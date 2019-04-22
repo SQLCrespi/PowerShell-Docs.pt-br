@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920383"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>O programador do Windows PowerShell&#39;guia
@@ -101,8 +101,8 @@ Para obter mais informações sobre como começar a usar o shell do Windows Powe
 |-----------|----------------|
 |[Como criar um provedor do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|Esta seção descreve como criar um provedor do Windows PowerShell para o Windows PowerShell.|
 |[Como criar um aplicativo de Host do PowerShell do Windows](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)|Esta seção descreve como escrever um aplicativo host que manipula um runspace e como escrever um aplicativo host que implementa seu próprio host personalizado.|
-|[Como criar um snap-in do Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta seção descreve como criar um snap-in que é usado para registrar todos os cmdlets e provedores em um assembly e como criar um snap-in personalizado.|
-|[Como criar um shell do console](./how-to-create-a-console-shell.md)|Esta seção descreve como criar um shell de console que não é extensível.|
+|[Como criar um Snap-in do PowerShell do Windows](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta seção descreve como criar um snap-in que é usado para registrar todos os cmdlets e provedores em um assembly e como criar um snap-in personalizado.|
+|[Como criar um Shell do Console](./how-to-create-a-console-shell.md)|Esta seção descreve como criar um shell de console que não é extensível.|
 |[Conceitos do Windows PowerShell](./windows-powershell-concepts.md)|Esta seção contém informações conceituais que ajudarão você a entender o Windows PowerShell do ponto de vista de um desenvolvedor.|
 
 ## <a name="see-also"></a>Consulte Também
