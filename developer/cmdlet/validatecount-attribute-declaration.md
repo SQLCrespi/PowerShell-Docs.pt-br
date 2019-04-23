@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: 4e0be34b6f7a56dcf02a4381de4d2a5d08db14df
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
-ms.translationtype: MT
+ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59983891"
 ---
 # <a name="validatecount-attribute-declaration"></a>Declaração de atributo ValidateCount
 
@@ -31,28 +31,34 @@ O atributo ValidateCount Especifica o número mínimo e máximo de argumentos pe
 
 #### <a name="parameters"></a>Parâmetros
 
-`MinLength` ([System.Int32](/dotnet/api/System.Int32)) Required. Especifica o número mínimo de argumentos.
+`MinLength` ([System.Int32][]) Required. Especifica o número mínimo de argumentos.
 
-`MaxLength`([System.Int32](/dotnet/api/System.Int32)) Required. Especifica o número máximo de argumentos.
+`MaxLength`([System.Int32][]) Required. Especifica o número máximo de argumentos.
 
 ## <a name="remarks"></a>Comentários
 
-- Para obter mais informações sobre como declarar esse atributo, consulte [como regras de validação de entrada declarar](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b).
+- Para obter mais informações sobre como declarar esse atributo, consulte [como validar uma contagem de argumento][].
 
 - Quando esse atributo não é invocado, o parâmetro de cmdlet correspondente pode ter qualquer número de argumentos.
 
 - O tempo de execução do Windows PowerShell gera um erro sob as seguintes condições:
 
-    - O `MinLength` e `MaxLength` parâmetros de atributo não são do tipo [System.Int32](/dotnet/api/System.Int32).
+    - O `MinLength` e `MaxLength` parâmetros de atributo não são do tipo [System.Int32][].
 
     - O valor da `MaxLength` parâmetro de atributo é menor que o valor da `MinLength` parâmetro do atributo.
 
-- O atributo ValidateCount é definido pela [System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount) classe.
+- O atributo ValidateCount é definido pela [System.Management.Automation.ValidateCountAttribute][] classe.
 
 ## <a name="see-also"></a>Consulte Também
 
-[System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount)
+[System.Management.Automation.ValidateCountAttribute][]
 
-[Como declarar as regras de validação de entrada](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)
+[Como validar uma contagem de argumento][]
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Writing a Windows PowerShell Cmdlet][] (Escrevendo um Cmdlet do Windows PowerShell)
+
+[Como validar uma contagem de argumento]: how-to-validate-an-argument-count.md
+[Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md (Escrevendo um Cmdlet do Windows PowerShell)
+
+[System.Int32]: /dotnet/api/System.Int32
+[System.Management.Automation.ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
