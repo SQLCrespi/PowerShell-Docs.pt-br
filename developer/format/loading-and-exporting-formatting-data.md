@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
 ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065199"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Carregar e exportar dados de formatação
 
@@ -59,4 +59,4 @@ Não há nenhum requisito para onde os arquivos de formatação são armazenados
 
 ## <a name="exporting-format-data"></a>Exportando dados de formato
 
-Insira o corpo da seção aqui.
+Inserir o corpo da seção aqui.

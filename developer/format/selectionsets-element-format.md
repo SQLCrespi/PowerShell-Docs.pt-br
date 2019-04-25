@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ebbac73a-1c99-4388-9f47-703cd024dc6d
 caps.latest.revision: 18
 ms.openlocfilehash: a9356635d60d5f8c5d4dec4ec8b7d0aea2b037dd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063754"
 ---
 # <a name="selectionsets-element-format"></a>Elemento SelectionSets (formato)
 
@@ -29,7 +29,7 @@ Formato do elemento SelectionSets de elemento de configuração
 </SelectionSets>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `SelectionSets` elemento. Cada elemento filho define um conjunto de objetos que podem ser referenciados pelo nome do conjunto. A ordem dos elementos filho não é significativa.
 
@@ -37,13 +37,13 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento SelectionSet (formato)](./selectionset-element-format.md)|Elemento necessário.<br /><br /> Define um único conjunto de objetos .NET que pode ser referenciado pelo nome do conjunto.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

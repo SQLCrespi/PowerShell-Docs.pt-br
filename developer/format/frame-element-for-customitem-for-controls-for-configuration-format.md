@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d879c8ce-679d-4622-bc43-c207f6413871
 caps.latest.revision: 9
 ms.openlocfilehash: b11b154a94daccead57bdfb5e579e1de2c190c09
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065553"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-configuration-format"></a>Elemento Frame para CustomItem para Controls para Configuration (formato)
 
@@ -33,7 +33,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 </Frame>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Frame` elemento.
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `F
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum.
 |[Elemento LeftIndent de quadro para controles de configuração (formato)](./leftindent-element-for-frame-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o número de caracteres de dados são deslocados da margem esquerda.|
 |[Elemento RightIndent de quadro para controles de configuração (formato)](./rightindent-element-for-frame-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o número de caracteres de dados são deslocados da margem direita.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

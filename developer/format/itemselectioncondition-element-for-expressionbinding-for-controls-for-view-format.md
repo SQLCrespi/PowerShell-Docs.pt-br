@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 82c15014-2440-410d-b02d-b7f1a49240a0
 caps.latest.revision: 7
 ms.openlocfilehash: 80f375c53c205c793600655fa6031d114871618e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065471"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format"></a>Elemento ItemSelectionCondition para ExpressionBinding para Controls para View (formato)
 
@@ -30,7 +30,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </ItemSelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ItemSelectionCondition` elemento.
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `I
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento PropertyName para ItemSelectionCondition controles para exibição (formato)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade do .NET que dispara a condição.|
 |[Elemento ScriptBlock para ItemSelectionCondition controles para exibição (formato)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o script que dispara a condição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

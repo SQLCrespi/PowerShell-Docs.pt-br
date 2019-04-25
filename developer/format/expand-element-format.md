@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: faa0314b-f6f1-44fd-ad2b-b00cbe38923f
 caps.latest.revision: 9
 ms.openlocfilehash: 8b924c989133b47e4d95d8429778003c76595d58
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065998"
 ---
 # <a name="expand-element-format"></a>Elemento Expand (formato)
 
@@ -27,7 +27,7 @@ Configuração (formato) elemento DefaultSettings (formato) elemento EnumerableE
 <Expand>EnumOnly, CoreOnly, Both</Expand>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Expand` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
