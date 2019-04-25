@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 64087c6c-2abd-446d-b837-7d3ee03a6874
 caps.latest.revision: 11
 ms.openlocfilehash: 102fe1b9c3bd04562aa296f390ec549d5f8f35e9
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58059863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083596"
 ---
-# <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Elemento de agrupamento para TableRowEntry para TableControl (formato)
+# <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Elemento Wrap para TableRowEntry para TableControl (formato)
 
 Especifica que o texto que excede a largura da coluna é exibido na próxima linha. Por padrão, o texto que excede a largura da coluna é truncado.
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) exibição elemento (forma
 <Wrap/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e elementos pai do `Wrap` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai do `Wr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
