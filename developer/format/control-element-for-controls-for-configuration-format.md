@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: bddf7ffa-04d3-4354-90b9-5e714e096260
 caps.latest.revision: 13
 ms.openlocfilehash: 26fe417c9ca60dda22bdc23d9d339d40135a0c9b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066781"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Elemento Control para Controls para Configuration (formato)
 
@@ -30,7 +30,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 </Control>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos e elementos filho do elemento pai o `Control` elemento. Você deve especificar apenas um de cada elemento filho.
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem os atributos e elementos filho do elemento pai o 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento CustomControl para o controle para controles de configuração (formato)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Define o controle.|
 |[Elemento Name para o controle para a configuração (formato)](./name-element-for-control-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Especifica o nome usado para fazer referência ao controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

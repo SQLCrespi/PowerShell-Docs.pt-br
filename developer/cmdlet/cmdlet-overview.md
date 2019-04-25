@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
 ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068463"
 ---
 # <a name="cmdlet-overview"></a>Visão geral do cmdlet
 
@@ -94,7 +94,7 @@ Para obter mais informações sobre esses métodos, consulte [métodos de proces
 
 Windows PowerShell define vários atributos do .NET Framework que são usados para gerenciar os cmdlets e para especificar a funcionalidade comum que é fornecido pelo Windows PowerShell e que podem ser necessárias pelo cmdlet. Por exemplo, os atributos são usados para designar uma classe como um cmdlet, para especificar os parâmetros do cmdlet e solicitar a validação de entrada para que os desenvolvedores do cmdlet não é necessário implementar essa funcionalidade em seu código do cmdlet. Para obter mais informações sobre atributos, consulte [atributos do Windows PowerShell](./cmdlet-attributes.md).
 
-## <a name="cmdlet-names"></a>Nomes dos cmdlets
+## <a name="cmdlet-names"></a>Nomes de cmdlet
 
 Windows PowerShell usa um par de nome do verbo e substantivo para cmdlets de nome. Por exemplo, o `Get-Command` cmdlet incluído no Windows PowerShell é usado para obter todos os cmdlets que estão registrados no shell de comando. O verbo identifica a ação que executa o cmdlet e o substantivo identifica o recurso no qual o cmdlet executa sua ação.
 

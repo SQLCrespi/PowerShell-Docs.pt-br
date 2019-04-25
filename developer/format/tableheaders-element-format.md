@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
 caps.latest.revision: 15
 ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075402"
 ---
 # <a name="tableheaders-element-format"></a>Elemento TableHeaders (formato)
 
@@ -30,7 +30,7 @@ Elemento ViewDefinitions (formato) modo de exibição (formato) elemento TableCo
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e elementos pai do `TableHeaders` elemento. Deve haver um elemento filho para cada propriedade do objeto a ser exibido. As informações de cabeçalho de coluna são exibidas na ordem em que os elementos filho são especificados.
 
@@ -38,13 +38,13 @@ As seções a seguir descrevem os atributos, elementos filho e elementos pai do 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)|Elemento opcional.<br /><br /> Define o rótulo, a largura e o alinhamento dos dados para uma coluna de uma exibição de tabela.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

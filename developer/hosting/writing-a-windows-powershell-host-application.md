@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
 ms.openlocfilehash: 2df5a59833fcdd58c6b2afbb4882111592fb3d76
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082491"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Escrever um aplicativo host do Windows PowerShell
 
