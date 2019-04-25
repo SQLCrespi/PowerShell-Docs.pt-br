@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Fornecendo comentários por meio de mídia social ou do recurso Comentários
 ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076065"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecendo comentários por meio de mídia social ou do recurso Comentários
 

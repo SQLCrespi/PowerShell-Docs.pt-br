@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: c51b583658ec82f39e4117e4266fa2e645b5012a
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: dcba906695acc44c313a401b2c9a50355ec84383
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057750"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Especificando dependências de nó cruzado
 

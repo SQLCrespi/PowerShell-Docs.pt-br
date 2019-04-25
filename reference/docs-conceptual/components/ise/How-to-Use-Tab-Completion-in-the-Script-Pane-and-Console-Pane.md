@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
 ms.openlocfilehash: 24a3f00987ff5ca4bf82d1a3206857ec3c4b3f09
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086877"
 ---
 # <a name="how-to-use-tab-completion-in-the-script-pane-and-console-pane"></a>Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 

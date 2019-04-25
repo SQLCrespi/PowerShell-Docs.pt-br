@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Trabalhando com instalações de software
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ms.openlocfilehash: 9369e3c5ac670895cd4fbd3ebc895c50efd02051
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086265"
 ---
 # <a name="working-with-software-installations"></a>Trabalhando com instalações de software
 

@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Recursos da Comunidade
 ms.openlocfilehash: a26f6eefeb3beb41575675b3dd4077f056606a70
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085024"
 ---
 # <a name="community-resources"></a>Recursos da Comunidade
 > Observação: Estas informações são preliminares e estão sujeitas a alterações.

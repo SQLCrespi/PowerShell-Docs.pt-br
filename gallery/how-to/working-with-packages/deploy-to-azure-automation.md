@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Implantar na Automação do Azure
 ms.openlocfilehash: dc382b1cf3ceaa787f54c555d01e6bd9ba70e680
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084872"
 ---
 # <a name="deploy-to-azure-automation"></a>Implantar na Automação do Azure
 

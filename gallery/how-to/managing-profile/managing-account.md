@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
 ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084425"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -39,7 +39,7 @@ A Galeria do PowerShell oferece as seguintes opções de notificação:
 ![Alterar o endereço de email](../../Images/PSGallery_AccountEmailOptions.png)
 
 Conforme observado na página, as notificações críticas da Galeria do PowerShell não podem ser desabilitadas.
-Eles incluem:
+Entre elas estão:
 
 - Notificações de segurança
 - Notificações de gerenciamento de conta de administradores da Galeria do PowerShell

@@ -4,22 +4,22 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Novos cenários e recursos no WMF 5.1
 ms.openlocfilehash: b00069aad7422f86d1462a62a6c4bc8a91e46705
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085405"
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Novos cenários e recursos no WMF 5.1
 
-> Observação: essas informações são preliminares e estão sujeitas a alteração.
+> Observação: Estas informações são preliminares e estão sujeitas a alterações.
 
 ## <a name="powershell-editions"></a>Edições do PowerShell
 
-A partir da versão 5.1, o PowerShell está disponível em diferentes edições que denotam os vários conjuntos de recursos e compatibilidades de plataforma.
+Da versão 5.1 em diante, o PowerShell está disponível nas edições diferentes que denotam diferentes conjuntos de recursos e compatibilidade de plataforma.
 
-- **Desktop Edition:** criada no .NET Framework e oferece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de superfície completa do Windows, como Server Core e Área de Trabalho do Windows.
-- **Core Edition:** criada no .NET Core e oferece compatibilidade com scripts e módulos destinados a versões do PowerShell executando em edições de superfície reduzida do Windows, como o Nano Server e Windows IoT.
+- **Desktop Edition:** criada no .NET Framework, fornece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de volume completo do Windows, como Server Core e Windows Desktop.
+- **Core Edition:** criada no .NET Core, oferece compatibilidade com scripts e módulos destinados a versões do PowerShell executadas em edições de volume reduzido do Windows, como o Nano Server e Windows IoT.
 
 **Saiba mais sobre como usar as edições do PowerShell**
 

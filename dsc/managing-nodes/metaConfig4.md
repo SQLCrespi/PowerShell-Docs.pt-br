@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o Gerenciador de Configurações Local em versões anteriores do Windows PowerShell
 ms.openlocfilehash: cea32c9aa8144bc52f3d44f2ad852f577f6a5e6d
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079601"
 ---
 # <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>Configurando o Gerenciador de Configurações Local em versões anteriores do Windows PowerShell
 

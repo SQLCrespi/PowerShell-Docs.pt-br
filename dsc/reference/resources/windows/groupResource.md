@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Group de DSC
 ms.openlocfilehash: 123e09b54a923af942a15f80fa7291c555b4235f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58054961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077340"
 ---
 # <a name="dsc-group-resource"></a>Recurso Group de DSC
 

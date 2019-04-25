@@ -3,11 +3,11 @@ title: Instalar o PowerShell Core no Linux
 description: Informações sobre a instalação do PowerShell Core em diversas distribuições Linux
 ms.date: 08/06/2018
 ms.openlocfilehash: 06194550f4e73f9dd38f8cdc25f6c7f698cafce2
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086554"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -75,8 +75,7 @@ Daí em diante, você só precisa usar `sudo apt-get upgrade powershell` para at
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>Instalação por meio de download direto – Ubuntu 14.04
 
-Baixar o pacote Debian
-`powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
+Baixe o pacote Debian `powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
 da página [lançamentos][] no computador com Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -124,8 +123,7 @@ Depois de registrar o repositório Microsoft uma vez como superusuário, daí em
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Instalação por meio de download direto – Ubuntu 16.04
 
-Baixar o pacote Debian
-`powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
+Baixe o pacote Debian `powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
 da página [lançamentos][] no computador com Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -176,8 +174,7 @@ Depois de registrar o repositório Microsoft uma vez como superusuário, daí em
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Instalação por meio de download direto – Ubuntu 18.04
 
-Baixar o pacote Debian
-`powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
+Baixe o pacote Debian `powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
 da página [lançamentos][] no computador com Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -266,8 +263,7 @@ Depois de registrar o repositório Microsoft uma vez como superusuário, daí em
 
 ### <a name="installation-via-direct-download---debian-9"></a>Instalação por meio de download direto – Debian 9
 
-Baixar o pacote Debian
-`powershell_6.2.0-1.debian.9_amd64.deb`
+Baixe o pacote Debian `powershell_6.2.0-1.debian.9_amd64.deb`
 da página [lançamentos][] no computador com Debian.
 
 Em seguida, execute o seguinte no terminal:
@@ -307,8 +303,7 @@ Depois de registrar o repositório da Microsoft uma vez como superusuário, voc�
 
 ### <a name="installation-via-direct-download---centos-7"></a>Instalação por meio de download direto – CentOS 7
 
-Usando o [CentOS 7][], baixe o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Usando o [CentOS 7][], baixe o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 da página [lançamentos][] no computador com CentOS.
 
 Em seguida, execute o seguinte no terminal:
@@ -352,8 +347,7 @@ Depois de registrar o repositório da Microsoft uma vez como superusuário, voc�
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Instalação por meio de download direto – Red Hat Enterprise Linux (RHEL) 7
 
-Baixar o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Baixe o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 da página de [lançamentos][] no computador com Red Hat Enterprise Linux.
 
 Em seguida, execute o seguinte no terminal:
@@ -463,8 +457,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>Instalação por meio de download direto – Fedora 27, Fedora 28
 
-Baixar o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Baixe o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 da página [lançamentos][] no computador com Fedora.
 
 Em seguida, execute o seguinte no terminal:
@@ -511,7 +504,7 @@ Para obter mais informações sobre a instalação de pacotes usando o AUR, veja
 
 ### <a name="getting-snapd"></a>Usando o Snap
 
-`snapd` é necessário para executar snaps.
+O `snapd` é necessário para executar snaps.
 Use [estas instruções](https://docs.snapcraft.io/core/install) para garantir que você tem o `snapd` instalado.
 
 ### <a name="installation-via-snap"></a>Instalação por meio do Snap

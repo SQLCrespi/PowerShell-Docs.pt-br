@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,serviço,instalação
 title: Escrever, compilar e aplicar uma configuração
 ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080000"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
