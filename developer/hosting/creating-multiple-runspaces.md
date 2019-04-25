@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 42c40c7f-1ee7-4021-950c-2e013c8f2a4a
 caps.latest.revision: 4
 ms.openlocfilehash: 606a2ee4e70d303bf1b1d69b7523eb8649f9be0c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082950"
 ---
-# <a name="creating-multiple-runspaces"></a><span data-ttu-id="5d6d4-102">Criar vários runspaces</span><span class="sxs-lookup"><span data-stu-id="5d6d4-102">Creating multiple runspaces</span></span>
+# <a name="creating-multiple-runspaces"></a><span data-ttu-id="3e62c-102">Criar vários runspaces</span><span class="sxs-lookup"><span data-stu-id="3e62c-102">Creating multiple runspaces</span></span>
 
-<span data-ttu-id="5d6d4-103">Se você criar um grande número de espaços de execução, você pode considerar a criação de um pool de Runspaces.</span><span class="sxs-lookup"><span data-stu-id="5d6d4-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="5d6d4-104">Usando um [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) objeto, em vez de criar um grande número de espaços de execução individuais com as mesmas características, pode melhorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="5d6d4-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
+<span data-ttu-id="3e62c-103">Se você criar um grande número de espaços de execução, você pode considerar a criação de um pool de Runspaces.</span><span class="sxs-lookup"><span data-stu-id="3e62c-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="3e62c-104">Usando um [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) objeto, em vez de criar um grande número de espaços de execução individuais com as mesmas características, pode melhorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="3e62c-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
 
-## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="5d6d4-105">Criando e usando um pool de Runspaces.</span><span class="sxs-lookup"><span data-stu-id="5d6d4-105">Creating and using a runspace pool.</span></span>
+## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="3e62c-105">Criando e usando um pool de Runspaces.</span><span class="sxs-lookup"><span data-stu-id="3e62c-105">Creating and using a runspace pool.</span></span>
 
- <span data-ttu-id="5d6d4-106">O exemplo a seguir mostra como criar um pool de Runspaces e como executar um comando de forma assíncrona em um runspace do pool.</span><span class="sxs-lookup"><span data-stu-id="5d6d4-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
+ <span data-ttu-id="3e62c-106">O exemplo a seguir mostra como criar um pool de Runspaces e como executar um comando de forma assíncrona em um runspace do pool.</span><span class="sxs-lookup"><span data-stu-id="3e62c-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
 
 ```csharp
 namespace HostRunspacePool
@@ -79,6 +79,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5d6d4-107">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="5d6d4-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e62c-107">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="3e62c-107">See Also</span></span>
 
- [<span data-ttu-id="5d6d4-108">Criando um InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="5d6d4-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="3e62c-108">Criando um InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="3e62c-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
