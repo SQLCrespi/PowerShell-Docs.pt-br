@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d837d5d4-ed2e-4d84-a306-0b5d2ad2d0bf
 caps.latest.revision: 24
 ms.openlocfilehash: 2361c1117757569bef0815018c75764430a9e7a8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083715"
 ---
 # <a name="view-element-format"></a>Elemento View (formato)
 
@@ -36,7 +36,7 @@ Elemento de exibição de ViewDefinitions elemento (formato) de (formato) do ele
 </View>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `View` elemento. Você deve especificar apenas um dos elementos de filhos do controle, e você deve especificar o nome da exibição e os objetos que usam o modo de exibição. Definindo controles personalizados, como agrupar objetos, e especifica se o modo de exibição é out-of-band são opcionais.
 
@@ -44,7 +44,7 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -57,7 +57,7 @@ Nenhum.
 |[Elemento ViewSelectedBy para exibição (formato)](./viewselectedby-element-format.md)|Elemento necessário.<br /><br /> Define os objetos do .NET que essa exibição exibe.|
 |[Elemento WideControl (formato)](./widecontrol-element-format.md)|Elemento opcional.<br /><br /> Define uma ampla (único valor) formato de lista para o modo de exibição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

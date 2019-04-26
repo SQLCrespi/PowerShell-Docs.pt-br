@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 17352fc4-ba83-4f04-86bc-f591765d85a8
 caps.latest.revision: 18
 ms.openlocfilehash: fa9eda3ea1028c27dbfb3eb04747af3b817c1a81
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083630"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>Elemento WideItem para WideControl (formato)
 
@@ -31,15 +31,15 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </WideItem>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
-As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `WideItem` elemento. O elemento `FormatString` é opcional. No entanto, você deve especificar uma `PropertyName` ou `ScriptBlock` elemento, mas você não é possível especificar ambos.
+As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `WideItem` elemento. O `FormatString` elemento é opcional. No entanto, você deve especificar uma `PropertyName` ou `ScriptBlock` elemento, mas você não é possível especificar ambos.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -47,7 +47,7 @@ Nenhum.
 |[Elemento PropertyName para WideItem (formato)](./propertyname-element-for-wideitem-for-widecontrol-format.md)|Especifica a propriedade do objeto cujo valor é exibido no modo de exibição amplo.|
 |[Elemento ScriptBlock para WideItem (formato)](./scriptblock-element-for-wideitem-for-widecontrol-format.md)|Especifica o script cujo valor é exibido no modo de exibição amplo.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
