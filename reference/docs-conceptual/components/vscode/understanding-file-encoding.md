@@ -2,12 +2,12 @@
 title: Entendendo a codificação de arquivos no VSCode e PowerShell
 description: Configurar a codificação de arquivos no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058430"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Entendendo a codificação de arquivos no VSCode e PowerShell
 
@@ -102,7 +102,7 @@ BOMs são opcionais e sua adoção não é tão popular no universo Linux, pois 
 
 A codificação padrão do VSCode é UTF-8 sem BOM.
 
-Para definir a [codificação do VSCode][], vá até as configurações do VSCode (<kbd>Ctrl<kbd>+</kbd>,</kbd>) e defina a configuração `"files.encoding"`:
+Para definir a [codificação do VSCode][], vá até as configurações do VSCode (<kbd>Ctrl</kbd>+<kbd>,</kbd>) e defina a configuração `"files.encoding"`:
 
 ```json
 "files.encoding": "utf8bom"
