@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
 caps.latest.revision: 16
 ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065063"
 ---
 # <a name="name-element-for-view-format"></a>Elemento Name para View (formato)
 
@@ -27,7 +27,7 @@ Configuração (formato) elemento ViewDefinitions (formato) modo de exibição (
 <Name>ViewName</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Name` elemento. Apenas um `Name` elemento é permitido para cada modo de exibição.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `N
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

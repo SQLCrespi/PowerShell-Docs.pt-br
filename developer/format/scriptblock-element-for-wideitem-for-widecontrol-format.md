@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e00e8f36-76f2-49a0-9b02-3a2a7fceb2dd
 caps.latest.revision: 8
 ms.openlocfilehash: 6534e9dbfbe0dedf60dadd6467cff9ad9b447ba4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064196"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>Elemento ScriptBlock para WideItem para WideControl (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 <ScriptBlock>ScriptToExecute</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

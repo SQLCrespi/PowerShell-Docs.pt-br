@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
 caps.latest.revision: 15
 ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065137"
 ---
 # <a name="name-element-for-selectionset-format"></a>Elemento Name para SelectionSet (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento SelectionSets (formato) elemento SelectionSet (forma
 <Name>Name of selection set</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `Name` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

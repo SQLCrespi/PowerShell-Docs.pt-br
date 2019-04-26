@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
 ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063819"
 ---
 # <a name="tablecontrol-element-format"></a>Elemento TableControl (formato)
 
@@ -33,7 +33,7 @@ Elemento ViewDefinitions (formato) modo de exibição (formato) TableControl ele
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TableControl` elemento. Você deve especificar as linhas da tabela. Todos os outros elementos filho são opcionais.
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -50,7 +50,7 @@ Nenhum.
 |[Elemento TableHeaders para TableControl (formato)](./tableheaders-element-format.md)|Elemento necessário.<br /><br /> Define os rótulos, as larguras e o alinhamento dos dados para as colunas da exibição de tabela.|
 |[Elemento TableRowEntries para TableControl (formato)](./tablerowentries-element-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Fornece as definições da exibição de tabela.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

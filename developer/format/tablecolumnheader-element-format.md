@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
 ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063802"
 ---
 # <a name="tablecolumnheader-element-format"></a>Elemento TableColumnHeader (formato)
 
@@ -31,7 +31,7 @@ Elemento (formato) elemento ViewDefinitions (formato) exibição elemento (forma
 </TableColumnHeader>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TableColumnHeader` elemento.
 
@@ -39,7 +39,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -47,7 +47,7 @@ Nenhum.
 |[Elemento de largura para TableColumnHeader para TableControl (formato)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Especifica a largura (em caracteres) da coluna.|
 |[Elemento de alinhamento para TableColumnHeader para TableControl (formato)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Especifica como o rótulo da coluna é exibido. Se nenhum alinhamento for especificado, o rótulo é alinhado à esquerda.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

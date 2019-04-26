@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 93d27173-9ae4-46e5-bb78-90525915cd70
 caps.latest.revision: 9
 ms.openlocfilehash: bc1e58c00ca8419f9204076f0a46050281e704db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066134"
 ---
 # <a name="enumerableexpansion-element-format"></a>Elemento EnumerableExpansion (formato)
 
@@ -30,7 +30,7 @@ Configuração (formato) elemento DefaultSettings (formato) elemento EnumerableE
 </EnumerableExpansion>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `EnumerableExpansion` elemento.
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)|Elemento opcional.<br /><br /> Define quais objetos de coleção do .NET são expandidos por essa definição.|
 |[Expanda o elemento (formato)](./expand-element-format.md)|Especifica como o objeto de coleção é expandido para esta definição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 98708c1d-6f39-4a76-b454-31153a6ade8c
 caps.latest.revision: 12
 ms.openlocfilehash: 3c110bd5fe3ef2f790ef136556afa7c29d0b5b29
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066395"
 ---
 # <a name="customitem-element-for-customentry-for-customcontrol-for-view-format"></a>Elemento CustomItem para CustomEntry para CustomControl para View (formato)
 
@@ -32,7 +32,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </CustomItem>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `CustomItem` elemento.
 
@@ -40,7 +40,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -49,7 +49,7 @@ Nenhum.
 |[Elemento de nova linha para CustomItem para um controle personalizado para o modo de exibição (formato)](./newline-element-for-customitem-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Adiciona uma linha em branco para a exibição do controle.|
 |[Elemento de texto para CustomItem para CustomControl para exibição (formato)](./text-element-for-customitem-for-customview-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o texto adicional para os dados exibidos pelo controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

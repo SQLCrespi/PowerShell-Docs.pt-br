@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c5242935-2782-4d23-84f5-2446b2b7ba83
 caps.latest.revision: 8
 ms.openlocfilehash: c9abd9f22907b87323c16d603a9f75bb3d375a03
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066627"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-controls-for-configuration-format"></a>Elemento CustomControlName para ExpressionBinding para Controls para Configuration (formato)
 
@@ -27,7 +27,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 <CustomControlName>NameofCustomControl</CustomControlName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `CustomControlName` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9dfba86f-29b2-473c-9e98-9d679176acce
 caps.latest.revision: 11
 ms.openlocfilehash: 497485a388d1cdc834ecc1d1079b0714a7d7f9db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066457"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>Elemento CustomEntry para CustomControl para Controls para Configuration (formato)
 
@@ -31,7 +31,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `CustomEntry` elemento. Você deve especificar os itens exibidos pela definição.
 
@@ -39,14 +39,14 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para CustomEntry para controles de configuração (formato)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Define os tipos de .NET que usam a definição do controle comum ou a condição que deve existir para esse controle a ser usado.|
 |[Elemento CustomItem para CustomEntry para controles de configuração](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Define quais dados são exibidos pelo controle e como ele é exibido.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

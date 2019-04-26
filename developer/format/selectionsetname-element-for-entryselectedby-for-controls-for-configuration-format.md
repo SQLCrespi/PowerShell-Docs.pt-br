@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 42143d1e-7cda-4c4a-b568-fa1951bb9417
 caps.latest.revision: 6
 ms.openlocfilehash: 9060ee54d6f88c7f910b16cf5c9b87f37844b736
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063959"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>Elemento SelectionSetName para EntrySelectedBy para Controls para Configuration (formato)
 
@@ -28,7 +28,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `SelectionSetName` elemento.
 
@@ -36,11 +36,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 Não
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

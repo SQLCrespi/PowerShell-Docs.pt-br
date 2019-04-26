@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d46df0cb-50b7-4b81-82ba-37186a7b7a7f
 caps.latest.revision: 28
 ms.openlocfilehash: 296c63d0c774a0bf56e90dbaa32f2c221d4c3dbd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066814"
 ---
 # <a name="configuration-element-format"></a>Elemento Configuration (formato)
 
@@ -33,7 +33,7 @@ Elemento de configuração
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `Configuration` elemento. Esse elemento deve ser o elemento raiz para cada arquivo de formatação, e esse elemento deve conter pelo menos um elemento filho.
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -50,7 +50,7 @@ Nenhum.
 |[Formato do elemento SelectionSets](./selectionsets-element-format.md)|Elemento opcional.<br /><br /> Define os conjuntos de objetos .NET que podem ser usados por todos os modos de exibição do arquivo de formatação comuns.|
 |[Elemento ViewDefinitions (formato)](./viewdefinitions-element-format.md)|Elemento opcional.<br /><br /> Define os modos de exibição usados para exibir os objetos.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 Nenhum.
 

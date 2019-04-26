@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
 caps.latest.revision: 8
 ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065524"
 ---
 # <a name="groupby-element-for-view-format"></a>Elemento GroupBy para View (formato)
 
@@ -33,7 +33,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </GroupBy>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum.
 |[Elemento PropertyName para GroupBy (formato)](./propertyname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET o inicia um novo grupo sempre que seu valor é alterado.|
 |[Elemento ScriptBlock para GroupBy (formato)](./scriptblock-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que inicia um novo grupo sempre que seu valor é alterado.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

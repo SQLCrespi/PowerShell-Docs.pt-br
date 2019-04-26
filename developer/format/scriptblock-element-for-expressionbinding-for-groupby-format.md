@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3e022ec4-8531-468e-96ff-77607755ec92
 caps.latest.revision: 6
 ms.openlocfilehash: 9afa53e1c7d1edabdbff56c4e59fcef0cf1647e3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064451"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-groupby-format"></a>Elemento ScriptBlock para ExpressionBinding para GroupBy (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
