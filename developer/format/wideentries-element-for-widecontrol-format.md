@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0c4bff45-0960-4b3a-95e7-47f2cee03ac5
 caps.latest.revision: 12
 ms.openlocfilehash: 083f3c8df8136858e32778ed231943ef983e47aa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083681"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>Elemento WideEntries para WideControl (formato)
 
@@ -30,7 +30,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `WideEntries` elemento. Pelo menos um elemento filho deve ser especificado.
 
@@ -38,13 +38,13 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento WideEntry (formato)](./wideentry-element-for-widecontrol-format.md)|Fornece uma definição da exibição ampla.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

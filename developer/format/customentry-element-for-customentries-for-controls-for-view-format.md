@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c6739205-2bc9-4507-b2af-d19d548c2057
 caps.latest.revision: 6
 ms.openlocfilehash: b92b99d88992cf13dbf7bfbe88aad603615f3138
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066463"
 ---
 # <a name="customentry-element-for-customentries-for-controls-for-view-format"></a>Elemento CustomEntry para CustomEntries para Controls para configuração (formato)
 
@@ -30,7 +30,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </CustomEntry>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e os elementos pai do `CustomEntry` elemento.
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem atributos, elementos filho e os elementos pai do 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para CustomEntry controles para exibição (formato)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Define os tipos de .NET que usam essa definição de controle ou a condição que deve existir para essa definição a ser usado.|
 |[Elemento CustomItem para CustomEntry controles para exibição (formato)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Elemento necessário.<br /><br /> Define como o controle exibe os dados.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
 caps.latest.revision: 11
 ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066338"
 ---
 # <a name="defaultsettings-element-format"></a>Elemento DefaultSettings (formato)
 
@@ -33,7 +33,7 @@ Elemento de DefaultSettings (formato) do elemento de configuração (formato)
 </DefaultSettings>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `DefaultSettings` elemento.
 
@@ -41,7 +41,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `D
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum.
 |[Elemento ShowError (formato)](./showerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que o registro completo de erro é exibido quando ocorre um erro ao exibir uma parte dos dados.|
 |[Elemento WrapTables (formato)](./wraptables-element-format.md)|Elemento opcional.<br /><br /> Especifica que os dados em uma tabela são movidos para a próxima linha se ela não se ajustam a largura da coluna.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

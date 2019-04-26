@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2472e256-8f4f-4288-8b67-a3300649dafa
 caps.latest.revision: 9
 ms.openlocfilehash: 2e84e770a345e272d4c5917b00afe7520840e1db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066746"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>Elemento CustomControl para GroupBy (formato)
 
@@ -29,7 +29,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 <CustomControl>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `CustomControl` elemento. Você pode especificar qualquer número de elementos filho e listá-los em qualquer ordem.
 
@@ -37,13 +37,13 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento CustomEntries para CustomControl para GroupBy (formato)](./customentries-element-for-customcontrol-for-groupby-format.md)|Elemento necessário.<br /><br /> Fornece as definições para o controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

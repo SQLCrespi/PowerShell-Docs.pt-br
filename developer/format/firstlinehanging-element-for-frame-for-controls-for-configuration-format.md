@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 679c8bcb-b49d-4bb4-91f5-ea1af6c217e3
 caps.latest.revision: 8
 ms.openlocfilehash: 4553f95e48a2b1440c00b4951bea56376b00628a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065879"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>Elemento FirstLineHanging para Frame para Controls para Configuration (formato)
 
@@ -27,7 +27,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 <FirstLineHanging>NumberOfCharactersToShift</FirstLineHanging>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `FirstLineHanging` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `F
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: af83c0f6-7fdd-4aa0-af12-efc62f632974
 caps.latest.revision: 7
 ms.openlocfilehash: f073142bf836ae892f161cf8c36ed16c35e311f5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066525"
 ---
 # <a name="customentries-element-for-customcontrol-for-groupby-format"></a>Elemento CustomEntries para CustomControl para GroupBy (formato)
 
@@ -29,7 +29,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 </CustomEntries>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e elementos pai do `CustomEntries` elemento. Não há nenhum limite máximo ao número de elementos filho que podem ser especificados.
 
@@ -37,13 +37,13 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai do `Cu
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento CustomEntry para CustomControl para GroupBy (formato)](./customentry-element-for-customcontrol-for-groupby-format.md)|Elemento necessário.<br /><br /> Fornece uma definição do controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

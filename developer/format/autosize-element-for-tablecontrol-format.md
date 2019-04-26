@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1df5de23-9ffc-427e-bb34-f5efe073f3fe
 caps.latest.revision: 11
 ms.openlocfilehash: f50ba257ee57c36aedc6b37c680a0130842b69b0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066882"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>Elemento AutoSize para TableControl (formato)
 
@@ -27,7 +27,7 @@ Elemento ViewDefinitions (formato) modo de exibição (formato) elemento TableCo
 <AutoSize/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `AutoSize` elemento.
 
@@ -35,11 +35,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `A
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

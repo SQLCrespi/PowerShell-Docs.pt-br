@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
 caps.latest.revision: 10
 ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066729"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Elemento CustomControl para Control para Controls para Configuration (formato)
 
@@ -29,7 +29,7 @@ Elemento de controles de (formato) do elemento de configuração do elemento de 
 </CustomControl>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `CustomControl` elemento. Esse elemento deve ter pelo menos um elemento filho. Não há nenhum limite máximo ao número de elementos filho que podem ser especificados.
 
@@ -37,13 +37,13 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento CustomEntries para CustomControl para configuração (formato)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Fornece as definições de um controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

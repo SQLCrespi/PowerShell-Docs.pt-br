@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 29840c10-2b30-4bb1-a8a0-ddf84d19c2d0
 caps.latest.revision: 18
 ms.openlocfilehash: c5ec80350c7707ccd41112ab5e1952e5dc198cca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083698"
 ---
 # <a name="viewdefinitions-element-format"></a>Elemento ViewDefinitions (formato)
 
@@ -30,7 +30,7 @@ Configuração (formato) ViewDefinitions (formato XML) do elemento
 </ViewDefinitions>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem os atributos, elementos filho e o elemento pai do `ViewDefinitions` elemento. Não há nenhum limite para o número de exibições que podem ser definidas em um arquivo de formatação, e eles podem ser adicionados em qualquer ordem.
 
@@ -38,13 +38,13 @@ As seções a seguir descrevem os atributos, elementos filho e o elemento pai do
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de exibição (formato)](./view-element-format.md)|Define uma exibição que é usada para exibir um ou mais objetos do .NET.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|

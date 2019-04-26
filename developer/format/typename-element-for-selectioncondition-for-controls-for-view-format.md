@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7141aefc-6656-4c52-8a9c-c2bfc9c87be9
 caps.latest.revision: 6
 ms.openlocfilehash: 7a697c286ec9efe750930739cdfa2580003365dd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083887"
 ---
 # <a name="typename-element-for-selectioncondition-for-controls-for-view-format"></a>Elemento TypeName para SelectionCondition para Controls para View (formato)
 
@@ -28,7 +28,7 @@ Elemento (formato) elemento ViewDefinitions (formato) modo de exibição (format
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Elementos e atributos
 
 As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TypeName` elemento.
 
@@ -36,11 +36,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
