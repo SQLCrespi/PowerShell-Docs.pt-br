@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Atalhos do teclado para o ISE do Windows PowerShell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086826"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
@@ -20,7 +20,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 
 |Ação|Atalhos do teclado|Usar em|
 |----------|----------------------|----------|
-|**Ajuda**|F1|Painel de script **importantes:** Você pode especificar que a Ajuda de F1 venha da biblioteca do TechNet na web ou ajuda baixada (veja Update-Help). Para selecionar, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da Ajuda local em vez do conteúdo online.**|
+|**Ajuda**|F1|Painel de Script **Importante:** você pode especificar que a Ajuda com F1 venha da Biblioteca do TechNet na Web ou da Ajuda baixada (consulte Update-Help). Para selecionar, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da Ajuda local em vez do conteúdo online.**|
 |**Copiar**|Ctrl+C|Painel de Script, Painel de Comando e Painel de Saída|
 |**Recortar**|Ctrl+X|Painel de Script, Painel de Comando|
 |**Expandir ou Recolher a Estrutura de Tópicos**|Ctrl+M|Painel de Script|
@@ -47,8 +47,8 @@ Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de
 |**Executar**|F5|
 |**Executar seleção**|F8|
 |**Parar execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
-|**Tab** (para o próximo script)|CTRL + TAB **Observação:** Guia para o próximo script funciona somente quando uma única guia do Windows PowerShell aberta ou quando você tiver mais de um guia do Windows PowerShell aberta, mas o foco está no painel de Script.|
-|**Tab** (para o script anterior)|CTRL + SHIFT + TAB **Observação:** Guia para o script anterior funciona quando você tiver apenas uma guia do Windows PowerShell aberta ou se você tiver mais de um guia do Windows PowerShell aberta, mas o foco estiver no painel de Script.|
+|**Tab** (para o próximo script)|CTRL+TAB **Observação:** usar Tab para o próximo script funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script.|
+|**Tab** (para o script anterior)|CTRL+SHIFT+TAB **Observação:** usar Tab para o script anterior funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Atalhos de teclado para personalizar a exibição
 
@@ -120,4 +120,4 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 
 ## <a name="see-also"></a>Consulte Também
 
-- [PowerShell Magazine: A lista completa de atalhos de teclado do Windows PowerShell ISE](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
+- [PowerShell Magazine: a lista completa de atalhos de teclado para ISE do Windows PowerShell](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

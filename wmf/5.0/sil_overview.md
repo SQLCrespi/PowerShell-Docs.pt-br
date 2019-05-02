@@ -2,15 +2,15 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 ms.openlocfilehash: 7e87ed4bc9a86be52d4d06d3e87386a1111227c5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085007"
 ---
 # <a name="software-inventory-logging-sil"></a>SIL (Log de Inventário de Software)
 
-**IMPORTANTE:** *ao instalar o WMF 5.0 em um Windows Server 2012 R2 que já esteja executando o SIL, será necessário executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso de Log de Inventário de Software.*
+**IMPORTANTE:** *ao instalar o WMF 5.0 em um Windows Server 2012 R2 que já esteja executando o SIL, é necessário executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interrompe incorretamente o recurso de Log de Inventário de Software.*
 
 O Log de Inventário de Software ajuda a reduzir os custos operacionais da obtenção de informações precisas sobre o software Microsoft instalado localmente em um servidor, mas especialmente em vários servidores em um ambiente de TI (presumindo-se que ele foi instalado e está em execução em todo o ambiente de TI). Desde que um esteja configurado, é possível encaminhar esses dados para um servidor de agregação e coletar os dados de log em um único local usando um processo uniforme e automático.
 

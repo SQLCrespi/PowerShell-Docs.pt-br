@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: usar o console do windows powershell baseado na web
 ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086613"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
-Atualizado em: 24 de junho de 2013
+Atualização: 24 de junho de 2013
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 

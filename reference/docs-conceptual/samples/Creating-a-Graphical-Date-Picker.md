@@ -1,22 +1,22 @@
 ---
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
-title: Criando um seletor de data gráfico
+title: Criar um seletor de data gráfico
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
 ms.openlocfilehash: d3b24af935e781a8a36fc346a6108baaed37b6db
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058600"
 ---
-# <a name="creating-a-graphical-date-picker"></a>Criando um seletor de data gráfico
+# <a name="creating-a-graphical-date-picker"></a>Criar um seletor de data gráfico
 
 Use o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controle de calendário de estilo gráfico, que permite aos usuários selecionar um dia do mês.
 
 ## <a name="create-a-graphical-date-picker-control"></a>Crie um controle de seletor de data gráfico
 
-Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
+Copie e cole o seguinte no ISE do Windows PowerShell e salve-o como um script do Windows PowerShell (.ps1).
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -147,5 +147,5 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 ## <a name="see-also"></a>Consulte Também
 
 - [Hey Scripting Guy:  por que esses exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
-- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana para o Windows PowerShell:  Criando um seletor de data gráfico](https://technet.microsoft.com/library/ff730942.aspx)
+- [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Dica da semana para o Windows PowerShell:  criar um seletor de data gráfico](https://technet.microsoft.com/library/ff730942.aspx)

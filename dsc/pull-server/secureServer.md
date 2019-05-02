@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
 ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58057698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079193"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -80,7 +80,7 @@ Outros recursos que têm sido historicamente atualizados por versões do WMF (co
 
 ### <a name="dsc-resource"></a>Recurso DSC
 
-Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
+Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
 
 Use o cmdlet `Install-Module` do módulo **PowerShellGet**.
 
@@ -150,7 +150,7 @@ Se necessário, qual tipo de solução de Balanceamento de Carga você utilizar�
 ### <a name="public-key-infrastructure"></a>Infraestrutura de chave pública
 
 A maioria das organizações atuais exige que o tráfego de rede, especialmente o tráfego que inclui dados confidenciais como a maneira que os servidores são configurados, seja validado e/ou criptografado durante o trânsito.
-Embora seja possível implantar um servidor de pull usando HTTP, o que facilita as solicitações de clientes em texto não criptografado, é uma prática recomendada proteger o tráfego usando HTTPS. O serviço pode ser configurado para usar HTTPS por meio de um conjunto de parâmetros no recurso de DSC **xPSDesiredStateConfiguration**.
+Embora seja possível implantar um servidor de pull usando HTTP, o que facilita as solicitações de clientes em texto não criptografado, é uma prática recomendada proteger o tráfego usando HTTPS. O serviço pode ser configurado para usar HTTPS por meio de um conjunto de parâmetros no recurso DSC **xPSDesiredStateConfiguration**.
 
 Os requisitos de certificado para proteger o tráfego HTTPS do servidor de pull não são diferentes da proteção de qualquer outro site HTTPS. O modelo de **servidor Web** dos Serviços de Certificado do Windows Server satisfaz os recursos necessários.
 

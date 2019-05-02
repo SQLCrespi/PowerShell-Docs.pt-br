@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsOptionalFeature DSC
 ms.openlocfilehash: 390caefd2ad190afc651b22ed1beb5cf1d604527
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076745"
 ---
 # <a name="dsc-windowsoptionalfeature-resource"></a>Recurso do WindowsOptionalFeature DSC
 

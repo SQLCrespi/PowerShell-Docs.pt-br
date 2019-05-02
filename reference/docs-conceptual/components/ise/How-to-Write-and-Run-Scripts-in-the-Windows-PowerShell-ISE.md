@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Como gravar e executar scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 ms.openlocfilehash: 61db5e18f05e8e334cd9ba6dab2cf15dee7390cc
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086843"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 
@@ -144,7 +144,7 @@ O comando a seguir obtém a codificação do arquivo atual.
 $psISE.CurrentFile.encoding
 ```
 
-Windows PowerShell ISE suporta as seguintes opções de codifica: ASCII, BigEndianUnicode, Unicode, UTF32, UTF7, UTF8 e padrão. O valor da opção Padrão varia de acordo com o sistema.
+O ISE do Windows PowerShell dá suporte às seguintes opções de codificação: ASCII, BigEndianUnicode, Unicode, UTF32, UTF7, UTF8 e padrão. O valor da opção Padrão varia de acordo com o sistema.
 
 O ISE do Windows PowerShell não altera a codificação dos arquivos de script quando você usa os comandos Salvar ou Salvar como.
 

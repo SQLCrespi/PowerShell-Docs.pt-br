@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Configurações parciais da Configuração de Estado Desejado do PowerShell
 ms.openlocfilehash: b2b17e35597707eb97ecdcea9dda4466deeab0cb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079516"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais da Configuração de Estado Desejado do PowerShell
 
-Aplica-se a: Windows PowerShell 5.0 e posterior._
+_Aplica-se a: Windows PowerShell 5.0 e posterior._
 
 No PowerShell 5.0, a Configuração de Estado Desejado (DSC) permite que as configurações sejam entregues em fragmentos e de várias fontes. O Gerenciador de Configurações Local (LCM) no nó de destino reúne os fragmentos antes de aplicá-los como uma única configuração. Essa capacidade permite compartilhar o controle de configuração entre equipes ou pessoas. Por exemplo, se duas ou mais equipes de desenvolvedores estiverem colaborando em um serviço, cada uma poderá querer criar configurações para gerenciar sua parte do serviço. Cada uma dessas configurações pode ser extraída de servidores de pull diferentes e adicionada em diferentes estágios do desenvolvimento. Configurações parciais também permitem que diferentes pessoas ou equipes controlem diferentes aspectos da configuração de nós sem a necessidade de coordenar a edição de um documento único de configuração. Por exemplo, uma equipe pode ser responsável por implantar uma VM e o sistema operacional, enquanto outra equipe pode implantar outros aplicativos e serviços em tal VM. Com configurações parciais, cada equipe pode criar sua própria configuração, sem complicações desnecessárias.
 
@@ -375,6 +375,6 @@ SharePointConfig
 
 ## <a name="see-also"></a>Consulte Também
 
-[Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md)
+[Servidores de Pull Desired State Configuration do Windows PowerShell](pullServer.md)
 
 [Configurando o Gerenciador de Configurações Local com o Windows](../managing-nodes/metaConfig.md)

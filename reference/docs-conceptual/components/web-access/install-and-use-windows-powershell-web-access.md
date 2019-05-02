@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: instalar e usar o windows powershell web access
 ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58056712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058550"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
-Atualizado: 5 de novembro de 2013 (editado: 23 de agosto de 2017)
+Atualização: 5 de novembro de 2013 (editado: 23 de agosto de 2017)
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
@@ -35,7 +35,7 @@ Este tópico não fornece diretrizes detalhadas de operações do Servidor Web I
 
 O diagrama a seguir mostra como funciona o Windows PowerShell Web Access.
 
-![Diagrama de Acesso via Web do Windows PowerShell](images/Windows-PowerShell-Web-Access-diagram.jpg)
+![Diagrama do Acesso via Web do PowerShell](images/Windows-PowerShell-Web-Access-diagram.jpg)
 
 ## <a name="requirements-for-running-windows-powershell-web-access"></a>Requisitos de execução do Windows PowerShell Web Access
 
@@ -58,10 +58,10 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ### <a name="minimally-tested-mobile-devices-or-browsers"></a>Dispositivos ou navegadores móveis minimamente testados
 
-- Windows Phone 7 e 7.5
-- Navegador Google Android WebKit 3.1 Android 2.2.1 (Kernel 2.6)
+- Windows Phone 7 e 7.5
+- Navegador Google Android WebKit 3.1 para Android 2.2.1 (Kernel 2.6)
 - Apple Safari para iPhone com sistema operacional 5.0.1
-- Apple Safari para iPad 2 com sistema operacional 5.0.1
+- Apple Safari para iPad 2 com sistema operacional 5.0.1
 
 ### <a name="browser-requirements"></a>Requisitos de navegador
 
@@ -187,7 +187,7 @@ Por padrão, o cmdlet instala o aplicativo Web, o **pswa** (e um pool de aplicat
    > [!NOTE]
    > Você não poderá fazer logon até que todos os usuários tenham obtido acesso ao site adicionando regras de autorização. Para obter mais informações, consulte [Configurar uma regra de autorização restritiva](#configure-a-restrictive-authorization-rule), neste tópico, e [Regras de autorização e recursos de segurança do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
-### <a name="configure-a-restrictive-authorization-rule"></a>configurar uma regra de autorização restritiva
+### <a name="configure-a-restrictive-authorization-rule"></a>Configurar uma regra de autorização restritiva
 
 Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para saber mais sobre os cmdlets do Windows PowerShell Web Access, confira os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) (Cmdlets do Windows PowerShell Web Access).
 
@@ -200,7 +200,7 @@ Para obter mais detalhes sobre as regras e a segurança de autorização do Wind
    - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
    - Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
-2. Etapa opcional para restringir o acesso de usuários usando as configurações de sessão: verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Etapa opcional para restringir o acesso de usuários usando as configurações de sessão: verifique se já existem as configurações de sessão que você deseja usar em suas regras. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digite o seguinte e pressione **Enter**.
 
@@ -248,7 +248,7 @@ Depois de instalar o Windows PowerShell Web Access, você pode personalizar a co
 
 8. Depois que você clicar em **Instalar**, a página **Progresso da instalação** exibirá o progresso, os resultados e mensagens da instalação, como avisos, falhas ou as etapas de configuração pós-instalação necessárias ao Windows PowerShell Web Access. Após a instalação do Windows PowerShell Web Access, você será solicitado a examinar o arquivo Leiame, que contém instruções de configuração básicas e necessárias para o gateway. Essas instruções também estão incluídas neste tópico. O caminho para o arquivo Leiame é `C:\Windows\Web\PowerShellWebAccess\wwwroot\README.txt`.
 
-### <a name="configure-the-gateway"></a>configurar o gateway
+### <a name="configure-the-gateway"></a>Configurar o gateway
 
 As instruções nesta seção referem-se à instalação do aplicativo Web Windows PowerShell Web Access em um subdiretório do seu site e não no diretório raiz. Esse procedimento é o equivalente baseado em GUI das ações executadas pelo cmdlet `Install-PswaWebApplication` . Esta seção também inclui instruções sobre como usar o Gerenciador do IIS para configurar o gateway do Windows PowerShell Web Access como um site raiz.
 
@@ -373,7 +373,7 @@ Para obter mais detalhes sobre as regras e a segurança de autorização do Wind
 
 1. ![Observação de segurança](images/SecurityNote.jpeg) Etapa opcional para restringir o acesso de usuários usando as configurações de sessão:
 
-   verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+   verifique se já existem as configurações de sessão que você deseja usar em suas regras. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 1. Digite o seguinte e pressione **Enter**.
 

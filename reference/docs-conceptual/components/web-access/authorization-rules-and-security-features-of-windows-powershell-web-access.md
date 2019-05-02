@@ -3,15 +3,15 @@ ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058413"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
-Atualizado em: 24 de junho de 2013
+Atualização: 24 de junho de 2013
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
@@ -52,7 +52,7 @@ A tabela a seguir descreve as quatro camadas de segurança entre os usuários fi
 |1|[recursos de segurança do servidor Web do IIS](#iis-web-server-security-features)|
 |2|[autenticação de gateway baseada em formulários do Windows PowerShell Web Access](#windows-powershell-web-access-forms-based-gateway-authentication)|
 |3|[regras de autorização do Windows PowerShell Web Access](#windows-powershell-web-access-authorization-rules)|
-|4|[regras de autorização e autenticação de destino](#target-authentication-and-authorization-rules)|
+|4|[autenticação de destino e regras de autorização](#target-authentication-and-authorization-rules)|
 
 Informações detalhadas sobre cada camada podem ser encontradas nos seguintes títulos:
 
@@ -139,7 +139,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
    Remove-PswaAuthorizationRule -ID <rule ID>
    ```
 
-   De forma alternativa, se você não souber o número da ID, mas souber o nome amigável da regra que deseja remover, poderá obter o nome da regra e redirecioná-la para o cmdlet `Remove-PswaAuthorizationRule` para remover a regra, como mostrado no seguinte exemplo:
+   Se você não sabe o número da ID, mas sabe o nome amigável da regra que deseja remover, coloque-o no cmdlet `Remove-PswaAuthorizationRule` para remover a regra, como mostrado no seguinte exemplo:
 
    ```
    Get-PswaAuthorizationRule `
@@ -158,7 +158,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
 
 - O administrador criou um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e deseja restringir o acesso a usuários específicos. O administrador cria um grupo de usuários chamado **Level1Support** e define a seguinte regra: **Level1Support,\*,PswaEndpoint**. A regra concede acesso a todos os usuários no grupo **Level1Support** a todos os computadores com a configuração **PswaEndpoint**. De modo semelhante, o acesso pode ser restrito a um conjunto específico de computadores.
 
-- Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define duas regras: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
+- Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define as duas regras a seguir: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
 
 - Um administrador configurou um ambiente de teste privado e deseja permitir que todos os usuários da rede autorizados acessem todos os computadores na rede aos quais têm acesso normalmente, com acesso a todas as configurações de sessão que acessam tipicamente. Como esse é um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura. - O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que usa o caractere curinga **\*** para representar todos os usuários, todos os computadores e todas as configurações. - Essa regra equivale ao seguinte: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 

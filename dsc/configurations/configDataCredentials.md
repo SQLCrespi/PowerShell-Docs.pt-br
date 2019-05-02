@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
 ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "55675885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080145"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 
@@ -25,7 +25,7 @@ Para suprimir essas mensagens de erro e aviso, use as palavras-chave de dados de
 > [!NOTE]
 > Armazenar/transmitir senhas de texto sem formatação não criptografadas não é seguro. É recomendável proteger credenciais usando as técnicas discutidas mais adiante neste tópico.
 > O serviço de DSC de Automação do Azure permite que gerenciar centralmente as credenciais a serem compiladas em configurações e armazenadas com segurança.
-> Para obter informações, consulte: [Compilando configurações de DSC / Ativos de credencial](/azure/automation/automation-dsc-compile#credential-assets)
+> Para saber mais, consulte: [Compilando configurações de DSC/ativos de credencial](/azure/automation/automation-dsc-compile#credential-assets)
 
 ## <a name="handling-credentials-in-dsc"></a>Lidando com Credenciais na DSC
 
@@ -58,14 +58,14 @@ Group [String] #ResourceName
 }
 ```
 
-Esse exemplo usa um recurso [Group](../resources/resources.md) do módulo interno de recurso de DSC `PSDesiredStateConfiguration`.
+Esse exemplo usa um recurso [Group](../resources/resources.md) do módulo interno de recurso DSC `PSDesiredStateConfiguration`.
 Pode criar grupos locais e adicionar ou remover membros.
 Ele aceita a propriedade `Credential` e a propriedade `PsDscRunAsCredential` automática.
 No entanto, o recurso usa apenas a propriedade `Credential`.
 
 Para saber mais sobre a propriedade `PsDscRunAsCredential`, veja [Execução do DSC com as credenciais do usuário](runAsUser.md).
 
-## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade de credencial do recurso Group
+## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade Credential do recurso Group
 
 A DSC é executada em `Local System`; portanto, já tem permissões para alterar os usuários locais e grupos.
 Se o membro adicionado for uma conta local, nenhuma credencial será necessária.
@@ -137,7 +137,7 @@ Esse exemplo tem dois problemas:
 1. Um erro explica que senhas de texto sem formatação não são recomendadas
 2. Um aviso alerta para não usar uma credencial de domínio
 
-Os sinalizadores **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** suprimir o erro e aviso informando o usuário sobre o risco envolvido.
+Os sinalizadores **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** suprimem o erro e o aviso que informam o usuário sobre o risco envolvido.
 
 ## <a name="psdscallowplaintextpassword"></a>PSDSCAllowPlainTextPassword
 
@@ -181,7 +181,7 @@ DomainCredentialExample -ConfigurationData $cd
 
 ### <a name="localhostmof"></a>localhost.mof
 
-O **PSDSCAllowPlainTextPassword** sinalizador requer que o usuário confirme o risco de armazenar senhas em texto sem formatação em um arquivo MOF. No arquivo MOF gerado, mesmo que um **PSCredential** objeto que contém uma **SecureString** tiver sido usado, as senhas ainda aparecem como texto sem formatação. Isso é o único momento em que as credenciais são expostas. Obtendo acesso a este dá do arquivo MOF qualquer pessoa acesse a conta de administrador.
+O sinalizador **PSDSCAllowPlainTextPassword** requer que o usuário confirme o risco de armazenar senhas em texto sem formatação em um arquivo MOF. No arquivo MOF gerado, mesmo que um objeto **PSCredential** que contenha uma **SecureString** tenha sido usado, as senhas continuarão aparecendo como texto sem formatação. Esse é o único momento que as credenciais são expostas. Obter acesso a esse arquivo MOF dá a qualquer pessoa acesso à conta Administrador.
 
 ```
 /*
@@ -218,14 +218,14 @@ ModuleVersion = "1.0";
 
 ### <a name="credentials-in-transit-and-at-rest"></a>Credenciais em trânsito e em repouso
 
-- O **PSDscAllowPlainTextPassword** sinalizador permite a compilação de arquivos MOF que contêm as senhas em texto não criptografado.
-  Tome precauções ao armazenar os arquivos MOF que contém senhas de texto não criptografado.
-- Quando o arquivo MOF é entregue a um nó no **enviar por Push** modo, o WinRM criptografa a comunicação para proteger a senha de texto não criptografado, a menos que você substituir o padrão com o **AllowUnencrypted** parâmetro.
-  - Criptografar o MOF com um certificado protege o arquivo MOF em repouso, antes que ela foi aplicada a um nó.
-- Na **Pull** modo, você pode configurar o servidor de pull do Windows para usar HTTPS para criptografar o tráfego usando o protocolo especificado no servidor de informações da Internet. Para obter mais informações, consulte os artigos [Configurando um cliente de pull de DSC](../pull-server/pullclient.md) e [arquivos MOF protegendo com certificados](../pull-server/secureMOF.md).
-  - No [configuração de estado de automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) serviço Pull tráfego sempre será criptografado.
-- No nó, os arquivos MOF são criptografados em repouso a partir do PowerShell 5.0.
-  - No PowerShell 4.0 MOF arquivos não são criptografados em repouso, a menos que eles são criptografados com um certificado quando enviada por push ou extraídos para o nó.
+- O sinalizador **PSDscAllowPlainTextPassword** possibilitar compilar os arquivos MOF que contêm senhas com texto não criptografado.
+  Tenha cuidado ao armazenar arquivos MOF contendo senhas com texto não criptografado.
+- Quando o arquivo MOF é entregue a um Nó no modo **Push**, o WinRM criptografa a comunicação para proteger a senha com texto não criptografado, a menos que você substitua o padrão pelo parâmetro **AllowUnencrypted**.
+  - A criptografia do MOF com um certificado protege o arquivo MOF em repouso antes que ele seja aplicado a um nó.
+- No modo **Pull**, você pode configurar o servidor de pull do Windows para usar HTTPS de modo a criptografar o tráfego usando o protocolo especificado no Servidor de Informações da Internet. Para saber mais, confira os artigos [Configurando um cliente pull de DSC](../pull-server/pullclient.md) e [Protegendo arquivos MOF com certificados](../pull-server/secureMOF.md).
+  - No serviço [State Configuration da Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), o tráfego de Pull sempre é criptografado.
+- No Nó, os arquivos MOF são criptografados em repouso, começando no PowerShell 5.0.
+  - No PowerShell 4.0, os arquivos MOF são descriptografados em repouso, a menos que sejam criptografados com um certificado quando o push e o pull são efetuados no Nó.
 
 **A Microsoft avisa para evitar senhas de texto sem formatação devido ao risco de segurança significativo.**
 
@@ -234,7 +234,7 @@ ModuleVersion = "1.0";
 Executar o script de configuração de exemplo novamente (com ou sem criptografia) ainda gera um aviso de que o uso de uma conta de domínio para uma credencial não é recomendado.
 O uso de uma conta local elimina a possível exposição das credenciais de domínio que podem ser usadas em outros servidores.
 
-**Ao usar credenciais com recursos de DSC, prefira uma conta local a uma conta de domínio, quando possível.**
+**Ao usar credenciais com recursos DSC, prefira uma conta local a uma conta de domínio, quando possível.**
 
 Se houver um "\\" ou um "\@", na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.

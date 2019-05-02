@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 ms.openlocfilehash: 46a278b83edb9d8e3d75b0874603710d416be3b5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085722"
 ---
 # <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a>Palavra-chave de Import-DscResource dá suporte ao parâmetro -ModuleVersion
 
@@ -16,9 +16,9 @@ Adicionamos um novo parâmetro à palavra-chave dinâmica `Import-DscResource`, 
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName(s)>] [-ModuleVersion <ModuleVersion>]
 ```
 
-* **Nome**: nomes de um ou mais recursos a serem importados.
-* **ModuleName**: nomes de módulo ou objetos ModuleSpecification de um ou mais módulos a ser importados.
-* **ModuleVersion**: versão de módulo a ser importada. Se for usado, ModuleName deverá representar apenas um módulo por nome.
+* **Name**: nomes de um ou mais recursos a serem importados.
+* **ModuleName**: nomes de módulo ou objetos ModuleSpecification de um ou mais módulos que devem ser importados.
+* **ModuleVersion**: versão do módulo a ser importado. Se for usado, ModuleName deverá representar apenas um módulo por nome.
 
 No ISE do Windows PowerShell, ele é exibido com o IntelliSense:
 

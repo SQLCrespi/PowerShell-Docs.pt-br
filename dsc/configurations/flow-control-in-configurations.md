@@ -3,22 +3,22 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Instruções condicionais e loops em configurações
 ms.openlocfilehash: 0073d94d28afbb45bb635442129a6cddde4c805a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080128"
 ---
 # <a name="conditional-statements-and-loops-in-configurations"></a>Instruções condicionais e loops em configurações
 
-Você pode fazer sua [configurações](configurations.md) mais dinâmicos usando as palavras-chave de controle de fluxo do PowerShell. Este artigo mostrará como você pode usar instruções condicionais e loops para tornar as configurações mais dinâmico. Combinando condicionais e loops com [parâmetros](add-parameters-to-a-configuration.md) e [dados de configuração](configData.md) permite que você mais flexibilidade e controle quando suas configurações de compilação.
+Você pode tornar suas [Configurações](configurations.md) mais dinâmicas usando palavras-chave de controle de fluxo do PowerShell. Este artigo mostra como você pode usar instruções condicionais e loops para tornar as Configurações mais dinâmicas. Combinar condicionais e loops com [parâmetros](add-parameters-to-a-configuration.md) e [Dados de Configuração](configData.md) proporciona a você mais flexibilidade e controle ao compilar as Configurações.
 
-Assim como uma função ou um bloco de Script, você pode usar qualquer linguagem do PowerShell dentro de uma configuração. As instruções que você usa serão avaliadas apenas quando você chama a sua configuração para compilar um arquivo ". MOF". Os exemplos abaixo mostram cenários simples para demonstrar conceitos. Condicionais são loops com mais frequência são usados com parâmetros e dados de configuração.
+Assim com uma Função ou um Bloco de Script, é possível usar qualquer linguagem do PowerShell em uma Configuração. As instruções usadas serão avaliadas somente quando você chamar a Configuração para compilar um arquivo ".mof". Os exemplos abaixo mostram cenários simples para demonstrar conceitos. As condicionais são loops usados frequentemente com parâmetros e Dados de Configuração.
 
-Neste exemplo simples, o **serviço** bloco de recursos recupera o estado atual de um serviço em tempo de compilação para gerar um arquivo ". MOF" que mantém seu estado atual.
+Neste exemplo simples, o bloco de recurso **Service** recupera o estado atual de um serviço no tempo de compilação para gerar um arquivo ".mof" que mantém seu estado atual.
 
 > [!NOTE]
-> Usar blocos de recurso dinâmicos antecipará a eficácia do Intellisense. O analisador do PowerShell não pode determinar se os valores especificados são aceitáveis, até que a configuração for compilada.
+> Usar blocos de recurso dinâmicos inviabiliza a eficácia do Intellisense. O analisador do PowerShell não pode determinar se os valores especificados são aceitáveis enquanto a Configuração não for compilada.
 
 ```powershell
 Configuration ServiceState
@@ -37,7 +37,7 @@ Configuration ServiceState
 }
 ```
 
-Além disso, você poderia criar uma **Service** bloquear recursos para todos os serviços no computador atual, usando um `foreach` loop.
+Além disso, você pode criar um bloco de recurso **Service** para cada serviço no computador atual usando um loop `foreach`.
 
 ```powershell
 Configuration ServiceState
@@ -59,7 +59,7 @@ Configuration ServiceState
 }
 ```
 
-Também só pode criar configurações para computadores que estão online, usando um simples `if` instrução.
+Também é possível criar configurações somente para computadores que estão online, usando uma instrução `if` simples.
 
 ```powershell
 Configuration ServiceState
@@ -85,7 +85,7 @@ Configuration ServiceState
 ```
 
 > [!NOTE]
-> Blocos de recurso dinâmico na referência exemplos acima no computador atual. Nesse caso, o que seria a máquina que você está criando a configuração no, não o nó de destino.
+> Os blocos de recurso dinâmicos nos exemplos acima fazem referência ao computador atual. Nesse caso, esse seria o computador no qual você cria a Configuração, não o Nó de destino.
 
 <!---
 Mention Get-DSCConfigurationFromSystem
@@ -93,19 +93,19 @@ Mention Get-DSCConfigurationFromSystem
 
 ## <a name="summary"></a>Resumo
 
-Em resumo, você pode usar qualquer linguagem do PowerShell dentro de uma configuração.
+Resumindo, você pode usar qualquer linguagem do PowerShell em uma Configuração.
 
-Isso inclui coisas como:
+Isso inclui itens como:
 
 - Objetos personalizados
 - Tabelas de hash
-- Manipulação de cadeia de caracteres
+- Manipulação da cadeia de caracteres
 - Comunicação remota
 - WMI e CIM
-- Objetos do Active Directory
+- Objetos do ActiveDirectory
 - e mais...
 
-Qualquer código do PowerShell definido em uma configuração será avaliado um tempo de compilação, mas você também pode colocar o código no script que contém sua configuração. Qualquer código fora do bloco de configuração será executado quando você importar sua configuração.
+Qualquer código do PowerShell definido em uma Configuração será avaliado no tempo de compilação, mas você também pode colocar o código no script que contém sua Configuração. Qualquer código fora do bloco de Configuração será executado ao importar sua Configuração.
 
 ## <a name="see-also"></a>Consulte também
 

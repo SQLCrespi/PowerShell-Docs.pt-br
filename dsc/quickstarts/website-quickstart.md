@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
-title: Guia de início rápido - criar um site com DSC
+title: 'Início Rápido: Criar um site com o DSC'
 ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079109"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-# <a name="quickstart---create-a-website-with-dsc"></a>Guia de início rápido - criar um site com DSC
+# <a name="quickstart---create-a-website-with-dsc"></a>Início Rápido: Criar um site com o DSC
 
 Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.
 O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `inetpub\wwwroot` desse servidor.
@@ -112,7 +112,7 @@ A pasta `WebsiteTest` contém um arquivo chamado `localhost.mof`.
 Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 
 O cmdlet `Start-DscConfiguration` indica ao [Gerenciador de Configurações Local (LCM)](../managing-nodes/metaConfig.md), qual é o mecanismo de DSC a aplicar à configuração.
-O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.
+O LCM realiza o trabalho de chamar os recursos DSC para aplicar a configuração.
 
 Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute o mesmo comando:
 
@@ -130,5 +130,5 @@ Você deve ver a página de HTML "Hello World" que criou como a primeira etapa d
 ## <a name="next-steps"></a>Próximas etapas
 
 - Saiba mais sobre configurações de DSC em [Configurações de DSC](../configurations/configurations.md).
-- Veja quais recursos de DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos de DSC](../resources/resources.md).
-- Localize as configurações e recursos de DSC na [Galeria do PowerShell](https://www.powershellgallery.com/).
+- Veja quais recursos DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos DSC](../resources/resources.md).
+- Localize as configurações e recursos DSC na [Galeria do PowerShell](https://www.powershellgallery.com/).

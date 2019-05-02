@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: 7f6aaf209601e99b0120407eb301d32fcfda9eb8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078054"
 ---
 # <a name="msftdsclocalconfigurationmanager-class"></a>Classe MSFT_DSCLocalConfigurationManager
 
@@ -45,9 +45,9 @@ A classe **MSFT_DSCLocalConfigurationManager** tem os métodos a seguir.
 | [GetMetaConfiguration](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Obtém as configurações LCM que são usadas para controlar o Agente de Configuração.|
 | [PerformRequiredConfigurationChecks](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)| Inicia a verificação de consistência.|
 | [RemoveConfiguration](msft-dsclocalconfigurationmanager-removeconfiguration.md)| Remove os arquivo de configuração.|
-| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chama diretamente o método **Get** de um recurso de DSC.|
-| [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chama diretamente o método **Set** de um recurso de DSC.|
-| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chama diretamente o método **Test** de um recurso de DSC.|
+| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chama diretamente o método **Get** de um recurso DSC.|
+| [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chama diretamente o método **Set** de um recurso DSC.|
+| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chama diretamente o método **Test** de um recurso DSC.|
 | [Reversão](msft-dsclocalconfigurationmanager-rollback.md)| Reverte a uma configuração anterior.|
 | [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerenciado e o salva como alteração pendente.|
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envia o documento de configuração para o nó gerenciado e usa o Agente de Configuração para aplicar a configuração.|

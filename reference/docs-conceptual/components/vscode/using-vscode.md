@@ -3,11 +3,11 @@ title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 08/06/2018
 ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086708"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
@@ -66,21 +66,21 @@ Para sair do Visual Studio Code, **Arquivo -> Sair**.
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>Instalando a extensão do PowerShell em sistemas restritos
 
-Alguns sistemas são configurados de forma que exige que todas as assinaturas de código a ser verificada e, portanto, requer o Editor do PowerShell dos serviços a serem aprovadas manualmente para executar o sistema.
-Uma atualização de diretiva de grupo que altera a política de execução é uma causa provável se você instalou a extensão do PowerShell, mas está atingindo um erro como:
+Alguns sistemas são configurados de forma a exigir que todas as assinaturas de código sejam verificadas e, portanto, exigem que os Serviços do Editor do PowerShell sejam aprovados manualmente para serem executados no sistema.
+Uma atualização da Política de Grupo que altera a política de execução é uma causa provável caso tenha instalado a extensão do PowerShell, mas veja um erro como:
 
 ```
 Language server startup failed.
 ```
 
-Para aprovar manualmente serviços do Editor do PowerShell e, portanto, a extensão do PowerShell para VSCode abrem um prompt e execução do PowerShell:
+Para aprovar manualmente os Serviços do Editor do PowerShell e, portanto, a extensão do PowerShell para VSCode, abra um prompt do PowerShell e execute:
 
 ```powershell
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-Você será solicitado com "Você deseja executar o software desse editor não confiáveis?"
-Tipo `R` para executar o arquivo. Em seguida, abra o Visual Studio Code e verifique se a extensão do PowerShell está funcionando corretamente. Se você ainda tiver problemas de Introdução, fale na [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
+O sistema mostrará a mensagem "Você deseja executar o software desse editor não confiável?"
+Digite `R` para executar o arquivo. Em seguida, abra o Visual Studio Code e verifique se a extensão do PowerShell está funcionando corretamente. Se você ainda tiver problemas para começar, fale conosco no [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
 
 #### <a name="using-a-specific-installed-version-of-powershell"></a>Uso de uma versão instalada específica do PowerShell
 
@@ -122,7 +122,7 @@ Recomendamos as seguintes definições de configuração para o Visual Studio Co
 }
 ```
 
-Se você não quiser que essas configurações afetam todos os tipos de arquivos, o VSCode também permite que configurações por idioma. Criar uma configuração específica da linguagem, colocando as configurações um `[<language-name>]` campo. Por exemplo:
+Caso não queira que essas configurações afetem todos os tipos de arquivos, o VSCode também permite configurações por idioma. Crie uma configuração específica para um idioma colocando as configurações em um campo `[<language-name>]`. Por exemplo:
 
 ```json
 "[powershell]": {
@@ -131,13 +131,13 @@ Se você não quiser que essas configurações afetam todos os tipos de arquivos
 }
 ```
 
-Para obter mais informações sobre o arquivo de codificação no VS Code, consulte [Entendendo a codificação do arquivo](understanding-file-encoding.md).
+Para saber mais sobre a codificação do arquivo no VS Code, confira [Entendendo a codificação do arquivo](understanding-file-encoding.md).
 
 ## <a name="debugging-with-visual-studio-code"></a>Depuração com o Visual Studio Code
 
 ### <a name="no-workspace-debugging"></a>Depuração sem espaço de trabalho
 
-A partir da versão do Visual Studio Code 1.9, você pode depurar scripts do PowerShell sem a necessidade de abrir a pasta que contém o script do PowerShell. Abra o arquivo de script do PowerShell com **arquivo -> Abrir arquivo...** , defina um ponto de interrupção em uma linha (pressione F9) e, em seguida, pressione F5 para iniciar a depuração. Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
+A partir da versão do Visual Studio Code 1.9, você pode depurar scripts do PowerShell sem a necessidade de abrir a pasta que contém o script do PowerShell. Abra o arquivo de script do PowerShell usando **Arquivo -> Abrir Arquivo...** , defina um ponto de interrupção em uma linha (pressione F9) e, em seguida, pressione F5 para iniciar a depuração. Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
 
 ### <a name="workspace-debugging"></a>Depuração do workspace
 
@@ -194,7 +194,7 @@ Siga estas etapas para criar o arquivo de configuração de depuração:
 
   Isso representa os cenários comuns de depuração.
   No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...**.
-  Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a ser adicionada é **PowerShell: Iniciar o Script**.
+  Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a adicionar é **PowerShell: Iniciar Script**.
   Com essa configuração, você pode especificar um arquivo específico com argumentos opcionais que devem ser iniciado sempre que você pressionar F5, não importa qual arquivo está ativo no momento no editor.
 
   Quando a configuração de depuração é estabelecida, selecione qual configuração você deseja usar durante uma sessão de depuração, selecionando uma no menu suspenso de configuração de depuração na barra de ferramentas da exibição **Depurar**.

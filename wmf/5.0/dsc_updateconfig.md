@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 ms.openlocfilehash: 31fde15e644455dbe77f68bca713bf026544fdc7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057563"
 ---
 # <a name="on-demand-pull-of-dsc-configurations"></a>PULL sob demanda de configurações DSC
 
@@ -19,7 +19,7 @@ Depois de disparado, o pull se comporta exatamente como faria quando disparado d
 2. Se elas forem iguais, ele será concluído com êxito sem aplicar a configuração.
 3. Se forem diferentes, a configuração será movida para baixo do servidor de recepção e aplicada.
 
-**Observação:** se RefreshMode = “Push” da Metaconfiguração, um erro será retornado por este cmdlet; portanto, esse cmdlet nunca executará nenhuma ação quando um nó de destino estiver no modo “Push”.
+**Observação:** se RefreshMode = “Push” para a Metaconfiguração, este cmdlet retorna um erro; portanto, esse cmdlet nunca executará nenhuma ação quando um nó de destino estiver no modo “Push”.
 
 ```powershell
 Update-DscConfiguration     [[-ComputerName] <string[]>]

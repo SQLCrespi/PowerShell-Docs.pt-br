@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
 ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085479"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -206,12 +206,12 @@ Este recurso evita que os nós executem as configurações ou os arquivos de mó
 ### <a name="how-to-sign-configuration-and-module"></a>Como assinar a configuração e o módulo
 
 ***
-* Arquivos de configuração (. MOFs): O cmdlet do PowerShell existente [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) é estendido para dar suporte à assinatura de arquivos MOF.
-* Módulos A assinatura dos módulos é feita ao assinar o catálogo de módulo correspondente usando as seguintes etapas:
-    1. Crie um arquivo de catálogo: Um arquivo de catálogo contém uma coleção de hashes criptográficos ou impressões digitais.
+* Arquivos de configuração (.MOFs): o cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) existente do PowerShell foi aprimorado para dar suporte à assinatura de arquivos MOF.
+* Módulos: a assinatura dos módulos é feita com a assinatura do catálogo do módulo correspondente por meio das seguintes etapas:
+    1. Crie um arquivo de catálogo: um arquivo de catálogo contém uma coleção de hashes criptográficos ou impressões digitais.
        Cada impressão digital corresponde a um arquivo que está incluído no módulo.
        O novo cmdlet [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx) foi adicionado para permitir que os usuários criem um arquivo de catálogo para seu módulo.
-    2. Assine o arquivo de catálogo: Use [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) para assinar o arquivo de catálogo.
+    2. Assine o arquivo de catálogo: use [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) para assinar o arquivo de catálogo.
     3. Coloque o arquivo de catálogo dentro da pasta do módulo.
 Por convenção, o arquivo de catálogo do módulo deve ser colocado na pasta do módulo, com o mesmo nome do módulo.
 

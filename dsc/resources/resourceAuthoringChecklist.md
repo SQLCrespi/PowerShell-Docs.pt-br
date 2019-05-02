@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Lista de verificação da criação de recursos
 ms.openlocfilehash: 7b1a096bba1b729c096b6689178ee022e12e4634
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076575"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação da criação de recursos
 
-Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso de DSC.
+Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso DSC.
 
 ## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>O módulo de recurso contém os arquivos .psd1 e schema.mof de cada um dos recursos
 
@@ -85,7 +85,7 @@ If ($error.count –ne 0) {
 
 ## <a name="resource-is-idempotent-in-the-positive-case"></a>O recurso é idempotente no caso positivo
 
-Uma das características fundamentais de recursos de DSC é o GUID do projeto. Isso significa que aplicar várias vezes uma configuração de DSC que contém esse recurso fará com que o mesmo resultado seja obtido sempre. Por exemplo, se criarmos uma configuração que contém o seguinte recurso File:
+Uma das características fundamentais dos recursos da DSC é a idempotência. Isso significa que aplicar várias vezes uma configuração DSC que contém esse recurso fará com que o mesmo resultado seja obtido sempre. Por exemplo, se criarmos uma configuração que contém o seguinte recurso File:
 
 ```powershell
 File file {
@@ -210,11 +210,11 @@ Criando exemplos de qualidade que ajudarão outros a entender como usá-los. Iss
 
 Mensagens de erro úteis devem ser:
 
-- Lá: O maior problema com mensagens de erro é que eles geralmente não existem, portanto, verifique se que eles estão lá.
-- Fácil de entender: Códigos de erro de não obscuros, legível por humanos
-- Preciso Descrever o que é exatamente o problema
-- Construtivas: Conselhos de como corrigir o problema
-- Cortês: Não culpam o usuário ou torná-los se aflija
+- Existentes: o maior problema com mensagens de erro é que elas geralmente não existem; portanto, certifique-se de que elas existem.
+- Fácil de entender: legíveis por humanos e sem códigos de erro obscuros
+- Precisas: descrevem qual é exatamente o problema
+- Construtivas: fazem recomendações sobre como corrigir o problema
+- Educadas: não culpam o usuário ou os fazem sentir-se mal
 
 Certifique-se de verificar erros nos cenários de ponta a ponta (usando `Start-DscConfiguration`), pois eles podem ser diferentes daqueles retornados ao executar as funções de recurso diretamente.
 
@@ -222,7 +222,7 @@ Certifique-se de verificar erros nos cenários de ponta a ponta (usando `Start-D
 
 Certifique-se de que logs gerados pelo recurso são fáceis de entender e fornecem valor ao usuário. Os recursos devem gerar todas as informações que podem ser úteis para o usuário; contudo, mais logs nem sempre são o melhor. É necessário evitar a redundância e gerar dados que não fornecem valor adicional – não faça alguém percorrer centenas de entradas de log para encontrar o que está procurando. Obviamente, não fornecer nenhum log também não é uma solução aceitável para esse problema.
 
-Durante o teste, também é necessário analisar logs detalhados e de depuração (executando `Start-DscConfiguration` com as opções `–Verbose` e `–Debug` de maneira adequada), bem como os logs do ETW. Para ver os logs do ETW do DSC, vá para Visualizador de eventos e abra a pasta a seguir: Aplicativos e serviços Microsoft - Windows - Desired State Configuration.  Por padrão, haverá o canal Operacional, mas lembre-se de habilitar os canais Analítico e de Depuração antes de executar a configuração.
+Durante o teste, também é necessário analisar logs detalhados e de depuração (executando `Start-DscConfiguration` com as opções `–Verbose` e `–Debug` de maneira adequada), bem como os logs do ETW. Para ver os logs do ETW do DSC, vá para Visualizador de Eventos e abra a pasta a seguir: Aplicativos e Serviços – Microsoft – Windows – Desired State Configuration.  Por padrão, haverá o canal Operacional, mas lembre-se de habilitar os canais Analítico e de Depuração antes de executar a configuração.
 Para habilitar os canais Analítico/de Depuração, é possível executar o script abaixo:
 
 ```powershell
@@ -283,7 +283,7 @@ As funções **Get/Set/Test-TargetResource** devem ser executadas automaticament
 
 Esta lista de verificação contém itens cujo teste é importante e/ou que, frequentemente, estão ausentes. Haverá vários testes, principalmente, aqueles funcionais que serão específicos ao recurso que está sendo testado e que não são mencionados aqui. Não se esqueça dos casos de teste negativos.
 
-## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Prática recomendada Módulo de recurso contém a pasta Tests com o script ResourceDesignerTests.ps1
+## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Prática recomendada: o módulo de recurso contém a pasta Tests com o script ResourceDesignerTests.ps1
 
 É uma prática recomendada criar a pasta “Tests” dentro do módulo de recurso, criar o arquivo `ResourceDesignerTests.ps1` e adicionar testes usando **Test-xDscResource** e **Test-xDscSchema** para todos os recursos em determinado módulo.
 Dessa forma, você pode validar rapidamente os esquemas de todos os recursos de determinado módulo e fazer a verificação de integridade antes da publicação.
@@ -294,7 +294,7 @@ Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
 
-## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Prática recomendada Pasta do recurso contém o script do designer de recursos para a geração de esquema
+## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Prática recomendada: a pasta do recurso contém um script de designer de recurso para geração de esquema
 
 Cada recurso deve conter um script do designer de recursos que gera um esquema mof do recurso. Esse arquivo deve ser colocado no `<ResourceName>\ResourceDesignerScripts` e ser nomeado Generate `<ResourceName>Schema.ps1` para o recurso xRemoteFile esse arquivo seria chamado `GenerateXRemoteFileSchema.ps1` e contém:
 
@@ -310,7 +310,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile
 ```
 
-## <a name="best-practice-resource-supports--whatif"></a>Prática recomendada Suporte de recurso - WhatIf
+## <a name="best-practice-resource-supports--whatif"></a>Prática recomendada: o recurso dá suporte a -WhatIf
 
 Caso o recurso esteja executando operações “perigosas”, é uma prática recomendada implementar a funcionalidade `-WhatIf`. Após a conclusão, certifique-se de que a saída `-WhatIf` descreve corretamente as operações que ocorreriam se o comando fosse executado sem a opção `-WhatIf`.
 Além disso, verifique se as operações não são executadas (não é feita nenhuma alteração ao estado do nó) quando a opção `–WhatIf` está presente.

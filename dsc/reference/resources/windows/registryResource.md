@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Registry de DSC
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076949"
 ---
 # <a name="dsc-registry-resource"></a>Recurso Registry de DSC
 
@@ -42,7 +42,7 @@ Registry [string] #ResourceName
 | Hex| Indica se os dados serão expressos em formato hexadecimal. Se especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor padrão é **$false**.|
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 | ValueData| Os dados para o valor de registro.|
-| ValueType| Indica o tipo de valor. Há suporte para estes tipos: Cadeia de caracteres (REG_SZ), o binário (REG-BINARY), Dword de 32 bits (REG_DWORD), Qword de 64 bits (REG_QWORD), cadeia de caracteres múltipla (REG_MULTI_SZ), cadeia de caracteres expansível (REG_EXPAND_SZ) |
+| ValueType| Indica o tipo de valor. Há suporte para estes tipos: cadeia de caracteres (REG_SZ), binário (REG-BINARY), Dword de 32 bits (REG_DWORD), Qword de 64 bits (REG_QWORD), cadeia de caracteres múltipla (REG_MULTI_SZ), cadeia de caracteres expansível (REG_EXPAND_SZ) |
 
 ## <a name="example"></a>Exemplo
 

@@ -4,15 +4,15 @@ contributor: manikb
 keywords: galeria,powershell,cmdlet,psget
 title: Cmdlets de solução de problemas
 ms.openlocfilehash: f5cd9c0cc23fef5891bf02c10b6541ab0f9d418a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084174"
 ---
 # <a name="troubleshooting-cmdlets"></a>Cmdlets de solução de problemas
 
-## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Como resolver o problema “AVISO: falha ao fazer o download do Pacote 'nome do pacote'”
+## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Como resolver o problema "AVISO: Falha ao baixar o pacote 'nome do seu pacote'"
 
 Há relatos de que `Install-Module` ou `Update-Module` às vezes falha em alguns computadores.
 Com base em nossa investigação, isso está relacionado à conexão de rede.

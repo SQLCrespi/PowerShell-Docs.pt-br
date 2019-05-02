@@ -4,17 +4,17 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Perguntas frequentes sobre a Galeria do PowerShell
 ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58057681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084600"
 ---
 # <a name="frequently-asked-questions"></a>perguntas frequentes
 
 ## <a name="what-is-a-powershell-module"></a>O que é um módulo do PowerShell?
 
-Um módulo do PowerShell é um pacote reutilizável que contém algumas funcionalidades do PowerShell. Tudo no PowerShell (funções, variáveis, recursos de DSC etc.) pode ser empacotado em módulos. Normalmente, os módulos são pastas que contêm tipos específicos de arquivos armazenados em um caminho específico. Há alguns tipos diferentes de módulos do PowerShell por aí.
+Um módulo do PowerShell é um pacote reutilizável que contém algumas funcionalidades do PowerShell. Tudo no PowerShell (funções, variáveis, recursos DSC etc.) pode ser empacotado em módulos. Normalmente, os módulos são pastas que contêm tipos específicos de arquivos armazenados em um caminho específico. Há alguns tipos diferentes de módulos do PowerShell por aí.
 
 ## <a name="what-is-a-powershell-script"></a>O que é um script do PowerShell?
 
@@ -113,7 +113,7 @@ Para atualizar os campos de metadados do script, use o cmdlet [Update-ScriptFile
 
 O termo módulo do PowerShell também se refere aos arquivos que implementam a funcionalidade real. Arquivos de módulo de script (.psm1) contêm código do PowerShell. Arquivos de módulo binários (.dll) contêm código compilado.
 
-Esta é uma forma de pensar neles: a pasta que encapsula o módulo é a pasta de módulo. A pasta de módulo pode conter um manifesto de módulo (.psd1) que descreve o conteúdo da pasta. Os arquivos que realmente fazem o trabalho são os arquivos de módulo de script (.psm1) e os arquivos de módulo binário (.dll). Os recursos de DSC ficam localizados em uma subpasta específica e são implementados como arquivos de módulo de script ou de módulo binário.
+Esta é uma forma de pensar neles: a pasta que encapsula o módulo é a pasta de módulo. A pasta de módulo pode conter um manifesto de módulo (.psd1) que descreve o conteúdo da pasta. Os arquivos que realmente fazem o trabalho são os arquivos de módulo de script (.psm1) e os arquivos de módulo binário (.dll). Os recursos DSC ficam localizados em uma subpasta específica e são implementados como arquivos de módulo de script ou de módulo binário.
 
 Todos os módulos na Galeria contêm manifestos de módulo e a maioria desses módulos contêm arquivos de módulo de script ou módulo binário. O termo módulo pode ser confuso devido a esses significados diferentes. A menos que seja indicado explicitamente o contrário, todos os usos da palavra módulo nesta página fazem referência à pasta de módulo que contém esses arquivos.
 
@@ -150,7 +150,7 @@ Na camada do provedor do pacote PackageManagement, o provedor de pacote PSModule
 
 ![Arquitetura do PowerShellGet](Images/powershellgetArchitecture.png)
 
-Figura 1: Arquitetura do PowerShellGet
+Figura 1: Arquitetura do PowerShellGet
 
 ## <a name="what-is-required-to-run-powershellget"></a>O que é necessário para executar o PowerShellGet?
 

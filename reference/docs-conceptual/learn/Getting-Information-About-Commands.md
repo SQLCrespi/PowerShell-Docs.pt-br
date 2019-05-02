@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Obtendo informações sobre comandos
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057699"
 ---
 # <a name="getting-information-about-commands"></a>Obtendo informações sobre comandos
 
@@ -74,7 +74,7 @@ Essa lista inclui comandos externos em seu caminho de pesquisa, portanto pode co
 > O asterisco (\*) é usado para correspondência de curingas nos argumentos de comando do PowerShell. O \* corresponde a “um ou mais caracteres quaisquer”. Você pode digitar `Get-Command a*` para encontrar todos os comandos que começam com a letra "a". Diferentemente da correspondência de curingas no **cmd.exe**, curingas do PowerShell também serão compatíveis com um ponto.
 
 Use o parâmetro **CommandType** de `Get-Command` para obter comandos nativos de outros tipos.
-.
+cmdlet.
 
 Para obter os aliases de comando, que são os apelidos atribuídos a comandos, digite:
 

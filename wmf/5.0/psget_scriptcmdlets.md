@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: a2938c168f476e5f9c38ba55ceb45fa2b95571e2
-ms.sourcegitcommit: bad40d59598ae5597051fa381986316a2d9bf6c8
+ms.openlocfilehash: ac845a461eef4f567b74f813621f6bfa38419afb
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057312"
 ---
 # <a name="powershellget-cmdlets-for-script-management"></a>Cmdlets do PowerShellGet para Gerenciamento de Script
 
@@ -165,7 +165,7 @@ Version Name Author Description
 ## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlets Install-Script e Get-InstalledScript
 O cmdlet Install-Script permite instalar um arquivo de script específico junto com suas dependências no escopo especificado. Por padrão, os scripts são instalados no escopo AllUsers. O cmdlet Get-InstalledScript permite obter a lista de arquivos de script que foram instalados com o cmdlet Install-Script.
 
-Observação de uso: para permitir o gerenciamento e a localização dos scripts quando eles forem instalados, Install-Script criará uma pasta padrão para armazenar scripts em $home\Documents\WindowsPowerShell\Scripts e adicionará essa pasta ao seu ambiente PATH. Caso a modificação do caminho seja uma preocupação, use Save-Script em vez de Install-Script. Get-InstalledScripts e Uninstall-Script só podem funcionar com scripts colocados no sistema usando Install-Script.
+Observação de uso: para permitir o gerenciamento e a localização dos scripts quando eles são instalados, o Install-Script cria uma pasta padrão para armazenar scripts em $home\Documents\WindowsPowerShell\Scripts e adiciona essa pasta ao seu ambiente PATH. Caso a modificação do caminho seja uma preocupação, use Save-Script em vez de Install-Script. Get-InstalledScripts e Uninstall-Script só podem funcionar com scripts colocados no sistema usando Install-Script.
 ```powershell
 \# Install locations for scripts:
 \# Default scope is AllUsers.

@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58058208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084701"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 
@@ -35,7 +35,7 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 | **Marcas** | Nos módulos, as Marcas estão incluídas em PSData\PrivateData. Nos scripts, a seção é rotulada como .TAGS. Observe que as marcas não podem conter espaços, mesmo quando estão entre aspas. Elas têm significados e requisitos adicionais que são descritos mais adiante neste artigo, na seção Detalhes da marca. | Sim | Sim |
 | **Cmdlets** | São fornecidos no manifesto de módulo com CmdletsToExport. Observe que a prática recomendada consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de melhorar o desempenho do módulo de carga para os usuários. | Sim | Não |
 | **Funções** | São fornecidas no manifesto de módulo com FunctionsToExport. Observe que a prática recomendada consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de melhorar o desempenho do módulo de carga para os usuários. | Sim | Não |
-| **Recursos de DSC** | No caso dos módulos que serão usados no PowerShell 5.0 ou superior, são fornecidos no manifesto com DscResourcesToExport. Se o módulo for usado no PowerShell 4, DSCResourcesToExport não deverá ser usada, por não se tratar de uma Chave de Manifesto compatível. (A DSC não era disponibilizada antes do PowerShell 4.) | Sim | Não |
+| **Recursos DSC** | No caso dos módulos que serão usados no PowerShell 5.0 ou superior, são fornecidos no manifesto com DscResourcesToExport. Se o módulo for usado no PowerShell 4, DSCResourcesToExport não deverá ser usada, por não se tratar de uma Chave de Manifesto compatível. (A DSC não era disponibilizada antes do PowerShell 4.) | Sim | Não |
 | **Fluxos de trabalho** | Os fluxos de trabalho são publicados na Galeria do PowerShell como scripts e identificados como fluxos de trabalho (confira [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) para obter um exemplo) no código. Eles não são controlados pelo manifesto. | Não | Não |
 | **Recursos de função** | São relacionados quando o módulo publicado na Galeria do PowerShell contém um ou mais arquivos de recurso de função (.psrc), que são usados pelo JEA. Confira a documentação do JEA para saber mais sobre [recursos de função](/powershell/jea/role-capabilities). | Sim | Não |
 | **Edições do PowerShell** | São especificadas no manifesto de módulo ou de script. No caso dos módulos projetados para uso com o PowerShell 5.0 ou posterior, elas são controladas com marcas. Para o Desktop, use a marca PSEdition_Desktop. No caso do núcleo, use a marca PSEdition_Core. Para os módulos que serão usados apenas no PowerShell 5.1 ou superior, há uma chave CompatiblePSEditions no manifesto principal. Para obter mais detalhes, veja o recurso PS Edition na [documentação do PowerShell Get](module-psedition-support.md). | Sim | Sim |

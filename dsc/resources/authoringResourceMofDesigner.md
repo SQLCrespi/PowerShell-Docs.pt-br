@@ -3,18 +3,18 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076660"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md).
-Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory.
+A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md).
+Neste tópico, criaremos um recurso DSC que gerencia os usuários do Active Directory.
 Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
 
 >**Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
@@ -23,7 +23,7 @@ Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) p
 A primeira coisa que precisamos fazer é decidir sobre as propriedades que serão expostas pelo recuso. Para esse exemplo, definiremos um usuário do Active Directory com as seguintes propriedades.
 
 Nome do parâmetro Descrição
-* **UserName**: propriedade de chave que identifica um usuário com exclusividade.
+* **UserName**: propriedade da chave que identifica um usuário com exclusividade.
 * **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
 * **DomainCredential**: a senha do domínio para o usuário.
 * **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Service de DSC
 ms.openlocfilehash: 09571bd0eaa428e7d0bb7a533d6ad1c0c936e2cf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076881"
 ---
 # <a name="dsc-service-resource"></a>Recurso Service de DSC
 
@@ -39,10 +39,10 @@ Service [string] #ResourceName
 |  Propriedade  |  Descrição   |
 |---|---|
 | Nome| Indica o nome do serviço. Observe que, às vezes, é diferente do nome de exibição. É possível obter uma lista dos serviços e seus estados atuais com o cmdlet Get-Service.|
-| BuiltInAccount| Indica a conta de entrada que deve ser usada para o serviço. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem**, e **NetworkService**.|
+| BuiltInAccount| Indica a conta de entrada que deve ser usada para o serviço. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem** e **NetworkService**.|
 | Credential| Indica as credenciais para a conta em que o serviço será executado. Essa propriedade e a propriedade __BuiltinAccount__ não podem ser usadas juntas.|
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
-| StartupType| Indica o tipo de inicialização para o serviço. Os valores permitidos para essa propriedade são: **Automática**, **desabilitado**, e **Manual**|
+| StartupType| Indica o tipo de inicialização para o serviço. Os valores permitidos para essa propriedade são: **Automático**, **Desabilitado** e **Manual**|
 | Estado| Indica o estado que você deseja garantir para o serviço.|
 | Descrição | Indica a descrição do serviço de destino.|
 | DisplayName | Indica o nome de exibição do serviço de destino.|

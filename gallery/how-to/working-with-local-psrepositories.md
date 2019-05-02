@@ -2,66 +2,66 @@
 ms.date: 11/06/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery,psget
-title: Trabalhando com PSRepositories local
+title: Trabalhando com PSRepositories locais
 ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084089"
 ---
 # <a name="working-with-local-powershellget-repositories"></a>Trabalhando com repositórios locais do PowerShellGet
 
-Os repositórios de suporte do módulo PowerShellGet diferente na Galeria do PowerShell.
-Esses cmdlets permitem que os cenários a seguir:
+O módulo PowerShellGet dá suporte a repositórios diferentes da Galeria do PowerShell.
+Esses cmdlets proporcionam os cenários a seguir:
 
 - Dar suporte a um conjunto de módulos do PowerShell confiável e validado previamente para uso em seu ambiente
-- Teste de um pipeline de CI/CD que compila os módulos do PowerShell ou scripts
-- Fornecer módulos e scripts do PowerShell para sistemas que não é possível acessar a internet
+- Testar um pipeline de CI/CD que compila os módulos ou scripts do PowerShell
+- Fornecer módulos e scripts do PowerShell para sistemas que não podem acessar a Internet
 
-Este artigo descreve como configurar um repositório local do PowerShell. O artigo também aborda a [OfflinePowerShellGetDeploy][] módulo disponível a partir da Galeria do PowerShell. Esse módulo contém cmdlets para instalar a versão mais recente do PowerShellGet no seu repositório local.
+Este artigo descreve como configurar um repositório local do PowerShell. O artigo também aborda o módulo [OfflinePowerShellGetDeploy][] disponível na Galeria do PowerShell. Esse módulo contém cmdlets para instalar a versão mais recente do PowerShellGet no seu repositório local.
 
 ## <a name="local-repository-types"></a>Tipos de repositório local
 
-Há duas maneiras de criar um PSRepository local: Compartilhamento de arquivo ou servidor do NuGet. Cada tipo tem vantagens e desvantagens:
+Há duas maneiras de criar um PSRepository local: Servidor do NuGet ou compartilhamento de arquivos. Cada tipo tem vantagens e desvantagens:
 
 Servidor do NuGet
 
 | Vantagens| Desvantagens |
 | --- | --- |
-| Imita a funcionalidade de PowerShellGallery | Aplicativo de várias camadas requer planejamento de operações e suporte |
-| O NuGet se integra com o Visual Studio, outras ferramentas | Modelo de autenticação e gerenciamento de contas do NuGet necessários |
-| O NuGet dá suporte a metadados em `.Nupkg` pacotes | A publicação requer manutenção e gerenciamento de chave de API |
+| Imita a funcionalidade da PowerShellGallery | Aplicativo de várias camadas requer planejamento de operações e suporte |
+| O NuGet integra-se ao Visual Studio e a outras ferramentas | É necessário realizar o gerenciamento de contas do NuGet e do modelo de autenticação |
+| O NuGet dá suporte a metadados em pacotes `.Nupkg` | A publicação requer manutenção e gerenciamento da chave de API |
 | Fornece pesquisa, administração de pacote, etc. | |
 
 Comp. de Arquivos
 
 | Vantagens| Desvantagens |
 | --- | --- |
-| Fácil de configurar, fazer backup e manter | Metadados usados pelo PowerShellGet não estão disponível |
-| Modelo de segurança simples - permissões de usuário no compartilhamento | Nenhuma interface do usuário além do compartilhamento de arquivo básico |
-| Não há restrições, como substituir itens existentes | Nenhuma gravação de quem atualiza o que e segurança limitada |
+| Fácil de configurar, fazer backup e manutenção | Os metadados usados pelo PowerShellGet não estão disponíveis |
+| Modelo de segurança simples: permissões de usuário no compartilhamento | Nenhuma interface do usuário além do compartilhamento de arquivo básico |
+| Não há restrições, como substituir itens existentes | Segurança limitada e sem gravação de quem atualiza o quê |
 
-PowerShellGet funciona com o tipo e dá suporte à localização de versões e a instalação da dependência.
-No entanto, alguns recursos que funcionam para a Galeria do PowerShell não estão disponíveis para servidores de NuGet base ou compartilhamentos de arquivos.
+O PowerShellGet funciona com qualquer tipo e dá suporte à localização de versões e à instalação de dependências.
+No entanto, alguns recursos que funcionam com a Galeria do PowerShell não estão disponíveis para servidores NuGet básicos ou compartilhamentos de arquivos.
 
-- Tudo o que é um pacote - nenhuma diferenciação de scripts, módulos, recursos de DSC ou recursos de função.
-- Servidores de compartilhamento de arquivos não podem ver os metadados do pacote, incluindo as marcas.
+- Tudo é um pacote, não há diferenciação de scripts, módulos, recursos DSC ou recursos de função.
+- Os servidores de compartilhamento de arquivos não podem ver os metadados do pacote, incluindo as marcas.
 
-## <a name="creating-a-local-repository"></a>Criação de um repositório local
+## <a name="creating-a-local-repository"></a>Criando um repositório local
 
 O artigo a seguir lista as etapas para configurar seu próprio servidor do NuGet.
 
 - [NuGet.Server][]
 
-Siga as etapas até o ponto de adição de pacotes. As etapas para [publicando um pacote](#publishing-to-a-local-repository) são abordados neste artigo.
+Siga as etapas até o ponto de adição de pacotes. As etapas para [publicar um pacote](#publishing-to-a-local-repository) são abordadas posteriormente neste artigo.
 
-Para um repositório com base no compartilhamento de arquivo, certifique-se de que os usuários tenham permissões para acessar o compartilhamento de arquivos.
+Para um repositório com base em compartilhamento de arquivo, verifique se os usuários têm permissões para acessar o compartilhamento de arquivos.
 
 ## <a name="registering-a-local-repository"></a>Registrando um repositório local
 
-Antes de um repositório pode ser usado, ele deve ser registrado usando o `Register-PSRepository` comando.
-Nos exemplos a seguir, o **InstallationPolicy** é definido como *confiáveis*, supondo que você confia que o seu próprio repositório.
+Antes de poder usar um repositório, ele deve ser registrado usando o comando `Register-PSRepository`.
+Nos exemplos a seguir, **InstallationPolicy** é definido como *Confiável*, supondo que você confie no seu próprio repositório.
 
 ```powershell
 # Register a NuGet-based server
@@ -71,16 +71,16 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation http://MyLocalNuget/Api/
 Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal\' -ScriptSourceLocation '\\localhost\PSRepoLocal\' -InstallationPolicy Trusted
 ```
 
-Tome nota da diferença entre como tratar os dois comandos **ScriptSourceLocation**. Para um repositórios baseados em compartilhamento de arquivo, o **SourceLocation** e **ScriptSourceLocation** devem corresponder. Para um repositório baseado na web, eles devem ser diferentes, portanto, neste exemplo à direita "/" é adicionado para o **SourceLocation**.
+Observe a diferença entre como os dois comandos tratam **ScriptSourceLocation**. Para um repositório baseado em compartilhamento de arquivo, **SourceLocation** e **ScriptSourceLocation** devem corresponder. Para um repositório baseado na Web, eles devem ser diferentes; portanto, neste exemplo à direita "/" é adicionado a **SourceLocation**.
 
-Se você quiser PSRepository recentemente criado para ser o repositório padrão, você deve cancelar o registro de todos os outros PSRepositories. Por exemplo:
+Se você quiser que o PSRepository recém-criado seja o repositório padrão, cancele o registro de todos os outros PSRepositories. Por exemplo:
 
 ```powershell
 Unregister-PSRepository -Name PSGallery
 ```
 
 > [!NOTE]
-> O nome do repositório 'PSGallery' é reservado para uso pela Galeria do PowerShell. Você pode cancelar o registro PSGallery, mas é possível reutilizar o nome PSGallery para qualquer outro repositório.
+> O nome de repositório 'PSGallery' é reservado para uso pela Galeria do PowerShell. Você pode cancelar o registro de PSGallery, mas não é possível reutilizar esse nome para outro repositório.
 
 Se você precisar restaurar a PSGallery, execute o seguinte comando:
 
@@ -88,13 +88,13 @@ Se você precisar restaurar a PSGallery, execute o seguinte comando:
 Register-PSRepository -Default
 ```
 
-## <a name="publishing-to-a-local-repository"></a>Publicação em um repositório local
+## <a name="publishing-to-a-local-repository"></a>Publicando em um repositório local
 
-Depois que você registrou o PSRepository local, você pode publicar em seu local PSRepository. Há dois cenários principais de publicação: publicar seu próprio módulo e publicação de um módulo de PSGallery.
+Depois de registrar o PSRepository local, é possível publicar em seu PSRepository local. Há dois cenários principais de publicação: publicar seu próprio módulo e publicar um módulo de PSGallery.
 
-### <a name="publishing-a-module-you-authored"></a>Publicação de um módulo criado por você
+### <a name="publishing-a-module-you-authored"></a>Publicando um módulo criado por você
 
-Use `Publish-Module` e `Publish-Script` para publicar seu módulo em seu local PSRepository da mesma maneira que faria para a Galeria do PowerShell.
+Use `Publish-Module` e `Publish-Script` para publicar seu módulo no PSRepository local da mesma maneira que faria com a Galeria do PowerShell.
 
 - Especifique o local para seu código
 - Forneça uma chave de API
@@ -115,15 +115,15 @@ Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey
 ```
 
 > [!IMPORTANT]
-> Para garantir a segurança, as chaves de API não devem ser codificado em scripts. Use um sistema de gerenciamento de chaves seguro.
+> Para garantir a segurança, as chaves de API não devem ser codificadas em scripts. Use um sistema seguro de gerenciamento de chaves.
 
-### <a name="publishing-a-module-from-the-psgallery"></a>Publicação de um módulo de PSGallery
+### <a name="publishing-a-module-from-the-psgallery"></a>Publicando um módulo de PSGallery
 
-Para publicar um módulo do PSGallery para seu local PSRepository, você pode usar o cmdlet 'Save-Package'.
+Para publicar um módulo de PSGallery em seu PSRepository local, use o cmdlet 'Save-Package'.
 
 - Especifique o nome do pacote
 - Especifique 'NuGet' como o provedor
-- Especifique o local de PSGallery como o código-fonte (https://www.powershellgallery.com/api/v2)
+- Especifique o local de PSGallery como a origem (https://www.powershellgallery.com/api/v2)
 - Especifique o caminho para seu repositório local
 
 Exemplo:
@@ -133,22 +133,22 @@ Exemplo:
 Save-Package -Name 'PackageName' -Provider Nuget -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
 ```
 
-Se o seu local PSRepository é baseado na web, ele requer uma etapa adicional que usa nuget.exe para publicar.
+Se o seu PSRepository local é baseado na Web, ele exige uma etapa adicional que usa nuget.exe para publicar.
 
 Consulte a documentação para usar [nuget.exe][].
 
-## <a name="installing-powershellget-on-a-disconnected-system"></a>Instalar o PowerShellGet em um sistema desconectado
+## <a name="installing-powershellget-on-a-disconnected-system"></a>Instalando o PowerShellGet em um sistema desconectado
 
-Implantar o PowerShellGet é difícil em ambientes que exigem sistemas para ser desconectado da internet. O PowerShellGet tem um processo de inicialização que instala a versão mais recente na primeira vez que ele é usado. O módulo OfflinePowerShellGetDeploy na Galeria do PowerShell fornece cmdlets que oferecem suporte a esse processo de inicialização.
+Implantar o PowerShellGet é difícil em ambientes que exigem que os sistemas sejam desconectados da Internet. O PowerShellGet tem um processo de inicialização que instala a versão mais recente na primeira vez que ele é usado. O módulo OfflinePowerShellGetDeploy na Galeria do PowerShell fornece cmdlets que dão suporte a esse processo de inicialização.
 
-Para inicializar uma implantação offline, você precisa:
+Para iniciar uma implantação offline, você precisa:
 
-- Baixe e instale o sistema OfflinePowerShellGetDeploy seu conectados à internet e seus sistemas desconectados
-- Baixe o PowerShellGet e suas dependências no sistema conectado à internet usando o `Save-PowerShellGetForOffline` cmdlet
-- Copiar PowerShellGet e suas dependências de sistema conectado à internet para o sistema desconectado
-- Use o `Install-PowerShellGetOffline` no sistema desconectado para colocar PowerShellGet e suas dependências nas pastas apropriadas
+- Baixar e instalar o OfflinePowerShellGetDeploy em seu sistema conectado à Internet e seus sistemas desconectados
+- Baixe o PowerShellGet e suas dependências no sistema conectado à Internet usando o cmdlet `Save-PowerShellGetForOffline`
+- Copie o PowerShellGet e suas dependências do sistema conectado à Internet para o sistema desconectado
+- Use `Install-PowerShellGetOffline` no sistema desconectado para colocar o PowerShellGet e suas dependências nas pastas apropriadas
 
-Os seguintes comandos use `Save-PowerShellGetForOffline` colocar todos os componentes em uma pasta `f:\OfflinePowerShellGet`
+Os seguintes comandos usam `Save-PowerShellGetForOffline` para colocar todos os componentes em uma pasta `f:\OfflinePowerShellGet`
 
 ```powershell
 # Requires -RunAsAdministrator
@@ -161,10 +161,10 @@ Import-Module F:\OfflinePowerShellGetDeploy
 Save-PowerShellGetForOffline -LocalFolder 'F:\OfflinePowerShellGet'
 ```
 
-Neste ponto, você deve fazer o conteúdo de `F:\OfflinePowerShellGet` disponíveis para seus sistemas desconectados. Execute o `Install-PowerShellGetOffline` cmdlet para instalar o PowerShellGet no sistema desconectado.
+Neste ponto, você deve tornar o conteúdo de `F:\OfflinePowerShellGet` disponível para seus sistemas desconectados. Execute o cmdlet `Install-PowerShellGetOffline` para instalar o PowerShellGet no sistema desconectado.
 
 > [!NOTE]
-> É importante que você não executar o PowerShellGet na sessão do PowerShell antes de executar esses comandos. Depois que o PowerShellGet está carregado na sessão, os componentes não podem ser atualizados. Se você iniciar o PowerShellGet por engano, saia e reinicie o PowerShell.
+> É importante que você não execute o PowerShellGet na sessão do PowerShell antes de executar esses comandos. Depois de carregar o PowerShellGet na sessão, os componentes não podem ser atualizados. Se você iniciar o PowerShellGet por engano, saia e reinicie o PowerShell.
 
 ```powershell
 Import-Module F:\OfflinePowerShellGetDeploy
@@ -183,7 +183,7 @@ Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApi
 ```
 
 > [!IMPORTANT]
-> Para garantir a segurança, as chaves de API não devem ser codificado em scripts. Use um sistema de gerenciamento de chaves seguro.
+> Para garantir a segurança, as chaves de API não devem ser codificadas em scripts. Use um sistema seguro de gerenciamento de chaves.
 
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1

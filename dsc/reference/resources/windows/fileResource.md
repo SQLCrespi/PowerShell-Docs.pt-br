@@ -2,23 +2,21 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recursos File de DSC
-ms.openlocfilehash: e5f7a91e5f19c8c7bbada090804d8f29a7cfedd5
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.openlocfilehash: b5bc2c305b8cfccbd044274811df631264a24279
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077323"
 ---
 # <a name="dsc-file-resource"></a>Recursos File de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-O recurso File na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar arquivos e pastas no nó de destino.
-
->**Observação:** Se a propriedade **MatchSource** estiver definida como **$false** (que é o valor padrão), o conteúdo a ser copiado será armazenado em cache na primeira vez que a configuração for aplicada.
->Os aplicativos subsequentes da configuração não verificarão arquivos e/ou pastas atualizados no caminho especificado pelo **SourcePath**. Se você quiser verificar se há atualizações para os arquivos e/ou pastas em **SourcePath** toda vez que a configuração for aplicada, defina **MatchSource** como **$true**.
+O recurso File na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar arquivos e pastas no nó de destino. O **DestinationPath** e o **SourcePath** devem ser acessíveis pelo nó de destino.
 
 ## <a name="syntax"></a>Sintaxe
+
 ```
 File [string] #ResourceName
 {
@@ -39,24 +37,48 @@ File [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   |
-|---|---|
-| DestinationPath| Indica o local onde você deseja garantir o estado de um arquivo ou diretório.|
-| Atributos| Especifica o estado desejado dos atributos para o arquivo ou diretório de destino.|
-| Soma de verificação| Indica o tipo de soma de verificação que deve ser usado para determinar se dois arquivos são iguais. Se __Checksum__ não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores válidos incluem: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.|
-| Conteúdo| Especifica o conteúdo de um arquivo, como uma cadeia de caracteres específica.|
-| Credential| Indicará as credenciais necessárias para acessar recursos, como arquivos de origem, se tal acesso for necessário.|
-| Ensure| Indica se o arquivo ou diretório existe. Defina essa propriedade como "Absent" para garantir que o arquivo ou diretório não exista. Defina-a como "Present" para garantir que o arquivo ou diretório exista. O padrão é "Present".|
-| Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade Force substitui esses erros. O valor padrão é __$false__.|
-| Recurse| Indica se subdiretórios são incluídos. Defina essa propriedade como __$true__ para indicar que você deseja que subdiretórios sejam incluídos. O padrão é __$false__. **Observação**: Essa propriedade é válida somente quando a propriedade Type é definida como Directory.|
-| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
-| SourcePath| Indica o caminho do qual o recurso de arquivo ou pasta deve ser copiado.|
-| Tipo| Indica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como "Directory" para indicar que o recurso é um diretório. Defina-a como "File" para indicar que o recurso é um arquivo. O valor padrão é “File”.|
-| MatchSource| Se definida como o valor padrão de __$false__, em seguida, todos os arquivos de origem (digamos, arquivos A, B e C) serão adicionados ao destino na primeira vez em que a configuração for aplicada. Se for adicionado um novo arquivo (D) à origem, ele não será adicionado ao destino, mesmo quando a configuração for reaplicada posteriormente. Se o valor for __$true__, em seguida, cada vez que a configuração for aplicada, os novos arquivos subsequentemente encontrados na origem (como arquivo D, neste exemplo) serão adicionados ao destino. O valor padrão é **$false**.|
+|Propriedade       |Descrição                                                                   |Necessária|Padrão|
+|---------------|------------------------------------------------------------------------------|--------|-------|
+|DestinationPath|O local, no nó de destino, que você quer que seja `Present` ou `Absent`.|Sim|Não|
+|Atributos     |O estado desejado dos atributos para o arquivo ou diretório de destino. Os valores válidos são **Archive**, **Hidden**, **ReadOnly** e **System**.|Não|Não|
+|Soma de verificação      |O tipo de soma de verificação a usar para determinar se dois arquivos são iguais. Os valores válidos incluem: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.|Não|Apenas os nomes de arquivo ou de diretório são comparados.|
+|Conteúdo       |Válido apenas quando usado com o tipo `File`. Indica se o conteúdo a verificar está `Present` ou `Absent` no arquivo de destino. |Não|Não|
+|Credential     |As credenciais necessárias para acessar recursos, como arquivos de origem.|Não|A conta do computador do nó de destino. (*veja a observação*)|
+|Ensure         |O estado desejado do diretório ou arquivo de destino. |Não|**Presente**|
+|Force          |Substitui as operações de acesso que resultariam em erro (como substituir um arquivo ou excluir um diretório que não esteja vazio).|Não|`$false`|
+|Recurse        |Válido apenas quando usado com o tipo `Directory`. Executa recursivamente a operação de estado em todos os subdiretórios.|Não|`$false`|
+|DependsOn      |Define uma dependência no(s) recurso(s) especificado(s). Este recurso só será executado após a execução bem-sucedida de todos os recursos dependentes. Você pode especificar os recursos dependentes usando a sintaxe `"[ResourceType]ResourceName"`. Consulte [about_DependsOn](../../../configurations/resource-depends-on.md)|Não|Não|
+|SourcePath     |O caminho do qual o recurso de arquivo ou pasta deve ser copiado.|Não|Não|
+|Tipo           |O tipo de recurso que está sendo configurado. Os valores válidos são `Directory` e `File`.|Não|`File`|
+|MatchSource    |Determina se o recurso deve monitorar novos arquivos adicionados ao diretório de origem após a cópia inicial. Um valor `$true` indica que, após a cópia inicial, os novos arquivos de origem devem ser copiados para o destino. Se for definido como `$False`, o recurso armazena em cache o conteúdo do diretório de origem e ignora todos os arquivos adicionados após a cópia inicial.|Não|`$false`|
+
+> [!WARNING]
+> Se você não especificar um valor para `Credential` ou `PSRunAsCredential` (PS V.5), o recurso usará a conta de computador do nó de destino para acessar o `SourcePath`.  Quando o `SourcePath` é um compartilhamento UNC, isso pode resultar em um erro "Acesso negado". Verifique se suas permissões estão definidas adequadamente ou use as propriedades `Credential` ou `PSRunAsCredential` para especificar a conta que deve ser usada.
+
+## <a name="present-vs-absent"></a>Present versus Absent
+
+Cada recurso DSC executa operações diferentes com base no valor especificado para a propriedade `Ensure`. Os valores especificados para as propriedades acima determinam a operação de estado executada.
+
+### <a name="existence"></a>Existência
+
+Ao especificar apenas um `DestinationPath`, o recurso garante que o caminho existe (`Present`) ou não existe (`Absent`).
+
+### <a name="copy-operations"></a>Operações de cópia
+
+Quando você especifica um `SourcePath` e um `DestinationPath` com um valor `Type` do **Diretório**, o recurso copia o diretório de origem para o caminho de destino. As propriedades `Recurse`, `Force` e `MatchSource` alteram o tipo de operação de cópia executada, embora `Credential` determine qual conta usar para acessar o diretório de origem.
+
+### <a name="limitations"></a>Limitações
+
+Se você tiver especificado um valor `ReadOnly` para a propriedade `Attributes` com um `DestinationPath`, `Ensure = "Present"` criará o caminho especificado, enquanto `Contents` definirá o conteúdo do arquivo.  Uma operação de estado `Absent` ignoraria completamente a propriedade `Attributes` e removeria qualquer arquivo no caminho especificado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como usar o recurso Files para garantir que um diretório com o caminho `C:\Users\Public\Documents\DSCDemo\DemoSource` em um computador de origem (como o servidor de “pull”) também esteja presente (juntamente com todos os subdiretórios) no nó de destino. Também escreve uma mensagem de confirmação no log quando for concluído e inclui uma declaração para garantir que a operação de verificação de arquivos seja executada antes da operação de registro em log.
+O exemplo a seguir copia um diretório e seus subdiretórios de um servidor de pull para um nó de destino usando o recurso de arquivo. Se a operação for bem-sucedida, o recurso de Log gravará uma mensagem de confirmação no log de eventos.
+
+O diretório de origem é um caminho UNC (`\\PullServer\DemoSource`) compartilhado do servidor de pull. A propriedade `Recurse` garante que todos os subdiretórios também sejam copiados.
+
+> [!IMPORTANT]
+> O LCM no nó de destino é executado no contexto da conta do sistema local por padrão. Para conceder acesso ao **SourcePath**, dê à conta do computador do nó de destino as permissões apropriadas. **Credential** e **PSDSCRunAsCredential** (v5) alteram o contexto que o LCM usa para acessar o **SourcePath**. Você ainda precisa conceder acesso à conta a ser usada para acessar o **SourcePath**.
 
 ```powershell
 Configuration FileResourceDemo
@@ -65,10 +87,10 @@ Configuration FileResourceDemo
     {
         File DirectoryCopy
         {
-            Ensure = "Present"  # You can also set Ensure to "Absent"
-            Type = "Directory" # Default is "File".
-            Recurse = $true # Ensure presence of subdirectories, too
-            SourcePath = "C:\Users\Public\Documents\DSCDemo\DemoSource"
+            Ensure = "Present" # Ensure the directory is Present on the target node.
+            Type = "Directory" # The default is File.
+            Recurse = $true # Recursively copy all subdirectories.
+            SourcePath = "\\PullServer\DemoSource"
             DestinationPath = "C:\Users\Public\Documents\DSCDemo\DemoDestination"
         }
 
@@ -76,8 +98,10 @@ Configuration FileResourceDemo
         {
             # The message below gets written to the Microsoft-Windows-Desired State Configuration/Analytic log
             Message = "Finished running the file resource with ID DirectoryCopy"
-            DependsOn = "[File]DirectoryCopy" # This means run "DirectoryCopy" first.
+            DependsOn = "[File]DirectoryCopy" # Depends on successful execution of the File resource.
         }
     }
 }
 ```
+
+Para saber mais sobre como usar **Credentials** no DSC, confira [Executar como usuário](../../../configurations/runAsUser.md) ou [Configurar credenciais de dados](../../../configurations/configDataCredentials.md).

@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O que há de novo no ISE do PowerShell 50
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: f05e3f3f95c8ceec6e843b8a1c79e6f092e1b87b
-ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
-ms.translationtype: MTE95
+ms.openlocfilehash: 2d953bc4553de7720c590304d29750b84a1ef3b2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52320577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058175"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell.
@@ -149,7 +149,7 @@ Se você iniciar o ISE do Windows PowerShell com a linha de comando (digitando *
 
 - *-NoProfile*: inicia o ISE do Windows PowerShell sem executar **$profile**
 
-- *-Help*: exibe uma janela de Ajuda
+- *-Help*: exibe uma janela Ajuda
 
 - *-mta*: inicia o ISE do Windows PowerShell no modo Multi-Threaded Apartment. O modo de operação padrão para o ISE do Windows PowerShell é o modo Single-Threaded Apartment ou *-STA*.
 
@@ -176,7 +176,7 @@ Outros recursos de edição do ISE do Windows PowerShell incluem:
 
 - **Analisar a exibição de erro** Erros de análise são indicados com um sublinhado vermelho. Quando você passa o cursor sobre um erro indicado, o texto da dica de ferramenta exibe o problema encontrado no código.
 
-- **Zoom** É possível definir o percentual de zoom do conteúdo do console usando o controle deslizante de zoom (no canto inferior direito da janela do ISE do Windows PowerShell) ou digitando o comando **$psise.options.Zoom** no Painel de Console.
+- **Zoom** É possível definir o percentual de zoom do conteúdo do console usando o Controle Deslizante de Zoom (no canto inferior direito da janela do ISE do Windows PowerShell) ou digitando o comando **$psise.options.Zoom** no Painel de Console.
 
 - **Copiar e colar rich text** A cópia para a área de transferência no ISE do Windows PowerShell preserva as informações de fonte, tamanho e cor da seleção original.
 

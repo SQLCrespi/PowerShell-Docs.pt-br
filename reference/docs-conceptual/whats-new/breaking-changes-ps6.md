@@ -1,15 +1,15 @@
 ---
 ms.date: 05/17/2018
 keywords: powershell,core
-title: Alterações da falha no PowerShell Core 6.0
+title: Alteração da falha no PowerShell Core 6.0
 ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085925"
 ---
-# <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
+# <a name="breaking-changes-for-powershell-60"></a>Alteração da falha no PowerShell Core 6.0
 
 ## <a name="features-no-longer-available-in-powershell-core"></a>Recursos não mais disponíveis no PowerShell Core
 
@@ -62,7 +62,7 @@ Em vez disso, recomendamos que você use os cmdlets do CIM (também conhecidos c
 
 Devido ao uso de APIs sem suporte, removemos `Microsoft.PowerShell.LocalAccounts` do PowerShell Core até encontrarmos uma solução melhor.
 
-### <a name="-computer-cmdlets"></a>Os cmdlets do `*-Computer`
+### <a name="-computer-cmdlets"></a>Cmdlets de `*-Computer`
 
 Devido ao uso de APIs sem suporte, os seguintes cmdlets foram removidos do PowerShell Core até encontrarmos uma solução melhor.
 
@@ -71,11 +71,11 @@ Devido ao uso de APIs sem suporte, os seguintes cmdlets foram removidos do Power
 - Remove-Computer
 - Restore-Computer
 
-### <a name="-counter-cmdlets"></a>Os cmdlets do `*-Counter`
+### <a name="-counter-cmdlets"></a>Cmdlets de `*-Counter`
 
 Devido ao uso de APIs sem suporte, removemos `*-Counter` do PowerShell Core até encontrarmos uma solução melhor.
 
-### <a name="-eventlog-cmdlets"></a>Os cmdlets do `*-EventLog`
+### <a name="-eventlog-cmdlets"></a>Cmdlets de `*-EventLog`
 
 Devido ao uso de APIs sem suporte, `*-EventLog` foi removido do PowerShell Core. até encontrarmos uma solução melhor. `Get-WinEvent` e `Create-WinEvent` estão disponíveis para obter e criar eventos no Windows.
 

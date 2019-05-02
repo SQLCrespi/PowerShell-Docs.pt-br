@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Mais aprendizado sobre o PowerShell
 ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058379"
 ---
 # <a name="more-powershell-learning"></a>Mais aprendizado sobre o PowerShell
 
@@ -31,7 +31,7 @@ Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem m
 
 ### <a name="channel-9-videos"></a>Vídeos do Channel 9
 
-Channel 9 é nossa plataforma de publicação de vídeo. Há centenas de vídeos sobre o PowerShell disponíveis. [Pesquisa para "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) para ver quais vídeos estão disponíveis.
+Channel 9 é nossa plataforma de publicação de vídeos. Há centenas de vídeos disponíveis sobre o PowerShell. [Procure por "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) para ver quais vídeos estão disponíveis.
 
 ## <a name="resources-for-windows-powershell-developers"></a>Recursos para desenvolvedores do Windows PowerShell
 

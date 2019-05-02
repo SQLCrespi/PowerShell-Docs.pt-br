@@ -1,22 +1,22 @@
 ---
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
-title: Selecionando itens de uma caixa de listagem
+title: Selecionar itens em uma caixa de listagem
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
 ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086061"
 ---
-# <a name="selecting-items-from-a-list-box"></a>Selecionando itens de uma caixa de listagem
+# <a name="selecting-items-from-a-list-box"></a>Selecionar itens em uma caixa de listagem
 
 Use o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos usuários selecionar itens de um controle de caixa de listagem.
 
 ## <a name="create-a-list-box-control-and-select-items-from-it"></a>Criar um controle de caixa de listagem e selecionar itens dela
 
-Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
+Copie e cole o seguinte no ISE do Windows PowerShell e salve-o como um script do Windows PowerShell (.ps1).
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -179,6 +179,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
-- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](https://technet.microsoft.com/library/ff730949.aspx) (Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem)
+- [Hey Scripting Guy:  por que esses exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Dica da semana para o Windows PowerShell:  selecionar itens em uma caixa de listagem](https://technet.microsoft.com/library/ff730949.aspx)

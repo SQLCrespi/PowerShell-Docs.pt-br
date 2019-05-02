@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 9a9bdac652512640209c20e3deb20d7abc0142c6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 5ac9566979e1b761249f5cc7c62ed44047a2b9f6
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058005"
 ---
 # <a name="register-a-powershell-repository"></a>Registrar um repositório do PowerShell
 É possível configurar o PowerShellGet operar em repositórios internos. Isso é feito usando as seguintes adições:

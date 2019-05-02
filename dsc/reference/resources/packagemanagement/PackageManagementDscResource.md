@@ -3,11 +3,11 @@ ms.date: 06/20/2018
 keywords: DSC,powershell,configuração,instalação
 title: Recurso PackageManagement de DSC
 ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077612"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Recurso PackageManagement de DSC
 
@@ -48,7 +48,7 @@ PackageManagement [string] #ResourceName
 | MinimumVersion|Especifica a versão mínima permitida do pacote que você deseja encontrar. Se você não adicionar esse parâmetro, esse recurso encontrará a versão disponível mais recente do pacote que também atende a qualquer versão máxima especificada pelo parâmetro _MaximumVersion_.|
 | ProviderName| Especifica um nome de provedor de pacote para o qual definir o escopo de sua pesquisa de pacote. Você pode obter os nomes de provedor de pacotes executando o cmdlet `Get-PackageProvider`.|
 | RequiredVersion| Especifica a versão exata do pacote que você deseja instalar. Se você não especificar esse parâmetro, esse recurso DSC instalará a versão disponível mais recente do pacote que também atende a qualquer versão máxima especificada pelo parâmetro _MaximumVersion_.|
-| Origem| Especifica o nome da origem do pacote onde é possível encontrar o pacote. Isso pode ser um URI ou uma fonte registrada com o recurso de DSC `Register-PackageSource` ou PackageManagementSource.|
+| Origem| Especifica o nome da origem do pacote onde é possível encontrar o pacote. Isso pode ser um URI ou uma fonte registrada com o recurso DSC `Register-PackageSource` ou PackageManagementSource.|
 | SourceCredential | Especifica uma conta de usuário que tenha direitos para instalar um pacote para um provedor de pacote ou origem específicos.|
 
 ## <a name="additional-parameters"></a>Parâmetros Adicionais
@@ -62,7 +62,7 @@ A tabela a seguir lista as opções para a propriedade AdditionalParameters.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo instala o pacote do NuGet **JQuery** e o módulo do PowerShell **GistProvider** usando o recurso de DSC **PackageManagement**. Este exemplo primeiro garante que as origens dos pacotes necessários estejam disponíveis e, em seguida, define o estado esperado dos pacotes **JQuery** e **GistProvider** (NuGet e PowerShell, respectivamente).
+Este exemplo instala o pacote do NuGet **JQuery** e o módulo do PowerShell **GistProvider** usando o recurso DSC **PackageManagement**. Este exemplo primeiro garante que as origens dos pacotes necessários estejam disponíveis e, em seguida, define o estado esperado dos pacotes **JQuery** e **GistProvider** (NuGet e PowerShell, respectivamente).
 
 ```powershell
 Configuration PackageTest

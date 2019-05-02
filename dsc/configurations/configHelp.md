@@ -3,25 +3,25 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Escrever ajuda para configurações de DSC
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080164"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Escrever ajuda para configurações de DSC
 
 >Aplica-se a: Windows PowerShell 5.0
 
-Você pode usar a ajuda baseada em comentários em configurações de DSC. Os usuários podem acessar a Ajuda chamando o **Configuration** com `-?`, ou usando o [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet. Coloque sua ajuda baseada em comentários diretamente acima a `Configuration` palavra-chave.
-Você pode colocar a Ajuda de parâmetro na linha com o bloco de comentário, diretamente acima a declaração de parâmetro, ou ambos como no exemplo a seguir.
+Você pode usar a ajuda baseada em comentários em configurações de DSC. Os usuários podem acessar a ajuda chamando a **Configuração** com `-?` ou usando o cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help). Coloque sua ajuda baseada em comentários diretamente acima da palavra-chave `Configuration`.
+Você pode colocar a ajuda do parâmetro alinhada ao seu bloco de comentários, diretamente acima da declaração do parâmetro, ou em ambos como no exemplo abaixo.
 
 Para saber mais sobre a ajuda baseada em comentários do PowerShell, veja [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
 > [!NOTE]
-> Ambientes de desenvolvimento do PowerShell, como o VSCode e o ISE, também têm trechos de código para que você possa inserir automaticamente modelos de bloco de comentário.
+> Os ambientes de desenvolvimento do PowerShell, como VSCode, e o ISE também têm snippets que possibilitam inserir automaticamente modelos de bloco de comentários.
 
-O exemplo a seguir mostra um script que contém uma configuração e uma ajuda baseada em comentários para cada configuração. Este exemplo mostra uma configuração com parâmetros. Para saber mais sobre como usar parâmetros em suas configurações, consulte [adicionar parâmetros a suas configurações](add-parameters-to-a-configuration.md).
+O exemplo a seguir mostra um script que contém uma configuração e uma ajuda baseada em comentários para cada configuração. Este exemplo mostra uma configuração com parâmetros. Para saber mais sobre como usar parâmetros em suas configurações, consulte [Adicionar parâmetros às suas configurações](add-parameters-to-a-configuration.md).
 
 ```powershell
 <#
@@ -77,7 +77,7 @@ configuration HelpSample1
 
 ## <a name="viewing-configuration-help"></a>Exibindo a ajuda de configuração
 
-Para exibir a Ajuda para uma configuração, use o `Get-Help` cmdlet com o nome da função, ou digite o nome da função seguido por `-?`. A seguir está a saída da configuração anterior passada para `Get-Help`.
+Para exibir a ajuda de uma configuração, use o cmdlet `Get-Help` com o nome da função, ou digite o nome da função seguido por `-?`. Veja a seguir o resultado da configuração anterior passada para `Get-Help`.
 
 ```powershell
 Get-Help HelpSample1 -Detailed
@@ -157,7 +157,7 @@ REMARKS
 ```
 
 > [!NOTE]
-> Campos de sintaxe e os atributos de parâmetro são gerados automaticamente para você pelo PowerShell.
+> Os atributos de parâmetro e campos de sintaxe são gerados automaticamente pelo PowerShell.
 
 ## <a name="see-also"></a>Consulte Também
 

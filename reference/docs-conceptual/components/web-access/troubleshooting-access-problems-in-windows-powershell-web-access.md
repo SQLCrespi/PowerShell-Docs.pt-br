@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
 ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086588"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
 
-Atualizado: 24 de junho de 2013 (revisado em 23 de agosto de 2017)
+Atualização: 24 de junho de 2013 (revisado em 23 de agosto de 2017)
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 

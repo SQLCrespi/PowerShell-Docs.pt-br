@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: O objeto PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 ms.openlocfilehash: 577e2aaaddf3071801816d9ae91dbf0006dd5072
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057665"
 ---
 # <a name="the-powershelltab-object"></a>O objeto PowerShellTab
 
@@ -18,7 +18,7 @@ O objeto **PowerShellTab** representa um ambiente de tempo de execução do Wind
 
 ### <a name="invoke-script-"></a>Invoke\( Script \)
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 Executa o script determinado na guia PowerShell.
 
@@ -35,12 +35,12 @@ $psISE.PowerShellTabs[1].Invoke({dir})
 
 ### <a name="invokesynchronous-script-usenewscope-millisecondstimeout-"></a>InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
+Com suporte no ISE do Windows PowerShell 3.0 e posterior, não está presente em versões anteriores.
 
 Executa o script determinado na guia PowerShell.
 
 > [!NOTE]
-> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando levar mais tempo que o **millesecondsTimeout** valor Especifica e, em seguida, o comando falhará com uma exceção: O tempo limite da operação acabou.
+> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando demorar mais para executar do que o que estiver especificado no valor **millisecondsTimeout**, o comando falhará com uma exceção: “A operação alcançou o tempo limite.”
 
 **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
@@ -72,7 +72,7 @@ Measure-Command {$psISE.PowerShellTabs[1].InvokeSynchronous('sleep 10', $false, 
 
 ### <a name="addonsmenu"></a>AddOnsMenu
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade somente leitura que obtém o menu Complementos para a guia PowerShell.
 
@@ -91,7 +91,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 
 ### <a name="caninvoke"></a>CanInvoke
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade Boolean somente leitura que retornará um valor **$true** se um script puder ser invocado com o método [Invoke( Script )](#invoke-script-).
 
@@ -110,7 +110,7 @@ $secondTab.CanInvoke
 
 ### <a name="consolepane"></a>Consolepane
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.  No ISE do Windows PowerShell 2.0 isso foi chamado de **CommandPane**.
+Com suporte no ISE do Windows PowerShell 3.0 e posterior, não está presente em versões anteriores.  No ISE do Windows PowerShell 2.0 isso foi chamado de **CommandPane**.
 
 A propriedade somente leitura que obtém o objeto [editor](The-ISEEditor-Object.md) do painel Console.
 
@@ -121,7 +121,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 
 ### <a name="displayname"></a>DisplayName
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade de leitura/leitura que obtém ou define o texto exibido na guia PowerShell. Por padrão, as guias são denominadas "PowerShell #", em que # representa um número.
 
@@ -133,7 +133,7 @@ $newTab.DisplayName = 'Brand New Tab'
 
 ### <a name="expandedscript"></a>ExpandedScript
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade Boolean de leitura/gravação que determina se o painel Script será expandido ou ocultado.
 
@@ -144,7 +144,7 @@ $psISE.CurrentPowerShellTab.ExpandedScript = !$psISE.CurrentPowerShellTab.Expand
 
 ### <a name="files"></a>Arquivos
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a [coleção de arquivos de script](The-ISEFileCollection-Object.md) abertos na guia PowerShell.
 
@@ -168,7 +168,7 @@ $psISE.CurrentPowerShellTab.output.clear()
 
 ### <a name="prompt"></a>Prompt
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade somente leitura que obtém o atual texto de solicitação. Observação: a função **Prompt** pode ser substituída pelo perfil do usuário. Se o resultado for diferente de uma cadeia simples, essa propriedade não retornará nada.
 
@@ -179,7 +179,7 @@ $psISE.CurrentPowerShellTab.Prompt
 
 ### <a name="showcommands"></a>ShowCommands
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
+Com suporte no ISE do Windows PowerShell 3.0 e posterior, não está presente em versões anteriores.
 
 A propriedade de leitura/gravação que indica se o Painel de comandos está sendo exibido no momento.
 
@@ -192,7 +192,7 @@ if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands = $true}
 
 ### <a name="statustext"></a>StatusText
 
-Suportado no Windows PowerShell ISE 2.0 e posteriores.
+Suportado no ISE do Windows PowerShell 2.0 e posteriores.
 
 A propriedade somente leitura que obtém o texto do status **PowerShellTab**.
 
@@ -203,7 +203,7 @@ $psISE.CurrentPowerShellTab.StatusText
 
 ### <a name="horizontaladdontoolspaneopened"></a>HorizontalAddOnToolsPaneOpened
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
+Com suporte no ISE do Windows PowerShell 3.0 e posterior, não está presente em versões anteriores.
 
 A propriedade somente leitura que indica se o painel de ferramentas horizontal Complementos está aberto no momento.
 
@@ -214,7 +214,7 @@ $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 
 ### <a name="verticaladdontoolspaneopened"></a>VerticalAddOnToolsPaneOpened
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
+Com suporte no ISE do Windows PowerShell 3.0 e posterior, não está presente em versões anteriores.
 
 A propriedade somente leitura que indica se o painel de ferramentas vertical Complementos está aberto no momento.
 

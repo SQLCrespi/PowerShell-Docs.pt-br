@@ -3,25 +3,25 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com classes do PowerShell
 ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076711"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrevendo um recurso personalizado de DSC com classes do PowerShell
 
 > Aplica-se a: Windows PowerShell 5.0
 
-Com a introdução de classes do PowerShell no Windows PowerShell 5.0, já é possível definir um recurso de DSC criando uma classe. A classe define o esquema e a implementação do recurso; portanto, não há necessidade de criar um arquivo MOF separado. A estrutura de pastas para um recurso baseado em classe também é mais simples, pois uma pasta **DSCResources** não é necessária.
+Com a introdução de classes do PowerShell no Windows PowerShell 5.0, já é possível definir um recurso DSC criando uma classe. A classe define o esquema e a implementação do recurso; portanto, não há necessidade de criar um arquivo MOF separado. A estrutura de pastas para um recurso baseado em classe também é mais simples, pois uma pasta **DSCResources** não é necessária.
 
-Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos **Get ()**, **Set()** e **Test ()** (equivalentes às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script).
+Em um recurso DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos **Get ()**, **Set()** e **Test ()** (equivalentes às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script).
 
 Neste tópico, criaremos um recurso simples chamado **FileResource**, que gerencia um arquivo em um caminho especificado.
 
-Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
+Para obter mais informações sobre recursos DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
 
->**Observação:** Não há suporte para coleções genéricas em recursos baseados em classe.
+>**Observação:** coleções genéricas não são permitidas em recursos baseados em classe.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Estrutura de pastas para um recurso de classe
 
@@ -36,7 +36,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>Criar a classe
 
-A palavra-chave class é utilizada para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, use o atributo **DscResource()**. O nome da classe é o nome do recurso de DSC.
+A palavra-chave class é utilizada para criar uma classe do PowerShell. Para especificar que uma classe é um recurso DSC, use o atributo **DscResource()**. O nome da classe é o nome do recurso DSC.
 
 ```powershell
 [DscResource()]
@@ -46,7 +46,7 @@ class FileResource {
 
 ### <a name="declare-properties"></a>Declarar propriedades
 
-O esquema do recurso de DSC é definido como propriedades da classe. Declaramos três propriedades da seguinte maneira.
+O esquema do recurso DSC é definido como propriedades da classe. Declaramos três propriedades da seguinte maneira.
 
 ```powershell
 [DscProperty(Key)]
@@ -64,10 +64,10 @@ O esquema do recurso de DSC é definido como propriedades da classe. Declaramos 
 
 Observe que as propriedades são modificadas por atributos. O significado dos atributos é o seguinte:
 
-- **DscProperty(Key)**: A propriedade é necessária. A propriedade é uma chave. Os valores de todas as propriedades marcadas como chaves devem se combinar para identificar exclusivamente uma instância de recursos dentro de uma configuração.
-- **Dscproperty (Mandatory)**: A propriedade é necessária.
+- **DscProperty(Key)**: a propriedade é obrigatória. A propriedade é uma chave. Os valores de todas as propriedades marcadas como chaves devem se combinar para identificar exclusivamente uma instância de recursos dentro de uma configuração.
+- **DscProperty(Mandatory)**: a propriedade é obrigatória.
 - **DscProperty(NotConfigurable)**: a propriedade é somente leitura. As propriedades marcadas com esse atributo não podem ser definidas por uma configuração, mas são preenchidas pelo método **Get ()** quando presentes.
-- **DscProperty()**: A propriedade é configurável, mas não é necessária.
+- **DscProperty()**: a propriedade é configurável, mas não é obrigatória.
 
 As propriedades **$Path** e **$SourcePath** são ambas cadeias de caracteres. O **$CreationTime** é uma propriedade [DateTime](/dotnet/api/system.datetime). A propriedade **$Ensure** é um tipo de enumeração definido da seguinte maneira.
 
@@ -496,11 +496,11 @@ class FileResource {
 }
 ```
 
-### <a name="declaring-multiple-class-resources-in-a-module"></a>Declarar vários recursos de classe em um módulo
+### <a name="declaring-multiple-class-resources-in-a-module"></a>Declarando vários recursos de classe em um módulo
 
-Um módulo pode definir vários recursos de DSC baseado em classe. Você pode criar a estrutura de pasta das seguintes maneiras:
+Um módulo pode definir vários recursos DSC baseados em classe. Você pode criar a estrutura de pasta das seguintes maneiras:
 
-1. Definir o primeiro recurso no "<ModuleName>. psm1" recursos de arquivo e subsequentes sob o **DSCResources** pasta.
+1. Defina o primeiro recurso no arquivo "<ModuleName>.psm1" e os recursos subsequentes na pasta **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -511,7 +511,7 @@ Um módulo pode definir vários recursos de DSC baseado em classe. Você pode cr
            |- SecondResource.psm1
    ```
 
-2. Definir todos os recursos sob o **DSCResources** pasta.
+2. Defina todos os recursos na pasta **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -524,7 +524,7 @@ Um módulo pode definir vários recursos de DSC baseado em classe. Você pode cr
    ```
 
 > [!NOTE]
-> Nos exemplos acima, adicione todos os arquivos PSM1 sob o **DSCResources** para o **NestedModules** chave em seu arquivo PSD1.
+> Nos exemplos acima, adicione todos os arquivos PSM1 em **DSCResources** à chave **NestedModules** no seu arquivo PSD1.
 
 ### <a name="access-the-user-context"></a>Acessar o contexto do usuário
 

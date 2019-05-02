@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxFile de DSC para Linux
 ms.openlocfilehash: 80969ba2ea6247fcd616a301d951403a840c851d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078020"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Recurso nxFile de DSC para Linux
 
@@ -45,7 +45,7 @@ nxFile <string> #ResourceName
 | Tipo| Especifica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como "directory" para indicar que o recurso é um diretório. Defina-a como "file" para indicar que o recurso é um arquivo. O valor padrão é "file"|
 | Conteúdo| Especifica o conteúdo de um arquivo, como uma cadeia de caracteres específica.|
 | Soma de verificação| Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores são: "ctime", "mtime" ou "md5".|
-| Recurse| Indica se subdiretórios são incluídos. Defina essa propriedade como **$true** para indicar que você deseja que subdiretórios sejam incluídos. O padrão é **$false**. **Observação:** Essa propriedade é válida somente quando o **tipo** estiver definida como directory.|
+| Recurse| Indica se subdiretórios são incluídos. Defina essa propriedade como **$true** para indicar que você deseja que subdiretórios sejam incluídos. O padrão é **$false**. **Observação:** essa propriedade é válida somente quando a propriedade **Type** está definida como directory.|
 | Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **$false**.|
 | Links| Especifica o comportamento desejado para links simbólicos. Defina essa propriedade como "follow" para seguir links simbólicos e agir sobre o destino de links (por exemplo, copiar o arquivo em vez do link). Defina essa propriedade como "manage" para agir sobre o link (por exemplo, copiar o próprio link). Defina essa propriedade como "ignore" para ignorar links simbólicos.|
 | Grupo| O nome do **Grupo** que será proprietário do arquivo ou diretório.|
@@ -98,7 +98,7 @@ nxFile resolvConf
 ```
 
 
-Etapa 3: Use uma função do PowerShell para substituir o Windows quebras de linha com caracteres de quebra de linha do Linux.
+Etapa 3: use uma função do PowerShell para substituir as quebras de linha do Windows com caracteres de quebra de linha do Linux.
 
 ```
 Function LinuxString($inputStr){

@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Filtrando resultados da pesquisa
 ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084395"
 ---
 # <a name="filtering-search-results"></a>Filtrando resultados da pesquisa
 
@@ -31,7 +31,7 @@ Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resul
   - script
 - Categorias
   - Cmdlet
-  - Recurso de DSC
+  - Recurso DSC
   - Função
   - Capacidade da função
   - Fluxo de Trabalho

@@ -3,24 +3,24 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Publicar em um servidor de Pull usando IDs de configuração (v4/v5)
 ms.openlocfilehash: 0144fec43d7a8d65b79891567cc0dc3952175343
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079499"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>Publicar em um servidor de Pull usando IDs de configuração (v4/v5)
 
-As seções a seguir pressupõem que você já configurou um servidor de recepção. Se você não tiver configurado seu servidor de Pull, você pode usar os guias a seguir:
+As seções a seguir pressupõem que você já tenha configurado um servidor de pull. Se ainda não configurou, use os guias a seguir:
 
 - [Configurar um servidor de pull SMB de DSC](pullServerSmb.md)
 - [Configurar um servidor de pull HTTP de DSC](pullServer.md)
 
-Cada nó de destino pode ser configurado para baixar as configurações, recursos e até mesmo relatar seu status. Este artigo mostra como carregar recursos para que fiquem disponíveis para serem baixadas e configurar clientes para baixar os recursos automaticamente. Quando o nó recebe uma configuração atribuída, por meio **Pull** ou **Push** (v5), ele baixa automaticamente todos os recursos necessários para a configuração do local especificado no LCM.
+Cada nó de destino pode ser configurado para baixar configurações, recursos e até mesmo relatar seu status. Este artigo mostrará como carregar recursos para que fiquem disponíveis para download e como configurar clientes para baixar os recursos automaticamente. Quando o nó recebe uma configuração atribuída, por meio de **Pull** ou **Push** (v5), ele baixa automaticamente todos os recursos necessários para a configuração do local especificado no LCM.
 
-## <a name="compile-configurations"></a>Compilar as configurações
+## <a name="compile-configurations"></a>Compilar configurações
 
-A primeira etapa para armazenar [configurações](../configurations/configurations.md) em um servidor de recepção, deverá compilá-los em arquivos ". MOF". Para tornar uma configuração genérica e aplicáveis a mais clientes, use `localhost` em seu bloco de nó. O exemplo a seguir mostra um shell de configuração que usa `localhost` em vez de um nome de cliente específico.
+A primeira etapa para armazenar [Configurações](../configurations/configurations.md) em um servidor de pull, é compilá-los em arquivos ".mof". Para tornar uma configuração genérica e aplicável a mais clientes, use `localhost` em seu bloco de nós. O exemplo a seguir mostra um shell de configuração que usa `localhost` em vez de um nome de cliente específico.
 
 ```powershell
 Configuration GenericConfig
@@ -33,15 +33,15 @@ Configuration GenericConfig
 GenericConfig
 ```
 
-Depois de você ter compilado seu configuração genérica, você deve ter um arquivo de "localhost.mof".
+Depois de compilar sua configuração genérica, você deve ter um arquivo "localhost.mof".
 
 ## <a name="renaming-the-mof-file"></a>Renomeando o arquivo MOF
 
-Você pode armazenar arquivos de configuração de ". MOF" em um servidor de Pull por **ConfigurationName** ou **ConfigurationID**. Dependendo de como você planeja configurar os clientes de pull, você pode escolher uma seção abaixo para renomear corretamente seus arquivos compilados ". MOF".
+Você pode armazenar arquivos de configuração ".mof" em um servidor de pull como **ConfigurationName** ou **ConfigurationID**. Dependendo de como você planeja configurar os clientes de pull, é possível escolher uma seção abaixo para renomear corretamente seus arquivos ".mof" compilados.
 
 ### <a name="configuration-ids-guid"></a>IDs de configuração (GUID)
 
-Será necessário renomear o arquivo "localhost.mof" para "<GUID>. MOF" arquivo. Você pode criar um aleatório **Guid** usando o exemplo abaixo, ou usando o [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet.
+Será necessário renomear o arquivo "localhost.mof" como "<GUID>.mof". Você pode criar um **Guid** aleatório usando o exemplo abaixo ou usando o cmdlet [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid).
 
 ```powershell
 [System.Guid]::NewGuid()
@@ -55,17 +55,17 @@ Guid
 64856475-939e-41fb-aba5-4469f4006059
 ```
 
-Em seguida, você pode renomear o arquivo ". MOF" usando qualquer método aceitável. O exemplo a seguir, usa o [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet.
+Em seguida, você pode renomear o arquivo ".mof" usando qualquer método aceitável. O exemplo a seguir usa o cmdlet [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item).
 
 ```powershell
 Rename-Item -Path .\localhost.mof -NewName '64856475-939e-41fb-aba5-4469f4006059.mof'
 ```
 
-Para obter mais informações sobre como usar **Guids** em seu ambiente, consulte [planejar Guids](/powershell/dsc/secureserver#guids).
+Para obter mais informações sobre o uso de **Guids** em seu ambiente, confira [Plan for Guids](/powershell/dsc/secureserver#guids) (Planejar-se para usar Guids).
 
 ### <a name="configuration-names"></a>Nomes de configuração
 
-Será necessário renomear o arquivo "localhost.mof" para "<Configuration Name>. MOF" arquivo. No exemplo a seguir, o nome da configuração da seção anterior é usado. Em seguida, você pode renomear o arquivo ". MOF" usando qualquer método aceitável. O exemplo a seguir, usa o [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet.
+Será necessário renomear o arquivo "localhost.mof" como "<Configuration Name>.mof". No exemplo a seguir, é usado o nome da configuração da seção anterior. Em seguida, você pode renomear o arquivo ".mof" usando qualquer método aceitável. O exemplo a seguir usa o cmdlet [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item).
 
 ```powershell
 Rename-Item -Path .\localhost.mof -NewName 'GenericConfig.mof'
@@ -73,21 +73,21 @@ Rename-Item -Path .\localhost.mof -NewName 'GenericConfig.mof'
 
 ## <a name="create-the-checksum"></a>Criar a soma de verificação
 
-Cada arquivo de ". MOF" armazenado em um servidor de Pull ou compartilhamento SMB precisa ter um arquivo associado ".checksum". Esse arquivo permite que os clientes saber quando o arquivo associado ". MOF" foi alterado e deve ser baixado novamente.
+Cada arquivo ".mof" armazenado em um servidor de pull ou compartilhamento SMB precisa ter um arquivo ".checksum" associado. Esse arquivo permite que os clientes saibam quando o arquivo associado ".mof" foi alterado e deve ser baixado novamente.
 
-Você pode criar uma **soma de verificação** com o [New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet. Você também pode executar `New-DSCCheckSum` em relação a um diretório de arquivos usando o `-Path` parâmetro. Se já existir uma soma de verificação, você pode forçá-lo a ser criada novamente com o `-Force` parâmetro. O exemplo a seguir especificou um diretório que contém o arquivo ". MOF" da seção anterior e usa o `-Force` parâmetro.
+Você pode criar um **CheckSum** com o cmdlet [New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum). Também pode executar `New-DSCCheckSum` em um diretório de arquivos usando o parâmetro `-Path`. Se já existir uma soma de verificação, é possível forçá-la a ser criada novamente com o parâmetro `-Force`. O exemplo a seguir especificou um diretório que contém o arquivo ".mof" da seção anterior e usa o parâmetro `-Force`.
 
 ```powershell
 New-DscChecksum -Path '.\' -Force
 ```
 
-Nenhuma saída será mostrada, mas agora você deve ver um "<GUID or Configuration Name>. mof.checksum" arquivo.
+Nenhuma saída será exibida, mas agora você deve ver um arquivo "<GUID or Configuration Name>.mof.checksum".
 
-## <a name="where-to-store-mof-files-and-checksums"></a>Onde armazenar os arquivos MOF e somas de verificação
+## <a name="where-to-store-mof-files-and-checksums"></a>Onde armazenar os arquivos MOF e as somas de verificação
 
-### <a name="on-a-dsc-http-pull-server"></a>Em um servidor de Pull de HTTP de DSC
+### <a name="on-a-dsc-http-pull-server"></a>Em um servidor de pull HTTP de DSC
 
-Ao configurar seu servidor de Pull de HTTP, conforme explicado em [configurar um servidor de recepção do DSC HTTP](pullServer.md), você especificar diretórios para o **ModulePath** e **ConfigurationPath** chaves. O **ConfigurationPath** chave indica onde todos os arquivos ". MOF" devem ser armazenados. O **ConfigurationPath** indica em que todos os arquivos ". MOF" e ".checksum" arquivos devem ser armazenados.
+Ao configurar seu servidor de Pull HTTP, conforme explicado em [Configurar um servidor de pull HTTP de DSC](pullServer.md), você especifica diretórios para as chaves **ModulePath** e **ConfigurationPath**. A chave **ConfigurationPath** indica onde todos os arquivos ".mof" devem ser armazenados. O **ConfigurationPath** indica onde os arquivos ".mof" e ".checksum" devem ser armazenados.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -102,7 +102,7 @@ Ao configurar seu servidor de Pull de HTTP, conforme explicado em [configurar um
 
 ### <a name="on-an-smb-share"></a>Em um compartilhamento SMB
 
-Quando você configurar um cliente de Pull para usar um compartilhamento SMB, você especifica um **ConfigurationRepositoryShare**. Todos os arquivos ". MOF" e ".checksum" devem ser armazenados em, em seguida, o **SourcePath** diretório da **ConfigurationRepositoryShare** bloco.
+Quando você configurar um cliente de pull para usar um compartilhamento SMB, especifique um **ConfigurationRepositoryShare**. Todos os arquivos ".mof" e ".checksum" devem ser armazenados no diretório **SourcePath** do bloco **ConfigurationRepositoryShare**.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -113,14 +113,14 @@ ConfigurationRepositoryShare SMBPullServer
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Em seguida, você desejará configurar clientes de Pull para extrair a configuração especificada. Para obter mais informações, consulte um dos seguintes guias:
+Em seguida, você deverá configurar clientes de pull para extrair a configuração especificada. Para saber mais, confira um dos guias a seguir:
 
-- [Configurar um cliente de Pull usando IDs de configuração (v4)](pullClientConfigId4.md)
-- [Configurar um cliente de Pull usando IDs de configuração (v5)](pullClientConfigId.md)
-- [Configurar um cliente de Pull usando nomes de configuração (v5)](pullClientConfigNames.md)
+- [Configurar um cliente de pull usando IDs de configuração (v4)](pullClientConfigId4.md)
+- [Configurar um cliente de pull usando IDs de configuração (v5)](pullClientConfigId.md)
+- [Configurar um cliente de pull usando Nomes de configuração (v5)](pullClientConfigNames.md)
 
 ## <a name="see-also"></a>Consulte também
 
 - [Configurar um servidor de pull SMB de DSC](pullServerSmb.md)
 - [Configurar um servidor de pull HTTP de DSC](pullServer.md)
-- [Pacote e os recursos de Upload para um servidor de Pull](package-upload-resources.md)
+- [Empacotar e carregar recursos em um servidor de pull](package-upload-resources.md)

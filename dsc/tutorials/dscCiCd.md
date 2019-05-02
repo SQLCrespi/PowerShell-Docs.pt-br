@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Criando um pipeline de integração contínua e implantação contínua com DSC
-ms.openlocfilehash: c305d9bc7e0f8c659129b5a20d0b7e8b34d09ba8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076456"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criando um pipeline de integração contínua e implantação contínua com DSC
 
@@ -274,7 +274,7 @@ O script de implantação [psake](https://github.com/psake/psake) definido em `D
 
 #### <a name="deploymodules"></a>DeployModules
 
-Inicia uma sessão do PowerShell no `TestAgent1` e instala os módulos que contêm os recursos de DSC necessários para a configuração.
+Inicia uma sessão do PowerShell no `TestAgent1` e instala os módulos que contêm os recursos DSC necessários para a configuração.
 
 #### <a name="deployconfigs"></a>DeployConfigs
 
@@ -388,7 +388,7 @@ Vamos criar uma definição de versão para que o projeto seja implantado no amb
 
 Para fazer isso, adicione uma nova definição de versão associada à definição de build `InfraDNS` que você criou anteriormente.
 Assegure-se de selecionar **Implantação contínua** para que uma nova versão seja disparada sempre que um novo build for concluído.
-[How to: Trabalhar com definições de versão](https://www.visualstudio.com/en-us/docs/build/actions/work-with-release-definitions)) e configurá-lo da seguinte maneira:
+([O que são pipelines de versão? ](/azure/devops/pipelines/release/what-is-release-management)) e configure-o da seguinte maneira:
 
 Adicione as seguintes etapas na definição de versão:
 

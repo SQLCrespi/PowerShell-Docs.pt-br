@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
 ms.openlocfilehash: 78a001dbe43a0b005d10a817e05e4cc7a72f5bd0
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058447"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -85,8 +85,8 @@ Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de
 |**Executar**|F5|
 |**Executar seleção**|F8|
 |**Parar execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
-|**Tab** (para o próximo script)|CTRL + TAB **Observação:** Guia para o próximo script funciona somente quando uma única guia do PowerShell aberta ou quando você tiver mais de um guia de PowerShell aberta, mas o foco está no painel de Script.|
-|**Tab** (para o script anterior)|CTRL + SHIFT + TAB **Observação:** Guia para o script anterior funciona quando você tiver apenas uma guia do PowerShell aberta ou se você tiver mais de um guia de PowerShell aberta, e o foco está no painel de Script.|
+|**Tab** (para o próximo script)|CTRL+TAB **Observação:** usar Tab para ir para o próximo script só funciona quando você tem uma única guia do PowerShell aberta ou quando tem mais de uma guia do PowerShell aberta, mas o destaque está no painel Script.|
+|**Tab** (para o script anterior)|CTRL+SHIFT+TAB **Observação:** usar Tab para ir para o script anterior só funciona quando você tem uma única guia do PowerShell aberta ou se tem mais de uma guia do PowerShell aberta, mas o destaque está no painel Script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Atalhos de teclado para personalizar a exibição
 

@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 ms.openlocfilehash: ff2c2bd7369893d72db001ecabf63991ded0bfd5
-ms.sourcegitcommit: ac20e0faaa37142e9c6e4507a21df2f4a3fdbece
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058974"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Representação de estado e status consistente e unificada
 
@@ -36,8 +36,8 @@ A tabela abaixo ilustra as propriedades relacionadas a estado e status resultant
 | r, S                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 | r, F                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 
-- S<sub>i</sub>: uma série de recursos que são aplicados com êxito
-- F<sub>i</sub>: uma série de recursos que são aplicados sem êxito
+- S<sub>i</sub>: uma série de recursos que foram aplicados com êxito
+- F<sub>i</sub>: uma série de recursos que não foram aplicados com êxito
 - r: um recurso que exige reinicialização
 
 ```powershell

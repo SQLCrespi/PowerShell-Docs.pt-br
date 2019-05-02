@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.openlocfilehash: 3d836a24b494df9c7f6ebe994386e2a0297521fa
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086083"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -179,8 +179,9 @@ Para obter mais informações sobre como esses cmdlets funcionam, confira [essa 
 
 ## <a name="experimental-feature-flags"></a>Sinalizadores de recursos experimentais
 
-Com os sinalizadores de recursos experimentais, os usuários podem habilitar recursos que não foram finalizados.
-Esses recursos experimentais não têm suporte e podem conter bugs.
+Habilitamos o suporte aos [Recursos experimentais][]. Isso possibilita aos desenvolvedores do PowerShell fornecer novos recursos e obter comentários antes da conclusão do design. Dessa maneira, evitamos fazer alterações significativas à medida que o projeto evolui.
+
+Use `Get-ExperimentalFeature` para obter uma lista de recursos experimentais disponíveis. Você pode habilitar ou desabilitar esses recursos com `Enable-ExperimentalFeature` e `Disable-ExperimentalFeature`.
 
 Você pode aprender mais sobre esse recurso no [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).
 
@@ -207,7 +208,7 @@ Se `pwsh.exe` não estiver disponível, o PowerShell Direct voltará a usar `pow
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` já cria pontos de extremidade de comunicação remota separados para versões prévias
 
-`Enable-PSRemoting` agora cria duas configurações de sessão de comunicação remota:
+`Enable-PSRemoting` já cria duas configurações de sessão de comunicação remota:
 
 - Uma para a versão principal do PowerShell. Por exemplo, `PowerShell.6`. Esse ponto de extremidade que pode ser utilizado em versões secundárias é atualizado como a configuração de sessão do PowerShell 6 "para todo o sistema"
 - Uma configuração de sessão específica da versão, por exemplo: `PowerShell.6.1.0`
@@ -305,7 +306,7 @@ Graças a [@iSazonov](https://github.com/iSazonov), o [`Test-Connection`](/power
 ### <a name="update-help-as-non-admin"></a>`Update-Help` como não administrador
 
 Por demanda popular, `Update-Help` não precisa mais ser executado como um administrador.
-`Update-Help` agora o padrão é salvar a ajuda em uma pasta no escopo do usuário.
+Agora, o padrão de `Update-Help` é salvar a ajuda em uma pasta no escopo do usuário.
 
 ### <a name="new-methodsproperties-on-pscustomobject"></a>Novos métodos/propriedades em `PSCustomObject`
 
@@ -523,3 +524,6 @@ Como parte da melhoria de desempenho, agora `Group-Object` retorna uma lista cla
 Embora você não deva confiar na classificação, essa alteração pode desviá-lo se você quiser o primeiro grupo. Decidimos que essa melhoria de desempenho faz a alteração valer a pena, pois o impacto de depender do comportamento anterior é baixo.
 
 Confira mais informações sobre essa alteração em [Problema #7409](https://github.com/PowerShell/PowerShell/issues/7409).
+
+<!-- URL references -->
+[Recursos experimentais]: /powershell/module/Microsoft.PowerShell.Core/About/about_Experimental_Features
