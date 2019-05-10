@@ -44,7 +44,7 @@ Se os pares **chave-valor** estiverem na mesma linha, eles deverão ser separado
 Este exemplo usa vários parâmetros **FilterHashtable** dos pares **chave-valor**. A consulta completa inclui **LogName**, **ProviderName**, **Palavras-chave**, **ID** e **Nível**.
 
 Os pares **chave-valor** aceitos são mostrados na tabela a seguir e incluídos na documentação do parâmetro [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/Get-WinEvent)
-**FilterHashtable **.
+**FilterHashtable**.
 
 A tabela a seguir exibe os nomes de chave, os tipos de dados e se os caracteres curinga são aceitos para um valor de dados.
 
