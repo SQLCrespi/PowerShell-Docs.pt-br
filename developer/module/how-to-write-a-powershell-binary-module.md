@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
 caps.latest.revision: 15
-ms.openlocfilehash: 9ddb3bc172c66314603d2be4df5192a76c92e05d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082219"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229323"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Como escrever um módulo binário do Windows PowerShell
 
@@ -29,7 +29,10 @@ O procedimento a seguir descreve como criar e instalar um módulo binário do Po
 
 2. Se necessário, crie o restante de sua solução: (cmdlets adicionais, arquivos XML e assim por diante) e descrevê-los com um manifesto de módulo.
 
-   Além de descrever os assemblies de cmdlet em sua solução, um manifesto de módulo pode descrever como você deseja que seu módulo exportados e importados, quais cmdlets serão expostas e o que irá arquivos adicionais no módulo. Conforme mencionado anteriormente no entanto, o PowerShell pode tratar um cmdlet binário como um módulo sem esforço adicional. Como tal, um manifesto de módulo é útil principalmente para combinar vários arquivos em um único pacote, ou para controlar explicitamente a publicação para um determinado assembly. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6).
+   Além de descrever os assemblies de cmdlet em sua solução, um manifesto de módulo pode descrever como você deseja que seu módulo exportados e importados, quais cmdlets serão expostas e o que irá arquivos adicionais no módulo.
+   Conforme mencionado anteriormente no entanto, o PowerShell pode tratar um cmdlet binário como um módulo sem esforço adicional.
+   Como tal, um manifesto de módulo é útil principalmente para combinar vários arquivos em um único pacote, ou para controlar explicitamente a publicação para um determinado assembly.
+   Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](how-to-write-a-powershell-module-manifest.md).
 
    O código a seguir é extremamente simples C# bloco de código que contém três cmdlets no mesmo arquivo que pode ser usado como um módulo.
 
@@ -82,7 +85,9 @@ O procedimento a seguir descreve como criar e instalar um módulo binário do Po
 
 Cmdlets e provedores que existem no snap-in de assemblies carregados como módulos binários. Quando os snap-in de assemblies são carregados como módulos binários, os cmdlets e provedores do snap-in estão disponíveis para o usuário, mas a classe de snap-in no assembly será ignorada e o snap-in não está registrado. Como resultado, os cmdlets do snap-in fornecidos pelo Windows PowerShell não pode detectar o snap-in, mesmo que os cmdlets e provedores estão disponíveis para a sessão.
 
-Além disso, qualquer formatação ou tipos de arquivos que são referenciados pelo snap-in não podem ser importados como parte de um módulo binário. Para importar os arquivos de formatação e tipos, você deve criar um manifesto de módulo. Consulte, [como escrever um manifesto de módulo do PowerShell](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6).
+Além disso, qualquer formatação ou tipos de arquivos que são referenciados pelo snap-in não podem ser importados como parte de um módulo binário.
+Para importar os arquivos de formatação e tipos, você deve criar um manifesto de módulo.
+Consulte, [como escrever um manifesto de módulo do PowerShell](how-to-write-a-powershell-module-manifest.md).
 
 ## <a name="see-also"></a>Consulte Também
 
