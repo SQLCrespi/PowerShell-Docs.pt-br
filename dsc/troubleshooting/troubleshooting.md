@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: DSC,powershell,configuração,instalação
 title: Solucionando problemas de DSC
-ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076541"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229528"
 ---
 # <a name="troubleshooting-dsc"></a>Solucionando problemas de DSC
 
@@ -627,6 +627,21 @@ onlyProperty                            PSComputerName
 ------------                            --------------
 14                                      localhost
 ```
+
+## <a name="dsc-returns-unexpected-response-code-internalservererror-when-registering-with-windows-pull-server"></a>O DSC retorna "código de resposta InternalServerError inesperado" ao registrar com o Servidor de Pull do Windows
+
+Ao aplicar uma metaconfiguração em um servidor para registrá-lo com uma instância do Servidor de Pull do Windows, você poderá encontrar o erro a seguir.
+
+```PowerShell
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : <computername>
+```
+
+Isso pode ocorrer quando o certificado usado no servidor para criptografar o tráfego tem um CN (nome comum) diferente do nome DNS usado pelo nó para resolver a URL.
+Atualize a instância do Servidor de Pull do Windows para usar um certificado com um nome corrigido.
 
 ## <a name="see-also"></a>Consulte Também
 

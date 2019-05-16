@@ -3,31 +3,31 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Usando a expansão com Tab
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
-ms.openlocfilehash: 3d047bf0691c8a304d7637aa50fba6ae99709a82
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 437c1e3c04352f2c5c3aba4c67b542821975f739
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086928"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229435"
 ---
 # <a name="using-tab-expansion"></a>Usando a expansão com Tab
 
-Shells de linha de comando geralmente fornecem uma maneira de preencher os nomes de comandos ou arquivos longos automaticamente, acelerando a entrada de comando e fornecendo. O Windows PowerShell permite preencher os nomes de arquivo e nomes de cmdlet pressionando a tecla **Tab**.
+Shells de linha de comando geralmente fornecem uma maneira de preencher nomes longos de arquivos ou comandos automaticamente, acelerando a entrada de comandos e fornecendo dicas. O PowerShell permite preencher os nomes de arquivo e os nomes de cmdlet pressionando a tecla <kbd>Tab</kbd>.
 
 > [!NOTE]
 > A expansão da guia é controlada pelas funções internas TabExpansion ou TabExpansion2. Como essa função pode ser modificada ou substituída, essa discussão é um guia para o comportamento da configuração padrão do PowerShell.
 
-Para preencher automaticamente um nome de arquivo ou um caminho com as opções disponíveis automaticamente, digite parte do nome e pressione a tecla **Tab**. O PowerShell expandirá automaticamente o nome para a primeira correspondência que encontrar. Pressionar a tecla **Tab** repetidamente percorrerá todas as opções disponíveis.
+Para preencher automaticamente um nome de arquivo ou um caminho com as opções disponíveis automaticamente, digite parte do nome e pressione a tecla <kbd>Tab</kbd>. O PowerShell expandirá automaticamente o nome para a primeira correspondência que encontrar. Pressionar a tecla <kbd>Tab</kbd> repetidamente percorrerá todas as opções disponíveis.
 
-A expansão com Tab de nomes de cmdlet é ligeiramente diferente. Para usar a expansão com Tab em um nome de cmdlet, digite a primeira parte inteira do nome (o verbo) e o hífen que o segue. Você pode preencher mais do mesmo nome de uma correspondência parcial. Por exemplo, se você digitar **get-co** e pressionar a tecla **Tab**, o PowerShell o expandirá automaticamente para o cmdlet **Get-Command** (observe que ele também altera as letras maiúsculas e minúsculas para sua forma padrão). Se você pressionar a tecla **Tab** novamente, o PowerShell substituirá isso pelo outro único nome de cmdlet correspondente, **Get-Content**.
+A expansão com Tab de nomes de cmdlet é ligeiramente diferente. Para usar a expansão com Tab em um nome de cmdlet, digite a primeira parte inteira do nome (o verbo) e o hífen que o segue. Você pode preencher mais do mesmo nome de uma correspondência parcial. Por exemplo, se você digitar `get-co` e pressionar a tecla <kbd>Tab</kbd>, o PowerShell o expandirá automaticamente para o cmdlet `Get-Command` (observe que ele também altera as letras maiúsculas e minúsculas para sua forma padrão). Se você pressionar a tecla <kbd>Tab</kbd> novamente, o PowerShell substitui isso pelo outro único nome de cmdlet correspondente, `Get-Content`.
 
-Você pode usar a expansão com Tab várias vezes na mesma linha. Por exemplo, você pode usar a expansão da tabulação no nome do cmdlet **Get-Content** digitando:
+Você pode usar a expansão com Tab várias vezes na mesma linha. Por exemplo, você pode usar a expansão de guias no nome do cmdlet `Get-Content` digitando:
 
 ```
 PS> Get-Con<Tab>
 ```
 
-Quando você pressiona a tecla **Tab**, o comando se expande para:
+Quando você pressiona a tecla <kbd>Tab</kbd>, o comando se expande para:
 
 ```
 PS> Get-Content
@@ -39,7 +39,7 @@ Você pode especificar parcialmente o caminho para o arquivo de log Active Setup
 PS> Get-Content c:\windows\acts<Tab>
 ```
 
-Quando você pressiona a tecla **Tab**, o comando se expande para:
+Quando você pressiona a tecla <kbd>Tab</kbd>, o comando se expande para:
 
 ```
 PS> Get-Content C:\windows\actsetup.log

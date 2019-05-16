@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Get-Test-Set
-ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076592"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229525"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-Quando aplicado, o [Configuration Manager local](../managing-nodes/metaConfig.md) lerá o valor "Spooler" do arquivo ".mof" e o enviará para o parâmetro `-Name` dos métodos **Get**, **Test** e **Set** da instância "MyService" do recurso **Serviço**.
+Quando aplicado, o LCM [(Configuration Manager local)](../managing-nodes/metaConfig.md) lerá o valor "Spooler" do arquivo ".mof" e o enviará para o parâmetro `-Name` dos métodos **Get**, **Test** e **Set** da instância "MyService" do recurso **Serviço**.
 
 ## <a name="get"></a>Get
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Recursos de Função JEA
-ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 528b41c0e2ffdcfed3251fb0f714c649e7290761
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084786"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229558"
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
 
@@ -183,6 +183,8 @@ Qualquer cmdlet restrito em uma sessão JEA exibirá o mesmo comportamento ao se
 
 Se você estiver escrevendo muitas funções personalizadas, poderá ser mais fácil colocá-las em um [Módulo de Script do PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 Em seguida, você pode tornar essas funções visíveis na sessão JEA, usando o campo VisibleFunctions, assim como faria com módulos internos e de terceiros.
+
+Para que o preenchimento da guia funcione corretamente em sessões JEA, você deve incluir a função interna `tabexpansion2` na lista **VisibleFunctions**.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Colocar recursos de função em um módulo
 

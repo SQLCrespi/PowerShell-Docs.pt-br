@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o Gerenciador de Configurações Local
-ms.openlocfilehash: 86d2cc17872692a738e9c68121b8931833d2a251
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079669"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229504"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -48,7 +48,7 @@ configuration LCMConfig
 }
 ```
 
-O processo de aplicação das configurações do LCM é semelhante à aplicação de uma configuração DSC.
+O processo de aplicação das configurações do LCM é semelhante à aplicação de uma configuração de DSC.
 Você criará uma configuração do LCM, a compilará em um arquivo MOF e a aplicará ao nó.
 Ao contrário de configurações de DSC, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 Em vez disso, chama [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager), fornecendo o caminho até o MOF de configuração do LCM como parâmetro.
@@ -121,6 +121,10 @@ Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 |ConfigurationNames|String[]|Uma matriz de nomes de configurações que serão retiradas por pull pelo nó de destino. Serão usadas apenas se o nó for registrado com o serviço de pull usando uma **RegistrationKey**. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](../pull-server/pullClientConfigNames.md).|
 |RegistrationKey|cadeia de caracteres|Um GUID que registra o nó com o serviço de pull. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](../pull-server/pullClientConfigNames.md).|
 |ServerURL|cadeia de caracteres|A URL do serviço de configuração.|
+|ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
+
+>!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ConfigurationRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -143,6 +147,10 @@ Um **ResourceRepositoryWeb** define as propriedades a seguir.
 |CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o serviço de pull.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
+|ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
+
+>!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -166,6 +174,10 @@ A função de servidor de relatório não é compatível com o serviço de pull 
 |CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o serviço de pull.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
+|ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
+
+>!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ReportServerWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
