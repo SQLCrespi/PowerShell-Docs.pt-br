@@ -8,40 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 946b71e4480a47ac6ccd6930be445d7efb4fb62d
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62075249"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854905"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
 
 Esta seção descreve como adicionar aliases, expansão de curinga, e mensagens de ajuda para os parâmetros do cmdlet Stop-Proc (descrito na [criação de um Cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)).
 
 Esse cmdlet Stop-Proc tenta interromper os processos que são recuperados usando o cmdlet Get-Proc (descrito na [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)).
-
-Os tópicos nesta seção incluem o seguinte:
-
-- [Definindo o Cmdlet](#Defining-the-Cmdlet)
-
-- [Definir parâmetros para modificação do sistema](#Defining-Parameters-for-System-Modification)
-
-- [Definir um Alias de parâmetro](#Defining-a-Parameter-Alias)
-
-- [Ajuda para os parâmetros de criação](#Creating-Help-for-Parameters)
-
-- [Substituindo uma método de processamento de entrada](#Overriding-an-Input-Processing-Method)
-
-- [Suporte à expansão de curinga](#Supporting-Wildcard-Expansion)
-
-- [Exemplo de código](#Defining-a-Parameter-Alias)
-
-- [Definindo tipos de objeto e formatação](#Define-Object-Types-and-Formatting)
-
-- [Criando o Cmdlet](#Building-the-Cmdlet)
-
-- [Testando o Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Definindo o Cmdlet
 

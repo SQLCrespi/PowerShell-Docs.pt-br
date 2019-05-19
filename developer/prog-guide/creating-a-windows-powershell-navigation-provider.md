@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 40454f880b57d5b3a8a8ded21c8c97aebba027fe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081845"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855166"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
 
@@ -33,34 +33,6 @@ O provedor descrito aqui permite que o identificador de usuário de um banco de 
 
 > [!CAUTION]
 > Lembre-se de que este design pressupõe um banco de dados que tem um campo com a ID de nome e o tipo do campo é LongInteger.
-
-A lista a seguir inclui as seções neste tópico. Se você estiver familiarizado com a gravação de um provedor de navegação do Windows PowerShell, leia essas informações na ordem em que ele é exibido. No entanto, se você estiver familiarizado com a gravação de um provedor de navegação do Windows PowerShell, vá diretamente para as informações que você precisa.
-
-- [Definindo uma classe de provedor de navegação de PS](#Define-the-Windows-PowerShell-provider)
-
-- [Definindo a funcionalidade de Base](#Defining-Base-Functionality)
-
-- [Criação de um caminho de PS](#Creating-a-Windows-PowerShell-Path)
-
-- [Recuperando o caminho pai](#Retrieving-the-Parent-Path)
-
-- [Recuperar o nome de caminho filho](#Retrieve-the-Child-Path-Name)
-
-- [Determinando se um Item é um contêiner](#Determining-if-an-Item-is-a-Container)
-
-- [Mover um Item](#Moving-an-Item)
-
-- [Anexando parâmetros dinâmicos para a `Move-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Move-Item-Cmdlet)
-
-- [Normalizar um caminho relativo](#Normalizing-a-Relative-Path)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definindo tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o provedor do Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Testando o provedor do Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="define-the-windows-powershell-provider"></a>Definir o provedor do Windows PowerShell
 

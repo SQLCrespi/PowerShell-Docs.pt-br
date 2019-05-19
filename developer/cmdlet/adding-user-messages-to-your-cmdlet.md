@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 5b3a5f5d5d02c7d5a3c1d622ec1a3740739c694f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 138c6a43937e72fffaa2a09243e500e9822e6111
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068769"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854931"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Adicionar mensagens de usuário para o cmdlet
 
@@ -51,32 +51,6 @@ Cmdlets pode gravar vários tipos de mensagens que podem ser exibidos ao usuári
 - Relatório de progresso, mensagens que contêm informações sobre a quantidade funcionar o cmdlet foi concluída ao executar uma operação que demora muito tempo.
 
 Não há nenhum limite para o número de mensagens que seu cmdlet pode gravar ou o tipo de mensagens que grava seu cmdlet. Cada mensagem é gravada, fazendo uma chamada específica de dentro da método do seu cmdlet de processamento de entrada.
-
-## <a name="the-stopproc-cmdlet"></a>O StopProc Cmdlet
-
-Os tópicos nesta seção incluem o seguinte:
-
-- [Definindo o Cmdlet](#Defining-the-Cmdlet)
-
-- [Definir parâmetros para modificação do sistema](#Defining-Parameters-for-System-Modification)
-
-- [Substituindo uma método de processamento de entrada](#Overriding-an-Input-Processing-Method)
-
-- [Gravar uma mensagem detalhada](#Writing-a-Verbose-Message)
-
-- [Gravar uma mensagem de depuração](#Writing-a-Debug-Message)
-
-- [Gravar uma mensagem de aviso](#Writing-a-Warning-Message)
-
-- [Gravar uma mensagem de progresso](#Writing-a-Progress-Message)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definir tipos de objeto e formatação](#Define-Object-Types-and-Formatting)
-
-- [Criando o Cmdlet](#Building-the-Cmdlet)
-
-- [Testando o Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Definindo o Cmdlet
 

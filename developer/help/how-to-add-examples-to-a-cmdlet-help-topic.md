@@ -8,28 +8,14 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f723b21-8f95-4981-8b6e-4f07c22d601a
 caps.latest.revision: 5
-ms.openlocfilehash: 5e8d1df6b423bfd2cd6b0a64a8875dea9c3fb4ef
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: b6f8aef76a5f4b5dc1a60425541856ead9a9c77a
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083460"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855122"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>Como adicionar exemplos a um tópico de ajuda do cmdlet
-
-- [É importante saber sobre exemplos na Ajuda do Cmdlet](#Things-to-Know-about-Examples-in-Cmdlet-Help)
-
-- [Exibições de Ajuda que exibem exemplos](#Help-Views-that-Display-Examples)
-
-- [Adicionando um nó de exemplos](#Adding-an-Examples-Node)
-
-- [Adição de caracteres que os precedem](#Adding-Preceding-Characters)
-
-- [Adicionando o comando](#Adding-the-Command)
-
-- [Adicionando uma descrição](#Adding-a-Description)
-
-- [Adicionando a saída de exemplo](#Adding-Example-Output)
 
 ## <a name="things-to-know-about-examples-in-cmdlet-help"></a>É importante saber sobre exemplos na Ajuda do Cmdlet
 

@@ -8,24 +8,14 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083375"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855145"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Como adicionar sintaxe a um tópico de ajuda do cmdlet
-
-- [Atributos de parâmetro](#Parameter-Attributes)
-
-- [Atributos de valor de parâmetro](#Parameter-Value-Attributes)
-
-- [Coletando informações de sintaxe](#Gathering-Syntax-Information)
-
-- [O diagrama de sintaxe XML de codificação](#Coding-the-Syntax-Diagram-XML)
-
-## <a name="things-to-know-about-the-syntax-diagram-in-cmdlet-help"></a>É importante saber sobre o diagrama de sintaxe na Ajuda do Cmdlet
 
 Antes de começar a codificar o XML para o diagrama de sintaxe no arquivo de ajuda de cmdlet, leia esta seção para obter uma visão clara do tipo de dados que você precisa fornecer, como os atributos de parâmetro e como esses dados são exibidos no diagrama de sintaxe...
 
@@ -166,7 +156,7 @@ Normalmente, os valores de parâmetro que são espaços reservados são necessá
 
 ## <a name="coding-the-syntax-diagram-xml"></a>O diagrama de sintaxe XML de codificação
 
-O nó de sintaxe do XML começa imediatamente após o nó de descrição, que termina com o \</maml:description > marca. Para obter informações sobre a coleta de dados usados no diagrama de sintaxe, consulte [coleta informações sobre a sintaxe](#Gathering-Syntax-Information).
+O nó de sintaxe do XML começa imediatamente após o nó de descrição, que termina com o \</maml:description > marca. Para obter informações sobre a coleta de dados usados no diagrama de sintaxe, consulte [coleta informações sobre a sintaxe](#gathering-syntax-information).
 
 ### <a name="adding-a-syntax-node"></a>Adicionando um nó de sintaxe
 
@@ -210,7 +200,7 @@ O exemplo a seguir inclui um nó de sintaxe que tem nós de item de sintaxe para
 
 Cada parâmetro é adicionado ao nó de item de sintaxe é especificado dentro de um par de \<: parâmetro de comando > marcas. Você precisa de um par de \<: parâmetro de comando > marcas para cada parâmetro incluído no conjunto de parâmetros, com exceção dos parâmetros comuns que são fornecidos pelo Windows PowerShell?.
 
-Os atributos da abertura \<: parâmetro de comando > marca determinar como o parâmetro aparece no diagrama de sintaxe. Para obter informações sobre atributos de parâmetro, consulte [atributos de parâmetro](#Parameter-Attributes).
+Os atributos da abertura \<: parâmetro de comando > marca determinar como o parâmetro aparece no diagrama de sintaxe. Para obter informações sobre atributos de parâmetro, consulte [atributos de parâmetro](#parameter-attributes).
 
 > [!NOTE]
 > O \<: parâmetro de comando > marca dá suporte a um elemento filho \<maml:description > cujo conteúdo nunca é exibido. As descrições de parâmetro são especificadas no nó de parâmetro do XML. Para evitar inconsistências entre as informações no item de sintaxe bodes e o nó de parâmetro, omita o (\<maml:description > ou deixá-lo vazio.

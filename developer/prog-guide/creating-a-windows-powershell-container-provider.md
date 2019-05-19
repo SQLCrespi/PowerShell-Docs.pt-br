@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 33effed9a96cf1b9ee5f1a50b60a1937526db9d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9e7da13ff559e802d52df475f2a555baeeeef983
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081896"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855189"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Criar um provedor de contêineres do Windows PowerShell
 
@@ -35,44 +35,6 @@ O provedor de contêiner do Windows PowerShell descrito aqui define o banco de d
 
 > [!CAUTION]
 > Lembre-se de que este design pressupõe um banco de dados que tem um campo com a ID de nome e o tipo do campo é LongInteger.
-
-Aqui está uma lista das seções neste tópico. Se você estiver familiarizado com a gravação de um provedor de contêiner do Windows PowerShell, leia essas informações na ordem em que ele é exibido. No entanto, se você estiver familiarizado com a gravação de um provedor de contêiner do Windows PowerShell, vá diretamente para as informações que você precisa.
-
-- [Definindo uma classe de provedor de contêiner do Windows PowerShell](#Defining-a-Windows-PowerShell-Container-Provider-Class)
-
-- [Definindo a funcionalidade de Base](#defining-base-functionality)
-
-- [Recuperando itens filho](#Retrieving-Child-Items)
-
-- [Anexando parâmetros dinâmicos para a `Get-ChildItem` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet)
-
-- [Recuperando nomes de itens filho](#Retrieving-Child-Item-Names)
-
-- [Anexando parâmetros dinâmicos para a `Get-ChildItem` Cmdlet (nome)](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet-(Name))
-
-- [Renomeando itens](#Renaming-Items)
-
-- [Anexando parâmetros dinâmicos para a `Rename-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Rename-Item-Cmdlet)
-
-- [Criando novos itens](#Creating-New-Items)
-
-- [Anexando parâmetros dinâmicos para a `New-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-New-Item-Cmdlet)
-
-- [Removendo itens](#Removing-Items)
-
-- [Anexando parâmetros dinâmicos para a `Remove-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Remove-Item-Cmdlet)
-
-- [Consultar itens filho](#Querying-for-Child-Items)
-
-- [Itens de cópia](#Copying-Items)
-
-- [Anexando parâmetros dinâmicos para a `Copy-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Criando o provedor do Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
-
-- [Testando o provedor do Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-a-windows-powershell-container-provider-class"></a>Definindo uma classe de provedor de contêiner do Windows PowerShell
 
@@ -398,7 +360,7 @@ As seguintes condições podem ser aplicáveis à sua implementação de [System
 
 - Sua implementação de [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) é responsável por impedir a recursão infinita quando há links circular e assim por diante. Uma exceção de terminação apropriada deve ser gerada para refletir uma condição desse tipo.
 
-- Sua implementação do [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método deve chamar [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificar seu valor de retorno antes de fazer alterações ao repositório de dados. Após a chamada para [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) retorna true, o [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método deve chamar o [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) método como uma verificação adicional para modificações no sistema potencialmente perigosos. Para obter mais informações sobre como chamar esses métodos, consulte [renomear itens](#Renaming-Items).
+- Sua implementação do [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método deve chamar [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificar seu valor de retorno antes de fazer alterações ao repositório de dados. Após a chamada para [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) retorna true, o [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método deve chamar o [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) método como uma verificação adicional para modificações no sistema potencialmente perigosos. Para obter mais informações sobre como chamar esses métodos, consulte [renomear itens](#renaming-items).
 
 ## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Anexando parâmetros dinâmicos para o Cmdlet Copy-Item
 

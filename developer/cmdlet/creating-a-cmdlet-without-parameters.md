@@ -11,32 +11,16 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068324"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854959"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Criar um cmdlet sem parâmetros
 
 Esta seção descreve como criar um cmdlet que recupera informações do computador local sem o uso de parâmetros e, em seguida, grava as informações para o pipeline. O cmdlet descrito aqui é um cmdlet Get-Proc que recupera informações sobre os processos do computador local e, em seguida, exibe essas informações na linha de comando.
-
-Os tópicos nesta seção incluem o seguinte:
-
-- [O Cmdlet de nomenclatura](#Naming-the-Cmdlet)
-
-- [Definição da classe do Cmdlet](#Defining-the-Cmdlet-Class)
-
-- [Substituindo uma método de processamento de entrada](#Overriding-an-Input-Processing-Method)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definindo tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o Cmdlet](#Building-the-Cmdlet)
-
-- [Testando o Cmdlet](#Testing-the-Cmdlet)
 
 > [!NOTE]
 > Lembre-se de que ao gravar cmdlets, os assemblies de referência Windows PowerShell® são baixados para o disco (por padrão em C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0). Eles não estão instalados no Cache de Assembly Global (GAC).

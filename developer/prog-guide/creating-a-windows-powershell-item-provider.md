@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: f2c9e10f0dc392399cf062500b7f28b3d1c07f6e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6f91fd53d41dd72c99f8fbc7bc7b863322d88787
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081862"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855044"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Criar um provedor de itens do Windows PowerShell
 
@@ -30,44 +30,6 @@ Este tópico descreve como criar um provedor do Windows PowerShell que pode mani
 > Para obter mais informações sobre outras implementações do provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 O provedor de item do Windows PowerShell descrito neste tópico obtém os itens de dados de um banco de dados. Nesse caso, "item" é uma tabela no banco de dados do Access ou uma linha em uma tabela.
-
-A lista a seguir contém as seções neste tópico. Se você estiver familiarizado com a gravação de um provedor de item do Windows PowerShell, leia essas seções na ordem em que aparecem. No entanto, se você estiver familiarizado com a gravação de um provedor de item do Windows PowerShell, vá diretamente para as informações que você precisa:
-
-- [Definição da classe de provedor do Windows PowerShell Item](#Defining-the-Windows-PowerShell-Item-Provider-Class)
-
-- [Definindo a funcionalidade de Base](#Defining-Base-Functionality)
-
-- [Verificação de validade do caminho](#Checking-for-Path-Validity)
-
-- [Determinando se existe um Item](#Determining-if-an-Item-Exists)
-
-- [Anexando parâmetros dinâmicos para a `Test-Path` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Test-Path-Cmdlet)
-
-- [Recuperação de um Item](#Retrieving-an-Item)
-
-- [Anexando parâmetros dinâmicos para a `Get-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-Item-Cmdlet)
-
-- [Definindo um Item](#Setting-an-Item)
-
-- [Anexando parâmetros dinâmicos para a `Set-Item` Cmdlet](#Retrieving-Dynamic-Parameters-for-SetItem)
-
-- [Limpar um Item](#Clearing-an-Item)
-
-- [Anexando parâmetros dinâmicos para o Cmdlet Clear-Item](#Retrieve-Dynamic-Parameters-for-ClearItem)
-
-- [Executar uma ação padrão para um Item](#Performing-a-Default-Action-for-an-Item)
-
-- [Recuperando parâmetros dinâmicos para InvokeDefaultAction](#Retrieve-Dynamic-Parameters-for-InvokeDefaultAction)
-
-- [Implementando os métodos e Classes auxiliares](#Implementing-Helper-Methods-and-Classes)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definindo tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o provedor do Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Testando o provedor do Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-item-provider-class"></a>Definição da classe de provedor do Windows PowerShell Item
 
@@ -223,7 +185,7 @@ Este provedor de item não implementa esse método. No entanto, o código a segu
 
 ## <a name="implementing-helper-methods-and-classes"></a>Implementando os métodos e Classes auxiliares
 
-Este provedor de item implementa vários métodos auxiliares e classes que são usadas pelo público substituem métodos definidos pelo Windows PowerShell. O código para esses métodos e classes auxiliares são mostrados na [exemplo de código](#Code-Sample) seção.
+Este provedor de item implementa vários métodos auxiliares e classes que são usadas pelo público substituem métodos definidos pelo Windows PowerShell. O código para esses métodos e classes auxiliares são mostrados na [exemplo de código](#code-sample) seção.
 
 ### <a name="normalizepath-method"></a>Método NormalizePath
 

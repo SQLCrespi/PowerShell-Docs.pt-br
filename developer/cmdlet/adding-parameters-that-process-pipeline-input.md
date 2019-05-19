@@ -11,34 +11,18 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068752"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854992"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Adicionar parâmetros que processam a entrada de pipeline
 
 Uma fonte de entrada para um cmdlet é um objeto no pipeline do que se origina de um cmdlet de upstream. Esta seção descreve como adicionar um parâmetro para o cmdlet Get-Proc (descrito na [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet pode processar objetos do pipeline.
 
 Esse cmdlet Get-Proc usa um `Name` parâmetro que aceita entrada de um objeto de pipeline, recupera informações de processo do computador local com base em nomes fornecidos e, em seguida, exibe informações sobre os processos na linha de comando.
-
-Os tópicos nesta seção incluem o seguinte:
-
-- [Definição da classe do Cmdlet](#Defining-the-Cmdlet-Class)
-
-- [Definindo a entrada do Pipeline](#Defining-Input-from-the-Pipeline)
-
-- [Substituindo uma método de processamento de entrada](#Overriding-an-Input-Processing-Method)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definindo tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o Cmdlet](#Building-the-Cmdlet)
-
-- [Testando o Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Definição da classe do Cmdlet
 
