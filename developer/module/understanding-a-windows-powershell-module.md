@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
-ms.openlocfilehash: 77d328bc1cb8cb42d5a10f107a149c05ab270ce3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: cff50d415c4c90182fa1cf015a5a5ba84d4d613a
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082085"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470779"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Noções básicas sobre um módulo do Windows PowerShell
 
@@ -55,7 +55,7 @@ Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para des
 
 ### <a name="dynamic-modules"></a>Módulos dinâmicos
 
-Um *módulo dinâmico* é um módulo não foi carregado ou salvo em um arquivo. Em vez disso, eles são criados dinamicamente por um script, usando o [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Esse tipo de módulo permite que um script criar um módulo sob demanda que não precisam ser carregados ou salvos no armazenamento persistente. Por sua natureza, um módulo dinâmico se destina a ser de curta duração e, portanto, não pode ser acessado pelo `Get-Module` cmdlet. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem fazem que provavelmente precisarão permanentes pastas para armazenar seus assemblies relacionados.
+Um *módulo dinâmico* é um módulo que não é carregado de, ou salvos em um arquivo. Em vez disso, eles são criados dinamicamente por um script, usando o [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Esse tipo de módulo permite que um script criar um módulo sob demanda que não precisam ser carregados ou salvos no armazenamento persistente. Por sua natureza, um módulo dinâmico se destina a ser de curta duração e, portanto, não pode ser acessado pelo `Get-Module` cmdlet. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem fazem que provavelmente precisarão permanentes pastas para armazenar seus assemblies relacionados.
 
 ## <a name="module-manifests"></a>Manifestos de módulo
 
