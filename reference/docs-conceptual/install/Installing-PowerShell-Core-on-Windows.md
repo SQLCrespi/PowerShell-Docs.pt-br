@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Windows
 description: Informações sobre a instalação do PowerShell Core no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 5a3c43e27f0027cfbeeefab33b045e618e0ff045
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: e716e24ba47c0c109ab302b4b1a9254d7110ddef
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854355"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470996"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Instalar o PowerShell Core no Windows
 
@@ -52,7 +52,7 @@ Confira a lista completa das opções de linha de comando para Msiexec.exe em [O
 
 ## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />Instalando o pacote ZIP
 
-Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. Observe que, ao usar o arquivo ZIP, você não obtém a verificação de pré-requisitos, como ocorre no pacote MSI. Para que a comunicação remota pelo WSMan funcione corretamente, certifique-se de que você cumpriu os [pré-requisitos](#prerequisites).
+Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. Observe que, ao usar o arquivo ZIP, você não obtém a verificação de pré-requisitos, como ocorre no pacote MSI. Para que a comunicação remota pelo WSMan funcione corretamente, verifique se você cumpriu os [pré-requisitos](#prerequisites).
 
 ## <a name="deploying-on-windows-iot"></a>Implantar no Windows IoT
 
