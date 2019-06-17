@@ -1,113 +1,125 @@
 ---
-ms.date: 06/05/2017
+ms.date: 06/03/2019
 keywords: powershell, cmdlet
 title: Trabalhando com instalações de software
-ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
-ms.openlocfilehash: 9369e3c5ac670895cd4fbd3ebc895c50efd02051
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d2111a332f0e8c1b545186d3d950e936aed1834
+ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086265"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830298"
 ---
 # <a name="working-with-software-installations"></a>Trabalhando com instalações de software
 
-Aplicativos que são projetados para usar o Windows Installer podem ser acessados por meio da classe do WMI **Win32_Product**, mas nem todos os aplicativos usados atualmente usam o Windows Installer. Como o Windows Installer fornece a mais ampla variedade de técnicas padrão para trabalhar com aplicativos instalados, abordaremos principalmente estes aplicativos. Aplicativos que usam rotinas de instalação alternativas geralmente não serão gerenciados pelo Windows Installer. Técnicas específicas para trabalhar com esses aplicativos dependem do instalador do software e as decisões tomadas pelo desenvolvedor do aplicativo.
+Aplicativos que são projetados para usar o Windows Installer podem ser acessados por meio da classe do WMI **Win32_Product**, mas nem todos os aplicativos usados atualmente usam o Windows Installer.
+Aplicativos que usam rotinas de instalação alternativas geralmente não são gerenciados pelo Windows Installer.
+As técnicas específicas para trabalhar com esses aplicativos dependem do instalador do software e das decisões tomadas pelo desenvolvedor do aplicativo. Por exemplo, aplicativos instalados ao copiar os arquivos para uma pasta do computador, geralmente não podem ser gerenciados por meio das técnicas discutidas aqui. É possível gerenciar esses aplicativos como arquivos e pastas, usando as técnicas discutidas em [Como trabalhar com arquivos e pastas](Working-with-Files-and-Folders.md).
 
-> [!NOTE]
-> Aplicativos que estão instalados copiando os arquivos do aplicativo para o computador geralmente não podem ser gerenciados usando técnicas discutidas aqui. Você pode gerenciar esses aplicativos como arquivos e pastas usando as técnicas discutidas na seção "Trabalhando com arquivos e pastas".
+> [!CAUTION]
+> A classe **Win32_Product** não é otimizada para consulta. Consultas que usam filtros curinga fazem com que o WMI use o provedor MSI para enumerar todos os produtos instalados e, em seguida, analisar a lista completa em sequência para lidar com o filtro. Isso também inicia uma verificação de consistência dos pacotes instalados, verificando e reparando a instalação. A validação é um processo lento e pode resultar em erros nos logs de eventos. Para obter mais informações, confira o [artigo da base de dados de conhecimento 974524](https://support.microsoft.com/help/974524).
 
 ## <a name="listing-windows-installer-applications"></a>Listando aplicativos do Windows Installer
 
 Para listar os aplicativos instalados com o Windows Installer em um sistema local ou remoto, use a seguinte consulta simples do WMI:
 
-```
-PS> Get-WmiObject -Class Win32_Product -ComputerName .
-
-IdentifyingNumber : {7131646D-CD3C-40F4-97B9-CD9E4E6262EF}
-Name              : Microsoft .NET Framework 2.0
-Vendor            : Microsoft Corporation
-Version           : 2.0.50727
-Caption           : Microsoft .NET Framework 2.0
+```powershell
+Get-CimInstance -Class Win32_Product |
+  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.2 (x64)"
 ```
 
-Para exibir todas as propriedades do objeto Win32_Product na tela, use o parâmetro Properties de cmdlets de formatação, como o cmdlet Format-List, com um valor de \* (all).
-
+```Output
+Name               Caption                     Vendor                 Version      IdentifyingNumber
+----               -------                     ------                 -------      -----------------
+Microsoft .NET ... Microsoft .NET Core Runt... Microsoft Corporation  16.72.26629  {ACC73072-9AD5-416C-94B...
 ```
-PS> Get-WmiObject -Class Win32_Product -ComputerName . | Where-Object -FilterScript {$_.Name -eq "Microsoft .NET Framework 2.0"} | Format-List -Property *
 
-Name              : Microsoft .NET Framework 2.0
-Version           : 2.0.50727
-InstallState      : 5
-Caption           : Microsoft .NET Framework 2.0
-Description       : Microsoft .NET Framework 2.0
-IdentifyingNumber : {7131646D-CD3C-40F4-97B9-CD9E4E6262EF}
-InstallDate       : 20060506
-InstallDate2      : 20060506000000.000000-000
+Para exibir todas as propriedades do objeto **Win32_Product** na tela, use o parâmetro **Properties** dos cmdlets de formatação, como o cmdlet `Format-List`, com um valor de `*` (all).
+
+```powershell
+Get-CimInstance -Class Win32_Product |
+  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.2 (x64)" |
+    Format-List -Property *
+```
+
+```Output
+Name                  : Microsoft .NET Core Runtime - 2.1.2 (x64)
+Version               : 16.72.26629
+InstallState          : 5
+Caption               : Microsoft .NET Core Runtime - 2.1.2 (x64)
+Description           : Microsoft .NET Core Runtime - 2.1.2 (x64)
+IdentifyingNumber     : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+SKUNumber             :
+Vendor                : Microsoft Corporation
+AssignmentType        : 1
+HelpLink              :
+HelpTelephone         :
+InstallDate           : 20180816
+InstallDate2          :
+InstallLocation       :
+InstallSource         : C:\ProgramData\Package Cache\{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}v16.72.26629\
+Language              : 1033
+LocalPackage          : C:\WINDOWS\Installer\414c96e.msi
+PackageCache          : C:\WINDOWS\Installer\414c96e.msi
+PackageCode           : {D20AC783-1EC5-4A58-9277-F452F5EB9AD9}
+PackageName           : dotnet-runtime-2.1.2-win-x64.msi
+ProductID             :
+RegCompany            :
+RegOwner              :
+Transforms            :
+URLInfoAbout          :
+URLUpdateInfo         :
+WordCount             : 0
+PSComputerName        :
+CimClass              : root/cimv2:Win32_Product
+CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+```
+
+Se preferir, você poderá usar o parâmetro `Get-CimInstance` **Filter** para selecionar apenas o Microsoft .NET Framework 2.0. O valor do parâmetro **Filter** usa a sintaxe da linguagem WQL, não a sintaxe do Windows PowerShell. Por exemplo:
+
+```powershell
+Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.2 (x64)'" |
+  Format-List -Property *
+```
+
+Para listar somente as propriedades de seu interesse, use o parâmetro **Property** dos cmdlets de formatação para listar as propriedades desejadas.
+
+```powershell
+Get-CimInstance -Class Win32_Product  -Filter "Name='Microsoft .NET Core Runtime - 2.1.2 (x64)'" |
+  Format-List -Property Name,InstallDate,InstallLocation,PackageCache,Vendor,Version,IdentifyingNumber
+```
+
+```Output
+Name              : Microsoft .NET Core Runtime - 2.1.2 (x64)
+InstallDate       : 20180816
 InstallLocation   :
-PackageCache      : C:\WINDOWS\Installer\619ab2.msi
-SKUNumber         :
+PackageCache      : C:\WINDOWS\Installer\414c96e.msi
 Vendor            : Microsoft Corporation
+Version           : 16.72.26629
+IdentifyingNumber : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
 ```
-
-Ou você pode usar o parâmetro **Get-WmiObject Filter** para selecionar somente Microsoft .NET Framework 2.0. Como o filtro usado neste comando é um filtro WMI, ele usa a sintaxe de linguagem de consulta WMI (WQL), não a sintaxe do Windows PowerShell. Em vez disso:
-
-```powershell
-Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='Microsoft .NET Framework 2.0'"| Format-List -Property *
-```
-
-Observe que as consultas WQL frequentemente usam caracteres que têm um significado especial no Windows PowerShell, como espaços ou sinais de igual. Por esse motivo, é recomendável sempre colocar o valor do parâmetro Filter entre aspas. Você também pode usar o caractere de escape do Windows PowerShell, um acento grave (\`), embora isso possa não melhorar a legibilidade. O comando a seguir é equivalente ao comando anterior e retorna os mesmos resultados, mas usa o acento grave como escape de caracteres especiais, em vez de delimitar toda a cadeia de caracteres do filtro.
-
-```powershell
-Get-WmiObject -Class Win32_Product -ComputerName . -Filter Name`=`'Microsoft` .NET` Framework` 2.0`' | Format-List -Property *
-```
-
-Para listar somente as propriedades que lhe interessam, use o parâmetro Property dos cmdlets formatação para listar as propriedades desejadas.
-
-```
-Get-WmiObject -Class Win32_Product -ComputerName . | Format-List -Property Name,InstallDate,InstallLocation,PackageCache,Vendor,Version,IdentifyingNumber
-...
-Name              : HighMAT Extension to Microsoft Windows XP CD Writing Wizard
-InstallDate       : 20051022
-InstallLocation   : C:\Program Files\HighMAT CD Writing Wizard\
-PackageCache      : C:\WINDOWS\Installer\113b54.msi
-Vendor            : Microsoft Corporation
-Version           : 1.1.1905.1
-IdentifyingNumber : {FCE65C4E-B0E8-4FBD-AD16-EDCBE6CD591F}
-...
-```
-
-Por fim, para localizar apenas os nomes dos aplicativos instalados, uma simples instrução **Format-Wide** simplifica o resultado:
-
-```powershell
-Get-WmiObject -Class Win32_Product -ComputerName .  | Format-Wide -Column 1
-```
-
-Embora haja várias maneiras de ver aplicativos que usaram o Windows Installer para a instalação, outros aplicativos não foram considerados. Como a maioria dos aplicativos padrão registram seu desinstalador com o Windows, podemos trabalhar com aqueles localmente, localizando-os no registro do Windows.
 
 ## <a name="listing-all-uninstallable-applications"></a>Listando todos os aplicativos desinstaláveis
 
-Embora não haja nenhuma forma garantida para localizar todos os aplicativos em um sistema, é possível encontrar todos os programas com listagens exibidas na caixa de diálogo Adicionar ou Remover Programas. Adicionar ou Remover Programas encontra esses aplicativos na seguinte chave do registro:
+Como a maioria dos aplicativos padrão registra um desinstalador com o Windows, podemos trabalhar com eles localmente, localizando-os no Registro do Windows. Não há uma forma garantida de localizar todos os aplicativos em um sistema. No entanto, é possível encontrar todos os programas com listagens exibidas em **Adicionar ou Remover Programas**. **Adicionar ou Remover Programas** encontra esses aplicativos na seguinte chave do Registro:
 
-**HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall**.
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
 
-Podemos também examinar essa chave para encontrar aplicativos. Para facilitar ainda mais a exibição da Chave de desinstalação, podemos mapear uma unidade do Windows PowerShell neste local do registro:
+Podemos examinar essa chave para encontrar aplicativos. Para facilitar ainda mais a exibição da Chave de desinstalação, podemos mapear uma unidade do PowerShell neste local do registro:
 
+```powershell
+New-PSDrive -Name Uninstall -PSProvider Registry -Root HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 ```
-PS> New-PSDrive -Name Uninstall -PSProvider Registry -Root HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 
+```Output
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
 Uninstall  Registry      HKEY_LOCAL_MACHINE\SOFTWARE\Micr...
 ```
-
-> [!NOTE]
-> A unidade **HKLM:** está mapeada para a raiz de **HKEY_LOCAL_MACHINE**, portanto, usamos essa unidade no caminho para a chave de Desinstalação. Em vez de **HKLM:**, também é possível especificar o caminho do Registro usando **HKLM** ou **HKEY_LOCAL_MACHINE**. A vantagem de usar uma unidade do registro existente é que podemos usar o preenchimento de guias para preencher os nomes de chaves, não sendo necessário digitá-los.
-
-Agora temos uma unidade chamada "Desinstalação" que pode ser usada como uma maneira rápida e conveniente de procurar as instalações de aplicativos. Podemos encontrar o número de aplicativos instalados contando o número de chaves de registro na Desinstalação: Unidade do Windows PowerShell:
+Agora temos uma unidade chamada "Desinstalação:" que pode ser usada como uma maneira rápida e conveniente de procurar as instalações de aplicativos. Podemos encontrar o número de aplicativos instalados contando o número de chaves de registro na Desinstalação: Unidade do PowerShell:
 
 ```
-PS> (Get-ChildItem -Path Uninstall:).Count
+(Get-ChildItem -Path Uninstall:).Count
 459
 ```
 
@@ -117,29 +129,49 @@ Podemos pesquisar esta lista de aplicativos ainda mais detalhadamente usando uma
 $UninstallableApplications = Get-ChildItem -Path Uninstall:
 ```
 
-> [!NOTE]
-> Estamos usando um longo nome de variável aqui para maior clareza. Na utilização real, não há nenhum motivo para usar nomes longos. Embora você possa usar o preenchimento de guias para nomes de variáveis, você também pode usar nomes com um ou dois caracteres para maior velocidade. Nomes mais longos e descritivos são mais úteis quando você estiver desenvolvendo código para reutilização.
-
 Para exibir os valores das entradas do registro nas chaves do registro em Desinstalação, use o método GetValue das chaves do registro. O valor do método é o nome da entrada do registro.
 
 Por exemplo, para localizar os nomes para exibição dos aplicativos na Chave de desinstalação, use o seguinte comando:
 
 ```powershell
-Get-ChildItem -Path Uninstall: | ForEach-Object -Process { $_.GetValue('DisplayName') }
+$UninstallableApplications | ForEach-Object -Process { $_.GetValue('DisplayName') }
 ```
 
 Não há nenhuma garantia de que esses valores sejam exclusivos. No exemplo a seguir, dois itens instalados aparecem como "Windows Media Encoder 9 Series":
 
+```powershell
+$UninstallableApplications | Where-Object -FilterScript { $_.GetValue("DisplayName") -eq "Windows Media Encoder 9 Series"}
 ```
-PS> Get-ChildItem -Path Uninstall: | Where-Object -FilterScript { $_.GetValue("DisplayName") -eq "Windows Media Encoder 9 Series"}
 
-   Hive: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Micros
-oft\Windows\CurrentVersion\Uninstall
-
-SKC  VC Name                           Property
----  -- ----                           --------
-  0   3 Windows Media Encoder 9        {DisplayName, DisplayIcon, UninstallS...
-  0  24 {E38C00D0-A68B-4318-A8A6-F7... {AuthorizedCDFPrefix, Comments, Conta...
+```Output
+Name                           Property
+----                           --------
+{ACC73072-9AD5-416C-94BF-D82DD AuthorizedCDFPrefix :
+CEA0F1B}                       Comments            :
+                               Contact             :
+                               DisplayVersion      : 16.72.26629
+                               HelpLink            :
+                               HelpTelephone       :
+                               InstallDate         : 20180816
+                               InstallLocation     :
+                               InstallSource       : C:\ProgramData\Package
+                               Cache\{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}v16.72.26629\
+                               ModifyPath          : MsiExec.exe /X{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+                               NoModify            : 1
+                               Publisher           : Microsoft Corporation
+                               Readme              :
+                               Size                :
+                               EstimatedSize       : 67156
+                               SystemComponent     : 1
+                               UninstallString     : MsiExec.exe /X{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+                               URLInfoAbout        :
+                               URLUpdateInfo       :
+                               VersionMajor        : 16
+                               VersionMinor        : 72
+                               WindowsInstaller    : 1
+                               Version             : 273180677
+                               Language            : 1033
+                               DisplayName         : Microsoft .NET Core Runtime - 2.1.2 (x64)
 ```
 
 ## <a name="installing-applications"></a>Instalando aplicativos
@@ -147,25 +179,26 @@ SKC  VC Name                           Property
 Você pode usar a classe **Win32_Product** para instalar os pacotes do Windows Installer, local ou remotamente.
 
 > [!NOTE]
-> Para instalar um aplicativo no Windows Vista, Windows Server 2008 e versões posteriores do Windows, você deve iniciar o Windows PowerShell com a opção "Executar como administrador".
+> Para instalar um aplicativo, inicie o PowerShell com a opção "Executar como administrador".
 
-Ao instalar remotamente, use um caminho de rede da Convenção de Nomenclatura Universal (UNC) para especificar o caminho para o pacote .msi, porque o subsistema WMI não entende caminhos do Windows PowerShell. Por exemplo, para instalar o pacote NewPackage.msi localizado no compartilhamento de rede \\\\AppServ\\dsp no computador remoto PC01, digite o seguinte comando no prompt do Windows PowerShell:
+Ao instalar remotamente, use um caminho de rede da Convenção de Nomenclatura Universal (UNC) para especificar o caminho para o pacote .msi, porque o subsistema WMI não entende caminhos do PowerShell. Por exemplo, para instalar o pacote NewPackage.msi localizado no compartilhamento de rede `\\AppServ\dsp` no computador remoto PC01, digite o seguinte comando no prompt do PowerShell:
 
 ```powershell
-(Get-WMIObject -ComputerName PC01 -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\\AppSrv\dsp\NewPackage.msi)
+Invoke-CimMethod -ClassName Win32_Product -MethodName Install -Arguments @{PackageLocation='\\AppSrv\dsp\NewPackage.msi'}
 ```
 
-Aplicativos que não usam a tecnologia Windows Installer podem ter métodos específicos de aplicativos disponíveis para a implantação automática. Para determinar se há um método para a automação de implantação, consulte a documentação do aplicativo ou consulte o sistema de suporte do fornecedor do aplicativo. Em alguns casos, mesmo que o fornecedor do aplicativo não tenha projetado especificamente o aplicativo para a automação da instalação, o fabricante do instalador de software pode conter algumas técnicas de automação.
+Aplicativos que não usam a tecnologia Windows Installer podem ter métodos específicos de aplicativos para a implantação automática. Confira a documentação do aplicativo ou consulte o sistema de suporte do fornecedor do aplicativo.
 
 ## <a name="removing-applications"></a>Removendo aplicativos
 
-Remover um pacote do Windows Installer usando o Windows PowerShell funciona quase da mesma forma que a instalação de um pacote. Aqui está um exemplo que seleciona o pacote para desinstalar com base em seu nome; em alguns casos pode ser mais fácil de filtrar com o **IdentifyingNumber**:
+Remover um pacote do Windows Installer, usando o PowerShell funciona quase da mesma forma que a instalação de um pacote. Aqui está um exemplo que seleciona o pacote para desinstalar com base em seu nome; em alguns casos pode ser mais fácil de filtrar com o **IdentifyingNumber**:
 
 ```powershell
-(Get-WmiObject -Class Win32_Product -Filter "Name='ILMerge'" -ComputerName . ).Uninstall()
+Get-CimInstance -Class Win32_Product -Filter "Name='ILMerge'" | Invoke-CimMethod -MethodName Uninstall
 ```
 
-Remover outros aplicativos não é tão simples, mesmo quando feito localmente. Podemos encontrar as cadeias de caracteres de desinstalação de linha de comando para esses aplicativos por meio da extração da propriedade **UninstallString**. Esse método funciona para aplicativos do Windows Installer em programas mais antigos que aparecem sob a Chave de desinstalação:
+Remover outros aplicativos não é tão simples, mesmo quando feito localmente. Podemos encontrar as cadeias de caracteres de desinstalação de linha de comando para esses aplicativos por meio da extração da propriedade **UninstallString**.
+Esse método funciona para aplicativos do Windows Installer em programas mais antigos que aparecem sob a Chave de desinstalação:
 
 ```powershell
 Get-ChildItem -Path Uninstall: | ForEach-Object -Process { $_.GetValue('UninstallString') }
@@ -174,15 +207,18 @@ Get-ChildItem -Path Uninstall: | ForEach-Object -Process { $_.GetValue('Uninstal
 Você pode filtrar a saída pelo nome da exibição, se desejar:
 
 ```powershell
-Get-ChildItem -Path Uninstall: | Where-Object -FilterScript { $_.GetValue('DisplayName') -like 'Win*'} | ForEach-Object -Process { $_.GetValue('UninstallString') }
+Get-ChildItem -Path Uninstall: |
+    Where-Object -FilterScript { $_.GetValue('DisplayName') -like 'Win*'} |
+        ForEach-Object -Process { $_.GetValue('UninstallString') }
 ```
 
-No entanto, essas cadeias de caracteres podem não ser diretamente utilizáveis no prompt do Windows PowerShell sem modificação.
+No entanto, essas cadeias de caracteres podem não ser diretamente utilizáveis no prompt do PowerShell sem modificação.
 
 ## <a name="upgrading-windows-installer-applications"></a>Atualizando aplicativos do Windows Installer
 
-Para atualizar um aplicativo, você precisa saber o nome do aplicativo e o caminho para o pacote de atualização do aplicativo. Com essas informações, você pode atualizar um aplicativo com um único comando do Windows PowerShell:
+Para atualizar um aplicativo, você precisa saber o nome do aplicativo e o caminho para o pacote de atualização do aplicativo. Com essas informações, você pode atualizar um aplicativo com um único comando do PowerShell:
 
 ```powershell
-(Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='OldAppName'").Upgrade(\\AppSrv\dsp\OldAppUpgrade.msi)
+Get-CimInstance -Class Win32_Product -Filter "Name='OldAppName'" |
+  Invoke-CimMethod -MethodName Upgrade -Arguments @{PackageLocation='\\AppSrv\dsp\OldAppUpgrade.msi'}
 ```
