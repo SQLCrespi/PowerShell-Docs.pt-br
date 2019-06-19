@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O objeto ISEFile
-ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
-ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ebb5a35f6ea9d93eab633b9f4e6c84e4fddd6ae8
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057546"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028949"
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile
 
@@ -18,7 +17,7 @@ Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado
 
 ### <a name="save-saveencoding-"></a>Save\( \[saveEncoding\] \)
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 Salva o arquivo no disco.
 
@@ -42,7 +41,7 @@ $myfile.Encoding
 
 ### <a name="saveasfilename-saveencoding"></a>SaveAs\(filename, \[saveEncoding\]\)
 
-Suportado no ISE do Windows PowerShell e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 Salva o arquivo com o nome de arquivo e codificação especificados.
 
@@ -68,7 +67,7 @@ $psISE.CurrentFile.SaveAs($fullPath, [System.Text.Encoding]::UTF8)
 
 ### <a name="displayname"></a>DisplayName
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a cadeia que contém o nome de exibição deste arquivo. O nome é mostrado na guia **Arquivo** na parte superior do editor. A presença de um asterisco \(\*\) ao final do nome indica que o arquivo tem alterações que não foram salvas.
 
@@ -79,7 +78,7 @@ $psISE.CurrentFile.DisplayName
 
 ### <a name="editor"></a>Editor
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém o [objeto editor](The-ISEEditor-Object.md) usado para o arquivo especificado.
 
@@ -90,7 +89,7 @@ $psISE.CurrentFile.Editor.Text
 
 ### <a name="encoding"></a>Codificando
 
-Suportado no ISE do Windows PowerShell e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a codificação original do arquivo. Este é um objeto **System.Text.Encoding**.
 
@@ -101,7 +100,7 @@ $psISE.CurrentFile.Encoding
 
 ### <a name="fullpath"></a>FullPath
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a cadeia de caracteres que especifica o caminho completo do arquivo aberto.
 
@@ -112,7 +111,7 @@ $psISE.CurrentFile.FullPath
 
 ### <a name="issaved"></a>IsSaved
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade Boolean somente leitura que retornará **$true** se o arquivo foi salvo depois de ter sido modificado pela última vez.
 
@@ -124,7 +123,7 @@ $myfile.IsSaved
 
 ### <a name="isuntitled"></a>IsUntitled
 
-Suportado no ISE do Windows PowerShell 2.0 e posteriores.
+Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que retornará **$true** se o arquivo nunca recebeu um título.
 

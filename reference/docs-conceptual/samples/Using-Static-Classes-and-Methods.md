@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Usando classes e métodos estáticos
-ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085995"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030741"
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 
@@ -47,7 +46,7 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> Conforme mencionado anteriormente, o Windows PowerShell adiciona “**System.**” automaticamente no início de nomes de tipo quando você usa **New-Object**. A mesma coisa acontece ao usar um nome de tipo entre colchetes, por isso você pode especificar **\[System.Environment]** como **\[Environment]**.
+> Conforme mencionado anteriormente, o Windows PowerShell adiciona “**System.** ” automaticamente no início de nomes de tipo quando você usa **New-Object**. A mesma coisa acontece ao usar um nome de tipo entre colchetes, por isso você pode especificar **\[System.Environment]** como **\[Environment]** .
 
 A classe **System. Environment** classe contém informações gerais sobre o ambiente de trabalho para o processo atual, que é powershell.exe ao trabalhar no Windows PowerShell.
 

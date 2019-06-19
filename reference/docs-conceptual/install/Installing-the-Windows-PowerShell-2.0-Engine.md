@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Instalar o Mecanismo do Windows PowerShell 2.0
-ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: b625b61b4e191402074f57ea2e942f800dbbcd53
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a2b78755e7e44e2523baee5477fadc94eab485b1
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058300"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030971"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Mecanismo do Windows PowerShell 2.0
 Este tópico explica como instalar o Mecanismo Windows PowerShell 2.0.
@@ -53,7 +52,7 @@ Use os seguintes procedimentos para adicionar os recursos dos Mecanismos Windows
 
 2. Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
 
-3. Sobre a página **Recursos**, expanda o nó **Recursos do .NET 3.5 Framework** e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)**.
+3. Sobre a página **Recursos**, expanda o nó **Recursos do .NET 3.5 Framework** e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)** .
 
     As outras opções nesse esse nó não são necessárias ao Mecanismo Windows PowerShell 2.0.
 

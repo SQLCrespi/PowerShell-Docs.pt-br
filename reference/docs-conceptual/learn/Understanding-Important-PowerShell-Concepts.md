@@ -2,13 +2,12 @@
 ms.date: 08/23/2018
 keywords: powershell, cmdlet
 title: Compreender conceitos importantes do PowerShell
-ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: fad64563d1a7a6abd4f0e430331f81f91f43d312
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8f9af370db46ea47dbccbabb7cc90fc27b8f2765
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058583"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030972"
 ---
 # <a name="understanding-important-powershell-concepts"></a>Compreender conceitos importantes do PowerShell
 
@@ -31,7 +30,7 @@ Os comandos nativos do PowerShell são conhecidos como *cmdlets* (pronuncia-se c
 
 Quando você digita um comando, o PowerShell sempre processa a linha de comando de entrada diretamente. O PowerShell também formata a saída exibida na tela. Essa diferença é considerável porque reduz o trabalho necessário em cada cmdlet. Isso garante que você possa fazer as coisas sempre da mesma maneira com qualquer cmdlet. Os desenvolvedores de cmdlet não precisam escrever códigos para analisar os argumentos de linha de comando ou formatar a saída.
 
-Ferramentas de linha de comando tradicionais têm seus próprios esquemas para solicitar e exibir a Ajuda. Algumas ferramentas de linha de comando usam **/?** para disparar a exibição da Ajuda; outras usam **-?**, **/H** ou até mesmo **//**. Algumas delas exibem a Ajuda em uma janela GUI em vez de na exibição do console. Se você usar o parâmetro errado, a ferramenta poderá ignorar o que você digitou e começar a executar uma tarefa automaticamente.
+Ferramentas de linha de comando tradicionais têm seus próprios esquemas para solicitar e exibir a Ajuda. Algumas ferramentas de linha de comando usam **/?** para disparar a exibição da Ajuda; outras usam **-?** , **/H** ou até mesmo **//** . Algumas delas exibem a Ajuda em uma janela GUI em vez de na exibição do console. Se você usar o parâmetro errado, a ferramenta poderá ignorar o que você digitou e começar a executar uma tarefa automaticamente.
 Como o PowerShell analisa e processa automaticamente a linha de comando, o parâmetro **-?** sempre significa "mostre-me a Ajuda para este comando".
 
 > [!NOTE]

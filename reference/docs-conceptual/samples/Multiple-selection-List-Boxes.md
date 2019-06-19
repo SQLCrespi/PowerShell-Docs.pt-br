@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Caixas de listagem de seleção múltipla
-ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
-ms.openlocfilehash: a762145dc197ec7e1424b2fbdcef5e7380d13803
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: dcfa43ac8e7cc4ba6147f71791edbf7989af3583
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057939"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030104"
 ---
 # <a name="multiple-selection-list-boxes"></a>Caixas de listagem de seleção múltipla
 
@@ -16,7 +15,7 @@ Use o Windows PowerShell 3.0 e versões posteriores para criar um controle de ca
 
 ## <a name="create-list-box-controls-that-allow-multiple-selections"></a>Criar controles de caixa de listagem que permitem seleção múltipla
 
-Copie e cole o seguinte no ISE do Windows PowerShell e salve-o como um script do Windows PowerShell (.ps1).
+Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms

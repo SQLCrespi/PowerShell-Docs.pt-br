@@ -1,22 +1,21 @@
 ---
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
-title: Selecionar itens em uma caixa de listagem
-ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
-ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Selecionando itens de uma caixa de listagem
+ms.openlocfilehash: 55bc9409b0e330a2080781bfd4c586109896258f
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086061"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030820"
 ---
-# <a name="selecting-items-from-a-list-box"></a>Selecionar itens em uma caixa de listagem
+# <a name="selecting-items-from-a-list-box"></a>Selecionando itens de uma caixa de listagem
 
 Use o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos usuários selecionar itens de um controle de caixa de listagem.
 
 ## <a name="create-a-list-box-control-and-select-items-from-it"></a>Criar um controle de caixa de listagem e selecionar itens dela
 
-Copie e cole o seguinte no ISE do Windows PowerShell e salve-o como um script do Windows PowerShell (.ps1).
+Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms

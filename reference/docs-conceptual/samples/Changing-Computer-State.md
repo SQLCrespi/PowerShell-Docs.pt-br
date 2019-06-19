@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Alterando o estado do computador
-ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: f8a2ed6a1a0390021eb633c9af64a725146ad136
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 80692ad7c56aa13e55d4997cfec289ffb3605458
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086316"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030285"
 ---
 # <a name="changing-computer-state"></a>Alterando o estado do computador
 
@@ -30,7 +29,7 @@ Para encerrar uma sessão específica em um Servidor de Terminal, use a ferramen
 
 ## <a name="logging-off-the-current-session"></a>Sair da sessão atual
 
-Você pode usar várias técnicas diferentes para sair de uma sessão no sistema local. A maneira mais simples é usar a ferramenta de linha de comando Área de Trabalho Remota/Serviços de Terminal, **logoff.exe** (para obter mais detalhes, no prompt do Windows PowerShell, digite **logoff /?**). Para fazer logoff da sessão ativa atual, digite **logoff** sem argumentos.
+Você pode usar várias técnicas diferentes para sair de uma sessão no sistema local. A maneira mais simples é usar a ferramenta de linha de comando Área de Trabalho Remota/Serviços de Terminal, **logoff.exe** (para obter mais detalhes, no prompt do Windows PowerShell, digite **logoff /?** ). Para fazer logoff da sessão ativa atual, digite **logoff** sem argumentos.
 
 Você também pode usar a ferramenta **shutdown.exe** com a opção de fazer logoff:
 
@@ -48,7 +47,7 @@ Para saber mais e para localizar outros recursos do método Win32Shutdown, confi
 
 ## <a name="shutting-down-or-restarting-a-computer"></a>Desligar ou reiniciar um computador
 
-Desligar e reiniciar computadores geralmente são os mesmos tipos de tarefa. Ferramentas que desligam um computador geralmente também o reiniciam e vice-versa. Há duas opções simples para reiniciar um computador do Windows PowerShell. Use Tsshutdn.exe ou Shutdown.exe com os argumentos apropriados. Obtenha informações de uso detalhadas em **tsshutdn.exe /?** ou **shutdown.exe /?**.
+Desligar e reiniciar computadores geralmente são os mesmos tipos de tarefa. Ferramentas que desligam um computador geralmente também o reiniciam e vice-versa. Há duas opções simples para reiniciar um computador do Windows PowerShell. Use Tsshutdn.exe ou Shutdown.exe com os argumentos apropriados. Obtenha informações de uso detalhadas em **tsshutdn.exe /?** ou **shutdown.exe /?** .
 
 Você também pode executar as operações de desligamento e reinicialização diretamente no Windows PowerShell.
 
