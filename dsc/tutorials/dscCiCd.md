@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Criando um pipeline de integração contínua e implantação contínua com DSC
-ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076456"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301503"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criando um pipeline de integração contínua e implantação contínua com DSC
 
@@ -22,10 +22,10 @@ Um pipeline de CI/CD automatizado ajuda a atualizar softwares com mais rapidez e
 
 Para usar este exemplo, você deve estar familiarizado com o seguinte:
 
-- Os conceitos de CI-CD. Uma boa referência pode ser encontrada em [The Release Pipeline Model](http://aka.ms/thereleasepipelinemodelpdf) (O modelo de pipeline de versão).
+- Os conceitos de CI-CD. Uma boa referência pode ser encontrada em [The Release Pipeline Model](https://aka.ms/thereleasepipelinemodelpdf) (O modelo de pipeline de versão).
 - O controle do código-fonte [Git](https://git-scm.com/)
 - A estrutura de testes [Pester](https://github.com/pester/Pester)
-- O [Team Foundation Server](https://www.visualstudio.com/tfs/)
+- O [Team Foundation Server](https://visualstudio.microsoft.com/tfs/)
 
 ## <a name="what-you-will-need"></a>O que será necessário
 
@@ -44,7 +44,7 @@ O computador cliente deve ser um computador Windows com o seguinte instalado:
 ### <a name="tfssrv1"></a>TFSSrv1
 
 O computador que hospeda o servidor do TFS no qual você definirá o build e a versão.
-Este computador deve ter o [Team Foundation Server 2017](https://www.visualstudio.com/tfs/) instalado.
+Este computador deve ter o [Team Foundation Server 2017](https://visualstudio.microsoft.com/tfs/) instalado.
 
 ### <a name="buildagent"></a>BuildAgent
 
@@ -157,7 +157,7 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 
 Isso localiza todos os nós que foram definidos como tendo uma função de `DNSServer` nos [dados de configuração](../configurations/configData.md), que são criados pelo script `DevEnv.ps1`.
 
-Você pode ler mais sobre o método `Where` em [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
+Você pode ler mais sobre o método `Where` em [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays)
 
 Usar dados de configuração para definir nós é importante ao fazer CI porque as informações do nó provavelmente serão alteradas entre os ambientes e usar dados de configuração permite fazer alterações facilmente nas informações do nó sem alterar o código de configuração.
 
@@ -274,7 +274,7 @@ O script de implantação [psake](https://github.com/psake/psake) definido em `D
 
 #### <a name="deploymodules"></a>DeployModules
 
-Inicia uma sessão do PowerShell no `TestAgent1` e instala os módulos que contêm os recursos DSC necessários para a configuração.
+Inicia uma sessão do PowerShell no `TestAgent1` e instala os módulos que contêm os recursos de DSC necessários para a configuração.
 
 #### <a name="deployconfigs"></a>DeployConfigs
 
@@ -319,7 +319,7 @@ O script de teste de integração usa uma combinação da sintaxe [Pester](https
 
 Agora que já carregado o código para o TFS e examinamos o que ele faz, vamos definir o build.
 
-Aqui, vamos abordar apenas as etapas de build que você adicionará ao build. Para obter instruções de como criar uma definição de build no TFS, consulte [Create and queue a build definition](/azure/devops/pipelines/get-started-designer) (Criar e enfileirar uma fila uma definição de build).
+Aqui, vamos abordar apenas as etapas de build que você adicionará ao build. Para obter instruções de como criar uma definição de build no TFS, consulte [Create and queue a build definition](/azure/devops/pipelines/create-first-pipeline) (Criar e enfileirar uma fila uma definição de build).
 
 Crie uma nova definição de build (selecione o modelo **Vazio**) denominado "InfraDNS".
 Adicione as seguintes etapas em sua definição de build:
@@ -388,7 +388,7 @@ Vamos criar uma definição de versão para que o projeto seja implantado no amb
 
 Para fazer isso, adicione uma nova definição de versão associada à definição de build `InfraDNS` que você criou anteriormente.
 Assegure-se de selecionar **Implantação contínua** para que uma nova versão seja disparada sempre que um novo build for concluído.
-([O que são pipelines de versão? ](/azure/devops/pipelines/release/what-is-release-management)) e configure-o da seguinte maneira:
+([O que são pipelines de versão? ](/azure/devops/pipelines/release/)) e configure-o da seguinte maneira:
 
 Adicione as seguintes etapas na definição de versão:
 
