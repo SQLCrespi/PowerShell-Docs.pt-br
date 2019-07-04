@@ -1,19 +1,19 @@
 ---
 title: Usando o Visual Studio Code para edição e depuração remotas
 description: Usando o Visual Studio Code para edição e depuração remotas
-ms.date: 08/06/2018
-ms.openlocfilehash: fbc1ee3556e822b4afb2b37111d0688dc89fdab3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.date: 06/13/2019
+ms.openlocfilehash: ae3b7a3709498fcd547a48d0849b0dc880217225
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086656"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263933"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Usando o Visual Studio Code para edição e depuração remotas
 
-Para aqueles que se familiarizaram com o ISE, talvez vocês se lembrem que podiam executar `psedit file.ps1` no console integrado para abrir arquivos locais ou remotos diretamente no ISE.
+Para aqueles que se familiarizaram com o ISE, talvez se lembrem que podiam executar `psedit file.ps1` no console integrado para abrir arquivos locais ou remotos diretamente no ISE.
 
-Como podemos ver, esse recurso também está disponível na extensão do PowerShell para VSCode. Este guia mostrará como fazê-lo.
+Esse recurso também está disponível na extensão do PowerShell para VSCode. Este guia mostra como fazê-lo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -27,25 +27,31 @@ Esse recurso funciona no Windows PowerShell e no PowerShell Core.
 
 Esse recurso também funciona ao se conectar a um computador remoto via WinRM, PowerShell Direct ou SSH. Se você quer usar o SSH, mas está usando o Windows, consulte a [versão Win32 do SSH](https://github.com/PowerShell/Win32-OpenSSH)!
 
-## <a name="lets-go"></a>Vamos lá
+> [!IMPORTANT]
+> Os comandos `Open-EditorFile` e `psedit` funcionam somente no **Console integrado do PowerShell** criado pela extensão do PowerShell para VSCode.
 
-Nesta seção, vou detalhar a edição e a depuração remotas de uma VM Ubuntu em execução no Azure pelo meu MacBook Pro. Posso não estar usando o Windows, mas **o processo é idêntico**.
+## <a name="usage-examples"></a>Exemplos de uso
+
+Esses exemplos mostram a edição e a depuração remotas de uma VM Ubuntu em execução no Azure por um MacBook Pro. O processo é idêntico no Windows.
 
 ### <a name="local-file-editing-with-open-editorfile"></a>Edição de arquivo local com o Open-EditorFile
 
 Com a extensão do PowerShell para VSCode iniciada e o Console Integrado do PowerShell aberto, podemos digitar `Open-EditorFile foo.ps1` ou `psedit foo.ps1` para abrir o arquivo foo.ps1 local diretamente no editor.
 
-![O arquivo foo.ps1 no Open-EditorFile funciona localmente](https://user-images.githubusercontent.com/2644648/34895897-7c2c46ac-f79c-11e7-9410-a252aff52f13.png)
+![O arquivo foo.ps1 no Open-EditorFile funciona localmente](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
 >[!NOTE]
-> foo.ps1 já deve existir.
+> O arquivo `foo.ps1` já deve existir.
 
 A partir daí, podemos:
 
-adicionar pontos de interrupção à medianiz ![adicionando ponto de interrupção à medianiz](https://user-images.githubusercontent.com/2644648/34895893-7bdc38e2-f79c-11e7-8026-8ad53f9a1bad.png)
+- Adicionar pontos de interrupção à medianiz
 
-e pressionar F5 para depurar o script do PowerShell.
-![depurando o script local do PowerShell](https://user-images.githubusercontent.com/2644648/34895894-7bedb874-f79c-11e7-9180-7e0dc2d02af8.png)
+  ![adicionando pontos de interrupção à medianiz](images/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+
+- Pressione F5 para depurar o script do PowerShell.
+
+  ![depurando o script local do PowerShell](images/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 Durante a depuração, você pode interagir com o console de depuração, ver as variáveis no escopo à esquerda e todas as outras ferramentas de depuração padrão.
 
@@ -61,22 +67,26 @@ A explicação básica do cmdlet é esta:
 - `Enter-PSSession -ContainerId foo` e `Enter-PSSession -VmId foo` iniciam uma sessão via PowerShell Direct
 - `Enter-PSSession -HostName foo` inicia uma sessão via SSH
 
-Para saber mais sobre `Enter-PSSession`, confira os documentos [aqui](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-6).
+Para saber mais, veja a documentação para o [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
 
-Usarei SSH para a comunicação remota, pois vou passar de um macOS para uma VM Ubuntu no Azure.
+Como estamos passando de um macOS para uma VM Ubuntu no Azure, vamos usar SSH para a comunicação remota.
 
-Em primeiro lugar, no Console Integrado, vamos executar nosso Enter-PSSession. Você saberá que está na sessão porque `[something]` será mostrado à esquerda do seu prompt.
+Primeiro, no Console Integrado, execute `Enter-PSSession`. Você estará conectado à sessão remota quando o `[<hostname>]` aparecer à esquerda de seu prompt.
 
-![A chamada a Enter-PSSession](https://user-images.githubusercontent.com/2644648/34895896-7c18e0bc-f79c-11e7-9b36-6f4bd0e9b0db.png)
+![A chamada a Enter-PSSession](images/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
-Nela, podemos executar as mesmas etapas como se estivéssemos editando um script local.
+Agora podemos executar as mesmas etapas como se estivéssemos editando um script local.
 
-1. Execute `Open-EditorFile test.ps1` ou `psedit test.ps1` para abrir o arquivo remoto `test.ps1` ![O arquivo test.ps1 do Open-EditorFile](https://user-images.githubusercontent.com/2644648/34895898-7c3e6a12-f79c-11e7-8bdf-549b591ecbcb.png)
-2. Edite os pontos de interrupção do arquivo/conjunto ![editar e definir pontos de interrupção](https://user-images.githubusercontent.com/2644648/34895892-7bb68246-f79c-11e7-8c0a-c2121773afbb.png)
-3. Comece a depurar (F5) o arquivo remoto
+1. Execute `Open-EditorFile test.ps1` ou `psedit test.ps1` para abrir o arquivo `test.ps1` remoto
 
-![depurando o arquivo remoto](https://user-images.githubusercontent.com/2644648/34895895-7c040782-f79c-11e7-93ea-47724fa5c10d.png)
+  ![Abrir o arquivo test.ps1 no EditorFile](images/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
-E isso é tudo! Esperamos que este guia tenha ajudado a esclarecer quaisquer dúvidas sobre a depuração e edição remotas do PowerShell no VSCode.
+1. Edite os pontos de interrupção do arquivo/conjunto
 
-Em caso de problemas, fique à vontade para abrir ocorrências [no repositório GitHub](http://github.com/powershell/vscode-powershell).
+   ![editar e definir pontos de interrupção](images/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
+
+1. Comece a depurar (F5) o arquivo remoto
+
+   ![depurando o arquivo remoto](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+
+Em caso de problemas, você pode abrir ocorrências [no repositório GitHub](https://github.com/powershell/vscode-powershell).

@@ -1,41 +1,44 @@
 ---
-ms.date: 06/05/2017
+ms.date: 06/18/2019
 keywords: powershell, cmdlet
 title: Mais aprendizado sobre o PowerShell
-ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9b9c95f1348edf90221fb9e27b13218cbe310cfc
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058379"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263877"
 ---
 # <a name="more-powershell-learning"></a>Mais aprendizado sobre o PowerShell
 
 Outras fontes para aprender sobre o PowerShell
 
-## <a name="resources-for-windows-powershell-users"></a>Recursos para usuários do Windows PowerShell
+## <a name="resources-for-powershell-users"></a>Recursos para usuários do PowerShell
 
-Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem mais informações para usuários que desejam executar o Windows PowerShell.
+Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem mais informações para usuários que desejam executar o PowerShell.
 
-- [Blog da equipe do Windows PowerShell](https://blogs.msdn.microsoft.com/powershell/). O melhor recurso para aprender diretamente com a equipe de produto do Windows PowerShell.
-- [O blog Hey, Scripting Guy! ](https://blogs.technet.microsoft.com/heyscriptingguy/) publica novos conteúdos sete dias por semana, sendo constantemente classificado dentre os cinco melhores blogs da Microsoft. Os artigos são direcionados a cenários comuns e escritos com uma abordagem dinâmica e envolvente.
-- [A página Learn PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) é o hub do Windows PowerShell no Script Center do TechNet. Esta página apresenta uma série de sessões de vídeos para iniciantes conduzida pelo Microsoft Scripting Guy Ed Wilson. Ela também contém testes e links para conteúdo da comunidade do Windows PowerShell e muito mais.
-- Dúvidas sobre como usar o Windows PowerShell? Conecte-se a centenas de pessoas com interesses semelhantes no [fórum do PowerShell na TechNet](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).
+- [Blog da equipe do Windows PowerShell](https://devblogs.microsoft.com/powershell/). O melhor recurso para aprender diretamente com a equipe de produto do PowerShell.
+- [O blog Hey, Scripting Guy! Os artigos do blog](https://devblogs.microsoft.com/scripting/) são direcionados a cenários comuns e escritos com uma abordagem dinâmica e envolvente.
+- Dúvidas sobre como usar o PowerShell? Conecte-se com centenas de pessoas com interesses semelhantes em um dos vários fóruns da comunidade listados na página [Comunidade do PowerShell](/powershell/#pivot=main&panel=community).
 
-## <a name="video-training"></a>Treinamento em vídeo
-
-### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
-
-- [Introdução de início rápido ao PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
-- [Ferramentas avançadas e scripts com o início rápido do PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
-
-### <a name="channel-9-videos"></a>Vídeos do Channel 9
+## <a name="channel-9-videos"></a>Vídeos do Channel 9
 
 Channel 9 é nossa plataforma de publicação de vídeos. Há centenas de vídeos disponíveis sobre o PowerShell. [Procure por "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) para ver quais vídeos estão disponíveis.
 
-## <a name="resources-for-windows-powershell-developers"></a>Recursos para desenvolvedores do Windows PowerShell
+### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 
-Os itens a seguir fornecem recursos para ajudar os desenvolvedores a criarem seus próprios módulos, funções, cmdlets, provedores e aplicativos de hospedagem do Windows PowerShell.
+Os vídeos do Microsoft Virtual Academy foram movidos para o Canal 9.
 
-- [SDK do Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89595). Fornece conteúdo de referência.
-- [Guia do Programador do Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89596). Fornece tutoriais. Também contém informações sobre os conceitos fundamentais do Windows PowerShell.
+- [Introdução ao Microsoft PowerShell](https://channel9.msdn.com/Series/Getting-Started-with-Microsoft-PowerShell)
+- [Ferramentas avançadas e scripts com o início rápido do PowerShell 3.0](https://channel9.msdn.com/Series/Advanced-Tools-and-Scripting-with-PowerShell-3.0-Jump-Start)
+- [Teste do PowerShell com o Pester](https://channel9.msdn.com/Series/Testing-PowerShell-with-Pester)
+- [Introdução à Desired State Configuration do PowerShell (DSC)](https://channel9.msdn.com/Series/Getting-Started-with-PowerShell-DSC)
+- [DSC avançado do PowerShell e recursos personalizados](https://channel9.msdn.com/Series/Advanced-PowerShell-DSC-and-Custom-Resources)
+- [Automação do SharePoint com DSC](https://channel9.msdn.com/Series/SharePoint-Automation-with-DSC)
+
+## <a name="resources-for-powershell-developers"></a>Recursos para desenvolvedores do PowerShell
+
+Os itens a seguir fornecem recursos para ajudar os desenvolvedores a criarem seus próprios módulos, funções, cmdlets, provedores e aplicativos de hospedagem do PowerShell.
+
+- [SDK do PowerShell](/powershell/developer/windows-powershell)
+- [Navegador de API do SDK do PowerShell](/dotnet/api/system.management.automation)
