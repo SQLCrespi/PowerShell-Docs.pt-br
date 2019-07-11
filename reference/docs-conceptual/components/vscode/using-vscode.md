@@ -84,22 +84,22 @@ Digite `R` para executar o arquivo. Em seguida, abra o Visual Studio Code e veri
 
 #### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>Escolha de uma versão do PowerShell para ser usada com a extensão
 
-Com o PowerShell Core instalado com o Windows PowerShell, agora é possível usar uma versão específica do PowerShell com a extensão do PowerShell. Use as etapas a seguir para escolher a versão:
+Com o PowerShell Core instalado com o Windows PowerShell, agora é possível usar uma versão específica do PowerShell com a extensão do PowerShell. Siga estas etapas para escolher a versão:
 
 1. Abra a paleta de comando (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> no Windows e Linux, ou <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> no macOS).
 1. Pesquise "Sessão".
-1. Clique em "PowerShell: mostrar menu Sessão".
+1. Clique em "PowerShell: mostrar menu de sessão".
 1. Na lista, escolha a versão do PowerShell que deseja usar; por exemplo, "PowerShell Core".
 
 >[!IMPORTANT]
-> Esse recurso analisa alguns caminhos conhecidos em diferentes sistemas operacionais para descobrir locais de instalação do PowerShell. Se você instalou o PowerShell em um local não típico, talvez ele não apareça inicialmente no menu de Sessão. Você pode estender o menu de sessão [adicionando seus próprios caminhos personalizados](#adding-your-own-powershell-paths-to-the-session-menu) conforme descrito abaixo.
+> Esse recurso analisa alguns caminhos conhecidos em diferentes sistemas operacionais para descobrir locais de instalação do PowerShell. Se você instalou o PowerShell em um local não típico, talvez ele não apareça inicialmente no menu de sessão. Você pode estender o menu de sessão [adicionando seus próprios caminhos personalizados](#adding-your-own-powershell-paths-to-the-session-menu) conforme descrito abaixo.
 
 >[!NOTE]
 > Há outra maneira de acessar o menu de sessão. Quando um arquivo do PowerShell é aberto no editor, um número de versão em verde aparece no canto inferior direito. Clicar nesse número de versão levará ao menu de sessão.
 
-##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>Inclusão de seus próprios caminhos do PowerShell ao menu de sessão
+##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>Adição dos seus caminhos do PowerShell ao menu de sessão
 
-É possível adicionar outros caminhos executáveis do PowerShell ao menu de sessão através de uma configuração do VS Code.
+É possível adicionar outros caminhos executáveis do PowerShell ao menu de sessão por meio de uma configuração do VS Code.
 
 Adicione um item à lista `powershell.powerShellAdditionalExePaths` ou crie a lista se ela não estiver em `settings.json`:
 
@@ -118,12 +118,12 @@ Adicione um item à lista `powershell.powerShellAdditionalExePaths` ou crie a li
 }
 ```
 
-Cada item deve ter:
+Cada item precisa ter:
 
 * `exePath`: o caminho para o executável `pwsh` ou `powershell`.
 * `versionName`: o texto que aparece no menu de sessão.
 
-É possível definir a versão padrão do PowerShell a ser usada. Para isso, utilize a configuração `powershell.powerShellDefaultVersion` definindo-a para o texto exibido no menu de sessão (também conhecido como `versionName` na última configuração):
+É possível definir a versão padrão do PowerShell a ser usada. Para isso, utilize a configuração `powershell.powerShellDefaultVersion` definindo-a como o texto exibido no menu de sessão (também conhecido como `versionName` na última configuração):
 
 ```json
 {
@@ -142,7 +142,7 @@ Cada item deve ter:
 }
 ```
 
-Depois de definir essa configuração, reinicie o Visual Studio Code ou use a ação da palete do comando "Desenvolvedor: recarregar janela" para atualizar a janela atual do vscode.
+Depois de definir essa configuração, reinicie o Visual Studio Code ou use a ação "Desenvolvedor: recarregar janela" da paleta de comando para atualizar a janela atual do vscode.
 
 Se você abrir o menu de sessão, agora verá versões adicionais do PowerShell!
 
@@ -238,7 +238,7 @@ Siga estas etapas para criar o arquivo de configuração de depuração:
   ```
 
   Isso representa os cenários comuns de depuração.
-  No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...**.
+  No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...** .
   Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a adicionar é **PowerShell: Iniciar Script**.
   Com essa configuração, você pode especificar um arquivo específico com argumentos opcionais que devem ser iniciado sempre que você pressionar F5, não importa qual arquivo está ativo no momento no editor.
 
