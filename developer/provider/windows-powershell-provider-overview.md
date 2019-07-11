@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080893"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734873"
 ---
 # <a name="windows-powershell-provider-overview"></a>Visão geral do provedor do Windows PowerShell
 
@@ -27,7 +27,7 @@ Quando você escreve um provedor, você pode especificar unidades-unidades padr�
 
 ## <a name="type-of-providers"></a>Tipo de provedores
 
-Há vários tipos de provedores, cada uma delas fornece um nível de funcionalidade diferente. Um provedor é implementado como uma classe que deriva de um dos descendentes de [System.Management.Automation.Sessionstatecategory.Cmdletprovider](/dotnet/api/System.Management.Automation.SessionStateCategory.CmdletProvider) classe. Para obter informações sobre os diferentes tipos de provedores, consulte [tipos de provedor](./provider-types.md).
+Há vários tipos de provedores, cada uma delas fornece um nível de funcionalidade diferente. Um provedor é implementado como uma classe que deriva de um dos descendentes de [System.Management.Automation.SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) **CmdletProvider** classe. Para obter informações sobre os diferentes tipos de provedores, consulte [tipos de provedor](./provider-types.md).
 
 ## <a name="provider-cmdlets"></a>Cmdlets do provedor
 
@@ -63,7 +63,7 @@ Provedores podem definir parâmetros dinâmicos que são adicionados a um cmdlet
 
 ## <a name="provider-capabilities"></a>Recursos do provedor
 
-O [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração define uma série de recursos que podem dar suporte a provedores. Isso inclui a capacidade de usar caracteres curinga, filtrar itens e oferece suporte a transações. Para especificar recursos para um provedor, adicione uma lista de valores da [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração, combinada com uma lógica `OR` operação, como o [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) propriedade (o segundo parâmetro do atributo) a [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) atributo para a sua classe de provedor. Por exemplo, o seguinte atributo especifica que o provedor oferece suporte a [System.Management.Automation.Provider.Providercapabilities.Shouldprocess](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess) e [ System.Management.Automation.Provider.Providercapabilities.Transactions](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.Transactions) recursos.
+O [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração define uma série de recursos que podem dar suporte a provedores. Isso inclui a capacidade de usar caracteres curinga, filtrar itens e oferece suporte a transações. Para especificar recursos para um provedor, adicione uma lista de valores da [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração, combinada com uma lógica `OR` operação, como o [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) propriedade (o segundo parâmetro do atributo) a [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) atributo para a sua classe de provedor. Por exemplo, o seguinte atributo especifica que o provedor oferece suporte a [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** e [ System.Management.Automation.Provider.ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **transações** recursos.
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]

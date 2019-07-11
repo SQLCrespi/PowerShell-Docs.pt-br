@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
-ms.openlocfilehash: 151b7125afe1b0d386467a0e5f89225716857ac2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080876"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734847"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Início rápido do provedor do Windows PowerShell
 
@@ -67,7 +67,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ### <a name="implementing-newdrive"></a>Implementando NewDrive
 
-O [System.Management.Automation.Provider.Drivecmdletprovider.Newdrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) método é chamado pelo mecanismo do Windows PowerShell, quando um usuário chama o [Microsoft.PowerShell.Commands.New-PSDrive](/dotnet/api/Microsoft.PowerShell.Commands.New-PSDrive)especificando o nome do seu provedor de cmdlet. O parâmetro PSDriveInfo é passado pelo mecanismo do Windows PowerShell e o método retorna a nova unidade ao mecanismo do Windows PowerShell. Esse método deve ser declarado dentro da classe criada acima.
+O [System.Management.Automation.Provider.Drivecmdletprovider.Newdrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) método é chamado pelo mecanismo do Windows PowerShell, quando um usuário chama o [Microsoft.PowerShell.Commands.NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) especificando o nome do seu provedor de cmdlet. O parâmetro PSDriveInfo é passado pelo mecanismo do Windows PowerShell e o método retorna a nova unidade ao mecanismo do Windows PowerShell. Esse método deve ser declarado dentro da classe criada acima.
 
 O método primeiro verifica para garantir que o objeto de unidade e a raiz da unidade que foram passados existem, retornando `null` se qualquer um deles não fizer isso. Ele usa um construtor da classe AccessDBPSDriveInfo interno para criar uma nova unidade e representa uma conexão para o banco de dados do Access a unidade.
 
@@ -147,7 +147,7 @@ internal class AccessDBPSDriveInfo : PSDriveInfo
 
 ### <a name="implementing-removedrive"></a>Implementando RemoveDrive
 
-O [System.Management.Automation.Provider.Drivecmdletprovider.Removedrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) método é chamado pelo mecanismo do Windows PowerShell, quando um usuário chama o [Microsoft.PowerShell.Commands.Remove-PSDrive](/dotnet/api/Microsoft.PowerShell.Commands.Remove-PSDrive) cmdlet. O método neste provedor fecha a conexão para o banco de dados do Access.
+O [System.Management.Automation.Provider.Drivecmdletprovider.Removedrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) método é chamado pelo mecanismo do Windows PowerShell, quando um usuário chama o [Microsoft.PowerShell.Commands.RemovePSDriveCommand ](/dotnet/api/Microsoft.PowerShell.Commands.removepsdrivecommand) cmdlet. O método neste provedor fecha a conexão para o banco de dados do Access.
 
 ```csharp
 protected override PSDriveInfo RemoveDrive(PSDriveInfo drive)

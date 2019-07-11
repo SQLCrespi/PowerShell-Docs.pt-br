@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Parameter attribute
 ms.assetid: 08433d0b-169b-42c8-9335-2881d9034698
 caps.latest.revision: 13
-ms.openlocfilehash: a3488d5fb3f7eb3df28d0242d6c39d07145a3c8d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 81b1ed95669f51ba554f6f99031d098e239f02e0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735143"
 ---
 # <a name="parameter-attribute-declaration"></a>Declaração de atributo de parâmetro
 
@@ -36,7 +36,7 @@ O atributo de parâmetro identifica uma propriedade pública da classe cmdlet co
 
 `ParameterSetName` ([System. String](/dotnet/api/System.String)) parâmetro nomeado opcional. Especifica que o parâmetro definido que esse parâmetro de cmdlet pertence. Se nenhum conjunto de parâmetro for especificado, o parâmetro pertence a todos os conjuntos de parâmetros.
 
-`Position` ([System.Integer](/dotnet/api/System.Integer)) parâmetro nomeado opcional. Especifica a posição do parâmetro dentro de um comando do Windows PowerShell.
+`Position` ([System.Int32](/dotnet/api/System.Int32)) parâmetro nomeado opcional. Especifica a posição do parâmetro dentro de um comando do Windows PowerShell.
 
 `ValueFromPipeline` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o parâmetro de cmdlet obtém seu valor de um objeto de pipeline. Especifique essa palavra-chave se o cmdlet acessa o completo do objeto, não apenas uma propriedade do objeto. O padrão é `false`.
 
