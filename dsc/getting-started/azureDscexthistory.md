@@ -3,12 +3,12 @@ description: Saiba mais sobre o histórico de versão para a extensão de DSC (D
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, extensão
 title: Histórico de Versão de Extensão de DSC do Azure
-ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d821e53e9206d99425e8c83f6d90986c7c28b63
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079737"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734666"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versão da extensão de Desired State Configuration do Azure
 
@@ -164,7 +164,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Ambiente:** Azure
 - **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
-  - Suporte para o WMF 5.1 Versão Prévia. Quando publicada pela primeira vez, esta versão era uma atualização opcional e você tinha que especificar Wmfversion = ‘5.1PP’ em modelos do Resource Manager para instalar o WMF 5.1 Versão Prévia. Wmfversion = ‘latest’ ainda instala o [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Para obter mais informações sobre o WMF 5.1 Versão Prévia, consulte [este blog]( https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
+  - Suporte para o WMF 5.1 Versão Prévia. Quando publicada pela primeira vez, esta versão era uma atualização opcional e você tinha que especificar Wmfversion = ‘5.1PP’ em modelos do Resource Manager para instalar o WMF 5.1 Versão Prévia. Wmfversion = ‘latest’ ainda instala o [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Para obter mais informações sobre o WMF 5.1 Versão Prévia, consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
   - Outros aprimoramentos e correções secundários foram adicionados.
 
 ### <a name="version--219"></a>Versão 2.19
@@ -198,7 +198,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Suporte para a Atualização do WMF 4.0. Para obter mais informações sobre o WMF 4.0 Update, consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/01/19/windows-management-framework-wmf-4-0-update-now-available-for-windows-server-2012-windows-server-2008-r2-sp1-and-windows-7-sp1/).
-  - Lógica de repetição em erros que ocorrem durante a instalação da Extensão de DSC ou durante a aplicação de uma configuração DSC após a instalação da extensão. Como parte dessa alteração, a extensão tentará novamente realizar a instalação se uma instalação anterior tiver falhado ou tentará aplicar novamente uma configuração DSC que falhou anteriormente, no máximo três vezes, até que ela atinja o estado de conclusão (Êxito/Erro) ou que uma nova solicitação chegue. Se a extensão falhar devido a configurações de usuário/entrada do usuário inválidas, ela não tentará novamente. Nesse caso, a extensão deve ser invocada novamente com uma nova solicitação e configurações do usuário corretas. Observação: a Extensão de DSC depende do agente de VM do Azure para as novas tentativas. O Agente de VM do Azure invoca a extensão com a última solicitação com falha até ela atingir um estado de êxito ou de erro.
+  - Lógica de repetição em erros que ocorrem durante a instalação da Extensão de DSC ou durante a aplicação de uma configuração de DSC após a instalação da extensão. Como parte dessa alteração, a extensão tentará novamente realizar a instalação se uma instalação anterior tiver falhado ou tentará aplicar novamente uma configuração de DSC que falhou anteriormente, no máximo três vezes, até que ela atinja o estado de conclusão (Êxito/Erro) ou que uma nova solicitação chegue. Se a extensão falhar devido a configurações de usuário/entrada do usuário inválidas, ela não tentará novamente. Nesse caso, a extensão deve ser invocada novamente com uma nova solicitação e configurações do usuário corretas. Observação: a Extensão de DSC depende do agente de VM do Azure para as novas tentativas. O Agente de VM do Azure invoca a extensão com a última solicitação com falha até ela atingir um estado de êxito ou de erro.
 
 ### <a name="version-216"></a>Versão 2.16
 
@@ -241,5 +241,5 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 
 - Para obter mais informações sobre o DSC do PowerShell, vá até o [Centro de documentação do PowerShell](../overview/overview.md).
 - Examine o [modelo do Resource Manager para a extensão de DSC](/azure/virtual-machines/extensions/dsc-template).
-- Para mais funcionalidade que você pode gerenciar usando o DSC do PowerShell e para obter mais recursos DSC, procure na [Galeria do PowerShell](https://www.powershellgallery.com/packages?q=DscResource&x=0&y=0).
+- Para mais funcionalidade que você pode gerenciar usando o DSC do PowerShell e para obter mais recursos de DSC, procure na [Galeria do PowerShell](https://www.powershellgallery.com/packages?q=DscResource&x=0&y=0).
 - Para obter detalhes sobre como passar parâmetros confidenciais em configurações, consulte [Gerenciar credenciais com segurança com o manipulador de extensão de DSC](/azure/virtual-machines/extensions/dsc-credentials).

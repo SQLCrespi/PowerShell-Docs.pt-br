@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsFeatureSet DSC
-ms.openlocfilehash: 8b7c7e72dd58459bd19cb723e5790a82841515c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8a64168d9ad0d6a6c40eb0398cc734fa93a247dc
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726783"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Recurso do WindowsFeatureSet DSC
 
@@ -38,7 +38,7 @@ WindowsFeatureSet [string] #ResourceName
 
 |  Propriedade  |  Descrição   |
 |---|---|
-| Nome| Os nomes de funções ou recursos que você deseja garantir são adicionados ou removidos. É igual à propriedade **Name** do cmdlet [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx), e não o nome de exibição das funções ou recursos.|
+| Nome| Os nomes de funções ou recursos que você deseja garantir são adicionados ou removidos. É igual à propriedade **Name** do cmdlet [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps), e não o nome de exibição das funções ou recursos.|
 | Credential| As credenciais que devem ser usadas para adicionar ou remover as funções ou os recursos.|
 | Ensure| Indica se as funções ou os recursos são adicionados. Para garantir que as funções ou os recursos sejam adicionados, defina essa propriedade como "Presente"; para garantir que as funções ou os recursos sejam removido, defina a propriedade como "Ausente".|
 | IncludeAllSubFeature| Defina essa propriedade como **$true** para incluir todos os sub-recursos com os recursos especificados com a propriedade **Nome**.|

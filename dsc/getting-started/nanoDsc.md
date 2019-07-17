@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando DSC no Nano Server
-ms.openlocfilehash: ac5eaf3885788f40e12e4f0a0f19025668280f7e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734602"
 ---
 # <a name="using-dsc-on-nano-server"></a>Usando DSC no Nano Server
 
@@ -44,7 +44,7 @@ Nos modos push e pull
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](https://technet.microsoft.com/en-us/library/mt517874.aspx)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
@@ -56,7 +56,7 @@ Nos modos push e pull
 
 - Execução de um recurso no contexto do usuário (confira [Executar DSC com as credenciais do usuário (RunAs)](../configurations/runAsUser.md))
 
-- Recursos baseados em classe (confira [Escrevendo um recurso personalizado de DSC com classes do PowerShell](../resources/authoringResourceClass.md))
+- Recursos baseados em classe (confira [Escrevendo um recurso personalizado de DSC com classes do PowerShell](/previous-versions//dn948461(v=technet.10)))
 
 - Depuração dos recursos de DSC (confira [Depurando os recursos de DSC](../troubleshooting/debugResource.md))
 

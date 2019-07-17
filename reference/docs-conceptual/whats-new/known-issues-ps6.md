@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085959"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733833"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -55,7 +55,7 @@ Confira [#954](https://github.com/PowerShell/PowerShell/issues/954) para fazer c
 
 O PowerShell no Linux/macOS usa .NET Core, que é um subconjunto do .NET Framework completo no Microsoft Windows. Isso é significativo, pois o PowerShell fornece acesso direto aos tipos de estrutura subjacentes, métodos etc. Como resultado, scripts executados no Windows não podem ser executados em outras plataformas devido às diferenças nas estruturas. Para saber mais sobre o .NET Core Framework, confira <https://dotnetfoundation.org/net-core>
 
-Com o surgimento do [.NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/), o .NET Core 2.0 trará de volta muitos tipos e métodos tradicionais presentes no .NET Framework completo. Isso significa que o PowerShell Core poderá carregar vários módulos tradicionais do Windows PowerShell sem modificação. Siga o nosso trabalho relacionado ao .NET Standard 2.0 [aqui](https://github.com/PowerShell/PowerShell/projects/4).
+Com o surgimento do [.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/), o .NET Core 2.0 trará de volta muitos tipos e métodos tradicionais presentes no .NET Framework completo. Isso significa que o PowerShell Core poderá carregar vários módulos tradicionais do Windows PowerShell sem modificação. Siga o nosso trabalho relacionado ao .NET Standard 2.0 [aqui](https://github.com/PowerShell/PowerShell/projects/4).
 
 ### <a name="redirection-issues"></a>Redirecionamento de problemas
 
@@ -82,7 +82,7 @@ Atualmente, o PowerShell Core dá suporte à Comunicação Remota do PowerShell 
 
 O trabalho para comunicação remota baseada em WSMan está sendo feito no repositório [psl-omi-provider](https://github.com/PowerShell/psl-omi-provider).
 
-O PowerShell Core também oferece suporte à Comunicação Remota do PowerShell (PSRP) sobre SSH em todas as plataformas (Windows, macOS e Linux). Embora isso não tenha suporte atualmente em produção, você pode aprender mais sobre como configurar isso [aqui](../core-powershell/ssh-remoting-in-powershell-core.md).
+O PowerShell Core também oferece suporte à Comunicação Remota do PowerShell (PSRP) sobre SSH em todas as plataformas (Windows, macOS e Linux). Embora isso não tenha suporte atualmente em produção, você pode aprender mais sobre como configurar isso [aqui](../learn/remoting/SSH-Remoting-in-PowerShell-Core.md).
 
 ### <a name="just-enough-administration-jea-support"></a>Suporte a JEA (Administração Just Enough)
 
@@ -104,7 +104,7 @@ A tabela a seguir lista os comandos que não funcionam no PowerShell no Linux/ma
 
 |Comandos|Estado Operacional|Observações|
 |--------|-----------------|-----|
-|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Get-Acl`, `Set-Acl`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Wait-Process`|Disponível, não funciona corretamente. |Por exemplo, `Start-Process gvim -PassThru | Wait-Process` não funciona; ele falha ao aguardar o processo.|

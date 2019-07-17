@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a3c4ca039b1e061a9246848bef6aeecebcd89011
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079193"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727201"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
 Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](/powershell/dsc/pull-server/pullserver#community-solutions-for-pull-service).
 
 Resumo: este documento tem a finalidade de incluir o processo e a extensibilidade para ajudar engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
 
@@ -50,9 +50,9 @@ O Windows PowerShell fornece um conjunto de extensões de linguagem para a Confi
 Um servidor de pull oferece um serviço centralizado para armazenar configurações que estarão acessíveis aos nós de destino.
 
 A função de servidor de pull pode ser implantada como uma instância de servidor Web ou um compartilhamento de arquivos SMB. A capacidade de servidor Web inclui uma interface de OData e, opcionalmente, pode incluir recursos para que os nós de destino reportem a confirmação de êxito ou de falha conforme as configurações são aplicadas. Essa funcionalidade é útil em ambientes em que há um grande número de nós de destino.
-Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para saber mais, confira [Servidores de Pull da Configuração de Estado Desejado do Windows PowerShell](/powershell/dsc/pullServer) e
+Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para saber mais, confira [Servidores de Pull da Configuração de Estado Desejado do Windows PowerShell](/powershell/dsc/pullServer/pullserver) e
 
-[Configuração de modos Push e Pull](/powershell/dsc/pullServer).
+[Configuração de modos Push e Pull](/powershell/dsc/pullServer/pullserver).
 
 ## <a name="configuration-planning"></a>Planejamento de configuração
 
@@ -80,7 +80,7 @@ Outros recursos que têm sido historicamente atualizados por versões do WMF (co
 
 ### <a name="dsc-resource"></a>Recurso DSC
 
-Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
+Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
 
 Use o cmdlet `Install-Module` do módulo **PowerShellGet**.
 
@@ -150,7 +150,7 @@ Se necessário, qual tipo de solução de Balanceamento de Carga você utilizar�
 ### <a name="public-key-infrastructure"></a>Infraestrutura de chave pública
 
 A maioria das organizações atuais exige que o tráfego de rede, especialmente o tráfego que inclui dados confidenciais como a maneira que os servidores são configurados, seja validado e/ou criptografado durante o trânsito.
-Embora seja possível implantar um servidor de pull usando HTTP, o que facilita as solicitações de clientes em texto não criptografado, é uma prática recomendada proteger o tráfego usando HTTPS. O serviço pode ser configurado para usar HTTPS por meio de um conjunto de parâmetros no recurso DSC **xPSDesiredStateConfiguration**.
+Embora seja possível implantar um servidor de pull usando HTTP, o que facilita as solicitações de clientes em texto não criptografado, é uma prática recomendada proteger o tráfego usando HTTPS. O serviço pode ser configurado para usar HTTPS por meio de um conjunto de parâmetros no recurso de DSC **xPSDesiredStateConfiguration**.
 
 Os requisitos de certificado para proteger o tráfego HTTPS do servidor de pull não são diferentes da proteção de qualquer outro site HTTPS. O modelo de **servidor Web** dos Serviços de Certificado do Windows Server satisfaz os recursos necessários.
 
