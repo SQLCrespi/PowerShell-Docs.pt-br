@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
-title: Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: b372a6c0ab9d4561dcf67026275e7d3ca6aa2584
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método SendMetaConfigurationApply
+ms.openlocfilehash: b2e420bafb8ea22aea43800f6e429d3ed785d1e8
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727049"
 ---
-# <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="c3501-103">Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="c3501-103">SendMetaConfigurationApply method of the MSFT_DSCLocalConfigurationManager class</span></span>
+# <a name="sendmetaconfigurationapply-method"></a><span data-ttu-id="3762e-103">Método SendMetaConfigurationApply</span><span class="sxs-lookup"><span data-stu-id="3762e-103">SendMetaConfigurationApply method</span></span>
 
-<span data-ttu-id="c3501-104">Define as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.</span><span class="sxs-lookup"><span data-stu-id="c3501-104">Sets the Local Configuration Manager settings that are used to control the Configuration Agent.</span></span>
+<span data-ttu-id="3762e-104">Define as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.</span><span class="sxs-lookup"><span data-stu-id="3762e-104">Sets the Local Configuration Manager settings that are used to control the Configuration Agent.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c3501-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c3501-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3762e-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3762e-105">Syntax</span></span>
 
 ```mof
 uint32 SendMetaConfigurationApply(
@@ -22,26 +22,26 @@ uint32 SendMetaConfigurationApply(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="c3501-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c3501-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3762e-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3762e-106">Parameters</span></span>
 
-<span data-ttu-id="c3501-107">*ConfigurationData* \[in\] Dados de ambiente da configuração.</span><span class="sxs-lookup"><span data-stu-id="c3501-107">*ConfigurationData* \[in\] The environment data for the configuration.</span></span>
+<span data-ttu-id="3762e-107">*ConfigurationData* \[in\] Dados de ambiente da configuração.</span><span class="sxs-lookup"><span data-stu-id="3762e-107">*ConfigurationData* \[in\] The environment data for the configuration.</span></span>
 
-<span data-ttu-id="c3501-108">*force* \[in\] **true** para forçar a configuração a parar.</span><span class="sxs-lookup"><span data-stu-id="c3501-108">*force* \[in\] **true** to force the configuration to stop.</span></span>
+<span data-ttu-id="3762e-108">*force* \[in\] **true** para forçar a configuração a parar.</span><span class="sxs-lookup"><span data-stu-id="3762e-108">*force* \[in\] **true** to force the configuration to stop.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="c3501-109">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="c3501-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3762e-109">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="3762e-109">Return value</span></span>
 
-<span data-ttu-id="c3501-110">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="c3501-110">Returns zero on success; otherwise returns an error code.</span></span>
+<span data-ttu-id="3762e-110">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="3762e-110">Returns zero on success; otherwise returns an error code.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c3501-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="c3501-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3762e-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="3762e-111">Remarks</span></span>
 
-<span data-ttu-id="c3501-112">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="c3501-112">This is a static method.</span></span>
+<span data-ttu-id="3762e-112">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="3762e-112">This is a static method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c3501-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c3501-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3762e-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3762e-113">Requirements</span></span>
 
-<span data-ttu-id="c3501-114">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="c3501-114">**MOF:** DscCore.mof</span></span>
+<span data-ttu-id="3762e-114">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="3762e-114">**MOF:** DscCore.mof</span></span>
 
-<span data-ttu-id="c3501-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="c3501-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
+<span data-ttu-id="3762e-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="3762e-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c3501-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c3501-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3762e-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3762e-116">See also</span></span>
 
-[<span data-ttu-id="c3501-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="c3501-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
+[<span data-ttu-id="3762e-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="3762e-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
