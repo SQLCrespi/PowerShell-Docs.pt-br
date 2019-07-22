@@ -2,16 +2,16 @@
 title: Novidades no PowerShell Core 6.0
 description: Novos recursos e alterações liberados no PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1218a38398f4d86829cf2b4ba6a3a882675eaab
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62059008"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843926"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novidades no PowerShell Core 6.0
 
-O [PowerShell Core 6.0][github] é uma nova edição do PowerShell multiplataformas (Windows, macOS e Linux), de software livre e criado para ambientes heterogêneos e a nuvem híbrida.
+O [PowerShell Core 6.0][github] é uma nova edição do PowerShell que é multiplataforma (Windows, macOS e Linux), open-source e criada para ambientes heterogêneos e para a nuvem híbrida.
 
 ## <a name="moved-from-net-framework-to-net-core"></a>Movido do .NET Framework para o .NET Core
 
@@ -32,7 +32,7 @@ Agora o PowerShell oficialmente dá suporte ao macOS e ao Linux, incluindo:
 
 - Windows 7, 8.1 e 10
 - Windows Server 2008 R2, 2012 R2, 2016
-- [Windows Server Canal Semestral][semi-annual]
+- [Canal Semestral do Windows Server][semi-annual]
 - Ubuntu 14.04, 16.04 e 17.04
 - Debian 8.7+ e 9+
 - CentOS 7
@@ -139,7 +139,7 @@ A maioria dos módulos fornecidos como parte do Windows (por exemplo, `DnsClient
 A equipe do PowerShell está trabalhando com essas equipes e grupos de produto para validar e mover seus módulos existentes para o PowerShell Core.
 Com o .NET Standard e o [CDXML][], muitos desses módulos tradicionais do Windows PowerShell parecem funcionar no PowerShell Core, mas eles não foram validados formalmente e não têm suporte formalmente.
 
-Instalando o módulo [`WindowsPSModulePath`][windowspsmodulepath], você pode usar os módulos do Windows PowerShell acrescentando o Windows PowerShell `PSModulePath` ao PowerShell Core `PSModulePath`.
+Ao instalar o módulo [`WindowsPSModulePath`][windowspsmodulepath], você pode usar os módulos do Windows PowerShell acrescentando o `PSModulePath` do Windows PowerShell ao `PSModulePath` do PowerShell Core.
 
 Primeiro, instale o módulo `WindowsPSModulePath` na Galeria do PowerShell:
 
@@ -159,7 +159,7 @@ Add-WindowsPSModulePath
 
 O PowerShell Core adiciona suporte para contêineres do Docker para todas as plataformas principais a que oferecemos suporte (incluindo várias distribuições Linux, Windows Server Core e Nano Server).
 
-Para obter uma lista completa, confira as marcas em [ `microsoft/powershell` no Hub do Docker][docker-hub].
+Para obter uma lista completa, confira as marcas em [`microsoft/powershell` no Docker Hub][docker-hub].
 Para obter mais informações sobre o Docker e o PowerShell Core, veja [Docker][] no GitHub.
 
 ## <a name="ssh-based-powershell-remoting"></a>Comunicação remota do PowerShell baseada no SSH
@@ -169,7 +169,7 @@ Agora o PSRP (protocolo de comunicação remota do PowerShell) funciona com o pr
 Isso significa que você pode usar cmdlets como `Enter-PSSession` e `New-PSSession` e autenticar usando o SSH.
 Tudo o que você precisa fazer é registrar o PowerShell como um subsistema com um servidor baseado em OpenSSH SSH e você pode usar seus mecanismos de autenticação existentes baseados no SSH (como senhas ou chaves privadas) com a semântica `PSSession` tradicional.
 
-Para obter mais informações sobre como configurar e usar a comunicação remota baseada no SSH, veja [Comunicação remota do PowerShell por SSH][ssh-remoting].
+Para obter mais informações sobre como configurar e usar a comunicação remota baseada no SSH, confira [Comunicação remota do PowerShell por SSH][ssh-remoting].
 
 ## <a name="default-encoding-is-utf-8-without-a-bom-except-for-new-modulemanifest"></a>Codificação padrão é UTF-8 sem uma BOM, exceto para New-ModuleManifest
 
@@ -295,9 +295,10 @@ Para obter mais informações sobre trabalhos do PowerShell, veja [about_Jobs](h
 
 ### <a name="csv-cmdlets"></a>Cmdlets CSV
 
+- O `Import-Csv` agora é compatível com o formato de arquivo de log estendido do W3C (nº 2482) (Obrigado, [@iSazonov](https://github.com/iSazonov)!)
 - Adicione suporte do `PSTypeName` para `Import-Csv` e `ConvertFrom-Csv`. (#5389) (Obrigado, [@markekraus](https://github.com/markekraus)!)
 - Defina suporte `Import-Csv` `CR`, `LF` e `CRLF` como delimitadores de linha. (#5363) (Obrigado, [@iSazonov](https://github.com/iSazonov)!)
-- Defina `-NoTypeInformation` como padrão em `Export-Csv` e `ConvertTo-Csv`. (#5164) (Obrigado, [@markekraus](https://github.com/markekraus))
+- Defina `-NoTypeInformation` como padrão em `Export-Csv` e `ConvertTo-Csv`. (nº 5164) (Obrigado, [@markekraus](https://github.com/markekraus)!)
 
 ### <a name="service-cmdlets"></a>Cmdlets de serviço
 
@@ -346,7 +347,7 @@ Para obter mais informações sobre trabalhos do PowerShell, veja [about_Jobs](h
 ## <a name="breaking-changes"></a>Alterações recentes
 
 Apresentamos inúmeras alterações recentes no PowerShell Core 6.0.
-Para ler mais sobre elas em detalhes, veja [Alterações recentes no PowerShell Core 6.0][breaking-changes].
+Para ler mais sobre elas em detalhes, confira [Alterações da falha no PowerShell Core 6.0][breaking-changes].
 
 ## <a name="debugging"></a>Depuração
 
@@ -375,7 +376,7 @@ Para obter uma lista completa de correções e alterações, confira nosso [log 
 
 Se você deseja recusar essa telemetria, basta criar uma variável de ambiente `POWERSHELL_TELEMETRY_OPTOUT` com um dos seguintes valores: `true`, `1` ou `yes`.
 A criação de variável ignora toda a telemetria mesmo antes da primeira execução do PowerShell.
-Planejamos expor esses dados de telemetria e as informações coletadas da telemetria no [painel da comunidade][community-dashboard].
+Planejamos expor esses dados telemétricos e os insights coletados da telemetria no [painel da comunidade][community-dashboard].
 Encontre mais informações sobre como usamos esses dados nesta [postagem no blog][telemetry-blog].
 
 [github]: https://github.com/PowerShell/PowerShell

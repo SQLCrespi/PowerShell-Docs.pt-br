@@ -2,19 +2,19 @@
 title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
-ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
+ms.openlocfilehash: 6a0da6e060693dc7cfc08d40fd658414dc23d660
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882567"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733881"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
-Além do [PowerShell ISE][ise], o PowerShell também tem suporte no Visual Studio Code.
+Além do [ISE do PowerShell][ise], o PowerShell também tem um bom suporte no Visual Studio Code.
 Além disso, o ISE não é compatível com o PowerShell Core, embora haja suporte do Visual Studio Code para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)
 
-Você pode usar o Visual Studio Code no Windows com o PowerShell versão 5 usando o Windows 10 ou instalando o [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) para sistemas operacionais do Windows de nível baixo (por exemplo, Windows 8.1 etc.).
+Você pode usar o Visual Studio Code no Windows com o PowerShell versão 5 usando o Windows 10 ou instalando o [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) para sistemas operacionais do Windows de nível baixo (por exemplo, Windows 8.1 etc.).
 
 Antes de iniciá-lo, verifique se o PowerShell existe no sistema.
 Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:
@@ -23,7 +23,7 @@ Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:
 - [Instalar o PowerShell Core no macOS][install-pscore-macos]
 - [Instalação do PowerShell Core no Windows][install-pscore-windows]
 
-Para cargas de trabalho tradicionais do Windows PowerShell, veja [instalação do Windows PowerShell][install-winps].
+Para cargas de trabalho tradicionais do Windows PowerShell, confira [Como instalar o Windows PowerShell][install-winps].
 
 ## <a name="editing-with-visual-studio-code"></a>Edição com o Visual Studio Code
 
@@ -248,7 +248,7 @@ Há alguns blogs que podem ser úteis para você começar a usar a extensão do 
 
 - [Extensão do PowerShell][ps-extension]
 - [Gravar e depurar scripts do PowerShell no Visual Studio Code][debug]
-- [Orientação sobre depuração no Visual Studio Code][vscode-guide]
+- [Diretrizes sobre depuração no Visual Studio Code][vscode-guide]
 - [Depuração do PowerShell no Visual Studio Code][ps-vscode]
 - [Introdução ao desenvolvimento do PowerShell no Visual Studio Code][getting-started]
 - [Recursos de edição do Visual Studio Code para desenvolvimento do PowerShell – parte 1][editing-part1]

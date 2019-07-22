@@ -1,92 +1,58 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/10/2019
 keywords: jea,powershell,segurança
 title: Considerações sobre segurança de JEA
-ms.openlocfilehash: 9526e141517601ae3b6d6932cd3536fdf49aa9a6
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726590"
 ---
 # <a name="jea-security-considerations"></a>Considerações sobre segurança de JEA
 
-> Aplica-se a: Windows PowerShell 5.0
-
-O JEA ajuda a melhorar a sua situação de segurança, reduzindo o número de administradores permanentes em seus computadores.
-Ele faz isso criando um novo ponto de entrada para os usuários para gerenciar o sistema (uma configuração de sessão do PowerShell) que é rigidamente bloqueada por padrão para evitar o uso indevido.
-Usuários que precisam de algum acesso ao computador, mas não um acesso ilimitado, para realizar tarefas administrativas, podem ter acesso concedido ao ponto de extremidade JEA.
-Como o JEA permite a execução de comandos de administrador sem ter diretamente o acesso de administrador, você então pode remover esses usuários de grupos de segurança altamente privilegiados (torná-los usuários padrão).
-
-Este tópico descreve o modelo de segurança JEA e as práticas recomendadas mais detalhadamente.
+O JEA ajuda a melhorar a sua situação de segurança, reduzindo o número de administradores permanentes em seus computadores. O JEA usa uma configuração de sessão do PowerShell para criar um ponto de entrada para os usuários gerenciarem o sistema. Os usuários que precisam de acesso com privilégios elevados, mas não acesso ilimitado, ao computador para realizar tarefas administrativas podem receber acesso ao ponto de extremidade JEA. Como o JEA permite que esses usuários executem comandos de administrador sem ter o acesso de administrador completo, você então poderá remover esses usuários de grupos de segurança altamente privilegiados.
 
 ## <a name="run-as-account"></a>Conta Executar como
 
-Cada ponto de extremidade JEA tem uma conta "Run As" designada, que é a conta na qual são executadas as ações do usuário que está se conectando.
-Essa conta é configurável no [arquivo de configuração de sessão](session-configurations.md) e a conta que você escolher tem uma influência significativa sobre a segurança de seu ponto de extremidade.
+Cada ponto de extremidade JEA tem uma conta **Executar como** designada. Essa é a conta na qual as ações do usuário que está se conectando são executadas. Essa conta é configurável no [arquivo de configuração de sessão](session-configurations.md) e a conta que você escolher tem uma influência significativa sobre a segurança de seu ponto de extremidade.
 
-As **contas virtuais** são a maneira recomendada de se configurar a conta Run As.
-As contas virtuais são avulsas, temporárias e locais que são criadas para o usuário que está se conectando para ser usada durante a duração de sua sessão JEA.
-Assim que a sessão é encerrada, a conta virtual será destruída e não poderá mais ser usada.
-O usuário que está se conectando não conhece as credenciais da conta virtual e não pode usar a conta virtual para acessar o sistema por outros meios, como Área de Trabalho Remota ou um ponto de extremidade irrestrito do PowerShell.
+As **contas virtuais** são a maneira recomendada de configurar a conta **Executar como**. As contas virtuais são avulsas, temporárias e locais que são criadas para o usuário que está se conectando para ser usada durante a duração de sua sessão JEA. Assim que a sessão é terminada, a conta virtual é destruída e não pode mais ser usada. O usuário que está se conectando não sabe as credenciais da conta virtual. A conta virtual não pode ser usada para acessar o sistema por outros meios, como a Área de Trabalho Remota ou um ponto de extremidade irrestrito do PowerShell.
 
-Por padrão, as contas virtuais pertencem ao grupo local de administradores no computador.
-Isso dá a eles direitos totais para gerenciar qualquer coisa no sistema, mas não dá direito para gerenciar recursos na rede.
-Durante a autenticação em outros computadores, o contexto do usuário será aquele da conta de computador local e não da conta virtual.
+Por padrão, as contas virtuais pertencem ao grupo local de **administradores** no computador. Isso dá a eles direitos totais para gerenciar qualquer coisa no sistema, mas não dá direito para gerenciar recursos na rede.
+Durante a autenticação com outros computadores, o contexto do usuário é aquele da conta do computador local, não da conta virtual.
 
-Os controladores de domínio são um caso especial, uma vez que não há um conceito de grupo de administradores locais.
-Em vez disso, as contas virtuais pertencem a Administradores de Domínio e podem gerenciar os serviços de diretório no controlador de domínio.
-A identidade do domínio ainda é restrita para uso no controlador de domínio onde a sessão da JEA foi instanciada e qualquer acesso à rede parecerá vir do objeto do computador controlador do domínio.
+Os controladores de domínio são um caso especial, uma vez que não há um grupo local de **administradores**. Em vez disso, as contas virtuais pertencem a **Administradores de Domínio** e podem gerenciar os serviços de diretório no controlador de domínio. A identidade do domínio ainda é restrita para uso no controlador de domínio em que foi criada uma instância da sessão JEA. Qualquer acesso à rede parece ser proveniente do objeto de computador do controlador de domínio.
 
-Em ambos os casos, você pode definir explicitamente a quais grupos de segurança a conta virtual deve pertencer.
-Essa é uma boa prática quando você executa uma tarefa que pode ser feita sem privilégios de administrador local ou de domínio.
-Se você já tiver um grupo de segurança definido para seus administradores, você poderá simplesmente conceder a associação de conta virtual a esse grupo para dar a ele as permissões necessárias.
-A associação de grupo de conta virtual é limitada a grupos de segurança local na estação de trabalho e servidores membro, mas em um controlador de domínio, eles só podem ser membros de grupos de segurança de domínio.
-Depois de especificar um ou mais grupos de segurança para a conta virtual pertencer, ela não pertencerá mais aos grupos padrão (administrador local ou administrador de domínio).
+Em ambos os casos, você pode definir explicitamente a quais grupos de segurança a conta virtual pertence. Essa é uma boa prática quando a tarefa que pode ser realizada sem privilégios de administrador local ou de domínio. Se você já tiver um grupo de segurança definido para seus administradores, conceda a associação de conta virtual a esse grupo. A associação de grupo da conta virtual é limitada aos grupos de segurança locais na estação de trabalho e em servidores membro. Em controladores de domínio, as contas virtuais precisam ser membros de grupos de segurança de domínio.
+Depois que a conta virtual é adicionada a um ou mais grupos de segurança, ela deixa de pertencer aos grupos padrão (administradores locais ou de domínio).
 
-A tabela a seguir resume as opções de configuração possíveis e as permissões resultantes para as contas virtuais
+A seguinte tabela resume as possíveis opções de configuração e as permissões resultantes para as contas virtuais:
 
-Tipo de Computador                | Configuração do grupo de conta virtual | Contexto de usuário local                                      | Contexto de usuário de rede
------------------------------|-------------------------------------|---------------------------------------------------------|--------------------------------------------------
-Controlador de domínio            | Padrão                             | Usuário do domínio, membro de '*DOMÍNIO*\Administradores de Domínio'         | Conta de Computador
-Controlador de domínio            | Grupos de domínio A e B               | Usuário do domínio, membro de '*DOMÍNIO*\A', '*DOMÍNIO*\B'       | Conta de Computador
-Estação de trabalho ou servidor membro | Padrão                             | Usuário local, membro de '*BUILTIN*\Administradores'        | Conta de Computador
-Estação de trabalho ou servidor membro | Grupos locais C e D                | Usuário local, membro de '*COMPUTADOR*\C' e '*COMPUTADOR*\D' | Conta de Computador
+|        Tipo de Computador         | Configuração do grupo de conta virtual |                   Contexto de usuário local                    | Contexto de usuário de rede |
+| ---------------------------- | ----------------------------------- | ------------------------------------------------------- | -------------------- |
+| Controlador de domínio            | Padrão                             | Usuário do domínio, membro de '*DOMÍNIO*\Administradores de Domínio'         | Conta de Computador     |
+| Controlador de domínio            | Grupos de domínio A e B               | Usuário do domínio, membro de '*DOMÍNIO*\A', '*DOMÍNIO*\B'       | Conta de Computador     |
+| Estação de trabalho ou servidor membro | Padrão                             | Usuário local, membro de '*BUILTIN*\Administradores'        | Conta de Computador     |
+| Estação de trabalho ou servidor membro | Grupos locais C e D                | Usuário local, membro de '*COMPUTADOR*\C' e '*COMPUTADOR*\D' | Conta de Computador     |
 
-Quando você examinar os eventos de auditoria de segurança e logs de eventos do aplicativo, verá que cada sessão de usuário JEA tem uma conta virtual exclusiva.
-Isso ajuda você a rastrear ações de usuário em um ponto de extremidade JEA até o usuário original que executou o comando.
-Os nomes de conta virtual seguem o formato "WinRM Virtual Users\\WinRM\_VA\_*ACCOUNTNUMBER*\_*DOMAIN*\_*sAMAccountName*", por exemplo, se o usuário "Alice" no domínio "Contoso" reinicia um serviço em um ponto de extremidade JEA, o nome de usuário associado a qualquer evento do Gerenciador de Controle de Serviço seria "WinRM Virtual Users\\WinRM\_VA\_1\_contoso\_alice".
+Quando você examinar os eventos de auditoria de segurança e os logs de eventos do aplicativo, verá que cada sessão de usuário JEA tem uma conta virtual exclusiva. Essa conta exclusiva ajuda você a acompanhar as ações de usuário em um ponto de extremidade JEA até o usuário original que executou o comando. Os nomes das contas virtuais seguem o formato `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>`. Por exemplo, se o usuário **Alice** no domínio **Contoso** reiniciar um serviço em um ponto de extremidade JEA, o nome de usuário associado aos eventos do Gerenciador de Controle de Serviço será `WinRM Virtual Users\WinRM_VA_1_contoso_alice`.
 
+**As GMSAs (contas de serviço gerenciado de grupo)** são úteis quando um servidor membro precisa ter acesso aos recursos de rede na sessão JEA. Por exemplo, quando um ponto de extremidade JEA é usado para controlar o acesso a um serviço de API REST hospedado em outro computador. É fácil escrever funções para invocar as APIs REST, mas você precisa de uma identidade de rede para autenticação na API. O uso de uma conta de serviço gerenciado de grupo possibilita o segundo salto, sem perder o controle sobre quais computadores podem usar a conta. As permissões efetivas da gMSA são definidas pelos grupos de segurança (local ou de domínio) ao qual a conta gMSA pertence.
 
-**As gMSAs (contas de serviço gerenciado de grupo)** são úteis quando um servidor membro necessita ter acesso aos recursos de rede na sessão JEA.
-Um exemplo de uso é um ponto de extremidade JEA que é usado para controlar o acesso a uma API REST hospedada em um computador diferente.
-É fácil escrever funções para fazer as invocações desejadas na API REST, mas para autenticar na API, é necessário uma identidade de rede.
-A utilização de uma conta de serviço gerenciado de grupo possibilita o "segundo salto", sem perder o controle sobre quais computadores podem usar a conta.
-As permissões efetivas da gMSA são definidas pelos grupos de segurança (local ou de domínio) ao qual a conta gMSA pertence.
+Quando um ponto de extremidade JEA é configurado para usar uma GMSA, as ações de todos os usuários JEA parecem vir da mesma GMSA. A única maneira de rastrear as ações até um usuário específico é identificar o conjunto de comandos executados em uma transcrição de sessão do PowerShell.
 
-Quando um ponto de extremidade JEA é configurado para usar uma conta gMSA, as ações de todos os usuários JEA parecerão vir da mesma conta de serviço gerenciado de grupo.
-A única maneira de rastrear ações até um usuário específico é identificar o conjunto de comandos executados em uma transcrição de sessão do PowerShell.
+**Credenciais de passagem** são usadas quando você não especifica uma conta **Executar como**. O PowerShell usa a credencial do usuário que está se conectando para executar comandos no servidor remoto. Isso exige que você permita acesso direto ao usuário que está se conectando aos grupos de gerenciamento privilegiado. Essa configuração **não** é recomendada para o JEA. Se o usuário que estiver se conectando já tiver privilégios de administrador, ele poderá evitar o JEA e gerenciar o sistema por outros meios irrestritos. Para obter mais informações, confira a seção abaixo sobre como [o JEA não fornece proteção contra administradores](#jea-doesnt-protect-against-admins).
 
-As **credenciais pass-thru** são usadas quando você não especifica uma conta Run As e deseja que o PowerShell use a credencial dos usuários que estão se conectando para executar comandos no servidor remoto.
-Essa configuração *não* é recomendada para o JEA, pois exigiria conceder ao usuário que está se conectando o acesso direto aos grupos de gerenciamento privilegiado.
-Se o usuário que estiver se conectando já tiver privilégios de administrador, poderá evitar totalmente o JEA e gerenciar o sistema por outros meios irrestritos.
-Consulte a seção abaixo sobre como [o JEA não protege contra administradores](#jea-does-not-protect-against-admins) para obter mais informações.
+As **contas padrão Executar como** permitem especificar qualquer conta de usuário na qual toda a sessão do PowerShell é executada. As configurações de sessão que usam contas fixas **Executar como** (com o parâmetro `-RunAsCredential`) não reconhecem o JEA. As definições de função deixarão de funcionar conforme o esperado. A mesma função é atribuída a todos os usuários autorizados a acessar o ponto de extremidade.
 
-**As contas Run As padrão** permitem especificar qualquer conta de usuário que executará toda a sessão do PowerShell.
-Essa é uma distinção importante, porque uma configuração de sessão definida para usar uma conta Run As fixa (com o parâmetro `-RunAsCredential`) não reconhece o JEA.
-Isso significa que as definições de função deixarão de funcionar conforme o esperado e todos os usuários autorizados a acessar o ponto de extremidade terão a mesma função atribuída.
-
-Você não deve usar um RunAsCredential em um ponto de extremidade JEA devido a dificuldade no rastreamento de ações até usuários específicos e devido à falta de suporte para mapeamento de usuários às funções.
+Você não deve usar uma **RunAsCredential** em um ponto de extremidade JEA, devido ao fato de ser difícil rastrear as ações até usuários específicos e não haver suporte para ela no mapeamento de usuários às funções.
 
 ## <a name="winrm-endpoint-acl"></a>ACL do Ponto de Extremidade do WinRM
 
-Assim como acontece com pontos de extremidade regulares de comunicação remota do PowerShell, cada ponto de extremidade JEA tem uma ACL (lista de controle de acesso) separada definida na configuração do WinRM que controla quem pode autenticar no ponto de extremidade JEA.
-Se for configurada incorretamente, usuários confiáveis poderão não acessar o ponto de extremidade JEA e/ou usuários não confiáveis poderão acessar.
-No entanto, a ACL do WinRM não afeta o mapeamento de usuários às funções JEA.
-Este é controlado pelo campo *RoleDefinitions* no arquivo de configuração de sessão que foi registrado no sistema.
+Assim como acontece com pontos de extremidade regulares de comunicação remota do PowerShell, cada ponto de extremidade JEA tem uma ACL (lista de controle de acesso) separada que controla quem pode se autenticar no ponto de extremidade JEA. Se ele for configurado incorretamente, os usuários confiáveis poderão não conseguir acessar o ponto de extremidade JEA e os usuários não confiáveis poderão ter acesso. A ACL do WinRM não afeta o mapeamento de usuários às funções JEA. O mapeamento é controlado pelo campo **RoleDefinitions** no arquivo de configuração de sessão usado para registrar o ponto de extremidade.
 
-Por padrão, quando você registra um ponto de extremidade JEA usando um arquivo de configuração de sessão e um ou mais recursos de função, a ACL do WinRM será configurada para permitir que todos os usuários com mapeamento para uma ou mais funções acessem o ponto de extremidade.
-Por exemplo, uma sessão JEA configurada com o uso dos comandos a seguir, concede acesso total a *CONTOSO\JEA\_Lev1* e *CONTOSO\JEA\_Lev2*.
+Por padrão, quando um ponto de extremidade JEA tem várias capacidades de função, a ACL do WinRM é configurada para permitir o acesso a todos os usuários mapeados. Por exemplo, uma sessão JEA configurada que usa os comandos a seguir permite acesso completo a `CONTOSO\JEA_Lev1` e `CONTOSO\JEA_Lev2`.
 
 ```powershell
 $roles = @{ 'CONTOSO\JEA_Lev1' = 'Lev1Role'; 'CONTOSO\JEA_Lev2' = 'Lev2Role' }
@@ -94,29 +60,27 @@ New-PSSessionConfigurationFile -Path '.\jea.pssc' -SessionType RestrictedRemoteS
 Register-PSSessionConfiguration -Path '.\jea.pssc' -Name 'MyJEAEndpoint'
 ```
 
-Você pode auditar as permissões de usuário com o cmdlet [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration).
+Você pode auditar as permissões de usuário com o cmdlet [Get-PSSessionConfiguration](/powershell/module/microsoft.powershell.core/get-pssessionconfiguration).
 
 ```powershell
-PS C:\> Get-PSSessionConfiguration -Name 'MyJEAEndpoint' | Select-Object Permission
+Get-PSSessionConfiguration -Name 'MyJEAEndpoint' | Select-Object Permission
+```
 
+```Output
 Permission
 ----------
 CONTOSO\JEA_Lev1 AccessAllowed
 CONTOSO\JEA_Lev2 AccessAllowed
 ```
 
-Para alterar quais usuários têm acesso, execute `Set-PSSessionConfiguration -Name 'MyJEAEndpoint' -ShowSecurityDescriptorUI` para um prompt interativo ou `Set-PSSessionConfiguration -Name 'MyJEAEndpoint' -SecurityDescriptorSddl <SDDL string>` para atualizar as permissões.
-Os usuários precisam, pelo menos, de direitos de *Invocar* para acessar o ponto de extremidade JEA.
+Para alterar quais usuários têm acesso, execute `Set-PSSessionConfiguration -Name 'MyJEAEndpoint' -ShowSecurityDescriptorUI` para um prompt interativo ou `Set-PSSessionConfiguration -Name 'MyJEAEndpoint' -SecurityDescriptorSddl <SDDL string>` para atualizar as permissões. Os usuários precisam, pelo menos, de direitos de *Invocar* para acessar o ponto de extremidade JEA.
 
-Se usuários adicionais tiverem permissão para acessar o ponto de extremidade JEA, mas não se encaixarem em nenhuma das funções definidas no arquivo de configuração de sessão, eles poderão iniciar uma sessão JEA, mas terão acesso somente aos cmdlets padrão.
-Você pode auditar as permissões de usuário em um ponto de extremidade JEA executando o `Get-PSSessionCapability`.
-Confira o artigo [Auditoria e relatórios no JEA](audit-and-report.md) para obter mais informações sobre a auditoria de quais comandos um usuário tem acesso em um ponto de extremidade JEA.
+É possível criar um ponto de extremidade JEA que não mapeia uma função definida para cada usuário que tem acesso. Esses usuários podem iniciar uma sessão JEA, mas só têm acesso aos cmdlets padrão. Você pode auditar as permissões de usuário em um ponto de extremidade JEA executando o `Get-PSSessionCapability`. Para obter mais informações, confira [Auditoria e relatórios no JEA](audit-and-report.md).
 
 ## <a name="least-privilege-roles"></a>Funções de privilégio mínimo
 
-Durante a criação de funções JEA, é importante lembrar que a conta virtual ou a conta de serviço gerenciado de grupo em execução em segundo plano geralmente tem acesso irrestrito para gerenciar o computador local.
-Os recursos de função do JEA ajudam a restringir o uso que pode ser feito por essa conta, limitando os comandos e os aplicativos que podem ser executados usando o contexto privilegiado.
-Funções desenvolvidas de modo inadequado podem permitir a execução de comandos perigosos que podem permitir que um usuário ultrapasse os limites do JEA ou obtenha acesso a informações confidenciais.
+Durante a criação de funções JEA, é importante lembrar que as contas virtuais e as contas de serviço gerenciado de grupo executadas em segundo plano têm acesso irrestrito ao computador local. As capacidades de função JEA ajudam a limitar os comandos e os aplicativos que podem ser executados nesse contexto privilegiado.
+As funções projetadas de modo inadequado podem permitir comandos perigosos que, por sua vez, podem permitir que um usuário ultrapasse os limites do JEA ou obtenha acesso a informações confidenciais.
 
 Por exemplo, considere a seguinte entrada de capacidade de função:
 
@@ -126,10 +90,7 @@ Por exemplo, considere a seguinte entrada de capacidade de função:
 }
 ```
 
-Essa capacidade de função permite que os usuários executem qualquer cmdlet do PowerShell com o substantivo "Processo" do módulo Microsoft.PowerShell.Management.
-Os usuários podem precisar acessar cmdlets como `Get-Process` para reconhecer quais aplicativos estão sendo executados no sistema e `Stop-Process` para encerrar qualquer aplicativo que não esteja respondendo.
-No entanto, essa entrada também permite o `Start-Process`, que pode ser usado para iniciar um programa arbitrário com permissões de administrador completas.
-O programa não precisa ser instalado localmente no sistema, portanto um adversário pode simplesmente iniciar um programa em um compartilhamento de arquivo que concede privilégios de administrador local ao usuário que está se conectando, pode executar um malware e muito mais.'
+Essa capacidade de função permite que os usuários executem cmdlets do PowerShell com o substantivo **Process** do módulo **Microsoft.PowerShell.Management**. Os usuários podem precisar acessar cmdlets como `Get-Process` para ver quais aplicativos estão sendo executados no sistema e `Stop-Process` para encerrar os aplicativos que não esteja respondendo. No entanto, essa entrada também permite o `Start-Process`, que pode ser usado para iniciar um programa arbitrário com permissões de administrador completas. O programa não precisa ser instalado localmente no sistema. Um usuário conectado pode iniciar um programa em um compartilhamento de arquivo que concede privilégios de administrador local ao usuário, executa malware, entre outros.
 
 Uma versão muito mais segura desse mesma capacidade de função seria:
 
@@ -139,16 +100,10 @@ Uma versão muito mais segura desse mesma capacidade de função seria:
 }
 ```
 
-Evite usar curingas em recursos de função e não se esqueça de [auditar as permissões efetivas de usuário](audit-and-report.md#check-effective-rights-for-a-specific-user) regularmente para entender a quais comandos um usuário tem acesso.
+Evite usar curingas em capacidades de função. Lembre-se de [auditar regularmente as permissões efetivas de usuário](audit-and-report.md#check-effective-rights-for-a-specific-user) para entender quais comandos estão disponíveis para o usuário.
 
-## <a name="jea-does-not-protect-against-admins"></a>O JEA não protege contra administradores
+## <a name="jea-doesnt-protect-against-admins"></a>O JEA não oferece proteção contra administradores
 
-Um aos princípios básicos do JEA é que ele permite que não administradores executem *algumas* tarefas de administração.
-O JEA não protege contra aqueles que já têm privilégios de administrador.
-Os usuários que pertencem a "administradores do domínio", "administradores local" ou outros grupos altamente privilegiados no seu ambiente ainda poderão contornar as proteções do JEA, conectando-se ao computador por outras formas.
-Eles poderiam, por exemplo, entrar com o RDP, usar os consoles remotos do MMC ou conectar-se aos pontos de extremidade irrestritos do PowerShell.
-Os administradores locais no sistema também podem modificar as configurações de JEA para permitir que usuários adicionais gerenciem o sistema ou alterem uma capacidade de função para estender o escopo do que um usuário pode fazer em sua sessão JEA.
-Portanto, é importante avaliar as permissões estendidas dos usuários de JEA para ver se existem outras maneiras pelas quais eles poderiam obter acesso privilegiado ao sistema.
+Um dos princípios básicos do JEA é que ele permite que não administradores executem algumas tarefas de administrador. O JEA não oferece proteção contra os usuários que já têm privilégios de administrador. Os usuários que pertencem ao grupo **Administradores do Domínio**, ao grupo local de **administradores** ou a outros grupos altamente privilegiados podem burlar as proteções do JEA por outros meios. Por exemplo, eles podem entrar com o RDP, usar consoles remotos do MMC ou se conectar aos pontos de extremidade irrestritos do PowerShell. Além disso, os administradores locais em um sistema podem modificar as configurações do JEA para permitir usuários adicionais ou alterar uma capacidade de função para estender o escopo do que um usuário pode fazer em sua sessão JEA. É importante avaliar as permissões estendidas dos usuários JEA para ver se existem outras maneiras de obter acesso privilegiado ao sistema.
 
-Uma prática comum é usar o JEA para a manutenção de rotina e usar uma solução de gerenciamento de acesso privilegiado "just in time" que permita que os usuários sejam temporariamente administradores locais em situações de emergência.
-Isso ajuda a garantir que os usuários não sejam administradores permanentes no sistema, mas possam obter esses direitos se e somente quando concluírem um fluxo de trabalho que documente o uso dessas permissões.
+Uma prática comum é usar o JEA para a manutenção de rotina e ter uma solução de gerenciamento de acesso privilegiado just-in-time que permita que os usuários se tornem administradores locais temporariamente em situações de emergência. Isso ajuda a garantir que os usuários não sejam administradores permanentes no sistema, mas possam obter esses direitos se concluírem um fluxo de trabalho que documente o uso dessas permissões e somente quando fizerem isso.
