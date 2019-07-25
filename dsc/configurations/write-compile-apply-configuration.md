@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,serviço,instalação
 title: Escrever, compilar e aplicar uma configuração
-ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8bcd55518b0409b9a4b02ca95f027a0a77eb5300
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080000"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372183"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -46,6 +46,18 @@ Configuration HelloWorld {
     }
 }
 ```
+
+> Importante Em cenários mais avançados em que vários módulos precisam ser importados para que você possa trabalhar com muitos recursos de DSC na mesma configuração, coloque cada módulo em uma linha separada usando `Import-DscResource`.
+> Assim é mais fácil manter no controle do código-fonte e é necessário ao trabalhar com a DSC na Configuração de Estado do Azure.
+>
+> ```powershell
+>  Configuration HelloWorld {
+>
+>   # Import the module that contains the File resource.
+>   Import-DscResource -ModuleName PsDesiredStateConfiguration
+>   Import-DscResource -ModuleName xWebAdministration
+>
+> ```
 
 Salve o arquivo como "HelloWorld.ps1".
 

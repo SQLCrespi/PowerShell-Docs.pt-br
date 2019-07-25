@@ -2,12 +2,12 @@
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d994a3888b9a372b803a65666634775a8905d63a
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086384"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372142"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -17,8 +17,7 @@ Normalmente, a comunicação remota do PowerShell usa WinRM para negociação de
 
 O WinRM fornece um modelo de hospedagem robusto para sessões remotas do PowerShell. No momento, a comunicação remota baseada em SSH não oferece suporte à configuração de ponto de extremidade remoto e JEA (Just Enough Administration).
 
-A comunicação remota do SSH permite que você faça a comunicação remota de sessão básica do PowerShell entre máquinas Windows e Linux. A comunicação remota do SSH cria um processo de hospedagem do PowerShell no computador de destino como um subsistema de SSH.
-Eventualmente, implementaremos um modelo de hospedagem geral, semelhante ao WinRM, para dar suporte à configuração de ponto de extremidade e JEA.
+A comunicação remota do SSH permite que você faça a comunicação remota de sessão básica do PowerShell entre máquinas Windows e Linux. A comunicação remota do SSH cria um processo de hospedagem do PowerShell no computador de destino como um subsistema de SSH. Eventualmente, implementaremos um modelo de hospedagem geral, semelhante ao WinRM, para dar suporte à configuração de ponto de extremidade e JEA.
 
 Agora, os cmdlets `New-PSSession`, `Enter-PSSession` e `Invoke-Command` têm um novo parâmetro definido para dar suporte a essa nova conexão de comunicação remota.
 
@@ -30,7 +29,7 @@ Para criar uma sessão remota, especifique o computador de destino com o parâme
 
 ## <a name="general-setup-information"></a>Informações gerais de configuração
 
-O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para que possa fazer comunicação remota entre os computadores. Agora, o OpenSSH para Windows está disponível no build 1809 do Windows 10 e no Windows Server 2019. Para obter mais informações, confira [OpenSSH para Windows](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Você também precisará instalar o PowerShell Core no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. Você também deve configurar autenticação baseada em chave ou habilitação por senha.
+O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para que possa fazer comunicação remota entre os computadores. Agora o OpenSSH para Windows está disponível no build 1809 do Windows 10 e no Windows Server 2019. Para obter mais informações, confira [OpenSSH para Windows](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Você também precisará instalar o PowerShell Core no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. Você também deve configurar autenticação baseada em chave ou habilitação por senha.
 
 ## <a name="set-up-on-windows-machine"></a>Configuração no computador Windows
 
@@ -88,9 +87,9 @@ O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.e
 
 5. Adicione o caminho no qual o OpenSSH está instalado à sua variável de ambiente Path. Por exemplo, `C:\Program Files\OpenSSH\`. Essa entrada permite que ssh.exe seja localizado.
 
-## <a name="set-up-on-linux-ubuntu-1404-machine"></a>Configuração no computador com Linux (Ubuntu 14.04)
+## <a name="set-up-on-linux-ubuntu-1604-machine"></a>Configuração no computador com Linux (Ubuntu 16.04)
 
-1. Instale o build mais recente do [PowerShell Core para Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1404) do GitHub
+1. Instale o build mais recente do [PowerShell Core para Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604) do GitHub
 2. Instale o [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html) conforme necessário
 
    ```bash
@@ -169,11 +168,7 @@ O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.e
 
 ## <a name="authentication"></a>Autenticação
 
-A comunicação remota do PowerShell por SSH depende da troca de autenticação entre o cliente do SSH e o serviço de SSH; ela própria não implementa nenhum esquema de autenticação.
-Isso significa que os esquemas de autenticação configurada, incluindo a autenticação multifator, são manipulados por SSH e são independentes do PowerShell.
-Por exemplo, você pode configurar o serviço SSH para exigir autenticação de chave pública, bem como uma senha única para aumentar a segurança.
-A configuração da autenticação multifator está fora do escopo desta documentação.
-Consulte a documentação para o SSH sobre como configurar a autenticação multifator corretamente e validar seu trabalho fora do PowerShell antes de tentar usá-la com a comunicação remota do PowerShell.
+A comunicação remota do PowerShell por SSH depende da troca de autenticação entre o cliente do SSH e o serviço de SSH; ela própria não implementa nenhum esquema de autenticação. Isso significa que os esquemas de autenticação configurada, incluindo a autenticação multifator, são manipulados por SSH e são independentes do PowerShell. Por exemplo, você pode configurar o serviço SSH para exigir autenticação de chave pública, bem como uma senha única para aumentar a segurança. A configuração da autenticação multifator está fora do escopo desta documentação. Consulte a documentação para o SSH sobre como configurar a autenticação multifator corretamente e validar seu trabalho fora do PowerShell antes de tentar usá-la com a comunicação remota do PowerShell.
 
 ## <a name="powershell-remoting-example"></a>Exemplo de comunicação remota do PowerShell
 
@@ -209,7 +204,7 @@ Enter-PSSession $session
 
 ```output
 [UbuntuVM1]: PS /home/TestUser> uname -a
-Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~14.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~16.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
 [UbuntuVM1]: PS /home/TestUser> Exit-PSSession
 ```
@@ -310,7 +305,7 @@ O comando sudo não funciona em uma sessão remota para computador com Linux.
 
 [PowerShell Core para Windows](../../install/installing-powershell-core-on-windows.md#msi)
 
-[PowerShell Core para Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1404)
+[PowerShell Core para Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
 
 [PowerShell Core para MacOS](../../install/installing-powershell-core-on-macos.md)
 
