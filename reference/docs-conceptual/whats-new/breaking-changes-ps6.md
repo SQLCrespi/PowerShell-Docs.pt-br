@@ -3,10 +3,10 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
 ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67843937"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
@@ -15,7 +15,7 @@ ms.locfileid: "67843937"
 
 ### <a name="powershell-workflow"></a>Fluxo de trabalho do PowerShell
 
-[Fluxo de trabalho do PowerShell][workflow] is a feature in Windows PowerShell that builds on top of [Windows Workflow Foundation (WF)][workflow-foundation] que permite a criação de runbooks robustos para tarefas de execução longa ou paralelizadas.
+O [Fluxo de Trabalho do PowerShell][workflow] é um recurso no Windows PowerShell baseado no [WF (Windows Workflow Foundation)][workflow-foundation] que permite a criação de runbooks robustos para tarefas em paralelo ou de longa duração.
 
 Devido à falta de suporte a Windows Workflow Foundation no .NET Core, não continuaremos a dar suporte ao Fluxo de Trabalho do PowerShell no PowerShell Core.
 
@@ -163,7 +163,7 @@ Os seguintes recursos foram removidos, pois eles não têm suporte no PowerShell
 
 ### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Remoção do suporte a `RunspaceConfiguration` [#4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
-Anteriormente, ao criar um runspace do PowerShell de forma programática usando a API, era possível usar a [`RunspaceConfiguration`][runspaceconfig] herdada or the newer [`InitialSessionState`][iss]. Essa alteração removeu o suporte a `RunspaceConfiguration`, e só dá suporte a `InitialSessionState`.
+Antes, ao criar um runspace do PowerShell de forma programática usando a API, era possível usar o [`RunspaceConfiguration`][runspaceconfig] herdado ou o [`InitialSessionState`][iss] mais recente. Essa alteração removeu o suporte a `RunspaceConfiguration`, e só dá suporte a `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
