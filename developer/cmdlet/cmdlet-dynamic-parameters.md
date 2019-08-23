@@ -1,5 +1,5 @@
 ---
-title: Parâmetros de cmdlet dinâmico | Microsoft Docs
+title: Parâmetros dinâmicos de cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
-ms.openlocfilehash: 2fc73b6ef5a862fafb7a3c8fe3da19ac71bafc05
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068531"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986246"
 ---
-# <a name="cmdlet-dynamic-parameters"></a><span data-ttu-id="5483c-102">Parâmetros dinâmicos de cmdlet</span><span class="sxs-lookup"><span data-stu-id="5483c-102">Cmdlet Dynamic Parameters</span></span>
+# <a name="cmdlet-dynamic-parameters"></a><span data-ttu-id="4f544-102">Parâmetros dinâmicos de cmdlet</span><span class="sxs-lookup"><span data-stu-id="4f544-102">Cmdlet dynamic parameters</span></span>
 
-<span data-ttu-id="5483c-103">Cmdlets pode definir os parâmetros que estão disponíveis para o usuário sob condições especiais, como quando o argumento de outro parâmetro é um valor específico.</span><span class="sxs-lookup"><span data-stu-id="5483c-103">Cmdlets can define parameters that are available to the user under special conditions, such as when the argument of another parameter is a specific value.</span></span> <span data-ttu-id="5483c-104">Esses parâmetros são adicionados em tempo de execução e são denominados *parâmetros dinâmicos* porque eles são adicionados apenas quando eles forem necessários.</span><span class="sxs-lookup"><span data-stu-id="5483c-104">These parameters are added at runtime and are referred to as *dynamic parameters* because they are added only when they are needed.</span></span> <span data-ttu-id="5483c-105">Por exemplo, você pode criar um cmdlet que adiciona vários parâmetros somente quando um parâmetro de opção específico é especificado.</span><span class="sxs-lookup"><span data-stu-id="5483c-105">For example, you can design a cmdlet that adds several parameters only when a specific switch parameter is specified.</span></span>
+<span data-ttu-id="4f544-103">Os cmdlets podem definir parâmetros que estão disponíveis para o usuário em condições especiais, como quando o argumento de outro parâmetro é um valor específico.</span><span class="sxs-lookup"><span data-stu-id="4f544-103">Cmdlets can define parameters that are available to the user under special conditions, such as when the argument of another parameter is a specific value.</span></span> <span data-ttu-id="4f544-104">Esses parâmetros são adicionados em tempo de execução e são chamados de parâmetros dinâmicos porque são adicionados apenas quando necessário.</span><span class="sxs-lookup"><span data-stu-id="4f544-104">These parameters are added at runtime and are referred to as dynamic parameters because they're only added when needed.</span></span> <span data-ttu-id="4f544-105">Por exemplo, você pode criar um cmdlet que adiciona vários parâmetros somente quando um parâmetro de opção específico é especificado.</span><span class="sxs-lookup"><span data-stu-id="4f544-105">For example, you can design a cmdlet that adds several parameters only when a specific switch parameter is specified.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5483c-106">Provedores e funções do Windows PowerShell também podem definir parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="5483c-106">Providers and Windows PowerShell functions can also define dynamic parameters.</span></span>
+> <span data-ttu-id="4f544-106">Provedores e funções do PowerShell também podem definir parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="4f544-106">Providers and PowerShell functions can also define dynamic parameters.</span></span>
 
-## <a name="dynamic-parameters-in-windows-powershell-cmdlets"></a><span data-ttu-id="5483c-107">Parâmetros dinâmicos nos Cmdlets do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5483c-107">Dynamic Parameters in Windows PowerShell Cmdlets</span></span>
+## <a name="dynamic-parameters-in-powershell-cmdlets"></a><span data-ttu-id="4f544-107">Parâmetros dinâmicos nos cmdlets do PowerShell</span><span class="sxs-lookup"><span data-stu-id="4f544-107">Dynamic parameters in PowerShell cmdlets</span></span>
 
-<span data-ttu-id="5483c-108">Windows PowerShell usa os parâmetros dinâmicos em vários dos seus cmdlets do provedor.</span><span class="sxs-lookup"><span data-stu-id="5483c-108">Windows PowerShell uses dynamic parameters in several of its provider cmdlets.</span></span> <span data-ttu-id="5483c-109">Por exemplo, o `Get-Item` e `Get-ChildItem` adicionar cmdlets uma `CodeSigningCert` parâmetro em tempo de execução quando o `Path` parâmetro do cmdlet especifica o caminho do provedor de certificado.</span><span class="sxs-lookup"><span data-stu-id="5483c-109">For example, the `Get-Item` and `Get-ChildItem` cmdlets add a `CodeSigningCert` parameter at runtime when the `Path` parameter of the cmdlet specifies the Certificate provider path.</span></span> <span data-ttu-id="5483c-110">Se o `Path` parâmetro do cmdlet especifica um caminho para um provedor diferente, o `CodeSigningCert` parâmetro não está disponível.</span><span class="sxs-lookup"><span data-stu-id="5483c-110">If the `Path` parameter of the cmdlet specifies a path for a different provider, the `CodeSigningCert` parameter is not available.</span></span>
+<span data-ttu-id="4f544-108">O PowerShell usa parâmetros dinâmicos em vários dos seus cmdlets de provedor.</span><span class="sxs-lookup"><span data-stu-id="4f544-108">PowerShell uses dynamic parameters in several of its provider cmdlets.</span></span> <span data-ttu-id="4f544-109">Por exemplo, os `Get-Item` `Get-ChildItem` cmdlets e adicionam um parâmetro **CodeSigningCert** em tempo de execução quando o parâmetro **Path** especifica o caminho do provedor de **certificado** .</span><span class="sxs-lookup"><span data-stu-id="4f544-109">For example, the `Get-Item` and `Get-ChildItem` cmdlets add a **CodeSigningCert** parameter at runtime when the **Path** parameter specifies the **Certificate** provider path.</span></span> <span data-ttu-id="4f544-110">Se o parâmetro **path** especificar um caminho para um provedor diferente, o parâmetro **CodeSigningCert** não estará disponível.</span><span class="sxs-lookup"><span data-stu-id="4f544-110">If the **Path** parameter specifies a path for a different provider, the **CodeSigningCert** parameter isn't available.</span></span>
 
-<span data-ttu-id="5483c-111">Os exemplos a seguir mostram como o `CodeSigningCert` parâmetro é adicionado em tempo de execução quando o `Get-Item` cmdlet é executado.</span><span class="sxs-lookup"><span data-stu-id="5483c-111">The following examples show how the `CodeSigningCert` parameter is added at runtime when the `Get-Item` cmdlet is run.</span></span>
+<span data-ttu-id="4f544-111">Os exemplos a seguir mostram como o parâmetro **CodeSigningCert** é adicionado em tempo `Get-Item` de execução quando é executado.</span><span class="sxs-lookup"><span data-stu-id="4f544-111">The following examples show how the **CodeSigningCert** parameter is added at runtime when `Get-Item` is run.</span></span>
 
-<span data-ttu-id="5483c-112">No primeiro exemplo, o tempo de execução do Windows PowerShell tiver adicionado o parâmetro e o cmdlet é bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="5483c-112">In the first example, the Windows PowerShell runtime has added the parameter, and the cmdlet is successful.</span></span>
+<span data-ttu-id="4f544-112">Neste exemplo, o tempo de execução do PowerShell adicionou o parâmetro e o cmdlet foi bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="4f544-112">In this example, the PowerShell runtime has added the parameter and the cmdlet is successful.</span></span>
 
 ```powershell
-Get-Item -Path cert:\CurrentUser -codesigningcert
+Get-Item -Path cert:\CurrentUser -CodeSigningCert
 ```
 
-```output
+```Output
 Location   : CurrentUser
 StoreNames : {SmartCardRoot, UserDS, AuthRoot, CA...}
 ```
 
-<span data-ttu-id="5483c-113">No segundo exemplo, uma unidade de sistema de arquivos for especificada e um erro será retornado.</span><span class="sxs-lookup"><span data-stu-id="5483c-113">In the second example, a FileSystem drive is specified, and an error is returned.</span></span> <span data-ttu-id="5483c-114">A mensagem de erro indica que o `CodeSigningCert` parâmetro não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="5483c-114">The error message indicates that the `CodeSigningCert` parameter cannot be found.</span></span>
+<span data-ttu-id="4f544-113">Neste exemplo, uma unidade de **sistema de arquivos** é especificada e um erro é retornado.</span><span class="sxs-lookup"><span data-stu-id="4f544-113">In this example, a **FileSystem** drive is specified and an error is returned.</span></span> <span data-ttu-id="4f544-114">A mensagem de erro indica que o parâmetro **CodeSigningCert** não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="4f544-114">The error message indicates that the **CodeSigningCert** parameter can't be found.</span></span>
 
 ```powershell
-Get-Item -Path C:\ -codesigningcert
+Get-Item -Path C:\ -CodeSigningCert
 ```
 
-```output
+```Output
 Get-Item : A parameter cannot be found that matches parameter name 'codesigningcert'.
 At line:1 char:37
 +  get-item -path C:\ -codesigningcert <<<<
@@ -54,19 +54,25 @@ At line:1 char:37
     FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetItemCommand
 ```
 
-## <a name="support-for-dynamic-parameters"></a><span data-ttu-id="5483c-115">Suporte para parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="5483c-115">Support for Dynamic Parameters</span></span>
+## <a name="support-for-dynamic-parameters"></a><span data-ttu-id="4f544-115">Suporte para parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="4f544-115">Support for dynamic parameters</span></span>
 
-<span data-ttu-id="5483c-116">Para dar suporte a parâmetros dinâmicos, o código do cmdlet deve incluir os seguintes elementos.</span><span class="sxs-lookup"><span data-stu-id="5483c-116">To support dynamic parameters, the cmdlet code must include the following elements.</span></span>
+<span data-ttu-id="4f544-116">Para dar suporte a parâmetros dinâmicos, os elementos a seguir devem ser incluídos no código do cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4f544-116">To support dynamic parameters, the following elements must be included in the cmdlet code.</span></span>
 
-<span data-ttu-id="5483c-117">[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) essa interface fornece o método que recupera os parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="5483c-117">[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) This interface provides the method that retrieves the dynamic parameters.</span></span>
+### <a name="interface"></a><span data-ttu-id="4f544-117">Interface</span><span class="sxs-lookup"><span data-stu-id="4f544-117">Interface</span></span>
 
-<span data-ttu-id="5483c-118">Exemplo:</span><span class="sxs-lookup"><span data-stu-id="5483c-118">Example:</span></span>
+<span data-ttu-id="4f544-118">[System. Management. Automation. IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters).</span><span class="sxs-lookup"><span data-stu-id="4f544-118">[System.Management.Automation.IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters).</span></span>
+<span data-ttu-id="4f544-119">Essa interface fornece o método que recupera os parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="4f544-119">This interface provides the method that retrieves the dynamic parameters.</span></span>
+
+<span data-ttu-id="4f544-120">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="4f544-120">For example:</span></span>
 
 `public class SendGreetingCommand : Cmdlet, IDynamicParameters`
 
-<span data-ttu-id="5483c-119">[System.Management.Automation.Idynamicparameters.Getdynamicparameters\*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) esse método recupera o objeto que contém as definições de parâmetro dinâmico.</span><span class="sxs-lookup"><span data-stu-id="5483c-119">[System.Management.Automation.Idynamicparameters.Getdynamicparameters\*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) This method retrieves the object that contains the dynamic parameter definitions.</span></span>
+### <a name="method"></a><span data-ttu-id="4f544-121">Método</span><span class="sxs-lookup"><span data-stu-id="4f544-121">Method</span></span>
 
-<span data-ttu-id="5483c-120">Exemplo:</span><span class="sxs-lookup"><span data-stu-id="5483c-120">Example:</span></span>
+<span data-ttu-id="4f544-122">[System. Management. Automation. IDynamicParameters.](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)getdynamicparameters.</span><span class="sxs-lookup"><span data-stu-id="4f544-122">[System.Management.Automation.IDynamicParameters.GetDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters).</span></span>
+<span data-ttu-id="4f544-123">Esse método recupera o objeto que contém as definições de parâmetro dinâmico.</span><span class="sxs-lookup"><span data-stu-id="4f544-123">This method retrieves the object that contains the dynamic parameter definitions.</span></span>
+
+<span data-ttu-id="4f544-124">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="4f544-124">For example:</span></span>
 
 ```csharp
  public object GetDynamicParameters()
@@ -81,9 +87,11 @@ At line:1 char:37
 private SendGreetingCommandDynamicParameters context;
 ```
 
-<span data-ttu-id="5483c-121">Classe de parâmetro dinâmico essa classe define os parâmetros a serem adicionados.</span><span class="sxs-lookup"><span data-stu-id="5483c-121">Dynamic Parameter class This class defines the parameters to be added.</span></span> <span data-ttu-id="5483c-122">Essa classe deve incluir um atributo de parâmetro para cada parâmetro e os atributos opcionais de Alias e de validação que são necessários para o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="5483c-122">This class must include a Parameter attribute for each parameter and any optional Alias and Validation attributes that are needed by the cmdlet.</span></span>
+### <a name="class"></a><span data-ttu-id="4f544-125">Classe</span><span class="sxs-lookup"><span data-stu-id="4f544-125">Class</span></span>
 
-<span data-ttu-id="5483c-123">Exemplo:</span><span class="sxs-lookup"><span data-stu-id="5483c-123">Example:</span></span>
+<span data-ttu-id="4f544-126">Uma classe que define os parâmetros dinâmicos a serem adicionados.</span><span class="sxs-lookup"><span data-stu-id="4f544-126">A class that defines the dynamic parameters to be added.</span></span> <span data-ttu-id="4f544-127">Essa classe deve incluir um atributo de **parâmetro** para cada parâmetro e qualquer **alias** opcional e atributos de **validação** que são necessários para o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4f544-127">This class must include a **Parameter** attribute for each parameter and any optional **Alias** and **Validation** attributes that are needed by the cmdlet.</span></span>
+
+<span data-ttu-id="4f544-128">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="4f544-128">For example:</span></span>
 
 ```csharp
 public class SendGreetingCommandDynamicParameters
@@ -99,14 +107,14 @@ public class SendGreetingCommandDynamicParameters
 }
 ```
 
-<span data-ttu-id="5483c-124">Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâmicos, consulte [como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="5483c-124">For a complete example of a cmdlet that supports dynamic parameters, see [How to Declare Dynamic Parameters](./how-to-declare-dynamic-parameters.md).</span></span>
+<span data-ttu-id="4f544-129">Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâmicos, consulte [como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="4f544-129">For a complete example of a cmdlet that supports dynamic parameters, see [How to Declare Dynamic Parameters](./how-to-declare-dynamic-parameters.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5483c-125">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="5483c-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f544-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4f544-130">See also</span></span>
 
-[<span data-ttu-id="5483c-126">System.Management.Automation.Idynamicparameters</span><span class="sxs-lookup"><span data-stu-id="5483c-126">System.Management.Automation.Idynamicparameters</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters)
+[<span data-ttu-id="4f544-131">System. Management. Automation. IDynamicParameters</span><span class="sxs-lookup"><span data-stu-id="4f544-131">System.Management.Automation.IDynamicParameters</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
-[<span data-ttu-id="5483c-127">System.Management.Automation.Idynamicparameters.Getdynamicparameters\*</span><span class="sxs-lookup"><span data-stu-id="5483c-127">System.Management.Automation.Idynamicparameters.Getdynamicparameters\*</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+[<span data-ttu-id="4f544-132">System. Management. Automation. IDynamicParameters. getdynamicparameters</span><span class="sxs-lookup"><span data-stu-id="4f544-132">System.Management.Automation.IDynamicParameters.GetDynamicParameters</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
-[<span data-ttu-id="5483c-128">Como declarar parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="5483c-128">How to Declare Dynamic Parameters</span></span>](./how-to-declare-dynamic-parameters.md)
+[<span data-ttu-id="4f544-133">Como declarar parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="4f544-133">How to Declare Dynamic Parameters</span></span>](./how-to-declare-dynamic-parameters.md)
 
-<span data-ttu-id="5483c-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="5483c-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="4f544-134">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="4f544-134">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
