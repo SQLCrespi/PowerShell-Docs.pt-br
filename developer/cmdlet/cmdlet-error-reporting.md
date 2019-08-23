@@ -14,79 +14,80 @@ helpviewer_keywords:
 - error records [PowerShell], non-terminating
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
-ms.openlocfilehash: 45f5934314a2871ceb921c7a66b9dfb658d0bd99
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068582"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986311"
 ---
 # <a name="cmdlet-error-reporting"></a>Relatório de erros do cmdlet
 
-Cmdlets deve relatar erros de forma diferente dependendo se os erros são erros de finalização ou erros sem encerramento. Erros de encerramento são erros que fazem com que o pipeline a ser encerrado imediatamente ou erros que ocorrem quando há nenhum motivo para continuar o processamento. Erros sem encerramento são os erros que relatam uma condição de erro atual, mas o cmdlet pode continuar a processar objetos de entrada. Com erros sem encerramento, normalmente, o usuário é notificado do problema, mas o cmdlet continua a processar o próximo objeto de entrada.
+Os cmdlets devem relatar erros de forma diferente, dependendo se os erros estão terminando erros ou erros de não encerramento. Erros de encerramento são erros que fazem com que o pipeline seja encerrado imediatamente ou erros que ocorrem quando não há motivo para continuar o processamento. Os erros de não encerramento são aqueles que relatam uma condição de erro atual, mas o cmdlet pode continuar processando objetos de entrada. Com erros de não encerramento, o usuário geralmente é notificado do problema, mas o cmdlet continua processando o próximo objeto de entrada.
 
-## <a name="terminating-and-nonterminating-errors"></a>Erros de finalização e sem encerramento
+## <a name="terminating-and-nonterminating-errors"></a>Erros de encerramento e não encerramento
 
-As diretrizes a seguir podem ser usadas para determinar se uma condição de erro é um erro de terminação ou um erro sem encerramento.
+As diretrizes a seguir podem ser usadas para determinar se uma condição de erro é um erro de encerramento ou de não encerramento.
 
-- A condição de erro impede a seu cmdlet processamento bem-sucedido de todos os objetos ainda mais a entrada? Nesse caso, isso é um erro de encerramento.
+- A condição de erro impede que o cmdlet processe com êxito outros objetos de entrada? Nesse caso, esse é um erro de encerramento.
 
-- A condição de erro está relacionada a um objeto de entrada específico ou um subconjunto de objetos de entrada? Nesse caso, esse é um erro sem encerramento.
+- A condição de erro está relacionada a um objeto de entrada específico ou a um subconjunto de objetos de entrada? Nesse caso, esse é um erro de não encerramento.
 
-- O cmdlet aceita vários objetos de entrada, tal que o processamento pode ter êxito em outro objeto de entrada? Nesse caso, esse é um erro sem encerramento.
+- O cmdlet aceita vários objetos de entrada, de modo que o processamento pode ter sucesso em outro objeto de entrada? Nesse caso, esse é um erro de não encerramento.
 
-- Cmdlets que podem aceitar vários objetos de entrada devem decidir entre o que está encerrando e erros sem encerramento, mesmo quando uma determinada situação se aplica a um único objeto de entrada.
+- Os cmdlets que podem aceitar vários objetos de entrada devem decidir entre o que são erros de encerramento e de não finalização, mesmo quando uma determinada situação se aplica a apenas um único objeto de entrada.
 
-- Cmdlets pode receber qualquer número de objetos de entrada e enviar qualquer número de objetos de sucesso ou erro antes de lançar uma exceção de terminação. Não há nenhuma relação entre o número de objetos de entrada recebidos e o número de objetos de êxito e erro enviadas.
+- Os cmdlets podem receber qualquer número de objetos de entrada e enviar qualquer número de objetos de êxito ou erro antes de lançar uma exceção de encerramento. Não há nenhuma relação entre o número de objetos de entrada recebidos e o número de objetos de êxito e de erro enviados.
 
-- Cmdlets que pode aceitar somente 0-1 objetos de entrada e gerar 0-1 apenas de saída objetos devem tratar erros como erros de finalização e geram exceções de encerramento.
+- Os cmdlets que podem aceitar apenas 0-1 objetos de entrada e gerar apenas 0-1 objetos de saída devem tratar erros como erros de encerramento e gerar exceções de encerramento.
 
-## <a name="reporting-nonterminating-errors"></a>Relatando erros sem encerramento
+## <a name="reporting-nonterminating-errors"></a>Relatando erros de não encerramento
 
-O relatório de um erro sem encerramento sempre deve ser feito dentro da implementação do cmdlet do [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método, o [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, ou o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Esses tipos de erros são relatados por meio da chamada a [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método que por sua vez envia um registro de erro para o fluxo de erro.
+O relatório de um erro não finalizado sempre deve ser feito dentro da implementação do cmdlet do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) ou o método de [processamento System. Management. Automation. cmdlet.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) end. Esses tipos de erros são relatados chamando o método [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) que, por sua vez, envia um registro de erro para o fluxo de erro.
 
-## <a name="reporting-terminating-errors"></a>Relatório de erros de finalização
+## <a name="reporting-terminating-errors"></a>Erros de encerramento de relatórios
 
-Erros de encerramento são relatados ao lançar exceções ou chamando o [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método. Lembre-se de que cmdlets também pode capturar e relançar exceções, como OutOfMemory, no entanto, eles não são necessários para gerar novamente as exceções, como o tempo de execução do Windows PowerShell irá capturá-las também.
+Os erros de encerramento são relatados pelo lançamento de exceções ou pela chamada do método [System. Management. Automation. cmdlet. ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) . Lembre-se de que os cmdlets também podem detectar e relançar exceções, como a **OutOfMemory**, no entanto, elas não são necessárias para relançar exceções, já que o tempo de execução do PowerShell as detectará também.
 
-Você também pode definir suas próprias exceções para questões específicas à sua situação ou adicionar informações adicionais em uma exceção existente usando o seu registro de erro.
+Você também pode definir suas próprias exceções para problemas específicos de sua situação ou adicionar informações adicionais a uma exceção existente usando seu registro de erro.
 
 ## <a name="error-records"></a>Registros de erro
 
-Windows PowerShell descreve uma condição de erro sem encerramento através do uso do [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objetos. Cada [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto fornece informações de categoria de erro, um objeto de destino opcionais e detalhes sobre a condição de erro.
+O PowerShell descreve uma condição de erro de não finalização com objetos [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) . Cada objeto fornece informações de categoria de erro, um objeto de destino opcional e detalhes sobre a condição de erro.
 
 ### <a name="error-identifiers"></a>Identificadores de erro
 
-O identificador de erro é uma simple cadeia de caracteres que identifica a condição de erro dentro do cmdlet. Windows PowerShell combina esse identificador com um identificador de cmdlet para criar um identificador de erro totalmente qualificado que pode ser usado mais tarde, ao filtrar fluxos de erro ou o log de erros ao responder a erros específicos, ou com outras atividades específicas do usuário.
+O identificador de erro é uma cadeia de caracteres simples que identifica a condição de erro dentro do cmdlet.
+O PowerShell combina esse identificador com um identificador de cmdlet para criar um identificador de erro totalmente qualificado que pode ser usado posteriormente ao filtrar fluxos de erro ou erros de log, ao responder a erros específicos ou a outras atividades específicas do usuário.
 
-As diretrizes a seguir devem ser seguidas ao especificar identificadores de erro.
+As diretrizes a seguir devem ser seguidas ao especificar identificadores de erro:
 
-- Atribua identificadores de erro diferente, altamente específico, para caminhos de código diferentes. Cada caminho de código que chama [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve ter seu próprio identificador de erro.
+- Atribua identificadores de erro diferentes, altamente específicos, a caminhos de código diferentes. Cada caminho de código que chama [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System. Management. Automation. cmdlet. ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve ter seu próprio identificador de erro.
 
-- Identificadores de erro devem ser exclusivos para os tipos de exceção do CLR para erros de finalização e sem encerramento.
+- Os identificadores de erro devem ser exclusivos para os tipos de exceção CLR (Common Language Runtime) para erros de encerramento e não encerramento.
 
-- Não altere a semântica de um identificador de erro entre as versões do seu cmdlet ou o provedor do Windows PowerShell. Depois que a semântica de um identificador de erro é estabelecida, ela deve permanecer constante ao longo do ciclo de vida de seu cmdlet.
+- Não altere a semântica de um identificador de erro entre versões do seu cmdlet ou provedor do PowerShell. Depois que a semântica de um identificador de erro é estabelecida, ela deve permanecer constante durante todo o ciclo de vida do seu cmdlet.
 
-- Para erros de finalização, use um identificador de erro exclusivo para um determinado tipo de exceção do CLR. Se o tipo de exceção for alterado, use um novo identificador de erro.
+- Para erros de encerramento, use um identificador de erro exclusivo para um determinado tipo de exceção CLR. Se o tipo de exceção for alterado, use um novo identificador de erro.
 
-- Para erros sem encerramento, use um identificador de erro específico para um objeto de entrada específico.
+- Para erros de não encerramento, use um identificador de erro específico para um objeto de entrada específico.
 
-- Escolha o texto para o identificador de tersely corresponde ao erro que está sendo relatado. Não use espaço em branco ou pontuação.
+- Escolha o texto para o identificador que tersely corresponde ao erro que está sendo relatado. Não use espaço em branco ou pontuação.
 
-- Não gere identificadores de erro que não são reproduzíveis. Por exemplo, não geram identificadores que incluem um identificador de processo. Identificadores de erro são úteis apenas quando eles correspondem aos identificadores que são vistos por outros usuários que estão tendo o mesmo problema.
+- Não gere identificadores de erro que não sejam reproduzíveis. Por exemplo, não gere identificadores que incluam um identificador de processo. Os identificadores de erro são úteis apenas quando correspondem a identificadores que são vistos por outros usuários que estão enfrentando o mesmo problema.
 
 ### <a name="error-categories"></a>Categorias de erro
 
-Categorias de erro são usadas para agrupar erros para o usuário final. Windows PowerShell define essas categorias e cmdlets e provedores do Windows PowerShell devem escolher entre elas durante a geração de registro de erro.
+As categorias de erro são usadas para agrupar erros para o usuário. O PowerShell define essas categorias e cmdlets, e os provedores do PowerShell devem escolher entre eles ao gerar o registro de erro.
 
-Para obter uma descrição das categorias de erro que estão disponíveis, consulte o [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração. Em geral, você deve evitar usar NoError, UndefinedError e erro genérico sempre que possível.
+Para obter uma descrição das categorias de erro disponíveis, consulte a enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Em geral, você deve evitar o uso de **NOERROR**, **UndefinedError**e **erro genérico** sempre que possível.
 
-Os usuários podem exibir erros com base na categoria quando eles definem "`$ErrorView`" para "CategoryView".
+Os usuários podem exibir erros com base na categoria quando `$ErrorView` configurados como **CategoryView**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Cmdlets do Windows PowerShell](./cmdlet-overview.md)
+[Visão geral do cmdlet](./cmdlet-overview.md)
 
-[Saída do cmdlet](./types-of-cmdlet-output.md)
+[Tipos de saída de cmdlet](./types-of-cmdlet-output.md)
 
-[Shell do Windows PowerShell do SDK](../windows-powershell-reference.md)
+[Referência do Windows PowerShell](../windows-powershell-reference.md)

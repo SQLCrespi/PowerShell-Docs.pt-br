@@ -1,5 +1,5 @@
 ---
-title: Diretrizes de desenvolvimento obrigatórias | Microsoft Docs
+title: Diretrizes de desenvolvimento necessárias | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,211 +8,211 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
 caps.latest.revision: 19
-ms.openlocfilehash: 3f6bcd2e4ef4d9c404b3a5deeaa9f25d3fa42ec1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e68e43a91f9139e8d3dc636b5740121515aab2e6
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067460"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986678"
 ---
 # <a name="required-development-guidelines"></a>Diretrizes para desenvolvimento necessárias
 
-As diretrizes a seguir devem ser seguidas ao escrever seus cmdlets. Eles são separados em diretrizes para criação de cmdlets e diretrizes para escrever seu código do cmdlet. Se você não seguir essas diretrizes, seus cmdlets pode falhar e os usuários podem ter uma experiência ruim quando eles usam seus cmdlets.
+As diretrizes a seguir devem ser seguidas quando você escrever seus cmdlets. Elas são separadas em diretrizes para criar cmdlets e diretrizes para escrever seu código de cmdlet. Se você não seguir essas diretrizes, os cmdlets poderão falhar e os usuários poderão ter uma experiência ruim ao usar seus cmdlets.
 
 ## <a name="in-this-topic"></a>Neste tópico
 
 ### <a name="design-guidelines"></a>Diretrizes de design
 
-- [Usar somente aprovados verbos (RD01)](./required-development-guidelines.md#use-only-approved-verbs-rd01)
+- [Usar somente verbos aprovados (RD01)](./required-development-guidelines.md#use-only-approved-verbs-rd01)
 
 - [Nomes de cmdlet: Caracteres que não podem ser usados (RD02)](./required-development-guidelines.md#cmdlet-names-characters-that-cannot-be-used-rd02)
 
 - [Nomes de parâmetros que não podem ser usados (RD03)](./required-development-guidelines.md#parameters-names-that-cannot-be-used-rd03)
 
-- [Suporte a solicitações de confirmação (RD04)](./required-development-guidelines.md#support-confirmation-requests-rd04)
+- [Solicitações de confirmação de suporte (RD04)](./required-development-guidelines.md#support-confirmation-requests-rd04)
 
-- [Suporte a parâmetro Force para sessões interativas (RD05)](./required-development-guidelines.md#support-force-parameter-for-interactive-sessions-rd05)
+- [Suporte ao parâmetro Force para sessões interativas (RD05)](./required-development-guidelines.md#support-force-parameter-for-interactive-sessions-rd05)
 
-- [Objetos de documento de saída (RD06)](./required-development-guidelines.md#document-output-objects-rd06)
+- [Objetos de saída de documento (RD06)](./required-development-guidelines.md#document-output-objects-rd06)
 
 ### <a name="code-guidelines"></a>Diretrizes de código
 
-- [Derivar do Cmdlet ou Classes de PSCmdlet (RC01)](./required-development-guidelines.md#derive-from-the-cmdlet-or-pscmdlet-classes-rc01)
+- [Derive das classes cmdlet ou PSCmdlet (RC01)](./required-development-guidelines.md#derive-from-the-cmdlet-or-pscmdlet-classes-rc01)
 
-- [Especificar o atributo de Cmdlet (RC02)](./required-development-guidelines.md#specify-the-cmdlet-attribute-rc02)
+- [Especificar o atributo de cmdlet (RC02)](./required-development-guidelines.md#specify-the-cmdlet-attribute-rc02)
 
-- [Substituir uma método (RC03) de processamento de entrada](./required-development-guidelines.md#override-an-input-processing-method-rc03)
+- [Substituir um método de processamento de entrada (RC03)](./required-development-guidelines.md#override-an-input-processing-method-rc03)
 
 - [Especificar o atributo OutputType (RC04)](./required-development-guidelines.md#specify-the-outputtype-attribute-rc04)
 
-- [Não manterá os identificadores de objetos de saída (RC05)](./required-development-guidelines.md#do-not-retain-handles-to-output-objects-rc05)
+- [Não manter identificadores para objetos de saída (RC05)](./required-development-guidelines.md#do-not-retain-handles-to-output-objects-rc05)
 
-- [Tratar erros robusto (RC06)](./required-development-guidelines.md#handle-errors-robustly-rc06)
+- [Tratar erros robustamente (RC06)](./required-development-guidelines.md#handle-errors-robustly-rc06)
 
-- [Usar um módulo do Windows PowerShell para implantar seus Cmdlets (RC07)](./required-development-guidelines.md#use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07)
+- [Usar um módulo do Windows PowerShell para implantar seus cmdlets (RC07)](./required-development-guidelines.md#use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07)
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
-As diretrizes a seguir devem ser seguidas durante a criação de cmdlets para garantir uma experiência de usuário consistente entre o uso de seus cmdlets e outros cmdlets. Quando você encontrar uma diretriz de Design que se aplica à sua situação, certifique-se de examinar as diretrizes de código para obter diretrizes semelhantes.
+As diretrizes a seguir devem ser seguidas durante a criação de cmdlets para garantir uma experiência de usuário consistente entre usar seus cmdlets e outros cmdlets. Quando encontrar uma diretriz de design que se aplique à sua situação, certifique-se de examinar as diretrizes de código para obter diretrizes semelhantes.
 
-### <a name="use-only-approved-verbs-rd01"></a>Usar somente aprovados verbos (RD01)
+### <a name="use-only-approved-verbs-rd01"></a>Usar somente verbos aprovados (RD01)
 
-O verbo especificado no atributo Cmdlet deve vir do reconhecido conjunto de verbos fornecidos pelo Windows PowerShell. Ele não deve ser um dos sinônimos proibidos. Use as cadeias de caracteres constante que são definidas pelas enumerações a seguir para especificar os verbos de cmdlet:
+O verbo especificado no atributo cmdlet deve vir do conjunto reconhecido de verbos fornecidos pelo Windows PowerShell. Ele não deve ser um dos sinônimos proibidos. Use as cadeias de caracteres constantes que são definidas pelas seguintes enumerações para especificar verbos de cmdlet:
 
-- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System. Management. Automation. VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
 
-- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System. Management. Automation. VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
 
-- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
+- [System. Management. Automation. VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
 
-- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System. Management. Automation. VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
 
-- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System. Management. Automation. VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
 
-- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System. Management. Automation. VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
 
-- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
+- [System. Management. Automation. VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
 
-Para obter mais informações sobre os nomes de verbos aprovados, consulte [verbos de Cmdlet](./approved-verbs-for-windows-powershell-commands.md).
+Para obter mais informações sobre os nomes de verbo aprovados, consulte [verbos de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-Os usuários precisam de um conjunto de nomes de cmdlet detectáveis e esperado. Use o verbo apropriado para que o usuário possa fazer uma avaliação rápida do que um cmdlet faz e descubram facilmente os recursos do sistema. Por exemplo, a linha de comando a seguir obtém uma lista de todos os comandos do sistema cujos nomes começam com "start": `get-command start-*`. Use substantivos nos seus cmdlets para diferenciar seus cmdlets de outros cmdlets. O substantivo indica o recurso no qual a operação será executada. A operação em si é representada pelo verbo.
+Os usuários precisam de um conjunto de nomes de cmdlet detectáveis e esperados. Use o verbo apropriado para que o usuário possa fazer uma rápida avaliação do que um cmdlet faz e descobrir facilmente os recursos do sistema. Por exemplo, o comando de linha de comando a seguir obtém uma lista de todos os comandos no sistema cujos nomes começam com "Start" `get-command start-*`:. Use os substantivos em seus cmdlets para diferenciar seus cmdlets de outros cmdlets. O substantivo indica o recurso no qual a operação será executada. A própria operação é representada pelo verbo.
 
 ### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Nomes de cmdlet: Caracteres que não podem ser usados (RD02)
 
-Ao nomear cmdlets, não use nenhum dos seguintes caracteres especiais.
+Ao nomear cmdlets, não use nenhum dos caracteres especiais a seguir.
 
-|Caractere|Nome|
+|Espaço|Nome|
 |---------------|----------|
 |#|sinal de número|
-|,|comma|
-|()|Parênteses|
+|,|pontos|
+|()|parênteses|
 |{}|chaves|
 |[]|colchetes|
-|&|e comercial|
-|-|hífen **Observação:**  O hífen pode ser usado para separar o verbo de substantivo, mas não pode ser usado dentro do substantivo ou dentro do verbo.|
-|/|marca de barra|
-|\|barra invertida|
-|$|Sinal de cifrão|
-|^|Sinal de interpolação|
-|;|Ponto e vírgula|
-|:|Dois-pontos|
+|&|'|
+|-|Observação de hífen **:**  O hífen pode ser usado para separar o verbo do substantivo, mas não pode ser usado dentro do substantivo ou dentro do verbo.|
+|/|barra de marcas|
+|\\| barra invertida|
+|$|cifrão|
+|^|acento|
+|;|ponto e vírgula|
+|:|pontos|
 |"|aspas duplas|
-|'|marca de aspas simples|
+|'|aspa simples|
 |<>|colchetes angulares|
 |&#124;|barra vertical|
 |?|ponto de interrogação|
 |@|sinal de arroba|
-|' | fazer escala (acento grave)|
-|*|Asterisco|
-|%|Sinal de porcentagem|
-|+|Sinal de adição|
-|=|Sinal de igual|
-|~|Til|
+|`|escala de fundo (acento grave)|
+|*|asterisco|
+|%|sinal de porcentagem|
+|+|sinal de adição|
+|=|sinal de igual|
+|~|supressor|
 
 ### <a name="parameters-names-that-cannot-be-used-rd03"></a>Nomes de parâmetros que não podem ser usados (RD03)
 
-Windows PowerShell fornece um conjunto comum de parâmetros para todos os cmdlets e parâmetros adicionais que são adicionados em situações específicas. Ao criar seus próprios cmdlets, você não pode usar os seguintes nomes: Confirmar, Debug, ErrorAction, ErrorVariable, OutBuffer, OutVariable, WarningAction, WarningVariable, WhatIf e UseTransaction e detalhado. Para obter mais informações sobre esses parâmetros, consulte [nomes de parâmetro comuns](./common-parameter-names.md).
+O Windows PowerShell fornece um conjunto comum de parâmetros a todos os cmdlets, além de parâmetros adicionais que são adicionados em situações específicas. Ao criar seus próprios cmdlets, você não pode usar os seguintes nomes: Confirmar, depurar, Erroaction, ErrorVariable, OutBuffer, OutVariable, WarningAction, WarningVariable, WhatIf, UseTransaction e Verbose. Para obter mais informações sobre esses parâmetros, consulte [nomes de parâmetro comuns](./common-parameter-names.md).
 
-### <a name="support-confirmation-requests-rd04"></a>Suporte a solicitações de confirmação (RD04)
+### <a name="support-confirmation-requests-rd04"></a>Solicitações de confirmação de suporte (RD04)
 
-Para cmdlets que executam uma operação que modifique o sistema, eles devem chamar o [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método solicitar uma confirmação e, em casos especiais, chamar o [ System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método. (O [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método deve ser chamado somente depois da [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método é chamado.)
+Para os cmdlets que executam uma operação que modifica o sistema, eles devem chamar o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) para solicitar a confirmação e, em casos especiais, chamam o [ Método System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) . (O método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve ser chamado somente depois que o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) for chamado.)
 
-Para fazer essas chamadas que o cmdlet deve especificar que ele oferece suporte a solicitações de confirmação, definindo o `SupportsShouldProcess` palavra-chave do atributo Cmdlet. Para obter mais informações sobre como definir esse atributo, consulte [declaração de atributo do Cmdlet](./cmdlet-attribute-declaration.md).
+Para fazer essas chamadas, o cmdlet deve especificar que ele dá suporte a solicitações de `SupportsShouldProcess` confirmação definindo a palavra-chave do atributo cmdlet. Para obter mais informações sobre como definir esse atributo, consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
-> Se o atributo de Cmdlet de classe do cmdlet indica que o cmdlet oferece suporte a chamadas para o [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método e o cmdlet não conseguir fazer a chamada para o [ System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método, o usuário pode modificar o sistema inesperadamente.
+> Se o atributo cmdlet da classe cmdlet indicar que o cmdlet dá suporte a chamadas para o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e o cmdlet não fará a chamada para o [ Método System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , o usuário pode modificar o sistema inesperadamente.
 
-Use o [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método para qualquer modificação do sistema. Uma preferência do usuário e o `WhatIf` controle de parâmetro de [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. Em contraste, o [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) chamada executa uma verificação adicional para modificações potencialmente perigosas. Esse método não é controlado por nenhuma preferência do usuário ou o `WhatIf` parâmetro. Se seu cmdlet chama o [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método, ele deve ter um `Force` parâmetro que ignora as chamadas para esses dois métodos e que continua com a operação. Isso é importante porque permite que o cmdlet a ser usado em scripts não interativo e hosts.
+Use o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) para qualquer modificação no sistema. Uma preferência de usuário e `WhatIf` o parâmetro controlam o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Por outro lado, a chamada [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) executa uma verificação adicional para modificações potencialmente perigosas. Esse método não é controlado por nenhuma preferência de `WhatIf` usuário ou parâmetro. Se o cmdlet chama o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , ele deve ter um `Force` parâmetro que ignora as chamadas para esses dois métodos e que prossegue com a operação. Isso é importante porque permite que o cmdlet seja usado em hosts e scripts não interativos.
 
-Se seus cmdlets do dão suporte a essas chamadas, o usuário pode determinar se a ação realmente deve ser executada. Por exemplo, o [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) cmdlet chamadas a [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método antes de parar um conjunto de processos críticos, incluindo o sistema, o Winlogon, e Spoolsv processos.
+Se os cmdlets suportarem essas chamadas, o usuário poderá determinar se a ação deve realmente ser executada. Por exemplo, o cmdlet [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) chama o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) antes de parar um conjunto de processos críticos, incluindo os processos System, Winlogon e spoolsv.
 
-Para obter mais informações sobre o suporte a esses métodos, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
+Para obter mais informações sobre como dar suporte a esses métodos, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
 
-### <a name="support-force-parameter-for-interactive-sessions-rd05"></a>Suporte a parâmetro Force para sessões interativas (RD05)
+### <a name="support-force-parameter-for-interactive-sessions-rd05"></a>Suporte ao parâmetro Force para sessões interativas (RD05)
 
-Se seu cmdlet é usado interativamente, sempre forneça um parâmetro Force para substituir as ações interativas, como prompts ou a leitura de linhas de entrada). Isso é importante porque permite que o cmdlet a ser usado em scripts não interativo e hosts. Os métodos a seguir podem ser implementados por um host interativo.
+Se o cmdlet for usado interativamente, sempre forneça um parâmetro Force para substituir as ações interativas, como prompts ou linhas de leitura de entrada). Isso é importante porque permite que o cmdlet seja usado em hosts e scripts não interativos. Os métodos a seguir podem ser implementados por um host interativo.
 
-- [System.Management.Automation.Host.PSHostUserInterface.Prompt*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.Prompt)
+- [System. Management. Automation. host. PSHostUserInterface. prompt *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.Prompt)
 
-- [System.Management.Automation.Host.Pshostuserinterface.PromptForChoice](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForChoice)
+- [System. Management. Automation. host. Pshostuserinterface. PromptForChoice](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForChoice)
 
-- [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection.PromptForChoice](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection.PromptForChoice)
+- [System. Management. Automation. host. Ihostuisupportsmultiplechoiceselection. PromptForChoice](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection.PromptForChoice)
 
-- [System.Management.Automation.Host.Pshostuserinterface.PromptForCredential*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForCredential)
+- [System. Management. Automation. host. Pshostuserinterface. PromptForCredential *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.PromptForCredential)
 
-- [System.Management.Automation.Host.Pshostuserinterface.ReadLine*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLine)
+- [System. Management. Automation. host. Pshostuserinterface. ReadLine *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLine)
 
-- [System.Management.Automation.Host.Pshostuserinterface.ReadLineAsSecureString*](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString)
+- [System. Management. Automation. host. Pshostuserinterface. ReadLineAsSecureString *](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString)
 
-### <a name="document-output-objects-rd06"></a>Objetos de documento de saída (RD06)
+### <a name="document-output-objects-rd06"></a>Objetos de saída de documento (RD06)
 
-Windows PowerShell usa os objetos que são escritos para o pipeline. Em ordem para que os usuários podem aproveitar os objetos que são retornados por cada cmdlet, você deve documentar os objetos que são retornados e você deve documentar o que os membros desses objetos retornados são usados para.
+O Windows PowerShell usa os objetos que são gravados no pipeline. Para que os usuários tirem proveito dos objetos que são retornados por cada cmdlet, você deve documentar os objetos que são retornados e deve documentar de que forma os membros desses objetos retornados são usados.
 
 ## <a name="code-guidelines"></a>Diretrizes de código
 
-As diretrizes a seguir devem ser seguidas ao escrever o código do cmdlet. Quando você encontrar uma diretriz de código que se aplica à sua situação, certifique-se de examinar as diretrizes de Design para obter diretrizes semelhantes.
+As diretrizes a seguir devem ser seguidas durante a gravação do código de cmdlet. Quando você encontrar uma diretriz de código que se aplica à sua situação, certifique-se de examinar as diretrizes de design para obter diretrizes semelhantes.
 
-### <a name="derive-from-the-cmdlet-or-pscmdlet-classes-rc01"></a>Derivar do Cmdlet ou Classes de PSCmdlet (RC01)
+### <a name="derive-from-the-cmdlet-or-pscmdlet-classes-rc01"></a>Derive das classes cmdlet ou PSCmdlet (RC01)
 
-Um cmdlet deve derivar do [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) ou [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) classe base. Os cmdlets que derivam de [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe não dependem do tempo de execução do Windows PowerShell. Eles podem ser chamados diretamente de qualquer linguagem do Microsoft .NET Framework. Os cmdlets que derivam de [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) classe dependem do tempo de execução do Windows PowerShell. Portanto, eles são executadas dentro de um espaço de execução.
+Um cmdlet deve ser derivado da classe base [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) ou [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . Os cmdlets que derivam da classe [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) não dependem do tempo de execução do Windows PowerShell. Eles podem ser chamados diretamente de qualquer linguagem do Microsoft .NET Framework. Os cmdlets que derivam da classe [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) dependem do tempo de execução do Windows PowerShell. Portanto, eles são executados em um runspace.
 
-Todas as classes de cmdlet que você implementar devem ser classes públicas. Para obter mais informações sobre essas classes de cmdlet, consulte [visão geral de Cmdlet](./cmdlet-overview.md).
+Todas as classes de cmdlet implementadas devem ser classes públicas. Para obter mais informações sobre essas classes de cmdlet, consulte [visão geral do cmdlet](./cmdlet-overview.md).
 
-### <a name="specify-the-cmdlet-attribute-rc02"></a>Especificar o atributo de Cmdlet (RC02)
+### <a name="specify-the-cmdlet-attribute-rc02"></a>Especificar o atributo de cmdlet (RC02)
 
-Para um cmdlet seja reconhecida pelo Windows PowerShell, sua classe do .NET Framework deve ser decorada com o atributo de Cmdlet. Esse atributo especifica os seguintes recursos do cmdlet.
+Para que um cmdlet seja reconhecido pelo Windows PowerShell, sua classe de .NET Framework deve ser decorada com o atributo de cmdlet. Esse atributo especifica os seguintes recursos do cmdlet.
 
-- O par do verbo e substantivo que identifica o cmdlet.
+- O par verbo-e-substantivo que identifica o cmdlet.
 
-- O conjunto de parâmetros padrão que é usado quando vários conjuntos de parâmetros são especificados. O conjunto de parâmetros padrão é usado quando o Windows PowerShell não tem informações suficientes para determinar qual parâmetro definido para usar.
+- O conjunto de parâmetros padrão que é usado quando vários conjuntos de parâmetros são especificados. O conjunto de parâmetros padrão é usado quando o Windows PowerShell não tem informações suficientes para determinar qual conjunto de parâmetros usar.
 
-- Indica se o cmdlet oferece suporte a chamadas para o [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. Esse método exibe uma mensagem de confirmação para o usuário antes que o cmdlet faz uma alteração no sistema. Para obter mais informações sobre como as solicitações de confirmação são feitas, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
+- Indica se o cmdlet dá suporte a chamadas para o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Esse método exibe uma mensagem de confirmação para o usuário antes que o cmdlet faça uma alteração no sistema. Para obter mais informações sobre como as solicitações de confirmação são feitas, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
 
-- Indica o nível de impacto (ou severidade) da ação associada com a mensagem de confirmação. Na maioria dos casos, o valor padrão de médio deve ser usado. Para obter mais informações sobre como o nível de impacto afeta as solicitações de confirmação são exibidas ao usuário, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
+- Indique o nível de impacto (ou a severidade) da ação associada à mensagem de confirmação. Na maioria dos casos, o valor padrão de Medium deve ser usado. Para obter mais informações sobre como o nível de impacto afeta as solicitações de confirmação exibidas para o usuário, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
 
-Para obter mais informações sobre como declarar o atributo de cmdlet, consulte [declaração CmdletAttribute](./cmdlet-attribute-declaration.md).
+Para obter mais informações sobre como declarar o atributo de cmdlet, consulte [declaração](./cmdlet-attribute-declaration.md)de CmdletAttribute.
 
-### <a name="override-an-input-processing-method-rc03"></a>Substituir uma método (RC03) de processamento de entrada
+### <a name="override-an-input-processing-method-rc03"></a>Substituir um método de processamento de entrada (RC03)
 
-Para o cmdlet participar do ambiente do Windows PowerShell, ele deve substituir pelo menos um dos seguintes *métodos de processamento de entrada*.
+Para que o cmdlet participe do ambiente do Windows PowerShell, ele deve substituir pelo menos um dos seguintes *métodos de processamento de entrada*.
 
-[System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) esse método é chamado uma vez, e ele é usado para fornecer a funcionalidade de pré-processamento.
+[System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) esse método é chamado uma vez e é usado para fornecer funcionalidade de pré-processamento.
 
-[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) esse método é chamado várias vezes, e ele é usado para fornecer a funcionalidade de registro por registro.
+[System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) esse método é chamado várias vezes e é usado para fornecer funcionalidade de registro por registro.
 
-[System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) esse método é chamado uma vez, e ele é usado para fornecer funcionalidade de pós-processamento.
+[System. Management. Automation. cmdlet.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) endprocessando esse método é chamado uma vez e é usado para fornecer funcionalidade de pós-processamento.
 
 ### <a name="specify-the-outputtype-attribute-rc04"></a>Especificar o atributo OutputType (RC04)
 
-O atributo OutputType (introduzido no Windows PowerShell 2.0) Especifica o tipo do .NET Framework que seu cmdlet retorna para o pipeline. Especifica o tipo de saída de seus cmdlets faz com os objetos retornados pelo cmdlet mais detectáveis por outros cmdlets. Para obter mais informações sobre a decoração de classe do cmdlet com esse atributo, consulte [declaração de atributo OutputType](./outputtype-attribute-declaration.md).
+O atributo OutputType (introduzido no Windows PowerShell 2,0) especifica o tipo de .NET Framework que seu cmdlet retorna para o pipeline. Ao especificar o tipo de saída de seus cmdlets, você torna os objetos retornados por seu cmdlet mais detectáveis por outros cmdlets. Para obter mais informações sobre como decorar a classe cmdlet com esse atributo, consulte [declaração de atributo OutputType](./outputtype-attribute-declaration.md).
 
-### <a name="do-not-retain-handles-to-output-objects-rc05"></a>Não manterá os identificadores de objetos de saída (RC05)
+### <a name="do-not-retain-handles-to-output-objects-rc05"></a>Não manter identificadores para objetos de saída (RC05)
 
-O cmdlet não deve reter os identificadores para os objetos que são passados para o [System.Management.Automation.Cmdlet.WriteObject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) método. Esses objetos são passados para o próximo cmdlet no pipeline, ou eles são usados por um script. Se você mantiver os identificadores de objetos, duas entidades possuirá cada objeto, o que causa erros.
+O cmdlet não deve reter nenhum identificador para os objetos passados para o método [System. Management. Automation. cmdlet. WriteObject *](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) . Esses objetos são passados para o próximo cmdlet no pipeline ou são usados por um script. Se você mantiver os identificadores para os objetos, duas entidades serão proprietárias de cada objeto, o que causará erros.
 
-### <a name="handle-errors-robustly-rc06"></a>Tratar erros robusto (RC06)
+### <a name="handle-errors-robustly-rc06"></a>Tratar erros robustamente (RC06)
 
-Um ambiente de administração inerentemente detecta e faz as alterações importantes no sistema que você está administrando. Portanto, é vital que cmdlets tratar erros corretamente. Para obter mais informações sobre os registros de erro, consulte [relatório de erros do Windows PowerShell](./error-reporting-concepts.md).
+Um ambiente de administração detecta inerentemente e faz alterações importantes no sistema que você está administrando. Portanto, é vital que os cmdlets manipulem erros corretamente. Para obter mais informações sobre registros de erro, consulte [relatório de erros do Windows PowerShell](./error-reporting-concepts.md).
 
-- Quando um erro impede que um cmdlet continua a processar qualquer mais registros, ele é um erro de encerramento. O cmdlet deve chamar o [System.Management.Automation.Cmdlet.ThrowTerminatingError*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método que faz referência a um [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto. Se uma exceção não é detectada pelo cmdlet, o tempo de execução do Windows PowerShell em si gera um erro de encerramento que contém menos informações.
+- Quando um erro impede que um cmdlet continue a processar mais registros, ele é um erro de encerramento. O cmdlet deve chamar o método [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) que faz referência a um objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) . Se uma exceção não for detectada pelo cmdlet, o tempo de execução do Windows PowerShell gera um erro de encerramento que contém menos informações.
 
-- Para um erro de finalização que não interrompe na próxima operação de registro que é proveniente de pipeline (por exemplo, um registro produzido por um processo diferente), o cmdlet deve chamar o [System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método faz referência a um [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto. Um exemplo de um erro de finalização é o erro que ocorre se um determinado processo falha ao parar. Chamar o [System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método permite que o usuário para executar consistentemente as ações solicitadas e reter as informações de determinadas ações que falham. O cmdlet deve tratar cada registro independentemente do quanto possível.
+- Para um erro de não finalização que não interrompa a operação no próximo registro que vem do pipeline (por exemplo, um registro produzido por um processo diferente), o cmdlet deve chamar o método [System. Management. Automation. cmdlet. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) que faz referência a um objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) . Um exemplo de um erro de não finalização é o erro que ocorre se um processo específico não for interrompido. Chamar o método [System. Management. Automation. cmdlet. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) permite que o usuário execute consistentemente as ações solicitadas e retenha as informações de ações específicas que falham. Seu cmdlet deve tratar cada registro da maneira mais independente possível.
 
-- O [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) que é referenciado pelo objeto de [System.Management.Automation.Cmdlet.ThrowTerminatingError*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) e [ System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) métodos requer uma exceção em seu núcleo. Siga as diretrizes de design do .NET Framework ao determinar a exceção a usar. Se o erro semanticamente é o mesmo que uma exceção existente, use essa exceção ou derivam dessa exceção. Caso contrário, derive uma nova exceção ou hierarquia de exceções diretamente a partir de [System. Exception](/dotnet/api/System.Exception) tipo.
+- O objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) que é referenciado pelos métodos [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) e [System. Management. Automation. cmdlet. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) requer um exceção em seu núcleo. Siga as diretrizes de design de .NET Framework ao determinar a exceção a ser usada. Se o erro for semanticamente igual a uma exceção existente, use essa exceção ou derive dessa exceção. Caso contrário, derive uma nova exceção ou hierarquia de exceção diretamente do tipo [System. Exception](/dotnet/api/System.Exception) .
 
-Uma [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto também requer uma categoria de erro que agrupa os erros do usuário. O usuário pode exibir os erros com base na categoria, definindo o valor da `$ErrorView` variável do shell para CategoryView. As categorias possíveis são definidas pela [System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração.
+Um objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) também requer uma categoria de erro que agrupa erros para o usuário. O usuário pode exibir erros com base na categoria definindo o valor da `$ErrorView` variável shell como CategoryView. As categorias possíveis são definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) .
 
-- Se um cmdlet cria um novo thread, e se o código que está em execução nesse thread gera uma exceção sem tratamento, o Windows PowerShell não irá capturar o erro e encerrará o processo.
+- Se um cmdlet criar um novo thread e se o código que está sendo executado nesse thread lançar uma exceção sem tratamento, o Windows PowerShell não detectará o erro e encerrará o processo.
 
-- Se um objeto tiver um código em seu destruidor que faz com que uma exceção sem tratamento, o Windows PowerShell não irá capturar o erro e encerrará o processo. Isso também ocorre se um objeto chama métodos Dispose que causam uma exceção sem tratamento.
+- Se um objeto tiver código em seu destruidor que causa uma exceção sem tratamento, o Windows PowerShell não capturará o erro e encerrará o processo. Isso também ocorrerá se um objeto chamar métodos Dispose que causam uma exceção sem tratamento.
 
-### <a name="use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07"></a>Usar um módulo do Windows PowerShell para implantar seus Cmdlets (RC07)
+### <a name="use-a-windows-powershell-module-to-deploy-your-cmdlets-rc07"></a>Usar um módulo do Windows PowerShell para implantar seus cmdlets (RC07)
 
-Crie um módulo do Windows PowerShell para empacotar e implantar seus cmdlets. Suporte para módulos é introduzido no Windows PowerShell 2.0. Você pode usar os assemblies que contêm suas classes de cmdlet diretamente como arquivos de módulo binário (Isso é muito útil ao testar seus cmdlets), ou você pode criar um manifesto de módulo que faz referência os assemblies de cmdlet. (Você também pode adicionar snap-in de assemblies existentes ao usar módulos.) Para obter mais informações sobre os módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+Crie um módulo do Windows PowerShell para empacotar e implantar seus cmdlets. O suporte para módulos é introduzido no Windows PowerShell 2,0. Você pode usar os assemblies que contêm as classes de cmdlet diretamente como arquivos de módulo binário (isso é muito útil ao testar seus cmdlets), ou você pode criar um manifesto de módulo que referencie os assemblies de cmdlet. (Você também pode adicionar assemblies de snap-in existentes ao usar módulos.) Para obter mais informações sobre módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 ## <a name="see-also"></a>Consulte Também
 
-[Diretrizes de desenvolvimento altamente incentivados](./strongly-encouraged-development-guidelines.md)
+[Diretrizes de desenvolvimento altamente incentivadas](./strongly-encouraged-development-guidelines.md)
 
 [Diretrizes de desenvolvimento de consultoria](./advisory-development-guidelines.md)
 
