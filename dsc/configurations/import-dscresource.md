@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Usando o Import-DSCResource
-ms.openlocfilehash: ee0b2f0469c6507c8f0148138198597a9e57cdd7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1c2c06d756a70c2de516f330e3123235ce740ba
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080094"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215410"
 ---
 # <a name="using-import-dscresource"></a>Usando o Import-DSCResource
 
@@ -71,14 +71,14 @@ Esse uso oferece os seguintes benefícios:
 - Define explicitamente o módulo de definição do recurso, garantindo que o recurso correto seja carregado.
 
 > [!NOTE]
-> No PowerShell 5.0, recursos DSC podem ter várias versões e as versões podem ser instaladas em um computador lado a lado. Isso é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta de módulo.
+> No PowerShell 5.0, recursos de DSC podem ter várias versões e as versões podem ser instaladas em um computador lado a lado. Isso é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta de módulo.
 > Para obter mais informações, veja [Usando recursos com várias versões](sxsresource.md).
 
 ## <a name="intellisense-with-import-dscresource"></a>IntelliSense com Import-DSCResource
 
 Ao criar a configuração DSC no ISE, o PowerShell fornece o IntelliSence para recursos e propriedades do recurso. Definições de recurso sob o caminho do módulo `$pshome` são carregados automaticamente. Quando você importa os recursos usando a palavra-chave `Import-DSCResource`, as definições de recursos especificadas são adicionadas e o Intellisense é expandido para incluir o esquema de recurso importado.
 
-![Recurso Intellisense](/media/resource-intellisense.png)
+![Recurso Intellisense](../media/resource-intellisense.png)
 
 > [!NOTE]
 > A partir do PowerShell 5.0, o preenchimento com Tab foi adicionado ao ISE para recursos DSC e suas propriedades. Para saber mais, confira [Recursos](../resources/resources.md).
@@ -137,11 +137,11 @@ Não havia suporte para instalar e usar várias versões de recursos lado a lado
 
 Na imagem abaixo, estão instaladas duas versões do módulo **xPSDesiredStateConfiguration**.
 
-![Várias versões fixas de recurso](/media/multiple-resource-versions-broken.md)
+![Várias versões fixas de recurso](../media/multiple-resource-versions-broken.png)
 
 Copie o conteúdo da sua versão de módulo desejada para o nível superior do diretório do módulo.
 
-![Várias versões fixas de recurso](/media/multiple-resource-versions-fixed.md)
+![Várias versões fixas de recurso](../media/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Localização do recurso
 

@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Get-Test-Set
-ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: 68738107cd4a222a13dd4afa158f0370953158ad
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229525"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215415"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Obter, testar e definir](/media/get-test-set.png)
+![Obter, testar e definir](../media/get-test-set.png)
 
 O PowerShell Desired State Configuration é construído ao redor de um processo **Get**, **Test** e **Set**. Os [recursos](resources.md) do DSC contêm métodos para concluir cada uma dessas operações. Em [Configuração](../configurations/configurations.md), você define os blocos de recursos para preencher as chaves que se tornam parâmetros para os métodos **Get**, **Test** e **Set** de recursos.
 
