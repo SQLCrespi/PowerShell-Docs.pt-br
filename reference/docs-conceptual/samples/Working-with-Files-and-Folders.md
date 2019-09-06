@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com arquivos e pastas
-ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 743e261d2f5e8bfa39f2731fca7fea6e5678c711
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030694"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215527"
 ---
 # <a name="working-with-files-and-folders"></a>Trabalhando com arquivos e pastas
 
@@ -106,15 +106,17 @@ Se você não quiser ser solicitado para cada item contido, especifique o parâm
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapear uma pasta local como uma Unidade Acessível do Windows
+## <a name="mapping-a-local-folder-as-a-drive"></a>Mapear uma pasta local como uma unidade
 
-Você também pode mapear uma pasta local usando o comando **subst**. O comando a seguir cria uma unidade local P: com raiz no diretório de Arquivos de Programa local:
+Você também pode mapear uma pasta local usando o comando **New-PSDrive**. O comando a seguir cria uma unidade local P: com raiz no diretório Arquivos de Programa locais, visível somente na sessão do PowerShell:
 
 ```powershell
-subst p: $env:programfiles
+New-PSDrive -Name P -Root $env:ProgramFiles -PSProvider FileSystem
 ```
 
-Assim como ocorre com unidades de rede, unidades mapeadas no Windows PowerShell usando **subst** ficam imediatamente visíveis para o shell do Windows PowerShell.
+Assim como ocorre com unidades de rede, unidades mapeadas no Windows PowerShell ficam visíveis imediatamente para o shell do Windows PowerShell.
+Para criar uma unidade mapeada visível no Explorador de Arquivos, é necessário o parâmetro **-Persist**. No entanto, somente caminhos remotos podem ser usados com Persist.
+
 
 ## <a name="reading-a-text-file-into-an-array"></a>Ler um arquivo de texto em uma matriz
 

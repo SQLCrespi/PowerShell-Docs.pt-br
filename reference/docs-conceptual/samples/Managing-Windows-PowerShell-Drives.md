@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando unidades do Windows PowerShell
-ms.openlocfilehash: 32efa282fb787753942e43acab53c7b6eaeb88e3
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030153"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215517"
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerenciando unidades do Windows PowerShell
 
@@ -105,8 +105,7 @@ Para criar uma nova unidade do Windows PowerShell, você deve fornecer três par
 Por exemplo, você pode criar uma unidade chamada “Office” mapeada para a pasta que contém os aplicativos do Microsoft Office em seu computador, como **C:\\Arquivos de Programas\\Microsoft Office\\OFFICE11**. Para criar a unidade, digite o seguinte comando:
 
 ```
-PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Micr
-osoft Office\OFFICE11"
+PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Microsoft Office\OFFICE11"
 
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
@@ -121,8 +120,7 @@ Faça referência à nova unidade do Windows PowerShell como todas as demais uni
 Uma unidade do Windows PowerShell pode tornar diversas tarefas muito mais simples. Por exemplo, algumas das chaves mais importantes no registro do Windows têm caminhos extremamente longos, tornando-os complicados de acessar e difíceis de serem lembradas. Informações de configuração crítica residem em **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Para exibir e alterar itens na chave do registro CurrentVersion, você pode criar uma unidade do Windows PowerShell que está enraizada na chave digitando:
 
 ```
-PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W
-indows\CurrentVersion
+PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\Windows\CurrentVersion
 
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
@@ -131,7 +129,9 @@ cvkey      Registry      HKLM\Software\Microsoft\Windows\...
 
 Você poderá então alterar o local para a unidade **cvkey:** , tal como faria com qualquer outra unidade:
 
-`PS> cd cvkey:`
+```
+PS> cd cvkey:
+```
 
 ou:
 

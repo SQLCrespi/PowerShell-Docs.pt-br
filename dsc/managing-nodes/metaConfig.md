@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o Gerenciador de Configurações Local
-ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: 42544036d87fcea3189fd6d2e55579fe87f137e1
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229504"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215397"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -72,16 +72,16 @@ As seguintes propriedades estão disponíveis em um bloco **Settings**.
 
 |  Propriedade  |  Tipo  |  Descrição   |
 |----------- |------- |--------------- |
-| ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são __"ContinueConfiguration"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continuar a aplicar a configuração atual após a reinicialização do computador. Este é o valor padrão</li><li>__StopConfiguration__: parar a configuração atual após a reinicialização do computador.</li></ul>|
+| ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são __"ContinueConfiguration"__ e __"StopConfiguration"__ . <ul><li> __ContinueConfiguration__: continuar a aplicar a configuração atual após a reinicialização do computador. Este é o valor padrão</li><li>__StopConfiguration__: parar a configuração atual após a reinicialização do computador.</li></ul>|
 | AllowModuleOverwrite| bool| __$TRUE__ se as novas configurações baixadas do serviço de pull tiverem permissão para substituir as antigas no nó de destino. Caso contrário, $FALSE.|
 | CertificateID| cadeia de caracteres| A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx). <br> __Observação:__ isso será gerenciado automaticamente se estiver usando o serviço de pull de DSC de Automação do Azure.|
 | ConfigurationDownloadManagers| CimInstance[]| Obsoleto. Use os blocos __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ para definir pontos de extremidade de serviço de pull de configuração.|
 | ConfigurationID| cadeia de caracteres| Para compatibilidade com versões anteriores do serviço de pull. Um GUID que identifica o arquivo de configuração que deve ser obtido de um serviço de pull. O nó efetuará o pull das configurações serviço de pull se o nome do MOF de configuração for ConfigurationID.mof.<br> __Observação:__ Se você definir essa propriedade, o registro do nó com um serviço de pull usando __RegistrationKey__ não funcionará. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](../pull-server/pullClientConfigNames.md).|
-| ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Os valores possíveis são __"ApplyOnly"__, __"ApplyAndMonitor"__ e __"ApplyAndAutoCorrect"__. <ul><li>__ApplyOnly__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando o pull de uma nova configuração for efetuado de um serviço. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyOnly__ entre em vigor. </li><li> __ApplyAndMonitor__: Este é o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyAndMonitor__ entre em vigor.</li><li>__ApplyAndAutoCorrect__: o DSC aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.</li></ul>|
+| ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Os valores possíveis são __"ApplyOnly"__ , __"ApplyAndMonitor"__ e __"ApplyAndAutoCorrect"__ . <ul><li>__ApplyOnly__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando o pull de uma nova configuração for efetuado de um serviço. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyOnly__ entre em vigor. </li><li> __ApplyAndMonitor__: Este é o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyAndMonitor__ entre em vigor.</li><li>__ApplyAndAutoCorrect__: o DSC aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.</li></ul>|
 | ConfigurationModeFrequencyMins| UInt32| A frequência, em minutos, em que a configuração atual é verificada e aplicada. Essa propriedade será ignorada se a propriedade ConfigurationMode estiver definida como ApplyOnly. O valor padrão é 15.|
 | DebugMode| cadeia de caracteres| Os valores possíveis são __None__, __ForceModuleImport__ e __All__. <ul><li>Defina como __None__ para usar os recursos armazenados em cache. Este é o padrão e deve ser usada em cenários de produção.</li><li>Definir como __ForceModuleImport__ fará com que o LCM recarregue todos os módulos de recursos DSC, mesmo se tiverem sido carregados e armazenados em cache anteriormente. Isso afeta o desempenho das operações de DSC, já que cada módulo é recarregado no momento do uso. Normalmente, você usaria esse valor durante a depuração de um recurso</li><li>Nesta versão, __All__ é o mesmo que __ForceModuleImport__</li></ul> |
 | RebootNodeIfNeeded| bool| defina como `$true` para permitir que os recursos reinicializem o nó usando o sinalizador `$global:DSCMachineStatus`. Caso contrário, você precisará reinicializar manualmente o nó para qualquer configuração que exigir. O valor padrão é `$false`. Para usar essa configuração quando uma condição de reinicialização for representada por algo diferente do DSC (como o Windows Installer), combine essa configuração com o módulo [xPendingReboot](https://github.com/powershell/xpendingreboot).|
-| RefreshMode| cadeia de caracteres| Especifica como o LCM obtém as configurações. Os valores possíveis são __"Disabled"__, __"Push"__ e __"Pull"__. <ul><li>__Disabled__: as configurações do DSC estão desabilitadas para este nó.</li><li> __Push__: as configurações são iniciadas chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). A configuração é aplicada imediatamente ao nó. Este é o valor padrão.</li><li>__Pull:__ o nó está configurado para verificar regularmente as configurações de um serviço de pull ou caminho SMB. Se essa propriedade estiver definida como __Pull__, você deverá especificar um caminho de (serviço) HTTP ou (compartilhamento) SMB em um bloco __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__.</li></ul>|
+| RefreshMode| cadeia de caracteres| Especifica como o LCM obtém as configurações. Os valores possíveis são __"Disabled"__ , __"Push"__ e __"Pull"__ . <ul><li>__Disabled__: as configurações do DSC estão desabilitadas para este nó.</li><li> __Push__: as configurações são iniciadas chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). A configuração é aplicada imediatamente ao nó. Este é o valor padrão.</li><li>__Pull:__ o nó está configurado para verificar regularmente as configurações de um serviço de pull ou caminho SMB. Se essa propriedade estiver definida como __Pull__, você deverá especificar um caminho de (serviço) HTTP ou (compartilhamento) SMB em um bloco __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__.</li></ul>|
 | RefreshFrequencyMins| Uint32| O intervalo de tempo, em minutos, em que o LCM verifica um serviço de pull para obter configurações atualizadas. Esse valor será ignorado se o LCM não estiver configurado no modo de pull. O valor padrão é 30.|
 | ReportManagers| CimInstance[]| Obsoleto. Use blocos __ReportServerWeb__ para definir um ponto de extremidade para enviar dados de relatório a um serviço de pull.|
 | ResourceModuleManagers| CimInstance[]| Obsoleto. Use os blocos __ResourceRepositoryWeb__ e __ResourceRepositoryShare__ para definir pontos de extremidade HTTP do serviço de pull ou caminhos SMB, respectivamente.|
@@ -124,7 +124,8 @@ Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 |ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
->!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
+> [!NOTE]
+> * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ConfigurationRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -150,7 +151,8 @@ Um **ResourceRepositoryWeb** define as propriedades a seguir.
 |ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
->!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
+> [!NOTE]
+> * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -177,7 +179,8 @@ A função de servidor de relatório não é compatível com o serviço de pull 
 |ProxyURL*|cadeia de caracteres|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
->!OBSERVAÇÃO \* Compatível com a versão 1809 e versões posteriores do Windows.
+> [!NOTE]
+> * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ReportServerWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -193,7 +196,7 @@ Para obter mais informações sobre configurações parciais, consulte [Configur
 |DependsOn|string{}|Uma lista de nomes de outras configurações que devem ser concluídas antes que essa configuração parcial seja aplicada.|
 |Descrição|cadeia de caracteres|Texto usado para descrever a configuração parcial.|
 |ExclusiveResources|string[]|Uma matriz de recursos exclusivos para essa configuração parcial.|
-|RefreshMode|cadeia de caracteres|Especifica como o LCM obtém essa configuração parcial. Os valores possíveis são __"Disabled"__, __"Push"__ e __"Pull"__. <ul><li>__Disabled__: esta configuração parcial está desabilitada.</li><li> __Push__: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um serviço, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Este é o valor padrão.</li><li>__Pull:__ o nó é configurado para verificar regularmente a configuração parcial de um serviço de pull. Se essa propriedade for definida como __Pull__, você deverá especificar um serviço de pull em uma propriedade __ConfigurationSource__. Para saber mais sobre o serviço de pull da Automação do Azure, consulte [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).</li></ul>|
+|RefreshMode|cadeia de caracteres|Especifica como o LCM obtém essa configuração parcial. Os valores possíveis são __"Disabled"__ , __"Push"__ e __"Pull"__ . <ul><li>__Disabled__: esta configuração parcial está desabilitada.</li><li> __Push__: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um serviço, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Este é o valor padrão.</li><li>__Pull:__ o nó é configurado para verificar regularmente a configuração parcial de um serviço de pull. Se essa propriedade for definida como __Pull__, você deverá especificar um serviço de pull em uma propriedade __ConfigurationSource__. Para saber mais sobre o serviço de pull da Automação do Azure, consulte [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).</li></ul>|
 |ResourceModuleSource|string[]|Uma matriz de nomes de servidores de recurso por meio dos quais é possível baixar os recursos necessários para essa configuração parcial. Esses nomes devem se referir a pontos de extremidade de serviço definidos previamente nos blocos **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
 
 __Observação:__ configurações parciais são compatíveis com o DSC de Automação do Azure, mas somente uma configuração pode ser extraída de cada conta de automação por nó.
