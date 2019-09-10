@@ -887,39 +887,13 @@
         - name: Escrever ajuda para cmdlets do Windows PowerShell
           href: ./help/writing-help-for-windows-powershell-cmdlets.md
         - name: Escrever ajuda para provedores do Windows PowerShell
-          href: ./help/writing-help-for-windows-powershell-providers.md
           items:
-            - name: Como criar um tópico de ajuda do provedor
-              href: ./help/how-to-create-a-provider-help-topic.md
-            - name: Como adicionar o nome do provedor
-              href: ./help/how-to-add-the-provider-name.md
-            - name: Como adicionar as unidades do provedor
-              href: ./help/how-to-add-the-provider-drives.md
-            - name: Como adicionar a sinopse do provedor
-              href: ./help/how-to-add-the-provider-synopsis.md
-            - name: Como adicionar uma descrição do provedor
-              href: ./help/how-to-add-a-provider-description.md
-            - name: Como adicionar funcionalidades
-              href: ./help/how-to-add-capabilities.md
-            - name: Como adicionar tarefas a um tópico de ajuda do provedor
-              href: ./help/how-to-add-tasks-to-a-provider-help-topic.md
             - name: Como adicionar parâmetros dinâmicos a um tópico de ajuda do provedor
               href: ./help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-            - name: Como adicionar notas a um tópico de ajuda do provedor
-              href: ./help/how-to-add-notes-to-a-provider-help-topic.md
             - name: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
               href: ./help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Escrever ajuda para scripts e funções do Windows PowerShell
           href: ./help/writing-help-for-windows-powershell-scripts-and-functions.md
-          items:
-            - name: Escrever tópicos da ajuda com base em XML para scripts e funções
-              href: ./help/writing-xml-based-help-topics-for-scripts-and-functions.md
-        - name: Escrever ajuda para snap-ins do Windows PowerShell
-          href: ./help/writing-help-for-windows-powershell-snap-ins.md
-        - name: Escrever ajuda de cmdlet personalizado para provedores do Windows PowerShell
-          href: ./help/writing-custom-cmdlet-help-for-windows-powershell-providers.md
-        - name: Escrever ajuda “Sobre” do Windows PowerShell
-          href: ./help/writing-windows-powershell-about-help.md
         - name: Escrever tópicos da ajuda baseados em comentário
           href: ./help/writing-comment-based-help-topics.md
           items:
@@ -936,7 +910,6 @@
             - name: Exemplos de ajuda baseada em comentários
               href: ./help/examples-of-comment-based-help.md
         - name: Escrever tópicos de ajuda com base em XML para comandos
-          href: ./help/writing-xml-based-help-topics-for-commands.md
           items:
             - name: Como criar o arquivo de ajuda do cmdlet
               href: ./help/how-to-create-the-cmdlet-help-file.md
