@@ -94,8 +94,6 @@
       items:
         - name: Apresentando o ISE do Windows PowerShell
           href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: Ambiente de script integrado do Windows PowerShell (ISE)
-          href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
         - name: Usando o ISE do Windows PowerShell
           items:
             - name: Explorando o ISE do Windows PowerShell
@@ -200,12 +198,66 @@
   items:
     - name: Scripts de exemplo para administração
       href: samples/sample-scripts-for-administration.yml
-    - name: Alterando o estado do computador
-      href: samples/changing-computer-state.md
-    - name: Coletando informações sobre computadores
-      href: samples/collecting-information-about-computers.md
-    - name: Criando consultas Get-WinEvent com FilterHashtable
-      href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Trabalhando com objetos
+      items:
+        - name: Exibindo a estrutura do objeto – Get-Member
+          href: samples/viewing-object-structure--get-member-.md
+        - name: Selecionando partes de objetos – Select-Object
+          href: samples/selecting-parts-of-objects--select-object-.md
+        - name: Removendo objetos do pipeline – Where-Object
+          href: samples/removing-objects-from-the-pipeline--where-object-.md
+        - name: Classificando objetos
+          href: samples/sorting-objects.md
+        - name: Repetindo uma tarefa para vários objetos – ForEach-Object
+          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
+        - name: Criando objetos .NET e COM – New-Object
+          href: samples/creating-.net-and-com-objects--new-object-.md
+        - name: Usando classes e métodos estáticos
+          href: samples/using-static-classes-and-methods.md
+        - name: Obtendo objetos da WMI – Get-WmiObject
+          href: samples/getting-wmi-objects--get-wmiobject-.md
+    - name: Gerenciando computadores
+      items:
+        - name: Alterando o estado do computador
+          href: samples/changing-computer-state.md
+        - name: Coletando informações sobre computadores
+          href: samples/collecting-information-about-computers.md
+        - name: Criando consultas Get-WinEvent com FilterHashtable
+          href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Gerenciando processos e serviços
+      items:
+        - name: Gerenciando processos com cmdlets de processo
+          href: samples/managing-processes-with-process-cmdlets.md
+        - name: Gerenciando serviços
+          href: samples/managing-services.md
+        - name: Gerenciando unidades do Windows PowerShell
+          href: samples/managing-windows-powershell-drives.md
+        - name: Trabalhando com impressoras
+          href: samples/working-with-printers.md
+        - name: Executando tarefas de rede
+          href: samples/performing-networking-tasks.md
+        - name: Trabalhando com instalações de software
+          href: samples/working-with-software-installations.md
+        - name: Decodificar um comando do PowerShell por meio de um processo em execução
+          href: samples/decode-powershell-command-from-a-running-process.md
+    - name: Trabalhando com saída
+      items:
+        - name: Redirecionando dados com os cmdlets Out-*
+          href: samples/redirecting-data-with-out---cmdlets.md
+        - name: Usando comandos de formatação para alterar a exibição dos resultados
+          href: samples/using-format-commands-to-change-output-view.md
+    - name: Gerenciar unidades e arquivos
+      items:
+        - name: Gerenciando o local atual
+          href: samples/managing-current-location.md
+        - name: Trabalhando com arquivos e pastas
+          href: samples/working-with-files-and-folders.md
+        - name: 'Trabalhando com arquivos, pastas e chaves do Registro'
+          href: samples/working-with-files-folders-and-registry-keys.md
+        - name: Trabalhando com entradas do Registro
+          href: samples/working-with-registry-entries.md
+        - name: Trabalhando com chaves do Registro
+          href: samples/working-with-registry-keys.md
     - name: Criando elementos de interface do usuário
       items:
         - name: Criando uma caixa de entrada personalizada
@@ -216,57 +268,13 @@
           href: samples/multiple-selection-list-boxes.md
         - name: Selecionando itens de uma caixa de listagem
           href: samples/selecting-items-from-a-list-box.md
-    - name: Decodificar um comando do PowerShell por meio de um processo em execução
-      href: samples/decode-powershell-command-from-a-running-process.md
-    - name: Gerenciando o local atual
-      href: samples/managing-current-location.md
-    - name: Gerenciando processos com cmdlets de processo
-      href: samples/managing-processes-with-process-cmdlets.md
-    - name: Gerenciando serviços
-      href: samples/managing-services.md
-    - name: Gerenciando unidades do Windows PowerShell
-      href: samples/managing-windows-powershell-drives.md
-    - name: Manipulando itens diretamente
-      href: samples/manipulating-items-directly.md
-    - name: Executando tarefas de rede
-      href: samples/performing-networking-tasks.md
-    - name: Redirecionando dados com os cmdlets Out-*
-      href: samples/redirecting-data-with-out---cmdlets.md
-    - name: Usando comandos de formatação para alterar a exibição dos resultados
-      href: samples/using-format-commands-to-change-output-view.md
-    - name: Trabalhando com arquivos e pastas
-      href: samples/working-with-files-and-folders.md
-    - name: 'Trabalhando com arquivos, pastas e chaves do Registro'
-      href: samples/working-with-files-folders-and-registry-keys.md
-    - name: Trabalhando com objetos
+    - name: Outros exemplos
       items:
-        - name: Obtendo objetos da WMI – Get-WmiObject
-          href: samples/getting-wmi-objects--get-wmiobject-.md
-        - name: Criando objetos .NET e COM – New-Object
-          href: samples/creating-.net-and-com-objects--new-object-.md
-        - name: Removendo objetos do pipeline – Where-Object
-          href: samples/removing-objects-from-the-pipeline--where-object-.md
-        - name: Selecionando partes de objetos – Select-Object
-          href: samples/selecting-parts-of-objects--select-object-.md
-        - name: Classificando objetos
-          href: samples/sorting-objects.md
-        - name: Repetindo uma tarefa para vários objetos – ForEach-Object
-          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
-        - name: Usando classes e métodos estáticos
-          href: samples/using-static-classes-and-methods.md
-        - name: Exibindo a estrutura do objeto – Get-Member
-          href: samples/viewing-object-structure--get-member-.md
-    - name: Trabalhando com impressoras
-      href: samples/working-with-printers.md
-    - name: Trabalhando com entradas do Registro
-      href: samples/working-with-registry-entries.md
-    - name: Trabalhando com chaves do Registro
-      href: samples/working-with-registry-keys.md
-    - name: Trabalhando com instalações de software
-      href: samples/working-with-software-installations.md
-    - name: Outros objetos de script úteis
-      href: samples/other-useful-scripting-objects.md
-    - name: Apêndice 1 Aliases de compatibilidade
-      href: samples/appendix-1---compatibility-aliases.md
-    - name: Apêndice 2 Criando um atalho personalizado do PowerShell
-      href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+        - name: Manipulando itens diretamente
+          href: samples/manipulating-items-directly.md
+        - name: Outros objetos de script úteis
+          href: samples/other-useful-scripting-objects.md
+        - name: Apêndice 1 Aliases de compatibilidade
+          href: samples/appendix-1---compatibility-aliases.md
+        - name: Apêndice 2 Criando um atalho personalizado do PowerShell
+          href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
