@@ -1,5 +1,5 @@
 ---
-title: Escrever ajuda para funções e Scripts do PowerShell | Microsoft Docs
+title: Gravando ajuda para scripts e funções do PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,70 +8,66 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
-ms.openlocfilehash: 98a3f61ff4fa2367f69357173d4e8e14288ff429
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: af989fb2eeba6b68f2e3e6506f3f60d5be6f7d8a
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083103"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848093"
 ---
-# <a name="writing-help-for-powershell-scripts-and-functions"></a>Escrever ajuda para funções e Scripts do PowerShell
+# <a name="writing-help-for-powershell-scripts-and-functions"></a>Escrevendo ajuda para funções e scripts do PowerShell
 
-Funções e scripts do PowerShell devem ser totalmente documentadas sempre que eles são compartilhados com outras pessoas.
-O `Get-Help` cmdlet exibe os tópicos de Ajuda do script e a função no mesmo formato que ele exibe a Ajuda para cmdlets e todos o `Get-Help` parâmetros funcionam nos tópicos de Ajuda do script e a função.
+Os scripts e funções do PowerShell devem ser totalmente documentados sempre que forem compartilhados com outras pessoas.
+O `Get-Help` cmdlet exibe os tópicos de ajuda de script e função no mesmo formato que exibe ajuda para cmdlets e todos `Get-Help` os parâmetros funcionam nos tópicos de ajuda de script e função.
 
-Scripts do PowerShell podem incluir um tópico da Ajuda sobre o script e os tópicos da Ajuda sobre cada funções no script.
-Funções que são compartilhadas independentemente dos scripts podem incluir suas próprias tópicos da Ajuda.
+Os scripts do PowerShell podem incluir um tópico da ajuda sobre o script e tópicos de ajuda sobre cada função no script.
+As funções que são compartilhadas independentemente dos scripts podem incluir seus próprios tópicos de ajuda.
 
-Este documento explica o formato e o posicionamento correto dos tópicos da Ajuda e sugere as diretrizes para o conteúdo.
+Este documento explica o formato e o posicionamento correto dos tópicos da ajuda e sugere diretrizes para o conteúdo.
 
-## <a name="types-of-script-and-function-help"></a>Tipos de Script e ajuda de função
+## <a name="types-of-script-and-function-help"></a>Tipos de ajuda de função e script
 
-### <a name="comment-based-help"></a>Ajuda baseada em comentário
-O tópico da Ajuda que descreve um script ou função pode ser implementado como um conjunto de comentários no script ou função.
-Ao escrever a Ajuda baseada em comentário para um script e para funções em um script, preste bastante atenção as regras para colocar a Ajuda baseada em comentário.
-O posicionamento determinará se o `Get-Help` cmdlet associa o tópico de ajuda com o script ou uma função.
-Para obter mais informações sobre como escrever tópicos de ajuda baseada em comentários, consulte [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
+### <a name="comment-based-help"></a>Ajuda baseada em comentários
+O tópico da ajuda que descreve um script ou uma função pode ser implementado como um conjunto de comentários dentro do script ou da função.
+Ao escrever ajuda baseada em comentários para um script e para funções em um script, preste atenção às regras para colocar a ajuda baseada em comentários.
+O posicionamento determina se o `Get-Help` cmdlet associa o tópico da ajuda ao script ou a uma função.
+Para obter mais informações sobre como escrever tópicos de ajuda baseados em comentários, consulte [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
-### <a name="xml-based-command-help"></a>Ajuda de comando baseado em XML
-O tópico da Ajuda que descreve um script ou função pode ser implementado em um arquivo XML que usa o esquema de ajuda de comando.
-Para associar o script ou função com o arquivo XML, use o `ExternalHelp` comentar a palavra-chave seguida pelo caminho e nome do arquivo XML.
+### <a name="xml-based-command-help"></a>Ajuda de comando baseada em XML
+O tópico da ajuda que descreve um script ou uma função pode ser implementado em um arquivo XML que usa o esquema de ajuda de comando.
+Para associar o script ou a função ao arquivo XML, use a `ExternalHelp` palavra-chave comment seguida pelo caminho e o nome do arquivo XML.
 
-Quando o `ExternalHelp` comentar a palavra-chave estiver presente, ela terá precedência sobre a Ajuda baseada em comentário, mesmo quando `Get-Help` não é possível localizar um arquivo de Ajuda que corresponde ao valor do `ExternalHelp` palavra-chave.
+Quando a `ExternalHelp` palavra-chave comment está presente, ela tem precedência sobre a ajuda baseada em `Get-Help` comentários, mesmo quando não é possível encontrar um arquivo de `ExternalHelp` ajuda que corresponda ao valor da palavra-chave.
 
 ### <a name="online-help"></a>Ajuda online
-Você pode postar seus tópicos da Ajuda na Internet e, em seguida, direcionar `Get-Help` para abrir os tópicos.
-Para obter mais informações sobre como escrever tópicos de ajuda baseada em comentários, consulte [suporte à Ajuda Online](../module/supporting-online-help.md).
+Você pode postar os tópicos da ajuda na Internet e, em `Get-Help` seguida, direcionar para abrir os tópicos.
+Para obter mais informações sobre como escrever tópicos de ajuda baseados em comentários, consulte [suporte à ajuda online](../module/supporting-online-help.md).
 
-Não há nenhum método estabelecido para gravação tópicos para scripts e funções ("sobre").
-No entanto, você pode postar tópicos conceituais sobre a lista de Internet os tópicos e as URLs na seção Links relacionados de um tópico de ajuda de comando.
+Não há nenhum método estabelecido para escrever tópicos conceituais ("sobre") para scripts e funções.
+No entanto, você pode postar tópicos conceituais na Internet listar os tópicos e suas URLs na seção links relacionados de um tópico da ajuda de comando.
 
-## <a name="content-considerations-for-script-and-function-help"></a>Considerações de conteúdo para o Script e a função de ajuda
+## <a name="content-considerations-for-script-and-function-help"></a>Considerações de conteúdo para ajuda de script e função
 
-- Se você estiver escrevendo um tópico da ajuda muito breve com apenas algumas das seções de ajuda de comando disponíveis, certifique-se de incluir claras descrições dos parâmetros de script ou função. Também incluem um ou dois comandos de exemplo na seção de exemplos, mesmo se você optar por omitir as descrições de exemplo.
+- Se você estiver escrevendo um tópico de ajuda muito breve com apenas algumas das seções de ajuda de comando disponíveis, certifique-se de incluir descrições claras do script ou dos parâmetros de função. Inclua também um ou dois comandos de exemplo na seção de exemplos, mesmo se você decidir omitir descrições de exemplo.
 
-- Em todas as descrições, consulte o comando como um script ou função. Essas informações ajudam o usuário a entender e gerenciar o comando.
+- Em todas as descrições, consulte o comando como um script ou uma função. Essas informações ajudam o usuário a entender e gerenciar o comando.
 
-  Por exemplo, a descrição detalhada a seguir indica que o comando New-tópico é um script. Isso informa os usuários precisam para especificar o caminho e o nome completo quando eles o executam.
+  Por exemplo, a descrição detalhada a seguir informa que o comando New-topic é um script. Isso lembra os usuários de que eles precisam para especificar o caminho e o nome completo quando eles o executam.
 
-  > "O script New-tópico cria um tópico conceitual em branco para cada nome de tópico no arquivo de entrada..."
+  > "O script New-topic cria um tópico conceitual em branco para cada nome de tópico no arquivo de entrada..."
 
-  A descrição detalhada a seguir declara que `Disable-PSRemoting` é uma função. Essa informação é particularmente útil para os usuários quando a sessão inclui vários comandos com o mesmo nome, algumas das quais podem estar oculto por um comando com precedência mais alta.
+  A descrição detalhada a seguir declara `Disable-PSRemoting` que é uma função. Essas informações são particularmente úteis para os usuários quando a sessão inclui vários comandos com o mesmo nome, alguns dos quais podem estar ocultos por um comando com precedência mais alta.
 
-  > O `Disable-PSRemoting` função desabilita todas as configurações de sessão no computador local...
+  > A `Disable-PSRemoting` função desabilita todas as configurações de sessão no computador local...
 
-- Em um tópico de Ajuda do script, explicam como usar o script como um todo. Se você também estiver escrevendo tópicos de ajuda para funções no script, Mencione as funções do seu tópico de Ajuda do script e incluem referências a tópicos de ajuda de função na seção Links relacionados do tópico da Ajuda do script. Por outro lado, quando uma função é parte de um script, explique no tópico da Ajuda de função a função que a função desempenha no script e como ele pode ser usado de forma independente. Em seguida, liste o tópico de Ajuda do script na seção Links relacionados do tópico da Ajuda de função.
+- Em um tópico de ajuda de script, explique como usar o script como um todo. Se você também estiver escrevendo tópicos de ajuda para funções no script, mencione as funções no tópico da ajuda do script e inclua referências aos tópicos da ajuda da função na seção links relacionados do tópico da ajuda de script. Por outro lado, quando uma função faz parte de um script, explique no tópico da ajuda da função a função que a função desempenha no script e como ela pode ser usada de forma independente. Em seguida, liste o tópico de ajuda de script na seção links relacionados do tópico da ajuda da função.
 
-- Ao escrever exemplos, para um tópico de Ajuda do script, certifique-se de incluir o caminho para o arquivo de script no exemplo de comando. Isso lembra os usuários que eles devem especificar o caminho explicitamente, mesmo quando o script estiver no diretório atual.
+- Ao escrever exemplos para um tópico de ajuda de script, certifique-se de incluir o caminho para o arquivo de script no comando de exemplo. Isso lembra os usuários de que eles devem especificar o caminho explicitamente, mesmo quando o script está no diretório atual.
 
-- Em um tópico de ajuda de função, lembre os usuários que a função existe apenas na sessão atual e, para usá-la em outras sessões, eles precisam para adicioná-lo, ou adicioná-lo um perfil do PowerShell.
+- Em um tópico da ajuda da função, lembre os usuários de que a função existe somente na sessão atual e, para usá-la em outras sessões, eles precisam adicioná-la ou adicioná-la a um perfil do PowerShell.
 
-- `Get-Help` Exibe o tópico de ajuda para uma função ou script apenas quando o arquivo de script e arquivos de tópicos de ajuda são salvos nos locais corretos. Portanto, não é útil incluir instruções para instalar o PowerShell, ou salvar ou instalando o script ou função em um tópico de Ajuda do script ou função. Em vez disso, inclua quaisquer instruções de instalação no documento que você usar para distribuir o script ou função.
+- `Get-Help`exibe o tópico da ajuda para um script ou função somente quando os arquivos de tópico do arquivo de script e da ajuda são salvos nos locais corretos. Portanto, não é útil incluir instruções para instalar o PowerShell ou salvar ou instalar o script ou a função em um tópico de ajuda de script ou função. Em vez disso, inclua as instruções de instalação no documento que você usa para distribuir o script ou a função.
 
 ## <a name="see-also"></a>Consulte Também
 
- [Escrevendo XML com base em tópicos da Ajuda para Scripts e funções](./writing-xml-based-help-topics-for-scripts-and-functions.md)
-
- [Escrevendo XML com base em tópicos de ajuda para comandos](./writing-xml-based-help-topics-for-commands.md)
-
- [Escrever tópicos de ajuda baseados em comentário](./writing-comment-based-help-topics.md)
+[Escrevendo tópicos de ajuda baseados em comentários](./writing-comment-based-help-topics.md)

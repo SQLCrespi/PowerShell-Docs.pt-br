@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre um módulo do Windows PowerShell | Microsoft Docs
+title: Compreendendo um módulo do Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,58 +8,58 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
-ms.openlocfilehash: cff50d415c4c90182fa1cf015a5a5ba84d4d613a
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470779"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848070"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Noções básicas sobre um módulo do Windows PowerShell
 
-Um *módulo* é um conjunto de funcionalidades relacionadas do Windows PowerShell, agrupados juntos como uma unidade conveniente (normalmente, salva em um único diretório). Definindo um conjunto de arquivos de script relacionadas, assemblies e recursos relacionados como um módulo, você pode fazer referência, carregar, persistir e compartilhar seu código mais fácil do que você precisaria de outra forma.
+Um *módulo* é um conjunto de funcionalidades do Windows PowerShell relacionadas, agrupadas em conjunto como uma unidade conveniente (geralmente salva em um único diretório). Ao definir um conjunto de arquivos de script relacionados, assemblies e recursos relacionados como um módulo, você pode fazer referência, carregar, persistir e compartilhar seu código de forma muito mais fácil do que seria.
 
-O objetivo principal de um módulo é permitir que a modularização (ou seja, reutilização e abstração) de código do Windows PowerShell. Por exemplo, a maneira mais básica de criação de um módulo é simplesmente salvar um script do Windows PowerShell como um arquivo. psm1. Fazer então permite que você controle (ou seja, tornar público ou privado) as funções e variáveis contidas no script. Salvando o script como um arquivo. psm1 também permite que você controle o escopo de certas variáveis. Por fim, você também pode usar cmdlets como [Install-Module](/powershell/module/PowershellGet/Install-Module) para organizar, instalar e usar o script como blocos de construção para soluções maiores.
+A principal finalidade de um módulo é permitir a modularidade (IE, reutilização e abstração) do código do Windows PowerShell. Por exemplo, a maneira mais básica de criar um módulo é simplesmente salvar um script do Windows PowerShell como um arquivo. psm1. Isso permite que você controle (ou seja, torne público ou privado) as funções e variáveis contidas no script. Salvar o script como um arquivo. psm1 também permite que você controle o escopo de determinadas variáveis. Por fim, você também pode usar cmdlets como [install-Module](/powershell/module/PowershellGet/Install-Module) para organizar, instalar e usar seu script como blocos de construção para soluções maiores.
 
-## <a name="module-components-and-types"></a>Tipos e os componentes de módulo
+## <a name="module-components-and-types"></a>Componentes e tipos de módulo
 
-Um módulo é composto por quatro componentes básicos:
+Um módulo é composto de quatro componentes básicos:
 
-1. Algum tipo de arquivo de código, normalmente, um script do PowerShell ou um assembly de cmdlet gerenciadas.
+1. Algum tipo de arquivo de código – geralmente um script do PowerShell ou um assembly de cmdlet gerenciado.
 
-2. Qualquer outra coisa que o arquivo de código acima pode precisa, como assemblies adicionais, ajudar a arquivos ou scripts.
+2. Qualquer outra coisa que o arquivo de código acima possa precisar, como assemblies adicionais, arquivos de ajuda ou scripts.
 
-3. Um arquivo de manifesto que descreve os arquivos acima, bem como armazena metadados, como informações de autor e controle de versão...
+3. Um arquivo de manifesto que descreve os arquivos acima, bem como armazena metadados, como informações de criação e controle de versão.
 
-4. Um diretório que contém todo o conteúdo acima e está localizado onde PowerShell razoavelmente pode encontrá-lo.
+4. Um diretório que contém todo o conteúdo acima e está localizado onde o PowerShell pode encontrá-lo razoavelmente.
 
-   Observe que nenhum desses componentes, por si só, é realmente necessário. Por exemplo, um módulo pode tecnicamente ser somente um script armazenado em um arquivo. psm1. Você também pode ter um módulo que é nada além de um arquivo de manifesto, que é usado principalmente para fins de organização. Você também pode escrever um script que cria dinamicamente um módulo e, assim, não precisa realmente um diretório para armazenar qualquer coisa no. As seções a seguir descrevem os tipos de módulos, que você pode obter ao misturar e combinar as diferentes partes possíveis de um módulo juntos.
+   Observe que nenhum desses componentes, por si só, são realmente necessários. Por exemplo, um módulo tecnicamente pode ser apenas um script armazenado em um arquivo. psm1. Você também pode ter um módulo que não seja nada além de um arquivo de manifesto, que é usado principalmente para fins organizacionais. Você também pode escrever um script que cria um módulo dinamicamente e, como tal, não precisa realmente de um diretório para armazenar nada. As seções a seguir descrevem os tipos de módulos que você pode obter misturando e combinando as diferentes partes possíveis de um módulo juntos.
 
 ### <a name="script-modules"></a>Módulos de script
 
-Como o nome implica, uma *módulo de script* é um arquivo (. psm1) que contém qualquer código válido do Windows PowerShell. Os administradores e desenvolvedores de script podem usar esse tipo de módulo para criar módulos cujos membros incluem funções, variáveis e muito mais. Em essência, um módulo de script é simplesmente um script do Windows PowerShell com uma extensão diferente, que permite aos administradores usar funções de gerenciamento, exportação e importação nele.
+Como o nome indica, um *módulo de script* é um arquivo (. psm1) que contém qualquer código válido do Windows PowerShell. Os desenvolvedores e administradores de script podem usar esse tipo de módulo para criar módulos cujos membros incluem funções, variáveis e muito mais. No coração, um módulo de script é simplesmente um script do Windows PowerShell com uma extensão diferente, que permite aos administradores usarem funções de importação, exportação e gerenciamento nele.
 
-Além disso, você pode usar um arquivo de manifesto para incluir outros recursos em seu módulo, como arquivos de dados, outros módulos dependentes ou scripts de tempo de execução. Arquivos de manifesto também são úteis para metadados, como informações de criação e controle de versão de controle.
+Além disso, você pode usar um arquivo de manifesto para incluir outros recursos em seu módulo, como arquivos de dados, outros módulos dependentes ou scripts de tempo de execução. Os arquivos de manifesto também são úteis para controlar metadados, como informações de criação e controle de versão.
 
-Por fim, um módulo de script, como qualquer outro módulo que não será criado dinamicamente, precisa ser salvo em uma pasta que o PowerShell razoavelmente pode descobrir. Geralmente, isso é no caminho do módulo do PowerShell; mas, se necessário você pode descrever explicitamente onde o módulo está instalado. Para obter mais informações, consulte [como escrever um módulo de Script do PowerShell](./how-to-write-a-powershell-script-module.md).
+Por fim, um módulo de script, como qualquer outro módulo que não é criado dinamicamente, precisa ser salvo em uma pasta que o PowerShell pode descobrir razoavelmente. Normalmente, isso está no caminho do módulo do PowerShell; Mas, se necessário, você pode descrever explicitamente onde o módulo está instalado. Para obter mais informações, consulte [como escrever um módulo de script do PowerShell](./how-to-write-a-powershell-script-module.md).
 
 ### <a name="binary-modules"></a>Módulos binários
 
-Um *módulo binário* é um assembly do .NET Framework (. dll) que contém o código compilado, como C#. Os desenvolvedores de cmdlet podem usar esse tipo de módulo para compartilhar cmdlets, provedores e muito mais. (Os snap-ins existentes também pode ser usados como módulos binários.) Em comparação com um módulo de script, um módulo binário permite que você crie cmdlets que são mais rápidos ou usar os recursos (como multithreading) que não são tão fácil de codificar em scripts do Windows PowerShell.
+Um *módulo binário* é um assembly .NET Framework (. dll) que contém código compilado, como C#. Os desenvolvedores de cmdlets podem usar esse tipo de módulo para compartilhar cmdlets, provedores e muito mais. (Os snap-ins existentes também podem ser usados como módulos binários.) Em comparação com um módulo de script, um módulo binário permite que você crie cmdlets que são mais rápidos ou usam recursos (como multithreading) que não são tão fáceis de codificar em scripts do Windows PowerShell.
 
-Como com módulos de script, você pode incluir um arquivo de manifesto para descrever os recursos adicionais que usa seu módulo e para controlar metadados sobre seu módulo. Da mesma forma, você provavelmente deve instalar o módulo binário em uma pasta em algum lugar no caminho do módulo do PowerShell. Para obter mais informações, consulte como [como escrever um módulo binário do PowerShell](./how-to-write-a-powershell-binary-module.md).
+Assim como acontece com os módulos de script, você pode incluir um arquivo de manifesto para descrever os recursos adicionais usados pelo seu módulo e controlar os metadados sobre o módulo. Da mesma forma, você provavelmente deve instalar o módulo binário em uma pasta em algum lugar ao longo do caminho do módulo do PowerShell. Para obter mais informações, consulte como [escrever um módulo binário do PowerShell](./how-to-write-a-powershell-binary-module.md).
 
 ### <a name="manifest-modules"></a>Módulos de manifesto
 
-Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem qualquer tipo de assembly principal ou script. (Formalmente, o módulo de manifesto deixa o `ModuleToProcess` ou `RootModule` elemento do manifesto vazio.) No entanto, você ainda pode usar outros recursos de um módulo, como a capacidade de carregar assemblies de dependente ou executar certos scripts de pré-processando automaticamente. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar os recursos que outros módulos serão usadas, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
+Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem nenhum tipo de assembly ou script de núcleo. (Formalmente, um módulo de manifesto deixa `ModuleToProcess` o `RootModule` elemento ou do manifesto vazio.) No entanto, você ainda pode usar os outros recursos de um módulo, como a capacidade de carregar assemblies dependentes ou executar automaticamente determinados scripts de pré-processamento. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar recursos que outros módulos usarão, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
 ### <a name="dynamic-modules"></a>Módulos dinâmicos
 
-Um *módulo dinâmico* é um módulo que não é carregado de, ou salvos em um arquivo. Em vez disso, eles são criados dinamicamente por um script, usando o [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Esse tipo de módulo permite que um script criar um módulo sob demanda que não precisam ser carregados ou salvos no armazenamento persistente. Por sua natureza, um módulo dinâmico se destina a ser de curta duração e, portanto, não pode ser acessado pelo `Get-Module` cmdlet. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem fazem que provavelmente precisarão permanentes pastas para armazenar seus assemblies relacionados.
+Um *módulo dinâmico* é um módulo que não é carregado de um arquivo ou salvo nele. Em vez disso, eles são criados dinamicamente por um script, usando o cmdlet [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) . Esse tipo de módulo permite que um script crie um módulo sob demanda que não precise ser carregado nem salvo no armazenamento persistente. Por sua natureza, um módulo dinâmico deve ser de curta duração e, portanto, não pode ser acessado `Get-Module` pelo cmdlet. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem eles provavelmente precisam de pastas permanentes para armazenar seus assemblies relacionados.
 
 ## <a name="module-manifests"></a>Manifestos de módulo
 
-Um *manifesto de módulo* é um arquivo. psd1 que contém uma tabela de hash. As chaves e valores na tabela de hash fazem o seguinte:
+Um *manifesto de módulo* é um arquivo. psd1 que contém uma tabela de hash. As chaves e os valores na tabela de hash fazem o seguinte:
 
 - Descreva o conteúdo e os atributos do módulo.
 
@@ -67,55 +67,55 @@ Um *manifesto de módulo* é um arquivo. psd1 que contém uma tabela de hash. As
 
 - Determine como os componentes são processados.
 
-  Manifestos não são necessários para um módulo. Módulos podem fazer referência a arquivos de script (. ps1), arquivos de módulo (. psm1), arquivos de manifesto (. psd1), formatação de script e digite arquivos (. ps1xml), conjuntos de módulos de cmdlet e o provedor (. dll), arquivos de recurso, arquivos de Ajuda, arquivos de localização ou qualquer outro tipo de arquivo ou recurso que é fornecido como parte do módulo. Para obter um script internacionalizado, a pasta de módulo também contém um conjunto de arquivos de catálogo de mensagens. Se você adicionar um arquivo de manifesto para a pasta de módulo, você pode fazer referência os vários arquivos como uma única unidade referenciando o manifesto.
+  Manifestos não são necessários para um módulo. Os módulos podem referenciar arquivos de script (. ps1), arquivos de módulo de script (. psm1), arquivos de manifesto (. psd1), arquivos de formatação e tipo (. ps1xml), assemblies de cmdlet e provedor (. dll), arquivos de recursos, arquivos de ajuda, arquivos de localização ou qualquer outro tipo de arquivo ou recurso que é agrupado como parte do módulo. Para um script internacionalizado, a pasta de módulo também contém um conjunto de arquivos de catálogo de mensagens. Se você adicionar um arquivo de manifesto à pasta do módulo, poderá fazer referência a vários arquivos como uma única unidade referenciando o manifesto.
 
-  O manifesto do próprio descreve categorias de informações a seguir:
+  O próprio manifesto descreve as seguintes categorias de informações:
 
 - Metadados sobre o módulo, como o número de versão do módulo, o autor e a descrição.
 
-- Pré-requisitos necessários para importar o módulo, como a versão do Windows PowerShell, a versão do common language runtime (CLR) e os módulos necessários.
+- Os pré-requisitos necessários para importar o módulo, como a versão do Windows PowerShell, a versão Common Language Runtime (CLR) e os módulos necessários.
 
-- Diretivas de processamento, como os scripts, formatos e tipos para processar.
+- Diretivas de processamento, como os scripts, formatos e tipos a serem processados.
 
-- Restrições sobre os membros do módulo para exportar, como os aliases, funções, variáveis e cmdlets para exportar.
+- Restrições sobre os membros do módulo a serem exportados, como aliases, funções, variáveis e cmdlets a serem exportados.
 
   Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
 ## <a name="storing-and-installing-a-module"></a>Armazenando e instalando um módulo
 
-Depois de criar um script, o módulo binário ou manifesto, você pode salvar seu trabalho em um local que outras pessoas possam acessá-lo. Por exemplo, o módulo pode ser armazenado na pasta do sistema onde o Windows PowerShell está instalado, ou ele pode ser armazenado em uma pasta de usuário.
+Depois de criar um módulo script, binário ou manifesto, você pode salvar seu trabalho em um local que outras pessoas possam acessá-lo. Por exemplo, o módulo pode ser armazenado na pasta do sistema em que o Windows PowerShell está instalado ou pode ser armazenado em uma pasta de usuário.
 
-Em termos gerais, você pode determinar onde você deve instalar o módulo usando um dos caminhos armazenados no `$ENV:PSModulePath` variável. Usar um desses caminhos significa PowerShell pode localizar e carregar o módulo quando um usuário faz uma chamada a ele em seu código automaticamente. Se você armazenar seu módulo em outro lugar, você pode explicitamente informar PowerShell passando o local do seu módulo como um parâmetro ao chamar `Install-Module`.
+Em termos gerais, você pode determinar onde você deve instalar o módulo usando um dos caminhos armazenados na `$ENV:PSModulePath` variável. Usar um desses caminhos significa que o PowerShell pode localizar e carregar automaticamente seu módulo quando um usuário fizer uma chamada para ele em seu código. Se você armazenar seu módulo em outro lugar, poderá explicitamente permitir que o PowerShell saiba passando o local do seu módulo como um parâmetro quando você chamar `Install-Module`.
 
-Independentemente disso, o caminho da pasta é conhecido como o *base* do módulo (ModuleBase) e o nome do script, o arquivo de módulo binário ou de manifesto deve ser o mesmo que o nome da pasta de módulo, com as seguintes exceções:
+Independentemente, o caminho da pasta é chamado de *base* do módulo (ModuleBase), e o nome do arquivo de módulo script, binário ou manifesto deve ser o mesmo que o nome da pasta do módulo, com as seguintes exceções:
 
-- Módulos dinâmicos que são criados pela `New-Module` cmdlet pode ser nomeado usando o `Name` parâmetro do cmdlet.
+- Módulos dinâmicos criados pelo `New-Module` cmdlet podem ser nomeados usando o `Name` parâmetro do cmdlet.
 
-- Módulos importados de objetos de assembly, o  **`Import-Module` -Assembly** comando são nomeados de acordo com a seguinte sintaxe: `"dynamic_code_module_" + assembly.GetName()`.
+- Os `"dynamic_code_module_" + assembly.GetName()` **`Import-Module`** módulos importados de objetos de assembly pelo comando-assembly são nomeados de acordo com a seguinte sintaxe:.
 
   Para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md) e [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
-## <a name="module-cmdlets-and-variables"></a>Variáveis e os Cmdlets do módulo
+## <a name="module-cmdlets-and-variables"></a>Cmdlets e variáveis de módulo
 
-As variáveis e os cmdlets a seguir são fornecidas pelo Windows PowerShell para a criação e gerenciamento de módulos.
+Os cmdlets e variáveis a seguir são fornecidos pelo Windows PowerShell para a criação e o gerenciamento de módulos.
 
-[Novo módulo](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet esse cmdlet cria um novo módulo dinâmico que existe apenas na memória. O módulo é criado a partir de um bloco de script e seus membros exportados, como suas funções e variáveis, ficam imediatamente disponíveis na sessão e permanecem disponíveis até que a sessão é fechada.
+Cmdlet [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) esse cmdlet cria um novo módulo dinâmico que existe apenas na memória. O módulo é criado a partir de um bloco de script, e seus membros exportados, como suas funções e variáveis, estão imediatamente disponíveis na sessão e permanecem disponíveis até que a sessão seja fechada.
 
-[New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) cmdlet esse cmdlet cria um novo arquivo de manifesto (. psd1) do módulo, preenche os valores e salva o arquivo de manifesto no caminho especificado. Esse cmdlet também pode ser usado para criar um modelo de manifesto de módulo que pode ser preenchido manualmente.
+Cmdlet [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) esse cmdlet cria um novo arquivo de manifesto de módulo (. psd1), popula seus valores e salva o arquivo de manifesto no caminho especificado. Esse cmdlet também pode ser usado para criar um modelo de manifesto de módulo que pode ser preenchido manualmente.
 
-[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet esse cmdlet adiciona um ou mais módulos à sessão atual.
+Cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) esse cmdlet adiciona um ou mais módulos à sessão atual.
 
-[Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet este cmdlet recupera informações sobre os módulos que foram ou que podem ser importados para a sessão atual.
+Cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) este cmdlet recupera informações sobre os módulos que foram ou que podem ser importados para a sessão atual.
 
-[Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) cmdlet esse cmdlet especifica os membros do módulo (como cmdlets, funções, variáveis e aliases) que são exportados a partir de um arquivo de módulo (. psm1) de script ou um módulo dinâmico criado usando o `New-Module` cmdlet.
+Cmdlet [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) este cmdlet especifica os membros do módulo (como cmdlets, funções, variáveis e aliases) que são exportados de um arquivo de módulo de script (. psm1) ou de um módulo dinâmico criado usando `New-Module` o cmdlet.
 
-[Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) cmdlet esse cmdlet remove módulos da sessão atual.
+Cmdlet [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) este cmdlet Remove módulos da sessão atual.
 
-[Test-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest) cmdlet esse cmdlet verifica se um manifesto de módulo descreve com precisão os componentes de um módulo, verificando se os arquivos que estão listados no arquivo de manifesto de módulo (. psd1) realmente existem nos caminhos especificados.
+Cmdlet [Test-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest) esse cmdlet verifica se um manifesto de módulo descreve precisamente os componentes de um módulo verificando se os arquivos listados no arquivo de manifesto de módulo (. psd1) realmente existem nos caminhos especificados.
 
-$PSScriptRoot essa variável contém o diretório do qual o módulo de script está sendo executado. Ele permite que os scripts usar o caminho do módulo para acessar outros recursos.
+$PSScriptRoot essa variável contém o diretório do qual o módulo de script está sendo executado. Ele permite que os scripts usem o caminho do módulo para acessar outros recursos.
 
-$env: PSModulePath essa variável de ambiente contém uma lista dos diretórios nos quais Windows PowerShell módulos são armazenados. Windows PowerShell usa o valor dessa variável ao importar módulos automaticamente e atualizando os tópicos de ajuda para módulos.
+$env:P SModulePath essa variável de ambiente contém uma lista dos diretórios nos quais os módulos do Windows PowerShell estão armazenados. O Windows PowerShell usa o valor dessa variável ao importar módulos automaticamente e atualizar tópicos de ajuda para módulos.
 
 ## <a name="see-also"></a>Consulte Também
 

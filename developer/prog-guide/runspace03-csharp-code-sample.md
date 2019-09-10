@@ -1,5 +1,5 @@
 ---
-title: RunSpace03 (C#) exemplo de código | Microsoft Docs
+title: Exemplo deC#código RunSpace03 () | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,21 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ac8ab99-1856-4d6f-b30d-c0a18b8dd1fc
 caps.latest.revision: 6
-ms.openlocfilehash: e1fc91174a959d6acc306330afb8d5c2e7a9a860
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 9afdb97b8ae2919f091ca5bacccedbe37c2e1584
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67734996"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848036"
 ---
 # <a name="runspace03-c-code-sample"></a>Exemplo de código RunSpace03 (C#)
 
-Aqui está o C# código-fonte do que o aplicativo de console descrito [criando um Console do aplicativo que é executado em um Script especificado](fd). Este exemplo usa o [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe para executar um script que recupera informações de processo usando a lista de nomes de processos passado para o script. Ele mostra como passar objetos de entrada para um script e como recuperar objetos de erro, bem como os objetos de saída.
+Este é o C# código-fonte do aplicativo de console descrito em "criando um aplicativo de console que executa um script especificado". Este exemplo usa a classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) para executar um script que recupera informações de processo usando a lista de nomes de processo passados para o script. Ele mostra como passar objetos de entrada para um script e como recuperar objetos de erro, bem como os objetos de saída.
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (runspace03.cs) para este exemplo usando o Microsoft Windows Software Development Kit para Windows Vista e o Microsoft .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
->
-> Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
+> Você pode baixar o C# arquivo de origem (runspace03.cs) para este exemplo usando os componentes de tempo de execução do Microsoft Windows Software Development Kit para Windows Vista e Microsoft .NET Framework 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> Os arquivos de origem baixados estão disponíveis no diretório de  **\<exemplos do PowerShell >** .
 
 ## <a name="code-sample"></a>Exemplo de código
 
