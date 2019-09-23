@@ -1,14 +1,13 @@
 ---
-ms.openlocfilehash: 962d61aac474a04387151de150af75b3f8d62e40
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3f78dfdac647a95e85501863e66d5b9491dd35a4
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055404"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143535"
 ---
 # <a name="readme"></a>ARQUIVO LEIAME
 
-Esta pasta contém a documentação do WMF (Windows Management Framework).
-Ela é configurada como um docset separado dentro do repositório PowerShell-Docs.
+O conteúdo do WMF foi movido para [reference/docs-conceptual/wmf](https://github.com/MicrosoftDocs/PowerShell-Docs/tree/staging/reference/docs-conceptual/wmf).
 
-Para obter informações de como colaborar com esse docset, confira o [Guia de Colaboradores](https://github.com/PowerShell/PowerShell-Docs/blob/staging/CONTRIBUTING.md) do PowerShell-Docs.
+Esta estrutura de pastas é necessária para dar suporte ao redirecionamento. Ela pode ser excluída após a SEO tornar o redirecionamento desnecessário.
