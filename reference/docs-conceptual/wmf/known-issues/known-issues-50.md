@@ -68,7 +68,7 @@ Há duas soluções para este problema, dependendo da versão do Windows Server 
      Publish-SilData
      ```
 
-  4. Exclua os arquivos no diretório \Windows\System32\Logfiles\SIL\
+  4. Exclua os arquivos no diretório \Windows\System32\Logfiles\SIL\\
 
      ```powershell
      Remove-Item -Recurse $env:SystemRoot\System32\Logfiles\SIL\
