@@ -1,5 +1,5 @@
 ---
-title: Criar um provedor de navegação do Windows PowerShell | Microsoft Docs
+title: Criando um provedor de navegação do Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -11,168 +11,168 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 10927381993d89e83fd9f7870138542eeb60fc59
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855166"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323392"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
 
-Este tópico descreve como criar um provedor de navegação do Windows PowerShell que pode navegar o armazenamento de dados. Esse tipo de provedor dá suporte a comandos recursivos, contêineres aninhados e caminhos relativos.
+Este tópico descreve como criar um provedor de navegação do Windows PowerShell que pode navegar pelo armazenamento de dados. Esse tipo de provedor dá suporte a comandos recursivos, Contêineres aninhados e caminhos relativos.
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider05.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
+> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider05.cs) para este provedor usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
-> Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
+> Os arquivos de origem baixados estão disponíveis no diretório de  **\<exemplos do PowerShell >** .
 >
-> Para obter mais informações sobre outras implementações do provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-O provedor descrito aqui permite que o identificador de usuário de um banco de dados como uma unidade para que o usuário possa navegar para as tabelas de dados no banco de dados. Ao criar seu próprio provedor de navegação, você pode implementar métodos que podem fazer caminhos qualificadas pela unidade necessários para a navegação, normalizar caminhos relativos, mover itens de repositório de dados, bem como os métodos que obtém nomes de filho, obtém o caminho pai de um item e de teste para identificar se um item é um contêiner.
+O provedor descrito aqui permite que o usuário manipule um banco de dados do Access como uma unidade para que o usuário possa navegar até as tabelas de data no banco de dado. Ao criar seu próprio provedor de navegação, você pode implementar métodos que podem tornar os caminhos qualificados da unidade necessários para navegação, normalizar caminhos relativos, mover itens do armazenamento de dados, bem como métodos que obtêm nomes filho, obter o caminho pai de um item e testar para identificar se um item é um contêiner.
 
 > [!CAUTION]
-> Lembre-se de que este design pressupõe um banco de dados que tem um campo com a ID de nome e o tipo do campo é LongInteger.
+> Lembre-se de que esse design pressupõe um banco de dados que tem um campo com a ID Name e que o tipo do campo é LongInteger.
 
 ## <a name="define-the-windows-powershell-provider"></a>Definir o provedor do Windows PowerShell
 
-Um provedor de navegação do Windows PowerShell deve criar uma classe .NET que deriva de [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe base. Aqui está a definição de classe para o provedor de navegação descrito nesta seção.
+Um provedor de navegação do Windows PowerShell deve criar uma classe .NET que deriva da classe base [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Aqui está a definição de classe para o provedor de navegação descrito nesta seção.
 
 [!code-csharp[AccessDBProviderSample05.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
-Observe que, neste provedor, o [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) atributo inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor que é usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há nenhum recursos específicos do Windows PowerShell que são adicionados.
+Observe que, nesse provedor, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há recursos específicos do Windows PowerShell adicionados.
 
-## <a name="defining-base-functionality"></a>Definindo a funcionalidade de Base
+## <a name="defining-base-functionality"></a>Definindo a funcionalidade base
 
-Conforme descrito em [Design de seu provedor de PS](./designing-your-windows-powershell-provider.md), o [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) deriva de classe base de várias outras classes que forneceu um provedor diferente funcionalidade. Um provedor de navegação do Windows PowerShell, portanto, deve definir todas as funcionalidades fornecidas por essas classes.
+Conforme descrito em [criar seu provedor de PS](./designing-your-windows-powershell-provider.md), a classe base [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) deriva de várias outras classes que forneceram funcionalidade de provedor diferente. Um provedor de navegação do Windows PowerShell, portanto, deve definir toda a funcionalidade fornecida por essas classes.
 
-Para implementar a funcionalidade para adicionar informações de inicialização de sessão específica e para liberação de recursos que são usados pelo provedor, consulte [criando um provedor básico do PS](./creating-a-basic-windows-powershell-provider.md). No entanto, a maioria dos provedores (incluindo o provedor descrito aqui) pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
+Para implementar a funcionalidade para adicionar informações de inicialização específicas da sessão e para liberar recursos que são usados pelo provedor, consulte [criando um provedor básico do PS](./creating-a-basic-windows-powershell-provider.md). No entanto, a maioria dos provedores (incluindo o provedor descrito aqui) pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
 
-Para obter acesso ao armazenamento de dados por meio de uma unidade do Windows PowerShell, você deve implementar os métodos do [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe base. Para obter mais informações sobre a implementação desses métodos, consulte [criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
+Para obter acesso ao armazenamento de dados por meio de uma unidade do Windows PowerShell, você deve implementar os métodos da classe base [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Para obter mais informações sobre como implementar esses métodos, consulte [criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
-Para manipular os itens de um repositório de dados, como introdução, configuração e itens de compensação, o provedor deve implementar os métodos fornecidos pela [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe base. Para obter mais informações sobre a implementação desses métodos, consulte [criando um provedor de Item do Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
+Para manipular os itens de um armazenamento de dados, como obter, configurar e limpar itens, o provedor deve implementar os métodos fornecidos pela classe base [System. Management. Automation. Provider. @ cmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Para obter mais informações sobre como implementar esses métodos, consulte [criando um provedor de item do Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
 
-Para obter os itens filho ou seus nomes, de armazenamento de dados, bem como os métodos que criar, copiar, renomeiam e remover itens, você deve implementar os métodos fornecidos pelo [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)classe base. Para obter mais informações sobre a implementação desses métodos, consulte [criando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
+Para obter os itens filho, ou seus nomes, do armazenamento de dados, bem como métodos que criam, copiam, renomeam e removem itens, você deve implementar os métodos fornecidos pela classe base [System. Management. Automation. Provider. Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Para obter mais informações sobre como implementar esses métodos, consulte [criando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
-## <a name="creating-a-windows-powershell-path"></a>Criação de um caminho do Windows PowerShell
+## <a name="creating-a-windows-powershell-path"></a>Criando um caminho do Windows PowerShell
 
-Provedor de navegação do Windows PowerShell usar um caminho provedor interno do Windows PowerShell para navegar os itens do repositório de dados. Para criar um caminho de provedor interno de provedor deve implementar o [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) método para dar suporte às chamadas do cmdlet combinar-Path. Esse método combina um caminho pai e filho em um caminho de provedor interno, usando um separador de caminho de provedor específico entre os caminhos pai e filho.
+Provedor de navegação do Windows PowerShell use um caminho interno de provedor do Windows PowerShell para navegar pelos itens do armazenamento de dados. Para criar um caminho interno do provedor, o provedor deve implementar o método [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) para dar suporte a chamadas do cmdlet Combine-Path. Esse método combina um caminho pai e filho em um caminho interno de provedor, usando um separador de caminho específico de provedor entre os caminhos pai e filho.
 
-A implementação padrão usa caminhos com "/" ou "\\"como o separador de caminho, normaliza o separador de caminho para"\\", combina as partes do caminho pai e filho com o separador entre eles e, em seguida, retorna uma cadeia de caracteres que contém o caminhos combinados.
+A implementação padrão usa caminhos com "/" ou "\\" como o separador de caminho, normaliza o separador de caminho para "\\", combina as partes do caminho pai e filho com o separador entre elas e, em seguida, retorna uma cadeia de caracteres que contém a caminhos combinados.
 
-Este provedor de navegação não implementa esse método. No entanto, o código a seguir é a implementação padrão do [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) método.
+Este provedor de navegação não implementa esse método. No entanto, o código a seguir é a implementação padrão do método [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) .
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermakepath](Msh_samplestestcmdlets#testprovidermakepath)]  -->
 
-#### <a name="things-to-remember-about-implementing-makepath"></a>Itens a lembrar sobre a implementação MakePath
+#### <a name="things-to-remember-about-implementing-makepath"></a>Coisas a serem lembradas sobre a implementação de MakePath
 
-As seguintes condições podem ser aplicáveis à sua implementação de [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath):
+As condições a seguir podem se aplicar à sua implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath):
 
-- Sua implementação do [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) método não deve validar o caminho como um caminho totalmente qualificado legal em que o namespace do provedor. Lembre-se de que cada parâmetro pode representar apenas uma parte de um caminho e as partes combinadas não podem gerar um caminho totalmente qualificado. Por exemplo, o [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) método para o provedor do sistema de arquivos pode receber "windows\system32" no `parent` parâmetro e "abc.dll" o `child` parâmetro. O método une esses valores com a "\\" separador e retorna "windows\system32\abc.dll", que não é um caminho de sistema de arquivo totalmente qualificado.
+- Sua implementação do método [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) não deve validar o caminho como um caminho válido totalmente qualificado no namespace do provedor. Lembre-se de que cada parâmetro pode representar apenas uma parte de um caminho, e as partes combinadas podem não gerar um caminho totalmente qualificado. Por exemplo, o método [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) para o provedor FileSystem pode receber "Windows\System32" no `parent` parâmetro e "ABC. `child` dll" no parâmetro. O método une esses valores com o\\separador "" e retorna "windows\system32\abc.dll", que não é um caminho de sistema de arquivos totalmente qualificado.
 
   > [!IMPORTANT]
-  > As partes do caminho fornecidas na chamada para [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) pode conter caracteres não são permitidos no namespace de provedor. Provavelmente, esses caracteres são usados para expansão de curinga e a implementação desse método não deve removê-los.
+  > As partes de caminho fornecidas na chamada para [System. Management. Automation. Provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) podem conter caracteres não permitidos no namespace do provedor. Esses caracteres provavelmente são usados para a expansão de curingas e a implementação desse método não deve removê-los.
 
 ## <a name="retrieving-the-parent-path"></a>Recuperando o caminho pai
 
-Implementam provedores de navegação do Windows PowerShell a [System.Management.Automation.Provider.Navigationcmdletprovider.Getparentpath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) método para recuperar a parte do pai do indicado completa ou parcial caminho específico do provedor. O método remove a parte do filho do caminho e retorna o pai de parte do caminho. O `root` parâmetro especifica o caminho totalmente qualificado para a raiz de uma unidade. Esse parâmetro pode ser nula ou vazia se não for uma unidade montada em uso para a operação de recuperação. Se uma raiz for especificada, o método deve retornar um caminho para um contêiner na mesma árvore de raiz.
+Os provedores de navegação do Windows PowerShell implementam o método [System. Management. Automation. Provider. Navigationcmdletprovider. GetParentPath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) para recuperar a parte pai do caminho específico do provedor, completo ou parcial indicado. O método remove a parte filho do caminho e retorna a parte do caminho pai. O `root` parâmetro especifica o caminho totalmente qualificado para a raiz de uma unidade. Esse parâmetro pode ser nulo ou vazio se uma unidade montada não estiver em uso para a operação de recuperação. Se uma raiz for especificada, o método deverá retornar um caminho para um contêiner na mesma árvore que a raiz.
 
-O provedor de navegação de exemplo não substitui esse método, mas usa a implementação padrão. Ele aceita caminhos que usam ambos "/" e "\\" como separadores de caminho. Ele primeiro normaliza o caminho para ter apenas "\\" separadores, em seguida, divide o caminho pai desativar o último "\\" e retorna o caminho pai.
+O provedor de navegação de exemplo não substitui esse método, mas usa a implementação padrão. Ele aceita caminhos que usam "/" e "\\" como separadores de caminho. Primeiro, ele normaliza o caminho para ter apenas "\\" separadores, depois divide o caminho pai no último "\\" e retorna o caminho pai.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
-#### <a name="to-remember-about-implementing-getparentpath"></a>Lembrar sobre a implementação GetParentPath
+#### <a name="to-remember-about-implementing-getparentpath"></a>Para se lembrar de implementar GetParentPath
 
-Sua implementação do [System.Management.Automation.Provider.Navigationcmdletprovider.Getparentpath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) método deve dividir o caminho lexicalmente no separador de caminho para o namespace do provedor. Por exemplo, o provedor filesystem usa esse método para procurar o último "\\" e retorna todos os itens à esquerda do separador.
+Sua implementação do método [System. Management. Automation. Provider. Navigationcmdletprovider. GetParentPath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) deve dividir o caminho lexicalmente no separador de caminho para o namespace do provedor. Por exemplo, o provedor FileSystem usa esse método para procurar o último "\\" e retorna tudo à esquerda do separador.
 
-## <a name="retrieve-the-child-path-name"></a>Recuperar o nome de caminho filho
+## <a name="retrieve-the-child-path-name"></a>Recuperar o nome do caminho filho
 
-Seu implementa de provedor de navegação de [System.Management.Automation.Provider.Navigationcmdletprovider.Getchildname*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) método para recuperar o nome (elemento de folha) do filho do item localizado em todo o indicado ou caminho parcial de específico do provedor.
+Seu provedor de navegação implementa o método [System. Management. Automation. Provider. Navigationcmdletprovider. getchildname *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) para recuperar o nome (elemento de folha) do filho do item localizado no indice completo ou parcial caminho específico do provedor.
 
-O provedor de navegação de exemplo não substitui esse método. A implementação padrão é mostrada abaixo. Ele aceita caminhos que usam ambos "/" e "\\" como separadores de caminho. Ele primeiro normaliza o caminho para ter apenas "\\" separadores, em seguida, divide o caminho pai desativar o último "\\" e retorna o nome do filho parte do caminho.
+O provedor de navegação de exemplo não substitui esse método. A implementação padrão é mostrada abaixo. Ele aceita caminhos que usam "/" e "\\" como separadores de caminho. Primeiro, ele normaliza o caminho para ter apenas "\\" separadores, depois divide o caminho pai no último "\\" e retorna o nome da parte do caminho filho.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetchildname](Msh_samplestestcmdlets#testprovidergetchildname)]  -->
 
-#### <a name="things-to-remember-about-implementing-getchildname"></a>Itens a lembrar sobre a implementação GetChildName
+#### <a name="things-to-remember-about-implementing-getchildname"></a>Coisas a serem lembradas sobre a implementação de getchildname
 
-Sua implementação do [System.Management.Automation.Provider.Navigationcmdletprovider.Getchildname*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) método deve dividir o caminho lexicalmente no separador de caminho. Se o caminho fornecido não contém nenhum separador de caminho, o método deve retornar o caminho sem modificações.
+Sua implementação do método [System. Management. Automation. Provider. Navigationcmdletprovider. getchildname *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) deve dividir o caminho lexicalmente no separador de caminho. Se o caminho fornecido não contiver separadores de caminho, o método deverá retornar o caminho inalterado.
 
 > [!IMPORTANT]
-> O caminho fornecido na chamada para esse método pode conter os caracteres são ilegais no namespace do provedor. Esses caracteres são mais prováveis usados para expansão de curinga ou correspondência da expressão regular e a implementação desse método não deve removê-los.
+> O caminho fornecido na chamada para esse método pode conter caracteres ilegais no namespace do provedor. Esses caracteres são mais prováveis para a expansão de curingas ou a correspondência de expressão regular, e a implementação desse método não deve removê-los.
 
-## <a name="determining-if-an-item-is-a-container"></a>Determinando se um Item é um contêiner
+## <a name="determining-if-an-item-is-a-container"></a>Determinando se um item é um contêiner
 
-O provedor de navegação pode implementar o [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) método para determinar se o caminho especificado indica um contêiner. Ela retorna true se o caminho representa um contêiner e false caso contrário. O usuário precisa ser capaz de usar esse método o `Test-Path` cmdlet para o caminho fornecido.
+O provedor de navegação pode implementar o método [System. Management. Automation. Provider. Navigationcmdletprovider. IsItemContainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) para determinar se o caminho especificado indica um contêiner. Retornará true se o caminho representar um contêiner; caso contrário, false. O usuário precisa desse método para poder usar o `Test-Path` cmdlet para o caminho fornecido.
 
-O código a seguir mostra a [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) implementação no nosso provedor de navegação de amostra. O método verifica se o caminho especificado está correto e se a tabela existe e retorna true se o caminho indica um contêiner.
+O código a seguir mostra a implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. IsItemContainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) em nosso provedor de navegação de exemplo. O método verifica se o caminho especificado está correto e se a tabela existe e retorna true se o caminho indica um contêiner.
 
 [!code-csharp[AccessDBProviderSample05.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
-#### <a name="things-to-remember-about-implementing-isitemcontainer"></a>Itens a lembrar sobre a implementação IsItemContainer
+#### <a name="things-to-remember-about-implementing-isitemcontainer"></a>Coisas a serem lembradas sobre a implementação de IsItemContainer
 
-Seu provedor de navegação de classe do .NET pode declarar recursos de provedor de ExpandWildcards, filtro, incluir ou excluir, do [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração. Nesse caso, a implementação de [System.Management.Automation.Provider.Navigationcmdletprovider.Isitemcontainer*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) precisa garantir que o caminho passou atende aos requisitos. Para fazer isso, o método deve acessar a propriedade apropriada, por exemplo, o [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) propriedade.
+Sua classe .NET do provedor de navegação pode declarar os recursos do provedor de ExpandWildcards, filtrar, incluir ou excluir da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Nesse caso, a implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. IsItemContainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) precisa garantir que o caminho passado atenda aos requisitos. Para fazer isso, o método deve acessar a propriedade apropriada, por exemplo, a propriedade [System. Management. Automation. Provider. cmdletprovider. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) .
 
-## <a name="moving-an-item"></a>Mover um Item
+## <a name="moving-an-item"></a>Movendo um item
 
-Suportados a `Move-Item` implementa de seu provedor de navegação do cmdlet, o [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) método. Esse método Move o item especificado pela `path` parâmetro para o contêiner no caminho fornecido no `destination` parâmetro.
+Para dar suporte ao `Move-Item` cmdlet, seu provedor de navegação implementa o método [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) . Esse método move o item especificado pelo `path` parâmetro para o contêiner no caminho fornecido `destination` no parâmetro.
 
-O provedor de navegação de exemplo não substitui o [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) método. A seguir está a implementação padrão.
+O provedor de navegação de exemplo não substitui o método [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) . A seguir está a implementação padrão.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermoveitem](Msh_samplestestcmdlets#testprovidermoveitem)]  -->
 
-#### <a name="things-to-remember-about-implementing-moveitem"></a>Itens a lembrar sobre a implementação MoveItem
+#### <a name="things-to-remember-about-implementing-moveitem"></a>Coisas a serem lembradas sobre a implementação de MoveItem
 
-Seu provedor de navegação de classe do .NET pode declarar recursos de provedor de ExpandWildcards, filtro, incluir ou excluir, do [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) enumeração. Nesse caso, a implementação de [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve garantir que o caminho passado atende aos requisitos. Para fazer isso, o método deve acessar a propriedade apropriada, por exemplo, o **CmdletProvider.Exclude** propriedade.
+Sua classe .NET do provedor de navegação pode declarar os recursos do provedor de ExpandWildcards, filtrar, incluir ou excluir da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Nesse caso, a implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve garantir que o caminho passado atenda aos requisitos. Para fazer isso, o método deve acessar a propriedade apropriada, por exemplo, a propriedade **cmdletprovider. Exclude** .
 
-Por padrão, substituições desse método não devem mover objetos sobre os objetos existentes, a menos que o [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) estiver definida como `true`. Por exemplo, o provedor filesystem não copiará c:\temp\abc.txt ao longo de um arquivo c:\bar.txt existente, a menos que o [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) estiver definida como `true`. Se o caminho especificado na `destination` parâmetro existe e é um contêiner, o [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) propriedade não é necessária. Nesse caso, [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve mover o item indicado pelo `path` parâmetro para o contêiner é indicado pelo `destination` parâmetro como um filho.
+Por padrão, as substituições desse método não devem mover objetos sobre objetos existentes, a menos que a propriedade [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) seja definida como `true`. Por exemplo, o provedor FileSystem não copiará c:\temp\abc.txt sobre um arquivo c:\bar.txt existente, a menos que a propriedade [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) esteja definida como `true`. Se o caminho especificado no `destination` parâmetro existir e for um contêiner, a propriedade [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) não será necessária. Nesse caso, [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve mover o item indicado pelo `path` parâmetro para o `destination` contêiner indicado pelo parâmetro como um filho.
 
-Sua implementação do [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) método deve chamar [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificar seu valor de retorno antes de fazer alterações ao repositório de dados. Esse método é usado para confirmar a execução de uma operação quando uma alteração é feita ao estado do sistema, por exemplo, excluindo arquivos. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) envia o nome do recurso a ser alterado para o usuário, com o tempo de execução do Windows PowerShell levando em consideração quaisquer configurações de linha de comando ou variáveis de preferência em Determinando o que deve ser exibido ao usuário.
+Sua implementação do método [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve chamar [System. Management. Automation. Provider. cmdletprovider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificar seu valor de retorno antes fazendo alterações no repositório de dados. Esse método é usado para confirmar a execução de uma operação quando uma alteração é feita no estado do sistema, por exemplo, excluir arquivos. [System. Management. Automation. Provider. cmdletprovider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) envia o nome do recurso a ser alterado para o usuário, com o tempo de execução do Windows PowerShell levando em conta quaisquer configurações de linha de comando ou variáveis de preferência para determinar o que deve ser exibido para o usuário.
 
-Após a chamada para [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) retorna `true`, o [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) método deve chamar o [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) método. Esse método envia uma mensagem ao usuário para permitir que seus comentários para dizer se a operação deve continuar. Seu provedor deve chamar [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) como uma verificação adicional para modificações no sistema potencialmente perigosos.
+Após a chamada para [System. Management. Automation. Provider. cmdletprovider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) retornar `true`, o método [System. Management. Automation. Provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deverá chamar o [ Método System. Management. Automation. Provider. Cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Esse método envia uma mensagem ao usuário para permitir comentários a fim de dizer se a operação deve continuar. Seu provedor deve chamar [System. Management. Automation. Provider. cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) como uma verificação adicional para modificações potencialmente perigosas do sistema.
 
-## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Anexando parâmetros dinâmicos para o Cmdlet Move-Item
+## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Anexando parâmetros dinâmicos ao cmdlet Move-Item
 
-Às vezes, o `Move-Item` cmdlet requer parâmetros adicionais que são fornecidos dinamicamente em tempo de execução. Para fornecer esses parâmetros dinâmicos, o provedor de navegação deve implementar o [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) método para obter os valores de parâmetro obrigatório do item no caminho indicado e retornar um objeto que tem propriedades e campos com análise atributos semelhante a uma classe cmdlet ou uma [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) objeto.
+Às vezes `Move-Item` , o cmdlet requer parâmetros adicionais que são fornecidos dinamicamente no tempo de execução. Para fornecer esses parâmetros dinâmicos, o provedor de navegação deve implementar o método [System. Management. Automation. Provider. Navigationcmdletprovider. Moveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) para obter os valores de parâmetro necessários do item no caminho indicado e retornar um objeto que tenha propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
-Este provedor de navegação não implementa esse método. No entanto, o código a seguir é a implementação padrão de [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters).
+Este provedor de navegação não implementa esse método. No entanto, o código a seguir é a implementação padrão de [System. Management. Automation. Provider. Navigationcmdletprovider. Moveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters).
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidermoveitemdynamicparameters](Msh_samplestestcmdlets#testprovidermoveitemdynamicparameters)]  -->
 
-## <a name="normalizing-a-relative-path"></a>Normalizar um caminho relativo
+## <a name="normalizing-a-relative-path"></a>Normalizando um caminho relativo
 
-Seu implementa de provedor de navegação de [System.Management.Automation.Provider.Navigationcmdletprovider.Normalizerelativepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) método normalizar o caminho totalmente qualificado é indicado no `path` parâmetro como estando em relação ao caminho especificado pela `basePath` parâmetro. O método retorna uma representação de cadeia de caracteres do caminho normalizado. Ele grava um erro se o `path` parâmetro especifica um caminho inexistente.
+Seu provedor de navegação implementa o método [System. Management. Automation. Provider. Navigationcmdletprovider. Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) para normalizar o caminho totalmente qualificado indicado no `path` parâmetro como sendo relativo ao caminho especificado pelo `basePath` parâmetro. O método retorna uma representação de cadeia de caracteres do caminho normalizado. Ele gravará um erro se `path` o parâmetro especificar um caminho inexistente.
 
 O provedor de navegação de exemplo não substitui esse método. A seguir está a implementação padrão.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidernormalizepath](Msh_samplestestcmdlets#testprovidernormalizepath)]  -->
 
-#### <a name="things-to-remember-about-implementing-normalizerelativepath"></a>Itens a lembrar sobre a implementação NormalizeRelativePath
+#### <a name="things-to-remember-about-implementing-normalizerelativepath"></a>Coisas a serem lembradas sobre a implementação de NormalizeRelativePath
 
-Sua implementação de [System.Management.Automation.Provider.Navigationcmdletprovider.Normalizerelativepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) deve analisar o `path` parâmetro, mas ele não precisa usar a análise puramente sintática. São incentivados a esse método para usar o caminho para pesquisar as informações de caminho no armazenamento de dados e criar um caminho que coincide com o uso de maiusculas e minúsculas de design e padronizado a sintaxe do caminho.
+Sua implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) deve analisar o `path` parâmetro, mas não precisa usar uma análise puramente sintática. Você é incentivado a criar esse método para usar o caminho para pesquisar as informações de caminho no repositório de dados e criar um caminho que corresponda à sintaxe de caminho padronizado e com maiúsculas e minúsculas.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-Para o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample05](./accessdbprovidersample05-code-sample.md).
+Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample05](./accessdbprovidersample05-code-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
-É possível para um provedor adicionar membros a objetos existentes ou para definir novos objetos. Para obter mais informações, consulte[estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+É possível que um provedor adicione membros a objetos existentes ou defina novos objetos. Para obter mais informações, consulte[estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Para obter mais informações, consulte [como registrar Cmdlets, provedores e aplicativos Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Para obter mais informações, consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
 
-Quando o provedor do Windows PowerShell tiver sido registrado com o Windows PowerShell, você pode testá-lo, executando os cmdlets com suporte na linha de comando, incluindo os cmdlets disponibilizados por derivação. Este exemplo irá testar o provedor de navegação de exemplo.
+Quando o provedor do Windows PowerShell tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando os cmdlets com suporte na linha de comando, incluindo os cmdlets disponibilizados pela derivação. Este exemplo testará o provedor de navegação de exemplo.
 
-1. Execute seu novo shell e use o `Set-Location` cmdlet para definir o caminho para indicar o banco de dados do Access.
+1. Execute o novo shell e use o `Set-Location` cmdlet para definir o caminho para indicar o banco de dados do Access.
 
    ```powershell
    Set-Location mydb:
    ```
 
-2. Agora, execute o `Get-Childitem` cmdlet para recuperar uma lista dos itens de banco de dados, que são as tabelas de banco de dados disponíveis. Para cada tabela, esse cmdlet também recupera o número de linhas da tabela.
+2. Agora, execute `Get-Childitem` o cmdlet para recuperar uma lista de itens de banco de dados, que são as tabelas de banco de dados disponíveis. Para cada tabela, esse cmdlet também recupera o número de linhas da tabela.
 
    ```powershell
    Get-ChildItem | Format-Table rowcount,name -AutoSize
@@ -199,13 +199,13 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
          29   Suppliers
    ```
 
-3. Use o `Set-Location` cmdlet novamente para definir o local da tabela de dados de funcionários.
+3. Use o `Set-Location` cmdlet novamente para definir o local da tabela de dados Employees.
 
    ```powershell
    Set-Location Employees
    ```
 
-4. Agora vamos usar o `Get-Location` cmdlet para recuperar o caminho para a tabela de funcionários.
+4. Agora, vamos usar o `Get-Location` cmdlet para recuperar o caminho para a tabela Employees.
 
    ```powershell
    Get-Location
@@ -217,7 +217,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    mydb:\Employees
    ```
 
-5. Agora use o `Get-Childitem` cmdlet canalizados para o `Format-Table` cmdlet. Esse conjunto de cmdlets recupera os itens para a tabela de dados de funcionários, que são as linhas da tabela. Eles são formatados conforme especificado pelo `Format-Table` cmdlet.
+5. Agora, use `Get-Childitem` o cmdlet canalizado para `Format-Table` o cmdlet. Esse conjunto de cmdlets recupera os itens da tabela de dados Employees, que são as linhas da tabela. Eles são formatados conforme especificado pelo `Format-Table` cmdlet.
 
    ```powershell
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
@@ -237,7 +237,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    8           False            System.Data.DataRow
    ```
 
-6. Agora você pode executar o `Get-Item` cmdlet para recuperar os itens de linha 0 da tabela de dados de funcionários.
+6. Agora você pode executar o `Get-Item` cmdlet para recuperar os itens para a linha 0 da tabela de dados Employees.
 
    ```powershell
    Get-Item 0
@@ -254,7 +254,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    RowNumber      : 0
    ```
 
-7. Use o `Get-Item` cmdlet novamente para recuperar os dados de funcionário para os itens na linha 0.
+7. Use o `Get-Item` cmdlet novamente para recuperar os dados do funcionário para os itens na linha 0.
 
    ```powershell
    (Get-Item 0).data
@@ -284,17 +284,17 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
-[Provedor de PowerShell do Windows seu design](./designing-your-windows-powershell-provider.md)
+[Criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Implementar um provedor de contêiner Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
+[Implementar um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
 
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

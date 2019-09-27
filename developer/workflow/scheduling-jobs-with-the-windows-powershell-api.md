@@ -1,5 +1,5 @@
 ---
-title: Agendamento de trabalhos com a API do Windows PowerShell | Microsoft Docs
+title: Agendando trabalhos com a API do Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
-ms.openlocfilehash: 8e1d2feff0665f169966f7d5e99540088e66bdfb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080349"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322952"
 ---
-# <a name="scheduling-jobs-with-the-powershell-api"></a>Agendamento de trabalhos com a API do PowerShell
+# <a name="scheduling-jobs-with-the-powershell-api"></a>Agendando trabalhos com a API do PowerShell
 
-Você pode usar os objetos expostos pela **Microsoft.PowerShell.ScheduledJob** namespace para fazer o seguinte:
+Você pode usar os objetos expostos pelo namespace **Microsoft. PowerShell. ScheduledJob** para fazer o seguinte:
 
 - Crie um trabalho agendado.
 - Defina quando o trabalho é executado.
 - Obter resultados sobre o trabalho concluído.
 
-## <a name="triggering-the-job"></a>Disparar o trabalho
+## <a name="triggering-the-job"></a>Acionando o trabalho
 
-A primeira etapa na criação de um trabalho agendado é Especifica quando o trabalho deve ser executado. Fazer isso criando e configurando um **Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger** objeto. O código a seguir cria um gatilho que agenda um trabalho para executar uma única vez 20 segundos no futuro.
+A primeira etapa na criação de um trabalho agendado é especificar quando o trabalho deve ser executado. Faça isso criando e configurando um objeto **Microsoft. PowerShell. ScheduledJob. ScheduledJobTrigger** . O código a seguir cria um gatilho que agenda um trabalho para ser executado uma única vez em 20 segundos no futuro.
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -40,18 +40,18 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 ## <a name="defining-the-job"></a>Definindo o trabalho
 
-Você pode definir um trabalho do PowerShell com a criação de um dicionário de parâmetros. Há suporte para os seguintes parâmetros:
+Você define um trabalho do PowerShell criando um dicionário de parâmetros. Há suporte para os seguintes parâmetros:
 
 |Nome do parâmetro|Descrição|
 |--------------------|-----------------|
-|**Nome**|O nome do trabalho.|
-|**ScriptBock**|Um bloco de script do PowerShell que especifica o que faz o trabalho.|
-|**FilePath**|Caminho para um arquivo que contém um bloco de script do PowerShell para especificar o que faz o trabalho.|
+|**Name**|O nome do trabalho.|
+|**ScriptBock**|Um bloco de script do PowerShell que especifica o que o trabalho faz.|
+|**FilePath**|Caminho para um arquivo que contém um bloco de script do PowerShell para especificar o que o trabalho faz.|
 |**InitializationScript**|Um bloco de script do PowerShell que inicializa o trabalho.|
-|**ArgumentList**|Uma matriz de objetos que especificam os argumentos que o trabalho leva.|
-|**RunAs32**|Um valor booliano que especifica se deve executar o trabalho em um processo de 32 bits.|
+|**ArgumentList**|Uma matriz de objetos que especificam argumentos que o trabalho usa.|
+|**RunAs32**|Um valor booliano que especifica se o trabalho deve ser executado em um processo de 32 bits.|
 
-O código a seguir cria um objeto de dicionário de parâmetro e define o **nome** e **ScriptBlock** parâmetros.
+O código a seguir cria um objeto Dictionary de parâmetro e define os parâmetros **Name** e **scriptblock** .
 
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
@@ -64,9 +64,9 @@ string schedJobDefName = "MySampleSchedJob";
 
 ```
 
-## <a name="creating-the-invocation-and-job-definition-objects"></a>Criar o trabalho de invocação e objetos de definição
+## <a name="creating-the-invocation-and-job-definition-objects"></a>Criando a invocação e objetos de definição de trabalho
 
-Você, em seguida, cria `ScheduledJobInvocationInfo` e `ScheduledJobDefinition` objetos para executar o trabalho, conforme mostrado no exemplo a seguir:
+Em seguida, `ScheduledJobInvocationInfo` você `ScheduledJobDefinition` cria os objetos e para executar o trabalho, conforme mostrado no exemplo a seguir:
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -84,7 +84,7 @@ ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
 
 ## <a name="registering-the-job-with-the-task-scheduler"></a>Registrando o trabalho com o Agendador de tarefas
 
-O código a seguir registra o trabalho com o [Agendador de tarefas do Windows](http://go.microsoft.com/fwlink/?LinkId=251817).
+O código a seguir registra o trabalho com o [Agendador de tarefas do Windows](https://go.microsoft.com/fwlink/?LinkId=251817).
 
 ```csharp
 schedJobDefinition.Register();
@@ -95,7 +95,7 @@ schedJobDefinition.Register();
 
 ## <a name="complete-code-example"></a>Exemplo de código completo
 
-A seguir é o exemplo de código completo do qual os trechos de código anteriores foram executados.
+Veja a seguir o exemplo de código completo do qual os trechos anteriores foram tirados.
 
 ```csharp
 using System;

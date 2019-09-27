@@ -1,5 +1,5 @@
 ---
-title: Adicionando relatórios de erros ao seu Cmdlet não fatal | Microsoft Docs
+title: Adicionando relatórios de erros não conclusivos ao cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,33 +8,33 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
-ms.openlocfilehash: 3741982f81efa04d8fe7ab448fba5f2fdf4b0c01
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a4426abec96cd922360aeef8c157b4e9f41a15b9
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068849"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322865"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Adicionar relatórios de erros de não encerramento ao seu cmdlet
 
-Cmdlets podem relatar erros sem encerramento chamando o [System.Management.Automation.Cmdlet.WriteError][] método e ainda continuar a operar no objeto de entrada atual ou em entrada mais objetos do pipeline.
-Esta seção explica como criar um cmdlet que relata erros sem encerramento de seus métodos de processamento de entrada.
+Os cmdlets podem relatar erros não conclusivos chamando o método [System. Management. Automation. cmdlet. WriteError][] e ainda continuam a operar no objeto de entrada atual ou em outros objetos de pipeline de entrada.
+Esta seção explica como criar um cmdlet que relata erros não conclusivos de seus métodos de processamento de entrada.
 
-Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar uma [System.Management.Automation.ErrorRecord][] objeto identifica o erro.
-Cada registro de erro é identificado por uma cadeia de caracteres exclusiva, chamada "identificador de erro".
-Além do identificador, a categoria de cada erro é especificada pelo constantes definidas por um [System.Management.Automation.ErrorCategory][] enumeração.
-O usuário pode exibir os erros com base em sua categoria, definindo o `$ErrorView` variável para "CategoryView".
+Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar um objeto [System. Management. Automation. ErrorRecord][] identificando o erro.
+Cada registro de erro é identificado por uma cadeia de caracteres exclusiva chamada "identificador de erro".
+Além do identificador, a categoria de cada erro é especificada por constantes definidas por uma enumeração [System. Management. Automation. ErrorCategory][] .
+O usuário pode exibir erros com base em sua categoria definindo a `$ErrorView` variável como "CategoryView".
 
-Para obter mais informações sobre os registros de erro, consulte [registros de erros do Windows PowerShell](./windows-powershell-error-records.md).
+Para obter mais informações sobre registros de erro, consulte [registros de erro do Windows PowerShell](./windows-powershell-error-records.md).
 
-## <a name="defining-the-cmdlet"></a>Definindo o Cmdlet
+## <a name="defining-the-cmdlet"></a>Definindo o cmdlet
 
-A primeira etapa na criação de cmdlet sempre é o cmdlet de nomenclatura e declarar a classe .NET que implementa o cmdlet.
-Este cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get".
-(Quase qualquer tipo de cmdlet que é capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre os verbos aprovados do cmdlet, consulte [nomes de verbos de Cmdlet](approved-verbs-for-windows-powershell-commands.md).
+A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet.
+Esse cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get".
+(Quase qualquer tipo de cmdlet capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](approved-verbs-for-windows-powershell-commands.md).
 
-A seguir está a definição para esse cmdlet Get-Proc.
-Detalhes desta definição são fornecidos nas [criando seu primeiro Cmdlet](creating-a-cmdlet-without-parameters.md).
+A seguir está a definição para esse cmdlet Get-proc.
+Detalhes dessa definição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -49,10 +49,10 @@ Public Class GetProcCommand
 
 ## <a name="defining-parameters"></a>Definindo parâmetros
 
-Se necessário, o cmdlet deve definir parâmetros para o processamento de entrada.
-Esse cmdlet Get-Proc define uma **nome** parâmetro, conforme descrito em [adicionando parâmetros essa entrada de linha de comando de processo](adding-parameters-that-process-command-line-input.md).
+Se necessário, o cmdlet deve definir parâmetros para processar a entrada.
+Esse cmdlet Get-proc define um parâmetro de **nome** conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](adding-parameters-that-process-command-line-input.md).
 
-Aqui está a declaração de parâmetro para o **nome** parâmetro desse cmdlet Get-Proc.
+Aqui está a declaração de parâmetro para o parâmetro **Name** deste cmdlet Get-proc.
 
 ```csharp
 [Parameter(
@@ -86,61 +86,61 @@ End Property
 
 ## <a name="overriding-input-processing-methods"></a>Substituindo métodos de processamento de entrada
 
-Todos os cmdlets devem substituir pelo menos uma entrada de processamento métodos fornecidos pelo [System.Management.Automation.Cmdlet][] classe.
-Esses métodos são discutidos [criando seu primeiro Cmdlet](creating-a-cmdlet-without-parameters.md).
+Todos os cmdlets devem substituir pelo menos um dos métodos de processamento de entrada fornecidos pela classe [System. Management. Automation. cmdlet][] .
+Esses métodos são discutidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
 
 > [!NOTE]
-> O cmdlet deve tratar cada registro independentemente do quanto possível.
+> Seu cmdlet deve tratar cada registro da maneira mais independente possível.
 
-Esse cmdlet Get-Proc substitui o [System.Management.Automation.Cmdlet.ProcessRecord][] método para lidar com o **nome** parâmetro de entrada fornecida pelo usuário ou um script.
-Esse método obtém os processos para cada nome de processo solicitado ou todos os processos se nenhum nome for fornecido.
-Detalhes dessa substituição são fornecidos nas [criando seu primeiro Cmdlet](creating-a-cmdlet-without-parameters.md).
+Esse cmdlet Get-proc substitui o método [System. Management. Automation. cmdlet. ProcessRecord][] para manipular o parâmetro **Name** para a entrada fornecida pelo usuário ou um script.
+Esse método obterá os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido.
+Os detalhes dessa substituição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
 
-### <a name="things-to-remember-when-reporting-errors"></a>Itens a lembrar ao relatar erros
+### <a name="things-to-remember-when-reporting-errors"></a>Itens a serem lembrados ao relatar erros
 
-O [System.Management.Automation.ErrorRecord][] do objeto que o cmdlet transmite ao escrever um erro requer uma exceção em seu núcleo.
-Siga as diretrizes do .NET ao determinar a exceção a usar.
-Basicamente, se o erro semanticamente é o mesmo que uma exceção existente, o cmdlet deve usar ou derivar dessa exceção.
-Caso contrário, ele deve derivar uma nova exceção ou hierarquia de exceções diretamente a partir de [System.Exception][] classe.
+O objeto [System. Management. Automation. ErrorRecord][] que o cmdlet passa ao gravar um erro requer uma exceção em seu núcleo.
+Siga as diretrizes do .NET ao determinar a exceção a ser usada.
+Basicamente, se o erro for semanticamente o mesmo que uma exceção existente, o cmdlet deverá usar ou derivar dessa exceção.
+Caso contrário, ele deve derivar uma nova hierarquia de exceção ou exceção diretamente da classe [System. Exception][] .
 
-Durante a criação de identificadores de erro (acessados por meio da propriedade da classe ErrorRecord FullyQualifiedErrorId) tenha em mente o seguinte.
+Ao criar identificadores de erro (acessados por meio da propriedade FullyQualifiedErrorId da classe ErrorRecord), tenha em mente o seguinte.
 
-- Usar cadeias de caracteres que são direcionadas para fins de diagnóstico para que, ao inspecionar o identificador totalmente qualificado, você pode determinar que o erro é e onde o erro veio de.
+- Use cadeias de caracteres destinadas a fins de diagnóstico para que, ao inspecionar o identificador totalmente qualificado, você possa determinar qual é o erro e de onde veio o erro.
 
-- Um identificador de erro bem formado de totalmente qualificado pode ser da seguinte maneira.
+- Um identificador de erro totalmente qualificado bem formado pode ser o seguinte.
 
 `CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand`
 
-Observe que no exemplo anterior, o identificador de erro (o primeiro token) que designa qual é o erro e a parte restante indica de onde veio o erro.
+Observe que, no exemplo anterior, o identificador de erro (o primeiro token) designa o que é o erro e a parte restante indica de onde veio o erro.
 
-- Para cenários mais complexos, o identificador de erro pode ser um token de ponto separado que pode ser analisado na inspeção.
-  Isso permite que você ramificar muito nas partes do identificador de erro, bem como a categoria de erro e o identificador de erro.
+- Para cenários mais complexos, o identificador de erro pode ser um token separado por ponto que pode ser analisado na inspeção.
+  Isso permite uma ramificação demais nas partes do identificador de erro, bem como o identificador de erro e a categoria de erro.
 
-O cmdlet deve atribuir os identificadores de erro específicas para diferentes caminhos de código.
-Lembre-se as informações a seguir para a atribuição de identificadores de erro:
+O cmdlet deve atribuir identificadores de erro específicos a caminhos de código diferentes.
+Tenha em mente as seguintes informações para a atribuição de identificadores de erro:
 
 - Um identificador de erro deve permanecer constante ao longo do ciclo de vida do cmdlet.
   Não altere a semântica de um identificador de erro entre as versões do cmdlet.
 
-- Use o texto de um identificador de erro tersely corresponde ao erro que está sendo relatado.
+- Use o texto para um identificador de erro que tersely corresponde ao erro que está sendo relatado.
   Não use espaço em branco ou pontuação.
 
-- Ter seu cmdlet gerar somente os identificadores de erro que podem ser reproduzidos.
-  Por exemplo, ele não deve gerar um identificador que inclui um identificador de processo.
-  Identificadores de erro são úteis para um usuário somente quando eles correspondem aos identificadores que são vistos por outros usuários tiver o mesmo problema.
+- Faça com que o cmdlet gere apenas identificadores de erro que podem ser reproduzidos.
+  Por exemplo, ele não deve gerar um identificador que inclua um identificador de processo.
+  Os identificadores de erro são úteis para um usuário somente quando eles correspondem a identificadores que são vistos por outros usuários que estão tendo o mesmo problema.
 
-Exceções não tratadas não são capturadas pelo PowerShell nas seguintes condições:
+As exceções sem tratamento não são detectadas pelo PowerShell nas seguintes condições:
 
-- Se um cmdlet cria um novo thread e o código que executa o thread gerará uma exceção sem tratamento, o PowerShell não irá capturar o erro e encerrará o processo.
+- Se um cmdlet criar um novo thread e o código em execução nesse thread gerar uma exceção sem tratamento, o PowerShell não detectará o erro e encerrará o processo.
 
-- Se um objeto tiver um código em seu destruidor ou métodos Dispose que faz com que uma exceção sem tratamento, o PowerShell não irá capturar o erro e encerrará o processo.
+- Se um objeto tiver código em seu destruidor ou métodos Dispose que causam uma exceção sem tratamento, o PowerShell não detectará o erro e encerrará o processo.
 
-## <a name="reporting-nonterminating-errors"></a>Relatando erros sem encerramento
+## <a name="reporting-nonterminating-errors"></a>Relatando erros de não encerramento
 
-Qualquer um dos métodos de processamento de entrada pode relatar um erro sem encerramento no fluxo de saída usando o [System.Management.Automation.Cmdlet.WriteError][] método.
+Qualquer um dos métodos de processamento de entrada pode relatar um erro de não encerramento para o fluxo de saída usando o método [System. Management. Automation. cmdlet. WriteError][] .
 
-Aqui está um exemplo de código desse cmdlet Get-Proc que ilustra a chamada para [System.Management.Automation.Cmdlet.WriteError][] de dentro a substituição do [System.Management.Automation.Cmdlet.ProcessRecord][] método.
-Nesse caso, a chamada será feita se o cmdlet não é possível localizar um processo para um identificador de processo especificado.
+Aqui está um exemplo de código desse cmdlet Get-proc que ilustra a chamada para [System. Management. Automation. cmdlet. WriteError][] de dentro da substituição do método [System. Management. Automation. cmdlet. ProcessRecord][] .
+Nesse caso, a chamada será feita se o cmdlet não encontrar um processo para um identificador de processo especificado.
 
 ```csharp
 protected override void ProcessRecord()
@@ -180,44 +180,44 @@ protected override void ProcessRecord()
   }
 ```
 
-### <a name="things-to-remember-about-writing-nonterminating-errors"></a>Itens a lembrar sobre a escrita de erros sem encerramento
+### <a name="things-to-remember-about-writing-nonterminating-errors"></a>Coisas a serem lembradas sobre a gravação de erros de não encerramento
 
-Para um erro sem encerramento, o cmdlet deve gerar um identificador de erro específico para cada objeto de entrada específico.
+Para um erro de não encerramento, o cmdlet deve gerar um identificador de erro específico para cada objeto de entrada específico.
 
-Um cmdlet com frequência precisa modificar a ação de PowerShell produzida por um erro sem encerramento.
-Ele pode fazer isso definindo a `ErrorAction` e `ErrorVariable` parâmetros.
-Se definir a `ErrorAction` parâmetro, o cmdlet apresenta as opções de usuário [System.Management.Automation.ActionPreference][], você também posso influenciar diretamente a ação, definindo o `$ErrorActionPreference` variável.
+Geralmente, um cmdlet precisa modificar a ação do PowerShell produzida por um erro de não encerramento.
+Isso pode fazer isso definindo os `ErrorAction` parâmetros e. `ErrorVariable`
+Se definir o `ErrorAction` parâmetro, o cmdlet apresentará as opções de usuário [System. Management. Automation. preferência][], você também pode influenciar diretamente a ação definindo `$ErrorActionPreference` a variável.
 
-O cmdlet pode salvar erros sem encerramento em uma variável usando o `ErrorVariable` parâmetro, que não é afetado pela configuração da `ErrorAction`.
-Falhas podem ser anexadas a uma variável de erro existente adicionando um sinal de adição (+) na frente do nome da variável.
+O cmdlet pode salvar erros não conclusivos em uma variável usando `ErrorVariable` o parâmetro, que não é afetado pela configuração de `ErrorAction`.
+As falhas podem ser acrescentadas a uma variável de erro existente adicionando um sinal de adição (+) à frente do nome da variável.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-Para o completo C# exemplos de código, consulte [GetProcessSample04 amostra](./getprocesssample04-sample.md).
+Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample04](./getprocesssample04-sample.md).
 
 ## <a name="define-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
-PowerShell passa informações entre cmdlets usando objetos .NET.
-Consequentemente, talvez seja necessário definir seu próprio tipo de um cmdlet, ou o cmdlet talvez precise estender um tipo existente fornecido pelo outro cmdlet.
-Para obter mais informações sobre como definir novos tipos ou estender os tipos existentes, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+O PowerShell passa informações entre os cmdlets usando objetos .NET.
+Consequentemente, um cmdlet pode precisar definir seu próprio tipo ou o cmdlet pode precisar estender um tipo existente fornecido por outro cmdlet.
+Para obter mais informações sobre como definir novos tipos ou estender tipos existentes, consulte [estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
-## <a name="building-the-cmdlet"></a>Criando o Cmdlet
+## <a name="building-the-cmdlet"></a>Criando o cmdlet
 
 Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShell por meio de um snap-in do Windows PowerShell.
-Para obter mais informações sobre como registrar cmdlets, consulte [como registrar Cmdlets, provedores e aplicativos Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Para obter mais informações sobre como registrar cmdlets, consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-cmdlet"></a>Testando o Cmdlet
+## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando seu cmdlet tiver sido registrado com o PowerShell, você pode testá-lo executando-o na linha de comando.
-Vamos testar o cmdlet Get-Proc de exemplo para ver se ele relata um erro:
+Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo executando-o na linha de comando.
+Vamos testar o cmdlet Get-proc de exemplo para ver se ele relata um erro:
 
-- Inicie o PowerShell e use o cmdlet Get-Proc para recuperar os processos denominados "Teste".
+- Inicie o PowerShell e use o cmdlet Get-proc para recuperar os processos chamados "TEST".
 
     ```powershell
     PS> get-proc -name test
     ```
 
-A seguinte saída é exibida.
+A saída a seguir é exibida.
 
     ```
     get-proc : Operation is not valid due to the current state of the object.
@@ -225,26 +225,26 @@ A seguinte saída é exibida.
     + get-proc  <<<< -name test
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Adicionar parâmetros de entrada do Pipeline de processo](./adding-parameters-that-process-pipeline-input.md)
+[Adicionando parâmetros que processam a entrada do pipeline](./adding-parameters-that-process-pipeline-input.md)
 
-[Adicionar parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md)
+[Adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md)
 
-[Criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)
+[Criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)
 
 [Exemplos de cmdlet](./cmdlet-samples.md)
 
-[System.Exception]: /dotnet/api/System.Exception
-[System.Management.Automation.ActionPreference]: /dotnet/api/System.Management.Automation.ActionPreference
-[System.Management.Automation.Cmdlet.ProcessRecord]: /dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord
-[System.Management.Automation.Cmdlet.WriteError]: /dotnet/api/System.Management.Automation.Cmdlet.WriteError
-[System.Management.Automation.Cmdlet]: /dotnet/api/System.Management.Automation.Cmdlet
-[System.Management.Automation.ErrorCategory]: /dotnet/api/System.Management.Automation.ErrorCategory
-[System.Management.Automation.ErrorRecord]: /dotnet/api/System.Management.Automation.ErrorRecord
+[System. Exception]: /dotnet/api/System.Exception
+[System. Management. Automation. preferência]: /dotnet/api/System.Management.Automation.ActionPreference
+[System. Management. Automation. cmdlet. ProcessRecord]: /dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord
+[System. Management. Automation. cmdlet. WriteError]: /dotnet/api/System.Management.Automation.Cmdlet.WriteError
+[System. Management. Automation. cmdlet]: /dotnet/api/System.Management.Automation.Cmdlet
+[System. Management. Automation. ErrorCategory]: /dotnet/api/System.Management.Automation.ErrorCategory
+[System. Management. Automation. ErrorRecord]: /dotnet/api/System.Management.Automation.ErrorRecord

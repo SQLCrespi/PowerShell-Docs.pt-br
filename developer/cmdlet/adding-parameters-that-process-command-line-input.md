@@ -1,5 +1,5 @@
 ---
-title: Adicionar parâmetros que processam a entrada de linha de comando | Microsoft Docs
+title: Adicionando parâmetros que processam a entrada de linha de comando | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], creating
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
-ms.openlocfilehash: c9ad84c5bcb6826fcf51db9a1f1a578a65a1f275
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 7db93af33717dc4802ed915793f6cd570cfb48f6
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854943"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322759"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>Adicionar parâmetros que processam a entrada de linha de comando
 
-Uma fonte de entrada para um cmdlet é a linha de comando. Este tópico descreve como adicionar um parâmetro para o **Get-Proc** cmdlet (que é descrito na [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet pode processar a entrada do computador local com base em explícita os objetos passados para o cmdlet. O **Get-Proc** cmdlet descrito aqui recupera processos com base em seus nomes e, em seguida, exibe informações sobre os processos em um prompt de comando.
+Uma fonte de entrada para um cmdlet é a linha de comando. Este tópico descreve como adicionar um parâmetro ao cmdlet **Get-proc** (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet possa processar a entrada do computador local com base em objetos explícitos passados para o cmdlet. O cmdlet **Get-proc** descrito aqui recupera processos com base em seus nomes e, em seguida, exibe informações sobre os processos em um prompt de comando.
 
-## <a name="defining-the-cmdlet-class"></a>Definição da classe do Cmdlet
+## <a name="defining-the-cmdlet-class"></a>Definindo a classe do cmdlet
 
-A primeira etapa na criação de cmdlet é a nomeação do cmdlet e a declaração de classe do .NET Framework que implementa o cmdlet. Este cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get". (Quase qualquer tipo de cmdlet que é capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre os verbos aprovados do cmdlet, consulte [nomes de verbos de Cmdlet](./approved-verbs-for-windows-powershell-commands.md).
+A primeira etapa na criação de cmdlet é a nomenclatura de cmdlets e a declaração da classe .NET Framework que implementa o cmdlet. Esse cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get". (Quase qualquer tipo de cmdlet capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-Aqui está a declaração de classe para o **Get-Proc** cmdlet. Detalhes sobre essa definição são fornecidos [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md).
+Aqui está a declaração de classe para o cmdlet **Get-proc** . Detalhes sobre essa definição são fornecidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -45,13 +45,13 @@ Public Class GetProcCommand
 
 ## <a name="declaring-parameters"></a>Declarando parâmetros
 
-Um parâmetro de cmdlet habilita o usuário fornecer entrada para o cmdlet. No exemplo a seguir **Get-Proc** e `Get-Member` são os nomes dos cmdlets do pipeline, e `MemberType` é um parâmetro para o `Get-Member` cmdlet. O parâmetro tem o argumento "property".
+Um parâmetro de cmdlet permite que o usuário forneça entrada para o cmdlet. No exemplo a seguir, **Get-proc** e `Get-Member` são os nomes dos cmdlets de pipeline e `MemberType` é um parâmetro para o `Get-Member` cmdlet. O parâmetro tem o argumento "Property".
 
-**PS > get-proc; `get-member` - membertype propriedade**
+**PS > Get-proc; `get-member` -Propriedade MemberType**
 
-Para declarar parâmetros para um cmdlet, você deve primeiro definir as propriedades que representam os parâmetros. No **Get-Proc** cmdlet, o único parâmetro é `Name`, nesse caso, que representa o nome do objeto de processo do .NET Framework para recuperar. Portanto, a classe do cmdlet define uma propriedade do tipo cadeia de caracteres para aceitar uma matriz de nomes.
+Para declarar parâmetros para um cmdlet, você deve primeiro definir as propriedades que representam os parâmetros. No cmdlet **Get-proc** , o único parâmetro é `Name`, que nesse caso representa o nome do objeto de processo de .NET Framework a ser recuperado. Portanto, a classe cmdlet define uma propriedade do tipo cadeia de caracteres para aceitar uma matriz de nomes.
 
-Aqui está a declaração de parâmetro para o `Name` parâmetro do **Get-Proc** cmdlet.
+Aqui está a declaração de parâmetro para `Name` o parâmetro do cmdlet **Get-proc** .
 
 ```csharp
 /// <summary>
@@ -83,41 +83,41 @@ Public Property Name() As String()
 End Property
 ```
 
-Para informar o tempo de execução do Windows PowerShell que essa propriedade é o `Name` parâmetro, uma [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) atributo é adicionado à definição da propriedade. A sintaxe básica para declarar esse atributo é `[Parameter()]`.
+Para informar ao tempo de execução do Windows PowerShell que essa `Name` propriedade é o parâmetro, um atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) é adicionado à definição de propriedade. A sintaxe básica para declarar esse atributo é `[Parameter()]`.
 
 > [!NOTE]
-> Um parâmetro deve ser explicitamente marcado como público. Parâmetros que não são marcados como padrão público para interno e não são encontrados pelo runtime do Windows PowerShell.
+> Um parâmetro deve ser explicitamente marcado como público. Parâmetros que não são marcados como padrão público para interno e não são encontrados pelo tempo de execução do Windows PowerShell.
 
-Esse cmdlet usa uma matriz de cadeias de caracteres para o `Name` parâmetro. Se possível, o cmdlet deve também definir um parâmetro como uma matriz, pois isso permite que o cmdlet a aceitar mais de um item.
+Esse cmdlet usa uma matriz de cadeias de `Name` caracteres para o parâmetro. Se possível, o cmdlet também deve definir um parâmetro como uma matriz, pois isso permite que o cmdlet aceite mais de um item.
 
-#### <a name="things-to-remember-about-parameter-definitions"></a>Coisas a serem lembrados sobre definições de parâmetro
+#### <a name="things-to-remember-about-parameter-definitions"></a>Coisas a serem lembradas sobre definições de parâmetros
 
-- Predefinido do Windows PowerShell parâmetro nomes e tipos de dados devem ser reutilizados tanto quanto possível para garantir que seu cmdlet seja compatível com os cmdlets do Windows PowerShell. Por exemplo, se todos os cmdlets usam predefinido `Id` nome de parâmetro para identificar um recurso, o usuário não precisará facilmente entender o significado do parâmetro, independentemente de qual cmdlet que estão usando. Basicamente, os nomes de parâmetro seguem as mesmas regras usadas para nomes de variáveis no common language runtime (CLR). Para obter mais informações sobre nomenclatura de parâmetro, consulte [nomes de parâmetro de Cmdlet](https://msdn.microsoft.com/en-us/c4500737-0a05-4d01-911b-394424c65bfb).
+- Os nomes de parâmetro e tipos de dados predefinidos do Windows PowerShell devem ser reutilizados o máximo possível para garantir que o cmdlet seja compatível com os cmdlets do Windows PowerShell. Por exemplo, se todos os cmdlets usarem `Id` o nome de parâmetro predefinido para identificar um recurso, o usuário entenderá facilmente o significado do parâmetro, independentemente do cmdlet que estiver usando. Basicamente, os nomes de parâmetro seguem as mesmas regras que as usadas para nomes de variáveis no Common Language Runtime (CLR). Para obter mais informações sobre a nomenclatura de parâmetros, consulte [nomes de parâmetro de cmdlet](https://msdn.microsoft.com/en-us/c4500737-0a05-4d01-911b-394424c65bfb).
 
-- Windows PowerShell reserva alguns nomes de parâmetro para fornecer uma experiência de usuário consistente. Não use esses nomes de parâmetro: `WhatIf`, `Confirm`, `Verbose`, `Debug`, `Warn`, `ErrorAction`, `ErrorVariable`, `OutVariable`, e `OutBuffer`. Além disso, os seguintes aliases para esses nomes de parâmetro são reservados: `vb`, `db`, `ea`, `ev`, `ov`, e `ob`.
+- O Windows PowerShell reserva alguns nomes de parâmetro para fornecer uma experiência de usuário consistente. Não use esses nomes de parâmetro: `WhatIf` `Verbose`, `Confirm`,, `Debug` `Warn` `ErrorVariable`, ,`OutVariable`,,e .`OutBuffer` `ErrorAction` Além disso, os aliases a seguir para esses nomes de parâmetro são `vb`reservados `db`: `ea`, `ev` `ov`,,, `ob`e.
 
-- `Name` é um nome de parâmetro simples e comum, recomendado para uso em seus cmdlets. É melhor escolher um nome de parâmetro assim que um nome complexo que é difícil lembrar e exclusivo para um cmdlet específico.
+- `Name`é um nome de parâmetro simples e comum, recomendado para uso em seus cmdlets. É melhor escolher um nome de parâmetro como este de um nome complexo que seja exclusivo para um cmdlet específico e difícil de lembrar.
 
-- Parâmetros diferenciam maiusculas de minúsculas no Windows PowerShell, embora por padrão o shell preserva o caso. Diferenciação de maiusculas e minúsculas dos argumentos depende da operação do cmdlet. Argumentos são passados para um parâmetro, conforme especificado na linha de comando.
+- Os parâmetros não diferenciam maiúsculas de minúsculas no Windows PowerShell, embora por padrão o Shell preserve o caso. Diferenciar maiúsculas de minúsculas dos argumentos depende da operação do cmdlet. Os argumentos são passados para um parâmetro conforme especificado na linha de comando.
 
-- Para obter exemplos de outras declarações de parâmetro, consulte [parâmetros de Cmdlet](./cmdlet-parameters.md).
+- Para obter exemplos de outras declarações de parâmetro, consulte [parâmetros de cmdlet](./cmdlet-parameters.md).
 
-## <a name="declaring-parameters-as-positional-or-named"></a>Declarando parâmetros como posicional ou nomeado
+## <a name="declaring-parameters-as-positional-or-named"></a>Declarando parâmetros como posicionais ou nomeados
 
-Um cmdlet deve definir cada parâmetro como um parâmetro posicional ou nomeado. Os dois tipos de parâmetros aceitam argumentos únicos, vários argumentos separados por vírgulas e as configurações de Boolianas. Um parâmetro booliano, também chamado de um *alternar*, manipula somente as configurações de Boolianas. A opção é usada para determinar a presença do parâmetro. O padrão recomendado é `false`.
+Um cmdlet deve definir cada parâmetro como um parâmetro posicional ou nomeado. Os dois tipos de parâmetros aceitam argumentos únicos, vários argumentos separados por vírgulas e configurações boolianas. Um parâmetro booliano, também chamado de *switch*, trata apenas das configurações boolianas. A opção é usada para determinar a presença do parâmetro. O padrão recomendado é `false`.
 
-O exemplo **Get-Proc** cmdlet define o `Name` parâmetro como um parâmetro posicional com posição 0. Isso significa que o primeiro argumento que o usuário entra na linha de comando é inserido automaticamente para esse parâmetro. Se você quiser definir um parâmetro nomeado, o usuário deve especificar o nome do parâmetro de linha de comando, deixe o `Position` palavra-chave fora a declaração de atributo.
+O cmdlet **Get-proc** de exemplo define `Name` o parâmetro como um parâmetro posicional com a posição 0. Isso significa que o primeiro argumento que o usuário insere na linha de comando é inserido automaticamente para esse parâmetro. Se você quiser definir um parâmetro nomeado, para o qual o usuário deve especificar o nome do parâmetro na linha de comando, deixe `Position` a palavra-chave fora da declaração do atributo.
 
 > [!NOTE]
-> A menos que os parâmetros devem ser nomeados, recomendamos que você verifique os parâmetros usados com mais posicionais para que os usuários não precisarão digitar o nome do parâmetro.
+> A menos que os parâmetros devam ser nomeados, recomendamos que você crie os parâmetros mais usados posicionais para que os usuários não precisem digitar o nome do parâmetro.
 
 ## <a name="declaring-parameters-as-mandatory-or-optional"></a>Declarando parâmetros como obrigatórios ou opcionais
 
-Um cmdlet deve definir cada parâmetro como um parâmetro obrigatório ou opcional. No exemplo **Get-Proc** cmdlet, o `Name` parâmetro é definido como opcional, porque o `Mandatory` palavra-chave não está definido na declaração de atributo.
+Um cmdlet deve definir cada parâmetro como um parâmetro opcional ou obrigatório. No cmdlet **Get-proc** de exemplo, o `Name` parâmetro é definido como opcional porque a `Mandatory` palavra-chave não está definida na declaração de atributo.
 
-## <a name="supporting-parameter-validation"></a>Suporte a validação de parâmetro
+## <a name="supporting-parameter-validation"></a>Validação de parâmetro de suporte
 
-O exemplo **Get-Proc** cmdlet adiciona um atributo de validação de entrada, [System.Management.Automation.Validatenotnulloremptyattribute](/dotnet/api/System.Management.Automation.ValidateNotNullOrEmptyAttribute), para o `Name` parâmetro para habilitar a validação que o entrada não é nem `null` nem vazio. Esse atributo é um dos vários atributos de validação fornecidos pelo Windows PowerShell. Para obter exemplos de outros atributos de validação, consulte [Validando a entrada do parâmetro](./validating-parameter-input.md).
+O cmdlet **Get-proc** de exemplo adiciona um atributo de validação de entrada, [System. Management. Automation. Validatenotnulloremptyattribute](/dotnet/api/System.Management.Automation.ValidateNotNullOrEmptyAttribute) `Name` , ao parâmetro para habilitar a `null` validação de que a entrada não é nem vazia. Esse atributo é um dos vários atributos de validação fornecidos pelo Windows PowerShell. Para obter exemplos de outros atributos de validação, consulte [validando a entrada de parâmetro](./validating-parameter-input.md).
 
 ```
 [Parameter(Position = 0)]
@@ -125,11 +125,11 @@ O exemplo **Get-Proc** cmdlet adiciona um atributo de validação de entrada, [S
 public string[] Name
 ```
 
-## <a name="overriding-an-input-processing-method"></a>Substituindo uma método de processamento de entrada
+## <a name="overriding-an-input-processing-method"></a>Substituindo um método de processamento de entrada
 
-Se seu cmdlet é manipular a entrada de linha de comando, ele deve substituir os métodos de processamento de entrada apropriada. Os métodos de processamento de entrada básico são introduzidos no [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md).
+Se o cmdlet for manipular a entrada de linha de comando, ele deverá substituir os métodos de processamento de entrada apropriados. Os métodos básicos de processamento de entrada são introduzidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
 
-O **Get-Proc** cmdlet substitui o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para manipular o `Name` entrada de parâmetro fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado, ou todos os processos se nenhum nome for fornecido. Observe que, na [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é a saída objetos do mecanismo de envio de saída para o pipeline. O segundo parâmetro dessa chamada `enumerateCollection`, é definido como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de saída de objetos de processo e gravar um processo por vez à linha de comando.
+O cmdlet **Get-proc** substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) para manipular a `Name` entrada de parâmetro fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Observe que em [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System. Management. Automation. cmdlet. WriteObject% 28System. Object% 2CSystem. booliano% 29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é o mecanismo de saída para enviar objetos de saída para o tubula. O segundo parâmetro dessa chamada, `enumerateCollection`, é definido como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de saída de objetos de processo e gravar um processo por vez na linha de comando.
 
 ```csharp
 protected override void ProcessRecord()
@@ -178,27 +178,27 @@ End Sub 'ProcessRecord
 
 ## <a name="code-sample"></a>Exemplo de código
 
-Para o completo C# exemplos de código, consulte [GetProcessSample02 exemplo](./getprocesssample02-sample.md).
+Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample02](./getprocesssample02-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
-Windows PowerShell passa informações entre cmdlets usando objetos do .NET Framework. Consequentemente, talvez seja necessário definir seu próprio tipo de um cmdlet ou um cmdlet, talvez seja necessário estender um tipo existente fornecido pelo outro cmdlet. Para obter mais informações sobre como definir novos tipos ou estender os tipos existentes, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+O Windows PowerShell passa informações entre os cmdlets usando .NET Framework objetos. Consequentemente, um cmdlet pode precisar definir seu próprio tipo ou um cmdlet pode precisar estender um tipo existente fornecido por outro cmdlet. Para obter mais informações sobre como definir novos tipos ou estender tipos existentes, consulte [estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
-## <a name="building-the-cmdlet"></a>Criando o Cmdlet
+## <a name="building-the-cmdlet"></a>Criando o cmdlet
 
-Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShell usando um snap-in do Windows PowerShell. Para obter mais informações sobre como registrar cmdlets, consulte [como registrar Cmdlets, provedores e aplicativos Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShell usando um snap-in do Windows PowerShell. Para obter mais informações sobre como registrar cmdlets, consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-cmdlet"></a>Testando o Cmdlet
+## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando seu cmdlet é registrado com o Windows PowerShell, você pode testá-lo executando-o na linha de comando. Aqui estão duas maneiras de testar o código para o cmdlet de exemplo. Para obter mais informações sobre como usar os cmdlets da linha de comando, consulte [Introdução ao Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Quando o cmdlet estiver registrado no Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Aqui estão duas maneiras de testar o código para o cmdlet de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- No prompt do Windows PowerShell, use o seguinte comando para listar o processo do Internet Explorer, que é chamado de "IEXPLORE."
+- No prompt do Windows PowerShell, use o comando a seguir para listar o processo do Internet Explorer, denominado "iexplore".
 
     ```powershell
     PS> get-proc -name iexplore
     ```
 
-A seguinte saída é exibida.
+A saída a seguir é exibida.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName
@@ -206,13 +206,13 @@ A seguinte saída é exibida.
         354      11  10036   18992    85   0.67   3284   iexplore
     ```
 
-- Para listar os processos do Internet Explorer, Outlook e o bloco de notas, chamados "IEXPLORE", "OUTLOOK" e "NOTEPAD", usam o comando a seguir. Se houver vários processos, todos eles são exibidos.
+- Para listar os processos do Internet Explorer, Outlook e bloco de notas denominados "iexplore", "OUTLOOK," e "bloco de notas", use o comando a seguir. Se houver vários processos, todos eles serão exibidos.
 
     ```powershell
     PS> get-proc -name iexplore, outlook, notepad
     ```
 
-A seguinte saída é exibida.
+A saída a seguir é exibida.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName
@@ -224,15 +224,15 @@ A seguinte saída é exibida.
          39       2   1024     356     30   0.08  3396   notepad
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Adicionar parâmetros de entrada do Pipeline de processo](./adding-parameters-that-process-pipeline-input.md)
+[Adicionando parâmetros que processam a entrada do pipeline](./adding-parameters-that-process-pipeline-input.md)
 
-[Criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)
+[Criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)
 

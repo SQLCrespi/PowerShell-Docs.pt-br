@@ -1,5 +1,5 @@
 ---
-title: Adicionando e invocar comandos | Microsoft Docs
+title: Adicionando e invocando comandos | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
 caps.latest.revision: 5
-ms.openlocfilehash: 9a01f948c5b474b4f9068030907601543e13cc7e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083018"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323475"
 ---
 # <a name="adding-and-invoking-commands"></a>Adicionar e invocar comandos
 
-Depois de criar um espaço de execução, você pode adicionar PowerShellcommands do Windows e scripts para um pipeline e, em seguida, invocar os pipelines de forma síncrona ou assíncrona.
+Depois de criar um runspace, você pode adicionar PowerShellcommands e scripts do Windows a um pipeline e, em seguida, invocar o pipeline de forma síncrona ou assíncrona.
 
-## <a name="creating-a-pipeline"></a>Criar um pipeline
+## <a name="creating-a-pipeline"></a>Criando um pipeline
 
- O [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) classe fornece vários métodos para adicionar comandos, parâmetros e scripts para o pipeline. Você pode invocar o pipeline de forma síncrona, chamando uma sobrecarga da [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) método, ou de forma assíncrona, chamando uma sobrecarga da [ System.Management.Automation.Powershell.Begininvoke*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) e, em seguida, o [System.Management.Automation.Powershell.Endinvoke*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) método.
+ A classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) fornece vários métodos para adicionar comandos, parâmetros e scripts ao pipeline. Você pode invocar o pipeline de forma síncrona chamando uma sobrecarga do método [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) , ou assincronamente, chamando uma sobrecarga de [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) e então o método [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .
 
-### <a name="addcommand"></a>AddCommand
+### <a name="addcommand"></a>O AddCommand
 
-1. Criar uma [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) objeto.
+1. Crie um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
    ```csharp
    PowerShell ps = PowerShell.Create();
@@ -37,17 +37,17 @@ Depois de criar um espaço de execução, você pode adicionar PowerShellcommand
    ps.AddCommand("Get-Process");
    ```
 
-3. Invocar o comando.
+3. Invoque o comando.
 
    ```csharp
    ps.Invoke();
    ```
 
- Se você chamar o [System.Management.Automation.Powershell.Addcommand*](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) método mais de uma vez antes de chamar o [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) método, o resultado do primeiro comando é canalizado para o segundo e assim por diante. Se você não quiser direcionar o resultado de um comando anterior para um comando, adicione-o chamando o [System.Management.Automation.Powershell.Addstatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) em vez disso.
+ Se você chamar o método [System. Management. Automation. PowerShell. AddCommand *](/dotnet/api/System.Management.Automation.PowerShell.AddCommand) mais de uma vez antes de chamar o método [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) , o resultado do primeiro comando será canalizado para o segundo e assim por diante. Se você não quiser canalizar o resultado de um comando anterior para um comando, adicione-o chamando o [System. Management. Automation. PowerShell. setstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) em vez disso.
 
 ### <a name="addparameter"></a>AddParameter
 
- O exemplo anterior executa um único comando sem parâmetros. Você pode adicionar parâmetros ao comando, usando o [System.Management.Automation.Pscommand.Addparameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) método, por exemplo, o código a seguir obtém uma lista de todos os processos que são nomeados `PowerShell` em execução no máquina.
+ O exemplo anterior executa um único comando sem parâmetros. Você pode adicionar parâmetros ao comando usando o método [System. Management. Automation. PSCommand. AddParameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) , por exemplo, o código a seguir obtém uma lista de todos os processos nomeados `PowerShell` em execução no computador.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -55,7 +55,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- Você pode adicionar parâmetros adicionais, chamando [System.Management.Automation.Pscommand.Addparameter*](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) repetidamente.
+ Você pode adicionar parâmetros adicionais chamando [System. Management. Automation. PSCommand. AddParameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) repetidamente.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -64,7 +64,7 @@ PowerShell.Create().AddCommand("Get-Process")
                    .Invoke();
 ```
 
- Você também pode adicionar um dicionário de valores e nomes de parâmetro ao chamar o [System.Management.Automation.Powershell.Addparameters*](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) método.
+ Você também pode adicionar um dicionário de nomes e valores de parâmetro chamando o método [System. Management. Automation. PowerShell. Parameters *](/dotnet/api/System.Management.Automation.PowerShell.AddParameters) .
 
 ```csharp
 IDictionary parameters = new Dictionary<String, String>();
@@ -77,9 +77,9 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ```
 
-### <a name="addstatement"></a>AddStatement
+### <a name="addstatement"></a>Addstatement
 
- Você pode simular o envio em lote usando o [System.Management.Automation.Powershell.Addstatement*](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) método, que adiciona uma instrução adicional para o final do pipeline, o código a seguir obtém uma lista de processos em execução com o nome `PowerShell`e, em seguida, obtém a lista de serviços em execução.
+ Você pode simular o envio em lote usando o método [System. Management. Automation. PowerShell. setstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , que adiciona uma instrução adicional ao final do pipeline. o código a seguir obtém uma lista de processos em execução `PowerShell`com o nome e em seguida, obtém a lista de serviços em execução.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -90,14 +90,14 @@ ps.Invoke();
 
 ### <a name="addscript"></a>AddScript
 
- Você pode executar um script existente chamando o [System.Management.Automation.Powershell.Addscript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) método. O exemplo a seguir adiciona um script para o pipeline e o executa. Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts`.
+ Você pode executar um script existente chamando o método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . O exemplo a seguir adiciona um script ao pipeline e o executa. Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts`.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- Também há uma versão dos [System.Management.Automation.Powershell.Addscript*](/dotnet/api/System.Management.Automation.PowerShell.AddScript) método que usa um parâmetro booliano denominado `useLocalScope`. Se esse parâmetro for definido como `true`, em seguida, o script é executado no escopo local. O código a seguir executará o script no escopo local.
+ Também há uma versão do método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) que usa um parâmetro booliano denominado `useLocalScope`. Se esse parâmetro for definido como `true`, o script será executado no escopo local. O código a seguir executará o script no escopo local.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -106,7 +106,7 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 
 ### <a name="invoking-a-pipeline-synchronously"></a>Invocar um pipeline de forma síncrona
 
- Depois de adicionar elementos ao pipeline, você invocá-lo. Para invocar o pipeline de forma síncrona, você pode chamar uma sobrecarga da [System.Management.Automation.Powershell.Invoke*](/dotnet/api/System.Management.Automation.PowerShell.Invoke) método. O exemplo a seguir mostra como chamar sincronamente um pipeline.
+ Depois de adicionar elementos ao pipeline, você o invoca. Para invocar o pipeline de forma síncrona, você chama uma sobrecarga do método [System. Management. Automation. PowerShell. Invoke *](/dotnet/api/System.Management.Automation.PowerShell.Invoke) . O exemplo a seguir mostra como invocar de forma síncrona um pipeline.
 
 ```csharp
 using System;
@@ -138,7 +138,7 @@ namespace HostPS1e
 
 ### <a name="invoking-a-pipeline-asynchronously"></a>Invocar um pipeline de forma assíncrona
 
- Invocar um pipeline de forma assíncrona, chamando uma sobrecarga da [System.Management.Automation.Powershell.Begininvoke*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) para criar um [IAsyncResult](http://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) objeto e, em seguida, chamar o [ System.Management.Automation.Powershell.Endinvoke*](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) método.
+ Você invoca um pipeline de forma assíncrona chamando uma sobrecarga de [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) para criar um objeto [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) e, em seguida, chamar [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) método.
 
  O exemplo a seguir mostra como invocar um pipeline de forma assíncrona.
 
@@ -182,8 +182,8 @@ namespace HostPS3
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
  [Criando um InitialSessionState](./creating-an-initialsessionstate.md)
 
- [Criando um runspace com restrição](./creating-a-constrained-runspace.md)
+ [Criando um runspace restrito](./creating-a-constrained-runspace.md)
