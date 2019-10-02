@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d86c9c947c521e0aee261a8a0335f1557b0d5a34
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085942"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325131"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 
@@ -181,7 +181,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Novos recursos no ISE do Windows PowerShell
 
-- Agora, você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e executando **PSEdit \<caminho e nome do arquivo no computador remoto\>**. Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
+- Agora, você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e executando **PSEdit \<caminho e nome do arquivo no computador remoto\>** . Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
 - Agora há suporte para o cmdlet Start-Transcript no ISE do Windows PowerShell.
 - Agora você pode depurar scripts remotos no ISE do Windows PowerShell.
 - Um novo comando de menu, **Interromper Tudo** (Ctrl+B), interrompe o depurador de scripts em execução local e remota.
@@ -217,7 +217,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 - O depurador do Windows PowerShell foi aprimorado para permitir a depuração de fluxos de trabalho do Windows PowerShell, bem como scripts que são executados em computadores remotos. Os fluxos de trabalho do Windows PowerShell agora podem ser depurados no nível de script da linha de comando do Windows PowerShell ou do ISE do Windows PowerShell. Scripts do Windows PowerShell, incluindo fluxos de trabalho de script, agora podem ser depurados em sessões remotas. Sessões de depuração remota são salvas sobre as sessões remotas do Windows PowerShell, que são desconectadas e reconectadas posteriormente.
 - Um parâmetro **RunNow** do **Register-ScheduledJob** e **Set-ScheduledJob** elimina a necessidade de definir uma data e hora de início imediato para trabalhos usando o parâmetro **Trigger**.
 - **Invoke-RestMethod** e **Invoke-WebRequest** agora permitem definir todos os cabeçalhos usando o parâmetro Headers. Embora esse parâmetro sempre tenha existido, ele era um dos diversos parâmetros dos cmdlets Web que resultavam em erros ou exceções.
-- **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName**, do tipo **ModuleSpecification\[]**. O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo, usando o nome, a versão e, opcionalmente, o GUID do módulo.
+- **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName**, do tipo **ModuleSpecification\[]** . O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo, usando o nome, a versão e, opcionalmente, o GUID do módulo.
 - A configuração de política de execução padrão no Windows Server 2012 R2 é **RemoteSigned**. No Windows 8.1, não há nenhuma alteração da configuração padrão.
 - No Windows PowerShell 4.0 há suporte para a invocação de método usando nomes de método dinâmico. Você pode usar uma variável para armazenar um nome de método e, em seguida, chamar o método dinamicamente ao chamar a variável.
 - Trabalhos de fluxo de trabalho assíncrono não são mais excluídos quando o período de tempo limite especificado pelo parâmetro **PSElapsedTimeoutSec** comum de fluxo de trabalho é atingido.
@@ -407,7 +407,7 @@ O recurso **Get-Help -Online** no Windows PowerShell 3.0 é ainda mais potente, 
 
 ```
 PS C:\>(Get-Command Get-ScheduledJob).HelpUri
-http://go.microsoft.com/fwlink/?LinkID=223923
+https://go.microsoft.com/fwlink/?LinkID=223923
 ```
 
 Começando no Windows PowerShell 3.0, autores de cmdlets do C# podem preencher a propriedade **HelpUri** criando um atributo **HelpUri** na classe do cmdlet. Autores de funções avançadas podem definir uma propriedade **HelpUri** no atributo **CmdletBinding**. O valor da propriedade **HelpUri** deve começar com "http" ou "https".
