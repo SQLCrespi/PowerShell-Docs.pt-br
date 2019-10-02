@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
-ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080145"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323294"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 
@@ -58,7 +58,7 @@ Group [String] #ResourceName
 }
 ```
 
-Esse exemplo usa um recurso [Group](../resources/resources.md) do módulo interno de recurso DSC `PSDesiredStateConfiguration`.
+Esse exemplo usa um recurso [Group](../resources/resources.md) do módulo interno de recurso de DSC `PSDesiredStateConfiguration`.
 Pode criar grupos locais e adicionar ou remover membros.
 Ele aceita a propriedade `Credential` e a propriedade `PsDscRunAsCredential` automática.
 No entanto, o recurso usa apenas a propriedade `Credential`.
@@ -143,7 +143,7 @@ Os sinalizadores **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** supr
 
 A primeira mensagem de erro tem uma URL com a documentação.
 Esse link explica como criptografar senhas usando uma estrutura [ConfigurationData](./configData.md) e um certificado.
-Para obter mais informações sobre certificados e DSC, [leia esta postagem](http://aka.ms/certs4dsc).
+Para obter mais informações sobre certificados e DSC, [leia esta postagem](https://aka.ms/certs4dsc).
 
 Para forçar uma senha de texto sem formatação, o recurso requer a palavra-chave `PsDscAllowPlainTextPassword` na seção de dados de configuração, conforme segue:
 
@@ -234,7 +234,7 @@ ModuleVersion = "1.0";
 Executar o script de configuração de exemplo novamente (com ou sem criptografia) ainda gera um aviso de que o uso de uma conta de domínio para uma credencial não é recomendado.
 O uso de uma conta local elimina a possível exposição das credenciais de domínio que podem ser usadas em outros servidores.
 
-**Ao usar credenciais com recursos DSC, prefira uma conta local a uma conta de domínio, quando possível.**
+**Ao usar credenciais com recursos de DSC, prefira uma conta local a uma conta de domínio, quando possível.**
 
 Se houver um "\\" ou um "\@", na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.
