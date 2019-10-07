@@ -2,22 +2,20 @@
 title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 6a0da6e060693dc7cfc08d40fd658414dc23d660
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 0e082b74f99d214749f10224fb5aaf41e2ef8951
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733881"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325244"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
-Além do [ISE do PowerShell][ise], o PowerShell também tem um bom suporte no Visual Studio Code.
-Além disso, o ISE não é compatível com o PowerShell Core, embora haja suporte do Visual Studio Code para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)
+Além do [ISE do PowerShell][ise], o PowerShell também tem um bom suporte no VSCode (Visual Studio Code). Além disso, o ISE não é compatível com o PowerShell Core, embora haja suporte do VSCode para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)
 
-Você pode usar o Visual Studio Code no Windows com o PowerShell versão 5 usando o Windows 10 ou instalando o [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) para sistemas operacionais do Windows de nível baixo (por exemplo, Windows 8.1 etc.).
+É possível usar o VSCode no Windows com o PowerShell versão 5 usando o Windows 10 ou instalando o [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) para sistemas operacionais do Windows de nível baixo (por exemplo, Windows 8.1 etc.).
 
-Antes de iniciá-lo, verifique se o PowerShell existe no sistema.
-Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:
+Antes de iniciá-lo, verifique se o PowerShell existe no sistema. Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:
 
 - [Instalar o PowerShell Core no Linux][install-pscore-linux]
 - [Instalar o PowerShell Core no macOS][install-pscore-macos]
@@ -25,49 +23,40 @@ Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:
 
 Para cargas de trabalho tradicionais do Windows PowerShell, confira [Como instalar o Windows PowerShell][install-winps].
 
-## <a name="editing-with-visual-studio-code"></a>Edição com o Visual Studio Code
+## <a name="editing-with-vscode"></a>Editar com VSCode
 
-### <a name="1-installing-visual-studio-codehttpscodevisualstudiocomdocssetupsetup-overview"></a>[1. Instalação do Visual Studio Code](https://code.visualstudio.com/Docs/setup/setup-overview)
+1. [Instalar o VSCode](https://code.visualstudio.com/Docs/setup/setup-overview)
 
-- **Linux**: siga as instruções de instalação na página [Execução do código VS no Linux](https://code.visualstudio.com/docs/setup/linux)
+   - **Linux**: siga as instruções de instalação na página [Executar o VSCode no Linux](https://code.visualstudio.com/docs/setup/linux)
+   - **macOS**: siga as instruções de instalação na página [Executar o VSCode no macOS](https://code.visualstudio.com/docs/setup/mac)
 
-- **macOS**: siga as instruções de instalação na página [Execução do código VS no macOS](https://code.visualstudio.com/docs/setup/mac)
+     > [!IMPORTANT]
+     > No macOS, você deve instalar o OpenSSL para que a extensão do PowerShell funcione corretamente. A maneira mais fácil de fazer isso é instalar o [Homebrew](https://brew.sh/) e, em seguida, executar `brew install openssl`. Agora, o VS Code pode carregar a extensão do PowerShell com êxito.
 
-  > [!IMPORTANT]
-  > No macOS, você deve instalar o OpenSSL para que a extensão do PowerShell funcione corretamente.
-  > A maneira mais fácil de fazer isso é instalar o [Homebrew](https://brew.sh/) e, em seguida, executar `brew install openssl`.
-  > Agora, o VS Code pode carregar a extensão do PowerShell com êxito.
+   - **Windows**: siga as instruções de instalação na página [Executar o VSCode no Windows](https://code.visualstudio.com/docs/setup/windows)
 
-- **Windows**: siga as instruções de instalação na página [Execução do código VS no Windows](https://code.visualstudio.com/docs/setup/windows)
+2. Instalação da extensão do PowerShell
 
-### <a name="2-installing-powershell-extension"></a>2. Instalação da extensão do PowerShell
+   - Inicie o aplicativo VSCode das seguintes formas:
+     - **Windows**: digitando `code` na sua sessão do PowerShell
+     - **Linux**: digitando `code` em seu terminal
+     - **macOS**: digitando `code` em seu terminal
+   - Inicie **Abertura rápida** pressionando <kbd>Ctrl</kbd>+<kbd>P</kbd> (<kbd>Cmd</kbd>+<kbd>P</kbd> no Mac).
+   - Na Abertura rápida, digite `ext install powershell` e clique em **Enter**.
+   - A exibição **Extensões** será aberta na barra lateral. Selecione a extensão do PowerShell da Microsoft.
+     Você deve ver algo como:
 
-- Inicie o aplicativo Visual Studio Code pelo:
-  - **Windows**: digitando `code` na sua sessão do PowerShell
-  - **Linux**: digitando `code` em seu terminal
-  - **macOS**: digitando `code` em seu terminal
+     ![VSCode](../../images/using-vscode/vscode.png)
 
-- Inicie **Abertura rápida** pressionando **Ctrl+P** (**Cmd+P** no Mac).
-- Na Abertura rápida, digite `ext install powershell` e clique em **Enter**.
-- A exibição **Extensões** será aberta na barra lateral. Selecione a extensão do PowerShell da Microsoft.
-  Você deve ver algo como:
+   - Clique no botão **Instalar** na extensão do PowerShell da Microsoft.
+   - Após a instalação, você verá que o botão **Instalar** mudará para **Recarregar**. Clique em **Recarregar**.
+   - Depois de recarregar o VSCode, você está pronto para edição.
 
-  ![VSCode](../../images/vscode.png)
-
-- Clique no botão **Instalar** na extensão do PowerShell da Microsoft.
-- Após a instalação, você verá que o botão **Instalar** mudará para **Recarregar**.
-  Clique em **Recarregar**.
-- Depois de recarregar o Visual Studio Code, você está pronto para edição.
-
-Por exemplo, para criar um novo arquivo, clique em **Arquivo -> Novo**.
-Para salvá-lo, clique em **Arquivo -> Salvar** e, em seguida, forneça um nome de arquivo. Digamos `HelloWorld.ps1`.
-Para fechar o arquivo, clique no "x" ao lado do nome de arquivo.
-Para sair do Visual Studio Code, **Arquivo -> Sair**.
+Por exemplo, para criar um novo arquivo, clique em **Arquivo -> Novo**. Para salvá-lo, clique em **Arquivo -> Salvar** e, em seguida, forneça um nome de arquivo. Digamos `HelloWorld.ps1`. Para fechar o arquivo, clique no "x" ao lado do nome de arquivo. Para sair do VSCode, **Arquivo -> Sair**.
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>Instalando a extensão do PowerShell em sistemas restritos
 
-Alguns sistemas são configurados de forma a exigir que todas as assinaturas de código sejam verificadas e, portanto, exigem que os Serviços do Editor do PowerShell sejam aprovados manualmente para serem executados no sistema.
-Uma atualização da Política de Grupo que altera a política de execução é uma causa provável caso tenha instalado a extensão do PowerShell, mas veja um erro como:
+Alguns sistemas são configurados de forma a exigir que todas as assinaturas de código sejam verificadas e, portanto, exigem que os Serviços do Editor do PowerShell sejam aprovados manualmente para serem executados no sistema. Uma atualização da Política de Grupo que altera a política de execução é uma causa provável caso tenha instalado a extensão do PowerShell, mas veja um erro como:
 
 ```
 Language server startup failed.
@@ -79,8 +68,7 @@ Para aprovar manualmente os Serviços do Editor do PowerShell e, portanto, a ext
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-O sistema mostrará a mensagem "Você deseja executar o software desse editor não confiável?"
-Digite `R` para executar o arquivo. Em seguida, abra o Visual Studio Code e verifique se a extensão do PowerShell está funcionando corretamente. Se você ainda tiver problemas para começar, fale conosco no [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
+O sistema mostrará a mensagem "Você deseja executar o software desse editor não confiável?" Digite `R` para executar o arquivo. Em seguida, abra o VSCode e verifique se a extensão do PowerShell está funcionando corretamente. Se você ainda tiver problemas para começar, fale conosco no [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
 
 #### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>Escolha de uma versão do PowerShell para ser usada com a extensão
 
@@ -91,7 +79,7 @@ Com o PowerShell Core instalado com o Windows PowerShell, agora é possível usa
 1. Clique em "PowerShell: mostrar menu de sessão".
 1. Na lista, escolha a versão do PowerShell que deseja usar; por exemplo, "PowerShell Core".
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Esse recurso analisa alguns caminhos conhecidos em diferentes sistemas operacionais para descobrir locais de instalação do PowerShell. Se você instalou o PowerShell em um local não típico, talvez ele não apareça inicialmente no menu de sessão. Você pode estender o menu de sessão [adicionando seus próprios caminhos personalizados](#adding-your-own-powershell-paths-to-the-session-menu) conforme descrito abaixo.
 
 >[!NOTE]
@@ -99,7 +87,7 @@ Com o PowerShell Core instalado com o Windows PowerShell, agora é possível usa
 
 ##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>Adição dos seus caminhos do PowerShell ao menu de sessão
 
-É possível adicionar outros caminhos executáveis do PowerShell ao menu de sessão por meio de uma configuração do VS Code.
+É possível adicionar outros caminhos executáveis do PowerShell ao menu de sessão por meio de uma configuração do VSCode.
 
 Adicione um item à lista `powershell.powerShellAdditionalExePaths` ou crie a lista se ela não estiver em `settings.json`:
 
@@ -113,7 +101,7 @@ Adicione um item à lista `powershell.powerShellAdditionalExePaths` ou crie a li
             "versionName": "Downloaded PowerShell"
         }
     ],
-    
+
     // other settings...
 }
 ```
@@ -135,25 +123,25 @@ Cada item precisa ter:
             "versionName": "Downloaded PowerShell"
         }
     ],
-    
+
     "powershell.powerShellDefaultVersion": "Downloaded PowerShell",
-    
+
     // other settings...
 }
 ```
 
-Depois de definir essa configuração, reinicie o Visual Studio Code ou use a ação "Desenvolvedor: recarregar janela" da paleta de comando para atualizar a janela atual do vscode.
+Depois de definir essa configuração, reinicie o VSCode ou use a ação "Desenvolvedor: recarregar janela" da paleta de comando para atualizar a janela atual do VSCode.
 
-Se você abrir o menu de sessão, agora verá versões adicionais do PowerShell!
+Se você abrir o menu de sessão, agora verá versões adicionais do PowerShell.
 
 > [!NOTE]
 > Compilar o PowerShell na origem é uma ótima maneira de testar sua compilação local do PowerShell.
 
-#### <a name="configuration-settings-for-visual-studio-code"></a>Definições de configuração para o Visual Studio Code
+#### <a name="configuration-settings-for-vscode"></a>Definições de configuração do VSCode
 
 Usando as etapas no parágrafo anterior, você pode adicionar configurações no `settings.json`.
 
-Recomendamos as seguintes definições de configuração para o Visual Studio Code:
+Recomendamos as seguintes definições de configuração para o VSCode:
 
 ```json
 {
@@ -178,20 +166,17 @@ Caso não queira que essas configurações afetem todos os tipos de arquivos, o 
 
 Para saber mais sobre a codificação do arquivo no VS Code, confira [Entendendo a codificação do arquivo](understanding-file-encoding.md).
 
-## <a name="debugging-with-visual-studio-code"></a>Depuração com o Visual Studio Code
+## <a name="debugging-with-vscode"></a>Depurar com o VSCode
 
 ### <a name="no-workspace-debugging"></a>Depuração sem espaço de trabalho
 
-A partir da versão do Visual Studio Code 1.9, você pode depurar scripts do PowerShell sem a necessidade de abrir a pasta que contém o script do PowerShell. Abra o arquivo de script do PowerShell usando **Arquivo -> Abrir Arquivo...** , defina um ponto de interrupção em uma linha (pressione F9) e, em seguida, pressione F5 para iniciar a depuração. Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
+A partir da versão 1.9 do VSCode, é possível depurar scripts do PowerShell sem a necessidade de abrir a pasta que contém o script do PowerShell. Abra o arquivo de script do PowerShell usando **Arquivo -> Abrir Arquivo…** , defina um ponto de interrupção em uma linha (pressione <kbd>F9</kbd>) e, em seguida, pressione <kbd>F5</kbd> para iniciar a depuração. Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
 
 ### <a name="workspace-debugging"></a>Depuração do workspace
 
-A depuração do workspace refere-se a depuração no contexto de uma pasta que você abriu no Visual Studio Code usando **Abrir Pasta...**  do menu **Arquivo**.
-A pasta que você abrir normalmente é a pasta do projeto do PowerShell e/ou a raiz do repositório Git.
+A depuração do workspace refere-se a depuração no contexto de uma pasta que você abriu no Visual Studio Code usando **Abrir Pasta...**  do menu **Arquivo**. A pasta que você abrir normalmente é a pasta do projeto do PowerShell e/ou a raiz do repositório Git.
 
-Mesmo nesse modo, você pode iniciar a depuração de script do PowerShell selecionado no momento pressionando F5.
-No entanto, a depuração do workspace permite definir várias configurações de depuração diferentes de depurar apenas o arquivo aberto no momento.
-Por exemplo, você pode adicionar configurações para:
+Mesmo nesse modo, é possível iniciar a depuração de script do PowerShell selecionado no momento pressionando <kbd>F5</kbd>. No entanto, a depuração do workspace permite definir várias configurações de depuração diferentes de depurar apenas o arquivo aberto no momento. Por exemplo, você pode adicionar configurações para:
 
 - Iniciar testes Pester no depurador
 - Abrir um arquivo específico com argumentos no depurador
@@ -200,13 +185,11 @@ Por exemplo, você pode adicionar configurações para:
 
 Siga estas etapas para criar o arquivo de configuração de depuração:
 
-  1. Abra a exibição **Depurar** pressionando **Ctrl+Shift+D** (**Cmd+Shift+D** no Mac).
-  2. Pressione o ícone de engrenagem **Configurar** na barra de ferramentas.
-  3. O Visual Studio Code solicitará que você **Selecione o Ambiente**. Escolha **PowerShell**.
+  1. Abra a exibição **Depurar** pressionando <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> no Mac).
+  2. Clique no ícone de engrenagem **Configurar** na barra de ferramentas.
+  3. O VSCode solicitará que você **Selecionar o Ambiente**. Escolha **PowerShell**.
 
-  Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de workspace.
-  A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json.
-  O conteúdo do arquivo launch.json é:
+  Quando você fizer isso, o VSCode criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de workspace. A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json. O conteúdo do arquivo launch.json é:
 
   ```json
   {
@@ -237,10 +220,7 @@ Siga estas etapas para criar o arquivo de configuração de depuração:
   }
   ```
 
-  Isso representa os cenários comuns de depuração.
-  No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...** .
-  Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a adicionar é **PowerShell: Iniciar Script**.
-  Com essa configuração, você pode especificar um arquivo específico com argumentos opcionais que devem ser iniciado sempre que você pressionar F5, não importa qual arquivo está ativo no momento no editor.
+  Isso representa os cenários comuns de depuração. No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...** . É possível clicar nesse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a adicionar é **PowerShell: Iniciar Script**. Com essa configuração, é possível especificar um arquivo específico com argumentos opcionais que devem ser iniciados sempre que você pressionar <kbd>F5</kbd>, não importa qual arquivo está ativo no momento no editor.
 
   Quando a configuração de depuração é estabelecida, selecione qual configuração você deseja usar durante uma sessão de depuração, selecionando uma no menu suspenso de configuração de depuração na barra de ferramentas da exibição **Depurar**.
 
@@ -271,6 +251,6 @@ Há alguns blogs que podem ser úteis para você começar a usar a extensão do 
 [debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
-## <a name="powershell-extension-for-visual-studio-code"></a>Extensão do PowerShell para Visual Studio Code
+## <a name="powershell-extension-for-vscode"></a>Extensão do PowerShell para VSCode
 
 O código-fonte da extensão do PowerShell pode ser encontrado no [GitHub](https://github.com/PowerShell/vscode-powershell).

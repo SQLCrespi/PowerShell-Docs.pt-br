@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: instalar e usar o windows powershell web access
-ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f6e94859c55bbd07f3f8a83bc4b9a83bc89d0fa
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058550"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692261"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
@@ -165,7 +165,7 @@ Por padrão, o cmdlet instala o aplicativo Web, o **pswa** (e um pool de aplicat
 
 3. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
-   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)**.
+   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)** .
    - Na tela **Iniciar** do Windows, clique em **Gerenciador do Servidor**.
 
 4. No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Expanda a pasta **Sites**.
@@ -256,8 +256,8 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 1. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
-   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)**.
-   - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)**. Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
+   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)** .
+   - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)** . Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
 
 2. Crie um novo pool de aplicativos para o Windows PowerShell Web Access. Expanda o nó do servidor de gateway no painel de árvore do Gerenciador do IIS, selecione **Pools de Aplicativos** e clique em **Adicionar Pool de Aplicativos** no painel **Ações**.
 
@@ -275,7 +275,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 9. Siga as etapas no procedimento [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico.
 
-10. ![](images/SecurityNote.jpeg) Etapa opcional de segurança:
+10. ![Observação de segurança](images/SecurityNote.jpeg) Etapa opcional de segurança:
 
     Com o site selecionado no painel de árvore, clique duas vezes em **Configurações de SSL** no painel de conteúdo.
     Selecione **Exigir SSL** e, no painel **Ações**, clique em **Aplicar**. Opcionalmente, no painel **Configurações de SSL**, você pode exigir que os usuários que se conectem ao site do Windows PowerShell Web Access tenham certificados de cliente. Os certificados de cliente ajudam a verificar a identidade de um usuário de dispositivo cliente. Para obter mais informações sobre como exigir certificados de cliente que podem aumentar a segurança do Windows PowerShell Web Access, consulte [Regras de autorização e recursos de segurança do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md) neste guia.
@@ -307,8 +307,8 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 1. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
-   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)**.
-   - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)**. Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
+   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)** .
+   - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)** . Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
 
 1. No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Selecione a pasta **Sites**.
 
@@ -327,7 +327,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
    Altere a porta padrão se outro site já estiver usando 443 ou se tiver outros motivos relativos à segurança para alterar esse número. Se outro site em execução no seu servidor de gateway estiver usando a porta selecionada, um aviso será exibido quando você clicar em **OK** na caixa de diálogo **Adicionar Site**. Você deve usar uma porta não utilizada para executar o Windows PowerShell Web Access.
 
-1. Opcionalmente, se necessário para sua organização, especifique um nome de host que faça sentido para a organização e para os usuários, como **`www.contoso.com`**. Clique em **OK**.
+1. Opcionalmente, se necessário para sua organização, especifique um nome de host que faça sentido para a organização e para os usuários, como **`www.contoso.com`** . Clique em **OK**.
 
 1. Para um ambiente de produção mais seguro, recomendamos enfaticamente fornecer um certificado válido assinado por uma AC. Forneça um certificado SSL, pois os usuários só podem se conectar ao Windows PowerShell Web Access por meio de um site HTTPS. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico para obter mais informações sobre como obter um certificado.
 

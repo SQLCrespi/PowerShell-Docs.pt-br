@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no macOS
 description: Informações sobre a instalação do PowerShell Core no macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 70f5d64aa8a697a9011d07fbcb2bb821463827e1
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: a53cb5b7e159635dac45fb9ca3df28e86dffc653
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229743"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325272"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Instalar o PowerShell Core no macOS
 
@@ -47,14 +47,14 @@ brew cask upgrade powershell
 > [!NOTE]
 > Os comandos acima podem ser chamados por meio de um host do PowerShell (pwsh), mas será necessário sair e entrar novamente no shell do PowerShell para concluir o upgrade e atualizar os valores mostrados em `$PSVersionTable`.
 
-[brew]: http://brew.sh/
+[brew]: https://brew.sh/
 
 ## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Instalação da versão prévia estável mais recente por meio do Homebrew no macOS 10.12 ou superior
 
 Confira [Sobre Brew](#about-brew) para obter mais informações sobre Brew.
 
 Depois de instalar o Homebrew, você pode instalar o PowerShell.
-Primeiro instale o pacote [Cask-Versions][cask-versions] que permite instalar versões alternativas de pacotes cask:
+Primeiro, instale o pacote [Cask-Versions][cask-versions] que permite instalar versões alternativas de pacotes cask:
 
 ```sh
 brew tap homebrew/cask-versions

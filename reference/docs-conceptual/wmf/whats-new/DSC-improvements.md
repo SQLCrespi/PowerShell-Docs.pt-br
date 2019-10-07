@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: 47c1de362108096f26c0420d6135a9d9028a0302
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 4de295db539b95d0f4ddef297df5e9523892bffc
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147666"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692372"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -353,4 +353,4 @@ Uma configuração entregue com o uso de push pode ser violada em sua origem ant
 
 - Tente enviar o arquivo MOF assinado por push.
 
-  ![SignMofFile](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)

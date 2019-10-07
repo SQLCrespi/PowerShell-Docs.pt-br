@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: e84dd2f7deefcc64aea09585e7ce24dc1e8515fc
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733833"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692216"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -53,7 +53,7 @@ Confira [#954](https://github.com/PowerShell/PowerShell/issues/954) para fazer c
 
 ### <a name="net-framework-vs-net-core-framework"></a>.NET Framework versus .NET Core Framework
 
-O PowerShell no Linux/macOS usa .NET Core, que é um subconjunto do .NET Framework completo no Microsoft Windows. Isso é significativo, pois o PowerShell fornece acesso direto aos tipos de estrutura subjacentes, métodos etc. Como resultado, scripts executados no Windows não podem ser executados em outras plataformas devido às diferenças nas estruturas. Para saber mais sobre o .NET Core Framework, confira <https://dotnetfoundation.org/net-core>
+O PowerShell no Linux/macOS usa .NET Core, que é um subconjunto do .NET Framework completo no Microsoft Windows. Isso é significativo, pois o PowerShell fornece acesso direto aos tipos de estrutura subjacentes, métodos etc. Como resultado, scripts executados no Windows não podem ser executados em outras plataformas devido às diferenças nas estruturas. Para saber mais sobre o .NET Core Framework, confira [dotnetfoundation.org](https://dotnetfoundation.org/).
 
 Com o surgimento do [.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/), o .NET Core 2.0 trará de volta muitos tipos e métodos tradicionais presentes no .NET Framework completo. Isso significa que o PowerShell Core poderá carregar vários módulos tradicionais do Windows PowerShell sem modificação. Siga o nosso trabalho relacionado ao .NET Standard 2.0 [aqui](https://github.com/PowerShell/PowerShell/projects/4).
 
