@@ -2,12 +2,12 @@
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte ao PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: 60999ed54ca3be15232ffee3ab0c49cb94873a8f
-ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
+ms.openlocfilehash: fbbda0a5f8460e5625625adcc50c631729df53f1
+ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69986736"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72351806"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell Core
 
@@ -49,28 +49,35 @@ Nossa comunidade também contribuiu com pacotes para algumas plataformas, mas el
 
 As plataformas listadas como `Experimental` não têm suporte oficial, mas estão disponíveis para experimentação e comentários.
 
-| Plataforma                                          | 6.1         | 6.2         |
-|---------------------------------------------------|:-----------:|:-----------:|
-| Windows 7, 8.1 e 10                            | Suportado   | Suportado   |
-| Windows Server 2008 R2, 2012 R2, 2016             | Suportado   | Suportado   |
-| [Canal Semestral do Windows Server][semi-annual] | Suportado   | Suportado   |
-| Ubuntu 16.04 e 18.04                            | Suportado   | Suportado   |
-| Ubuntu 18.10 (por meio do pacote Snap)                   | Comunidade   | Comunidade   |
-| Ubuntu 19.04 (por meio do pacote Snap)                   | Comunidade   | Comunidade   |
-| Debian 9                                          | Suportado   | Suportado   |
-| CentOS 7                                          | Suportado   | Suportado   |
-| Red Hat Enterprise Linux 7                        | Suportado   | Suportado   |
-| OpenSUSE 42.3                                     | Suportado   | Suportado   |
-| Fedora 28                                         | Suportado   | Suportado   |
-| macOS 10.12+                                      | Suportado   | Suportado   |
-| Arch                                              | Comunidade   | Comunidade   |
-| Raspbian                                          | Comunidade   | Comunidade   |
-| Kali                                              | Comunidade   | Comunidade   |
-| AppImage (funciona em várias plataformas Linux)      | Comunidade   | Comunidade   |
-| [Pacote Snap](https://snapcraft.io/powershell)   | Consultar a observação    | Consultar a observação    |
+| Plataforma                                          |      6.2      |    7.0    |
+|---------------------------------------------------|:-------------:|:---------:|
+| Windows 7, 8.1 e 10                            |   Suportado   | Suportado |
+| Windows Server 2008 R2, 2012 R2, 2016             |   Suportado   | Suportado |
+| [Canal Semestral do Windows Server][semi-annual] |   Suportado   | Suportado |
+| Ubuntu 16.04 e 18.04                            |   Suportado   | Suportado |
+| Ubuntu 18.10 (por meio do pacote Snap)                   |   Comunidade   | Comunidade |
+| Ubuntu 19.04 (por meio do pacote Snap)                   |   Comunidade   | Comunidade |
+| Debian 9                                          |   Suportado   | Suportado |
+| Debian 10                                         | Sem suporte | Suportado |
+| CentOS 7                                          |   Suportado   | Suportado |
+| Red Hat Enterprise Linux 7                        |   Suportado   | Suportado |
+| OpenSUSE 42.3                                     |   Suportado   | Suportado |
+| Fedora 28                                         |   Suportado   | Suportado |
+| Fedora 29, 30                                     | Sem suporte | Suportado |
+| Alpine 3.8                                        |   Veja a observação    | Veja a observação  |
+| Alpine 3.9 e 3.10                               | Sem suporte | Veja a observação  |
+| macOS 10.12+                                      |   Suportado   | Suportado |
+| Arch                                              |   Comunidade   | Comunidade |
+| Raspbian                                          |   Comunidade   | Comunidade |
+| Kali                                              |   Comunidade   | Comunidade |
+| AppImage (funciona em várias plataformas Linux)      |   Comunidade   | Comunidade |
+| [Pacote Snap](https://snapcraft.io/powershell)   |   Consultar a observação    | Consultar a observação  |
 
 > [!NOTE]
 > Os pacotes Snap têm suporte da mesma forma que a distribuição na qual você está executando o pacote.
+
+> [!NOTE]
+> O modelo CIM, a comunicação remota do PowerShell e a DSC não são compatíveis com o Alpine.
 
 ## <a name="powershell-releases-end-of-life"></a>Fim da vida útil das versões do PowerShell
 
