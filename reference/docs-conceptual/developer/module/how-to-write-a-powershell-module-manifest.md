@@ -1,112 +1,115 @@
 ---
 title: Como escrever um manifesto de módulo do PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 10/16/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: 1265855b82b0bfaa7b2717c8eb348b822c19f561
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 4aa6c020cf0e82a4ffcad6f6c7540688d3369aa6
+ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72367095"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561281"
 ---
-# <a name="how-to-write-a-powershell-module-manifest"></a>Como escrever um manifesto de módulo do Windows PowerShell
+# <a name="how-to-write-a-powershell-module-manifest"></a>Como escrever um manifesto de módulo do PowerShell
 
-Depois de escrever o módulo do Windows PowerShell, você pode opcionalmente adicionar um manifesto de módulo. Um manifesto de módulo é um arquivo de script do PowerShell que você pode usar para incluir informações sobre o módulo. Por exemplo, você pode descrever o autor, especificar arquivos no módulo (como módulos aninhados), executar scripts para personalizar o ambiente do usuário, carregar tipos e formatar arquivos, definir requisitos de sistema e limitar os membros que o módulo exporta.
+Depois de escrever o módulo do PowerShell, você pode adicionar um manifesto de módulo opcional que inclui informações sobre o módulo. Por exemplo, você pode descrever o autor, especificar arquivos no módulo (como módulos aninhados), executar scripts para personalizar o ambiente do usuário, carregar tipos e formatar arquivos, definir requisitos de sistema e limitar os membros que o módulo exporta.
 
 ## <a name="creating-a-module-manifest"></a>Criando um manifesto de módulo
 
-Um *manifesto de módulo* é um arquivo de dados do Windows PowerShell (. psd1) que descreve o conteúdo de um módulo e determina como um módulo é processado. O próprio arquivo de manifesto é um arquivo de texto que contém uma tabela de hash de chaves e valores. Vincule um arquivo de manifesto a um módulo, nomeando-o da mesma forma que o módulo e colocando-o na raiz do diretório do módulo.
+Um **manifesto de módulo** é um arquivo de dados do PowerShell (`.psd1`) que descreve o conteúdo de um módulo e determina como um módulo é processado. O arquivo de manifesto é um arquivo de texto que contém uma tabela de hash de chaves e valores. Vincule um arquivo de manifesto a um módulo, nomeando o manifesto da mesma forma que o módulo e armazenando o manifesto no diretório raiz do módulo.
 
-Para módulos simples que contêm apenas um único assembly. psm1 ou binário, um manifesto de módulo é opcional. No entanto, é recomendável que você use um manifesto de módulo sempre que possível, pois eles são úteis para ajudá-lo a organizar seu código e a manter informações de controle de versão. Além disso, um manifesto de módulo é necessário para exportar um assembly que está instalado no cache de assembly global. Um manifesto de módulo também é necessário para módulos que dão suporte ao recurso de ajuda atualizável. Ou seja, a ajuda atualizável usa a chave **HelpInfoUri** no manifesto do módulo para localizar o arquivo de informações de ajuda (HelpInfo XML) que contém o local dos arquivos de ajuda atualizados para o módulo. Para obter mais informações sobre a ajuda atualizável, consulte [suporte à ajuda atualizável](./supporting-updatable-help.md).
+Para módulos simples que contêm apenas um único `.psm1` ou assembly binário, um manifesto de módulo é opcional. Mas, a recomendação é usar um manifesto de módulo sempre que possível, pois eles são úteis para ajudá-lo a organizar seu código e manter informações de controle de versão. E um manifesto de módulo é necessário para exportar um assembly que está instalado no [cache de assembly global](/dotnet/framework/app-domains/gac). Um manifesto de módulo também é necessário para módulos que dão suporte ao recurso de ajuda atualizável. A ajuda atualizável usa a chave **HelpInfoUri** no manifesto do módulo para localizar o arquivo de informações de ajuda (HelpInfo XML) que contém o local dos arquivos de ajuda atualizados para o módulo. Para obter mais informações sobre a ajuda atualizável, consulte [suporte à ajuda atualizável](./supporting-updatable-help.md).
 
 ### <a name="to-create-and-use-a-module-manifest"></a>Para criar e usar um manifesto de módulo
 
-1. Para criar um manifesto de módulo, você tem várias opções:
+1. A prática recomendada para criar um manifesto de módulo é usar o cmdlet [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) . Você pode usar parâmetros para especificar uma ou mais das chaves e valores padrão do manifesto. O único requisito é nomear o arquivo. `New-ModuleManifest` cria um manifesto de módulo com os valores especificados e inclui as chaves restantes e seus valores padrão. Se você precisar criar vários módulos, use `New-ModuleManifest` para criar um modelo de manifesto de módulo que possa ser modificado para seus módulos diferentes. Para obter um exemplo de um manifesto de módulo padrão, consulte o [manifesto do módulo de exemplo](#sample-module-manifest).
 
-   1. Crie diretamente a tabela de hash com as informações mínimas necessárias e salve-a em um arquivo. psd1 que tenha o mesmo nome que o seu módulo. Depois de fazer isso, você pode abrir o arquivo e adicionar os valores apropriados manualmente.
+   `New-ModuleManifest -Path C:\myModuleName.psd1 -ModuleVersion "2.0" -Author "YourNameHere"`
 
-      `'@{ModuleVersion="1.0"}' > myModuleName.psd1`
+   Uma alternativa é criar manualmente a tabela de hash do manifesto do módulo usando as informações mínimas necessárias, o **ModuleVersion**. Você salva o arquivo com o mesmo nome que o seu módulo e usa a extensão de arquivo `.psd1`. Em seguida, você pode editar o arquivo e adicionar as chaves e os valores apropriados.
 
-   2. Ou, chame o cmdlet [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) , com um ou mais valores padrão passados como parâmetros. (Observe que o único nome do arquivo é necessário para gerar um manifesto, no entanto.) Isso criará um manifesto de módulo com todos os valores de manifesto fornecidos explicitamente declarados e com o restante que contém o valor padrão apropriado.
+1. Adicione quaisquer elementos adicionais que desejar no arquivo de manifesto.
 
-      `New-ModuleManifest myModuleName.psd1 -ModuleVersion "2.0" -Author "YourNameHere"`
+   Para editar o arquivo de manifesto, use qualquer editor de texto que preferir. No entanto, o arquivo de manifesto é um arquivo de script que contém o código, portanto, talvez você queira editá-lo em um ambiente de script ou de desenvolvimento, como Visual Studio Code. Todos os elementos de um arquivo de manifesto são opcionais, exceto pelo número **ModuleVersion** .
 
-   3. Por fim, você também pode criar um arquivo. psd1 vazio e copiar o modelo na parte inferior deste tópico para o arquivo e preencher os valores relevantes. O único requisito real nesse caso seria garantir que o arquivo tenha sido nomeado da mesma forma que o módulo.
+   Para obter descrições das chaves e valores que você pode incluir em um manifesto de módulo, consulte a tabela [elementos de manifesto de módulo](#module-manifest-elements) . Para obter mais informações, consulte as descrições de parâmetro no cmdlet [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) .
 
-2. Adicione qualquer elemento adicional ao manifesto que você deseja ter no arquivo.
+1. Para resolver os cenários que podem não ser cobertos pelos elementos de manifesto de módulo base, você tem a opção de adicionar código adicional ao manifesto do módulo.
 
-   Em geral, isso provavelmente será feito em qualquer editor de texto que você preferir, como o bloco de notas. No entanto, isso tecnicamente é um arquivo de script que contém o código, portanto, talvez você queira editá-lo em um ambiente de script ou de desenvolvimento real, como Visual Studio Code. Novamente, observe que todos os elementos de um arquivo de manifesto são opcionais, exceto o número ModuleVersion.
+   Para questões de segurança, o PowerShell executa apenas um pequeno subconjunto das operações disponíveis em um arquivo de manifesto de módulo. Geralmente, você pode usar a instrução `if`, operadores aritméticos e de comparação e os tipos de dados básicos do PowerShell.
 
-   Para obter descrições das chaves e valores que você pode ter em um manifesto de módulo, consulte os **elementos de manifesto de módulo** abaixo. Para obter informações adicionais, consulte as descrições de parâmetro no cmdlet [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) .
-
-3. Opcionalmente, você pode optar por adicionar código a seu manifesto de módulo para atender a quaisquer cenários que não seriam cobertos pelos elementos de manifesto do módulo base.
-
-   Devido a questões de segurança, o PowerShell executará apenas um pequeno subconjunto das operações disponíveis em um arquivo de manifesto de módulo. Geralmente, você pode usar a instrução **If** , os operadores aritméticos e de comparação e os tipos de dados básicos do PowerShell.
-
-4. Depois de criar o manifesto do módulo, você pode testá-lo (para confirmar se todos os caminhos descritos no manifesto estão corretos) com uma chamada para [Test-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest).
+1. Depois de criar o manifesto do módulo, você pode testá-lo para confirmar se os caminhos descritos no manifesto estão corretos. Para testar o manifesto do módulo, use [Test-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest).
 
    `Test-ModuleManifest myModuleName.psd1`
 
-5. Verifique se o manifesto do módulo está localizado no nível superior do diretório que contém o módulo.
+1. Verifique se o manifesto do módulo está localizado no nível superior do diretório que contém o módulo.
 
-   Quando você copiar o módulo para um sistema e importá-lo, o PowerShell usará o manifesto do módulo para importar o módulo.
+   Quando você copia o módulo em um sistema e o importa, o PowerShell usa o manifesto do módulo para importar o módulo.
 
-6. Opcionalmente, você pode testar diretamente seu manifesto de módulo com uma chamada para [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) por dot sourcing do manifesto em si.
+1. Opcionalmente, você pode testar diretamente seu manifesto de módulo com uma chamada para [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) por dot sourcing do manifesto em si.
 
    `Import-Module .\myModuleName.psd1`
 
 ## <a name="module-manifest-elements"></a>Elementos de manifesto de módulo
 
-A tabela a seguir descreve os elementos que você pode ter em um manifesto de módulo
+A tabela a seguir descreve os elementos que você pode incluir em um manifesto de módulo.
 
 |Elemento|Padrão|Descrição|
 |-------------|-------------|-----------------|
-|RootModule<br /><br /> Tipo: cadeia de caracteres|' '|Módulo de script ou arquivo de módulo binário associado a este manifesto. As versões anteriores do PowerShell chamaram esse elemento de ModuleToProcess.<br /><br /> Os tipos possíveis para o módulo raiz podem estar vazios (o que fará dele um módulo de **manifesto** ), o nome de um módulo de script (. psm1, que torna esse módulo de **script** ) ou o nome de um módulo binário (. exe ou. dll, que torna este módulo **binário** ). Colocar o nome de um manifesto de módulo (. psd1) ou um arquivo de script (. ps1) neste elemento causará a ocorrência de um erro.|
-|ModuleVersion<br /><br /> Tipo: cadeia de caracteres|1.0|Número de versão deste módulo. A cadeia de caracteres deve ser capaz de converter em [System. Version]. Ou seja, ' #. #. #. #. # '. `Import-Module` carregará o primeiro módulo que encontrará no **$psModulePath** que corresponde ao nome e tem pelo menos o alto de ModuleVersion, como o parâmetro `-MinimumVersion`. Para importar uma versão específica, use o parâmetro @ no__t-0, em vez disso.<br /><br /> Exemplo: `ModuleVersion = '1.0'`|
-|GUID<br /><br /> Tipo: cadeia de caracteres|GUID gerado automaticamente|ID usada para identificar exclusivamente este módulo. Observe que você não pode importar um módulo por GUID no momento.<br /><br /> Exemplo: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
-|Autor<br /><br /> Tipo: cadeia de caracteres|Não|Autor deste módulo.<br /><br /> Exemplo: `Author = 'AuthorNameHere'`|
-|CompanyName<br /><br /> Tipo: cadeia de caracteres|Unknown|Empresa ou fornecedor deste módulo.<br /><br /> Exemplo: `CompanyName = 'Fabrikam'`|
-|Direitos Autorais<br /><br /> Tipo: cadeia de caracteres|(c) [currentYear] [Autor]. Todos os direitos reservados.|Declaração de direitos autorais deste módulo.<br /><br /> Exemplo: `Copyright = '2016 AuthorName. All rights reserved.'`|
-|Descrição<br /><br /> Tipo: cadeia de caracteres|' '|Descrição da funcionalidade fornecida por este módulo.<br /><br /> Exemplo: `Description = 'This is a description of a module.'`|
-|PowerShellVersion<br /><br /> Tipo: cadeia de caracteres|' '|Versão mínima do mecanismo do Windows PowerShell exigida por este módulo. Os valores válidos atuais são 1,0, 2,0, 3,0, 4,0 e 5,0.<br /><br /> Exemplo: `PowerShellVersion = '5.0'`|
-|PowerShellHostName<br /><br /> Tipo: cadeia de caracteres|' '|Especifica o nome do host do Windows PowerShell que é exigido pelo módulo. Esse nome é fornecido pelo Windows PowerShell. Para localizar o nome de um programa de host, no programa, digite: `$host.name`.<br /><br /> Exemplo: `PowerShellHostName = 'Windows PowerShell ISE Host'`|
-|PowerShellHostVersion<br /><br /> Tipo: cadeia de caracteres|' '|Versão mínima do host do Windows PowerShell exigida por este módulo.<br /><br /> Exemplo: `PowerShellHostVersion = '2.0'`|
-|DotNetFrameworkVersion<br /><br /> Tipo: cadeia de caracteres|' '|Versão mínima do Microsoft .NET Framework exigida por este módulo.<br /><br /> Exemplo: `DotNetFrameworkVersion = '3.5'`|
-|CLRVersion<br /><br /> Tipo: cadeia de caracteres|' '|Versão mínima do Common Language Runtime (CLR) exigido por este módulo.<br /><br /> Exemplo: `CLRVersion = '3.5'`|
-|ProcessorArchitecture<br /><br /> Tipo: cadeia de caracteres|' '|Arquitetura do processador (nenhuma, x86, AMD64) exigida por este módulo. Os valores válidos são x86, AMD64 IA64 e Nenhum (desconhecido ou não especificado).<br /><br /> Exemplo: `ProcessorArchitecture = 'x86'`|
-|RequiredModules<br /><br /> Tipo: [String []]|@()|Módulos que devem ser importados para o ambiente global antes da importação deste módulo. Isso carregará todos os módulos listados, a menos que eles já tenham sido carregados. Por exemplo, alguns módulos podem já ter sido carregados por um módulo diferente. Também é possível especificar uma versão específica para carregar usando `RequiredVersion` em vez de `ModuleVersion`. Ao usar `ModuleVersion` ele carregará a versão mais recente disponível com, no mínimo, a versão especificada.<br /><br /> Exemplo: `RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Exemplo: `RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="1.5"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
-|RequiredAssemblies<br /><br /> Tipo: [String []]|@()|Assemblies que devem ser carregados antes da importação deste módulo.<br /><br /> Observe que, diferentemente do RequiredModules, o PowerShell carregará o RequiredAssemblies se eles ainda não estiverem carregados.|
-|ScriptsToProcess<br /><br /> Tipo: [String []]|@()|Arquivos de script (. ps1) que são executados no estado de sessão do chamador quando o módulo é importado. Pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Você pode usar esses scripts para preparar um ambiente assim como você pode usar um script de logon.<br /><br /> Esses scripts são executados antes que qualquer um dos módulos listados no manifesto seja carregado.|
-|TypesToProcess<br /><br /> Tipo: [String []]|@()|Digite os arquivos (. ps1xml) a serem carregados ao importar este módulo.|
-|FormatsToProcess<br /><br /> Tipo: [String []]|@()|Arquivos de formato (. ps1xml) a serem carregados ao importar este módulo.|
-|NestedModules<br /><br /> Tipo: [String []]|@()|Módulos a serem importados como módulos aninhados do módulo especificado em RootModule/ModuleToProcess.<br /><br /> Adicionar um nome de módulo a esse elemento é semelhante a chamar `Import-Module` de dentro do seu código de script ou assembly. A principal diferença é que é mais fácil ver o que você está carregando aqui no arquivo de manifesto. Além disso, se um módulo não for carregado aqui, você ainda não terá carregado seu módulo real.<br /><br /> Além de outros módulos, você também pode carregar arquivos de script (. ps1) aqui. Esses arquivos serão executados no contexto do módulo raiz. (Isso é equivalente a dot sourcing do script em seu módulo raiz.)|
-|FunctionsToExport<br /><br /> Tipo: [String []]|@()|Especifica as funções que o módulo exporta (caracteres curinga são permitidos, mas desencorajados) para o estado de sessão do chamador. Por padrão, nenhuma função é exportada. Você pode usar essa chave para listar as funções que são exportadas pelo módulo.<br /><br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Ao encadear módulos aninhados, todas as funções exportadas por um módulo aninhado serão exportadas para o estado de sessão global, a menos que um módulo na cadeia restrinja a função usando a chave FunctionsToExport.<br /><br /> Se o manifesto também exportar aliases para as funções, essa chave poderá remover funções cujos aliases são listados na chave AliasesToExport, mas essa chave não pode adicionar aliases de função à lista.|
-|CmdletsToExport<br /><br /> Tipo: [String []]|@()|Especifica os cmdlets que o módulo exporta (caracteres curinga são permitidos, mas desencorajados). Por padrão, nenhum cmdlet é exportado. Você pode usar essa chave para listar os cmdlets que são exportados pelo módulo.<br /><br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todos os cmdlets exportados por um módulo aninhado serão exportados para o estado de sessão global, a menos que um módulo na cadeia restringe o cmdlet usando a chave CmdletsToExport.<br /><br /> Se o manifesto também exporta aliases para os cmdlets, essa chave pode remover cmdlets cujos aliases estão listados na chave AliasesToExport, mas essa chave não pode adicionar aliases de cmdlet à lista.|
-|VariablesToExport<br /><br /> Tipo: cadeia de caracteres|'*'|Especifica as variáveis que o módulo exporta (caracteres curinga são permitidos) para o estado de sessão do chamador. Por padrão, todas as variáveis são exportadas. Você pode usar essa chave para restringir as variáveis exportadas pelo módulo.<br /><br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todas as variáveis exportadas por um módulo aninhado serão exportadas para o estado de sessão global, a menos que um módulo na cadeia restringe a variável usando a chave VariablesToExport.<br /><br /> Se o manifesto também exportar aliases para as variáveis, essa chave poderá remover variáveis cujos aliases são listados na chave AliasesToExport, mas essa chave não pode adicionar aliases variáveis à lista.|
-|AliasesToExport<br /><br /> Tipo: [String []]|@()|Especifica os aliases que o módulo exporta (caracteres curinga são permitidos, mas desencorajados) para o estado de sessão do chamador. Por padrão, nenhum alias é exportado. Você pode usar essa chave para listar os aliases exportados pelo módulo.<br /><br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todos os aliases exportados por um módulo aninhado serão exportados para o estado de sessão global, a menos que um módulo na cadeia restrinja o alias usando a chave AliasesToExport.|
-|Módulolist<br /><br /> Tipo: [String []]|@()|Especifica todos os módulos que são empacotados com este módulo. Esses módulos podem ser inseridos por nome (uma cadeia de caracteres separada por vírgula) ou como uma tabela de hash com ModuleName e chaves GUID. A tabela de hash também pode ter uma chave ModuleVersion opcional. A chave ModuleList foi projetada para atuar como um inventário de módulo. Esses módulos não são processados automaticamente.|
-|File<br /><br /> Tipo: [String []]|@()|Lista de todos os arquivos empacotados com este módulo. Assim como com ModuleList, FileList é para ajudá-lo como uma lista de inventário e não é processado de outra forma.|
-|PrivateData<br /><br /> Tipo: [objeto]|@{...}|Especifica todos os dados privados que precisam ser passados para o módulo raiz especificado pela chave RootModule/ModuleToProcess.|
-|HelpInfoURI<br /><br /> Tipo: cadeia de caracteres|' '|HelpInfo URI deste módulo.|
-|DefaultCommandPrefix<br /><br /> Tipo: cadeia de caracteres|' '|Prefixo padrão para comandos exportados deste módulo. Substitua o prefixo padrão usando `Import-Module`-Prefix.|
+|**RootModule**<br /> Tipo: `String`|`<empty string>`|Módulo de script ou arquivo de módulo binário associado a este manifesto. As versões anteriores do PowerShell chamaram esse elemento de **ModuleToProcess**.<br /> Os tipos possíveis para o módulo raiz podem estar vazios, o que cria um módulo de **manifesto** , o nome de um módulo de script (`.psm1`) ou o nome de um módulo binário (`.exe` ou `.dll`). Colocar o nome de um manifesto de módulo (`.psd1`) ou um arquivo de script (`.ps1`) nesse elemento causa um erro. <br /> Exemplo: `RootModule = 'ScriptModule.psm1'`|
+|**ModuleVersion**<br /> Tipo: `Version`|`'0.0.1'`|Número de versão deste módulo. Se um valor não for especificado, `New-ModuleManifest` usará o padrão. A cadeia de caracteres deve ser capaz de converter para o tipo `Version` por exemplo `#.#.#.#.#`. `Import-Module` carrega o primeiro módulo encontrado no **$PSModulePath** que corresponde ao nome e tem pelo menos o alto de **ModuleVersion**, como o parâmetro **MinimumVersion** . Para importar uma versão específica, use o parâmetro **RequiredVersion** do cmdlet `Import-Module`.<br /> Exemplo: `ModuleVersion = '1.0'`|
+|**VOLUME**<br /> Tipo: `GUID`|`'<GUID>'`|ID usada para identificar exclusivamente este módulo. Se um valor não for especificado, `New-ModuleManifest` gerará o valor. No momento, não é possível importar um módulo pelo **GUID**. <br /> Exemplo: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
+|**Autor**<br /> Tipo: `String`|`'<Current user>'`|Autor deste módulo. Se um valor não for especificado, `New-ModuleManifest` usará o usuário atual. <br /> Exemplo: `Author = 'AuthorNameHere'`|
+|**CompanyName**<br /> Tipo: `String`|`'Unknown'`|Empresa ou fornecedor deste módulo. Se um valor não for especificado, `New-ModuleManifest` usará o padrão.<br /> Exemplo: `CompanyName = 'Fabrikam'`|
+|**Direitos autorais**<br /> Tipo: `String`|`'(c) <Author>. All rights reserved.'`| Declaração de direitos autorais deste módulo. Se um valor não for especificado, `New-ModuleManifest` usará o padrão com o usuário atual como o `<Author>`. Para especificar um autor, use o parâmetro **Author** . <br /> Exemplo: `Copyright = '2019 AuthorName. All rights reserved.'`|
+|**Descrição**<br /> Tipo: `String`|`<empty string>`|Descrição da funcionalidade fornecida por este módulo.<br /> Exemplo: `Description = 'This is the module's description.'`|
+|**PowerShellVersion**<br /> Tipo: `Version`|`<empty string>`|Versão mínima do mecanismo do PowerShell exigida por este módulo. Os valores válidos são 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6 e 7.<br /> Exemplo: `PowerShellVersion = '5.0'`|
+|**PowerShellHostName**<br /> Tipo: `String`|`<empty string>`|Nome do host do PowerShell exigido por este módulo. Esse nome é fornecido pelo PowerShell. Para localizar o nome de um programa de host, no programa, digite: `$host.name`.<br /> Exemplo: `PowerShellHostName = 'ConsoleHost'`|
+|**PowerShellHostVersion**<br /> Tipo: `Version`|`<empty string>`|Versão mínima do host do PowerShell exigida por este módulo.<br /> Exemplo: `PowerShellHostVersion = '2.0'`|
+|**DotNetFrameworkVersion**<br /> Tipo: `Version`|`<empty string>`|Versão mínima do Microsoft .NET Framework exigida por este módulo. Esse pré-requisito é válido somente para a edição do PowerShell desktop, como o PowerShell 5,1.<br /> Exemplo: `DotNetFrameworkVersion = '3.5'`|
+|**CLRVersion**<br /> Tipo: `Version`|`<empty string>`|Versão mínima do Common Language Runtime (CLR) exigido por este módulo. Esse pré-requisito é válido somente para a edição do PowerShell desktop, como o PowerShell 5,1.<br /> Exemplo: `CLRVersion = '3.5'`|
+|**ProcessorArchitecture**<br /> Tipo: `ProcessorArchitecture`|`<empty string>`|Arquitetura do processador (nenhuma, x86, AMD64) exigida por este módulo. Os valores válidos são x86, AMD64, ARM, IA64, MSIL e None (desconhecido ou não especificado).<br /> Exemplo: `ProcessorArchitecture = 'x86'`|
+|**RequiredModules**<br /> Tipo: `Object[]`|`@()`|Módulos que devem ser importados para o ambiente global antes da importação deste módulo. Isso carregará todos os módulos listados, a menos que eles já tenham sido carregados. Por exemplo, alguns módulos podem já ter sido carregados por um módulo diferente. É possível especificar uma versão específica para carregar usando `RequiredVersion` em vez de `ModuleVersion`. Quando `ModuleVersion` for usado, ele carregará a versão mais recente disponível com, no mínimo, a versão especificada. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.<br /> Exemplo: `RequiredModules = @("MyModule", @{ModuleName="MyDependentModule"; ModuleVersion="2.0"; GUID="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /> Exemplo: `RequiredModules = @("MyModule", @{ModuleName="MyDependentModule"; RequiredVersion="1.5"; GUID="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
+|**RequiredAssemblies**<br /> Tipo: `String[]`|`@()`|Assemblies que devem ser carregados antes da importação deste módulo. Especifica os nomes de arquivo de assembly (`.dll`) que o módulo requer.<br /> O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave RootModule. Use esse parâmetro para listar todos os assemblies que o módulo requer.<br /> Exemplo: `RequiredAssemblies = @("assembly1.dll", "assembly2.dll", "assembly3.dll")`|
+|**ScriptsToProcess**<br /> Tipo: `String[]`|`@()`|Arquivos de script (`.ps1`) que são executados no estado de sessão do chamador quando o módulo é importado. Pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Você pode usar esses scripts para preparar um ambiente assim como você pode usar um script de logon.<br /> Esses scripts são executados antes que qualquer um dos módulos listados no manifesto seja carregado. <br /> Exemplo: `ScriptsToProcess = @("script1.ps1", "script2.ps1", "script3.ps1")`|
+|**TypesToProcess**<br /> Tipo: `String[]`|`@()`|Digite arquivos (`.ps1xml`) a serem carregados ao importar este módulo. <br /> Exemplo: `TypesToProcess = @("type1.ps1xml", "type2.ps1xml", "type3.ps1xml")`|
+|**FormatsToProcess**<br /> Tipo: `String[]`|`@()`|Arquivos de formato (`.ps1xml`) a serem carregados ao importar este módulo. <br /> Exemplo: `FormatsToProcess = @("format1.ps1xml", "format2.ps1xml", "format3.ps1xml")`|
+|**NestedModules**<br /> Tipo: `Object[]`|`@()`|Módulos a serem importados como módulos aninhados do módulo especificado em **RootModule** (alias:**ModuleToProcess**).<br /> Adicionar um nome de módulo a esse elemento é semelhante a chamar `Import-Module` de dentro do seu código de script ou assembly. A principal diferença ao usar um arquivo de manifesto é que é mais fácil ver o que você está carregando. E, se um módulo não for carregado, você ainda não terá carregado seu módulo real.<br /> Além de outros módulos, você também pode carregar arquivos de script (`.ps1`) aqui. Esses arquivos serão executados no contexto do módulo raiz. Isso é equivalente a dot sourcing do script em seu módulo raiz. <br /> Exemplo: `NestedModules = @("script.ps1", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
+|**FunctionsToExport**<br /> Tipo: `String[]`|`@()`|Especifica as funções a serem exportadas deste módulo, para melhor desempenho, não use curingas e não exclua a entrada, use uma matriz vazia se não houver funções a serem exportadas. Por padrão, nenhuma função é exportada. Você pode usar essa chave para listar as funções que são exportadas pelo módulo.<br /> O módulo exporta as funções para o estado de sessão do chamador. O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Ao encadear módulos aninhados, todas as funções exportadas por um módulo aninhado serão exportadas para o estado de sessão global, a menos que um módulo na cadeia restrinja a função usando a chave **FunctionsToExport** .<br /> Se o manifesto exportar aliases para as funções, essa chave poderá remover funções cujos aliases são listados na chave **AliasesToExport** , mas essa chave não pode adicionar aliases de função à lista. <br /> Exemplo: `FunctionsToExport = @("function1", "function2", "function3")`|
+|**CmdletsToExport**<br /> Tipo: `String[]`|`@()`|Especifica os cmdlets a serem exportados deste módulo, para melhor desempenho, não use curingas e não exclua a entrada, use uma matriz vazia se não houver cmdlets a serem exportados. Por padrão, nenhum cmdlet é exportado. Você pode usar essa chave para listar os cmdlets que são exportados pelo módulo.<br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todos os cmdlets exportados por um módulo aninhado serão exportados para o estado de sessão global, a menos que um módulo na cadeia restringe o cmdlet usando a chave **CmdletsToExport** .<br /> Se o manifesto exporta aliases para os cmdlets, essa chave pode remover cmdlets cujos aliases são listados na chave **AliasesToExport** , mas essa chave não pode adicionar aliases de cmdlet à lista. <br /> Exemplo: `CmdletsToExport = @("Get-MyCmdlet", "Set-MyCmdlet", "Test-MyCmdlet")`|
+|**VariablesToExport**<br /> Tipo: `String[]`|`'*'`|Especifica as variáveis que o módulo exporta para o estado de sessão do chamador. Caracteres curinga são permitidos. Por padrão, todas as variáveis (`'*'`) são exportadas. Você pode usar essa chave para restringir as variáveis exportadas pelo módulo.<br /> O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todas as variáveis exportadas por um módulo aninhado serão exportadas para o estado de sessão global, a menos que um módulo na cadeia restringe a variável usando a chave **VariablesToExport** .<br /> Se o manifesto também exportar aliases para as variáveis, essa chave poderá remover variáveis cujos aliases são listados na chave **AliasesToExport** , mas essa chave não pode adicionar aliases variáveis à lista. <br /> Exemplo: `VariablesToExport = @('$MyVariable1', '$MyVariable2', '$MyVariable3')`|
+|**AliasesToExport**<br /> Tipo: `String[]`|`@()`|Especifica os aliases a serem exportados deste módulo, para melhor desempenho, não use curingas e não exclua a entrada, use uma matriz vazia se não houver aliases a serem exportados. Por padrão, nenhum alias é exportado. Você pode usar essa chave para listar os aliases exportados pelo módulo.<br /> O módulo exporta os aliases para o estado de sessão do chamador. O estado de sessão do chamador pode ser o estado de sessão global ou, para módulos aninhados, o estado de sessão de outro módulo. Quando você estiver encadeando módulos aninhados, todos os aliases exportados por um módulo aninhado serão exportados para o estado de sessão global, a menos que um módulo na cadeia restrinja o alias usando a chave **AliasesToExport** . <br /> Exemplo: `AliasesToExport = @("MyAlias1", "MyAlias2", "MyAlias3")`|
+|**DscResourcesToExport**<br /> Tipo: `String[]`|`@()`|Especifica os recursos DSC a serem exportados deste módulo. Caracteres curinga são permitidos. <br /> Exemplo: `DscResourcesToExport = @("DscResource1", "DscResource2", "DscResource3")`|
+|**Módulolist**<br /> Tipo: `Object[]`|`@()`|Especifica todos os módulos que são empacotados com este módulo. Esses módulos podem ser inseridos por nome, usando uma cadeia de caracteres separada por vírgulas ou como uma tabela de hash com nome de **módulo** e chaves de **GUID** . A tabela de hash também pode ter uma chave **ModuleVersion** opcional. A chave **ModuleList** foi projetada para atuar como um inventário de módulo. Esses módulos não são processados automaticamente. <br /> Exemplo: `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
+|**FileList**<br /> Tipo: `String[]`|`@()`|Lista de todos os arquivos empacotados com este módulo. Assim como com **ModuleList**, **FileList** é uma lista de inventário e não é processado de outra forma. <br /> Exemplo: `FileList = @("File1", "File2", "File3")`|
+|**PrivateData**<br /> Tipo: `Object`|`@{...}`|Especifica todos os dados privados que precisam ser passados para o módulo raiz especificado pela chave **RootModule** (alias: **ModuleToProcess**). **PrivateData** é uma tabela de hash que compreende vários elementos: **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **releasenotes**, **pré-lançamento**, **RequireLicenseAcceptance**e  **ExternalModuleDependencies**. |
+|**Marcas** <br /> Tipo: `String[]` |`@()`| Marcas ajudam com a descoberta de módulo em galerias online. <br /> Exemplo: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
+|**LicenseUri**<br /> Tipo: `Uri` |`<empty string>`| Uma URL para a licença deste módulo. <br /> Exemplo: `LicenseUri = 'https://www.contoso.com/license'`|
+|**ProjectUri**<br /> Tipo: `Uri` |`<empty string>`| Uma URL para o site principal deste projeto. <br /> Exemplo: `ProjectUri = 'https://www.contoso.com/project'`|
+|**IconUri**<br /> Tipo: `Uri` |`<empty string>`| Uma URL para um ícone que representa este módulo. <br /> Exemplo: `IconUri = 'https://www.contoso.com/icons/icon.png'`|
+|**ReleaseNotes**<br /> Tipo: `String` |`<empty string>`| Especifica as notas de versão do módulo. <br /> Exemplo: `ReleaseNotes = 'The release notes provide information about the module.`|
+|**Pré-lançamento**<br /> Tipo: `String` |`<empty string>`| Esse parâmetro foi adicionado no PowerShell 7. Uma cadeia de caracteres de **pré-lançamento** que identifica o módulo como uma versão de pré-lançamento em galerias online. <br /> Exemplo: `PreRelease = 'This module is a prerelease version.`|
+|**RequireLicenseAcceptance**<br /> Tipo: `Boolean`|`$true`| Esse parâmetro foi adicionado no PowerShell 7. Sinalizador para indicar se o módulo requer aceitação explícita do usuário para instalar, atualizar ou salvar. <br /> Exemplo: `RequireLicenseAcceptance = $false`|
+|**ExternalModuleDependencies**<br /> Tipo: `String[]` |`@()`| Esse parâmetro foi adicionado no PowerShell 7. Uma lista de módulos externos que dependem deste módulo. <br /> Exemplo: `ExternalModuleDependencies =  @("ExtModule1", "ExtModule2", "ExtModule3")`|
+|**HelpInfoURI**<br /> Tipo: `String`|`<empty string>`|HelpInfo URI deste módulo. <br /> Exemplo: `HelpInfoURI = 'https://www.contoso.com/help'`|
+|**DefaultCommandPrefix**<br /> Tipo: `String`|`<empty string>`|Prefixo padrão para comandos exportados deste módulo. Substitua o prefixo padrão usando `Import-Module -Prefix`. <br /> Exemplo: `DefaultCommandPrefix = 'My'`|
 
 ## <a name="sample-module-manifest"></a>Manifesto de módulo de exemplo
 
-O manifesto de módulo de exemplo a seguir mostra as chaves e valores padrão em um manifesto de módulo. Este exemplo foi criado usando o cmdlet `New-ModuleManifest` no Windows PowerShell 3,0. Ao criar vários módulos, você pode usar este cmdlet para criar um modelo de manifesto que pode ser modificado para diferentes módulos.
+O manifesto de módulo de exemplo a seguir foi criado com `New-ModuleManifest` no PowerShell 7 e contém as chaves e valores padrão.
 
 ```powershell
 #
-# Module manifest for module 'myManifest'
+# Module manifest for module 'SampleModuleManifest'
 #
 # Generated by: User01
 #
-# Generated on: 2019-10-09
+# Generated on: 10/15/2019
 #
 
 @{
@@ -115,13 +118,13 @@ O manifesto de módulo de exemplo a seguir mostra as chaves e valores padrão em
 # RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '1.0'
+ModuleVersion = '0.0.1'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
 
 # ID used to uniquely identify this module
-GUID = 'b888e5a2-8578-4c0b-938d-0cd9b5b836ba'
+GUID = 'b632e90c-df3d-4340-9f6c-3b832646bf87'
 
 # Author of this module
 Author = 'User01'
@@ -130,18 +133,18 @@ Author = 'User01'
 CompanyName = 'Unknown'
 
 # Copyright statement for this module
-Copyright = '(c) 2019 User01. All rights reserved.'
+Copyright = '(c) User01. All rights reserved.'
 
 # Description of the functionality provided by this module
 # Description = ''
 
-# Minimum version of the Windows PowerShell engine required by this module
+# Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
 
-# Name of the Windows PowerShell host required by this module
+# Name of the PowerShell host required by this module
 # PowerShellHostName = ''
 
-# Minimum version of the Windows PowerShell host required by this module
+# Minimum version of the PowerShell host required by this module
 # PowerShellHostVersion = ''
 
 # Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
@@ -212,6 +215,15 @@ PrivateData = @{
         # ReleaseNotes of this module
         # ReleaseNotes = ''
 
+        # Prerelease string of this module
+        # Prerelease = ''
+
+        # Flag to indicate whether the module requires explicit user acceptance for install/update/save
+        RequireLicenseAcceptance = $true
+
+        # External dependent modules of this module
+        # ExternalModuleDependencies = @()
+
     } # End of PSData hashtable
 
 } # End of PrivateData hashtable
@@ -223,9 +235,22 @@ PrivateData = @{
 # DefaultCommandPrefix = ''
 
 }
-
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
+
+[about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
+
+[about_If](/powershell/module/microsoft.powershell.core/about/about_if)
+
+[Cache de assembly global](/dotnet/framework/app-domains/gac)
+
+[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+
+[New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest)
+
+[Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest)
+
+[Update-ModuleManifest](/powershell/module/powershellget/update-modulemanifest)
 
 [Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
