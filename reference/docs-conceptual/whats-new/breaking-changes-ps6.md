@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
+ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
+ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67843937"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561273"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
 
@@ -20,6 +20,8 @@ O [Fluxo de Trabalho do PowerShell][workflow] é um recurso no Windows PowerShel
 Devido à falta de suporte a Windows Workflow Foundation no .NET Core, não continuaremos a dar suporte ao Fluxo de Trabalho do PowerShell no PowerShell Core.
 
 Futuramente, gostaríamos de habilitar o paralelismo/simultaneidade nativa na linguagem do PowerShell sem a necessidade do Fluxo de Trabalho do PowerShell.
+
+Se houver a necessidade de usar pontos de verificação para retomar um script após a reinicialização do sistema operacional, recomendamos o uso de Agendador de Tarefas para executar um script na inicialização do sistema, mas o script precisaria manter o próprio estado (como mantê-lo em um arquivo).
 
 [workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
