@@ -2,12 +2,12 @@
 title: Instalar o SDK do Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
-ms.openlocfilehash: da1b3dbb8a599aee2cdbab9115aedcab0b4c78c9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72367265"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444505"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Instalar o SDK do Windows PowerShell
 
@@ -17,24 +17,21 @@ O tópico a seguir descreve como instalar o SDK do PowerShell em diferentes vers
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Instalando o SDK do Windows PowerShell 3.0 para Windows 8 e Windows Server 2012
 
-O Windows PowerShell 3.0 é instalado automaticamente com o Windows 8 e Windows Server 2012. Além disso, você pode baixar e instalar os assemblies de referência para o Windows PowerShell 3.0 como parte do SDK do Windows 8. Esses assemblies permitem que você grave cmdlets, provedores e programas de host no Windows PowerShell 3.0. Quando você instala o SDK do Windows para o Windows 8, os assemblies do Windows PowerShell são instalados automaticamente na pasta do assembly de referência, em \Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0. Para obter mais informações, consulte o site de download do SDK do Windows 8. Exemplos de código do Windows PowerShell também estão disponíveis no Centro de Desenvolvimento.
-Para obter mais informações, consulte a página de exemplo de código da área de trabalho no site do centro de desenvolvimento.
-
-Além disso, o Windows PowerShell 3.0 é compatível com versões anteriores com o SDK do Windows PowerShell 2.0, que inclui diversos exemplos de código. Para obter mais informações sobre como baixar o SDK do Windows PowerShell 2.0, consulte abaixo. (Observe que, enquanto os exemplos de 2.0 código são compatíveis com o Windows 8 e Windows PowerShell 3.0, você não pode instalar o Windows PowerShell 2.0 em uma plataforma Windows 8).
+O Windows PowerShell 3.0 é instalado automaticamente com o Windows 8 e Windows Server 2012. Além disso, você pode baixar e instalar os assemblies de referência para o Windows PowerShell 3.0 como parte do SDK do Windows 8. Esses assemblies permitem que você grave cmdlets, provedores e programas de host no Windows PowerShell 3.0. Quando você instala o SDK do Windows para o Windows 8, os assemblies do Windows PowerShell são instalados automaticamente na pasta do assembly de referência, em `\Program Files
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`. Para obter mais informações, consulte o site de download do SDK do Windows 8. Exemplos de código do Windows PowerShell também estão disponíveis no centro de desenvolvimento no [pacote de exemplo do SDK 3,0 do Windows PowerShell](https://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d).
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Instalando o SDK do Windows PowerShell 3.0 no Windows 7 e Windows Server 2008 R2
 
-O Windows 7 e o Windows Server 2008 R2 têm o PowerShell 2.0 instalado automaticamente. Além disso, você pode instalar o PowerShell 3.0 nesses sistemas. (Para obter mais informações, consulte Instalando o Windows PowerShell.). Conforme descrito acima, você também pode instalar o SDK do Windows 8 no Windows 7 e Windows Server 2008 R2.
+O Windows 7 e o Windows Server 2008 R2 têm o PowerShell 2.0 instalado automaticamente. Além disso, você pode instalar o PowerShell 3.0 nesses sistemas. Você também pode instalar o SDK do Windows 8 no Windows 7 e no Windows Server 2008 R2, conforme descrito acima.
 
 ## <a name="installing-windows-powershell-20-sdk-for-windows-7-vista-xp-server-2003-and-server-2008"></a>Instalando o SDK do Windows PowerShell 2.0 para Windows 7, Vista, XP, Server 2003 e Server 2008
 
-O SDK do Windows PowerShell 2.0 fornece os assemblies de referência necessários para gravar cmdlets, provedores e aplicativos de hospedagem, além de fornecer o código de exemplo em C# que poderá ser usado como ponto de partida quando você começar a gravar código.
-
-Para instalar esse SDK, consulte Windows PowerShell 2,0 SDK.
+O SDK do Windows PowerShell 2.0 fornece os assemblies de referência necessários para gravar cmdlets, provedores e aplicativos de hospedagem, além de fornecer o código de exemplo em C# que poderá ser usado como ponto de partida quando você começar a gravar código. Você pode baixar os exemplos de código de [https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560).
 
 ### <a name="reference-assemblies"></a>Assemblies de referência
 
-Os assemblies de referência são instalados no seguinte local por padrão: c:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\V1.0.
+Assemblies de referência são instalados, por padrão, no seguinte local: `c:\Program Files\Reference
+Assemblies\Microsoft\WindowsPowerShell\V1.0`.
 
 > [!NOTE]
 >
@@ -43,14 +40,15 @@ Os assemblies de referência são instalados no seguinte local por padrão: c:\P
 
 ### <a name="samples"></a>Amostras
 
-Os exemplos de código são instalados no seguinte local por padrão: C:\Arquivos de Programas\microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\. As seções a seguir fornecem uma breve descrição da ação de cada amostra.
+Exemplos de código são instalados, por padrão, no seguinte local: `C:\Program Files\Microsoft
+SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. As seções a seguir fornecem uma breve descrição da ação de cada amostra.
 
 #### <a name="cmdlet-samples"></a>Amostras de cmdlet
 
 - GetProcessSample01-mostra como escrever um cmdlet simples que obtém todos os processos no computador local.
 - GetProcessSample02-mostra como adicionar parâmetros ao cmdlet. O cmdlet usa um ou mais nomes de processo e retorna os processos correspondentes.
 - GetProcessSample03-mostra como adicionar parâmetros que aceitam entrada do pipeline.
-- GetProcessSample04-mostra como tratar erros de não encerramento.
+- GetProcessSample04-mostra como lidar com erros de não encerramento.
 - GetProcessSample05-mostra como exibir uma lista de processos especificados.
 - SelectObject-mostra como gravar um filtro para selecionar apenas determinados objetos.
 - SelectString-mostra como Pesquisar padrões especificados em arquivos.
@@ -76,7 +74,7 @@ Os exemplos de código são instalados no seguinte local por padrão: C:\Arquivo
 
 - Runspace01-mostra como usar a classe PowerShell para executar o cmdlet `Get-Process` de forma síncrona.
 O cmdlet `Get-Process` retorna objetos de processo para cada processo em execução no computador local.
-- Runspace02-mostra como usar a classe PowerShell para executar os cmdlets `Get-Process` e `Sort-Object` de forma síncrona. O cmdlet `Get-Process` retorna objetos de processo para cada processo em execução no computador local, e o `Sort-Object` classifica os objetos com base em sua propriedade de ID. Os resultados desses comandos são exibidos usando um controle DataGridView.
+- Runspace02-mostra como usar a classe PowerShell para executar os cmdlets `Get-Process` e `Sort-Object` de forma síncrona. O cmdlet `Get-Process` retorna objetos de processo para cada processo em execução no computador local e o `Sort-Object` classifica os objetos com base em sua propriedade de ID. Os resultados desses comandos são exibidos usando um controle DataGridView.
 - Runspace03-mostra como usar a classe PowerShell para executar um script de forma síncrona e como lidar com erros de não finalização. O script recebe uma lista de nomes de processo e, em seguida, recupera tais processos. Os resultados do script, incluindo quaisquer erros de não encerramento gerados durante a execução do script, são exibidos em uma janela do console.
 - Runspace04-mostra como usar a classe PowerShell para executar comandos e como detectar erros de encerramento que são lançados durante a execução dos comandos. Dois comandos são executados e o último comando é passado um argumento de parâmetro que não é válido. Como resultado, nenhum objeto é retornado e um erro de encerramento é gerado.
 - Runspace05-mostra como adicionar um snap-in a um objeto InitialSessionState para que o cmdlet do snap-in esteja disponível quando o runspace for aberto. O snap-in fornece um cmdlet Get-proc (definido pelo exemplo GetProcessSample01) que é executado de forma síncrona usando um objeto do PowerShell.
@@ -106,8 +104,8 @@ O cmdlet `Get-Process` retorna objetos de processo para cada processo em execuç
 
 - AccessDBProviderSample03-mostra como substituir os métodos GetItem e SetItem para dar suporte a chamadas para os cmdlets `Get-Item` e `Set-Item`. A classe de provedor neste exemplo deriva da classe @ Cmdletprovider.
 
-- AccessDBProviderSample04-mostra como substituir métodos de contêiner para dar suporte a chamadas para os cmdlets `Copy-Item`, `Get-ChildItem`, `New-Item` e `Remove-Item`. Esses métodos devem ser implementados quando o armazenamento de dados contiver itens que são contêineres. Um contêiner é um grupo de itens filho em um item pai comum. A classe de provedor neste exemplo deriva da classe @ Cmdletprovider.
+- AccessDBProviderSample04-mostra como substituir métodos de contêiner para dar suporte a chamadas para os cmdlets `Copy-Item`, `Get-ChildItem`, `New-Item`e `Remove-Item`. Esses métodos devem ser implementados quando o armazenamento de dados contiver itens que são contêineres. Um contêiner é um grupo de itens filho em um item pai comum. A classe de provedor neste exemplo deriva da classe @ Cmdletprovider.
 
 - AccessDBProviderSample05-mostra como substituir métodos de contêiner para dar suporte a chamadas para os cmdlets `Move-Item` e `Join-Path`. Esses métodos deverão ser implementados quando o usuário precisar mover itens dentro de um contêiner e se o armazenamento de dados contiver contêineres aninhados. A classe de provedor neste exemplo deriva da classe NavigationCmdletProvider.
 
-- AccessDBProviderSample06-mostra como substituir os métodos de conteúdo para dar suporte a chamadas para os cmdlets `Clear-Content`, `Get-Content` e `Set-Content`. Esses métodos devem ser implementados quando o usuário precisa gerenciar o conteúdo dos itens no armazenamento de dados. A classe de provedor neste exemplo deriva da classe NavigationCmdletProvider e implementa a interface IContentCmdletProvider.
+- AccessDBProviderSample06-mostra como substituir os métodos de conteúdo para dar suporte a chamadas para os cmdlets `Clear-Content`, `Get-Content`e `Set-Content`. Esses métodos devem ser implementados quando o usuário precisa gerenciar o conteúdo dos itens no armazenamento de dados. A classe de provedor neste exemplo deriva da classe NavigationCmdletProvider e implementa a interface IContentCmdletProvider.
