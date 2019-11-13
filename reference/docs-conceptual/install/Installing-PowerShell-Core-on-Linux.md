@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre a instalação do PowerShell Core em diversas distribuições Linux
 ms.date: 07/19/2019
-ms.openlocfilehash: fc5a278f0fc10733a0d60fb856d0400332ba2719
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 3159de2d64d9c473e00b58c9f9c52b6d1c7779af
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72350205"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444411"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -30,6 +30,13 @@ Todos os pacotes estão disponíveis na nossa página [versões][] do GitHub. De
 [arch]: #arch-linux
 [snap]: #snap-package
 [tar]: #binary-archives
+
+> [!TIP]
+> Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fácil instalar o PowerShell como uma [ferramenta global do .NET](/dotnet/core/tools/global-tools).
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="installing-preview-releases"></a>Instalando versões prévias
 
@@ -536,7 +543,7 @@ sudo dnf remove powershell
 ## <a name="arch-linux"></a>Arch Linux
 
 > [!NOTE]
-> O suporte para o Arch é experimental.
+> O suporte ao Arch não é reconhecido oficialmente pela Microsoft e é mantido pela comunidade.
 
 O PowerShell está disponível no AUR (Repositório de Usuários do [Arch Linux][]).
 
@@ -598,6 +605,9 @@ sudo snap remove powershell-preview
 ```
 
 ## <a name="kali"></a>Kali
+
+> [!NOTE]
+> O suporte ao Kali não é reconhecido oficialmente pela Microsoft e é mantido pela comunidade.
 
 ### <a name="installation---kali"></a>Instalação – Kali
 
@@ -691,7 +701,7 @@ Os arquivos binários `tar.gz` do PowerShell são fornecidos para plataformas Li
 
 ### <a name="dependencies"></a>Dependências
 
-O PowerShell cria binários portáteis para todas as distribuições Linux. Porém o tempo de execução do .NET Core exige dependências diferentes em diferentes distribuições, portanto, o PowerShell faz o mesmo.
+O PowerShell cria binários portáteis para todas as distribuições Linux. Porém o runtime do .NET Core exige dependências diferentes em diferentes distribuições, portanto, o PowerShell faz o mesmo.
 
 O gráfico a seguir mostra as dependências do .NET Core 2.0 com suporte oficial em diferentes distribuições Linux.
 

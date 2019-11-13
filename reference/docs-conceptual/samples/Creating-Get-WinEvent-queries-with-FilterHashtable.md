@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Criando consultas Get-WinEvent com FilterHashtable
-ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143665"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444384"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Criando consultas Get-WinEvent com FilterHashtable
 
@@ -36,12 +36,12 @@ Get-WinEvent -FilterHashtable @{
 Este artigo apresenta informações sobre como usar os valores enumerados em uma tabela de hash. Para obter mais informações sobre a enumeração, leia as postagens de blog de **Scripting Guy**. Para criar uma função que retorne valores enumerados, confira [Enumerações e valores](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values).
 Para obter mais informações, confira [a série de postagens de blog sobre enumeração de Scripting Guy](https://devblogs.microsoft.com/scripting/?s=about+enumeration).
 
-## <a name="hash-table-keyvalue-pairs"></a>Pares chave-valor da tabela de hash
+## <a name="hash-table-key-value-pairs"></a>Pares chave-valor da tabela de hash
 
 Para criar consultas eficientes, use o cmdlet `Get-WinEvent` com o parâmetro **FilterHashtable**.
 O **FilterHashtable** aceita uma tabela de hash como filtro para obter informações específicas de logs de eventos do Windows. Uma tabela de hash usa pares **chave-valor**. Para obter informações sobre tabelas de hash, confira [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
 
-Se os pares **chave-valor** estiverem na mesma linha, eles deverão ser separados por um ponto e vírgula. Se cada par **chave-valor** estiver em uma linha separada, o ponto e vírgula não será necessário. Por exemplo, este artigo coloca pares **chave-valor**  em linhas separadas e não usa ponto e vírgula.
+Se os pares **chave-valor** estiverem na mesma linha, eles deverão ser separados por um ponto e vírgula. Se cada par **chave-valor** estiver em uma linha separada, o ponto e vírgula não será necessário. Por exemplo, este artigo coloca pares **chave-valor** em linhas separadas e não usa ponto e vírgula.
 
 Este exemplo usa vários parâmetros **FilterHashtable** dos pares **chave-valor**. A consulta completa inclui **LogName**, **ProviderName**, **Palavras-chave**, **ID** e **Nível**.
 
@@ -62,9 +62,9 @@ A tabela a seguir exibe os nomes de chave, os tipos de dados e se os caracteres 
 | EndTime        | `<DateTime>`    | Não                           |
 | UserID         | `<SID>`         | Não                           |
 | Dados           | `<String[]>`    | Não                           |
-| \<named-data\> | `<String[]>`    | Não                           |
+| `<named-data>` | `<String[]>`    | Não                           |
 
-A chave \<named-data\> representa um campo de dados de evento nomeado. Por exemplo, o evento 1008 do Perflib pode conter os seguintes dados de evento:
+A chave `<named-data>` representa um campo de dados de evento nomeado. Por exemplo, o evento 1008 do Perflib pode conter os seguintes dados de evento:
 
 ```xml
 <EventData>
@@ -80,6 +80,9 @@ Você pode consultar esses eventos usando o seguinte comando:
 Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
 ```
 
+> [!NOTE]
+> A capacidade de consultar `<named-data>` foi adicionada no PowerShell 6.
+
 ## <a name="building-a-query-with-a-hash-table"></a>Como criar uma consulta com uma tabela de hash
 
 Para verificar os resultados e solucionar problemas, convém criar a tabela de hash com um par **chave-valor** de cada vez. A consulta obtém dados de log do **Aplicativo**. A tabela de hash é equivalente a `Get-WinEvent –LogName Application`.
@@ -92,7 +95,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-Continue a criar a tabela de hash com a chave **ProviderName**. O **ProviderName** é o nome exibido no campo **Fonte** no **Visualizador de Eventos do Windows**. Por exemplo, **Tempo de execução do .NET** na captura de tela a seguir:
+Continue a criar a tabela de hash com a chave **ProviderName**. O **ProviderName** é o nome exibido no campo **Fonte** no **Visualizador de Eventos do Windows**. Por exemplo, **Runtime do .NET** na captura de tela a seguir:
 
 ![Imagem das fontes do Visualizador de Eventos do Windows.](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
@@ -148,7 +151,7 @@ WdiContext       Property   static System.Diagnostics.Eventing.Reader.StandardEv
 WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEventKey…
 ```
 
-Os valores enumerados estão documentados no **.NET Framework**. Para obter mais informações, confira [Enumeração StandardEventKeywords](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
+Os valores enumerados estão documentados no **.NET Framework**. Para obter mais informações, confira [Enumeração StandardEventKeywords](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 Os nomes e valores enumerados das **Palavras-chave** são os seguintes:
 
@@ -229,7 +232,7 @@ Verbose       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEventLevel Warning {get;}
 ```
 
-Os valores enumerados estão documentados no **.NET Framework**. Para obter mais informações, confira [Enumeração de StandardEventKeywords](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
+Os valores enumerados estão documentados no **.NET Framework**. Para obter mais informações, confira [Enumeração de StandardEventKeywords](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 Os nomes e valores enumerados de **Nível** são os seguintes:
 

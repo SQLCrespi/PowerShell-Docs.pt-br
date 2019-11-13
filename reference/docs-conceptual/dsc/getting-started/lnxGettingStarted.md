@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
-ms.openlocfilehash: 523b91741dba57a98ac6e7ba660a776568af7065
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
+ms.sourcegitcommit: 14b50e5446f69729f72231f5dc6f536cdd1084c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953883"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73933845"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
@@ -128,7 +128,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 > [!NOTE]
 > No modo de "Push", a credencial do usuário precisa ser o usuário raiz no computador Linux.
 > Há suporte apenas para conexões SSL/TLS para DSC para Linux; a `New-CimSession` precisa ser usada com o parâmetro –UseSSL definido como $true.
-> O certificado SSL usado pela OMI (para DSC) é especificado no arquivo: `/opt/omi/etc/omiserver.conf` com as propriedades: pemfile e keyfile.
+> O certificado SSL usado pela OMI (para DSC) é especificado no arquivo: `/etc/opt/omi/conf/omiserver.conf` com as propriedades: pemfile e keyfile.
 > Se o computador Windows em que você está executando o cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) não confiar nesse certificado, será possível optar por ignorar a validação do certificado com as Opções de CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 Execute o seguinte comando para enviar a configuração DSC por push para o nó do Linux.

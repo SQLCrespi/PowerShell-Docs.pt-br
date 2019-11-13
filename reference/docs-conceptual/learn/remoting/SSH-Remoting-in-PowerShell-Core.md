@@ -2,12 +2,12 @@
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 09/30/2019
-ms.openlocfilehash: 744fa95e42b0cf6eb28db0c7014d07f143174214
-ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
+ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692161"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444375"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -64,23 +64,24 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Crie o subsistema SSH que hospeda um processo do PowerShell no computador remoto:
 
    ```
-   Subsystem powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
-   > Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema. Para saber mais, confira este [problema do GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
-
-   Uma solução é criar um link simbólico para o diretório de instalação do PowerShell que não contenha espaços:
-
-   ```powershell
-   New-Item -ItemType SymbolicLink -Path "C:\pwshdir" -Value "C:\Program Files\PowerShell\6"
-   ```
-
-   Use o caminho do link simbólico para o executável do PowerShell no subsistema:
-
-   ```
-   Subsystem powershell C:\pwshdir\pwsh.exe -sshs -NoLogo -NoProfile
-   ```
+   > Você deve usar o nome curto 8.3 para qualquer caminho de arquivo que contenha espaços. Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema. Para saber mais, confira este [problema do GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+   >
+   > O nome curto 8.3 para a pasta `Program Files` no Windows geralmente é `Progra~1`. No entanto, você pode usar o seguinte comando para garantir:
+   >
+   > ```powershell
+   > Get-CimInstance Win32_Directory -Filter 'Name="C:\\Program Files"' |
+   >   Select-Object EightDotThreeFileName
+   > ```
+   >
+   > ```Output
+   > EightDotThreeFileName
+   > ---------------------
+   > c:\progra~1
+   > ```
 
    Como alternativa, habilite a autenticação de chave:
 

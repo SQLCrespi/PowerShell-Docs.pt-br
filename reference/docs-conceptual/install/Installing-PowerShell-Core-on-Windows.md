@@ -2,16 +2,23 @@
 title: Instalar o PowerShell Core no Windows
 description: Informações sobre a instalação do PowerShell Core no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 3f21761037311891162f1083234edb0aca80d28b
-ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
+ms.openlocfilehash: c06eba06e376c3f795ab9c0fae9270cf6cf8f2ce
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830218"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444460"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Instalar o PowerShell Core no Windows
 
 Há várias maneiras de instalar o PowerShell Core no Windows.
+
+> [!TIP]
+> Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fácil instalar o PowerShell como uma [ferramenta global do .NET](/dotnet/core/tools/global-tools).
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -22,7 +29,7 @@ Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisit
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
 
-Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI de nossa página [versões][releases] no GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
+Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
 O arquivo MSI tem esta aparência – `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
