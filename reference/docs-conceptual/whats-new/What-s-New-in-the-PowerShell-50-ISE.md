@@ -2,12 +2,12 @@
 ms.date: 09/06/2019
 keywords: powershell, cmdlet
 title: Novidades no ISE do PowerShell 5.0
-ms.openlocfilehash: a719baef0da1600f0a5377e1b72c81b67e37eef2
-ms.sourcegitcommit: a74ae7ed089301992fed201fbe55d827a622afa0
+ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70746218"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117506"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Novidades no ISE do Windows PowerShell 5.0
 
@@ -30,11 +30,11 @@ O IntelliSense exibe menus clicáveis dos cmdlets, parâmetros, valores de parâ
 
 **Qual é o valor adicionado por esta alteração?**
 
-Com a adição do IntelliSense, é mais fácil descobrir cmdlets e sintaxes ao usar o ISE do Windows PowerShell para criar scripts. Você também pode usar o ISE do Windows PowerShell para conhecer o Windows PowerShell enquanto cria novos scripts.
+Com a adição do IntelliSense, ficou mais fácil de descobrir cmdlets e sintaxes ao usar o ISE do Windows PowerShell para criar scripts. Você também pode usar o ISE do Windows PowerShell para conhecer o Windows PowerShell enquanto cria novos scripts.
 
 **O que passou a funcionar de maneira diferente?**
 
-Quando você digita cmdlets no ISE do Windows PowerShell, é exibido um menu de rolagem clicável que permite navegar e selecionar os comandos apropriados.
+Quando você digita cmdlets no ISE do Windows PowerShell, é exibido um menu de rolagem clicável que permite que você navegue e selecione os comandos apropriados.
 
 ## <a name="snippets"></a>Snippets
 
@@ -54,7 +54,7 @@ Para usar snippets no Windows PowerShell 3.0 ou posterior, no menu **Editar**, c
 
 > Adicionado no PowerShell 3.0
 
-Agora o ISE do Windows PowerShell dá suporte a ferramentas complementares usando o modelo de objeto. Esses complementos são controles do WPF (Windows Presentation Foundation), exibidos como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações, confira [Objetivo do modelo de objeto de script do ISE do Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md).
+Agora o ISE do Windows PowerShell oferece superte a ferramentas complementares usando o modelo de objeto. Esses complementos são controles do WPF (Windows Presentation Foundation), exibidos como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações, confira [Objetivo do modelo de objeto de script do ISE do Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md).
 
 **Qual é o valor adicionado por esta alteração?**
 
@@ -193,7 +193,7 @@ O cmdlet `Show-Command` permite compor ou executar um cmdlet ou uma função com
 
 **Qual é o valor adicionado por esta alteração?**
 
-Usando `Show-Command` em seus scripts do Windows PowerShell, é possível fornecer aos usuários o ambiente gráfico com o qual eles estão familiarizados. `Show-Command` também pode ajudar os usuários iniciantes a aprender o Windows PowerShell.
+Ao usar `Show-Command` em seus scripts do Windows PowerShell, é possível fornecer aos usuários o ambiente gráfico com o qual eles estão familiarizados. `Show-Command` também pode ajudar os usuários iniciantes a aprender o Windows PowerShell.
 
 **O que passou a funcionar de maneira diferente?**
 
@@ -201,4 +201,4 @@ Usando `Show-Command` em seus scripts do Windows PowerShell, é possível fornec
 
 ## <a name="see-also"></a>Consulte também
 
-Para obter mais informações sobre como usar o ISE do Windows PowerShell, confira [Explorar o Ambiente de Script Integrado do Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md).
+Para obter mais informações sobre como usar o ISE do Windows PowerShell, confira [Explorar o Ambiente de Script Integrado do Windows PowerShell](../components/ise/exploring-the-windows-powershell-ise.md).

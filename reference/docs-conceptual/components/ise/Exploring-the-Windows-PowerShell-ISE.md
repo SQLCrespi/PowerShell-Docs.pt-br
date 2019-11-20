@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Explorando o ISE do Windows PowerShell
-ms.openlocfilehash: 8c47e236e2e345a887fc3af281e429f440e176ff
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031037"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117444"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorando o ISE do Windows PowerShell
 
@@ -18,7 +18,7 @@ Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell® par
 
 ## <a name="menu-bar"></a>Barra de menu
 
-A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](../../core-powershell/ise/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
+A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](object-model/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
 
 > [!NOTE]
 > No ISE do Windows PowerShell 2.0, os menus **Ferramentas** e **Complementos** não existiam.
@@ -83,4 +83,4 @@ A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca 
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Apresentando o ISE do Windows PowerShell](../../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
+- [Apresentando o ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)
