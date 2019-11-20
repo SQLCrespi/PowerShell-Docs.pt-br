@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: 'Recursos de composição: usando uma configuração DSC como um recurso'
-ms.openlocfilehash: ef8d5665e552da01977c2f21a43246c72bb7155f
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 7fa6ee56d4706b96fb47123c7aa00c4df6256492
+ms.sourcegitcommit: 14b50e5446f69729f72231f5dc6f536cdd1084c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954343"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73933836"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Recursos de composição: usando uma configuração DSC como um recurso
 
@@ -158,10 +158,8 @@ O recurso é detectável usando o cmdlet Get-DscResource; suas propriedades são
 Em seguida, criamos uma configuração que chama o recurso de composição. Essa configuração chama o recurso de composição xVirtualMachine para criar uma máquina virtual e, em seguida, chama o recurso **xComputer** para renomeá-lo.
 
 ```powershell
-
 configuration RenameVM
 {
-
     Import-DscResource -Module xVirtualMachine
     Node localhost
     {
@@ -188,9 +186,32 @@ configuration RenameVM
 }
 ```
 
+Também é possível usar esse recurso para criar várias VMs passando uma matriz de nomes de VM para o recurso xVirtualMachine.
+
+```PowerShell
+Configuration MultipleVms
+{
+    Import-DscResource -Module xVirtualMachine
+    Node localhost
+    {
+        xVirtualMachine VMs
+        {
+            VMName = "IIS01", "SQL01", "SQL02"
+            SwitchName = "Internal"
+            SwitchType = "Internal"
+            VhdParentPath = "C:\Demo\VHD\RTM.vhd"
+            VHDPath = "C:\Demo\VHD"
+            VMStartupMemory = 1024MB
+            VMState = "Running"
+        }
+    }
+}
+```
+
 ## <a name="supporting-psdscrunascredential"></a>Dando suporte a PsDscRunAsCredential
 
->**Observação:** **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e posterior.
+> [!NOTE]
+> **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e posterior.
 
 A propriedade **PsDscRunAsCredential** pode ser usada no bloco de recurso [Configurações DSC](../configurations/configurations.md) para especificar que o recurso deve ser executado em um conjunto de credenciais específico.
 Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](../configurations/runAsUser.md).
