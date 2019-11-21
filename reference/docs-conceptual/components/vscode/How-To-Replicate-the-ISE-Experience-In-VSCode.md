@@ -2,12 +2,12 @@
 title: Como replicar a experiência do ISE no Visual Studio Code
 description: Como replicar a experiência do ISE no Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058498"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117498"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Como replicar a experiência do ISE no Visual Studio Code
 
@@ -27,12 +27,29 @@ Este documento tenta listar configurações que você pode definir no VSCode par
 
 Você também pode [configurar suas próprias associações de teclas](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings) no VSCode.
 
+## <a name="simplified-ise-like-ui"></a>Interface do usuário simplificada semelhante à do ISE
+
+Se você estiver procurando simplificar a interface do usuário do Visual Studio Code para ter uma aparência mais próxima da interface do usuário do ISE, aplique estas duas configurações:
+
+```json
+"workbench.activityBar.visible": false,
+"debug.openDebug": "neverOpen",
+```
+
+Isso ocultará as seções "Barra de Atividades" e "Barra Lateral de Depuração" abaixo na caixa vermelha:
+
+![a seção realçada inclui a Barra de Atividades e a Barra Lateral de Depuração](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+
+O resultado final se parece com o seguinte:
+
+![Exibição simplificada do VS Code](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+
 ## <a name="tab-completion"></a>Preenchimento de guias
 
 Para habilitar um preenchimento com Tab mais semelhante ao ISE, adicione esta configuração:
 
 ```json
-"editor.tabCompletion": "on"
+"editor.tabCompletion": "on",
 ```
 
 > [!NOTE]
@@ -64,7 +81,7 @@ Para interromper o console integrado na inicialização, defina:
 Para tornar os arquivos novos/sem título, registre-os como PowerShell por padrão:
 
 ```json
-"files.defaultLanguage": "powershell"
+"files.defaultLanguage": "powershell",
 ```
 
 ## <a name="color-scheme"></a>Esquema de cores
@@ -77,7 +94,7 @@ Na lista suspensa, selecione `PowerShell ISE`.
 Você pode definir esse tema nas configurações com:
 
 ```json
-"workbench.colorTheme": "PowerShell ISE"
+"workbench.colorTheme": "PowerShell ISE",
 ```
 
 ## <a name="powershell-command-explorer"></a>Gerenciador de comandos do PowerShell

@@ -2,12 +2,12 @@
 title: Entendendo a codificação de arquivos no VSCode e PowerShell
 description: Configurar a codificação de arquivos no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3283e1262c8eb26906429ecf195cfa0b122b330f
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058430"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117415"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Entendendo a codificação de arquivos no VSCode e PowerShell
 
@@ -15,7 +15,7 @@ Ao usar o VS Code para criar e editar scripts do PowerShell, é importante que o
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>O que é codificação de arquivos e por que ela é importante?
 
-O VSCode gerencia a interface entre um humano inserindo cadeias de caracteres em um buffer e lendo/gravando blocos de bytes no sistema de arquivos. Quando salva um arquivo, o VSCode usa uma codificação de texto para fazer isso.
+O VSCode gerencia a interface entre um humano inserindo cadeias de caracteres em um buffer e lendo/gravando blocos de bytes no sistema de arquivos. Quando o VSCode salva um arquivo, ele usa uma codificação de texto para decidir quais bytes cada caractere se torna.
 
 De forma semelhante, quando o PowerShell executa um script, ele precisa converter os bytes em um arquivo em caracteres para reconstruir o arquivo em um programa do PowerShell. Como o VSCode grava o arquivo e o PowerShell lê o arquivo, eles precisam usar o mesmo sistema de codificação. O processo de análise de um script do PowerShell é: *bytes* -> *caracteres* -> *tokens*  ->  *árvore de sintaxe abstrata* -> *execução*.
 
@@ -27,9 +27,10 @@ Problemas de codificação ocorrem quando a codificação do VSCode ou seu arqui
 
 Você tem mais probabilidade de ter problemas de codificação quando usa caracteres que não estão no [conjunto de caracteres ASCII de 7 bits](https://ascii.cl/). Por exemplo:
 
+- Caracteres não alfabéticos estendidos, como travessão (`—`), espaço contínuo (` `) ou aspas duplas à esquerda (`“`)
 - Caracteres latinos acentuados (`É`, `ü`)
 - Caracteres não latinos, como cirílico (`Д`, `Ц`)
-- Chinês Han (`脚`, `本`)
+- Caracteres CJK (`本`, `화`, `が`)
 
 Motivos comuns para problemas de codificação são:
 
