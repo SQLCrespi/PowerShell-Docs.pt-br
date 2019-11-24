@@ -21,7 +21,7 @@ Os exemplos de® do Windows PowerShell estão disponíveis por meio do SDK do Wi
 
 > [!NOTE]
 > Quando o SDK do Windows é instalado, um diretório de **exemplos** é criado no qual todos os exemplos do Windows PowerShell são disponibilizados. Um diretório de instalação típico é **C:\Program Files\Microsoft SDKs\Windows\v6.0**.
-> Inicie o Windows PowerShell e digite **"CD Samples\SysMgmt\PowerShell"** para localizar o diretório de exemplos do Windows PowerShell. Neste documento, o diretório de exemplos do Windows PowerShell é conhecido como **exemplos de @no__t 1PowerShell >** .
+> Inicie o Windows PowerShell e digite **"CD Samples\SysMgmt\PowerShell"** para localizar o diretório de exemplos do Windows PowerShell. Neste documento, o diretório de exemplos do Windows PowerShell é conhecido como **\<exemplos do powershell >** .
 
 ## <a name="sample-code-listing"></a>Listagem de código de exemplo
 
@@ -51,7 +51,7 @@ Os exemplos de® do Windows PowerShell estão disponíveis por meio do SDK do Wi
 |[Exemplo de código RunSpace09](./runspace09-code-sample.md)|Este é o código-fonte para o exemplo de Runspace09 descrito em [criando um aplicativo de console que invoca um pipeline de forma assíncrona](https://msdn.microsoft.com/en-us/198c1c94-2a06-457e-93ce-c0d910618e47).|
 |[Exemplo de código RunSpace10](./runspace10-code-sample.md)|Este é o código-fonte do exemplo Runspace10, que adiciona um cmdlet a [System. Management. Automation. Runspaces. Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) e, em seguida, usa as informações de configuração modificadas para criar o runspace.|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

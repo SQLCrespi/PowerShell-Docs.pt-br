@@ -101,9 +101,9 @@ Quando o mesmo parâmetro é usado por vários cmdlets, sempre use o mesmo tipo 
 
 #### <a name="parameters-that-take-true-and-false"></a>Parâmetros que assumem true e false
 
-Se o parâmetro usar apenas `true` e `false`, defina o parâmetro como Type [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Um parâmetro de opção é tratado como `true` quando é especificado em um comando. Se o parâmetro não estiver incluído em um comando, o Windows PowerShell considerará o valor do parâmetro como `false`. Não defina parâmetros boolianos.
+Se o parâmetro usar apenas `true` e `false`, defina o parâmetro como tipo [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Um parâmetro de opção é tratado como `true` quando é especificado em um comando. Se o parâmetro não estiver incluído em um comando, o Windows PowerShell considerará o valor do parâmetro a ser `false`. Não defina parâmetros boolianos.
 
-Se o parâmetro precisar diferenciar entre 3 valores: $true, $false e "não especificado", defina um parâmetro do tipo Nullable @ no__t-0bool >.  A necessidade de um terceiro, o valor "não especificado", normalmente ocorre quando o cmdlet pode modificar uma propriedade booliana de um objeto. Nesse caso, "não especificado" significa não alterar o valor atual da propriedade.
+Se o parâmetro precisar diferenciar entre 3 valores: $true, $false e "não especificado", defina um parâmetro do tipo Nullable\<bool >.  A necessidade de um terceiro, o valor "não especificado", normalmente ocorre quando o cmdlet pode modificar uma propriedade booliana de um objeto. Nesse caso, "não especificado" significa não alterar o valor atual da propriedade.
 
 #### <a name="support-arrays-for-parameters"></a>Suporte a matrizes para parâmetros
 
@@ -139,7 +139,7 @@ Um cmdlet deve chamar o método [System. Management. Automation. cmdlet. WriteWa
 
 Um cmdlet deve chamar o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) quando o usuário precisar de detalhes sobre o que o cmdlet está fazendo. Por exemplo, um cmdlet deve chamar essas informações se o autor do cmdlet sentir que há cenários que podem exigir mais informações sobre o que o cmdlet está fazendo.
 
-O cmdlet deve chamar o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) quando um engenheiro de suporte a produtos ou desenvolvedores precisar entender o que corrompeu a operação de cmdlet. Não é necessário que o cmdlet chame o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) no mesmo código que chama o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) , pois o parâmetro `Debug` apresenta ambos conjuntos de informações.
+O cmdlet deve chamar o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) quando um engenheiro de suporte a produtos ou desenvolvedores precisar entender o que corrompeu a operação de cmdlet. Não é necessário que o cmdlet chame o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) no mesmo código que chama o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) , pois o parâmetro `Debug` apresenta os dois conjuntos de informações.
 
 #### <a name="support-writeprogress-for-operations-that-take-a-long-time"></a>Suporte a WriteProgress para operações que levam muito tempo
 
@@ -182,7 +182,7 @@ Se os dados que o cmdlet ler ou gravar tiverem que ser um arquivo, o cmdlet deve
 
 - [System. Management. Automation. PathIntrinsics. GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
-Se os dados que o cmdlet lê ou grava são apenas um conjunto de cadeias de caracteres em vez de um arquivo, o cmdlet deve usar as informações de conteúdo do provedor (`Content`) para leitura e gravação. Essas informações são obtidas da propriedade [System. Management. Automation. Provider. cmdletprovider. invokeprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) . Esses mecanismos permitem que outros armazenamentos de dados participem da leitura e gravação de dados.
+Se os dados que o cmdlet lê ou grava são apenas um conjunto de cadeias de caracteres em vez de um arquivo, o cmdlet deve usar as informações de conteúdo do provedor (`Content` membro) para leitura e gravação. Essas informações são obtidas da propriedade [System. Management. Automation. Provider. cmdletprovider. invokeprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) . Esses mecanismos permitem que outros armazenamentos de dados participem da leitura e gravação de dados.
 
 #### <a name="support-wildcard-characters"></a>Suporte a caracteres curinga
 
@@ -214,13 +214,13 @@ Implemente uma interface [System. IComparable](/dotnet/api/System.IComparable) e
 
 ##### <a name="update-display-information"></a>Atualizar informações de exibição
 
-Se a exibição de um objeto não fornecer os resultados esperados, crie um *> personalizado de \<YourProductName*. Arquivo Format. ps1xml para esse objeto.
+Se a exibição de um objeto não fornecer os resultados esperados, crie um *> personalizado\<YourProductName*. Arquivo Format. ps1xml para esse objeto.
 
 ### <a name="support-well-defined-pipeline-input-sc02"></a>Suporte à entrada de pipeline bem definida (SC02)
 
 #### <a name="implement-for-the-middle-of-a-pipeline"></a>Implementar para o meio de um pipeline
 
-Implemente um cmdlet supondo que ele será chamado do meio de um pipeline (ou seja, outros cmdlets produzirão sua entrada ou consumirão sua saída). Por exemplo, você pode supor que o cmdlet `Get-Process`, pois ele gera dados, é usado somente como o primeiro cmdlet em um pipeline. No entanto, como esse cmdlet é projetado para o meio de um pipeline, esse cmdlet permite que os cmdlets ou dados anteriores no pipeline especifiquem os processos a serem recuperados.
+Implemente um cmdlet supondo que ele será chamado do meio de um pipeline (ou seja, outros cmdlets produzirão sua entrada ou consumirão sua saída). Por exemplo, você pode pressupor que o cmdlet `Get-Process`, porque ele gera dados, é usado somente como o primeiro cmdlet em um pipeline. No entanto, como esse cmdlet é projetado para o meio de um pipeline, esse cmdlet permite que os cmdlets ou dados anteriores no pipeline especifiquem os processos a serem recuperados.
 
 #### <a name="support-input-from-the-pipeline"></a>Suporte à entrada do pipeline
 
@@ -240,7 +240,7 @@ Quando um cmdlet retorna objetos, o cmdlet deve gravar os objetos imediatamente 
 
 Por padrão, o próprio Windows PowerShell não diferencia maiúsculas de minúsculas. No entanto, como ele lida com muitos sistemas preexistentes, o Windows PowerShell preserva o caso para facilitar a operação e a compatibilidade. Em outras palavras, se um caractere for fornecido em letras maiúsculas, o Windows PowerShell o manterá em letras maiúsculas. Para que os sistemas funcionem bem, um cmdlet precisa seguir essa convenção. Se possível, ele deve operar de forma não diferencia maiúsculas de minúsculas. No entanto, ele deve preservar o caso original para cmdlets que ocorrem posteriormente em um comando ou no pipeline.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
 

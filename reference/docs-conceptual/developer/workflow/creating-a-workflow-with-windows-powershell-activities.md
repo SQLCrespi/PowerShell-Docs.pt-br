@@ -23,7 +23,7 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
 ### <a name="setting-up-the-project"></a>Configurando o projeto
 
-1. Siga o procedimento em [adicionando atividades do Windows PowerShell à caixa de ferramentas do Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) para criar um projeto de fluxo de trabalho e adicionar as atividades de [Microsoft. PowerShell. Activities](/dotnet/api/Microsoft.PowerShell.Activities) e [Microsoft. PowerShell. Management. Activities ](/dotnet/api/Microsoft.PowerShell.Management.Activities)assemblies para a caixa de ferramentas.
+1. Siga o procedimento em [adicionando atividades do Windows PowerShell à caixa de ferramentas do Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) para criar um projeto de fluxo de trabalho e adicionar as atividades dos assemblies [Microsoft. PowerShell. Activities](/dotnet/api/Microsoft.PowerShell.Activities) e [Microsoft. PowerShell. Management. Activities](/dotnet/api/Microsoft.PowerShell.Management.Activities) à caixa de ferramentas.
 
 2. Adicione o System. Management. Automation, o Microsoft. PowerShell. Activities, o System. Management, o Microsoft. PowerShell. Management. Activities e o Microsoft. PowerShell. Commands. Management como no projeto como assemblies de referência.
 
@@ -37,7 +37,7 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
 4. Crie um argumento chamado `MachineCred` do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Esse argumento representa as credenciais de um administrador nos computadores para verificar e ingressar.
 
-5. Adicione uma atividade **ParallelForEach** dentro da atividade **Sequence** . Insira `comp` e `ComputerName` nas caixas de texto para que o loop itere pelos elementos da matriz `ComputerName`.
+5. Adicione uma atividade **ParallelForEach** dentro da atividade **Sequence** . Insira `comp` e `ComputerName` nas caixas de texto para que o loop itere pelos elementos da matriz de `ComputerName`.
 
 6. Adicione uma atividade **Sequence** ao corpo da atividade **ParallelForEach** . Defina a propriedade **DisplayName** da sequência como `JoinDomain`.
 
@@ -47,7 +47,7 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
    |Propriedade|Valor|
    |--------------|-----------|
-   |**Classes**|Win32|
+   |**Classes**|"Win32_ComputerSystem"|
    |**PSComputerName**|às|
    |**PSCredential**|MachineCred|
 
@@ -77,4 +77,5 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
     Quando você tiver concluído os procedimentos, a janela de design do fluxo de trabalho deverá ser parecida com esta.
 
-    XAML de @no__t 0JoinDomain no designer de fluxo de trabalho @ no__t-1![JOINDOMAIN XAML no designer de fluxo de trabalho](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    ![XAML JoinDomain no designer de fluxo de trabalho](../media/joindomainworkflow.png)
+    ![XAML JoinDomain no designer de fluxo de trabalho](../media/joindomainworkflow.png "JoinDomainWorkflow")

@@ -25,7 +25,7 @@ As diretrizes a seguir devem ser consideradas ao criar cmdlets. Quando encontrar
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Suporte a um parâmetro InputObject (AD01)
 
-Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject` é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um parâmetro `InputObject` do tipo processo que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
+Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject` é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um parâmetro `InputObject` do tipo Process que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
 
 ### <a name="support-the-force-parameter-ad02"></a>Suporte ao parâmetro Force (AD02)
 
@@ -35,7 +35,7 @@ Por exemplo, o cmdlet [Remove-Item](/powershell/module/microsoft.powershell.mana
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Tratar credenciais por meio do Windows PowerShell (AD03)
 
-Um cmdlet deve definir um parâmetro `Credential` para representar credenciais. Esse parâmetro deve ser do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) e deve ser definido usando uma declaração de atributo de credencial. Esse suporte solicita automaticamente ao usuário o nome de usuário, para a senha ou para ambos quando uma credencial completa não é fornecida diretamente. Para obter mais informações sobre o atributo Credential, consulte [declaração de atributo de credencial](./credential-attribute-declaration.md).
+Um cmdlet deve definir um parâmetro `Credential` para representar as credenciais. Esse parâmetro deve ser do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) e deve ser definido usando uma declaração de atributo de credencial. Esse suporte solicita automaticamente ao usuário o nome de usuário, para a senha ou para ambos quando uma credencial completa não é fornecida diretamente. Para obter mais informações sobre o atributo Credential, consulte [declaração de atributo de credencial](./credential-attribute-declaration.md).
 
 ### <a name="support-encoding-parameters-ad04"></a>Suporte a parâmetros de codificação (AD04)
 
@@ -59,7 +59,7 @@ Normalmente, você define a classe para um cmdlet em um namespace .NET Framework
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>Nomeie a classe de cmdlet para corresponder ao nome do cmdlet
 
-Ao nomear a classe .NET Framework que implementa um cmdlet, nomeie a classe " *\<Verb > **\<Noun >** \<Command >* ", onde você *substitui os espaços reservados @no__t >* e @no__t *-8Noun >* por o verbo e o substantivo usados para o nome do cmdlet. Por exemplo, o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) é implementado por uma classe chamada `GetProcessCommand`.
+Quando você nomear a classe .NET Framework que implementa um cmdlet, nomeie a classe " *\<verbo > **\<substantivo >** \<comando*>", em que você substitui os\<de *verbo >* e\<de > *substantivo* pelo verbo e pelo substantivo usados para o nome do cmdlet. Por exemplo, o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) é implementado por uma classe chamada `GetProcessCommand`.
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Se nenhuma entrada de pipeline substituir o método BeginProcessing (AC02)
 
@@ -67,13 +67,13 @@ Se o cmdlet não aceitar a entrada do pipeline, o processamento deverá ser impl
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>Para tratar as solicitações de parada, substitua o método StopProcessing (AC03)
 
-Substitua o método [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) para que o cmdlet possa manipular o sinal de parada. Alguns cmdlets demoram muito para concluir sua operação e permitem um longo tempo entre chamadas para o tempo de execução do Windows PowerShell, como quando o cmdlet bloqueia o thread em chamadas RPC de longa execução. Isso inclui cmdlets que fazem chamadas para o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) , para o método [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) e para outros mecanismos de comentários que podem levar muito tempo para serem concluídos . Para esses casos, o usuário pode precisar enviar um sinal de parada para esses cmdlets.
+Substitua o método [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) para que o cmdlet possa manipular o sinal de parada. Alguns cmdlets demoram muito para concluir sua operação e permitem um longo tempo entre chamadas para o tempo de execução do Windows PowerShell, como quando o cmdlet bloqueia o thread em chamadas RPC de longa execução. Isso inclui cmdlets que fazem chamadas para o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) , para o método [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) e para outros mecanismos de comentários que podem levar muito tempo para serem concluídos. Para esses casos, o usuário pode precisar enviar um sinal de parada para esses cmdlets.
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>Implementar a interface IDisposable (AC04)
 
-Se o cmdlet tiver objetos que não são descartados (gravados no pipeline) pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , seu cmdlet poderá exigir descarte de objeto adicional. Por exemplo, se o cmdlet abrir um identificador de arquivo em seu método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e mantiver o identificador aberto para uso pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , esse identificador terá que ser fechado ao final do processamento.
+Se o cmdlet tiver objetos que não são descartados (gravados no pipeline) pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , seu cmdlet poderá exigir descarte de objeto adicional. Por exemplo, se o cmdlet abrir um identificador de arquivo em seu método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e mantiver o identificador aberto para uso pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , esse identificador terá que ser fechado no final do processamento.
 
-O tempo de execução do Windows PowerShell nem sempre chama o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) pode não ser chamado se o cmdlet for cancelado ao meio de sua operação ou se ocorrer um erro de encerramento em qualquer parte do cmdlet. Portanto, a classe .NET Framework para um cmdlet que exige a limpeza de objeto deve implementar o padrão de interface [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar ambos os [ Métodos System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
+O tempo de execução do Windows PowerShell nem sempre chama o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) pode não ser chamado se o cmdlet for cancelado ao meio de sua operação ou se ocorrer um erro de encerramento em qualquer parte do cmdlet. Portanto, a classe .NET Framework para um cmdlet que requer a limpeza de objeto deve implementar o padrão de interface [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar os métodos [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Usar tipos de parâmetro amigável de serialização (AC05)
 
@@ -115,7 +115,7 @@ Outros tipos:
 
 Ao lidar com dados confidenciais, sempre use o tipo de dados [System. Security. SecureString](/dotnet/api/System.Security.SecureString) . Isso pode incluir entrada de pipeline para parâmetros, bem como retornar dados confidenciais para o pipeline.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
 

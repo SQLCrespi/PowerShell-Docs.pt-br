@@ -41,7 +41,7 @@ Ao criar cmdlets que dão suporte a caracteres curinga, permita combinações de
 
 `Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-O comando anterior usa o curinga de intervalo `[a-l]` para especificar que o nome do arquivo deve começar com os caracteres "a" por meio de "l" e usa o caractere curinga `*` como um espaço reservado para qualquer caractere entre a primeira letra do nome do arquivo e o **. txt** extensão.
+O comando anterior usa o curinga de intervalo `[a-l]` para especificar que o nome do arquivo deve começar com os caracteres "a" por meio de "l" e usa o caractere curinga `*` como um espaço reservado para qualquer caractere entre a primeira letra do nome do arquivo e a extensão **. txt** .
 
 O exemplo a seguir usa um padrão de curinga de intervalo que exclui a letra "d", mas inclui todas as outras letras de "a" até "f".
 
@@ -55,11 +55,11 @@ Por exemplo, o padrão a seguir contém dois colchetes que devem ser usados lite
 
 Quando usado na API do PowerShell, use:
 
-- "John Smith \` [* ']"
+- "John Smith \`[* ']"
 
 Quando usado no prompt de comando do PowerShell:
 
-- "John Smith \` @ no__t-1 [* \` ']"
+- "John Smith \`\`[*\`']"
 
 Esse padrão corresponde a "John Smith [marketing]" ou "John Smith [desenvolvimento]". Por exemplo:
 
@@ -76,7 +76,7 @@ True
 Quando os parâmetros de cmdlet dão suporte a caracteres curinga, a operação geralmente gera uma saída de matriz.
 Ocasionalmente, não faz sentido oferecer suporte a uma saída de matriz porque o usuário pode usar apenas um único item. Por exemplo, o cmdlet `Set-Location` não oferece suporte à saída de matriz porque o usuário define apenas um único local. Nessa instância, o cmdlet ainda dá suporte a caracteres curinga, mas força a resolução para um único local.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 

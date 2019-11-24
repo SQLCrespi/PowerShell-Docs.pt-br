@@ -20,7 +20,7 @@ ms.locfileid: "72364445"
 Ao estender .NET Framework objetos, você pode adicionar propriedades de alias, propriedades de código, propriedades de observação, propriedades de script e conjuntos de propriedades aos objetos. O XML que define essas propriedades é descrito nas seções a seguir.
 
 > [!NOTE]
-> Os exemplos nas seções a seguir são do arquivo de tipos `Types.ps1xml` padrão no diretório de instalação do PowerShell (`$PSHOME`). Para obter mais informações, consulte [sobre tipos. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Os exemplos nas seções a seguir são do arquivo padrão de tipos de `Types.ps1xml` no diretório de instalação do PowerShell (`$PSHOME`). Para obter mais informações, consulte [sobre tipos. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="alias-properties"></a>Propriedades do alias
 
@@ -102,10 +102,10 @@ No exemplo a seguir, a propriedade **VERSIONINFO** é adicionada ao tipo [System
 ## <a name="property-sets"></a>Conjuntos de propriedades
 
 Um conjunto de propriedades define um grupo de propriedades estendidas que podem ser referenciadas pelo nome do conjunto.
-Por exemplo, o parâmetro de**Propriedade** [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
- pode especificar um conjunto de propriedades específico a ser exibido. Quando um conjunto de propriedades é especificado, somente as propriedades que pertencem ao conjunto são exibidas.
+Por exemplo, o parâmetro [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
+**Property** pode especificar um conjunto de propriedades específico a ser exibido. Quando um conjunto de propriedades é especificado, somente as propriedades que pertencem ao conjunto são exibidas.
 
-Não há restrição quanto ao número de conjuntos de propriedades que podem ser definidos para um objeto. No entanto, os conjuntos de propriedades usados para definir as propriedades de exibição padrão de um objeto devem ser especificados dentro do conjunto de membros **PSStandardMembers** . No arquivo de tipos `Types.ps1xml`, os nomes de conjunto de propriedades padrão incluem **DefaultDisplayProperty**, **DefaultDisplayPropertySet**e **DefaultKeyPropertySet**. Todos os conjuntos de propriedades adicionais que você adicionar ao conjunto de membros **PSStandardMembers** serão ignorados.
+Não há restrição quanto ao número de conjuntos de propriedades que podem ser definidos para um objeto. No entanto, os conjuntos de propriedades usados para definir as propriedades de exibição padrão de um objeto devem ser especificados dentro do conjunto de membros **PSStandardMembers** . No arquivo de tipos de `Types.ps1xml`, os nomes de conjunto de propriedades padrão incluem **DefaultDisplayProperty**, **DefaultDisplayPropertySet**e **DefaultKeyPropertySet**. Todos os conjuntos de propriedades adicionais que você adicionar ao conjunto de membros **PSStandardMembers** serão ignorados.
 
 No exemplo a seguir, o conjunto de propriedades **DefaultDisplayPropertySet** é adicionado ao conjunto de membros **PSStandardMembers** do tipo [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . O elemento [PropertySet](/dotnet/api/system.management.automation.pspropertyset) define o grupo de propriedades. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name) especifica o nome do conjunto de propriedades. E, o elemento [referenciaproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) especifica as propriedades do conjunto. Você também pode adicionar o elemento `PropertySet` aos membros do elemento [Type](/dotnet/api/system.management.automation.pstypename) .
 
