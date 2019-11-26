@@ -1,5 +1,5 @@
 ---
-title: GetProc01 (C#) Sample Code | Microsoft Docs
+title: Código deC#exemplo GetProc01 () | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -15,21 +15,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74416164"
 ---
-# <a name="getproc01-c-sample-code"></a><span data-ttu-id="f211b-102">Código de exemplo GetProc01 (C#)</span><span class="sxs-lookup"><span data-stu-id="f211b-102">GetProc01 (C#) Sample Code</span></span>
+# <a name="getproc01-c-sample-code"></a><span data-ttu-id="68d06-102">Código de exemplo GetProc01 (C#)</span><span class="sxs-lookup"><span data-stu-id="68d06-102">GetProc01 (C#) Sample Code</span></span>
 
-<span data-ttu-id="f211b-103">The following code shows the implementation of the GetProc01 sample cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f211b-103">The following code shows the implementation of the GetProc01 sample cmdlet.</span></span> <span data-ttu-id="f211b-104">Notice that the cmdlet is simplified by leaving the actual work of process retrieval to the [System.Diagnostics.Process.Getprocesses\*](/dotnet/api/System.Diagnostics.Process.GetProcesses) method.</span><span class="sxs-lookup"><span data-stu-id="f211b-104">Notice that the cmdlet is simplified by leaving the actual work of process retrieval to the [System.Diagnostics.Process.Getprocesses\*](/dotnet/api/System.Diagnostics.Process.GetProcesses) method.</span></span>
+<span data-ttu-id="68d06-103">O código a seguir mostra a implementação do cmdlet de exemplo GetProc01.</span><span class="sxs-lookup"><span data-stu-id="68d06-103">The following code shows the implementation of the GetProc01 sample cmdlet.</span></span> <span data-ttu-id="68d06-104">Observe que o cmdlet é simplificado deixando o trabalho real de recuperação do processo com o método [System. Diagnostics. Process. GetProcesses \*](/dotnet/api/System.Diagnostics.Process.GetProcesses) .</span><span class="sxs-lookup"><span data-stu-id="68d06-104">Notice that the cmdlet is simplified by leaving the actual work of process retrieval to the [System.Diagnostics.Process.Getprocesses\*](/dotnet/api/System.Diagnostics.Process.GetProcesses) method.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f211b-105">You can download the C# source file (getproc01.cs) for this Get-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span><span class="sxs-lookup"><span data-stu-id="f211b-105">You can download the C# source file (getproc01.cs) for this Get-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="f211b-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="f211b-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="68d06-105">Você pode baixar o C# arquivo de origem (getproc01.cs) para este cmdlet Get-proc usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0.</span><span class="sxs-lookup"><span data-stu-id="68d06-105">You can download the C# source file (getproc01.cs) for this Get-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="68d06-106">Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="68d06-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
 >
-> <span data-ttu-id="f211b-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span><span class="sxs-lookup"><span data-stu-id="f211b-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
+> <span data-ttu-id="68d06-107">Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.</span><span class="sxs-lookup"><span data-stu-id="68d06-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="f211b-108">Code Sample</span><span class="sxs-lookup"><span data-stu-id="f211b-108">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="68d06-108">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="68d06-108">Code Sample</span></span>
 
 [!code-csharp[GetProcessSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs#L11-L126 "GetProcessSample01.cs")]
 
-## <a name="see-also"></a><span data-ttu-id="f211b-109">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="f211b-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68d06-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68d06-109">See Also</span></span>
 
-[<span data-ttu-id="f211b-110">Windows PowerShell Programmer's Guide</span><span class="sxs-lookup"><span data-stu-id="f211b-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="68d06-110">Guia do programador do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="68d06-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="f211b-111">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="f211b-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="68d06-111">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="68d06-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
