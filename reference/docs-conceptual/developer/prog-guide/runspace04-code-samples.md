@@ -1,5 +1,5 @@
 ---
-title: RunSpace04 Code Samples | Microsoft Docs
+title: Exemplos de código do RunSpace04 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,21 +17,21 @@ ms.locfileid: "74416084"
 ---
 # <a name="runspace04-code-samples"></a>Exemplos de código RunSpace04
 
-Here is a code sample for a runspace that uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error. The host application is responsible for catching the error and interpreting the error record.
+Aqui está um exemplo de código para um runspace que usa a classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) para executar um script que gera um erro de encerramento. O aplicativo host é responsável por capturar o erro e interpretar o registro de erro.
 
 > [!NOTE]
-> You can download the VB.NET source file (Runspace04.vb) for this runspace using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Você pode baixar o arquivo de origem VB.NET (Runspace04. vb) para este runspace usando o kit de desenvolvimento de software do Windows para componentes de tempo de execução do Windows Vista e Microsoft .NET Framework 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-For complete sample code, see the following topics.
+Para obter o código de exemplo completo, consulte os tópicos a seguir.
 
-|Language|Tópico|
+|Idioma|Tópico|
 |--------------|-----------|
-|VB.NET|[Runspace01 (VB.NET) Code Sample](./runspace01-vb-net-code-sample.md)|
+|VB.NET|[Exemplo de código do Runspace01 (VB.NET)](./runspace01-vb-net-code-sample.md)|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

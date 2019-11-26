@@ -1,5 +1,5 @@
 ---
-title: StopProcessSample04 (C#) Sample Code | Microsoft Docs
+title: Código deC#exemplo StopProcessSample04 () | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,17 +17,17 @@ ms.locfileid: "74416048"
 ---
 # <a name="stopprocesssample04-c-sample-code"></a>Código de exemplo StopProcessSample04 (C#)
 
-Here is the complete C# sample code for the StopProc04 sample cmdlet. This is the code for the `Stop-Process` cmdlet described in [Adding Parameter Sets to a Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Aqui está o código C# de exemplo completo para o cmdlet de exemplo StopProc04. Este é o código para o cmdlet `Stop-Process` descrito em [Adicionando conjuntos de parâmetros a um cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). O cmdlet `Stop-Process` foi projetado para interromper processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
-> You can download the C# (stopprocesssample04.cs) source file for this Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Você pode baixar o C# arquivo de origem (stopprocesssample04.cs) para este cmdlet Stop-proc usando o Software Development Kit do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
 [!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L11-L435 "StopProcessSample04.cs")]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

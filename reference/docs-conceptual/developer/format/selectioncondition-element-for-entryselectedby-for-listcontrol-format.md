@@ -1,5 +1,5 @@
 ---
-title: SelectionCondition Element for EntrySelectedBy for ListControl (Format) | Microsoft Docs
+title: Elemento SelectionCondition para EntrySelectedBy para ListControl (Format) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,9 +17,9 @@ ms.locfileid: "74417545"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Elemento SelectionCondition para EntrySelectedBy para ListControl (formato)
 
-Defines the condition that must exist to use this definition of the list view. There is no limit to the number of selection conditions that can be specified for a list definition.
+Define a condição que deve existir para usar essa definição da exibição de lista. Não há nenhum limite para o número de condições de seleção que podem ser especificadas para uma definição de lista.
 
-Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element (Format) ListEntry Element (Format) EntrySelectedBy Element for ListEntry (Format) SelectionCondition Element for EntrySelectedBy for ListEntry (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) ListControl elemento (Format) ListEntries Element (Format) o elemento ListEntry (Format) o elemento EntrySelectedBy para o elemento ListEntry (Format) SelectionCondition para EntrySelectedBy para ListEntry (formato)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,49 +34,49 @@ Configuration Element (Format) ViewDefinitions Element (Format) View Element (Fo
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-The following sections describe attributes, child elements, and the parent element of the `SelectionCondition` element.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `SelectionCondition`.
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filhos
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[PropertyName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the .NET property that triggers the condition.|
-|[ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the script that triggers the condition.|
-|[SelectionSetName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Optional element.<br /><br /> Specifies the set of .NET types that trigger the condition.|
-|[TypeName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies a .NET type that triggers the condition.|
+|[Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET que dispara a condição.|
+|[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica o script que dispara a condição.|
+|[Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos .NET que disparam a condição.|
+|[Elemento TypeName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que dispara a condição.|
 
 ### <a name="parent-elements"></a>Elementos pais
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[EntrySelectedBy Element for TableRowEntry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Defines the .NET types that use this table entry or the condition that must exist for this entry to be used.|
+|[Elemento EntrySelectedBy para TableRowEntry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Define os tipos .NET que usam essa entrada de tabela ou a condição que deve existir para que essa entrada seja usada.|
 
 ## <a name="remarks"></a>Comentários
 
-lWhen you are defining a selection condition, the following requirements apply:
+lWhen você está definindo uma condição de seleção, os seguintes requisitos se aplicam:
 
-- The selection condition must specify a least one property name or a script block, but cannot specify both.
+- A condição de seleção deve especificar pelo menos um nome de propriedade ou um bloco de script, mas não pode especificar ambos.
 
-- The selection condition can specify any number of .NET types or selection sets, but cannot specify both.
+- A condição de seleção pode especificar qualquer número de tipos .NET ou conjuntos de seleção, mas não pode especificar ambos.
 
-For more information about how to use selection conditions, see [Defining Conditions for when Data is Displayed](./defining-conditions-for-displaying-data.md).
+Para obter mais informações sobre como usar condições de seleção, consulte [definindo condições para quando os dados são exibidos](./defining-conditions-for-displaying-data.md).
 
-For more information about other components of a list view, see [Creating a List View](./creating-a-list-view.md).
+Para obter mais informações sobre outros componentes de um modo de exibição de lista, consulte [criando uma exibição de lista](./creating-a-list-view.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Creating a List View](./creating-a-list-view.md)
+[Criando um modo de exibição de lista](./creating-a-list-view.md)
 
-[Defining Conditions for When Data Is Displayed](./defining-conditions-for-displaying-data.md)
+[Definindo condições para quando os dados são exibidos](./defining-conditions-for-displaying-data.md)
 
-[ListEntry Element (Format)](./listentry-element-for-listcontrol-format.md)
+[Elemento ListEntry (Format)](./listentry-element-for-listcontrol-format.md)
 
-[SelectionSetName Element for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Elemento SelectionSetName para EntrySelectedBy para ListEntry (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[TypeName Element for EntrySelectedBy for ListEntry (Format)](/powershell/scripting/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
+[Elemento TypeName para EntrySelectedBy para ListEntry (Format)](/powershell/scripting/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
 
-[Writing a PowerShell Formatting File](./writing-a-powershell-formatting-file.md)
+[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

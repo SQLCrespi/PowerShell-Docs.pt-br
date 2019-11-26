@@ -1,5 +1,5 @@
 ---
-title: Adding Aliases, Wildcard Expansion, and Help to Cmdlet Parameters | Microsoft Docs
+title: Adicionando aliases, expansão de curinga e ajuda para parâmetros de cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,15 +17,15 @@ ms.locfileid: "74415647"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
 
-This section describes how to add aliases, wildcard expansion, and Help messages to the parameters of the Stop-Proc cmdlet (described in [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)).
+Esta seção descreve como adicionar aliases, expansão de curinga e mensagens de ajuda aos parâmetros do cmdlet Stop-proc (descrito em [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)).
 
-This Stop-Proc cmdlet attempts to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](./creating-a-cmdlet-without-parameters.md)).
+Esse cmdlet Stop-proc tenta parar os processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)).
 
-## <a name="defining-the-cmdlet"></a>Defining the Cmdlet
+## <a name="defining-the-cmdlet"></a>Definindo o cmdlet
 
-The first step in cmdlet creation is always naming the cmdlet and declaring the .NET class that implements the cmdlet. Because you are writing a cmdlet to change the system, it should be named accordingly. Because this cmdlet stops system processes, it uses the verb "Stop", defined by the [System.Management.Automation.Verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) class, with the noun "Proc" to indicate process. For more information about approved cmdlet verbs, see [Cmdlet Verb Names](./approved-verbs-for-windows-powershell-commands.md).
+A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet. Como você está escrevendo um cmdlet para alterar o sistema, ele deve ser nomeado de acordo. Como esse cmdlet interrompe os processos do sistema, ele usa o verbo "Stop", definido pela classe [System. Management. Automation. Verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) , com o substantivo "proc" para indicar o processo. Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-The following code is the class definition for this Stop-Proc cmdlet.
+O código a seguir é a definição de classe para esse cmdlet Stop-proc.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -33,15 +33,15 @@ The following code is the class definition for this Stop-Proc cmdlet.
 public class StopProcCommand : Cmdlet
 ```
 
-## <a name="defining-parameters-for-system-modification"></a>Defining Parameters for System Modification
+## <a name="defining-parameters-for-system-modification"></a>Definindo parâmetros para a modificação do sistema
 
-Your cmdlet needs to define parameters that support system modifications and user feedback. The cmdlet should define a `Name` parameter or equivalent so that the cmdlet will be able to modify the system by some sort of identifier. In addition, the cmdlet should define the `Force` and `PassThru` parameters. For more information about these parameters, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
+Seu cmdlet precisa definir parâmetros que dão suporte a modificações do sistema e comentários do usuário. O cmdlet deve definir um parâmetro `Name` ou equivalente para que o cmdlet possa modificar o sistema por algum tipo de identificador. Além disso, o cmdlet deve definir os parâmetros `Force` e `PassThru`. Para obter mais informações sobre esses parâmetros, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="defining-a-parameter-alias"></a>Defining a Parameter Alias
+## <a name="defining-a-parameter-alias"></a>Definindo um alias de parâmetro
 
-A parameter alias can be an alternate name or a well-defined 1-letter or 2-letter short name for a cmdlet parameter. In both cases, the goal of using aliases is to simplify user entry from the command line. Windows PowerShell supports parameter aliases through the [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) attribute, which uses the declaration syntax [Alias()].
+Um alias de parâmetro pode ser um nome alternativo ou um nome curto bem definido de 1 letra ou de duas letras para um parâmetro de cmdlet. Em ambos os casos, a meta de usar aliases é simplificar a entrada do usuário na linha de comando. O Windows PowerShell dá suporte a aliases de parâmetro por meio do atributo [System. Management. Automation. AliasAttribute](/dotnet/api/System.Management.Automation.AliasAttribute) , que usa a sintaxe de declaração [alias ()].
 
-The following code shows how an alias is added to the `Name` parameter.
+O código a seguir mostra como um alias é adicionado ao parâmetro `Name`.
 
 ```csharp
 /// <summary>
@@ -64,13 +64,13 @@ public string[] Name
 private string[] processNames;
 ```
 
-In addition to using the [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) attribute, the Windows PowerShell runtime performs partial name matching, even if no aliases are specified. For example, if your cmdlet has a `FileName` parameter and that is the only parameter that starts with `F`, the user could enter `Filename`, `Filenam`, `File`, `Fi`, or `F` and still recognize the entry as the `FileName` parameter.
+Além de usar o atributo [System. Management. Automation. AliasAttribute](/dotnet/api/System.Management.Automation.AliasAttribute) , o tempo de execução do Windows PowerShell executa correspondência de nome parcial, mesmo que nenhum alias seja especificado. Por exemplo, se o cmdlet tiver um parâmetro `FileName` e esse for o único parâmetro que começa com `F`, o usuário poderá inserir `Filename`, `Filenam`, `File`, `Fi`ou `F` e ainda reconhecer a entrada como o parâmetro `FileName`.
 
-## <a name="creating-help-for-parameters"></a>Creating Help for Parameters
+## <a name="creating-help-for-parameters"></a>Criando ajuda para parâmetros
 
-Windows PowerShell allows you to create Help for cmdlet parameters. Do this for any parameter used for system modification and user feedback. For each parameter to support Help, you can set the `HelpMessage` attribute keyword in the [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute declaration. This keyword defines the text to display to the user for assistance in using the parameter. You can also set the `HelpMessageBaseName` keyword to identify the base name of a resource to use for the message. If you set this keyword, you must also set the `HelpMessageResourceId` keyword to specify the resource identifier.
+O Windows PowerShell permite que você crie ajuda para parâmetros de cmdlet. Faça isso para qualquer parâmetro usado para modificação do sistema e comentários do usuário. Para cada parâmetro para dar suporte à ajuda, você pode definir a palavra-chave do atributo `HelpMessage` na declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Essa palavra-chave define o texto a ser exibido para o usuário para obter assistência no uso do parâmetro. Você também pode definir a palavra-chave `HelpMessageBaseName` para identificar o nome de base de um recurso a ser usado para a mensagem. Se você definir essa palavra-chave, também deverá definir a palavra-chave `HelpMessageResourceId` para especificar o identificador de recurso.
 
-The following code from this Stop-Proc cmdlet defines the `HelpMessage` attribute keyword for the `Name` parameter.
+O código a seguir desse cmdlet Stop-proc define a palavra-chave do atributo `HelpMessage` para o parâmetro `Name`.
 
 ```csharp
 /// <summary>
@@ -86,32 +86,32 @@ The following code from this Stop-Proc cmdlet defines the `HelpMessage` attribut
 )]
 ```
 
-## <a name="overriding-an-input-processing-method"></a>Overriding an Input Processing Method
+## <a name="overriding-an-input-processing-method"></a>Substituindo um método de processamento de entrada
 
-Your cmdlet must override an input processing method, most often this will be [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). When modifying the system, the cmdlet should call the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) and [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) methods to allow the user to provide feedback before a change is made. For more information about these methods, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
+O cmdlet deve substituir um método de processamento de entrada, com mais frequência ele será [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Ao modificar o sistema, o cmdlet deve chamar os métodos [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) para permitir que o usuário forneça comentários antes que uma alteração seja feita. Para obter mais informações sobre esses métodos, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="supporting-wildcard-expansion"></a>Supporting Wildcard Expansion
+## <a name="supporting-wildcard-expansion"></a>Suporte à expansão de curinga
 
-To allow the selection of multiple objects, your cmdlet can use the [System.Management.Automation.Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) and [System.Management.Automation.Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions) classes to provide wildcard expansion support for parameter input. Examples of wildcard patterns are lsa*, \*.txt, and [a-c]\*. Use the back-quote character (`) as an escape character when the pattern contains a character that should be used literally.
+Para permitir a seleção de vários objetos, o cmdlet pode usar as classes [System. Management. Automation. Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) e [System. Management. Automation. curingaoptions](/dotnet/api/System.Management.Automation.WildcardOptions) para fornecer suporte à expansão de curinga para a entrada de parâmetro. Exemplos de padrões de curinga são LSA *, \*. txt e [a-c]\*. Use o caractere de aspas (') como um caractere de escape quando o padrão contiver um caractere que deve ser usado literalmente.
 
-Wildcard expansions of file and path names are examples of common scenarios where the cmdlet may want to allow support for path inputs when the selection of multiple objects is required. A common case is in the file system, where a user wants to see all files residing in the current folder.
+As expansões de curinga dos nomes de arquivo e caminho são exemplos de cenários comuns em que o cmdlet pode querer permitir suporte para entradas de caminho quando a seleção de vários objetos é necessária. Um caso comum está no sistema de arquivos, em que um usuário deseja ver todos os arquivos que residem na pasta atual.
 
-You should need a customized wildcard pattern matching implementation only rarely. In this case, your cmdlet should support either the full POSIX 1003.2, 3.13 specification for wildcard expansion or the following simplified subset:
+Você deve precisar de um padrão de caractere curinga personalizado somente para a implementação, raramente. Nesse caso, o cmdlet deve dar suporte à especificação POSIX 1003,2, 3,13 completa para expansão de curinga ou o seguinte subconjunto simplificado:
 
-- **Question mark (?).** Matches any character at the specified location.
+- **Ponto de interrogação (?).** Corresponde a qualquer caractere no local especificado.
 
-- **Asterisk (\*).** Matches zero or more characters starting at the specified location.
+- **Asterisco (\*).** Corresponde a zero ou mais caracteres a partir do local especificado.
 
-- **Open bracket ([).** Introduces a pattern bracket expression that can contain characters or a range of characters. If a range is required, a hyphen (-) is used to indicate the range.
+- **Colchete de abertura ([).** Apresenta uma expressão de colchete de padrão que pode conter caracteres ou um intervalo de caracteres. Se um intervalo for necessário, um hífen (-) será usado para indicar o intervalo.
 
-- **Close bracket (]).** Ends a pattern bracket expression.
+- **Colchete de fechamento (]).** Termina uma expressão de colchete de padrão.
 
-- **Back-quote escape character (`).** Indicates that the next character should be taken literally. Be aware that when specifying the back-quote character from the command line (as opposed to specifying it programmatically), the back-quote escape character must be specified twice.
+- **Caractere de escape de aspas traseiras (').** Indica que o próximo caractere deve ser levado literalmente. Lembre-se de que ao especificar o caractere de aspas invertidas na linha de comando (em vez de especificá-lo de forma programática), o caractere de escape de aspas traseiras deve ser especificado duas vezes.
 
 > [!NOTE]
-> For more information about wildcard patterns, see [Supporting Wildcards in Cmdlet Parameters](./supporting-wildcard-characters-in-cmdlet-parameters.md).
+> Para obter mais informações sobre padrões de curinga, consulte [suportando curingas em parâmetros de cmdlet](./supporting-wildcard-characters-in-cmdlet-parameters.md).
 
-The following code shows how to set wildcard options and define the wildcard pattern used for resolving the `Name` parameter for this cmdlet.
+O código a seguir mostra como definir opções de curinga e definir o padrão de curinga usado para resolver o parâmetro de `Name` para esse cmdlet.
 
 ```csharp
 WildcardOptions options = WildcardOptions.IgnoreCase |
@@ -119,7 +119,7 @@ WildcardOptions options = WildcardOptions.IgnoreCase |
 WildcardPattern wildcard = new WildcardPattern(name,options);
 ```
 
-The following code shows how to test whether the process name matches the defined wildcard pattern. Notice that, in this case, if the process name does not match the pattern, the cmdlet continues on to get the next process name.
+O código a seguir mostra como testar se o nome do processo corresponde ao padrão curinga definido. Observe que, nesse caso, se o nome do processo não corresponder ao padrão, o cmdlet continuará para obter o próximo nome do processo.
 
 ```csharp
 if (!wildcard.IsMatch(processName))
@@ -128,29 +128,29 @@ if (!wildcard.IsMatch(processName))
 }
 ```
 
-## <a name="code-sample"></a>Code Sample
+## <a name="code-sample"></a>Exemplo de código
 
-For the complete C# sample code, see [StopProcessSample03 Sample](./stopprocesssample03-sample.md).
+Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample03](./stopprocesssample03-sample.md).
 
-## <a name="define-object-types-and-formatting"></a>Define Object Types and Formatting
+## <a name="define-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
-Windows PowerShell passes information between cmdlets using .Net objects. Consequently, a cmdlet may need to define its own type, or the cmdlet may need to extend an existing type provided by another cmdlet. For more information about defining new types or extending existing types, see [Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85)).
+O Windows PowerShell passa informações entre os cmdlets usando objetos .net. Consequentemente, um cmdlet pode precisar definir seu próprio tipo ou o cmdlet pode precisar estender um tipo existente fornecido por outro cmdlet. Para obter mais informações sobre como definir novos tipos ou estender tipos existentes, consulte [estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85)).
 
-## <a name="building-the-cmdlet"></a>Building the Cmdlet
+## <a name="building-the-cmdlet"></a>Criando o cmdlet
 
-After implementing a cmdlet, it must be registered with Windows PowerShell through a Windows PowerShell snap-in. For more information about registering cmdlets, see [How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85)).
+Depois de implementar um cmdlet, ele deve ser registrado com o Windows PowerShell por meio de um snap-in do Windows PowerShell. Para obter mais informações sobre como registrar cmdlets, consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Testing the Cmdlet
+## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-When your cmdlet has been registered with Windows PowerShell, you can test it by running it on the command line. Let's test the sample Stop-Proc cmdlet. For more information about using cmdlets from the command line, see the [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Stop-proc de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Start Windows PowerShell and use Stop-Proc to stop a process using the ProcessName alias for the `Name` parameter.
+- Inicie o Windows PowerShell e use Stop-proc para interromper um processo usando o alias ProcessName para o parâmetro `Name`.
 
     ```powershell
     PS> stop-proc -ProcessName notepad
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     Confirm
@@ -159,13 +159,13 @@ The following output appears.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-- Make the following entry on the command line. Because the Name parameter is mandatory, you are prompted for it. Entering "!?" brings up the help text associated with the parameter.
+- Faça a seguinte entrada na linha de comando. Como o parâmetro Name é obrigatório, você será solicitado a fazê-lo. Inserindo "!?" Abre o texto de ajuda associado ao parâmetro.
 
     ```powershell
     PS> stop-proc
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -176,13 +176,13 @@ The following output appears.
     Name[0]: notepad
     ```
 
-- Now make the following entry to stop all processes that match the wildcard pattern "*note\*". You are prompted before stopping each process that matches the pattern.
+- Agora, faça a seguinte entrada parar todos os processos que correspondam ao padrão curinga "* note\*". Você será solicitado antes de parar cada processo que corresponde ao padrão.
 
     ```powershell
     PS> stop-proc -Name *note*
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ The following output appears.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ The following output appears.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     Confirm
@@ -209,16 +209,16 @@ The following output appears.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Create a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)
+[Criar um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[How to Create a Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[Como criar um cmdlet do Windows PowerShell](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85))
+[Estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85))
 
-[How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85))
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions//ms714644(v=vs.85))
 
-[Supporting Wildcards in Cmdlet Parameters](./supporting-wildcard-characters-in-cmdlet-parameters.md)
+[Suporte a curingas em parâmetros de cmdlet](./supporting-wildcard-characters-in-cmdlet-parameters.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

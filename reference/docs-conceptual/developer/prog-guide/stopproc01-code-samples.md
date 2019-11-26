@@ -1,5 +1,5 @@
 ---
-title: StopProc01 Code Samples | Microsoft Docs
+title: Exemplos de código do StopProc01 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,19 +17,19 @@ ms.locfileid: "74417874"
 ---
 # <a name="stopproc01-code-samples"></a>Exemplos de código StopProc01
 
-Here is the code sample for the StopProc01 sample cmdlet. This is the `Stop-Process` cmdlet sample described in [Creating a Cmdlet that Modifies the System](../cmdlet/creating-a-cmdlet-that-modifies-the-system.md). The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Aqui está o exemplo de código para o cmdlet de exemplo StopProc01. Este é o exemplo de cmdlet `Stop-Process` descrito em [criando um cmdlet que modifica o sistema](../cmdlet/creating-a-cmdlet-that-modifies-the-system.md). O cmdlet `Stop-Process` foi projetado para interromper processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
-> You can download the C# (stopproc01.cs) source file for the Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Você pode baixar o C# arquivo de origem (stopproc01.cs) para o cmdlet Stop-proc usando o Software Development Kit do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-|Language|Tópico|
+|Idioma|Tópico|
 |--------------|-----------|
-|C#|[StopProc01 (C#) Sample Code](./stopproc01-csharp-sample-code.md)|
+|C#|[Código deC#exemplo StopProc01 ()](./stopproc01-csharp-sample-code.md)|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

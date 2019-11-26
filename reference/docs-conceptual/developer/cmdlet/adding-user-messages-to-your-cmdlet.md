@@ -1,5 +1,5 @@
 ---
-title: Adding User Messages to Your Cmdlet | Microsoft Docs
+title: Adicionando mensagens de usuário ao cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -40,25 +40,25 @@ ms.locfileid: "74416035"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Adicionar mensagens de usuário para o cmdlet
 
-Cmdlets can write several kinds of messages that can be displayed to the user by the Windows PowerShell runtime. These messages include the following types:
+Os cmdlets podem gravar vários tipos de mensagens que podem ser exibidas para o usuário pelo tempo de execução do Windows PowerShell. Essas mensagens incluem os seguintes tipos:
 
-- Verbose messages that contain general user information.
+- Mensagens detalhadas que contêm informações gerais do usuário.
 
-- Debug messages that contain troubleshooting information.
+- Mensagens de depuração que contêm informações de solução de problemas.
 
-- Warning messages that contain a notification that the cmdlet is about to perform an operation that can have unexpected results.
+- Mensagens de aviso que contêm uma notificação de que o cmdlet está prestes a executar uma operação que pode ter resultados inesperados.
 
-- Progress report messages that contain information about how much work the cmdlet has completed when performing an operation that takes a long time.
+- Mensagens de relatório de progresso que contêm informações sobre a quantidade de trabalho que o cmdlet concluiu ao executar uma operação que leva muito tempo.
 
-There are no limits to the number of messages that your cmdlet can write or the type of messages that your cmdlet writes. Each message is written by making a specific call from within the input processing method of your cmdlet.
+Não há limites para o número de mensagens que seu cmdlet pode gravar ou o tipo de mensagens que seu cmdlet grava. Cada mensagem é escrita fazendo uma chamada específica de dentro do método de processamento de entrada do seu cmdlet.
 
-## <a name="defining-the-cmdlet"></a>Defining the Cmdlet
+## <a name="defining-the-cmdlet"></a>Definindo o cmdlet
 
-The first step in cmdlet creation is always naming the cmdlet and declaring the .NET class that implements the cmdlet. Any sort of cmdlet can write user notifications from its input processing methods; so, in general, you can name this cmdlet using any verb that indicates what system modifications the cmdlet performs. For more information about approved cmdlet verbs, see [Cmdlet Verb Names](./approved-verbs-for-windows-powershell-commands.md).
+A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet. Qualquer tipo de cmdlet pode gravar notificações de usuário de seus métodos de processamento de entrada; Portanto, em geral, você pode nomear esse cmdlet usando qualquer verbo que indique quais modificações do sistema o cmdlet executa. Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-The Stop-Proc cmdlet is designed to modify the system; therefore, the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) declaration for the .NET class must include the `SupportsShouldProcess` attribute keyword and be set to `true`.
+O cmdlet Stop-proc foi projetado para modificar o sistema; Portanto, a Declaração [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) para a classe .NET deve incluir a palavra-chave do atributo `SupportsShouldProcess` e ser definida como `true`.
 
-The following code is the definition for this Stop-Proc cmdlet class. For more information about this definition, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
+O código a seguir é a definição para essa classe de cmdlet Stop-proc. Para obter mais informações sobre essa definição, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -66,11 +66,11 @@ The following code is the definition for this Stop-Proc cmdlet class. For more i
 public class StopProcCommand : Cmdlet
 ```
 
-## <a name="defining-parameters-for-system-modification"></a>Defining Parameters for System Modification
+## <a name="defining-parameters-for-system-modification"></a>Definindo parâmetros para a modificação do sistema
 
-The Stop-Proc cmdlet defines three parameters: `Name`, `Force`, and `PassThru`. For more information about defining these parameters, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
+O cmdlet Stop-proc define três parâmetros: `Name`, `Force`e `PassThru`. Para obter mais informações sobre como definir esses parâmetros, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
-Here is the parameter declaration for the Stop-Proc cmdlet.
+Aqui está a declaração de parâmetro para o cmdlet Stop-proc.
 
 ```csharp
 [Parameter(
@@ -113,18 +113,18 @@ public SwitchParameter PassThru
 private bool passThru;
 ```
 
-## <a name="overriding-an-input-processing-method"></a>Overriding an Input Processing Method
+## <a name="overriding-an-input-processing-method"></a>Substituindo um método de processamento de entrada
 
-Your cmdlet must override an input processing method, most often it will be [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). This Stop-Proc cmdlet overrides the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) input processing method. In this implementation of the Stop-Proc cmdlet, calls are made to write verbose messages, debug messages, and warning messages.
+O cmdlet deve substituir um método de processamento de entrada, geralmente ele será [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Esse cmdlet Stop-proc substitui o método de processamento de entrada [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . Nessa implementação do cmdlet Stop-proc, são feitas chamadas para gravar mensagens detalhadas, depurar mensagens e mensagens de aviso.
 
 > [!NOTE]
-> For more information about how this method calls the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) and [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) methods, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
+> Para obter mais informações sobre como esse método chama os métodos [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
-## <a name="writing-a-verbose-message"></a>Writing a Verbose Message
+## <a name="writing-a-verbose-message"></a>Escrevendo uma mensagem detalhada
 
-The [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method is used to write general user-level information that is unrelated to specific error conditions. The system administrator can then use that information to continue processing other commands. In addition, any information written using this method should be localized as needed.
+O método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) é usado para gravar informações gerais em nível de usuário que não estão relacionadas a condições de erro específicas. O administrador do sistema pode usar essas informações para continuar processando outros comandos. Além disso, todas as informações escritas usando esse método devem ser localizadas conforme necessário.
 
-The following code from this Stop-Proc cmdlet shows two calls to the [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
+O código a seguir desse cmdlet Stop-proc mostra duas chamadas para o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) da substituição do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
 
 ```csharp
 message = String.Format("Attempting to stop process \"{0}\".", name);
@@ -138,16 +138,16 @@ message = String.Format("Stopped process \"{0}\", pid {1}.",
 WriteVerbose(message);
 ```
 
-## <a name="writing-a-debug-message"></a>Writing a Debug Message
+## <a name="writing-a-debug-message"></a>Gravando uma mensagem de depuração
 
-The [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method is used to write debug messages that can be used to troubleshoot the operation of the cmdlet. The call is made from an input processing method.
+O método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) é usado para gravar mensagens de depuração que podem ser usadas para solucionar problemas da operação do cmdlet. A chamada é feita de um método de processamento de entrada.
 
 > [!NOTE]
-> Windows PowerShell also defines a `Debug` parameter that presents both verbose and debug information. If your cmdlet supports this parameter, it does not need to call [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) in the same code that calls [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
+> O Windows PowerShell também define um parâmetro `Debug` que apresenta informações detalhadas e de depuração. Se o cmdlet der suporte a esse parâmetro, ele não precisará chamar [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) no mesmo código que chama [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
 
-The following two sections of code from the sample Stop-Proc cmdlet show calls to the [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
+As duas seções de código a seguir do cmdlet Stop-proc de exemplo mostram chamadas para o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) da substituição do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
 
-This debug message is written immediately before [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) is called.
+Essa mensagem de depuração é gravada imediatamente antes de [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) ser chamado.
 
 ```csharp
 message =
@@ -156,7 +156,7 @@ message =
 WriteDebug(message);
 ```
 
-This debug message is written immediately before [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) is called.
+Essa mensagem de depuração é gravada imediatamente antes de [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) ser chamado.
 
 ```csharp
 message =
@@ -166,15 +166,15 @@ WriteDebug(message);
 WriteObject(process);
 ```
 
-Windows PowerShell automatically routes any [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) calls to the tracing infrastructure and cmdlets. This allows the method calls to be traced to the hosting application, a file, or a debugger without your having to do any extra development work within the cmdlet. The following command-line entry implements a tracing operation.
+O Windows PowerShell roteia automaticamente quaisquer chamadas [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) para a infraestrutura de rastreamento e os cmdlets. Isso permite que as chamadas de método sejam rastreadas para o aplicativo de hospedagem, um arquivo ou um depurador sem a necessidade de fazer qualquer trabalho de desenvolvimento extra dentro do cmdlet. A seguinte entrada de linha de comando implementa uma operação de rastreamento.
 
-**PS> trace-expression stop-proc -file proc.log -command stop-proc notepad**
+**PS > Trace-expressão Stop-proc-File proc. log-Command Stop-proc bloco de notas**
 
-## <a name="writing-a-warning-message"></a>Writing a Warning Message
+## <a name="writing-a-warning-message"></a>Gravando uma mensagem de aviso
 
-The [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) method is used to write a warning when the cmdlet is about to perform an operation that might have an unexpected result, for example, overwriting a read-only file.
+O método [System. Management. Automation. cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) é usado para gravar um aviso quando o cmdlet está prestes a executar uma operação que pode ter um resultado inesperado, por exemplo, substituindo um arquivo somente leitura.
 
-The following code from the sample Stop-Proc cmdlet shows the call to the [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) method from the override of the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method.
+O código a seguir do cmdlet Stop-proc de exemplo mostra a chamada para o método [System. Management. Automation. cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) da substituição do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
 
 ```csharp
  if (criticalProcess)
@@ -186,14 +186,14 @@ The following code from the sample Stop-Proc cmdlet shows the call to the [Syste
 } // if (criticalProcess...
 ```
 
-## <a name="writing-a-progress-message"></a>Writing a Progress Message
+## <a name="writing-a-progress-message"></a>Gravando uma mensagem de progresso
 
-The [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) is used to write progress messages when cmdlet operations take an extended amount of time to complete. A call to [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) passes a [System.Management.Automation.Progressrecord](/dotnet/api/System.Management.Automation.ProgressRecord) object that is sent to the hosting application for rendering to the user.
+O [System. Management. Automation. cmdlet. WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) é usado para gravar mensagens de progresso quando as operações de cmdlet demoram um longo período de tempo para serem concluídas. Uma chamada para [System. Management. Automation. cmdlet. WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) passa um objeto [System. Management. Automation. ProgressRecord](/dotnet/api/System.Management.Automation.ProgressRecord) que é enviado ao aplicativo de hospedagem para renderização para o usuário.
 
 > [!NOTE]
-> This Stop-Proc cmdlet does not include a call to the [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) method.
+> Este cmdlet Stop-proc não inclui uma chamada para o método [System. Management. Automation. cmdlet. WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) .
 
-The following code is an example of a progress message written by a cmdlet that is attempting to copy an item.
+O código a seguir é um exemplo de uma mensagem de progresso escrita por um cmdlet que está tentando copiar um item.
 
 ```csharp
 int myId = 0;
@@ -206,29 +206,29 @@ pr.RecordType = ProgressRecordType.Completed;
 WriteProgress(pr);
 ```
 
-## <a name="code-sample"></a>Code Sample
+## <a name="code-sample"></a>Exemplo de código
 
-For the complete C# sample code, see [StopProcessSample02 Sample](./stopprocesssample02-sample.md).
+Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample02](./stopprocesssample02-sample.md).
 
-## <a name="define-object-types-and-formatting"></a>Define Object Types and Formatting
+## <a name="define-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
-Windows PowerShell passes information between cmdlets using .NET objects. Consequently, a cmdlet might need to define its own type, or the cmdlet might need to extend an existing type provided by another cmdlet. For more information about defining new types or extending existing types, see [Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85)).
+O Windows PowerShell passa informações entre os cmdlets usando objetos .NET. Consequentemente, um cmdlet pode precisar definir seu próprio tipo ou o cmdlet pode precisar estender um tipo existente fornecido por outro cmdlet. Para obter mais informações sobre como definir novos tipos ou estender tipos existentes, consulte [estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85)).
 
-## <a name="building-the-cmdlet"></a>Building the Cmdlet
+## <a name="building-the-cmdlet"></a>Criando o cmdlet
 
-After implementing a cmdlet, it must be registered with Windows PowerShell through a Windows PowerShell snap-in. For more information about registering cmdlets, see [How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85)).
+Depois de implementar um cmdlet, ele deve ser registrado com o Windows PowerShell por meio de um snap-in do Windows PowerShell. Para obter mais informações sobre como registrar cmdlets, consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Testing the Cmdlet
+## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-When your cmdlet has been registered with Windows PowerShell, you can test it by running it on the command line. Let's test the sample Stop-Proc cmdlet. For more information about using cmdlets from the command line, see the [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Stop-proc de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- The following command-line entry uses Stop-Proc to stop the process named "NOTEPAD", provide verbose notifications, and print debug information.
+- A seguinte entrada de linha de comando usa Stop-proc para interromper o processo chamado "NOTEPAD", fornecer notificações detalhadas e imprimir informações de depuração.
 
     ```powershell
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-The following output appears.
+A saída a seguir é exibida.
 
     ```
     VERBOSE: Attempting to stop process " notepad ".
@@ -245,14 +245,14 @@ The following output appears.
     VERBOSE: Stopped process "notepad", pid 5584.
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
-[Create a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)
+[Criar um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[How to Create a Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[Como criar um cmdlet do Windows PowerShell](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85))
+[Estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85))
 
-[How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85))
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions//ms714644(v=vs.85))
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)
