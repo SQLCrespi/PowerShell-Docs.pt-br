@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 title: Limitações e problemas conhecidos do DSC (Configuração de Estado Desejado)
-ms.openlocfilehash: 6faf24795d14a93f265943029d9f6f1388f32263
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147716"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416614"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Limitações e problemas conhecidos do DSC (Configuração de Estado Desejado)
 
@@ -52,7 +52,7 @@ Se o LCM estiver em DebugMode, pressionar CTRL+C para interromper o processament
 
 Se o LCM estiver em DebugMode, `Stop-DscConfiguration` poderá não responder ao tentar interromper uma operação iniciada por `Get-DscConfiguration`
 
-**Resolução:** conclua a depuração da operação iniciada por `Get-DscConfiguration`, conforme descrito em [Depurando os recursos de DSC](/powershell/dsc/troubleshooting/debugResource).
+**Resolução:** conclua a depuração da operação iniciada por `Get-DscConfiguration`, conforme descrito em [Depurando os recursos de DSC](/powershell/scripting/dsc/troubleshooting/debugResource).
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>Nenhuma mensagem de erro detalhada é mostrada em DebugMode
 
@@ -80,7 +80,7 @@ O cmdlet `Invoke-DscResource` não retorna mensagens detalhadas, de aviso nem de
 
 ## <a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invoke-dscresource"></a>Os Recursos DSC não podem ser depurados com facilidade quando usados com Invoke-DscResource
 
-Ao executar o LCM no modo de depuração, o cmdlet `Invoke-DscResource` não fornece informações sobre o runspace para se conectar para realizar a depuração. Para obter mais informações, veja [Depurando os recursos de DSC](/powershell/dsc/troubleshooting/debugResource).
+Ao executar o LCM no modo de depuração, o cmdlet `Invoke-DscResource` não fornece informações sobre o runspace para se conectar para realizar a depuração. Para obter mais informações, veja [Depurando os recursos de DSC](/powershell/scripting/dsc/troubleshooting/debugResource).
 
 **Resolução:** Descubra e anexe ao runspace usando os cmdlets `Get-PSHostProcessInfo`, `Enter-PSHostProcess` , `Get-Runspace` e `Debug-Runspace` para depurar o recurso de DSC.
 

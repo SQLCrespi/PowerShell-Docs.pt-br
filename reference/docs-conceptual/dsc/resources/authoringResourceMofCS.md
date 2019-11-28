@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Criando um recurso de DSC em C#
-ms.openlocfilehash: 6f2bb4d411237f13e2735c2e5f630b4f40dc6842
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954313"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417686"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Criando um recurso de DSC em C\#
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Normalmente, um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell é implementado em um script do PowerShell. No entanto, também é possível implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em C#. Para obter uma introdução sobre como escrever cmdlets em C#, consulte [Escrevendo um Cmdlet do Windows PowerShell](/powershell/developer/windows-powershell).
+Normalmente, um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell é implementado em um script do PowerShell. No entanto, também é possível implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em C#. Para obter uma introdução sobre como escrever cmdlets em C#, consulte [Escrevendo um Cmdlet do Windows PowerShell](/powershell/scripting/developer/windows-powershell).
 
 Além de implementar o recurso em C# como cmdlets, o processo de criar o esquema MOF, criando a estrutura de pastas, importar e usar o recurso personalizado de DSC é igual ao descrito em [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md).
 
@@ -281,4 +281,4 @@ $env: psmodulepath (folder)
 #### <a name="concepts"></a>Conceitos
 [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Outros recursos
-[Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell) (Escrevendo um Cmdlet do Windows PowerShell)
+[Writing a Windows PowerShell Cmdlet](/powershell/scripting/developer/windows-powershell) (Escrevendo um Cmdlet do Windows PowerShell)

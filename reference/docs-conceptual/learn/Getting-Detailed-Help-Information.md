@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Obtendo informações de ajuda detalhadas
-ms.openlocfilehash: 033a8962ca438b49c10fafa2852c87d19868b4d9
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: e722eb8a0ca13e3d2de864314775a0a9fa578390
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325200"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417668"
 ---
 # <a name="getting-detailed-help-information"></a>Obtendo informações de ajuda detalhadas
 
@@ -79,7 +79,7 @@ Por exemplo, para exibir apenas os exemplos no artigo de Ajuda do cmdlet `Get-Ch
 Get-Help Get-ChildItem -Examples
 ```
 
-Para obter informações de como escrever artigos de Ajuda para os cmdlets que você escreve, confira [Como escrever a Ajuda do cmdlet](/powershell/developer/help/writing-help-for-windows-powershell-cmdlets).
+Para obter informações de como escrever artigos de Ajuda para os cmdlets que você escreve, confira [Como escrever a Ajuda do cmdlet](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets).
 
 ## <a name="getting-conceptual-help"></a>Obter ajuda conceitual
 

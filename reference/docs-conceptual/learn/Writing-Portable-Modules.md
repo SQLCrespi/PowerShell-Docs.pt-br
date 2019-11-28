@@ -2,12 +2,12 @@
 ms.date: 12/14/2018
 keywords: powershell, cmdlet
 title: Gravação de módulos portáteis
-ms.openlocfilehash: 237f6aaea0ed019c54d04a8477d7a456edf00910
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 7871f524495c1ce5283b30696a24185d427edebf
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470987"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417636"
 ---
 # <a name="portable-modules"></a>Módulos portáteis
 
@@ -17,7 +17,7 @@ O Windows PowerShell é escrito para [.NET Framework][] enquanto o PowerShell Co
 
 ### <a name="porting-a-pssnapin"></a>Fazendo a portabilidade de um PSSnapIn
 
-Os PowerShell [SnapIns](/powershell/developer/cmdlet/modules-and-snap-ins) não são aceitos no PowerShell Core. No entanto, é comum converter um PSSnapIn em um módulo do PowerShell. Normalmente, o código de registro do PSSnapIn está em um único arquivo de origem de uma classe que deriva de [PSSnapIn][].
+Os PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) não são aceitos no PowerShell Core. No entanto, é comum converter um PSSnapIn em um módulo do PowerShell. Normalmente, o código de registro do PSSnapIn está em um único arquivo de origem de uma classe que deriva de [PSSnapIn][].
 Remova esse arquivo de origem do build; ele não é mais necessário.
 
 Use [New-ModuleManifest][] para criar um novo manifesto de módulo que substitui a necessidade do código de registro do PSSnapIn. Alguns dos valores do **PSSnapIn** (como **Descrição**) podem ser reutilizados no manifesto do módulo.
@@ -26,7 +26,7 @@ A propriedade **RootModule** no manifesto do módulo deve ser definida como o no
 
 ### <a name="the-net-portability-analyzer-aka-apiport"></a>.NET Portability Analyzer (também conhecido como APIPort)
 
-Para fazer a portabilidade de módulos escritos para o Windows PowerShell de modo que funcionem com o PowerShell Core, comece com o [.NET Portability Analyzer][]. Execute essa ferramenta em seu assembly compilado para determinar se as APIs do .NET usadas no módulo são compatíveis com o .NET Framework, o .NET Core e outros tempos de execução do .NET. A ferramenta sugere APIs alternativas, se houver. Caso contrário, talvez você precise adicionar [verificações de tempo de execução][] e restringir recursos não disponíveis em tempos de execução específicos.
+Para fazer a portabilidade de módulos escritos para o Windows PowerShell de modo que funcionem com o PowerShell Core, comece com o [.NET Portability Analyzer][]. Execute essa ferramenta em seu assembly compilado para determinar se as APIs do .NET usadas no módulo são compatíveis com o .NET Framework, o .NET Core e outros runtimes do .NET. A ferramenta sugere APIs alternativas, se houver. Caso contrário, talvez você precise adicionar [verificações de runtime][] e restringir recursos não disponíveis em runtimes específicos.
 
 ## <a name="creating-a-new-module"></a>Criando um novo módulo
 
@@ -168,12 +168,12 @@ As seções a seguir descrevem algumas das tecnologias usadas por esse modelo em
 [.NET Standard][] é uma especificação formal de APIs do .NET que estão disponíveis em todas as implementações do .NET. O código gerenciado que se destina ao .NET Standard funciona com as versões do .NET Framework e .NET Core compatíveis com essa versão do .NET Standard.
 
 > [!NOTE]
-> Embora possa existir uma API no .NET Standard, a implementação da API no .NET Core pode gerar uma `PlatformNotSupportedException` no tempo de execução. Portanto, para verificar a compatibilidade com o Windows PowerShell e o PowerShell Core, a prática recomendada é executar testes para seu módulo em ambos os ambientes.
+> Embora possa existir uma API no .NET Standard, a implementação da API no .NET Core pode gerar uma `PlatformNotSupportedException` no runtime. Portanto, para verificar a compatibilidade com o Windows PowerShell e o PowerShell Core, a prática recomendada é executar testes para seu módulo em ambos os ambientes.
 > Execute testes também no Linux e macOS se deseja usar seu módulo em mais de uma plataforma.
 
 O direcionamento do .NET Standard ajuda a garantir que, à medida que o módulo evolui, as APIs incompatíveis não sejam acidentalmente introduzidas no módulo. As incompatibilidades são descobertas no tempo de compilação, e não no de execução.
 
-No entanto, não é obrigatório direcionar o .NET Standard para que um módulo funcione com o Windows PowerShell e o PowerShell Core, desde que você use APIs compatíveis. A Linguagem Intermediária (IL) é compatível entre os dois tempos de execução. Você pode visar o .NET Framework 4.6.1, que é compatível com o .NET Standard 2.0. Se você não usar APIs fora do .NET Standard 2.0, seu módulo funcionará com o PowerShell Core 6 sem recompilação.
+No entanto, não é obrigatório direcionar o .NET Standard para que um módulo funcione com o Windows PowerShell e o PowerShell Core, desde que você use APIs compatíveis. A Linguagem Intermediária (IL) é compatível entre os dois runtimes. Você pode visar o .NET Framework 4.6.1, que é compatível com o .NET Standard 2.0. Se você não usar APIs fora do .NET Standard 2.0, seu módulo funcionará com o PowerShell Core 6 sem recompilação.
 
 ## <a name="powershell-standard-library"></a>Biblioteca Padrão do PowerShell
 
@@ -259,11 +259,11 @@ Exemplo:
 [.NET Core]: /dotnet/core/
 [PSSnapIn]: /dotnet/api/system.management.automation.pssnapin
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
-[verificações de tempo de execução]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
+[verificações de runtime]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [CLI do .NET]: /dotnet/core/tools/?tabs=netcore2x
 [.NET Standard]: /dotnet/standard/net-standard
 [Padrão do PowerShell]: https://github.com/PowerShell/PowerShellStandard
 [Padrão 5.1 do PowerShell]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [Galeria do PowerShell]: https://www.powershellgallery.com
 [.NET Portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
-[CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support
+[CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support

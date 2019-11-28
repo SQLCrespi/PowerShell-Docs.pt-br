@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Dando o segundo salto na Comunicação Remota do PowerShell
-ms.openlocfilehash: f4cfde39de8494050c31cfc3181271b968819695
-ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
+ms.openlocfilehash: 567d75009f7d53e9e95e5480b275ec3991cfb9f5
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692159"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417619"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Dando o segundo salto na Comunicação Remota do PowerShell
 
@@ -22,7 +22,7 @@ Há várias maneiras de resolver esse problema. Neste tópico, vamos examinar v�
 
 ## <a name="credssp"></a>CredSSP
 
-Você pode usar o [CredSSP (Credential Security Support Provider)](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx) para autenticação. O CredSSP armazena em cache as credenciais no servidor remoto (_ServerB_), portanto, usá-lo abre para ataques de roubo de credenciais. Se o computador remoto estiver comprometido, o invasor terá acesso às credenciais do usuário. O CredSSP é desabilitado por padrão nos computadores cliente e servidor. Você só deve habilitar o CredSSP nos ambientes mais confiáveis. Por exemplo, um administrador de domínio que se conecta a um controlador de domínio porque o controlador de domínio é altamente confiável.
+Você pode usar o [CredSSP (Credential Security Support Provider)](/windows/win32/secauthn/credential-security-support-provider) para autenticação. O CredSSP armazena em cache as credenciais no servidor remoto (_ServerB_), portanto, usá-lo abre para ataques de roubo de credenciais. Se o computador remoto estiver comprometido, o invasor terá acesso às credenciais do usuário. O CredSSP é desabilitado por padrão nos computadores cliente e servidor. Você só deve habilitar o CredSSP nos ambientes mais confiáveis. Por exemplo, um administrador de domínio que se conecta a um controlador de domínio porque o controlador de domínio é altamente confiável.
 
 Para saber mais sobre questões de segurança ao usar o CredSSP para comunicação remota do PowerShell, confira [Sabotagem acidental: cuidado com o CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
 
@@ -153,7 +153,7 @@ $x.'msDS-AllowedToActOnBehalfOfOtherIdentity'.Access
 Get-ADComputer -Identity $ServerC -Properties PrincipalsAllowedToDelegateToAccount
 ```
 
-O Kerberos [KDC (Centro de distribuição de chaves)](https://msdn.microsoft.com/library/windows/desktop/aa378170(v=vs.85).aspx) armazena em cache as tentativas de acesso negado (cache negativo) por 15 minutos. Se _ServerB_ tentou acessar anteriormente o _ServerC_, será necessário limpar o cache no _ServerB_ invocando o seguinte comando:
+O Kerberos [KDC (Centro de distribuição de chaves)](/windows/win32/secauthn/key-distribution-center) armazena em cache as tentativas de acesso negado (cache negativo) por 15 minutos. Se _ServerB_ tentou acessar anteriormente o _ServerC_, será necessário limpar o cache no _ServerB_ invocando o seguinte comando:
 
 ```powershell
 Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
@@ -214,8 +214,8 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [Como o Windows Server 2012 Ameniza a Dificuldade da Delegação Restrita de Kerberos, Parte 1](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
 - [Como o Windows Server 2012 Ameniza a Dificuldade da Delegação Restrita de Kerberos, Parte 2](https://www.itprotoday.com/windows-server/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Noções básicas sobre a Delegação Restrita de Kerberos para Implantações de Proxy de Aplicativo do Azure Active Directory com a Autenticação Integrada do Windows](https://aka.ms/kcdpaper)
-- [[MS-ADA2]: Atributo de Esquema do Active Directory M2.210 Atributo msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
-- [[MS-SFU]: Extensões do protocolo Kerberos: Serviço para usuário e protocolo de delegação restrita 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx)
+- [[MS-ADA2]: Atributo de Esquema do Active Directory M2.210 Atributo msDS-AllowedToActOnBehalfOfOtherIdentity](/openspecs/windows_protocols/ms-ada2/cea4ac11-a4b2-4f2d-84cc-aebb4a4ad405)
+- [[MS-SFU]: Extensões do protocolo Kerberos: Serviço para usuário e protocolo de delegação restrita 1.3.2 S4U2proxy](/openspecs/windows_protocols/ms-sfu/bde93b0e-f3c9-4ddf-9f44-e1453be7af5a)
 - [Delegação Restrita de Kerberos Baseada em Recursos](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Administração remota sem a delegação restrita usando PrincipalsAllowedToDelegateToAccount](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/)
 
@@ -238,7 +238,7 @@ Para obter informações sobre como usar PSSessionConfiguration e RunAs para res
 
 O JEA permite restringir os comandos que um administrador pode executar durante uma sessão do PowerShell. Pode ser usado para resolver o problema do segundo salto.
 
-Para obter informações sobre o JEA, consulte [Just Enough Administration](https://docs.microsoft.com/powershell/jea/overview).
+Para obter informações sobre o JEA, consulte [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview).
 
 ### <a name="pros"></a>Vantagens
 
@@ -251,7 +251,7 @@ Para obter informações sobre o JEA, consulte [Just Enough Administration](http
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Passar credenciais dentro de um bloco de script Invoke-Command
 
-É possível passar credenciais dentro do parâmetro **ScriptBlock** de uma chamada do cmdlet [Invoke-Command](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/invoke-command).
+É possível passar credenciais dentro do parâmetro **ScriptBlock** de uma chamada do cmdlet [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command).
 
 ### <a name="pros"></a>Vantagens
 

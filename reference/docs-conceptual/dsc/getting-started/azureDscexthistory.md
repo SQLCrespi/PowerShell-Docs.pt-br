@@ -3,12 +3,12 @@ description: Saiba mais sobre o histórico de versão para a extensão de DSC (D
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, extensão
 title: Histórico de Versão de Extensão de DSC do Azure
-ms.openlocfilehash: d97ba879679972752196e3f16d0dfb7c731776b9
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 7a89037d62cb2c8580141d2b177fdded5db654eb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953913"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417286"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versão da extensão de Desired State Configuration do Azure
 
@@ -219,7 +219,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Ambiente:** Azure
 - **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
-  - Na versão da extensão 2.14, foram incluídas alterações para instalar o WMF RTM. Durante a atualização de versão da extensão 2.13.2.0 para 2.14.0.0, observe que alguns cmdlets do DSC falham ou sua configuração falha com um erro – "Nenhuma instância encontrada com os valores de propriedade fornecidos". Para ibter mais informações, consulte as [notas de versão do DSC](https://msdn.microsoft.com/en-us/powershell/wmf/limitation_dsc). As soluções alternativas para esses problemas foram adicionadas na versão 2.15.
+  - Na versão da extensão 2.14, foram incluídas alterações para instalar o WMF RTM. Durante a atualização de versão da extensão 2.13.2.0 para 2.14.0.0, observe que alguns cmdlets do DSC falham ou sua configuração falha com um erro – "Nenhuma instância encontrada com os valores de propriedade fornecidos". Para ibter mais informações, consulte as [notas de versão do DSC](/powershell/scripting/wmf/known-issues/known-issues-dsc). As soluções alternativas para esses problemas foram adicionadas na versão 2.15.
   - Se já tiver instalado a versão 2.14 e estiver encontrando um dos dois problemas acima, você precisará executar essas etapas manualmente.  Em uma sessão do PowerShell elevada:
     - `Remove-Item -Path $env:SystemRoot\system32\Configuration\DSCEngineCache.mof`
     - `mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof`

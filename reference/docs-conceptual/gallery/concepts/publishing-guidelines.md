@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: 03c3a037b1d6c523914a2275249124940111fdcd
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 9047e938ab961c68e225c9029e52403c40afbe26
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71328507"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417676"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -98,7 +98,7 @@ Se houver comportamento inadequado observado em algum desse canais de comunicaç
 
 Compartilhar um script com outros usuários é ótimo e fornece aos outros alguns exemplos de como resolver os problemas que eles possam ter. O problema é que os scripts na Galeria do PowerShell são arquivos únicos sem documentação, testes e exemplos separados.
 
-Os módulos do PowerShell têm uma estrutura de pasta que permite que várias pastas e arquivos sejam incluídos no pacote. A estrutura do módulo permite incluir os outros pacotes listados como práticas recomendadas: ajuda do cmdlet, documentação, exemplos e testes. A maior desvantagem é que um script dentro de um módulo deve ser exposto e usado como uma função. Para obter informações de como criar um módulo, consulte [Writing a Windows PowerShell Module](/powershell/developer/module/writing-a-windows-powershell-module) (Escrevendo um módulo do Windows PowerShell).
+Os módulos do PowerShell têm uma estrutura de pasta que permite que várias pastas e arquivos sejam incluídos no pacote. A estrutura do módulo permite incluir os outros pacotes listados como práticas recomendadas: ajuda do cmdlet, documentação, exemplos e testes. A maior desvantagem é que um script dentro de um módulo deve ser exposto e usado como uma função. Para obter informações de como criar um módulo, consulte [Writing a Windows PowerShell Module](/powershell/scripting/developer/module/writing-a-windows-powershell-module) (Escrevendo um módulo do Windows PowerShell).
 
 Há situações em que um script fornece uma experiência melhor para o usuário, principalmente com configurações DSC. A prática recomendada para configurações DSC é publicar a configuração como um script com um módulo de acompanhamento que contenha documentos, exemplos e testes. O script lista o módulo anexo usando `RequiredModules = @(Name of the Module)`. Essa abordagem pode ser usada com qualquer script.
 
@@ -165,7 +165,7 @@ O PowerShell dá suporte à validação de assinatura de código por meio de dua
 
 A assinatura de arquivos do PowerShell é uma abordagem bem estabelecida para garantir que o código que está sendo executado tenha sido produzido por uma fonte confiável e não tenha sido modificado. Os detalhes de como assinar arquivos de script do PowerShell são abordados no artigo [Sobre assinatura](/powershell/module/microsoft.powershell.core/about/about_signing). Em geral, uma assinatura pode ser adicionada a qualquer arquivo `.PS1` que o PowerShell valida quando o script é carregado. O PowerShell pode ser restrito usando os cmdlets [Política de execução](/powershell/module/microsoft.powershell.core/about/about_execution_policies) para garantir o uso de scripts.
 
-A assinatura de catálogo de módulo é um recurso que foi adicionado no PowerShell na versão 5.1. Como assinar um módulo é abordado no artigo [Cmdlets de catálogo](/powershell/wmf/5.1/catalog-cmdlets). Em geral, a assinatura do catálogo é feita criando um arquivo de catálogo que contenha um valor de hash para cada arquivo no módulo e, em seguida, assinando esse arquivo.
+A assinatura de catálogo de módulo é um recurso que foi adicionado no PowerShell na versão 5.1. Como assinar um módulo é abordado no artigo [Cmdlets de catálogo](/powershell/scripting/wmf/5.1/catalog-cmdlets). Em geral, a assinatura do catálogo é feita criando um arquivo de catálogo que contenha um valor de hash para cada arquivo no módulo e, em seguida, assinando esse arquivo.
 
 Os cmdlets **PowerShellGet** `Publish-Module`, `Install-Module` e `Update-Module` verificarão a assinatura para garantir que seja válida e, em seguida, confirmar que o valor de hash de cada pacote corresponde ao que está no catálogo. `Save-Module` não valida uma assinatura. Se uma versão anterior do módulo estiver instalada no sistema, `Install-Module` confirmará se a autoridade de assinatura da nova versão coincide com a que já estava instalada. `Install-Module` e `Update-Module` usarão a assinatura em um arquivo `.PSD1` se o pacote não for assinado por catálogo. A assinatura de catálogo funciona com os arquivos de script de assinatura, mas não os substitui. O PowerShell não valida as assinaturas de catálogo no tempo de carregamento do módulo.
 
