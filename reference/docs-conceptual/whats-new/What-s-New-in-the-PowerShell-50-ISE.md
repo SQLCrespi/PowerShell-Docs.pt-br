@@ -2,16 +2,22 @@
 ms.date: 09/06/2019
 keywords: powershell, cmdlet
 title: Novidades no ISE do PowerShell 5.0
-ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
-ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
+ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117506"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416638"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Novidades no ISE do Windows PowerShell 5.0
 
-Este tópico explica os recursos novos e atualizados introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell.
+Este tópico explica os recursos novos e atualizados introduzidos na versão 5.0 do ISE (Ambiente de Script Integrado) do Windows PowerShell.
+
+> [!NOTE]
+> O ISE do PowerShell não está mais no desenvolvimento ativo de recursos. Como componente de remessa do Windows, ele continua com suporte oficial para correções de segurança e serviços de alta prioridade.
+> No momento, não há planos de remover o ISE do Windows.
+>
+> Não há suporte para o ISE no PowerShell v6 e posteriores. Os usuários que buscam substituir o ISE devem usar o [Visual Studio Code](https://code.visualstudio.com/) com o [PowerShell Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell).
 
 ## <a name="feature-description"></a>Descrição do recurso
 

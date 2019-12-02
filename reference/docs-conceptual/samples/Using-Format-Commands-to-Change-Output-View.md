@@ -1,13 +1,13 @@
 ---
-ms.date: 10/22/2019
+ms.date: 11/22/2019
 keywords: powershell, cmdlet
 title: Usando comandos de formatação para alterar a exibição de saída
-ms.openlocfilehash: 9d9854362b5150a99bdd0c02518599840c1fd42d
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444417"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417594"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Usando comandos de formatação para alterar a exibição de saída
 
@@ -128,7 +128,7 @@ Id          : 21748
 
 ### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Obtendo informações detalhadas usando Format-List com curingas
 
-O cmdlet `Format-List` permite usar um caractere curinga como o valor do parâmetro **Property**. Isso permite exibir informações detalhadas. Geralmente, os objetos incluem mais informações do que você precisa, por isso, o PowerShell não mostra todos os valores de propriedade por padrão. Para mostrar todas as propriedades de um objeto, use o comando **Format-List -Property \&#42;** . O comando a seguir gera mais de 60 linhas de saída para um único processo:
+O cmdlet `Format-List` permite usar um caractere curinga como o valor do parâmetro **Property**. Isso permite exibir informações detalhadas. Geralmente, os objetos incluem mais informações do que você precisa, por isso, o PowerShell não mostra todos os valores de propriedade por padrão. Para mostrar todas as propriedades de um objeto, use o comando `Format-List -Property *`. O comando a seguir gera mais de 60 linhas de saída para um único processo:
 
 ```powershell
 Get-Process -Name iexplore | Format-List -Property *
