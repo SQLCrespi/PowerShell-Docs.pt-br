@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Empacotar e carregar recursos em um servidor de pull
 ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954373"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Empacotar e carregar recursos em um servidor de pull

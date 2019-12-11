@@ -3,15 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O objeto PowerShellTab
 ms.openlocfilehash: bfa11b553f97b7b27b974855ff4e8f1a48c33fea
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67028914"
 ---
 # <a name="the-powershelltab-object"></a>O objeto PowerShellTab
 
-O objeto **PowerShellTab** representa um ambiente de tempo de execução do Windows PowerShell.
+O objeto **PowerShellTab** representa um ambiente de runtime do Windows PowerShell.
 
 ## <a name="methods"></a>Métodos
 
@@ -43,7 +43,7 @@ Executa o script determinado na guia PowerShell.
 
 **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
-**\[useNewScope\]** – Booliano Opcional cujo padrão é **$true** Se for definido como **$true**, um novo escopo será criado dentro do qual o comando será executado. Ele não modifica o ambiente de tempo de execução da guia PowerShell que é especificada pelo comando.
+**\[useNewScope\]** – Booliano Opcional cujo padrão é **$true** Se for definido como **$true**, um novo escopo será criado dentro do qual o comando será executado. Ele não modifica o ambiente de runtime da guia PowerShell que é especificada pelo comando.
 
 **\[[millisecondsTimeout]\]** – inteiro opcional padronizado para **500**.
 Se o comando não terminar dentro do tempo especificado, gerará um **TimeoutException** com a mensagem "A operação atingiu o tempo limite".
