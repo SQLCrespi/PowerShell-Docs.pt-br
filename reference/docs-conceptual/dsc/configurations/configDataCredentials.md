@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
 ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954533"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração

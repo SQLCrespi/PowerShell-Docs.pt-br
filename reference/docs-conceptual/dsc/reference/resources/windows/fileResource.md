@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recursos File de DSC
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954673"
 ---
 # <a name="dsc-file-resource"></a>Recursos File de DSC

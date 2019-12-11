@@ -3,15 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O objeto PowerShellTabCollection
 ms.openlocfilehash: 5a1318534ddce19c2f5faa0d2013e2b38d8b79e5
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030495"
 ---
 # <a name="the-powershelltabcollection-object"></a>O objeto PowerShellTabCollection
 
-O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab**. Cada objeto **PowerShellTab** funciona como um ambiente de tempo de execução separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto **$psISE.PowerShellTabs**.
+O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab**. Cada objeto **PowerShellTab** funciona como um ambiente de runtime separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto **$psISE.PowerShellTabs**.
 
 ## <a name="methods"></a>Métodos
 

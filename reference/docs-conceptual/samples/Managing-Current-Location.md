@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando o local atual
 ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030190"
 ---
 # <a name="managing-current-location"></a>Gerenciando o local atual
@@ -49,9 +49,9 @@ C:\WINDOWS
 
 O parâmetro **-PassThru** pode ser usado com muitos comandos Set no Windows PowerShell para retornar informações sobre o resultado em casos em que não há nenhuma saída padrão.
 
-Você pode especificar caminhos em relação ao seu local atual da mesma forma que faria na maioria dos shells de comando UNIX e Windows. Na notação padrão para caminhos relativos, um ponto (**.**) representa a pasta atual e um ponto duplo (**..**) representa o diretório pai do seu local atual.
+Você pode especificar caminhos em relação ao seu local atual da mesma forma que faria na maioria dos shells de comando UNIX e Windows. Na notação padrão para caminhos relativos, um ponto ( **.** ) representa a pasta atual e um ponto duplo ( **..** ) representa o diretório pai do seu local atual.
 
-Por exemplo, se você está na pasta **C:\\Windows**, um ponto (**.**) representa **C:\\Windows** e um ponto duplo (**..**) representa **C:**. Você pode alterar do seu local atual para a raiz da unidade C: digitando:
+Por exemplo, se você está na pasta **C:\\Windows**, um ponto ( **.** ) representa **C:\\Windows** e um ponto duplo ( **..** ) representa **C:** . Você pode alterar do seu local atual para a raiz da unidade C: digitando:
 
 ```
 PS> Set-Location -Path .. -PassThru
@@ -61,7 +61,7 @@ Path
 C:\
 ```
 
-A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de arquivos, como **HKLM:**. Você pode definir o local na chave HKLM\\Software do Registro digitando:
+A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de arquivos, como **HKLM:** . Você pode definir o local na chave HKLM\\Software do Registro digitando:
 
 ```
 PS> Set-Location -Path HKLM:\SOFTWARE -PassThru
@@ -167,7 +167,7 @@ ou
 Push-Location \\FS01\Public
 ```
 
-Você pode usar os comandos **Push-Location** e **Set-Location** para alterar o local de qualquer unidade disponível. Por exemplo, se você tiver uma unidade de CD-ROM local com a letra da unidade D contendo um CD de dados, será possível alterar o local da unidade de CD digitando o comando **Set-Location D:**.
+Você pode usar os comandos **Push-Location** e **Set-Location** para alterar o local de qualquer unidade disponível. Por exemplo, se você tiver uma unidade de CD-ROM local com a letra da unidade D contendo um CD de dados, será possível alterar o local da unidade de CD digitando o comando **Set-Location D:** .
 
 Se a unidade estiver vazia, você receberá a seguinte mensagem de erro:
 

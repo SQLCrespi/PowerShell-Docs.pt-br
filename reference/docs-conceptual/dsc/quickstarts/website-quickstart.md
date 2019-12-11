@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: 'Início Rápido: Criar um site com o DSC'
 ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71955063"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0

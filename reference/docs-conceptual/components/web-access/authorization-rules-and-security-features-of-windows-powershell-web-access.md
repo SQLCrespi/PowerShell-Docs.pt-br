@@ -3,10 +3,10 @@ ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "62058413"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
@@ -52,7 +52,7 @@ A tabela a seguir descreve as quatro camadas de segurança entre os usuários fi
 |1|[recursos de segurança do servidor Web do IIS](#iis-web-server-security-features)|
 |2|[autenticação de gateway baseada em formulários do Windows PowerShell Web Access](#windows-powershell-web-access-forms-based-gateway-authentication)|
 |3|[regras de autorização do Windows PowerShell Web Access](#windows-powershell-web-access-authorization-rules)|
-|4|[autenticação de destino e regras de autorização](#target-authentication-and-authorization-rules)|
+|4|[regras de autorização e autenticação de destino](#target-authentication-and-authorization-rules)|
 
 Informações detalhadas sobre cada camada podem ser encontradas nos seguintes títulos:
 

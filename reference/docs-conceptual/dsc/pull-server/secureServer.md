@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
 ms.openlocfilehash: 5cb47598b11f7884dddf1440cec21afeab49bebb
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417736"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull

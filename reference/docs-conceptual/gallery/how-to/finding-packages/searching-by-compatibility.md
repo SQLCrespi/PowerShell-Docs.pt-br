@@ -4,10 +4,10 @@ contributor: JKeithB, SydneyhSmith
 keywords: galeria,powershell,cmdlet,psgallery
 title: Pacotes com edições do PowerShell ou sistema operacional compatível
 ms.openlocfilehash: 14038aa9b0453e1d06e6587e97da391b56297c75
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71328437"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Pacotes com edições do PowerShell ou sistemas operacionais compatíveis

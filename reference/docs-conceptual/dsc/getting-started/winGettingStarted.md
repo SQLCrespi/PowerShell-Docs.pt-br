@@ -3,10 +3,10 @@ ms.date: 08/15/2019
 keywords: DSC,powershell,configuração,instalação
 title: Introdução a DSC (Desired State Configuration) para Windows
 ms.openlocfilehash: a9346b96693acdbad9bacbd4b6ca85971e17a3d1
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417754"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Introdução a DSC (Desired State Configuration) para Windows

@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: A hierarquia de modelo do objeto do ISE
 ms.openlocfilehash: 0159707b1050c412a74da3d3ca02a46cea982556
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "62057716"
 ---
 # <a name="the-ise-object-model-hierarchy"></a>A hierarquia de modelo do objeto do ISE
