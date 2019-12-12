@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
 ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359915"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Início rápido do provedor do Windows PowerShell
@@ -21,7 +21,7 @@ Este tópico explica como criar um provedor do Windows PowerShell que tem a func
 
 ## <a name="writing-a-basic-provider"></a>Escrevendo um provedor básico
 
-A funcionalidade mais básica de um provedor do Windows PowerShell é criar e remover unidades. Neste exemplo, implementamos os métodos [System. Management. Automation. Provider. Drivecmdletprovider. NewDrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. Provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) do [ Classe System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Você também verá como declarar uma classe de provedor.
+A funcionalidade mais básica de um provedor do Windows PowerShell é criar e remover unidades. Neste exemplo, implementamos os métodos [System. Management. Automation. Provider. Drivecmdletprovider. NewDrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. Provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) da classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Você também verá como declarar uma classe de provedor.
 
 Ao escrever um provedor, você pode especificar unidades-unidades padrão que são criadas automaticamente quando o provedor está disponível. Você também define um método para criar novas unidades que usam esse provedor.
 
@@ -35,7 +35,7 @@ No Visual Studio, crie um projeto de biblioteca de classes chamado AccessDBProvi
 
 1. Adicione o assembly System. Management. Automation como uma referência ao seu projeto.
 
-2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo**e navegue até o executável do Windows PowerShell (normalmente c:\windows\system32\windowspowershell\ v1.0\\.powershell.exe).
+2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo**e navegue até o executável do Windows PowerShell (normalmente c:\Windows\system32\WindowsPowerShell\v1.0\\. PowerShell. exe).
 
 3. Em **Opções de início**, insira o seguinte na caixa **argumentos de linha de comando** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
@@ -43,7 +43,7 @@ No Visual Studio, crie um projeto de biblioteca de classes chamado AccessDBProvi
 
 Nosso provedor deriva da classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . A maioria dos provedores que fornecem funcionalidade real (acessando e manipulando itens, navegando no armazenamento de dados e obtendo e definindo o conteúdo dos itens) deriva da classe [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) .
 
-Além de especificar que a classe deriva de [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), você deve decorar com o [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) , conforme mostrado no exemplo .
+Além de especificar que a classe deriva de [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), você deve decorar isso com o [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) , conforme mostrado no exemplo.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Providers
@@ -67,9 +67,9 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ### <a name="implementing-newdrive"></a>Implementando NewDrive
 
-O método [System. Management. Automation. Provider. Drivecmdletprovider. NewDrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) é chamado pelo mecanismo do Windows PowerShell quando um usuário chama o cmdlet [Microsoft. PowerShell. Commands. NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) especificando o nome do seu operador. O parâmetro PSDriveInfo é passado pelo mecanismo do Windows PowerShell e o método retorna a nova unidade para o mecanismo do Windows PowerShell. Esse método deve ser declarado dentro da classe criada acima.
+O método [System. Management. Automation. Provider. Drivecmdletprovider. NewDrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) é chamado pelo mecanismo do Windows PowerShell quando um usuário chama o cmdlet [Microsoft. PowerShell. Commands. NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) especificando o nome do seu provedor. O parâmetro PSDriveInfo é passado pelo mecanismo do Windows PowerShell e o método retorna a nova unidade para o mecanismo do Windows PowerShell. Esse método deve ser declarado dentro da classe criada acima.
 
-O método primeiro verifica se o objeto da unidade e a raiz da unidade que foram passados existem, retornando `null`, caso não haja nenhum. Em seguida, ele usa um construtor da classe interna AccessDBPSDriveInfo para criar uma nova unidade e uma conexão com o banco de dados do Access que a unidade representa.
+O método primeiro verifica se o objeto da unidade e a raiz da unidade que foram passados existem, retornando `null` se um deles não tiver. Em seguida, ele usa um construtor da classe interna AccessDBPSDriveInfo para criar uma nova unidade e uma conexão com o banco de dados do Access que a unidade representa.
 
 ```csharp
 protected override PSDriveInfo NewDrive(PSDriveInfo drive)
