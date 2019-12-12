@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
 caps.latest.revision: 16
 ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362635"
 ---
 # <a name="name-element-for-view-format"></a>Elemento Name para View (formato)
@@ -29,7 +29,7 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `Name`. Somente um elemento `Name` é permitido para cada exibição.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `Name`. Apenas um elemento `Name` é permitido para cada exibição.
 
 ### <a name="attributes"></a>Atributos
 
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento View (formato)](./view-element-format.md)|Define uma exibição que é usada para exibir os membros de um ou mais objetos .NET.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique um nome amigável exclusivo para a exibição. Esse nome pode incluir uma referência ao tipo da exibição (como uma exibição de tabela ou exibição de lista), qual objeto ou conjunto de objetos usa a exibição, qual comando retorna os objetos ou uma combinação deles.
 
@@ -76,7 +76,7 @@ O exemplo a seguir mostra um elemento `View` que define uma exibição de tabela
 
 [Criando uma exibição ampla](./creating-a-wide-view.md)
 
-[Criando controles personalizados](./creating-custom-controls.md)
+[Criar controles personalizados](./creating-custom-controls.md)
 
 [Elemento View (formato)](./view-element-format.md)
 

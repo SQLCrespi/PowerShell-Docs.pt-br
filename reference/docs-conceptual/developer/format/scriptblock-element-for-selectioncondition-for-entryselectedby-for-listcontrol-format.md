@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4a1adad7-e864-4892-9d26-a6476a9698d2
 caps.latest.revision: 7
 ms.openlocfilehash: b65d953169f6daf15fb617ce4d0303cf4cb584ee
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368585"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para ListControl (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento SelectionCondition para EntrySelectedBy para ListEntry (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|Define a condição que deve existir para que essa entrada de lista seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o script que é avaliado.
 
@@ -63,7 +63,7 @@ Para obter mais informações sobre os outros componentes de um modo de exibiç�
 
 [Elemento SelectionCondition para EntrySelectedBy para ListEntry (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Exibição de lista](./creating-a-list-view.md)
+[Exibição de Lista](./creating-a-list-view.md)
 
 [Definindo condições para quando uma entrada ou item de exibição é usado](./defining-conditions-for-displaying-data.md)
 

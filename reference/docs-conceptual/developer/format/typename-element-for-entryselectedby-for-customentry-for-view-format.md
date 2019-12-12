@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 76548af7-05bd-4d12-bf71-6fb69c434ef2
 caps.latest.revision: 10
 ms.openlocfilehash: c3dd761cd9b6c468d4833ea35b897ba5d425f598
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368065"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>Elemento TypeName para EntrySelectedBy para Controls para CustomEntry (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para CustomEntry para exibição (formato)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Define os tipos .NET que usam essa definição de exibição de controle personalizado ou a condição que deve existir para que essa definição seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
 
@@ -57,7 +57,7 @@ Para obter mais informações sobre os componentes de um modo de exibição de c
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando controles personalizados](./creating-custom-controls.md)
+[Criar controles personalizados](./creating-custom-controls.md)
 
 [Elemento EntrySelectedBy para CustomEntry para exibição (formato)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
 

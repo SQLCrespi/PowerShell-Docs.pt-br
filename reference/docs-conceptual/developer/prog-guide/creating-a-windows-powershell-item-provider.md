@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
 ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417492"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Criar um provedor de itens do Windows PowerShell
@@ -219,7 +219,7 @@ Este provedor de item define a classe auxiliar DatabaseRowInfo que representa um
 
 O provedor de exemplo define um método DatabaseRowInfo. GetRows para retornar uma coleção de objetos de informações de linha para a tabela especificada. Esse método inclui um bloco try/catch para interceptar exceções. Quaisquer erros resultarão em nenhuma informação de linha.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample03](./accessdbprovidersample03-code-sample.md).
 
@@ -235,7 +235,7 @@ Consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn
 
 Quando este provedor de itens do Windows PowerShell é registrado com o Windows PowerShell, você só pode testar a funcionalidade básica e de unidade do provedor. Para testar a manipulação de itens, você também deve implementar a funcionalidade de contêiner descrita em [implementando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)
 

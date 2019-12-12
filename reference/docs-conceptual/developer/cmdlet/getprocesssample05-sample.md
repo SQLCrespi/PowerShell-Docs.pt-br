@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6aebd53f-0610-4959-88b2-42339588c859
 caps.latest.revision: 6
 ms.openlocfilehash: ad4300937c10652b677346a62c42fa4f6e8513cf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365695"
 ---
 # <a name="getprocesssample05-sample"></a>Amostra GetProcessSample05
@@ -27,11 +27,11 @@ Este exemplo mostra uma versão completa do cmdlet Get-proc.
 
 2. Clique duas vezes no ícone do arquivo da solução (. sln). Isso abre o projeto de exemplo no Visual Studio.
 
-3. No menu **Compilar** , selecione **Compilar solução**.
+3. No menu **Compilar**, selecione **Compilar Solução**.
 
    A biblioteca do exemplo será criada nos diretórios \bin ou \bin\Debug padrão.
 
-### <a name="how-to-run-the-sample"></a>Como executar o exemplo
+### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
 1. Crie a seguinte pasta de módulo:
 
@@ -53,7 +53,7 @@ Este exemplo mostra uma versão completa do cmdlet Get-proc.
 
 Este exemplo requer o Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Este exemplo demonstra o seguinte.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 08512496-5682-4539-ab56-0c5394ce1f01
 caps.latest.revision: 6
 ms.openlocfilehash: 0137886437f01518f396613c564517e7910e657a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364795"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-controls-for-view-format"></a>Elemento ScriptBlock para SelectionCondition para Controls para View (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento SelectionCondition para EntrySelectedBy para controles para View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|Define uma condição que deve existir para que a definição de controle seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o script que é avaliado.
 

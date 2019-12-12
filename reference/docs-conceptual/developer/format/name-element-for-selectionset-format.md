@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
 caps.latest.revision: 15
 ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362665"
 ---
 # <a name="name-element-for-selectionset-format"></a>Elemento Name para SelectionSet (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento SelectionSet (formato)](./selectionset-element-format.md)|Define um único conjunto de objetos .NET que podem ser referenciados pelo nome do conjunto.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome para fazer referência ao conjunto de seleção. Não há restrições sobre quais caracteres podem ser usados.
 

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
 caps.latest.revision: 16
 ms.openlocfilehash: 596212f2e64401a751cf3dca0ee7d60b80912c00
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368845"
 ---
 # <a name="defining-selection-sets"></a>Definir conjuntos de seleção
 
-Ao criar vários modos de exibição e controles, você pode definir conjuntos de objetos que são chamados de conjuntos de seleção. Um conjunto de seleção permite que você defina os objetos uma vez, sem precisar defini-los repetidamente para cada exibição ou controle. Normalmente, os conjuntos de seleção são usados quando você tem um conjunto de objetos .NET relacionados. Por exemplo, o arquivo de formatação `FileSystem` (FileSystem. Format. ps1xml) define um conjunto de seleção dos tipos de sistema de arquivos que várias exibições usam.
+Ao criar vários modos de exibição e controles, você pode definir conjuntos de objetos que são chamados de conjuntos de seleção. Um conjunto de seleção permite que você defina os objetos uma vez, sem precisar defini-los repetidamente para cada exibição ou controle. Normalmente, os conjuntos de seleção são usados quando você tem um conjunto de objetos .NET relacionados. Por exemplo, o arquivo de formatação de `FileSystem` (FileSystem. Format. ps1xml) define um conjunto de seleção dos tipos de sistema de arquivos que várias exibições usam.
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>Onde os conjuntos de seleção são definidos e referenciados
 
@@ -43,7 +43,7 @@ Você pode fazer referência a um conjunto de seleção das seguintes maneiras:
 
 ## <a name="selection-set-example"></a>Exemplo de conjunto de seleção
 
-O exemplo a seguir mostra um conjunto de seleção que é obtido diretamente do arquivo de formatação `FileSystem` fornecido pelo Windows PowerShell. Para obter mais informações sobre outros arquivos de formatação do Windows PowerShell, consulte [arquivos de formatação do Windows PowerShell](./powershell-formatting-files.md).
+O exemplo a seguir mostra um conjunto de seleção que é obtido diretamente do arquivo de formatação de `FileSystem` fornecido pelo Windows PowerShell. Para obter mais informações sobre outros arquivos de formatação do Windows PowerShell, consulte [arquivos de formatação do Windows PowerShell](./powershell-formatting-files.md).
 
 ```xml
 <SelectionSets>
@@ -138,9 +138,9 @@ O conjunto de seleção anterior é referenciado no elemento `ViewSelectedBy` de
 
 [Selecionador de seleção](./selectionset-element-format.md)
 
-[Nomes](./name-element-for-selectionset-format.md)
+[Name](./name-element-for-selectionset-format.md)
 
-[Digita](./types-element-for-selectionset-format.md)
+[Types](./types-element-for-selectionset-format.md)
 
 [Arquivos de formatação do PowerShell](./powershell-formatting-files.md)
 

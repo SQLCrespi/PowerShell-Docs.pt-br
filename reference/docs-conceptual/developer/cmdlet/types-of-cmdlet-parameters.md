@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
 ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369305"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Tipos de parâmetros de cmdlet
@@ -91,7 +91,7 @@ private string userName;
 
 ## <a name="switch-parameters"></a>Parâmetros de comutação
 
-O Windows PowerShell fornece um tipo [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) que permite definir um parâmetro cujo valor é definido automaticamente como `false` se o parâmetro não for especificado quando o cmdlet for chamado. Sempre que possível, use parâmetros de opção no lugar de parâmetros boolianos.
+O Windows PowerShell fornece um tipo [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) que permite que você defina um parâmetro cujo valor é definido automaticamente como `false` se o parâmetro não for especificado quando o cmdlet for chamado. Sempre que possível, use parâmetros de opção no lugar de parâmetros boolianos.
 
 Considere o exemplo a seguir. Por padrão, vários cmdlets do Windows PowerShell não passam um objeto de saída para baixo no pipeline. No entanto, esses cmdlets têm um parâmetro de opção `PassThru` que substitui o comportamento padrão. Se o parâmetro `PassThru` for especificado quando esses cmdlets forem chamados, o cmdlet retornará um objeto de saída para o pipeline.
 

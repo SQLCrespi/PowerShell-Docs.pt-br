@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
 ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365295"
 ---
 # <a name="stopprocesssample01-sample"></a>Amostra StopProcessSample01
 
-Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro `PassThru` indicando que o usuário deseja que o cmdlet retorne um objeto. Esse cmdlet é semelhante ao cmdlet `Stop-Process` fornecido pelo Windows PowerShell 2,0.
+Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro de `PassThru` indicando que o usuário deseja que o cmdlet retorne um objeto. Esse cmdlet é semelhante ao cmdlet `Stop-Process` fornecido pelo Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
@@ -25,11 +25,11 @@ Este exemplo mostra como escrever um cmdlet que solicita comentários do usuári
 
 2. Clique duas vezes no ícone do arquivo da solução (. sln). Isso abre o projeto de exemplo no Microsoft Visual Studio.
 
-3. No menu **Compilar** , selecione **Compilar solução**.
+3. No menu **Compilar**, selecione **Compilar Solução**.
 
     A biblioteca do exemplo será criada nas pastas \bin ou \bin\Debug padrão.
 
-### <a name="how-to-run-the-sample"></a>Como executar o exemplo
+### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
 1. Crie a seguinte pasta de módulo:
 
@@ -51,7 +51,7 @@ Este exemplo mostra como escrever um cmdlet que solicita comentários do usuári
 
 Este exemplo requer o Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Este exemplo demonstra o seguinte.
 

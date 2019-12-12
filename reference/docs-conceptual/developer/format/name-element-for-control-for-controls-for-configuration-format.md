@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b4371d45-49a4-4303-8384-5b54105bd0d6
 caps.latest.revision: 8
 ms.openlocfilehash: 2704a530e0ae269efb772ac10e531bcbb12f6eff
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362705"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Elemento Name para Control para Controls para Configuration (formato)
@@ -46,7 +46,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)|Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação e pelo nome usado para fazer referência ao controle.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome que é usado para fazer referência a esse controle.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
 caps.latest.revision: 11
 ms.openlocfilehash: 9c9d50c880f843e21621e5735c800e3afb48b2ad
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369715"
 ---
 # <a name="extending-output-objects"></a>Estender os objetos de saída
@@ -75,7 +75,7 @@ PS> (1, 2, 3, 4).Length
 
 ## <a name="custom-types-files"></a>Arquivos de tipos personalizados
 
-Para criar um arquivo de tipos personalizados, comece copiando um arquivo de tipos existente. O novo arquivo pode ter qualquer nome, mas deve ter uma extensão de nome de arquivo. ps1xml. Ao copiar o arquivo, você pode colocá-lo em qualquer diretório acessível ao Windows PowerShell, mas é útil colocá-los no diretório de instalação do Windows PowerShell (`$pshome`) ou em um subdiretório do diretório de instalação.
+Para criar um arquivo de tipos personalizados, comece copiando um arquivo de tipos existente. O novo arquivo pode ter qualquer nome, mas deve ter uma extensão de nome de arquivo. ps1xml. Ao copiar o arquivo, você pode colocá-lo em qualquer diretório que possa ser acessado pelo Windows PowerShell, mas é útil colocá-los no diretório de instalação do Windows PowerShell (`$pshome`) ou em um subdiretório do diretório de instalação.
 
 Para adicionar seus próprios tipos estendidos ao arquivo, adicione um elemento de tipos para cada objeto que você deseja estender. Os tópicos a seguir fornecem exemplos.
 

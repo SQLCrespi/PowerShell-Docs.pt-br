@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 5ec7159e-e4e9-4b21-95df-94244432f679
 caps.latest.revision: 5
 ms.openlocfilehash: a663bd69be7825b1685f64ff8d3068bdd8ca3265
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367775"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>Colocar a ajuda baseada em comentários em funções
 
-Este tópico explica onde posicionar a ajuda baseada em comentários para uma função, de forma que o cmdlet `Get-Help` associe o tópico de ajuda baseado em comentário com a função correta.
+Este tópico explica onde posicionar a ajuda baseada em comentários para uma função, de modo que o cmdlet `Get-Help` associa o tópico de ajuda baseado em comentário à função correta.
 
 ## <a name="where-to-place-comment-based-help-for-a-function"></a>Onde posicionar a ajuda baseada em comentários para uma função
 
@@ -25,7 +25,7 @@ Este tópico explica onde posicionar a ajuda baseada em comentários para uma fu
 
 - No final do corpo da função.
 
-- Antes da palavra-chave `Function`. Quando a função está em um módulo de script ou script, não pode haver mais de uma linha em branco entre a última linha da ajuda baseada em comentários e a palavra-chave `Function`. Caso contrário, `Get-Help` associa a ajuda ao script, não com a função.
+- Antes da palavra-chave `Function`. Quando a função está em um módulo script ou script, não pode haver mais de uma linha em branco entre a última linha da ajuda baseada em comentários e a palavra-chave `Function`. Caso contrário, o `Get-Help` associa a ajuda ao script, não com a função.
 
 ## <a name="examples-of-help-placement-in-a-function"></a>Exemplos de posicionamento de ajuda em uma função
 

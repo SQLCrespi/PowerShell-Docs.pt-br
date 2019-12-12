@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
 ms.openlocfilehash: a28c8d3df19bc72bf338d6abc4e02768c5097209
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369865"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Métodos de processamento de entrada de cmdlet
@@ -63,7 +63,7 @@ Por exemplo, o cmdlet pode precisar limpar as variáveis de objeto após o proce
 
 Quando o PowerShell processa um pipeline de comando, o PowerShell chama esse método uma vez para cada instância do cmdlet no pipeline.
 No entanto, é importante lembrar que o tempo de execução do PowerShell não chamará o método endprocessor se o cmdlet for cancelado no meio de seu processamento de entrada ou se ocorrer um erro de encerramento em qualquer parte do cmdlet.
-Por esse motivo, um cmdlet que requer a limpeza de objeto deve implementar o padrão [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo um finalizador, para que o tempo de execução possa chamar os métodos EndProcessing e [System. IDisposable. Dispose](/dotnet/api/System.IDisposable.Dispose) no final de processamento.
+Por esse motivo, um cmdlet que requer a limpeza de objeto deve implementar o padrão [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo um finalizador, para que o tempo de execução possa chamar os métodos noprocessing e [System. IDisposable. Dispose](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
 Para obter mais informações sobre como o PowerShell invoca o pipeline de comando, consulte [ciclo de vida de processamento de cmdlet](/previous-versions/ms714429(v=vs.85)).
 
 O código a seguir mostra uma implementação do método endprocessor.
@@ -86,6 +86,6 @@ protected override void EndProcessing()
 
 [Tutorial do SelectStr](selectstr-tutorial.md)
 
-[System. IDisposable](/dotnet/api/System.IDisposable)
+[System.IDisposable](/dotnet/api/System.IDisposable)
 
 [SDK do shell do Windows PowerShell](../windows-powershell-reference.md)

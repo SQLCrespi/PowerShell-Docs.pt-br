@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 19644c5bc186a5554d6b134a67fc7c4d7aa7b64c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365305"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Suporte a caracteres curinga em parâmetros de cmdlet
@@ -30,7 +30,7 @@ Muitas vezes, você precisará criar um cmdlet para ser executado em um grupo de
 
 O Windows PowerShell dá suporte aos seguintes caracteres curinga.
 
-| Amplia |                             Descrição                             |  Exemplo   |     Correspondências      | Não corresponde a |
+| Caractere curinga |                             Descrição                             |  Exemplo   |     Correspondências      | Não corresponde |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | Corresponde a zero ou mais caracteres, começando na posição especificada | `a*`       | A, AG, Apple     |                |
 | ?        | Corresponde a qualquer caractere na posição especificada                     | `?n`       | Um, em, em       | executa            |
@@ -76,7 +76,7 @@ True
 Quando os parâmetros de cmdlet dão suporte a caracteres curinga, a operação geralmente gera uma saída de matriz.
 Ocasionalmente, não faz sentido oferecer suporte a uma saída de matriz porque o usuário pode usar apenas um único item. Por exemplo, o cmdlet `Set-Location` não oferece suporte à saída de matriz porque o usuário define apenas um único local. Nessa instância, o cmdlet ainda dá suporte a caracteres curinga, mas força a resolução para um único local.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
 ms.openlocfilehash: af989fb2eeba6b68f2e3e6506f3f60d5be6f7d8a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367715"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Escrevendo ajuda para funções e scripts do PowerShell
@@ -35,11 +35,11 @@ Para obter mais informações sobre como escrever tópicos de ajuda baseados em 
 
 ### <a name="xml-based-command-help"></a>Ajuda de comando baseada em XML
 O tópico da ajuda que descreve um script ou uma função pode ser implementado em um arquivo XML que usa o esquema de ajuda de comando.
-Para associar o script ou a função ao arquivo XML, use a palavra-chave comment `ExternalHelp` seguida pelo caminho e o nome do arquivo XML.
+Para associar o script ou a função ao arquivo XML, use a palavra-chave de comentário `ExternalHelp` seguida pelo caminho e o nome do arquivo XML.
 
 Quando a palavra-chave comment do `ExternalHelp` está presente, ela tem precedência sobre a ajuda baseada em comentários, mesmo quando `Get-Help` não consegue encontrar um arquivo de ajuda que corresponda ao valor da palavra-chave `ExternalHelp`.
 
-### <a name="online-help"></a>Ajuda online
+### <a name="online-help"></a>Ajuda Online
 Você pode postar os tópicos da ajuda na Internet e, em seguida, direcionar `Get-Help` para abrir os tópicos.
 Para obter mais informações sobre como escrever tópicos de ajuda baseados em comentários, consulte [suporte à ajuda online](../module/supporting-online-help.md).
 

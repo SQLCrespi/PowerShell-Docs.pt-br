@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fab6c0f4-ba55-48ae-9c16-f9a998169239
 caps.latest.revision: 9
 ms.openlocfilehash: 00ff3a357cfef0b250bb55dd3a206d69d5d42609
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368115"
 ---
 # <a name="text-element-for-customitem-for-customview-for-view-format"></a>Elemento Text para CustomItem para CustomView para View (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento CustomItem para CustomEntry para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Define um controle para o modo de exibição de controle personalizado.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o texto de um controle para os dados que você deseja exibir.
 

@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 3096965ba9f99f70994f2fb5b180cc58691b04f8
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415702"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Criar um cmdlet para acessar um armazenamento de dados
@@ -375,7 +375,7 @@ O cmdlet deve abrir o provedor indicado pelo caminho do Windows PowerShell para 
 
 Este cmdlet Select-Str de exemplo usa a propriedade [System. Management. Automation. Providerintrinsics. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) para expor o conteúdo a ser verificado. Em seguida, ele pode chamar o método [System. Management. Automation. Contentcmdletproviderintrinsics. GetReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , passando o caminho necessário do Windows PowerShell.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 O código a seguir mostra a implementação desta versão deste cmdlet Select-Str. Observe que esse código inclui a classe cmdlet, os métodos privados usados pelo cmdlet e o código do snap-in do Windows PowerShell usado para registrar o cmdlet. Para obter mais informações sobre como registrar o cmdlet, consulte [criando o cmdlet](#defining-the-cmdlet-class).
 
@@ -1100,7 +1100,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path "notes" -Pattern ".NET" -SimpleMatch=$false
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : True
@@ -1121,7 +1121,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : True
@@ -1142,7 +1142,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path notes -Pattern "\([A-Za-z:blank:]" -SimpleMatch:$false
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : True
@@ -1163,7 +1163,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path notes -Pattern Parameter -CaseSensitive
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : False
@@ -1184,7 +1184,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path * -Pattern "[0-9]"
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : True
@@ -1200,7 +1200,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     select-str -Path "SelectStrCommandSample.cs" -Script { if ($args[0] -cmatch "Pos"){ return $true } return $false }
     ```
 
-    A saída a seguir é exibida.
+    A seguinte saída aparece.
 
     ```output
     IgnoreCase   : True
@@ -1210,7 +1210,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     Pattern      :
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Como criar um cmdlet do Windows PowerShell](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 

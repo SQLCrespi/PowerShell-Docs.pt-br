@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
 ms.openlocfilehash: 0906d0d37c66b8c1538a0b2e9e0f1ff2fba12ac0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369335"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>Diretrizes de desenvolvimento altamente recomendadas
@@ -240,7 +240,7 @@ Quando um cmdlet retorna objetos, o cmdlet deve gravar os objetos imediatamente 
 
 Por padrão, o próprio Windows PowerShell não diferencia maiúsculas de minúsculas. No entanto, como ele lida com muitos sistemas preexistentes, o Windows PowerShell preserva o caso para facilitar a operação e a compatibilidade. Em outras palavras, se um caractere for fornecido em letras maiúsculas, o Windows PowerShell o manterá em letras maiúsculas. Para que os sistemas funcionem bem, um cmdlet precisa seguir essa convenção. Se possível, ele deve operar de forma não diferencia maiúsculas de minúsculas. No entanto, ele deve preservar o caso original para cmdlets que ocorrem posteriormente em um comando ou no pipeline.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 679c8bcb-b49d-4bb4-91f5-ea1af6c217e3
 caps.latest.revision: 8
 ms.openlocfilehash: 4553f95e48a2b1440c00b4951bea56376b00628a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363165"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>Elemento FirstLineHanging para Frame para Controls para Configuration (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento frame para CustomItem para controles para configuração (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Define como os dados são exibidos, como deslocar os dados para a esquerda ou para a direita.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o número de caracteres que você deseja que a primeira linha dos dados seja deslocada.
 

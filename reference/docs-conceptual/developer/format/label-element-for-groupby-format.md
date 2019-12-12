@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3351d237-e8c2-4ec5-9500-4eceadb407c2
 caps.latest.revision: 11
 ms.openlocfilehash: e7158711c60d13c745bbdfab9b1b9fc7d98b34e2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365195"
 ---
 # <a name="label-element-for-groupby-format"></a>Elemento Label para GroupBy (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)|Define como um novo grupo de objetos é exibido.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o texto que será exibido sempre que o Windows PowerShell encontrar uma nova propriedade ou um novo valor de script.
 

@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
 caps.latest.revision: 9
 ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369105"
 ---
 # <a name="windows-powershell-error-records"></a>Registros de erros do Windows PowerShell
@@ -60,7 +60,7 @@ Use as diretrizes a seguir para gerar identificadores de erro ao criar registros
 
 ## <a name="error-category"></a>Categoria do erro
 
-Ao criar um registro de erro, especifique a categoria do erro usando uma das constantes definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . O Windows PowerShell usa a categoria de erro para exibir informações de erro quando os usuários definem a variável `$ErrorView` como `"CategoryView"`.
+Ao criar um registro de erro, especifique a categoria do erro usando uma das constantes definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . O Windows PowerShell usa a categoria de erro para exibir informações de erro quando os usuários definem a variável de `$ErrorView` como `"CategoryView"`.
 
 Evite usar a constante [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **não especificada** . Se você tiver alguma informação sobre o erro ou sobre a operação que causou o erro, escolha a categoria que melhor descreve o erro ou a operação, mesmo que a categoria não seja uma correspondência perfeita.
 
@@ -88,7 +88,7 @@ Quando você desenvolve um registro de erro para um cmdlet, a mensagem de erro p
 
 A mensagem de substituição é fornecida por um objeto [System. Management. Automation. ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) . Use um dos construtores a seguir deste objeto porque eles fornecem informações de localização adicionais que podem ser usadas pelo Windows PowerShell.
 
-- [ErrorDetails (cmdlet, Cadeia de caracteres, Cadeia de caracteres, objeto [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): Use esse construtor se a cadeia de caracteres do modelo for uma cadeia de caracteres de recurso no mesmo assembly no qual o cmdlet é implementado ou se você quiser carregar a cadeia de caracteres do modelo por meio de uma substituição do [ Método System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
+- [ErrorDetails (cmdlet, Cadeia de caracteres, Cadeia de caracteres, objeto [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): Use esse construtor se a cadeia de caracteres do modelo for uma cadeia de caracteres de recurso no mesmo assembly no qual o cmdlet é implementado ou se você quiser carregar a cadeia de caracteres do modelo por meio de uma substituição do método [System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
 
 - [ErrorDetails (assembly, String, String, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): Use este construtor se a cadeia de caracteres do modelo estiver em outro assembly e você não carregá-lo por meio de uma substituição de [System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString).
 

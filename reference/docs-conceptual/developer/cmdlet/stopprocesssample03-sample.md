@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
 caps.latest.revision: 8
 ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369365"
 ---
 # <a name="stopprocesssample03-sample"></a>Amostra StopProcessSample03
@@ -25,11 +25,11 @@ Este exemplo mostra como escrever um cmdlet cujos parâmetros têm aliases e cuj
 
 2. Clique duas vezes no ícone do arquivo da solução (. sln). Isso abre o projeto de exemplo no Microsoft Visual Studio.
 
-3. No menu **Compilar** , selecione **Compilar solução**.
+3. No menu **Compilar**, selecione **Compilar Solução**.
 
     A biblioteca do exemplo será criada nas pastas \bin ou \bin\Debug padrão.
 
-### <a name="how-to-run-the-sample"></a>Como executar o exemplo
+### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
 1. Crie a seguinte pasta de módulo:
 
@@ -51,7 +51,7 @@ Este exemplo mostra como escrever um cmdlet cujos parâmetros têm aliases e cuj
 
 Este exemplo requer o Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Este exemplo demonstra o seguinte.
 

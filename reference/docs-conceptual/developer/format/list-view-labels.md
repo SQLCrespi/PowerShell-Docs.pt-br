@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 53442bb1-74a3-49f9-9150-3bc3081a7565
 caps.latest.revision: 6
 ms.openlocfilehash: 27de41c88e224f7610c10a764e51524016ecc8cb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362785"
 ---
 # <a name="list-view-labels"></a>Exibição de lista (rótulos)
@@ -23,14 +23,14 @@ Este exemplo mostra como implementar um modo de exibição de lista que exibe um
 
 1. Copie o XML da seção de exemplo deste tópico em um arquivo de texto.
 
-2. Salve o arquivo de texto. Certifique-se de adicionar a extensão `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
+2. Salve o arquivo de texto. Certifique-se de adicionar a extensão de `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
 
 3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o parâmetro `prependPath` ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Esse arquivo de formatação demonstra os seguintes elementos XML:
 

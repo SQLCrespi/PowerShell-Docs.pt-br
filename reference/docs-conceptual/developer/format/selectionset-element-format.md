@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 848e7acd-d578-4fd1-a575-c0c3b9b5e68a
 caps.latest.revision: 17
 ms.openlocfilehash: c809aa6c3a40d16cfd2fd99065a846d265ec0f61
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368375"
 ---
 # <a name="selectionset-element-format"></a>Elemento SelectionSet (formato)
@@ -55,7 +55,7 @@ Nenhum.
 
 Você pode usar conjuntos de seleção quando tiver um conjunto de objetos relacionados que deseja referenciar usando um único nome, como um conjunto de objetos que estão relacionados por meio de herança. Ao definir suas exibições, você pode especificar o conjunto de objetos usando o nome do conjunto de seleção em vez de listar todos os objetos dentro de cada exibição.
 
-Conjuntos de seleção comuns são especificados por seu nome ao definir as exibições do arquivo de formatação ou as definições das exibições. Nesses casos, o elemento filho `SelectionSetName` dos elementos `ViewSelectedBy` e `EntrySelectedBy` especifica o conjunto a ser usado. Para obter mais informações sobre conjuntos de seleção, consulte [definindo conjuntos de objetos](./defining-selection-sets.md).
+Conjuntos de seleção comuns são especificados por seu nome ao definir as exibições do arquivo de formatação ou as definições das exibições. Nesses casos, o `SelectionSetName` elemento filho dos elementos `ViewSelectedBy` e `EntrySelectedBy` especifica o conjunto a ser usado. Para obter mais informações sobre conjuntos de seleção, consulte [definindo conjuntos de objetos](./defining-selection-sets.md).
 
 ## <a name="example"></a>Exemplo
 

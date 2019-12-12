@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9c754ac3-cee3-4c13-9bad-e499c8a68a09
 caps.latest.revision: 4
 ms.openlocfilehash: f5c48fd04c620828a6e99c5c5424d11b31fd10e5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367835"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
@@ -27,7 +27,7 @@ A seção ver também é criada a partir do elemento `RelatedLinks` e das marcas
 
 ### <a name="to-add-see-also-topics"></a>Para adicionar tópicos "Consulte também"
 
-1. No arquivo *AssemblyName*. dll-help. xml, dentro do elemento `providerHelp`, adicione um elemento `RelatedLinks`. O elemento `RelatedLinks` deve ser o último elemento no elemento `providerHelp`. Somente um elemento `RelatedLinks` é permitido em cada tópico da ajuda do provedor.
+1. No arquivo *AssemblyName*. dll-help. xml, dentro do elemento `providerHelp`, adicione um elemento `RelatedLinks`. O elemento `RelatedLinks` deve ser o último elemento no elemento `providerHelp`. Apenas um elemento `RelatedLinks` é permitido em cada tópico da ajuda do provedor.
 
    Por exemplo:
 
@@ -38,7 +38,7 @@ A seção ver também é criada a partir do elemento `RelatedLinks` e das marcas
     </providerHelp>
     ```
 
-2. Para cada tópico na seção **Consulte também** , dentro do elemento `RelatedLinks`, adicione um elemento `navigationLink`. Em seguida, dentro de cada elemento `navigationLink`, adicione um elemento `linkText` e um elemento `uri`. Se você não estiver usando o elemento `uri`, poderá adicioná-lo como um elemento vazio (\<uri/>).
+2. Para cada tópico na seção **Consulte também** , dentro do elemento `RelatedLinks`, adicione um elemento `navigationLink`. Em seguida, dentro de cada elemento `navigationLink`, adicione um elemento `linkText` e um elemento `uri`. Se você não estiver usando o elemento `uri`, poderá adicioná-lo como um elemento vazio (\<URI/>).
 
    Por exemplo:
 
@@ -53,7 +53,7 @@ A seção ver também é criada a partir do elemento `RelatedLinks` e das marcas
     </providerHelp>
     ```
 
-3. Digite o nome do tópico entre as marcas `linkText`. Se você estiver fornecendo um URI, digite-o entre as marcas `uri`. Para indicar a versão online do tópico de ajuda do provedor atual, entre as marcas `linkText`, digite "versão online:" em vez do nome do tópico. Normalmente, o link "versão online:" é o primeiro tópico na lista de tópicos consulte também.
+3. Digite o nome do tópico entre as marcas de `linkText`. Se você estiver fornecendo um URI, digite-o entre as marcas de `uri`. Para indicar a versão online do tópico de ajuda do provedor atual, entre as marcas de `linkText`, digite "versão online:" em vez do nome do tópico. Normalmente, o link "versão online:" é o primeiro tópico na lista de tópicos consulte também.
 
    O exemplo a seguir inclui três tópicos de consulte também. A primeira refere-se à versão online do tópico atual. O segundo se refere a um tópico de ajuda de cmdlet do Windows PowerShell. O terceiro se refere a outro tópico online.
 

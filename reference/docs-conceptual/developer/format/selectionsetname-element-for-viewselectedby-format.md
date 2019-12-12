@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
 caps.latest.revision: 13
 ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368255"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>Elemento SelectionSetName para ViewSelectedBy (formato)
@@ -45,9 +45,9 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento ViewSelectedBy (Format)](./viewselectedby-element-format.md)|Define os objetos .NET que são exibidos pela exibição.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
-Especifique o nome do conjunto de seleção definido pelo elemento `Name` para o conjunto de seleção.
+Especifique o nome do conjunto de seleção que é definido pelo elemento `Name` para o conjunto de seleção.
 
 ## <a name="remarks"></a>Comentários
 

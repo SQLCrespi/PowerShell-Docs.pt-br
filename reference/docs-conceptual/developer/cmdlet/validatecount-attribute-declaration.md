@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
 ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369225"
 ---
 # <a name="validatecount-attribute-declaration"></a>Declaração de atributo ValidateCount
@@ -31,9 +31,9 @@ O atributo ValidateCount especifica o número mínimo e máximo de argumentos pe
 
 #### <a name="parameters"></a>Parâmetros
 
-`MinLength` ([System. Int32][]) necessário. Especifica o número mínimo de argumentos.
+`MinLength` ([System.Int32][]) necessário. Especifica o número mínimo de argumentos.
 
-`MaxLength` ([System. Int32][]) necessário. Especifica o número máximo de argumentos.
+`MaxLength`([System.Int32][]) necessário. Especifica o número máximo de argumentos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -43,7 +43,7 @@ O atributo ValidateCount especifica o número mínimo e máximo de argumentos pe
 
 - O tempo de execução do Windows PowerShell gera um erro nas seguintes condições:
 
-    - Os parâmetros de atributo `MinLength` e `MaxLength` não são do tipo [System. Int32][].
+    - Os parâmetros de atributo `MinLength` e `MaxLength` não são do tipo [System.Int32][].
 
     - O valor do parâmetro de atributo `MaxLength` é menor que o valor do parâmetro de atributo `MinLength`.
 
@@ -60,5 +60,5 @@ O atributo ValidateCount especifica o número mínimo e máximo de argumentos pe
 [Como validar uma contagem de argumentos]: how-to-validate-an-argument-count.md
 [Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md (Escrevendo um Cmdlet do Windows PowerShell)
 
-[System. Int32]: /dotnet/api/System.Int32
+[System.Int32]: /dotnet/api/System.Int32
 [System. Management. Automation. ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute

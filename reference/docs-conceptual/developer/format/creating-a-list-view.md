@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8c7a40ca-1786-46f0-bab5-6ce229daa7ee
 caps.latest.revision: 14
 ms.openlocfilehash: 25d24063501196d44e0f806a55bb699c82f771ce
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368975"
 ---
 # <a name="creating-a-list-view"></a>Criar uma exibição de lista
@@ -99,7 +99,7 @@ Os seguintes elementos XML são usados para definir um modo de exibição de lis
 
 - O elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição. Esse elemento é necessário para todas as exibições.
 
-- O elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição. Esse elemento é necessário.
+- O elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição. Este elemento é obrigatório.
 
 - O elemento [GroupBy](./groupby-element-for-view-format.md) define quando um novo grupo de objetos é exibido. Um novo grupo é iniciado sempre que o valor de uma propriedade ou script específico é alterado. Esse elemento é opcional.
 
@@ -141,7 +141,7 @@ Os seguintes elementos XML podem ser usados para fornecer definições para uma 
 
 - O elemento [ListControl](./listcontrol-element-format.md) e seus elementos filho definem o que é exibido na exibição.
 
-- O elemento [ListEntries](./listentries-element-for-listcontrol-format.md) fornece as definições da exibição. Na maioria dos casos, uma exibição terá apenas uma definição. Esse elemento é necessário.
+- O elemento [ListEntries](./listentries-element-for-listcontrol-format.md) fornece as definições da exibição. Na maioria dos casos, uma exibição terá apenas uma definição. Este elemento é obrigatório.
 
 - O elemento [ListEntry](./listentry-element-for-listcontrol-format.md) fornece uma definição da exibição. Pelo menos um [ListEntry](./listentry-element-for-listcontrol-format.md) é necessário; no entanto, não há nenhum limite máximo para o número de elementos que você pode adicionar. Na maioria dos casos, uma exibição terá apenas uma definição.
 
@@ -285,7 +285,7 @@ No exemplo a seguir, o método `ToString` é chamado para formatar o valor do sc
 </ListItem>
 ```
 
-O elemento XML a seguir pode ser usado para chamar o método `ToString`:
+O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
 
 - O elemento [ListItem](./listitem-element-for-listitems-for-listcontrol-format.md) especifica os dados que são exibidos pela exibição.
 

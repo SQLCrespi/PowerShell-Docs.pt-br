@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
 ms.openlocfilehash: 962d2ba9fd892c297a633276b9ac07a5fa75ea87
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366805"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Projetar seu provedor do Windows PowerShell
@@ -33,15 +33,15 @@ Para permitir que o usuário acesse os dados localizados em uma unidade física,
 
 ### <a name="defining-a-provider-qualified-path"></a>Definindo um caminho qualificado pelo provedor
 
-Para permitir que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para provedor. Por exemplo, FileSystem:: \\ \ uncshare\abc\bar é o caminho qualificado do provedor para o provedor FileSystem fornecido pelo Windows PowerShell.
+Para permitir que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para provedor. Por exemplo, FileSystem::\\\uncshare\abc\bar é o caminho qualificado do provedor para o provedor FileSystem fornecido pelo Windows PowerShell.
 
 ### <a name="defining-a-provider-direct-path"></a>Definindo um caminho direto do provedor
 
-Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve dar suporte a um caminho direto do provedor para passar diretamente para o provedor do Windows PowerShell para o local atual. Por exemplo, o provedor do Windows PowerShell do registro pode usar \\ \ server\regkeypath como um caminho direto do provedor.
+Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve dar suporte a um caminho direto do provedor para passar diretamente para o provedor do Windows PowerShell para o local atual. Por exemplo, o provedor do Windows PowerShell do registro pode usar \\\server\regkeypath como um caminho direto do provedor.
 
 ### <a name="defining-a-provider-internal-path"></a>Definindo um caminho interno do provedor
 
-Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor do sistema de arquivos do provedor do Windows PowerShell é \\ \ uncshare\abc\bar.
+Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor do sistema de arquivos do provedor do Windows PowerShell é \\\uncshare\abc\bar.
 
 ## <a name="changing-stored-data"></a>Alterando dados armazenados
 
@@ -53,7 +53,7 @@ O Windows PowerShell fornece várias classes base que você pode usar para imple
 
 Cada classe base do provedor do Windows PowerShell disponibiliza um conjunto de cmdlets. Esta seção descreve os cmdlets, mas não descreve seus parâmetros.
 
-Usando o estado de sessão, o tempo de execução do Windows PowerShell disponibiliza vários cmdlets de local para determinados provedores do Windows PowerShell, como os cmdlets `Get-Location`, `Set-Location`, `Pop-Location` e `Push-Location`. Você pode usar o cmdlet `Get-Help` para obter informações sobre esses cmdlets de local.
+Usando o estado de sessão, o tempo de execução do Windows PowerShell disponibiliza vários cmdlets de local para determinados provedores do Windows PowerShell, como os cmdlets `Get-Location`, `Set-Location`, `Pop-Location`e `Push-Location`. Você pode usar o cmdlet `Get-Help` para obter informações sobre esses cmdlets de local.
 
 ### <a name="cmdletprovider-base-class"></a>Classe base cmdletprovider
 
@@ -141,7 +141,7 @@ A interface [System. Management. Automation. Provider. Ipropertycmdletprovider](
 
 ### <a name="idynamicpropertycmdletprovider"></a>IDynamicPropertyCmdletProvider
 
-A interface [System. Management. Automation. Provider. Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) , derivada de [System. Management. Automation. Provider. Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider), define um provedor que especifica parâmetros dinâmicos para seu cmdlets com suporte. Esse tipo de provedor trata as operações para as quais as propriedades podem ser definidas em tempo de execução, por exemplo, uma nova operação de propriedade. Essas operações não são possíveis em itens com propriedades definidas estaticamente. A tabela a seguir lista os cmdlets expostos por essa interface.
+A interface [System. Management. Automation. Provider. Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) , derivada de [System. Management. Automation. Provider. Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider), define um provedor que especifica parâmetros dinâmicos para seus cmdlets com suporte. Esse tipo de provedor trata as operações para as quais as propriedades podem ser definidas em tempo de execução, por exemplo, uma nova operação de propriedade. Essas operações não são possíveis em itens com propriedades definidas estaticamente. A tabela a seguir lista os cmdlets expostos por essa interface.
 
 |Cmdlet|Definição|
 |------------|----------------|

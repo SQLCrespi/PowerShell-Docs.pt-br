@@ -11,10 +11,10 @@ applies_to:
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
 ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366955"
 ---
 # <a name="updatable-help-overview"></a>Visão geral da ajuda atualizável
@@ -25,7 +25,7 @@ Este documento fornece uma introdução básica ao design e operação do recurs
 
 Os tópicos de ajuda do Windows PowerShell são parte integrante da experiência do Windows PowerShell. Assim como os módulos do Windows PowerShell, os tópicos da ajuda são continuamente atualizados e aprimorados pelos autores e pelas contribuições da comunidade de usuários do Windows PowerShell.
 
-O recurso de *ajuda atualizável* , introduzido no Windows PowerShell 3,0, garante que os usuários tenham as versões mais recentes dos tópicos da ajuda no prompt de comando, mesmo para comandos internos do Windows PowerShell, sem baixar novos módulos ou executar Windows Update . A ajuda atualizável torna a atualização simples, fornecendo cmdlets que baixam as versões mais recentes dos tópicos de ajuda da Internet e as instalam nos subdiretórios corretos no computador local do usuário. Até mesmo os usuários que estão atrás de firewalls podem usar os novos cmdlets para obter ajuda atualizada de um compartilhamento de arquivos interno.
+O recurso de *ajuda atualizável* , introduzido no Windows PowerShell 3,0, garante que os usuários tenham as versões mais recentes dos tópicos da ajuda no prompt de comando, mesmo para comandos internos do Windows PowerShell, sem baixar novos módulos ou executar Windows Update. A ajuda atualizável torna a atualização simples, fornecendo cmdlets que baixam as versões mais recentes dos tópicos de ajuda da Internet e as instalam nos subdiretórios corretos no computador local do usuário. Até mesmo os usuários que estão atrás de firewalls podem usar os novos cmdlets para obter ajuda atualizada de um compartilhamento de arquivos interno.
 
 A ajuda atualizável tem suporte total de todos os módulos do Windows PowerShell no Windows® 8 e do Windows Server® 2012, e seus recursos estão disponíveis para todos os autores de módulo do Windows PowerShell. A ajuda atualizável dá suporte apenas a arquivos de ajuda baseados em XML. Ele não oferece suporte à ajuda baseada em comentários.
 
@@ -41,7 +41,7 @@ A ajuda atualizável inclui os seguintes recursos.
 
 - **Suporte à versão**. A ajuda atualizável usa quatro posições padrão (N1. N2. N3. N4) números de versão. A ajuda atualizável baixa arquivos de ajuda quando o número de versão dos arquivos de ajuda no computador do usuário (ou no diretório `Save-Help`) é menor do que o número de versão dos arquivos de ajuda no local da Internet.
 
-- **Suporte a vários idiomas**. A ajuda atualizável oferece suporte a arquivos de ajuda de módulo em várias culturas de interface do usuário. Nomes de arquivo de ajuda atualizáveis incluem códigos de idioma padrão, como "en-US" e "ja-JP", e os cmdlets `Update-Help` e `Save-Help` colocam os arquivos de ajuda em subdiretórios específicos à linguagem do diretório do módulo.
+- **Suporte a vários idiomas**. A ajuda atualizável oferece suporte a arquivos de ajuda de módulo em várias culturas de interface do usuário. Nomes de arquivo de ajuda atualizáveis incluem códigos de idioma padrão, como "en-US" e "ja-JP", e os cmdlets `Update-Help` e `Save-Help` colocam os arquivos de ajuda em subdiretórios específicos do idioma do diretório do módulo.
 
 - **Ajuda gerada automaticamente**. O cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) exibe a ajuda básica para comandos que não têm arquivos de ajuda. A ajuda gerada automaticamente inclui a sintaxe e os aliases de comando e instruções para usar a ajuda online e a ajuda atualizável.
 

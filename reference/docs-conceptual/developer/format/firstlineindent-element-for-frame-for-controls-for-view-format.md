@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ec63f4f9-8858-4529-8646-ffbbc278f83e
 caps.latest.revision: 7
 ms.openlocfilehash: 694c5baaa5e90a772257276ba139d90acf7ec0e3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363085"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-view-format"></a>Elemento FirstLineIndent para Frame para Controls para View (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento frame para CustomItem para controles para View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Define como os dados são exibidos, como deslocar os dados para a esquerda ou para a direita.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o número de caracteres que você deseja que a primeira linha dos dados seja deslocada.
 

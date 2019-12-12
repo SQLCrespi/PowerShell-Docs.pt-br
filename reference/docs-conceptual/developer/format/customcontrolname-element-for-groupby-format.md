@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 473d9b56-521b-479a-8010-67fe9f040063
 caps.latest.revision: 8
 ms.openlocfilehash: 3a386eff95044eae573c255a451c5c8b8f16714d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368875"
 ---
 # <a name="customcontrolname-element-for-groupby-format"></a>Elemento CustomControlName para GroupBy (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)|Define como o Windows PowerShell exibe um novo grupo de objetos.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome do controle personalizado usado para exibir um novo grupo.
 

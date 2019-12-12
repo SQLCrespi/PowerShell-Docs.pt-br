@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 33cb5350-73ef-4b79-a879-0edf051869e4
 caps.latest.revision: 7
 ms.openlocfilehash: 174ba6a14819f823ec39f72e49a626e781221d8c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363935"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>Elemento CustomItem para CustomEntry para Controls para View (formato)
@@ -34,7 +34,7 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `CustomItem`. Para obter mais informações, consulte comentários.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `CustomItem`. Para obter mais informações, consulte Remarks.
 
 ### <a name="attributes"></a>Atributos
 
@@ -59,7 +59,7 @@ Nenhum.
 
 Ao especificar os elementos filho do elemento `CustomItem`, tenha em mente o seguinte:
 
-- Os elementos filho devem ser adicionados na seguinte sequência: `ExpressionBinding`, `NewLine`, `Text` e `Frame`.
+- Os elementos filho devem ser adicionados na seguinte sequência: `ExpressionBinding`, `NewLine`, `Text`e `Frame`.
 
 - Não há nenhum limite máximo para o número de sequências que você pode especificar.
 

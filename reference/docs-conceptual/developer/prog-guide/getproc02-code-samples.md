@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a2fd91af-758b-49b9-b57f-106ee01fc8c1
 caps.latest.revision: 5
 ms.openlocfilehash: 381011ffd9bd4a46dcfcdbebaa0164d03378abe6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416182"
 ---
 # <a name="getproc02-code-samples"></a>Exemplos de código GetProc02
@@ -26,12 +26,12 @@ Aqui estão os exemplos de código para o cmdlet de exemplo GetProc02. Este é o
 
 Para obter o código de exemplo completo, consulte os tópicos a seguir.
 
-|Idioma|Tópico|
+|Language|Tópico|
 |--------------|-----------|
 |C#|[Código deC#exemplo GetProc02 ()](./getproc02-csharp-sample-code.md)|
 |VB.NET|[Código de exemplo do GetProc02 (VB.NET)](./getproc02-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

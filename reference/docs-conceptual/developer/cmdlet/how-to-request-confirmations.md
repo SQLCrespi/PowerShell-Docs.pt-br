@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
 ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369675"
 ---
 # <a name="how-to-request-confirmations"></a>Como solicitar confirmações
@@ -49,7 +49,7 @@ Este exemplo mostra como chamar os métodos [System. Management. Automation. cmd
 
 ## <a name="example"></a>Exemplo
 
-No exemplo de código a seguir, os métodos [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) são chamados de dentro da substituição do [ Método System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . No entanto, você também pode chamar esses métodos de outros métodos de processamento de entrada.
+No exemplo de código a seguir, os métodos [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) são chamados de dentro da substituição do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . No entanto, você também pode chamar esses métodos de outros métodos de processamento de entrada.
 
 ```csharp
 protected override void ProcessRecord()

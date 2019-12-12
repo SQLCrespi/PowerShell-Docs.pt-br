@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
 caps.latest.revision: 6
 ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369495"
 ---
 # <a name="security-parameters"></a>Parâmetros de segurança
@@ -29,21 +29,21 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 |**CertStoreLocation**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o local do repositório de certificados. O local normalmente é um caminho de arquivo.|
 |**CertSubjectName**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o emissor de um certificado ou para que o usuário possa especificar uma subcadeia de caracteres.|
 |**CertUsage**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para especificar o uso de chave ou o uso avançado de chave. A chave pode ser representada como uma máscara de bits, um bit, um OID (identificador de objeto) ou uma cadeia de caracteres.|
-|**Provedores**<br>Tipo de dados: [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Implemente esse parâmetro para que o cmdlet solicite automaticamente ao usuário um nome de usuário ou senha. Um prompt para ambos será exibido se uma credencial completa não for fornecida diretamente.|
+|**Credencial**<br>Tipo de dados: [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Implemente esse parâmetro para que o cmdlet solicite automaticamente ao usuário um nome de usuário ou senha. Um prompt para ambos será exibido se uma credencial completa não for fornecida diretamente.|
 |**CSPName**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o nome do provedor de serviços de certificado (CSP).|
 |**CSPType**<br>Tipo de dados: inteiro|Implemente esse parâmetro para que o usuário possa especificar o tipo de CSP.|
 |**Grupo**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma coleção de entidades de acesso. Para obter mais informações, consulte a descrição do parâmetro **principal** .|
 |**KeyAlgorithm**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o algoritmo de geração de chave a ser usado para segurança.|
 |**KeyContainerName**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o nome do contêiner de chave.|
 |**KeyLength da**<br>Tipo de dados: inteiro|Implemente esse parâmetro para que o usuário possa especificar o comprimento da chave em bits.|
-|**Operacional**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma ação que pode ser executada em um objeto protegido.|
-|**Beneficiário**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma entidade identificável exclusiva para acesso.|
+|**Operação**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma ação que pode ser executada em um objeto protegido.|
+|**Principal**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma entidade identificável exclusiva para acesso.|
 |**Privilégio**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o direito que um cmdlet precisa para executar uma operação para uma entidade específica.|
 |**Privilégios**<br>Tipo de dados: matriz de privilégios|Implemente esse parâmetro para que o usuário possa especificar os direitos que um cmdlet precisa para executar sua operação para uma determinada entrada.|
-|**Cargo**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um conjunto de operações que podem ser executadas por uma entidade.|
+|**Função**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um conjunto de operações que podem ser executadas por uma entidade.|
 |**SaveCred**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro de forma que as credenciais que foram salvas anteriormente pelo usuário serão usadas quando o parâmetro for especificado.|
-|**Com**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o grupo de objetos protegidos para o cmdlet.|
-|**SIDs**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
+|**Escopo**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o grupo de objetos protegidos para o cmdlet.|
+|**SID**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
 |**Confiável**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro para que os níveis de confiança tenham suporte quando o parâmetro for especificado.|
 |**TrustLevel**<br>Tipo de dados: palavra-chave|Implemente esse parâmetro para que o usuário possa especificar o nível de confiança que tem suporte. Por exemplo, os valores possíveis incluem Internet, intranet e FullTrust.|
 

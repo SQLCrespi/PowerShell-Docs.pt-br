@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
 ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370025"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
@@ -86,7 +86,7 @@ A tabela a seguir lista a maioria dos verbos definidos.
 
 |Verbo (alias)|Ação|Comentários|
 |--------------------|------------|--------------|
-|[Adicionar](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Adiciona um recurso a um contêiner ou anexa um item a outro item. Por exemplo, o cmdlet `Add-Content` adiciona conteúdo a um arquivo. Esse verbo é emparelhado com `Remove`.|Para esta ação, não use verbos como acrescentar, Attach, Concatenate ou INSERT.|
+|[Adicionar](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Adiciona um recurso a um contêiner ou anexa um item a outro item. Por exemplo, o cmdlet `Add-Content` adiciona o conteúdo a um arquivo. Esse verbo é emparelhado com `Remove`.|Para esta ação, não use verbos como acrescentar, Attach, Concatenate ou INSERT.|
 |[Limpar](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (CL)|Remove todos os recursos de um contêiner, mas não exclui o contêiner. Por exemplo, o cmdlet `Clear-Content` remove o conteúdo de um arquivo, mas não exclui o arquivo.|Para esta ação, não use verbos como liberar, apagar, liberar, desmarcar, remover ou anular.|
 |[Fechar](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (CS)|Altera o estado de um recurso para torná-lo inacessível, indisponível ou inutilizável. Esse verbo é emparelhado com `Open.`||
 |[Copiar](/dotnet/api/System.Management.Automation.VerbsCommon.Copy) (CP)|Copia um recurso para outro nome ou para outro contêiner. Por exemplo, o cmdlet `Copy-Item` usado para acessar dados armazenados copia um item de um local no repositório de dados para outro local.|Para essa ação, não use verbos como duplicar, clonar, replicar ou sincronizar.|
@@ -103,7 +103,7 @@ A tabela a seguir lista a maioria dos verbos definidos.
 |[Abrir](/dotnet/api/System.Management.Automation.VerbsCommon.Open) (op)|Altera o estado de um recurso para torná-lo acessível, disponível ou utilizável. Esse verbo é emparelhado com `Close`.||
 |[Otimizar](/dotnet/api/System.Management.Automation.VerbsCommon.Optimize) (OM)|Aumenta a eficácia de um recurso.||
 |[Pop](/dotnet/api/System.Management.Automation.VerbsCommon.Pop) (pop)|Remove um item da parte superior de uma pilha. Por exemplo, o cmdlet `Pop-Location` altera o local atual para o local que foi enviado mais recentemente para a pilha.||
-|[Push](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (PU)|Adiciona um item à parte superior de uma pilha. Por exemplo, o cmdlet `Push-Location` envia por push o local atual para a pilha.||
+|[Push](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (PU)|Adiciona um item à parte superior de uma pilha. Por exemplo, o cmdlet `Push-Location` envia o local atual para a pilha.||
 |[Refazer](/dotnet/api/System.Management.Automation.VerbsCommon.Redo) (re)|Redefine um recurso para o estado que foi desfeito.||
 |[Remover](/dotnet/api/System.Management.Automation.VerbsCommon.Remove) (r)|Exclui um recurso de um contêiner. Por exemplo, o cmdlet `Remove-Variable` exclui uma variável e seu valor. Esse verbo é emparelhado com `Add`.|Para esta ação, não use verbos como Clear, Cut, Dispose, Discard ou Erase.|
 |[Renomear](/dotnet/api/System.Management.Automation.VerbsCommon.Rename) (RN)|Altera o nome de um recurso. Por exemplo, o cmdlet `Rename-Item`, que é usado para acessar dados armazenados, altera o nome de um item no repositório de dados.|Para esta ação, não use um verbo como alterar.|
@@ -201,7 +201,7 @@ A tabela a seguir lista a maioria dos verbos definidos.
 |[Invocar](/dotnet/api/System.Management.Automation.VerbsLifecycle.Invoke) (i)|Executa uma ação, como executar um comando ou um método.|Para essa ação, não use verbos como executar ou iniciar.|
 |[Registrar](/dotnet/api/System.Management.Automation.VerbsLifecycle.Register) (RG)|Cria uma entrada para um recurso em um repositório, como um banco de dados. Esse verbo é emparelhado com `Unregister`.||
 |[Solicitação](/dotnet/api/System.Management.Automation.VerbsLifecycle.Request) (RQ)|Solicita um recurso ou solicita permissões.||
-|[Reiniciar](/dotnet/api/System.Management.Automation.VerbsLifecycle.Restart) (RT)|Interrompe uma operação e a inicia novamente. Por exemplo, o cmdlet `Restart-Service` é interrompido e, em seguida, inicia um serviço.|Para esta ação, não use um verbo como reciclar.|
+|[Reiniciar](/dotnet/api/System.Management.Automation.VerbsLifecycle.Restart) (RT)|Interrompe uma operação e a inicia novamente. Por exemplo, o cmdlet `Restart-Service` para e inicia um serviço.|Para esta ação, não use um verbo como reciclar.|
 |[Currículo](/dotnet/api/System.Management.Automation.VerbsLifecycle.Resume) (ru)|Inicia uma operação que foi suspensa. Por exemplo, o cmdlet `Resume-Service` inicia um serviço que foi suspenso. Esse verbo é emparelhado com `Suspend`.||
 |[Início](/dotnet/api/System.Management.Automation.VerbsLifecycle.Start) (SA)|Inicia uma operação. Por exemplo, o cmdlet `Start-Service` inicia um serviço. Esse verbo é emparelhado com `Stop`.|Para essa ação, não use verbos como iniciar, iniciar ou inicializar.|
 |[Parar](/dotnet/api/System.Management.Automation.VerbsLifecycle.Stop) (SP)|Descontinua uma atividade. Esse verbo é emparelhado com `Start`.|Para essa ação, não use verbos como end, Kill, Terminate ou Cancel.|

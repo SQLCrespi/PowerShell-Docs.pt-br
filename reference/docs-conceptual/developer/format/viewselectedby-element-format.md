@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: acdeef4d-3554-4f39-a7e6-a684e3848fd7
 caps.latest.revision: 19
 ms.openlocfilehash: efc1c5d1338889ecd0be7150b7733842ce78979e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367965"
 ---
 # <a name="viewselectedby-element-format"></a>Elemento ViewSelectedBy (formato)
@@ -32,7 +32,7 @@ Elemento ViewDefinitions (Format) View element (Format) ViewSelectedBy elemento 
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `ViewSelectedBy`. Esse elemento deve conter pelo menos um elemento filho `TypeName` ou `SelectionSetName`. Não há nenhum limite para o número de elementos filho que podem ser especificados, nem sua ordem significativa.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `ViewSelectedBy`. Este elemento deve conter pelo menos um `TypeName` ou `SelectionSetName` elemento filho. Não há nenhum limite para o número de elementos filho que podem ser especificados, nem sua ordem significativa.
 
 ### <a name="attributes"></a>Atributos
 
@@ -79,7 +79,7 @@ O exemplo a seguir mostra como especificar o objeto [System. ServiceProcess. Ser
 
 [Criando uma exibição ampla](./creating-a-wide-view.md)
 
-[Criando controles personalizados](./creating-custom-controls.md)
+[Criar controles personalizados](./creating-custom-controls.md)
 
 [Definindo conjuntos de seleção](./defining-selection-sets.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
 ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367065"
 ---
 # <a name="installing-a-powershell-module"></a>Instalar um módulo do PowerShell
@@ -62,7 +62,7 @@ Por padrão, o valor da variável de ambiente **PSModulePath** contém os seguin
   ```
 
   > [!IMPORTANT]
-  > Depois de adicionar o caminho para **PSModulePath**, você deve transmitir uma mensagem de ambiente sobre a alteração. A transmissão da alteração permite que outros aplicativos, como o Shell, escolham a alteração. Para transmitir a alteração, faça com que o código de instalação do produto envie uma mensagem **WM_SETTINGCHANGE** com `lParam` definido para a cadeia de caracteres "Environment". Lembre-se de enviar a mensagem depois que o código de instalação do módulo tiver atualizado o **PSModulePath**.
+  > Depois de adicionar o caminho para **PSModulePath**, você deve transmitir uma mensagem de ambiente sobre a alteração. A transmissão da alteração permite que outros aplicativos, como o Shell, escolham a alteração. Para difundir a alteração, peça ao código de instalação do produto para enviar uma mensagem de **WM_SETTINGCHANGE** com `lParam` definido como a cadeia de caracteres "ambiente". Lembre-se de enviar a mensagem depois que o código de instalação do módulo tiver atualizado o **PSModulePath**.
 
 ### <a name="use-the-correct-module-directory-name"></a>Usar o nome do diretório de módulo correto
 
@@ -101,7 +101,7 @@ Se o módulo não estiver bem formado e seu local não estiver incluído no valo
 
 - O cmdlet [show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) não pode localizar e exibir os comandos no módulo.
 
-  Os comandos no módulo estão ausentes na janela `Show-Command` no Ambiente de Script Integrado do Windows PowerShell (ISE).
+  Os comandos no módulo estão ausentes na janela de `Show-Command` no Ambiente de Script Integrado do Windows PowerShell (ISE).
 
 ## <a name="where-to-install-modules"></a>Onde instalar os módulos
 

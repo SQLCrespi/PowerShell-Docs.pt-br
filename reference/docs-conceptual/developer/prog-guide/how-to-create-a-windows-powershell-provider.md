@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
 ms.openlocfilehash: ffbf8028ba2b52e77d8e22c061baa9b8b67f6da3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366645"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Como criar um provedor do Windows PowerShell
@@ -29,7 +29,7 @@ Para o desenvolvedor, o provedor do Windows PowerShell é a interface entre o us
 
 O Windows PowerShell fornece vários provedores (como o provedor FileSystem, o provedor de registro e o provedor de alias) usados para acessar armazenamentos de dados conhecidos. Para obter mais informações sobre os provedores fornecidos pelo Windows PowerShell, use o seguinte comando para acessar a ajuda online:
 
-**PS > Get-Help about_Providers**
+**PS > Get-Help about_providers**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Acessando os dados armazenados usando caminhos do Windows PowerShell
 

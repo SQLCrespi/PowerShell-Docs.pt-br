@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9abb63b8-6d02-4e24-9c0e-2d15a04e9051
 caps.latest.revision: 8
 ms.openlocfilehash: 7a36f548a3eccdf2c9cad04a8bfe28bf4e8d6dfd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367935"
 ---
 # <a name="wide-view-basic"></a>Exibição ampla (Básica)
@@ -23,14 +23,14 @@ Este exemplo mostra como implementar uma exibição ampla básica que exibe o [S
 
 1. Copie o XML da seção de exemplo deste tópico em um arquivo de texto.
 
-2. Salve o arquivo de texto. Certifique-se de adicionar a extensão `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
+2. Salve o arquivo de texto. Certifique-se de adicionar a extensão de `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
 
 3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o parâmetro `prependPath` ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Esse arquivo de formatação demonstra os seguintes elementos XML:
 

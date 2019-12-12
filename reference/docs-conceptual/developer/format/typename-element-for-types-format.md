@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
 ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368025"
 ---
 # <a name="typename-element-for-types-format"></a>Elemento TypeName para Types (formato)
@@ -29,7 +29,7 @@ Elemento de configuração (Format) elemento SelectionSets (formato) elemento Se
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `TypeName`. Pelo menos um elemento `TypeName` deve ser incluído no conjunto de seleção.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `TypeName`. Pelo menos um elemento de `TypeName` deve ser incluído no conjunto de seleção.
 
 ### <a name="attributes"></a>Atributos
 
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento Types (formato)](./types-element-for-selectionset-format.md)|Define os objetos .NET que estão no conjunto de seleção.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome totalmente qualificado para o tipo .NET.
 
@@ -53,7 +53,7 @@ Especifique o nome totalmente qualificado para o tipo .NET.
 
 Você pode usar conjuntos de seleção quando tiver um conjunto de objetos relacionados que deseja referenciar usando um único nome, como um conjunto de objetos que estão relacionados por meio de herança. Ao definir suas exibições, você pode especificar o conjunto de objetos usando o nome do conjunto de seleção em vez de listar todos os objetos dentro de cada exibição.
 
-Conjuntos de seleção comuns são especificados por seu nome ao definir as exibições do arquivo de formatação. Nesses casos, o elemento filho `SelectionSetName` do elemento `ViewSelectedBy` para a exibição especifica o conjunto. No entanto, entradas diferentes de uma exibição também podem especificar um conjunto de seleção que se aplica somente a essa entrada da exibição. Para obter mais informações sobre conjuntos de seleção, consulte [definindo conjuntos de objetos](./defining-selection-sets.md).
+Conjuntos de seleção comuns são especificados por seu nome ao definir as exibições do arquivo de formatação. Nesses casos, o elemento filho `SelectionSetName` do elemento `ViewSelectedBy` da exibição especifica o conjunto. No entanto, entradas diferentes de uma exibição também podem especificar um conjunto de seleção que se aplica somente a essa entrada da exibição. Para obter mais informações sobre conjuntos de seleção, consulte [definindo conjuntos de objetos](./defining-selection-sets.md).
 
 ## <a name="example"></a>Exemplo
 

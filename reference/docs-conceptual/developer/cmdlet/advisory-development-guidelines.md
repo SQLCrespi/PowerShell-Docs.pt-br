@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
 ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370035"
 ---
 # <a name="advisory-development-guidelines"></a>Diretrizes para desenvolvimento de consultoria
@@ -115,7 +115,7 @@ Outros tipos:
 
 Ao lidar com dados confidenciais, sempre use o tipo de dados [System. Security. SecureString](/dotnet/api/System.Security.SecureString) . Isso pode incluir entrada de pipeline para parâmetros, bem como retornar dados confidenciais para o pipeline.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
 

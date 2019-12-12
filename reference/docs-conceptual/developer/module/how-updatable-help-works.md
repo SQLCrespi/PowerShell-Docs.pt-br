@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
 ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367075"
 ---
 # <a name="how-updatable-help-works"></a>Como a ajuda atualizável funciona
@@ -25,7 +25,7 @@ A lista a seguir descreve as ações do cmdlet [Update-Help](/powershell/module/
 
 1. `Update-Help` Obtém o arquivo XML HelpInfo remoto do local especificado pelo valor da chave **HelpInfoURI** no manifesto do módulo e valida o arquivo em relação ao esquema. (Para exibir o esquema, consulte [HELPINFO XML Schema](./helpinfo-xml-schema.md).) Em seguida, `Update-Help` procura um arquivo XML HelpInfo local para o módulo no diretório do módulo no computador do usuário.
 
-2. `Update-Help` compara o número de versão dos arquivos de ajuda para a cultura da interface do usuário especificada nos arquivos XML HelpInfo remotos e locais para o módulo. Se o número de versão no arquivo remoto for maior que o número de versão no arquivo local ou se não houver nenhum arquivo XML HelpInfo local para o módulo, `Update-Help` se preparar para baixar novos arquivos de ajuda.
+2. `Update-Help` compara o número de versão dos arquivos de ajuda para a cultura da interface do usuário especificada nos arquivos XML HelpInfo remotos e locais para o módulo. Se o número de versão no arquivo remoto for maior que o número de versão no arquivo local ou se não houver nenhum arquivo XML HelpInfo local para o módulo, o `Update-Help` se preparar para baixar novos arquivos de ajuda.
 
 3. `Update-Help` seleciona o arquivo CAB para o módulo a partir do local especificado pelo elemento **HelpContentUri** no arquivo XML HelpInfo remoto. Ele usa o nome do módulo, o GUID do módulo e a cultura da interface do usuário para identificar o arquivo CAB.
 
@@ -53,7 +53,7 @@ O cmdlet `Save-Help` executa as seguintes ações em resposta a um comando para 
 
 1. `Update-Help` Obtém o arquivo XML HelpInfo remoto do diretório **SourcePath** . Em seguida, ele procura um arquivo XML HelpInfo local no diretório do módulo no computador do usuário.
 
-2. `Update-Help` compara o número de versão dos arquivos de ajuda para a cultura da interface do usuário especificada nos arquivos XML HelpInfo remotos e locais para o módulo. Se o número de versão no arquivo remoto for maior que o número de versão no arquivo local ou se não houver nenhum arquivo XML HelpInfo local, `Update-Help` se preparar para instalar novos arquivos de ajuda.
+2. `Update-Help` compara o número de versão dos arquivos de ajuda para a cultura da interface do usuário especificada nos arquivos XML HelpInfo remotos e locais para o módulo. Se o número de versão no arquivo remoto for maior que o número de versão no arquivo local, ou se não houver nenhum arquivo XML HelpInfo local, `Update-Help` se preparar para instalar novos arquivos de ajuda.
 
 3. `Update-Help` seleciona o arquivo CAB para o módulo do diretório **SourcePath** . Ele usa o nome do módulo, o GUID do módulo e a cultura da interface do usuário para identificar o arquivo CAB.
 

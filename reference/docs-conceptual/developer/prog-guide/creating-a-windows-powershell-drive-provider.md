@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
 ms.openlocfilehash: 2e3d97e224b06bdf36ac0bc1237911e029ea762d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366825"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Criar um provedor de unidade do Windows PowerShell
@@ -31,7 +31,7 @@ O provedor de unidade deve definir uma classe .NET que deriva da classe base [Sy
 
 [!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L29-L30 "AccessDBProviderSample02.cs")]
 
-Observe que, neste exemplo, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) especifica um nome amigável para o provedor e os recursos específicos do Windows PowerShell que o provedor expõe para as janelas Tempo de execução do PowerShell durante o processamento do comando. Os valores possíveis para os recursos do provedor são definidos pela enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Este provedor de unidade não oferece suporte a nenhum desses recursos.
+Observe que, neste exemplo, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) especifica um nome amigável para o provedor e os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Os valores possíveis para os recursos do provedor são definidos pela enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Este provedor de unidade não oferece suporte a nenhum desses recursos.
 
 ## <a name="defining-base-functionality"></a>Definindo a funcionalidade base
 
@@ -67,7 +67,7 @@ A substituição desse método deve fazer o seguinte:
 
 ## <a name="attaching-dynamic-parameters-to-newdrive"></a>Anexando parâmetros dinâmicos a NewDrive
 
-O cmdlet `New-PSDrive` com suporte do seu provedor de unidade pode exigir parâmetros adicionais. Para anexar esses parâmetros dinâmicos ao cmdlet, o provedor implementa o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Esse método retorna um objeto que tem propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+O cmdlet `New-PSDrive` suportado pelo seu provedor de unidade pode exigir parâmetros adicionais. Para anexar esses parâmetros dinâmicos ao cmdlet, o provedor implementa o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Esse método retorna um objeto que tem propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Este provedor de unidade não substitui esse método. No entanto, o código a seguir mostra a implementação padrão desse método:
 
@@ -97,7 +97,7 @@ Este provedor de unidade não substitui o método [System. Management. Automatio
 
 Todos os provedores de unidade devem montar uma unidade raiz para ajudar o usuário com a capacidade de descoberta. A unidade raiz pode listar locais que servem como raízes para outras unidades montadas. Por exemplo, o provedor de Active Directory pode criar uma unidade que lista os contextos de nomenclatura encontrados nos atributos de `namingContext` no ambiente de sistema distribuído raiz (DSE). Isso ajuda os usuários a descobrir pontos de montagem para outras unidades.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample02](./accessdbprovidersample02-code-sample.md).
 

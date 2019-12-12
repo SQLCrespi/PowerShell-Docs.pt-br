@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
 caps.latest.revision: 6
 ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365135"
 ---
 # <a name="list-view-groupby"></a>Exibição de lista (GroupBy)
@@ -23,14 +23,14 @@ Este exemplo mostra como implementar um modo de exibição de lista que separa a
 
 1. Copie o XML da seção de exemplo deste tópico em um arquivo de texto.
 
-2. Salve o arquivo de texto. Certifique-se de adicionar a extensão `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
+2. Salve o arquivo de texto. Certifique-se de adicionar a extensão de `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
 
 3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o parâmetro `prependPath` ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Esse arquivo de formatação demonstra os seguintes elementos XML:
 

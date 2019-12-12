@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
 ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367815"
 ---
 # <a name="examples-of-comment-based-help"></a>Exemplos de ajuda baseada em comentários
@@ -311,7 +311,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Exemplo 5: redirecionando para um tópico de ajuda diferente
 
-O código a seguir é um trecho do início da função interna `Help` no Windows PowerShell, que exibe uma tela de texto de ajuda por vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa as palavras-chave `.ForwardHelpTargetName` e `.ForwardHelpCategory` para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
+O código a seguir é um trecho do início da função de `Help` interna no Windows PowerShell, que exibe uma tela de texto de ajuda por vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa as palavras-chave `.ForwardHelpTargetName` e `.ForwardHelpCategory` para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
 
 ```powershell
 function help
