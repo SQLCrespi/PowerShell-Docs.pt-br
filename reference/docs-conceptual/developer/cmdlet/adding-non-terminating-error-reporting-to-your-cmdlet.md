@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
 ms.openlocfilehash: a4426abec96cd922360aeef8c157b4e9f41a15b9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364605"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Adicionar relatórios de erros de não encerramento ao seu cmdlet
@@ -186,12 +186,12 @@ Para um erro de não encerramento, o cmdlet deve gerar um identificador de erro 
 
 Geralmente, um cmdlet precisa modificar a ação do PowerShell produzida por um erro de não encerramento.
 Isso pode fazer isso definindo os parâmetros `ErrorAction` e `ErrorVariable`.
-Se definir o parâmetro `ErrorAction`, o cmdlet apresentará as opções de usuário [System. Management. Automation. preferência][], você também pode influenciar diretamente a ação definindo a variável `$ErrorActionPreference`.
+Se definir o parâmetro `ErrorAction`, o cmdlet apresentará as opções de usuário [System. Management. Automation. preferência][], você também poderá influenciar diretamente a ação definindo a variável `$ErrorActionPreference`.
 
 O cmdlet pode salvar erros não conclusivos em uma variável usando o parâmetro `ErrorVariable`, que não é afetado pela configuração de `ErrorAction`.
 As falhas podem ser acrescentadas a uma variável de erro existente adicionando um sinal de adição (+) à frente do nome da variável.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample04](./getprocesssample04-sample.md).
 
@@ -217,7 +217,7 @@ Vamos testar o cmdlet Get-proc de exemplo para ver se ele relata um erro:
     PS> get-proc -name test
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     get-proc : Operation is not valid due to the current state of the object.

@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
 ms.openlocfilehash: f73e732ca9416b906b3647c5090dfa04ad940484
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416203"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
@@ -150,7 +150,7 @@ O provedor de navegação de exemplo não substitui esse método. A seguir está
 
 Sua implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) deve analisar o parâmetro `path`, mas não precisa usar uma análise puramente sintática. Você é incentivado a criar esse método para usar o caminho para pesquisar as informações de caminho no repositório de dados e criar um caminho que corresponda à sintaxe de caminho padronizado e com maiúsculas e minúsculas.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample05](./accessdbprovidersample05-code-sample.md).
 
@@ -284,7 +284,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

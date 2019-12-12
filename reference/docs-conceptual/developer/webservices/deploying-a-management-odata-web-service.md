@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
 ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366175"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>Implantar um serviço Web OData de gerenciamento
@@ -23,7 +23,7 @@ Depois de concluir todas as etapas necessárias para criar um serviço Web do Ma
 
 Conclua as etapas a seguir para implantar o serviço Web do Management OData.
 
-1. Crie um diretório para o aplicativo Web no diretório IIS `WWWRoot`.
+1. Crie um diretório para o aplicativo Web no diretório `WWWRoot` do IIS.
 
 2. Copie o arquivo de esquema MOF, o arquivo de esquema XML, as DLLs que exportam as interfaces [Microsoft. Management. OData. Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) e [System. Management. Automation. Remoting. PSSessionConfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) e o arquivo Web. config para o diretório do aplicativo.
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: e45929d1-bbb4-4dc6-892f-f9eacdb1c84c
 caps.latest.revision: 8
 ms.openlocfilehash: 553878c34e74129f9876cca25a5393cb0d53445a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364385"
 ---
 # <a name="input-filter-parameters"></a>Parâmetros de filtro de entrada
 
-Um cmdlet pode definir `Filter`, `Include` e parâmetros `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
+Um cmdlet pode definir `Filter`, `Include`e parâmetros de `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
 
-Normalmente, o conjunto de objetos de entrada é especificado por um parâmetro `InputObject`, `Path` ou `Name`. Por exemplo, um cmdlet pode ter um parâmetro `Path` que aceita vários caminhos usando caracteres curinga, e cada caminho aponta para um objeto de entrada. Usados juntos, os parâmetros `Filter`, `Include` e `Exclude` qualificam ainda mais os caminhos em que o cmdlet funciona sempre que é invocado.
+Normalmente, o conjunto de objetos de entrada é especificado por um parâmetro `InputObject`, `Path`ou `Name`. Por exemplo, um cmdlet pode ter um parâmetro `Path` que aceita vários caminhos usando caracteres curinga, e cada caminho aponta para um objeto de entrada. Usados juntos, os parâmetros `Filter`, `Include`e `Exclude` qualificam ainda mais os caminhos em que o cmdlet funciona sempre que é invocado.
 
 ## <a name="include-and-exclude-parameters"></a>Incluir e excluir parâmetros
 

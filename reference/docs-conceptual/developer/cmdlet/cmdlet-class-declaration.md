@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
 ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363515"
 ---
 # <a name="cmdlet-class-declaration"></a>Declaração de classe do cmdlet
@@ -45,7 +45,7 @@ O atributo **cmdlet** também permite que você especifique que o cmdlet oferece
 
 Para obter mais informações sobre a sintaxe de declaração usada para especificar o atributo de **cmdlet** , consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
 
-## <a name="cmdlet-class-definition"></a>Definição de classe de cmdlet
+## <a name="cmdlet-class-definition"></a>Definição da classe dos cmdlets
 
 O código a seguir é a definição de uma classe de cmdlet getproc. Observe que o uso de maiúsculas e minúsculas do Pascal é usado e que o nome da classe inclui o verbo e o substantivo do cmdlet.
 
@@ -53,7 +53,7 @@ O código a seguir é a definição de uma classe de cmdlet getproc. Observe que
 
 ## <a name="pascal-casing"></a>Compartimento de Pascal
 
-Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os cmdlets `Get-Item` e `Get-ItemProperty` mostram a maneira correta de usar maiúsculas ao nomear cmdlets.
+Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os cmdlets `Get-Item` e `Get-ItemProperty` mostram a maneira correta de usar maiúsculas e minúsculas ao nomear cmdlets.
 
 ## <a name="see-also"></a>Consulte Também
 

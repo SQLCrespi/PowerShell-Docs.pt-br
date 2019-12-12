@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
 ms.openlocfilehash: a806d012097d107b6cc35710b9a93f2b27dd1ace
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359795"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>Criação do arquivo de esquema XML para um serviço Web OData de gerenciamento
 
-Depois de definir os recursos que o serviço Web irá expor (consulte [criando o arquivo de esquema MOF para um serviço Web do Management OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), você mapeia esses recursos para os cmdlets subjacentes do Windows PowerShell que implementam as operações com suporte para cada um recurso criando um arquivo XML que está de acordo com o [esquema de mapeamento de recursos](./resource-mapping-schema.md). O arquivo XML também especifica as URLs que são usadas pelo cliente para acessar os recursos.
+Depois de definir os recursos que seu serviço Web irá expor (Confira [criando o arquivo de esquema MOF para um serviço Web do Management OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), mapeie esses recursos para os cmdlets subjacentes do Windows PowerShell que implementam as operações com suporte para cada recurso criando um arquivo XML que está de acordo com o [esquema de mapeamento de recursos](./resource-mapping-schema.md). O arquivo XML também especifica as URLs que são usadas pelo cliente para acessar os recursos.
 
 ## <a name="mappng-resources-to-urls"></a>Mappng recursos para URLs
 
@@ -51,7 +51,7 @@ Em seguida, você especifica os cmdlets que correspondem às operações CRUD (c
 |Atualizar|Atualizar|
 |Excluir|Excluir|
 
-O exemplo a seguir mostra os mapeamentos para as operações de criação, leitura e atualização no recurso `Service`.
+O exemplo a seguir mostra os mapeamentos para as operações de criação, leitura e atualização no recurso de `Service`.
 
 ```xml
 <ClassImplementations>

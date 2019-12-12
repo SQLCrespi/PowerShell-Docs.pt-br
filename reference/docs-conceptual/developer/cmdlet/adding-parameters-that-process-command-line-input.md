@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
 ms.openlocfilehash: 7db93af33717dc4802ed915793f6cd570cfb48f6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364625"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>Adicionar parâmetros que processam a entrada de linha de comando
@@ -47,9 +47,9 @@ Public Class GetProcCommand
 
 Um parâmetro de cmdlet permite que o usuário forneça entrada para o cmdlet. No exemplo a seguir, **Get-proc** e `Get-Member` são os nomes dos cmdlets de pipeline e `MemberType` é um parâmetro para o cmdlet `Get-Member`. O parâmetro tem o argumento "Property".
 
-**PS > Get-proc; `get-member`-Propriedade MemberType**
+**PS > Get-proc; Propriedade `get-member`-MemberType**
 
-Para declarar parâmetros para um cmdlet, você deve primeiro definir as propriedades que representam os parâmetros. No cmdlet **Get-proc** , o único parâmetro é `Name`, que nesse caso representa o nome do objeto de processo de .NET Framework a ser recuperado. Portanto, a classe cmdlet define uma propriedade do tipo cadeia de caracteres para aceitar uma matriz de nomes.
+Para declarar parâmetros para um cmdlet, é preciso primeiro definir as propriedades que representam os parâmetros. No cmdlet **Get-proc** , o único parâmetro é `Name`, que nesse caso representa o nome do objeto de processo de .NET Framework a ser recuperado. Portanto, a classe cmdlet define uma propriedade do tipo cadeia de caracteres para aceitar uma matriz de nomes.
 
 Aqui está a declaração de parâmetro para o parâmetro `Name` do cmdlet **Get-proc** .
 
@@ -94,7 +94,7 @@ Esse cmdlet usa uma matriz de cadeias de caracteres para o parâmetro `Name`. Se
 
 - Os nomes de parâmetro e tipos de dados predefinidos do Windows PowerShell devem ser reutilizados o máximo possível para garantir que o cmdlet seja compatível com os cmdlets do Windows PowerShell. Por exemplo, se todos os cmdlets usarem o nome de parâmetro `Id` predefinido para identificar um recurso, o usuário entenderá facilmente o significado do parâmetro, independentemente do cmdlet que estiver usando. Basicamente, os nomes de parâmetro seguem as mesmas regras que as usadas para nomes de variáveis no Common Language Runtime (CLR). Para obter mais informações sobre a nomenclatura de parâmetros, consulte [nomes de parâmetro de cmdlet](https://msdn.microsoft.com/en-us/c4500737-0a05-4d01-911b-394424c65bfb).
 
-- O Windows PowerShell reserva alguns nomes de parâmetro para fornecer uma experiência de usuário consistente. Não use esses nomes de parâmetro: `WhatIf`, `Confirm`, `Verbose`, `Debug`, `Warn`, `ErrorAction`, `ErrorVariable`, `OutVariable` e `OutBuffer`. Além disso, os aliases a seguir para esses nomes de parâmetro são reservados: `vb`, `db`, `ea`, `ev`, `ov` e `ob`.
+- O Windows PowerShell reserva alguns nomes de parâmetro para fornecer uma experiência de usuário consistente. Não use esses nomes de parâmetro: `WhatIf`, `Confirm`, `Verbose`, `Debug`, `Warn`, `ErrorAction`, `ErrorVariable`, `OutVariable`e `OutBuffer`. Além disso, os aliases a seguir para esses nomes de parâmetro são reservados: `vb`, `db`, `ea`, `ev`, `ov`e `ob`.
 
 - `Name` é um nome de parâmetro simples e comum, recomendado para uso em seus cmdlets. É melhor escolher um nome de parâmetro como este de um nome complexo que seja exclusivo para um cmdlet específico e difícil de lembrar.
 
@@ -129,7 +129,7 @@ public string[] Name
 
 Se o cmdlet for manipular a entrada de linha de comando, ele deverá substituir os métodos de processamento de entrada apropriados. Os métodos básicos de processamento de entrada são introduzidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
 
-O cmdlet **Get-proc** substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) para manipular a entrada de parâmetro `Name` fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Observe que em [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System. Management. Automation. cmdlet. WriteObject% 28System. Object% 2CSystem. booliano %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é o mecanismo de saída para enviar objetos de saída para o tubula. O segundo parâmetro dessa chamada, `enumerateCollection`, é definido como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de saída de objetos de processo e gravar um processo por vez na linha de comando.
+O cmdlet **Get-proc** substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) para manipular a entrada de parâmetro `Name` fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Observe que em [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System. Management. Automation. cmdlet. WriteObject% 28System. Object% 2CSystem. booliano %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é o mecanismo de saída para enviar objetos de saída para o pipeline. O segundo parâmetro dessa chamada, `enumerateCollection`, é definido como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de saída de objetos de processo e gravar um processo por vez na linha de comando.
 
 ```csharp
 protected override void ProcessRecord()
@@ -176,7 +176,7 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord
 ```
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample02](./getprocesssample02-sample.md).
 
@@ -198,7 +198,7 @@ Quando o cmdlet estiver registrado no Windows PowerShell, você poderá testá-l
     PS> get-proc -name iexplore
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName
@@ -212,7 +212,7 @@ A saída a seguir é exibida.
     PS> get-proc -name iexplore, outlook, notepad
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName

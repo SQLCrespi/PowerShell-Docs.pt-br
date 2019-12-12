@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
 ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363405"
 ---
 # <a name="creating-a-table-view"></a>Criar uma exibição de tabela
@@ -79,7 +79,7 @@ Os seguintes elementos XML são usados para definir um modo de exibição de lis
 
 - O elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição. Esse elemento é necessário para todas as exibições.
 
-- O elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição. Esse elemento é necessário.
+- O elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição. Este elemento é obrigatório.
 
 - O elemento [GroupBy](./groupby-element-for-view-format.md) (não mostrado neste exemplo) define quando um novo grupo de objetos é exibido. Um novo grupo é iniciado sempre que o valor de uma propriedade ou script específico é alterado. Esse elemento é opcional.
 
@@ -243,7 +243,7 @@ No exemplo a seguir, o método `ToString` é chamado para formatar o valor do sc
 </ListItem>
 ```
 
-O elemento XML a seguir pode ser usado para chamar o método `ToString`:
+O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
 
 - O elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) define a propriedade ou o script cujo valor é exibido na coluna da linha. Um elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) é necessário para cada coluna da linha. A primeira entrada é exibida na primeira coluna, a segunda entrada na segunda coluna e assim por diante.
 

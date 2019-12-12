@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
 ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416316"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Adicionar conjuntos de parâmetros como um cmdlet
@@ -211,7 +211,7 @@ End Sub 'ProcessRecord ' ProcessRecord
 
 Os métodos auxiliares chamados pela instrução SELECT não são descritos aqui, mas você pode ver sua implementação no exemplo de código completo na próxima seção.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample04](./stopprocesssample04-sample.md).
 
@@ -247,7 +247,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, teste-o executan
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 

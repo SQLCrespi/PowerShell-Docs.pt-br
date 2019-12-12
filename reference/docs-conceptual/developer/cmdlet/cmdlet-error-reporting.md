@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
 ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365915"
 ---
 # <a name="cmdlet-error-reporting"></a>Relatório de erros do cmdlet
@@ -43,7 +43,7 @@ As diretrizes a seguir podem ser usadas para determinar se uma condição de err
 
 ## <a name="reporting-nonterminating-errors"></a>Relatando erros de não encerramento
 
-O relatório de um erro não finalizado sempre deve ser feito dentro da implementação do cmdlet do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) ou o método de [processamento System. Management. Automation. cmdlet.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) end. Esses tipos de erros são relatados chamando o método [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) que, por sua vez, envia um registro de erro para o fluxo de erro.
+O relatório de um erro não finalizado sempre deve ser feito dentro da implementação do cmdlet do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , do método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) ou do método [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Esses tipos de erros são relatados chamando o método [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) que, por sua vez, envia um registro de erro para o fluxo de erro.
 
 ## <a name="reporting-terminating-errors"></a>Erros de encerramento de relatórios
 
@@ -82,7 +82,7 @@ As categorias de erro são usadas para agrupar erros para o usuário. O PowerShe
 
 Para obter uma descrição das categorias de erro disponíveis, consulte a enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Em geral, você deve evitar o uso de **NOERROR**, **UndefinedError**e **erro genérico** sempre que possível.
 
-Os usuários podem exibir erros com base na categoria quando definem `$ErrorView` como **CategoryView**.
+Os usuários podem exibir erros com base na categoria quando eles definem `$ErrorView` como **CategoryView**.
 
 ## <a name="see-also"></a>Consulte também
 

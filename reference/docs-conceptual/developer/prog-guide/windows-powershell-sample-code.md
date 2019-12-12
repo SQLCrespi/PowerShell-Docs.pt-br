@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
 caps.latest.revision: 7
 ms.openlocfilehash: e9df44b17453e9f73f6eb388d9cbc8a69fce4ba2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366415"
 ---
 # <a name="windows-powershell-sample-code"></a>Código de exemplo do Windows PowerShell
@@ -51,7 +51,7 @@ Os exemplos de® do Windows PowerShell estão disponíveis por meio do SDK do Wi
 |[Exemplo de código RunSpace09](./runspace09-code-sample.md)|Este é o código-fonte para o exemplo de Runspace09 descrito em [criando um aplicativo de console que invoca um pipeline de forma assíncrona](https://msdn.microsoft.com/en-us/198c1c94-2a06-457e-93ce-c0d910618e47).|
 |[Exemplo de código RunSpace10](./runspace10-code-sample.md)|Este é o código-fonte do exemplo Runspace10, que adiciona um cmdlet a [System. Management. Automation. Runspaces. Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) e, em seguida, usa as informações de configuração modificadas para criar o runspace.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: f2b58fa5-01bc-426c-a043-5c700d6578e9
 caps.latest.revision: 16
 ms.openlocfilehash: 443bf5f693d2ab161668de25a1097347826cb5c2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360555"
 ---
 # <a name="writing-help-for-windows-powershell-modules"></a>Escrever ajuda para módulos do Windows PowerShell
 
-Os módulos do Windows PowerShell podem incluir tópicos de ajuda sobre o módulo e sobre os membros do módulo, como cmdlets, provedores, funções e scripts. O cmdlet `Get-Help` exibe os tópicos de ajuda do módulo no mesmo formato que exibe a ajuda para outros itens do Windows PowerShell, e os usuários usam comandos padrão do `Get-Help` para obter os tópicos da ajuda.
+Os módulos do Windows PowerShell podem incluir tópicos de ajuda sobre o módulo e sobre os membros do módulo, como cmdlets, provedores, funções e scripts. O cmdlet `Get-Help` exibe os tópicos de ajuda do módulo no mesmo formato que exibe a ajuda para outros itens do Windows PowerShell, e os usuários usam comandos de `Get-Help` padrão para obter os tópicos da ajuda.
 
 Este documento explica o formato e o posicionamento correto dos tópicos de ajuda do módulo e sugere diretrizes para o conteúdo da ajuda do módulo.
 
@@ -87,7 +87,7 @@ Você pode fornecer tópicos de ajuda de módulo em diferentes idiomas. O cmdlet
 
 A partir do Windows PowerShell 3,0, a execução de um comando `Get-Help` para um cmdlet ou função dispara a importação automática do módulo. O cmdlet `Get-Help` exibe imediatamente o conteúdo dos tópicos da ajuda no módulo.
 
-Se o módulo não contiver tópicos de ajuda e não houver tópicos de ajuda para os comandos no módulo no computador do usuário, `Get-Help` exibirá a ajuda gerada automaticamente. A ajuda gerada automaticamente inclui a sintaxe do comando, os parâmetros e os tipos de entrada e saída, mas não inclui nenhuma descrição. A ajuda gerada automaticamente inclui texto que orienta o usuário a tentar usar o cmdlet `Update-Help` para baixar a ajuda do comando da Internet ou de um compartilhamento de arquivos. Ele também recomenda o uso do parâmetro **online** do cmdlet `Get-Help` para obter a versão online do tópico da ajuda.
+Se o módulo não contiver tópicos de ajuda e não houver tópicos de ajuda para os comandos no módulo no computador do usuário, `Get-Help` exibirá a ajuda gerada automaticamente. A ajuda gerada automaticamente inclui a sintaxe do comando, os parâmetros e os tipos de entrada e saída, mas não inclui nenhuma descrição. A ajuda gerada automaticamente inclui um texto que orienta o usuário a tentar usar o cmdlet `Update-Help` para baixar a ajuda do comando da Internet ou de um compartilhamento de arquivos. Ele também recomenda o uso do parâmetro **online** do cmdlet `Get-Help` para obter a versão online do tópico da ajuda.
 
 ## <a name="supporting-updatable-help"></a>Suporte à ajuda atualizável
 

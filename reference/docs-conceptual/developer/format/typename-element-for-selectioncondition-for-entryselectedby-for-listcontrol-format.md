@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: bd025a3a-3780-40db-a068-873e7df38015
 caps.latest.revision: 9
 ms.openlocfilehash: 2b76b040b39088cc9c3b9d6890c38df3c533b39f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361555"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Elemento TypeName para SelectionCondition para EntrySelectedBy para ListControl (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento SelectionCondition para EntrySelectedBy para ListControl (formato)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|Define a condição que deve existir para que essa entrada de lista seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
 

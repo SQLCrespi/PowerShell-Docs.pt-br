@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
 ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361845"
 ---
 # <a name="tablecolumnheader-element-format"></a>Elemento TableColumnHeader (formato)
@@ -55,9 +55,9 @@ Nenhum.
 
 ## <a name="remarks"></a>Comentários
 
-Especifique um cabeçalho para cada coluna da tabela. As colunas são exibidas na ordem em que os elementos `TableColumnHeader` são definidos.
+Especifique um cabeçalho para cada coluna da tabela. As colunas são exibidas na ordem em que os elementos de `TableColumnHeader` são definidos.
 
-Uma tabela deve ter o mesmo número de elementos `TableColumnHeader` que os elementos `TableRowEntry`. O cabeçalho da coluna define como o texto na parte superior da tabela é exibido. As entradas de linha definem quais dados são exibidos nas linhas da tabela.
+Uma tabela deve ter o mesmo número de elementos `TableColumnHeader` que `TableRowEntry` elementos. O cabeçalho da coluna define como o texto na parte superior da tabela é exibido. As entradas de linha definem quais dados são exibidos nas linhas da tabela.
 
 Para obter mais informações sobre os componentes de uma exibição de tabela, consulte [exibição de tabela](./creating-a-table-view.md).
 

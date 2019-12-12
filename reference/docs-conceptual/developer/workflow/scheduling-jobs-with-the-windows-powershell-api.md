@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
 ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366015"
 ---
 # <a name="scheduling-jobs-with-the-powershell-api"></a>Agendando trabalhos com a API do PowerShell
@@ -44,7 +44,7 @@ Você define um trabalho do PowerShell criando um dicionário de parâmetros. H�
 
 |Nome do parâmetro|Descrição|
 |--------------------|-----------------|
-|**Nomes**|O nome do trabalho.|
+|**Name**|O nome do trabalho.|
 |**ScriptBock**|Um bloco de script do PowerShell que especifica o que o trabalho faz.|
 |**FilePath**|Caminho para um arquivo que contém um bloco de script do PowerShell para especificar o que o trabalho faz.|
 |**InitializationScript**|Um bloco de script do PowerShell que inicializa o trabalho.|
@@ -66,7 +66,7 @@ string schedJobDefName = "MySampleSchedJob";
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>Criando a invocação e objetos de definição de trabalho
 
-Em seguida, você cria os objetos `ScheduledJobInvocationInfo` e `ScheduledJobDefinition` para executar o trabalho, conforme mostrado no exemplo a seguir:
+Em seguida, você cria `ScheduledJobInvocationInfo` e `ScheduledJobDefinition` objetos para executar o trabalho, conforme mostrado no exemplo a seguir:
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(

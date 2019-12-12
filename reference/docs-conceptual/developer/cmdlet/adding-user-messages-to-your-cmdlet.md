@@ -32,10 +32,10 @@ helpviewer_keywords:
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
 ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416035"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Adicionar mensagens de usuário para o cmdlet
@@ -206,7 +206,7 @@ pr.RecordType = ProgressRecordType.Completed;
 WriteProgress(pr);
 ```
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample02](./stopprocesssample02-sample.md).
 
@@ -228,7 +228,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     VERBOSE: Attempting to stop process " notepad ".
@@ -245,7 +245,7 @@ A saída a seguir é exibida.
     VERBOSE: Stopped process "notepad", pid 5584.
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Criar um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 

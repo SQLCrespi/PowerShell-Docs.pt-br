@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
 ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359815"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>Adicionar recursos a um serviço Web OData de gerenciamento
@@ -49,13 +49,13 @@ A primeira etapa é importar o esquema do ponto de extremidade do OData de geren
 
 2. Verifique se **computador local** está selecionado e clique em **Avançar**.
 
-3. Verifique se os módulos instalados do Windows PowerShell estão selecionados e selecione Hyper-V na lista suspensa. clique em **Avançar**. Clique em **Avançar**.
+3. Verifique se os módulos instalados do Windows PowerShell estão selecionados e selecione Hyper-V na lista suspensa. Clique em **Avançar**. Clique em **Avançar**.
 
 4. Na lista de **Substandos do cmdlet** , selecione **VM**. Clique em **Avançar**
 
 5. Para este exemplo, Vincularemos apenas os comandos Get e DELETE com cmdlets. Desmarque as caixas de seleção **criar** e **Atualizar** e verifique se as caixas de seleção **obter** e **excluir** estão marcadas. Verifique se o cmdlet `Get-VM` está selecionado para **Get**e se o cmdlet `Remove-VM` está selecionado para **exclusão**.
 
-6. Como os metadados dos cmdlets da VM não especificam um tipo de saída, será necessário executar o cmdlet para especificar o tipo de saída. Selecione **fornecer tipo de saída** e clique em **executar cmdlet**. A caixa de diálogo **executar cmdlet** é exibida. Clique em **executar**. A caixa **tipo CLR** é populada com o tipo `VirtualMachine`. Clique em **OK**e em **Avançar**.
+6. Como os metadados dos cmdlets da VM não especificam um tipo de saída, será necessário executar o cmdlet para especificar o tipo de saída. Selecione **fornecer tipo de saída** e clique em **executar cmdlet**. A caixa de diálogo **executar cmdlet** é exibida. Clique em **Executar**. A caixa **tipo CLR** é populada com o tipo de `VirtualMachine`. Clique em **OK**e em **Avançar**.
 
 7. Por padrão, todas as propriedades do objeto VirtualMachine são selecionadas. Você pode limpar todas as propriedades que não deseja como parte dos dados retornados ao solicitar esse recurso do serviço Web. Clique em **Avançar**.
 
@@ -77,4 +77,4 @@ A primeira etapa é importar o esquema do ponto de extremidade do OData de geren
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Antes de acessar o novo recurso de VM do serviço Web do Management OData, você deve atualizar o arquivo RbacConfiguration. xml para permitir o acesso ao módulo do Windows PowerShell do Hyper-V, conforme descrito em [Configurando a autorização baseada em função](./configuring-role-based-authorization.md), e você também é necessário reiniciar o serviço Web.
+Antes de acessar o novo recurso de VM do serviço Web do Management OData, você deve atualizar o arquivo RbacConfiguration. xml para permitir o acesso ao módulo do Windows PowerShell do Hyper-V, conforme descrito em [Configurando a autorização baseada em função](./configuring-role-based-authorization.md), e também será necessário reiniciar o serviço Web.

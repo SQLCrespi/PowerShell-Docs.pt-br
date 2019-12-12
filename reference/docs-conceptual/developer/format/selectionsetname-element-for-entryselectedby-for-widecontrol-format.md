@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c9c6e18f-6cca-465c-bd20-3969e7897a96
 caps.latest.revision: 10
 ms.openlocfilehash: 6b6a4a4647412d11d947f1dc4ea12d1e05ff536e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361975"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>Elemento SelectionSetName para EntrySelectedBy para WideControl (formato)
@@ -46,7 +46,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Define os tipos .NET que usam essa entrada ampla ou a condição que deve existir para que essa entrada seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome do conjunto de seleção.
 

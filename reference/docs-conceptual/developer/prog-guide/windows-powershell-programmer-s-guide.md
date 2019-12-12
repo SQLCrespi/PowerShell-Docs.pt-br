@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417783"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Guia do programador&#39;do Windows PowerShell
@@ -53,7 +53,7 @@ O Windows PowerShell fornece vários provedores padrão do Windows PowerShell. P
 
 Se você expor um armazenamento de dados que o usuário precisará acessar, talvez seja necessário escrever seu próprio provedor do Windows PowerShell, conforme descrito em [criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md). Para obter mais informações sobre provedores do PowerShell aboutWindows, consulte [como funciona o Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="host-application"></a>Aplicativo host
+### <a name="host-application"></a>Aplicativo Host
 
 O Windows PowerShell inclui o aplicativo host padrão PowerShell. exe, que é um aplicativo de console que interage com o usuário e hospeda o tempo de execução do Windows PowerShell usando uma janela de console.
 
@@ -105,6 +105,6 @@ Para obter mais informações sobre como começar a usar o Shell do Windows Powe
 |[Como criar um shell de console](./how-to-create-a-console-shell.md)|Esta seção descreve como criar um shell de console que não é extensível.|
 |[Conceitos do Windows PowerShell](./windows-powershell-concepts.md)|Esta seção contém informações conceituais que ajudarão você a entender o Windows PowerShell do ponto de vista de um desenvolvedor.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3a6cedcc-0437-4312-961e-0845cc249532
 caps.latest.revision: 8
 ms.openlocfilehash: 9d8779c90421145b40d7b6b537686caf1ccd2a09
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362225"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>Elemento RightIndent para Frame para Controls para Configuration (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento frame para CustomItem para controles para configuração (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Define como os dados são exibidos, como deslocar os dados para a esquerda ou para a direita.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o número de caracteres que você deseja que os dados sejam deslocados para a direita.
 

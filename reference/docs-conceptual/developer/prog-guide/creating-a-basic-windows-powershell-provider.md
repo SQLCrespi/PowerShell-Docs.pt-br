@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
 ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360515"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Criar um provedor básico do Windows PowerShell
@@ -49,13 +49,13 @@ Você pode definir palavras-chave de atributo para declarar ainda mais a classe,
 
 ## <a name="defining-provider-specific-state-information"></a>Definindo informações de estado específicas do provedor
 
-A classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) e todas as classes derivadas são consideradas sem estado porque o tempo de execução do Windows PowerShell cria instâncias de provedor somente conforme necessário. Portanto, se seu provedor exigir controle total e manutenção de estado para dados específicos do provedor, ele deverá derivar uma classe da classe [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) . Sua classe derivada deve definir os membros necessários para manter o estado para que os dados específicos do provedor possam ser acessados quando o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) para Inicialize o provedor.
+A classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) e todas as classes derivadas são consideradas sem estado porque o tempo de execução do Windows PowerShell cria instâncias de provedor somente conforme necessário. Portanto, se seu provedor exigir controle total e manutenção de estado para dados específicos do provedor, ele deverá derivar uma classe da classe [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) . Sua classe derivada deve definir os membros necessários para manter o estado de forma que os dados específicos do provedor possam ser acessados quando o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) para inicializar o provedor.
 
 Um provedor do Windows PowerShell também pode manter o estado baseado em conexão. Para obter mais informações sobre como manter o estado de conexão, consulte [criando um provedor de unidade do PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
 ## <a name="initializing-the-provider"></a>Inicializando o provedor
 
-Para inicializar o provedor, o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) quando o Windows PowerShell é iniciado. Para a maior parte, seu provedor pode usar a implementação padrão desse método, que simplesmente retorna o objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) que descreve seu provedor. No entanto, no caso em que você deseja adicionar informações de inicialização adicionais, você deve implementar seu próprio método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) que retorna uma versão modificada do [ Objeto System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) que é passado para seu provedor. Em geral, esse método deve retornar o objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) fornecido passado a ele ou um objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) modificado que contém outras informações de inicialização.
+Para inicializar o provedor, o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) quando o Windows PowerShell é iniciado. Para a maior parte, seu provedor pode usar a implementação padrão desse método, que simplesmente retorna o objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) que descreve seu provedor. No entanto, no caso em que você deseja adicionar informações de inicialização adicionais, você deve implementar seu próprio método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) que retorna uma versão modificada do objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) que é passado para seu provedor. Em geral, esse método deve retornar o objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) fornecido passado a ele ou um objeto [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) modificado que contém outras informações de inicialização.
 
 Este provedor básico não substitui esse método. No entanto, o código a seguir mostra a implementação padrão desse método:
 
@@ -65,7 +65,7 @@ O provedor pode manter o estado das informações específicas do provedor, conf
 
 ## <a name="start-dynamic-parameters"></a>Iniciar parâmetros dinâmicos
 
-A implementação do provedor do método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) pode exigir parâmetros adicionais. Nesse caso, o provedor deve substituir o método [System. Management. Automation. Provider. cmdletprovider. Startdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) e retornar um objeto que tenha propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou a um [ Objeto System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+A implementação do provedor do método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) pode exigir parâmetros adicionais. Nesse caso, o provedor deve substituir o método [System. Management. Automation. Provider. cmdletprovider. Startdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) e retornar um objeto que tenha propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou a um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Este provedor básico não substitui esse método. No entanto, o código a seguir mostra a implementação padrão desse método:
 
@@ -79,7 +79,7 @@ Este provedor básico não substitui esse método. No entanto, o código a segui
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStop](Msh_samplesaccessdbprov01#accessdbprov01ProviderStop)]  -->
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample01](./accessdbprovidersample01-code-sample.md).
 

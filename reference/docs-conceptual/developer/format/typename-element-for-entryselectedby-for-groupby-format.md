@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b8b6739b-770c-432a-95ab-551c7507c51f
 caps.latest.revision: 6
 ms.openlocfilehash: 3b5ce60d3a0d76988af48f49445a5478a415d498
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361665"
 ---
 # <a name="typename-element-for-entryselectedby-for-groupby-format"></a>Elemento TypeName para EntrySelectedBy para GroupBy (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para CustomEntry para GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Define os tipos .NET que usam essa definição de controle ou a condição que deve existir para que essa definição seja usada.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
 
@@ -57,7 +57,7 @@ Para obter mais informações sobre os componentes de um modo de exibição de c
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando controles personalizados](./creating-custom-controls.md)
+[Criar controles personalizados](./creating-custom-controls.md)
 
 [Elemento EntrySelectedBy para CustomEntry para GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 

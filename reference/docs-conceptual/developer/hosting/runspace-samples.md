@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c92a6d3d-8d34-4a76-bdc3-dea923d9858e
 caps.latest.revision: 17
 ms.openlocfilehash: e24d40746da91f60aaf2af655ddcadc88ab6a4db
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360995"
 ---
 # <a name="runspace-samples"></a>Amostras de runspace
@@ -42,7 +42,7 @@ Esta seção inclui um código de exemplo que mostra como usar diferentes tipos 
 
  [Exemplo de Runspace09](./runspace09-sample.md) Este exemplo mostra como adicionar um script ao pipeline de um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) e como executar o script de forma assíncrona. Eventos são usados para tratar a saída do script.
 
- [Exemplo de Runspace10](./runspace10-sample.md) Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um Objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Exemplo de Runspace10](./runspace10-sample.md) Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Exemplo de Runspace11](./runspace11-sample.md) Isso mostra como usar a classe [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) para criar um comando de proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros disponíveis. O comando de proxy é adicionado a um estado de sessão inicial que é usado para criar um espaço de execução restrito. Isso significa que o usuário pode acessar a funcionalidade do cmdlet apenas por meio do comando proxy.
 

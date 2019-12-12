@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
 ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361205"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Como adicionar sintaxe a um tópico de ajuda do cmdlet
@@ -27,7 +27,7 @@ Antes de começar a codificar o XML para o diagrama de sintaxe no arquivo de aju
 
   - Se for false, o parâmetro será opcional em todos os comandos que usam o conjunto de parâmetros.
 
-- Propostas
+- Posição
 
   - Se nomeado, o nome do parâmetro será obrigatório.
 
@@ -156,11 +156,11 @@ Normalmente, os valores de parâmetro que são espaços reservados são necessá
 
 ## <a name="coding-the-syntax-diagram-xml"></a>Codificando o XML do diagrama de sintaxe
 
-O nó de sintaxe do XML começa imediatamente após o nó de descrição, que termina com a marca de > de \</maml: Description. Para obter informações sobre como coletar os dados usados no diagrama de sintaxe, consulte [coletando informações de sintaxe](#gathering-syntax-information).
+O nó de sintaxe do XML começa imediatamente após o nó de descrição, que termina com a marca \</maml: Description >. Para obter informações sobre como coletar os dados usados no diagrama de sintaxe, consulte [coletando informações de sintaxe](#gathering-syntax-information).
 
 ### <a name="adding-a-syntax-node"></a>Adicionando um nó de sintaxe
 
-O diagrama de sintaxe exibido no tópico de ajuda do cmdlet é gerado a partir dos dados no nó sintaxe do XML. O nó de sintaxe será colocado em um par se \<command: Syntax > Tags. Com cada conjunto de parâmetros do cmdlet incluído em um par de \<command: syntaxitem > marcas. Não há nenhum limite para o número de \<command: syntaxitem > marcas que você pode adicionar.
+O diagrama de sintaxe exibido no tópico de ajuda do cmdlet é gerado a partir dos dados no nó sintaxe do XML. O nó de sintaxe será colocado em um par se \<comando: Syntax > Tags. Com cada conjunto de parâmetros do cmdlet incluído em um par de \<comando: syntaxitem > marcas. Não há nenhum limite para o número de \<comando: syntaxitem > marcas que você pode adicionar.
 
 O exemplo a seguir mostra um nó de sintaxe que tem nós de item de sintaxe para dois conjuntos de parâmetros.
 
@@ -198,12 +198,12 @@ O exemplo a seguir inclui um nó de sintaxe que tem nós de item de sintaxe para
 
 ### <a name="adding-parameters"></a>Adicionando parâmetros
 
-Cada parâmetro adicionado ao nó de item de sintaxe é especificado dentro de um par de \<command: parâmetros > marcas. Você precisa de um par de \<command: parâmetros > marcas para cada parâmetro incluído no conjunto de parâmetros, com exceção dos parâmetros comuns fornecidos pelo Windows PowerShell?.
+Cada parâmetro adicionado ao nó de item de sintaxe é especificado dentro de um par de \<comando: > marcas de parâmetro. Você precisa de um par de \<comando: parâmetros > marcas para cada parâmetro incluído no conjunto de parâmetros, com exceção dos parâmetros comuns fornecidos pelo Windows PowerShell?.
 
-Os atributos da marca de abertura \<command: Parameter > determinam como o parâmetro aparece no diagrama de sintaxe. Para obter informações sobre atributos de parâmetro, consulte [atributos de parâmetro](#parameter-attributes).
+Os atributos do comando de abertura \<: > marca de parâmetro determinam como o parâmetro aparece no diagrama de sintaxe. Para obter informações sobre atributos de parâmetro, consulte [atributos de parâmetro](#parameter-attributes).
 
 > [!NOTE]
-> A marca de > de parâmetro \<command: dá suporte a um elemento filho \<maml: Description > cujo conteúdo nunca é exibido. As descrições de parâmetro são especificadas no nó de parâmetro do XML. Para evitar inconsistências entre as informações no item de sintaxe bodes e o nó de parâmetro, omita a descrição (\<maml: Description > ou deixe-a vazia.
+> O comando \<: o parâmetro > marca dá suporte a um elemento filho \<maml: Description > cujo conteúdo nunca é exibido. As descrições de parâmetro são especificadas no nó de parâmetro do XML. Para evitar inconsistências entre as informações no item de sintaxe bodes e o nó de parâmetro, omita a descrição (\<maml: Description > ou deixe-a vazia.
 
 O exemplo a seguir inclui um nó de item de sintaxe para um conjunto de parâmetros com dois parâmetros.
 

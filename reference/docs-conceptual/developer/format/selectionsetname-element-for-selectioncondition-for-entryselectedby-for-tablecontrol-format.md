@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 17ae4d6b-dc95-4a1d-8e32-31ff084a951f
 caps.latest.revision: 10
 ms.openlocfilehash: edb163f2b0b5129bd741677dce882888d9bbfd89
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361915"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para TableControl (formato)
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento SelectionCondition para EntrySelectedBy para TableRowEntry (Format)](./selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md)|Define a condição que deve existir para ser usada para esta definição da exibição de tabela.|
 
-## <a name="text-value"></a>Valor de texto
+## <a name="text-value"></a>Valor de Texto
 
 Especifique o nome do conjunto de seleção.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 60873d0f-c5f1-4d5b-ade1-49ad0df43245
 caps.latest.revision: 5
 ms.openlocfilehash: 5e669472524263a8a97e50ca993ed7102551d13b
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417874"
 ---
 # <a name="stopproc01-code-samples"></a>Exemplos de código StopProc01
@@ -24,11 +24,11 @@ Aqui está o exemplo de código para o cmdlet de exemplo StopProc01. Este é o e
 >
 > Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-|Idioma|Tópico|
+|Language|Tópico|
 |--------------|-----------|
 |C#|[Código deC#exemplo StopProc01 ()](./stopproc01-csharp-sample-code.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

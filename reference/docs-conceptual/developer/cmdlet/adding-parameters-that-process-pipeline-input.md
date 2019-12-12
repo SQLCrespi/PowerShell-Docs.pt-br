@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
 ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364595"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Adicionar parâmetros que processam a entrada de pipeline
@@ -43,7 +43,7 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Definindo a entrada do pipeline
 
-Esta seção descreve como definir a entrada do pipeline para um cmdlet. Esse cmdlet Get-proc define uma propriedade que representa o parâmetro `Name`, conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md). (Consulte esse tópico para obter informações gerais sobre como declarar parâmetros.)
+Esta seção descreve como definir a entrada do pipeline para um cmdlet. Esse cmdlet Get-proc define uma propriedade que representa o parâmetro `Name` conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md). (Consulte esse tópico para obter informações gerais sobre como declarar parâmetros.)
 
 No entanto, quando um cmdlet precisa processar a entrada do pipeline, ele deve ter seus parâmetros associados aos valores de entrada pelo tempo de execução do Windows PowerShell. Para fazer isso, você deve adicionar a palavra-chave `ValueFromPipeline` ou adicionar a palavra-chave `ValueFromPipelineByProperty` à declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Especifique a palavra-chave `ValueFromPipeline` se o cmdlet acessar o objeto de entrada completo. Especifique o `ValueFromPipelineByProperty` se o cmdlet acessar apenas uma propriedade do objeto.
 
@@ -68,10 +68,10 @@ End Property
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesgetproc03#GetProc03VBNameParameter](Msh_samplesgetproc03#GetProc03VBNameParameter)]  -->
 
-A declaração anterior define a palavra-chave `ValueFromPipeline` como `true` para que o tempo de execução do Windows PowerShell vincule o parâmetro ao objeto de entrada se o objeto for do mesmo tipo que o parâmetro ou se ele puder ser forçado ao mesmo tipo. A palavra-chave `ValueFromPipelineByPropertyName` também é definida como `true` para que o tempo de execução do Windows PowerShell Verifique o objeto de entrada para uma propriedade `Name`. Se o objeto de entrada tiver tal propriedade, o tempo de execução associará o parâmetro `Name` à propriedade `Name` do objeto de entrada.
+A declaração anterior define a palavra-chave `ValueFromPipeline` como `true` para que o tempo de execução do Windows PowerShell vincule o parâmetro ao objeto de entrada se o objeto for do mesmo tipo que o parâmetro, ou se ele puder ser forçado ao mesmo tipo. A palavra-chave `ValueFromPipelineByPropertyName` também é definida como `true` para que o tempo de execução do Windows PowerShell Verifique o objeto de entrada para uma propriedade `Name`. Se o objeto de entrada tiver tal propriedade, o tempo de execução associará o parâmetro `Name` à propriedade `Name` do objeto de entrada.
 
 > [!NOTE]
-> A configuração da palavra-chave de atributo `ValueFromPipeline` para um parâmetro tem precedência sobre a configuração da palavra-chave `ValueFromPipelineByPropertyName`.
+> A configuração da palavra-chave do atributo `ValueFromPipeline` para um parâmetro tem precedência sobre a configuração da palavra-chave `ValueFromPipelineByPropertyName`.
 
 ## <a name="overriding-an-input-processing-method"></a>Substituindo um método de processamento de entrada
 
@@ -124,7 +124,7 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord
 ```
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample03](./getprocesssample03-sample.md).
 
@@ -146,7 +146,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, teste-o executan
     PS> type ProcessNames | get-proc
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
@@ -163,7 +163,7 @@ A saída a seguir é exibida.
     PS> get-process iexplore | get-proc
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName

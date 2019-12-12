@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
 ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366265"
 ---
 # <a name="public-resource-schema"></a>Esquema de recursos públicos
@@ -38,9 +38,9 @@ class PswsTest_Process
 
 Cada nome de propriedade é precedido por um tipo de dados. Os tipos de dados neste exemplo correspondem aos tipos de dados CLR primitivos no .NET Framework, mas as propriedades também podem ser referências a outros recursos ou tipos complexos, que são descritos posteriormente.
 
-O qualificador `Key` indica que uma propriedade é usada para identificar exclusivamente uma instância de recurso. Um recurso pode ter mais de uma chave.
+O qualificador de `Key` indica que uma propriedade é usada para identificar exclusivamente uma instância de recurso. Um recurso pode ter mais de uma chave.
 
-O qualificador `Required` indica que a propriedade é necessária. Se uma propriedade for rotulada com o qualificador `Key`, ela será considerada necessária e o qualificador de `Required` não será necessário.
+O qualificador de `Required` indica que a propriedade é necessária. Se uma propriedade for rotulada com o qualificador de `Key`, ela será considerada necessária e o qualificador de `Required` não será necessário.
 
 ### <a name="complex-data-types"></a>Tipos de dados complexos
 
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-Para declarar uma propriedade de entidade como um tipo complexo, declare-a como um tipo `string` com o qualificador `EmbeddedInstance`, incluindo o nome do tipo complexo. O exemplo a seguir mostra a declaração de uma propriedade do tipo `PswsTest_ProcessModule` declarado no exemplo anterior.
+Para declarar uma propriedade de entidade como um tipo complexo, declare-a como um tipo de `string` com o qualificador de `EmbeddedInstance`, incluindo o nome do tipo complexo. O exemplo a seguir mostra a declaração de uma propriedade do tipo de `PswsTest_ProcessModule` declarado no exemplo anterior.
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];

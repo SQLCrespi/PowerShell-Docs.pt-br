@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
 ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363555"
 ---
 # <a name="background-jobs"></a>Trabalhos em segundo plano
@@ -35,7 +35,7 @@ Para obter mais informações sobre como os trabalhos em segundo plano são trat
 
 Para gravar um cmdlet que pode ser executado como um trabalho em segundo plano, você deve concluir as seguintes tarefas:
 
-- Defina um parâmetro de opção `asJob` para que o usuário possa decidir se deseja executar o cmdlet como um trabalho em segundo plano.
+- Defina um parâmetro de opção de `asJob` para que o usuário possa decidir se deseja executar o cmdlet como um trabalho em segundo plano.
 
 - Crie um objeto derivado da classe [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) . Esse objeto pode ser um objeto de trabalho personalizado ou um objeto de trabalho fornecido pelo Windows PowerShell, como um objeto [System. Management. Automation. PSEventJob](/dotnet/api/System.Management.Automation.PSEventJob) .
 
@@ -51,7 +51,7 @@ Para obter um exemplo de código, consulte [como dar suporte a trabalhos](./how-
 
 As APIs a seguir são fornecidas pelo Windows PowerShell para gerenciar trabalhos em segundo plano.
 
-[System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) deriva objetos de trabalho personalizados. Essa é uma classe abstrata.
+[System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) deriva objetos de trabalho personalizados. Esta é uma classe abstrata.
 
 [System. Management. Automation. Jobrepository](/dotnet/api/System.Management.Automation.JobRepository) gerencia e fornece informações sobre os trabalhos em segundo plano ativos atuais.
 

@@ -9,23 +9,23 @@ ms.topic: article
 ms.assetid: 2933a6ca-fe92-4ba2-97ee-ef0f0d5fdfcf
 caps.latest.revision: 8
 ms.openlocfilehash: b73284adb4bf228510bf8134aa4c6a10561b7ea2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359765"
 ---
 # <a name="configuring-role-based-authorization"></a>Configurar a autorização baseada em função
 
-Este tópico demonstra como configurar a política de autorização baseada em função para a implementação de exemplo da interface [Microsoft. Management. OData. Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) descrita em [implementando a autorização personalizada para gerenciamento Extensão do IIS OData](./implementing-custom-authorization-for-a-management-odata-web-service.md).
+Este tópico demonstra como configurar a política de autorização baseada em função para a implementação de exemplo da interface [Microsoft. Management. OData. Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) descrita em [implementando a autorização personalizada para a extensão do IIS do Management OData](./implementing-custom-authorization-for-a-management-odata-web-service.md).
 
 Neste exemplo, você configurará um arquivo XML que é usado pelo aplicativo OData de gerenciamento de exemplo para definir a política de autorização. Você criará duas funções e associará diferentes módulos do Windows PowerShell que contêm fluxos de trabalho com essas funções. O esquema que define o arquivo XML é listado no [esquema de configuração de autorização baseada em função](./role-based-authorization-configuration-schema.md).
 
 ## <a name="modifying-the-rbacconfigurationxml-file"></a>Modificando o arquivo RBacConfiguration. xml
 
-Esse arquivo define a política de autorização para o aplicativo. As funções são definidas usando nós `Group`. Um nó `Group` define os comandos do Windows PowerShell que os usuários atribuídos a esse grupo podem executar. Os usuários são atribuídos a grupos usando nós `User`.
+Esse arquivo define a política de autorização para o aplicativo. As funções são definidas usando nós `Group`. Um nó `Group` define os comandos do Windows PowerShell que os usuários atribuídos a esse grupo podem executar. Os usuários são atribuídos a grupos usando nós de `User`.
 
-Nesses exemplos, você adicionará um módulo ao nó `Group` do administrador e adicionará um usuário a cada grupo.
+Nesses exemplos, você adicionará um módulo ao `Group` nó de administrador e adicionará um usuário a cada grupo.
 
 #### <a name="adding-a-module-to-a-group-node"></a>Adicionando um módulo a um nó de grupo
 
@@ -85,9 +85,9 @@ Nesses exemplos, você adicionará um módulo ao nó `Group` do administrador e 
    </RbacConfiguration>
    ```
 
-2. O arquivo contém dois nós `Group`. Elas representam as duas funções usadas neste exemplo, as funções `NonAdminGroup` e `AdminGroup`.
+2. O arquivo contém dois nós de `Group`. Elas representam as duas funções usadas neste exemplo, a `NonAdminGroup` e as funções de `AdminGroup`.
 
-   Diretamente após a marca de fechamento `Cmdlets` no primeiro nó `Group`, adicione o seguinte XML:
+   Diretamente após a marcação de `Cmdlets` de fechamento no primeiro nó `Group`, adicione o seguinte XML:
 
    ```xml
    <Modules>
@@ -97,7 +97,7 @@ Nesses exemplos, você adicionará um módulo ao nó `Group` do administrador e 
 
 #### <a name="adding-a-user-to-a-group-node"></a>Adicionando um usuário a um nó de grupo
 
-1. Abra o arquivo **RBacConfiguration. xml** em um editor de texto. Esse arquivo está localizado na pasta C: \\ \ inetpub\wwwroot\Modata se você não alterou o nome do ponto de extremidade antes da instalação.
+1. Abra o arquivo **RBacConfiguration. xml** em um editor de texto. Esse arquivo está localizado na pasta C:\\\inetpub\wwwroot\Modata se você não alterou o nome do ponto de extremidade antes da instalação.
 
 2. Diretamente após a marca de fechamento no nó `Users`, adicione o seguinte XML:
 

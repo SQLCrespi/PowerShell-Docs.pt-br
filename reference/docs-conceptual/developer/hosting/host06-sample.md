@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
 caps.latest.revision: 10
 ms.openlocfilehash: 8b89d7bf8a69626dc3e6bd566dab7951a4c7c5ab
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361015"
 ---
 # <a name="host06-sample"></a>Amostra Host06
@@ -25,9 +25,9 @@ Este exemplo mostra como criar um aplicativo de host baseado em console interati
 
 - Esse aplicativo deve ser executado no modo elevado (executar como administrador).
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
-- Criar um host personalizado cujas classes derivam da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) e do [ Classe System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
+- Criação de um host personalizado cujas classes derivam da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) e da classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
 - Criar um aplicativo de console que usa essas classes de host para criar um shell interativo do Windows PowerShell.
 

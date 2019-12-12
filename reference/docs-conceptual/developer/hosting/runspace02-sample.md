@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
 ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360975"
 ---
 # <a name="runspace02-sample"></a>Amostra Runspace02
 
-Este exemplo mostra como usar a classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar os cmdlets [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) de forma síncrona. O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna objetos [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) para cada processo em execução no computador local, e o `Sort-Object` classifica os objetos com base em sua propriedade [System.Diagnostics.Process.ID *](/dotnet/api/System.Diagnostics.Process.Id) . Os resultados desses comandos são exibidos usando um controle [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .
+Este exemplo mostra como usar a classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar os cmdlets [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) de forma síncrona. O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna objetos [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) para cada processo em execução no computador local e o `Sort-Object` classifica os objetos com base em sua propriedade [System.Diagnostics.Process.ID *](/dotnet/api/System.Diagnostics.Process.Id) . Os resultados desses comandos são exibidos usando um controle [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) .
 
 ## <a name="requirements"></a>Requisitos
 
 Este exemplo requer o Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Este exemplo demonstra o seguinte.
 

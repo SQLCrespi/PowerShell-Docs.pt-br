@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
 caps.latest.revision: 8
 ms.openlocfilehash: e97e9ddb1bf81ba66e5f3cedddd22e3a861ce228
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363615"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Como criar um arquivo de formatação (.format.ps1xml)
@@ -36,7 +36,7 @@ Este tópico descreve como criar um arquivo de formatação (. Format. ps1xml).
    </Configuration>
    ```
 
-   - As marcas \<Configuration > \</Configuration > definem o nó raiz `Configuration`. Todas as marcas XML adicionais serão incluídas nesse nó.
+   - O \<de configuração >\<marcas de > de/configuração definem o nó de `Configuration` raiz. Todas as marcas XML adicionais serão incluídas nesse nó.
 
    - As <ViewDefinitions></ViewDefinitions> marcas definem o nó `ViewDefinitions`. Todas as exibições são definidas neste nó.
 

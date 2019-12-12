@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
 ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365875"
 ---
 # <a name="cmdlet-samples"></a>Amostras de cmdlet
@@ -31,7 +31,7 @@ Esta seção descreve o código de exemplo que é fornecido no SDK do Windows Po
 
 [Exemplo de GetProcessSample05](./getprocesssample05-sample.md) Este exemplo mostra uma versão completa do cmdlet Get-proc.
 
-[Exemplo de StopProcessSample01](./stopprocesssample01-sample.md) Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro `PassThru` que indica que o usuário deseja que o cmdlet retorne um objeto.
+[Exemplo de StopProcessSample01](./stopprocesssample01-sample.md) Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro de `PassThru` que indica que o usuário deseja que o cmdlet retorne um objeto.
 
 [Exemplo de StopProcessSample02](./stopprocesssample02-sample.md) Este exemplo mostra como escrever um cmdlet que grava mensagens de depuração, detalhadas e de aviso ao parar os processos no computador local.
 

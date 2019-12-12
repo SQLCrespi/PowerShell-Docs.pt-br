@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 4174e84f-d516-4aca-b418-273047dcfb07
 caps.latest.revision: 7
 ms.openlocfilehash: 5761ed2168a46d6ed9a2e50554d459f5b93223ee
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359655"
 ---
 # <a name="creating-a-workflow-activity-from-a-windows-powershell-cmdlet"></a>Criar uma atividade de fluxo de trabalho de um cmdlet do Windows PowerShell
 
-Qualquer módulo ou cmdlet do Windows PowerShell pode ser empacotado como uma atividade de fluxo de trabalho usando os métodos da classe [Microsoft. PowerShell. Activities. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) . Use o [Microsoft. PowerShell. Activities. Activitygenerator. Generatefrommoduleinfo *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromModuleInfo), o [Microsoft. PowerShell. Activities. Activitygenerator. Generatefromcommandinfo *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo)e [ Os métodos Microsoft. PowerShell. Activities. Activitygenerator. Generatefromname *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName) da classe [Microsoft. PowerShell. Activities. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) para gerar C# o código que representa uma atividade. Em seguida, você pode compilar C# o código resultante em um assembly que pode ser adicionado a um projeto como uma atividade.
+Qualquer módulo ou cmdlet do Windows PowerShell pode ser empacotado como uma atividade de fluxo de trabalho usando os métodos da classe [Microsoft. PowerShell. Activities. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) . Use os métodos [Microsoft. PowerShell. Activities. Activitygenerator. Generatefrommoduleinfo *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromModuleInfo), [Microsoft. PowerShell. Activities. Activitygenerator. Generatefromcommandinfo *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo)e [Microsoft. PowerShell. Activities. Activitygenerator. Generatefromname *](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName) da classe [Microsoft. PowerShell. Activities. Activitygenerator](/dotnet/api/Microsoft.PowerShell.Activities.ActivityGenerator) para gerar C# o código que representa uma atividade. Em seguida, você pode compilar C# o código resultante em um assembly que pode ser adicionado a um projeto como uma atividade.
 
 Em seguida, você pode compilar C# o código resultante em um assembly que pode ser adicionado a um projeto como uma atividade usando uma linha de comando com o formulário a seguir.
 

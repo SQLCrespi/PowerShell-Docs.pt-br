@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
 ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360635"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Noções básicas sobre um módulo do Windows PowerShell
@@ -51,7 +51,7 @@ Assim como acontece com os módulos de script, você pode incluir um arquivo de 
 
 ### <a name="manifest-modules"></a>Módulos de manifesto
 
-Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem nenhum tipo de assembly ou script de núcleo. (Formalmente, um módulo de manifesto deixa o elemento `ModuleToProcess` ou `RootModule` do manifesto vazio.) No entanto, você ainda pode usar os outros recursos de um módulo, como a capacidade de carregar assemblies dependentes ou executar automaticamente determinados scripts de pré-processamento. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar recursos que outros módulos usarão, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
+Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem nenhum tipo de assembly ou script de núcleo. (Formalmente, um módulo de manifesto deixa o `ModuleToProcess` ou `RootModule` elemento do manifesto vazio.) No entanto, você ainda pode usar os outros recursos de um módulo, como a capacidade de carregar assemblies dependentes ou executar automaticamente determinados scripts de pré-processamento. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar recursos que outros módulos usarão, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
 ### <a name="dynamic-modules"></a>Módulos dinâmicos
 

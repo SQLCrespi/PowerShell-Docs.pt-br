@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: cb6fcc47-cf89-43e7-b686-3d60934ce3e7
 caps.latest.revision: 6
 ms.openlocfilehash: e9a79e90da7e0a8232280fa2275d357cb633f4d6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416084"
 ---
 # <a name="runspace04-code-samples"></a>Exemplos de código RunSpace04
@@ -26,11 +26,11 @@ Aqui está um exemplo de código para um runspace que usa a classe [System. Mana
 
 Para obter o código de exemplo completo, consulte os tópicos a seguir.
 
-|Idioma|Tópico|
+|Language|Tópico|
 |--------------|-----------|
 |VB.NET|[Exemplo de código do Runspace01 (VB.NET)](./runspace01-vb-net-code-sample.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
 caps.latest.revision: 13
 ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363685"
 ---
 # <a name="formatting-file-overview"></a>Visão geral do arquivo de formatação
@@ -116,7 +116,7 @@ Conforme mostrado nos exemplos anteriores, o arquivo de formatação pode conter
 
 ## <a name="example-of-a-table-view"></a>Exemplo de uma exibição de tabela
 
-O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](./viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](./view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada elemento [View](./view-element-format.md) , o elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o elemento `TableControl` mostrado no seguinte exemplo) defina o tipo da exibição.
+O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](./viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](./view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada elemento [View](./view-element-format.md) , o elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o elemento `TableControl` mostrado no exemplo a seguir) definem o tipo da exibição.
 
 ```xml
 <ViewDefinitions>
@@ -161,6 +161,6 @@ O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibiçã
 
 [Criando uma exibição ampla](./creating-a-wide-view.md)
 
-[Criando controles personalizados](./creating-custom-controls.md)
+[Criar controles personalizados](./creating-custom-controls.md)
 
 [Gravando um arquivo de tipos e formatação do PowerShell](./writing-a-powershell-formatting-file.md)

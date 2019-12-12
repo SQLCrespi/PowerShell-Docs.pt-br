@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
 ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360815"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Início rápido do Windows PowerShell Host
@@ -91,7 +91,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>Addstatement
 
 Você pode simular o envio em lote usando o método [System. Management. Automation. PowerShell. Addstatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , que adiciona uma instrução adicional ao final do pipeline.
-O código a seguir obtém uma lista de processos em execução com o nome `PowerShell` e obtém a lista de serviços em execução.
+O código a seguir obtém uma lista de processos em execução com o nome `PowerShell`e, em seguida, obtém a lista de serviços em execução.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -111,7 +111,7 @@ PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-Também há uma versão do método addScript que usa um parâmetro booleano denominado `useLocalScope`.
+Há também uma versão do método addScript que usa um parâmetro booleano chamado `useLocalScope`.
 Se esse parâmetro for definido como `true`, o script será executado no escopo local.
 O código a seguir executará o script no escopo local.
 

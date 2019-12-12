@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
 ms.openlocfilehash: b98e6879bbfe0e3ec1a9ab37496dde44caf523a4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360675"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>Como definir os números de versão do XML HelpInfo
@@ -22,7 +22,7 @@ Este tópico explica como definir e aumentar os números de versão em um arquiv
 ## <a name="how-to-set-helpinfo-xml-version-numbers"></a>Como definir os números de versão do XML HelpInfo
 
 Os números de versão em um arquivo XML HelpInfo são críticos para a operação de ajuda atualizável.
-Os cmdlets [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) e [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) baixam novos arquivos de ajuda somente quando o número de versão de uma cultura de interface do usuário no arquivo XML HelpInfo remoto é maior que o número de versão para essa cultura de interface do usuário no XML HelpInfo local ou não há nenhum HelpInfo local Arquivo XML.
+Os cmdlets [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) e [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) baixam novos arquivos de ajuda somente quando o número de versão de uma cultura de interface do usuário no arquivo XML HelpInfo remoto é maior que o número de versão para essa cultura de interface do usuário no XML HelpInfo local ou não há nenhum arquivo XML HelpInfo local.
 
 O arquivo XML HelpInfo usa o número de versão de 4 partes que é definido na classe **System. Version** da estrutura de Microsoft .net. O formato é `N1.N2.N3.N4`. Os autores de módulo podem usar qualquer esquema de numeração de versão que seja permitido pela classe **System. Version** . A ajuda atualizável requer apenas que o número de versão de uma cultura de interface do usuário aumente quando uma nova versão do arquivo CAB para a cultura da interface do usuário for carregada no local especificado pelo elemento **HelpContentURI** no arquivo XML HelpInfo.
 

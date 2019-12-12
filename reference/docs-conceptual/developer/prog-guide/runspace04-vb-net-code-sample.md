@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
 caps.latest.revision: 6
 ms.openlocfilehash: a0c04adb64ab5f2a9fd42fa7dee3977638d3b535
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417954"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Exemplo de código RunSpace04 (VB.NET)
@@ -24,7 +24,7 @@ Aqui está o código-fonte VB.NET para o exemplo de Runspace04. Este exemplo usa
 >
 > Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 ```vb
 Imports System
@@ -115,7 +115,7 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace04.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace04.vb#L09-L92 "Runspace04.vb")] -->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
 ms.openlocfilehash: 2f145795a57c988da0cb4ed294142aa141c53cae
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364455"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Como importar cmdlets por meio de módulos
@@ -24,11 +24,11 @@ Este artigo descreve como importar cmdlets para uma sessão do PowerShell usando
 
 ## <a name="how-to-load-cmdlets-using-a-module"></a>Como carregar cmdlets usando um módulo
 
-1. Crie uma pasta de módulo que tenha o mesmo nome que o arquivo de assembly no qual os cmdlets são implementados. Neste procedimento, a pasta do módulo é criada na pasta `system32` do Windows.
+1. Crie uma pasta de módulo que tenha o mesmo nome que o arquivo de assembly no qual os cmdlets são implementados. Neste procedimento, a pasta de módulo é criada na pasta Windows `system32`.
 
    `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\mymodule`
 
-1. Verifique se a variável de ambiente `PSModulePath` inclui o caminho para a nova pasta do módulo. Por padrão, a pasta do sistema já foi adicionada à variável de ambiente `PSModulePath`. Para exibir o `PSModulePath`, digite: `$env:PSModulePath`.
+1. Certifique-se de que a variável de ambiente `PSModulePath` inclui o caminho para a nova pasta do módulo. Por padrão, a pasta do sistema já foi adicionada à variável de ambiente `PSModulePath`. Para exibir o `PSModulePath`, digite: `$env:PSModulePath`.
 
 1. Copie o assembly do cmdlet para a pasta do módulo.
 

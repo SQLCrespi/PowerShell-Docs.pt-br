@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 39acce45-5144-43ba-894d-a4ce782fa67d
 caps.latest.revision: 13
 ms.openlocfilehash: f89f0009972d5237d71cb8f0d1c53cd0ae614b67
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361405"
 ---
 # <a name="writing-a-powershell-formatting-file"></a>Escrever um arquivo de formatação do PowerShell
@@ -21,7 +21,7 @@ ms.locfileid: "72361405"
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão geral do arquivo de formatação](./formatting-file-overview.md) Descreve o que é um arquivo de formato e os componentes gerais de um arquivo de formatação, incluindo recursos comuns que podem ser definidos no arquivo, os diferentes tipos de exibições de formato que podem ser definidos para objetos .NET e um exemplo simplificado do XML usado para definir uma tabela v ibir.
+[Visão geral do arquivo de formatação](./formatting-file-overview.md) Descreve o que é um arquivo de formato e os componentes gerais de um arquivo de formatação, incluindo recursos comuns que podem ser definidos no arquivo, os diferentes tipos de exibições de formato que podem ser definidos para objetos .NET e um exemplo simplificado do XML usado para definir uma exibição de tabela.
 
 [Conceitos de formatação de arquivo](./formatting-file-concepts.md) Inclui informações que talvez você precise saber ao criar seus próprios arquivos de formatação, como os diferentes tipos de exibições que você pode definir e componentes especiais dessas exibições.
 

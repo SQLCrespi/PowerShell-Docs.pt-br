@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
 ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365885"
 ---
 # <a name="cmdlet-overview"></a>Visão geral do cmdlet
@@ -51,7 +51,7 @@ Os cmdlets podem ter parâmetros obrigatórios, nomeados, posicionais e de *comu
 Parâmetros de opção permitem definir parâmetros que serão avaliados somente se os parâmetros forem especificados na chamada.
 Para obter mais informações sobre os diferentes tipos de parâmetros, consulte [cmdlet Parameters](cmdlet-parameters.md).
 
-### <a name="parameter-set"></a>Conjunto de parâmetros
+### <a name="parameter-set"></a>Conjunto de Parâmetros
 
 Um grupo de parâmetros que podem ser usados no mesmo comando para executar uma ação específica.
 Um cmdlet pode ter vários conjuntos de parâmetros, mas cada conjunto de parâmetros deve ter pelo menos um parâmetro exclusivo.
@@ -67,7 +67,7 @@ Para obter mais informações sobre parâmetros dinâmicos, consulte [parâmetro
 ### <a name="input-processing-method"></a>Método de processamento de entrada
 
 Um método que um cmdlet pode usar para processar os registros que ele recebe como entrada.
-Os métodos de processamento de entrada incluem o método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , o [ Método System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e o método [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) . Ao implementar um cmdlet, você deve substituir pelo menos um dos [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)e [ Métodos de processamento de System. Management. Automation. cmdlet.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) end.
+Os métodos de processamento de entrada incluem o método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , o método [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e o método [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) . Ao implementar um cmdlet, você deve substituir pelo menos um dos métodos [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), e [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) .
 Normalmente, o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) é o método que você substitui porque ele é chamado para cada registro que o cmdlet processa.
 Por outro lado, o método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e o método [System. Management. Automation. cmdlet. endprocessation](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) são chamados uma vez para executar o pré-processamento ou o pós-processamento dos registros.
 Para obter mais informações sobre esses métodos, consulte [métodos de processamento de entrada](cmdlet-input-processing-methods.md).
@@ -75,7 +75,7 @@ Para obter mais informações sobre esses métodos, consulte [métodos de proces
 ### <a name="shouldprocess-feature"></a>Recurso ShouldProcess
 
 O PowerShell permite que você crie cmdlets que solicitam ao usuário comentários antes que o cmdlet faça uma alteração no sistema.
-Para usar esse recurso, o cmdlet deve declarar que oferece suporte ao recurso ShouldProcess quando você declara o atributo cmdlet e o cmdlet deve chamar [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [ Métodos System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) de dentro de um método de processamento de entrada.
+Para usar esse recurso, o cmdlet deve declarar que oferece suporte ao recurso ShouldProcess quando você declara o atributo cmdlet, e o cmdlet deve chamar os métodos [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) de dentro de um método de processamento de entrada.
 Para obter mais informações sobre como dar suporte à funcionalidade ShouldProcess, consulte [solicitando confirmação](requesting-confirmation-from-cmdlets.md).
 
 ### <a name="transaction"></a>Transação
@@ -128,7 +128,7 @@ Para obter mais informações sobre esses métodos, consulte [métodos de proces
 
 O Windows PowerShell define vários atributos de .NET Framework que são usados para gerenciar cmdlets e especificar funcionalidades comuns que são fornecidas pelo Windows PowerShell e que podem ser exigidas pelo cmdlet. Por exemplo, os atributos são usados para designar uma classe como um cmdlet, especificar os parâmetros do cmdlet e solicitar a validação de entrada para que os desenvolvedores de cmdlets não precisem implementar essa funcionalidade em seu código de cmdlet. Para obter mais informações sobre atributos, consulte [atributos do Windows PowerShell](./cmdlet-attributes.md).
 
-## <a name="cmdlet-names"></a>Nomes de cmdlet
+## <a name="cmdlet-names"></a>Nomes dos cmdlets
 
 O Windows PowerShell usa um par de nomes verbo-and-substantivo para nomear cmdlets. Por exemplo, o cmdlet `Get-Command` incluído no Windows PowerShell é usado para obter todos os cmdlets registrados no Shell de comando. O verbo identifica a ação que o cmdlet executa e o substantivo identifica o recurso no qual o cmdlet executa sua ação.
 

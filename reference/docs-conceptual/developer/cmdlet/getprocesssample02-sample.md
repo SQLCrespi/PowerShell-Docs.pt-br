@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
 caps.latest.revision: 7
 ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364565"
 ---
 # <a name="getprocesssample02-sample"></a>Amostra GetProcessSample02
@@ -25,11 +25,11 @@ Este exemplo mostra como escrever um cmdlet que recupera os processos no computa
 
 2. Clique duas vezes no ícone do arquivo da solução (. sln). Isso abre o projeto de exemplo no Visual Studio.
 
-3. No menu **Compilar** , selecione **Compilar solução**.
+3. No menu **Compilar**, selecione **Compilar Solução**.
 
     A biblioteca do exemplo será criada nas pastas \bin ou \bin\Debug padrão.
 
-### <a name="how-to-run-the-sample"></a>Como executar o exemplo
+### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
 1. Crie a seguinte pasta de módulo:
 
@@ -51,7 +51,7 @@ Este exemplo mostra como escrever um cmdlet que recupera os processos no computa
 
 Este exemplo requer o Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Demonstrar
+## <a name="demonstrates"></a>Demonstra
 
 Este exemplo demonstra o seguinte.
 

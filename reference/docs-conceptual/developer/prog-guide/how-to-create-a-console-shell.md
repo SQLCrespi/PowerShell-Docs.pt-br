@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 6c24dd44-a8ec-421d-ac86-90912e1a8cc6
 caps.latest.revision: 5
 ms.openlocfilehash: 7166881bd1403ea8c81ec2928321f6b93e3ac58d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360265"
 ---
 # <a name="how-to-create-a-console-shell"></a>Como criar um shell do console
@@ -65,8 +65,8 @@ Aqui está uma breve descrição dos parâmetros de make-Shell.
 |-builtinscript S1. ps1 [, S2. ps1,...]|Uma lista de scripts internos para o Shell. Esses scripts são descobertos antes dos scripts no caminho, e seu conteúdo não pode ser alterado depois que o Shell é criado.<br /><br /> Os arquivos estão incluídos "no estado em que se encontram"; nenhuma verificação de validade é feita por Make-Shell.|
 |-Resource ResourceFile. txt|O arquivo. txt que contém a ajuda e os recursos de faixa para o Shell. O primeiro recurso é denominado ShellHelp e contém o texto exibido se o Shell for invocado com o parâmetro `help`. O segundo recurso é denominado ShellBanner e contém o texto e as informações de direitos autorais exibidas quando o Shell é iniciado no modo interativo.<br /><br /> Se esse parâmetro não for fornecido ou se esses recursos não estiverem presentes, uma ajuda e faixa genérica serão usadas.|
 |-cscflags cscFlags|Sinalizadores que devem ser passados para o C# compilador (CSC. exe). Eles são transmitidos por meio de inalterado. Se esse parâmetro incluir espaços, ele deverá estar entre aspas duplas.|
-|-?<br /><br /> -ajuda|Exibe a mensagem de direitos autorais e as opções de linha de comando make-Shell.|
-|-Detalhado|Exibe informações detalhadas enquanto o Shell está sendo criado.|
+|-?<br /><br /> -help|Exibe a mensagem de direitos autorais e as opções de linha de comando make-Shell.|
+|-verbose|Exibe informações detalhadas enquanto o Shell está sendo criado.|
 
 ## <a name="see-also"></a>Consulte Também
 

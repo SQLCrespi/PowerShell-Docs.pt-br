@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3204599c-7159-47aa-82ec-4a476f461027
 caps.latest.revision: 7
 ms.openlocfilehash: 5c5707d1c533e0498c6794b60f4499e530e25813
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360655"
 ---
 # <a name="supporting-online-help"></a>Suporte à ajuda online
@@ -41,13 +41,13 @@ Para implementar `Get-Help`-online, o cmdlet `Get-Help` procura um Uniform Resou
 
 - A propriedade HelpUri de qualquer comando. A propriedade HelpUri é acessível mesmo quando o tópico da ajuda do comando não está instalado no computador do usuário. Esse recurso foi introduzido no Windows PowerShell 3,0.
 
-  `Get-Help` procura um URI na primeira entrada na seção links relacionados antes de obter o valor da propriedade HelpUri. Se o valor da propriedade estiver incorreto ou alterado, você poderá substituí-lo inserindo um valor diferente no primeiro link relacionado. No entanto, o primeiro link relacionado funciona somente quando os tópicos da ajuda são instalados no computador do usuário.
+  `Get-Help` procura um URI na primeira entrada da seção links relacionados antes de obter o valor da propriedade HelpUri. Se o valor da propriedade estiver incorreto ou alterado, você poderá substituí-lo inserindo um valor diferente no primeiro link relacionado. No entanto, o primeiro link relacionado funciona somente quando os tópicos da ajuda são instalados no computador do usuário.
 
 ## <a name="adding-a-uri-to-the-first-related-link-of-a-command-help-topic"></a>Adicionando um URI ao primeiro link relacionado de um tópico de ajuda de comando
 
-Você pode dar suporte a `Get-Help`-online para qualquer comando, adicionando um URI válido à primeira entrada na seção links relacionados do tópico de ajuda baseado em XML do comando. Essa opção só é válida em tópicos de ajuda baseados em XML e funciona somente quando o tópico da ajuda está instalado no computador do usuário. Quando o tópico da ajuda é instalado e o URI é populado, esse valor tem precedência sobre a propriedade **HelpUri** do comando.
+Você pode dar suporte a `Get-Help`-online para qualquer comando, adicionando um URI válido à primeira entrada na seção links relacionados do tópico da ajuda baseada em XML para o comando. Essa opção só é válida em tópicos de ajuda baseados em XML e funciona somente quando o tópico da ajuda está instalado no computador do usuário. Quando o tópico da ajuda é instalado e o URI é populado, esse valor tem precedência sobre a propriedade **HelpUri** do comando.
 
-Para dar suporte a esse recurso, o URI deve aparecer no elemento `maml:uri` no primeiro elemento `maml:relatedLinks/maml:navigationLink` no elemento `maml:relatedLinks`.
+Para dar suporte a esse recurso, o URI deve aparecer no elemento `maml:uri` sob o primeiro elemento `maml:relatedLinks/maml:navigationLink` no elemento `maml:relatedLinks`.
 
 O XML a seguir mostra o posicionamento correto do URI. O texto "versão online:" no elemento `maml:linkText` é uma prática recomendada, mas não é necessário.
 
@@ -73,7 +73,7 @@ Esta seção mostra como adicionar a propriedade HelpUri a comandos de tipos dif
 
 Para os cmdlets escritos C#em, adicione um atributo **HelpUri** à classe cmdlet. O valor do atributo deve ser um URI que comece com "http" ou "https".
 
-O código a seguir mostra o atributo HelpUri da classe cmdlet `Get-History`.
+O código a seguir mostra o atributo HelpUri da classe `Get-History` cmdlet.
 
 ```
 [Cmdlet(VerbsCommon.Get, "History", HelpUri = "http://go.microsoft.com/fwlink/?LinkID=001122")]

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
 ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359645"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Adicionar atividades do Windows PowerShell à caixa de ferramentas do Visual Studio
@@ -23,7 +23,7 @@ Antes de criar um fluxo de trabalho do PowerShell usando Designer de Fluxo de Tr
 
 1. Crie um novo projeto de aplicativo de console de fluxo de trabalho no Visual Studio.
 
-2. No menu **Exibir** , clique em **caixa de ferramentas**.
+2. No menu **Exibir** , clique em **Caixa de Ferramentas**.
 
 3. Adicione uma nova guia na caixa de ferramentas clicando com o botão direito do mouse na caixa de ferramentas e clicando em **Adicionar guia**e dê à nova guia um nome como "atividades do PowerShell".
 
@@ -33,9 +33,9 @@ Antes de criar um fluxo de trabalho do PowerShell usando Designer de Fluxo de Tr
 
 5. Na caixa de diálogo **escolher itens da caixa de ferramentas** , clique na guia **sistema. atividades** .
 
-6. Clique em **procurar**.
+6. Clique em **Procurar**.
 
-7. Navegue até a pasta%WINDIR%\Microsoft.NET\assembly\GAC_MSIL\Microsoft.PowerShell.Core.Activities\v4.0_3.0.0.0__31bf3856ad364e e clique duas vezes em Microsoft. PowerShell. Core. Activities. dll.
+7. Navegue até a pasta%WINDIR%\Microsoft.NET\assembly\ GAC_MSIL \Microsoft.PowerShell.Core.Activities\v4.0_3.0.0.0__31bf3856ad364e e clique duas vezes em Microsoft. PowerShell. Core. Activities. dll.
 
 8. Clique em **OK**. As atividades definidas pelo assembly Microsoft. PowerShell. Core. Activities agora estão disponíveis na caixa de ferramentas.
 

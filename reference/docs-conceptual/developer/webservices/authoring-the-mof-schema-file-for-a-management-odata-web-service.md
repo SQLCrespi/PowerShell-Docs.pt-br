@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
 ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366165"
 ---
 # <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a>Criação do arquivo de esquema MOF para um serviço Web OData de gerenciamento
@@ -23,7 +23,7 @@ Você define os recursos que o serviço Web do Management OData expõe criando u
 
 O arquivo a seguir define os recursos de serviço e processo. Cada um desses recursos corresponde a um objeto que pode ser gerenciado por um conjunto de cmdlets do Windows PowerShell. As propriedades correspondem aos parâmetros usados por esses cmdlets.
 
-Cada um dos dois recursos contém propriedades que são de tipo complexo. Os tipos complexos são definidos como classes modificadas com o qualificador `ComplexType`.
+Cada um dos dois recursos contém propriedades que são de tipo complexo. Os tipos complexos são definidos como classes modificadas com o qualificador de `ComplexType`.
 
 ```csharp
 

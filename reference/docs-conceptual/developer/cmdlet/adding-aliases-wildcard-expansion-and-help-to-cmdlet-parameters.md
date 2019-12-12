@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
 ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415647"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
@@ -128,7 +128,7 @@ if (!wildcard.IsMatch(processName))
 }
 ```
 
-## <a name="code-sample"></a>Exemplo de código
+## <a name="code-sample"></a>Exemplo de Código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample03](./stopprocesssample03-sample.md).
 
@@ -150,7 +150,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     PS> stop-proc -ProcessName notepad
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Confirm
@@ -165,7 +165,7 @@ A saída a seguir é exibida.
     PS> stop-proc
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -182,7 +182,7 @@ A saída a seguir é exibida.
     PS> stop-proc -Name *note*
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ A saída a seguir é exibida.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ A saída a seguir é exibida.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-A saída a seguir é exibida.
+A seguinte saída aparece.
 
     ```
     Confirm
@@ -209,7 +209,7 @@ A saída a seguir é exibida.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Criar um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 

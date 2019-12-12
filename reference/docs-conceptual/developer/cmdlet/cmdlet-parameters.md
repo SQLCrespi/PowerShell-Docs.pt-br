@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
 ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365925"
 ---
 # <a name="cmdlet-parameters"></a>Parâmetros de cmdlets
 
-Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite entrada. Os parâmetros podem aceitar a entrada diretamente da linha de comando ou de objetos passados para o cmdlet por meio do pipeline, os argumentos (também conhecidos como *valores*) desses parâmetros podem especificar a entrada que o cmdlet aceita, como o cmdlet deve executar seu ações e os dados que o cmdlet retorna para o pipeline.
+Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite entrada. Os parâmetros podem aceitar a entrada diretamente da linha de comando ou de objetos passados para o cmdlet por meio do pipeline, os argumentos (também conhecidos como *valores*) desses parâmetros podem especificar a entrada que o cmdlet aceita, como o cmdlet deve executar suas ações e os dados que o cmdlet retorna para o pipeline.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -47,7 +47,7 @@ Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite e
 
 [Validando entrada de parâmetro](./validating-parameter-input.md) Descreve como o Windows PowerShell valida os argumentos passados para parâmetros de cmdlet.
 
-[Parâmetros de filtro de entrada](./input-filter-parameters.md) Discute os parâmetros `Filter`, `Include` e `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
+[Parâmetros de filtro de entrada](./input-filter-parameters.md) Discute os parâmetros `Filter`, `Include`e `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
 
 ## <a name="related-sections"></a>Seções pertinentes
 
