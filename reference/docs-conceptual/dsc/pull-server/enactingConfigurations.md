@@ -3,10 +3,10 @@ ms.date: 10/16/2017
 keywords: DSC,powershell,configuração,instalação
 title: Aplicando configurações
 ms.openlocfilehash: 2a40f2055dda78cc0cb6cb05a5e14dce48be9d00
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71953643"
 ---
 # <a name="enacting-configurations"></a>Aplicando configurações
@@ -28,7 +28,7 @@ Por exemplo, se o MOF da configuração estiver localizado em `C:\DSC\Configurat
 
 ## <a name="pull-mode"></a>Modo de pull
 
-![Modo de pull](../images/pullModel.png "Como funciona o modo de pull")
+![Modo de Pull](../images/pullModel.png "Como funciona o modo de pull")
 
 No modo de pull, os clientes de pull são configurados para obter suas configurações de estado desejado de um serviço de pull remoto.
 Da mesma forma, o serviço de pull foi configurado para hospedar o serviço de DSC e recebeu as configurações e os recursos necessários para os clientes de pull.
