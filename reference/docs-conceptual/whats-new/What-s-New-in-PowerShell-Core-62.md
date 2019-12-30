@@ -72,7 +72,7 @@ Se estiver usando o PowerShell Core em diferentes sistemas operacionais, você d
 
 ```powershell
 PS> "Hello World!" > Temp:/hello.txt
-PS> `Get-Content` Temp:/hello.txt
+PS> Get-Content Temp:/hello.txt
 Hello World!
 ```
 
