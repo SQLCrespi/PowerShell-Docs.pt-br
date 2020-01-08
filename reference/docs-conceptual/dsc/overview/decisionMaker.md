@@ -2,12 +2,12 @@
 ms.date: 10/11/2019
 keywords: DSC,powershell,configuração,instalação
 title: Visão Geral da Desired State Configuration para Tomadores de Decisão
-ms.openlocfilehash: 271ec04035feb17e932acd0ac80f32213a4e018b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b6d483d105c2d3b9be7215be36397d452338c7f1
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72352131"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737246"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Visão geral da Desired State Configuration para tomadores de decisão
 
@@ -31,7 +31,7 @@ As configurações são compartilhadas por meio da [Galeria do PowerShell](https
 
 ## <a name="dsc-and-devops"></a>DSC e DevOps
 
-A DSC foi concebida pensando em [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx). Uma combinação de pessoas, processos e ferramentas que permitem uma implantação e iteração rápidas concentradas em proporcionar vantagens para os usuários finais internos ou externos. Uma única configuração que define um ambiente significa que os desenvolvedores podem codificar seus requisitos em uma configuração e verificá-la no controle do código-fonte. As equipes de operações podem implantar o código sem passar por processos manuais propensos a erros.
+A DSC foi concebida pensando em [DevOps](/archive/blogs/ashleymcglone/devops-for-n00bs-ie-windows-people-like-me). Uma combinação de pessoas, processos e ferramentas que permitem uma implantação e iteração rápidas concentradas em proporcionar vantagens para os usuários finais internos ou externos. Uma única configuração que define um ambiente significa que os desenvolvedores podem codificar seus requisitos em uma configuração e verificá-la no controle do código-fonte. As equipes de operações podem implantar o código sem passar por processos manuais propensos a erros.
 
 As configurações são [controladas por dados](../configurations/configData.md). A definição de dados facilita as operações de identificação e alteração de ambientes sem a intervenção do desenvolvedor.
 
