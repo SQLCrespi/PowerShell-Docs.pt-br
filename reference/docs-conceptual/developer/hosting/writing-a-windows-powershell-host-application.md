@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: b44708b3bbcb974a6178323dff2302b7da121af6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fe0393634a1e5bb1a3d4a98ccf245e199beb0f16
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367275"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869904"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Escrever um aplicativo host do Windows PowerShell
 
@@ -34,7 +34,3 @@ Os tópicos a seguir explicam como criar um aplicativo que hospeda o Windows Pow
 [Criando uma interface do usuário personalizada](./creating-a-custom-user-interface.md) Apresenta interfaces de usuário personalizadas e fornece links para exemplos.
 
 [Exemplos de aplicativos host](./host-application-samples.md) Esta seção inclui exemplos de aplicativos host completos.
-
-## <a name="see-also"></a>Consulte Também
-
-[Windows PowerShell](https://msdn.microsoft.com/en-us/b41a2af3-aec1-402d-8e18-c2c26be461ff)

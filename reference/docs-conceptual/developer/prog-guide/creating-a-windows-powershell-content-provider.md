@@ -1,22 +1,14 @@
 ---
-title: Criando um provedor de conteúdo do Windows PowerShell | Microsoft Docs
-ms.custom: ''
+title: Criar um provedor de conteúdo do Windows PowerShell
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
-caps.latest.revision: 6
-ms.openlocfilehash: 4afe0370f7a2c5b17826544e94e76650611c9d68
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d48c18cb41dcca372b1e12e1f3abc4c3f5e4bee
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417513"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870720"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Criar um provedor de conteúdo do Windows PowerShell
 
@@ -24,16 +16,14 @@ Este tópico descreve como criar um provedor do Windows PowerShell que permite a
 
 > [!NOTE]
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider06.cs) para este provedor usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
->
-> Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório. Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Definir a classe do provedor de conteúdo do Windows PowerShell
 
 Um provedor de conteúdo do Windows PowerShell deve criar uma classe .NET que ofereça suporte à interface [System. Management. Automation. Provider. Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) . Aqui está a definição de classe para o provedor de item descrito nesta seção.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33
+"AccessDBProviderSample06.cs")]
 
 Observe que nessa definição de classe, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há nenhum recurso específico do Windows PowerShell adicionado.
 
@@ -41,7 +31,8 @@ Observe que nessa definição de classe, o atributo [System. Management. Automat
 
 Conforme descrito em [criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md), a classe [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) deriva de várias outras classes que forneceram funcionalidade de provedor diferente. Portanto, um provedor de conteúdo do Windows PowerShell, em geral, define toda a funcionalidade fornecida por essas classes.
 
-Para obter mais informações sobre como implementar a funcionalidade para adicionar informações de inicialização específicas da sessão e para liberar recursos que são usados pelo provedor, consulte [criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). No entanto, a maioria dos provedores, incluindo o provedor descrito aqui, pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
+Para obter mais informações sobre como implementar a funcionalidade para adicionar informações de inicialização específicas da sessão e para liberar recursos que são usados pelo provedor, consulte [criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md).
+No entanto, a maioria dos provedores, incluindo o provedor descrito aqui, pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
 
 Para acessar o armazenamento de dados, o provedor deve implementar os métodos da classe base [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Para obter mais informações sobre como implementar esses métodos, consulte [criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
@@ -53,13 +44,16 @@ Para dar suporte a comandos recursivos, Contêineres aninhados e caminhos relati
 
 ## <a name="implementing-a-content-reader"></a>Implementando um leitor de conteúdo
 
-Para ler o conteúdo de um item, um provedor deve implementar uma classe de leitor de conteúdo derivada de [System. Management. Automation. Provider. Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader). O leitor de conteúdo para esse provedor permite o acesso ao conteúdo de uma linha em uma tabela de dados. A classe Content Reader define um método **Read** que recupera os dados da linha indicada e retorna uma lista que representa esses dados, um método de **busca** que move o leitor de conteúdo, um método **Close** que fecha o leitor de conteúdo e um método **Dispose** .
+Para ler o conteúdo de um item, um provedor deve implementar uma classe de leitor de conteúdo derivada de [System. Management. Automation. Provider. Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader).
+O leitor de conteúdo para esse provedor permite o acesso ao conteúdo de uma linha em uma tabela de dados. A classe Content Reader define um método **Read** que recupera os dados da linha indicada e retorna uma lista que representa esses dados, um método de **busca** que move o leitor de conteúdo, um método **Close** que fecha o leitor de conteúdo e um método **Dispose** .
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241
+"AccessDBProviderSample06.cs")]
 
 ## <a name="implementing-a-content-writer"></a>Implementando um gravador de conteúdo
 
-Para gravar o conteúdo em um item, um provedor deve implementar uma classe de gravador de conteúdo derivada de [System. Management. Automation. Provider. Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter). A classe de gravador de conteúdo define um método de **gravação** que grava o conteúdo de linha especificado, um método de **busca** que move o gravador de conteúdo, um método **Close** que fecha o gravador de conteúdo e um método **Dispose** .
+Para gravar o conteúdo em um item, um provedor deve implementar uma classe de gravador de conteúdo derivada de [System. Management. Automation. Provider. Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter).
+A classe de gravador de conteúdo define um método de **gravação** que grava o conteúdo de linha especificado, um método de **busca** que move o gravador de conteúdo, um método **Close** que fecha o gravador de conteúdo e um método **Dispose** .
 
 [!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
 
@@ -195,17 +189,17 @@ public object ClearContentDynamicParameters(string path)
 
 [!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1819-L1822 "AccessDBProviderSample06.cs")]
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample06](./accessdbprovidersample06-code-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
-Ao escrever um provedor, pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso é feito, você deve criar um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Ao escrever um provedor, pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso é feito, você deve criar um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
 
@@ -217,7 +211,7 @@ Use o cmdlet `Get-Content` para recuperar o conteúdo do item especificado na ta
 Get-Content -Path mydb:\Customers -ReadCount 2
 ```
 
-```output
+```Output
 ID        : 1
 FirstName : Eric
 LastName  : Gruber
@@ -244,17 +238,17 @@ Zip       : 98089
 Country   : USA
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
 [Criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85))
 
 [Implementar um provedor de navegação do Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
 
-[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions/ms714644(v=vs.85))
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417492"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870703"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Criar um provedor de itens do Windows PowerShell
 
@@ -24,10 +24,7 @@ Este tópico descreve como criar um provedor do Windows PowerShell que pode mani
 
 > [!NOTE]
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider03.cs) para este provedor usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
->
-> Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório. Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 O provedor de item do Windows PowerShell descrito neste tópico Obtém itens de dados de um banco de dado do Access. Nesse caso, um "item" é uma tabela no banco de dados do Access ou uma linha em uma tabela.
 
@@ -43,13 +40,15 @@ Observe que nessa definição de classe, o atributo [System. Management. Automat
 
 Conforme descrito em [criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md), a classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) deriva de várias outras classes que forneceram funcionalidade de provedor diferente. Portanto, um provedor de item do Windows PowerShell deve definir toda a funcionalidade fornecida por essas classes.
 
-Para obter mais informações sobre como implementar a funcionalidade para adicionar informações de inicialização específicas da sessão e para liberar recursos usados pelo provedor, consulte [criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md). No entanto, a maioria dos provedores, incluindo o provedor descrito aqui, pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
+Para obter mais informações sobre como implementar a funcionalidade para adicionar informações de inicialização específicas da sessão e para liberar recursos usados pelo provedor, consulte [criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md).
+No entanto, a maioria dos provedores, incluindo o provedor descrito aqui, pode usar a implementação padrão dessa funcionalidade fornecida pelo Windows PowerShell.
 
 Antes que o provedor de itens do Windows PowerShell possa manipular os itens no repositório, ele deve implementar os métodos da classe base [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) para acessar o armazenamento de dados. Para obter mais informações sobre como implementar essa classe, consulte [criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
 ## <a name="checking-for-path-validity"></a>Verificando a validade do caminho
 
-Ao procurar um item de dados, o tempo de execução do Windows PowerShell fornece um caminho do Windows PowerShell para o provedor, conforme definido na seção "conceitos de PSPath" de [como o Windows PowerShell funciona](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Um provedor de item do Windows PowerShell deve verificar a sintaxe sintática e semântica de qualquer caminho passado para ele implementando o método [System. Management. Automation. Provider. docmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Esse método retornará `true` se o caminho for válido e `false` caso contrário. Lembre-se de que a implementação desse método não deve verificar a existência do item no caminho, mas apenas que o caminho é sintaticamente e semanticamente correto.
+Ao procurar um item de dados, o tempo de execução do Windows PowerShell fornece um caminho do Windows PowerShell para o provedor, conforme definido na seção "conceitos de PSPath" de [como o Windows PowerShell funciona](/previous-versions/ms714658(v=vs.85)).
+Um provedor de item do Windows PowerShell deve verificar a sintaxe sintática e semântica de qualquer caminho passado para ele implementando o método [System. Management. Automation. Provider. docmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Esse método retornará `true` se o caminho for válido e `false` caso contrário. Lembre-se de que a implementação desse método não deve verificar a existência do item no caminho, mas apenas que o caminho é sintaticamente e semanticamente correto.
 
 Aqui está a implementação do método [System. Management. Automation. Provider. createcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) para esse provedor. Observe que essa implementação chama um método auxiliar NormalizePath para converter todos os separadores no caminho para um uniforme.
 
@@ -219,23 +218,23 @@ Este provedor de item define a classe auxiliar DatabaseRowInfo que representa um
 
 O provedor de exemplo define um método DatabaseRowInfo. GetRows para retornar uma coleção de objetos de informações de linha para a tabela especificada. Esse método inclui um bloco try/catch para interceptar exceções. Quaisquer erros resultarão em nenhuma informação de linha.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample03](./accessdbprovidersample03-code-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
-Ao escrever um provedor, pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando terminar, crie um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações sobre o, consulte [estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Ao escrever um provedor, pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando terminar, crie um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações sobre o, consulte [estendendo tipos de objeto e formatação](/previous-versions/ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
 
 Quando este provedor de itens do Windows PowerShell é registrado com o Windows PowerShell, você só pode testar a funcionalidade básica e de unidade do provedor. Para testar a manipulação de itens, você também deve implementar a funcionalidade de contêiner descrita em [implementando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)
 
@@ -245,12 +244,12 @@ Quando este provedor de itens do Windows PowerShell é registrado com o Windows 
 
 [Criando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](/previous-versions/ms714665(v=vs.85))
 
-[Como funciona o Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Como funciona o Windows PowerShell](/previous-versions/ms714658(v=vs.85))
 
 [Criando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
 
 [Criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)
 
-[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions/ms714644(v=vs.85))

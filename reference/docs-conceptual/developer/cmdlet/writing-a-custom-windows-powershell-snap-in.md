@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], specified in snap-ins
 ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
 caps.latest.revision: 6
-ms.openlocfilehash: 4d50ef4dcd75d5c0ba802fbcfe2d7d1d7c954707
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa6e4a4615f2681efa691008c86611f0df4e07d7
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364245"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870482"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>Escrever um snap-in personalizado do Windows PowerShell
 
@@ -27,12 +27,11 @@ Com esse tipo de snap-in, você especifica quais cmdlets, provedores, tipos ou f
 ## <a name="to-write-a-windows-powershell-snap-in-that-registers-specific-cmdlets"></a>Para gravar um snap-in do Windows PowerShell que registra cmdlets específicos.
 
 1. Adicione o atributo RunInstallerAttribute.
-
 2. Crie uma classe pública que derive da classe [System. Management. Automation. CustomPSSnapIn](/dotnet/api/System.Management.Automation.CustomPSSnapIn) .
 
    Neste exemplo, o nome da classe é "CustomPSSnapinTest".
 
-3. Adicione uma propriedade pública para o nome do snap-in (obrigatório). Ao nomear snap-ins, não use nenhum dos seguintes caracteres: #. , () {} [] &-/\ $; : "' \< > &#124; ? @ ` *
+3. Adicione uma propriedade pública para o nome do snap-in (obrigatório). Ao nomear snap-ins, não use nenhum dos seguintes caracteres: `#`, `.`, `,`, `(`, `)`, `{`, `}`, `[`, `]`, `&`, `-`, `/`, `\`, `$`, `;`, `:`, `"`, `'`, `<`, `>`, `|`, `?`, `@`, `` ` ``, `*`
 
    Neste exemplo, o nome do snap-in é "CustomPSSnapInTest".
 
@@ -46,13 +45,15 @@ Com esse tipo de snap-in, você especifica quais cmdlets, provedores, tipos ou f
 
 6. Adicione uma propriedade pública para a descrição do snap-in (obrigatório).
 
-   Neste exemplo, a descrição é: "Este é um snap-in personalizado do Windows PowerShell que inclui os cmdlets Test-HelloWorld e Test-CustomSnapinTest".
+   Neste exemplo, a descrição é: "Este é um snap-in personalizado do Windows PowerShell que inclui os cmdlets `Test-HelloWorld` e `Test-CustomSnapinTest`".
 
 7. Adicione uma propriedade pública para o recurso de descrição do snap-in (opcional).
 
-   Neste exemplo, o recurso do fornecedor é "CustomPSSnapInTest, este é um snap-in personalizado do Windows PowerShell que inclui os cmdlets Test-HelloWorld e Test-CustomSnapinTest".
+   Neste exemplo, o recurso do fornecedor é:
 
-8. Especifique os cmdlets que pertencem ao snap-in personalizado (opcional) usando a classe [System. Management. Automation. Runspaces. Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) . As informações adicionadas aqui incluem o nome do cmdlet, seu tipo .NET e o nome do arquivo de ajuda do cmdlet (o formato do nome do arquivo de ajuda do cmdlet deve ser Name. dll-help. xml).
+   > CustomPSSnapInTest, esse é um snap-in personalizado do Windows PowerShell que inclui os cmdlets Test-HelloWorld e Test-CustomSnapinTest ".
+
+8. Especifique os cmdlets que pertencem ao snap-in personalizado (opcional) usando a classe [System. Management. Automation. Runspaces. Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) . As informações adicionadas aqui incluem o nome do cmdlet, seu tipo .NET e o nome do arquivo de ajuda do cmdlet (o formato do nome do arquivo de ajuda do cmdlet deve ser` name.dll-help.xml`).
 
    Este exemplo adiciona os cmdlets Test-HelloWorld e TestCustomSnapinTest.
 
@@ -70,7 +71,7 @@ Com esse tipo de snap-in, você especifica quais cmdlets, provedores, tipos ou f
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como escrever um snap-in personalizado do Windows PowerShell que pode ser usado para registrar os cmdlets Test-HelloWorld e Test-CustomSnapinTest. Lembre-se de que, neste exemplo, o assembly completo pode conter outros cmdlets e provedores que não seriam registrados por esse snap-in.
+Este exemplo mostra como gravar um snap-in personalizado do Windows PowerShell que pode ser usado para registrar os cmdlets `Test-HelloWorld` e `Test-CustomSnapinTest`. Lembre-se de que, neste exemplo, o assembly completo pode conter outros cmdlets e provedores que não seriam registrados por esse snap-in.
 
 ```csharp
 [RunInstaller(true)]
@@ -213,10 +214,10 @@ public class CustomPSSnapinTest : CustomPSSnapIn
 }
 ```
 
-Para obter mais informações sobre como registrar snap-ins, consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c) no [Guia do programador do Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
+Para obter mais informações sobre como registrar snap-ins, consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions/ms714644(v=vs.85)) no [Guia do programador do Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
-[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions/ms714644(v=vs.85))
 
 [SDK do shell do Windows PowerShell](../windows-powershell-reference.md)
