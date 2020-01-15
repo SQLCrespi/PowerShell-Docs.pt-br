@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O objeto PowerShellTab
-ms.openlocfilehash: bfa11b553f97b7b27b974855ff4e8f1a48c33fea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028914"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736923"
 ---
 # <a name="the-powershelltab-object"></a>O objeto PowerShellTab
 
@@ -43,7 +43,7 @@ Executa o script determinado na guia PowerShell.
 
 **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
-**\[useNewScope\]** – Booliano Opcional cujo padrão é **$true** Se for definido como **$true**, um novo escopo será criado dentro do qual o comando será executado. Ele não modifica o ambiente de runtime da guia PowerShell que é especificada pelo comando.
+**\[useNewScope\]** – Booliano opcional cujo padrão é `$true` Se for definido como `$true`, será criado um novo escopo em que o comando será executado. Ele não modifica o ambiente de runtime da guia PowerShell que é especificada pelo comando.
 
 **\[[millisecondsTimeout]\]** – inteiro opcional padronizado para **500**.
 Se o comando não terminar dentro do tempo especificado, gerará um **TimeoutException** com a mensagem "A operação atingiu o tempo limite".
@@ -92,7 +92,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-A propriedade Boolean somente leitura que retornará um valor **$true** se um script puder ser invocado com o método [Invoke( Script )](#invoke-script-).
+A propriedade Boolean somente leitura que retornará um valor `$true` se um script puder ser invocado com o método [Invoke( Script )](#invoke-script-).
 
 ```powershell
 # CanInvoke will be false if the PowerShell
@@ -107,9 +107,9 @@ $secondTab.Invoke({sleep 20})
 $secondTab.CanInvoke
 ```
 
-### <a name="consolepane"></a>Consolepane
+### <a name="consolepane"></a>ConsolePane
 
-Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.  No ISE do Windows PowerShell 2.0 isso foi chamado de **CommandPane**.
+Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. No ISE do Windows PowerShell 2.0 isso foi chamado de **CommandPane**.
 
 A propriedade somente leitura que obtém o objeto [editor](The-ISEEditor-Object.md) do painel Console.
 
@@ -156,7 +156,7 @@ $newFile.Editor.LineCount
 
 ### <a name="output"></a>Saída
 
-Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Em versões mais recentes do ISE do Windows PowerShell, você pode usar o objeto **ConsolePane** para os mesmos fins.
+Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE. Em versões mais recentes do ISE do Windows PowerShell, você pode usar o objeto **ConsolePane** para os mesmos fins.
 
 A propriedade somente leitura que obtém o Painel de saída do [editor](The-ISEEditor-Object.md) atual.
 

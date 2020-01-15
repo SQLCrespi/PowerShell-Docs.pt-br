@@ -1,24 +1,24 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Trabalhando com impressoras
-ms.openlocfilehash: 816388325cc3155f1dbd1bc15fc1736155216092
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 47c4f230d023ad93e2b65080feaa1dbfae803d08
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030668"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736855"
 ---
-# <a name="working-with-printers"></a>Trabalhando com impressoras
+# <a name="working-with-printers-in-windows"></a>Como trabalhar com impressoras no Windows
 
-Você pode usar o Windows PowerShell para gerenciar impressoras usando o WMI e o objeto COM WScript.Network do WSH. Usaremos uma combinação das duas ferramentas para demonstrar as tarefas específicas.
+Você pode usar o PowerShell para gerenciar impressoras usando o WMI e o objeto COM **WScript.Network** do WSH. Usaremos uma combinação das duas ferramentas para demonstrar as tarefas específicas.
 
 ## <a name="listing-printer-connections"></a>Listar conexões de impressora
 
 A maneira mais simples de listar as impressoras instaladas em um computador é usar o a classe do WMI **Win32_Printer**:
 
 ```powershell
-Get-WmiObject -Class Win32_Printer
+Get-CimInstance -Class Win32_Printer
 ```
 
 Você também pode listar as impressoras usando o objeto COM **WScript.Network** que normalmente é usado nos scripts do WSH:
@@ -42,7 +42,7 @@ Para adicionar uma nova impressora de rede, use **WScript.Network**:
 Para usar o WMI para definir a impressora padrão, localize a impressora na coleção **Win32_Printer** e, em seguida, invoque o método **SetDefaultPrinter**:
 
 ```powershell
-(Get-WmiObject -ComputerName . -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
+(Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
 ```
 
 **WScript.Network** é um pouco mais simples de usar, pois ele tem um método **SetDefaultPrinter** que usa apenas o nome da impressora como um argumento:

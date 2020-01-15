@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISESnippetCollection
-ms.openlocfilehash: 6c392c08767fba004f63155d5a469777856a0b59
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030504"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736038"
 ---
 # <a name="the-isesnippetcollection-object"></a>O objeto ISESnippetCollection
 
-O objeto **ISESnippetCollection** é uma coleção de objetos **ISESnippet**. A coleção de arquivos associada a um objeto **PowerShellTab** é um membro dessa classe. Um exemplo é a coleção **$psISE.CurrentPowerShellTab.Files**.
+O objeto **ISESnippetCollection** é uma coleção de objetos **ISESnippet**. A coleção de arquivos associada a um objeto **PowerShellTab** é um membro dessa classe. Um exemplo é a coleção `$psISE.CurrentPowerShellTab.Files`.
 
 ## <a name="methods"></a>Métodos
 
@@ -19,7 +19,7 @@ O objeto **ISESnippetCollection** é uma coleção de objetos **ISESnippet**. A 
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-Carrega um arquivo .snippets.ps1xml que contém os snippets definidos pelo usuário. A maneira mais fácil de criar snippets é usar o novo cmdlet New-IseSnippet, que os armazena automaticamente em sua pasta de perfil para que sejam carregados sempre que você iniciar o ISE do Windows PowerShell.
+Carrega um arquivo `.snippets.ps1xml` que contém os snippets definidos pelo usuário. A maneira mais fácil de criar snippets é usar o novo cmdlet `New-IseSnippet`, que os armazena automaticamente em sua pasta de perfil para que sejam carregados sempre que você iniciar o ISE do Windows PowerShell.
 
 **FilePathName** – a cadeia de caracteres, o caminho e o nome de arquivo para um arquivo .snippets.ps1xml que contém definições de snippet.
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
-ms.openlocfilehash: e59593ef06911c709e92fa7a1eabd96d2636ca30
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f48df112bd19297baa311116e79d3d7603d7c81
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030918"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736225"
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objetivo do modelo de objeto de script do ISE do Windows PowerShell
 
@@ -17,12 +17,13 @@ Objetos são associados com a forma e a função do ISE (Ambiente de Script Inte
 
 Você pode usar o modelo de objeto para modificar as configurações e opções do aplicativo. Por exemplo, você pode modificá-las da seguinte forma:
 
-- Você pode mudar a cor de erros, avisos, saídas detalhadas e saídas de depuração.
-- Você pode obter ou definir cores de tela de fundo para o painel de Comando, painel de Saída e o painel de Script.
-- Você pode definir a cor de primeiro plano para o painel de Saída.
-- Você pode definir o nome e tamanho da fonte para o ISE do Windows PowerShell.
-- Você pode configurar alertas. Essa configuração inclui advertências que são emitidas quando um arquivo é aberto em várias guias do PowerShell ou quando um script no arquivo é executado antes que o arquivo seja salvo.
-- Você pode alternar entre uma exibição em que o painel Script e Painel de saída estão lado em uma exibição em que o painel Script está na parte superior do Painel de saída. Você pode encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
+- Mudar a cor de erros, avisos, saídas detalhadas e saídas de depuração.
+- Obter ou definir cores de tela de fundo para o painel de Comando, painel de Saída e o painel de Script.
+- Definir a cor de primeiro plano para o painel de Saída.
+- Definir o nome e tamanho da fonte para o ISE do Windows PowerShell.
+- Configurar alertas. Essa configuração inclui advertências que são emitidas quando um arquivo é aberto em várias guias do PowerShell ou quando um script no arquivo é executado antes que o arquivo seja salvo.
+- Alternar entre uma exibição em que o painel Script e Painel de saída estão lado em uma exibição em que o painel Script está na parte superior do Painel de saída.
+- Encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
 
 ## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Melhorando a funcionalidade do ISE do Windows PowerShell
 
@@ -49,6 +50,6 @@ Você pode usar o modelo de objeto para melhorar a funcionalidade do ISE do Wind
 
 Você pode usar o modelo de objeto de script para criar atalhos de teclado para operações frequentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)

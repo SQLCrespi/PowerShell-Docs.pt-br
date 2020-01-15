@@ -1,90 +1,76 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Obtendo objetos WMI Get WmiObject
-ms.openlocfilehash: 93276ce12135342af2d6f238976e65e5d8bdde7a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 23fd8cf596a8be7e36651ac3f9c79ca97240e647
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030221"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737212"
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 
 ## <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 
-O WMI (Instrumentação de Gerenciamento do Windows) é uma das principais tecnologias para a administração do sistema, pois ela expõe uma grande variedade de informações de maneira uniforme. Devido a quanto o WMI possibilita, o cmdlet do Windows PowerShell para acessar objetos WMI, **Get-WmiObject**, é um dos mais úteis para fazer o trabalho real. Vamos discutir como usar Get-WmiObject para acessar objetos WMI e como usar objetos WMI para fazer coisas específicas.
+O WMI (Instrumentação de Gerenciamento do Windows) é uma das principais tecnologias para a administração do sistema, pois ela expõe uma grande variedade de informações de maneira uniforme. Devido às inúmeras possibilidades oferecidas pelo WMI, o cmdlet do PowerShell usado para acessar objetos WMI, `Get-CimInstance`, é um dos mais úteis para fazer o trabalho duro. Vamos discutir como usar CimCmdlets para acessar objetos WMI e como usar objetos WMI para fazer coisas específicas.
 
 ### <a name="listing-wmi-classes"></a>Listar classes WMI
 
 O primeiro problema que a maioria dos usuários do WMI encontram é tentar descobrir o que pode ser feito com o WMI. As classes WMI descrevem os recursos que podem ser gerenciados. Há centenas de classes WMI, algumas das quais contêm dezenas de propriedades.
 
-O **Get-WmiObject** cuida desse problema, possibilitando que o WMI possa ser descoberto. Você pode obter uma lista das classes WMI disponíveis no computador local digitando:
+`Get-CimClass` cuida desse problema possibilitando que o WMI possa ser descoberto. Você pode obter uma lista das classes WMI disponíveis no computador local digitando:
 
+```powershell
+Get-CimClass -Namespace root/CIMV2 |
+  Where-Object CimClassName -like Win32* |
+    Select-Object CimClassName
 ```
-PS> Get-WmiObject -List
 
-__SecurityRelatedClass                  __NTLMUser9X
-__PARAMETERS                            __SystemSecurity
-__NotifyStatus                          __ExtendedStatus
-Win32_PrivilegesStatus                  Win32_TSNetworkAdapterSettingError
-Win32_TSRemoteControlSettingError       Win32_TSEnvironmentSettingError
+```Output
+CimClassName
+------------
+Win32_DeviceChangeEvent
+Win32_SystemConfigurationChangeEvent
+Win32_VolumeChangeEvent
+Win32_SystemTrace
+Win32_ProcessTrace
+Win32_ProcessStartTrace
+Win32_ProcessStopTrace
+Win32_ThreadTrace
+Win32_ThreadStartTrace
+Win32_ThreadStopTrace
 ...
 ```
 
-Você pode recuperar as mesmas informações de um computador remoto usando o parâmetro ComputerName, especificando um nome do computador ou endereço IP:
+Você pode recuperar as mesmas informações de um computador remoto por meio do parâmetro **ComputerName** especificando um nome do computador ou endereço IP:
 
-```
-PS> Get-WmiObject -List -ComputerName 192.168.1.29
-
-__SystemClass                           __NAMESPACE
-__Provider                              __Win32Provider
-__ProviderRegistration                  __ObjectProviderRegistration
-...
+```powershell
+Get-CimClass -Namespace root/CIMV2 -ComputerName 192.168.1.29
 ```
 
 A listagem de classe retornada por computadores remotos pode variar por sistema operacional específico que o computador está executando e as extensões WMI específicas adicionadas por aplicativos instalados.
 
 > [!NOTE]
-> Ao usar Get-WmiObject para se conectar a um computador remoto, o computador remoto deve estar executando o WMI e, sob a configuração padrão, a conta que você está usando deve estar no grupo Administradores local no computador remoto. O sistema remoto não precisa ter o Windows PowerShell. instalado. Isso permite administrar sistemas operacionais que não executam o Windows PowerShell, mas que têm WMI disponível.
-
-Você pode até mesmo incluir o ComputerName ao se conectar ao sistema local. Você pode usar o nome do computador local, seu endereço IP (ou o endereço de loopback 127.0.0.1) ou '.' em estilo WMI como o nome do computador. Se você estiver executando o Windows PowerShell em um computador chamado Admin01 com endereço IP 192.168.1.90, os comandos a seguir retornarão a listagem da classe WMI para o computador:
-
-```powershell
-Get-WmiObject -List
-Get-WmiObject -List -ComputerName .
-Get-WmiObject -List -ComputerName Admin01
-Get-WmiObject -List -ComputerName 192.168.1.90
-Get-WmiObject -List -ComputerName 127.0.0.1
-Get-WmiObject -List -ComputerName localhost
-```
-
-Get-WmiObject usa o namespace root/cimv2 por padrão. Se você desejar especificar outro namespace de WMI, use o parâmetro **Namespace** e especifique o caminho do namespace correspondente:
-
-```
-PS> Get-WmiObject -List -ComputerName 192.168.1.29 -Namespace root
-
-__SystemClass                           __NAMESPACE
-__Provider                              __Win32Provider
-...
-```
+> Quando usar cmdlets do CIM para se conectar a um computador remoto, o computador remoto deverá estar executando o WMI, e a conta usada deverá estar no grupo de administradores locais no computador remoto.
+> O sistema remoto não precisa ter o PowerShell instalado. Isso permite administrar sistemas operacionais que não executam o PowerShell, mas que têm o WMI disponível.
 
 ### <a name="displaying-wmi-class-details"></a>Exibir detalhes da classe WMI
 
 Se você já souber o nome de uma classe WMI, poderá usá-la para obter informações imediatamente. Por exemplo, uma das classes WMI geralmente usadas para recuperar informações sobre um computador é **Win32_OperatingSystem**.
 
-```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName .
-
-SystemDirectory : C:\WINDOWS\system32
-Organization    : Global Network Solutions
-BuildNumber     : 2600
-RegisteredUser  : Oliver W. Jones
-SerialNumber    : 12345-678-9012345-67890
-Version         : 5.1.2600
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem
 ```
 
-Embora mostremos todos os parâmetros, o comando pode ser expresso de forma mais sucinta. O parâmetro **ComputerName** não é necessário ao se conectar ao sistema local. Vamos mostrá-lo para demonstrar o caso mais geral e lembrá-lo sobre o parâmetro. O **Namespace** assume o padrão de root/cimv2 e também pode ser omitido. Por fim, a maioria dos cmdlets permitem omitir o nome dos parâmetros comuns. Com Get-WmiObject, se nenhum nome for especificado para o primeiro parâmetro, o Windows PowerShell o tratará como o parâmetro **Class**. Isso significa que o último comando pode ter sido emitido digitando:
+```Output
+SystemDirectory     Organization BuildNumber RegisteredUser SerialNumber            Version
+---------------     ------------ ----------- -------------- ------------            -------
+C:\WINDOWS\system32 Microsoft    18362       USER1          00330-80000-00000-AA175 10.0.18362
+```
+
+Embora mostremos todos os parâmetros, o comando pode ser expresso de forma mais sucinta.
+O parâmetro **ComputerName** não é necessário ao se conectar ao sistema local. Vamos mostrá-lo para demonstrar o caso mais geral e lembrá-lo sobre o parâmetro. O **Namespace** usa `root/CIMV2` como padrão e também pode ser omitido. Por fim, a maioria dos cmdlets permitem omitir o nome dos parâmetros comuns. Com `Get-CimInstance`, se nenhum nome for especificado para o primeiro parâmetro, o PowerShell o tratará como o parâmetro **Class**. Isso significa que o último comando pode ter sido emitido digitando:
 
 ```powershell
 Get-WmiObject Win32_OperatingSystem
@@ -92,18 +78,27 @@ Get-WmiObject Win32_OperatingSystem
 
 A classe **Win32_OperatingSystem** tem muitos mais propriedades do que as exibidas aqui. Você pode usar Get-Member para ver todas as propriedades. As propriedades de uma classe WMI ficam automaticamente disponíveis assim como outras propriedades de objeto:
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem | Get-Member -MemberType Property
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Get-Member -MemberType Property
 
-   TypeName: System.Management.ManagementObject#root\cimv2\Win32_OperatingSyste
-m
-
+```Output
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#root/cimv2/Win32_OperatingSystem
 Name                                      MemberType Definition
 ----                                      ---------- ----------
-__CLASS                                   Property   System.String __CLASS {...
-...
-BootDevice                                Property   System.String BootDevic...
-BuildNumber                               Property   System.String BuildNumb...
+BootDevice                                Property   string BootDevice {get;}
+BuildNumber                               Property   string BuildNumber {get;}
+BuildType                                 Property   string BuildType {get;}
+Caption                                   Property   string Caption {get;}
+CodeSet                                   Property   string CodeSet {get;}
+CountryCode                               Property   string CountryCode {get;}
+CreationClassName                         Property   string CreationClassName {get;}
+CSCreationClassName                       Property   string CSCreationClassName {get;}
+CSDVersion                                Property   string CSDVersion {get;}
+CSName                                    Property   string CSName {get;}
+CurrentTimeZone                           Property   short CurrentTimeZone {get;}
+DataExecutionPrevention_32BitApplications Property   bool DataExecutionPrevention_32BitApplications {get;}
+DataExecutionPrevention_Available         Property   bool DataExecutionPrevention_Available {get;}
 ...
 ```
 
@@ -111,25 +106,32 @@ BuildNumber                               Property   System.String BuildNumb...
 
 Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format**. Por exemplo, se você deseja exibir dados de memória disponível, digite:
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem |
+  Format-Table -Property TotalVirtualMemorySize, TotalVisibleMemorySize,
+    FreePhysicalMemory, FreeVirtualMemory, FreeSpaceInPagingFiles
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Format-Table -Property TotalVirtualMemorySize,TotalVisibleMemorySize,FreePhysicalMemory,FreeVirtualMemory,FreeSpaceInPagingFiles
 
-TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory FreeSpaceInPagingFiles
----------------------- ---------------    ------------------ -==--------------------- ---------------
-               2097024          785904                305808           2056724                1558232
+```Output
+TotalVirtualMemorySize TotalVisibleMemorySize FreePhysicalMemory FreeVirtualMemory FreeSpaceInPagingFiles
+---------------------- ---------------------- ------------------ ----------------- ----------------------
+              33449088               16671872            6451868          18424496               16285032
 ```
 
 > [!NOTE]
-> Os curingas funcionam com nomes de propriedade em **Format-Table**, portanto o elemento final do pipeline pode ser reduzido para `Format-Table -Property Total,Free`
+> Os curingas funcionam com nomes de propriedade em `Format-Table`, portanto, o elemento final do pipeline pode ser reduzido para `Format-Table -Property Total*Memory*, Free*`
 
 Os dados da memória podem ficar mais legíveis se você formatá-los como uma lista digitando:
 
+```powershell
+Get-CimInstance -Class Win32_OperatingSystem | Format-List Total*Memory*, Free*
 ```
-PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Format-List TotalVirtualMemorySize,TotalVisibleMemorySize,FreePhysicalMemory,FreeVirtualMemory,FreeSpaceInPagingFiles
 
-TotalVirtualMemorySize : 2097024
-TotalVisibleMemorySize : 785904
-FreePhysicalMemory     : 301876
-FreeVirtualMemory      : 2056724
-FreeSpaceInPagingFiles : 1556644
+```Output
+TotalVirtualMemorySize : 33449088
+TotalVisibleMemorySize : 16671872
+FreePhysicalMemory     : 6524456
+FreeSpaceInPagingFiles : 16285808
+FreeVirtualMemory      : 18393668
+Name                   : Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition2
 ```

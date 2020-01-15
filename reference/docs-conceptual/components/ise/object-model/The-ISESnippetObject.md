@@ -2,16 +2,16 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O ISESnippetObject
-ms.openlocfilehash: 62d470569deb051fca80005235d4c492319cf5ec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 60456ec90f56753fa96f141b8b8299ef3f7e41c9
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028892"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736957"
 ---
 # <a name="the-isesnippetobject"></a>O ISESnippetObject
 
-Um objeto **ISESnippet** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISESnippet. Os membros da coleção **$psISE.CurrentPowerShellTab.Snippets** são exemplos de objetos **ISESnippet**. A maneira mais fácil de criar um snippet é usar o cmdlet [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0).
+Um objeto **ISESnippet** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISESnippet. Os membros da coleção `$psISE.CurrentPowerShellTab.Snippets` são exemplos de objetos **ISESnippet**. A maneira mais fácil de criar um snippet é por meio do cmdlet [New-IseSnippet](/reference/5.1/ISE/New-IseSnippet.md).
 
 ## <a name="properties"></a>Propriedades
 

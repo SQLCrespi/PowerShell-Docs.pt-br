@@ -1,13 +1,13 @@
 ---
-ms.date: 11/15/2019
+ms.date: 12/18/2019
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dfbbeb5e5bb3d43959ce144afffc5b10193f8b30
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417565"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415704"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Alterações da falha no PowerShell 6.x
 
@@ -17,7 +17,7 @@ ms.locfileid: "74417565"
 
 O [Fluxo de Trabalho do PowerShell][workflow] é um recurso no Windows PowerShell baseado no [WF (Windows Workflow Foundation)][workflow-foundation] que permite a criação de runbooks robustos para tarefas em paralelo ou de longa duração.
 
-Devido à falta de suporte a Windows Workflow Foundation no .NET Core, não continuaremos a dar suporte ao Fluxo de Trabalho do PowerShell no PowerShell Core.
+Devido à falta de suporte a Windows Workflow Foundation no .NET Core, não damos suporte ao Fluxo de Trabalho do PowerShell no PowerShell Core.
 
 Futuramente, gostaríamos de habilitar o paralelismo/simultaneidade nativa na linguagem do PowerShell sem a necessidade do Fluxo de Trabalho do PowerShell.
 
@@ -64,6 +64,10 @@ Em vez disso, recomendamos que você use os cmdlets do CIM (também conhecidos c
 
 Devido ao uso de APIs sem suporte, removemos `Microsoft.PowerShell.LocalAccounts` do PowerShell Core até encontrarmos uma solução melhor.
 
+### <a name="new-webserviceproxy-cmdlet-removed"></a>cmdlet `New-WebServiceProxy` removido
+
+O .NET Core não dá suporte ao Windows Communication Framework, que fornece serviços para o uso do protocolo SOAP. Esse cmdlet foi removido porque requer o SOAP.
+
 ### <a name="-computer-cmdlets"></a>Cmdlets de `*-Computer`
 
 Devido ao uso de APIs sem suporte, os seguintes cmdlets foram removidos do PowerShell Core até encontrarmos uma solução melhor.
@@ -83,7 +87,7 @@ Devido ao uso de APIs sem suporte, `*-EventLog` foi removido do PowerShell Core.
 
 ## <a name="enginelanguage-changes"></a>Alterações de mecanismo/linguagem
 
-### <a name="rename-powershellexe-to-pwshexe-5101httpsgithubcompowershellpowershellissues5101"></a>Renomear `powershell.exe` para `pwsh.exe` [#5101](https://github.com/PowerShell/PowerShell/issues/5101)
+### <a name="rename-powershellexe-to-pwshexe-5101httpsgithubcompowershellpowershellissues5101"></a>`powershell.exe` renomeado para `pwsh.exe` [#5101](https://github.com/PowerShell/PowerShell/issues/5101)
 
 Para dar aos usuários uma maneira determinística de chamar o PowerShell Core no Windows (e não no Windows PowerShell), o binário do PowerShell Core foi alterado para `pwsh.exe` no Windows e para `pwsh` em outras plataformas.
 
@@ -105,7 +109,7 @@ A codificação anterior, ASCII (7 bits), resultaria em alteração incorreta da
 
 Para acelerar a criação de escopo, `AllScope` foi removido da maioria dos aliases padrão. `AllScope` foi deixado por alguns aliases usados com frequência nos quais a pesquisa foi mais rápida.
 
-### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113httpsgithubcompowershellpowershellissues5113"></a>`-Verbose` e `-Debug` não substituem mais `$ErrorActionPreference` [#5113](https://github.com/PowerShell/PowerShell/issues/5113)
+### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113httpsgithubcompowershellpowershellissues5113"></a>`-Verbose` e `-Debug` já não substituem `$ErrorActionPreference` [#5113](https://github.com/PowerShell/PowerShell/issues/5113)
 
 Antes, se `-Verbose` ou `-Debug` fosse especificado, substituiria o comportamento de `$ErrorActionPreference`. Com essa alteração, `-Verbose` e `-Debug` não afetam mais o comportamento de `$ErrorActionPreference`.
 
@@ -115,7 +119,7 @@ Antes, se `-Verbose` ou `-Debug` fosse especificado, substituiria o comportament
 
 Quando uma API retorna apenas `null`, Invoke-RestMethod serializava isso como a cadeia de caracteres `"null"` em vez de `$null`. Essa alteração corrige a lógica em `Invoke-RestMethod` para serializar apropriadamente um JSON `null` literal de valor único como `$null`.
 
-### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Remoção de `-Protocol` dos cmdlets `*-Computer` [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Remoção de `-Protocol` dos cmdlets `*-Computer`[#5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
 Devido a problemas com a comunicação remota do RPC no CoreFX (principalmente em plataformas diferentes do Windows), e para garantir uma experiência de comunicação remota consistente no PowerShell, o parâmetro `-Protocol` foi removido dos cmdlets `\*-Computer`. O DCOM não é compatível na comunicação remota. Os seguintes cmdlets só dão suporte à comunicação remota do WSMAN:
 
@@ -123,7 +127,7 @@ Devido a problemas com a comunicação remota do RPC no CoreFX (principalmente e
 - Restart-Computer
 - Stop-Computer
 
-### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Remoção de `-ComputerName` dos cmdlets `*-Service` [#5090](https://github.com/PowerShell/PowerShell/issues/5094)
+### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Remoção de `-ComputerName` dos cmdlets `*-Service`[#5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
 Para incentivar a consistência no uso de PSRP, o parâmetro `-ComputerName` foi removido dos cmdlets `*-Service`.
 
@@ -135,7 +139,7 @@ Antes, se `-LiteralPath` recebesse um caractere curinga, o trataria da mesma for
 
 Antes, os objetos exportados usando `Export-CSV` com `TypeInformation` importado com `ConvertFrom-Csv` não estavam retendo as informações de tipo. Esta mudança adiciona as informações de tipo ao membro `PSTypeNames`, se estiverem disponíveis no arquivo CSV.
 
-### <a name="-notypeinformation-should-be-default-on-export-csv-5131httpsgithubcompowershellpowershellissues5131"></a>`-NoTypeInformation` deve ser padrão em `Export-Csv` [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
+### <a name="-notypeinformation-should-be-default-on-export-csv-5131httpsgithubcompowershellpowershellissues5131"></a>`-NoTypeInformation` deve ser o padrão em `Export-Csv` [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
 Essa alteração foi feita para atender aos comentários de clientes sobre o comportamento padrão de inclusão de informações de tipo no `Export-CSV`.
 
@@ -147,7 +151,7 @@ Ao usar HTTP, todo conteúdo, incluindo senhas, é enviado como texto não cript
 
 ## <a name="api-changes"></a>Alterações de API
 
-### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Remoção da classe `AddTypeCommandBase` [#5407](https://github.com/PowerShell/PowerShell/issues/5407)
+### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Remoção da classe `AddTypeCommandBase`[#5407](https://github.com/PowerShell/PowerShell/issues/5407)
 
 A classe `AddTypeCommandBase` foi removida de `Add-Type` para melhorar o desempenho. Essa classe é usada apenas pelo cmdlet Add-Type e não deve afetar os usuários.
 
@@ -163,14 +167,14 @@ Antes, ao passar uma cadeia de caracteres de formato vazio para `-UFormat`, uma 
 
 Os seguintes recursos foram removidos, pois eles não têm suporte no PowerShell Core, e não há planos para adicionar suporte, já que eles existem por motivos de herança para o Windows PowerShell: opção `-psconsolefile` e o código, opção `-importsystemmodules` e o código e código de alteração de fonte.
 
-### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Remoção do suporte a `RunspaceConfiguration` [#4942](https://github.com/PowerShell/PowerShell/issues/4942)
+### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Remoção do suporte a `RunspaceConfiguration`[#4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
 Antes, ao criar um runspace do PowerShell de forma programática usando a API, era possível usar o [`RunspaceConfiguration`][runspaceconfig] herdado ou o [`InitialSessionState`][iss] mais recente. Essa alteração removeu o suporte a `RunspaceConfiguration`, e só dá suporte a `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
 
-### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923httpsgithubcompowershellpowershellissues4923"></a>`CommandInvocationIntrinsics.InvokeScript` associa argumentos a `$input` em vez de `$args` [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
+### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923httpsgithubcompowershellpowershellissues4923"></a>`CommandInvocationIntrinsics.InvokeScript` associa argumentos a `$input`, em vez de `$args` [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
 
 Uma posição incorreta de um parâmetro resultou na passagem de argumentos como entrada, e não como argumentos.
 
@@ -182,11 +186,11 @@ Uma posição incorreta de um parâmetro resultou na passagem de argumentos como
 
 Antes, se `-LiteralPath` recebesse um caractere curinga, o trataria da mesma forma que `-Path`, e se o caractere curinga não encontrasse arquivos, sairia silenciosamente. O comportamento correto deveria ser um `-LiteralPath` literal, para que se o arquivo não existir, ele cause um erro. A mudança é tratar os curingas usados com `-Literal` como literal.
 
-### <a name="fix-set-service-failing-test-4802httpsgithubcompowershellpowershellissues4802"></a>Correção do teste de falha de `Set-Service` [#4802](https://github.com/PowerShell/PowerShell/issues/4802)
+### <a name="fix-set-service-failing-test-4802httpsgithubcompowershellpowershellissues4802"></a>Correção do teste de falha de `Set-Service`[#4802](https://github.com/PowerShell/PowerShell/issues/4802)
 
 Antes, se `New-Service -StartupType foo` fosse usado, `foo` era ignorado e o serviço era criado com algum tipo de inicialização padrão. Essa alteração serve para lançar explicitamente um erro para um tipo de inicialização inválida.
 
-### <a name="rename-isosx-to-ismacos-4700httpsgithubcompowershellpowershellissues4700"></a>Renomear `$IsOSX` para `$IsMacOS` [#4700](https://github.com/PowerShell/PowerShell/issues/4700)
+### <a name="rename-isosx-to-ismacos-4700httpsgithubcompowershellpowershellissues4700"></a>`$IsOSX` renomeado para `$IsMacOS` [#4700](https://github.com/PowerShell/PowerShell/issues/4700)
 
 A nomenclatura no PowerShell deve ser consistente com nossa nomenclatura e estar de acordo com o uso da Apple do macOS, em vez de OSX. No entanto, para facilitar a leitura e manter a consistência, permaneceremos com o uso de maiúsculas e minúsculas do padrão Pascal.
 
@@ -206,7 +210,7 @@ Antes, usar **powershell.exe** (agora **pwsh.exe**) para executar um script do P
 
 A propriedade `ClrVersion` de `$PSVersionTable` não é útil com CoreCLR, os usuários finais não devem usar esse valor para determinar a compatibilidade.
 
-### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019httpsgithubcompowershellpowershellissues4019"></a>Alteração do parâmetro posicional para `powershell.exe` de `-Command` para `-File` [4019 #](https://github.com/PowerShell/PowerShell/issues/4019)
+### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019httpsgithubcompowershellpowershellissues4019"></a>Alteração do parâmetro posicional para `powershell.exe` de `-Command` para `-File` [#4019](https://github.com/PowerShell/PowerShell/issues/4019)
 
 Habilitação geral do uso do PowerShell em plataformas diferentes do Windows. Isso significa que, em sistemas baseados em Unix, você pode tornar um script executável para invocar o PowerShell automaticamente, em vez de invocar explicitamente `pwsh`. Isso também significa que agora você pode fazer coisas como `powershell foo.ps1` ou `powershell fooScript` sem especificar `-File`. No entanto, essa alteração agora exige que você especifique explicitamente `-c` ou `-Command` ao tentar fazer coisas como `powershell.exe Get-Command`.
 
@@ -238,7 +242,7 @@ Em Unix, é padrão dos shells aceitar `-i` para um shell interativo, e muitas f
 
 `BiosSerialNumber` foi digitado incorretamente como `BiosSeralNumber` e foi alterado para a ortografia correta.
 
-### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Adição dos cmdlets `Get-StringHash` e `Get-FileHash` [#3024](https://github.com/PowerShell/PowerShell/issues/3024)
+### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Adição dos cmdlets `Get-StringHash` e `Get-FileHash`[#3024](https://github.com/PowerShell/PowerShell/issues/3024)
 
 A mudança é que alguns algoritmos de hash não têm suporte do CoreFX, portanto, não estão mais disponíveis:
 
@@ -265,7 +269,7 @@ Agora, passar `$null` para qualquer uma das seguintes opções gera um erro:
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Adição de suporte ao Formato do Arquivo de Log Estendido do W3C em `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Adição de suporte ao Formato de Arquivo de Log Estendido do W3C em `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 Antes, o cmdlet `Import-Csv` não podia ser usado para importar diretamente os arquivos de log no formato de log estendido do W3C e uma ação adicional seria necessária. Com essa alteração, há suporte para o formato de log estendido W3C.
 
@@ -273,7 +277,7 @@ Antes, o cmdlet `Import-Csv` não podia ser usado para importar diretamente os a
 
 Agora, `ValueFromRemainingArguments` retorna os valores como uma matriz em vez de um único valor que é uma matriz.
 
-### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>`BuildVersion` foi removido do `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>`BuildVersion` foi removido de `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 Remoção da propriedade `BuildVersion` de `$PSVersionTable`. Essa propriedade foi vinculada à versão de build do Windows. Em vez disso, recomendamos que você use `GitCommitId` para recuperar a versão de build exata do PowerShell Core.
 

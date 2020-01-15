@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Explorando o ISE do Windows PowerShell
-ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 03728a8c83962894b27738609a5b1bec841fdb13
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117444"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737093"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorando o ISE do Windows PowerShell
 
@@ -31,25 +31,25 @@ Uma guia do Windows PowerShell é o ambiente em que um script do Windows PowerSh
 
 Os seguintes botões estão localizados na barra de ferramentas.
 
-|Botão|Função|
-|----------|------------|
-|**Novo**|Abre um novo script.|
-|**Abrir**|Abre um arquivo ou um script existente.|
-|**Salvar**|Salva um script ou um arquivo.|
-|**Recortar**|Recorta o texto selecionado e o copia para a área de transferência.|
-|**Copiar**|Copia o texto selecionado para a área de transferência.|
-|**Colar**|Cola o conteúdo da área de transferência na posição do cursor.|
-|**Limpar Painel de Saída**|Limpa todo o conteúdo no Painel de Saída.|
-|**Desfazer**|Reverte a ação que acabou de ser executada.|
-|**Refazer**|Realiza a ação que acabou de ser desfeita.|
-|**Executar Script**|Executa um script.|
-|**Executar seleção**|Executa uma parte selecionada de um script.|
-|**Parar execução**|Interrompe um script que está em execução.|
-|**Nova Guia do PowerShell Remota**|Cria uma nova Guia do PowerShell que estabelece uma sessão em um computador remoto. Uma caixa de diálogo é exibida e solicita que você insira os detalhes necessários para estabelecer a conexão remota.|
-|**Inicia o PowerShell.exe**|Abre o Console do Windows PowerShell.|
-|**Mostrar o Painel de Script Acima**|Move o Painel de Script para cima na exibição.|
-|**Mostrar o Painel de Script à Direita**|Move o Painel de Script para a direita na exibição.|
-|**Mostrar o Painel de Script Maximizado**|Maximiza o Painel de Script.|
+|             Botão             |                                                                                     Função                                                                                     |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Novo**                        | Abre um novo script.                                                                                                                                                              |
+| **Abrir**                       | Abre um arquivo ou um script existente.                                                                                                                                                |
+| **Salvar**                       | Salva um script ou um arquivo.                                                                                                                                                          |
+| **Recortar**                        | Recorta o texto selecionado e o copia para a área de transferência.                                                                                                                           |
+| **Copy**                       | Copia o texto selecionado para a área de transferência.                                                                                                                                       |
+| **Colar**                      | Cola o conteúdo da área de transferência na posição do cursor.                                                                                                                     |
+| **Limpar Painel de Saída**          | Limpa todo o conteúdo no Painel de Saída.                                                                                                                                           |
+| **Desfazer**                       | Reverte a ação que acabou de ser executada.                                                                                                                                     |
+| **Refazer**                       | Realiza a ação que acabou de ser desfeita.                                                                                                                                        |
+| **Executar Script**                 | Executa um script.                                                                                                                                                                   |
+| **Executar seleção**              | Executa uma parte selecionada de um script.                                                                                                                                             |
+| **Parar execução**             | Interrompe um script que está em execução.                                                                                                                                                  |
+| **Nova Guia do PowerShell Remota**  | Cria uma nova Guia do PowerShell que estabelece uma sessão em um computador remoto. Uma caixa de diálogo é exibida e solicita que você insira os detalhes necessários para estabelecer a conexão remota. |
+| **Inicia o PowerShell.exe**       | Abre o Console do Windows PowerShell.                                                                                                                                                      |
+| **Mostrar o Painel de Script Acima**       | Move o Painel de Script para cima na exibição.                                                                                                                                 |
+| **Mostrar o Painel de Script à Direita**     | Move o Painel de Script para a direita na exibição.                                                                                                                               |
+| **Mostrar o Painel de Script Maximizado** | Maximiza o Painel de Script.                                                                                                                                                       |
 
 ## <a name="script-tab"></a>Guia de Script
 
@@ -67,7 +67,7 @@ Exibe os resultados dos comandos e scripts executados por você. Você também p
 
 ## <a name="command-pane"></a>Painel de Comando
 
-Permite gravar comandos. Você pode executar um comando de uma ou várias linhas no Painel de Comando. Pressione Shift+Enter para inserir cada linha de comando de várias linhas e pressione Enter após a última linha para executá-lo. O prompt exibido na parte superior do Painel de Comando mostra o caminho para o diretório de trabalho atual.
+Permite gravar comandos. Você pode executar um comando de uma ou várias linhas no Painel de Comando. Pressione <kbd>SHIFT</kbd>+<kbd>ENTER</kbd> para inserir cada linha de um comando multilinha e pressione <kbd>ENTER</kbd> após a última linha para executá-lo. O prompt exibido na parte superior do Painel de Comando mostra o caminho para o diretório de trabalho atual.
 
 ## <a name="status-bar"></a>Barra de Status
 
@@ -79,7 +79,8 @@ Aumenta ou diminui o tamanho do texto na tela.
 
 ## <a name="help"></a>Ajuda
 
-A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla F1 em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console. No menu **Ajuda**, você também pode executar o cmdlet Update-Help e exibir a Janela Comando que auxilia na construção de comandos, mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
+A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla <kbd>F1</kbd> em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console.
+No menu **Ajuda**, você também pode executar o cmdlet `Update-Help` e exibir a janela Comando, que auxilia na construção de comandos mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
 
 ## <a name="see-also"></a>Consulte Também
 

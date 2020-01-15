@@ -1,13 +1,13 @@
 ---
-ms.date: 08/14/2018
+ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Como gravar e executar scripts no ISE do Windows PowerShell
-ms.openlocfilehash: be54e26965a6d2f1472059820080a6a06c47dd26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2e3122a3b436ba878d2c5f9d72d4f9e024d4d031
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117562"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737059"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 
@@ -15,14 +15,14 @@ Este artigo descreve como criar, editar, executar e salvar scripts no Painel de 
 
 ## <a name="how-to-create-and-run-scripts"></a>Como criar e executar scripts
 
-Você pode abrir e editar arquivos do Windows PowerShell no Painel de Script. Tipos de arquivos específicos de interesse no Windows PowerShell são arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1). Esses tipos de arquivo são coloridos por sintaxe no editor do Painel de Script. Outros tipos de arquivo comuns que você pode abrir no Painel de Script são arquivos de configuração (.ps1xml), arquivos XML e arquivos de texto.
+Você pode abrir e editar arquivos do Windows PowerShell no Painel de Script. Tipos de arquivos específicos de interesse no Windows PowerShell são arquivos de script (`.ps1`), arquivos de dados de script (`.psd1`) e arquivos de módulo de script (`.psm1`). Esses tipos de arquivo são coloridos por sintaxe no editor do Painel de Script. Outros tipos de arquivo comuns que você pode abrir no Painel de Script são arquivos de configuração (`.ps1xml`), arquivos XML e arquivos de texto.
 
 > [!NOTE]
 > A política de execução do Windows PowerShell determina se você pode executar scripts e carregar perfis e arquivos de configuração do Windows PowerShell. A política de execução padrão, Restricted, impede a execução de todos os scripts e impede o carregamento dos perfis. Para alterar a política de execução para permitir que os perfis sejam carregados usados, consulte [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) e [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 ### <a name="to-create-a-new-script-file"></a>Para criar um novo arquivo de script
 
-Na barra de ferramentas, clique em **Novo** ou, no menu **Arquivo**, clique em **Novo**. O arquivo criado aparece em uma nova guia do arquivo sob a guia atual do PowerShell. Lembre-se de que as guias do PowerShell são visíveis apenas quando há mais de uma. Por padrão, um arquivo de script de tipo (.ps1) é criado, mas pode ser salvo com um novo nome e uma extensão. Vários arquivos de script podem ser criados na mesma guia do PowerShell.
+Na barra de ferramentas, clique em **Novo** ou, no menu **Arquivo**, clique em **Novo**. O arquivo criado aparece em uma nova guia do arquivo sob a guia atual do PowerShell. Lembre-se de que as guias do PowerShell são visíveis apenas quando há mais de uma. Por padrão, um arquivo de script de tipo (`.ps1`) é criado, mas pode ser salvo com um novo nome e uma extensão. Vários arquivos de script podem ser criados na mesma guia do PowerShell.
 
 ### <a name="to-open-an-existing-script"></a>Para abrir um script existente
 
@@ -30,7 +30,7 @@ Na barra de ferramentas, clique em **Abrir** ou, no menu **Arquivo**, clique em 
 
 ### <a name="to-close-a-script-tab"></a>Para fechar uma guia de script
 
-Clique no ícone **Fechar** (X) da guia de arquivo que você quer fechar ou selecione o menu **Arquivo** e clique em **Fechar**.
+Clique no ícone **Fechar** (**X**) da guia de arquivo que você quer fechar ou escolha o menu **Arquivo** e clique em **Fechar**.
 
 Se o arquivo tiver sido alterado desde que foi salvo pela última vez, você precisará salvá-lo ou descartá-lo.
 
@@ -52,10 +52,10 @@ Na barra de ferramentas, clique em **Executar Script** ou, no menu **Arquivo**, 
 Há várias maneiras para interromper um script em execução.
 
 - Clique em **Parar Operação** na barra de ferramentas
-- Pressione Ctrl+Break
+- Pressione <kbd>CTRL</kbd>+<kbd>BREAK</kbd>
 - Selecione o menu **Arquivo** e clique em **Parar Operação**.
 
-Pressionar **Ctrl+C** também funciona, a menos que algum texto esteja selecionado no momento, quando então **Ctrl+C** é mapeado para a função de cópia do texto selecionado.
+Pressionar <kbd>CTRL</kbd>+<kbd>C</kbd> também funciona, a menos que algum texto esteja selecionado no momento; nesse caso, <kbd>CTRL</kbd>+<kbd>C</kbd> é mapeado para a função de cópia do texto selecionado.
 
 ## <a name="how-to-write-and-edit-text-in-the-script-pane"></a>Como gravar e editar texto no Painel de Script
 
@@ -69,17 +69,17 @@ Você pode copiar, recortar, colar, localizar e substituir texto no Painel de Sc
 
 ### <a name="to-find-text-in-the-script-pane"></a>Para localizar texto no Painel de Script
 
-1. Para localizar texto em qualquer lugar, pressione **Ctrl+F** ou, no menu **Editar**, clique em **Localizar no Script**.
-2. Para localizar texto após o cursor, pressione **F3** ou, no menu **Editar**, clique em **Localizar Próximo no Script**.
-3. Para localizar o texto antes do cursor, pressione **Shift+F3** ou, no menu **Editar**, clique em **Localizar Anterior no Script**.
+1. Para localizar texto em qualquer lugar, pressione <kbd>CTRL</kbd>+<kbd>F</kbd> ou, no menu **Editar**, clique em **Localizar no Script**.
+2. Para localizar texto após o cursor, pressione <kbd>F3</kbd> ou, no menu **Editar**, clique em **Localizar Próximo no Script**.
+3. Para localizar o texto antes do cursor, pressione <kbd>SHIFT</kbd>+<kbd>F3</kbd> ou, no menu **Editar**, clique em **Localizar Anterior no Script**.
 
 ### <a name="to-find-and-replace-text-in-the-script-pane"></a>Para localizar e substituir texto no Painel de Script
 
-Pressione **Ctrl+H** ou, no menu **Editar**, clique em **Substituir no Script**. Insira o texto que você deseja localizar e o texto de substituição, depois pressione **Enter**.
+Pressione <kbd>CTRL</kbd>+<kbd>H</kbd> ou, no menu **Editar**, clique em **Substituir no Script**. Insira o texto que você deseja localizar e o texto de substituição, depois pressione <kbd>Enter</kbd>.
 
 ### <a name="to-go-to-a-particular-line-of-text-in-the-script-pane"></a>Para ir para uma determinada linha de texto no Painel de Script
 
-1. No Painel de Script, pressione **Ctrl+G** ou, no menu **Editar**, clique em **Ir para a Linha**.
+1. No Painel de Script, pressione <kbd>CTRL</kbd>+<kbd>G</kbd> ou, no menu **Editar**, clique em **Ir para a Linha**.
 
 2. Insira um número de linha.
 
@@ -87,24 +87,24 @@ Pressione **Ctrl+H** ou, no menu **Editar**, clique em **Substituir no Script**.
 
 1. No Painel de Script, selecione o texto que você deseja copiar.
 
-2. Pressione **Ctrl+C** ou, na barra de ferramentas, clique no ícone **Copiar** ou, no menu **Editar**, clique em **Copiar**.
+2. Pressione <kbd>CTRL</kbd>+<kbd>C</kbd> ou, na barra de ferramentas, clique no ícone **Copiar** ou, no menu **Editar**, clique em **Copiar**.
 
 ### <a name="to-cut-text-in-the-script-pane"></a>Para recortar texto no Painel de Script
 
 1. No Painel de Script, selecione o texto que você deseja recortar.
-2. Pressione **Ctrl+X** ou, na barra de ferramentas, clique no ícone **Recortar** ou, no menu **Editar**, clique em **Recortar**.
+2. Pressione <kbd>CTRL</kbd>+<kbd>X</kbd> ou, na barra de ferramentas, clique no ícone **Recortar** ou, no menu **Editar**, clique em **Recortar**.
 
 ### <a name="to-paste-text-into-the-script-pane"></a>Para colar o texto no Painel de Script
 
-Pressione **Ctrl+V** ou, na barra de ferramentas, clique no ícone **Colar** ou, no menu **Editar**, clique em **Colar**.
+Pressione <kbd>CTRL</kbd>+<kbd>V</kbd> ou, na barra de ferramentas, clique no ícone **Colar** ou, no menu **Editar**, clique em **Colar**.
 
 ### <a name="to-undo-an-action-in-the-script-pane"></a>Para desfazer uma ação no Painel de Script
 
-Pressione **Ctrl+Z** ou, na barra de ferramentas, clique no ícone **Desfazer** ou, no menu **Editar**, clique em **Desfazer**.
+Pressione <kbd>CTRL</kbd>+<kbd>Z</kbd> ou, na barra de ferramentas, clique no ícone **Desfazer** ou, no menu **Editar**, clique em **Desfazer**.
 
 ### <a name="to-redo-an-action-in-the-script-pane"></a>Para refazer uma ação no Painel de Script
 
-Pressione **Ctrl+Y** ou, na barra de ferramentas, clique no ícone **Refazer** ou, no menu **Editar**, clique em **Refazer**.
+Pressione <kbd>CTRL</kbd>+<kbd>Y</kbd> ou, na barra de ferramentas, clique no ícone **Refazer** ou, no menu **Editar**, clique em **Refazer**.
 
 ## <a name="how-to-save-a-script"></a>Como salvar um script
 
@@ -112,18 +112,18 @@ Um asterisco é exibido ao lado do nome do script para marcar um arquivo que nã
 
 ### <a name="to-save-a-script"></a>Para salvar um script
 
-Pressione **Ctrl+S** ou, na barra de ferramentas, clique no ícone **Salvar** ou, no menu **Arquivo**, clique em **Salvar**.
+Pressione <kbd>CTRL</kbd>+<kbd>S</kbd> ou, na barra de ferramentas, clique no ícone **Salvar** ou, no menu **Arquivo**, clique em **Salvar**.
 
 ### <a name="to-save-and-name-a-script"></a>Para salvar e nomear um script
 
 1. No menu **Arquivo**, clique em **Salvar Como**. A caixa de diálogo **Salvar Como** é exibida.
 2. Na caixa **Nome do arquivo**, insira um nome para o arquivo.
-3. Na caixa **Salvar como tipo**, selecione um tipo de arquivo. Por exemplo, na caixa **Salvar como tipo**, selecione "Scripts do PowerShell (\*.ps1)".
-4. Clique em **Salvar**.
+3. Na caixa **Salvar como tipo**, selecione um tipo de arquivo. Por exemplo, na caixa **Salvar como tipo**, escolha "Scripts do PowerShell (`*.ps1`)".
+4. Clique em **Save** (Salvar).
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>Para salvar um script em codificação ASCII
 
-Por padrão, o ISE do Windows PowerShell salva novos arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1) como Unicode (BigEndianUnicode). Para salvar um script em outra codificação, como ASCII (ANSI), use os métodos **Save** ou **SaveAs** no objeto [$psISE.CurrentFile](object-model/the-ise-object-model-hierarchy.md).
+Por padrão, o ISE do Windows PowerShell salva os novos arquivos de script (`.ps1`), arquivos de dados de script (`.psd1`) e arquivos de módulo de script (`.psm1`) como Unicode (BigEndianUnicode) por padrão. Para salvar um script em outra codificação, como ASCII (ANSI), use os métodos **Save** ou **SaveAs** do objeto [$psISE.CurrentFile](object-model/the-ise-object-model-hierarchy.md).
 
 O comando a seguir salva um novo script como MyScript.ps1 com codificação ASCII.
 

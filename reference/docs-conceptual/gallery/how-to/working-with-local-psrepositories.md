@@ -3,14 +3,14 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery,psget
 title: Trabalhando com PSRepositories locais
-ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327987"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415830"
 ---
-# <a name="working-with-local-powershellget-repositories"></a>Trabalhando com repositórios locais do PowerShellGet
+# <a name="working-with-private-powershellget-repositories"></a>Trabalhar com repositórios privados do PowerShellGet
 
 O módulo PowerShellGet dá suporte a repositórios diferentes da Galeria do PowerShell.
 Esses cmdlets proporcionam os cenários a seguir:
@@ -18,6 +18,7 @@ Esses cmdlets proporcionam os cenários a seguir:
 - Dar suporte a um conjunto de módulos do PowerShell confiável e validado previamente para uso em seu ambiente
 - Testar um pipeline de CI/CD que compila os módulos ou scripts do PowerShell
 - Fornecer módulos e scripts do PowerShell para sistemas que não podem acessar a Internet
+- Oferecer scripts e módulos do PowerShell disponíveis apenas para sua organização
 
 Este artigo descreve como configurar um repositório local do PowerShell. O artigo também aborda o módulo [OfflinePowerShellGetDeploy][] disponível na Galeria do PowerShell. Esse módulo contém cmdlets para instalar a versão mais recente do PowerShellGet no seu repositório local.
 
@@ -25,7 +26,7 @@ Este artigo descreve como configurar um repositório local do PowerShell. O arti
 
 Há duas maneiras de criar um PSRepository local: Servidor do NuGet ou compartilhamento de arquivos. Cada tipo tem vantagens e desvantagens:
 
-Servidor do NuGet
+### <a name="nuget-server"></a>Servidor do NuGet
 
 | Vantagens| Desvantagens |
 | --- | --- |
@@ -34,7 +35,7 @@ Servidor do NuGet
 | O NuGet dá suporte a metadados em pacotes `.Nupkg` | A publicação requer manutenção e gerenciamento da chave de API |
 | Fornece pesquisa, administração de pacote, etc. | |
 
-Comp. de Arquivos
+### <a name="file-share"></a>Comp. de Arquivos
 
 | Vantagens| Desvantagens |
 | --- | --- |
@@ -109,7 +110,9 @@ Exemplos:
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+```
 
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
@@ -130,7 +133,7 @@ Exemplo:
 
 ```powershell
 # Publish from the PSGallery to your local Repository
-Save-Package -Name 'PackageName' -Provider Nuget -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
+Save-Package -Name 'PackageName' -Provider NuGet -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
 ```
 
 Se o seu PSRepository local é baseado na Web, ele exige uma etapa adicional que usa nuget.exe para publicar.
@@ -181,6 +184,10 @@ Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApi
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
+
+## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>Usar soluções de Empacotamento para hospedar repositórios do PowerShellGet
+
+Você também pode usar soluções de empacotamento como o Azure Artifacts para hospedar um repositório público ou privado do PowerShellGet. Para obter mais informações e instruções, confira a [documentação do Azure Artifacts](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library).
 
 > [!IMPORTANT]
 > Para garantir a segurança, as chaves de API não devem ser codificadas em scripts. Use um sistema seguro de gerenciamento de chaves.

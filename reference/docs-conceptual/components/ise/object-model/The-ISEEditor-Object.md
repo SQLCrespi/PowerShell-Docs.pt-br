@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEEditor
-ms.openlocfilehash: 2d4c3d941035384c591ca57e809c0e3a9b852f5c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086758"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736182"
 ---
 # <a name="the-iseeditor-object"></a>O objeto ISEEditor
 
@@ -69,7 +69,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – \(,\[,{ – ou imediatamente após um parêntese de fechamento, colchete ou chave – \),\],}.  O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará.
+Moverá o cursor do sistema para o caractere correspondente se a propriedade **CanGoToMatch** do objeto editor for `$true`, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – `(`,`[`,`{` – ou imediatamente após um parêntese de fechamento, colchete ou chave – `)`,`]`,`}`. O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for `$false`, esse método nada fará.
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
@@ -119,7 +119,7 @@ $psISE.CurrentFile.Editor.SelectCaretLine()
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Define a posição do cursor no número de linha e no número da coluna. Gera uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.
+Define a posição do cursor no número de linha e no número da coluna. Gerará uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.
 
 **lineNumber** – inteiro, o número de linha do cursor do sistema.
 
@@ -147,7 +147,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-A propriedade booliana somente leitura para indicar se o cursor está ao lado de um parêntese, colchete ou chave – \(\), \[\], {}. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**. Caso contrário é **$false**.
+A propriedade booliana somente leitura para indicar se o cursor está ao lado de um parêntese, colchete ou chave – `()`, `[]`, `{}`. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será `$true`. Caso contrário, será `$false`.
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace

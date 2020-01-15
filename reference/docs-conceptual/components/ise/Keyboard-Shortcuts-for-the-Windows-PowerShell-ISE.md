@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Atalhos do teclado para o ISE do Windows PowerShell
-ms.openlocfilehash: f71aea16f7a98ff7b6427237dc90104e4ea0db71
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030932"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737042"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
@@ -17,105 +17,105 @@ Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Scr
 
 Você pode usar os seguintes atalhos de teclado ao editar texto.
 
-|Ação|Atalhos do teclado|Usar em|
-|----------|----------------------|----------|
-|**Ajuda**|F1|Painel de Script **Importante:** você pode especificar que a Ajuda com F1 venha da Biblioteca do TechNet na Web ou da Ajuda baixada (consulte Update-Help). Para selecionar, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da Ajuda local em vez do conteúdo online.**|
-|**Copiar**|Ctrl+C|Painel de Script, Painel de Comando e Painel de Saída|
-|**Recortar**|Ctrl+X|Painel de Script, Painel de Comando|
-|**Expandir ou Recolher a Estrutura de Tópicos**|Ctrl+M|Painel de Script|
-|**Localizar no script**|Ctrl+F|Painel de Script|
-|**Localizar próximo no script**|F3|Painel de Script|
-|**Localizar anterior no script**|Shift+F3|Painel de Script|
-|**Localizar Chave Correspondente**|Ctrl+]|Painel de Script|
-|**Colar**|Ctrl+V|Painel de Script, Painel de Comando|
-|**Refazer**|Ctrl+Y|Painel de Script, Painel de Comando|
-|**Substituir no script**|Ctrl+H|Painel de Script|
-|**Salvar**|Ctrl+S|Painel de Script|
-|**Selecionar tudo**|Ctrl+A|Painel de Script, Painel de Comando e Painel de Saída|
-|**Mostrar Snippets**|Ctrl+J|Painel de Script, Painel de Comando|
-|**Desfazer**|Ctrl+Z|Painel de Script, Painel de Comando|
+|              Ação              |       Atalhos do teclado       |                                                                                                                                                 Usar em                                                                                                                                                 |
+| -------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ajuda**                         | <kbd>F1</kbd>                  | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha da Biblioteca do TechNet na Web ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
+| **Copy**                         | <kbd>CTRL</kbd>+<kbd>C</kbd>   | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                                 |
+| **Recortar**                          | <kbd>CTRL</kbd>+<kbd>X</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
+| **Expandir ou Recolher a Estrutura de Tópicos** | <kbd>CTRL</kbd>+<kbd>M</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Localizar no script**               | <kbd>CTRL</kbd>+<kbd>F</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Localizar próximo no script**          | <kbd>F3</kbd>                  | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Localizar anterior no script**      | <kbd>SHIFT</kbd>+<kbd>F3</kbd> | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Localizar Chave Correspondente**          | <kbd>CTRL</kbd>+<kbd>]</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Colar**                        | <kbd>CTRL</kbd>+<kbd>V</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
+| **Refazer**                         | <kbd>CTRL</kbd>+<kbd>Y</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
+| **Substituir no script**            | <kbd>CTRL</kbd>+<kbd>H</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Salvar**                         | <kbd>CTRL</kbd>+<kbd>S</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
+| **Selecionar tudo**                   | <kbd>CTRL</kbd>+<kbd>A</kbd>   | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                                 |
+| **Mostrar Snippets**                | <kbd>CTRL</kbd>+<kbd>J</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
+| **Desfazer**                         | <kbd>CTRL</kbd>+<kbd>Z</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para execução de scripts
 
 Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de Script.
 
-|Ação|Atalho do Teclado|
-|----------|---------------------|
-|**Novo**|Ctrl+N|
-|**Abrir**|Ctrl+O|
-|**Executar**|F5|
-|**Executar seleção**|F8|
-|**Parar execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
-|**Tab** (para o próximo script)|CTRL+TAB **Observação:** usar Tab para o próximo script funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script.|
-|**Tab** (para o script anterior)|CTRL+SHIFT+TAB **Observação:** usar Tab para o script anterior funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script.|
+|            Ação            |                                                                                                             Atalho do Teclado                                                                                                             |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Novo**                      | <kbd>CTRL</kbd>+<kbd>N</kbd>                                                                                                                                                                                                              |
+| **Abrir**                     | <kbd>CTRL</kbd>+<kbd>O</kbd>                                                                                                                                                                                                              |
+| **Executar**                      | <kbd>F5</kbd>                                                                                                                                                                                                                             |
+| **Executar seleção**            | <kbd>F8</kbd>                                                                                                                                                                                                                             |
+| **Parar execução**           | <kbd>CTRL</kbd>+<kbd>BREAK</kbd>. <kbd>CTRL</kbd>+<kbd>C</kbd> pode ser usado quando o contexto é ambíguo (quando não há textos selecionados).                                                                                              |
+| **Tab** (para o próximo script)     | <kbd>CTRL</kbd>+<kbd>TAB</kbd> **Observação:** usar Tab para o próximo script funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script.               |
+| **Tab** (para o script anterior) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> **Observação:** usar Tab para o script anterior funciona apenas quando você tem uma única guia do Windows PowerShell aberta, ou quando tem mais de uma guia do Windows PowerShell aberta, mas com o destaque no Painel de Script. |
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Atalhos de teclado para personalizar a exibição
 
 Você pode usar os seguintes atalhos de teclado para personalizar a exibição no ISE do Windows PowerShell. Eles são acessíveis de todos os painéis no aplicativo.
 
-|Ação|Atalho do Teclado|
-|----------|---------------------|
-|**Ir para Painel de Comando (v2) ou do Console (v3 e posterior)**|Ctrl+D|
-|**Ir para o Painel de Saída (apenas v2)**|Ctrl+Shift+O|
-|**Ir para o Painel de script**|Ctrl+I|
-|**Mostrar Painel de script**|Ctrl+R|
-|**Ocultar Painel de script**|Ctrl+R|
-|**Mover o Painel de script para cima**|Ctrl+1|
-|**Mover o Painel de script para a direita**|Ctrl+2|
-|**Maximizar o Painel de script**|Ctrl+3|
-|**Ampliar**|Ctrl+Sinal de adição|
-|**Reduzir**|Ctrl+Sinal de subtração|
+|                        Ação                         |               Atalho do Teclado               |
+| ----------------------------------------------------- | --------------------------------------------- |
+| **Ir para Painel de Comando (v2) ou do Console (v3 e posterior)** | <kbd>CTRL</kbd>+<kbd>D</kbd>                  |
+| **Ir para o Painel de Saída (apenas v2)**                       | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>O</kbd> |
+| **Ir para o Painel de script**                                 | <kbd>CTRL</kbd>+<kbd>I</kbd>                  |
+| **Mostrar Painel de script**                                  | <kbd>CTRL</kbd>+<kbd>R</kbd>                  |
+| **Ocultar Painel de script**                                  | <kbd>CTRL</kbd>+<kbd>R</kbd>                  |
+| **Mover o Painel de script para cima**                               | <kbd>CTRL</kbd>+<kbd>1</kbd>                  |
+| **Mover o Painel de script para a direita**                            | <kbd>CTRL</kbd>+<kbd>2</kbd>                  |
+| **Maximizar o Painel de script**                              | <kbd>CTRL</kbd>+<kbd>3</kbd>                  |
+| **Ampliar**                                           | <kbd>CTRL</kbd>+<kbd>+</kbd>                  |
+| **Reduzir**                                          | <kbd>CTRL</kbd>+<kbd>-</kbd>                  |
 
 ## <a name="keyboard-shortcuts-for-debugging-scripts"></a>Atalhos de teclado para depuração de scripts
 
 Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 
-|Ação|Atalho do Teclado|Usar em|
-|----------|---------------------|----------|
-|**Executar/continuar**|F5|Painel de Script ao depurar um script|
-|**Intervir**|F11|Painel de Script ao depurar um script|
-|**Contornar**|F10|Painel de Script ao depurar um script|
-|**Sair**|Shift+F11|Painel de Script ao depurar um script|
-|**Exibir pilha de chamadas**|Ctrl+Shift+D|Painel de Script ao depurar um script|
-|**Listar pontos de interrupção**|Ctrl+Shift+L|Painel de Script ao depurar um script|
-|**Alternar ponto de interrupção**|F9|Painel de Script ao depurar um script|
-|**Remover todos os pontos de interrupção**|Ctrl+Shift+F9|Painel de Script ao depurar um script|
-|**Parar depurador**|Shift+F5|Painel de Script ao depurar um script|
+|           Ação           |               Atalho do Teclado                |                Usar em                |
+| -------------------------- | ---------------------------------------------- | ------------------------------------ |
+| **Executar/continuar**           | <kbd>F5</kbd>                                  | Painel de Script ao depurar um script |
+| **Intervir**              | <kbd>F11</kbd>                                 | Painel de Script ao depurar um script |
+| **Contornar**              | <kbd>F10</kbd>                                 | Painel de Script ao depurar um script |
+| **Sair**               | <kbd>SHIFT</kbd>+<kbd><kbd>F11</kbd></kbd>     | Painel de Script ao depurar um script |
+| **Exibir pilha de chamadas**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>  | Painel de Script ao depurar um script |
+| **Listar pontos de interrupção**       | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>L</kbd>  | Painel de Script ao depurar um script |
+| **Alternar ponto de interrupção**      | <kbd>F9</kbd>                                  | Painel de Script ao depurar um script |
+| **Remover todos os pontos de interrupção** | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>F9</kbd> | Painel de Script ao depurar um script |
+| **Parar depurador**          | <kbd>SHIFT</kbd>+<kbd>F5</kbd>                 | Painel de Script ao depurar um script |
 
 > [!NOTE]
-> Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Comando e pressionar Enter.
+> Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Comando e pressionar <kbd>ENTER</kbd>.
 
-|Ação|Atalho do Teclado|Usar em|
-|----------|---------------------|----------|
-|**Continuar**|C|Painel de Console ao depurar um script|
-|**Intervir**|S|Painel de Console ao depurar um script|
-|**Contornar**|V|Painel de Console ao depurar um script|
-|**Sair**|O|Painel de Console ao depurar um script|
-|**Repetir Último Comando** (para Intervir ou Contornar)|Enter|Painel de Console ao depurar um script|
-|**Exibir pilha de chamadas**|K|Painel de Console ao depurar um script|
-|**Parar depuração**|Q|Painel de Console ao depurar um script|
-|**Listar o script**|L|Painel de Console ao depurar um script|
-|**Exibir comandos de depuração do console**|H ou ?|Painel de Console ao depurar um script|
+|                        Ação                        | Atalho do Teclado |                Usar em                 |
+| ---------------------------------------------------- | ----------------- | ------------------------------------- |
+| **Continuar**                                         | `C`               | Painel de Console ao depurar um script |
+| **Intervir**                                        | `S`               | Painel de Console ao depurar um script |
+| **Contornar**                                        | `V`               | Painel de Console ao depurar um script |
+| **Sair**                                         | `O`               | Painel de Console ao depurar um script |
+| **Repetir Último Comando** (para Intervir ou Contornar) | <kbd>ENTER</kbd>  | Painel de Console ao depurar um script |
+| **Exibir pilha de chamadas**                               | `K`               | Painel de Console ao depurar um script |
+| **Parar depuração**                                   | `Q`               | Painel de Console ao depurar um script |
+| **Listar o script**                                  | `L`               | Painel de Console ao depurar um script |
+| **Exibir comandos de depuração do console**               | `H` ou `?`        | Painel de Console ao depurar um script |
 
 ## <a name="keyboard-shortcuts-for-windows-powershell-tabs"></a>Atalhos do teclado para as guias do Windows PowerShell
 
 Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows PowerShell.
 
-|Ação|Atalho do Teclado|
-|----------|---------------------|
-|**Fechar a guia do PowerShell**|Ctrl+W|
-|**Nova guia do PowerShell**|Ctrl+T|
-|**Guia anterior do PowerShell**|Ctrl+Shift+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do Windows PowerShell.|
-|**Próxima guia do Windows PowerShell**|Ctrl+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do Windows PowerShell.|
+|             Ação              |                                                        Atalho do Teclado                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Fechar a guia do PowerShell**        | <kbd>CTRL</kbd>+<kbd>W</kbd>                                                                                                    |
+| **Nova guia do PowerShell**          | <kbd>CTRL</kbd>+<kbd>T</kbd>                                                                                                    |
+| **Guia anterior do PowerShell**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd>. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do Windows PowerShell. |
+| **Próxima guia do Windows PowerShell** | <kbd>CTRL</kbd>+<kbd>TAB</kbd>. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do Windows PowerShell.                  |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Atalhos de teclado para iniciar e sair
 
 Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.
 
-|Ação|Atalho do Teclado|
-|----------|---------------------|
-|**Sair**|Alt+F4|
-|**Iniciar o PowerShell.exe** (console do Windows PowerShell)|Ctrl+Shift+P|
+|                        Ação                        |               Atalho do Teclado               |
+| ---------------------------------------------------- | --------------------------------------------- |
+| **Sair**                                             | <kbd>ALT</kbd>+<kbd>F4</kbd>                  |
+| **Iniciar o PowerShell.exe**(console do Windows PowerShell) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
 
 ## <a name="see-also"></a>Consulte Também
 

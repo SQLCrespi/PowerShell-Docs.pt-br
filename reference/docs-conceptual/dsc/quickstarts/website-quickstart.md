@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: 'Início Rápido: Criar um site com o DSC'
-ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 08ca25604998ce8c913ef8112b5342f2e0216b6e
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71955063"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75416124"
 ---
-> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+# <a name="quickstart---create-a-website-with-desired-state-configuration-dsc"></a>Início Rápido: Criar um site com DSC (Desired State Configuration)
 
-# <a name="quickstart---create-a-website-with-dsc"></a>Início Rápido: Criar um site com o DSC
+> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.
 O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `inetpub\wwwroot` desse servidor.
@@ -74,7 +74,7 @@ Salve o arquivo como `WebsiteTest.ps1`.
 
 Você pode ver que ele parece uma função do PowerShell, com a adição da palavra-chave **Configuração** usada antes do nome da função.
 
-O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `localhost`.
+O bloco **Nó** especifica o nó de destino a ser configurado. Nesse caso, `localhost`.
 
 A configuração chama dois [recursos](../resources/resources.md), **WindowsFeature** e **Arquivo**.
 Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.
@@ -113,6 +113,9 @@ Agora que você tem o MOF compilado, é possível aplicar a configuração ao n�
 
 O cmdlet `Start-DscConfiguration` indica ao [Gerenciador de Configurações Local (LCM)](../managing-nodes/metaConfig.md), qual é o mecanismo de DSC a aplicar à configuração.
 O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.
+
+> [!NOTE]
+> Para permitir que a DSC seja executada, o Windows precisa ser configurado para receber comandos remotos do PowerShell, mesmo quando você estiver executando uma configuração de `localhost`. Para configurar seu ambiente corretamente de forma simples, basta executar `Set-WsManQuickConfig -Force` em um Terminal do PowerShell elevado.
 
 Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute o mesmo comando:
 

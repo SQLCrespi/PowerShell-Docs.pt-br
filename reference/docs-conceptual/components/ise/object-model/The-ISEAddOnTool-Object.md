@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O objeto ISEAddOnTool
-ms.openlocfilehash: c71602d200b941ed4fb142b9c35f0fe68982e3e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028988"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736123"
 ---
 # <a name="the-iseaddontool-object"></a>O objeto ISEAddOnTool
 
@@ -33,6 +33,9 @@ A propriedade **Control** fornece acesso de leitura a muitos dos detalhes da fer
 # View the properties of the Commands add-on tool.
 # (assumes that it is visible in the vertical pane)
 $psISE.CurrentVisibleVerticalTool.Control
+```
+
+```Output
 HostObject                  : Microsoft.PowerShell.Host.ISE.ObjectModelRoot
 Content                     :
 HasContent                  :
@@ -143,7 +146,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído. Se estiver visível, você poderá definir a propriedade **IsVisible** como **$false** para ocultar a ferramenta ou definir a propriedade **IsVisible** como **$true** para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.
+A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído. Se estiver visível, você poderá definir a propriedade **IsVisible** como `$false` para ocultar a ferramenta ou definir a propriedade **IsVisible** como `$true` para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.
 
 ```powershell
 # Hide the current tool in the vertical tool pane
@@ -161,6 +164,9 @@ A propriedade somente leitura que obtém o nome da ferramenta complementar.
 ```powershell
 # Gets the name of the visible vertical pane add-on tool.
 $psISE.CurrentVisibleVerticalTool.Name
+```
+
+```Output
 Commands
 ```
 

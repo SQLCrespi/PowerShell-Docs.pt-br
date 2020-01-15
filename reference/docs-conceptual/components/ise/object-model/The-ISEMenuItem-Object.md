@@ -1,17 +1,18 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEMenuItem
-ms.openlocfilehash: a513a3e9f2eb97f3955fa817faedbcbf4e0ed018
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c3ffe6e8f0b28987543fe0a873c552292dc5158a
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028946"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736974"
 ---
 # <a name="the-isemenuitem-object"></a>O objeto ISEMenuItem
 
-Um objeto **ISEMenuItem** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItem. Todos os objetos de menu **Complementos** são instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Um objeto **ISEMenuItem** é uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Todos os objetos de menu **Complementos** são instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
 
 ## <a name="properties"></a>Propriedades
 

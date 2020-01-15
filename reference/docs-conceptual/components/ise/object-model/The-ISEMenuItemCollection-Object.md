@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEMenuItemCollection
-ms.openlocfilehash: b3795af1a6ed61ed6e371e5fc20cc4e95f643fd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030532"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736165"
 ---
 # <a name="the-isemenuitemcollection-object"></a>O objeto ISEMenuItemCollection
 
-Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Um exemplo é o objeto **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.
+Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Um exemplo é o objeto `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
 ## <a name="method"></a>Método
 
@@ -27,7 +27,7 @@ Adiciona um item de menu à coleção.
 
 **Shortcut** O atalho de teclado desta ação.
 
-**Returns** O objeto ISEMenuItem que acabou de ser adicionado.
+**Returns** O objeto **ISEMenuItem** que acabou de ser adicionado.
 
 ```powershell
 # Create an Add-ons menu with an fast access key and a shortcut.
