@@ -1,33 +1,33 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEMenuItemCollection
-ms.openlocfilehash: b3795af1a6ed61ed6e371e5fc20cc4e95f643fd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030532"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736165"
 ---
-# <a name="the-isemenuitemcollection-object"></a><span data-ttu-id="1258f-103">O objeto ISEMenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="1258f-103">The ISEMenuItemCollection Object</span></span>
+# <a name="the-isemenuitemcollection-object"></a><span data-ttu-id="b25cd-103">O objeto ISEMenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="b25cd-103">The ISEMenuItemCollection Object</span></span>
 
-<span data-ttu-id="1258f-104">Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**.</span><span class="sxs-lookup"><span data-stu-id="1258f-104">An **ISEMenuItemCollection** object is a collection of **ISEMenuItem** objects.</span></span> <span data-ttu-id="1258f-105">É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection.</span><span class="sxs-lookup"><span data-stu-id="1258f-105">It is an instance of the Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection class.</span></span> <span data-ttu-id="1258f-106">Um exemplo é o objeto **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.</span><span class="sxs-lookup"><span data-stu-id="1258f-106">An example is the **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** object that is used to customize the **Add-On** menu in Windows PowerShell® Integrated Scripting Environment (ISE).</span></span>
+<span data-ttu-id="b25cd-104">Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**.</span><span class="sxs-lookup"><span data-stu-id="b25cd-104">An **ISEMenuItemCollection** object is a collection of **ISEMenuItem** objects.</span></span> <span data-ttu-id="b25cd-105">É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**.</span><span class="sxs-lookup"><span data-stu-id="b25cd-105">It is an instance of the **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** class.</span></span> <span data-ttu-id="b25cd-106">Um exemplo é o objeto `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.</span><span class="sxs-lookup"><span data-stu-id="b25cd-106">An example is the `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` object that is used to customize the **Add-On** menu in Windows PowerShell® Integrated Scripting Environment (ISE).</span></span>
 
-## <a name="method"></a><span data-ttu-id="1258f-107">Método</span><span class="sxs-lookup"><span data-stu-id="1258f-107">Method</span></span>
+## <a name="method"></a><span data-ttu-id="b25cd-107">Método</span><span class="sxs-lookup"><span data-stu-id="b25cd-107">Method</span></span>
 
-### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a><span data-ttu-id="1258f-108">Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)</span><span class="sxs-lookup"><span data-stu-id="1258f-108">Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)</span></span>
+### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a><span data-ttu-id="b25cd-108">Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)</span><span class="sxs-lookup"><span data-stu-id="b25cd-108">Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)</span></span>
 
-<span data-ttu-id="1258f-109">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="1258f-109">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="b25cd-109">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="b25cd-109">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="1258f-110">Adiciona um item de menu à coleção.</span><span class="sxs-lookup"><span data-stu-id="1258f-110">Adds a menu item to the collection.</span></span>
+<span data-ttu-id="b25cd-110">Adiciona um item de menu à coleção.</span><span class="sxs-lookup"><span data-stu-id="b25cd-110">Adds a menu item to the collection.</span></span>
 
-<span data-ttu-id="1258f-111">**DisplayName** O nome de exibição do menu a ser adicionado.</span><span class="sxs-lookup"><span data-stu-id="1258f-111">**DisplayName** The display name of the menu to be added.</span></span>
+<span data-ttu-id="b25cd-111">**DisplayName** O nome de exibição do menu a ser adicionado.</span><span class="sxs-lookup"><span data-stu-id="b25cd-111">**DisplayName** The display name of the menu to be added.</span></span>
 
-<span data-ttu-id="1258f-112">**Action** O objeto **System.Management.Automation.ScriptBlock** que especifica a ação associada a este item de menu.</span><span class="sxs-lookup"><span data-stu-id="1258f-112">**Action** The **System.Management.Automation.ScriptBlock** object that specifies the action that is associated with this menu item.</span></span>
+<span data-ttu-id="b25cd-112">**Action** O objeto **System.Management.Automation.ScriptBlock** que especifica a ação associada a este item de menu.</span><span class="sxs-lookup"><span data-stu-id="b25cd-112">**Action** The **System.Management.Automation.ScriptBlock** object that specifies the action that is associated with this menu item.</span></span>
 
-<span data-ttu-id="1258f-113">**Shortcut** O atalho de teclado desta ação.</span><span class="sxs-lookup"><span data-stu-id="1258f-113">**Shortcut** The keyboard shortcut for the action.</span></span>
+<span data-ttu-id="b25cd-113">**Shortcut** O atalho de teclado desta ação.</span><span class="sxs-lookup"><span data-stu-id="b25cd-113">**Shortcut** The keyboard shortcut for the action.</span></span>
 
-<span data-ttu-id="1258f-114">**Returns** O objeto ISEMenuItem que acabou de ser adicionado.</span><span class="sxs-lookup"><span data-stu-id="1258f-114">**Returns** The ISEMenuItem object that was just added.</span></span>
+<span data-ttu-id="b25cd-114">**Returns** O objeto **ISEMenuItem** que acabou de ser adicionado.</span><span class="sxs-lookup"><span data-stu-id="b25cd-114">**Returns** The **ISEMenuItem** object that was just added.</span></span>
 
 ```powershell
 # Create an Add-ons menu with an fast access key and a shortcut.
@@ -35,19 +35,19 @@ ms.locfileid: "67030532"
 $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('_Process', {Get-Process}, 'Alt+P')
 ```
 
-### <a name="clear"></a><span data-ttu-id="1258f-115">Clear\(\)</span><span class="sxs-lookup"><span data-stu-id="1258f-115">Clear\(\)</span></span>
+### <a name="clear"></a><span data-ttu-id="b25cd-115">Clear\(\)</span><span class="sxs-lookup"><span data-stu-id="b25cd-115">Clear\(\)</span></span>
 
-<span data-ttu-id="1258f-116">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="1258f-116">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="b25cd-116">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="b25cd-116">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="1258f-117">Remove todos os submenus do item de menu.</span><span class="sxs-lookup"><span data-stu-id="1258f-117">Removes all submenus from the menu item.</span></span>
+<span data-ttu-id="b25cd-117">Remove todos os submenus do item de menu.</span><span class="sxs-lookup"><span data-stu-id="b25cd-117">Removes all submenus from the menu item.</span></span>
 
 ```powershell
 # Remove all custom submenu items from the AddOns menu
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1258f-118">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="1258f-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b25cd-118">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="b25cd-118">See Also</span></span>
 
-- [<span data-ttu-id="1258f-119">O objeto ISEMenuItem</span><span class="sxs-lookup"><span data-stu-id="1258f-119">The ISEMenuItem Object</span></span>](The-ISEMenuItem-Object.md)
-- [<span data-ttu-id="1258f-120">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="1258f-120">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [<span data-ttu-id="1258f-121">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="1258f-121">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
+- [<span data-ttu-id="b25cd-119">O objeto ISEMenuItem</span><span class="sxs-lookup"><span data-stu-id="b25cd-119">The ISEMenuItem Object</span></span>](The-ISEMenuItem-Object.md)
+- [<span data-ttu-id="b25cd-120">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="b25cd-120">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [<span data-ttu-id="b25cd-121">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="b25cd-121">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)

@@ -1,112 +1,112 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEEditor
-ms.openlocfilehash: 2d4c3d941035384c591ca57e809c0e3a9b852f5c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086758"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736182"
 ---
-# <a name="the-iseeditor-object"></a><span data-ttu-id="797bf-103">O objeto ISEEditor</span><span class="sxs-lookup"><span data-stu-id="797bf-103">The ISEEditor Object</span></span>
+# <a name="the-iseeditor-object"></a><span data-ttu-id="9d40a-103">O objeto ISEEditor</span><span class="sxs-lookup"><span data-stu-id="9d40a-103">The ISEEditor Object</span></span>
 
-<span data-ttu-id="797bf-104">Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor.</span><span class="sxs-lookup"><span data-stu-id="797bf-104">An **ISEEditor** object is an instance of the Microsoft.PowerShell.Host.ISE.ISEEditor class.</span></span> <span data-ttu-id="797bf-105">O painel de Console é um objeto **ISEEditor**.</span><span class="sxs-lookup"><span data-stu-id="797bf-105">The Console pane is an **ISEEditor** object.</span></span> <span data-ttu-id="797bf-106">Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado.</span><span class="sxs-lookup"><span data-stu-id="797bf-106">Each [ISEFile](The-ISEFile-Object.md) object has an associated **ISEEditor** object.</span></span> <span data-ttu-id="797bf-107">As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor**.</span><span class="sxs-lookup"><span data-stu-id="797bf-107">The following sections list the methods and properties of an **ISEEditor** object.</span></span>
+<span data-ttu-id="9d40a-104">Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-104">An **ISEEditor** object is an instance of the Microsoft.PowerShell.Host.ISE.ISEEditor class.</span></span> <span data-ttu-id="9d40a-105">O painel de Console é um objeto **ISEEditor**.</span><span class="sxs-lookup"><span data-stu-id="9d40a-105">The Console pane is an **ISEEditor** object.</span></span> <span data-ttu-id="9d40a-106">Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado.</span><span class="sxs-lookup"><span data-stu-id="9d40a-106">Each [ISEFile](The-ISEFile-Object.md) object has an associated **ISEEditor** object.</span></span> <span data-ttu-id="9d40a-107">As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor**.</span><span class="sxs-lookup"><span data-stu-id="9d40a-107">The following sections list the methods and properties of an **ISEEditor** object.</span></span>
 
-## <a name="methods"></a><span data-ttu-id="797bf-108">Métodos</span><span class="sxs-lookup"><span data-stu-id="797bf-108">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="9d40a-108">Métodos</span><span class="sxs-lookup"><span data-stu-id="9d40a-108">Methods</span></span>
 
-### <a name="clear"></a><span data-ttu-id="797bf-109">Clear\(\)</span><span class="sxs-lookup"><span data-stu-id="797bf-109">Clear\(\)</span></span>
+### <a name="clear"></a><span data-ttu-id="9d40a-109">Clear\(\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-109">Clear\(\)</span></span>
 
-<span data-ttu-id="797bf-110">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-110">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-110">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-110">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-111">Apaga o texto no editor.</span><span class="sxs-lookup"><span data-stu-id="797bf-111">Clears the text in the editor.</span></span>
+<span data-ttu-id="9d40a-111">Apaga o texto no editor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-111">Clears the text in the editor.</span></span>
 
 ```powershell
 # Clears the text in the Console pane.
 $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 ```
 
-### <a name="ensurevisibleint-linenumber"></a><span data-ttu-id="797bf-112">EnsureVisible\(int lineNumber\)</span><span class="sxs-lookup"><span data-stu-id="797bf-112">EnsureVisible\(int lineNumber\)</span></span>
+### <a name="ensurevisibleint-linenumber"></a><span data-ttu-id="9d40a-112">EnsureVisible\(int lineNumber\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-112">EnsureVisible\(int lineNumber\)</span></span>
 
-<span data-ttu-id="797bf-113">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-113">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-113">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-113">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-114">Rola o editor de modo que a linha que corresponde ao valor do parâmetro **lineNumber** especificado fique visível.</span><span class="sxs-lookup"><span data-stu-id="797bf-114">Scrolls the editor so that the line that corresponds to the specified **lineNumber** parameter value is visible.</span></span> <span data-ttu-id="797bf-115">Gerará uma exceção se o número de linha especificado estiver fora do intervalo de 1, último número da linha, que define os números de linha válidos.</span><span class="sxs-lookup"><span data-stu-id="797bf-115">It throws an exception if the specified line number is outside the range of 1,last line number, which defines the valid line numbers.</span></span>
+<span data-ttu-id="9d40a-114">Rola o editor de modo que a linha que corresponde ao valor do parâmetro **lineNumber** especificado fique visível.</span><span class="sxs-lookup"><span data-stu-id="9d40a-114">Scrolls the editor so that the line that corresponds to the specified **lineNumber** parameter value is visible.</span></span> <span data-ttu-id="9d40a-115">Gerará uma exceção se o número de linha especificado estiver fora do intervalo de 1, último número da linha, que define os números de linha válidos.</span><span class="sxs-lookup"><span data-stu-id="9d40a-115">It throws an exception if the specified line number is outside the range of 1,last line number, which defines the valid line numbers.</span></span>
 
-<span data-ttu-id="797bf-116">**lineNumber** O número da linha que deve ficar visível.</span><span class="sxs-lookup"><span data-stu-id="797bf-116">**lineNumber** The number of the line that is to be made visible.</span></span>
+<span data-ttu-id="9d40a-116">**lineNumber** O número da linha que deve ficar visível.</span><span class="sxs-lookup"><span data-stu-id="9d40a-116">**lineNumber** The number of the line that is to be made visible.</span></span>
 
 ```powershell
 # Scrolls the text in the Script pane so that the fifth line is in view.
 $psISE.CurrentFile.Editor.EnsureVisible(5)
 ```
 
-### <a name="focus"></a><span data-ttu-id="797bf-117">Focus\(\)</span><span class="sxs-lookup"><span data-stu-id="797bf-117">Focus\(\)</span></span>
+### <a name="focus"></a><span data-ttu-id="9d40a-117">Focus\(\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-117">Focus\(\)</span></span>
 
-<span data-ttu-id="797bf-118">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-118">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-118">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-118">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-119">Define o foco para o editor.</span><span class="sxs-lookup"><span data-stu-id="797bf-119">Sets the focus to the editor.</span></span>
+<span data-ttu-id="9d40a-119">Define o foco para o editor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-119">Sets the focus to the editor.</span></span>
 
 ```powershell
 # Sets focus to the Console pane.
 $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 ```
 
-### <a name="getlinelengthint-linenumber-"></a><span data-ttu-id="797bf-120">GetLineLength\(int lineNumber \)</span><span class="sxs-lookup"><span data-stu-id="797bf-120">GetLineLength\(int lineNumber \)</span></span>
+### <a name="getlinelengthint-linenumber-"></a><span data-ttu-id="9d40a-120">GetLineLength\(int lineNumber \)</span><span class="sxs-lookup"><span data-stu-id="9d40a-120">GetLineLength\(int lineNumber \)</span></span>
 
-<span data-ttu-id="797bf-121">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-121">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-121">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-121">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-122">Obtém o comprimento da linha como um inteiro para a linha especificada pelo número de linha.</span><span class="sxs-lookup"><span data-stu-id="797bf-122">Gets the line length as an integer for the line that is specified by the line number.</span></span>
+<span data-ttu-id="9d40a-122">Obtém o comprimento da linha como um inteiro para a linha especificada pelo número de linha.</span><span class="sxs-lookup"><span data-stu-id="9d40a-122">Gets the line length as an integer for the line that is specified by the line number.</span></span>
 
-<span data-ttu-id="797bf-123">**lineNumber** O número da linha cujo comprimento será obtido.</span><span class="sxs-lookup"><span data-stu-id="797bf-123">**lineNumber** The number of the line of which to get the length.</span></span>
+<span data-ttu-id="9d40a-123">**lineNumber** O número da linha cujo comprimento será obtido.</span><span class="sxs-lookup"><span data-stu-id="9d40a-123">**lineNumber** The number of the line of which to get the length.</span></span>
 
-<span data-ttu-id="797bf-124">**Returns** O comprimento da linha no número de linha especificado.</span><span class="sxs-lookup"><span data-stu-id="797bf-124">**Returns** The line length for the line at the specified line number.</span></span>
+<span data-ttu-id="9d40a-124">**Returns** O comprimento da linha no número de linha especificado.</span><span class="sxs-lookup"><span data-stu-id="9d40a-124">**Returns** The line length for the line at the specified line number.</span></span>
 
 ```powershell
 # Gets the length of the first line in the text of the Command pane.
 $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ```
 
-### <a name="gotomatch"></a><span data-ttu-id="797bf-125">GoToMatch\(\)</span><span class="sxs-lookup"><span data-stu-id="797bf-125">GoToMatch\(\)</span></span>
+### <a name="gotomatch"></a><span data-ttu-id="9d40a-125">GoToMatch\(\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-125">GoToMatch\(\)</span></span>
 
-<span data-ttu-id="797bf-126">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-126">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="9d40a-126">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-126">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="797bf-127">Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – \(,\[,{ – ou imediatamente após um parêntese de fechamento, colchete ou chave – \),\],}.</span><span class="sxs-lookup"><span data-stu-id="797bf-127">Moves the caret to the matching character if the **CanGoToMatch** property of the editor object is **$true**, which occurs when the caret is immediately before an opening parenthesis, bracket, or brace - \(,\[,{ - or immediately after a closing parenthesis, bracket, or brace - \),\],}.</span></span>  <span data-ttu-id="797bf-128">O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento.</span><span class="sxs-lookup"><span data-stu-id="797bf-128">The caret is placed before an opening character or after a closing character.</span></span> <span data-ttu-id="797bf-129">Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará.</span><span class="sxs-lookup"><span data-stu-id="797bf-129">If the **CanGoToMatch** property is **$false**, then this method does nothing.</span></span>
+<span data-ttu-id="9d40a-127">Moverá o cursor do sistema para o caractere correspondente se a propriedade **CanGoToMatch** do objeto editor for `$true`, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – `(`,`[`,`{` – ou imediatamente após um parêntese de fechamento, colchete ou chave – `)`,`]`,`}`.</span><span class="sxs-lookup"><span data-stu-id="9d40a-127">Moves the caret to the matching character if the **CanGoToMatch** property of the editor object is `$true`, which occurs when the caret is immediately before an opening parenthesis, bracket, or brace - `(`,`[`,`{` - or immediately after a closing parenthesis, bracket, or brace - `)`,`]`,`}`.</span></span> <span data-ttu-id="9d40a-128">O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento.</span><span class="sxs-lookup"><span data-stu-id="9d40a-128">The caret is placed before an opening character or after a closing character.</span></span> <span data-ttu-id="9d40a-129">Se a propriedade **CanGoToMatch** for `$false`, esse método nada fará.</span><span class="sxs-lookup"><span data-stu-id="9d40a-129">If the **CanGoToMatch** property is `$false`, then this method does nothing.</span></span>
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
 $psISE.CurrentPowerShellTab.ConsolePane.GoToMatch()
 ```
 
-### <a name="inserttext-text-"></a><span data-ttu-id="797bf-130">InsertText\( text \)</span><span class="sxs-lookup"><span data-stu-id="797bf-130">InsertText\( text \)</span></span>
+### <a name="inserttext-text-"></a><span data-ttu-id="9d40a-130">InsertText\( text \)</span><span class="sxs-lookup"><span data-stu-id="9d40a-130">InsertText\( text \)</span></span>
 
-<span data-ttu-id="797bf-131">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-131">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-131">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-131">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-132">Substitui a seleção por texto ou inserções de texto na posição do cursor atual.</span><span class="sxs-lookup"><span data-stu-id="797bf-132">Replaces the selection with text or inserts text at the current caret position.</span></span>
+<span data-ttu-id="9d40a-132">Substitui a seleção por texto ou inserções de texto na posição do cursor atual.</span><span class="sxs-lookup"><span data-stu-id="9d40a-132">Replaces the selection with text or inserts text at the current caret position.</span></span>
 
-<span data-ttu-id="797bf-133">**text** – cadeia de caracteres, o texto a ser inserido.</span><span class="sxs-lookup"><span data-stu-id="797bf-133">**text** - String The text to insert.</span></span>
+<span data-ttu-id="9d40a-133">**text** – cadeia de caracteres, o texto a ser inserido.</span><span class="sxs-lookup"><span data-stu-id="9d40a-133">**text** - String The text to insert.</span></span>
 
-<span data-ttu-id="797bf-134">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="797bf-134">See the [Scripting Example](#scripting-example) later in this topic.</span></span>
+<span data-ttu-id="9d40a-134">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="9d40a-134">See the [Scripting Example](#scripting-example) later in this topic.</span></span>
 
-### <a name="select-startline-startcolumn-endline-endcolumn-"></a><span data-ttu-id="797bf-135">Select\( startLine, startColumn, endLine, endColumn \)</span><span class="sxs-lookup"><span data-stu-id="797bf-135">Select\( startLine, startColumn, endLine, endColumn \)</span></span>
+### <a name="select-startline-startcolumn-endline-endcolumn-"></a><span data-ttu-id="9d40a-135">Select\( startLine, startColumn, endLine, endColumn \)</span><span class="sxs-lookup"><span data-stu-id="9d40a-135">Select\( startLine, startColumn, endLine, endColumn \)</span></span>
 
-<span data-ttu-id="797bf-136">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-136">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-136">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-136">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-137">Seleciona o texto dos parâmetros **startLine**, **startColumn**, **endLine** e **endColumn**.</span><span class="sxs-lookup"><span data-stu-id="797bf-137">Selects the text from the **startLine**, **startColumn**, **endLine**, and **endColumn** parameters.</span></span>
+<span data-ttu-id="9d40a-137">Seleciona o texto dos parâmetros **startLine**, **startColumn**, **endLine** e **endColumn**.</span><span class="sxs-lookup"><span data-stu-id="9d40a-137">Selects the text from the **startLine**, **startColumn**, **endLine**, and **endColumn** parameters.</span></span>
 
-<span data-ttu-id="797bf-138">**startLine** – inteiro, a linha na qual a seleção começa.</span><span class="sxs-lookup"><span data-stu-id="797bf-138">**startLine** - Integer The line where the selection starts.</span></span>
+<span data-ttu-id="9d40a-138">**startLine** – inteiro, a linha na qual a seleção começa.</span><span class="sxs-lookup"><span data-stu-id="9d40a-138">**startLine** - Integer The line where the selection starts.</span></span>
 
-<span data-ttu-id="797bf-139">**startColumn** – inteiro, a coluna na linha inicial na qual a seleção começa.</span><span class="sxs-lookup"><span data-stu-id="797bf-139">**startColumn** - Integer The column within the start line where the selection starts.</span></span>
+<span data-ttu-id="9d40a-139">**startColumn** – inteiro, a coluna na linha inicial na qual a seleção começa.</span><span class="sxs-lookup"><span data-stu-id="9d40a-139">**startColumn** - Integer The column within the start line where the selection starts.</span></span>
 
-<span data-ttu-id="797bf-140">**endLine** – inteiro, a linha na qual a seleção é encerrada.</span><span class="sxs-lookup"><span data-stu-id="797bf-140">**endLine** - Integer The line where the selection ends.</span></span>
+<span data-ttu-id="9d40a-140">**endLine** – inteiro, a linha na qual a seleção é encerrada.</span><span class="sxs-lookup"><span data-stu-id="9d40a-140">**endLine** - Integer The line where the selection ends.</span></span>
 
-<span data-ttu-id="797bf-141">**endColumn** – inteiro, a coluna na linha final na qual a seleção é encerrada.</span><span class="sxs-lookup"><span data-stu-id="797bf-141">**endColumn** - Integer The column within the end line where the selection ends.</span></span>
+<span data-ttu-id="9d40a-141">**endColumn** – inteiro, a coluna na linha final na qual a seleção é encerrada.</span><span class="sxs-lookup"><span data-stu-id="9d40a-141">**endColumn** - Integer The column within the end line where the selection ends.</span></span>
 
-<span data-ttu-id="797bf-142">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="797bf-142">See the  [Scripting Example](#scripting-example) later in this topic.</span></span>
+<span data-ttu-id="9d40a-142">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="9d40a-142">See the  [Scripting Example](#scripting-example) later in this topic.</span></span>
 
-### <a name="selectcaretline"></a><span data-ttu-id="797bf-143">SelectCaretLine\(\)</span><span class="sxs-lookup"><span data-stu-id="797bf-143">SelectCaretLine\(\)</span></span>
+### <a name="selectcaretline"></a><span data-ttu-id="9d40a-143">SelectCaretLine\(\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-143">SelectCaretLine\(\)</span></span>
 
-<span data-ttu-id="797bf-144">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-144">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-144">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-144">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-145">Seleciona toda a linha de texto que contém atualmente o circunflexo.</span><span class="sxs-lookup"><span data-stu-id="797bf-145">Selects the entire line of text that currently contains the caret.</span></span>
+<span data-ttu-id="9d40a-145">Seleciona toda a linha de texto que contém atualmente o circunflexo.</span><span class="sxs-lookup"><span data-stu-id="9d40a-145">Selects the entire line of text that currently contains the caret.</span></span>
 
 ```powershell
 # First, set the caret position on line 5.
@@ -115,106 +115,106 @@ $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 $psISE.CurrentFile.Editor.SelectCaretLine()
 ```
 
-### <a name="setcaretposition-linenumber-columnnumber-"></a><span data-ttu-id="797bf-146">SetCaretPosition\( lineNumber, columnNumber \)</span><span class="sxs-lookup"><span data-stu-id="797bf-146">SetCaretPosition\( lineNumber, columnNumber \)</span></span>
+### <a name="setcaretposition-linenumber-columnnumber-"></a><span data-ttu-id="9d40a-146">SetCaretPosition\( lineNumber, columnNumber \)</span><span class="sxs-lookup"><span data-stu-id="9d40a-146">SetCaretPosition\( lineNumber, columnNumber \)</span></span>
 
-<span data-ttu-id="797bf-147">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-147">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-147">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-147">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-148">Define a posição do cursor no número de linha e no número da coluna.</span><span class="sxs-lookup"><span data-stu-id="797bf-148">Sets the caret position at the line number and the column number.</span></span> <span data-ttu-id="797bf-149">Gera uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.</span><span class="sxs-lookup"><span data-stu-id="797bf-149">It throws an exception if either the caret line number  or the caret column number  are out of their respective valid ranges.</span></span>
+<span data-ttu-id="9d40a-148">Define a posição do cursor no número de linha e no número da coluna.</span><span class="sxs-lookup"><span data-stu-id="9d40a-148">Sets the caret position at the line number and the column number.</span></span> <span data-ttu-id="9d40a-149">Gerará uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.</span><span class="sxs-lookup"><span data-stu-id="9d40a-149">It throws an exception if either the caret line number or the caret column number are out of their respective valid ranges.</span></span>
 
-<span data-ttu-id="797bf-150">**lineNumber** – inteiro, o número de linha do cursor do sistema.</span><span class="sxs-lookup"><span data-stu-id="797bf-150">**lineNumber** - Integer The caret line number.</span></span>
+<span data-ttu-id="9d40a-150">**lineNumber** – inteiro, o número de linha do cursor do sistema.</span><span class="sxs-lookup"><span data-stu-id="9d40a-150">**lineNumber** - Integer The caret line number.</span></span>
 
-<span data-ttu-id="797bf-151">**columnNumber** – inteiro, o número da coluna do cursor do sistema.</span><span class="sxs-lookup"><span data-stu-id="797bf-151">**columnNumber** - Integer The caret column number.</span></span>
+<span data-ttu-id="9d40a-151">**columnNumber** – inteiro, o número da coluna do cursor do sistema.</span><span class="sxs-lookup"><span data-stu-id="9d40a-151">**columnNumber** - Integer The caret column number.</span></span>
 
 ```powershell
 # Set the CaretPosition.
 $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 ```
 
-### <a name="toggleoutliningexpansion"></a><span data-ttu-id="797bf-152">ToggleOutliningExpansion\(\)</span><span class="sxs-lookup"><span data-stu-id="797bf-152">ToggleOutliningExpansion\(\)</span></span>
+### <a name="toggleoutliningexpansion"></a><span data-ttu-id="9d40a-152">ToggleOutliningExpansion\(\)</span><span class="sxs-lookup"><span data-stu-id="9d40a-152">ToggleOutliningExpansion\(\)</span></span>
 
-<span data-ttu-id="797bf-153">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-153">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="9d40a-153">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-153">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="797bf-154">Faz com que toda a estrutura de tópicos se expanda ou se recolha.</span><span class="sxs-lookup"><span data-stu-id="797bf-154">Causes all the outline sections to expand or collapse.</span></span>
+<span data-ttu-id="9d40a-154">Faz com que toda a estrutura de tópicos se expanda ou se recolha.</span><span class="sxs-lookup"><span data-stu-id="9d40a-154">Causes all the outline sections to expand or collapse.</span></span>
 
 ```powershell
 # Toggle the outlining expansion
 $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 ```
 
-## <a name="properties"></a><span data-ttu-id="797bf-155">Propriedades</span><span class="sxs-lookup"><span data-stu-id="797bf-155">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="9d40a-155">Propriedades</span><span class="sxs-lookup"><span data-stu-id="9d40a-155">Properties</span></span>
 
-### <a name="cangotomatch"></a><span data-ttu-id="797bf-156">CanGoToMatch</span><span class="sxs-lookup"><span data-stu-id="797bf-156">CanGoToMatch</span></span>
+### <a name="cangotomatch"></a><span data-ttu-id="9d40a-156">CanGoToMatch</span><span class="sxs-lookup"><span data-stu-id="9d40a-156">CanGoToMatch</span></span>
 
-<span data-ttu-id="797bf-157">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-157">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="9d40a-157">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-157">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="797bf-158">A propriedade booliana somente leitura para indicar se o cursor está ao lado de um parêntese, colchete ou chave – \(\), \[\], {}.</span><span class="sxs-lookup"><span data-stu-id="797bf-158">The read-only Boolean property to indicate whether the caret is next to a parenthesis, bracket, or brace - \(\), \[\], {}.</span></span> <span data-ttu-id="797bf-159">Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**.</span><span class="sxs-lookup"><span data-stu-id="797bf-159">If the caret is immediately before the opening character or immediately after the closing character of a pair, then this property value is **$true**.</span></span> <span data-ttu-id="797bf-160">Caso contrário é **$false**.</span><span class="sxs-lookup"><span data-stu-id="797bf-160">Otherwise, it is **$false**.</span></span>
+<span data-ttu-id="9d40a-158">A propriedade booliana somente leitura para indicar se o cursor está ao lado de um parêntese, colchete ou chave – `()`, `[]`, `{}`.</span><span class="sxs-lookup"><span data-stu-id="9d40a-158">The read-only Boolean property to indicate whether the caret is next to a parenthesis, bracket, or brace - `()`, `[]`, `{}`.</span></span> <span data-ttu-id="9d40a-159">Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será `$true`.</span><span class="sxs-lookup"><span data-stu-id="9d40a-159">If the caret is immediately before the opening character or immediately after the closing character of a pair, then this property value is `$true`.</span></span> <span data-ttu-id="9d40a-160">Caso contrário, será `$false`.</span><span class="sxs-lookup"><span data-stu-id="9d40a-160">Otherwise, it is `$false`.</span></span>
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace
 $psISE.CurrentFile.Editor.CanGoToMatch
 ```
 
-### <a name="caretcolumn"></a><span data-ttu-id="797bf-161">CaretColumn</span><span class="sxs-lookup"><span data-stu-id="797bf-161">CaretColumn</span></span>
+### <a name="caretcolumn"></a><span data-ttu-id="9d40a-161">CaretColumn</span><span class="sxs-lookup"><span data-stu-id="9d40a-161">CaretColumn</span></span>
 
-<span data-ttu-id="797bf-162">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-162">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-162">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-162">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-163">A propriedade somente leitura que obtém o número da coluna que corresponde à posição do cursor.</span><span class="sxs-lookup"><span data-stu-id="797bf-163">The read-only property that gets the column number that corresponds to the position of the caret.</span></span>
+<span data-ttu-id="9d40a-163">A propriedade somente leitura que obtém o número da coluna que corresponde à posição do cursor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-163">The read-only property that gets the column number that corresponds to the position of the caret.</span></span>
 
 ```powershell
 # Get the CaretColumn.
 $psISE.CurrentFile.Editor.CaretColumn
 ```
 
-### <a name="caretline"></a><span data-ttu-id="797bf-164">CaretLine</span><span class="sxs-lookup"><span data-stu-id="797bf-164">CaretLine</span></span>
+### <a name="caretline"></a><span data-ttu-id="9d40a-164">CaretLine</span><span class="sxs-lookup"><span data-stu-id="9d40a-164">CaretLine</span></span>
 
-<span data-ttu-id="797bf-165">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-165">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-165">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-165">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-166">A propriedade somente leitura que obtém o número da linha que contém o cursor.</span><span class="sxs-lookup"><span data-stu-id="797bf-166">The read-only property that gets the number of the line that contains the caret.</span></span>
+<span data-ttu-id="9d40a-166">A propriedade somente leitura que obtém o número da linha que contém o cursor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-166">The read-only property that gets the number of the line that contains the caret.</span></span>
 
 ```powershell
 # Get the CaretLine.
 $psISE.CurrentFile.Editor.CaretLine
 ```
 
-### <a name="caretlinetext"></a><span data-ttu-id="797bf-167">CaretLineText</span><span class="sxs-lookup"><span data-stu-id="797bf-167">CaretLineText</span></span>
+### <a name="caretlinetext"></a><span data-ttu-id="9d40a-167">CaretLineText</span><span class="sxs-lookup"><span data-stu-id="9d40a-167">CaretLineText</span></span>
 
-<span data-ttu-id="797bf-168">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-168">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-168">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-168">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-169">A propriedade somente leitura que obtém a linha completa de texto que contém o cursor.</span><span class="sxs-lookup"><span data-stu-id="797bf-169">The read-only property that gets the complete line of text that contains the caret.</span></span>
+<span data-ttu-id="9d40a-169">A propriedade somente leitura que obtém a linha completa de texto que contém o cursor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-169">The read-only property that gets the complete line of text that contains the caret.</span></span>
 
 ```powershell
 # Get all of the text on the line that contains the caret.
 $psISE.CurrentFile.Editor.CaretLineText
 ```
 
-### <a name="linecount"></a><span data-ttu-id="797bf-170">LineCount</span><span class="sxs-lookup"><span data-stu-id="797bf-170">LineCount</span></span>
+### <a name="linecount"></a><span data-ttu-id="9d40a-170">LineCount</span><span class="sxs-lookup"><span data-stu-id="9d40a-170">LineCount</span></span>
 
-<span data-ttu-id="797bf-171">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-171">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-171">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-171">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-172">A propriedade somente leitura que obtém a contagem de linha do editor.</span><span class="sxs-lookup"><span data-stu-id="797bf-172">The read-only property that gets the line count from the editor.</span></span>
+<span data-ttu-id="9d40a-172">A propriedade somente leitura que obtém a contagem de linha do editor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-172">The read-only property that gets the line count from the editor.</span></span>
 
 ```powershell
 # Get the LineCount.
 $psISE.CurrentFile.Editor.LineCount
 ```
 
-### <a name="selectedtext"></a><span data-ttu-id="797bf-173">SelectedText</span><span class="sxs-lookup"><span data-stu-id="797bf-173">SelectedText</span></span>
+### <a name="selectedtext"></a><span data-ttu-id="9d40a-173">SelectedText</span><span class="sxs-lookup"><span data-stu-id="9d40a-173">SelectedText</span></span>
 
-<span data-ttu-id="797bf-174">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-174">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-174">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-174">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-175">A propriedade somente leitura que obtém o texto selecionado do editor.</span><span class="sxs-lookup"><span data-stu-id="797bf-175">The read-only property that gets the selected text from the editor.</span></span>
+<span data-ttu-id="9d40a-175">A propriedade somente leitura que obtém o texto selecionado do editor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-175">The read-only property that gets the selected text from the editor.</span></span>
 
-<span data-ttu-id="797bf-176">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="797bf-176">See the  [Scripting Example](#scripting-example) later in this topic.</span></span>
+<span data-ttu-id="9d40a-176">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="9d40a-176">See the  [Scripting Example](#scripting-example) later in this topic.</span></span>
 
-### <a name="text"></a><span data-ttu-id="797bf-177">Texto</span><span class="sxs-lookup"><span data-stu-id="797bf-177">Text</span></span>
+### <a name="text"></a><span data-ttu-id="9d40a-177">Texto</span><span class="sxs-lookup"><span data-stu-id="9d40a-177">Text</span></span>
 
-<span data-ttu-id="797bf-178">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="797bf-178">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
+<span data-ttu-id="9d40a-178">Suportado no Windows PowerShell ISE 2.0 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="9d40a-178">Supported in Windows PowerShell ISE 2.0 and later.</span></span>
 
-<span data-ttu-id="797bf-179">A propriedade de leitura/gravação que obtém ou define o texto no editor.</span><span class="sxs-lookup"><span data-stu-id="797bf-179">The read/write property that gets or sets the text in the editor.</span></span>
+<span data-ttu-id="9d40a-179">A propriedade de leitura/gravação que obtém ou define o texto no editor.</span><span class="sxs-lookup"><span data-stu-id="9d40a-179">The read/write property that gets or sets the text in the editor.</span></span>
 
-<span data-ttu-id="797bf-180">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="797bf-180">See the [Scripting Example](#scripting-example) later in this topic.</span></span>
+<span data-ttu-id="9d40a-180">Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="9d40a-180">See the [Scripting Example](#scripting-example) later in this topic.</span></span>
 
-## <a name="scripting-example"></a><span data-ttu-id="797bf-181">Exemplo de Script</span><span class="sxs-lookup"><span data-stu-id="797bf-181">Scripting Example</span></span>
+## <a name="scripting-example"></a><span data-ttu-id="9d40a-181">Exemplo de Script</span><span class="sxs-lookup"><span data-stu-id="9d40a-181">Scripting Example</span></span>
 
 ```powershell
 # This illustrates how you can use the length of a line to
@@ -243,9 +243,9 @@ $myEditor.Clear()
 $myEditor.InsertText($selection.ToLower())
 ```
 
-## <a name="see-also"></a><span data-ttu-id="797bf-182">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="797bf-182">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d40a-182">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="9d40a-182">See Also</span></span>
 
-- [<span data-ttu-id="797bf-183">O objeto ISEFile</span><span class="sxs-lookup"><span data-stu-id="797bf-183">The ISEFile Object</span></span>](The-ISEFile-Object.md)
-- [<span data-ttu-id="797bf-184">O objeto PowerShellTab</span><span class="sxs-lookup"><span data-stu-id="797bf-184">The PowerShellTab Object</span></span>](The-PowerShellTab-Object.md)
-- [<span data-ttu-id="797bf-185">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="797bf-185">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [<span data-ttu-id="797bf-186">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="797bf-186">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
+- [<span data-ttu-id="9d40a-183">O objeto ISEFile</span><span class="sxs-lookup"><span data-stu-id="9d40a-183">The ISEFile Object</span></span>](The-ISEFile-Object.md)
+- [<span data-ttu-id="9d40a-184">O objeto PowerShellTab</span><span class="sxs-lookup"><span data-stu-id="9d40a-184">The PowerShellTab Object</span></span>](The-PowerShellTab-Object.md)
+- [<span data-ttu-id="9d40a-185">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="9d40a-185">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [<span data-ttu-id="9d40a-186">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="9d40a-186">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
