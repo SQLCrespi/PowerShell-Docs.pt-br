@@ -16,12 +16,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], parameters
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
-ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365925"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022216"
 ---
 # <a name="cmdlet-parameters"></a>Parâmetros de cmdlets
 
@@ -33,7 +33,7 @@ Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite e
 
 [Tipos de parâmetros de cmdlet](./types-of-cmdlet-parameters.md) Descreve os diferentes tipos de parâmetros que você pode declarar em cmdlets.
 
-[Diretrizes de funcionalidade e nome de parâmetro de cmdlet](./standard-cmdlet-parameter-names-and-types.md) Discuta os nomes, o tipo de dados recomendado e a funcionalidade dos parâmetros padrão.
+[Diretrizes de funcionalidade e nome de parâmetro de cmdlet](./standard-cmdlet-parameter-names-and-types.md) Discute os nomes, o tipo de dados recomendado e a funcionalidade dos parâmetros padrão.
 
 [Aliases de parâmetro](./parameter-aliases.md) Discute os aliases que você pode definir para parâmetros.
 
@@ -53,7 +53,7 @@ Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite e
 
 [Como validar a entrada de parâmetro](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
 [Declaração de atributo de parâmetro](./parameter-attribute-declaration.md)
 
