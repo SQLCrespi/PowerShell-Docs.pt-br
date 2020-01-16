@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
-ms.openlocfilehash: 74cebbe418fecd21567ba9ecc7c561b51ac008fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 818beffaf7df55ae36a154b7b751f9201c5b4299
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71692231"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870176"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
 
@@ -37,13 +37,13 @@ A falha pode ocorrer com base em um dos fatores a seguir.
 
   Para obter mais informações, consulte [How to Configure Your Computer for Remoting](/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting) (Como configurar seu computador para comunicação remota).
 
-## <a name="internal-server-error"></a>Erro Interno do Servidor
+## <a name="internal-server-error"></a>Erro interno do servidor
 
 Quando os usuários tentarem entrar no Windows PowerShell Web Access em uma janela do Internet Explorer, página **Erro Interno do Servidor** será exibida ou o *Internet Explorer* deixará de responder.
 
 Esse problema é específico ao Internet Explorer.
 
-### <a name="possible-cause"></a>Causa possível
+### <a name="possible-cause"></a>Possível causa
 
 Isso pode ocorrer com usuários que entraram com um nome de domínio que contém caracteres em chinês, ou quando um ou mais caracteres em chinês fazem parte do nome do servidor de gateway.
 
@@ -56,7 +56,7 @@ Isso pode ocorrer com usuários que entraram com um nome de domínio que contém
    1. Clique em **Modo de Documento** e, em seguida, em *Padrões do IE10*.
    1. Pressione **F12** novamente para abrir o console Ferramentas de Desenvolvimento.
 1. Desabilite a configuração automática de proxy no Internet Explorer 10.
-   1. Clique em **Ferramentas**e em **Opções da Internet**.
+   1. Clique em **Ferramentas** e em **Opções da Internet**.
    1. Na caixa de diálogo **Opções da Internet**, na guia **Conexões**, clique em **Configurações da LAN**.
    1. Desmarque a caixa de seleção **Detectar automaticamente as configurações**. Clique em **OK** e clique em **OK** novamente para fechar a caixa de diálogo *Opções da Internet*.
 
@@ -66,63 +66,59 @@ Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a s
 
 ## <a name="cannot-find-web-server-iis-management-tools-even-though-the-role-was-installed"></a>Não é possível encontrar as ferramentas de gerenciamento do Servidor Web (IIS), embora a função esteja instalada
 
-Se você instalar o Windows PowerShell Web Access usando o cmdlet `Install-WindowsFeature`, as ferramentas de gerenciamento não serão instaladas, a menos que o parâmetro `-IncludeManagementTools` seja adicionado ao cmdlet.
+Se você instalou o Windows PowerShell Web Access usando o cmdlet `Install-WindowsFeature`, as ferramentas de gerenciamento não serão instaladas a menos que o parâmetro **IncludeManagementTools** seja adicionado ao cmdlet.
 
 Por exemplo, consulte [Para instalar o Windows PowerShell Web Access usando cmdlets do Windows PowerShell](install-and-use-windows-powershell-web-access.md#to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets).
 
-Você pode adicionar o console do Gerenciador do IIS e outras ferramentas de gerenciamento do IIS de que precisa, selecionando as ferramentas em uma sessão do **Assistente para Adicionar Funções e Recursos** direcionada ao servidor de gateway.
-O Assistente de Adição de Funções e Recursos é aberto do Gerenciador do Servidor.
+Você pode adicionar o console do Gerenciador do IIS e outras ferramentas de gerenciamento do IIS de que precisa, selecionando as ferramentas em uma sessão do **Assistente para Adicionar Funções e Recursos** direcionada ao servidor de gateway. O Assistente de Adição de Funções e Recursos é aberto do Gerenciador do Servidor.
 
 ## <a name="windows-powershell-web-access-website-is-not-accessible"></a>O site do Windows PowerShell Web Access não está acessível
 
 Se o recurso IE ESC (Configuração de Segurança Aprimorada do Internet Explorer) estiver habilitado, você poderá adicionar o site do Windows PowerShell Web Access à lista de sites confiáveis.
 
-Uma abordagem menos recomendada, devido a riscos de segurança, é desabilitar o IE ESC.
-Você pode desabilitar o IE ESC no bloco Propriedades na página Servidor Local no Gerenciador do Servidor.
+Uma abordagem menos recomendada, devido a riscos de segurança, é desabilitar o IE ESC. Você pode desabilitar o IE ESC no bloco Propriedades na página Servidor Local no Gerenciador do Servidor.
 
 ## <a name="an-authorization-failure-occurred-verify-that-you-are-authorized-to-connect-to-the-destination-computer"></a>Ocorreu uma falha de autorização. Verifique se que você está autorizado a conectar-se ao computador de destino.
 
 A mensagem de erro acima é exibida ao tentar se conectar quando o servidor de gateway é o computador de destino e também está um grupo de trabalho.
 
-Quando o servidor de gateway for o servidor de destino e também estiver em um grupo de trabalho, especifique o nome de usuário, o nome do computador e o nome do grupo de usuários.
-Não use um ponto (.) sozinho para representar o nome do computador.
+Quando o servidor de gateway for o servidor de destino e também estiver em um grupo de trabalho, especifique o nome de usuário, o nome do computador e o nome do grupo de usuários. Não use um ponto (.) sozinho para representar o nome do computador.
 
 ### <a name="scenarios-and-proper-values"></a>Cenários e valores adequados
 
 #### <a name="all-cases"></a>Todos os casos
 
-Parâmetro | Valor
--- | --
-UserName | Nome\_servidor\\nome\_usuário<br/>Localhost\\nome\_usuário<br/>.\\nome\_usuário
-UserGroup | Nome\_servidor\\grupo\_usuários<br/>Localhost\\grupo\_usuários<br/>.\\grupo\_usuários
-ComputerGroup | Nome\_servidor\\grupo\_computadores<br/>Localhost\\grupo\_computadores<br/>.\\grupo\_computadores
+  Parâmetro   |                                        Valor
+------------- | -----------------------------------------------------------------------------------
+UserName      | `Server_name\user_name`<br/>`Localhost\user_name`<br/>`.\user_name`
+UserGroup     | `Server_name\user_group`<br/>`Localhost\user_group`<br/>`.\user_group`
+ComputerGroup | `Server_name\computer_group`<br/>`Localhost\computer_group`<br/>`.\computer_group`
 
 #### <a name="gateway-server-is-in-a-domain"></a>O servidor de gateway está em um domínio
 
-Parâmetro | Valor
--- | --
+ Parâmetro   |                        Valor
+------------ | ----------------------------------------------------
 ComputerName | Nome totalmente qualificado do servidor de gateway ou Localhost
 
 #### <a name="gateway-server-is-in-a-workgroup"></a>O servidor de gateway está em um grupo de trabalho
 
-Parâmetro | Valor
--- | --
+ Parâmetro   |    Valor
+------------ | -----------
 ComputerName | Nome do servidor
 
 ### <a name="gateway-credentials"></a>Credenciais de gateway
 
 Entre em um servidor de gateway como computador de destino usando credenciais formatadas conforme uma das maneiras a seguir.
 
-- Nome\_servidor\\nome\_usuário
-- Localhost\\nome\_usuário
-- .\\nome\_usuário
+- `Server_name\user_name`
+- `Localhost\user_name`
+- `.\user_name`
 
 ## <a name="a-security-identifier-sid-is-displayed-in-an-authorization-rule"></a>Um SID (identificador de segurança) é exibido em uma regra de autorização
 
-Um SID (identificador de segurança) é exibido em uma regra de autorização em vez da sintaxe nome\_usuário/nome\_computador.
+Um SID (identificador de segurança) é exibido em uma regra de autorização, em vez da sintaxe `user_name/computer_name`.
 
-A regra não é mais válida ou a consulta aos Serviços de Domínio Active Directory falhou.
-A regra de autorização geralmente não é válida em cenários em que o servidor de gateway já esteve em um grupo de trabalho, mas depois ingressou em um domínio
+A regra não é mais válida ou a consulta aos Serviços de Domínio Active Directory falhou. A regra de autorização geralmente não é válida em cenários em que o servidor de gateway já esteve em um grupo de trabalho, mas depois ingressou em um domínio
 
 ## <a name="cannot-sign-in-with-rule-as-an-ipv6-address-with-a-domain"></a>Não é possível entrar com uma regra como um endereço IPv6 com um domínio
 
@@ -130,13 +126,12 @@ Não é possível entrar em um computador de destino especificado em regras de a
 
 As regras de autorização não dão suporte a endereços IPv6 no formato de nome de domínio.
 
-Para especificar um computador de destino usando um endereço IPv6, use o endereço IPv6 original (que contém dois-pontos) na regra de autorização.
-Tanto domínios quanto endereços IPv6 numéricos (com dois-pontos) têm suporte como nome do computador de destino na página de entrada do Windows PowerShell Web Access, mas não em regras de autorização.
+Para especificar um computador de destino usando um endereço IPv6, use o endereço IPv6 original (que contém dois-pontos) na regra de autorização. Tanto domínios quanto endereços IPv6 numéricos (com dois-pontos) têm suporte como nome do computador de destino na página de entrada do Windows PowerShell Web Access, mas não em regras de autorização.
 
-Para obter mais informações sobre endereços IPv6, consulte [How IPv6 Works](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx) (Como o IPv6 Funciona).
+Para obter mais informações sobre endereços IPv6, consulte [How IPv6 Works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10)) (Como o IPv6 Funciona).
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Authorization Rules and Security Features of Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx) (Regras de autorização e recursos de segurança do Windows PowerShell Web Access)
-- [Usar o Console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-- [about_Remote_Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
+- [Authorization Rules and Security Features of Windows PowerShell Web Access](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282394(v=ws.11)) (Regras de autorização e recursos de segurança do Windows PowerShell Web Access)
+- [Usar o Console do Windows PowerShell baseado na Web](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831417(v=ws.11))
+- [about_Remote_Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
