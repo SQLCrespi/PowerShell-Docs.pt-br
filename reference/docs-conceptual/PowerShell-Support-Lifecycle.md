@@ -2,12 +2,12 @@
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte ao PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: 27738514fc84105a0339eafcdbb540b7d3790052
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416293"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022222"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell Core
 
@@ -41,7 +41,7 @@ A política de ciclo de vida moderna também requer que a Microsoft forneça aos
 
 Por fim, esperamos que o PowerShell Core adote a abordagem de manutenção de longo prazo. Nessa abordagem de manutenção, exigiríamos apenas que as atualizações de serviço e segurança permanecessem em suporte em um branch/versão específica do 6.x.
 
-## <a name="supported-platforms"></a>Plataformas com suporte
+## <a name="supported-platforms"></a>Plataformas compatíveis
 
 Para confirmar se a plataforma e a versão do PowerShell Core têm suporte oficial, confira a tabela a seguir.
 
@@ -51,22 +51,24 @@ As plataformas listadas como `Experimental` não têm suporte oficial, mas estã
 
 | Plataforma                                          |      6.2      |    7.0    |
 |---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 e 10                            |   Suportado   | Suportado |
-| Windows Server 2008 R2, 2012 R2, 2016             |   Suportado   | Suportado |
-| [Canal Semestral do Windows Server][semi-annual] |   Suportado   | Suportado |
-| Ubuntu 16.04 e 18.04                            |   Suportado   | Suportado |
+| Windows 7, 8.1 e 10                            |   Com suporte   | Com suporte |
+| Windows Server 2008 R2, 2012 R2, 2016             |   Com suporte   | Com suporte |
+| [Canal Semestral do Windows Server][semi-annual] |   Com suporte   | Com suporte |
+| Ubuntu 16.04 e 18.04                            |   Com suporte   | Com suporte |
 | Ubuntu 18.10 (por meio do pacote Snap)                   |   Comunidade   | Comunidade |
 | Ubuntu 19.04 (por meio do pacote Snap)                   |   Comunidade   | Comunidade |
-| Debian 9                                          |   Suportado   | Suportado |
-| Debian 10                                         | Sem suporte | Suportado |
-| CentOS 7                                          |   Suportado   | Suportado |
-| Red Hat Enterprise Linux 7                        |   Suportado   | Suportado |
-| OpenSUSE 42.3                                     |   Suportado   | Suportado |
-| Fedora 28                                         |   Suportado   | Suportado |
-| Fedora 29, 30                                     | Sem suporte | Suportado |
+| Debian 9                                          |   Com suporte   | Com suporte |
+| Debian 10                                         | Sem suporte | Com suporte |
+| CentOS 7                                          |   Com suporte   | Com suporte |
+| CentOS 8                                          | Sem suporte | Com suporte |
+| Red Hat Enterprise Linux 7                        |   Com suporte   | Com suporte |
+| Red Hat Enterprise Linux 8                        | Sem suporte | Com suporte |
+| OpenSUSE 42.3                                     |   Com suporte   | Com suporte |
+| Fedora 28                                         |   Com suporte   | Com suporte |
+| Fedora 29, 30                                     | Sem suporte | Com suporte |
 | Alpine 3.8                                        |   Veja a observação    | Veja a observação  |
 | Alpine 3.9 e 3.10                               | Sem suporte | Veja a observação  |
-| macOS 10.12+                                      |   Suportado   | Suportado |
+| macOS 10.12+                                      |   Com suporte   | Com suporte |
 | Arch                                              |   Comunidade   | Comunidade |
 | Raspbian                                          |   Comunidade   | Comunidade |
 | Kali                                              |   Comunidade   | Comunidade |
@@ -85,7 +87,7 @@ Com base no [Ciclo de vida do PowerShell Core](#lifecycle-of-powershell-core), a
 
 | Versão | Fim da vida útil                   |
 |---------|-------------------------------|
-| 6.0     | 13 de fevereiro de 2019             |
+| 6,0     | 13 de fevereiro de 2019             |
 | 6.1     | 28 de setembro de 2019            |
 | 6.2     | 6 meses após 7 lançamentos     |
 
