@@ -258,7 +258,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Entrando em contato com os administradores
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: solução de problemas
+        - name: Solução de problemas
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Inicializando o provedor do NuGet e NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -288,6 +288,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: Novidades no ISE do PowerShell 5.0
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Histórico de versões de cmdlets e módulos
+      href: whats-new/cmdlet-versions.md
 - name: Ciclo de vida de suporte do PowerShell Core
   href: powershell-support-lifecycle.md
 - name: WMF (Windows Management Framework)
@@ -504,7 +506,7 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Configurar a chave do Registro DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: solução de problemas
+    - name: Solução de problemas
       items:
         - name: Problemas conhecidos
           href: dsc/troubleshooting/troubleshooting.md
