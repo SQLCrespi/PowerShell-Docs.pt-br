@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74dcb396-c295-4457-b84c-4432bdaa8df3
 caps.latest.revision: 7
-ms.openlocfilehash: 0f965f4ee1ef92a6a538b52b4348c04366cabf66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8142a620f0f71de3d2a6b33fc2e45092b5743a54
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360735"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995998"
 ---
-# <a name="helpinfo-xml-schema"></a><span data-ttu-id="29c4f-102">Esquema XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="29c4f-102">HelpInfo XML Schema</span></span>
+# <a name="helpinfo-xml-schema"></a><span data-ttu-id="38f32-102">Esquema XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="38f32-102">HelpInfo XML Schema</span></span>
 
-<span data-ttu-id="29c4f-103">Este tópico contém o esquema XML para arquivos de informações de ajuda atualizáveis, normalmente conhecidos como "arquivos XML HelpInfo".</span><span class="sxs-lookup"><span data-stu-id="29c4f-103">This topic contains the XML schema for Updatable Help Information files, commonly known as "HelpInfo XML files."</span></span>
+<span data-ttu-id="38f32-103">Este tópico contém o esquema XML para arquivos de informações de ajuda atualizáveis, normalmente conhecidos como "arquivos XML HelpInfo".</span><span class="sxs-lookup"><span data-stu-id="38f32-103">This topic contains the XML schema for Updatable Help Information files, commonly known as "HelpInfo XML files."</span></span>
 
-## <a name="helpinfo-xml-schema"></a><span data-ttu-id="29c4f-104">Esquema XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="29c4f-104">HelpInfo XML Schema</span></span>
+## <a name="helpinfo-xml-schema"></a><span data-ttu-id="38f32-104">Esquema XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="38f32-104">HelpInfo XML Schema</span></span>
 
-<span data-ttu-id="29c4f-105">Os arquivos XML HelpInfo são baseados no esquema XML a seguir.</span><span class="sxs-lookup"><span data-stu-id="29c4f-105">HelpInfo XML files are based on the following XML schema.</span></span>
+<span data-ttu-id="38f32-105">Os arquivos XML HelpInfo são baseados no esquema XML a seguir.</span><span class="sxs-lookup"><span data-stu-id="38f32-105">HelpInfo XML files are based on the following XML schema.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<schema targetNamespace="http://schemas.microsoft.com/powershell/help/2010/05" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="https://schemas.microsoft.com/powershell/help/2010/05" xmlns="http://www.w3.org/2001/XMLSchema">
   <element name="HelpInfo">
     <complexType>
       <sequence>
@@ -50,16 +50,16 @@ ms.locfileid: "72360735"
 </schema>
 ```
 
-## <a name="helpinfo-xml-elements"></a><span data-ttu-id="29c4f-106">Elementos XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="29c4f-106">HelpInfo XML Elements</span></span>
+## <a name="helpinfo-xml-elements"></a><span data-ttu-id="38f32-106">Elementos XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="38f32-106">HelpInfo XML Elements</span></span>
 
-<span data-ttu-id="29c4f-107">O arquivo XML HelpInfo inclui os elementos a seguir.</span><span class="sxs-lookup"><span data-stu-id="29c4f-107">The HelpInfo XML file includes the following elements.</span></span>
+<span data-ttu-id="38f32-107">O arquivo XML HelpInfo inclui os elementos a seguir.</span><span class="sxs-lookup"><span data-stu-id="38f32-107">The HelpInfo XML file includes the following elements.</span></span>
 
-<span data-ttu-id="29c4f-108">HelpContentURI contém o URI do local dos arquivos CAB de ajuda para o módulo.</span><span class="sxs-lookup"><span data-stu-id="29c4f-108">HelpContentURI Contains the URI of the location of the help CAB files for the module.</span></span> <span data-ttu-id="29c4f-109">O URI deve começar com "http" ou "https".</span><span class="sxs-lookup"><span data-stu-id="29c4f-109">The URI must begin with "http" or "https".</span></span> <span data-ttu-id="29c4f-110">O URI deve especificar um local da Internet, mas não deve incluir o nome do arquivo CAB.</span><span class="sxs-lookup"><span data-stu-id="29c4f-110">The URI should specify an Internet location, but must not include the CAB file name.</span></span> <span data-ttu-id="29c4f-111">O valor de **HelpContentURI** pode ser o mesmo ou diferente do valor de **HelpInfoURI** .</span><span class="sxs-lookup"><span data-stu-id="29c4f-111">The **HelpContentURI** value can be the  same or different from the **HelpInfoURI** value.</span></span>
+<span data-ttu-id="38f32-108">HelpContentURI contém o URI do local dos arquivos CAB de ajuda para o módulo.</span><span class="sxs-lookup"><span data-stu-id="38f32-108">HelpContentURI Contains the URI of the location of the help CAB files for the module.</span></span> <span data-ttu-id="38f32-109">O URI deve começar com "http" ou "https".</span><span class="sxs-lookup"><span data-stu-id="38f32-109">The URI must begin with "http" or "https".</span></span> <span data-ttu-id="38f32-110">O URI deve especificar um local da Internet, mas não deve incluir o nome do arquivo CAB.</span><span class="sxs-lookup"><span data-stu-id="38f32-110">The URI should specify an Internet location, but must not include the CAB file name.</span></span> <span data-ttu-id="38f32-111">O valor de **HelpContentURI** pode ser o mesmo ou diferente do valor de **HelpInfoURI** .</span><span class="sxs-lookup"><span data-stu-id="38f32-111">The **HelpContentURI** value can be the  same or different from the **HelpInfoURI** value.</span></span>
 
-<span data-ttu-id="29c4f-112">SupportedUICultures representa os arquivos de ajuda do módulo em todas as culturas da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="29c4f-112">SupportedUICultures Represents the module help files in all UI cultures.</span></span> <span data-ttu-id="29c4f-113">Contém elementos **UICulture** , cada um dos quais representa um conjunto de arquivos de ajuda para o módulo em uma cultura de interface do usuário especificada.</span><span class="sxs-lookup"><span data-stu-id="29c4f-113">Contains **UICulture** elements, each of which represents a set of help files for the module in a specified UI culture.</span></span>
+<span data-ttu-id="38f32-112">SupportedUICultures representa os arquivos de ajuda do módulo em todas as culturas da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="38f32-112">SupportedUICultures Represents the module help files in all UI cultures.</span></span> <span data-ttu-id="38f32-113">Contém elementos **UICulture** , cada um dos quais representa um conjunto de arquivos de ajuda para o módulo em uma cultura de interface do usuário especificada.</span><span class="sxs-lookup"><span data-stu-id="38f32-113">Contains **UICulture** elements, each of which represents a set of help files for the module in a specified UI culture.</span></span>
 
-<span data-ttu-id="29c4f-114">UICulture representa um conjunto de arquivos de ajuda para o módulo em uma cultura de interface do usuário especificada.</span><span class="sxs-lookup"><span data-stu-id="29c4f-114">UICulture Represents a set of help files for the module in a specified UI culture.</span></span> <span data-ttu-id="29c4f-115">Adicione um elemento **UICulture** para cada cultura de interface do usuário na qual os arquivos de ajuda são gravados.</span><span class="sxs-lookup"><span data-stu-id="29c4f-115">Add a **UICulture** element for each UI culture in which the help files are written.</span></span>
+<span data-ttu-id="38f32-114">UICulture representa um conjunto de arquivos de ajuda para o módulo em uma cultura de interface do usuário especificada.</span><span class="sxs-lookup"><span data-stu-id="38f32-114">UICulture Represents a set of help files for the module in a specified UI culture.</span></span> <span data-ttu-id="38f32-115">Adicione um elemento **UICulture** para cada cultura de interface do usuário na qual os arquivos de ajuda são gravados.</span><span class="sxs-lookup"><span data-stu-id="38f32-115">Add a **UICulture** element for each UI culture in which the help files are written.</span></span>
 
-<span data-ttu-id="29c4f-116">UICulturename contém o código de idioma para a cultura da interface do usuário na qual os arquivos de ajuda são gravados.</span><span class="sxs-lookup"><span data-stu-id="29c4f-116">UICultureName Contains the language code for the UI culture in which the help files are written.</span></span>
+<span data-ttu-id="38f32-116">UICulturename contém o código de idioma para a cultura da interface do usuário na qual os arquivos de ajuda são gravados.</span><span class="sxs-lookup"><span data-stu-id="38f32-116">UICultureName Contains the language code for the UI culture in which the help files are written.</span></span>
 
-<span data-ttu-id="29c4f-117">UICultureVersion contém um número de versão de 4 partes em "N1. N2. N3. N4 "formato que representa a versão do arquivo CAB de ajuda na cultura da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="29c4f-117">UICultureVersion Contains a 4-part version number in "N1.N2.N3.N4" format that represents the version of the help CAB file in the UI culture.</span></span> <span data-ttu-id="29c4f-118">Aumente esse número de versão sempre que carregar novos arquivos CAB de ajuda na cultura da interface do usuário especificada por **uiculturename**.</span><span class="sxs-lookup"><span data-stu-id="29c4f-118">Increment this version number whenever you upload new help CAB files in the UI culture that is specified by **UICultureName**.</span></span> <span data-ttu-id="29c4f-119">Para obter mais informações sobre esse valor, consulte "classe de versão (sistema)" no MSDN.</span><span class="sxs-lookup"><span data-stu-id="29c4f-119">For more information about this value, see "Version Class (System)" in MSDN.</span></span>
+<span data-ttu-id="38f32-117">UICultureVersion contém um número de versão de 4 partes em "N1. N2. N3. N4 "formato que representa a versão do arquivo CAB de ajuda na cultura da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="38f32-117">UICultureVersion Contains a 4-part version number in "N1.N2.N3.N4" format that represents the version of the help CAB file in the UI culture.</span></span> <span data-ttu-id="38f32-118">Aumente esse número de versão sempre que carregar novos arquivos CAB de ajuda na cultura da interface do usuário especificada por **uiculturename**.</span><span class="sxs-lookup"><span data-stu-id="38f32-118">Increment this version number whenever you upload new help CAB files in the UI culture that is specified by **UICultureName**.</span></span> <span data-ttu-id="38f32-119">Para obter mais informações sobre esse valor, consulte "classe de versão (sistema)" no MSDN.</span><span class="sxs-lookup"><span data-stu-id="38f32-119">For more information about this value, see "Version Class (System)" in MSDN.</span></span>
