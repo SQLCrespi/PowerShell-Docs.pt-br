@@ -2,12 +2,12 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Trabalhando com instalações de software
-ms.openlocfilehash: d164064418ad7a0209166c81a7c3cc32a9db300a
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737144"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76996119"
 ---
 # <a name="working-with-software-installations"></a>Trabalhando com instalações de software
 
@@ -75,7 +75,7 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-Se preferir, você poderá usar o parâmetro `Get-CimInstance` **Filter** para escolher apenas o Microsoft .NET 2.0 Runtime. O valor do parâmetro **Filter** usa a sintaxe da linguagem WQL, não a sintaxe do Windows PowerShell. Por exemplo:
+Se preferir, você poderá usar o parâmetro `Get-CimInstance` **Filter** para escolher apenas o Microsoft .NET 2.0 Runtime. O valor do parâmetro **Filter** usa a sintaxe da linguagem WQL, não a sintaxe do Windows PowerShell. Por exemplo: 
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
@@ -158,7 +158,7 @@ Name                           Property
 BB71E00}                       Comments            :
                                Contact             :
                                DisplayVersion      : 5.1.50918.0
-                               HelpLink            : http://go.microsoft.com/fwlink/?LinkID=91955
+                               HelpLink            : https://go.microsoft.com/fwlink/?LinkID=91955
                                HelpTelephone       :
                                InstallDate         : 20190115
                                InstallLocation     : C:\Program Files\Microsoft Silverlight\

@@ -1,23 +1,24 @@
 ---
 title: Importando um módulo do PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 02/03/2020
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
 caps.latest.revision: 13
-ms.openlocfilehash: bb5d036e5658c365a4fafa2cac05c0bba9f87019
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d5ce61a1cba1d91c130394c5cf7249021e95f485
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360695"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76996021"
 ---
 # <a name="importing-a-powershell-module"></a>Importar um módulo do PowerShell
 
-Depois de instalar um módulo em um sistema, você provavelmente vai querer importar o módulo. A importação é o processo que carrega o módulo na memória ativa, para que um usuário possa acessar esse módulo na sessão do PowerShell. No PowerShell 2,0, você pode importar um módulo do PowerShell instalado recentemente com uma chamada para o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) . No PowerShell 3,0, o PowerShell é capaz de importar implicitamente um módulo quando uma das funções ou cmdlets no módulo é chamado por um usuário. Observe que ambas as versões pressupõem que você instale o módulo em um local onde o PowerShell possa encontrá-lo; para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md). Você pode usar um manifesto de módulo para restringir quais partes do módulo são exportadas e pode usar parâmetros da chamada `Import-Module` para restringir quais partes são importadas.
+Depois de instalar um módulo em um sistema, você provavelmente vai querer importar o módulo. A importação é o processo que carrega o módulo na memória ativa, para que um usuário possa acessar esse módulo na sessão do PowerShell. No PowerShell 2,0, você pode importar um módulo do PowerShell instalado recentemente com uma chamada para o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) . No PowerShell 3,0, o PowerShell é capaz de importar implicitamente um módulo quando uma das funções ou cmdlets no módulo é chamado por um usuário. Observe que ambas as versões pressupõem que você instale o módulo em um local onde o PowerShell possa encontrá-lo; para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md).
+Você pode usar um manifesto de módulo para restringir quais partes do módulo são exportadas e pode usar parâmetros da chamada `Import-Module` para restringir quais partes são importadas.
 
 ## <a name="importing-a-snap-in-powershell-10"></a>Importando um snap-in (PowerShell 1,0)
 
@@ -25,7 +26,8 @@ Os módulos não existiam no PowerShell 1,0: em vez disso, era necessário regis
 
 ## <a name="importing-a-module-with-import-module-powershell-20"></a>Importando um módulo com Import-Module (PowerShell 2,0)
 
-O PowerShell 2,0 usa o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) nomeado apropriadamente para importar módulos. Quando esse cmdlet é executado, o Windows PowerShell procura o módulo especificado dentro dos diretórios especificados na variável `PSModulePath`. Quando o diretório especificado é encontrado, o Windows PowerShell procura arquivos na seguinte ordem: Arquivos de manifesto de módulo (. psd1), arquivos de módulo de script (. psm1), arquivos de módulo binário (. dll). Para obter mais informações sobre como adicionar diretórios à pesquisa, consulte [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md). O código a seguir descreve como importar um módulo:
+O PowerShell 2,0 usa o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) nomeado apropriadamente para importar módulos. Quando esse cmdlet é executado, o Windows PowerShell procura o módulo especificado dentro dos diretórios especificados na variável `PSModulePath`. Quando o diretório especificado é encontrado, o Windows PowerShell procura arquivos na seguinte ordem: Arquivos de manifesto de módulo (. psd1), arquivos de módulo de script (. psm1), arquivos de módulo binário (. dll). Para obter mais informações sobre como adicionar diretórios à pesquisa, consulte [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md).
+O código a seguir descreve como importar um módulo:
 
 ```powershell
 Import-Module myModule
@@ -37,7 +39,7 @@ Supondo que MyModule estava localizado na `PSModulePath`, o PowerShell carregar�
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-Você também pode usar o parâmetro-Verbose para identificar o que está sendo exportado fora do módulo e o que está sendo importado para a memória ativa. As exportações e as importações restringem o que é exposto ao usuário: a diferença é quem está controlando a visibilidade. Essencialmente, as exportações são controladas pelo código dentro do módulo. Por outro lado, as importações são controladas pela chamada `Import-Module`. Para obter mais informações, consulte **restringindo Membros que são importados**, abaixo.
+Você também pode usar o parâmetro `-Verbose` para identificar o que está sendo exportado fora do módulo e o que está sendo importado para a memória ativa. As exportações e as importações restringem o que é exposto ao usuário: a diferença é quem está controlando a visibilidade. Essencialmente, as exportações são controladas pelo código dentro do módulo. Por outro lado, as importações são controladas pela chamada `Import-Module`. Para obter mais informações, consulte **restringindo Membros que são importados**, abaixo.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Importando implicitamente um módulo (PowerShell 3,0)
 
@@ -47,7 +49,7 @@ As ações a seguir disparam a importação automática de um módulo, também c
 
 - Usando um cmdlet em um comando. Por exemplo, digitar `Get-ExecutionPolicy` importa o módulo Microsoft. PowerShell. Security que contém o cmdlet `Get-ExecutionPolicy`.
 
-- Usando o cmdlet [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) para obter o comando.  Por exemplo, digitar `Get-Command Get-JobTrigger` importa o módulo **PSScheduledJob** que contém o cmdlet `Get-JobTrigger`. Um comando `Get-Command` que inclui caracteres curinga é considerado como descoberta e não dispara a importação de um módulo.
+- Usando o cmdlet [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) para obter o comando. Por exemplo, digitar `Get-Command Get-JobTrigger` importa o módulo **PSScheduledJob** que contém o cmdlet `Get-JobTrigger`. Um comando `Get-Command` que inclui caracteres curinga é considerado como descoberta e não dispara a importação de um módulo.
 
 - Usando o cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) para obter ajuda para um cmdlet. Por exemplo, digitar `Get-Help Get-WinEvent` importa o módulo Microsoft. PowerShell. Diagnostics que contém o cmdlet `Get-WinEvent`.
 
@@ -62,20 +64,21 @@ Os metadados de membros que são exportados de um módulo têm uma propriedade M
 > [!WARNING]
 > Se o nome de um membro exportado usar um verbo não aprovado ou se o nome do membro usar caracteres restritos, um aviso será exibido quando o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) for executado.
 
-Por padrão, o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) não retorna nenhum objeto para o pipeline. No entanto, o cmdlet dá suporte a um parâmetro `PassThru` que pode ser usado para retornar um objeto [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) para cada módulo que é importado. Para enviar a saída para o host, os usuários devem executar o cmdlet [write-host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
+Por padrão, o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) não retorna nenhum objeto para o pipeline. No entanto, o cmdlet dá suporte a um parâmetro **PassThru** que pode ser usado para retornar um objeto [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) para cada módulo que é importado. Para enviar a saída para o host, os usuários devem executar o cmdlet [write-host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
 
 ## <a name="restricting--the-members-that-are-imported"></a>Restringindo os membros que são importados
 
-Quando um módulo é importado usando o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) , por padrão, todos os membros do módulo exportados são importados para a sessão, incluindo todos os comandos exportados para o módulo por um módulo aninhado. Por padrão, variáveis e aliases não são exportados. Para restringir os membros que são exportados, use um [manifesto de módulo](./how-to-write-a-powershell-module-manifest.md). Para restringir os membros que são importados, use os parâmetros a seguir do cmdlet `Import-Module`.
+Quando um módulo é importado usando o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) , por padrão, todos os membros do módulo exportados são importados para a sessão, incluindo todos os comandos exportados para o módulo por um módulo aninhado. Por padrão, variáveis e aliases não são exportados. Para restringir os membros que são exportados, use um [manifesto de módulo](./how-to-write-a-powershell-module-manifest.md).
+Para restringir os membros que são importados, use os parâmetros a seguir do cmdlet `Import-Module`.
 
-- `Function`: esse parâmetro restringe as funções que são exportadas. (Se você estiver usando um manifesto de módulo, consulte a chave FunctionsToExport.)
+- **Função**: esse parâmetro restringe as funções que são exportadas. (Se você estiver usando um manifesto de módulo, consulte a chave FunctionsToExport.)
 
-- `Cmdlet`: esse parâmetro restringe os cmdlets que são exportados (se você estiver usando um manifesto de módulo, consulte a chave CmdletsToExport).
+- `**cmdlet**: esse parâmetro restringe os cmdlets que são exportados (se você estiver usando um manifesto de módulo, consulte a chave CmdletsToExport).
 
-- `Variable`: esse parâmetro restringe as variáveis que são exportadas (se você estiver usando um manifesto de módulo, consulte a chave VariablesToExport).
+- **Variável**: esse parâmetro restringe as variáveis que são exportadas (se você estiver usando um manifesto de módulo, consulte a chave VariablesToExport).
 
-- `Alias`: esse parâmetro restringe os aliases exportados (se você estiver usando um manifesto de módulo, consulte a chave AliasesToExport).
+- **Alias**: esse parâmetro restringe os aliases que são exportados (se você estiver usando um manifesto de módulo, consulte a chave AliasesToExport).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja também
 
 [Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
