@@ -3,14 +3,14 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Perguntas frequentes sobre a Galeria do PowerShell
-ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328047"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818117"
 ---
-# <a name="frequently-asked-questions"></a>perguntas frequentes
+# <a name="frequently-asked-questions"></a>Perguntas frequentes
 
 ## <a name="what-is-a-powershell-module"></a>O que é um módulo do PowerShell?
 
@@ -172,7 +172,7 @@ Portanto, **PowerShellGet** exige um dos seguintes sistemas operacionais:
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>É possível reservar nomes para pacotes que serão publicados no futuro?
 
-Não é possível guardar nomes de pacotes. Se você acreditar que um pacote existente está usando um nome que seria mais adequado para o seu pacote, tente [entrar em contato com o proprietário do pacote](./how-to/working-with-packages/contacting-package-owners.md). Se não receber uma resposta dentro de duas semanas, você poderá contatar o suporte e a equipe da Galeria do PowerShell examinará a questão.
+Não é possível guardar nomes de pacotes. Se você acreditar que um pacote existente está usando um nome que seria mais adequado para o seu pacote, tente [entrar em contato com o proprietário do pacote](./how-to/working-with-packages/contacting-package-owners.md). Se não receber uma resposta dentro de duas semanas, entre em contato com o suporte, e a equipe da Galeria do PowerShell examinará a questão.
 
 ## <a name="how-do-i-claim-ownership-for-packages"></a>Como declarar a propriedade de pacotes?
 

@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: b8d493c070681fe680308fc9aa5b1ca0ae79acff
-  ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+  ms.openlocfilehash: 67d3f5f1816a11933183d079d2eb4bd3a5ab6e66
+  ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/23/2019
-  ms.locfileid: "74416589"
+  ms.lasthandoff: 02/04/2020
+  ms.locfileid: "76996082"
 highlightedContent:
   items:
   - title: Visão geral
@@ -28,7 +28,7 @@ highlightedContent:
     url: https://docs.microsoft.com/powershell/scripting/samples/sample-scripts-for-administration
   - title: Galeria do PowerShell
     itemType: deploy
-    url: http://www.powershellgallery.com/
+    url: https://www.powershellgallery.com/
   - title: Navegador do Módulo do PowerShell
     itemType: reference
     url: https://docs.microsoft.com/powershell/module/
@@ -67,7 +67,7 @@ productDirectory:
     - url: https://docs.microsoft.com/powershell/scripting/gallery/concepts/publishing-guidelines
       text: Práticas recomendadas
     - url: https://docs.microsoft.com/powershell/scripting/gallery/faqs
-      text: Perguntas Frequentes
+      text: Perguntas frequentes
   - title: PowerShell DSC
     imageSrc: https://docs.microsoft.com/media/common/i_config-tools.svg
     links:
@@ -104,7 +104,7 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-powershell
       text: Azure Functions usando o PowerShell
 tools:
-  title: Recursos da Comunidade
+  title: Recursos da comunidade
   summary: Conectar-se com outros usuários do PowerShell
   items:
   - title: Grupos de usuários

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Lista de verificação da criação de recursos
-ms.openlocfilehash: c0a18169b5e9f6ba0c3848b00725731453763611
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7401071db9cb149fff572d79568d69a0b8ea004
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952873"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818134"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação da criação de recursos
 
@@ -130,7 +130,7 @@ Possíveis tipos de problemas:
 - A Credencial/Sessão podem se comportar de maneira diferente, porque o agente do DSC é executado como um serviço.  Certifique-se de testar quaisquer recursos aqui de ponta a ponta.
 - Os erros gerados por `Start-DscConfiguration` podem ser diferentes daqueles exibidos ao chamar diretamente a função `Set-TargetResource`.
 
-## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Teste a compatibilidade em todas as plataformas com suporte para DSC
+## <a name="test-compatibility-on-all-dsc-supported-platforms"></a>Teste a compatibilidade em todas as plataformas com suporte para DSC
 
 O recurso deve funcionar em todas as plataformas do DSC com suporte (Windows Server 2008 R2 e mais recente). Instale o WMF (Windows Management Framework) mais recente em seu sistema operacional para obter a versão mais recente da DSC. Se seu recurso não funcionar em algumas dessas plataformas por design, uma mensagem de erro específica deverá ser retornada. Além disso, certifique-se de que o recurso verifica se os cmdlets que estão sendo chamados estão presentes em um computador específico. O Windows Server 2012 adicionou um grande número de novos cmdlets que não estão disponíveis no Windows Server 2008R2, mesmo com o WMF instalado.
 

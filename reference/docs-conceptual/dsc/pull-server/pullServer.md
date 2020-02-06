@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: d71c87e0420a0ee54eca36f1792b43103431233f
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
+ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870805"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885380"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -22,6 +22,14 @@ As opções atuais para o serviço de pull incluem:
 - Um serviço de pull em execução no Windows Server
 - Soluções de software livre mantidas pela comunidade
 - Um compartilhamento SMB
+
+A escala recomendada para cada solução é a seguinte:
+
+|                   Solução                   |              Nós clientes              |
+| -------------------------------------------- | -------------------------------------- |
+| Servidor de Pull do Windows usando o banco de dados MDB/ESENT | Até 500 nós                        |
+| Servidor de Pull do Windows usando o banco de dados SQL       | Até 1000 nós                       |
+| DSC de Automação do Azure                         | Cenários com mais de 1000 nós |
 
 **A solução recomendada**, e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
 
@@ -42,7 +50,7 @@ Entre os recursos do serviço online que não estão disponíveis no serviço de
 
 ## <a name="dsc-pull-service-in-windows-server"></a>Serviço de pull de DSC no Windows Server
 
-É possível configurar um serviço de pull para ser executado no Windows Server. Fique ciente de que a solução de serviço de pull incluída no Windows Server inclui apenas as funcionalidades de armazenamento de configurações/módulos para download e de captura de dados de relatório para o banco de dados. Ela não inclui muitas das funcionalidades oferecidas pelo serviço no Azure e, portanto, não é uma boa ferramenta para avaliar o modo como o serviço seria usado.
+É possível configurar um serviço de pull para ser executado no Windows Server. Fique ciente de que a solução de serviço de pull incluída no Windows Server inclui apenas as funcionalidades de armazenamento de configurações/módulos para download e de captura de dados de relatório para um banco de dados. Ela não inclui muitas das funcionalidades oferecidas pelo serviço no Azure e, portanto, não é uma boa ferramenta para avaliar o modo como o serviço seria usado.
 
 O serviço de pull oferecido no Windows Server é um serviço Web no IIS que utiliza uma interface OData para disponibilizar arquivos de configuração DSC para nós de destino quando são pedidos por tais nós.
 
@@ -219,7 +227,7 @@ Após a instalação do servidor pull ser concluída, as pastas definidas pelas 
 
 Cada módulo de recurso precisa ser compactado e nomeado de acordo com o seguinte padrão `{Module Name}_{Module Version}.zip`.
 
-Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado `xWebAdministration_3.1.2.0.zip`. Cada versão de um módulo deve estar contido em um único arquivo zip.
+Por exemplo, um módulo chamado **xWebAdminstration** com uma versão do módulo correspondente a 3.1.2.0 seria nomeado`xWebAdministration_3.1.2.0.zip`. Cada versão de um módulo deve estar contido em um único arquivo zip.
 Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão de módulos contendo recursos DSC no WMF 5.0 é `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`. Antes de empacotar o servidor de pull, remova a pasta **{versão do módulo}** para que o caminho se torne `{Module Folder}\DscResources\{DSC Resource Folder}\`. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 Use `New-DscChecksum {module zip file}` para criar um arquivo de soma de verificação para o módulo recém-adicionado.

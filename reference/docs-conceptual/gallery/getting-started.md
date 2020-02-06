@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Introdução à Galeria do PowerShell
-ms.openlocfilehash: ee3fe7d9c65ad1a8f9ffd2ddec0f4ce6659bc3d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328457"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995884"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
@@ -27,12 +27,12 @@ A Galeria do PowerShell é um repositório de pacotes contendo scripts, módulos
 - AllVersions
 - MinimumVersion
 - RequiredVersion
-- Tag
+- Marca
 - Includes
 - DscResource
 - RoleCapability
 - Comando
-- Filtro
+- Filtrar
 
 Caso tenha interesse apenas em descobrir recursos de DSC específicos na Galeria, execute o cmdlet [Find-DscResource][]. Find-DscResource retorna dados em recursos de DSC contidos na Galeria. Como os recursos de DSC sempre são fornecidos como parte de um módulo, você ainda precisa executar [Install-Module][] para instalar esses recursos.
 
@@ -76,9 +76,9 @@ Para saber mais sobre a Automação do Azure, confira a documentação da [Autom
 
 ## <a name="updating-packages-from-the-powershell-gallery"></a>Atualizar pacotes da Galeria do PowerShell
 
-Para atualizar pacotes instalados usando a Galeria do PowerShell, execute o cmdlet [Update-Module][] ou [Update-Script][]. Quando executado sem parâmetros adicionais, [Update-Module][] tenta atualizar todos os módulos instalados executando [Install-Module][]. Para atualizar os módulos seletivamente, adicione o parâmetro `-Name`.
+Para atualizar pacotes instalados da Galeria do PowerShell, execute o cmdlet [Update-Module][] ou [Update-Script][]. Quando executado sem nenhum parâmetro adicional, o [Update-Module][] tenta atualizar todos os módulos instalados executando o [Install-Module][]. Para atualizar os módulos seletivamente, adicione o parâmetro `-Name`.
 
-Da mesma forma, quando executado sem parâmetros adicionais, [Update-Script][] também tenta atualizar todos os scripts instalados executando [Install-Script][]. Para atualizar os scripts seletivamente, adicione o parâmetro `-Name`.
+Da mesma forma, quando executado sem parâmetros adicionais, o [Update-Script][] também tenta atualizar todos os scripts instalados executando o [Install-Script][]. Para atualizar os scripts seletivamente, adicione o parâmetro `-Name`.
 
 ## <a name="list-packages-that-you-have-installed-from-the-powershell-gallery"></a>Listar pacotes que você instalou da Galeria do PowerShell
 
@@ -98,3 +98,5 @@ De forma semelhante, para descobrir quais scripts você instalou da Galeria do P
 [Register-PSRepository]: /powershell/module/powershellget/Register-Repository
 [Save-Module]: /powershell/module/powershellget/Save-Module
 [Save-Script]: /powershell/module/powershellget/Save-Script
+[Update-Module]: /powershell/module/powershellget/Update-Module
+[Update-Script]: /powershell/module/powershellget/Update-Script
