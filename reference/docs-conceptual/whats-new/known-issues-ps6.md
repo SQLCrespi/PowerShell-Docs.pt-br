@@ -1,13 +1,13 @@
 ---
-ms.date: 05/17/2018
+ms.date: 02/03/2020
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: e84dd2f7deefcc64aea09585e7ce24dc1e8515fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71692216"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76996112"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -15,24 +15,24 @@ ms.locfileid: "71692216"
 
 As versões alfa do PowerShell no Linux e no macOS são em grande parte funcionais, mas têm limitações consideráveis e problemas de uso. As versões beta do PowerShell no Linux e no macOS são mais funcionais e estáveis do que as versões alfa, mas ainda carecem de alguns recursos e podem conter bugs. Em alguns casos, esses problemas são simplesmente bugs ainda não corrigidos. Em outros casos (como acontece com os aliases padrão para ls, cp etc)., queremos comentários da comunidade sobre as escolhas que fazemos.
 
-Observação: devido a semelhanças dos vários subsistemas subjacentes, o PowerShell no Linux e no macOS tendem a compartilhar o mesmo nível de maturidade com relação a recursos e bugs. Com exceção do que será indicado abaixo, os problemas nesta seção se aplicam aos dois sistemas operacionais.
+Observação: devido a semelhanças dos vários subsistemas subjacentes, o PowerShell no Linux e no macOS tendem a compartilhar o mesmo nível de maturidade com relação a recursos e bugs. Com exceção dos itens abaixo, os problemas desta seção se aplicam a ambos os sistemas operacionais.
 
 ### <a name="case-sensitivity-in-powershell"></a>Diferenciação de maiúsculas e minúsculas no PowerShell
 
 Historicamente, o PowerShell nunca diferenciou maiúsculas de minúsculas, com algumas exceções. Em sistemas operacionais do tipo UNIX, o sistema de arquivos é predominantemente indiferente a maiúsculas e minúsculas, e o PowerShell segue o padrão do sistema de arquivos. Isso é exposto de várias maneiras, óbvias e não óbvias.
 
-#### <a name="directly"></a>Diretamente
+#### <a name="directly"></a>diretamente
 
 - Ao especificar um arquivo no PowerShell, a capitalização correta deve ser usada.
 
 #### <a name="indirectly"></a>Indiretamente
 
 - Se um script tentar carregar um módulo, e o nome do módulo não estiver com as maiúsculas e minúsculas corretas, o carregamento do módulo falhará. Isso pode causar um problema com os scripts existentes, se o nome pelo qual o módulo é chamado não corresponder ao nome real do arquivo.
-- O preenchimento com Tab não ocorrerá automaticamente se a capitalização do nome do arquivo estiver incorreta. O fragmento para preenchimento deve ter a capitalização correta. O preenchimento não diferencia maiúsculas de minúsculas para o nome do tipo e conclusões de membro do tipo.
+- O preenchimento com Tab não ocorre automaticamente se a capitalização do nome do arquivo está incorreta. O fragmento para preenchimento deve ter a capitalização correta. O preenchimento não diferencia maiúsculas de minúsculas para o nome do tipo e conclusões de membro do tipo.
 
 ### <a name="ps1-file-extensions"></a>Extensões de arquivo .PS1
 
-Os scripts do PowerShell devem terminar em `.ps1` para o interpretador entender como carregar e executá-los no processo atual. A execução de scripts no processo atual é o comportamento normal esperado para o PowerShell. O número mágico `#!` pode ser adicionado a um script que não tem uma extensão `.ps1`, mas isso fará com que o script seja executado em uma nova instância do PowerShell, impedindo que o script funcione corretamente ao trocar objetos. Observação: esse pode ser o comportamento desejável ao executar um script do PowerShell do `bash` ou outro shell.
+Os scripts do PowerShell devem terminar em `.ps1` para o interpretador entender como carregar e executá-los no processo atual. A execução de scripts no processo atual é o comportamento normal esperado para o PowerShell. O número mágico `#!` pode ser adicionado a um script que não tem uma extensão `.ps1`, mas isso faz com que o script seja executado em uma nova instância do PowerShell, impedindo que o script funcione corretamente ao trocar objetos. Observação: esse pode ser o comportamento desejável ao executar um script do PowerShell do `bash` ou outro shell.
 
 ### <a name="missing-command-aliases"></a>Aliases de comando ausentes
 
@@ -41,13 +41,13 @@ No Linux/macOS, os "aliases de conveniência" para os comandos básicos `ls`, `c
 Há vantagens e desvantagens nisso. A remoção dos aliases expõe a experiência do comando nativo ao usuário do PowerShell, mas reduz a funcionalidade no shell, pois os comandos nativos retornam cadeias de caracteres em vez de objetos.
 
 > [!NOTE]
-> Essa é uma área sobre a qual a equipe do PowerShell está procurando comentários.
-> Qual é a solução preferida? Devemos deixar como está ou adicionar novamente os aliases de conveniência? Consulte a [Edição #929](https://github.com/PowerShell/PowerShell/issues/929).
+> Essa é uma área sobre a qual a equipe do PowerShell está procurando comentários. Qual é a solução preferida?
+> Devemos deixar como está ou adicionar novamente os aliases de conveniência? Consulte a [Edição #929](https://github.com/PowerShell/PowerShell/issues/929).
 
 ### <a name="missing-wildcard-globbing-support"></a>Falta o suporte ao recurso de curinga
 
 No momento, o PowerShell só faz expansão de curinga (recurso de curinga) para cmdlets internos do Windows, e para comandos externos ou binários, bem como os cmdlets no Linux. Isso significa que um comando como `ls
-*.txt` falhará devido à falta de expansão do asterisco para corresponder aos nomes de arquivo. Você pode contornar esse problema fazendo `ls (gci *.txt | % name)` ou, simplificando, `gci *.txt` usando o equivalente interno do PowerShell para `ls`.
+*.txt` falha devido à falta de expansão do asterisco para corresponder aos nomes de arquivo. Você pode contornar esse problema fazendo `ls (gci *.txt | % name)` ou, simplificando, `gci *.txt` usando o equivalente interno do PowerShell para `ls`.
 
 Confira [#954](https://github.com/PowerShell/PowerShell/issues/954) para fazer comentários sobre como melhorar a experiência de recurso de curinga no Linux/macOS.
 
@@ -55,7 +55,7 @@ Confira [#954](https://github.com/PowerShell/PowerShell/issues/954) para fazer c
 
 O PowerShell no Linux/macOS usa .NET Core, que é um subconjunto do .NET Framework completo no Microsoft Windows. Isso é significativo, pois o PowerShell fornece acesso direto aos tipos de estrutura subjacentes, métodos etc. Como resultado, scripts executados no Windows não podem ser executados em outras plataformas devido às diferenças nas estruturas. Para saber mais sobre o .NET Core Framework, confira [dotnetfoundation.org](https://dotnetfoundation.org/).
 
-Com o surgimento do [.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/), o .NET Core 2.0 trará de volta muitos tipos e métodos tradicionais presentes no .NET Framework completo. Isso significa que o PowerShell Core poderá carregar vários módulos tradicionais do Windows PowerShell sem modificação. Siga o nosso trabalho relacionado ao .NET Standard 2.0 [aqui](https://github.com/PowerShell/PowerShell/projects/4).
+Com o surgimento do [.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/), o .NET Core 2.0 traz de volta muitos tipos e métodos tradicionais presentes no .NET Framework completo. Isso significa que o PowerShell Core pode carregar vários módulos tradicionais do Windows PowerShell sem modificação. Siga o nosso trabalho relacionado ao .NET Standard 2.0 [aqui](https://github.com/PowerShell/PowerShell/projects/4).
 
 ### <a name="redirection-issues"></a>Redirecionamento de problemas
 
@@ -64,7 +64,7 @@ Não há suporte para o redirecionamento de entrada no PowerShell em qualquer pl
 
 Use `Get-Content` para gravar o conteúdo de um arquivo no pipeline.
 
-A saída redirecionada conterá a BOM (marca de ordem de byte) Unicode quando a codificação UTF-8 padrão for usada. A BOM causará problemas ao trabalhar com utilitários que não a esperam, ou ao ser anexada a um arquivo. Use `-Encoding Ascii` para escrever texto ASCII (o qual, não sendo Unicode, não terá uma BOM).
+A saída redirecionada contém a BOM (marca de ordem de byte) Unicode quando a codificação UTF-8 padrão for usada. A BOM causa problemas ao trabalhar com utilitários que não a esperam, ou ao ser anexada a um arquivo. Use `-Encoding Ascii` para gravar texto ASCII, que não tem uma BOM.
 
 > [!Note]
 > Confira [RFC0020](https://github.com/PowerShell/PowerShell-RFC/issues/71) para nos enviar comentários sobre como melhorar a experiência de codificação no PowerShell Core em todas as plataformas. Estamos trabalhando para dar suporte a UTF-8 sem uma BOM e possivelmente alterando os padrões de codificação para diversos cmdlets entre plataformas.
@@ -92,11 +92,11 @@ A capacidade de criar pontos de extremidade de comunicação remota de administr
 
 Como o PowerShell executa a maioria dos comandos na memória (como Python ou Ruby), não é possível usar o sudo diretamente com integrações do PowerShell. Você pode, obviamente, executar `pwsh` com o sudo. Se for necessário executar um cmdlet do PowerShell de dentro do PowerShell com sudo, por exemplo, `sudo Set-Date 8/18/2016`, você faria `sudo pwsh Set-Date 8/18/2016`. Da mesma forma, não é possível executar uma integração do PowerShell diretamente. Em vez disso, será necessário fazer `exec pwsh item_to_exec`.
 
-Esse problema está sendo acompanhado como parte da [#3232](https://github.com/PowerShell/PowerShell/issues/3232).
+Este problema está sendo acompanhado como parte da [#3232](https://github.com/PowerShell/PowerShell/issues/3232).
 
 ### <a name="missing-cmdlets"></a>Cmdlets ausentes
 
-Muitos comandos (cmdlets) normalmente disponíveis no PowerShell não está disponíveis no Linux/macOS. Em muitos casos, esses comandos não fazem nenhum sentido nessas plataformas (por exemplo, recursos específicos do Windows como o Registro). Outros comandos, como os comandos de controle de serviço (Get/Start/Stop-Service) estão presentes, mas não são funcionais. As versões futuras corrigirão esses problemas, arrumando os cmdlets quebrados e adicionando novos valores ao longo do tempo.
+Muitos comandos (cmdlets) normalmente disponíveis no PowerShell não está disponíveis no Linux/macOS. Em muitos casos, esses comandos não fazem nenhum sentido nessas plataformas (por exemplo, recursos específicos do Windows como o Registro). Outros comandos, como os comandos de controle de serviço (Get/Start/Stop-Service) estão presentes, mas não são funcionais. As versões futuras podem corrigir esses problemas arrumando os cmdlets quebrados e adicionando novos valores ao longo do tempo.
 
 ### <a name="command-availability"></a>Disponibilidade do comando
 
@@ -104,11 +104,10 @@ A tabela a seguir lista os comandos que não funcionam no PowerShell no Linux/ma
 
 |Comandos|Estado Operacional|Observações|
 |--------|-----------------|-----|
-|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
-|`Get-Acl`, `Set-Acl`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
-|`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não são reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-Acl`, `Get-AuthenticodeSignature`, `Get-CmsMessage`, `New-FileCatalog`, `Protect-CmsMessage`, `Set-Acl`, `Set-AuthenticodeSignature`, `Test-FileCatalog`, `Unprotect-CmsMessage`|Não disponível.|Esses comandos não são reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Wait-Process`|Disponível, não funciona corretamente. |Por exemplo, `Start-Process gvim -PassThru | Wait-Process` não funciona; ele falha ao aguardar o processo.|
-|`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|Disponível, mas não funciona.|Grava uma mensagem de erro indicando que os comandos não estão funcionando. Devem ser corrigidos em uma versão futura.|
-|`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|Disponível, mas não há fontes de evento disponíveis.|Os comandos de evento do PowerShell estão presentes, mas a maioria das fontes de evento usadas com os comandos (como System.Timers.Timer) não está disponível no Linux, tornando os comandos inúteis na versão alfa.|
+|`Connect-PSSession`, `Disable-PSRemoting`, `Disable-PSSessionConfiguration`, `Disconnect-PSSession`, `Enable-PSRemoting`, `Enable-PSSessionConfiguration`, `Get-PSSessionCapability`, `Get-PSSessionConfiguration`, `New-PSSessionConfigurationFile`, `Receive-PSSession`, `Register-PSSessionConfiguration`, `Set-PSSessionConfiguration`, `Test-PSSessionConfigurationFile`, `Unregister-PSSessionConfiguration`|Não disponível.|Esses comandos não são reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-Event`, `New-Event`, `Register-EngineEvent`, `Remove-Event`, `Unregister-Event`|Disponível, mas não há fontes de evento disponíveis.|Os comandos de evento do PowerShell estão presentes, mas a maioria das fontes de evento usadas com os comandos (como System.Timers.Timer) não está disponível no Linux, tornando os comandos inúteis na versão alfa.|
 |`Set-ExecutionPolicy`|Disponível, mas não funciona.|Retorna uma mensagem informando que não há suporte nessa plataforma. A política de execução é um "dispositivo de segurança" voltado ao usuário que o ajuda a não cometer erros caros. Não é um limite de segurança.|
 |`New-PSSessionOption`, `New-PSTransportOption`|Disponível, mas `New-PSSession` não funciona.|`New-PSSessionOption` e `New-PSTransportOption` não estão atualmente verificados para funcionar agora que `New-PSSession` funciona.|
