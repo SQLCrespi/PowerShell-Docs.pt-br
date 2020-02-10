@@ -11,7 +11,7 @@ ms.locfileid: "75736991"
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile
 
-Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe ****Microsoft.PowerShell.Host.ISE.ISEFile**.
+Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Métodos
 
