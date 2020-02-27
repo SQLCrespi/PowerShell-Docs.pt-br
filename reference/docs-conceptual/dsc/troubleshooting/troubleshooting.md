@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: DSC,powershell,configuração,instalação
 title: Solucionando problemas de DSC
-ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954613"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478778"
 ---
 # <a name="troubleshooting-dsc"></a>Solucionando problemas de DSC
 
@@ -17,7 +17,7 @@ Este tópico descreve maneiras de solucionar o DSC quando surgem problemas.
 
 ## <a name="winrm-dependency"></a>Dependência do WinRM
 
-O DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 nem no Windows 7. Execute `Set-WSManQuickConfig`, em uma sessão de privilégios elevados do Windows PowerShell, para habilitar o WinRM.
+O DSC (Desired State Configuration) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 nem no Windows 7. Execute o `Set-WSManQuickConfig`, em uma sessão com privilégios elevados do Windows PowerShell para habilitar o WinRM.
 
 ## <a name="using-get-dscconfigurationstatus"></a>Usando Get-DscConfigurationStatus
 
@@ -642,6 +642,16 @@ https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned une
 
 Isso pode ocorrer quando o certificado usado no servidor para criptografar o tráfego tem um CN (nome comum) diferente do nome DNS usado pelo nó para resolver a URL.
 Atualize a instância do Servidor de Pull do Windows para usar um certificado com um nome corrigido.
+
+## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>Erro ao executar o Sysprep depois de aplicar uma configuração de DSC
+
+Se você aplicou uma configuração DSC, ao tentar executar o Sysprep para generalizar um Windows Server, você poderá encontrar o seguinte erro.
+
+```
+SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
+```
+
+Generalizar um servidor que foi configurado usando a Desired State Configuration do Windows PowerShell é um cenário sem suporte.  Em vez disso, aplique as configurações ao Windows depois que a fase de Especialização da Instalação do Windows for concluída.
 
 ## <a name="see-also"></a>Consulte Também
 
