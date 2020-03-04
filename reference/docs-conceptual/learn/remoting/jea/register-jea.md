@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,segurança
 title: Registrando Configurações de JEA
-ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417606"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706199"
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 
@@ -51,7 +51,7 @@ Após o registro, você estará pronto para [usar o JEA](using-jea.md). Você po
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configuração de vários computadores com o DSC
 
-Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples usará o recurso [DSC (Desired State Configuration)](/powershell/scripting/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
+Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples usará o recurso [DSC (Desired State Configuration)](../../../dsc/overview/overview.md) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
 
 Para implantar o JEA com o DSC, garanta que os seguintes pré-requisitos sejam atendidos:
 
@@ -65,7 +65,7 @@ Crie uma configuração DSC para o ponto de extremidade JEA em um computador de 
 
 As seguintes propriedades são configuráveis usando o recurso de DSC:
 
-- Definições de Função
+- Definições de Funções
 - Grupos de contas virtuais
 - Nome da conta de serviço gerenciado de grupo
 - Diretório de transcrição
