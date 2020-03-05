@@ -2,12 +2,12 @@
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte ao PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
-ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
+ms.openlocfilehash: 8cf8a0ac6140d28e55b065bf711763ba1c681d63
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478795"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706250"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell Core
 
@@ -71,7 +71,7 @@ As plataformas listadas como `Experimental` não têm suporte oficial, mas estã
 | Raspbian                                          |   Comunidade   | Comunidade |
 | Kali                                              |   Comunidade   | Comunidade |
 | AppImage (funciona em várias plataformas Linux)      |   Comunidade   | Comunidade |
-| [Pacote Snap](https://snapcraft.io/powershell)   |   Consultar a observação    | Consultar a observação  |
+| [Pacote Snap](https://snapcraft.io/powershell)   |   Veja a observação    | Veja a observação  |
 
 > [!NOTE]
 > Os pacotes Snap têm suporte da mesma forma que a distribuição na qual você está executando o pacote.
@@ -141,6 +141,22 @@ Add-WindowsPSModulePath
 
 Os [recursos experimentais][] estão limitados ao [suporte da comunidade](#community-support).
 
+## <a name="release-history"></a>Histórico de versões
+
+A tabela a seguir contém uma linha do tempo das principais versões do PowerShell. Esta tabela é fornecida para referência histórica. Ela não se destina ao uso para determinar o ciclo de vida do suporte.
+
+|       Versão        | Data de lançamento |                                                                     Observação                                                                      |
+| -------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| PowerShell 7.0 (LTS) |   Março de 2020   | Criado no .NET Core 3.1 (LTS)                                                                                                                  |
+| PowerShell 6.0       |   Janeiro de 2018   | Primeira versão, criada no .NET Core 2.1. Instalável no Windows, Linux e macOS.                                                              |
+| PowerShell 5.1       |   Agosto de 2016   | Lançado na Atualização de Aniversário do Windows 10 e no Windows Server 2016                                                                             |
+| PowerShell 5.0       |   Fevereiro de 2016   | Lançado no WMF (Windows Management Framework) 5.0                                                                                            |
+| PowerShell 4.0       |   Outubro de 2013   | Integrado no Windows 8.1 e no Windows Server 2012 R2. Instalável no Windows 7 SP1, Windows Server 2008 R2 SP1 e Windows Server 2012. |
+| PowerShell 3.0       |   Outubro de 2012   | Integrado no Windows 8 e no Windows Server 2012. Instalável no Windows 7 SP1, Windows Server 2008 SP1 e Windows Server 2008 R2 SP1.  |
+| PowerShell 2.0       |   Julho de 2009   | Integrado no Windows 7 e no Windows Server 2008 R2. Instalável no Windows XP SP3, Windows Server 2003 SP2 e Windows Vista SP1.            |
+| PowerShell 1.0       |   Novembro de 2006   | Instalável no Windows XP SP2, Windows Server 2003 SP1 e Windows Vista. Componente opcional do Windows Server 2008.                          |
+
+<!-- hyperlink references -->
 [Premier]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx

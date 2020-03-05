@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359625"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277450"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Criar um fluxo de trabalho com atividades do Windows PowerShell
 
@@ -68,14 +68,14 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
     |--------------|-----------|
     |**ComputerName**|às|
     |**Credencial**|MachineCred|
-    |**Para**|Microsoft. PowerShell. Commands. WaitForServiceTypes. PowerShell|
-    |**Aplicação**|verdadeiro|
-    |Wait|verdadeiro|
+    |**Fins**|Microsoft. PowerShell. Commands. WaitForServiceTypes. PowerShell|
+    |**Aplicação**|True|
+    |Aguarde|True|
     |PSComputerName|{""}|
 
 13. Adicione uma atividade **getwmiobject** à sequência **JoinDomain** após a atividade **RestartComputer** . Edite suas propriedades para que sejam iguais à atividade **getwmiobject** anterior.
 
     Quando você tiver concluído os procedimentos, a janela de design do fluxo de trabalho deverá ser parecida com esta.
 
-    ![XAML JoinDomain no designer de fluxo de trabalho](../media/joindomainworkflow.png)
-    ![XAML do JoinDomain no designer de fluxo de trabalho](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    ![XAML JoinDomain no designer de fluxo de trabalho](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+    ![XAML do JoinDomain no designer de fluxo de trabalho](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")

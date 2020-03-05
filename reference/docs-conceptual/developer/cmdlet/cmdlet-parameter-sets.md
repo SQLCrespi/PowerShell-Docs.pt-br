@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
 caps.latest.revision: 10
-ms.openlocfilehash: dfe747893b4aef6376ea3b12dd79b7c144455ed0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 41cb32735091f065a0835378428de190d08f3160
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415696"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278969"
 ---
 # <a name="cmdlet-parameter-sets"></a>Conjuntos de parâmetros de cmdlet
 
@@ -31,7 +31,7 @@ Cada conjunto de parâmetros deve ter um parâmetro exclusivo que o tempo de exe
 
 Na ilustração a seguir, a coluna à esquerda mostra três conjuntos de parâmetros válidos. O **parâmetro A** é exclusivo para o primeiro conjunto de parâmetros, o **parâmetro B** é exclusivo para o segundo conjunto de parâmetros, e o **parâmetro C** é exclusivo para o terceiro conjunto de parâmetros. Na coluna à direita, os conjuntos de parâmetros não têm um parâmetro exclusivo.
 
-![ps_parametersets](../media/ps-parametersets.gif)
+![ps_parametersets](media/cmdlet-parameter-sets/ps-parametersets.gif)
 
 ## <a name="parameter-set-requirements"></a>Requisitos do conjunto de parâmetros
 
