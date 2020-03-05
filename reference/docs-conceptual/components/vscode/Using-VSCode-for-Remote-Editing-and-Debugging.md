@@ -15,7 +15,7 @@ Para aqueles que se familiarizaram com o ISE, talvez se lembrem que podiam execu
 
 Esse recurso também está disponível na extensão do PowerShell para VSCode. Este guia mostra como fazê-lo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este guia pressupõe que você tenha:
 

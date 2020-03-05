@@ -27,7 +27,7 @@ Nós registrados no [DSC de Automação do Azure](https://docs.microsoft.com/azu
 > Certificados autoassinados *não* devem ser usados para fins de autenticação.
 > Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para criptografar com êxito as credenciais usadas para proteger uma configuração DSC, verifique se que você tem o seguinte:
 

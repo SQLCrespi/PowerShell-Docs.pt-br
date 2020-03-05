@@ -239,7 +239,7 @@ O que será usado como processo para configurar computadores cliente e como isso
 
 *Os scripts fornecidos neste documento são exemplos estáveis. Sempre examine os scripts cuidadosamente antes de executá-los em um ambiente de produção.*
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Para verificar a versão do PowerShell no seu servidor use o comando a seguir.
 

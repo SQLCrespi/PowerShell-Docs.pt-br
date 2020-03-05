@@ -18,7 +18,7 @@ Esse processo simula a primeira parte de um pipeline que seria usado em um ambie
 
 Um pipeline de CI/CD automatizado ajuda a atualizar softwares com mais rapidez e confiança, garantir que todo o código seja testado e que um build atual do código esteja sempre disponível.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para usar este exemplo, você deve estar familiarizado com o seguinte:
 

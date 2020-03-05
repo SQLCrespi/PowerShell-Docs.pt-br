@@ -20,7 +20,7 @@ Há várias maneiras de instalar o PowerShell Core no Windows.
 > dotnet tool install --global PowerShell
 > ```
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisitos a seguir precisam ser atendidos:
 

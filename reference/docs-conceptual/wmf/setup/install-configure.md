@@ -21,7 +21,7 @@ ms.locfileid: "71147686"
 
 Baixe o pacote do WMF 5.1 de acordo com o seu sistema operacional e a sua arquitetura:
 
-| Sistema operacional       | Pré-requisitos           | Links de pacote                          |
+| Sistema operacional       | Prerequisites           | Links de pacote                          |
 |------------------------|-------------------------|----------------------------------------|
 | Windows Server 2012 R2 |                         | [Win8.1AndW2K12R2-KB3191564-x64.msu][] |
 | Windows Server 2012    |                         | [W2K12-KB3191565-x64.msu][]            |

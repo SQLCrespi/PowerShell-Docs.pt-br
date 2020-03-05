@@ -6,7 +6,7 @@
   items:
     - name: Instalar várias versões do PowerShell
       href: install/installing-powershell.md
-    - name: PowerShell Core
+    - name: Instalar o PowerShell
       items:
         - name: Instalar o PowerShell Core no Windows
           href: install/installing-powershell-core-on-windows.md
@@ -16,7 +16,7 @@
           href: install/installing-powershell-core-on-macos.md
         - name: Instalar o PowerShell Core no ARM
           href: install/powershell-core-on-arm.md
-    - name: Windows PowerShell
+    - name: Instalar o Windows PowerShell 5.1
       items:
         - name: Instalar o Windows PowerShell
           href: install/installing-windows-powershell.md
@@ -24,6 +24,8 @@
           href: install/installing-the-windows-powershell-2.0-engine.md
         - name: Requisitos do Sistema do Windows PowerShell
           href: install/windows-powershell-system-requirements.md
+    - name: Como usar o PowerShell no Docker
+      href: install/PowerShell-in-Docker.md
 - name: Introdução
   items:
     - name: Introdução ao PowerShell
@@ -58,7 +60,7 @@
           items:
             - name: Visão geral
               href: learn/remoting/jea/overview.md
-            - name: Prerequisites
+            - name: Pré-requisitos
               href: learn/remoting/jea/prerequisites.md
             - name: Capacidades de Função
               href: learn/remoting/jea/role-capabilities.md
@@ -268,6 +270,10 @@
       href: gallery/faqs.md
 - name: What's New
   items:
+    - name: Novidades no PowerShell 7.x
+      items:
+        - name: Novidades no PowerShell 7.0
+          href: whats-new/what-s-new-in-powershell-70.md
     - name: Novidades no PowerShell Core 6.x
       items:
         - name: Novidades no PowerShell Core 6.2

@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416719"
 ---
-# <a name="prerequisites"></a>Pré-requisitos
+# <a name="prerequisites"></a>Prerequisites
 
 O Just Enough Administration é um recurso incluído no PowerShell 5.0 e posterior. Este artigo descreve os pré-requisitos que precisam ser atendidos para começar a usar o JEA.
 
