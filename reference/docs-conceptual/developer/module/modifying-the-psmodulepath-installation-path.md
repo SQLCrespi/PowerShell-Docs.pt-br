@@ -8,18 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
-ms.openlocfilehash: 5957ea4c15cd3778bd09b67c4b97de0ef0cfdd2a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.openlocfilehash: b176d8439025ac132962859f79e72ae6f9703e82
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74953833"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78405050"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Modificar o caminho de instalação PSModulePath
 
 A variável de ambiente `PSModulePath` armazena os caminhos para os locais dos módulos que estão instalados no disco. O PowerShell usa essa variável para localizar módulos quando o usuário não especifica o caminho completo para um módulo. Os caminhos nessa variável são pesquisados na ordem em que aparecem.
 
-Quando o PowerShell é iniciado, `PSModulePath` é criado como uma variável de ambiente do sistema com o seguinte valor padrão: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` ou `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` para Windows PowerShell.
+Quando o PowerShell é iniciado, `PSModulePath` é criado como uma variável de ambiente do sistema com o seguinte valor padrão: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` no Windows e no `$HOME/.local/share/powershell/Modules: usr/local/share/powershell/Modules` no Linux ou Mac e `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` para Windows PowerShell.
+
+> [!NOTE]
+> O local **CurrentUser** específico do usuário é a pasta `WindowsPowerShell\Modules` localizada no local **documentos** em seu perfil de usuário. O caminho específico desse local varia de acordo com a versão do Windows e se você está usando o redirecionamento de pasta. Por padrão, no Windows 10, esse local é `$HOME\Documents\WindowsPowerShell\Modules`.
 
 ## <a name="to-view-the-psmodulepath-variable"></a>Para exibir a variável PSModulePath
 
@@ -56,3 +59,5 @@ Você pode remover caminhos da variável usando métodos semelhantes: por exempl
 ## <a name="see-also"></a>Consulte Também
 
 [Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+
+[about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)
