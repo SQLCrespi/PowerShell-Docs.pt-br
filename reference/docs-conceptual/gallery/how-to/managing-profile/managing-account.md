@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
-ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328027"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278045"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -25,7 +25,7 @@ A Galeria do PowerShell oferece as seguintes configurações de conta:
 
 O endereço de email é o destino para receber notificações de Galeria do PowerShell. Ele não precisa corresponder à conta de logon. É possível usar qualquer conta de email a que você tem acesso. Seu endereço de email nunca é diretamente fornecido pela Galeria do PowerShell para outros usuários.
 
-![Alterar o endereço de email](../../Images/PSGallery_AcccountEmailAddress.png)
+![Alterar o endereço de email](media/managing-account/PSGallery_AcccountEmailAddress.png)
 
 A Galeria do PowerShell envia uma mensagem de verificação quando um novo endereço de email é inserido. O email de verificação tem um link para a Galeria do PowerShell para concluir o processo de alteração. Até a conclusão do processo de verificação, todas as notificações são enviadas para o endereço anterior.
 
@@ -36,10 +36,10 @@ A Galeria do PowerShell oferece as seguintes opções de notificação:
 - Os usuários podem entrar em contato comigo por meio da Galeria do PowerShell
 - Notificar-me quando um pacote for movido para a Galeria do PowerShell usando minha conta
 
-![Alterar o endereço de email](../../Images/PSGallery_AccountEmailOptions.png)
+![Alterar o endereço de email](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Conforme observado na página, as notificações críticas da Galeria do PowerShell não podem ser desabilitadas.
-Entre elas estão:
+Eles incluem:
 
 - Notificações de segurança
 - Notificações de gerenciamento de conta de administradores da Galeria do PowerShell
@@ -49,20 +49,20 @@ Entre elas estão:
 
 Para alterar a conta de logon, é necessário estar conectado com a conta atual. Realize as seguintes etapas para concluir alteração.
 
-![Configurações da conta de logon](../../Images/PSGallery_LoginAccountSettings.png)
+![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Clique em **Alterar conta**. Uma janela pop-up explica que alterar a conta de logon se aplica a todos os usos dessa conta na Galeria do PowerShell. Examine as informações e clique em **OK** para continuar.
 
-   ![Configurações da conta de logon](../../Images/PSGallery_LoginAccountChange-1.png)
+   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Em seguida, você precisará entrar usando a _nova conta_.
 
-   ![Configurações da conta de logon](../../Images/PSGallery_LoginAccountChange-2.png)
+   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. Ao clicar em **Próximo**, será exibida uma mensagem informando que você está conectado com a conta atual.
    Clique em **Sair e entrar com uma conta diferente**.
 
-   ![Configurações da conta de logon](../../Images/PSGallery_LoginAccountChange-3.png)
+   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Digite a senha da nova conta. Após inserir a senha, você retornará para a página "Configurações da conta" e verá que a conta de logon foi atualizada.
 

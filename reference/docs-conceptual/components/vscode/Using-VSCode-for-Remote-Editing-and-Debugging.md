@@ -2,12 +2,12 @@
 title: Usando o Visual Studio Code para edição e depuração remotas
 description: Usando o Visual Studio Code para edição e depuração remotas
 ms.date: 06/13/2019
-ms.openlocfilehash: ae3b7a3709498fcd547a48d0849b0dc880217225
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67263933"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279088"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Usando o Visual Studio Code para edição e depuração remotas
 
@@ -15,7 +15,7 @@ Para aqueles que se familiarizaram com o ISE, talvez se lembrem que podiam execu
 
 Esse recurso também está disponível na extensão do PowerShell para VSCode. Este guia mostra como fazê-lo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este guia pressupõe que você tenha:
 
@@ -38,7 +38,7 @@ Esses exemplos mostram a edição e a depuração remotas de uma VM Ubuntu em ex
 
 Com a extensão do PowerShell para VSCode iniciada e o Console Integrado do PowerShell aberto, podemos digitar `Open-EditorFile foo.ps1` ou `psedit foo.ps1` para abrir o arquivo foo.ps1 local diretamente no editor.
 
-![O arquivo foo.ps1 no Open-EditorFile funciona localmente](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
+![O arquivo foo.ps1 no Open-EditorFile funciona localmente](media/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
 >[!NOTE]
 > O arquivo `foo.ps1` já deve existir.
@@ -47,11 +47,11 @@ A partir daí, podemos:
 
 - Adicionar pontos de interrupção à medianiz
 
-  ![adicionando pontos de interrupção à medianiz](images/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+  ![adicionando pontos de interrupção à medianiz](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
 
 - Pressione F5 para depurar o script do PowerShell.
 
-  ![depurando o script local do PowerShell](images/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
+  ![depurando o script local do PowerShell](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 Durante a depuração, você pode interagir com o console de depuração, ver as variáveis no escopo à esquerda e todas as outras ferramentas de depuração padrão.
 
@@ -73,20 +73,20 @@ Como estamos passando de um macOS para uma VM Ubuntu no Azure, vamos usar SSH pa
 
 Primeiro, no Console Integrado, execute `Enter-PSSession`. Você estará conectado à sessão remota quando o `[<hostname>]` aparecer à esquerda de seu prompt.
 
-![A chamada a Enter-PSSession](images/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![A chamada a Enter-PSSession](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 Agora podemos executar as mesmas etapas como se estivéssemos editando um script local.
 
 1. Execute `Open-EditorFile test.ps1` ou `psedit test.ps1` para abrir o arquivo `test.ps1` remoto
 
-  ![Abrir o arquivo test.ps1 no EditorFile](images/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![Abrir o arquivo test.ps1 no EditorFile](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. Edite os pontos de interrupção do arquivo/conjunto
 
-   ![editar e definir pontos de interrupção](images/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
+   ![editar e definir pontos de interrupção](media/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
 
 1. Comece a depurar (F5) o arquivo remoto
 
-   ![depurando o arquivo remoto](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![depurando o arquivo remoto](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 Em caso de problemas, você pode abrir ocorrências [no repositório GitHub](https://github.com/powershell/vscode-powershell).

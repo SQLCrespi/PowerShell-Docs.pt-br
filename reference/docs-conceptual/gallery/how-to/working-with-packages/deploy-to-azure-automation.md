@@ -3,18 +3,18 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Implantar na Automação do Azure
-ms.openlocfilehash: 707691e24a77647064e60da0d9a31ad5eece1c59
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5d09a0777c59b642400d683c8cb6f881319fb881
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327907"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278682"
 ---
 # <a name="deploy-to-azure-automation"></a>Implantar na Automação do Azure
 
 O botão Implantar na Automação do Azure na página de detalhes do pacote implantará o pacote da Galeria do PowerShell para a Automação do Azure.
 
-![Botão Implantar na Automação do Azure](../../Images/DeployToAzureAutomationButton.png)
+![Botão Implantar na Automação do Azure](media/deploy-to-azure-automation/DeployToAzureAutomationButton.png)
 
 Quando acionado, ele redirecionará você para o Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure.
 Se o pacote incluir dependências, todas as dependências serão implantadas também na Automação do Azure.
@@ -30,7 +30,7 @@ O botão Implantar na Automação do Azure pode ser desabilitado, adicionando a 
 
 Se o módulo que está sendo implantado na Automação do Azure exigir a aceitação da licença, a interface do usuário do portal exibirá um aviso de isenção informando que "Esse módulo exige a aceitação da licença. Ao clicar em OK, você aceita os termos da licença."
 
-![A implantação na Automação do Azure exige a aceitação da licença](../../Images/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
+![A implantação na Automação do Azure exige a aceitação da licença](media/deploy-to-azure-automation/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
 
 ## <a name="more-details"></a>Mais detalhes
 

@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Gerenciar chaves de API
-ms.openlocfilehash: 954eb27c25babdb8efe50c13caf5f2d287c6b3e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328287"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278266"
 ---
 # <a name="managing-api-keys"></a>Gerenciar chaves de API
 
@@ -19,7 +19,7 @@ A Galeria do PowerShell dá suporte à criação de várias chaves de API compat
 
 A imagem a seguir mostra as opções disponíveis ao criar uma chave de API com escopo.
 
-![Criar chaves de API](../../Images/PSGallery_KeyScoped.png)
+![Criar chaves de API](media/creating-APIkeys/PSGallery_KeyScoped.png)
 
 Neste exemplo, criamos uma chave de API com o nome **AzureRMDataFactory**. Esse valor de chave pode ser usado para efetuar push de pacotes com nomes que começam com "AzureRM.DataFactory" e é válido por 365 dias. Trata-se de um cenário normal quando equipes diferentes trabalham em pacotes distintos dentro da mesma organização. Os membros da equipe têm uma chave que concede privilégios para o pacote específico em que estão trabalhando.
 O valor de expiração impede o uso de chaves obsoletas ou esquecidas.
@@ -32,7 +32,7 @@ Caso você trabalhe com vários pacotes, poderá usar padrões glob para combina
 
 Por questões de segurança, um valor de chave recém-criado nunca é exibido na tela e só fica disponível com o botão Copiar, conforme mostrado abaixo.
 
-![Obter um novo valor de chave de API](../../Images/PSGallery_CopyCreatedKey.png)
+![Obter um novo valor de chave de API](media/creating-APIkeys/PSGallery_CopyCreatedKey.png)
 
 > [!IMPORTANT]
 > Só é possível copiar o valor da chave de API imediatamente após criá-lo ou atualizá-lo. Esse valor não será exibido e não ficará acessível novamente após a atualização da página. Se você perder o valor da chave, será necessário regenerá-lo e copiar a chave depois disso.
@@ -47,7 +47,7 @@ As chaves de API com escopo podem atribuir qualquer uma das seguintes permissõe
 
 Toda nova chave tem uma expiração. O valor de expiração é medido em dias. Os valores possíveis para expiração são:
 
-- Um dia
+- 1 dia
 - 90 dias
 - 180 dias
 - 270 dias
@@ -59,7 +59,7 @@ Essas configurações não podem ser alteradas após a criação da chave. Não 
 
 É possível alterar algumas configurações de uma chave existente. Conforme mencionado anteriormente, não é possível modificar o escopo de segurança de uma chave de API existente ou alterar a expiração. As opções que podem ser alteradas são mostradas na captura de tela a seguir:
 
-![Obter um novo valor de chave de API](../../Images/PSGallery_EditAPIKey.png)
+![Obter um novo valor de chave de API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 Para alterar os pacotes controlados por uma chave, escolha pacotes individuais na lista ou altere o padrão glob.
 

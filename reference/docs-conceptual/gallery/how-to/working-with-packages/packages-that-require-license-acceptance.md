@@ -3,18 +3,18 @@ ms.date: 06/12/2017
 contributor: Farehar
 keywords: galeria, powershell, psgallery
 title: Exigir a aceitação da licença
-ms.openlocfilehash: eaed248895d14bd455d2d8d3c2222d8848eeccae
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328207"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278629"
 ---
 # <a name="require-license-acceptance"></a>Exigir a aceitação da licença
 
 O texto Exigir a Aceitação da Licença aparece na página de detalhes do item para módulos que exigem a aceitação da licença. A licença para o módulo pode ser exibida clicando no link 'Exibir Licença.txt'.
 
-![Exigir a Aceitação da Licença](../../Images/RequireLicenseAcceptance.png)
+![Exigir a Aceitação da Licença](media/packages-that-require-license-acceptance/RequireLicenseAcceptance.png)
 
 Usuários receberão uma solicitação para aceitar a licença ao instalar, salvar ou atualizar o módulo por meio do PowerShellGet ou ao implantar a Automação do Azure.
 
@@ -22,7 +22,7 @@ Usuários receberão uma solicitação para aceitar a licença ao instalar, salv
 
 Se o módulo que está sendo implantado na Automação do Azure exigir a aceitação da licença, a interface do usuário do portal exibirá um aviso de isenção informando que "Esse módulo exige a aceitação da licença. Ao clicar em OK, você aceita os termos da licença."
 
-![A implantação na Automação do Azure exige a aceitação da licença](../../Images/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
+![A implantação na Automação do Azure exige a aceitação da licença](media/packages-that-require-license-acceptance/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
 
 ## <a name="more-details"></a>Mais detalhes
 

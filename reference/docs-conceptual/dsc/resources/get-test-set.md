@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Get-Test-Set
-ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954283"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278403"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Obter, testar e definir](../media/get-test-set.png)
+![Obter, testar e definir](media/get-test-set/get-test-set.png)
 
 O PowerShell Desired State Configuration é construído ao redor de um processo **Get**, **Test** e **Set**. Os [recursos](resources.md) do DSC contêm métodos para concluir cada uma dessas operações. Em [Configuração](../configurations/configurations.md), você define os blocos de recursos para preencher as chaves que se tornam parâmetros para os métodos **Get**, **Test** e **Set** de recursos.
 
@@ -123,7 +123,7 @@ ModuleVersion = "1.0";
 
 Quando aplicado, o LCM [(Configuration Manager local)](../managing-nodes/metaConfig.md) lerá o valor "Spooler" do arquivo ".mof" e o enviará para o parâmetro `-Name` dos métodos **Get**, **Test** e **Set** da instância "MyService" do recurso **Serviço**.
 
-## <a name="get"></a>Get
+## <a name="get"></a>Obter
 
 O método **Get** de um recurso recupera o estado do recurso como está configurado no nó de destino. Esse estado é retornado como uma [tabela de hash](/powershell/module/microsoft.powershell.core/about/about_hash_tables). As chaves da **tabela de hash** serão valores ou parâmetros configuráveis que o recurso aceita.
 
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 Para saber mais, confira [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
 
-## <a name="set"></a>Set
+## <a name="set"></a>Definir
 
 O método **Set** de um recurso tenta forçar o nó para estar em conformidade com o *estado desejado* do recurso. O método **Set** deve ser **idempotent**, o que significa que **Set** pode ser executado várias vezes e sempre obterá o mesmo resultado sem erros.  Quando você chama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), o LCM percorre cada recurso na configuração aplicada no momento. O LCM recupera os valores de chave para a instância atual do recurso do arquivo ".mof" e os usa como parâmetros para o método **Test**. Se o método **Test** retornar `$True`, o nó está em conformidade com o recurso atual e o método **Set** será ignorado. Se o **Test** retornar `$False`, o nó não está em conformidade.  O LCM passa os valores de chave da instância do recurso como parâmetros para do método **Set** do recurso, restaurando o nó para conformidade.
 
@@ -235,7 +235,7 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Configurando um servidor de pull da Web e SMB](../pull-server/pullServerSMB.md)

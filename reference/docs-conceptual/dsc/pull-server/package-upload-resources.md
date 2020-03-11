@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Empacotar e carregar recursos em um servidor de pull
-ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954373"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278487"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Empacotar e carregar recursos em um servidor de pull
 
@@ -27,7 +27,7 @@ Cada recurso disponível para um cliente fazer download deve ser armazenado em u
 
 Você pode compactar o diretório de recursos usando qualquer utilitário, script ou método que preferir. No Windows, é possível *clicar com o botão direito do mouse* no diretório "xPSDesiredStateConfiguration" e selecionar "Enviar para" e, em seguida, "Pasta compactada".
 
-![Clicar com o botão direito do mouse](../media/right-click.gif)
+![Clicar com o botão direito do mouse](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>Nomear o arquivo de recurso
 
@@ -95,7 +95,7 @@ ConfigurationRepositoryShare SMBPullServer
 
 Você pode forçar um nó a atualizar seus recursos alterando o número de versão no nome de arquivo ou criando uma nova soma de verificação. O cliente de pull verifica se há versões mais recentes dos recursos necessários e somas de verificação atualizadas quando o LCM é atualizado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configurar um servidor de pull SMB de DSC](pullServerSmb.md)
 - [Configurar um servidor de pull HTTP de DSC](pullServer.md)

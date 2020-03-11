@@ -2,12 +2,12 @@
 title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: 4f197e71d3b79828f466584f5d862415726818b1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 16ae228c0d169261b783366a730fd2d5d77d32d6
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117391"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279054"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
@@ -19,7 +19,7 @@ Antes de começar, verifique se o PowerShell existe no seu sistema. Para cargas 
 
 - [Instalar o PowerShell Core no Linux][install-pscore-linux]
 - [Instalar o PowerShell Core no macOS][install-pscore-macos]
-- [Instalação do PowerShell Core no Windows][install-pscore-windows]
+- [Instalar o PowerShell Core no Windows][install-pscore-windows]
 
 Para cargas de trabalho tradicionais do Windows PowerShell, confira [Como instalar o Windows PowerShell][install-winps].
 
@@ -48,7 +48,7 @@ Para cargas de trabalho tradicionais do Windows PowerShell, confira [Como instal
    1. A exibição **Extensões** será aberta na barra lateral. Selecione a extensão do PowerShell da Microsoft.
       Você deverá ver uma tela VSCode semelhante à imagem a seguir:
 
-      ![VSCode](../../images/using-vscode/vscode.png)
+      ![VSCode](media/using-vscode/vscode.png)
 
    1. Clique no botão **Instalar** na extensão do PowerShell da Microsoft.
    1. Após a instalação, você verá que o botão **Instalar** mudará para **Recarregar**. Clique em **Recarregar**.

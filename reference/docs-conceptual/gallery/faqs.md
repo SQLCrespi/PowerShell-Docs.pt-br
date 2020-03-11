@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Perguntas frequentes sobre a Galeria do PowerShell
-ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 9572a61d38b0d540b0b8933405810ac4f2b6377e
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818117"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278164"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
@@ -148,7 +148,7 @@ Na camada de cmdlet do PowerShell, [Install-Module][] é, na verdade, um wrapper
 
 Na camada do provedor do pacote PackageManagement, o provedor de pacote PSModule chama outros provedores do pacote PackageManagement. Por exemplo, quando você está trabalhando com galerias baseadas em NuGet (como a Galeria do PowerShell), o provedor do pacote PSModule usa o provedor de pacote do NuGet para trabalhar com o repositório.
 
-![Arquitetura do PowerShellGet](Images/powershellgetArchitecture.png)
+![Arquitetura do PowerShellGet](media/faqs/powershellgetArchitecture.png)
 
 Figura 1: Arquitetura do PowerShellGet
 

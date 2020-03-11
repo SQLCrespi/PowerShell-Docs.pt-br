@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 531259217f2b71213776e7d394616c7790e9aca9
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995510"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277705"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -169,7 +169,7 @@ Adicionamos alguns cmdlets em um 6.1 o que permite converter e renderizar docume
 
 Por exemplo, `Show-Markdown` renderiza um arquivo markdown no console:
 
-![Exemplo de Markdown do show](./images/markdown_example.png)
+![Exemplo de Markdown do show](media/What-s-New-in-PowerShell-Core-61/markdown_example.png)
 
 Para obter mais informações sobre como esses cmdlets funcionam, confira [essa RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).
 
@@ -264,7 +264,7 @@ Os clientes do SSH geralmente dão suporte a uma cadeia de conexão no formato `
 
 Graças a [@bergmeister](https://github.com/bergmeister), já é possível habilitar um menu de contexto no Windows. Agora, você pode abrir a instalação do PowerShell 6.1 para todo o sistema por meio de qualquer pasta no Windows Explorer:
 
-![Menu de contexto do shell do PowerShell 6](./images/shell_context_menu.png)
+![Menu de contexto do shell do PowerShell 6](media/What-s-New-in-PowerShell-Core-61/shell_context_menu.png)
 
 ## <a name="goodies"></a>Coisas boas
 
@@ -272,7 +272,7 @@ Graças a [@bergmeister](https://github.com/bergmeister), já é possível habil
 
 Graças a [@bergmeister](https://github.com/bergmeister), a lista de atalhos do PowerShell Core passou a incluir "Executar como administrador":
 
-![Executar como administrador na lista de atalhos do PowerShell 6](./images/jumplist.png)
+![Executar como administrador na lista de atalhos do PowerShell 6](media/What-s-New-in-PowerShell-Core-61/jumplist.png)
 
 ### <a name="cd---returns-to-previous-directory"></a>`cd -` retorna ao diretório anterior
 
