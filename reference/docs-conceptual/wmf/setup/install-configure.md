@@ -3,13 +3,13 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: keithb
-title: Instalar e configurar o WMF 5.1
+title: Como instalar e configurar o WMF 5.1
 ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71147686"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402363"
 ---
 # <a name="install-and-configure-wmf-51"></a>Como instalar e configurar o WMF 5.1
 
@@ -21,7 +21,7 @@ ms.locfileid: "71147686"
 
 Baixe o pacote do WMF 5.1 de acordo com o seu sistema operacional e a sua arquitetura:
 
-| Sistema operacional       | Prerequisites           | Links de pacote                          |
+| Sistema operacional       | Pré-requisitos           | Links do pacote                          |
 |------------------------|-------------------------|----------------------------------------|
 | Windows Server 2012 R2 |                         | [Win8.1AndW2K12R2-KB3191564-x64.msu][] |
 | Windows Server 2012    |                         | [W2K12-KB3191565-x64.msu][]            |
@@ -71,7 +71,7 @@ Os pré-requisitos para instalação do WMF 5.1 no Windows Server 2008 R2 SP1 ou
 
 ## <a name="winrm-dependency"></a>Dependência do WinRM
 
-O DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 nem no Windows 7. Execute o `Set-WSManQuickConfig`, em uma sessão com privilégios elevados do Windows PowerShell para habilitar o WinRM.
+O DSC (Desired State Configuration) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 nem no Windows 7. Execute o `Set-WSManQuickConfig`, em uma sessão com privilégios elevados do Windows PowerShell para habilitar o WinRM.
 
 ## <a name="install-wmf-51-for-windows-server-2012-r2-windows-server-2012-and-windows-81"></a>Como instalar o WMF 5.1 em Windows Server 2012 R2, Windows Server 2012 e Windows 8.1
 

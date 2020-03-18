@@ -3,11 +3,11 @@ ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058413"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402603"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -181,8 +181,8 @@ No cenário anterior, o Windows PowerShell Web Access só estabelece uma conexã
 2. Autenticação no computador de destino usando credenciais alternativas fornecidas na página de entrada, na área **Configurações opcionais de conexão**
 
    > [!NOTE]
-   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Criando relações de confiança entre domínios e florestas](https://technet.microsoft.com/library/cc794775.aspx).
-   > Para obter mais informações sobre como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, consulte [Gerenciamento remoto com o Gerenciador do Servidor](https://technet.microsoft.com/library/dd759202.aspx).
+   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx) (Criando relações de confiança entre domínios e florestas).
+   > Para saber mais sobre como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, confira [Gerenciamento remoto com gerenciador de servidores](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Usando um único conjunto de regras de autorização para vários sites
 
@@ -190,7 +190,7 @@ As regras de autorização são armazenadas em um arquivo XML. Por padrão, o no
 
 O caminho para o arquivo XML de regras de autorização é armazenado no arquivo **powwa.config**, encontrado em `$env:windir\Web\PowershellWebAccess\data`. O administrador pode alterar a referência ao caminho padrão em **powwa.config** de acordo com preferências ou requisitos. O fato de o administrador poder alterar a localização do arquivo permite que muitos gateways do Windows PowerShell Web Access usem as mesmas regras de autorização, caso essa configuração seja necessária.
 
-## <a name="session-management"></a>Gerenciamento de sessões
+## <a name="session-management"></a>Gerenciamento da sessão
 
 Por padrão, o Windows PowerShell Web Access limita um usuário a três sessões ao mesmo tempo. Você pode editar o arquivo **web.config** do aplicativo Web no Gerenciador do IIS para dar suporte a um número diferente de sessões por usuário. O caminho para o arquivo **web.config** é `$env:windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
 

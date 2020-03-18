@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Usando o Import-DSCResource
-ms.openlocfilehash: 4bc269ab1dd4696298b4f33f7661473aae869eba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417417"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402443"
 ---
 # <a name="using-import-dscresource"></a>Usando o Import-DSCResource
 
@@ -21,7 +21,7 @@ Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-Module
 
 |Parâmetro  |Descrição  |
 |---------|---------|
-|`-Name`|Os nomes do recurso DSC que você deve importar. Se o nome do módulo for especificado, o comando procurará pelos recursos DSC neste módulo; caso contrário, o comando procurará os recursos DSC em todos os caminhos de recursos DSC. Caracteres curinga são suportados.|
+|`-Name`|Os nomes do recurso DSC que você deve importar. Se o nome do módulo for especificado, o comando procurará pelos recursos DSC neste módulo; caso contrário, o comando procurará os recursos DSC em todos os caminhos de recursos DSC. Há suporte para caracteres curinga.|
 |`-ModuleName`|O nome ou a especificação do módulo.  Se você especificar os recursos a importar de um módulo, o comando tentará importar apenas os recursos. Se você especificar apenas o módulo, o comando importará todos os recursos DSC no módulo.|
 |`-ModuleVersion`|A partir do PowerShell 5.0, é possível especificar qual versão de um módulo a configuração deve usar. Para saber mais, confira [Importar uma versão específica de um recurso instalado](sxsresource.md).|
 
@@ -80,7 +80,7 @@ Esse uso oferece os seguintes benefícios:
 
 Ao criar a configuração DSC no ISE, o PowerShell fornece o IntelliSence para recursos e propriedades do recurso. Definições de recurso sob o caminho do módulo `$pshome` são carregados automaticamente. Quando você importa os recursos usando a palavra-chave `Import-DSCResource`, as definições de recursos especificadas são adicionadas e o Intellisense é expandido para incluir o esquema de recurso importado.
 
-![Recurso Intellisense](../media/resource-intellisense.png)
+![Recurso Intellisense](media/import-dscresource/resource-intellisense.png)
 
 > [!NOTE]
 > A partir do PowerShell 5.0, o preenchimento com Tab foi adicionado ao ISE para recursos DSC e suas propriedades. Para saber mais, confira [Recursos](../resources/resources.md).
@@ -139,11 +139,11 @@ Não havia suporte para instalar e usar várias versões de recursos lado a lado
 
 Na imagem abaixo, estão instaladas duas versões do módulo **xPSDesiredStateConfiguration**.
 
-![Várias versões fixas de recurso](../media/multiple-resource-versions-broken.png)
+![Várias versões fixas de recurso](media/import-dscresource/multiple-resource-versions-broken.png)
 
 Copie o conteúdo da sua versão de módulo desejada para o nível superior do diretório do módulo.
 
-![Várias versões fixas de recurso](../media/multiple-resource-versions-fixed.png)
+![Várias versões fixas de recurso](media/import-dscresource/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Localização do recurso
 
@@ -153,6 +153,6 @@ Ao criar e compilar configurações, seus recursos podem ser armazenados em qual
 
 A partir do PowerShell 5.0, o parâmetro `-ModuleVersion` permite especificar qual versão de um módulo deve ser usada na configuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Recursos](../resources/resources.md)
