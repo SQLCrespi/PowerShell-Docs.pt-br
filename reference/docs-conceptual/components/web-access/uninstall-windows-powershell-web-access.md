@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: desinstalar o windows powershell web access
-ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3c2c83525f5a240976eef215b5eac939796c91e8
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058125"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279003"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
 
@@ -21,8 +21,7 @@ As etapas neste tópico removem o site do Windows PowerShell Web Access e o apli
 
 Antes de começar, notifique os usuários do console baseado na Web a respeito da remoção do site.
 
-A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado.
-O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
+A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado. O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
 
 ## <a name="recommended-quick-uninstallation"></a>Desinstalação recomendada (rápida)
 
@@ -37,36 +36,37 @@ usando cmdlets do Windows PowerShell.
 
 1. Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell.
 
-    -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas.
-
-    -   Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
+   - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas.
+   - Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
 
 2. Digite `Uninstall-PswaWebApplication` e pressione **Enter**.
-   1. Se você tiver especificado o seu próprio nome de site personalizado, adicione o parâmetro `-WebsiteName` ao seu comando e especifique o nome do site.
 
-        `Uninstall-PswaWebApplication -WebsiteName <web-site-name>`
+   1. Se você tiver especificado seu próprio nome de site personalizado, adicione o parâmetro `-WebsiteName` ao seu comando e especifique o nome do site.
+
+      `Uninstall-PswaWebApplication -WebsiteName <web-site-name>`
+
    1. Se você tiver usado um aplicativo Web personalizado (não o aplicativo padrão, **pswa**), adicione o parâmetro `-WebApplicationName` ao comando e especifique o nome do aplicativo Web.
 
-        `Uninstall-PswaWebApplication -WebApplicationName <web-application-name>`
+      `Uninstall-PswaWebApplication -WebApplicationName <web-application-name>`
+
    1. Se você estiver usando um certificado de teste, adicione o parâmetro `DeleteTestCertificate` ao cmdlet, como mostrado no exemplo a seguir.
 
-        `Uninstall-PswaWebApplication -DeleteTestCertificate`
+      `Uninstall-PswaWebApplication -DeleteTestCertificate`
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Etapa 2: Desinstalar o Windows PowerShell Web Access usando cmdlets
 
 1. Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados. Se já houver uma sessão aberta, vá para a etapa seguinte.
 
-    -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
-
-    -   Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
+    - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
+    - Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
 1. Digite o seguinte e pressione **Enter**, em que *computer_name* representa um servidor remoto do qual você deseja remover o Windows PowerShell Web Access. O parâmetro `-Restart` reinicia automaticamente os servidores de destino quando exigido pela remoção.
 
-        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
+    `Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart`
 
-    Para remover funções e recursos de um VHD offline, adicione os parâmetros `-ComputerName` e `-VHD` . O parâmetro `-ComputerName` contém o nome do servidor em que será montado o VHD, e o parâmetro `-VHD` contém o caminho para o arquivo VHD no servidor especificado.
+    Para remover funções e recursos de um VHD offline, adicione os parâmetros `-ComputerName` e `-VHD`. O parâmetro `-ComputerName` inclui o nome do servidor em que será montado o VHD, e o parâmetro `-VHD` inclui o caminho para o arquivo VHD no servidor especificado.
 
-        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart
+    `Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart`
 
 1. Quando a remoção for concluída, verifique se você removeu o Windows PowerShell Web Access abrindo a página **Todos os Servidores** no Gerenciador do Servidor, selecionando um servidor do qual você removeu o recurso e exibindo o bloco **Funções e Recursos** na página do servidor selecionado.
 
@@ -78,12 +78,11 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Etapa 1: Excluir o aplicativo Web usando o Gerenciador do IIS
 
-
 1. Abra o console do Gerenciador do IIS seguindo um destes procedimentos. Se já estiver aberto, vá para a etapa seguinte.
 
-    -   Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)** .
+   - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)** .
 
-    -   Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)** . Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
+   - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)** . Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
 
 1. No painel da árvore Gerenciador do IIS, selecione o site que está executando o aplicativo Web do Windows PowerShell Web Access.
 
@@ -95,19 +94,15 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 1. Feche o Gerenciador do IIS.
 
-> ![Observação de aviso](images/SecurityNote.jpeg)**Observação**:
->
-> O certificado não é excluído durante a desinstalação.
->
-> Se você tiver criado um certificado autoassinado ou usado um certificado de teste e deseja removê-lo, exclua o certificado no Gerenciador do IIS.
+   > [!WARNING]
+   > O certificado não é excluído durante a desinstalação. Se você tiver criado um certificado autoassinado ou usado um certificado de teste e deseja removê-lo, exclua o certificado no Gerenciador do IIS.
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Etapa 2: Desinstalar o Windows PowerShell Web Access usando o Assistente para Remover Funções e Recursos
 
 1. Se o Gerenciador do Servidor já estiver aberto, vá para a etapa seguinte. Se o Gerenciador do Servidor ainda não estiver aberto, abra-o de uma das maneiras a seguir.
 
-    -   Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows.
-
-    -   Na tela **Iniciar** do Windows, clique em **Gerenciador do Servidor**.
+    - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows.
+    - Na tela **Iniciar** do Windows, clique em **Gerenciador do Servidor**.
 
 1. No menu **Gerenciar**, clique em **Remover Funções e Recursos**.
 

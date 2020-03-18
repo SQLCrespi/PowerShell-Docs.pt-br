@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: d9339ec9f316c4a32c5fa6cb2360c077973ee334
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818100"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277552"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -59,7 +59,7 @@ Confira os instantâneos abaixo:
 
 - Definições da configuração local, que determina uma configuração parcial que um nó está autorizado a receber.
 
-  ![Metaconfiguração de exemplo](../images/DSC-improvements/MetaConfigPartialOne.png)
+  ![Metaconfiguração de exemplo](media/DSC-improvements/MetaConfigPartialOne.png)
 
 - Definição da configuração parcial de exemplo
 
@@ -80,11 +80,11 @@ Confira os instantâneos abaixo:
 
 - "ConfigurationName" inserido no arquivo MOF gerado.
 
-  ![Arquivo mof de exemplo gerado](../images/DSC-improvements/PartialGeneratedMof.png)
+  ![Arquivo mof de exemplo gerado](media/DSC-improvements/PartialGeneratedMof.png)
 
 - FileName no repositório de configuração de pull
 
-  ![FileName no Repositório de Configuração](../images/DSC-improvements/PartialInConfigRepository.png)
+  ![FileName no Repositório de Configuração](media/DSC-improvements/PartialInConfigRepository.png)
 
   O nome do serviço da Automação do Azure gerou arquivos MOF como `<ConfigurationName>.<NodeName>.mof`. Portanto, a configuração abaixo é compilada para PartialOne.localhost.mof.
 
@@ -249,7 +249,7 @@ No WMF 5.1, a DSC dá suporte para a validação de assinaturas digitais no cat�
 
 #### <a name="pull"></a>Recepção
 
-O LocalConfigurationManager de um nó executa a validação da assinatura dos módulos e das configurações com base em suas configurações atuais. Por padrão, a validação da assinatura está desabilitada. A validação da assinatura pode ser habilitada adicionando o bloco “SignatureValidation” à definição de metaconfiguração do nó, conforme mostrado abaixo:
+O LocalConfigurationManager de um nó executa a validação da assinatura dos módulos e das configurações com base em suas configurações atuais. Por padrão, a validação da assinatura está desabilitada. A validação da assinatura pode ser habilitada adicionando o bloco "SignatureValidation" à definição de metaconfiguração do nó, conforme mostrado abaixo:
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -293,11 +293,11 @@ A definição da metaconfiguração acima em um nó habilita a validação da as
 > a validação da assinatura no catálogo de módulo e na configuração é realizada somente quando a configuração é aplicada ao sistema pela primeira vez ou quando o módulo é baixado e instalado.
 > As execuções de consistência não validam a assinatura de Current.mof ou de suas dependências de módulo. Se a verificação tiver falhado em qualquer estágio, por exemplo, se a configuração extraída do servidor de pull não estiver assinada, o processamento da configuração será encerrado com o erro mostrado abaixo e todos os arquivos temporários serão excluídos.
 
-![Configuração de Saída de Erro de Exemplo](../images/DSC-improvements/PullUnsignedConfigFail.png)
+![Configuração de Saída de Erro de Exemplo](media/DSC-improvements/PullUnsignedConfigFail.png)
 
 Da mesma forma, a extração de um módulo cujo catálogo não está assinado resulta no seguinte erro:
 
-![Módulo de Saída de Erro de Exemplo](../images/DSC-improvements/PullUnisgnedCatalog.png)
+![Módulo de Saída de Erro de Exemplo](media/DSC-improvements/PullUnisgnedCatalog.png)
 
 #### <a name="push"></a>Push
 
@@ -345,12 +345,12 @@ Uma configuração entregue com o uso de push pode ser violada em sua origem ant
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](../images/DSC-improvements/PushUnsignedMof.png)
+  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
 
 - Assine o arquivo de configuração usando um certificado de assinatura de código.
 
-  ![SignMofFile](../images/DSC-improvements/SignMofFile.png)
+  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
 
 - Tente enviar o arquivo MOF assinado por push.
 
-  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)

@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: galeria, powershell, psgallery
 title: Download manual do pacote
-ms.openlocfilehash: c0a96e866dfd27f9b2170ea540ec6dd0c67701fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327887"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278690"
 ---
 # <a name="manual-package-download"></a>Download manual do pacote
 
@@ -22,7 +22,7 @@ Na Galeria do PowerShell, é possível baixar um pacote diretamente do site, sem
 
 Cada página tem um link para Download Manual, conforme mostrado aqui:
 
-![Download manual](../../Images/packagedisplaypagewithpseditions.png)
+![Download manual](media/manual-download/packagedisplaypagewithpseditions.png)
 
 Para baixar manualmente, clique em **Baixar o arquivo nupkg bruto**. Uma cópia do pacote é copiada para a pasta de download do navegador com o nome `<name>.<version>.nupkg`.
 
@@ -46,7 +46,8 @@ Para obter a lista de elementos específicos do NuGet, confira [Usar o download 
 
 As etapas são as seguintes:
 
-1. Extrair o conteúdo do pacote do NuGet em uma pasta local.
+1. Desbloqueie o arquivo de pacote NuGet (`.nupkg`) baixado da Internet, por exemplo, usando o cmdlet `Unblock-File -Path C:\Downloads\module.nupkg`.
+2. Extrair o conteúdo do pacote do NuGet em uma pasta local.
 2. Exclua os elementos específicos do NuGet da pasta.
 3. Renomear a pasta. Normalmente, o nome de pasta padrão é `<name>.<version>`. A versão poderá incluir `-prerelease` se o módulo estiver marcado como uma versão de pré-lançamento. Renomeie a pasta somente com o nome do módulo. Por exemplo, `azurerm.storage.5.0.4-preview` torna-se `azurerm.storage`.
 4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de caminhos delimitados por ponto e vírgula no qual o PowerShell deve procurar os módulos.
@@ -63,7 +64,8 @@ A abordagem mais fácil é extrair o pacote do NuGet e, em seguida, usar o scrip
 
 As etapas são as seguintes:
 
-1. Extrair o conteúdo do pacote do NuGet.
+1. Desbloqueie o arquivo de pacote NuGet (`.nupkg`) baixado da Internet, por exemplo, usando o cmdlet `Unblock-File -Path C:\Downloads\package.nupkg`.
+2. Extrair o conteúdo do pacote do NuGet.
 2. O arquivo `.PS1` na pasta pode ser usado diretamente desse local.
 3. Você pode excluir os elementos específicos do NuGet da pasta.
 
