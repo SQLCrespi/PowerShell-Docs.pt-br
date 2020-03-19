@@ -1,31 +1,40 @@
 ---
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte ao PowerShell Core
-ms.date: 08/06/2018
-ms.openlocfilehash: 8cf8a0ac6140d28e55b065bf711763ba1c681d63
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.date: 03/09/2020
+ms.openlocfilehash: a1cd316b1d5351acd04c547bc35b3cc62a561429
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706250"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090266"
 ---
-# <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell Core
+# <a name="powershell-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell
 
-O PowerShell Core é um conjunto distinto de ferramentas e componentes que é enviado, instalado e configurado separadamente do Windows PowerShell. Portanto, o PowerShell Core não está incluído nos contratos de licenciamento do Windows 7/8.1/10 ou Windows Server.
+O PowerShell é um conjunto distinto de ferramentas e componentes que é enviado, instalado e configurado separadamente do Windows PowerShell. O PowerShell não está incluído nos contratos de licenciamento do Windows.
 
-No entanto, o PowerShell Core é aceito pelos contratos de suporte tradicionais da Microsoft, incluindo [Premier][], [Microsoft Enterprise Agreements][enterprise-agreement] e [Microsoft Software Assurance][assurance].
-Você também pode pagar por [suporte assistido][] do PowerShell Core preenchendo uma solicitação de suporte para o seu problema.
+O PowerShell é aceito pelos contratos de suporte tradicionais da Microsoft, incluindo [Premier][], [Microsoft Enterprise Agreements][enterprise-agreement] e [Microsoft Software Assurance][assurance].
+Você também pode pagar por [suporte assistido][] do PowerShell preenchendo uma solicitação de suporte para o seu problema.
 
 ## <a name="community-support"></a>Suporte da comunidade
 
 Oferecemos também [suporte da comunidade][] no GitHub, no qual você pode registrar um problema, um bug ou uma solicitação de recurso.
 Além disso, você pode encontrar ajuda de outros membros da comunidade na Microsoft [Comunidade tecnológica do PowerShell][] ou em qualquer um dos fóruns na seção Comunidade da página do hub do [PowerShell][pshub]. Não oferecemos nenhuma garantia de que a comunidade atenderá ou resolverá seu problema de maneira oportuna. Se você tiver um problema que requer atenção imediata, use as opções tradicionais de suporte pago.
 
-## <a name="lifecycle-of-powershell-core"></a>Ciclo de vida do PowerShell Core
+## <a name="lifecycle-of-powershell-7"></a>Ciclo de vida do PowerShell 7
 
-O PowerShell Core está adotando a [Política de ciclo de vida moderna da Microsoft][modern]. Esse ciclo de vida do suporte destina-se a manter os clientes atualizados com as versões mais recentes.
+Com o lançamento do PowerShell 7, o PowerShell continua a ter suporte na [Política de ciclo de vida moderna da Microsoft][modern], mas as datas de suporte estão vinculadas ao [ciclo de vida de suporte do .NET Core][Long-Term]. Nessa abordagem de manutenção, os clientes podem escolher versões de LTS (suporte de longo prazo) ou versões atuais. O PowerShell 7.0 é uma versão de LTS. O suporte termina com o suporte do .NET Core 3.1. A próxima versão de LTS segue a próxima versão de LTS do .NET Core. Confira a [tabela de fim da vida útil das versões do PowerShell](#powershell-releases-end-of-life) para obter as datas atuais de término do suporte. As atualizações de versão de LTS contêm apenas atualizações críticas de segurança, de manutenção e correções que são projetadas para evitar ou minimizar o impacto nas cargas de trabalho existentes.
 
-A ramificação da versão 6.x do PowerShell Core será atualizada aproximadamente a cada seis meses (por exemplo: 6.0, 6.1, 6.2 etc.)
+Uma versão atual é uma versão que ocorre entre as versões de LTS. As versões atuais podem conter correções críticas, inovações e novos recursos. A versão atual recebe suporte por três meses após a próxima versão atual ou com LTS.
+
+> [!IMPORTANT]
+> Você deve ter a atualização de patch mais recente instalada para se qualificar para o suporte. Por exemplo, se você estiver executando o PowerShell 7.0 e o 7.0.1 foi lançado, será necessário atualizar para o 7.0.1 para se qualificar para suporte.
+
+## <a name="lifecycle-of-powershell-core-6x"></a>Ciclo de vida do PowerShell Core 6.x
+
+O PowerShell Core usado na [Política de ciclo de vida moderna da Microsoft][modern]. Esse ciclo de vida do suporte destina-se a manter os clientes atualizados com as versões mais recentes.
+
+O branch da versão 6.x do PowerShell Core foi atualizado aproximadamente a cada seis meses (por exemplo: 6.0, 6.1, 6.2 etc.). No entanto, com o lançamento do PowerShell 7, não haverá mais versões secundárias de lançamentos da versão 6.x. O PowerShell 6.2.x continuará recebendo atualizações de serviço e ainda terá suporte.
 
 > [!IMPORTANT]
 > Você deve atualizar em seis meses após cada novo lançamento de versão secundária para continuar a receber suporte.
@@ -38,8 +47,6 @@ Por exemplo, se o PowerShell Core 6.1 for liberado em 1º de julho de 2018, espe
 Por exemplo, se você está executando o PowerShell Core 6.1 e o 6.1.3 foi lançado em 19 de fevereiro de 2019, é esperado que você atualize para o PowerShell Core 6.1.3 até 21 de março de 2019, que é 30 dias após o lançamento, para manter o suporte. Se qualquer correção for considerada necessária, ela será lançada na nossa próxima atualização cumulativa.
 
 A política de ciclo de vida moderna também requer que a Microsoft forneça aos clientes um aviso 12 meses antes de interromper o suporte para um produto (ou seja, o PowerShell Core).
-
-Por fim, esperamos que o PowerShell Core adote a abordagem de manutenção de longo prazo. Nessa abordagem de manutenção, exigiríamos apenas que as atualizações de serviço e segurança permanecessem em suporte em um branch/versão específica do 6.x.
 
 ## <a name="supported-platforms"></a>Plataformas compatíveis
 
@@ -71,7 +78,7 @@ As plataformas listadas como `Experimental` não têm suporte oficial, mas estã
 | Raspbian                                          |   Comunidade   | Comunidade |
 | Kali                                              |   Comunidade   | Comunidade |
 | AppImage (funciona em várias plataformas Linux)      |   Comunidade   | Comunidade |
-| [Pacote Snap](https://snapcraft.io/powershell)   |   Veja a observação    | Veja a observação  |
+| [Pacote Snap](https://snapcraft.io/powershell)   |   Consultar a observação    | Consultar a observação  |
 
 > [!NOTE]
 > Os pacotes Snap têm suporte da mesma forma que a distribuição na qual você está executando o pacote.
@@ -81,13 +88,14 @@ As plataformas listadas como `Experimental` não têm suporte oficial, mas estã
 
 ## <a name="powershell-releases-end-of-life"></a>Fim da vida útil das versões do PowerShell
 
-Com base no [Ciclo de vida do PowerShell Core](#lifecycle-of-powershell-core), a tabela a seguir lista as datas em que várias versões não receberão mais suporte.
+Com base no [Ciclo de vida do PowerShell](#lifecycle-of-powershell-7), a tabela a seguir lista as datas em que várias versões não receberão mais suporte.
 
-| Versão | Fim da vida útil                   |
-|---------|-------------------------------|
-| 6,0     | 13 de fevereiro de 2019             |
-| 6.1     | 28 de setembro de 2019            |
-| 6.2     | 6 meses após 7 lançamentos     |
+| Versão |    Fim da vida útil     |
+| :-----: | ------------------ |
+|   7.0   | 3 de dezembro de 2022   |
+|   6.2   | 4 de setembro de 2020  |
+|   6.1   | 28 de setembro de 2019 |
+|   6,0   | 13 de fevereiro de 2019  |
 
 ## <a name="unsupported-platforms"></a>Plataformas sem suporte
 
@@ -95,47 +103,37 @@ Quando uma versão de plataforma atingir o final da vida, conforme definido pelo
 
 Portanto, os proprietários de distribuição encerraram o suporte para as versões a seguir, que não têm mais suporte.
 
-| Plataforma       | Versão | Fim de vida                                                                                                                        |
-| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Debian         | 8       | [Junho de 2018](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                                  |
-| Fedora         | 24      | [Agosto de 2017](https://fedoramagazine.org/fedora-24-eol/)                                                                           |
-| Fedora         | 25      | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                                                                    |
-| Fedora         | 26      | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                                                         |
-| Fedora         | 27      | [Novembro de 2018](https://fedoramagazine.org/fedora-27-end-of-life/)                                                                 |
-| Fedora         | 28      | [Maio de 2019](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                      |
-| openSUSE       | 42.1    | [Maio de 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                            |
-| openSUSE       | 42.2    | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                        |
-| openSUSE       | 42.3    | [Julho de 2019](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                           |
-| Ubuntu         | 14.04   | [Abril de 2019](https://wiki.ubuntu.com/Releases)                                                                                     |
-| Ubuntu         | 16.10   | [Julho de 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                               |
-| Ubuntu         | 17.04   | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                                 |
-| Ubuntu         | 17.10   | [Julho de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                               |
-| Windows        | 7       | [Janeiro de 2020](https://support.microsoft.com/en-us/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
-| Windows Server | 2008 R2 | [Janeiro de 2020](https://support.microsoft.com/en-us/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
+|    Plataforma    | Versão |                                                         Fim de vida                                                          |
+| -------------- | :-----: | ---------------------------------------------------------------------------------------------------------------------------- |
+| Debian         |    8    | [Junho de 2018](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                            |
+| Fedora         |   24    | [Agosto de 2017](https://fedoramagazine.org/fedora-24-eol/)                                                                     |
+| Fedora         |   25    | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                                                              |
+| Fedora         |   26    | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                                                   |
+| Fedora         |   27    | [Novembro de 2018](https://fedoramagazine.org/fedora-27-end-of-life/)                                                           |
+| Fedora         |   28    | [Maio de 2019](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                |
+| openSUSE       |  42.1   | [Maio de 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                      |
+| openSUSE       |  42.2   | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                  |
+| openSUSE       |  42.3   | [Julho de 2019](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                     |
+| Ubuntu         |  14.04  | [Abril de 2019](https://wiki.ubuntu.com/Releases)                                                                               |
+| Ubuntu         |  16.10  | [Julho de 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                         |
+| Ubuntu         |  17.04  | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                           |
+| Ubuntu         |  17.10  | [Julho de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                         |
+| Windows        |    7    | [Janeiro de 2020](https://support.microsoft.com/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
+| Windows Server | 2008 R2 | [Janeiro de 2020](https://support.microsoft.com/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
 
 ## <a name="notes-on-licensing"></a>Observações sobre o licenciamento
 
 O PowerShell Core foi lançado sob a [licença MIT][]. Sob essa licença e sem um contrato de suporte pago, os usuários estão limitados ao [suporte da comunidade][]. Com o suporte da comunidade, a Microsoft não faz nenhuma garantia de capacidade de resposta ou correções.
 
-## <a name="windows-powershell-module"></a>Módulo do Windows PowerShell
+## <a name="windows-powershell-compatibility"></a>Compatibilidade do Windows PowerShell
 
-O suporte para o PowerShell Core não inclui módulos do produto, a menos que esses módulos deem suporte explicitamente ao PowerShell Core. Por exemplo, usar o módulo `ActiveDirectory` fornecido como parte do Windows Server é um cenário sem suporte.
+O ciclo de vida de suporte do PowerShell não abrange os módulos fornecidos fora do pacote de versão do PowerShell 7. Por exemplo, usar o módulo `ActiveDirectory` fornecido como parte do Windows Server tem suporte com base no [Ciclo de vida de suporte do Windows][].
 
-No entanto, os módulos que não dão suporte explicitamente ao PowerShell Core podem ser compatíveis em alguns casos. Instalando o módulo [WindowsPSModulePath][], é possível adicionar o `PSModulePath` do Windows PowerShell ao `PSModulePath` do seu PowerShell Core.
+O PowerShell 7 melhora a compatibilidade com módulos existentes do PowerShell criados para o Windows PowerShell.
+Para saber mais, confira o artigo [about_Windows_Compatibility][] e a [lista de compatibilidade do módulo][].
 
-Primeiro, instale o módulo do **WindowsPSModulePath** pela Galeria do PowerShell:
-
-```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin
-Install-Module WindowsPSModulePath -Force
-```
-
-Depois de instalar esse módulo, execute o cmdlet `Add-WindowsPSModulePath` para adicionar o Windows PowerShell `PSModulePath` ao PowerShell Core:
-
-```powershell
-# Add this line to your profile if you always want Windows PowerShell PSModulePath
-Add-WindowsPSModulePath
-```
+> [!NOTE]
+> O módulo [**WindowsPSModulePath**](https://www.powershellgallery.com/packages/WindowsPSModulePath) não é mais necessário no PowerShell 7 e não tem suporte.
 
 ## <a name="experimental-features"></a>Recursos experimentais
 
@@ -157,16 +155,20 @@ A tabela a seguir contém uma linha do tempo das principais versões do PowerShe
 | PowerShell 1.0       |   Novembro de 2006   | Instalável no Windows XP SP2, Windows Server 2003 SP1 e Windows Vista. Componente opcional do Windows Server 2008.                          |
 
 <!-- hyperlink references -->
-[Premier]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
-[enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
-[assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
-[suporte da comunidade]: https://github.com/powershell/powershell/issues
-[pshub]: https://docs.microsoft.com/powershell
+[Premier]: https://www.microsoft.com/microsoftservices/support.aspx
+[enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
+[assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
+[suporte da comunidade]: /powershell/scripting/community/community-support
+[pshub]: /powershell
 [Comunidade tecnológica do PowerShell]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
 [suporte assistido]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
+[Long-Term]: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
 [lifecycle-chart]: ./images/modern-lifecycle.png
-[semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
+[semi-annual]: /windows-server/get-started/semi-annual-channel-overview
 [licença MIT]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+[about_Windows_Compatibility]: /powershell/module/microsoft.powershell.core/about/about_windows_powershell_compatibility
+[Ciclo de vida de suporte do Windows]: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet
+[lista de compatibilidade do módulo]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
-[Recursos experimentais]: /powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-6#experimentalfeatures
+[Recursos experimentais]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures

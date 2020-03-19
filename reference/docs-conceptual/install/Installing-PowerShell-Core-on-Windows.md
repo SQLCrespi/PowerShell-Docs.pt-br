@@ -1,26 +1,19 @@
 ---
-title: Instalar o PowerShell Core no Windows
-description: Informações sobre a instalação do PowerShell Core no Windows
+title: Instalar o PowerShell no Windows
+description: Informações sobre a instalação do PowerShell no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 00a1d8064a3c1ec6608a46415bbabb8d98d880f0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: df05a16bcf7a81d43d24535e50517fa217f82e7a
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416768"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402413"
 ---
-# <a name="installing-powershell-core-on-windows"></a>Instalar o PowerShell Core no Windows
+# <a name="installing-powershell-on-windows"></a>Instalar o PowerShell no Windows
 
-Há várias maneiras de instalar o PowerShell Core no Windows.
+Há várias maneiras de instalar o PowerShell no Windows.
 
-> [!TIP]
-> Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fácil instalar o PowerShell como uma [ferramenta global do .NET](/dotnet/core/tools/global-tools).
->
-> ```
-> dotnet tool install --global PowerShell
-> ```
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisitos a seguir precisam ser atendidos:
 
@@ -32,7 +25,6 @@ Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisit
 Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
 O arquivo MSI tem esta aparência – `PowerShell-<version>-win-<os-arch>.msi`
-<!-- TODO: should be updated to point to the Download Center as well -->
 
 Após o download, clique duas vezes no instalador e siga os prompts.
 
@@ -40,6 +32,15 @@ O instalador cria um atalho no Menu Iniciar do Windows.
 
 - Por padrão, o pacote é instalado em `$env:ProgramFiles\PowerShell\<version>`
 - Você pode iniciar o PowerShell por meio do Menu Iniciar ou `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
+
+> [!NOTE]
+> O PowerShell 7 é instalado em um novo diretório e executado lado a lado com o Windows PowerShell 5.1. Para o PowerShell Core 6.x, o PowerShell 7 é uma atualização in-loco que remove o PowerShell Core 6.x.
+>
+> - O PowerShell 7 é instalado em `%programfiles%\PowerShell\7`
+> - A pasta `%programfiles%\PowerShell\7` é adicionada ao `$env:PATH`
+> - A pasta `%programfiles%\PowerShell\6` é excluída
+>
+> Se você precisar executar o PowerShell 6 lado a lado com o PowerShell 7, reinstale o PowerShell 6 usando o método de [instalação por ZIP](#zip).
 
 ### <a name="administrative-install-from-the-command-line"></a>Instalação administrativa a partir da linha de comando
 
@@ -49,7 +50,7 @@ O instalador cria um atalho no Menu Iniciar do Windows.
 - **ENABLE_PSREMOTING** – Esta propriedade controla a opção para habilitar a comunicação remota do PowerShell durante a instalação.
 - **REGISTER_MANIFEST** – Esta propriedade controla a opção para registrar o manifesto do Log de eventos do Windows.
 
-Os exemplos a seguir mostram como instalar silenciosamente o PowerShell Core com todas as opções de instalação habilitadas.
+Os exemplos a seguir mostram como instalar silenciosamente o PowerShell com todas as opções de instalação habilitadas.
 
 ```powershell
 msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
@@ -61,7 +62,7 @@ Confira a lista completa das opções de linha de comando para Msiexec.exe em [O
 
 Para instalar manualmente o pacote MSIX em um cliente Windows 10, baixe o pacote MSIX na nossa página de [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
-O arquivo MSI tem esta aparência – `PowerShell-<version>-win-<os-arch>.msix`
+O arquivo MSIX tem esta aparência – `PowerShell-<version>-win-<os-arch>.msix`
 
 Após o download, você não pode simplesmente clicar duas vezes no instalador porque esse pacote requer o uso de recursos não virtualizados.  Para instalar, você deve usar o cmdlet `Add-AppxPackage`:
 
@@ -75,7 +76,7 @@ Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários
 
 ## <a name="deploying-on-windows-iot"></a>Implantar no Windows IoT
 
-O Windows IoT já é fornecido com o Windows PowerShell, o qual usaremos para implantar o PowerShell Core 6.
+O Windows IoT já é fornecido com o Windows PowerShell, o qual podemos usar para implantar o PowerShell 7.
 
 1. Crie `PSSession` no dispositivo de destino
 
@@ -100,7 +101,7 @@ O Windows IoT já é fornecido com o Windows PowerShell, o qual usaremos para im
    Expand-Archive .\PowerShell-<version>-win-<os-arch>.zip
    ```
 
-4. Configuração de comunicação remota no PowerShell Core 6
+4. Configuração de comunicação remota no PowerShell 7
 
    ```powershell
    Set-Location .\PowerShell-<version>-win-<os-arch>
@@ -110,7 +111,7 @@ O Windows IoT já é fornecido com o Windows PowerShell, o qual usaremos para im
    # You'll get an error message and will be disconnected from the device because it has to restart WinRM
    ```
 
-5. Conecte-se ao ponto de extremidade do PowerShell Core 6 no dispositivo
+5. Conectar-se ao ponto de extremidade do PowerShell 7 no dispositivo
 
    ```powershell
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
@@ -120,23 +121,23 @@ O Windows IoT já é fornecido com o Windows PowerShell, o qual usaremos para im
 ## <a name="deploying-on-nano-server"></a>Implantação no Nano Server
 
 Estas instruções pressupõem que uma versão do PowerShell já está em execução na imagem do Nano Server e que ela foi gerada pelo [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).
-Nano Server é um sistema operacional "sem periféricos". Os principais binários podem ser implantados usando dois métodos diferentes.
+Nano Server é um sistema operacional "sem periféricos". Os binários do PowerShell podem ser implantados usando dois métodos diferentes.
 
 1. Offline – monte o VHD do Nano Server e descompacte o conteúdo do arquivo zip para o local escolhido na imagem montada.
 2. Online – transfira o arquivo zip em uma sessão do PowerShell e descompacte-o em seu local escolhido.
 
 Em ambos os casos, você precisa do pacote da versão ZIP do Windows 10 x64 e precisa executar os comandos em uma instância "Administrador" do PowerShell.
 
-### <a name="offline-deployment-of-powershell-core"></a>Implantação offline do PowerShell Core
+### <a name="offline-deployment-of-powershell"></a>Implantação offline do PowerShell
 
 1. Use o utilitário zip favorito para descompactar o pacote para um diretório na imagem montada do Nano Server.
 2. Desmonte a imagem e inicialize-a.
 3. Conecte-se à instância da caixa de entrada do Windows PowerShell.
 4. Siga as instruções para criar um ponto de extremidade de comunicação remota usando a ["outra técnica de instância"](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
-### <a name="online-deployment-of-powershell-core"></a>Implantação online do PowerShell Core
+### <a name="online-deployment-of-powershell"></a>Implantação online do PowerShell
 
-As etapas a seguir servem de orientação para a implantação do PowerShell Core em uma instância em execução do Nano Server, e a configuração do seu ponto de extremidade de comunicação remota.
+As etapas a seguir servem de orientação para a implantação do PowerShell em uma instância em execução do Nano Server, e a configuração do seu ponto de extremidade de comunicação remota.
 
 - Conectar-se à instância da caixa de entrada do Windows PowerShell
 
@@ -160,14 +161,22 @@ As etapas a seguir servem de orientação para a implantação do PowerShell Cor
 
   ```powershell
   # Insert the appropriate version.
-  Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShellCore_<version>"
+  Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShell_<version>"
   ```
 
 - Se você deseja comunicação remota baseada no WSMan, siga as instruções para criar um ponto de extremidade de comunicação remota usando a ["outra técnica de instância"](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
+## <a name="install-as-a-net-global-tool"></a>Instalar como uma ferramenta global do .NET
+
+Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fácil instalar o PowerShell como uma [ferramenta global do .NET](/dotnet/core/tools/global-tools).
+
+```
+dotnet tool install --global PowerShell
+```
+
 ## <a name="how-to-create-a-remoting-endpoint"></a>Como criar um ponto de extremidade de comunicação remota
 
-O PowerShell Core dá suporte ao protocolo PSRP (comunicação remota do PowerShell) por WSMan e SSH. Para obter mais informações, consulte:
+O PowerShell dá suporte ao protocolo PSRP (comunicação remota do PowerShell) por WSMan e SSH. Para obter mais informações, consulte:
 
 - [Comunicação remota do SSH no PowerShell Core][ssh-remoting]
 - [Comunicação remota do WSMan no PowerShell Core][wsman-remoting]

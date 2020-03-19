@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
-ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
+ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885380"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402433"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -28,10 +28,10 @@ A escala recomendada para cada solução é a seguinte:
 |                   Solução                   |              Nós clientes              |
 | -------------------------------------------- | -------------------------------------- |
 | Servidor de Pull do Windows usando o banco de dados MDB/ESENT | Até 500 nós                        |
-| Servidor de Pull do Windows usando o banco de dados SQL       | Até 1000 nós                       |
-| DSC de Automação do Azure                         | Cenários com mais de 1000 nós |
+| Servidor de Pull do Windows usando o banco de dados SQL       | Até 3.500 nós                       |
+| DSC de Automação do Azure                         | Ambientes pequenos e grandes      |
 
-**A solução recomendada**, e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
+**A solução recomendada**, e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started). Não foi identificado um limite superior para o número de nós por Conta de Automação.
 
 O serviço do Azure pode gerenciar nós localmente em datacenters privados ou em nuvens públicas, como AWS e o Azure. Para ambientes privados, onde os servidores não podem se conectar diretamente à Internet, considere limitar o tráfego de saída apenas ao intervalo de IPs do Azure publicado (consulte [Intervalos de IP de Datacenter do Azure](https://www.microsoft.com/download/details.aspx?id=41653)).
 
