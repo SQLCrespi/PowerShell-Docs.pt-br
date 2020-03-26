@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no Windows
 description: Informações sobre a instalação do PowerShell no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: df05a16bcf7a81d43d24535e50517fa217f82e7a
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: bb0971b6c4ac99bde70b226da2becf2f4ed82083
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402413"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082788"
 ---
 # <a name="installing-powershell-on-windows"></a>Instalar o PowerShell no Windows
 
@@ -20,7 +20,7 @@ Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisit
 - Instale o [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) em versões do Windows antes do Windows 10. Ele está disponível por meio do Windows Update ou de download direto. Sistemas operacionais com suporte totalmente corrigidos (incluindo pacotes opcionais) já o terão instalado.
 - Instale o Windows Management Framework (WMF) 4.0 ou mais recente no Windows 7 e no Windows Server 2008 R2. Saiba mais sobre o WMF em [Visão geral do WMF](/powershell/scripting/wmf/overview).
 
-## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
+## <a name="installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
 
 Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
@@ -58,7 +58,7 @@ msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_
 
 Confira a lista completa das opções de linha de comando para Msiexec.exe em [Opções de linha de comando](/windows/desktop/Msi/command-line-options).
 
-## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />Instalação do pacote MSIX
+## <a name="installing-the-msix-package"></a><a id="msix" />Instalação do pacote MSIX
 
 Para instalar manualmente o pacote MSIX em um cliente Windows 10, baixe o pacote MSIX na nossa página de [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
@@ -70,7 +70,7 @@ Após o download, você não pode simplesmente clicar duas vezes no instalador p
 Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 ```
 
-## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />Instalando o pacote ZIP
+## <a name="installing-the-zip-package"></a><a id="zip" />Instalando o pacote ZIP
 
 Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. Observe que, ao usar o arquivo ZIP, você não obtém a verificação de pré-requisitos, como ocorre no pacote MSI. Para que a comunicação remota pelo WSMan funcione corretamente, verifique se você cumpriu os [pré-requisitos](#prerequisites).
 
@@ -81,7 +81,8 @@ O Windows IoT já é fornecido com o Windows PowerShell, o qual podemos usar par
 1. Crie `PSSession` no dispositivo de destino
 
    ```powershell
-   $s = New-PSSession -ComputerName <deviceIp> -Credential Administrator
+   Set-Item -Path WSMan:\localhost\Client\TrustedHosts <deviceip>
+   $S = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
 2. Copie o pacote ZIP no dispositivo
@@ -173,6 +174,8 @@ Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fáci
 ```
 dotnet tool install --global PowerShell
 ```
+
+O instalador da ferramenta dotnet adiciona `$env:USERPROFILE\dotnet\tools` à sua variável de ambiente `$env:PATH`. No entanto, o shell em execução no momento não tem o `$env:PATH` atualizado. Você deve conseguir iniciar o PowerShell em um novo shell digitando `pwsh`.
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>Como criar um ponto de extremidade de comunicação remota
 
