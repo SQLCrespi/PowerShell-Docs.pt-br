@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Como depurar scripts no ISE do Windows PowerShell
-ms.openlocfilehash: c5da80f3e0e013448533c80bbe1957a301be38f5
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737110"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500934"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar scripts no ISE do Windows PowerShell
 
@@ -26,13 +26,13 @@ Depois de o script ser pausado por um ponto de interrupção, você pode executa
 
 1. **Ponto de interrupção de comando.** O script faz uma pausa sempre que o comando designado está prestes a ser executado durante a operação do script. Ele pode incluir parâmetros para filtrar ainda mais o ponto de interrupção para somente a operação desejada. O comando também pode ser uma função que você criou.
 
-Desses, no ambiente de depuração do ISE do Windows PowerShell, somente os pontos de interrupção de linha podem ser definidos usando o menu ou os atalhos de teclado. Os outros dois tipos de pontos de interrupção podem ser definidos, mas são definidos no Painel de Console usando o cmdlet [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md). Esta seção descreve como executar tarefas de depuração no ISE do Windows PowerShell usando os menus quando disponíveis e como executar uma variedade maior de comandos no Painel de Console usando scripts.
+Desses, no ambiente de depuração do ISE do Windows PowerShell, somente os pontos de interrupção de linha podem ser definidos usando o menu ou os atalhos de teclado. Os outros dois tipos de pontos de interrupção podem ser definidos, mas são definidos no Painel de Console usando o cmdlet [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint). Esta seção descreve como executar tarefas de depuração no ISE do Windows PowerShell usando os menus quando disponíveis e como executar uma variedade maior de comandos no Painel de Console usando scripts.
 
 ### <a name="to-set-a-breakpoint"></a>Para definir um ponto de interrupção
 
 Um ponto de interrupção pode ser definido em um script somente depois de ele ser salvo. Clique com o botão direito do mouse na linha em que você quer definir um ponto de interrupção e clique em **Alternar Ponto de Interrupção**. Ou então clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e pressione <kbd>F9</kbd> ou, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**.
 
-O script a seguir é um exemplo de como é possível definir um ponto de interrupção de variável no Painel de Console usando o cmdlet [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
+O script a seguir é um exemplo de como é possível definir um ponto de interrupção de variável no Painel de Console usando o cmdlet [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint).
 
 ```powershell
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -43,7 +43,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 
 Exibe todos os pontos de interrupção na sessão atual do Windows PowerShell.
 
-No menu **Depurar**, clique em **Listar Pontos de Interrupção**. O script a seguir é um exemplo de como é possível listar todos os pontos de interrupção no Painel de Console usando o cmdlet [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md).
+No menu **Depurar**, clique em **Listar Pontos de Interrupção**. O script a seguir é um exemplo de como é possível listar todos os pontos de interrupção no Painel de Console usando o cmdlet [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint).
 
 ```powershell
 # This command lists all breakpoints in the current session.
@@ -55,7 +55,7 @@ Get-PSBreakpoint
 Remover um ponto de interrupção o excluirá.
 
 Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [Desabilitar um ponto de interrupção](#disable-a-breakpoint) em vez disso. Clique com o botão direito do mouse na linha da qual você quer remover um ponto de interrupção e clique em **ToggleBreakpoint**.
-Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md).
+Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint).
 
 ```powershell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -66,7 +66,7 @@ Remove-PSBreakpoint -Id 2
 
 Para remover todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Remover Todos os Pontos de Interrupção**.
 
-O script a seguir é um exemplo de como remover todos os pontos de interrupção no Painel de Console usando o cmdlet [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md).
+O script a seguir é um exemplo de como remover todos os pontos de interrupção no Painel de Console usando o cmdlet [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint).
 
 ```powershell
 # This command deletes all of the breakpoints in the current session.
@@ -75,7 +75,7 @@ Get-PSBreakpoint | Remove-PSBreakpoint
 
 ### <a name="disable-a-breakpoint"></a>Desabilitar um ponto de interrupção
 
-Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado. Para desabilitar um ponto de interrupção de linha específico, clique com o botão direito do mouse na linha na qual você quer desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione <kbd>F9</kbd> ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md).
+Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado. Para desabilitar um ponto de interrupção de linha específico, clique com o botão direito do mouse na linha na qual você quer desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione <kbd>F9</kbd> ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint).
 
 ```powershell
 # This command disables the breakpoint with breakpoint ID 0.
@@ -84,7 +84,7 @@ Disable-PSBreakpoint -Id 0
 
 ### <a name="disable-all-breakpoints"></a>Desabilitar Todos os Pontos de Interrupção
 
-Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado. Para desabilitar todos os pontos de interrupção na sessão atual, no menu **Depurar**, clique em **Desabilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível desabilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md).
+Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado. Para desabilitar todos os pontos de interrupção na sessão atual, no menu **Depurar**, clique em **Desabilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível desabilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint).
 
 ```powershell
 # This command disables all breakpoints in the current session.
@@ -94,7 +94,7 @@ Get-PSBreakpoint | Disable-PSBreakpoint
 
 ### <a name="enable-a-breakpoint"></a>Habilitar um ponto de interrupção
 
-Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha na qual você quer habilitar um ponto de interrupção e clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione <kbd>F9</kbd> ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md).
+Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha na qual você quer habilitar um ponto de interrupção e clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione <kbd>F9</kbd> ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint).
 
 ```powershell
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -103,7 +103,7 @@ Enable-PSBreakpoint -Id 0, 1, 5
 
 ### <a name="enable-all-breakpoints"></a>Habilitar Todos os Pontos de Interrupção
 
-Para habilitar todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Habilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível habilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md).
+Para habilitar todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Habilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível habilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint).
 
 ```powershell
 # This command enables all breakpoints in the current session.
@@ -113,7 +113,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 
 ## <a name="how-to-manage-a-debugging-session"></a>Como gerenciar uma sessão de depuração
 
-Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#how-to-manage-breakpoints) ou [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
+Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#how-to-manage-breakpoints) ou [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint).
 Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
 
 ### <a name="to-start-debugging"></a>Para iniciar a depuração
@@ -138,7 +138,7 @@ Pressione <kbd>SHIFT</kbd>+<kbd>F5</kbd> ou, no menu **Depurar**, clique em **In
 
 Passo a passo é o processo de executar uma instrução de cada vez. Você pode parar em uma linha de código e examinar os valores de variáveis e o estado do sistema. A tabela a seguir descreve as tarefas comuns de depuração como contornar, intervir e sair.
 
-| Tarefa de Depuração |                                                                                                                   DESCRIÇÃO                                                                                                                    |                                                      Como fazer isso no ISE do PowerShell                                                       |
+| Tarefa de Depuração |                                                                                                                   Descrição                                                                                                                    |                                                      Como fazer isso no ISE do PowerShell                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Intervir**  | Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador intervirá nessa função ou script, caso contrário, ele parará na próxima instrução.                      | Pressione <kbd>F11</kbd> ou, no menu **Depurar**, clique em **Intervir** ou então, no Painel de Console, digite `S` e pressione <kbd>ENTER</kbd>.                 |
 | **Contornar**  | Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador executará a função ou o script completos e parará na próxima instrução após a chamada de função. | Pressione <kbd>F10</kbd> ou, no menu **Depurar**, clique em **Contornar** ou então, no Painel de Console, digite `V` e pressione <kbd>ENTER</kbd>.                 |
@@ -198,4 +198,4 @@ C:\ps-test\MyScript.ps1
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Explorando o ISE do Windows PowerShell](exploring-the-windows-powershell-ise.md)
+[Explorando o ISE do Windows PowerShell](exploring-the-windows-powershell-ise.md)

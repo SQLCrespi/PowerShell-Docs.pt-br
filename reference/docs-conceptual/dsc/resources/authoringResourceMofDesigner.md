@@ -2,22 +2,18 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
-ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952853"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500642"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md).
-Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory.
-Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
-
->**Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md). Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory. Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
 
 ## <a name="creating-resource-properties"></a>Criando propriedades de recurso
 A primeira coisa que precisamos fazer é decidir sobre as propriedades que serão expostas pelo recuso. Para esse exemplo, definiremos um usuário do Active Directory com as seguintes propriedades.
@@ -26,7 +22,7 @@ Nome do parâmetro Descrição
 * **UserName**: propriedade da chave que identifica um usuário com exclusividade.
 * **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
 * **DomainCredential**: a senha do domínio para o usuário.
-* **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
+* **Senha**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
 
 Para criar as propriedades, usamos o cmdlet **novo xDscResourceProperty**. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
 
@@ -60,7 +56,8 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-O script do recurso está em **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**. Não inclui a lógica real para implementar o recurso, que você mesmo deve adicionar. O conteúdo do script esqueleto é o seguinte.
+O script do recurso está em **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.
+Não inclui a lógica real para implementar o recurso, que você mesmo deve adicionar. O conteúdo do script esqueleto é o seguinte.
 
 ```powershell
 function Get-TargetResource

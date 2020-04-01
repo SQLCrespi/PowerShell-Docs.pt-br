@@ -3,12 +3,12 @@ title: Criar um provedor de navegação do Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 7ca7e3ca6feeba018ad793d074caf67cd9506a68
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870686"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500797"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
 
@@ -27,8 +27,7 @@ O provedor descrito aqui permite que o usuário manipule um banco de dados do Ac
 
 Um provedor de navegação do Windows PowerShell deve criar uma classe .NET que deriva da classe base [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Aqui está a definição de classe para o provedor de navegação descrito nesta seção.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
-"AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
 Observe que, nesse provedor, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há recursos específicos do Windows PowerShell adicionados.
 
@@ -97,7 +96,7 @@ O provedor de navegação pode implementar o método [System. Management. Automa
 
 O código a seguir mostra a implementação de [System. Management. Automation. Provider. Navigationcmdletprovider. IsItemContainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) em nosso provedor de navegação de exemplo. O método verifica se o caminho especificado está correto e se a tabela existe e retorna true se o caminho indica um contêiner.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
 #### <a name="things-to-remember-about-implementing-isitemcontainer"></a>Coisas a serem lembradas sobre a implementação de IsItemContainer
 
@@ -276,7 +275,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Configurações parciais da Configuração de Estado Desejado do PowerShell
-ms.openlocfilehash: 379ecf804329f318e9604c1af43a60a0e24551f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 842acad221d468ca5e4c9e660f0205c567bcc220
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417747"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500764"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais da Configuração de Estado Desejado do PowerShell
 
@@ -23,7 +23,7 @@ Para usar configurações parciais no modo de push, o LCM é configurado no nó 
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Configurando o LCM para configurações parciais no modo de push
 
-Para configurar o LCM para configurações parciais no modo de push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](/powershell/scripting/dsc/metaConfig). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
+Para configurar o LCM para configurações parciais no modo de push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](../managing-nodes/metaConfig.md). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]

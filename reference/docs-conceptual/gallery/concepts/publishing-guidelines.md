@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: 07271e037100350d3efc7ae63860f42afd22aae7
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 5ee33ba12475f9d3e5ceb3b31f37d9f2acc19d9e
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278199"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500597"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -165,7 +165,8 @@ O PowerShell dá suporte à validação de assinatura de código por meio de dua
 
 A assinatura de arquivos do PowerShell é uma abordagem bem estabelecida para garantir que o código que está sendo executado tenha sido produzido por uma fonte confiável e não tenha sido modificado. Os detalhes de como assinar arquivos de script do PowerShell são abordados no artigo [Sobre assinatura](/powershell/module/microsoft.powershell.core/about/about_signing). Em geral, uma assinatura pode ser adicionada a qualquer arquivo `.PS1` que o PowerShell valida quando o script é carregado. O PowerShell pode ser restrito usando os cmdlets [Política de execução](/powershell/module/microsoft.powershell.core/about/about_execution_policies) para garantir o uso de scripts.
 
-A assinatura de catálogo de módulo é um recurso que foi adicionado no PowerShell na versão 5.1. Como assinar um módulo é abordado no artigo [Cmdlets de catálogo](/powershell/scripting/wmf/5.1/catalog-cmdlets). Em geral, a assinatura do catálogo é feita criando um arquivo de catálogo que contenha um valor de hash para cada arquivo no módulo e, em seguida, assinando esse arquivo.
+A assinatura de catálogo de módulo é um recurso que foi adicionado no PowerShell na versão 5.1. Como assinar um módulo é abordado no artigo [Cmdlets de catálogo](/powershell/scripting/wmf/whats-new/new-updated-cmdlets#catalog-cmdlets).
+Em geral, a assinatura do catálogo é feita criando um arquivo de catálogo que contenha um valor de hash para cada arquivo no módulo e, em seguida, assinando esse arquivo.
 
 Os cmdlets **PowerShellGet** `Publish-Module`, `Install-Module` e `Update-Module` verificarão a assinatura para garantir que seja válida e, em seguida, confirmar que o valor de hash de cada pacote corresponde ao que está no catálogo. `Save-Module` não valida uma assinatura. Se uma versão anterior do módulo estiver instalada no sistema, `Install-Module` confirmará se a autoridade de assinatura da nova versão coincide com a que já estava instalada. `Install-Module` e `Update-Module` usarão a assinatura em um arquivo `.PSD1` se o pacote não for assinado por catálogo. A assinatura de catálogo funciona com os arquivos de script de assinatura, mas não os substitui. O PowerShell não valida as assinaturas de catálogo no tempo de carregamento do módulo.
 

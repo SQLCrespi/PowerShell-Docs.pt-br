@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.0
 description: Novos recursos e alterações liberados no PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: d1bc1ef2676da60062b8bdd57042331f0f245bec
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995489"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500481"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novidades no PowerShell Core 6.0
 
@@ -231,7 +231,7 @@ Colocar `&` no final de um pipeline faz com que o pipeline seja executado como u
 - Suporte à paginação de cabeçalho de link em cmdlets da Web (#3828)
   - Para `Invoke-WebRequest`, quando a resposta inclui um cabeçalho de link, criamos uma propriedade RelationLink como um dicionário que representa as URLs e atributos `rel` e garantimos que as URLs são absolutas para facilitar o uso pelo desenvolvedor.
   - Para `Invoke-RestMethod`, quando a resposta inclui um cabeçalho de link, expomos um comutador `-FollowRelLink` para seguir automaticamente links `next` `rel` até que eles não existam mais ou até o valor do parâmetro `-MaximumFollowRelLink` opcional seja clicado.
-- Adicione o parâmetro `-CustomMethod` a cmdlets da Web para permitir verbos do método não padrão. (#3142) (Obrigado, [@Lee303](https://github.com/Lee303)!)
+- Adicione o parâmetro `-CustomMethod` a cmdlets da Web para permitir verbos do método não padrão. (#3142) (Obrigado, @Lee303!)
 - Adicione suporte do `SslProtocol` aos cmdlets da Web. (#5329) (Obrigado, [@markekraus](https://github.com/markekraus)!)
 - Adicione suporte de partes múltiplas aos cmdlets da Web. (#4782) (Obrigado, [@markekraus](https://github.com/markekraus))
 - Adicione `-NoProxy` a cmdlets da Web para que eles ignorem a configuração do proxy em todo o sistema. (#3447) (Obrigado, [@TheFlyingCorpse](https://github.com/TheFlyingCorpse)!)
@@ -248,7 +248,7 @@ Colocar `&` no final de um pipeline faz com que o pipeline seja executado como u
 - Altere cmdlets da Web `UserAgent` de `WindowsPowerShell` para `PowerShell`. (#4914) (Obrigado, [@markekraus](https://github.com/markekraus))
 - Adicione a detecção `ContentType` explícita `Invoke-RestMethod` (#4692)
 - Corrija os cmdlets da Web `-SkipHeaderValidation` para funcionar com cabeçalhos de agente do usuário não padrão. (#4479 &
-  #<a name="4512-thanks-markekraushttpsgithubcommarkekraus"></a>4512) (Obrigado [@markekraus](https://github.com/markekraus))
+  #<a name="4512-thanks-markekraus"></a>4512) (Obrigado [@markekraus](https://github.com/markekraus))
 
 ### <a name="json-cmdlets"></a>Cmdlets JSON
 

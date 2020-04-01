@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Atualizar nós de um servidor de pull
-ms.openlocfilehash: 516e50b0c39e4747a123307cb3f5e25259ac7ce5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417705"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500671"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>Atualizar nós de um servidor de pull
 
@@ -38,4 +38,4 @@ $cimSession | Remove-CimSession
 
 ## <a name="see-also"></a>Consulte Também
 
-[PerformRequiredConfigurationChecks](/powershell/scripting/dsc/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks)
+[PerformRequiredConfigurationChecks](../reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)
