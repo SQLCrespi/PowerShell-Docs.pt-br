@@ -2,12 +2,12 @@
 title: Novidades no PowerShell 7.0
 description: Novos recursos e alterações lançados no PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 6915bb70d6e54da86d2b935e3feed8d7f3770ba9
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404990"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263128"
 ---
 # <a name="whats-new-in-powershell-70"></a>Novidades no PowerShell 7.0
 
@@ -396,6 +396,7 @@ Saiba mais informações sobre [Invoke-DSCResource](/powershell/module/psdesired
 - Corrigir um vazamento de recurso ao cancelar o registro do manipulador de eventos de AppDomain.CurrentDomain.ProcessExit (nº 10626)
 - Adicionar suporte a ActionPreference.Break para entrar no depurador quando forem geradas mensagens de depuração, erro, informações, progresso, detalhadas ou de aviso (nº 8205) (Obrigado, @KirkMunro!)
 - Habilitar os suplementos iniciais do painel de controle no PowerShell Core sem especificar a extensão .CPL. (nº 9828)
+- Suporte a números negativos no operador -split (#8960) (obrigado, @ece-jacob-scott!)
 
 ### <a name="general-cmdlet-updates-and-fixes"></a>Atualizações e correções gerais do Cmdlet
 

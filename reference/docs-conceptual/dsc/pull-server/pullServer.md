@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402433"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500718"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -70,7 +70,7 @@ A melhor maneira de configurar o Windows Server para hospedar o serviço de pull
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT (padrão), MDB | ESENT (padrão), MDB | ESENT (padrão), SQL Server, MDB               |
 
-Começando na versão 17090 do [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), o SQL Server é uma opção compatível com o serviço de pull (Recurso do Windows *Serviço de DSC*). Essa é uma nova opção para dimensionar grandes ambientes de DSC que não foram migrados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
+A partir da versão 17090 do Windows Server, o SQL Server é uma opção compatível com o serviço de pull (Recurso do Windows *Serviço DSC*). Essa é uma nova opção para dimensionar grandes ambientes de DSC que não foram migrados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
 
 > [!NOTE]
 > O suporte ao SQL Server não será adicionado às versões anteriores do WMF 5.1 (ou mais antigas) e só estará disponível nas versões do Windows Server maiores ou iguais à 17090.
@@ -82,7 +82,7 @@ Para obter um exemplo de configuração do SQL Server com **xDscWebService**, pr
 
 A maneira mais fácil de configurar um servidor de recepção Web é usar o recurso **xDscWebService**, incluído no módulo **xPSDesiredStateConfiguration**. As etapas a seguir explicam como usar o recurso em uma `Configuration` que defina o serviço Web.
 
-1. Chame o cmdlet [Install-Module](/reference/6/PowerShellGet/Install-Module.md) para instalar o módulo **xPSDesiredStateConfiguration**.
+1. Chame o cmdlet [Install-Module](/powershell/module/PowerShellGet/Install-Module) para instalar o módulo **xPSDesiredStateConfiguration**.
 
    > [!NOTE]
    > `Install-Module` está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0 e posterior.
@@ -234,7 +234,7 @@ Use `New-DscChecksum {module zip file}` para criar um arquivo de soma de verific
 
 ### <a name="configuration-mof-format"></a>Formato MOF de configuração
 
-Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DscChecksum](/reference/6/PSDesiredStateConfiguration/New-DSCCheckSum.md). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e os arquivos de soma de verificação associados na pasta **ConfigurationPath**.
+Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e os arquivos de soma de verificação associados na pasta **ConfigurationPath**.
 
 > [!NOTE]
 > Se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.

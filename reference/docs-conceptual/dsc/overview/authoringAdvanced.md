@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Noções básicas sobre a função da DSC em um pipeline de CI/CD
-ms.openlocfilehash: 79740225c030974546035b67e0f873fa00aa690a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78279326"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500816"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Noções básicas sobre a função da DSC em um pipeline de CI/CD
 
@@ -41,7 +41,7 @@ Segundo os clientes, isso pode levar a conflitos de recursos, substituições n�
 
 Além disso, comentaram que ao usar esse modelo, é improvável que as alterações em cada configuração feita pelas equipes de controle sejam completamente testadas em um pipeline de lançamento, o que gera resultados inesperados na produção.
 
-**É essencial que um único pipeline seja usado para avaliar o lançamento de todas as alterações nos servidores.**
+**É essencial usar um único pipeline para avaliar o lançamento de todas as alterações nos servidores.**
 
 Na ilustração abaixo, a Equipe B libera a configuração parcial para a Equipe A. Em seguida, a Equipe A executa seus testes em um servidor com ambas as configurações aplicadas. Nesse modelo, somente uma autoridade tem permissão para fazer alterações na produção.
 

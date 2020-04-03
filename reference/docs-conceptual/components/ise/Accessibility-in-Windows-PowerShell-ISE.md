@@ -2,12 +2,12 @@
 ms.date: 12/19/2019
 keywords: powershell, cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
-ms.openlocfilehash: e618daca98d76f767a8b60a3425760bfc0bd0f64
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736276"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500956"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -121,7 +121,7 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 | **Parar depurador**          | <kbd>SHIFT</kbd>+<kbd>F5</kbd>                 | Painel de Script ao depurar um script |
 
 > [!NOTE]
-> Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar Enter.
+> Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar <kbd>ENTER</kbd>.
 
 |                 Ação                  |      Atalho do Teclado       |                Usar em                 |
 | --------------------------------------- | ---------------------------- | ------------------------------------- |
@@ -143,7 +143,7 @@ Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows 
 | ------------------------------- | ---------------------------------------------------------------------------------- |
 | **Fechar a guia do PowerShell**        | <kbd>CTRL</kbd>+<kbd>W</kbd>                                                       |
 | **Nova guia do PowerShell**          | <kbd>CTRL</kbd>+<kbd>T</kbd>                                                       |
-| **Guia anterior do PowerShell**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> (Somente quando nenhum arquivo estiver aberto em nenhuma das guias do PowerShell)                 |
+| **Guia anterior do PowerShell**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> (Somente quando nenhum arquivo estiver aberto em nenhuma das guias do PowerShell) |
 | **Próxima guia do Windows PowerShell** | <kbd>CTRL</kbd>+<kbd>TAB</kbd> (Somente quando nenhum arquivo estiver aberto em nenhuma das guias do PowerShell) |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Atalhos de teclado para iniciar e sair
@@ -157,8 +157,7 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 
 ## <a name="breakpoint-management"></a>Gerenciamento do ponto de interrupção
 
-Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) e [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
-Para saber mais, veja "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
+Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) e [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint). Para saber mais, veja "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
 
 ## <a name="see-also"></a>Consulte Também
 
