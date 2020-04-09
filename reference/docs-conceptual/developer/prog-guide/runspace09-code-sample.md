@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 136e451f-767b-42e0-bd6f-6486693abd5e
 caps.latest.revision: 6
-ms.openlocfilehash: 2f447fd0ce21c5bca8abe1fddb4e3c7025b70ef1
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: d7fa39485eea833483682c91c96417a76e5d770f
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870567"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80977532"
 ---
-# <a name="runspace09-code-sample"></a><span data-ttu-id="a81e8-102">Exemplo de código RunSpace09</span><span class="sxs-lookup"><span data-stu-id="a81e8-102">RunSpace09 Code Sample</span></span>
+# <a name="runspace09-code-sample"></a><span data-ttu-id="49806-102">Exemplo de código RunSpace09</span><span class="sxs-lookup"><span data-stu-id="49806-102">RunSpace09 Code Sample</span></span>
 
-<span data-ttu-id="a81e8-103">Aqui está o código-fonte para o exemplo de Runspace09 descrito em [criando um aplicativo de console que invoca um pipeline de forma assíncrona](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).</span><span class="sxs-lookup"><span data-stu-id="a81e8-103">Here is the source code for the Runspace09 sample described in [Creating a Console Application That Invokes a Pipeline Asynchronously](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).</span></span>
-<span data-ttu-id="a81e8-104">Esse aplicativo de exemplo cria e abre um runspace, cria e invoca de forma assíncrona um pipeline e, em seguida, usa eventos de pipeline para processar o script de forma assíncrona.</span><span class="sxs-lookup"><span data-stu-id="a81e8-104">This sample application creates and opens a runspace, creates and asynchronously invokes a pipeline, and then uses pipeline events to process the script asynchronously.</span></span> <span data-ttu-id="a81e8-105">O script que é executado por esse aplicativo cria os inteiros de 1 a 10 em intervalos de 0,5 segundos (500 MS).</span><span class="sxs-lookup"><span data-stu-id="a81e8-105">The script that is run by this application creates the integers 1 through 10 in 0.5-second intervals (500 ms).</span></span>
+<span data-ttu-id="49806-103">Aqui está o código-fonte para o exemplo de Runspace09 descrito em [criando um aplicativo de console que invoca um pipeline de forma assíncrona](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).</span><span class="sxs-lookup"><span data-stu-id="49806-103">Here is the source code for the Runspace09 sample described in [Creating a Console Application That Invokes a Pipeline Asynchronously](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).</span></span>
+<span data-ttu-id="49806-104">Esse aplicativo de exemplo cria e abre um runspace, cria e invoca de forma assíncrona um pipeline e, em seguida, usa eventos de pipeline para processar o script de forma assíncrona.</span><span class="sxs-lookup"><span data-stu-id="49806-104">This sample application creates and opens a runspace, creates and asynchronously invokes a pipeline, and then uses pipeline events to process the script asynchronously.</span></span> <span data-ttu-id="49806-105">O script que é executado por esse aplicativo cria os inteiros de 1 a 10 em intervalos de 0,5 segundos (500 MS).</span><span class="sxs-lookup"><span data-stu-id="49806-105">The script that is run by this application creates the integers 1 through 10 in 0.5-second intervals (500 ms).</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="a81e8-106">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="a81e8-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="49806-106">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="49806-106">Code Sample</span></span>
 
-[!code-csharp[Runspace09.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace09/Runspace09.cs#L11-L113 "Runspace09.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace09/Runspace09.cs" range="11-113":::
 
-## <a name="see-also"></a><span data-ttu-id="a81e8-107">Veja também</span><span class="sxs-lookup"><span data-stu-id="a81e8-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49806-107">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="49806-107">See Also</span></span>
 
-[<span data-ttu-id="a81e8-108">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="a81e8-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="49806-108">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="49806-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
