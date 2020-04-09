@@ -11,16 +11,16 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360515"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978501"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Criar um provedor básico do Windows PowerShell
 
-Este tópico é o ponto de partida para aprender a criar um provedor do Windows PowerShell. O provedor básico descrito aqui fornece métodos para iniciar e interromper o provedor e, embora esse provedor não forneça um meio para acessar um armazenamento de dados ou obter ou definir os dados no repositório de dados, ele fornece a funcionalidade básica exigida pelo todos os provedores.
+Este tópico é o ponto de partida para aprender a criar um provedor do Windows PowerShell. O provedor básico descrito aqui fornece métodos para iniciar e interromper o provedor e, embora esse provedor não forneça um meio para acessar um armazenamento de dados ou obter ou definir os dados no repositório de dados, ele fornece a funcionalidade básica exigida por todos os provedores.
 
 Conforme mencionado anteriormente, o provedor básico descrito aqui implementa métodos para iniciar e parar o provedor. O tempo de execução do Windows PowerShell chama esses métodos para inicializar e cancelar a inicialização do provedor.
 
@@ -38,7 +38,7 @@ A primeira etapa na criação de um provedor do Windows PowerShell é definir su
 
 Aqui está a definição de classe para este provedor básico:
 
-[!code-csharp[AccessDBProviderSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs#L23-L24 "AccessDBProviderSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
 Logo antes da definição de classe, você deve declarar o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) com a sintaxe [cmdletprovider ()].
 
@@ -79,7 +79,7 @@ Este provedor básico não substitui esse método. No entanto, o código a segui
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStop](Msh_samplesaccessdbprov01#accessdbprov01ProviderStop)]  -->
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 Para obter o código de exemplo completo, consulte [exemplo de código AccessDbProviderSample01](./accessdbprovidersample01-code-sample.md).
 
@@ -91,9 +91,9 @@ Depois que o provedor do Windows PowerShell tiver sido registrado com o Windows 
 Get-PSProvider
 ```
 
-A seguinte saída é exibida:
+A saída a seguir é exibida:
 
-```output
+```Output
 Name                 Capabilities                  Drives
 ----                 ------------                  ------
 AccessDb             None                          {}

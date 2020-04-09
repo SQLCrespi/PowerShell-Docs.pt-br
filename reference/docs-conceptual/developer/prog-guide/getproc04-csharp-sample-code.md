@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 439ba3f3-91b1-46a4-8d07-9af6edb71bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 0ca2ccc5188f0c1784ec14ac204c1fdd624c2e66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d17a67019b7451f2da5595b3258457a01cc86b0b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978348"
 ---
 # <a name="getproc04-c-sample-code"></a>Código de exemplo GetProc04 (C#)
 
@@ -21,12 +21,11 @@ O código a seguir mostra a implementação de um cmdlet `Get-Process` que relat
 
 > [!NOTE]
 > Você pode baixar o C# arquivo de origem (getprov04.cs) para este cmdlet Get-proc usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
 > Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
-[!code-csharp[GetProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample04/GetProcessSample04.cs#L11-L98 "GetProcessSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample04/GetProcessSample04.cs" range="11-98":::
 
 ## <a name="see-also"></a>Consulte Também
 

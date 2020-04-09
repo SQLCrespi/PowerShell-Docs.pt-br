@@ -8,25 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
-ms.openlocfilehash: 26c7bafe708fbbd89aecb002f3591daa03f56b77
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ee4a0cb6032361aecdf21ab7346521b4757f7030
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417518"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978552"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Exemplo de código AccessDbProviderSample03
 
-O código a seguir mostra a implementação do provedor do Windows PowerShell descrito em [criando um provedor de item do Windows PowerShell](./creating-a-windows-powershell-item-provider.md). Este provedor que pode manipular os dados em um armazenamento de dados.
+O código a seguir mostra a implementação do provedor do Windows PowerShell descrito em [criando um provedor de item do Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
+Este provedor que pode manipular os dados em um armazenamento de dados.
 
 > [!NOTE]
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider03.cs) para este provedor usando o kit de desenvolvimento de software do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
->
-> Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório. Para obter mais informações sobre outras implementações de provedor do Windows PowerShell, consulte [projetando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 ```csharp
 using System;
@@ -997,7 +995,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 }
 ```
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L11-L976 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
 ## <a name="see-also"></a>Consulte Também
 

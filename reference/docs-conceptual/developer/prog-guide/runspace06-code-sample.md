@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d71f86d5-eb62-4b16-aa95-5fd3f314ffd3
 caps.latest.revision: 6
-ms.openlocfilehash: 98b01a79474c58afc3ef1ae5b3761a8d651162f9
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: d1d5e7f4096288ed09dada8eb8a61773921dc1ce
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870618"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978213"
 ---
 # <a name="runspace06-code-sample"></a>Exemplo de código RunSpace06
 
@@ -26,9 +26,9 @@ Esse aplicativo de exemplo cria um runspace com base em um snap-in do Windows Po
 
 ## <a name="code-sample"></a>Exemplo de código
 
-[!code-csharp[Runspace06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace06/Runspace06.cs#L11-L85 "Runspace06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace06/Runspace06.cs" range="11-85":::
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

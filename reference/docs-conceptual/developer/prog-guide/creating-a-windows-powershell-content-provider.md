@@ -3,12 +3,12 @@ title: Criar um provedor de conteúdo do Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
-ms.openlocfilehash: 149ddb5becf2e0237973e535323ddf8b03b86f24
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: e7a59d902633a6d4c73236b7f5a10fc4b405c9bf
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978467"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Criar um provedor de conteúdo do Windows PowerShell
 
@@ -22,7 +22,7 @@ Este tópico descreve como criar um provedor do Windows PowerShell que permite a
 
 Um provedor de conteúdo do Windows PowerShell deve criar uma classe .NET que ofereça suporte à interface [System. Management. Automation. Provider. Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) . Aqui está a definição de classe para o provedor de item descrito nesta seção.
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="32-33":::
 
 Observe que nessa definição de classe, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há nenhum recurso específico do Windows PowerShell adicionado.
 
@@ -46,15 +46,14 @@ Para dar suporte a comandos recursivos, Contêineres aninhados e caminhos relati
 Para ler o conteúdo de um item, um provedor deve implementar uma classe de leitor de conteúdo derivada de [System. Management. Automation. Provider. Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader).
 O leitor de conteúdo para esse provedor permite o acesso ao conteúdo de uma linha em uma tabela de dados. A classe Content Reader define um método **Read** que recupera os dados da linha indicada e retorna uma lista que representa esses dados, um método de **busca** que move o leitor de conteúdo, um método **Close** que fecha o leitor de conteúdo e um método **Dispose** .
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241
-"AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="2115-2241":::
 
 ## <a name="implementing-a-content-writer"></a>Implementando um gravador de conteúdo
 
 Para gravar o conteúdo em um item, um provedor deve implementar uma classe de gravador de conteúdo derivada de [System. Management. Automation. Provider. Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter).
 A classe de gravador de conteúdo define um método de **gravação** que grava o conteúdo de linha especificado, um método de **busca** que move o gravador de conteúdo, um método **Close** que fecha o gravador de conteúdo e um método **Dispose** .
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="2250-2394":::
 
 ## <a name="retrieving-the-content-reader"></a>Recuperando o leitor de conteúdo
 
@@ -83,7 +82,7 @@ public IContentReader GetContentReader(string path)
 } // GetContentReader
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1829-L1846 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1829-1846":::
 
 #### <a name="things-to-remember-about-implementing-getcontentreader"></a>Coisas a serem lembradas sobre a implementação de GetContentReader
 
@@ -106,7 +105,7 @@ public object GetContentReaderDynamicParameters(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1853-L1856 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1853-1856":::
 
 ## <a name="retrieving-the-content-writer"></a>Recuperando o gravador de conteúdo
 
@@ -135,7 +134,7 @@ public IContentWriter GetContentWriter(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1863-L1880 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1863-1880":::
 
 #### <a name="things-to-remember-about-implementing-getcontentwriter"></a>Coisas a serem lembradas sobre a implementação de GetContentWriter
 
@@ -151,7 +150,7 @@ Os cmdlets `Add-Content` e `Set-Content` podem exigir parâmetros dinâmicos adi
 
 Este provedor de contêiner do Windows PowerShell não implementa esse método. No entanto, o código a seguir é a implementação padrão desse método.
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1887-L1890 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1887-1890":::
 
 ## <a name="clearing-content"></a>Limpando conteúdo
 
@@ -159,7 +158,7 @@ Seu provedor de conteúdo implementa o método [System. Management. Automation. 
 
 Aqui está a implementação do método [System. Management. Automation. Provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) para esse provedor.
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1775-L1812 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1775-1812":::
 
 #### <a name="things-to-remember-about-implementing-clearcontent"></a>Coisas a serem lembradas sobre a implementação de ClearContent
 
@@ -186,7 +185,7 @@ public object ClearContentDynamicParameters(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1819-L1822 "AccessDBProviderSample06.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="1819-1822":::
 
 ## <a name="code-sample"></a>Exemplo de código
 

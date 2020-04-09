@@ -1,22 +1,13 @@
 ---
-title: Criando um provedor de contêiner do Windows PowerShell | Microsoft Docs
-ms.custom: ''
+title: Criar um provedor de contêineres do Windows PowerShell
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], container provider
-- container providers [PowerShell Programmer's Guide]
-ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
-caps.latest.revision: 5
-ms.openlocfilehash: 69e45de4220a234783d35a877116ad5a5e47d182
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: eec92d526ad78d2351eef6679eaa0df19900715b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870771"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978484"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Criar um provedor de contêineres do Windows PowerShell
 
@@ -42,7 +33,7 @@ Um provedor de contêiner do Windows PowerShell deve definir uma classe .NET que
 public class AccessDBProvider : ContainerCmdletProvider
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="34-35":::
 
 Observe que nessa definição de classe, o atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) inclui dois parâmetros. O primeiro parâmetro especifica um nome amigável para o provedor usado pelo Windows PowerShell. O segundo parâmetro especifica os recursos específicos do Windows PowerShell que o provedor expõe para o tempo de execução do Windows PowerShell durante o processamento do comando. Para esse provedor, não há recursos específicos do Windows PowerShell adicionados.
 
@@ -118,7 +109,7 @@ protected override void GetChildItems(string path, bool recurse)
 } // GetChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L311-L362 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="311-362":::
 
 #### <a name="things-to-remember-about-implementing-getchilditems"></a>Coisas a serem lembradas sobre a implementação de GetChildItems
 
@@ -192,7 +183,7 @@ protected override void GetChildNames(string path,
 } // GetChildNames
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L369-L411 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="369-411":::
 
 #### <a name="things-to-remember-about-implementing-getchildnames"></a>Coisas a serem lembradas sobre a implementação de getchildnames
 
@@ -272,7 +263,7 @@ protected override void NewItem( string path, string type, object newItemValue )
 } // NewItem
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L939-L955 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="939-955":::
 
 #### <a name="things-to-remember-about-implementing-newitem"></a>Coisas a serem lembradas sobre a implementação de NewItem
 
@@ -334,7 +325,7 @@ protected override bool HasChildItems( string path )
 } // HasChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L1094-L1097 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="1094-1097":::
 
 #### <a name="things-to-remember-about-implementing-haschilditems"></a>Coisas a serem lembradas sobre a implementação de HasChildItems
 
@@ -388,7 +379,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    Get-ChildItem mydb:customers
    ```
 
-   A saída a seguir aparece.
+   A saída a seguir é exibida.
 
    ```output
    PSPath        : AccessDB::customers
@@ -407,7 +398,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    (Get-ChildItem mydb:customers).data
    ```
 
-   A saída a seguir aparece.
+   A saída a seguir é exibida.
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -423,7 +414,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    Get-Item mydb:\customers\0
    ```
 
-   A saída a seguir aparece.
+   A saída a seguir é exibida.
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -440,7 +431,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    (Get-Item mydb:\customers\0).data
    ```
 
-   A saída a seguir aparece.
+   A saída a seguir é exibida.
 
    ```output
    CustomerID   : 1234
@@ -470,7 +461,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   A saída a seguir aparece.
+   A saída a seguir é exibida.
 
    ```output
    ID        : 3
@@ -487,7 +478,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    Country   : USA
    ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

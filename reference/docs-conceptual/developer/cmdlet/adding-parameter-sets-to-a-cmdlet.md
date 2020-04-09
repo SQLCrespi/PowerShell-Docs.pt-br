@@ -10,12 +10,12 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6e17ff3d8ad3f7b2c511b879c913633f320bf511
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416316"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978620"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Adicionar conjuntos de parâmetros como um cmdlet
 
@@ -60,7 +60,7 @@ Esse cmdlet define três parâmetros necessários como entrada para o cmdlet (es
 
 Esse parâmetro de entrada permite que o usuário especifique os nomes dos processos a serem interrompidos. Observe que a palavra-chave Attribute `ParameterSetName` do atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) especifica o parâmetro `ProcessName` definido para esse parâmetro.
 
-[!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L44-L58 "StopProcessSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="44-58":::
 
 ```vb
 <Parameter(Position:=0, ParameterSetName:="ProcessName", _
@@ -211,7 +211,7 @@ End Sub 'ProcessRecord ' ProcessRecord
 
 Os métodos auxiliares chamados pela instrução SELECT não são descritos aqui, mas você pode ver sua implementação no exemplo de código completo na próxima seção.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample04](./stopprocesssample04-sample.md).
 
@@ -229,23 +229,23 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, teste-o executan
 
 - Com o Windows PowerShell iniciado, execute o cmdlet Stop-proc com o parâmetro `ProcessId` definido para interromper um processo com base em seu identificador. Nesse caso, o cmdlet está usando o parâmetro `ProcessId` definido para parar o processo.
 
-    ```
-    PS> stop-proc -Id 444
-    Confirm
-    Are you sure you want to perform this action?
-    Performing operation "stop-proc" on Target "notepad (444)".
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
-    ```
+  ```
+  PS> stop-proc -Id 444
+  Confirm
+  Are you sure you want to perform this action?
+  Performing operation "stop-proc" on Target "notepad (444)".
+  [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+  ```
 
 - Com o Windows PowerShell iniciado, execute o cmdlet Stop-proc com o parâmetro `InputObject` definido para parar os processos no objeto do bloco de notas recuperado pelo comando `Get-Process`.
 
-    ```
-    PS> get-process notepad | stop-proc
-    Confirm
-    Are you sure you want to perform this action?
-    Performing operation "stop-proc" on Target "notepad (444)".
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
-    ```
+  ```
+  PS> get-process notepad | stop-proc
+  Confirm
+  Are you sure you want to perform this action?
+  Performing operation "stop-proc" on Target "notepad (444)".
+  [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
+  ```
 
 ## <a name="see-also"></a>Consulte Também
 

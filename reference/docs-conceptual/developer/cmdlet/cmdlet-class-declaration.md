@@ -11,16 +11,17 @@ helpviewer_keywords:
 - declaring cmdlets [PowerShell SDK]
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
-ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363515"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978705"
 ---
 # <a name="cmdlet-class-declaration"></a>Declaração de classe do cmdlet
 
-Uma classe de estrutura de Microsoft .NET é declarada como um cmdlet especificando o atributo de **cmdlet** como metadados para a classe. (O atributo de **cmdlet** é o único atributo necessário para todos os cmdlets). Ao especificar o atributo de **cmdlet** , você deve especificar o par verbo-e-substantivo que identifica o cmdlet para o usuário. Além disso, você deve descrever a funcionalidade do Windows PowerShell que o cmdlet dá suporte. Para obter mais informações sobre a sintaxe de declaração usada para especificar o atributo de **cmdlet** , consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
+Uma classe de estrutura de Microsoft .NET é declarada como um cmdlet especificando o atributo de **cmdlet** como metadados para a classe. (O atributo de **cmdlet** é o único atributo necessário para todos os cmdlets).
+Ao especificar o atributo de **cmdlet** , você deve especificar o par verbo-e-substantivo que identifica o cmdlet para o usuário. Além disso, você deve descrever a funcionalidade do Windows PowerShell que o cmdlet dá suporte. Para obter mais informações sobre a sintaxe de declaração usada para especificar o atributo de **cmdlet** , consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
 > O atributo **cmdlet** é definido pela classe [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . As propriedades dessa classe correspondem aos parâmetros de declaração que são usados quando você declara o atributo.
@@ -45,11 +46,11 @@ O atributo **cmdlet** também permite que você especifique que o cmdlet oferece
 
 Para obter mais informações sobre a sintaxe de declaração usada para especificar o atributo de **cmdlet** , consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
 
-## <a name="cmdlet-class-definition"></a>Definição da classe dos cmdlets
+## <a name="cmdlet-class-definition"></a>Definição de classe de cmdlet
 
 O código a seguir é a definição de uma classe de cmdlet getproc. Observe que o uso de maiúsculas e minúsculas do Pascal é usado e que o nome da classe inclui o verbo e o substantivo do cmdlet.
 
-[!code-csharp[GetProcessSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs#L33-L34 "GetProcessSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs" range="33-34":::
 
 ## <a name="pascal-casing"></a>Compartimento de Pascal
 

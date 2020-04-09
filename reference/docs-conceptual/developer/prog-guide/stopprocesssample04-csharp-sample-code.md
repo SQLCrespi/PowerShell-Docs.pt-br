@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 778ce1a2-e16d-4af5-b15b-77ca4326bdc4
 caps.latest.revision: 5
-ms.openlocfilehash: df5591e351790d18bf2a5b5554d792ab8175dcc6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7bd7c8ad190c6ace0f2325a16307c297016f32b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416048"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80977549"
 ---
 # <a name="stopprocesssample04-c-sample-code"></a>Código de exemplo StopProcessSample04 (C#)
 
@@ -21,10 +21,9 @@ Aqui está o código C# de exemplo completo para o cmdlet de exemplo StopProc04.
 
 > [!NOTE]
 > Você pode baixar o C# arquivo de origem (stopprocesssample04.cs) para este cmdlet Stop-proc usando o Software Development Kit do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
 > Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
 
-[!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L11-L435 "StopProcessSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="11-435":::
 
 ## <a name="see-also"></a>Consulte Também
 
