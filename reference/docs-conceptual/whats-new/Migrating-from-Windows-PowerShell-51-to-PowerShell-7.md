@@ -176,7 +176,7 @@ Para criar uma sessão remota, especifique o computador de destino com o parâme
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-Como alternativa, ao usar o parâmetro **HostName**, forneça as informações de nome de usuário seguidas pelo sinal de arroba ("@") e pelo nome do computador.
+Como alternativa, ao usar o parâmetro **HostName**, forneça as informações de nome de usuário seguidas pelo sinal de arroba ('@') e pelo nome do computador.
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>
