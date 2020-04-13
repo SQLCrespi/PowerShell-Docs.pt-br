@@ -158,7 +158,7 @@
           href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: Usando o Visual Studio Code para edição e depuração remotas
           href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-        - name: Entendendo a codificação de arquivos no VSCode e PowerShell
+        - name: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
           href: components/vscode/understanding-file-encoding.md
     - name: Acesso via Web
       items:
