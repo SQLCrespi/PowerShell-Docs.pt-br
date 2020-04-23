@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277552"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978280"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -147,7 +147,7 @@ Confira os instantâneos abaixo:
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usando a PsDscRunAsCredential com os recursos de composição da DSC
 
-Adicionamos suporte para usar [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) com os recursos de [Composição](/powershell/scripting/dsc/authoringresourcecomposite) da DSC.
+Adicionamos suporte para usar [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) com os recursos de [Composição](/powershell/scripting/dsc/resources/authoringresourcecomposite) da DSC.
 
 Agora é possível especificar o valor para **PsDscRunAsCredential** ao usar recursos de composição nas configurações. Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs. Se o recurso de composição chamar outro recurso de composição, todos os seus recursos também serão executados como usuário RunAs. As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição. Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para **PsDscRunAsCredential**, ocorrerá um erro de mesclagem durante a compilação da configuração.
 
@@ -239,10 +239,10 @@ No WMF 5.1, a DSC dá suporte para a validação de assinaturas digitais no cat�
 
 ### <a name="how-to-sign-configuration-and-module"></a>Como assinar a configuração e o módulo
 
-- Arquivos de configuração (.MOFs): o cmdlet [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) existente do PowerShell foi aprimorado para dar suporte à assinatura de arquivos MOF.
+- Arquivos de Configuração (.MOFs): o cmdlet [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) existente do PowerShell é estendido para dar suporte à assinatura de arquivos MOF.
 - Módulos: a assinatura dos módulos é feita com a assinatura do catálogo do módulo correspondente por meio das seguintes etapas:
   1. Crie um arquivo de catálogo: um arquivo de catálogo contém uma coleção de hashes criptográficos ou impressões digitais. Cada impressão digital corresponde a um arquivo que está incluído no módulo. O novo cmdlet [New-FileCatalog](/powershell/module/microsoft.powershell.security/new-filecatalog) foi adicionado para permitir que os usuários criem um arquivo de catálogo para seu módulo.
-  2. Assine o arquivo de catálogo: use [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) para assinar o arquivo de catálogo.
+  2. Assine o arquivo de catálogo: use a [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) para assinar o arquivo de catálogo.
   3. Coloque o arquivo de catálogo dentro da pasta do módulo. Por convenção, o arquivo de catálogo do módulo deve ser colocado na pasta do módulo, com o mesmo nome do módulo.
 
 ### <a name="localconfigurationmanager-settings-to-enable-signing-validations"></a>Configurações de LocalConfigurationManager para habilitar as validações de assinatura

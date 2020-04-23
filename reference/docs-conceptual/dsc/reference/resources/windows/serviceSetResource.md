@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do ServiceSet DSC
 ms.openlocfilehash: 97c25f46940d69ed6c696e2692e29131e9a997b0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953023"
 ---
 # <a name="dsc-serviceset-resource"></a>Recurso do ServiceSet DSC
@@ -41,7 +41,7 @@ ServiceSet [string] #ResourceName
 |StartupType |Indica o tipo de inicialização para os serviços. Os valores permitidos para essa propriedade são: **Automático**, **Desabilitado** e **Manual**. |
 |BuiltInAccount |Indica a conta de credenciais a ser usada para os serviços. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem** e **NetworkService**. |
 |Estado |Indica o estado que você deseja garantir para os serviços: **Parado** ou **Em execução**. |
-|Credential |Indica as credenciais para a conta sob a qual o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
+|Credencial |Indica as credenciais para a conta sob a qual o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 

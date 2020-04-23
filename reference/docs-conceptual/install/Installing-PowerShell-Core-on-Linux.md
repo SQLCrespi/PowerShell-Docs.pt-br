@@ -3,10 +3,10 @@ title: Instalar o PowerShell no Linux
 description: Informações sobre como instalar o PowerShell em várias distribuições do Linux
 ms.date: 03/09/2020
 ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500544"
 ---
 # <a name="installing-powershell-on-linux"></a>Instalar o PowerShell no Linux
@@ -106,7 +106,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>Instalação por meio do repositório de pacotes – Ubuntu 18.04
 
-O PowerShell para Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
+O PowerShell Core Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
 
 O método preferencial é o seguinte:
 
@@ -170,7 +170,7 @@ Só há suporte para instalações via `snapd`. Para obter instruções, confira
 
 ### <a name="installation-via-package-repository---debian-8"></a>Instalação por meio do repositório de pacotes – Debian 8
 
-O PowerShell para Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
+O PowerShell Core Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
 
 O método preferencial é o seguinte:
 
@@ -201,7 +201,7 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-package-repository---debian-9"></a>Instalação por meio do repositório de pacotes – Debian 9
 
-O PowerShell para Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
+O PowerShell Core Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
 
 O método preferencial é o seguinte:
 
@@ -252,7 +252,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---debian-10"></a>Instalação por meio do repositório de pacotes – Debian 10
 
-O PowerShell para Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
+O PowerShell Core Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
 
 O método preferencial é o seguinte:
 

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Environment de DSC
 ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954713"
 ---
 # <a name="dsc-environment-resource"></a>Recurso Environment de DSC
@@ -31,7 +31,7 @@ Environment [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |Indica o nome da variável de ambiente para a qual você deseja garantir um estado específico. |
 |Caminho |Define a variável de ambiente que está sendo configurada. Defina essa propriedade como `$true` se a variável for **Path**. Caso contrário, defina-a como `$false`. O padrão é `$false`. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente. |
@@ -39,7 +39,7 @@ Environment [string] #ResourceName
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se existe uma variável. Defina essa propriedade como **Present** para criar a variável de ambiente caso ela não exista ou para garantir que seu valor corresponda ao que é fornecido por meio da propriedade **Value** se a variável já existir. Defina-a como **Absent** para excluir a variável se ela existir. |

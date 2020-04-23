@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 title: Criando tipos personalizados usando classes do PowerShell
 ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147836"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>Criando tipos personalizados usando classes do PowerShell

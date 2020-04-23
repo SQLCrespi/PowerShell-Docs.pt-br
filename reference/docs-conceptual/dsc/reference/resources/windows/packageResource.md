@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Package de DSC
 ms.openlocfilehash: efac07b4b051564cadd5aa1542a6afda6cd453ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953143"
 ---
 # <a name="dsc-package-resource"></a>Recurso Package de DSC
@@ -35,19 +35,19 @@ Package [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |Indica o nome do pacote para o qual você deseja garantir um estado específico. |
 |Caminho |Indica o caminho em que o pacote reside. |
 |ProductId |Indica a ID do produto que identifica o pacote com exclusividade. |
 |Argumentos |Lista uma cadeia de caracteres de argumentos que será passada para o pacote exatamente conforme fornecido. |
-|Credential |Fornece acesso ao pacote em uma fonte remota. Essa propriedade não é usada para instalar o pacote. O pacote é sempre instalado no sistema local. |
+|Credencial |Fornece acesso ao pacote em uma fonte remota. Essa propriedade não é usada para instalar o pacote. O pacote é sempre instalado no sistema local. |
 |LogPath |Indica o caminho completo em que você deseja que o provedor salve um arquivo de log para instalar ou desinstalar o pacote. |
 |ReturnCode |Indica o código de retorno esperado. Se o código de retorno real não corresponder ao valor esperado fornecido aqui, a configuração gerará um erro. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se o pacote foi instalado. Defina esta propriedade como **Absent** para garantir que o pacote não seja instalado (ou desinstalar o pacote, se ele estiver instalado). Defina-a como **Present** para garantir que o pacote seja instalado. O valor padrão é **Present**. |

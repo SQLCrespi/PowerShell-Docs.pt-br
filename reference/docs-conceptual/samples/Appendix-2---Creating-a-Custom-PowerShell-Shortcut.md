@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Apêndice 2 Criar um atalho do PowerShell personalizado
 ms.openlocfilehash: 6f1a6a8187b1797103e3620b2cf9155978807ea5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030294"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Apêndice 2: Criar um atalho do PowerShell personalizado
@@ -17,7 +17,7 @@ O procedimento a seguir descreve como criar um atalho para o Windows PowerShell 
 
 2. Clique com o botão direito do mouse no atalho e clique em **Propriedades**.
 
-3. Clique na guia **Opções**.
+3. Clique na guia **Opções** .
 
 4. Na seção **Editar Opções**, selecione a caixa de seleção **Edição Rápida**.
 

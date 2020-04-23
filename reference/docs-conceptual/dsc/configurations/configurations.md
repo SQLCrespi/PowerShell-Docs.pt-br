@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurações DSC
 ms.openlocfilehash: d7749ec88f9cca3e29c6b38d61fb73776af7ceb4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954493"
 ---
 # <a name="dsc-configurations"></a>Configurações DSC
@@ -175,6 +175,6 @@ Há diferenças quanto ao local em que os recursos DSC precisam ser armazenados 
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](../overview/overview.md)
+- [Visão geral da Desired State Configuration do Windows PowerShell](../overview/overview.md)
 - [Recursos de DSC](../resources/resources.md)
 - [Configurando o Gerenciador de Configurações Local](../managing-nodes/metaConfig.md)

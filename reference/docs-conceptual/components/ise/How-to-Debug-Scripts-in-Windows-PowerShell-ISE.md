@@ -3,10 +3,10 @@ ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Como depurar scripts no ISE do Windows PowerShell
 ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500934"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar scripts no ISE do Windows PowerShell
@@ -138,7 +138,7 @@ Pressione <kbd>SHIFT</kbd>+<kbd>F5</kbd> ou, no menu **Depurar**, clique em **In
 
 Passo a passo é o processo de executar uma instrução de cada vez. Você pode parar em uma linha de código e examinar os valores de variáveis e o estado do sistema. A tabela a seguir descreve as tarefas comuns de depuração como contornar, intervir e sair.
 
-| Tarefa de Depuração |                                                                                                                   Descrição                                                                                                                    |                                                      Como fazer isso no ISE do PowerShell                                                       |
+| Tarefa de Depuração |                                                                                                                   DESCRIÇÃO                                                                                                                    |                                                      Como fazer isso no ISE do PowerShell                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Intervir**  | Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador intervirá nessa função ou script, caso contrário, ele parará na próxima instrução.                      | Pressione <kbd>F11</kbd> ou, no menu **Depurar**, clique em **Intervir** ou então, no Painel de Console, digite `S` e pressione <kbd>ENTER</kbd>.                 |
 | **Contornar**  | Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador executará a função ou o script completos e parará na próxima instrução após a chamada de função. | Pressione <kbd>F10</kbd> ou, no menu **Depurar**, clique em **Contornar** ou então, no Painel de Console, digite `V` e pressione <kbd>ENTER</kbd>.                 |

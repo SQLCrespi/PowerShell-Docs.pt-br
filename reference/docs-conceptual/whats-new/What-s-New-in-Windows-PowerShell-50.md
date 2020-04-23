@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500460"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978195"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 
@@ -460,7 +460,7 @@ Assim como tarefas do Agendador de Tarefas, você pode executar trabalhos agenda
 
 Além disso, os trabalhos agendados são fornecidos com um conjunto personalizado de cmdlets para gerenciá-las. Os cmdlets permitem criar, editar, gerenciar, desabilitar e habilitar novamente os trabalhos agendados, criar disparadores de trabalho agendado e definir opções de trabalho agendado.
 
-Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs).
+Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1).
 
 ### <a name="windows-powershell-language-enhancements"></a>Aprimoramentos da Linguagem do Windows PowerShell
 

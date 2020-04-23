@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Usando nomes familiares de comando
 ms.openlocfilehash: 30b33bc8739975c1a40e51c04a3ee4e426c199e7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030902"
 ---
 # <a name="using-familiar-command-names"></a>Usando nomes de comando familiares
@@ -26,8 +26,8 @@ A lista a seguir mostra alguns comandos comuns do **cmd.exe** e Unix que podem s
 |chdir|erase|popd|sleep|
 |clear|h|ps|sort|
 |cls|history|pushd|tee|
-|copy|kill|pwd|tipo|
-|del|lp|r|write|
+|copy|kill|pwd|type|
+|del|lp|r|gravação|
 |diff|ls|ren||
 
 O cmdlet `Get-Alias` mostra o nome real do comando nativo do PowerShell associado a um alias.
@@ -53,10 +53,10 @@ Exemplo de abreviações:
 
 | Substantivo ou verbo | Abreviação |
 |--------------|--------------|
-| Get          | g            |
-| Set          | s            |
+| Obter          | g            |
+| Definir          | s            |
 | Item         | i            |
-| Local     | l            |
+| Location     | l            |
 | Comando      | cm           |
 | Alias        | al           |
 

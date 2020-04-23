@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
 ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500642"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
@@ -19,10 +19,10 @@ A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módul
 A primeira coisa que precisamos fazer é decidir sobre as propriedades que serão expostas pelo recuso. Para esse exemplo, definiremos um usuário do Active Directory com as seguintes propriedades.
 
 Nome do parâmetro Descrição
-* **UserName**: propriedade da chave que identifica um usuário com exclusividade.
+* **UserName**: propriedade de chave que identifica um usuário com exclusividade.
 * **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
 * **DomainCredential**: a senha do domínio para o usuário.
-* **Senha**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
+* **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
 
 Para criar as propriedades, usamos o cmdlet **novo xDscResourceProperty**. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
 

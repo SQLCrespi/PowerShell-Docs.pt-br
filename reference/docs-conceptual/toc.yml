@@ -60,7 +60,7 @@
           items:
             - name: Visão geral
               href: learn/remoting/jea/overview.md
-            - name: Pré-requisitos
+            - name: Prerequisites
               href: learn/remoting/jea/prerequisites.md
             - name: Capacidades de Função
               href: learn/remoting/jea/role-capabilities.md
@@ -260,7 +260,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Entrando em contato com os administradores
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: Solução de problemas
+        - name: solução de problemas
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Inicializando o provedor do NuGet e NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -516,7 +516,7 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Configurar a chave do Registro DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: Solução de problemas
+    - name: solução de problemas
       items:
         - name: Problemas conhecidos
           href: dsc/troubleshooting/troubleshooting.md

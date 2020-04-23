@@ -3,10 +3,10 @@ ms.date: 01/10/2020
 keywords: powershell, cmdlet
 title: Gravação de módulos portáteis
 ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76022250"
 ---
 # <a name="portable-modules"></a>Módulos portáteis
@@ -200,7 +200,7 @@ Primeiramente, confirme se o módulo funciona no Linux e no macOS. Em seguida, i
 
 No manifesto do módulo, a propriedade `PrivateData` tem uma subpropriedade `PSData`. A propriedade `Tags` opcional de `PSData` usa uma matriz de valores que é exibida na Galeria do PowerShell. A Galeria do PowerShell aceita os seguintes valores de compatibilidade:
 
-| Marca               | Descrição                                |
+| Marca               | DESCRIÇÃO                                |
 |-------------------|--------------------------------------------|
 | PSEdition_Core    | Compatível com o PowerShell Core 6          |
 | PSEdition_Desktop | Compatível com o Windows PowerShell         |

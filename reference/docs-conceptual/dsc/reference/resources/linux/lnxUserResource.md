@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxUser de DSC para Linux
 ms.openlocfilehash: 6d7b52809741813af7fa80b1c6372b267aff4777
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954793"
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Recurso nxUser de DSC para Linux
@@ -37,7 +37,7 @@ nxUser <string> #ResourceName
 |---|---|
 |UserName |Especifica o local onde você deseja garantir o estado de um arquivo ou diretório. |
 |FullName |Uma cadeia de caracteres que contém o nome completo que deve ser usado para a conta de usuário. |
-|Descrição |A descrição da conta de usuário. |
+|DESCRIÇÃO |A descrição da conta de usuário. |
 |Senha |O hash da senha de usuário no formato apropriado para o computador Linux. Normalmente, é um hash SHA-256 ou SHA-512 com valor de sal. No Debian e no Ubuntu Linux, esse valor pode ser gerado com o comando `mkpasswd`. Para outras distribuições de Linux, o método de criptografia da biblioteca de Criptografia do Python pode ser usado para gerar o hash. |
 |Desabilitado |Indica se a conta está habilitada. Defina essa propriedade como `$true` para garantir que essa conta esteja desabilitada e defina-a como `$false` para garantir que esteja habilitada. |
 |PasswordChangeRequired |Indica se o usuário pode alterar a senha. Defina essa propriedade como `$true` para garantir que o usuário não possa alterar a senha e defina-a como `$false` para permitir que o usuário altere a senha. O valor padrão é `$false`. Essa propriedade é avaliada apenas se a conta de usuário não existia anteriormente e está sendo criada. |
@@ -46,7 +46,7 @@ nxUser <string> #ResourceName
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Especifica se a conta existe. Defina essa propriedade como **Present** para garantir que a conta exista e defina-o como **Absent** para garantir que a conta não exista. |

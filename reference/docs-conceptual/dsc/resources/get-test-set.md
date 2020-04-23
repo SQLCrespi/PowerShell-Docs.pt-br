@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Get-Test-Set
 ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278403"
 ---
 # <a name="get-test-set"></a>Get-Test-Set

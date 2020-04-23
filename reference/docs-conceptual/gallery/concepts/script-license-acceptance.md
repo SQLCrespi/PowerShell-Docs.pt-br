@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Exigindo a aceitação da licença para scripts
 ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328077"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Exigindo a aceitação da licença para scripts
@@ -18,7 +18,7 @@ Os comandos de script (Install-Script/Save-Script/Update-Script) oferecem suport
 
 ## <a name="examples"></a>EXEMPLOS
 
-### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Exemplo 1: Instalar script com dependências exigindo a aceitação da licença
+### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Exemplo 1: Instalar Script com dependências exigindo a aceitação da licença
 
 O script 'ScriptRequireLicenseAcceptance' depende do módulo 'ModuleRequireLicenseAcceptance'. O usuário recebe a solicitação para aceitar licença.
 
@@ -38,7 +38,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-### <a name="example-2-install-script-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>Exemplo 2: Instalar script com dependências exigindo a aceitação da licença e -AcceptLicense
+### <a name="example-2-install-script-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>Exemplo 2: Instalar o Script com dependências exigindo a aceitação da licença e -AcceptLicense
 
 O script 'ScriptRequireLicenseAcceptance' depende do módulo 'ModuleRequireLicenseAcceptance'. O usuário não recebe a solicitação para aceitar a licença, pois - AcceptLicense é especificado.
 

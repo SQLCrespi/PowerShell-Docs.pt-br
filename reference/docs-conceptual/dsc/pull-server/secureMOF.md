@@ -3,10 +3,10 @@ ms.date: 10/31/2017
 keywords: DSC,powershell,configuração,instalação
 title: Protegendo o Arquivo MOF
 ms.openlocfilehash: ab03db8bf4ed7d412691ae87fd12da5131607886
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278453"
 ---
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
@@ -20,7 +20,7 @@ A partir do PowerShell versão 5.0, o arquivo MOF inteiro é criptografado por p
 > [!NOTE]
 > Este tópico discute os certificados usados para criptografia. Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento. Certificados autoassinados *não* devem ser usados para fins de autenticação. Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para criptografar com êxito as credenciais usadas para proteger uma configuração DSC, verifique se que você tem o seguinte:
 
@@ -44,10 +44,10 @@ Para ativar a criptografia de credenciais, um certificado de chave pública deve
 
 1. **Uso de chave**:
    - Deve conter: 'KeyEncipherment' e 'DataEncipherment'.
-   - _Não_ deve conter: 'Assinatura digital'.
+   - _Não_ deve conter: “Assinatura Digital”.
 2. **Uso avançado de chave**:
-   - Deve conter: Criptografia de documento (1.3.6.1.4.1.311.80.1).
-   - _Não_ deve conter: Autenticação de cliente (1.3.6.1.5.5.7.3.2) e Autenticação de servidor (1.3.6.1.5.5.7.3.1).
+   - Deve conter: Criptografia de Documento (1.3.6.1.4.1.311.80.1).
+   - _Não_ deve conter: Autenticação de Cliente (1.3.6.1.5.5.7.3.2) e Autenticação de Servidor (1.3.6.1.5.5.7.3.1).
 3. A Chave Privada do certificado está disponível no *Nó de Destino_.
 4. O **Provedor** para o certificado deve ser "Microsoft RSA SChannel Cryptographic Provider".
 

@@ -3,10 +3,10 @@ ms.date: 12/05/2019
 keywords: powershell, cmdlet
 title: Iniciando o Windows PowerShell
 ms.openlocfilehash: 97b15a4cd79c77a391451ba917f985f9d99db3f5
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953816"
 ---
 # <a name="starting-windows-powershell"></a>Iniciando o Windows PowerShell
@@ -23,10 +23,10 @@ No PowerShell 6 em diante, o binário do PowerShell foi renomeado **pwsh.exe** p
 
 Para encontrar a referência de cmdlet e a documentação de instalação do PowerShell 7, use os seguintes links:
 
-| Documento | Link |
+| Document | Link |
 | ----- | ----- |
 | Referência de cmdlet | [Navegador do Módulo do PowerShell](/powershell/module/?view=powershell-7) |
-| Instalação do Windows | [Instalação do PowerShell Core no Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
+| Instalação do Windows | [Instalar o PowerShell Core no Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
 | Instalação do macOS | [Instalar o PowerShell Core no macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
 | Instalação do Linux | [Instalar o PowerShell Core no Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
 

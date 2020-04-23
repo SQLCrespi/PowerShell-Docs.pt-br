@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando DSC no Nano Server
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953853"
 ---
 # <a name="using-dsc-on-nano-server"></a>Usando DSC no Nano Server
@@ -60,7 +60,7 @@ Nos modos push e pull
 
 - Depuração dos recursos de DSC (confira [Depurando os recursos de DSC](../troubleshooting/debugResource.md))
 
-  **Problema:** não funciona se um recurso estiver usando PsDscRunAsCredential (confira [Executar DSC com credenciais de usuário](../configurations/runAsUser.md))
+  **Problema:** não funciona se um recurso estiver usando PsDscRunAsCredential (confira [Executar DSC com as credenciais do usuário](../configurations/runAsUser.md))
 
 - [Especificando dependências de nó cruzado](../configurations/crossNodeDependencies.md)
 
@@ -74,18 +74,18 @@ Nos modos push e pull
 
 - Criptografia do MOF
 
-- Registro em log de eventos
+- Log de eventos
 
 - Relatórios de DSC de automação do Azure
 
 - Recursos que são totalmente funcionais
 
-- **Archive**
-- **Environment**
-- **File**
+- **Arquivar**
+- **Ambiente**
+- **Arquivo**
 - **Log**
 - **ProcessSet**
-- **Registry**
+- **Registro**
 - **Script**
 - **WindowsPackageCab**
 - **WindowsProcess**
@@ -94,20 +94,20 @@ Nos modos push e pull
 - **WaitForSome** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
 
 - Recursos que são parcialmente funcionais
-- **Grupo**
+- **Agrupar**
 - **GroupSet**
 
-  **Problema:** os recursos acima falharão se a instância específica for chamada duas vezes (executando a mesma configuração duas vezes)
+  **Problema:** os recursos acima falharão se a instância for chamada duas vezes (executando a mesma configuração duas vezes)
 
-- **Service**
+- **Serviço**
 - **ServiceSet**
 
-  **Problema:** funciona apenas para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
+  **Problema:** só funciona para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
 
   *Não é possível localizar o tipo [management.managementobject]: verifique se o assembly que contém esse tipo é carregado.*
 
 - Recursos que não são funcionais
-- **User**
+- **Usuário**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Recursos de DSC não disponíveis no Nano Server
 

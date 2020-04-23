@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
 ms.openlocfilehash: aac27f1ff4b4287b53745fa3b946fb3de84771c2
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75870550"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
@@ -21,7 +21,7 @@ As configurações DSC com uma credencial sem criptografia gerarão mensagens de
 - **PsDscAllowDomainUser**
 
 > [!NOTE]
-> Armazenar/transmitir senhas de texto sem formatação não criptografadas não é seguro. É recomendável proteger credenciais usando as técnicas discutidas mais adiante neste tópico. O serviço de DSC de Automação do Azure permite que gerenciar centralmente as credenciais a serem compiladas em configurações e armazenadas com segurança. Para saber mais, consulte: [Compilando configurações de DSC/ativos de credencial](/azure/automation/automation-dsc-compile#credential-assets)
+> Armazenar/transmitir senhas de texto sem formatação não criptografadas não é seguro. É recomendável proteger credenciais usando as técnicas discutidas mais adiante neste tópico. O serviço de DSC de Automação do Azure permite que gerenciar centralmente as credenciais a serem compiladas em configurações e armazenadas com segurança. Para obter informações, consulte: [Compilando configurações de DSC / Ativos de credencial](/azure/automation/automation-dsc-compile#credential-assets)
 
 ## <a name="handling-credentials-in-dsc"></a>Lidando com Credenciais na DSC
 
@@ -57,7 +57,7 @@ Esse exemplo usa um recurso [Group](../resources/resources.md) do módulo intern
 
 Para saber mais sobre a propriedade `PsDscRunAsCredential`, veja [Execução do DSC com as credenciais do usuário](runAsUser.md).
 
-## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade Credential do recurso Group
+## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade de credencial do recurso Group
 
 A DSC é executada em `Local System`; portanto, já tem permissões para alterar os usuários locais e grupos. Se o membro adicionado for uma conta local, nenhuma credencial será necessária. Se o recurso `Group` adicionar uma conta de domínio ao grupo local, uma credencial será necessária.
 

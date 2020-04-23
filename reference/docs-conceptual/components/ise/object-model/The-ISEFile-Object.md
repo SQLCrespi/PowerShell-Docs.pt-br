@@ -3,10 +3,10 @@ ms.date: 12/31/2019
 keywords: powershell, cmdlet
 title: O objeto ISEFile
 ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736991"
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile

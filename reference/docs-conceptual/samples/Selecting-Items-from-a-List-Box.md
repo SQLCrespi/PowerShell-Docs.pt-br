@@ -1,15 +1,15 @@
 ---
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
-title: Selecionar itens de uma caixa de listagem
+title: Selecionando itens de uma caixa de listagem
 ms.openlocfilehash: 048bccd403e01e2290a8930a0faba30d4c7caa73
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "77706165"
 ---
-# <a name="selecting-items-from-a-list-box"></a>Selecionar itens de uma caixa de listagem
+# <a name="selecting-items-from-a-list-box"></a>Selecionando itens de uma caixa de listagem
 
 Use o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos usuários selecionar itens de um controle de caixa de listagem.
 
@@ -179,5 +179,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Consulte Também
 
-- [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana para o Windows PowerShell:  selecionar itens em uma caixa de listagem](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))
+- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10)) (Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem)

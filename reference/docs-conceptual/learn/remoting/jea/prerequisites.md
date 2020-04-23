@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,segurança
 title: Pré-requisitos do JEA
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416719"
 ---
 # <a name="prerequisites"></a>Prerequisites
@@ -102,7 +102,7 @@ Você também pode habilitar transcrição do PowerShell de todo o sistema por m
 
 [Criar um arquivo de configuração de sessão](session-configurations.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Segurança do WinRM](/powershell/scripting/learn/remoting/winrmsecurity)
 

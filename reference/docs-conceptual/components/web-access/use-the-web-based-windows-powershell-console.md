@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: usar o console do windows powershell baseado na web
-ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 9a5d6d825dc82710466768bc612b012dd80937da
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978654"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
@@ -211,9 +211,8 @@ Alt+F7          | Limpa a lista do histórico de comandos
 
     É possível alterar a altura do console de maneira similar.
 
-    Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](h https://devblogs.microsoft.com/powershell).
+    Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](https://devblogs.microsoft.com/powershell).
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Hey, Scripting Guy!](https://devblogs.microsoft.com/scripting/)
-- [Blog da equipe do Windows PowerShell](https://devblogs.microsoft.com/powershell/)

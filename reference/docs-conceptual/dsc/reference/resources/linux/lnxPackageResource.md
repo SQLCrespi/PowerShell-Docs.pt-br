@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxPackage de DSC para Linux
 ms.openlocfilehash: 4091cbbd5e34a84b9011870da4bda93281378347
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954813"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>Recurso nxPackage de DSC para Linux
@@ -31,7 +31,7 @@ nxPackage <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |O nome do pacote para o qual você deseja garantir um estado específico. |
 |PackageManager |Os valores compatíveis são **yum**, **apt** e **zypper**. Especifica o gerenciador de pacotes que deve ser usado ao instalar pacotes. Se **FilePath** for especificado, o caminho fornecido será usado para instalar o pacote. Caso contrário, será usado um Gerenciador de Pacotes para instalar o pacote por meio de um repositório pré-configurado. Se não for fornecido o **PackageManager** ou o **FilePath**, o gerenciador de pacotes padrão para o sistema será usado. |
@@ -42,7 +42,7 @@ nxPackage <string> #ResourceName
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se é necessário verificar se o pacote existe. Defina essa propriedade como **Present** para garantir que o pacote exista. Defina-a como **Absent** para garantir que o pacote não exista. O valor padrão é **Present**. |

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 title: Melhorias na depuração de script do PowerShell
 ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147806"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>Melhorias na depuração de script do PowerShell

@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417051"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
@@ -21,7 +21,7 @@ Este tópico fornece um resumo informativo aos editores sobre como modificar o m
 
 A tabela a seguir mostra os elementos da interface do usuário da página do pacote da Galeria do PowerShell, que são controlados pelo editor. Cada item indica se pode ser controlado pelo manifesto de módulo ou de script.
 
-| Elemento da interface do usuário | Descrição | Módulo | script |
+| Elemento da interface do usuário | DESCRIÇÃO | Módulo | Script |
 | --- | --- | --- | --- |
 | **Título** | Este é o nome do pacote publicado na Galeria  | Não | Não |
 | **Versão** | A versão exibida representa a cadeia de caracteres da versão nos metadados e um pré-lançamento, se for especificado. A parte principal da versão em um manifesto de módulo é a ModuleVersion. No caso de um script, ela é identificada como .VERSION. Se a cadeia de caracteres da versão de um pré-lançamento for especificada, ela será adicionada à ModuleVersion nos módulos ou especificada como parte da .VERSION nos scripts. Veja a documentação sobre como especificar cadeias de caracteres de pré-lançamento em [módulos](module-prerelease-support.md) e [scripts](script-prerelease-support.md) | Sim | Sim |
@@ -51,8 +51,8 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 
 A página Editar pacote, na Galeria do PowerShell, permite aos editores alterar vários campos exibidos de um pacote, especificamente:
 
-- Título
-- Descrição
+- Title
+- DESCRIÇÃO
 - Resumo
 - URL do ícone
 - URL da página inicial do projeto
@@ -86,7 +86,7 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | DSCResource |  |
 | Automação |  |
 | REST |  |
-| ActiveDirectory | "AD" por si só não está em uso no momento  |
+| Active Directory | "AD" por si só não está em uso no momento  |
 | SQLServer |  |
 | DBA |  |
 | Segurança | "Defense" é menos preciso |
@@ -99,7 +99,7 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | GIT |  |
 | Teste | "Testing" é menos recomendado |
 | VersionControl | "Version" é menos preciso, embora seja usado com mais frequência  |
-| Log | Recomendamos usar "Logging" como uma ação |
+| Registro em log | Recomendamos usar "Logging" como uma ação |
 | Log | Recomendamos usar "Log" como um objeto |
 | Backup |  |
 | IaaS |  |
@@ -112,7 +112,7 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | Exchange |  |
 | Rede | "Networking" é semelhante, porém usado com menos frequência |
 | SharePoint |  |
-| Relatórios | "Reporting" é uma ação e "Report" é um objeto |
+| Relatório | "Reporting" é uma ação e "Report" é um objeto |
 | Relatório | "Report" é um objeto |
 | WinRM |  |
 | Monitoramento |  |
@@ -126,7 +126,7 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | Pester |  |
 | AzureAD |  |
 | HTML |  |
-| Hyper-V | "HyperV" é menos comum como marca |
+| Hyper-v | "HyperV" é menos comum como marca |
 | Configuração |  |
 | ChatOps |  |
 | PackageManagement |  |

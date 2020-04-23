@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell, cmdlet
 title: Executando comandos remotos
 ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030323"
 ---
 # <a name="running-remote-commands"></a>Executando comandos remotos
@@ -72,7 +72,7 @@ Exit-PSSession
 
 Para saber mais sobre os cmdlets Enter-PSSession e Exit-PSSession, consulte:
 
-- [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
+- [ENTER-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
 - [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession)
 
 ### <a name="run-a-remote-command"></a>Executar um comando remoto

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Especificando dependências de nó cruzado
 ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954103"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Especificando dependências de nó cruzado
@@ -55,7 +55,7 @@ WaitForSome [String] #ResourceName
 
 Todos os **WaitForXXXX** compartilham as chaves de sintaxe a seguir.
 
-|Propriedade|  Descrição   |
+|Propriedade|  DESCRIÇÃO   |
 |---------|---------------------|
 | RetryIntervalSec| O número de segundos antes de tentar novamente. O mínimo é 1.|
 | RetryCount| O número máximo de tentativas.|

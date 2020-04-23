@@ -3,10 +3,10 @@ title: Usando o Visual Studio Code para edição e depuração remotas
 description: Usando o Visual Studio Code para edição e depuração remotas
 ms.date: 06/13/2019
 ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279088"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Usando o Visual Studio Code para edição e depuração remotas
@@ -15,7 +15,7 @@ Para aqueles que se familiarizaram com o ISE, talvez se lembrem que podiam execu
 
 Esse recurso também está disponível na extensão do PowerShell para VSCode. Este guia mostra como fazê-lo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este guia pressupõe que você tenha:
 

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Criando um recurso de DSC em C#
 ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417686"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Criando um recurso de DSC em C\#
@@ -40,7 +40,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 1. Abra o Visual Studio.
 1. Crie um projeto em C# e forneça o nome.
 1. Selecione **Biblioteca de Classes** nos modelos de projeto disponíveis.
-1. Clique em **Ok**.
+1. Clique em **OK**.
 1. Adicione uma referência de assembly a System.Automation.Management.dll ao seu projeto.
 1. Altere o nome do assembly para corresponder ao nome do recurso. Nesse caso, o assembly deve se chamar **MSFT_XDemoFile**.
 

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxService de DSC para Linux
 ms.openlocfilehash: 6bb58796c4deff1153f932f61c328d84f8c4d2ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954833"
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>Recurso nxService de DSC para Linux
@@ -28,16 +28,16 @@ nxService <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |O nome do serviço/daemon que será configurado. |
-|Controlador |O tipo de controlador de serviço que deve ser usado ao configurar o serviço. |
-|Habilitada |Indica se o serviço começa na inicialização. |
+|Controller |O tipo de controlador de serviço que deve ser usado ao configurar o serviço. |
+|habilitado |Indica se o serviço começa na inicialização. |
 |Estado |Indica se o serviço está em execução. Defina essa propriedade como **Stopped** para garantir que o serviço não esteja em execução. Defina-a como **Running** para garantir que o serviço esteja em execução. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 

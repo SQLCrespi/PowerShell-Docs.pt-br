@@ -4,10 +4,10 @@ keywords: DSC,powershell,configuração,instalação
 description: Oferece um mecanismo para gerenciar grupos locais no nó de destino.
 title: Recurso de GroupSet DSC
 ms.openlocfilehash: d36274741b2c96a0852f384ccf5d187ac8d27131
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953173"
 ---
 # <a name="dsc-groupset-resource"></a>Recurso de GroupSet DSC
@@ -44,7 +44,7 @@ Group [string] #ResourceName
 |Descrição |A descrição do grupo. |
 |MembersToInclude |Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro. |
 |MembersToExclude |Use essa propriedade para remover membros da associação existente dos grupos. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro. |
-|Credential |As credenciais necessárias para acessar recursos remotos. Essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro. |
+|Credencial |As credenciais necessárias para acessar recursos remotos. Essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 

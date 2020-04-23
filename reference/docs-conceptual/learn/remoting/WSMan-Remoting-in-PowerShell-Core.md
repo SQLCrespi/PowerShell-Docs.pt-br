@@ -3,10 +3,10 @@ title: Comunicação remota do WS-Management (WSMan) no PowerShell Core
 description: Comunicação remota do WSMan no PowerShell Core
 ms.date: 08/06/2018
 ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62058872"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>Comunicação remota do WS-Management (WSMan) no PowerShell Core
@@ -56,7 +56,7 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**OBSERVAÇÃO**: O script de registro de comunicação remota reiniciará o WinRM. Dessa forma, todas as sessões PSRP existentes serão encerradas logo depois que o script for executado. Se executar durante uma sessão remota, isso encerrará a conexão.
+**Observação:** o script de registro de comunicação remota reiniciará o WinRM. Dessa forma, todas as sessões PSRP existentes serão encerradas logo depois que o script for executado. Se executar durante uma sessão remota, isso encerrará a conexão.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>Como se conectar ao novo ponto de extremidade
 

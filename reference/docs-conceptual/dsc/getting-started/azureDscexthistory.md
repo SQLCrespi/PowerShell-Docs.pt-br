@@ -4,10 +4,10 @@ ms.date: 06/21/2018
 keywords: dsc, powershell, azure, extensão
 title: Histórico de Versão de Extensão de DSC do Azure
 ms.openlocfilehash: 7a89037d62cb2c8580141d2b177fdded5db654eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417286"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versão da extensão de Desired State Configuration do Azure
@@ -37,8 +37,8 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Ambiente:**
   - Azure
   - Azure China
-  - Azure Governamental
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+  - Azure Government
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Melhoria nos metadados de extensão de substatus e outras correções de bugs secundárias.
 
@@ -53,7 +53,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Após a recente migração do GitHub para o protocolo TLS 1.2, não é possível integrar uma VM ao DSC de Automação do Azure usando modelos "Faça você mesmo" do Resource Manager disponíveis no Microsoft Azure Marketplace nem usar a extensão DSC para obter configurações hospedadas no GitHub. Você verá um erro semelhante ao seguinte ao implantar a extensão:
 
@@ -90,7 +90,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Correções de bug e melhorias que simplificam o uso da Automação do Azure de DSC por meio da interface do usuário do portal, bem como do modelo do Resource Manager.  Para obter mais informações, consulte [Script de Configuração Padrão](/azure/virtual-machines/extensions/dsc-overview) na documentação da Extensão de DSC.
 
@@ -100,7 +100,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Melhorias de telemetria.
 
@@ -110,7 +110,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Várias correções de bug e outras pequenas melhorias foram adicionadas.
 
@@ -120,7 +120,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Expõe a ID do Agente do DSC e a UUID da VM como metadados de extensão. Outros aprimoramentos secundários foram adicionados.
 
@@ -130,7 +130,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Várias correções de bug e outras melhorias foram adicionadas.
 
@@ -140,7 +140,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Suporte a WMF:** WMF 5.1, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - A extensão de DSC agora é compatível com o WMF 5.1.
   - Outros aprimoramentos secundários foram adicionados.
@@ -151,7 +151,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Suporte a WMF:** WMF 5.1 Versão Prévia, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - A extensão de DSC agora está disponível no Nano Server. Esta versão contém principalmente alterações de código para executar a extensão no Nano Server.
   - Outros aprimoramentos secundários foram adicionados.
@@ -162,7 +162,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.1 Versão Prévia, WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Suporte para o WMF 5.1 Versão Prévia. Quando publicada pela primeira vez, esta versão era uma atualização opcional e era preciso especificar Wmfversion = '5.1PP' em modelos do Resource Manager para instalar a versão prévia do WMF 5.1. Wmfversion = 'latest' ainda instala o [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Para obter mais informações sobre o WMF 5.1 Versão Prévia, consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
   - Outros aprimoramentos e correções secundários foram adicionados.
@@ -173,7 +173,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure, Azure China, Azure Governamental
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - A extensão DSC agora está integrada ao Azure China. Esta versão contém principalmente correções para executar a Extensão no Azure China.
 
@@ -183,7 +183,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Torne a telemetria sem bloqueio quando ocorre um erro durante o download do hotfix de telemetria (problema conhecido do DNS do Azure) ou durante a instalação.
   - Corrija o problema intermitente em que a extensão interrompe o processamento da configuração após uma reinicialização. Isso fazia com que a extensão de DSC permanecesse no estado "em transição".
@@ -195,10 +195,10 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, Atualização do WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Suporte para a Atualização do WMF 4.0. Para obter mais informações sobre o WMF 4.0 Update, consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/01/19/windows-management-framework-wmf-4-0-update-now-available-for-windows-server-2012-windows-server-2008-r2-sp1-and-windows-7-sp1/).
-  - Lógica de repetição em erros que ocorrem durante a instalação da Extensão de DSC ou durante a aplicação de uma configuração de DSC após a instalação da extensão. Como parte dessa alteração, a extensão tentará novamente realizar a instalação se uma instalação anterior tiver falhado ou tentará aplicar novamente uma configuração de DSC que falhou anteriormente, no máximo três vezes, até que ela atinja o estado de conclusão (Êxito/Erro) ou que uma nova solicitação chegue. Se a extensão falhar devido a configurações de usuário/entrada do usuário inválidas, ela não tentará novamente. Nesse caso, a extensão deve ser invocada novamente com uma nova solicitação e configurações do usuário corretas. Observação: a Extensão de DSC depende do agente de VM do Azure para as novas tentativas. O Agente de VM do Azure invoca a extensão com a última solicitação com falha até ela atingir um estado de êxito ou de erro.
+  - Lógica de repetição em erros que ocorrem durante a instalação da Extensão de DSC ou durante a aplicação de uma configuração de DSC após a instalação da extensão. Como parte dessa alteração, a extensão tentará novamente realizar a instalação se uma instalação anterior tiver falhado ou tentará aplicar novamente uma configuração de DSC que falhou anteriormente, no máximo três vezes, até que ela atinja o estado de conclusão (Êxito/Erro) ou que uma nova solicitação chegue. Se a extensão falhar devido a configurações de usuário/entrada do usuário inválidas, ela não tentará novamente. Nesse caso, a extensão deve ser invocada novamente com uma nova solicitação e configurações do usuário corretas. Observação: a Extensão de DSC é dependente do agente de VM do Azure para as novas tentativas. O Agente de VM do Azure invoca a extensão com a última solicitação com falha até ela atingir um estado de êxito ou de erro.
 
 ### <a name="version-216"></a>Versão 2.16
 
@@ -206,7 +206,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Melhoria no tratamento de erros e outras correções de bugs secundárias.
   - Nova propriedade nas configurações de Extensão de DSC. "ForcePullAndApply" em AdvancedOptions é adicionado para habilitar a Extensão de DSC a aplicar configurações de DSC quando o modo de atualização é Pull (em vez do modo padrão, Push). Consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/02/26/arm-dsc-extension-settings/) para obter mais informações sobre as configurações de Extensão de DSC.
@@ -217,7 +217,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Na versão da extensão 2.14, foram incluídas alterações para instalar o WMF RTM. Durante a atualização de versão da extensão 2.13.2.0 para 2.14.0.0, observe que alguns cmdlets do DSC falham ou sua configuração falha com um erro – "Nenhuma instância encontrada com os valores de propriedade fornecidos". Para ibter mais informações, consulte as [notas de versão do DSC](/powershell/scripting/wmf/known-issues/known-issues-dsc). As soluções alternativas para esses problemas foram adicionadas na versão 2.15.
   - Se já tiver instalado a versão 2.14 e estiver encontrando um dos dois problemas acima, você precisará executar essas etapas manualmente.  Em uma sessão do PowerShell elevada:
@@ -230,7 +230,7 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
 - **Suporte a SO:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Suporte a WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
-- **Comentários:** Essa versão usa o DSC como incluído na versão prévia técnica do Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
+- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
 - **Novos recursos:**
   - Usa o WMF RTM.
   - Habilita a coleta de dados para melhorar a qualidade da Extensão de DSC. Para obter mais informações, consulte [o blog](https://blogs.msdn.microsoft.com/powershell/2016/02/02/azure-dsc-extension-data-collection-2/).

@@ -3,10 +3,10 @@ ms.date: 08/09/2017
 keywords: powershell, cmdlet, baixar, instalar, configurar, windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
 ms.openlocfilehash: 345cde8012bece730e7217ed16be6175ad26bb28
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62086469"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
@@ -24,7 +24,7 @@ Todas as versões listadas aqui são a versão original, conforme lançada, sem 
 
 ### <a name="for-console"></a>Para o Console
 
-Versão | Local
+Versão | Location
 -- | --
 Windows 10 | Clique no ícone do Windows no canto inferior esquerdo e comece digitando PowerShell
 Windows 8.1, 8.0 | Na tela inicial, comece a digitar PowerShell.<br/>Se estiver na área de trabalho, clique no ícone do Windows canto inferior esquerdo, comece digitando PowerShell
@@ -32,7 +32,7 @@ Windows 7 SP1 | Clique no ícone do Windows no canto inferior esquerdo e, na cai
 
 ### <a name="for-ise"></a>Para o ISE
 
-Versão | Local
+Versão | Location
 -- | --
 Windows 10 | Clique no ícone do Windows no canto inferior esquerdo e comece digitando ISE
 Windows 8.1, 8.0 | Na tela inicial, clique em **ISE do PowerShell**.<br/>Se estiver na área de trabalho, clique no ícone do Windows canto inferior esquerdo, comece digitando **ISE do PowerShell**

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,recurso,galeria,instalação
 title: Adicionar parâmetros a uma configuração
 ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
-ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80263145"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Adicionar parâmetros a uma configuração
@@ -36,7 +36,7 @@ Configuration TestConfig
 
 Porém, diferente de uma Função, o atributo [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) não adiciona funcionalidade. Além de [Parâmetros Comuns](/powershell/module/microsoft.powershell.core/about/about_commonparameters), as Configurações também podem usar os parâmetros internos a seguir, sem exigir que você os defina.
 
-|        Parâmetro        |                                         Descrição                                          |
+|        Parâmetro        |                                         DESCRIÇÃO                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------- |
 | `-InstanceName`         | Usado na definição de [Configurações de Composição](compositeconfigs.md)                             |
 | `-DependsOn`            | Usado na definição de [Configurações de Composição](compositeconfigs.md)                             |

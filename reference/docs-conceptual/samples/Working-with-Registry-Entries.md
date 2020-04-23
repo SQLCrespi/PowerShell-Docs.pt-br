@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com entradas do Registro
 ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030722"
 ---
 # <a name="working-with-registry-entries"></a>Trabalhando com entradas do Registro
@@ -196,7 +196,7 @@ O **PropertyType** deve ter o mesmo nome de um membro da enumeração **Microsof
 |DWord|Um número UInt32 válido|
 |ExpandString|Uma cadeia de caracteres que pode conter variáveis de ambiente que são expandidos dinamicamente|
 |MultiString|Uma cadeia de caracteres de várias linhas|
-|Cadeia de caracteres|Qualquer valor de cadeia de caracteres|
+|String|Qualquer valor de cadeia de caracteres|
 |QWord|8 bytes de dados binários|
 
 > [!NOTE]

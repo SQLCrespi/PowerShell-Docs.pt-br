@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsFeatureSet DSC
 ms.openlocfilehash: 1758d248dde4fdee57bd01c157a3f9a8340d6194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952953"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Recurso do WindowsFeatureSet DSC
@@ -38,9 +38,9 @@ WindowsFeatureSet [string] #ResourceName
 |  Propriedade  |  Descrição   |
 |---|---|
 |Nome |Os nomes de funções ou recursos que você deseja garantir são adicionados ou removidos. É igual à propriedade **Name** do cmdlet [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps), e não o nome de exibição das funções ou recursos. |
-|Origem |Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário. |
+|Fonte |Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário. |
 |IncludeAllSubFeature |Defina essa propriedade como `$true` para incluir todos os sub-recursos com os recursos especificados com a propriedade **Name**. |
-|Credential |As credenciais que devem ser usadas para adicionar ou remover as funções ou os recursos. |
+|Credencial |As credenciais que devem ser usadas para adicionar ou remover as funções ou os recursos. |
 |LogPath |O caminho até um arquivo de log em que você deseja que o provedor de recursos registre a operação. |
 
 ## <a name="common-properties"></a>Propriedades comuns

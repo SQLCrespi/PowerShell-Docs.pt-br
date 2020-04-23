@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsOptionalFeatureSet DSC
 ms.openlocfilehash: f378006a6c362ee9890d70dd76fb552dd262a544
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952863"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Recurso do WindowsOptionalFeatureSet DSC
@@ -39,7 +39,7 @@ WindowsOptionalFeatureSet [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |Nome |Indica o nome dos recursos que você deseja garantir que estejam habilitados ou desabilitados. |
-|Origem |Não foi implementado. |
+|Fonte |Não implementado. |
 |NoWindowsUpdateCheck |Especifica se o DISM contata o WU (Windows Update) ao procurar os arquivos de origem para habilitar recursos. Se `$true`, o DISM não contatará o WU. |
 |RemoveFilesOnDisable |Definido como `$true` para remover todos os arquivos associados aos recursos quando **Ensure** está definido como **Absent**. |
 |LogLevel |O nível máximo de saída mostrado nos logs. Os valores aceitos são: **ErrorsOnly**, **ErrorsAndWarning** e **ErrorsAndWarningAndInformation**. |

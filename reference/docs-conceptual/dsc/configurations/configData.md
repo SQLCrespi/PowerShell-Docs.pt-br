@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando dados de configuração
 ms.openlocfilehash: 7d13b19ba932d1a818194a221f145fd1a3832547
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954183"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Usando dados de configuração em DSC
@@ -23,7 +23,7 @@ Para obter exemplos de como usar dados de configuração, consulte [Separando Da
 ## <a name="the-configurationdata-common-parameter"></a>O parâmetro comum de ConfigurationData
 
 Uma configuração DSC usa um parâmetro comum, **ConfigurationData**, que você especifica ao compilar a configuração.
-Para obter informações sobre configurações de compilação, consulte [configurações DSC](configurations.md).
+Para obter informações de como compilar configurações, consulte [Configurações DSC](configurations.md).
 
 O parâmetro **ConfigurationData** é uma tabela de hash que precisa ter pelo menos uma chave chamada **AllNodes**.
 Ele também pode ter uma ou mais chaves.

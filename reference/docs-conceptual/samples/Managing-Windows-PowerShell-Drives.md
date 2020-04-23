@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando unidades do Windows PowerShell
 ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70215517"
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerenciando unidades do Windows PowerShell
@@ -149,7 +149,7 @@ O cmdlet New-PsDrive adiciona a nova unidade apenas à sessão atual do Windows 
 
 Você pode excluir unidades do Windows PowerShell usando o cmdlet **Remove-PSDrive**. O cmdlet **Remove-PSDrive** é fácil de usar. Para excluir uma unidade específica do Windows PowerShell, basta fornecer o nome da unidade.
 
-Por exemplo, se adicionar a unidade **Office:** ao Windows PowerShell, como mostrado no tópico **New-PSDrive**, você poderá excluí-la digitando:
+Por exemplo, se você adicionou a unidade do Windows PowerShell **Office:** , como mostrado no tópico **New-PSDrive**, você poderá excluí-la digitando:
 
 ```powershell
 Remove-PSDrive -Name Office

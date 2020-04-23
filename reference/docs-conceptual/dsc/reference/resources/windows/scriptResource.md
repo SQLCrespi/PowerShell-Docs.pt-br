@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Script de DSC
 ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953063"
 ---
 # <a name="dsc-script-resource"></a>Recurso Script de DSC
@@ -34,16 +34,16 @@ Script [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |GetScript |Um bloco de script que retorna o estado atual do Node. |
 |SetScript |Um bloco de script usado pelo DSC para impor a conformidade quando o Node não estiver no estado desejado. |
 |TestScript |Um bloco de script que determina se o Node está no estado desejado. |
-|Credential |Indica as credenciais que devem ser usadas para executar esse script, caso sejam necessárias. |
+|Credencial |Indica as credenciais que devem ser usadas para executar esse script, caso sejam necessárias. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
@@ -98,7 +98,7 @@ Configuration ScriptTest
 }
 ```
 
-### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar informações de versão usando um recurso de Script
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar as informações de versão usando um recurso de Script
 
 Este exemplo recupera as informações da versão *compatível* de um arquivo de texto no computador de criação e as armazenam na variável `$version`. Ao gerar o arquivo MOF do nó, o DSC substitui as variáveis `$using:version` em cada bloco de script pelo valor da variável `$version`.
 Durante a execução, a versão *compatível* é armazenada em um arquivo de texto em cada Node, comparada e atualizada em execuções subsequentes.

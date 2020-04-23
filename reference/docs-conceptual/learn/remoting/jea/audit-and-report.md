@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,segurança
 title: Auditoria e relatórios no JEA (Just Enough Administration)
 ms.openlocfilehash: 2afefe83acecc1fc3643d49766120ffecc25378f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017787"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Auditoria e relatórios no JEA (Just Enough Administration)
@@ -135,6 +135,6 @@ Uma linha **CommandInvocation** é gravada para cada comando executado por um us
 
 A saída de cada comando também dispara uma **CommandInvocation**, geralmente para `Out-Default`. O **InputObject** de `Out-Default` é o objeto do PowerShell retornado pelo comando. Os detalhes desse objeto estão impressos algumas linhas abaixo, imitando de perto o que o usuário veria.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [*Postagem no blog sobre segurança* PowerShell ♥ the Blue Team](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)

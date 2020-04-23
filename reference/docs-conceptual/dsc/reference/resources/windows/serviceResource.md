@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Service de DSC
 ms.openlocfilehash: 0bef6aa6d3526c9d8d92187c1e738d5c46b5665a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953043"
 ---
 # <a name="dsc-service-resource"></a>Recurso Service de DSC
@@ -40,7 +40,7 @@ Service [string] #ResourceName
 |---|---|
 |Nome |Indica o nome do serviço. Observe que, às vezes, é diferente do nome de exibição. É possível obter uma lista dos serviços e seus estados atuais com o cmdlet `Get-Service`. |
 |BuiltInAccount |Indica a conta de entrada que deve ser usada para o serviço. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem** e **NetworkService**. |
-|Credential |Indica as credenciais para a conta em que o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
+|Credencial |Indica as credenciais para a conta em que o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
 |StartupType |Indica o tipo de inicialização para o serviço. Os valores permitidos para essa propriedade são: **Automático**, **Desabilitado** e **Manual**. |
 |Estado |Indica o estado que você deseja garantir para o serviço. Os valores são: **Em execução** ou **Parado**. |
 |Descrição |Indica a descrição do serviço de destino. |

@@ -3,10 +3,10 @@ title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 09/30/2019
 ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444375"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
@@ -314,13 +314,13 @@ GitCommitId                    v6.0.0-alpha.17
 
 O comando **sudo** não funciona em uma sessão remota para computador com Linux.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instalar o PowerShell Core no Linux](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
 
 [Instalar o PowerShell Core no macOS](../../install/installing-powershell-core-on-macos.md)
 
-[Instalação do PowerShell Core no Windows](../../install/installing-powershell-core-on-windows.md#msi)
+[Instalar o PowerShell Core no Windows](../../install/installing-powershell-core-on-windows.md#msi)
 
 [Gerenciar o Windows com o OpenSSH](/windows-server/administration/openssh/openssh_overview)
 

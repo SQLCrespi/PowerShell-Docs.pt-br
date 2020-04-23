@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,recurso,galeria,instalação
 title: Instalar recursos adicionais do DSC
 ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417802"
 ---
 # <a name="install-additional-dsc-resources"></a>Instalar recursos adicionais do DSC
@@ -20,16 +20,16 @@ Esta é uma lista dos recursos OOB incluídos no PowerShell 4.0 e uma descriçã
 
 |Recurso  |Descrição  |
 |---------|---------|
-|**File**|Controla o estado dos arquivos e diretórios. Copia os arquivos de uma **Fonte** para um **Destino** e os atualiza quando a **Fonte** muda comparando datas, somas de verificação e hashes.|
-|**Archive**|Desempacota os arquivos e um local especificado. Valida os arquivos com a **soma de verificação** especificada.|
-|**Environment**|Gerencia as variáveis de ambiente.|
-|**Grupo**|Gerencia os grupos locais e controla a associação de grupo.|
+|**Arquivo**|Controla o estado dos arquivos e diretórios. Copia os arquivos de uma **Fonte** para um **Destino** e os atualiza quando a **Fonte** muda comparando datas, somas de verificação e hashes.|
+|**Arquivar**|Desempacota os arquivos e um local especificado. Valida os arquivos com a **soma de verificação** especificada.|
+|**Ambiente**|Gerencia as variáveis de ambiente.|
+|**Agrupar**|Gerencia os grupos locais e controla a associação de grupo.|
 |**Log**|Grava as mensagens no log de eventos `Microsoft-Windows-Desired State Configuration/Analytic`.|
 |**Pacote**|Instala ou desinstala pacotes usando **Arguments**, **LogPath**, **ReturnCode** e outras configurações.|
-|**Registry**|Gerencia os valores e as chaves do registro.|
+|**Registro**|Gerencia os valores e as chaves do registro.|
 |**Script**|Permite que você crie seus próprios blocos de script [get-test-set](../resources/get-test-set.md).|
-|**Service**|Configura os serviços do Windows.|
-|**User** |Gerencia os atributos e usuários locais.|
+|**Serviço**|Configura os serviços do Windows.|
+|**Usuário** |Gerencia os atributos e usuários locais.|
 |**WindowsFeature**|Gerencia as funções e os recursos.|
 |**WindowsProcess**|Configura os processos do Windows.|
 
@@ -151,6 +151,6 @@ PowerShell      TimeZone                  ComputerManagementDsc          6.0.0.0
 PowerShell      VirtualMemory             ComputerManagementDsc          6.0.0.0    {Drive, Type, DependsOn, Initi...
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [O que são recursos?](../resources/resources.md)

@@ -2,10 +2,10 @@
 ms.date: 09/13/2019
 title: Criando consultas Get-WinEvent com FilterHashtable
 ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444384"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Criando consultas Get-WinEvent com FilterHashtable
@@ -165,7 +165,7 @@ Os nomes e valores enumerados das **Palavras-chave** são os seguintes:
 | WdiDiagnostic    | 1125899906842624  |
 | WdiContext       | 562949953421312   |
 | ResponseTime     | 281474976710656   |
-| Não             | 0                 |
+| Nenhum             | 0                 |
 
 Atualize a tabela de hash e inclua o par **chave-valor** com a chave **Palavras-chave** e o valor de enumeração **EventLogClassic**, **36028797018963968**.
 
@@ -238,10 +238,10 @@ Os nomes e valores enumerados de **Nível** são os seguintes:
 
 | Nome           | Valor |
 | -------------- | ----- |
-| Verbose        |   5   |
+| Detalhado        |   5   |
 | Informativo  |   4   |
 | Aviso        |   3   |
-| Erro do          |   2   |
+| Erro          |   2   |
 | Crítico       |   1   |
 | LogAlways      |   0   |
 

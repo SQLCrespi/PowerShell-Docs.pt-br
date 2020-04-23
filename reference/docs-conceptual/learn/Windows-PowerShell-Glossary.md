@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Glossário do Windows PowerShell
 ms.openlocfilehash: 0827ec771b1744b87a8c0f0ddf48438f9ba484b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030346"
 ---
 # <a name="windows-powershell-glossary"></a>Glossário do Windows PowerShell
@@ -41,10 +41,10 @@ ms.locfileid: "67030346"
 |shell|O interpretador de comando que é usado para passar comandos para o sistema operacional.|
 |parâmetro de opção|Um parâmetro que não têm um argumento.|
 |erro fatal|Um erro que interrompe o processamento do comando do Windows PowerShell.|
-|transação|Uma unidade atômica de trabalho. O trabalho em uma transação deve ser concluído como um todo; se qualquer parte da transação falhar, a transação inteira falhará.|
+|transaction|Uma unidade atômica de trabalho. O trabalho em uma transação deve ser concluído como um todo; se qualquer parte da transação falhar, a transação inteira falhará.|
 |arquivo de tipos|Um arquivo XML do Windows PowerShell que tem a extensão. ps1xml e que estende as propriedades de tipos do Microsoft .NET Framework para o Windows PowerShell.|
 |verbo|A palavra que precede o hífen em um nome de cmdlet do Windows PowerShell. O verbo descreve a ação que o cmdlet executa.|
-|Usando o Windows PowerShell|Um shell de linha de comando e uma tecnologia de script baseada em tarefa que fornece aos administradores de TI controle e automação abrangentes das tarefas de administração do sistema.|
+|Windows PowerShell|Um shell de linha de comando e uma tecnologia de script baseada em tarefa que fornece aos administradores de TI controle e automação abrangentes das tarefas de administração do sistema.|
 |comando do Windows PowerShell|Os elementos em um pipeline que fazem uma ação ser realizada. Comandos do Windows PowerShell são digitados no teclado ou invocados programaticamente.|
 |Arquivo de dados do Windows PowerShell|Um arquivo de texto que tem a extensão de nome de arquivo .psd1. O Windows PowerShell usa os arquivos de dados para várias finalidades como armazenar dados de manifesto de módulo e cadeias de caracteres traduzidas para a internacionalização de script.|
 |Unidade do Windows PowerShell|Uma unidade virtual que fornece acesso direto a um armazenamento de dados. Ele pode ser definido por um provedor do Windows PowerShell ou criado na linha de comando. Unidades criadas na linha de comando são unidades de sessão específica e serão perdidas quando a sessão for fechada.|

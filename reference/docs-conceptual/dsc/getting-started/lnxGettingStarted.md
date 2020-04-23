@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
 ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73933845"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
@@ -26,12 +26,12 @@ Há suporte para as seguintes versões de sistema operacional do Linux para DSC 
 
 A tabela a seguir descreve as dependências de pacote necessárias para a DSC para Linux.
 
-|  Pacote necessário |  Descrição |  Versão mínima |
+|  Pacote necessário |  DESCRIÇÃO |  Versão mínima |
 |---|---|---|
 | glibc| Biblioteca do GNU| 2…4 – 31.30|
 | python| Python| 2.4 – 3.4|
 | omiserver| Infraestrutura de gerenciamento aberta| 1.0.8.1|
-| openssl| Bibliotecas do OpenSSL| 0.9.8 ou 1.0|
+| openssl| Bibliotecas OpenSSL| 0.9.8 ou 1.0|
 | ctypes| Biblioteca do Python CTypes| Deve coincidir com a versão do Python|
 | libcurl| biblioteca de cliente http do cURL| 7.15.1|
 
@@ -41,7 +41,7 @@ A tabela a seguir descreve as dependências de pacote necessárias para a DSC pa
 
 ### <a name="installing-omi"></a>Instalando a OMI
 
-A Desired State Configuration para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1 ou posterior. A OMI pode ser baixada do The Open Group: [OMI (Infraestrutura de gerenciamento aberta)](https://github.com/Microsoft/omi).
+A Desired State Configuration para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1 ou posterior. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://github.com/Microsoft/omi).
 
 Para instalar a OMI, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -183,7 +183,7 @@ Aplica um arquivo MOF de metaconfiguração ao computador. Semelhante ao cmdlet 
 
 Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 
-|Arquivo de log|Directory|Descrição|
+|Arquivo de log|Diretório|DESCRIÇÃO|
 |---|---|---|
 |**omiserver.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação do servidor CIM da OMI.|
 |**dsc.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|

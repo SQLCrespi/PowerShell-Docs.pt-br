@@ -3,10 +3,10 @@ ms.date: 12/06/2019
 keywords: powershell, cmdlet
 title: Requisitos do Sistema do Windows PowerShell
 ms.openlocfilehash: 713b062916fec0c5c70ea9a7f95fea3570afb64a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953782"
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos do Sistema do Windows PowerShell
@@ -15,7 +15,7 @@ Este artigo lista os requisitos do sistema para o Windows PowerShell 3.0, o Wind
 
 O Windows® 8.1 e o Windows Server® 2012 R2 incluem todos os programas necessários. Este artigo foi projetado para usuários de versões anteriores do Windows.
 
-## <a name="operating-system-requirements"></a>Requisitos de sistema operacional
+## <a name="operating-system-requirements"></a>Requisitos do sistema operacional
 
 ### <a name="windows-powershell-51"></a>Windows PowerShell 5.1
 
@@ -119,7 +119,7 @@ Alguns itens exigem uma interface gráfica do usuário. Para obter mais detalhes
   - [Show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
   - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
   - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
-- Parâmetros
+- parâmetros
   - Parâmetro **ShowWindow** do cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help).
   - Parâmetro **ShowSecurityDescriptorUI** dos cmdlets [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) e [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).
 
@@ -145,7 +145,7 @@ O Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 s�
 
 O serviço **WinRM** não está presente no Windows PE.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Introdução ao Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxFile de DSC para Linux
 ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954823"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Recurso nxFile de DSC para Linux
@@ -36,23 +36,23 @@ nxFile <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DestinationPath |Especifica o local onde você deseja garantir o estado de um arquivo ou diretório. |
 |SourcePath |Especifica o caminho do qual o recurso de arquivo ou pasta deve ser copiado. Esse caminho poderá ser um caminho local ou uma URL `http/https/ftp`. As URLs `http/https/ftp` remotas só são compatíveis quando o valor da propriedade **Type** é **file**. |
-|Tipo |Especifica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como **directory** para indicar que o recurso é um diretório. Defina-a como **file** para indicar que o recurso é um arquivo. O valor padrão é **file**. |
+|Type |Especifica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como **directory** para indicar que o recurso é um diretório. Defina-a como **file** para indicar que o recurso é um arquivo. O valor padrão é **file**. |
 |Conteúdo |Especifica o conteúdo de um arquivo, como uma cadeia de caracteres específica. |
-|Soma de verificação |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores são: **ctime**, **mtime** ou **md5**. |
+|Checksum (soma de verificação) |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores são: **ctime**, **mtime** ou **md5**. |
 |Recurse |Indica se subdiretórios são incluídos. Defina essa propriedade como `$true` para indicar que você deseja que subdiretórios sejam incluídos. O padrão é `$false`. Essa propriedade é válida somente quando a propriedade **Type** está definida como **directory**. |
 |Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é `$false`. |
 |Links |Especifica o comportamento desejado para links simbólicos. Defina essa propriedade como **follow** para seguir links simbólicos e agir sobre o destino de links. Por exemplo, copiar o arquivo em vez do link. Defina essa propriedade como **manage** para agir sobre o link. Por exemplo, copiar o próprio link. Defina essa propriedade como **ignore** para ignorar links simbólicos. |
-|Grupo |O nome do **Grupo** que terá permissões para o arquivo ou diretório. |
-|Modo |Especifica as permissões desejadas para o recurso, na notação octal ou simbólica. Por exemplo, **777** ou **rwxrwxrwx**. Se usar notação simbólica, não forneça o primeiro caractere que indica o diretório ou arquivo. |
+|Agrupar |O nome do **Grupo** que terá permissões para o arquivo ou diretório. |
+|Mode |Especifica as permissões desejadas para o recurso, na notação octal ou simbólica. Por exemplo, **777** ou **rwxrwxrwx**. Se usar notação simbólica, não forneça o primeiro caractere que indica o diretório ou arquivo. |
 |Proprietário |O nome do grupo que será proprietário do arquivo ou diretório. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |Descrição |
+|Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se é necessário verificar se o arquivo existe. Defina essa propriedade como **Present** para garantir que o arquivo exista. Defina-a como **Absent** para garantir que o arquivo não exista. O valor padrão é **Present**. |

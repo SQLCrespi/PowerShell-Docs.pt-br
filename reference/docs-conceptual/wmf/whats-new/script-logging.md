@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
 title: Rastreamento e registro de scripts
 ms.openlocfilehash: 6b7e5022cb4c974da5ddb3d670b5808dc9fb7bdc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147796"
 ---
 # <a name="script-tracing-and-logging"></a>Rastreamento e registro de scripts
@@ -19,7 +19,7 @@ Os eventos são:
 
 | Canal |                               Operacional                               |
 | ------- | ----------------------------------------------------------------------- |
-| Nível   | Verbose                                                                 |
+| Nível   | Detalhado                                                                 |
 | Opcode  | Criar                                                                  |
 | Tarefa    | CommandStart                                                            |
 | Palavra-chave | Runspace                                                                |
@@ -33,7 +33,7 @@ Ao habilitar o registro detalhado, o recurso escreve marcadores de início e de 
 
 | Canal |                                 Operacional                                |
 | ------- | -------------------------------------------------------------------------- |
-| Nível   | Verbose                                                                    |
+| Nível   | Detalhado                                                                    |
 | Opcode  | Abrir/Fechar                                                               |
 | Tarefa    | CommandStart/CommandStop                                                 |
 | Palavra-chave | Runspace                                                                   |
