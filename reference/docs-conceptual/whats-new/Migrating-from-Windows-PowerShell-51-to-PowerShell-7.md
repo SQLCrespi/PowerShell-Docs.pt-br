@@ -2,12 +2,12 @@
 title: Migrando do Windows PowerShell 5.1 para o PowerShell 7
 description: Atualize do PowerShell 5.1 para o PowerShell 7 em suas plataformas Windows.
 ms.date: 03/25/2020
-ms.openlocfilehash: e3881b1758f50119444969ad39541aec694cebe5
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8f19297bdb4825f3bbd50544dc5737997e3c83e3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500496"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81440485"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Migrando do Windows PowerShell 5.1 para o PowerShell 7
 
@@ -176,7 +176,7 @@ Para criar uma sessão remota, especifique o computador de destino com o parâme
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-Como alternativa, ao usar o parâmetro **HostName**, forneça as informações de nome de usuário seguidas pelo sinal de arroba ('@') e pelo nome do computador.
+Como alternativa, ao usar o parâmetro **HostName**, forneça as informações de nome de usuário seguidas pelo sinal de arroba (`@`) e pelo nome do computador.
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>

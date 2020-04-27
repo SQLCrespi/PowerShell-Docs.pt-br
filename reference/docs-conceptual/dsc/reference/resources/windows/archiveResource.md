@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Archive da DSC
 ms.openlocfilehash: ddabe1a623783fe213b8059f47851184d5253fc5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954763"
 ---
 # <a name="dsc-archive-resource"></a>Recurso Archive da DSC
@@ -35,11 +35,11 @@ Archive [string] #ResourceName
 
 |Propriedade |Descrição |
 |---|---|
-|Destination |Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído. |
+|Destino |Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído. |
 |Caminho |Especifica o caminho de origem do arquivo morto. |
-|Soma de verificação |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. |
-|Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **False**. |
-|Validar| Usa a propriedade **Checksum** para determinar se o arquivo corresponde à assinatura. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. Se você especificar **Validate** sem **Checksum**, uma **soma de verificação** de _SHA-256_ será usada por padrão. |
+|Checksum (soma de verificação) |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. |
+|Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **Falso**. |
+|Validar| Usa a propriedade **Checksum** para determinar se o arquivo corresponde à assinatura. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. Se você especificar **Validate** sem **Checksum**, uma soma de verificação _SHA-256_ **Checksum** será usada por padrão. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 

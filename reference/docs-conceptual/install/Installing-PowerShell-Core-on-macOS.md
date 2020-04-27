@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no macOS
 description: Informações sobre a instalação do PowerShell no macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 3a5e71d0f69d0c39f9b7f3fa667863d7ec0a31dd
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.openlocfilehash: 4640cef3f99aefe36d69d4eb7cb4859bde1c0347
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80395002"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80977515"
 ---
 # <a name="installing-powershell-on-macos"></a>Instalar o PowerShell no macOS
 
@@ -146,13 +146,7 @@ xcode-select --install
 
 ### <a name="install-openssl"></a>Instalar o OpenSSL
 
-O OpenSSL é necessário para operações CIM e comunicação remota do PowerShell. Você pode instalar por meio de MacPorts ou Brew.
-
-#### <a name="install-openssl-via-brew"></a>Instalar o OpenSSL por meio de Brew
-
-Confira [Sobre Brew](#about-brew) para obter mais informações sobre Brew.
-
-Execute `brew install openssl` para instalar o OpenSSL.
+O OpenSSL é necessário para operações CIM e comunicação remota do PowerShell. Você pode instalar por meio de MacPorts.
 
 #### <a name="install-openssl-via-macports"></a>Instalar o OpenSSL por meio de MacPorts
 
@@ -161,12 +155,12 @@ Execute `brew install openssl` para instalar o OpenSSL.
    Se precisar de instruções, confira o [guia de instalação](https://guide.macports.org/chunked/installing.macports.html).
 1. Atualize o MacPorts executando `sudo port selfupdate`.
 1. Atualize os pacotes de MacPorts executando `sudo port upgrade outdated`.
-1. Instale o OpenSSL executando `sudo port install openssl`.
+1. Instale o OpenSSL executando `sudo port install openssl10`.
 1. Vincule as bibliotecas para disponibilizá-las para o PowerShell:
 
 ```sh
 sudo mkdir -p /usr/local/opt/openssl
-sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
+sudo ln -s /opt/local/lib/openssl-1.0 /usr/local/opt/openssl/lib
 ```
 
 ## <a name="uninstalling-powershell"></a>Desinstalar o PowerShell

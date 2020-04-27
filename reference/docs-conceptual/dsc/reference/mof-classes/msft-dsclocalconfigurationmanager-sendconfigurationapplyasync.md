@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Método SendConfigurationApplyAsync
 ms.openlocfilehash: c0e6dc9418757ee719e848fa8e7006dd73d91ad8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953373"
 ---
 # <a name="sendconfigurationapplyasync-method"></a>Método SendConfigurationApplyAsync
@@ -25,13 +25,13 @@ uint32 SendConfigurationApplyAsync(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ConfigurationData* \[in\] Dados de ambiente da configuração.
+*ConfigurationData* \[in\] Os dados de ambiente da configuração.
 
 *force* \[in\] **true** para forçar a configuração a parar.
 
 *jobId* \[in\] A ID do trabalho para a qual enviar a configuração.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
@@ -45,6 +45,6 @@ Esse é um método estático.
 
 **Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

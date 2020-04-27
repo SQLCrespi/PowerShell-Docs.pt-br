@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Método RollBack
 ms.openlocfilehash: 6452bdffd5160d9956576fb59c98e2f9ff7ddbbb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954933"
 ---
 # <a name="rollback-method"></a>Método RollBack
@@ -25,7 +25,7 @@ uint32 RollBack(
 
 *configurationNumber* \[in\] Especifica a configuração solicitada.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
@@ -39,6 +39,6 @@ Esse é um método estático.
 
 **Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

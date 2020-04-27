@@ -3,12 +3,12 @@ title: Lista de verificação editorial
 description: Esta é uma lista resumida de regras para editar a documentação do PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 511e0c323e1a3256039e819d06f32f6e1ac42767
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060331"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624730"
 ---
 # <a name="editors-checklist"></a>Lista de verificação do editor
 
@@ -36,7 +36,8 @@ Este é um resumo das regras a serem aplicadas ao escrever novos artigos ou atua
   - Exemplos sintáticos `Verb-Noun -Parameter`
   - Caminhos de arquivo `C:\Program Files\PowerShell`, `/usr/bin/pwsh`
   - URLs que não devem ser clicáveis no documento
-- Use negrito para nomes de propriedade, Use negrito para nomes de propriedades, valores de parâmetros, nomes de parâmetros, nomes de classes, nomes de módulos, nomes de entidades, nomes de objetos ou tipos
+  - Valores de propriedade ou parâmetro
+- Use negrito para nomes de: propriedade, parâmetros, classes, módulos, entidades, objetos ou tipos
   - Negrito é usado para marcação semântica, não para ênfase
   - Negrito - use asteriscos `**`
 - Itálico - use sublinhado `_`
@@ -60,7 +61,7 @@ Este é um resumo das regras a serem aplicadas ao escrever novos artigos ou atua
 - Linha em branco antes e depois
 - Usar limites de código marcados -  **powershell**, **Saída** ou outro ID de linguagem apropriado
 - Limite não marcado - blocos de sintaxe ou outros shells
-- Coloque **Saída** em um bloco de código separado, exceto em exemplos simples, nos quais você não pretende que o leitor use o botão **Copiar**
+- Coloque a saída em um bloco de código separado, exceto em exemplos simples, nos quais você não pretende que o leitor use o botão **Copiar**
 - Confira uma lista de [linguagens com suporte](/contribute/code-in-docs#supported-languages)
 
 ### <a name="lists"></a>Listas

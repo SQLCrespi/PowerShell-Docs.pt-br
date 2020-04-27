@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Filtrando resultados da pesquisa
 ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328037"
 ---
 # <a name="filtering-search-results"></a>Filtrando resultados da pesquisa
@@ -28,13 +28,13 @@ Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artig
 Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resultados por:
 - Tipos de Pacote
   - Módulo
-  - script
+  - Script
 - Categorias
   - Cmdlet
   - Recurso de DSC
   - Função
   - Capacidade da função
-  - Fluxo de Trabalho
+  - Fluxo de trabalho
 
 Para ver somente módulos na Galeria do PowerShell, marque a opção Módulo nos Tipos de Pacote.
 Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opção Script nos Tipos de Pacote.

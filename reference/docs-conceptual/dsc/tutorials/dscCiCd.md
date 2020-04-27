@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Criando um pipeline de integração contínua e implantação contínua com DSC
 ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954233"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criando um pipeline de integração contínua e implantação contínua com DSC
@@ -18,7 +18,7 @@ Esse processo simula a primeira parte de um pipeline que seria usado em um ambie
 
 Um pipeline de CI/CD automatizado ajuda a atualizar softwares com mais rapidez e confiança, garantir que todo o código seja testado e que um build atual do código esteja sempre disponível.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este exemplo, você deve estar familiarizado com o seguinte:
 
@@ -31,7 +31,7 @@ Para usar este exemplo, você deve estar familiarizado com o seguinte:
 
 Para compilar e executar esse exemplo, você precisará de um ambiente com vários computadores e/ou máquinas virtuais.
 
-### <a name="client"></a>Remota
+### <a name="client"></a>Cliente
 
 Este é o computador no qual você fará todo o trabalho de configurar e executar o exemplo.
 
@@ -91,7 +91,7 @@ Se você ainda não clonou o repositório Demo_CI no computador cliente, faça i
 > Esse exemplo usa o código no branch `ci-cd-example` do repositório Git.
 > Assegure-se de especificar essa ramificação como a ramificação padrão em seu projeto do TFS e para os gatilhos de CI/CD que você criar.
 
-## <a name="understanding-the-code"></a>Noções básicas sobre o código
+## <a name="understanding-the-code"></a>Compreender o código
 
 Antes de criar os pipelines de build e implantação, vamos analisar parte do código para entender o que está acontecendo.
 No computador cliente, abra o editor de texto favorito e navegue até a raiz do repositório Git Demo_CI.
@@ -324,14 +324,14 @@ Aqui, vamos abordar apenas as etapas de build que você adicionará ao build. Pa
 Crie uma nova definição de build (selecione o modelo **Vazio**) denominado "InfraDNS".
 Adicione as seguintes etapas em sua definição de build:
 
-- Script do PowerShell
+- Scripts PowerShell
 - Publicar resultados de teste
 - Copiar arquivos
 - Publicar artefato
 
 Depois de adicionar essas etapas de build, edite as propriedades de cada etapa da seguinte maneira:
 
-### <a name="powershell-script"></a>Script do PowerShell
+### <a name="powershell-script"></a>Scripts PowerShell
 
 1. Defina a propriedade **Tipo** como `File Path`.
 1. Defina a propriedade **Caminho de script** como `initiate.ps1`.
@@ -370,7 +370,7 @@ Esta etapa copia os scripts de build e de teste no diretório de preparo para qu
 1. Defina o **Tipo de artefato** para `Server`
 1. Selecione `Enabled` em **Opções de controle**
 
-## <a name="enable-continuous-integration"></a>Habilitar integração contínua
+## <a name="enable-continuous-integration"></a>Ativar integração contínua
 
 Agora vamos definir um gatilho que faz com que o projeto seja compilado sempre que uma alteração for verificada na ramificação `ci-cd-example` do repositório git.
 
@@ -392,13 +392,13 @@ Assegure-se de selecionar **Implantação contínua** para que uma nova versão 
 
 Adicione as seguintes etapas na definição de versão:
 
-- Script do PowerShell
+- Scripts PowerShell
 - Publicar resultados de teste
 - Publicar resultados de teste
 
 Edite as etapas da seguinte maneira:
 
-### <a name="powershell-script"></a>Script do PowerShell
+### <a name="powershell-script"></a>Scripts PowerShell
 
 1. Defina o campo **Caminho de script** para `$(Build.DefinitionName)\Deploy\initiate.ps1"`
 1. Defina o campo **Argumentos** para `-fileName Deploy`

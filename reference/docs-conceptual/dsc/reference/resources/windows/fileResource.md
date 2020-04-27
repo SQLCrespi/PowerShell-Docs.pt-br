@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recursos File de DSC
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954673"
 ---
 # <a name="dsc-file-resource"></a>Recursos File de DSC
@@ -42,13 +42,13 @@ File [string] #ResourceName
 |---|---|
 |DestinationPath |O local, no nó de destino, que você quer que seja **Present** ou **Absent** com **Ensure**. |
 |Atributos |O estado desejado dos atributos para o arquivo ou diretório de destino. Os valores válidos são _Archive_, _Hidden_, _ReadOnly_ e _System_. |
-|Soma de verificação |O tipo de soma de verificação a usar para determinar se dois arquivos são iguais. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. |
-|Conteúdo |Válido apenas quando usado com **Type** **File**. Indica se o conteúdo a **Ensure** está **Present** ou **Absent** no arquivo de destino. |
-|Credential |As credenciais necessárias para acessar recursos, como arquivos de origem. |
+|Checksum (soma de verificação) |O tipo de soma de verificação a usar para determinar se dois arquivos são iguais. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. |
+|Conteúdo |Válido apenas quando usado com o **Type** **File**. Indica se o conteúdo a **Ensure** está **Present** ou **Absent** no arquivo de destino. |
+|Credencial |As credenciais necessárias para acessar recursos, como arquivos de origem. |
 |Force |Substitui as operações de acesso que resultariam em erro (como substituir um arquivo ou excluir um diretório que não esteja vazio). O valor padrão é `$false`. |
-|Recurse |Válido somente quando usado com **Type** **Directory**. Executa recursivamente a operação de estado em todos os subdiretórios. O valor padrão é `$false`. |
+|Recurse |Válido apenas quando usado com o **Type** **Directory**. Executa recursivamente a operação de estado em todos os subdiretórios. O valor padrão é `$false`. |
 |SourcePath |O caminho do qual o recurso de arquivo ou pasta deve ser copiado. |
-|Tipo |O tipo de recurso que está sendo configurado. Os valores válidos são **Directory** e **File**. O valor padrão é **File**. |
+|Type |O tipo de recurso que está sendo configurado. Os valores válidos são **Directory** e **File**. O valor padrão é **File**. |
 |MatchSource |Determina se o recurso deve monitorar novos arquivos adicionados ao diretório de origem após a cópia inicial. Um valor `$true` indica que, após a cópia inicial, os novos arquivos de origem devem ser copiados para o destino. Se for definido como `$false`, o recurso armazena em cache o conteúdo do diretório de origem e ignora todos os arquivos adicionados após a cópia inicial. O valor padrão é `$false`. |
 
 > [!WARNING]
@@ -69,7 +69,7 @@ File [string] #ResourceName
 
 - Ao especificar apenas um **DestinationPath**, o recurso garante que o caminho existe caso seja **Present** ou se não existe caso seja **Absent**.
 - Quando você especifica um **SourcePath** e um **DestinationPath** com um valor **Type** do **Diretório**, o recurso copia o diretório de origem para o caminho de destino. As propriedades **Recurse**, **Force** e **MatchSource** alteram o tipo de operação de cópia executada, embora **Credential** determine qual conta usar para acessar o diretório de origem.
-- Se você tiver especificado um valor de **ReadOnly** para a propriedade **Attributes** junto com um **DestinationPath**, **Ensure** **Present** criarão o caminho especificado, enquanto **Contents** definirá o conteúdo do arquivo. Uma configuração **Ensure** **Absent** ignoraria a propriedade **Attributes** completamente e removeria qualquer arquivo no caminho especificado.
+- Se você tiver especificado um valor **ReadOnly** para a propriedade **Attributes** junto com um **DestinationPath**, **Ensure** e **Present** criará o caminho especificado, enquanto **Contents** definirá o conteúdo do arquivo. Uma configuração **Ensure** **Absent** ignoraria a propriedade **Attributes** completamente e removeria qualquer arquivo no caminho especificado.
 
 ## <a name="example"></a>Exemplo
 

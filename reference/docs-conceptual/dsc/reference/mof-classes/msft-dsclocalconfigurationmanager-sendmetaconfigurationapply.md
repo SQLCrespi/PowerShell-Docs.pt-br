@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Método SendMetaConfigurationApply
 ms.openlocfilehash: b2e420bafb8ea22aea43800f6e429d3ed785d1e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954873"
 ---
 # <a name="sendmetaconfigurationapply-method"></a>Método SendMetaConfigurationApply
@@ -24,11 +24,11 @@ uint32 SendMetaConfigurationApply(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ConfigurationData* \[in\] Dados de ambiente da configuração.
+*ConfigurationData* \[in\] Os dados de ambiente da configuração.
 
 *force* \[in\] **true** para forçar a configuração a parar.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
@@ -42,6 +42,6 @@ Esse é um método estático.
 
 **Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

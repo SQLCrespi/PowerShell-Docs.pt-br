@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Introdução à Galeria do PowerShell
-ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995884"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81219686"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
@@ -85,6 +85,16 @@ Da mesma forma, quando executado sem parâmetros adicionais, o [Update-Script][]
 Para descobrir quais módulos você instalou da Galeria do PowerShell, execute o cmdlet [Get-InstalledModule][]. Esse comando lista todos os módulos no seu sistema que foram instalados diretamente da Galeria do PowerShell.
 
 De forma semelhante, para descobrir quais scripts você instalou da Galeria do PowerShell, execute o cmdlet [Get-InstalledScript][]. Esse comando lista todos os scripts no seu sistema que foram instalados diretamente da Galeria do PowerShell.
+
+## <a name="network-access-to-the-powershell-gallery"></a>Acesso à rede para a Galeria do PowerShell
+
+O Galeria do PowerShell usa os nomes do host a seguir.
+
+- `psg-prod-eastus.azureedge.net` – o nome do host CDN
+- `devopsgallerystorage.blob.core.windows.net` – o nome do host da conta de armazenamento
+- `*.powershellgallery.com` – o site
+
+Esses nomes do host devem ser adicionados às listas de permissões que controlam o acesso da sua rede.
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Método PerformRequiredConfigurationChecks
 ms.openlocfilehash: 909e3a48d08e0220ab0efc6a03bea7ead5d9843e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71955003"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>Método PerformRequiredConfigurationChecks
@@ -23,7 +23,7 @@ uint32 PerformRequiredConfigurationChecks(
 
 ## <a name="parameters"></a>Parâmetros
 
-*Flags* \[in\] Um bitmask que especifica o tipo de verificação de consistência a ser executada. Os seguintes valores são válidos e podem ser combinados usando um operação **OR** bit a bit:
+*Flags* \[in\] Um bitmask que especifica o tipo de verificação de consistência que deve ser executada. Os seguintes valores são válidos e podem ser combinados usando um operação **OR** bit a bit:
 
 |Valor |Descrição |
 |:--- |:---|
@@ -32,7 +32,7 @@ uint32 PerformRequiredConfigurationChecks(
 |**4** | A configuração deve ser extraída do servidor de pull especificado na metaconfiguração do nó. Esse valor deve sempre ser combinado com **1**, para um valor de **5**. |
 |**8** | Envie status para o servidor de relatório. |
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
@@ -46,6 +46,6 @@ Esse é um método estático.
 
 **Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

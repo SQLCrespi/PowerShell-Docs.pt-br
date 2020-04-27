@@ -3,12 +3,12 @@ title: Editar artigos de referência
 description: Este artigo explica os requisitos específicos para edição de referências de cmdlet e os tópicos Sobre na documentação do PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3aed1c14429310c57681397d4877a3a6f48400fd
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: e135f6cc81ba7537a535a08421e1ca9b2b2af573
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500968"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624764"
 ---
 # <a name="editing-reference-articles"></a>Editar artigos de referência
 
@@ -26,18 +26,17 @@ O PlatyPS tem um esquema embutido em código para a referência de cmdlet que é
 
 ## <a name="formatting-about_-files"></a>Formatar arquivos About_
 
-Os arquivos `About_*` agora são processados pelo [Pandoc][], em vez do PlatyPS. Os arquivos `About_*` são formatados para oferecer a melhor compatibilidade com todas as versões do PowerShell e com as ferramentas de publicação.
+Os arquivos `About_*` são escritos em Markdown, mas são enviados como arquivos de texto sem formatação. Usamos [Pandoc][] para converter a redução em texto sem formatação. Os arquivos `About_*` são formatados para oferecer a melhor compatibilidade com todas as versões do PowerShell e com as ferramentas de publicação.
 
 Diretrizes básicas de formatação:
 
-- Limite as linhas a 80 caracteres
-- Os blocos de código e as tabelas são limitados a 76 caracteres, pois o Pandoc os recua em quatro espaços durante a conversão para texto sem formatação
-- As tabelas precisam se ajustar a 76 caracteres
-  - Quebre manualmente o conteúdo das células em várias linhas
-  - Use caracteres de abertura e fechamento `|` em cada linha
-  - Confira um exemplo funcional em [about_Comparison_Operators][about-example]
-- Use os caracteres especiais do Pandoc `\`, `$` e `<`
-  - Em um cabeçalho – esses caracteres devem ter escape usando um caractere `\` inicial ou entre aspas invertidas (`` ` ``)
+- Limite as linhas a 80 caracteres. O Pandoc recua alguns blocos de redução, portanto, esses blocos devem ser ajustados.
+  - Os blocos de código são limitados a 76 caracteres
+  - As tabelas são limitadas a 76 caracteres
+  - Os blocos de citações (e alertas) são limitados a 78 caracteres
+
+- Usar os metacaracteres especiais de Pandoc `\`, `$` e `<`
+  - Em um cabeçalho – esses caracteres devem ter escape usando um caractere `\` inicial ou colocados em intervalos de código usando aspas invertidas (`` ` ``)
   - Em um parágrafo – esses caracteres devem ser colocados em extensões de código. Por exemplo:
 
     ~~~markdown
@@ -45,6 +44,29 @@ Diretrizes básicas de formatação:
 
     The `$foo` variable is used to store ...
     ~~~
+
+- As tabelas precisam se ajustar a 76 caracteres
+  - Quebre manualmente o conteúdo das células em várias linhas
+  - Use caracteres de abertura e fechamento `|` em cada linha
+  - O exemplo a seguir ilustra como construir corretamente uma tabela contendo informações com quebra de linha em várias linhas dentro de uma célula.
+
+    ~~~markdown
+    ```
+    |Operator|Description                |Example                          |
+    |--------|---------------------------|---------------------------------|
+    |`-is`   |Returns TRUE when the input|`(get-date) -is [DateTime]`      |
+    |        |is an instance of the      |`True`                           |
+    |        |specified .NET type.       |                                 |
+    |`-isNot`|Returns TRUE when the input|`(get-date) -isNot [DateTime]`   |
+    |        |not an instance of the     |`False`                          |
+    |        |specified.NET type.        |                                 |
+    |`-as`   |Converts the input to the  |`"5/7/07" -as [DateTime]`        |
+    |        |specified .NET type.       |`Monday, May 7, 2007 12:00:00 AM`|
+    ```
+    ~~~
+
+    > [!NOTE]
+    > A limitação de 76 colunas aplica-se apenas aos tópicos `About_*`. Você pode usar colunas largas em artigos conceituais ou de referência de cmdlet.
 
 ## <a name="structuring-examples"></a>Estruturar exemplos
 
