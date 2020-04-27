@@ -3,12 +3,12 @@ title: Guia de estilo do PowerShell no Docs
 description: Este artigo fornece as regras de estilo para escrever a documentação do PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 964536c5195c3bb8abd98b5996a96fc7b9362489
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 90dc93d608440ce7388614b552c0cd873a385cd9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624781"
 ---
 # <a name="powershell-docs-style-guide"></a>Guia de estilo do PowerShell no Docs
 
@@ -17,16 +17,20 @@ Este artigo fornece orientações de estilo específicas de conteúdo do PowerSh
 ## <a name="product-terminology"></a>Terminologia do produto
 
 O PowerShell tem diversas variantes.
-Esta tabela define alguns dos vários termos usados para definir o PowerShell.
 
 - **PowerShell** – é o termo padrão. A partir de agora, consideraremos o PowerShell 7 e versões posteriores o verdadeiro PowerShell.
-
 - **PowerShell Core** – PowerShell criado com base no .NET Core. O uso do termo **Core** deve se limitar aos casos em que é necessário haver diferenciação do Windows PowerShell.
-
 - **Windows PowerShell** – PowerShell criado no .NET Framework. O Windows PowerShell é fornecido apenas no Windows e requer o Framework completo.
 
-Em geral, as referências ao "Windows PowerShell" na documentação podem ser alteradas para "PowerShell".
-O "Windows PowerShell" **não** deve ser alterado quando a tecnologia específica do Windows está sendo abordada.
+  Em geral, as referências ao "Windows PowerShell" na documentação podem ser alteradas para "PowerShell".
+  O "Windows PowerShell" deve ser usado quando o comportamento específico do "Windows PowerShell" está sendo discutido.
+
+Produtos relacionados
+
+- **Visual Studio Code (VS Code)** – este é o editor de software livre gratuito da Microsoft. Na primeira menção, o nome completo deve ser usado. Depois disso, você poderá usar o **VS Code**. Não use "VSCode".
+- **Extensão do PowerShell para Visual Studio Code** – a extensão transforma VS Code no IDE preferencial para o PowerShell. Na primeira menção, o nome completo deve ser usado. Depois disso, você poderá usar a **extensão do PowerShell**.
+- **Azure PowerShell** – é a coleção de módulos do PowerShell usada para gerenciar os serviços do Azure.
+- **Azure Stack** do PowerShell – é a coleção de módulos do PowerShell usada para gerenciar a solução de nuvem híbrida da Microsoft.
 
 ## <a name="markdown-specifics"></a>Especificações de Markdown
 
@@ -36,12 +40,14 @@ A nova especificação do CommonMark é muito mais rigorosa quanto à construç�
 
 ### <a name="blank-lines-spaces-and-tabs"></a>Linhas em branco, espaços e tabulações
 
-Remova linhas em branco duplicadas. Se houver muitas linhas em branco, elas serão processadas como uma única linha em branco no HTML, portanto, não há finalidade para o uso de várias linhas em branco.
-
 As linhas em branco também sinalizam o fim de um bloco em Markdown. Deve haver um espaço em branco único entre os blocos de Markdown de diferentes tipos (por exemplo, entre um parágrafo e uma lista ou cabeçalho).
 
+Remova linhas em branco duplicadas. Se houver muitas linhas em branco, elas serão processadas como uma única linha em branco no HTML, portanto, não há finalidade para o uso de várias linhas em branco. Várias linhas em branco dentro de um bloco de código causarão sua quebra.
+
+Remova espaços extras no final das linhas.
+
 > [!NOTE]
-> O espaçamento é importante em Markdown. Use sempre espaços em vez de tabulação. Remova espaços extras no final das linhas.
+> O espaçamento é importante em Markdown. Use sempre espaços em vez de tabulação. Os espaços à direita podem mudar a maneira como o Markdown é renderizado.
 
 ### <a name="titles-and-headings"></a>Títulos e cabeçalhos
 
@@ -56,10 +62,11 @@ Use somente [cabeçalhos ATX][atx] (estilo #, em vez de cabeçalhos de estilo `=
 
 ### <a name="limit-line-length-to-100-characters"></a>Limite o comprimento da linha a 100 caracteres
 
-Isso se aplica a artigos conceituais e à referência de cmdlet. Os tópicos Sobre são limitados a 80 caracteres.
-Limitar o comprimento da linha melhora a legibilidade de comparações e histórico do git. Também facilita a contribuição de outros escritores.
+Isso se aplica a artigos conceituais e à referência de cmdlet. Limitar o comprimento da linha melhora a legibilidade de comparações e histórico de git. Também facilita a contribuição de outros escritores.
 
 Use a extensão [Reflow Markdown][reflow] no Visual Studio Code para refluir parágrafos com facilidade e ajustar o comprimento da linha prescrita.
+
+Os tópicos Sobre são limitados a 80 caracteres. Para obter informações mais específicas, confira [Editar artigos de referência](./editing-cmdlet-ref.md#formatting-about_-files).
 
 ### <a name="lists"></a>Listas
 
@@ -129,56 +136,6 @@ O Markdown resultante é renderizado da seguinte maneira:
 
 1. O próximo item numerado começa aqui.
 
-### <a name="formatting-command-syntax-elements"></a>Formatação de elementos de sintaxe de comando
-
-- Sempre use o nome completo, sem abreviações, para cmdlets e parâmetros. Evite usar aliases, a menos que você esteja demonstrando o alias especificamente.
-
-- Em um parágrafo, palavras-chave de linguagem, nomes de cmdlet, variáveis e caminhos de arquivo devem ser colocados entre aspas invertidas (`` ` ``). Os nomes de propriedades, parâmetros e classes devem estar em **negrito**.
-
-  Por exemplo:
-
-  ~~~markdown
-  The following code uses `Get-ChildItem` to list the contents of `C:\Windows` and assigns
-  the output to the `$files` variable.
-
-  ```powershell
-  $files = Get-ChildItem C:\Windows
-  ```
-  ~~~
-
-- Ao se referir a um parâmetro por nome, o nome deve estar em **negrito**. Ao ilustrar o uso de um parâmetro com o prefixo de hífen, o parâmetro deve estar entre aspas invertidas. Por exemplo:
-
-  ```markdown
-  The parameter's name is **Name**, but it is typed as `-Name` when used on the command
-  line as a parameter.
-  ```
-
-- Ao se referir a comandos externos (EXEs, scripts etc.), o nome do comando deve estar em negrito, em letras minúsculas (ou maiúsculas, se estiver no início de uma frase) e incluir a extensão de arquivo apropriada. Por exemplo:
-
-  ```markdown
-  For example, on Windows systems, you can use the `net start` and `net stop` commands
-  to start and stop a service. **Sc.exe** is another service control tool for Windows.
-  That name does not fit into the naming pattern for the **net.exe** service commands.
-  ```
-
-- Ao mostrar o exemplo de uso de um comando externo, o exemplo deve estar entre aspas invertidas.
-  Quando houver uma colisão de nomes com um alias, você deve incluir a extensão do arquivo no exemplo de comando. Por exemplo:
-
-  ```markdown
-  To start the spooler service on a remote computer named DC01, you type `sc.exe \\DC01 start spooler`.
-  ```
-
-- Ao escrever um artigo conceitual (em vez de um conteúdo de referência), a primeira instância de um nome de cmdlet deve ser vinculada à documentação do cmdlet. Não use aspas invertidas, negrito ou outra marcação dentro dos colchetes em um hiperlink.
-
-  Por exemplo:
-
-  ```markdown
-  This [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) cmdlet
-  uses the **Object** parameter to ...
-  ```
-
-  Para obter mais informações, confira a seção [Hiperlinks](#hyperlinks) deste artigo.
-
 ### <a name="images"></a>Imagens
 
 A sintaxe que deve ser incluída em uma imagem é:
@@ -199,7 +156,7 @@ Os seguintes tipos de arquivos de imagem são compatíveis: `*.png`, `*.gif`, `*
 
 ### <a name="markdown-extensions-supported-by-open-publishing"></a>Extensões de Markdown para as quais o Open Publishing dá suporte
 
-O [Pacote de Criação do Microsoft Docs](/contribute/how-to-write-docs-auth-pack) contém ferramentas que oferecem suporte a recursos exclusivos do nosso sistema de publicação. Os alertas são uma extensão do Markdown para criar citações em bloco que são renderizadas no docs.microsoft.com com cores e ícones que indicam o significado do conteúdo. Há suporte para os seguintes tipos de alerta:
+O [Pacote de Criação do Microsoft Docs](/contribute/how-to-write-docs-auth-pack) contém ferramentas que oferecem suporte a recursos exclusivos do nosso sistema de publicação. Os alertas são uma extensão do Markdown para criar citações em bloco que são renderizadas no docs.microsoft.com com cores e ícones que destacam o significado do conteúdo. Há suporte para os seguintes tipos de alerta:
 
 ```markdown
 > [!NOTE]
@@ -220,80 +177,151 @@ O [Pacote de Criação do Microsoft Docs](/contribute/how-to-write-docs-auth-pac
 
 Esses alertas ficam da seguinte forma no docs.microsoft.com:
 
+Bloco de notas
+
 > [!NOTE]
 > Informações que o usuário deve conseguir notar mesmo que esteja correndo o texto.
+
+Bloco de dicas
 
 > [!TIP]
 > Informações opcionais para ajudar um usuário a ter mais sucesso.
 
+Bloco de importância
+
 > [!IMPORTANT]
 > Informações essenciais necessárias para o sucesso do usuário.
+
+Bloco de cuidado
 
 > [!CAUTION]
 > Possíveis consequências negativas de uma ação.
 
+Bloco de aviso
+
 > [!WARNING]
 > Consequências perigosas de uma ação.
 
-## <a name="hyperlinks"></a>Hiperlinks
+### <a name="hyperlinks"></a>Hiperlinks
 
-- Evite usar URLs simples. Os links devem usar a sintaxe do Markdown `[friendlyname](url-or-path)`
-- URLs simples podem ser usadas quando necessário, mas devem estar entre aspas invertidas. Por exemplo:
+- Os hiperlinks devem usar a sintaxe de redução `[friendlyname](url-or-path)`
+- Os links devem ser HTTPS quando possível.
+- Os links devem ter um nome amigável, geralmente o título do tópico vinculado
+- Todos os itens da seção "links relacionados" na parte inferior devem ser hiperlinks
+- Não use aspas invertidas, negrito ou outra marcação dentro dos colchetes em um hiperlink.
+- URLs simples podem ser usadas quando há menção a um URI específico. O URI deve ser colocado entre aspas invertidas. Por exemplo:
 
   ```markdown
   By default, if you do not specify this parameter, the DMTF standard resource URI
   `http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/` is used and the class name is appended to it.
   ```
 
-- Os links de URL devem ser HTTPS quando possível.
-- Os links devem ter um nome amigável, geralmente o título do tópico vinculado
-- Todos os itens da seção "links relacionados" na parte inferior devem ser hiperlinks.
-- Não use aspas invertidas, negrito ou outra marcação dentro dos colchetes em um hiperlink.
+#### <a name="linking-to-other-content"></a>Vincular a outros conteúdos
 
-### <a name="linking-to-other-content"></a>Vincular a outros conteúdos
+Existem dois tipos de hiperlinks compatíveis com o sistema de publicação:
 
-Existem dois tipos de hiperlinks compatíveis com o sistema de publicação: Links de arquivos e URLs.
+Um **link de URL** pode ser um caminho de URL que é relativo à raiz do docs.microsoft.com. Ou uma URL absoluta que inclua a sintaxe completa da URL. Por exemplo: `https:/github.com/MicrosoftDocs/PowerShell-Docs`
 
-Um link de URL pode ser um caminho de URL que é relativo à raiz do docs.microsoft.com. Ou uma URL absoluta que inclua a sintaxe completa da URL. (Por exemplo, `https:/github.com/MicrosoftDocs/PowerShell-Docs`)
-
-- Use links de URL ao vincular conteúdo fora do PowerShell-Docs ou entre a referência de cmdlet e artigos conceituais no PowerShell-Docs.
-- A maneira mais simples de criar um link relativo é copiar a URL do seu navegador e remover `https://docs.microsoft.com/en-us` do valor colado no Markdown.
-   - Não inclua localidades em URLs nas propriedades da Microsoft (por exemplo: remova "/en-us" da URL).
+- Use links de URL ao vincular conteúdo fora do PowerShell-Docs ou entre a referência de cmdlet e artigos conceituais no PowerShell-Docs. A maneira mais simples de criar um link relativo é copiar a URL do seu navegador e remover `https://docs.microsoft.com/en-us` do valor colado no markdown.
+- Não inclua localidades em URLs nas propriedades da Microsoft (por exemplo: remova `/en-us` da URL).
+- Remova quaisquer parâmetros de consulta desnecessários da URL, a menos que você precise vincular uma versão específica de um artigo. Exemplos:
+  - `?view=powershell-5.1` – usado para vincular uma versão específica do PowerShell
+  - `?redirectedfrom=MSDN` – adicionado à URL quando você é redirecionado de um artigo antigo para seu novo local
 - Todas as URLs para sites externos devem usar HTTPS, a menos que isso não seja válido para o site de destino.
 
-Um link de arquivo é usado para vincular um artigo de referência a outro ou um artigo conceitual a outro. Se você precisar criar um link para um artigo de referência de uma versão específica do PowerShell, use um link de URL.
+Um **link de arquivo** é usado para vincular um artigo de referência a outro ou um artigo conceitual a outro. Se você precisar criar um link para um artigo de referência de uma versão específica do PowerShell, use um link de URL.
 
 - Os links de arquivo contêm um caminho de arquivo relativo (por exemplo: `../folder/file.md`)
 - Todos os caminhos de arquivo usam caracteres de barra (`/`)
 
-## <a name="formatting-code-samples"></a>Exemplos de código de formatação
+A vinculação profunda é permitida em links de URL e de arquivo. Adicione a âncora ao final do caminho de destino.
+Por exemplo:
+
+- `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
+- `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
+
+Para saber mais, confira [Usar links na documentação](https://docs.microsoft.com/contribute/how-to-write-links).
+
+## <a name="formatting-command-syntax-elements"></a>Formatação de elementos de sintaxe de comando
+
+- Sempre use o nome completo, sem abreviações, para cmdlets e parâmetros. Evite usar aliases, a menos que você esteja demonstrando o alias especificamente.
+
+- Propriedade, parâmetro, objeto, nomes de tipo, nomes de classe, métodos de classe estar em **negrito**.
+  - Os valores de propriedade e de parâmetro devem ser dispostos entre aspas invertidas (`` ` ``).
+  - Ao se referir a tipos que usam o estilo entre colchetes, use aspas invertidas. Por exemplo: `[System.Io.FileInfo]`
+
+- Palavras-chave de idioma, nomes de cmdlet, funções, variáveis, EXEs nativos, caminhos de arquivo e exemplos de sintaxe em linha devem ser agrupados em caracteres de aspas invertidas (`` ` ``).
+
+  Por exemplo:
+
+  ~~~markdown
+  The following code uses `Get-ChildItem` to list the contents of `C:\Windows` and assigns
+  the output to the `$files` variable.
+
+  ```powershell
+  $files = Get-ChildItem C:\Windows
+  ```
+  ~~~
+
+  - Ao se referir a um parâmetro por nome, o nome deve estar em **negrito**. Ao ilustrar o uso de um parâmetro com o prefixo de hífen, o parâmetro deve estar entre aspas invertidas. Por exemplo:
+
+    ```markdown
+    The parameter's name is **Name**, but it is typed as `-Name` when used on the command
+    line as a parameter.
+    ```
+
+  - Ao mostrar o exemplo de uso de um comando externo, o exemplo deve estar entre aspas invertidas.
+    Sempre inclua a extensão do arquivo no comando nativo. Por exemplo:
+
+    ```markdown
+    To start the spooler service on a remote computer named DC01, you type `sc.exe \\DC01 start spooler`.
+    ```
+
+    A inclusão da extensão do arquivo garante que o comando correto seja executado de acordo com a precedência do comando do PowerShell.
+
+- Ao escrever um artigo conceitual (em vez de um conteúdo de referência), a primeira instância de um nome de cmdlet deve ser vinculada à documentação do cmdlet. Não use aspas invertidas, negrito ou outra marcação dentro dos colchetes em um hiperlink.
+
+  Por exemplo:
+
+  ```markdown
+  This [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) cmdlet
+  uses the **Object** parameter to ...
+  ```
+
+  Para obter mais informações, confira a seção [Hiperlinks](#hyperlinks) deste artigo.
+
+## <a name="markdown-for-code-samples"></a>Markdown de exemplos de código
 
 O Markdown dá suporte a dois estilos de código diferentes:
 
-- Extensão de código (embutido) – marcada por um único caractere de aspas invertidas (`` ` ``). Usado dentro de um parágrafo, e não como um bloco independente.
-- Blocos de código – um bloco de várias linhas cercado por cadeias de caracteres com aspas triplas (`` ``` ``). Os blocos de código também podem ter um rótulo de linguagem após as aspas invertidas. O rótulo de linguagem habilita o destaque da sintaxe para o conteúdo do bloco de código.
+- **Extensão de código (embutido)** – marcada por um único caractere de aspas invertidas (`` ` ``). Usado dentro de um parágrafo, e não como um bloco independente.
+- **Blocos de código** – um bloco de várias linhas cercado por cadeias de caracteres com aspas triplas (`` ``` ``). Os blocos de código também podem ter um rótulo de linguagem após as aspas invertidas. O rótulo de linguagem habilita o destaque da sintaxe para o conteúdo do bloco de código.
 
-### <a name="using-code-blocks"></a>Usar blocos de código
+Todos os blocos de código devem estar contidos em um limite de códigos. Nunca use recuo para blocos de código. O Markdown permite esse padrão, mas pode gerar problemas e deve ser evitado.
 
-O Markdown permite que o recuo simbolize um bloco de código, mas esse padrão pode gerar problemas e deve ser evitado. Todos os blocos de código devem estar contidos em um limite de códigos. Um limite de código é um bloco de código cercado por cadeias de caracteres de aspas triplas (`` ``` ``). Os marcadores de limite de código devem estar em sua própria linha antes e depois do exemplo de código. O marcador no início do bloco de código pode ter um rótulo de linguagem opcional. O OPS (Open Publishing System) da Microsoft usa o rótulo de linguagem para oferecer suporte ao recurso de destaque da sintaxe.
+Um bloco de código corresponde a uma ou mais linhas de código limitadas por aspas invertidas triplas (`` ``` ``).
+Os marcadores de limite de código devem estar em sua própria linha antes e depois do exemplo de código. O marcador no início do bloco de código pode ter um rótulo de linguagem opcional. O OPS (Open Publishing System) da Microsoft usa o rótulo de linguagem para oferecer suporte ao recurso de destaque da sintaxe.
 
-O OPS também adiciona um botão **Copiar** que copia o conteúdo do bloco de código para a área de transferência. Isso permite colar rapidamente o código em um script para testar o exemplo de código. No entanto, nem todos os exemplos em nossa documentação devem ser executados. Alguns blocos de código são ilustrações simples de um conceito do PowerShell.
+Para obter uma lista completa das marcas de idioma compatíveis, confira [Blocos de código limitados](/contribute/code-in-docs#fenced-code-blocks) no guia do colaborador centralizado.
 
-Existem dois tipos de blocos de código usados em nossa documentação:
+O OPS também adiciona um botão **Copiar** que copia o conteúdo do bloco de código para a área de transferência. Isso permite que você cole rapidamente o código em um script para testar o exemplo de código. No entanto, nem todos os exemplos em nossa documentação devem ser executados no estado em que se encontram. Alguns blocos de código são ilustrações simples de um conceito do PowerShell.
 
+Existem três tipos de blocos de código usados em nossa documentação:
+
+1. Blocos de sintaxe
 1. Exemplos ilustrativos
-2. Exemplos executáveis
+1. Exemplos executáveis
 
 ### <a name="syntax-code-blocks"></a>Blocos de código de sintaxe
 
-Este exemplo ilustra todos os parâmetros possíveis do cmdlet `Get-Command`.
+Os blocos de código de sintaxe são usados para descrever a estrutura sintática de um comando. Não use uma marca de idioma no limite de código. Este exemplo ilustra todos os parâmetros possíveis do cmdlet `Get-Command`.
 
 ~~~markdown
 ```
 Get-Command [-Verb <String[]>] [-Noun <String[]>] [-Module <String[]>]
-  [-FullyQualifiedModule <ModuleSpecification[]>] [-TotalCount <Int32>] [-Syntax] [-ShowCommandInfo]
-  [[-ArgumentList] <Object[]>] [-All] [-ListImported] [-ParameterName <String[]>]
-  [-ParameterType <PSTypeName[]>] [<CommonParameters>]
+  [-FullyQualifiedModule <ModuleSpecification[]>] [-TotalCount <Int32>] [-Syntax]
+  [-ShowCommandInfo] [[-ArgumentList] <Object[]>] [-All] [-ListImported]
+  [-ParameterName <String[]>] [-ParameterType <PSTypeName[]>] [<CommonParameters>]
 ```
 ~~~
 
@@ -308,10 +336,9 @@ for (<init>; <condition>; <repeat>)
 
 ### <a name="illustrative-examples"></a>Exemplos ilustrativos
 
-Exemplos ilustrativos são usados para explicar um conceito do PowerShell. Eles não devem ser copiados para a área de transferência a fim de serem executados. Eles são mais comumente usados como exemplos simples e fáceis de digitar.
-Também são usados como exemplos de sintaxe em que se está ilustrando a sintaxe de um comando. O bloco de código pode conter a saída de exemplo do comando que está sendo ilustrado.
+Exemplos ilustrativos são usados para explicar um conceito do PowerShell. Eles não devem ser copiados para a área de transferência a fim de serem executados. Eles são mais comumente usados em exemplos simples, fáceis de digitar e entender. O bloco de código pode incluir o prompt do PowerShell e o exemplo de saída.
 
-Confira um exemplo simples que ilustra os operadores de comparação do PowerShell:
+Confira um exemplo simples que ilustra os operadores de comparação do PowerShell. Nesse caso, não pretendemos que o leitor copie nem execute esse exemplo.
 
 ~~~markdown
 ```powershell
@@ -335,15 +362,13 @@ abc
 ```
 ~~~
 
-Observe que esse exemplo tem o prompt simplificado do PowerShell e mostra a saída resultante. Nesse caso, não pretendemos que o leitor copie nem execute esse exemplo.
-
 ### <a name="executable-examples"></a>Exemplos executáveis
 
-Exemplos mais complexos ou que são destinados à cópia e execução devem usar a seguinte marcação no estilo de bloco:
+Exemplos complexos, ou exemplos que devem ser copiados e executados, devem usar a seguinte marcação no estilo de bloco:
 
 ~~~markdown
 ```powershell
-<PowerShell code goes here>
+<Your PowerShell code goes here>
 ```
 ~~~
 
@@ -412,7 +437,7 @@ GameConfigStore        GameDVR_Enabled                       : 1
 
 ### <a name="do-not-use-aliases-in-examples"></a>Não usar aliases em exemplos
 
-Use sempre o nome completo de todos os cmdlets e parâmetros, a menos que esteja falando especificamente sobre o alias. Os nomes de cmdlets e parâmetros devem usar a ortografia adequada definida no código.
+Use sempre o nome completo de todos os cmdlets e parâmetros, a menos que esteja falando especificamente sobre o alias. Os nomes de cmdlets e parâmetros devem usar os nomes apropriados para Pascal.
 
 ### <a name="using-parameters-in-examples"></a>Usar parâmetros em exemplos
 
