@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6c700c8-0889-49a1-a990-8c6e9aaf4735
 caps.latest.revision: 6
-ms.openlocfilehash: 5166213f8247fa23d5e0b3fdfd2367062d595169
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b3a54a9bd6af0f9532faa37a873d3598eeb529d
+ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365475"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82584468"
 ---
 # <a name="how-to-validate-parameter-input"></a>Como validar a entrada de parâmetro
 
@@ -37,4 +37,4 @@ A maneira como um parâmetro é declarado pode afetar a validação. Para obter 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
