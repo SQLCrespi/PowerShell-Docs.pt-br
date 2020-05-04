@@ -296,6 +296,8 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
     - name: Migrando do Windows PowerShell 5.1 para o PowerShell 7
       href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: Usar recursos experimentais
+      href: whats-new/experimental-features.md
     - name: Histórico de versões de cmdlets e módulos
       href: whats-new/cmdlet-versions.md
     - name: Lista de compatibilidade de módulos
@@ -729,13 +731,20 @@
         - name: Apêndice 2 Criando um atalho personalizado do PowerShell
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
 - name: Comunidade
+  expanded: true
   items:
-    - name: Recursos da comunidade
+    - name: Atualização da comunidade
+      href: community/community-update.yml
+    - name: Suporte da comunidade
       href: community/community-support.md
-    - name: Arte digital
-      href: community/digital-art.md
-    - name: Novidades na documentação do PowerShell
-      href: community/whats-new-in-docs.md
+    - name: Hall da Fama do Colaborador
+      href: community/hall-of-fame.md
+    - name: Novidades no Docs
+      items:
+        - name: T2 de 2020
+          href: community/2020-Q2.md
+        - name: T1 de 2020
+          href: community/2020-Q1.md
     - name: Guia do colaborador
       items:
         - name: Visão geral
@@ -758,6 +767,8 @@
               href: community/contributing/managing-issues.md
             - name: Como gerenciamos solicitações de pull
               href: community/contributing/managing-pull-requests.md
+    - name: Arte digital
+      href: community/digital-art.md
 - name: SDK do PowerShell
   items:
     - name: Visão geral
