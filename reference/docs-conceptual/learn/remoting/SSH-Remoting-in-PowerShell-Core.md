@@ -2,12 +2,12 @@
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 09/30/2019
-ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
+ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444375"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82174120"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -64,10 +64,12 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Crie o subsistema SSH que hospeda um processo do PowerShell no computador remoto:
 
    ```
-   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
+   > O local padrão do executável do PowerShell é `c:/progra~1/powershell/7/pwsh.exe`. O local pode variar dependendo de como você instalou o PowerShell.
+   >
    > Você deve usar o nome curto 8.3 para qualquer caminho de arquivo que contenha espaços. Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema. Para saber mais, confira este [problema do GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
    >
    > O nome curto 8.3 para a pasta `Program Files` no Windows geralmente é `Progra~1`. No entanto, você pode usar o seguinte comando para garantir:
@@ -123,6 +125,9 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
    ```
 
+   > [!NOTE]
+   > O local padrão do executável do PowerShell é `/usr/bin/pwsh`. O local pode variar dependendo de como você instalou o PowerShell.
+
    Como alternativa, habilite a autenticação de chave:
 
    ```
@@ -165,6 +170,9 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    ```
    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
    ```
+
+   > [!NOTE]
+   > O local padrão do executável do PowerShell é `/usr/local/bin/pwsh`. O local pode variar dependendo de como você instalou o PowerShell.
 
    Como alternativa, habilite a autenticação de chave:
 

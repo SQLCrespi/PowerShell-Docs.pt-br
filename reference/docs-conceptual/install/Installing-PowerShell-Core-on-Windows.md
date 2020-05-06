@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no Windows
 description: Informações sobre a instalação do PowerShell no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: ea5432725f4baea8c688fb8e67482910e2c3981e
-ms.sourcegitcommit: b6cf10224eb9f32919a505cdffbe5968241c18a1
+ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
+ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80374886"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141390"
 ---
 # <a name="installing-powershell-on-windows"></a>Instalar o PowerShell no Windows
 
@@ -28,7 +28,7 @@ Para instalar o PowerShell no Windows, baixe o pacote de instalação na página
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
 
-O arquivo MSI tem esta aparência `PowerShell-<version>-win-<os-arch>.msi`. Por exemplo:
+O arquivo MSI tem esta aparência `PowerShell-<version>-win-<os-arch>.msi`. Por exemplo: 
 
 - `PowerShell-7.0.0-win-x64.msi`
 - `PowerShell-7.0.0-win-x86.msi`
@@ -82,11 +82,11 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Instalando o pacote ZIP
 
-Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. A instalação do arquivo ZIP não verifica os pré-requisitos como os pacotes MSI fazem. Para que a comunicação remota pelo WSMan funcione corretamente, certifique-se de atender aos [pré-requisitos](#prerequisites).
+Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. A instalação do arquivo ZIP não verifica os pré-requisitos como os pacotes MSI fazem. Baixe o arquivo ZIP na página de [versões][releases]. Dependendo de como você baixar o arquivo, poderá ser necessário desbloqueá-lo usando o cmdlet `Unblock-File`. Descompacte o conteúdo para o local de sua escolha e execute `pwsh.exe` desse local. Para que a comunicação remota pelo WSMan funcione corretamente, certifique-se de atender aos [pré-requisitos](#prerequisites).
 
-## <a name="deploying-on-windows-iot"></a>Implantar no Windows IoT
+## <a name="deploying-on-windows-10-iot-enterprise"></a>Implantar no Windows 10 IoT Enterprise
 
-O Windows IoT é fornecido com o Windows PowerShell, que podemos usar para implantar o PowerShell 7.
+O Windows 10 IoT Enterprise vem com o Windows PowerShell, que pode ser usado para implantar o PowerShell 7.
 
 1. Crie `PSSession` no dispositivo de destino
 
@@ -128,6 +128,16 @@ O Windows IoT é fornecido com o Windows PowerShell, que podemos usar para impla
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+## <a name="deploying-on-windows-10-iot-core"></a>Implantar no Windows 10 IoT Core
+
+O Windows 10 IoT Core adiciona o Windows PowerShell quando você inclui o recurso *IOT_POWERSHELL*, que pode ser usado para implantar o PowerShell 7.
+As etapas definidas acima para o Windows 10 IoT Enterprise também podem ser seguidas para o IoT Core.
+
+Para adicionar o PowerShell mais recente na imagem de remessa, use o comando [Import-PSCoreRelease](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease) para incluir o pacote na área de trabalho e adicione o recurso *OPENSRC_POWERSHELL* à imagem.
+
+> [!NOTE]
+> Para a arquitetura ARM64, o Windows PowerShell não é adicionado quando você inclui *IOT_POWERSHELL*. Portanto, a instalação baseada em zip não funcionará.
+> Você precisará usar o comando Import-PSCoreRelease para adicioná-lo à imagem.
 
 ## <a name="deploying-on-nano-server"></a>Implantação no Nano Server
 
