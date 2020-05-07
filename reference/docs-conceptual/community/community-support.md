@@ -1,19 +1,17 @@
 ---
-title: Recursos da comunidade do PowerShell
+title: Recursos de suporte da comunidade do PowerShell
 description: Lista de recursos criados para e por usuários do PowerShell
-ms.date: 03/04/2020
-ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.date: 04/29/2020
+ms.openlocfilehash: f35524c8a1a457ffd6cccf0d2165cc340f7519ca
+ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80395017"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82630828"
 ---
-# <a name="powershell-community-resources"></a>Recursos da comunidade do PowerShell
+# <a name="getting-support-from-the-community"></a>Obter suporte da comunidade
 
 A Comunidade do PowerShell é um grupo de usuários ativo e vibrante. Este artigo pode ajudar você a se conectar com outro membro da comunidade.
-
-## <a name="getting-support-from-the-community"></a>Obter suporte da comunidade
 
 A comunidade do PowerShell pode registrar problemas, bugs ou solicitações de recursos em nosso repositório [GitHub](https://github.com/powershell/powershell/issues). Se você tiver dúvidas, poderá encontrar ajuda de outros membros da comunidade em um destes fóruns públicos:
 
@@ -27,9 +25,3 @@ A comunidade do PowerShell pode registrar problemas, bugs ou solicitações de r
 - [Conflito do PowerShell](https://discord.gg/Ju25cw6)
 
 Para obter informações sobre nossa política de suporte, confira o [Ciclo de Vida do Suporte do PowerShell](/powershell/scripting/powershell-support-lifecycle).
-
-## <a name="looking-for-logos-and-other-digital-goodies"></a>Procurar por logotipos e outros itens digitais
-
-Temos uma coleção de arte digital disponível para você.
-
-[Arte digital](/powershell/scripting/community/digital-art)
