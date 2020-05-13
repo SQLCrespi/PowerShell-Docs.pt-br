@@ -2,12 +2,12 @@
 title: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
 description: Configurar a codificação de arquivos no VS Code e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: b09c13374c28e88c66d1d84fbe56ca5c66b34c8c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 991e3ccc95dd0dd2106cefe6c68371e59c031f35
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978671"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271858"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
 
@@ -73,7 +73,7 @@ A extensão do PowerShell interage com scripts de várias maneiras:
 2. Quando são executados diretamente no Console integrado, os scripts são lidos do arquivo diretamente pelo PowerShell. Se a codificação do PowerShell for diferente da codificação do VS Code, algo poderá dar errado aqui.
 3. Quando um script aberto no VS Code faz referência a outro script que não está aberto no VS Code, a extensão volta a carregar o conteúdo do script do sistema de arquivos. A extensão do PowerShell usa por padrão a codificação UTF-8, mas usa a detecção de [marca de ordem de byte][], ou BOM, para selecionar a codificação correta.
 
-O problema ocorre ao assumir a codificação de formatos sem BOM (como [UTF-8][] sem BOM e [Windows-1252][]). A extensão do PowerShell usa UTF-8 por padrão. A extensão não pode alterar as configurações de codificação do VS Code. Para saber mais, confira [problema 824] (https://github.com/Microsoft/VS Code/issues/824).
+O problema ocorre ao assumir a codificação de formatos sem BOM (como [UTF-8][] sem BOM e [Windows-1252][]). A extensão do PowerShell usa UTF-8 por padrão. A extensão não pode alterar as configurações de codificação do VS Code. Para obter mais informações, confira [problema #824](https://github.com/Microsoft/VSCode/issues/824).
 
 ## <a name="choosing-the-right-encoding"></a>Escolher a codificação correta
 
@@ -255,11 +255,11 @@ Há algumas outras postagens interessantes sobre codificação e configuração 
 
 - [Resumo de [@mklement0] sobre a codificação do PowerShell no StackOverflow](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - Problemas anteriores abertos no VS Code-PowerShell referentes a problemas de codificação:
-  - [#1308](https://github.com/PowerShell/VS Code-powershell/issues/1308)
-  - [#1628](https://github.com/PowerShell/VS Code-powershell/issues/1628)
-  - [#1680](https://github.com/PowerShell/VS Code-powershell/issues/1680)
-  - [#1744](https://github.com/PowerShell/VS Code-powershell/issues/1744)
-  - [#1751](https://github.com/PowerShell/VS Code-powershell/issues/1751)
+  - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
+  - [#1628](https://github.com/PowerShell/VSCode-powershell/issues/1628)
+  - [#1680](https://github.com/PowerShell/VSCode-powershell/issues/1680)
+  - [#1744](https://github.com/PowerShell/VSCode-powershell/issues/1744)
+  - [#1751](https://github.com/PowerShell/VSCode-powershell/issues/1751)
 - [O artigo clássico de *Joel on Software* sobre Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [Codificação no .NET Standard](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 
