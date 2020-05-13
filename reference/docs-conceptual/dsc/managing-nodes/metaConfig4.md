@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o LCM no PowerShell 4.0
-ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4a9dedf67f9fb18fdd7f5adf70dbf1402fb3f918
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953823"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271824"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>Configurando o LCM no PowerShell 4.0
 
@@ -24,11 +24,11 @@ Este tópico lista as propriedades do Gerenciador de Configurações Local e des
 O exemplo a seguir lista as propriedades do Gerenciador de Configurações Local que podem ser definidas ou recuperadas.
 
 - **AllowModuleOverwrite**: controla se as novas configurações baixadas do serviço de configuração têm permissão para substituir as antigas no nó de destino. Os valores possíveis são True e False.
-- **CertificateID**: A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)
+- **CertificateID**: A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](https://devblogs.microsoft.com/powershell/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)
 - **ConfigurationID**: indica um GUID que é usado para obter um arquivo de configuração específico de um serviço de pull. O GUID garante que o arquivo de configuração correto seja acessado.
 - **ConfigurationMode**: especifica como o Gerenciador de Configurações Local realmente aplica a configuração aos nós de destino. Ele pode usar os seguintes valores:
   - **ApplyOnly**: Com essa opção, a DSC aplicará a configuração e não fará nada além disso, a menos que uma nova configuração seja detectada quando você enviar uma nova configuração diretamente para o nó de destino, ou se você estiver se conectando a um serviço de pull e o DSC descobrir uma nova configuração quando verificar com o serviço de pull. Nenhuma ação será executada se a configuração de destino estiver dessincronizada.
-  - **ApplyAndMonitor**: com essa opção (que é o padrão), o DSC aplica todas as novas configurações, independentemente de terem sido enviadas por você diretamente para o nó de destino ou descobertas em um serviço de pull. Por conseguinte, se a configuração do nó de destino estiver dessincronizada em relação ao arquivo de configuração, a DSC relatará a discrepância em logs. Para obter mais informações sobre o registro em log de DSC, consulte [Usando Logs de Evento para Diagnosticar Erros na Configuração de Estado Desejado](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx).
+  - **ApplyAndMonitor**: com essa opção (que é o padrão), o DSC aplica todas as novas configurações, independentemente de terem sido enviadas por você diretamente para o nó de destino ou descobertas em um serviço de pull. Por conseguinte, se a configuração do nó de destino estiver dessincronizada em relação ao arquivo de configuração, a DSC relatará a discrepância em logs. Para obter mais informações sobre o registro em log de DSC, consulte [Usando Logs de Evento para Diagnosticar Erros na Configuração de Estado Desejado](https://devblogs.microsoft.com/powershell/using-event-logs-to-diagnose-errors-in-desired-state-configuration/).
   - **ApplyAndAutoCorrect**: com essa opção, o DSC aplica todas as novas configurações, independentemente de terem sido enviadas por você diretamente para o nó de destino ou descobertas em um serviço de pull. Depois disso, se a configuração do nó de destino estiver dessincronizada em relação ao arquivo de configuração, a DSC relatará a discrepância em logs e tentará ajustar a configuração do nó de destino para colocar em conformidade com o arquivo de configuração.
 - **ConfigurationModeFrequencyMins**: representa a frequência (em minutos) com que o aplicativo em segundo plano do DSC tenta implementar a configuração de nó atual no nó de destino. O valor padrão é 15. Esse valor pode ser definido em conjunto com RefreshMode. Quando RefreshMode é definido como PULL, o nó de destino entra em contato com o serviço de configuração em um intervalo definido por RefreshFrequencyMins e baixa a configuração atual. Independentemente do valor RefreshMode, no intervalo definido por ConfigurationModeFrequencyMins, o mecanismo de consistência aplica a configuração que foi baixada por último ao nó de destino. RefreshFrequencyMins deve ser definido como um número inteiro, múltiplo de ConfigurationModeFrequencyMins.
 - **Credential**: indica credenciais (como é o caso de Get-Credential) necessárias para acessar recursos remotos, como para entrar em contato com o serviço de configuração.
