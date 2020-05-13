@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no Linux
 description: Informações sobre como instalar o PowerShell em várias distribuições do Linux
 ms.date: 03/09/2020
-ms.openlocfilehash: 6ad637bd30e5e40ccc9532bae6f1171ecf79734a
-ms.sourcegitcommit: e0a737961280026832cff9c658ed1468dc904e80
+ms.openlocfilehash: e04d8a91999cd6e9b2d669230c7a1b412f11eeb8
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605842"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271892"
 ---
 # <a name="installing-powershell-on-linux"></a>Instalar o PowerShell no Linux
 
@@ -54,6 +54,10 @@ Métodos de instalação alternativos
 - Pacote Snap
 - Arquivos binários
 - Ferramenta .NET Global
+
+Sem suporte no momento 
+
+- Ubuntu 20.04
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -165,6 +169,10 @@ Só há suporte para instalações via `snapd`. Para obter instruções, confira
 
 > [!NOTE]
 > O Ubuntu 19.04 é uma [versão provisória](https://www.ubuntu.com/about/release-cycle) e tem apenas [suporte da comunidade](../powershell-support-lifecycle.md).
+
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+O Ubuntu 20.04 é uma versão LTS. Atualmente, o PowerShell não dá suporte a essa versão. O suporte para essa versão do Ubuntu está sendo considerado para a versão 7.1 do PowerShell. Se você gostaria de suporte para o Ubuntu 20.04, vote a favor nesta [solicitação](https://github.com/PowerShell/PowerShell/issues/12626).
 
 ## <a name="debian-8"></a>Debian 8
 
