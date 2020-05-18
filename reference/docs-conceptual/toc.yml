@@ -755,22 +755,20 @@
               href: community/contributing/managing-pull-requests.md
     - name: Arte digital
       href: community/digital-art.md
-- name: Desenvolvedor do PowerShell
+- name: Script e desenvolvimento
   items:
-    - name: Desenvolvimento multiplataforma
+    - name: Visual Studio Code
       items:
-        - name: Visual Studio Code
-          items:
-            - name: Usar o Visual Studio Code
-              href: components/vscode/using-vscode.md
-            - name: Como replicar a experiência do ISE no Visual Studio Code
-              href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-            - name: Usando o Visual Studio Code para edição e depuração remotas
-              href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-            - name: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
-              href: components/vscode/understanding-file-encoding.md
-        - name: Escrevendo módulos portáteis
-          href: learn/writing-portable-modules.md
+        - name: Usar o Visual Studio Code
+          href: components/vscode/using-vscode.md
+        - name: Como replicar a experiência do ISE no Visual Studio Code
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: Usando o Visual Studio Code para edição e depuração remotas
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
+          href: components/vscode/understanding-file-encoding.md
+    - name: Escrevendo módulos portáteis
+      href: learn/writing-portable-modules.md
     - name: SDK do PowerShell Herdado
       items:
         - name: Visão geral
