@@ -92,7 +92,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-Para uma saída mais sucinta, pode ser útil excluir algumas propriedades. Embora você possa usar o parâmetro `Get-CimInstance`Property**de** para escolher somente a **HotFixID**, fazer isso, na verdade, retornará mais informações, pois todos os metadados são exibidos por padrão:
+Para uma saída mais sucinta, pode ser útil excluir algumas propriedades. Embora você possa usar o parâmetro **Property** de `Get-CimInstance` para escolher somente a **HotFixID**, fazer isso, na verdade, retornará mais informações, pois todos os metadados são exibidos por padrão:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -138,7 +138,7 @@ Get-CimInstance -ClassName Win32_OperatingSystem |
   Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion
 ```
 
-Você também pode usar caracteres curinga com o parâmetro `Select-Object`Property**de**. Como todas as propriedades que começam com **Build** ou **ServicePack** são importantes para usar aqui, podemos reduzir isso para a seguinte forma:
+Você também pode usar caracteres curinga com o parâmetro **Property** de `Select-Object`. Como todas as propriedades que começam com **Build** ou **ServicePack** são importantes para usar aqui, podemos reduzir isso para a seguinte forma:
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property Build*,OSType,ServicePack*
