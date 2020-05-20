@@ -56,7 +56,7 @@ Quando marca uma caixa de seleção de Categoria, você está dizendo "Eu gostar
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>Quais são os requisitos para publicar um módulo na Galeria do PowerShell?
 
-Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários ou módulos de manifesto) pode ser publicado na Galeria. Para publicar um módulo, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação do *manifesto do módulo* arquivo (.psd1) ou do valor do parâmetro [Publish-Module][] do cmdlet **Publish-Module**. Todos os módulos publicados na Galeria devem ter manifestos de módulo. Qualquer módulo que incluir as seguintes informações em seu manifesto pode ser publicado na Galeria:
+Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários ou módulos de manifesto) pode ser publicado na Galeria. Para publicar um módulo, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação do *manifesto do módulo* arquivo (.psd1) ou do valor do parâmetro **LicenseUri** do cmdlet [Publish-Module][]. Todos os módulos publicados na Galeria devem ter manifestos de módulo. Qualquer módulo que incluir as seguintes informações em seu manifesto pode ser publicado na Galeria:
 
 - Versão
 - DESCRIÇÃO
@@ -73,7 +73,7 @@ Para atualizar os campos do arquivo de manifesto do módulo, use o cmdlet [Updat
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>Quais são os requisitos para publicar um script na Galeria?
 
-Qualquer tipo de script do PowerShell (scripts ou fluxos de trabalho) pode ser publicado na Galeria. Para publicar um script, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação da seção *PSScriptInfo* do arquivo de script ou do valor do parâmetro [Publish-Script][] do cmdlet **Publish-Script**. Todos os scripts publicados na Galeria devem ter informações dos metadados. Qualquer script que incluir as seguintes informações em sua seção PSScriptInfo pode ser publicado na Galeria:
+Qualquer tipo de script do PowerShell (scripts ou fluxos de trabalho) pode ser publicado na Galeria. Para publicar um script, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação da seção *PSScriptInfo* do arquivo de script ou do valor do parâmetro **LicenseUri** do cmdlet [Publish-Script][]. Todos os scripts publicados na Galeria devem ter informações dos metadados. Qualquer script que incluir as seguintes informações em sua seção PSScriptInfo pode ser publicado na Galeria:
 
 - Versão
 - DESCRIÇÃO
