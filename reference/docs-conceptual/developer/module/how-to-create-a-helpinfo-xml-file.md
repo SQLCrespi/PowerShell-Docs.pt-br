@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3971ce1f-271c-4938-a9d3-47ff3aaf7219
 caps.latest.revision: 9
-ms.openlocfilehash: 7df9764fd573b75f285fec592448a550e481bea3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f09146a9e6456584f67edb52407193d8a9330ce
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367315"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564782"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>Como criar um arquivo XML HelpInfo
 
@@ -37,7 +37,7 @@ Esta seção inclui os seguintes tópicos.
 
 - [Como nomear um arquivo XML HelpInfo](./how-to-name-a-helpinfo-xml-file.md)
 
-- [Como definir números de versão do HelpInfo XML](./how-to-set-helpinfo-xml-version-numbers.md)
+- [Como definir os números de versão do XML HelpInfo](./how-to-set-helpinfo-xml-version-numbers.md)
 
 ## <a name="see-also"></a>Consulte Também
 

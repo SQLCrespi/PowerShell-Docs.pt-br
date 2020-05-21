@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
-ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369285"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561400"
 ---
 # <a name="types-of-cmdlet-output"></a>Tipos de saída de cmdlet
 
@@ -54,7 +54,7 @@ Por padrão, as mensagens de depuração não são exibidas. Você pode especifi
 
 Os cmdlets podem exibir mensagens de aviso chamando o método [System. Management. Automation. cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) .
 
-Por padrão, as mensagens de aviso são exibidas. No entanto, você pode configurar mensagens de aviso usando a variável `$WarningPreference` ou usando os parâmetros **detalhados** e de **depuração** quando o cmdlet é chamado.
+Por padrão, as mensagens de aviso são exibidas. No entanto, você pode configurar mensagens de aviso usando a `$WarningPreference` variável ou usando os parâmetros **detalhados** e de **depuração** quando o cmdlet é chamado.
 
 ## <a name="displaying-output"></a>Exibindo saída
 
@@ -64,10 +64,10 @@ Para todas as chamadas de método de gravação, a exibição de conteúdo é de
 
 Você também pode criar um cmdlet para acessar diretamente a funcionalidade de saída de um aplicativo host por meio do tempo de execução do PowerShell. Usar as APIs de host fornecidas pelo PowerShell em vez de [System. console](/dotnet/api/System.Console) ou [System. Windows. Forms](/dotnet/api/System.Windows.Forms) garante que o cmdlet funcionará com uma variedade de hosts. Por exemplo: o host do console do **PowerShell. exe** , o host gráfico **Powershell_ise. exe** , o host remoto do PowerShell e hosts de terceiros.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Conceitos de relatório de erros](./error-reporting-concepts.md)
+[Conceitos de relatórios de erro](./error-reporting-concepts.md)
 
 [Visão geral do cmdlet](./cmdlet-overview.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

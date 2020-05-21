@@ -10,12 +10,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], designing
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
-ms.openlocfilehash: bfb29fd5df87ffa9ae270c18ce8bfb0c59ee6f90
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6112e64a4a15d9dc8ac28ba51259b6647db4c064
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870652"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560042"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Projetar seu provedor do Windows PowerShell
 
@@ -33,15 +33,15 @@ Para permitir que o usuário acesse os dados localizados em uma unidade física,
 
 ### <a name="defining-a-provider-qualified-path"></a>Definindo um caminho qualificado pelo provedor
 
-Para permitir que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para provedor. Por exemplo, FileSystem::\\\uncshare\abc\bar é o caminho qualificado do provedor para o provedor FileSystem fornecido pelo Windows PowerShell.
+Para permitir que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para provedor. Por exemplo, FileSystem:: \\ \uncshare\abc\bar é o caminho qualificado do provedor para o provedor FileSystem fornecido pelo Windows PowerShell.
 
 ### <a name="defining-a-provider-direct-path"></a>Definindo um caminho direto do provedor
 
-Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve dar suporte a um caminho direto do provedor para passar diretamente para o provedor do Windows PowerShell para o local atual. Por exemplo, o provedor do Windows PowerShell do registro pode usar \\\server\regkeypath como um caminho direto do provedor.
+Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve dar suporte a um caminho direto do provedor para passar diretamente para o provedor do Windows PowerShell para o local atual. Por exemplo, o provedor do Windows PowerShell do registro pode usar \\ \server\regkeypath como um caminho direto do provedor.
 
 ### <a name="defining-a-provider-internal-path"></a>Definindo um caminho interno do provedor
 
-Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor do sistema de arquivos do provedor do Windows PowerShell é \\\uncshare\abc\bar.
+Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor para o sistema de arquivos provedor do Windows PowerShell é \\ \uncshare\abc\bar.
 
 ## <a name="changing-stored-data"></a>Alterando dados armazenados
 
@@ -53,12 +53,12 @@ O Windows PowerShell fornece várias classes base que você pode usar para imple
 
 Cada classe base do provedor do Windows PowerShell disponibiliza um conjunto de cmdlets. Esta seção descreve os cmdlets, mas não descreve seus parâmetros.
 
-Usando o estado de sessão, o tempo de execução do Windows PowerShell disponibiliza vários cmdlets de local para determinados provedores do Windows PowerShell, como os cmdlets `Get-Location`, `Set-Location`, `Pop-Location`e `Push-Location`. Você pode usar o cmdlet `Get-Help` para obter informações sobre esses cmdlets de local.
+Usando o estado de sessão, o tempo de execução do Windows PowerShell disponibiliza vários cmdlets de local para determinados provedores do Windows PowerShell, como os `Get-Location` `Set-Location` cmdlets,, `Pop-Location` e `Push-Location` . Você pode usar o `Get-Help` cmdlet para obter informações sobre esses cmdlets de local.
 
 ### <a name="cmdletprovider-base-class"></a>Classe base cmdletprovider
 
 A classe [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) define um provedor básico do Windows PowerShell. Essa classe dá suporte à declaração do provedor e fornece uma série de propriedades e métodos que estão disponíveis para todos os provedores do Windows PowerShell.
-A classe é invocada pelo cmdlet `Get-PSProvider` para listar todos os provedores disponíveis para uma sessão.
+A classe é invocada pelo `Get-PSProvider` cmdlet para listar todos os provedores disponíveis para uma sessão.
 A implementação desse cmdlet é fornecida pelo estado da sessão.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ A implementação desse cmdlet é fornecida pelo estado da sessão.
 
 A classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) define um provedor de unidade do Windows PowerShell que dá suporte a operações para adicionar novas unidades, remover unidades existentes e inicializar unidades padrão. Por exemplo, o provedor FileSystem fornecido pelo Windows PowerShell Inicializa unidades para todos os volumes que são montados, como discos rígidos e unidades de dispositivo de CD/DVD.
 
-Essa classe deriva da classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) . A tabela a seguir lista os cmdlets expostos por essa classe. Além daqueles listados, o cmdlet `Get-PSDrive` (exposto por estado de sessão) é um cmdlet relacionado que é usado para recuperar as unidades disponíveis.
+Essa classe deriva da classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) . A tabela a seguir lista os cmdlets expostos por essa classe. Além daqueles listados, o `Get-PSDrive` cmdlet (exposto por estado de sessão) é um cmdlet relacionado que é usado para recuperar as unidades disponíveis.
 
 |      Cmdlet      |                             Definição                              |
 | ---------------- | ------------------------------------------------------------------- |
@@ -81,12 +81,12 @@ A classe [System. Management. Automation. Provider. createcmdletprovider](/dotne
 
 |     Cmdlet     |                                                                                                                                                            Definição                                                                                                                                                            |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Clear-Item`   | Limpa o conteúdo atual dos itens no local especificado e o substitui pelo valor "Clear" especificado pelo provedor. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.                                                                                   |
+| `Clear-Item`   | Limpa o conteúdo atual dos itens no local especificado e o substitui pelo valor "Clear" especificado pelo provedor. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.                                                                                   |
 | `Get-Item`     | Recupera itens do local especificado e transmite os objetos resultantes.                                                                                                                                                                                                                                                  |
 | `Invoke-Item`  | Invoca a ação padrão para o item no caminho especificado.                                                                                                                                                                                                                                                                   |
-| `Set-Item`     | Define um item no local especificado com o valor indicado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.                                                                                                                                                   |
+| `Set-Item`     | Define um item no local especificado com o valor indicado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.                                                                                                                                                   |
 | `Resolve-Path` | Resolve os curingas para um caminho do Windows PowerShell e transmite informações de caminho.                                                                                                                                                                                                                                              |
-| `Test-Path`    | Testa o caminho especificado e retorna `true` se ele existir e `false` caso contrário. Esse cmdlet é implementado para dar suporte ao parâmetro `IsContainer` para o método [System. Management. Automation. Provider. cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) . |
+| `Test-Path`    | Testa o caminho especificado e retorna `true` se ele existe e, `false` caso contrário,. Esse cmdlet é implementado para dar suporte ao `IsContainer` parâmetro para o método [System. Management. Automation. Provider. cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) . |
 
 ### <a name="containercmdletprovider-base-class"></a>Classe base ContainerCmdletProvider
 
@@ -96,11 +96,11 @@ Essa classe deriva da classe base [System. Management. Automation. Provider. @ c
 
 |     Cmdlet      |                                                                        Definição                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Copy-Item`     | Copia itens de um local para outro. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
+| `Copy-Item`     | Copia itens de um local para outro. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
 | `Get-Childitem` | Recupera os itens filho no local especificado e os transmite como objetos.                                                                        |
 | `New-Item`      | Cria novos itens no local especificado e transmite o objeto resultante.                                                                           |
 | `Remove-Item`   | Remove itens do local especificado.                                                                                                               |
-| `Rename-Item`   | Renomeia um item no local especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
+| `Rename-Item`   | Renomeia um item no local especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
 
 ### <a name="navigationcmdletprovider-base-class"></a>Classe base NavigationCmdletProvider
 
@@ -109,13 +109,13 @@ A classe [System. Management. Automation. Provider. Navigationcmdletprovider](/d
 |    Cmdlet    |                                                                      Definição                                                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Combinação-caminho | Combina dois caminhos em um único caminho, usando um delimitador específico de provedor entre caminhos. Esse cmdlet transmite cadeias de caracteres.                               |
-| `Move-Item`  | Move itens para o local especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
+| `Move-Item`  | Move itens para o local especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
 
-Um cmdlet relacionado é o cmdlet de análise-caminho básico fornecido pelo Windows PowerShell. Esse cmdlet pode ser usado para analisar um caminho do Windows PowerShell para dar suporte ao parâmetro `Parent`. Ele transmite a cadeia de caracteres do caminho pai.
+Um cmdlet relacionado é o cmdlet de análise-caminho básico fornecido pelo Windows PowerShell. Esse cmdlet pode ser usado para analisar um caminho do Windows PowerShell para dar suporte ao `Parent` parâmetro. Ele transmite a cadeia de caracteres do caminho pai.
 
 ## <a name="select-provider-interfaces-to-support"></a>Selecionar interfaces de provedor para dar suporte
 
-Além de derivar de uma das classes base do Windows PowerShell, seu provedor do Windows PowerShell pode dar suporte a outras funcionalidades derivando de uma ou mais das seguintes interfaces de provedor. Esta seção define as interfaces e os cmdlets com suporte em cada um. Ele não descreve os parâmetros para os cmdlets com suporte de interface. As informações de parâmetro de cmdlet estão disponíveis online usando os cmdlets `Get-Command` e `Get-Help`.
+Além de derivar de uma das classes base do Windows PowerShell, seu provedor do Windows PowerShell pode dar suporte a outras funcionalidades derivando de uma ou mais das seguintes interfaces de provedor. Esta seção define as interfaces e os cmdlets com suporte em cada um. Ele não descreve os parâmetros para os cmdlets com suporte de interface. As informações de parâmetro de cmdlet estão disponíveis online usando os `Get-Command` `Get-Help` cmdlets e.
 
 ### <a name="icontentcmdletprovider"></a>IContentCmdletProvider
 
@@ -123,23 +123,23 @@ A interface [System. Management. Automation. Provider. Icontentcmdletprovider](/
 
 |     Cmdlet      |                                                                                        Definição                                                                                        |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Add-Content`   | Acrescenta os comprimentos de valor indicados ao conteúdo do item especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
-| `Clear-Content` | Define o conteúdo do item especificado para o valor "Clear". Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.               |
+| `Add-Content`   | Acrescenta os comprimentos de valor indicados ao conteúdo do item especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
+| `Clear-Content` | Define o conteúdo do item especificado para o valor "Clear". Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.               |
 | `Get-Content`   | Recupera o conteúdo dos itens especificados e transmite os objetos resultantes.                                                                                                         |
-| `Set-Content`   | Substitui o conteúdo existente para os itens especificados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.                     |
+| `Set-Content`   | Substitui o conteúdo existente para os itens especificados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.                     |
 
 ### <a name="ipropertycmdletprovider"></a>IPropertyCmdletProvider
 
 A interface [System. Management. Automation. Provider. Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) define uma propriedade do provedor do Windows PowerShell que executa operações nas propriedades de itens no armazenamento de dados. A tabela a seguir lista os cmdlets expostos por essa interface.
 
 > [!NOTE]
-> O parâmetro `Path` nesses cmdlets indica um caminho para um item em vez de identificar uma propriedade.
+> O `Path` parâmetro nesses cmdlets indica um caminho para um item em vez de identificar uma propriedade.
 
 |        Cmdlet        |                                                                                   Definição                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Clear-ItemProperty` | Define as propriedades dos itens especificados para o valor "Clear". Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.      |
+| `Clear-ItemProperty` | Define as propriedades dos itens especificados para o valor "Clear". Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.      |
 | `Get-ItemProperty`   | Recupera as propriedades dos itens especificados e transmite os objetos resultantes.                                                                                                |
-| `Set-ItemProperty`   | Define as propriedades dos itens especificados com os valores indicados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
+| `Set-ItemProperty`   | Define as propriedades dos itens especificados com os valores indicados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
 
 ### <a name="idynamicpropertycmdletprovider"></a>IDynamicPropertyCmdletProvider
 
@@ -148,11 +148,11 @@ A tabela a seguir lista os cmdlets expostos por essa interface.
 
 |        Cmdlet         |                                                                                Definição                                                                                |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Copy-ItemProperty`   | Copia uma propriedade do item especificado para outro item. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado. |
-| `Move-ItemProperty`   | Move uma propriedade do item especificado para outro item. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.  |
+| `Copy-ItemProperty`   | Copia uma propriedade do item especificado para outro item. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
+| `Move-ItemProperty`   | Move uma propriedade do item especificado para outro item. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.  |
 | `New-ItemProperty`    | Cria uma propriedade nos itens especificados e transmite os objetos resultantes.                                                                                             |
 | `Remove-ItemProperty` | Remove uma propriedade para os itens especificados.                                                                                                                              |
-| `Rename-ItemProperty` | Renomeia uma propriedade dos itens especificados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu parâmetro `PassThru` seja especificado.                 |
+| `Rename-ItemProperty` | Renomeia uma propriedade dos itens especificados. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado.                 |
 
 ### <a name="isecuritydescriptorcmdletprovider"></a>ISecurityDescriptorCmdletProvider
 
@@ -163,7 +163,7 @@ A interface [System. Management. Automation. Provider. Isecuritydescriptorcmdlet
 | `Get-Acl` | Recupera as informações contidas em uma ACL (lista de controle de acesso), que faz parte de um descritor de segurança usado para proteger os recursos do sistema operacional, por exemplo, um arquivo ou um objeto.                                                                                                                                                                                                                                      |
 | `Set-Acl` | Define as informações de uma ACL. Ele está na forma de uma instância de [System. Security. AccessControl. ObjectSecurity](/dotnet/api/System.Security.AccessControl.ObjectSecurity) nos itens designados para o caminho especificado. Esse cmdlet pode definir informações sobre arquivos, chaves e subchaves no registro, ou qualquer outro item de provedor, se o provedor do Windows PowerShell oferecer suporte à configuração de informações de segurança. |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 

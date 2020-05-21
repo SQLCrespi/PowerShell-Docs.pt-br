@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9f1b94e722e59e707a26547949c661b5098d29e0
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366285"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560943"
 ---
 # <a name="windows-powershell-provider-overview"></a>Visão geral do provedor do Windows PowerShell
 
-Um provedor do Windows PowerShell permite que qualquer armazenamento de dados seja exposto como um sistema de arquivos como se fosse uma unidade montada. Por exemplo, o provedor de registro interno permite que você navegue no registro como você navegaria na unidade de `c` do seu computador. Um provedor também pode substituir os cmdlets `Item` (por exemplo, `Get-Item`, `Set-Item`, etc.), de modo que os dados em seu armazenamento de dados possam ser tratados como arquivos e diretórios são tratados durante a navegação em um sistema de arquivos. Para obter mais informações sobre provedores e unidades e os provedores internos do Windows PowerShell, consulte [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
+Um provedor do Windows PowerShell permite que qualquer armazenamento de dados seja exposto como um sistema de arquivos como se fosse uma unidade montada. Por exemplo, o provedor de registro interno permite que você navegue no registro como você navegaria na `c` unidade do seu computador. Um provedor também pode substituir os `Item` cmdlets (por exemplo,,, `Get-Item` `Set-Item` etc.), de modo que os dados em seu armazenamento de dados possam ser tratados como arquivos e diretórios são tratados ao navegar em um sistema de arquivos. Para obter mais informações sobre provedores e unidades e os provedores internos do Windows PowerShell, consulte [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 
 ## <a name="providers-and-drives"></a>Provedores e unidades
 
@@ -43,7 +43,7 @@ Um caminho qualificado para unidade é uma combinação do nome do item, o cont�
 
 ### <a name="provider-qualified-paths"></a>Caminhos qualificados para o provedor
 
-Para permitir que o mecanismo do Windows PowerShell inicialize e desinicialize seu provedor, o provedor deve dar suporte a um caminho qualificado para provedor. Por exemplo, o usuário pode inicializar e cancelar a inicialização do provedor FileSystem porque ele define o seguinte caminho qualificado pelo provedor: `FileSystem::\\uncshare\abc\bar`.
+Para permitir que o mecanismo do Windows PowerShell inicialize e desinicialize seu provedor, o provedor deve dar suporte a um caminho qualificado para provedor. Por exemplo, o usuário pode inicializar e cancelar a inicialização do provedor FileSystem porque ele define o seguinte caminho qualificado para provedor: `FileSystem::\\uncshare\abc\bar` .
 
 ### <a name="provider-direct-paths"></a>Provedores-caminhos diretos
 
@@ -51,7 +51,7 @@ Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve da
 
 ### <a name="provider-internal-paths"></a>Provedor-caminhos internos
 
-Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor para o sistema de arquivos do provedor do Windows PowerShell é `\\uncshare\abc\bar`.
+Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor para o sistema de arquivos do provedor do Windows PowerShell é `\\uncshare\abc\bar` .
 
 ## <a name="overriding-cmdlet-parameters"></a>Substituindo parâmetros de cmdlet
 
@@ -63,7 +63,7 @@ Os provedores podem definir parâmetros dinâmicos que são adicionados a um cmd
 
 ## <a name="provider-capabilities"></a>Recursos do provedor
 
-A enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) define uma série de recursos aos quais os provedores podem dar suporte. Isso inclui a capacidade de usar curingas, filtrar itens e transações de suporte. Para especificar recursos para um provedor, adicione uma lista de valores da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) , combinada com uma operação de `OR` lógica, como a propriedade [System. Management. Automation. Provider. Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (o segundo parâmetro do atributo) do atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) para sua classe de provedor. Por exemplo, o atributo a seguir especifica que o provedor dá suporte aos recursos de **Transações** [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** e [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) .
+A enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) define uma série de recursos aos quais os provedores podem dar suporte. Isso inclui a capacidade de usar curingas, filtrar itens e transações de suporte. Para especificar recursos para um provedor, adicione uma lista de valores da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) , combinada com uma operação lógica `OR` , como a propriedade [System. Management. Automation. Provider. Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (o segundo parâmetro do atributo) do atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) para sua classe de provedor. Por exemplo, o atributo a seguir especifica que o provedor dá suporte aos recursos de **Transações** [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** e [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) .
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -74,9 +74,9 @@ A enumeração [System. Management. Automation. Provider. Providercapabilities](
 
 Ao escrever um provedor, você pode implementar sua própria ajuda para os cmdlets do provedor aos quais você dá suporte. Isso inclui um único tópico de ajuda para cada cmdlet de provedor ou várias versões de um tópico da ajuda para casos em que o cmdlet do provedor atua de forma diferente com base no uso de parâmetros dinâmicos. Para dar suporte à ajuda específica do cmdlet do provedor, seu provedor deve implementar a interface [System. Management. Automation. Provider. Icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) .
 
-O mecanismo do Windows PowerShell chama o método [System. Management. Automation. Provider. Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) para exibir o tópico da ajuda para seus cmdlets do provedor. O mecanismo fornece o nome do cmdlet especificado pelo usuário ao executar o cmdlet `Get-Help` e o caminho atual do usuário. O caminho atual será necessário se o provedor implementar versões diferentes do mesmo cmdlet do provedor para unidades diferentes. O método deve retornar uma cadeia de caracteres que contém o XML para a ajuda do cmdlet.
+O mecanismo do Windows PowerShell chama o método [System. Management. Automation. Provider. Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) para exibir o tópico da ajuda para seus cmdlets do provedor. O mecanismo fornece o nome do cmdlet que o usuário especificou ao executar o `Get-Help` cmdlet e o caminho atual do usuário. O caminho atual será necessário se o provedor implementar versões diferentes do mesmo cmdlet do provedor para unidades diferentes. O método deve retornar uma cadeia de caracteres que contém o XML para a ajuda do cmdlet.
 
-O conteúdo do arquivo de ajuda é escrito usando PSMAML XML. Esse é o mesmo esquema XML usado para gravar o conteúdo da ajuda para cmdlets autônomos. Adicione o conteúdo para a ajuda do cmdlet personalizado ao arquivo de ajuda para seu provedor no elemento `CmdletHelpPaths`. O exemplo a seguir mostra o elemento `command` para um cmdlet de provedor único e mostra como você especifica o nome do cmdlet do provedor que seu provedor. dá suporte
+O conteúdo do arquivo de ajuda é escrito usando PSMAML XML. Esse é o mesmo esquema XML usado para gravar o conteúdo da ajuda para cmdlets autônomos. Adicione o conteúdo para a ajuda do cmdlet personalizado ao arquivo de ajuda para o seu provedor no `CmdletHelpPaths` elemento. O exemplo a seguir mostra o `command` elemento para um cmdlet de provedor único e mostra como você especifica o nome do cmdlet do provedor que seu provedor. dá suporte
 
 ```xml
 <CmdletHelpPaths>
@@ -96,4 +96,4 @@ O conteúdo do arquivo de ajuda é escrito usando PSMAML XML. Esse é o mesmo es
 
 [Cmdlets do provedor](./provider-cmdlets.md)
 
-[Escrevendo um provedor do Windows PowerShell](./writing-a-windows-powershell-provider.md)
+[Escrever um provedor do Windows PowerShell](./writing-a-windows-powershell-provider.md)

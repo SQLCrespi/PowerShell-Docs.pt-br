@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
-ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 997b1d6841ff014093ba54bf7a1db7b0b7d746b8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360975"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564799"
 ---
 # <a name="runspace02-sample"></a>Amostra Runspace02
 
@@ -116,4 +116,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um aplicativo host do Windows PowerShell](./writing-a-windows-powershell-host-application.md)
+[Escrever um aplicativo host do Windows PowerShell](./writing-a-windows-powershell-host-application.md)

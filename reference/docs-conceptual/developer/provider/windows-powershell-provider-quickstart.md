@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
-ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4693a2ec02a8f010f900bebf5a50853edef88cb1
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359915"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560926"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Início rápido do provedor do Windows PowerShell
 
@@ -35,9 +35,9 @@ No Visual Studio, crie um projeto de biblioteca de classes chamado AccessDBProvi
 
 1. Adicione o assembly System. Management. Automation como uma referência ao seu projeto.
 
-2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo**e navegue até o executável do Windows PowerShell (normalmente c:\Windows\system32\WindowsPowerShell\v1.0\\. PowerShell. exe).
+2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo**e navegue até o executável do Windows PowerShell (normalmente c:\Windows\system32\WindowsPowerShell\v1.0 \\ . PowerShell. exe).
 
-3. Em **Opções de início**, insira o seguinte na caixa **argumentos de linha de comando** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
+3. Em **Opções de início**, insira o seguinte na caixa **argumentos de linha de comando** :`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>Declarando a classe do provedor
 
@@ -69,7 +69,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 O método [System. Management. Automation. Provider. Drivecmdletprovider. NewDrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) é chamado pelo mecanismo do Windows PowerShell quando um usuário chama o cmdlet [Microsoft. PowerShell. Commands. NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) especificando o nome do seu provedor. O parâmetro PSDriveInfo é passado pelo mecanismo do Windows PowerShell e o método retorna a nova unidade para o mecanismo do Windows PowerShell. Esse método deve ser declarado dentro da classe criada acima.
 
-O método primeiro verifica se o objeto da unidade e a raiz da unidade que foram passados existem, retornando `null` se um deles não tiver. Em seguida, ele usa um construtor da classe interna AccessDBPSDriveInfo para criar uma nova unidade e uma conexão com o banco de dados do Access que a unidade representa.
+O método primeiro verifica se o objeto da unidade e a raiz da unidade que foram passados existem, retornando `null` se um deles não faz isso. Em seguida, ele usa um construtor da classe interna AccessDBPSDriveInfo para criar uma nova unidade e uma conexão com o banco de dados do Access que a unidade representa.
 
 ```csharp
 protected override PSDriveInfo NewDrive(PSDriveInfo drive)

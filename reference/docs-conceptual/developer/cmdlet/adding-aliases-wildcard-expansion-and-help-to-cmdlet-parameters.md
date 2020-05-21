@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7c4098c6c670f22253fe7d463b33e45208d00790
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415647"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83559991"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
 
@@ -35,13 +35,13 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>Definindo parâmetros para a modificação do sistema
 
-Seu cmdlet precisa definir parâmetros que dão suporte a modificações do sistema e comentários do usuário. O cmdlet deve definir um parâmetro `Name` ou equivalente para que o cmdlet possa modificar o sistema por algum tipo de identificador. Além disso, o cmdlet deve definir os parâmetros `Force` e `PassThru`. Para obter mais informações sobre esses parâmetros, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
+Seu cmdlet precisa definir parâmetros que dão suporte a modificações do sistema e comentários do usuário. O cmdlet deve definir um `Name` parâmetro ou equivalente para que o cmdlet possa modificar o sistema por algum tipo de identificador. Além disso, o cmdlet deve definir os `Force` `PassThru` parâmetros e. Para obter mais informações sobre esses parâmetros, consulte [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ## <a name="defining-a-parameter-alias"></a>Definindo um alias de parâmetro
 
 Um alias de parâmetro pode ser um nome alternativo ou um nome curto bem definido de 1 letra ou de duas letras para um parâmetro de cmdlet. Em ambos os casos, a meta de usar aliases é simplificar a entrada do usuário na linha de comando. O Windows PowerShell dá suporte a aliases de parâmetro por meio do atributo [System. Management. Automation. AliasAttribute](/dotnet/api/System.Management.Automation.AliasAttribute) , que usa a sintaxe de declaração [alias ()].
 
-O código a seguir mostra como um alias é adicionado ao parâmetro `Name`.
+O código a seguir mostra como um alias é adicionado ao `Name` parâmetro.
 
 ```csharp
 /// <summary>
@@ -64,13 +64,13 @@ public string[] Name
 private string[] processNames;
 ```
 
-Além de usar o atributo [System. Management. Automation. AliasAttribute](/dotnet/api/System.Management.Automation.AliasAttribute) , o tempo de execução do Windows PowerShell executa correspondência de nome parcial, mesmo que nenhum alias seja especificado. Por exemplo, se o cmdlet tiver um parâmetro `FileName` e esse for o único parâmetro que começa com `F`, o usuário poderá inserir `Filename`, `Filenam`, `File`, `Fi`ou `F` e ainda reconhecer a entrada como o parâmetro `FileName`.
+Além de usar o atributo [System. Management. Automation. AliasAttribute](/dotnet/api/System.Management.Automation.AliasAttribute) , o tempo de execução do Windows PowerShell executa correspondência de nome parcial, mesmo que nenhum alias seja especificado. Por exemplo, se o cmdlet tiver um `FileName` parâmetro e esse for o único parâmetro que começa com `F` , o usuário poderá inserir `Filename` , `Filenam` , `File` , `Fi` ou `F` e ainda reconhecer a entrada como o `FileName` parâmetro.
 
 ## <a name="creating-help-for-parameters"></a>Criando ajuda para parâmetros
 
-O Windows PowerShell permite que você crie ajuda para parâmetros de cmdlet. Faça isso para qualquer parâmetro usado para modificação do sistema e comentários do usuário. Para cada parâmetro para dar suporte à ajuda, você pode definir a palavra-chave do atributo `HelpMessage` na declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Essa palavra-chave define o texto a ser exibido para o usuário para obter assistência no uso do parâmetro. Você também pode definir a palavra-chave `HelpMessageBaseName` para identificar o nome de base de um recurso a ser usado para a mensagem. Se você definir essa palavra-chave, também deverá definir a palavra-chave `HelpMessageResourceId` para especificar o identificador de recurso.
+O Windows PowerShell permite que você crie ajuda para parâmetros de cmdlet. Faça isso para qualquer parâmetro usado para modificação do sistema e comentários do usuário. Para cada parâmetro para dar suporte à ajuda, você pode definir a `HelpMessage` palavra-chave Attribute na declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Essa palavra-chave define o texto a ser exibido para o usuário para obter assistência no uso do parâmetro. Você também pode definir a `HelpMessageBaseName` palavra-chave para identificar o nome de base de um recurso a ser usado para a mensagem. Se você definir essa palavra-chave, também deverá definir a `HelpMessageResourceId` palavra-chave para especificar o identificador de recurso.
 
-O código a seguir desse cmdlet Stop-proc define a palavra-chave do atributo `HelpMessage` para o parâmetro `Name`.
+O código a seguir desse cmdlet Stop-proc define a `HelpMessage` palavra-chave Attribute para o `Name` parâmetro.
 
 ```csharp
 /// <summary>
@@ -92,7 +92,7 @@ O cmdlet deve substituir um método de processamento de entrada, com mais frequ�
 
 ## <a name="supporting-wildcard-expansion"></a>Suporte à expansão de curinga
 
-Para permitir a seleção de vários objetos, o cmdlet pode usar as classes [System. Management. Automation. Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) e [System. Management. Automation. curingaoptions](/dotnet/api/System.Management.Automation.WildcardOptions) para fornecer suporte à expansão de curinga para a entrada de parâmetro. Exemplos de padrões de curinga são LSA *, \*. txt e [a-c]\*. Use o caractere de aspas (') como um caractere de escape quando o padrão contiver um caractere que deve ser usado literalmente.
+Para permitir a seleção de vários objetos, o cmdlet pode usar as classes [System. Management. Automation. Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) e [System. Management. Automation. curingaoptions](/dotnet/api/System.Management.Automation.WildcardOptions) para fornecer suporte à expansão de curinga para a entrada de parâmetro. Exemplos de padrões de curinga são LSA *, \* . txt e [a-c] \* . Use o caractere de aspas (') como um caractere de escape quando o padrão contiver um caractere que deve ser usado literalmente.
 
 As expansões de curinga dos nomes de arquivo e caminho são exemplos de cenários comuns em que o cmdlet pode querer permitir suporte para entradas de caminho quando a seleção de vários objetos é necessária. Um caso comum está no sistema de arquivos, em que um usuário deseja ver todos os arquivos que residem na pasta atual.
 
@@ -100,7 +100,7 @@ Você deve precisar de um padrão de caractere curinga personalizado somente par
 
 - **Ponto de interrogação (?).** Corresponde a qualquer caractere no local especificado.
 
-- **Asterisco (\*).** Corresponde a zero ou mais caracteres a partir do local especificado.
+- **Asterisco ( \* ).** Corresponde a zero ou mais caracteres a partir do local especificado.
 
 - **Colchete de abertura ([).** Apresenta uma expressão de colchete de padrão que pode conter caracteres ou um intervalo de caracteres. Se um intervalo for necessário, um hífen (-) será usado para indicar o intervalo.
 
@@ -111,7 +111,7 @@ Você deve precisar de um padrão de caractere curinga personalizado somente par
 > [!NOTE]
 > Para obter mais informações sobre padrões de curinga, consulte [suportando curingas em parâmetros de cmdlet](./supporting-wildcard-characters-in-cmdlet-parameters.md).
 
-O código a seguir mostra como definir opções de curinga e definir o padrão de curinga usado para resolver o parâmetro de `Name` para esse cmdlet.
+O código a seguir mostra como definir opções de curinga e definir o padrão curinga usado para resolver o `Name` parâmetro para esse cmdlet.
 
 ```csharp
 WildcardOptions options = WildcardOptions.IgnoreCase |
@@ -128,9 +128,9 @@ if (!wildcard.IsMatch(processName))
 }
 ```
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
-Para obter o C# código de exemplo completo, consulte [exemplo de StopProcessSample03](./stopprocesssample03-sample.md).
+Para obter o código de exemplo completo em C#, consulte [exemplo de StopProcessSample03](./stopprocesssample03-sample.md).
 
 ## <a name="define-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
@@ -144,13 +144,13 @@ Depois de implementar um cmdlet, ele deve ser registrado com o Windows PowerShel
 
 Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Stop-proc de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Inicie o Windows PowerShell e use Stop-proc para interromper um processo usando o alias ProcessName para o parâmetro `Name`.
+- Inicie o Windows PowerShell e use Stop-proc para interromper um processo usando o alias ProcessName para o `Name` parâmetro.
 
     ```powershell
     PS> stop-proc -ProcessName notepad
     ```
 
-A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```
     Confirm
@@ -165,7 +165,7 @@ A seguinte saída aparece.
     PS> stop-proc
     ```
 
-A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -176,13 +176,13 @@ A seguinte saída aparece.
     Name[0]: notepad
     ```
 
-- Agora, faça a seguinte entrada parar todos os processos que correspondam ao padrão curinga "* note\*". Você será solicitado antes de parar cada processo que corresponde ao padrão.
+- Agora, faça a seguinte entrada parar todos os processos que correspondam ao padrão de curinga "* observação \* ". Você será solicitado antes de parar cada processo que corresponde ao padrão.
 
     ```powershell
     PS> stop-proc -Name *note*
     ```
 
-A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ A seguinte saída aparece.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ A seguinte saída aparece.
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```
     Confirm

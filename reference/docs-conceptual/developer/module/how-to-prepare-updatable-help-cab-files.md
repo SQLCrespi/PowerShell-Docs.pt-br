@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: a8f48736-c9fa-4e07-bd18-dd813e11f774
 caps.latest.revision: 6
-ms.openlocfilehash: fb5189e2e77b90ddaf61386246a6f001369bfda4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9d87b086a8309560c039b000afc1c6535dbca38e
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360705"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560535"
 ---
 # <a name="how-to-prepare-updatable-help-cab-files"></a>Como preparar arquivos CAB de ajuda atualizável
 

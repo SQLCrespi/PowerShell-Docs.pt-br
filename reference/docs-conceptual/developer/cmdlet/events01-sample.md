@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 772f73793449856651ab6b03e1ccc14faed941fc
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369735"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561440"
 ---
 # <a name="events01-sample"></a>Amostra Events01
 
@@ -30,7 +30,7 @@ Este exemplo deriva da classe base [Microsoft. PowerShell. Commands. ObjectEvent
    Isso abre o projeto de exemplo no Microsoft Visual Studio.
 
 3. No menu **Compilar**, selecione **Compilar Solução**.
-   A biblioteca do exemplo será criada nas pastas padrão `\bin` ou `\bin\debug`.
+   A biblioteca do exemplo será criada no padrão `\bin` ou `\bin\debug` nas pastas.
 
 ### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
@@ -83,8 +83,8 @@ Este exemplo demonstra o seguinte.
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Como escrever um cmdlet para o registro de eventos
 
-O cmdlet deriva da classe [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , que fornece suporte para parâmetros comuns aos cmdlets `Register-*Event`.
-Os cmdlets que são derivados de [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) só precisam definir seus parâmetros específicos e substituir os métodos `GetSourceObject` e `GetSourceObjectEventName` abstract.
+O cmdlet deriva da classe [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , que fornece suporte para parâmetros comuns aos `Register-*Event` cmdlets.
+Os cmdlets que são derivados de [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) precisam apenas definir seus parâmetros específicos e substituir `GetSourceObject` os `GetSourceObjectEventName` métodos e abstract.
 
 ## <a name="example"></a>Exemplo
 
@@ -189,4 +189,4 @@ namespace Sample
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](writing-a-windows-powershell-cmdlet.md)

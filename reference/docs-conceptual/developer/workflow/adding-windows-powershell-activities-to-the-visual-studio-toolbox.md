@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
-ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ecd23d3eb722137bdda0498fc71e0e966c57a589
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359645"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561182"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Adicionar atividades do Windows PowerShell à caixa de ferramentas do Visual Studio
 
@@ -29,7 +29,7 @@ Antes de criar um fluxo de trabalho do PowerShell usando Designer de Fluxo de Tr
 
    A adição de uma guia permite que você agrupe as atividades do PowerShell separadas de outras ferramentas na caixa de ferramentas.
 
-4. Na nova guia caixa de ferramentas, clique em **escolher itens...** . A caixa de diálogo **escolher itens da caixa de ferramentas** é exibida.
+4. Na nova guia caixa de ferramentas, clique em **escolher itens...**. A caixa de diálogo **escolher itens da caixa de ferramentas** é exibida.
 
 5. Na caixa de diálogo **escolher itens da caixa de ferramentas** , clique na guia **sistema. atividades** .
 
@@ -41,6 +41,6 @@ Antes de criar um fluxo de trabalho do PowerShell usando Designer de Fluxo de Tr
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Workflow](./writing-a-windows-powershell-workflow.md) (Escrevendo um Fluxo de Trabalho do Windows PowerShell)
+[Escrevendo um Fluxo de Trabalho do Windows PowerShell](./writing-a-windows-powershell-workflow.md)
 
-[Criando um fluxo de trabalho com atividades do Windows PowerShell](./creating-a-workflow-with-windows-powershell-activities.md)
+[Criar um fluxo de trabalho com atividades do Windows PowerShell](./creating-a-workflow-with-windows-powershell-activities.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: 186a8ceecea47564503dc181a76cc314033b6d3f
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: cc77c0546de98e492c9724e051b9d72f1ebfdcb6
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996044"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560161"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Como criar o arquivo de ajuda do cmdlet
 
@@ -36,7 +36,7 @@ Esta seção descreve como criar um arquivo XML válido que contém conteúdo pa
 
    A tabela a seguir lista o elemento XML para cada nó, seguido por uma descrição de cada nó.
 
-   |Nó|Description|
+   |Nó|Descrição|
    |----------|-----------------|
    |`<details>`|Adiciona conteúdo para as seções nome e Sinopse do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar o nome do cmdlet e Sinopse](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md).|
    |`<maml:description>`|Adiciona o conteúdo da seção Descrição do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar a descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md).|
@@ -87,24 +87,24 @@ Esta seção descreve como criar um arquivo XML válido que contém conteúdo pa
 </command:command>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
  [Como adicionar o nome do cmdlet e Sinopse](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [Como adicionar a descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md)
 
- [Como adicionar sintaxe a um tópico de ajuda de cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Como adicionar sintaxe a um tópico de ajuda do cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Como adicionar parâmetros a um tópico de ajuda de cmdlet](./how-to-add-parameter-information.md)
 
- [Como adicionar tipos de entrada a um tópico de ajuda de cmdlet](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
+ [Como adicionar tipos de entrada a um tópico de ajuda do cmdlet](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Como adicionar valores de retorno a um tópico de ajuda de cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Como adicionar valores retornados a um tópico de ajuda do cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
  [Como adicionar anotações a um tópico de ajuda de cmdlet](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Como adicionar exemplos a um tópico de ajuda de cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Como adicionar exemplos a um tópico de ajuda do cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Como adicionar links relacionados a um tópico de ajuda de cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Como adicionar links relacionados a um tópico de ajuda do cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [SDK do Windows PowerShell](../windows-powershell-reference.md)

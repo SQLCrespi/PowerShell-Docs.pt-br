@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2551ceed-836f-4275-9fc0-ea68446d6a35
 caps.latest.revision: 7
-ms.openlocfilehash: 4f0be193fb5b5c753d040a48e5f49235ece11708
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8a9938a1685e9abc2f1dbfb18c3b2b9008d9be
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366005"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564919"
 ---
 # <a name="writing-a-windows-powershell-workflow"></a>Escrevendo um Fluxo de Trabalho do Windows PowerShell
 
@@ -36,12 +36,12 @@ Você pode criar um fluxo de trabalho XAML adicionando atividades expostas por a
 
   Os tópicos a seguir descrevem como criar um fluxo de trabalho usando atividades do Windows PowerShell.
 
-- [Adicionando atividades do Windows PowerShell à caixa de ferramentas do Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md)
+- [Adicionar atividades do Windows PowerShell à caixa de ferramentas do Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md)
 
-- [Criando um fluxo de trabalho com atividades do Windows PowerShell](./creating-a-workflow-with-windows-powershell-activities.md)
+- [Criar um fluxo de trabalho com atividades do Windows PowerShell](./creating-a-workflow-with-windows-powershell-activities.md)
 
-- [Criando um fluxo de trabalho usando um script do Windows PowerShell](./creating-a-workflow-by-using-a-windows-powershell-script.md)
+- [Criar um fluxo de trabalho pelo uso de um script do Windows PowerShell](./creating-a-workflow-by-using-a-windows-powershell-script.md)
 
-- [Importando e invocando um fluxo de trabalho do Windows PowerShell](./importing-and-invoking-a-windows-powershell-workflow.md)
+- [Importar e invocar um fluxo de trabalho do Windows PowerShell](./importing-and-invoking-a-windows-powershell-workflow.md)
 
-- [Criando uma atividade de fluxo de trabalho a partir de um cmdlet do Windows PowerShell](./creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md)
+- [Criar uma atividade de fluxo de trabalho de um cmdlet do Windows PowerShell](./creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md)

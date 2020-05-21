@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 7ccdeeb2833b79cabc7c77d1a400e0c9132b2dcd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996066"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561457"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>Criação do arquivo de esquema XML para um serviço Web OData de gerenciamento
 
@@ -47,11 +47,11 @@ Em seguida, você especifica os cmdlets que correspondem às operações CRUD (c
 |Comando CRUD|Elemento XML|
 |------------------|-----------------|
 |Criar|Criar|
-|Leitura|Consulta|
-|Atualizar|Atualizar|
+|Ler|Consulta|
+|Atualização|Atualizar|
 |Excluir|Excluir|
 
-O exemplo a seguir mostra os mapeamentos para as operações de criação, leitura e atualização no recurso de `Service`.
+O exemplo a seguir mostra os mapeamentos para as operações criar, ler e atualizar no `Service` recurso.
 
 ```xml
 <ClassImplementations>
@@ -157,10 +157,10 @@ O exemplo a seguir mostra os mapeamentos para as operações de criação, leitu
         </Class>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
-[Criando o arquivo de esquema MOF para um serviço Web do Management OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[Criação do arquivo de esquema MOF para um serviço Web OData de gerenciamento](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
 [Esquema de mapeamento de recursos](./resource-mapping-schema.md)
 
-[Criando um serviço Web do Management OData](./creating-a-management-odata-web-service.md)
+[Criar um serviço Web OData de gerenciamento](./creating-a-management-odata-web-service.md)

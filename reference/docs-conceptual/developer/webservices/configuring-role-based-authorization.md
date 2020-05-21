@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2933a6ca-fe92-4ba2-97ee-ef0f0d5fdfcf
 caps.latest.revision: 8
-ms.openlocfilehash: b73284adb4bf228510bf8134aa4c6a10561b7ea2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2c9d6040b7a9c17dc5204c8eb835fd69780f62c5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564250"
 ---
 # <a name="configuring-role-based-authorization"></a>Configurar a autorização baseada em função
 
@@ -23,9 +23,9 @@ Neste exemplo, você configurará um arquivo XML que é usado pelo aplicativo OD
 
 ## <a name="modifying-the-rbacconfigurationxml-file"></a>Modificando o arquivo RBacConfiguration. xml
 
-Esse arquivo define a política de autorização para o aplicativo. As funções são definidas usando nós `Group`. Um nó `Group` define os comandos do Windows PowerShell que os usuários atribuídos a esse grupo podem executar. Os usuários são atribuídos a grupos usando nós de `User`.
+Esse arquivo define a política de autorização para o aplicativo. As funções são definidas usando `Group` nós. Um `Group` nó define os comandos do Windows PowerShell que os usuários atribuídos a esse grupo podem executar. Os usuários são atribuídos a grupos usando `User` nós.
 
-Nesses exemplos, você adicionará um módulo ao `Group` nó de administrador e adicionará um usuário a cada grupo.
+Nestes exemplos, você adicionará um módulo ao `Group` nó administrador e adicionará um usuário a cada grupo.
 
 #### <a name="adding-a-module-to-a-group-node"></a>Adicionando um módulo a um nó de grupo
 
@@ -85,9 +85,9 @@ Nesses exemplos, você adicionará um módulo ao `Group` nó de administrador e 
    </RbacConfiguration>
    ```
 
-2. O arquivo contém dois nós de `Group`. Elas representam as duas funções usadas neste exemplo, a `NonAdminGroup` e as funções de `AdminGroup`.
+2. O arquivo contém dois `Group` nós. Elas representam as duas funções usadas neste exemplo, as `NonAdminGroup` `AdminGroup` funções e.
 
-   Diretamente após a marcação de `Cmdlets` de fechamento no primeiro nó `Group`, adicione o seguinte XML:
+   Diretamente após a marca de fechamento `Cmdlets` no primeiro `Group` nó, adicione o seguinte XML:
 
    ```xml
    <Modules>
@@ -97,9 +97,9 @@ Nesses exemplos, você adicionará um módulo ao `Group` nó de administrador e 
 
 #### <a name="adding-a-user-to-a-group-node"></a>Adicionando um usuário a um nó de grupo
 
-1. Abra o arquivo **RBacConfiguration. xml** em um editor de texto. Esse arquivo está localizado na pasta C:\\\inetpub\wwwroot\Modata se você não alterou o nome do ponto de extremidade antes da instalação.
+1. Abra o arquivo **RBacConfiguration. xml** em um editor de texto. Esse arquivo está localizado na pasta C: \\ \inetpub\wwwroot\Modata se você não alterou o nome do ponto de extremidade antes da instalação.
 
-2. Diretamente após a marca de fechamento no nó `Users`, adicione o seguinte XML:
+2. Diretamente após a marca de fechamento no `Users` nó, adicione o seguinte XML:
 
    ```xml
    <User Name="UserName" GroupName="AdminGroup" AuthenticationType="Basic" DomainName="DomainName"/>

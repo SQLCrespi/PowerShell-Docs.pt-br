@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e8adc997-1a71-48e9-9383-513ef13da7cf
 caps.latest.revision: 4
-ms.openlocfilehash: 584e5923008e8369a83c699478844f0e0c295adc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: da74c674c704794d8648dcdf9ba0a1617decba9b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367755"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560603"
 ---
 # <a name="syntax-of-comment-based-help"></a>Sintaxe de ajuda baseada em comentários
 
@@ -37,7 +37,7 @@ Esta seção descreve a sintaxe da ajuda baseada em comentários.
 
 ## <a name="syntax-description"></a>Descrição da sintaxe
 
- A ajuda baseada em comentários é escrita como uma série de comentários. Você pode digitar um símbolo de comentário (#) antes de cada linha de comentários ou pode usar os símbolos "\<#" e "# >" para criar um bloco de comentários. Todas as linhas dentro do bloco de comentários são interpretadas como comentários.
+ A ajuda baseada em comentários é escrita como uma série de comentários. Você pode digitar um símbolo de comentário (#) antes de cada linha de comentários ou pode usar os \< símbolos "#" e "# >" para criar um bloco de comentário. Todas as linhas dentro do bloco de comentários são interpretadas como comentários.
 
  Cada seção da ajuda baseada em comentários é definida por uma palavra-chave e cada palavra-chave é precedida por um ponto (.). As palavras-chave podem aparecer em qualquer ordem. Os nomes de palavra-chave não diferenciam maiúsculas de minúsculas.
 

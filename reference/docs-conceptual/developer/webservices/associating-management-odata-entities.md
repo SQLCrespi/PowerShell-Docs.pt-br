@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a3add-3593-400d-8144-8b44c8adbe5e
 caps.latest.revision: 5
-ms.openlocfilehash: 44b718e024eb98ac562edb50076287a31f5edc6b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4849735bf412497f5590b109c67760b6a197cb2b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359805"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561719"
 ---
 # <a name="associating-management-odata-entities"></a>Associar entidades OData de gerenciamento
 
-Geralmente, é útil criar uma associação entre duas entidades do OData de gerenciamento diferentes. Por exemplo, um serviço OData de gerenciamento pode ter entidades que gerenciam um catálogo de produtos organizados em categorias e definir as entidades `Product` e `Category`. Ao associar essas duas entidades, um cliente pode obter informações sobre todos os produtos em uma categoria com uma única solicitação para o serviço Web.
+Geralmente, é útil criar uma associação entre duas entidades do OData de gerenciamento diferentes. Por exemplo, um serviço OData de gerenciamento pode ter entidades que gerenciam um catálogo de produtos organizados em categorias e definir as entidades `Product` e `Category` . Ao associar essas duas entidades, um cliente pode obter informações sobre todos os produtos em uma categoria com uma única solicitação para o serviço Web.
 
 Um exemplo que mostra como criar associações entre entidades pode ser baixado no [exemplo de associação](https://code.msdn.microsoft.com:443/windowsdesktop/Association-sample-0f0fa87e).
 
@@ -43,9 +43,9 @@ string Products[];
 }
 ```
 
-A classe `Category` define uma propriedade que é uma matriz dos nomes dos produtos que pertencem a essa categoria.
+A `Category` classe define uma propriedade que é uma matriz dos nomes dos produtos que pertencem a essa categoria.
 
-Para associar duas entidades, você deve definir uma classe com o atributo `Association` no arquivo MOF do esquema de recursos para o serviço. A classe deve definir as duas entidades a serem associadas, chamadas `ends` da associação. O exemplo a seguir mostra uma definição de uma classe que define uma associação entre as entidades categoria e produtos.
+Para associar duas entidades, você deve definir uma classe com o `Association` atributo no arquivo MOF do esquema de recursos para o serviço. A classe deve definir as duas entidades a serem associadas, chamadas `ends` da associação. O exemplo a seguir mostra uma definição de uma classe que define uma associação entre as entidades categoria e produtos.
 
 ```csharp
 [Association]
@@ -55,7 +55,7 @@ Product ref theProducts;
 }
 ```
 
-Você também deve alterar a declaração da propriedade Products na classe Category. Use a palavra-chave `AssociationClass` para especificar que a propriedade é uma extremidade da associação. A propriedade também deve ser definida como uma referência a uma entidade separada, em vez de uma matriz de cadeias de caracteres. Você faz isso usando a palavra-chave `ref`. O exemplo a seguir mostra a definição de propriedade para a associação.
+Você também deve alterar a declaração da propriedade Products na classe Category. Você usa a `AssociationClass` palavra-chave para especificar que a propriedade é uma extremidade da associação. A propriedade também deve ser definida como uma referência a uma entidade separada, em vez de uma matriz de cadeias de caracteres. Você faz isso usando a `ref` palavra-chave. O exemplo a seguir mostra a definição de propriedade para a associação.
 
 ```csharp
 class Sample_Category {
@@ -67,7 +67,7 @@ Sample_Product ref AssociatedProducts[];
 };
 ```
 
-Por fim, você deve declarar a outra extremidade da Associação adicionando uma definição de propriedade à classe `Product`. Essa é uma referência a uma matriz ou a uma única entidade. Supondo que cada produto pertença a apenas uma categoria, a definição seria a seguinte.
+Por fim, você deve declarar a outra extremidade da Associação adicionando uma definição de propriedade à `Product` classe. Essa é uma referência a uma matriz ou a uma única entidade. Supondo que cada produto pertença a apenas uma categoria, a definição seria a seguinte.
 
 ```csharp
 class Sample_Product {
@@ -82,7 +82,7 @@ As propriedades que representam as duas extremidades da associação são chamad
 
 #### <a name="steps-for-associating-entities-in-the-resource-schema-file"></a>Etapas para associar entidades no arquivo de esquema de recursos
 
-- Defina a associação como uma classe usando a palavra-chave `Association`.
+- Defina a associação como uma classe usando a `Association` palavra-chave.
 
 - Defina as extremidades da Associação usando a palavra-chave AssociationClass para qualificar as propriedades das entidades associadas.
 
@@ -94,7 +94,7 @@ Há três casos diferentes a serem considerados ao mapear uma associação no ar
 
 - Se a propriedade de navegação estiver presente no subjacente. .NET Framework tipo e essa propriedade contém chaves estrangeiras, nenhum mapeamento explícito é necessário.
 
-- Se a propriedade de navegação não existir no tipo de .NET Framework subjacente, você deverá especificar um cmdlet que recupere a lista de chaves das instâncias associadas. Você faz isso adicionando um elemento `Association` aninhado sob o elemento `CmdletImplementation`, seguindo os elementos que definem o `cmdlets` para os outros comandos CRUD.
+- Se a propriedade de navegação não existir no tipo de .NET Framework subjacente, você deverá especificar um cmdlet que recupere a lista de chaves das instâncias associadas. Você faz isso adicionando um `Association` elemento aninhado sob o `CmdletImplementation` elemento, seguindo os elementos que definem o `cmdlets` para os outros comandos CRUD.
 
   ```xml
   Class Name=" Category">
@@ -177,7 +177,7 @@ O cliente pode recuperar uma lista das instâncias associadas a uma entidade cri
 
 #### <a name="constructing-queries-for-associated-entities"></a>Construindo consultas para entidades associadas
 
-- Um cliente pode solicitar os detalhes de uma categoria sem recuperar seus produtos associados. Por exemplo, a solicitação a seguir obtém detalhes da categoria de `food`.
+- Um cliente pode solicitar os detalhes de uma categoria sem recuperar seus produtos associados. Por exemplo, a solicitação a seguir obtém detalhes da `food` categoria.
 
   ```
   http://localhost:7000/MODataSvc/sample.svc/Category('food')
@@ -189,13 +189,13 @@ O cliente pode recuperar uma lista das instâncias associadas a uma entidade cri
   http://localhost:7000/MODataSvc/sample.svc/Category('food')/AssociatedProducts
   ```
 
-- Para recuperar somente as URLs dos produtos, use o qualificador `$links` na solicitação.
+- Para recuperar somente as URLs dos produtos, use o `$links` qualificador na solicitação.
 
   ```
   http://localhost:7000/MODataSvc/sample.svc/Category('food')/$links/AssociatedProducts
   ```
 
-- O cliente pode obter os detalhes da categoria e seus produtos associados usando o qualificador `$expand`.
+- O cliente pode obter os detalhes da categoria e seus produtos associados usando o `$expand` qualificador.
 
   ```
   http://localhost:7000/MODataSvc/sample.svc/Category('food')?$expand=AssociatedProducts

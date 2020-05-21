@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
-ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f6ad8ee9f303d3dea92a633996e9248d2e87a21
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359815"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561893"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>Adicionar recursos a um serviço Web OData de gerenciamento
 
@@ -51,17 +51,17 @@ A primeira etapa é importar o esquema do ponto de extremidade do OData de geren
 
 3. Verifique se os módulos instalados do Windows PowerShell estão selecionados e selecione Hyper-V na lista suspensa. Clique em **Avançar**. Clique em **Avançar**.
 
-4. Na lista de **Substandos do cmdlet** , selecione **VM**. Clique em **Avançar**
+4. Na lista de **Substandos do cmdlet** , selecione **VM**. Clique em **Avançar**.
 
-5. Para este exemplo, Vincularemos apenas os comandos Get e DELETE com cmdlets. Desmarque as caixas de seleção **criar** e **Atualizar** e verifique se as caixas de seleção **obter** e **excluir** estão marcadas. Verifique se o cmdlet `Get-VM` está selecionado para **Get**e se o cmdlet `Remove-VM` está selecionado para **exclusão**.
+5. Para este exemplo, Vincularemos apenas os comandos Get e DELETE com cmdlets. Desmarque as caixas de seleção **criar** e **Atualizar** e verifique se as caixas de seleção **obter** e **excluir** estão marcadas. Verifique se o `Get-VM` cmdlet está selecionado para **Get**e se o `Remove-VM` cmdlet está selecionado para **exclusão**.
 
-6. Como os metadados dos cmdlets da VM não especificam um tipo de saída, será necessário executar o cmdlet para especificar o tipo de saída. Selecione **fornecer tipo de saída** e clique em **executar cmdlet**. A caixa de diálogo **executar cmdlet** é exibida. Clique em **Executar**. A caixa **tipo CLR** é populada com o tipo de `VirtualMachine`. Clique em **OK**e em **Avançar**.
+6. Como os metadados dos cmdlets da VM não especificam um tipo de saída, será necessário executar o cmdlet para especificar o tipo de saída. Selecione **fornecer tipo de saída** e clique em **executar cmdlet**. A caixa de diálogo **executar cmdlet** é exibida. Clique em **Executar**. A caixa **tipo CLR** é populada com o `VirtualMachine` tipo. Clique em **OK**e em **Avançar**.
 
 7. Por padrão, todas as propriedades do objeto VirtualMachine são selecionadas. Você pode limpar todas as propriedades que não deseja como parte dos dados retornados ao solicitar esse recurso do serviço Web. Clique em **Avançar**.
 
 8. Você deve selecionar pelo menos uma propriedade para ser usada como uma chave. Selecione **nome** na lista e clique em **Avançar**.
 
-9. A próxima janela permite mapear as propriedades do recurso do Management OData para as propriedades dos cmdlets subjacentes. O assistente mapeia Propriedades com nomes idênticos por padrão. Por exemplo, a propriedade `ComputerName` do recurso é mapeada para a propriedade `ComputerName` dos cmdlets.  Isso permite que você especifique a propriedade `ComputerName` em uma solicitação para o serviço Web e que o valor especificado seja passado para o cmdlet `Get-VM`. `Id` e `Name` também são mapeados por padrão.
+9. A próxima janela permite mapear as propriedades do recurso do Management OData para as propriedades dos cmdlets subjacentes. O assistente mapeia Propriedades com nomes idênticos por padrão. Por exemplo, a `ComputerName` Propriedade do recurso é mapeada para a `ComputerName` propriedade dos cmdlets.  Isso permite que você especifique a `ComputerName` propriedade em uma solicitação para o serviço Web e que o valor especificado seja passado para o `Get-VM` cmdlet. `Id`e `Name` também são mapeados por padrão.
 
    10. Clique em **Avançar**e em **concluir**.
 

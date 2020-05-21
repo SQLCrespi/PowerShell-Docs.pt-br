@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137543d8-0012-4cba-bcd6-98b25aac83bb
 caps.latest.revision: 9
-ms.openlocfilehash: 8271512d06047f3ff5e45f81d971ffe2c1f6afd7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9bd72e8f97c194c98adb1049f5a966549113fd12
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365465"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563901"
 ---
 # <a name="how-to-write-a-cmdlet"></a>Como escrever um cmdlet
 
-Este artigo mostra como escrever um cmdlet. O cmdlet `Send-Greeting` usa um único nome de usuário como entrada e, em seguida, grava uma saudação para esse usuário. Embora o cmdlet não faça muito trabalho, este exemplo demonstra as principais seções de um cmdlet.
+Este artigo mostra como escrever um cmdlet. O `Send-Greeting` cmdlet usa um único nome de usuário como entrada e, em seguida, grava uma saudação para esse usuário. Embora o cmdlet não faça muito trabalho, este exemplo demonstra as principais seções de um cmdlet.
 
 ## <a name="steps-to-write-a-cmdlet"></a>Etapas para gravar um cmdlet
 
@@ -78,7 +78,7 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet)
 
@@ -92,4 +92,4 @@ namespace SendGreeting
 
 [Declaração de ParameterAttribute](parameter-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](writing-a-windows-powershell-cmdlet.md)

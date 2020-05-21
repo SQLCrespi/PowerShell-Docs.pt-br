@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fbaea91c12eede70d30e29dce3fd2d36d7f55994
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367815"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564833"
 ---
 # <a name="examples-of-comment-based-help"></a>Exemplos de ajuda baseada em comentários
 
@@ -145,7 +145,7 @@ C:\PS> get-help add-extension -full
 
 A função de exemplo a seguir inclui ajuda baseada em comentários.
 
-Observe as linhas em branco entre o **#>** de fechamento e a instrução `Param`. Em um script que não tem uma instrução `Param`, deve haver pelo menos duas linhas em branco entre o comentário final no tópico da ajuda e a primeira declaração da função. Sem essas linhas em branco, Get-Help associa o tópico da ajuda com a função, em vez do script.
+Observe as linhas em branco entre o fechamento **#>** e a `Param` instrução. Em um script que não tem uma `Param` instrução, deve haver pelo menos duas linhas em branco entre o comentário final no tópico da ajuda e a primeira declaração da função. Sem essas linhas em branco, Get-Help associa o tópico da ajuda com a função, em vez do script.
 
 ```powershell
 <#
@@ -257,7 +257,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>Exemplo 3: descrições de parâmetro em uma instrução param
 
-Este exemplo mostra como inserir ParameterDescriptions na instrução `Param` de uma função ou script. Esse formato é mais útil quando as descrições de parâmetro são breves.
+Este exemplo mostra como inserir ParameterDescriptions na `Param` instrução de uma função ou script. Esse formato é mais útil quando as descrições de parâmetro são breves.
 
 ```powershell
 function Add-Extension
@@ -282,11 +282,11 @@ function Add-Extension
     #>
 ```
 
-Os resultados são os mesmos dos resultados, por exemplo 1. O Get-Help interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela palavra-chave `.Parameter`.
+Os resultados são os mesmos dos resultados, por exemplo 1. Get-Help interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela `.Parameter` palavra-chave.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Exemplo 4: redirecionando para um arquivo XML
 
-Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do script Update-Month. ps1. O script usa a palavra-chave `.ExternalHelp` para especificar o caminho para um tópico de ajuda baseado em XML para o script.
+Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do script Update-Month. ps1. O script usa a `.ExternalHelp` palavra-chave para especificar o caminho para um tópico de ajuda baseado em XML para o script.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -296,7 +296,7 @@ Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. 
     function Get-Data { }
 ```
 
-O exemplo a seguir mostra o uso da palavra-chave `.ExternalHelp` em uma função.
+O exemplo a seguir mostra o uso da `.ExternalHelp` palavra-chave em uma função.
 
 ```powershell
 function Add-Extension
@@ -311,7 +311,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Exemplo 5: redirecionando para um tópico de ajuda diferente
 
-O código a seguir é um trecho do início da função de `Help` interna no Windows PowerShell, que exibe uma tela de texto de ajuda por vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa as palavras-chave `.ForwardHelpTargetName` e `.ForwardHelpCategory` para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
+O código a seguir é um trecho do início da `Help` função interna no Windows PowerShell, que exibe uma tela de texto de ajuda de cada vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa `.ForwardHelpTargetName` as `.ForwardHelpCategory` palavras-chave e para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
 
 ```powershell
 function help

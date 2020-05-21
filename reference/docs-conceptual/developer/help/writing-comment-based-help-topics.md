@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e619ab16-90ad-46e9-9bde-d6dce492ba56
 caps.latest.revision: 4
-ms.openlocfilehash: e3d32f36b597088abc41e229bb0955c1b25504e6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d740c0028fd2d4ddd83fe97d66ea45aa6300e16b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361075"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561028"
 ---
 # <a name="writing-comment-based-help-topics"></a>Escrever tópicos da ajuda baseados em comentário
 
 Você pode escrever tópicos de ajuda baseados em comentários para funções e scripts usando palavras-chave de comentário de ajuda especial.
 
- O cmdlet `Get-Help` exibe a ajuda baseada em comentários no mesmo formato em que ele exibe os tópicos de ajuda do cmdlet gerados a partir de arquivos XML. Os usuários podem usar todos os parâmetros de `Get-Help`, como detalhado, completo, exemplo e online, para exibir a função e a ajuda do script.
+ O `Get-Help` cmdlet exibe a ajuda baseada em comentários no mesmo formato em que ele exibe os tópicos de ajuda do cmdlet gerados a partir de arquivos XML. Os usuários podem usar todos os parâmetros de `Get-Help` , como detalhado, completo, exemplo e online, para exibir a função e a ajuda do script.
 
  Você também pode escrever tópicos de ajuda baseados em XML para scripts e funções e usar as palavras-chave de comentário da ajuda para redirecionar os usuários para os tópicos baseados em XML ou outros tópicos.
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d29a652b32d07b7825bc5bed5099daa67dd32ff4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366175"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564588"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>Implantar um serviço Web OData de gerenciamento
 
@@ -23,7 +23,7 @@ Depois de concluir todas as etapas necessárias para criar um serviço Web do Ma
 
 Conclua as etapas a seguir para implantar o serviço Web do Management OData.
 
-1. Crie um diretório para o aplicativo Web no diretório `WWWRoot` do IIS.
+1. Crie um diretório para o aplicativo Web no diretório do IIS `WWWRoot` .
 
 2. Copie o arquivo de esquema MOF, o arquivo de esquema XML, as DLLs que exportam as interfaces [Microsoft. Management. OData. Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) e [System. Management. Automation. Remoting. PSSessionConfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) e o arquivo Web. config para o diretório do aplicativo.
 
@@ -427,14 +427,14 @@ Start-Sleep 10
 
 ## <a name="see-also"></a>Consulte Também
 
-[Implementando a autorização personalizada para um serviço Web do Management OData](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[Implementar autorização personalizada para um serviço Web OData de gerenciamento](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[Implementando o SessionConfiguration para um serviço Web do Management OData](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[Implementar SessionConfiguration para um serviço Web OData de gerenciamento](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[Criando o arquivo de esquema MOF para um serviço Web do Management OData](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[Criação do arquivo de esquema MOF para um serviço Web OData de gerenciamento](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[Criando o arquivo de esquema XML para um serviço Web do Management OData](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[Criação do arquivo de esquema XML para um serviço Web OData de gerenciamento](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[Criando o arquivo Web. config para um serviço Web do Management OData](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+[Criação do arquivo Web.config para um serviço Web OData de gerenciamento](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
-[Criando um serviço Web do Management OData](./creating-a-management-odata-web-service.md)
+[Criar um serviço Web OData de gerenciamento](./creating-a-management-odata-web-service.md)

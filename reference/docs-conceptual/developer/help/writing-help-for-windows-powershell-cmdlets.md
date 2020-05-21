@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55908d67-7cbe-482a-a105-5a6da93c5311
 caps.latest.revision: 4
-ms.openlocfilehash: 8d692cf88d1d356886ef973f0989294d6b51ee6d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd565e8bf8429d91d785664c8cc69d1843439219
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361065"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560586"
 ---
 # <a name="writing-help-for-powershell-cmdlets"></a>Gravando ajuda para cmdlets do PowerShell
 
@@ -34,7 +34,7 @@ Outra alternativa é copiar o texto de ajuda para o Microsoft Word e usar as ver
 
 ### <a name="write-simply"></a>Escrever simplesmente
 Use palavras e frases simples.
-Evite o jargão.
+Evite jargões.
 Considere que muitos leitores estão equipados apenas com um dicionário de idioma estrangeiro e o tópico da ajuda.
 
 ### <a name="write-consistently"></a>Escreva de forma consistente
@@ -87,22 +87,22 @@ Você também pode solicitar comentários de grupos de notícias.
 
  [Como criar o arquivo de ajuda do cmdlet](./how-to-create-the-cmdlet-help-file.md)
 
- [Como adicionar o nome do cmdlet e Sinopse a um tópico de ajuda do cmdlet](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
+ [Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [Como adicionar a descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md)
 
- [Como adicionar sintaxe a um tópico de ajuda de cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Como adicionar sintaxe a um tópico de ajuda do cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Como adicionar parâmetros a um tópico de ajuda de cmdlet](./how-to-add-parameter-information.md)
 
  [Como adicionar tipos de entrada a um tópico de ajuda de cmdlet](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Como adicionar valores de retorno a um tópico de ajuda de cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Como adicionar valores retornados a um tópico de ajuda do cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
- [Como adicionar anotações a um tópico de ajuda de cmdlet](./how-to-add-notes-to-a-cmdlet-help-topic.md)
+ [Como adicionar notas a um tópico de ajuda do cmdlet](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Como adicionar exemplos a um tópico de ajuda de cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Como adicionar exemplos a um tópico de ajuda do cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Como adicionar links relacionados a um tópico de ajuda de cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Como adicionar links relacionados a um tópico de ajuda do cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [SDK do Windows PowerShell](../windows-powershell-reference.md)

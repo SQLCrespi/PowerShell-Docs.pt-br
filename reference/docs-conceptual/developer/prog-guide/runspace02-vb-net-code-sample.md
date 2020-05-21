@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bd9d599-faa7-4154-ac36-1f35ccf8e320
 caps.latest.revision: 7
-ms.openlocfilehash: 5ad28cfbc73628ba818e42b87128d8f4ad273bda
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 38e022012bc5302fb28cd2e3d9f3a8d2859d72f6
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366605"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83559872"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Exemplo de código Runspace02 (VB.NET)
 
-Aqui está o código-fonte VB.NET para o exemplo de Runspace02. Este exemplo usa a classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) para executar o cmdlet `Get-Process` de forma síncrona. Windows Forms e a ligação de dados são usados para exibir os resultados em um controle DataGridView.
+Aqui está o código-fonte VB.NET para o exemplo de Runspace02. Este exemplo usa a classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) para executar o `Get-Process` cmdlet de forma síncrona. Windows Forms e a ligação de dados são usados para exibir os resultados em um controle DataGridView.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 ```vb
 Imports System
