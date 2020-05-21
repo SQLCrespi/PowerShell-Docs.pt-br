@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 70532e7e-9cac-43c3-9687-e77011ecc878
 caps.latest.revision: 4
-ms.openlocfilehash: 5720200ce32f114cd4965d961b9e2804bd154b2e
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: cc613240e056e8443b075019cbff6dd15da3716f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870839"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557441"
 ---
 # <a name="creating-a-workflow-by-using-a-windows-powershell-script"></a>Criar um fluxo de trabalho pelo uso de um script do Windows PowerShell
 
@@ -28,7 +28,7 @@ Você encontra o fluxo de trabalho da mesma maneira que faria com qualquer outro
 
 ## <a name="implementing-parallel-and-sequence"></a>Implementando paralelo e sequência
 
-O [Windows Workflow Foundation](/previous-versions/dotnet/netframework-3.5/ms735967(v=vs.90)) dá suporte à execução de atividades em paralelo. Para implementar esse recurso em um script do Windows PowerShell, use a palavra-chave `parallel` na frente de um bloco de script. Você também pode usar a construção `foreach -parallel` para iterar por meio de uma coleção de objetos em paralelo. Para executar um grupo de atividades em ordem sequencial dentro de um bloco paralelo, coloque esse grupo de atividades em um bloco de script e preceda o bloco com a palavra-chave Sequence.
+O [Windows Workflow Foundation](/previous-versions/dotnet/netframework-3.5/ms735967(v=vs.90)) dá suporte à execução de atividades em paralelo. Para implementar esse recurso em um script do Windows PowerShell, use a `parallel` palavra-chave na frente de um bloco de script. Você também pode usar a `foreach -parallel` construção para iterar por meio de uma coleção de objetos em paralelo. Para executar um grupo de atividades em ordem sequencial dentro de um bloco paralelo, coloque esse grupo de atividades em um bloco de script e preceda o bloco com a palavra-chave Sequence.
 
 ## <a name="joining-computers-to-a-domain"></a>Unindo computadores a um domínio
 

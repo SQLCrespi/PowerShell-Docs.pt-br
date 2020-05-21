@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
-ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4989b0bb8a379011cde1a1d2cc803a081d79d97f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359675"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557287"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>Implementar autorização personalizada para um serviço Web OData de gerenciamento
 
@@ -134,7 +134,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
 ### <a name="role-based-authorization"></a>Autorização baseada em função
 
-O exemplo a seguir implementa uma política de autorização baseada em função. A política é definida em um arquivo XML que reside no diretório principal do aplicativo com os arquivos de esquema Web. config e MOF e de mapeamento XML. Para obter informações sobre como configurar o arquivo de esquema de autorização, consulte [Configurando a autorização baseada em função](./configuring-role-based-authorization.md). A primeira parte do exemplo implementa os métodos [Microsoft. Management. OData. CustomAuthorization. AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft. Management. OData. CustomAuthorization. getafiliaid](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) . Nesse caso, os métodos de interface chamam métodos na classe `RbacSystem` (definida abaixo) que fazem o trabalho real de verificar as permissões para o usuário.
+O exemplo a seguir implementa uma política de autorização baseada em função. A política é definida em um arquivo XML que reside no diretório principal do aplicativo com os arquivos de esquema Web. config e MOF e de mapeamento XML. Para obter informações sobre como configurar o arquivo de esquema de autorização, consulte [Configurando a autorização baseada em função](./configuring-role-based-authorization.md). A primeira parte do exemplo implementa os métodos [Microsoft. Management. OData. CustomAuthorization. AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft. Management. OData. CustomAuthorization. getafiliaid](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) . Nesse caso, os métodos de interface chamam métodos na `RbacSystem` classe (definida abaixo) que fazem o trabalho real de verificar as permissões para o usuário.
 
 ```csharp
 namespace Microsoft.Samples.Management.OData.RoleBasedPlugins

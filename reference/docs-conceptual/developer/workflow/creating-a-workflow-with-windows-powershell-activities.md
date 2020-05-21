@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 12b0b246b78142f3811f9f566cd94e4dabd40cc9
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277450"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557458"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Criar um fluxo de trabalho com atividades do Windows PowerShell
 
@@ -31,15 +31,15 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
 1. Adicione uma atividade de **sequência** ao fluxo de trabalho.
 
-2. Crie um argumento chamado `ComputerName` com um tipo de argumento de `String[]`. Esse argumento representa os nomes dos computadores a serem verificados e Unidos.
+2. Crie um argumento chamado `ComputerName` com um tipo de argumento de `String[]` . Esse argumento representa os nomes dos computadores a serem verificados e Unidos.
 
-3. Crie um argumento chamado `DomainCred` do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Esse argumento representa as credenciais de domínio de uma conta de domínio que está autorizada a ingressar um computador no domínio.
+3. Crie um argumento chamado `DomainCred` de tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Esse argumento representa as credenciais de domínio de uma conta de domínio que está autorizada a ingressar um computador no domínio.
 
-4. Crie um argumento chamado `MachineCred` do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Esse argumento representa as credenciais de um administrador nos computadores para verificar e ingressar.
+4. Crie um argumento chamado `MachineCred` de tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential). Esse argumento representa as credenciais de um administrador nos computadores para verificar e ingressar.
 
-5. Adicione uma atividade **ParallelForEach** dentro da atividade **Sequence** . Insira `comp` e `ComputerName` nas caixas de texto para que o loop itere pelos elementos da matriz de `ComputerName`.
+5. Adicione uma atividade **ParallelForEach** dentro da atividade **Sequence** . Insira `comp` e `ComputerName` nas caixas de texto para que o loop itere pelos elementos da `ComputerName` matriz.
 
-6. Adicione uma atividade **Sequence** ao corpo da atividade **ParallelForEach** . Defina a propriedade **DisplayName** da sequência como `JoinDomain`.
+6. Adicione uma atividade **Sequence** ao corpo da atividade **ParallelForEach** . Defina a propriedade **DisplayName** da sequência como `JoinDomain` .
 
 7. Adicione uma atividade **getwmiobject** à sequência **JoinDomain** .
 
@@ -67,7 +67,7 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
     |Propriedade|Valor|
     |--------------|-----------|
     |**ComputerName**|às|
-    |**Credencial**|MachineCred|
+    |**Provedores**|MachineCred|
     |**Fins**|Microsoft. PowerShell. Commands. WaitForServiceTypes. PowerShell|
     |**Aplicação**|True|
     |Aguarde|True|
@@ -77,5 +77,5 @@ Os procedimentos a seguir descrevem como criar um fluxo de trabalho que verifica
 
     Quando você tiver concluído os procedimentos, a janela de design do fluxo de trabalho deverá ser parecida com esta.
 
-    ![XAML JoinDomain no designer de fluxo de trabalho](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
-    ![XAML do JoinDomain no designer de fluxo de trabalho](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")
+    ![JoinDomain XAML no designer de fluxo de trabalho ](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+     ![JoinDomain XAML no designer de fluxo de trabalho](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")

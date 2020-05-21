@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d35f233-5447-48a2-a961-9fbca763262b
 caps.latest.revision: 7
-ms.openlocfilehash: 9928a0b31a57d42eb39cea1af0509613c483caf7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 37b31aa77dde23c1bd57a9af67e2232ef0827005
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367325"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557577"
 ---
 # <a name="how-to-create-and-upload-cab-files"></a>Como criar e carregar arquivos CAB
 
@@ -25,7 +25,7 @@ Você pode usar o recurso de ajuda atualizável para fornecer arquivos de ajuda 
 
 1. Organize os arquivos de ajuda para o módulo por cultura de interface do usuário. Cada arquivo CAB de ajuda atualizável contém os arquivos de ajuda para um módulo em uma cultura de interface do usuário. Você pode entregar vários arquivos CAB de ajuda para o módulo, cada um para uma cultura de interface do usuário diferente.
 
-2. Verifique se os arquivos de ajuda incluem apenas os tipos de arquivo permitidos para a ajuda atualizável e validá-los em um esquema de arquivo de ajuda. Se o cmdlet `Update-Help` encontrar um arquivo inválido ou não for um tipo permitido, ele não instalará o arquivo inválido e interromperá a instalação de arquivos do CAB. Para obter uma lista de tipos de arquivo permitidos, consulte [tipos de arquivo permitidos em um arquivo CAB de ajuda atualizável](./file-types-permitted-in-an-updatable-help-cab-file.md).
+2. Verifique se os arquivos de ajuda incluem apenas os tipos de arquivo permitidos para a ajuda atualizável e validá-los em um esquema de arquivo de ajuda. Se o `Update-Help` cmdlet encontrar um arquivo inválido ou não for um tipo permitido, ele não instalará o arquivo inválido e interromperá a instalação de arquivos do CAB. Para obter uma lista de tipos de arquivo permitidos, consulte [tipos de arquivo permitidos em um arquivo CAB de ajuda atualizável](./file-types-permitted-in-an-updatable-help-cab-file.md).
 
 3. Assine digitalmente os arquivos da ajuda. As assinaturas digitais não são necessárias, mas são uma prática recomendada.
 

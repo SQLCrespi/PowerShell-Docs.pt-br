@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f723b21-8f95-4981-8b6e-4f07c22d601a
 caps.latest.revision: 5
-ms.openlocfilehash: b6f8aef76a5f4b5dc1a60425541856ead9a9c77a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 82bee7b7bb0ef49203636f2a293075f3db924ce4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368105"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557083"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>Como adicionar exemplos a um tópico de ajuda do cmdlet
 
@@ -58,7 +58,7 @@ O XML a seguir mostra como adicionar um título para o exemplo. O título é usa
 
 ## <a name="adding-preceding-characters"></a>Adicionando caracteres precedentes
 
-O XML a seguir mostra como adicionar caracteres, como o prompt do Windows PowerShell, que são exibidos imediatamente antes do comando de exemplo (sem nenhum espaço intermediário). O Windows PowerShell® usa o prompt do Windows PowerShell: C:\PS >.
+O XML a seguir mostra como adicionar caracteres, como o prompt do Windows PowerShell, que são exibidos imediatamente antes do comando de exemplo (sem nenhum espaço intermediário). O Windows PowerShell® usa o prompt do Windows PowerShell: C:\PS>.
 
 ```xml
 <command:examples>
@@ -89,7 +89,7 @@ O XML a seguir mostra como adicionar o comando real do exemplo. Ao adicionar o c
 
 ## <a name="adding-a-description"></a>Adicionando uma descrição
 
-O XML a seguir mostra como adicionar uma descrição para o exemplo. O Windows PowerShell® usa um conjunto único de marcas \<maml: para > para a descrição, embora várias marcas de \<maml: para > possam ser usadas.
+O XML a seguir mostra como adicionar uma descrição para o exemplo. O Windows PowerShell® usa um conjunto único de \< marcas maml: para> para a descrição, embora várias \< marcas maml: para> possam ser usadas.
 
 ```xml
 <command:examples>
@@ -108,7 +108,7 @@ O XML a seguir mostra como adicionar uma descrição para o exemplo. O Windows P
 
 ## <a name="adding-example-output"></a>Adicionando saída de exemplo
 
-O XML a seguir mostra como adicionar a saída do comando. As informações dos resultados do comando são opcionais, mas, em alguns casos, é útil demonstrar o efeito de usar parâmetros específicos. O Windows PowerShell® usa dois conjuntos de \<maml: para > marcas para separar a saída do comando do comando.
+O XML a seguir mostra como adicionar a saída do comando. As informações dos resultados do comando são opcionais, mas, em alguns casos, é útil demonstrar o efeito de usar parâmetros específicos. O Windows PowerShell® usa dois conjuntos de \< marcas maml: para> em branco para separar a saída do comando do comando.
 
 ```xml
 <command:examples>
