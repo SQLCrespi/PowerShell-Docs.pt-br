@@ -148,20 +148,6 @@
               href: components/ise/object-model/the-powershelltabcollection-object.md
             - name: O objeto PowerShellTab
               href: components/ise/object-model/the-powershelltab-object.md
-    - name: Acesso via Web
-      items:
-        - name: Regras de autorização e recursos de segurança
-          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-        - name: Instalação
-          href: components/web-access/install-and-use-windows-powershell-web-access.md
-        - name: Solução de problemas de acesso
-          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-        - name: Desinstalar o Windows PowerShell Web Access
-          href: components/web-access/uninstall-windows-powershell-web-access.md
-        - name: Usar o console do PowerShell baseado na Web
-          href: components/web-access/use-the-web-based-windows-powershell-console.md
-    - name: Guia de fluxos de trabalho
-      href: components/workflows-guide.md
 - name: Galeria do PowerShell
   items:
     - name: Visão geral
