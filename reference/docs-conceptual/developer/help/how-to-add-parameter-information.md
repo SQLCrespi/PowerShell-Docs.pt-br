@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf6c1442-60aa-477a-8f30-ab02b1b11039
 caps.latest.revision: 7
-ms.openlocfilehash: d4a5fc934a41b00f89862674e44e4540680674f7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b9ccca75c2d9126e84a7f486ffe803042a742b62
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361225"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565553"
 ---
 # <a name="how-to-add-parameter-information"></a>Como adicionar informações de parâmetro
 
@@ -157,7 +157,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
 
 Aqui estão algumas coisas a serem lembradas ao adicionar parâmetros.
 
-- Os atributos do parâmetro não são exibidos em todas as exibições do tópico de ajuda do cmdlet. No entanto, eles são exibidos em uma tabela após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \<CmdletName >-Full) ou parâmetro (Get-Help \<CmdletName >-Parameter) do tópico.
+- Os atributos do parâmetro não são exibidos em todas as exibições do tópico de ajuda do cmdlet. No entanto, eles são exibidos em uma tabela após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \< cmdlets>-Full) ou parâmetro (Get-Help \< cmdlets>-Parameter) do tópico.
 
 - A descrição do parâmetro é uma das partes mais importantes de um tópico de ajuda de cmdlet. A descrição deve ser breve, bem como completa. Além disso, lembre-se de que se a descrição do parâmetro se tornar muito longa, como quando dois parâmetros interagem entre si, você pode adicionar mais conteúdo na seção anotações do tópico de ajuda do cmdlet.
 
@@ -171,11 +171,11 @@ Aqui estão algumas coisas a serem lembradas ao adicionar parâmetros.
 
 O valor padrão do parâmetro é o valor que será usado se o parâmetro não for especificado na linha de comando. Observe que o valor padrão é opcional e não é necessário para alguns parâmetros, como os parâmetros necessários. No entanto, você deve especificar um valor padrão para a maioria dos parâmetros opcionais.
 
-O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do Windows PowerShell ($pshome)" para um caminho opcional. Você também pode escrever uma frase que descreva o padrão, como a seguinte frase usada para o parâmetro de `PassThru`: "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline".  Além disso, como o valor é exibido em oposto ao nome do campo "**valor padrão**", não é necessário incluir o termo "valor padrão" na entrada.
+O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do Windows PowerShell ($pshome)" para um caminho opcional. Você também pode escrever uma frase que descreve o padrão, como a seguinte frase usada para o `PassThru` parâmetro: "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline".  Além disso, como o valor é exibido em oposto ao nome do campo "**valor padrão**", não é necessário incluir o termo "valor padrão" na entrada.
 
-O valor padrão do parâmetro não é exibido em todas as exibições do tópico de ajuda do cmdlet. No entanto, ele é exibido em uma tabela (juntamente com os atributos de parâmetro) após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \<CmdletName >-Full) ou do parâmetro (Get-Help \<CmdletName >-Parameter) do tópico.
+O valor padrão do parâmetro não é exibido em todas as exibições do tópico de ajuda do cmdlet. No entanto, ele é exibido em uma tabela (juntamente com os atributos de parâmetro) após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \< cmdlets>-Full) ou parâmetro (Get-Help \< cmdlets>-Parameter) do tópico.
 
-O XML a seguir mostra um par de marcas `<dev:defaultValue>` adicionadas ao nó `<command:parameter>`. Observe que o valor padrão segue imediatamente após a marcação de `</command:parameterValue>` de fechamento (quando o valor do parâmetro é especificado) ou a marca de `</maml:description>` de fechamento da descrição do parâmetro. nome.
+O XML a seguir mostra um par de `<dev:defaultValue>` marcas adicionadas ao `<command:parameter>` nó. Observe que o valor padrão segue imediatamente após a marca de fechamento `</command:parameterValue>` (quando o valor do parâmetro é especificado) ou a `</maml:description>` marca de fechamento da descrição do parâmetro. nome.
 
 ```xml
 <command:parameters>
@@ -195,11 +195,11 @@ O XML a seguir mostra um par de marcas `<dev:defaultValue>` adicionadas ao nó `
 
 Adicionar valores para tipos enumerados
 
-Se o parâmetro tiver vários valores ou valores de um tipo enumerado, você poderá usar um nó opcional \<dev: possibleValues >. Esse nó permite que você especifique um nome e uma descrição para vários valores.
+Se o parâmetro tiver vários valores ou valores de um tipo enumerado, você poderá usar um \< nó dev: possibleValues> opcional. Esse nó permite que você especifique um nome e uma descrição para vários valores.
 
-Lembre-se de que as descrições dos valores enumerados não aparecem em nenhum dos modos de exibição padrão da ajuda exibidos pelo cmdlet `Get-Help`, mas outros visualizadores da ajuda podem exibir esse conteúdo em suas exibições.
+Lembre-se de que as descrições dos valores enumerados não aparecem em nenhum dos modos de exibição padrão da ajuda exibidos pelo `Get-Help` cmdlet, mas outros visualizadores da ajuda podem exibir esse conteúdo em suas exibições.
 
-O XML a seguir mostra um nó `<dev:possibleValues>` com dois valores especificados.
+O XML a seguir mostra um `<dev:possibleValues>` nó com dois valores especificados.
 
 ```xml
 <command:parameters>

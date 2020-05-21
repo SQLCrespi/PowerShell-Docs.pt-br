@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a1a494534169b2da470286020dfacfa8e9084839
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369175"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692329"
 ---
 # <a name="validatelength-attribute-declaration"></a>Declaração de atributo ValidateLength
 
@@ -31,9 +31,9 @@ O atributo ValidateLength especifica o número mínimo e máximo de caracteres p
 
 #### <a name="parameters"></a>Parâmetros
 
-`MinLength` ([System. Int32](/dotnet/api/System.Int32)) necessário. Especifica o número mínimo de caracteres permitidos.
+`MinLength`([System. Int32](/dotnet/api/System.Int32)) necessário. Especifica o número mínimo de caracteres permitidos.
 
-`MaxLength` ([System. Int32](/dotnet/api/System.Int32)) necessário. Especifica o número máximo de caracteres permitidos.
+`MaxLength`([System. Int32](/dotnet/api/System.Int32)) necessário. Especifica o número máximo de caracteres permitidos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -43,11 +43,11 @@ O atributo ValidateLength especifica o número mínimo e máximo de caracteres p
 
 - O tempo de execução do Windows PowerShell gera um erro nas seguintes condições:
 
-    - Quando o valor do parâmetro de atributo `MaxLength` é menor que o valor do parâmetro de atributo `MinLength`.
+  - Quando o valor do `MaxLength` parâmetro Attribute é menor que o valor do `MinLength` parâmetro Attribute.
 
-    - Quando o parâmetro de atributo `MaxLength` é definido como 0.
+  - Quando o `MaxLength` parâmetro de atributo é definido como 0.
 
-    - Quando o argumento não é uma cadeia de caracteres.
+  - Quando o argumento não é uma cadeia de caracteres.
 
 - O atributo ValidateLength é definido pela classe [System. Management. Automation. Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) .
 
@@ -55,4 +55,4 @@ O atributo ValidateLength especifica o número mínimo e máximo de caracteres p
 
 [System. Management. Automation. Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
