@@ -1,57 +1,48 @@
 - name: Como usar esta documentação
   href: how-to-use-docs.md
 - name: Visão geral
-  href: overview.md
+  expanded: true
+  items:
+    - name: O que é o PowerShell?
+      href: overview.md
+    - name: Ciclo de vida de suporte do PowerShell
+      href: powershell-support-lifecycle.md
 - name: Instalar
   items:
-    - name: Instalar várias versões do PowerShell
+    - name: Visão geral
       href: install/installing-powershell.md
-    - name: Instalar o PowerShell
-      items:
-        - name: Instalar o PowerShell no Windows
-          href: install/installing-powershell-core-on-windows.md
-        - name: Instalar o PowerShell no Linux
-          href: install/installing-powershell-core-on-linux.md
-        - name: Instalar o PowerShell no macOS
-          href: install/installing-powershell-core-on-macos.md
-        - name: Instalar o PowerShell no ARM
-          href: install/powershell-core-on-arm.md
-    - name: Instalar o Windows PowerShell 5.1
-      items:
-        - name: Instalar o Windows PowerShell
-          href: install/installing-windows-powershell.md
-        - name: Instalar o Mecanismo do Windows PowerShell 2.0
-          href: install/installing-the-windows-powershell-2.0-engine.md
-        - name: Requisitos do Sistema do Windows PowerShell
-          href: install/windows-powershell-system-requirements.md
+    - name: Migrando do Windows PowerShell 5.1 para o PowerShell 7
+      href: install/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: Instalar o PowerShell no Windows
+      href: install/installing-powershell-core-on-windows.md
+    - name: Instalar o PowerShell no Linux
+      href: install/installing-powershell-core-on-linux.md
+    - name: Instalar o PowerShell no macOS
+      href: install/installing-powershell-core-on-macos.md
+    - name: Instalar o PowerShell no ARM
+      href: install/powershell-core-on-arm.md
     - name: Como usar o PowerShell no Docker
       href: install/PowerShell-in-Docker.md
-- name: Introdução
-  items:
-    - name: Introdução ao PowerShell
-      href: getting-started/getting-started-with-windows-powershell.md
-    - name: Iniciando o Windows PowerShell
-      href: getting-started/starting-windows-powershell.md
-    - name: Iniciando o Mecanismo do Windows PowerShell 2.0
-      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: Aprendendo a usar o PowerShell
   items:
-    - name: Compreender conceitos importantes do PowerShell
-      href: learn/understanding-important-powershell-concepts.md
-    - name: Aprendendo os nomes do PowerShell
-      href: learn/learning-powershell-names.md
-    - name: Usando nomes de comando familiares
-      href: learn/using-familiar-command-names.md
-    - name: Obtendo informações de ajuda detalhadas
-      href: learn/getting-detailed-help-information.md
-    - name: Obtendo informações sobre comandos
-      href: learn/getting-information-about-commands.md
-    - name: Usando variáveis para armazenar objetos
-      href: learn/using-variables-to-store-objects.md
-    - name: Entendendo o pipeline do PowerShell
-      href: learn/understanding-the-powershell-pipeline.md
-    - name: Mais aprendizado sobre o PowerShell
-      href: learn/more-powershell-learning.md
+    - name: Introdução ao PowerShell
+      items:
+        - name: Aprendendo os nomes do PowerShell
+          href: learn/ps101/learning-powershell-names.md
+        - name: Usando nomes de comando familiares
+          href: learn/ps101/using-familiar-command-names.md
+        - name: Obtendo informações de ajuda detalhadas
+          href: learn/ps101/getting-detailed-help-information.md
+        - name: Obtendo informações sobre comandos
+          href: learn/ps101/getting-information-about-commands.md
+        - name: Usando variáveis para armazenar objetos
+          href: learn/ps101/using-variables-to-store-objects.md
+        - name: Opções de linha de comando do PowerShell
+          href: learn/ps101/powershell.exe-command-line-help.md
+        - name: Usando a expansão com Tab
+          href: learn/ps101/using-tab-expansion.md
+    - name: Usar recursos experimentais
+      href: learn/experimental-features.md
     - name: Comunicação remota do PowerShell
       items:
         - name: JEA (Administração Just Enough)
@@ -82,167 +73,12 @@
           href: learn/remoting/winrmsecurity.md
         - name: Dando o segundo salto na Comunicação Remota do PowerShell
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: Recursos adicionais
+      href: learn/more-powershell-learning.md
     - name: Glossário
-      href: learn/windows-powershell-glossary.md
-- name: Componentes
-  items:
-    - name: Console
-      items:
-        - name: Opções de linha de comando do PowerShell
-          href: components/console/powershell.exe-command-line-help.md
-        - name: Usando a expansão com Tab
-          href: components/console/using-tab-expansion.md
-    - name: ISE
-      items:
-        - name: Apresentando o ISE do Windows PowerShell
-          href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: Usando o ISE do Windows PowerShell
-          items:
-            - name: Explorando o ISE do Windows PowerShell
-              href: components/ise/exploring-the-windows-powershell-ise.md
-            - name: Como criar uma guia do PowerShell no ISE do Windows PowerShell
-              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-            - name: Como depurar scripts no ISE do Windows PowerShell
-              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-            - name: Como usar perfis no ISE do Windows PowerShell
-              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-            - name: Como usar o preenchimento com Tab nos painéis de script e do console
-              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-            - name: Como usar o painel do console no ISE do Windows PowerShell
-              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-            - name: Como gravar e executar scripts no ISE do Windows PowerShell
-              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-            - name: Atalhos de teclado do ISE do Windows PowerShell
-              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-            - name: Acessibilidade no ISE do Windows PowerShell
-              href: components/ise/accessibility-in-windows-powershell-ise.md
-        - name: O modelo de objeto de script ISE
-          items:
-            - name: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
-              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-            - name: A hierarquia de modelo de objeto do ISE
-              href: components/ise/object-model/the-ise-object-model-hierarchy.md
-            - name: O objeto ObjectModelRoot
-              href: components/ise/object-model/the-objectmodelroot-object.md
-            - name: O objeto ISEAddOnToolCollection
-              href: components/ise/object-model/the-iseaddontoolcollection-object.md
-            - name: O objeto ISEAddOnTool
-              href: components/ise/object-model/the-iseaddontool-object.md
-            - name: O objeto ISEEditor
-              href: components/ise/object-model/the-iseeditor-object.md
-            - name: O objeto ISEFileCollection
-              href: components/ise/object-model/the-isefilecollection-object.md
-            - name: O objeto ISEFile
-              href: components/ise/object-model/the-isefile-object.md
-            - name: O objeto ISEMenuItemCollection
-              href: components/ise/object-model/the-isemenuitemcollection-object.md
-            - name: O objeto ISEMenuItem
-              href: components/ise/object-model/the-isemenuitem-object.md
-            - name: O objeto ISEOptions
-              href: components/ise/object-model/the-iseoptions-object.md
-            - name: O objeto ISESnippetCollection
-              href: components/ise/object-model/the-isesnippetcollection-object.md
-            - name: O ISESnippetObject
-              href: components/ise/object-model/the-isesnippetobject.md
-            - name: O objeto PowerShellTabCollection
-              href: components/ise/object-model/the-powershelltabcollection-object.md
-            - name: O objeto PowerShellTab
-              href: components/ise/object-model/the-powershelltab-object.md
-- name: Galeria do PowerShell
-  items:
-    - name: Visão geral
-      href: gallery/overview.md
-    - name: Instalando o PowerShellGet
-      href: gallery/installing-psget.md
-    - name: Introdução
-      href: gallery/getting-started.md
-    - name: Instruções
-      items:
-        - name: Localizando pacotes na Galeria
-          items:
-            - name: Pesquisando pacotes
-              href: gallery/how-to/finding-packages/search-syntax.md
-            - name: Pesquisando por compatibilidade
-              href: gallery/how-to/finding-packages/searching-by-compatibility.md
-            - name: Filtrando os resultados da pesquisa
-              href: gallery/how-to/finding-packages/filtering-packages.md
-        - name: Publicando na galeria
-          items:
-            - name: Criando e publicando pacotes
-              href: gallery/how-to/publishing-packages/publishing-a-package.md
-            - name: Criando uma conta de PowerShellGallery
-              href: gallery/how-to/publishing-packages/creating-an-account.md
-            - name: Remover pacotes da lista
-              href: gallery/how-to/publishing-packages/unlisting-packages.md
-            - name: Excluir pacotes
-              href: gallery/how-to/publishing-packages/deleting-packages.md
-            - name: Gerenciando proprietários de pacotes
-              href: gallery/how-to/publishing-packages/managing-package-owners.md
-        - name: Trabalhando com pacotes
-          items:
-            - name: Exibição FileList
-              href: gallery/how-to/working-with-packages/filelist-view.md
-            - name: Implantar na Automação do Azure
-              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
-            - name: Download manual do pacote
-              href: gallery/how-to/working-with-packages/manual-download.md
-            - name: Pacotes que exigem aceitação da licença
-              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
-            - name: Contatando proprietários de pacotes
-              href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: Fornecendo comentários por meio de mídia social ou do recurso Comentários
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
-        - name: Gerenciando o perfil da conta
-          items:
-            - name: Configurações de conta da Galeria do PowerShell
-              href: gallery/how-to/managing-profile/managing-account.md
-            - name: Gerenciando chaves de API
-              href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: Trabalhar com repositórios privados do PowerShellGet
-          href: gallery/how-to/working-with-local-psrepositories.md
-    - name: Conceitos
-      items:
-        - name: Publicando diretrizes e práticas recomendadas
-          href: gallery/concepts/publishing-guidelines.md
-        - name: Manifesto de pacotes e interface do usuário da Galeria
-          href: gallery/concepts/package-manifest-affecting-ui.md
-        - name: Exigir PSEditions específicas
-          items:
-            - name: Escrevendo scripts com suporte para PSEditions
-              href: gallery/concepts/script-psedition-support.md
-            - name: Escrevendo módulos com suporte para PSEditions
-              href: gallery/concepts/module-psedition-support.md
-        - name: Exigir aceitação da licença
-          items:
-            - name: Exigir a aceitação da licença para Scripts
-              href: gallery/concepts/script-license-acceptance.md
-            - name: Exigir a aceitação da licença para módulos
-              href: gallery/concepts/module-license-acceptance.md
-        - name: Definindo pacotes como pré-lançamento
-          items:
-            - name: Definindo um módulo como pré-lançamento
-              href: gallery/concepts/module-prerelease-support.md
-            - name: Definindo um script como pré-lançamento
-              href: gallery/concepts/script-prerelease-support.md
-        - name: Perfil de regra PSScriptAnalyzer
-          href: gallery/concepts/scriptanalyzer-rule-profile.md
-    - name: Como Obter Suporte
-      items:
-        - name: Relatar abuso
-          href: gallery/how-to/getting-support/report-abuse.md
-        - name: Solução de controvérsias
-          href: gallery/how-to/getting-support/dispute-resolution.md
-        - name: Entrando em contato com os administradores
-          href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: Solução de problemas
-          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
-        - name: Inicializando o provedor do NuGet e NuGet.exe
-          href: gallery/how-to/getting-support/bootstrapping-nuget.md
-        - name: Conformidade de GDPR
-          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
-    - name: Perguntas frequentes sobre a Galeria
-      href: gallery/faqs.md
+      href: learn/glossary.md
 - name: What's New
+  expanded: true
   items:
     - name: Novidades no PowerShell 7.x
       items:
@@ -260,71 +96,135 @@
           href: whats-new/breaking-changes-ps6.md
         - name: Problemas conhecidos do PowerShell Core 6.0
           href: whats-new/known-issues-ps6.md
+    - name: Histórico de versões de cmdlets e módulos
+      href: whats-new/cmdlet-versions.md
+    - name: Lista de compatibilidade de módulo
+      href: whats-new/module-compatibility.md
+- name: Windows PowerShell
+  items:
+    - name: Instalar o Windows PowerShell 5.1
+      items:
+        - name: Instalar o Windows PowerShell
+          href: windows-powershell/install/installing-windows-powershell.md
+        - name: Instalar o Mecanismo do Windows PowerShell 2.0
+          href: windows-powershell/install/installing-the-windows-powershell-2.0-engine.md
+        - name: Requisitos do Sistema do Windows PowerShell
+          href: windows-powershell/install/windows-powershell-system-requirements.md
     - name: Novidades no PowerShell 5.x
       items:
         - name: Novidades no Windows PowerShell 5.x
-          href: whats-new/what-s-new-in-windows-powershell-50.md
+          href: windows-powershell/whats-new/what-s-new-in-windows-powershell-50.md
         - name: Novidades no ISE do PowerShell 5.0
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
-    - name: Migrando do Windows PowerShell 5.1 para o PowerShell 7
-      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
-    - name: Usar recursos experimentais
-      href: whats-new/experimental-features.md
-    - name: Histórico de versões de cmdlets e módulos
-      href: whats-new/cmdlet-versions.md
-    - name: Lista de compatibilidade de módulos
-      href: whats-new/module-compatibility.md
-- name: Ciclo de vida de suporte do PowerShell
-  href: powershell-support-lifecycle.md
-- name: WMF (Windows Management Framework)
-  items:
-    - name: Visão geral
-      href: wmf/overview.md
-    - name: Instalação
+          href: windows-powershell/whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: ISE
       items:
-        - name: Como instalar e configurar o WMF 5.1
-          href: wmf/setup/install-configure.md
-        - name: Desinstalar o WMF 5.0
-          href: wmf/setup/uninstall.md
-    - name: What's New
-      expanded: true
+        - name: Apresentando o ISE do Windows PowerShell
+          href: windows-powershell/ise/introducing-the-windows-powershell-ise.md
+        - name: Usando o ISE do Windows PowerShell
+          items:
+            - name: Explorando o ISE do Windows PowerShell
+              href: windows-powershell/ise/exploring-the-windows-powershell-ise.md
+            - name: Como criar uma guia do PowerShell no ISE do Windows PowerShell
+              href: windows-powershell/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: Como depurar scripts no ISE do Windows PowerShell
+              href: windows-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: Como usar perfis no ISE do Windows PowerShell
+              href: windows-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: Como usar o preenchimento com Tab nos painéis de script e do console
+              href: windows-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: Como usar o painel do console no ISE do Windows PowerShell
+              href: windows-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: Como gravar e executar scripts no ISE do Windows PowerShell
+              href: windows-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Atalhos de teclado do ISE do Windows PowerShell
+              href: windows-powershell/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Acessibilidade no ISE do Windows PowerShell
+              href: windows-powershell/ise/accessibility-in-windows-powershell-ise.md
+        - name: O modelo de objeto de script ISE
+          items:
+            - name: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
+              href: windows-powershell/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: A hierarquia de modelo de objeto do ISE
+              href: windows-powershell/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: O objeto ObjectModelRoot
+              href: windows-powershell/ise/object-model/the-objectmodelroot-object.md
+            - name: O objeto ISEAddOnToolCollection
+              href: windows-powershell/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: O objeto ISEAddOnTool
+              href: windows-powershell/ise/object-model/the-iseaddontool-object.md
+            - name: O objeto ISEEditor
+              href: windows-powershell/ise/object-model/the-iseeditor-object.md
+            - name: O objeto ISEFileCollection
+              href: windows-powershell/ise/object-model/the-isefilecollection-object.md
+            - name: O objeto ISEFile
+              href: windows-powershell/ise/object-model/the-isefile-object.md
+            - name: O objeto ISEMenuItemCollection
+              href: windows-powershell/ise/object-model/the-isemenuitemcollection-object.md
+            - name: O objeto ISEMenuItem
+              href: windows-powershell/ise/object-model/the-isemenuitem-object.md
+            - name: O objeto ISEOptions
+              href: windows-powershell/ise/object-model/the-iseoptions-object.md
+            - name: O objeto ISESnippetCollection
+              href: windows-powershell/ise/object-model/the-isesnippetcollection-object.md
+            - name: O ISESnippetObject
+              href: windows-powershell/ise/object-model/the-isesnippetobject.md
+            - name: O objeto PowerShellTabCollection
+              href: windows-powershell/ise/object-model/the-powershelltabcollection-object.md
+            - name: O objeto PowerShellTab
+              href: windows-powershell/ise/object-model/the-powershelltab-object.md
+    - name: WMF (Windows Management Framework)
       items:
-        - name: Notas de versão do WMF 5.x
-          href: wmf/whats-new/release-notes.md
-        - name: Correções de Bug no WMF 5.1
-          href: wmf/whats-new/bugfixes.md
-        - name: Cmdlets novos e atualizados
-          href: wmf/whats-new/new-updated-cmdlets.md
-        - name: Criando tipos personalizados usando classes do PowerShell
-          href: wmf/whats-new/class-overview.md
-        - name: Melhorias do Console no WMF 5.1
-          href: wmf/whats-new/console-improvements.md
-        - name: Melhorias na depuração de script do PowerShell
-          href: wmf/whats-new/debug-overview.md
-        - name: Rastreamento e registro de scripts
-          href: wmf/whats-new/script-logging.md
-        - name: Melhorias da DSC no WMF 5.1
-          href: wmf/whats-new/DSC-improvements.md
-        - name: Melhorias do Mecanismo do PowerShell no WMF 5.1
-          href: wmf/whats-new/engine-improvements.md
-        - name: Fluxo de informações
-          href: wmf/whats-new/informationstream-overview.md
-        - name: Aprimoramentos no recurso JEA (Administração Suficiente)
-          href: wmf/whats-new/jea-improvements.md
-        - name: Melhorias ao Gerenciamento de Pacotes do WMF 5.1
-          href: wmf/whats-new/package-management-improvements.md
-        - name: SIL (Log de Inventário de Software)
-          href: wmf/whats-new/sil-overview.md
-        - name: Status de compatibilidade do produto
-          href: wmf/whats-new/compatibility.md
-    - name: Problemas conhecidos
-      items:
-        - name: Problemas conhecidos no WMF 5.0
-          href: wmf/known-issues/known-issues-50.md
-        - name: Problemas conhecidos no WMF 5.1
-          href: wmf/known-issues/known-issues-51.md
-        - name: Limitações e problemas conhecidos no DSC
-          href: wmf/known-issues/known-issues-dsc.md
+        - name: Visão geral
+          href: windows-powershell/wmf/overview.md
+        - name: Instalação
+          items:
+            - name: Como instalar e configurar o WMF 5.1
+              href: windows-powershell/wmf/setup/install-configure.md
+            - name: Desinstalar o WMF 5.0
+              href: windows-powershell/wmf/setup/uninstall.md
+        - name: What's New
+          expanded: true
+          items:
+            - name: Notas de versão do WMF 5.x
+              href: windows-powershell/wmf/whats-new/release-notes.md
+            - name: Correções de Bug no WMF 5.1
+              href: windows-powershell/wmf/whats-new/bugfixes.md
+            - name: Cmdlets novos e atualizados
+              href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
+            - name: Criando tipos personalizados usando classes do PowerShell
+              href: windows-powershell/wmf/whats-new/class-overview.md
+            - name: Melhorias do Console no WMF 5.1
+              href: windows-powershell/wmf/whats-new/console-improvements.md
+            - name: Melhorias na depuração de script do PowerShell
+              href: windows-powershell/wmf/whats-new/debug-overview.md
+            - name: Rastreamento e registro de scripts
+              href: windows-powershell/wmf/whats-new/script-logging.md
+            - name: Melhorias da DSC no WMF 5.1
+              href: windows-powershell/wmf/whats-new/DSC-improvements.md
+            - name: Melhorias do Mecanismo do PowerShell no WMF 5.1
+              href: windows-powershell/wmf/whats-new/engine-improvements.md
+            - name: Fluxo de informações
+              href: windows-powershell/wmf/whats-new/informationstream-overview.md
+            - name: Aprimoramentos no recurso JEA (Administração Suficiente)
+              href: windows-powershell/wmf/whats-new/jea-improvements.md
+            - name: Melhorias ao Gerenciamento de Pacotes do WMF 5.1
+              href: windows-powershell/wmf/whats-new/package-management-improvements.md
+            - name: SIL (Log de Inventário de Software)
+              href: windows-powershell/wmf/whats-new/sil-overview.md
+            - name: Status de compatibilidade do produto
+              href: windows-powershell/wmf/whats-new/compatibility.md
+            - name: Problemas conhecidos
+              items:
+                - name: Problemas conhecidos no WMF 5.0
+                  href: windows-powershell/wmf/known-issues/known-issues-50.md
+                - name: Problemas conhecidos no WMF 5.1
+                  href: windows-powershell/wmf/known-issues/known-issues-51.md
+                - name: Limitações e problemas conhecidos no DSC
+                  href: windows-powershell/wmf/known-issues/known-issues-dsc.md
+    - name: Iniciando o Windows PowerShell
+      href: windows-powershell/starting-windows-powershell.md
+    - name: Iniciando o Mecanismo do Windows PowerShell 2.0
+      href: windows-powershell/starting-the-windows-powershell-2.0-engine.md
 - name: DSC (Configuração de Estado Desejado)
   items:
     - name: Visão geral
@@ -618,6 +518,44 @@
       items:
         - name: White papers
           href: dsc/further-reading/whitepapers.md
+- name: Comunidade
+  items:
+    - name: Atualização da comunidade
+      href: community/community-update.yml
+    - name: Suporte da comunidade
+      href: community/community-support.md
+    - name: Hall da Fama do Colaborador
+      href: community/hall-of-fame.md
+    - name: Novidades no Docs
+      items:
+        - name: T2 de 2020
+          href: community/2020-Q2.md
+        - name: T1 de 2020
+          href: community/2020-Q1.md
+    - name: Guia do colaborador
+      items:
+        - name: Visão geral
+          href: community/contributing/overview.md
+        - name: Como registrar um problema no Docs
+          href: community/contributing/file-an-issue.md
+        - name: Comece a colaborar para a documentação
+          href: community/contributing/get-started-writing.md
+        - name: Enviar uma solicitação de pull
+          href: community/contributing/pull-requests.md
+        - name: Guia de estilo do PowerShell no Docs
+          href: community/contributing/powershell-style-guide.md
+        - name: Editar a referência de cmdlet
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: Recursos adicionais
+          items:
+            - name: Lista de verificação editorial
+              href: community/contributing/editorial-checklist.md
+            - name: Como gerenciamos problemas
+              href: community/contributing/managing-issues.md
+            - name: Como gerenciamos solicitações de pull
+              href: community/contributing/managing-pull-requests.md
+    - name: Arte digital
+      href: community/digital-art.md
 - name: Scripts de exemplo
   items:
     - name: Scripts de exemplo para administração
@@ -702,124 +640,125 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: Apêndice 2 Criando um atalho personalizado do PowerShell
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-- name: Comunidade
-  expanded: true
+- name: Galeria do PowerShell
   items:
-    - name: Atualização da comunidade
-      href: community/community-update.yml
-    - name: Suporte da comunidade
-      href: community/community-support.md
-    - name: Hall da Fama do Colaborador
-      href: community/hall-of-fame.md
-    - name: Novidades no Docs
+    - name: Visão geral
+      href: gallery/overview.md
+    - name: Instalando o PowerShellGet
+      href: gallery/installing-psget.md
+    - name: Introdução
+      href: gallery/getting-started.md
+    - name: Instruções
       items:
-        - name: T2 de 2020
-          href: community/2020-Q2.md
-        - name: T1 de 2020
-          href: community/2020-Q1.md
-    - name: Guia do colaborador
-      items:
-        - name: Visão geral
-          href: community/contributing/overview.md
-        - name: Como registrar um problema no Docs
-          href: community/contributing/file-an-issue.md
-        - name: Comece a colaborar para a documentação
-          href: community/contributing/get-started-writing.md
-        - name: Enviar uma solicitação de pull
-          href: community/contributing/pull-requests.md
-        - name: Guia de estilo do PowerShell no Docs
-          href: community/contributing/powershell-style-guide.md
-        - name: Editar a referência de cmdlet
-          href: community/contributing/editing-cmdlet-ref.md
-        - name: Recursos adicionais
+        - name: Localizando pacotes na Galeria
           items:
-            - name: Lista de verificação editorial
-              href: community/contributing/editorial-checklist.md
-            - name: Como gerenciamos problemas
-              href: community/contributing/managing-issues.md
-            - name: Como gerenciamos solicitações de pull
-              href: community/contributing/managing-pull-requests.md
-    - name: Arte digital
-      href: community/digital-art.md
+            - name: Pesquisando pacotes
+              href: gallery/how-to/finding-packages/search-syntax.md
+            - name: Pesquisando por compatibilidade
+              href: gallery/how-to/finding-packages/searching-by-compatibility.md
+            - name: Filtrando os resultados da pesquisa
+              href: gallery/how-to/finding-packages/filtering-packages.md
+        - name: Publicando na galeria
+          items:
+            - name: Criando e publicando pacotes
+              href: gallery/how-to/publishing-packages/publishing-a-package.md
+            - name: Criando uma conta de PowerShellGallery
+              href: gallery/how-to/publishing-packages/creating-an-account.md
+            - name: Remover pacotes da lista
+              href: gallery/how-to/publishing-packages/unlisting-packages.md
+            - name: Excluir pacotes
+              href: gallery/how-to/publishing-packages/deleting-packages.md
+            - name: Gerenciando proprietários de pacotes
+              href: gallery/how-to/publishing-packages/managing-package-owners.md
+        - name: Trabalhando com pacotes
+          items:
+            - name: Exibição FileList
+              href: gallery/how-to/working-with-packages/filelist-view.md
+            - name: Implantar na Automação do Azure
+              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
+            - name: Download manual do pacote
+              href: gallery/how-to/working-with-packages/manual-download.md
+            - name: Pacotes que exigem aceitação da licença
+              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
+            - name: Contatando proprietários de pacotes
+              href: gallery/how-to/working-with-packages/contacting-package-owners.md
+            - name: Fornecendo comentários por meio de mídia social ou do recurso Comentários
+              href: gallery/how-to/working-with-packages/social-media-feedback.md
+        - name: Gerenciando o perfil da conta
+          items:
+            - name: Configurações de conta da Galeria do PowerShell
+              href: gallery/how-to/managing-profile/managing-account.md
+            - name: Gerenciando chaves de API
+              href: gallery/how-to/managing-profile/creating-apikeys.md
+        - name: Trabalhar com repositórios privados do PowerShellGet
+          href: gallery/how-to/working-with-local-psrepositories.md
+    - name: Conceitos
+      items:
+        - name: Publicando diretrizes e práticas recomendadas
+          href: gallery/concepts/publishing-guidelines.md
+        - name: Manifesto de pacotes e interface do usuário da Galeria
+          href: gallery/concepts/package-manifest-affecting-ui.md
+        - name: Exigir PSEditions específicas
+          items:
+            - name: Escrevendo scripts com suporte para PSEditions
+              href: gallery/concepts/script-psedition-support.md
+            - name: Escrevendo módulos com suporte para PSEditions
+              href: gallery/concepts/module-psedition-support.md
+        - name: Exigir aceitação da licença
+          items:
+            - name: Exigir a aceitação da licença para Scripts
+              href: gallery/concepts/script-license-acceptance.md
+            - name: Exigir a aceitação da licença para módulos
+              href: gallery/concepts/module-license-acceptance.md
+        - name: Definindo pacotes como pré-lançamento
+          items:
+            - name: Definindo um módulo como pré-lançamento
+              href: gallery/concepts/module-prerelease-support.md
+            - name: Definindo um script como pré-lançamento
+              href: gallery/concepts/script-prerelease-support.md
+        - name: Perfil de regra PSScriptAnalyzer
+          href: gallery/concepts/scriptanalyzer-rule-profile.md
+    - name: Como Obter Suporte
+      items:
+        - name: Relatar abuso
+          href: gallery/how-to/getting-support/report-abuse.md
+        - name: Solução de controvérsias
+          href: gallery/how-to/getting-support/dispute-resolution.md
+        - name: Entrando em contato com os administradores
+          href: gallery/how-to/getting-support/contacting-administrators.md
+        - name: Solução de problemas
+          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
+        - name: Inicializando o provedor do NuGet e NuGet.exe
+          href: gallery/how-to/getting-support/bootstrapping-nuget.md
+        - name: Conformidade de GDPR
+          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
+    - name: Perguntas frequentes sobre a Galeria
+      href: gallery/faqs.md
 - name: Script e desenvolvimento
   items:
     - name: Visual Studio Code
       items:
         - name: Usar o Visual Studio Code
-          href: components/vscode/using-vscode.md
+          href: dev-cross-plat/vscode/using-vscode.md
         - name: Como replicar a experiência do ISE no Visual Studio Code
-          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+          href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: Usando o Visual Studio Code para edição e depuração remotas
-          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+          href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
-          href: components/vscode/understanding-file-encoding.md
+          href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: Escrevendo módulos portáteis
-      href: learn/writing-portable-modules.md
+      href: dev-cross-plat/writing-portable-modules.md
     - name: SDK do PowerShell Herdado
       items:
         - name: Visão geral
           href: developer/windows-powershell.md
         - name: Instalar o SDK do Windows PowerShell
           href: developer/installing-the-windows-powershell-sdk.md
-        - name: Escrever um módulo do Windows PowerShell
-          href: developer/module/writing-a-windows-powershell-module.md
-          items:
-            - name: Noções básicas sobre um módulo do Windows PowerShell
-              href: developer/module/understanding-a-windows-powershell-module.md
-            - name: Como escrever um módulo de script do Windows PowerShell
-              href: developer/module/how-to-write-a-powershell-script-module.md
-            - name: Como escrever um módulo binário do Windows PowerShell
-              href: developer/module/how-to-write-a-powershell-binary-module.md
-            - name: Como escrever um manifesto de módulo do Windows PowerShell
-              href: developer/module/how-to-write-a-powershell-module-manifest.md
-            - name: Instalar um módulo do PowerShell
-              href: developer/module/installing-a-powershell-module.md
-            - name: Modificar o caminho de instalação PSModulePath
-              href: developer/module/modifying-the-psmodulepath-installation-path.md
-            - name: Importar um módulo do PowerShell
-              href: developer/module/importing-a-powershell-module.md
-            - name: Escrever ajuda para módulos do Windows PowerShell
-              href: developer/module/writing-help-for-windows-powershell-modules.md
-              items:
-                - name: Nomear arquivos de ajuda
-                  href: developer/module/naming-help-files.md
-                - name: Suporte à ajuda atualizável
-                  href: developer/module/supporting-updatable-help.md
-                  items:
-                    - name: Visão geral da ajuda atualizável
-                      href: developer/module/updatable-help-overview.md
-                    - name: 'Criação de ajuda atualizável: passo a passo'
-                      href: developer/module/updatable-help-authoring-step-by-step.md
-                    - name: Como a ajuda atualizável funciona
-                      href: developer/module/how-updatable-help-works.md
-                    - name: Como criar um arquivo XML HelpInfo
-                      href: developer/module/how-to-create-a-helpinfo-xml-file.md
-                      items:
-                        - name: Esquema XML HelpInfo
-                          href: developer/module/helpinfo-xml-schema.md
-                        - name: Arquivo de exemplo XML HelpInfo
-                          href: developer/module/helpinfo-xml-sample-file.md
-                        - name: Como nomear um arquivo XML HelpInfo
-                          href: developer/module/how-to-name-a-helpinfo-xml-file.md
-                        - name: Como definir os números de versão do XML HelpInfo
-                          href: developer/module/how-to-set-helpinfo-xml-version-numbers.md
-                    - name: Como preparar arquivos CAB de ajuda atualizável
-                      href: developer/module/how-to-prepare-updatable-help-cab-files.md
-                      items:
-                        - name: Como criar e carregar arquivos CAB
-                          href: developer/module/how-to-create-and-upload-cab-files.md
-                        - name: Como nomear um arquivo CAB de ajuda atualizável
-                          href: developer/module/how-to-name-an-updatable-help-cab-file.md
-                        - name: Tipos de arquivo permitidos em um arquivo CAB de ajuda atualizável
-                          href: developer/module/file-types-permitted-in-an-updatable-help-cab-file.md
-                    - name: Como atualizar os arquivos de ajuda
-                      href: developer/module/how-to-update-help-files.md
-                    - name: Como testar a ajuda atualizável
-                      href: developer/module/how-to-test-updatable-help.md
-                - name: Suporte à ajuda online
-                  href: developer/module/supporting-online-help.md
+        - name: Referência do Windows PowerShell
+          href: developer/windows-powershell-reference.md
+        - name: What's New
+          href: developer/windows-powershell-reference-whats-new.md
         - name: Escrevendo um Cmdlet do Windows PowerShell
-          href: developer/cmdlet/writing-a-windows-powershell-cmdlet.md
           items:
             - name: Visão geral do cmdlet
               href: developer/cmdlet/cmdlet-overview.md
@@ -926,20 +865,6 @@
                           href: developer/cmdlet/defining-default-member-sets-for-objects.md
                     - name: Arquivos de formatação personalizada
                       href: developer/cmdlet/custom-formatting-files.md
-                - name: Registrar cmdlets
-                  href: developer/cmdlet/registering-cmdlets.md
-                  items:
-                    - name: Módulos e snap-ins
-                      href: developer/cmdlet/modules-and-snap-ins.md
-                    - name: Como importar cmdlets por meio de módulos
-                      href: developer/cmdlet/how-to-import-cmdlets-using-modules.md
-                    - name: Como criar um snap-in do Windows PowerShell
-                      href: developer/cmdlet/how-to-create-a-windows-powershell-snap-in.md
-                      items:
-                        - name: Escrever um snap-in do Windows PowerShell
-                          href: developer/cmdlet/writing-a-windows-powershell-snap-in.md
-                        - name: Escrever um snap-in personalizado do Windows PowerShell
-                          href: developer/cmdlet/writing-a-custom-windows-powershell-snap-in.md
                 - name: Solicitar confirmação
                   href: developer/cmdlet/requesting-confirmation.md
                   items:
@@ -1061,8 +986,41 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Amostra Events01
                   href: developer/cmdlet/events01-sample.md
+        - name: Escrever um módulo do Windows PowerShell
+          items:
+            - name: Visão geral
+              href: developer/module/writing-a-windows-powershell-module.md
+            - name: Noções básicas sobre um módulo do Windows PowerShell
+              href: developer/module/understanding-a-windows-powershell-module.md
+            - name: Como escrever um módulo de script do Windows PowerShell
+              href: developer/module/how-to-write-a-powershell-script-module.md
+            - name: Como escrever um módulo binário do Windows PowerShell
+              href: developer/module/how-to-write-a-powershell-binary-module.md
+            - name: Como escrever um manifesto de módulo do Windows PowerShell
+              href: developer/module/how-to-write-a-powershell-module-manifest.md
+            - name: Instalar um módulo do PowerShell
+              href: developer/module/installing-a-powershell-module.md
+            - name: Modificar o caminho de instalação PSModulePath
+              href: developer/module/modifying-the-psmodulepath-installation-path.md
+            - name: Registrar cmdlets
+              items:
+                - name: Visão geral
+                  href: developer/module/registering-cmdlets.md
+                - name: Módulos e snap-ins
+                  href: developer/module/modules-and-snap-ins.md
+                - name: Como importar cmdlets por meio de módulos
+                  href: developer/module/how-to-import-cmdlets-using-modules.md
+                - name: Como criar um snap-in do Windows PowerShell
+                  items:
+                    - name: Visão geral
+                      href: developer/module/how-to-create-a-windows-powershell-snap-in.md
+                    - name: Escrever um snap-in do Windows PowerShell
+                      href: developer/module/writing-a-windows-powershell-snap-in.md
+                    - name: Escrever um snap-in personalizado do Windows PowerShell
+                      href: developer/module/writing-a-custom-windows-powershell-snap-in.md
+            - name: Importar um módulo do PowerShell
+              href: developer/module/importing-a-powershell-module.md
         - name: Escrever um provedor do Windows PowerShell
-          href: developer/provider/writing-a-windows-powershell-provider.md
           items:
             - name: Início rápido do provedor do Windows PowerShell
               href: developer/provider/windows-powershell-provider-quickstart.md
@@ -1099,7 +1057,6 @@
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
         - name: Escrever um aplicativo host do Windows PowerShell
-          href: developer/hosting/writing-a-windows-powershell-host-application.md
           items:
             - name: Início rápido do Windows PowerShell Host
               href: developer/hosting/windows-powershell-host-quickstart.md
@@ -1176,13 +1133,13 @@
                     - name: Amostra RemoteRunspacePool01
                       href: developer/hosting/remoterunspacepool01-sample.md
         - name: Escrever um arquivo de formatação do PowerShell
-          href: developer/format/writing-a-powershell-formatting-file.md
           items:
             - name: Visão geral do arquivo de formatação
               href: developer/format/formatting-file-overview.md
             - name: Conceitos de arquivo de formatação
-              href: developer/format/formatting-file-concepts.md
               items:
+                - name: Visão geral
+                  href: developer/format/formatting-file-concepts.md
                 - name: Criar uma exibição de tabela
                   href: developer/format/creating-a-table-view.md
                 - name: Criar uma exibição de lista
@@ -1201,13 +1158,14 @@
                   href: developer/format/defining-conditions-for-displaying-data.md
                 - name: Formatar os dados exibidos
                   href: developer/format/formatting-displayed-data.md
-                - name: Arquivos de formatação do PowerShell
-                  href: developer/format/powershell-formatting-files.md
-            - name: Exemplos de arquivos de formatação
-              href: developer/format/examples-of-formatting-files.md
+            - name: Arquivos de formatação do PowerShell
               items:
+                - name: Visão geral
+                  href: developer/format/powershell-formatting-files.md
                 - name: Como criar um arquivo de formatação (.format.ps1xml)
                   href: developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+            - name: Exemplos de arquivos de formatação
+              items:
                 - name: Exibição ampla (Básica)
                   href: developer/format/wide-view-basic.md
                 - name: Exibição ampla (GroupBy)
@@ -1639,22 +1597,14 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: Elemento WrapTables (formato)
                   href: developer/format/wraptables-element-format.md
-        - name: Escrever tópicos da ajuda baseados em comentário
-          href: developer/help/writing-comment-based-help-topics.md
+        - name: Escrever tópicos de ajuda para o Windows PowerShell
           items:
-            - name: Escrever ajuda para cmdlets do Windows PowerShell
-              href: developer/help/writing-help-for-windows-powershell-cmdlets.md
-            - name: Escrever ajuda para provedores do Windows PowerShell
-              items:
-                - name: Como adicionar parâmetros dinâmicos a um tópico de ajuda do provedor
-                  href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-                - name: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
-                  href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-            - name: Escrever ajuda para scripts e funções do Windows PowerShell
+            - name: Visão geral
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
             - name: Escrever tópicos da ajuda baseados em comentário
-              href: developer/help/writing-comment-based-help-topics.md
               items:
+                - name: Visão geral
+                  href: developer/help/writing-comment-based-help-topics.md
                 - name: Sintaxe de ajuda baseada em comentários
                   href: developer/help/syntax-of-comment-based-help.md
                 - name: Palavras-chave de ajuda baseada em comentários
@@ -1669,39 +1619,92 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: Escrever tópicos de ajuda com base em XML para comandos
               items:
-                - name: Como criar o arquivo de ajuda do cmdlet
-                  href: developer/help/how-to-create-the-cmdlet-help-file.md
-                - name: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
-                - name: Como adicionar uma descrição do cmdlet
-                  href: developer/help/how-to-add-a-cmdlet-description.md
-                - name: Como adicionar sintaxe a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
-                - name: Como adicionar informações de parâmetro
-                  href: developer/help/how-to-add-parameter-information.md
-                - name: Como adicionar tipos de entrada a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
-                - name: Como adicionar valores retornados a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
-                - name: Como adicionar notas a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
-                - name: Como adicionar exemplos a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
-                - name: Como adicionar links relacionados a um tópico de ajuda do cmdlet
-                  href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: Escrever ajuda para cmdlets do Windows PowerShell
+                  items:
+                    - name: Visão geral
+                      href: developer/help/writing-help-for-windows-powershell-cmdlets.md
+                    - name: Como criar o arquivo de ajuda do cmdlet
+                      href: developer/help/how-to-create-the-cmdlet-help-file.md
+                    - name: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar uma descrição do cmdlet
+                      href: developer/help/how-to-add-a-cmdlet-description.md
+                    - name: Como adicionar sintaxe a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar informações de parâmetro
+                      href: developer/help/how-to-add-parameter-information.md
+                    - name: Como adicionar tipos de entrada a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar valores retornados a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar notas a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar exemplos a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+                    - name: Como adicionar links relacionados a um tópico de ajuda do cmdlet
+                      href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: Escrever ajuda para módulos do Windows PowerShell
+                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                  items:
+                    - name: Nomear arquivos de ajuda
+                      href: developer/help/naming-help-files.md
+                    - name: Suporte à ajuda atualizável
+                      href: developer/help/supporting-updatable-help.md
+                      items:
+                        - name: Visão geral da ajuda atualizável
+                          href: developer/help/updatable-help-overview.md
+                        - name: 'Criação de ajuda atualizável: passo a passo'
+                          href: developer/help/updatable-help-authoring-step-by-step.md
+                        - name: Como a ajuda atualizável funciona
+                          href: developer/help/how-updatable-help-works.md
+                        - name: Como criar um arquivo XML HelpInfo
+                          href: developer/help/how-to-create-a-helpinfo-xml-file.md
+                          items:
+                            - name: Esquema XML HelpInfo
+                              href: developer/help/helpinfo-xml-schema.md
+                            - name: Arquivo de exemplo XML HelpInfo
+                              href: developer/help/helpinfo-xml-sample-file.md
+                            - name: Como nomear um arquivo XML HelpInfo
+                              href: developer/help/how-to-name-a-helpinfo-xml-file.md
+                            - name: Como definir os números de versão do XML HelpInfo
+                              href: developer/help/how-to-set-helpinfo-xml-version-numbers.md
+                        - name: Como preparar arquivos CAB de ajuda atualizável
+                          href: developer/help/how-to-prepare-updatable-help-cab-files.md
+                          items:
+                            - name: Como criar e carregar arquivos CAB
+                              href: developer/help/how-to-create-and-upload-cab-files.md
+                            - name: Como nomear um arquivo CAB de ajuda atualizável
+                              href: developer/help/how-to-name-an-updatable-help-cab-file.md
+                            - name: Tipos de arquivo permitidos em um arquivo CAB de ajuda atualizável
+                              href: developer/help/file-types-permitted-in-an-updatable-help-cab-file.md
+                            - name: Como atualizar os arquivos de ajuda
+                              href: developer/help/how-to-update-help-files.md
+                            - name: Como testar a ajuda atualizável
+                              href: developer/help/how-to-test-updatable-help.md
+                        - name: Suporte à ajuda online
+                          href: developer/help/supporting-online-help.md
+                - name: Escrever ajuda para provedores do Windows PowerShell
+                  items:
+                    - name: Como adicionar parâmetros dinâmicos a um tópico de ajuda do provedor
+                      href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+                    - name: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
+                      href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Criar um serviço Web OData de gerenciamento
-          href: developer/webservices/creating-a-management-odata-web-service.md
           items:
+            - name: Visão geral
+              href: developer/webservices/creating-a-management-odata-web-service.md
             - name: Adicionar recursos a um serviço Web OData de gerenciamento
               href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
             - name: Implementar autorização personalizada para um serviço Web OData de gerenciamento
-              href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
               items:
+                - name: Visão geral
+                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
                 - name: Configurar a autorização baseada em função
                   href: developer/webservices/configuring-role-based-authorization.md
-                  items:
-                    - name: Esquema de configuração de autorização baseada em função
-                      href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: Esquema de configuração de autorização baseada em função
+                  href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: Invocar cmdlets do Windows PowerShell com serviços Web OData de gerenciamento
+                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: Implementar SessionConfiguration para um serviço Web OData de gerenciamento
               href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
             - name: Criação do arquivo de esquema MOF para um serviço Web OData de gerenciamento
@@ -1714,32 +1717,32 @@
               href: developer/webservices/deploying-a-management-odata-web-service.md
             - name: Associar entidades OData de gerenciamento
               href: developer/webservices/associating-management-odata-entities.md
-            - name: Invocar cmdlets do Windows PowerShell com serviços Web OData de gerenciamento
-              href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: Arquivos de esquema de extensões do IIS OData de gerenciamento
-              href: developer/webservices/management-odata-iis-extension-schema-files.md
               items:
+                - name: Visão geral
+                  href: developer/webservices/management-odata-iis-extension-schema-files.md
                 - name: Esquema de mapeamento de recursos
                   href: developer/webservices/resource-mapping-schema.md
                 - name: Esquema de recursos públicos
                   href: developer/webservices/public-resource-schema.md
         - name: Escrevendo um Fluxo de Trabalho do Windows PowerShell
-          href: developer/workflow/writing-a-windows-powershell-workflow.md
           items:
+            - name: Visão geral
+              href: developer/workflow/writing-a-windows-powershell-workflow.md
             - name: Adicionar atividades do Windows PowerShell à caixa de ferramentas do Visual Studio
               href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: Parâmetros de fluxo de trabalho comuns
-              href: developer/workflow/common-workflow-parameters.md
-            - name: Criar uma atividade de fluxo de trabalho de um cmdlet do Windows PowerShell
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: Criar um fluxo de trabalho pelo uso de um script do Windows PowerShell
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: Criar um fluxo de trabalho com atividades do Windows PowerShell
               href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
+            - name: Criar um fluxo de trabalho pelo uso de um script do Windows PowerShell
+              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: Importar e invocar um fluxo de trabalho do Windows PowerShell
               href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
+            - name: Criar uma atividade de fluxo de trabalho de um cmdlet do Windows PowerShell
+              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
             - name: Agendar trabalhos com a API do Windows PowerShell
               href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
+            - name: Parâmetros de fluxo de trabalho comuns
+              href: developer/workflow/common-workflow-parameters.md
         - name: Guia do programador do Windows PowerShell
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
@@ -1866,8 +1869,3 @@
                   href: developer/prog-guide/runspace09-code-sample.md
                 - name: Exemplo de código RunSpace10
                   href: developer/prog-guide/runspace10-code-sample.md
-        - name: Referência do Windows PowerShell
-          href: developer/windows-powershell-reference.md
-          items:
-            - name: What's New
-              href: developer/windows-powershell-reference-whats-new.md
