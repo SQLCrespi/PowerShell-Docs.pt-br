@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ec194a4cc5abba5061e43152e0cb851c22611445
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "62086350"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564422"
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell
 
@@ -69,11 +69,9 @@ Como o protocolo de autenticação NTLM não pode garantir a identidade do servi
 Se for inviável implantar um certificado SSL em um servidor para conexões de NTLM, você poderá suprimir os erros de identidade resultantes adicionando o servidor à lista **TrustedHosts** do WinRM. Observe que adicionar um nome de servidor à lista TrustedHosts não deve ser considerada como uma forma de declaração de confiabilidade dos hosts em si, uma vez que o protocolo de autenticação NTLM não pode garantir que você esteja de fato se conectando ao host ao qual está pretendendo se conectar.
 Em vez disso, você deve considerar a configuração TrustedHosts como a lista de hosts para a qual você deseja suprimir o erro gerado por não ter sido capaz de verificar a identidade do servidor.
 
-
 ### <a name="ongoing-communication"></a>Comunicação em andamento
 
 Quando a autenticação inicial é concluída, o [Protocolo de Comunicação Remota do PowerShell](https://msdn.microsoft.com/library/dd357801.aspx) criptografa toda a comunicação em andamento com um chave simétrica AES-256 por sessão.
-
 
 ## <a name="making-the-second-hop"></a>Dando o segundo salto
 

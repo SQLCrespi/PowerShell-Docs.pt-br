@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Filtrando resultados da pesquisa
-ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328037"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691469"
 ---
 # <a name="filtering-search-results"></a>Filtrando resultados da pesquisa
 
@@ -20,12 +20,14 @@ Para ver mais detalhes sobre um pacote específico, clique nele.
 ## <a name="filter-by"></a>Filtrar Por
 
 O menu suspenso em "Filtrar Por" permite aos usuários filtrar os resultados por:
+
 - Incluir pré-lançamento
 - Apenas estável
 
 Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artigo [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Controle de versão de pré-lançamento adicionado ao PowerShellGet e à Galeria do PowerShell), no blog da equipe do PowerShell.
 
 Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resultados por:
+
 - Tipos de Pacote
   - Módulo
   - Script
@@ -49,6 +51,7 @@ Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opç
 ## <a name="sort-by"></a>Classificar Por
 
 O menu suspenso Classificar Por permite aos usuários classificar os resultados por:
+
 - Popularidade – a popularidade é determinada pela Contagem de Downloads
 - A a Z – em ordem alfabética por nome do pacote
 - Recentes – os pacotes aparecem na ordem da data de publicação

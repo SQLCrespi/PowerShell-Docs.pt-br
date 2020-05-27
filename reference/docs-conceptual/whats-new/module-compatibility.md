@@ -1,12 +1,12 @@
 ---
 title: Compatibilidade de módulo do PowerShell 7
 ms.date: 02/03/2020
-ms.openlocfilehash: 02095b8233b6fc7b6d2a30bcb841bfd831a50031
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935183"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565056"
 ---
 # <a name="powershell-7-module-compatibility"></a>Compatibilidade de módulo do PowerShell 7
 
@@ -25,7 +25,6 @@ Install-WindowsFeature -Name ActiveDirectory
 ```
 
 No Windows 10, os módulos de gerenciamento do Windows são disponibilizados como **Recursos Opcionais do Windows** ou **Recursos do Windows**. Os comandos a seguir devem ser executados a partir de uma sessão com privilégios elevados usando **Executar como administrador**.
-
 
 - Para os Recursos Opcionais do Windows
 

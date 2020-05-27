@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
-ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 460b1c67af0af81dd993a45c4f988b825dc2f3eb
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417051"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560416"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 
@@ -45,7 +45,6 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 | **Site do Projeto** | O site do projeto é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando um ProjectURI. No manifesto de script, ele é controlado pela especificação .PROJECTURI. | Sim | Sim |
 | **Licença** | O link da licença é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando uma propriedade LicenseURI. No manifesto de script, ele é controlado pela especificação .LICENSEURI. É importante observar que, quando uma licença não é fornecida por meio de uma propriedade LicenseURI ou dentro de um módulo, os termos de uso da Galeria do PowerShell especificam os termos de uso do pacote. Confira os termos de uso para saber mais. | Sim | Sim |
 | **Ícone** | Um ícone pode ser especificado para qualquer pacote na Galeria do PowerShell; basta fornecer o sinalizador IconURI no manifesto do script ou na seção Privatedata-PSData do manifesto do módulo. O IconURI deve apontar para uma imagem de 32 x 32, com tela de fundo transparente. O URI **precisa** ser uma URL de imagem direta e **não deve** conduzir para uma página da Web que contenha a imagem ou um arquivo no pacote da Galeria do PowerShell. | Sim | Sim |
-
 
 ## <a name="editing-package-details"></a>Editar detalhes do pacote
 

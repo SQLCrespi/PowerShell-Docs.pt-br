@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Gerenciar proprietários de pacote
-ms.openlocfilehash: 5cf26a7195ac446177cbb7f3a055e8e0a78569cc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 72a3ff72818c5461c74d46de5689e2d6c59b19bf
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328257"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564662"
 ---
 # <a name="managing-package-owners"></a>Gerenciar proprietários de pacote
 
@@ -41,7 +41,6 @@ Esse processo de convites impede que os usuários adicionem outros usuários err
 
 Observe que os metadados de “Autores” são meramente texto de forma livre; somente “Proprietários” são controlados.
 
-
 ## <a name="removing-owners"></a>Removendo proprietários
 
 Quando um pacote tem vários proprietários e um deles precisa ser removido, o processo é simples:
@@ -50,8 +49,6 @@ Quando um pacote tem vários proprietários e um deles precisa ser removido, o p
 2. Navegue até uma página do pacote, usando a guia Pacotes, pesquisando ou clicando em seu nome de usuário e em [**Gerenciar Meus Pacotes**](https://www.powershellgallery.com/account/Packages).
 3. Quando estiver conectado como o proprietário de um pacote, você verá um link "Gerenciar proprietários" do lado esquerdo para clicar;
 4. Clique no link “Remover” ao lado do proprietário a ser removido.
-
-
 
 ## <a name="transferring-package-ownership"></a>Transferir a propriedade do pacote
 
@@ -65,7 +62,6 @@ Essa solicitação chegou de diversas maneiras, mas o processo funciona da mesma
 
 - A propriedade do pacote muda de um desenvolvedor para outro
 - O pacote foi publicado acidentalmente usando a conta errada
-
 
 ## <a name="orphaned-packages"></a>Pacotes órfãos
 

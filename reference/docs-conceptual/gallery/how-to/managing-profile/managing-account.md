@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
-ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278045"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560450"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -65,7 +65,6 @@ Para alterar a conta de logon, é necessário estar conectado com a conta atual.
    ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Digite a senha da nova conta. Após inserir a senha, você retornará para a página "Configurações da conta" e verá que a conta de logon foi atualizada.
-
 
 ## <a name="enable-two-factor-authentication-2fa"></a>Habilitar a 2FA (autenticação de dois fatores)
 

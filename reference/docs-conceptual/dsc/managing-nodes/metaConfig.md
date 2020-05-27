@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o Gerenciador de Configurações Local
-ms.openlocfilehash: 5847a29efd165724ffe9f1f0e89cfaf358ade31c
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271841"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692000"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -125,6 +125,7 @@ Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
 > [!NOTE]
+>
 > * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ConfigurationRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
@@ -152,6 +153,7 @@ Um **ResourceRepositoryWeb** define as propriedades a seguir.
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
 > [!NOTE]
+>
 > * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
@@ -180,6 +182,7 @@ A função de servidor de relatório não é compatível com o serviço de pull 
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
 > [!NOTE]
+>
 > * Compatível com as versões 1809 e posteriores do Windows.
 
 Um exemplo de script para simplificar a configuração do valor ReportServerWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)

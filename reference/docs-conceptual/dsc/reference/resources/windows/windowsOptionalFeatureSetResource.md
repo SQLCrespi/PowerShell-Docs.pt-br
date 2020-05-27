@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsOptionalFeatureSet DSC
-ms.openlocfilehash: f378006a6c362ee9890d70dd76fb552dd262a544
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0930bd0c6d1955005ea607b610e004818c0ad06f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952863"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560144"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Recurso do WindowsOptionalFeatureSet DSC
 

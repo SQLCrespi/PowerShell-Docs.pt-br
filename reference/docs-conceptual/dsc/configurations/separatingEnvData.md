@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Separando Dados de Configuração e de Ambiente
-ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954433"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692425"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separando Dados de Configuração e de Ambiente
 
@@ -32,14 +32,14 @@ Vamos criar uma única configuração que garante que **IIS** esteja presente em
 ```powershell
 Configuration MyDscConfiguration {
 
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
+  WindowsFeature IISInstall {
+    Ensure = 'Present'
+    Name   = 'Web-Server'
+  }
 
-    }
+ }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -102,7 +102,7 @@ Definiremos os dados do ambiente de desenvolvimento e de produção em um arquiv
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-        WebSiteName     = "New website"
+            WebSiteName     = "New website"
         },
 
         @{
@@ -253,11 +253,12 @@ Observe que você pode ter quantas chaves adicionais quiser, e pode nomeá-las c
 
 Acesse as chaves adicionais usando a variável especial **$ConfigurationData**.
 Neste exemplo, `ConfigFileContents` é acessado com a linha:
+
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
- no bloco de recurso `File`.
 
+ no bloco de recurso `File`.
 
 ```powershell
 $MyData =
@@ -311,8 +312,8 @@ configuration WebsiteConfig
 }
 ```
 
-
 ## <a name="see-also"></a>Consulte Também
+
 - [Usar dados de configuração](configData.md)
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações DSC](configurations.md)

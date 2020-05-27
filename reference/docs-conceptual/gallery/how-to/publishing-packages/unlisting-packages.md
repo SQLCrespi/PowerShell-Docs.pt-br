@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Remover pacotes da lista
-ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4291b910dcea65b2ca241e55838ea00d4ec53ee4
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978263"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692354"
 ---
 # <a name="unlisting-packages"></a>Remover pacotes da lista
 
@@ -32,6 +32,7 @@ Para remover o pacote da lista, visite a página de detalhes do pacote e selecio
 
 Se você tiver um cenário em que a exclusão do pacote é necessária, entre em contato com os Administradores da Galeria do PowerShell.
 Os cenários de exclusão válidos são:
+
 - Problemas de violação de direitos autorais.
 - O pacote possui conteúdo potencialmente perigoso.
 - O pacote contém dados confidenciais.

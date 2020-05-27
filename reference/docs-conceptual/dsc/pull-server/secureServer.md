@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: b2469984086a827b6b2a0fe84d1f326fc214ec28
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 2d707dc64c327cf30d09104aee140e5b78ee7c29
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500692"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692261"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -86,6 +86,7 @@ O módulo **PowerShellGet** baixará o módulo em:
 `C:\Program Files\Windows PowerShell\Modules`
 
 Tarefa de planejamento
+
 - Você tem acesso aos arquivos de instalação do Windows Server 2012 R2?
 - O ambiente de implantação terá acesso à Internet para baixar o módulo e o WMF da galeria online?
 - Como você instalará as atualizações mais recentes de segurança depois de instalar o sistema operacional?
@@ -102,6 +103,7 @@ As implantações de servidor de pull têm suporte em servidores físicos e virt
 - Rede: Adaptador Gigabit Ethernet
 
 Tarefa de planejamento
+
 - Você implantará em hardware físico ou em uma plataforma de virtualização?
 - Qual é o processo de solicitação de um novo servidor para seu ambiente de destino?
 - Qual é o tempo médio de resposta para que um servidor fique disponível?
@@ -121,14 +123,15 @@ Um DNS CNAME permite a criação de um alias para se referir ao seu registro de 
 Ao escolher um nome para o registro DNS, lembre-se da arquitetura da solução.
 Se estiver usando o balanceamento de carga, o certificado usado para proteger o tráfego por meio de HTTPS precisará compartilhar o mesmo nome do registro DNS.
 
-       Cenário        |                                                                                         Melhor prática
-:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Ambiente de Teste       | Reproduzir o ambiente de produção planejado, se possível. Um nome do host do servidor é adequado para configurações simples. Se o DNS não estiver disponível, um endereço IP poderá ser usado no lugar do nome do host.
-Implantação de Nó único | Criar um registro DNS CNAME que aponta para o nome do host do servidor.
+|       Cenário        |                                                                                         Melhor prática
+|:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Ambiente de Teste       | Reproduzir o ambiente de produção planejado, se possível. Um nome do host do servidor é adequado para configurações simples. Se o DNS não estiver disponível, um endereço IP poderá ser usado no lugar do nome do host.
+|Implantação de Nó único | Criar um registro DNS CNAME que aponta para o nome do host do servidor.
 
 Para obter mais informações, consulte [Configuração de Round Robin de DNS no Windows Server](/previous-versions/windows/it-pro/windows-server-2003/cc787484(v=ws.10)).
 
 Tarefa de planejamento
+
 - Você sabe quem contatar para que os registros DNS sejam criados e alterados?
 - Qual é o tempo médio de resposta para uma solicitação de um registro DNS?
 - Você precisa solicitar registros de nome do host (A) estáticos para servidores?
@@ -143,6 +146,7 @@ Embora seja possível implantar um servidor de pull usando HTTP, o que facilita 
 Os requisitos de certificado para proteger o tráfego HTTPS do servidor de pull não são diferentes da proteção de qualquer outro site HTTPS. O modelo de **servidor Web** dos Serviços de Certificado do Windows Server satisfaz os recursos necessários.
 
 Tarefa de planejamento
+
 - Se as solicitações de certificado não são automatizadas, quem você precisará contatar para solicitar um certificado?
 - Qual é o tempo médio de resposta para a solicitação?
 - Como o arquivo de certificado será transferido para você?
@@ -159,6 +163,7 @@ Um servidor de pull pode ser implantado usando um serviço Web hospedado no IIS 
 Os clientes interagindo com o serviço Web fazem uma solicitação de informações que é retornada em uma única resposta. Não são necessárias solicitações sequenciais, portanto, não é necessário que a plataforma de balanceamento de carga garanta que as sessões sejam mantidas em um único servidor em qualquer ponto no tempo.
 
 Tarefa de planejamento
+
 - Qual solução será usada para o tráfego de balanceamento de carga entre servidores?
 - Se estiver usando um balanceador de carga de hardware, quem receberá uma solicitação para adicionar uma nova configuração ao dispositivo?
 - Qual é o tempo médio de resposta de uma solicitação para configurar um novo serviço Web com balanceamento de carga?
@@ -187,6 +192,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 ```
 
 Tarefa de planejamento
+
 - Se você estiver planejando um ambiente de laboratório ou de teste, quais cenários serão fundamentais para validar?
 - Há módulos disponíveis publicamente que contêm recursos para cobrir tudo o que é necessário ou você precisará criar seus próprios recursos?
 - Seu ambiente terá acesso à Internet para recuperar os módulos públicos?
@@ -210,6 +216,7 @@ O planejamento de **Guids** de configuração merece atenção adicional quando 
   O GUID é algo que deve ser considerado como dado confidencial, porque ele pode ser aproveitado por alguém mal-intencionado para obter informações sobre como os servidores estão implantados e configurados no seu ambiente. Para obter mais informações, consulte [Alocar Guids com segurança no Modo Pull do Desired State Configuration do PowerShell](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/).
 
 Tarefa de planejamento
+
 - Quem será responsável pela cópia de configurações na pasta do servidor de pull quando elas estiverem prontas?
 - Se as configurações são criadas por uma equipe de aplicativos, qual será o processo para entregá-las?
 - Você utilizará um repositório para armazenar configurações conforme elas são criadas entre as equipes?

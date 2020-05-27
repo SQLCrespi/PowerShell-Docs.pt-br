@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: galeria,powershell,cmdlet,psgallery
 title: Pacotes com edições do PowerShell ou sistema operacional compatível
-ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278292"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691458"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Pacotes com edições do PowerShell ou sistemas operacionais compatíveis
 
@@ -17,6 +17,7 @@ Da versão 5.1 em diante, o PowerShell está disponível em edições diferentes
 ## <a name="searching-by-powershell-edition"></a>Pesquisar por edição do PowerShell
 
 As duas edições do PowerShell são:
+
 - **Desktop Edition:** criada no .NET Framework, fornece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de volume completo do Windows, como Server Core e Windows Desktop.
 - **Core Edition:** criada no .NET Core, oferece compatibilidade com scripts e módulos destinados a versões do PowerShell executadas em edições de volume reduzido do Windows, como o Nano Server e Windows IoT.
 

@@ -3,12 +3,12 @@ title: Iniciar a contribuição para a documentação do PowerShell
 description: Este artigo é uma visão geral de como começar como um colaborador da documentação do PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: fdf29feb75abb6592205aaf1726c07a60ce3a924
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 989605f21685decda5f916298a05ec7f5600e575
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81005509"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560671"
 ---
 # <a name="get-started-contributing-to-powershell-documentation"></a>Iniciar a contribuição para a documentação do PowerShell
 

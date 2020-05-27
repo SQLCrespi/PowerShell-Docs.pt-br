@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 070ecb871003487e2f1ff7b0d56c44c562acaaf8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277705"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565073"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -93,7 +93,6 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 Na atualização 1809 do Windows 10 e no Windows Server 2019, atualizamos alguns módulos do PowerShell na caixa de entrada para marcá-los como compatíveis com o PowerShell Core.
 
 Quando o PowerShell Core 6.1 for iniciado, ele incluirá `$windir\System32` automaticamente como parte da variável de ambiente `PSModulePath`. No entanto, expõe módulos somente para `Get-Module` e `Import-Module` se seu `CompatiblePSEdition` está marcado como compatível `Core`.
-
 
 ```powershell
 Get-Module -ListAvailable

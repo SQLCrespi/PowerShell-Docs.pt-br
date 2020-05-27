@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso de DSC WaitForAll
-ms.openlocfilehash: 1bdaa63812766cfe5ec0778ef07689109683b994
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: b756bad2c49659d983c58ba8d0c989888674722e
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953013"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560790"
 ---
 # <a name="dsc-waitforall-resource"></a>Recurso de DSC WaitForAll
 

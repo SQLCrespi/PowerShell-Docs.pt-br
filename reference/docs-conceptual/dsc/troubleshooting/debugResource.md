@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Depurando os recursos de DSC
-ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954253"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691960"
 ---
 # <a name="debugging-dsc-resources"></a>Depurando os recursos de DSC
 
@@ -22,7 +22,6 @@ Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**.
 É possível verificar se a depuração foi habilitada analisando o resultado de uma chamada para o [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
 A seguinte saída do PowerShell mostra o resultado de habilitar a depuração:
-
 
 ```powershell
 PS C:\DebugTest> $LCM = Get-DscLocalConfigurationManager
@@ -40,7 +39,6 @@ ResourceScriptBreakAll
 
 PS C:\DebugTest>
 ```
-
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>Iniciando uma configuração com a depuração habilitada
 Para depurar um recurso de DSC, inicie uma configuração que chame esse recurso.
@@ -61,6 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
+
 Depois de compilar a configuração, inicie chamando [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 A configuração parará quando o LCM (Gerenciador de Configurações Local) chamar o primeiro recurso na configuração.
 Se você usar os parâmetros `-Verbose` e `-Wait`, a saída exibirá as linhas que você precisa inserir para iniciar a depuração.
@@ -85,6 +84,7 @@ Enter-PSSession -ComputerName TEST-SRV -Credential <credentials>
 Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
+
 Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção.
 As três últimas linhas na saída mostram como anexar ao processo e iniciar a depuração do script do recurso.
 
