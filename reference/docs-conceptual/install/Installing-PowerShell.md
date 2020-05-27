@@ -2,12 +2,12 @@
 ms.date: 08/09/2018
 keywords: instalação, windows, linux, macOS, ARM, raspbian
 title: Instalar o PowerShell
-ms.openlocfilehash: 22c88bfbbe4cd6b163e69ab5e599a98528caf9c8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fd62d33945e0253b43b80f294964d5e9b8ba03a0
+ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78405051"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840997"
 ---
 # <a name="installing-various-versions-of-powershell"></a>Instalar várias versões do PowerShell
 
@@ -24,4 +24,4 @@ O PowerShell Core é um projeto de software livre no [GitHub](https://github.com
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-Para obter mais informações sobre como instalar as versões herdadas do PowerShell no Windows, confira [Instalar o Windows PowerShell](installing-windows-powershell.md).
+Para obter mais informações sobre como instalar as versões herdadas do PowerShell no Windows, confira [Instalar o Windows PowerShell](../windows-powershell/install/installing-windows-powershell.md).
