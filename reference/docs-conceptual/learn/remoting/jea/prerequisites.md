@@ -2,17 +2,16 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,segurança
 title: Pré-requisitos do JEA
-ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 5083a9ad4aa87c753799d36f55540342225ecddd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74416719"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556862"
 ---
-# <a name="prerequisites"></a>Prerequisites
+# <a name="prerequisites"></a>Pré-requisitos
 
 O Just Enough Administration é um recurso incluído no PowerShell 5.0 e posterior. Este artigo descreve os pré-requisitos que precisam ser atendidos para começar a usar o JEA.
-
 
 ## <a name="check-which-version-of-powershell-is-installed"></a>Verificar qual versão do PowerShell que está instalada
 

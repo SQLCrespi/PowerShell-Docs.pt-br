@@ -2,16 +2,16 @@
 ms.date: 07/09/2019
 keywords: DSC, GPO, PowerShell, configuração, instalação
 title: Início Rápido – Converter a Política de Grupo em DSC
-ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500652"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808241"
 ---
-> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
-
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Início Rápido: Converter a Política de Grupo em DSC
+
+> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Você pode gerar uma configuração DSC de uma Política de Grupo ou uma linha de base da Central de Segurança do Azure. O módulo [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) inclui os comandos a seguir para realizar essa tarefa.
 
