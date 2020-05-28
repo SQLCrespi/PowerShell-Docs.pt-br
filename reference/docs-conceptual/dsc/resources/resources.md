@@ -2,12 +2,12 @@
 ms.date: 02/28/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recursos de DSC
-ms.openlocfilehash: 863898d910cc3c75c3e5977a5b6b0657ba7ed512
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278232"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692210"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 
@@ -22,9 +22,9 @@ Um recurso pode modelar algo tão genérico quanto um arquivo ou tão específic
 Cada recurso tem um *esquema que determina a sintaxe necessária para usar o recurso em uma [Configuração](../configurations/configurations.md).
 Um esquema de recurso pode ser definido das seguintes maneiras:
 
-- Arquivo **'Schema.Mof'** : A maioria dos recursos define seus _esquemas_ em um arquivo 'schema.mof' usando o [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
-- Arquivo **'\<Resource Name\>.schema.psm1'** : [Recursos de Composição](../configurations/compositeConfigs.md) definem seus *esquemas* em um arquivo '<ResourceName>.schema.psm1' usando um [Bloco de Parâmetro](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
-- Arquivo **'\<Resource Name\>.psm1'** : Recursos DSC baseado em classe definem seus _esquemas_ na definição da classe. Os itens de sintaxe são indicados como propriedades de Classe. Para saber mais, confira [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc).
+- Arquivo `Schema.Mof`: A maioria dos recursos define seus _esquemas_ em um arquivo 'schema.mof' usando o [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
+- Arquivo `<Resource Name>.schema.psm1`: [Recursos de composição](../configurations/compositeConfigs.md) definem o *esquema* em um arquivo `<ResourceName>.schema.psm1` usando um [bloco de parâmetro](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
+- Arquivo `<Resource Name>.psm1`: Recursos DSC baseado em classe definem seus _esquemas_ na definição da classe. Os itens de sintaxe são indicados como propriedades de Classe. Para saber mais, confira [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc).
 
 Para recuperar a sintaxe para um recurso DSC, use o cmdlet [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) com o parâmetro `-Syntax`. Esse uso é semelhante ao uso de [Get-Command](/powershell/module/microsoft.powershell.core/get-command) com o parâmetro `-Syntax` para obter a sintaxe do cmdlet. A saída que você vê mostrará o modelo usado para um bloco de recursos do recurso que você especificar.
 
