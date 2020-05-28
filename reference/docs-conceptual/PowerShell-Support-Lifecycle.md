@@ -2,12 +2,12 @@
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte ao PowerShell Core
 ms.date: 03/09/2020
-ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: e7ec0fd9a702b7d23a784eff6e730fc3a6c30467
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500984"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560722"
 ---
 # <a name="powershell-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell
 
@@ -23,7 +23,7 @@ Além disso, você pode encontrar ajuda de outros membros da comunidade na Micro
 
 ## <a name="lifecycle-of-powershell-7"></a>Ciclo de vida do PowerShell 7
 
-Com o lançamento do PowerShell 7, o PowerShell continua a ter suporte na [Política de ciclo de vida moderna da Microsoft][modern], mas as datas de suporte estão vinculadas ao [ciclo de vida de suporte do .NET Core][Long-Term]. Nessa abordagem de manutenção, os clientes podem escolher versões de LTS (suporte de longo prazo) ou versões atuais. O PowerShell 7.0 é uma versão de LTS. O suporte termina com o suporte do .NET Core 3.1. A próxima versão de LTS segue a próxima versão de LTS do .NET Core. Confira a [tabela de fim da vida útil das versões do PowerShell](#powershell-releases-end-of-life) para obter as datas atuais de término do suporte. As atualizações de versão de LTS contêm apenas atualizações críticas de segurança, de manutenção e correções que são projetadas para evitar ou minimizar o impacto nas cargas de trabalho existentes.
+Com o lançamento do PowerShell 7, o PowerShell continua a ter suporte na [Política de ciclo de vida moderna da Microsoft][modern], mas as datas de suporte estão vinculadas ao [ciclo de vida de suporte do .NET Core][Long-Term]. Nessa abordagem de manutenção, os clientes podem escolher versões de LTS (suporte de longo prazo) ou versões atuais. O PowerShell 7.0 é uma versão de LTS. O suporte termina com o suporte do .NET Core 3.1. A próxima versão de LTS segue a próxima versão de LTS do .NET Core. Confira a [tabela de fim da vida útil das versões do PowerShell](#powershell-releases-end-of-life) para obter as datas atuais do fim de suporte. As atualizações de versão de LTS contêm apenas atualizações críticas de segurança, de manutenção e correções que são projetadas para evitar ou minimizar o impacto nas cargas de trabalho existentes.
 
 Uma versão atual é uma versão que ocorre entre as versões de LTS. As versões atuais podem conter correções críticas, inovações e novos recursos. A versão atual recebe suporte por três meses após a próxima versão atual ou com LTS.
 
@@ -139,6 +139,17 @@ Para saber mais, confira o artigo [about_Windows_Compatibility][] e a [lista de 
 
 Os [recursos experimentais][] estão limitados ao [suporte da comunidade](#community-support).
 
+## <a name="security-servicing-criteria"></a>Critérios de manutenção de segurança
+
+O PowerShell segue os [Critérios da manutenção de segurança da Microsoft no Windows][].
+A tabela a seguir descreve os recursos que atendem aos critérios de manutenção e os que não atendem.
+
+| Recurso                          | Type             |
+|----------------------------------|------------------|
+| Política de execução                 | Defesa em profundidade |
+| Bloqueio do sistema – com o AppLocker | Defesa em profundidade |
+| Bloqueio do sistema – com o WDAC      | Recurso de segurança |
+
 ## <a name="release-history"></a>Histórico de versões
 
 A tabela a seguir contém uma linha do tempo das principais versões do PowerShell. Esta tabela é fornecida para referência histórica. Ela não se destina ao uso para determinar o ciclo de vida do suporte.
@@ -172,3 +183,4 @@ A tabela a seguir contém uma linha do tempo das principais versões do PowerShe
 [lista de compatibilidade do módulo]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
 [Recursos experimentais]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures
+[Critérios da manutenção de segurança da Microsoft no Windows]: https://www.microsoft.com/en-us/msrc/windows-security-servicing-criteria

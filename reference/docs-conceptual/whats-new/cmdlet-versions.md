@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Histórico de versões de módulos e cmdlets
-ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
+ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082729"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83751336"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>Histórico de versões de módulos e cmdlets
 
@@ -77,7 +77,6 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Get-IseSnippet    | &check; |      |       |       | Somente Windows |
 | Import-IseSnippet | &check; |      |       |       | Somente Windows |
 | New-IseSnippet    | &check; |      |       |       | Somente Windows |
-
 
 ### <a name="microsoftpowershellarchive"></a>Microsoft.PowerShell.Archive
 
@@ -260,7 +259,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | Somente Windows                     |
 | Resolve-Path                  | &check; | &check; | &check; | &check; |                                  |
-| Restart-Computer              | &check; | &check; | &check; | &check; |                                  |
+| Restart-Computer              | &check; | &check; | &check; | &check; | Suporte para o Linux/macOS adicionado na versão 7.1 |
 | Restart-Service               | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Restore-Computer              | &check; |         |         |         | Somente Windows                     |
 | Resume-Service                | &check; | &check; | &check; | &check; | Somente Windows                     |
@@ -278,7 +277,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Start-Process                 | &check; | &check; | &check; | &check; |                                  |
 | Start-Service                 | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Start-Transaction             | &check; |         |         |         | Somente Windows                     |
-| Stop-Computer                 | &check; | &check; | &check; | &check; | Suporte adicionado para Linux/macOS em 7.0 |
+| Stop-Computer                 | &check; | &check; | &check; | &check; | Suporte para o Linux/macOS adicionado na versão 7.1 |
 | Stop-Process                  | &check; | &check; | &check; | &check; |                                  |
 | Stop-Service                  | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Suspend-Service               | &check; | &check; | &check; | &check; | Somente Windows                     |

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: galeria,powershell,cmdlet,psget
 title: Inicializando o NuGet
-ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 139b2c5a9e742eca8f5ac36c9acd721216584335
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935174"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690873"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Inicializar o provedor do NuGet e o NuGet.exe
 
@@ -146,7 +146,7 @@ O caso de uso mais comum para esse cenário é quando uma galeria privada está 
 
 Uma opção é inicializar um computador que esteja conectado à Internet e copiar os arquivos para os computadores offline usando um processo confiável. Após inicializar o computador conectado à Internet, o binário NuGet.exe estará localizado em uma das duas pastas:
 
- - Se os cmdlets `Publish-Module` ou `Publish-Script` foram executados com permissões elevadas (como um administrador):
+- Se os cmdlets `Publish-Module` ou `Publish-Script` foram executados com permissões elevadas (como um administrador):
 
    ```powershell
    $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
@@ -158,7 +158,7 @@ Uma opção é inicializar um computador que esteja conectado à Internet e copi
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-Uma segunda opção é fazer o download do NuGet.exe do site NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Ao selecionar uma versão NugGet para computadores de produção, verifique se ela é posterior à 2.8.5.208 e identifique a versão rotulada como "recomendada". Lembre-se de desbloquear o arquivo se ele tiver sido baixado usando um navegador. Isso pode ser feito usando o cmdlet `Unblock-File`.
+Uma segunda opção é baixar o NuGet.exe do site NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Ao selecionar uma versão NugGet para computadores de produção, verifique se ela é posterior à 2.8.5.208 e identifique a versão rotulada como "recomendada". Lembre-se de desbloquear o arquivo se ele tiver sido baixado usando um navegador. Isso pode ser feito usando o cmdlet `Unblock-File`.
 
 Em ambos os casos, o arquivo NuGet.exe pode ser copiado para qualquer local em `$env:path`, mas os locais padrão são:
 

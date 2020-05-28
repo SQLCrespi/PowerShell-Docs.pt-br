@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Script de DSC
-ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 50d4667396c8c619079288ec51599152ed2d6cd5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953063"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557015"
 ---
 # <a name="dsc-script-resource"></a>Recurso Script de DSC
 
@@ -34,7 +34,7 @@ Script [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|Propriedade |DESCRIÇÃO |
+|Propriedade |Descrição |
 |---|---|
 |GetScript |Um bloco de script que retorna o estado atual do Node. |
 |SetScript |Um bloco de script usado pelo DSC para impor a conformidade quando o Node não estiver no estado desejado. |
@@ -43,7 +43,7 @@ Script [string] #ResourceName
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |DESCRIÇÃO |
+|Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
@@ -98,7 +98,7 @@ Configuration ScriptTest
 }
 ```
 
-### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar as informações de versão usando um recurso de Script
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar informações de versão usando um recurso de Script
 
 Este exemplo recupera as informações da versão *compatível* de um arquivo de texto no computador de criação e as armazenam na variável `$version`. Ao gerar o arquivo MOF do nó, o DSC substitui as variáveis `$using:version` em cada bloco de script pelo valor da variável `$version`.
 Durante a execução, a versão *compatível* é armazenada em um arquivo de texto em cada Node, comparada e atualizada em execuções subsequentes.
@@ -136,4 +136,63 @@ Configuration ScriptTest
         }
     }
 }
+```
+
+### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>Exemplo 3: Utilizar parâmetros em um recurso de script
+
+Este exemplo acessa parâmetros de dentro do recurso de script usando o escopo `using`. Observe que **ConfigurationData** pode ser acessado de maneira semelhante. Como o exemplo 2, espera-se que uma versão seja armazenada dentro de um arquivo local no nó de destino. No entanto, o caminho do arquivo local e a versão são configuráveis, desacoplando o código dos dados de configuração.
+
+```powershell
+Configuration ScriptTest
+{
+    param
+    (
+        [Version]
+        $Version,
+
+        [string]
+        $FilePath
+    )
+
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+
+    Node localhost
+    {
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content -Path $using:FilePath
+                return @{ 'Result' = "$currentVersion" }
+            }
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:Version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                Set-Content -Path $using:FilePath -Value $using:Version
+            }
+        }
+    }
+}
+```
+
+O arquivo MOF resultante inclui as variáveis e seus respectivos valores acessados por meio do escopo `using`.
+Eles são injetados em cada bloco de script que usa as variáveis. Por razões de brevidade, os scripts Test e Set foram removidos:
+
+```Output
+instance of MSFT_ScriptResource as $MSFT_ScriptResource1ref
+{
+ GetScript = "$FilePath ='C:\\Config.ini'\n\n $currentVersion = Get-Content -Path $FilePath\n return @{ 'Result' = \"$currentVersion\" }\n";
+ TestScript = ...;
+ SetScript = ...;
+};
 ```

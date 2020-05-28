@@ -2,12 +2,12 @@
 title: Novidades no PowerShell 7.0
 description: Novos recursos e alterações lançados no PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263128"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808394"
 ---
 # <a name="whats-new-in-powershell-70"></a>Novidades no PowerShell 7.0
 
@@ -53,19 +53,20 @@ Para obter informações mais atualizadas sobre os sistemas operacionais com sup
 
 ## <a name="running-powershell-7"></a>Executar o PowerShell 7
 
-O PowerShell 7 é instalado em um novo diretório e executado lado a lado com o Windows PowerShell 5.1. Para o PowerShell Core 6.x, o PowerShell 7 é uma atualização in-loco que remove o PowerShell Core 6.x.
+O PowerShell 7 é instalado em um diretório separado do Windows PowerShell.
+Isso permite a execução do PowerShell 7 lado a lado com o Windows PowerShell 5.1. Para o PowerShell Core 6.x, o PowerShell 7 é uma atualização in-loco que remove o PowerShell Core 6.x.
 
 - O PowerShell 7 é instalado em `%programfiles%\PowerShell\7`
 - A pasta `%programfiles%\PowerShell\7` é adicionada ao `$env:PATH`
 
-Os pacotes do instalador do PowerShell 7 atualizam versões anteriores do PowerShell Core 6.x:
+O pacote do instalador do PowerShell 7 atualiza as versões anteriores do PowerShell Core 6.x:
 
 - PowerShell Core 6.x no Windows: `%programfiles%\PowerShell\6` é substituído por `%programfiles%\PowerShell\7`
 - Linux: `/opt/microsoft/powershell/6` é substituído por `/opt/microsoft/powershell/7`
 - macOS: `/usr/local/microsoft/powershell/6` é substituído por `/usr/local/microsoft/powershell/7`
 
 > [!NOTE]
-> No Windows PowerShell, o executável para iniciar o PowerShell é denominado `powershell.exe`. Na versão 6 e posterior, o executável é alterado para dar suporte à execução lado a lado. O novo executável para iniciar o PowerShell 7 é `pwsh.exe`. Os builds de versão prévia permanecerão no local como `pwsh-preview` em vez de `pwsh` no diretório 7-preview.
+> No Windows PowerShell, o executável para iniciar o PowerShell é denominado `powershell.exe`. Da versão 6 em diante, o nome do executável é alterado para dar suporte à execução lado a lado. O novo nome do executável para iniciar o PowerShell 7 é `pwsh.exe`. Os builds de versão prévia permanecem no local como `pwsh-preview` em vez de `pwsh` no diretório da versão prévia da versão 7.
 
 ## <a name="improved-backwards-compatibility-with-windows-powershell"></a>Melhor compatibilidade com versões anteriores do Windows PowerShell
 
@@ -214,7 +215,7 @@ $x
 100
 ```
 
-No seguinte exemplo, o operando à direita não será avaliado:
+No seguinte exemplo, o operando à direita não é avaliado:
 
 ```powershell
 [string] $todaysDate = '1/10/2020'
@@ -240,14 +241,14 @@ ${Service}?.status
 Stopped
 ```
 
-O seguinte exemplo retornará nulo, sem tentar acessar o nome do membro **Status**:
+O seguinte exemplo retorna nulo sem tentar acessar o nome do membro **Status**:
 
 ```powershell
 $service = $Null
 ${Service}?.status
 ```
 
-Da mesma forma, usando `?[]`, o valor do elemento será retornado:
+Da mesma forma, usando `?[]`, o valor do elemento é retornado:
 
 ```powershell
 $a = 1..10
@@ -266,7 +267,7 @@ Saiba mais informações [Sobre operadores](/powershell/module/microsoft.powersh
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>Novo modo de exibição ConciseView e cmdlet Get-Error
 
-A exibição das mensagens de erro foi aprimorada para melhorar a legibilidade dos erros interativos e de script com um novo modo de exibição padrão **ConciseView**. Os modos de exibição são selecionáveis pelo usuário por meio da variável de preferência `$ErrorView`.
+O PowerShell 7.0 aprimora a exibição de mensagens de erro para aumentar a legibilidade dos erros interativos e de script com um novo modo de exibição padrão **ConciseView**. Os modos de exibição são selecionáveis pelo usuário por meio da variável de preferência `$ErrorView`.
 
 Com **ConciseView**, se um erro não for de script ou do analisador, será exibida uma mensagem de erro de linha única:
 
@@ -282,8 +283,8 @@ Se o erro ocorrer durante a execução do script ou for um erro de análise, o P
 
 ![Exibição de erro de um script](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-O modo de exibição padrão no PowerShell 7 é **ConciseView**. O modo de exibição padrão anterior era  **NormalView**, selecionável pelo usuário ao definir a variável de preferência `$ErrorView`.
-
+O modo de exibição padrão no PowerShell 7 é **ConciseView**. O modo de exibição padrão anterior era **NormalView**, que você pode selecionar ao definir a variável de preferência `$ErrorView`.
+ 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -292,7 +293,7 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 > [!NOTE]
 > Uma nova propriedade **ErrorAccentColor** é adicionada a `$Host.PrivateData` para dar suporte à alteração da cor de destaque da mensagem de erro.
 
-Um novo cmdlet `Get-Error` fornece uma exibição detalhada completa do erro totalmente qualificado quando desejado.
+Quando desejado, um novo cmdlet `Get-Error` fornece um modo de exibição detalhado e completo do erro totalmente qualificado.
 Por padrão, o cmdlet exibe os detalhes completos, incluindo as exceções internas, do último erro que ocorreu.
 
 ![Exibir de Get-Error](./media/What-s-New-in-PowerShell-70/myscript-geterror.png)
@@ -517,7 +518,7 @@ Saiba mais informações sobre [Invoke-DSCResource](/powershell/module/psdesired
 - Limpar problemas de estilo de CodeFactor provenientes de commits no último mês (nº 10591) (Obrigado, @iSazonov!)
 - Corrigir erro de digitação na descrição do recurso experimental PSTernaryOperator (nº 10586) (Obrigado, @bergmeister!)
 - Converter o valor de enumeração ActionPreference.Suspend em um estado reservado sem suporte e remover a restrição do uso de ActionPreference.Ignore nas variáveis de preferência (nº 10317) (Obrigado, @KirkMunro!)
-- Substituir ArrayList por List<T> para obter um código mais legível e confiável sem alterar a funcionalidade (nº 10333) (Obrigado, @iSazonov!)
+- Substituir ArrayList por List\<T> para obter um código mais legível e confiável sem alterar a funcionalidade (nº 10333) (Agradecemos, @iSazonov!)
 - Fazer correções de estilo de código em TestConnectionCommand (nº 10439) (Obrigado, @vexx32!)
 - Limpar AutomationEngine e remover a chamada de método extra SetSessionStateDrive (nº 10416) (Obrigado, @iSazonov!)
 - Renomear ParameterSetName padrão de volta para Delimiter em ConvertTo-Csv e ConvertFrom-Csv (nº 10425)

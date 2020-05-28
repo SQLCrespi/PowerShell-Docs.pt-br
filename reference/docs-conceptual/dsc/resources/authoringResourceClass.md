@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com classes do PowerShell
-ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952823"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692220"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrevendo um recurso personalizado de DSC com classes do PowerShell
 
@@ -500,7 +500,7 @@ class FileResource {
 
 Um módulo pode definir vários recursos DSC baseados em classe. Você pode criar a estrutura de pasta das seguintes maneiras:
 
-1. Defina o primeiro recurso no arquivo "<ModuleName>.psm1" e os recursos subsequentes na pasta **DSCResources**.
+1. Defina o primeiro recurso no arquivo `<ModuleName>.psm1` e os próximos na pasta **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com MOF
-ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7dd107431e756e5cbfc2d6babec41331b89743cc
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952893"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692231"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrevendo um recurso personalizado de DSC com MOF
 
@@ -67,7 +67,7 @@ Observe o seguinte sobre o código anterior:
 
 ### <a name="writing-the-resource-script"></a>Escrevendo o script de recurso
 
-O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado <ResourceName>.psm1. No exemplo a seguir, as funções são armazenadas em um arquivo chamado Demo_IISWebsite.psm1.
+O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado `<ResourceName>.psm1`. No exemplo a seguir, as funções são armazenadas em um arquivo chamado Demo_IISWebsite.psm1.
 
 > [!NOTE]
 > Ao executar o mesmo script de configuração no recurso mais de uma vez, você não receberá erros e o recurso permanecerá no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções **Get-TargetResource** e **Test-TargetResource** deixam o recurso inalterado e se chamar a função **Set-TargetResource** mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
@@ -221,7 +221,7 @@ $result
 
 ### <a name="creating-the-module-manifest"></a>Criando o manifesto de módulo
 
-Por fim, use o cmdlet **New-ModuleManifest** para definir um arquivo <ResourceName>.psd1 para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
+Por fim, use o cmdlet **New-ModuleManifest** para definir um arquivo `<ResourceName>.psd1` para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'

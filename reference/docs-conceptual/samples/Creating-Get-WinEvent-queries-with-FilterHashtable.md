@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Criando consultas Get-WinEvent com FilterHashtable
-ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444384"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563931"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Criando consultas Get-WinEvent com FilterHashtable
 
@@ -99,7 +99,7 @@ Continue a criar a tabela de hash com a chave **ProviderName**. O **ProviderName
 
 ![Imagem das fontes do Visualizador de Eventos do Windows.](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
-Atualize a tabela de hash e inclua o par **chave-valor** com a chave **ProviderName e o valor **Tempo de execução do .NET**.
+Atualize a tabela de hash e inclua o par **chave-valor** com a chave, **ProviderName**, e o valor, **Runtime do .NET**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
