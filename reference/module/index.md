@@ -14,15 +14,15 @@ archive_url: ''
 layout: ApiBrowserPage
 apiPlatform: powershell
 quickFilterColumn1: powershell-7,win10-ps
-quickFilterColumn2: azps-4.1.0,win-mdop2-ps
+quickFilterColumn2: azps-4.2.0,win-mdop2-ps
 quickFilterColumn3: sqlserver-ps,systemcenter-ps-2019
-ms.openlocfilehash: 7fc4752083c6a2ef7d0cc1c1b8d2ff5dfd8e3c60
-ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
+ms.openlocfilehash: 9a725f40ea41a5687f6d154f72b00442785d7125
+ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83751304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84633321"
 ---
-# <a name="powershell-module-browser"></a><span data-ttu-id="05785-103">Navegador do Módulo do PowerShell</span><span class="sxs-lookup"><span data-stu-id="05785-103">PowerShell Module Browser</span></span>
+# <a name="powershell-module-browser"></a><span data-ttu-id="5f900-103">Navegador do Módulo do PowerShell</span><span class="sxs-lookup"><span data-stu-id="5f900-103">PowerShell Module Browser</span></span>
 
-<span data-ttu-id="05785-104">Pesquisar todos os módulos e cmdlets do PowerShell da Microsoft – basta começar a digitar na caixa abaixo.</span><span class="sxs-lookup"><span data-stu-id="05785-104">Search all PowerShell modules and cmdlets from Microsoft – just start typing in the box below.</span></span>
+<span data-ttu-id="5f900-104">Pesquisar todos os módulos e cmdlets do PowerShell da Microsoft – basta começar a digitar na caixa abaixo.</span><span class="sxs-lookup"><span data-stu-id="5f900-104">Search all PowerShell modules and cmdlets from Microsoft – just start typing in the box below.</span></span>
