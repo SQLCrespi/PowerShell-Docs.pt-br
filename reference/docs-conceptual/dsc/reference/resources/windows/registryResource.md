@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Registry de DSC
-ms.openlocfilehash: 9f65815cbe6a94831b88cb3425bf688e1a99a9c0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 3acd79fa81bc731f344d810371b961dc3af3a11d
+ms.sourcegitcommit: 1ab59991c18e1b9692333d5e58ce649eaa75594f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83559895"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203640"
 ---
 # <a name="dsc-registry-resource"></a>Recurso Registry de DSC
 
@@ -54,9 +54,11 @@ Registry [string] #ResourceName
 > [!NOTE]
 > A propriedade comum **PsDscRunAsCredential** foi adicionada ao WMF 5.0 para permitir a execução de qualquer recurso de DSC no contexto de outras credenciais. Para saber mais, confira [Usar credenciais com recursos de DSC](../../../configurations/runasuser.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
-Este exemplo assegura que uma chave chamada "ExampleKey" está presente no hive **HKEY\_LOCAL\_MACHINE**.
+### <a name="example-1-ensure-specified-value-and-data-under-specified-registry-key"></a>Exemplo 1: Verifique o Valor e os Dados especificados na chave do Registro especificada
+
+Este exemplo verifica se o valor do Registro "TestValue" em uma chave chamada "ExampleKey1" está presente no hive `HKEY\_LOCAL\_MACHINE` e tem os dados "TestData".
 
 ```powershell
 Configuration RegistryTest
@@ -64,9 +66,25 @@ Configuration RegistryTest
     Registry RegistryExample
     {
         Ensure      = "Present"  # You can also set Ensure to "Absent"
-        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey1"
         ValueName   = "TestValue"
         ValueData   = "TestData"
+    }
+}
+```
+
+### <a name="example-2-ensure-specified-registry-key-exists"></a>Exemplo 2: Verifique se a chave do Registro especificada existe
+
+Este exemplo verifica se uma chave chamada "ExampleKey2" está presente no hive **HKEY\_LOCAL\_MACHINE**.
+
+```powershell
+Configuration RegistryTest
+{
+    Registry RegistryExample
+    {
+        Ensure      = "Present"  # You can also set Ensure to "Absent"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey2"
+        ValueName   = ""
     }
 }
 ```
