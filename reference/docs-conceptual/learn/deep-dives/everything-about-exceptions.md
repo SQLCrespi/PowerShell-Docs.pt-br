@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre exceções
 description: O tratamento de erro é apenas uma parte da vida quando se trata de escrever código.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fd3ddacbf14d1faeee98682697161f86c6ff0c72
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
+ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149539"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84337175"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>Tudo o que você queria saber sobre exceções
 
@@ -55,7 +55,7 @@ A seguir está uma rápida visão geral da sintaxe básica de manipulação de e
 Para criar o nosso próprio evento de exceção, geramos uma exceção com a palavra-chave `throw`.
 
 ```powershell
-function Do-Something
+function Start-Something
 {
     throw "Bad thing happened"
 }
@@ -64,7 +64,7 @@ function Do-Something
 Isso cria uma exceção de runtime que é um erro de encerramento. Ele é manipulado por um `catch` em uma função de chamada ou sai do script com uma mensagem como esta.
 
 ```powershell
-PS> Do-Something
+PS> Start-Something
 
 Bad thing happened
 At line:1 char:1
@@ -89,7 +89,7 @@ Agradeço a Lee Daily por lembrar sobre o uso de `-ErrorAction Stop` dessa manei
 Se você especificar `-ErrorAction Stop` em qualquer função ou cmdlet avançado, ele transformará todas as instruções `Write-Error` em erros de encerramento que interromperão a execução ou que poderão ser manipulados por um `catch`.
 
 ```powershell
-Do-Something -ErrorAction Stop
+Start-Something -ErrorAction Stop
 ```
 
 ### <a name="trycatch"></a>Try/Catch
@@ -99,7 +99,7 @@ A maneira como a manipulação de exceção funciona no PowerShell (e em muitas 
 ```powershell
 try
 {
-    Do-Something
+    Start-Something
 }
 catch
 {
@@ -108,7 +108,7 @@ catch
 
 try
 {
-    Do-Something -ErrorAction Stop
+    Start-Something -ErrorAction Stop
 }
 catch
 {
@@ -213,7 +213,7 @@ Essa propriedade mostra a ordem das chamadas de função que levaram você ao c�
 ```powershell
 PS> $PSItem.ScriptStackTrace
 at Get-Resource, C:\blog\throwerror.ps1: line 13
-at Do-Something, C:\blog\throwerror.ps1: line 5
+at Start-Something, C:\blog\throwerror.ps1: line 5
 at <ScriptBlock>, C:\blog\throwerror.ps1: line 18
 ```
 
@@ -276,7 +276,7 @@ Você pode ser seletivo com as exceções que você captura. As exceções têm 
 ```powershell
 try
 {
-    Do-Something -Path $path
+    Start-Something -Path $path
 }
 catch [System.IO.FileNotFoundException]
 {
@@ -300,7 +300,7 @@ Se tivéssemos um `System.IO.PathTooLongException`, o `IOException` seria corres
 ```powershell
 try
 {
-    Do-Something -Path $path -ErrorAction Stop
+    Start-Something -Path $path -ErrorAction Stop
 }
 catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException]
 {
@@ -449,7 +449,6 @@ At line:31 char:9
     + FullyQualifiedErrorId : Unable to find the specified file.
 ```
 
-
 Uma mensagem de erro que informa que o meu script foi interrompido porque chamei `throw` na linha 31 é uma mensagem incorreta para ser exibida para os usuários do seu script. Ela não informa nada de útil.
 
 Dexter Dhami apontou que posso usar `ThrowTerminatingError()` para corrigir isso.
@@ -495,13 +494,13 @@ Isso altera a origem do erro para o Cmdlet e oculta os elementos internos da sua
 Kirk Munro destaca que algumas exceções estão encerrando erros apenas quando são executadas dentro de um bloco `try/catch`. A seguir está o exemplo que ele me deu que gera uma exceção de runtime de divisão por zero.
 
 ```powershell
-function Do-Something { 1/(1-1) }
+function Start-Something { 1/(1-1) }
 ```
 
 Em seguida, invoque-a dessa forma para que ela gere o erro e ainda gere a mensagem.
 
 ```powershell
-&{ Do-Something; Write-Output "We did it. Send Email" }
+&{ Start-Something; Write-Output "We did it. Send Email" }
 ```
 
 Mas, ao colocar o mesmo código dentro de um `try/catch`, vemos outra coisa ocorrer.
@@ -509,14 +508,13 @@ Mas, ao colocar o mesmo código dentro de um `try/catch`, vemos outra coisa ocor
 ```powershell
 try
 {
-    &{ Do-Something; Write-Output "We did it. Send Email" }
+    &{ Start-Something; Write-Output "We did it. Send Email" }
 }
 catch
 {
     Write-Output "Notify Admin to fix error and send email"
 }
 ```
-
 
 Vemos que o erro se torna um erro de encerramento e não gera a primeira mensagem. O que eu não gosto sobre isso é que você pode ter um código em uma função e ele funcionar de modo diferente se alguém estiver usando um `try/catch`.
 
@@ -528,12 +526,12 @@ Uma nuance de `$PSCmdlet.ThrowTerminatingError()` é que ele cria um erro de enc
 
 ### <a name="public-function-templates"></a>Modelos de função pública
 
-Uma última consideração sobre a minha conversa com Kirk Munro é que ele coloca um `try{...}catch{...}` em todos os blocos `begin`, `process` e `end` em todas as funções avançadas dele. Nesses blocos catch genéricos, uma única linha usa `$PSCmdlet.ThrowTerminatingError($PSitem)` para lidar com todas as exceções que estão saindo das funções.
+Uma última consideração sobre a minha conversa com Kirk Munro é que ele coloca um `try{...}catch{...}` em todos os blocos `begin`, `process` e `end` em todas as funções avançadas dele. Nesses blocos catch genéricos, uma única linha usa `$PSCmdlet.ThrowTerminatingError($PSItem)` para lidar com todas as exceções que estão saindo das funções.
 
 ```powershell
-function Do-Something
+function Start-Something
 {
-    [cmdletbinding()]
+    [CmdletBinding()]
     param()
 
     process
@@ -544,7 +542,7 @@ function Do-Something
         }
         catch
         {
-            $PSCmdlet.ThrowTerminatingError($PSitem)
+            $PSCmdlet.ThrowTerminatingError($PSItem)
         }
     }
 }
