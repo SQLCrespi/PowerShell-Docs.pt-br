@@ -8,12 +8,11 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: fbaea91c12eede70d30e29dce3fd2d36d7f55994
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
-ms.translationtype: MT
+ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564833"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86035426"
 ---
 # <a name="examples-of-comment-based-help"></a>Exemplos de ajuda baseada em comentários
 
@@ -185,7 +184,7 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-O comando a seguir obtém a ajuda do script. Como o script não é um diretório listado na variável de ambiente Path, o comando Get-Help que obtém a ajuda do script deve especificar o caminho do script.
+O comando a seguir obtém a ajuda do script. Como o script não está em um diretório listado na variável de ambiente Path, o comando Get-Help que obtém a ajuda do script deve especificar o caminho do script.
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
@@ -257,7 +256,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>Exemplo 3: descrições de parâmetro em uma instrução param
 
-Este exemplo mostra como inserir ParameterDescriptions na `Param` instrução de uma função ou script. Esse formato é mais útil quando as descrições de parâmetro são breves.
+Este exemplo mostra como inserir descrições de parâmetro na `Param` instrução de uma função ou script. Esse formato é mais útil quando as descrições de parâmetro são breves.
 
 ```powershell
 function Add-Extension
@@ -286,7 +285,7 @@ Os resultados são os mesmos dos resultados, por exemplo 1. Get-Help interpreta 
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Exemplo 4: redirecionando para um arquivo XML
 
-Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do script Update-Month. ps1. O script usa a `.ExternalHelp` palavra-chave para especificar o caminho para um tópico de ajuda baseado em XML para o script.
+Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do script de Update-Month.ps1. O script usa a `.ExternalHelp` palavra-chave para especificar o caminho para um tópico de ajuda baseado em XML para o script.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
