@@ -10,16 +10,16 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/28/2020
 ms.locfileid: "84149419"
 ---
-# <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a><span data-ttu-id="cb47e-103">Tudo o que você sempre quis saber sobre a instrução switch</span><span class="sxs-lookup"><span data-stu-id="cb47e-103">Everything you ever wanted to know about the switch statement</span></span>
+# <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a><span data-ttu-id="3a655-103">Tudo o que você sempre quis saber sobre a instrução switch</span><span class="sxs-lookup"><span data-stu-id="3a655-103">Everything you ever wanted to know about the switch statement</span></span>
 
-<span data-ttu-id="cb47e-104">Como muitas outras linguagens, o PowerShell tem comandos para controlar o fluxo de execução dentro dos seus scripts.</span><span class="sxs-lookup"><span data-stu-id="cb47e-104">Like many other languages, PowerShell has commands for controlling the flow of execution within your scripts.</span></span> <span data-ttu-id="cb47e-105">Uma dessas instruções é a instrução [switch][] e, no PowerShell, ela oferece recursos que não são encontrados em outras linguagens.</span><span class="sxs-lookup"><span data-stu-id="cb47e-105">One of those statements is the [switch][] statement and in PowerShell, it offers features that aren't found in other languages.</span></span> <span data-ttu-id="cb47e-106">Hoje, vamos nos aprofundar sobre como trabalhar com o `switch` do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cb47e-106">Today, we take a deep dive into working with the PowerShell `switch`.</span></span>
+<span data-ttu-id="3a655-104">Como muitas outras linguagens, o PowerShell tem comandos para controlar o fluxo de execução dentro dos seus scripts.</span><span class="sxs-lookup"><span data-stu-id="3a655-104">Like many other languages, PowerShell has commands for controlling the flow of execution within your scripts.</span></span> <span data-ttu-id="3a655-105">Uma dessas instruções é a instrução [switch][] e, no PowerShell, ela oferece recursos que não são encontrados em outras linguagens.</span><span class="sxs-lookup"><span data-stu-id="3a655-105">One of those statements is the [switch][] statement and in PowerShell, it offers features that aren't found in other languages.</span></span> <span data-ttu-id="3a655-106">Hoje, vamos nos aprofundar sobre como trabalhar com o `switch` do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3a655-106">Today, we take a deep dive into working with the PowerShell `switch`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cb47e-107">A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][].</span><span class="sxs-lookup"><span data-stu-id="cb47e-107">The [original version][] of this article appeared on the blog written by [@KevinMarquette][].</span></span> <span data-ttu-id="cb47e-108">A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco.</span><span class="sxs-lookup"><span data-stu-id="cb47e-108">The PowerShell team thanks Kevin for sharing this content with us.</span></span> <span data-ttu-id="cb47e-109">Confira o blog dele em [PowerShellExplained.com][].</span><span class="sxs-lookup"><span data-stu-id="cb47e-109">Please check out his blog at [PowerShellExplained.com][].</span></span>
+> <span data-ttu-id="3a655-107">A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][].</span><span class="sxs-lookup"><span data-stu-id="3a655-107">The [original version][] of this article appeared on the blog written by [@KevinMarquette][].</span></span> <span data-ttu-id="3a655-108">A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco.</span><span class="sxs-lookup"><span data-stu-id="3a655-108">The PowerShell team thanks Kevin for sharing this content with us.</span></span> <span data-ttu-id="3a655-109">Confira o blog dele em [PowerShellExplained.com][].</span><span class="sxs-lookup"><span data-stu-id="3a655-109">Please check out his blog at [PowerShellExplained.com][].</span></span>
 
-## <a name="if-statement"></a><span data-ttu-id="cb47e-110">Instrução If</span><span class="sxs-lookup"><span data-stu-id="cb47e-110">If statement</span></span>
+## <a name="if-statement"></a><span data-ttu-id="3a655-110">Instrução If</span><span class="sxs-lookup"><span data-stu-id="3a655-110">If statement</span></span>
 
-<span data-ttu-id="cb47e-111">Uma das primeiras instruções que você aprende é a instrução `if`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-111">One of the first statements that you learn is the `if` statement.</span></span> <span data-ttu-id="cb47e-112">Ela permitirá que você execute um bloco de script se uma instrução for `$true`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-112">It lets you execute a script block if a statement is `$true`.</span></span>
+<span data-ttu-id="3a655-111">Uma das primeiras instruções que você aprende é a instrução `if`.</span><span class="sxs-lookup"><span data-stu-id="3a655-111">One of the first statements that you learn is the `if` statement.</span></span> <span data-ttu-id="3a655-112">Ela permitirá que você execute um bloco de script se uma instrução for `$true`.</span><span class="sxs-lookup"><span data-stu-id="3a655-112">It lets you execute a script block if a statement is `$true`.</span></span>
 
 ``` powershell
 if ( Test-Path $Path )
@@ -28,7 +28,7 @@ if ( Test-Path $Path )
 }
 ```
 
-<span data-ttu-id="cb47e-113">Você pode ter uma lógica muito mais complicada usando instruções `elseif` e `else`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-113">You can have much more complicated logic by using `elseif` and `else` statements.</span></span> <span data-ttu-id="cb47e-114">A seguir está um exemplo no qual tenho um valor numérico para o dia da semana e quero obter o nome como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cb47e-114">Here is an example where I have a numeric value for day of the week and I want to get the name as a string.</span></span>
+<span data-ttu-id="3a655-113">Você pode ter uma lógica muito mais complicada usando instruções `elseif` e `else`.</span><span class="sxs-lookup"><span data-stu-id="3a655-113">You can have much more complicated logic by using `elseif` and `else` statements.</span></span> <span data-ttu-id="3a655-114">A seguir está um exemplo no qual tenho um valor numérico para o dia da semana e quero obter o nome como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="3a655-114">Here is an example where I have a numeric value for day of the week and I want to get the name as a string.</span></span>
 
 ``` powershell
 $day = 3
@@ -48,11 +48,11 @@ $result
 Wednesday
 ```
 
-<span data-ttu-id="cb47e-115">Esse é um padrão comum e há várias maneiras de lidar com isso.</span><span class="sxs-lookup"><span data-stu-id="cb47e-115">It turns out that this is a common pattern and there are many ways to deal with this.</span></span> <span data-ttu-id="cb47e-116">Uma delas é com um `switch`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-116">One of them is with a `switch`.</span></span>
+<span data-ttu-id="3a655-115">Esse é um padrão comum e há várias maneiras de lidar com isso.</span><span class="sxs-lookup"><span data-stu-id="3a655-115">It turns out that this is a common pattern and there are many ways to deal with this.</span></span> <span data-ttu-id="3a655-116">Uma delas é com um `switch`.</span><span class="sxs-lookup"><span data-stu-id="3a655-116">One of them is with a `switch`.</span></span>
 
-## <a name="switch-statement"></a><span data-ttu-id="cb47e-117">Instrução switch</span><span class="sxs-lookup"><span data-stu-id="cb47e-117">Switch statement</span></span>
+## <a name="switch-statement"></a><span data-ttu-id="3a655-117">Instrução switch</span><span class="sxs-lookup"><span data-stu-id="3a655-117">Switch statement</span></span>
 
-<span data-ttu-id="cb47e-118">A instrução `switch` permite que você forneça uma variável e uma lista de valores possíveis.</span><span class="sxs-lookup"><span data-stu-id="cb47e-118">The `switch` statement allows you to provide a variable and a list of possible values.</span></span> <span data-ttu-id="cb47e-119">Se o valor corresponder à variável, o bloco de script será executado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-119">If the value matches the variable, then its scriptblock is executed.</span></span>
+<span data-ttu-id="3a655-118">A instrução `switch` permite que você forneça uma variável e uma lista de valores possíveis.</span><span class="sxs-lookup"><span data-stu-id="3a655-118">The `switch` statement allows you to provide a variable and a list of possible values.</span></span> <span data-ttu-id="3a655-119">Se o valor corresponder à variável, o bloco de script será executado.</span><span class="sxs-lookup"><span data-stu-id="3a655-119">If the value matches the variable, then its scriptblock is executed.</span></span>
 
 ``` powershell
 $day = 3
@@ -75,11 +75,11 @@ $result
 'Wednesday'
 ```
 
-<span data-ttu-id="cb47e-120">Nesse exemplo, o valor de `$day` corresponde a um dos valores numéricos, em seguida, o nome correto é atribuído a `$result`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-120">For this example, the value of `$day` matches one of the numeric values, then the correct name is assigned to `$result`.</span></span> <span data-ttu-id="cb47e-121">Estamos apenas fazendo uma atribuição de variável nesse exemplo, mas qualquer PowerShell pode ser executado nesses blocos de script.</span><span class="sxs-lookup"><span data-stu-id="cb47e-121">We are only doing a variable assignment in this example, but any PowerShell can be executed in those script blocks.</span></span>
+<span data-ttu-id="3a655-120">Nesse exemplo, o valor de `$day` corresponde a um dos valores numéricos, em seguida, o nome correto é atribuído a `$result`.</span><span class="sxs-lookup"><span data-stu-id="3a655-120">For this example, the value of `$day` matches one of the numeric values, then the correct name is assigned to `$result`.</span></span> <span data-ttu-id="3a655-121">Estamos apenas fazendo uma atribuição de variável nesse exemplo, mas qualquer PowerShell pode ser executado nesses blocos de script.</span><span class="sxs-lookup"><span data-stu-id="3a655-121">We are only doing a variable assignment in this example, but any PowerShell can be executed in those script blocks.</span></span>
 
-### <a name="assign-to-a-variable"></a><span data-ttu-id="cb47e-122">Atribuir a uma variável</span><span class="sxs-lookup"><span data-stu-id="cb47e-122">Assign to a variable</span></span>
+### <a name="assign-to-a-variable"></a><span data-ttu-id="3a655-122">Atribuir a uma variável</span><span class="sxs-lookup"><span data-stu-id="3a655-122">Assign to a variable</span></span>
 
-<span data-ttu-id="cb47e-123">Podemos gravar esse último exemplo de outra maneira.</span><span class="sxs-lookup"><span data-stu-id="cb47e-123">We can write that last example in another way.</span></span>
+<span data-ttu-id="3a655-123">Podemos gravar esse último exemplo de outra maneira.</span><span class="sxs-lookup"><span data-stu-id="3a655-123">We can write that last example in another way.</span></span>
 
 ``` powershell
 $result = switch ( $day )
@@ -94,11 +94,11 @@ $result = switch ( $day )
 }
 ```
 
-<span data-ttu-id="cb47e-124">Estamos colocando o valor no pipeline do PowerShell e atribuindo-o ao `$result`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-124">We are placing the value on the PowerShell pipeline and assigning it to the `$result`.</span></span> <span data-ttu-id="cb47e-125">Você pode fazer a mesma coisa com as instruções `if` e `foreach`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-125">You can do this same thing with the `if` and `foreach` statements.</span></span>
+<span data-ttu-id="3a655-124">Estamos colocando o valor no pipeline do PowerShell e atribuindo-o ao `$result`.</span><span class="sxs-lookup"><span data-stu-id="3a655-124">We are placing the value on the PowerShell pipeline and assigning it to the `$result`.</span></span> <span data-ttu-id="3a655-125">Você pode fazer a mesma coisa com as instruções `if` e `foreach`.</span><span class="sxs-lookup"><span data-stu-id="3a655-125">You can do this same thing with the `if` and `foreach` statements.</span></span>
 
-### <a name="default"></a><span data-ttu-id="cb47e-126">Padrão</span><span class="sxs-lookup"><span data-stu-id="cb47e-126">Default</span></span>
+### <a name="default"></a><span data-ttu-id="3a655-126">Padrão</span><span class="sxs-lookup"><span data-stu-id="3a655-126">Default</span></span>
 
-<span data-ttu-id="cb47e-127">Podemos usar a palavra-chave `default` para identificar o que deve acontecer se não houver nenhuma correspondência.</span><span class="sxs-lookup"><span data-stu-id="cb47e-127">We can use the `default` keyword to identify the what should happen if there is no match.</span></span>
+<span data-ttu-id="3a655-127">Podemos usar a palavra-chave `default` para identificar o que deve acontecer se não houver nenhuma correspondência.</span><span class="sxs-lookup"><span data-stu-id="3a655-127">We can use the `default` keyword to identify the what should happen if there is no match.</span></span>
 
 ``` powershell
 $result = switch ( $day )
@@ -110,11 +110,11 @@ $result = switch ( $day )
 }
 ```
 
-<span data-ttu-id="cb47e-128">Aqui, retornamos o valor `Unknown` no caso padrão.</span><span class="sxs-lookup"><span data-stu-id="cb47e-128">Here we return the value `Unknown` in the default case.</span></span>
+<span data-ttu-id="3a655-128">Aqui, retornamos o valor `Unknown` no caso padrão.</span><span class="sxs-lookup"><span data-stu-id="3a655-128">Here we return the value `Unknown` in the default case.</span></span>
 
-### <a name="strings"></a><span data-ttu-id="cb47e-129">Cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="cb47e-129">Strings</span></span>
+### <a name="strings"></a><span data-ttu-id="3a655-129">Cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="3a655-129">Strings</span></span>
 
-<span data-ttu-id="cb47e-130">Estava correspondendo números nesses últimos exemplos, mas você também pode corresponder cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cb47e-130">I was matching numbers in those last examples, but you can also match strings.</span></span>
+<span data-ttu-id="3a655-130">Estava correspondendo números nesses últimos exemplos, mas você também pode corresponder cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="3a655-130">I was matching numbers in those last examples, but you can also match strings.</span></span>
 
 ``` powershell
 $item = 'Role'
@@ -140,11 +140,11 @@ switch ( $item )
 is a role
 ```
 
-<span data-ttu-id="cb47e-131">Decidi não encapsular as correspondências `Component`,`Role` e `Location` entre aspas aqui para realçar que elas são opcionais.</span><span class="sxs-lookup"><span data-stu-id="cb47e-131">I decided not to wrap the `Component`,`Role` and `Location` matches in quotes here to highlight that they're optional.</span></span> <span data-ttu-id="cb47e-132">O `switch` trata elas como uma cadeia de caracteres na maioria dos casos.</span><span class="sxs-lookup"><span data-stu-id="cb47e-132">The `switch` treats those as a string in most cases.</span></span>
+<span data-ttu-id="3a655-131">Decidi não encapsular as correspondências `Component`,`Role` e `Location` entre aspas aqui para realçar que elas são opcionais.</span><span class="sxs-lookup"><span data-stu-id="3a655-131">I decided not to wrap the `Component`,`Role` and `Location` matches in quotes here to highlight that they're optional.</span></span> <span data-ttu-id="3a655-132">O `switch` trata elas como uma cadeia de caracteres na maioria dos casos.</span><span class="sxs-lookup"><span data-stu-id="3a655-132">The `switch` treats those as a string in most cases.</span></span>
 
-## <a name="arrays"></a><span data-ttu-id="cb47e-133">Matrizes</span><span class="sxs-lookup"><span data-stu-id="cb47e-133">Arrays</span></span>
+## <a name="arrays"></a><span data-ttu-id="3a655-133">Matrizes</span><span class="sxs-lookup"><span data-stu-id="3a655-133">Arrays</span></span>
 
-<span data-ttu-id="cb47e-134">Um dos recursos interessantes de `switch` do PowerShell é a maneira como ele lida com matrizes.</span><span class="sxs-lookup"><span data-stu-id="cb47e-134">One of the cool features of the PowerShell `switch` is the way it handles arrays.</span></span> <span data-ttu-id="cb47e-135">Se você fornecer uma matriz a um `switch`, ele processará cada elemento nessa coleção.</span><span class="sxs-lookup"><span data-stu-id="cb47e-135">If you give a `switch` an array, it processes each element in that collection.</span></span>
+<span data-ttu-id="3a655-134">Um dos recursos interessantes de `switch` do PowerShell é a maneira como ele lida com matrizes.</span><span class="sxs-lookup"><span data-stu-id="3a655-134">One of the cool features of the PowerShell `switch` is the way it handles arrays.</span></span> <span data-ttu-id="3a655-135">Se você fornecer uma matriz a um `switch`, ele processará cada elemento nessa coleção.</span><span class="sxs-lookup"><span data-stu-id="3a655-135">If you give a `switch` an array, it processes each element in that collection.</span></span>
 
 ``` powershell
 $roles = @('WEB','Database')
@@ -161,23 +161,23 @@ Configure IIS
 Configure SQL
 ```
 
-<span data-ttu-id="cb47e-136">Se você tiver itens repetidos na sua matriz, eles serão correspondidos várias vezes pela seção apropriada.</span><span class="sxs-lookup"><span data-stu-id="cb47e-136">If you have repeated items in your array, then they're matched multiple times by the appropriate section.</span></span>
+<span data-ttu-id="3a655-136">Se você tiver itens repetidos na sua matriz, eles serão correspondidos várias vezes pela seção apropriada.</span><span class="sxs-lookup"><span data-stu-id="3a655-136">If you have repeated items in your array, then they're matched multiple times by the appropriate section.</span></span>
 
-### <a name="psitem"></a><span data-ttu-id="cb47e-137">PSItem</span><span class="sxs-lookup"><span data-stu-id="cb47e-137">PSItem</span></span>
+### <a name="psitem"></a><span data-ttu-id="3a655-137">PSItem</span><span class="sxs-lookup"><span data-stu-id="3a655-137">PSItem</span></span>
 
-<span data-ttu-id="cb47e-138">Você pode usar `$PSItem` ou `$_` para fazer referência ao item atual que foi processado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-138">You can use the `$PSItem` or `$_` to reference the current item that was processed.</span></span> <span data-ttu-id="cb47e-139">Quando fazemos uma correspondência simples, `$PSItem` é o valor que estamos correspondendo.</span><span class="sxs-lookup"><span data-stu-id="cb47e-139">When we do a simple match, `$PSItem` is the value that we are matching.</span></span> <span data-ttu-id="cb47e-140">Executarei algumas correspondências avançadas na próxima seção nas quais essa variável é usada.</span><span class="sxs-lookup"><span data-stu-id="cb47e-140">I'll be performing some advanced matches in the next section where this variable is used.</span></span>
+<span data-ttu-id="3a655-138">Você pode usar `$PSItem` ou `$_` para fazer referência ao item atual que foi processado.</span><span class="sxs-lookup"><span data-stu-id="3a655-138">You can use the `$PSItem` or `$_` to reference the current item that was processed.</span></span> <span data-ttu-id="3a655-139">Quando fazemos uma correspondência simples, `$PSItem` é o valor que estamos correspondendo.</span><span class="sxs-lookup"><span data-stu-id="3a655-139">When we do a simple match, `$PSItem` is the value that we are matching.</span></span> <span data-ttu-id="3a655-140">Executarei algumas correspondências avançadas na próxima seção nas quais essa variável é usada.</span><span class="sxs-lookup"><span data-stu-id="3a655-140">I'll be performing some advanced matches in the next section where this variable is used.</span></span>
 
-## <a name="parameters"></a><span data-ttu-id="cb47e-141">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cb47e-141">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3a655-141">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3a655-141">Parameters</span></span>
 
-<span data-ttu-id="cb47e-142">Um recurso exclusivo de `switch` do PowerShell é que ele tem um número de [parâmetros de opção][] que alteram a forma como ele é executado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-142">A unique feature of the PowerShell `switch` is that it has a number of [switch parameters][] that change how it performs.</span></span>
+<span data-ttu-id="3a655-142">Um recurso exclusivo de `switch` do PowerShell é que ele tem um número de [parâmetros de opção][] que alteram a forma como ele é executado.</span><span class="sxs-lookup"><span data-stu-id="3a655-142">A unique feature of the PowerShell `switch` is that it has a number of [switch parameters][] that change how it performs.</span></span>
 
-### <a name="-casesensitive"></a><span data-ttu-id="cb47e-143">-CaseSensitive</span><span class="sxs-lookup"><span data-stu-id="cb47e-143">-CaseSensitive</span></span>
+### <a name="-casesensitive"></a><span data-ttu-id="3a655-143">-CaseSensitive</span><span class="sxs-lookup"><span data-stu-id="3a655-143">-CaseSensitive</span></span>
 
-<span data-ttu-id="cb47e-144">Por padrão, as correspondências não diferenciam maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="cb47e-144">The matches aren't case-sensitive by default.</span></span> <span data-ttu-id="cb47e-145">Se você precisar diferenciar maiúsculas de minúsculas, poderá usar `-CaseSensitive`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-145">If you need to be case-sensitive, you can use `-CaseSensitive`.</span></span> <span data-ttu-id="cb47e-146">Isso pode ser usado em combinação com os outros parâmetros de opção.</span><span class="sxs-lookup"><span data-stu-id="cb47e-146">This can be used in combination with the other switch parameters.</span></span>
+<span data-ttu-id="3a655-144">Por padrão, as correspondências não diferenciam maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="3a655-144">The matches aren't case-sensitive by default.</span></span> <span data-ttu-id="3a655-145">Se você precisar diferenciar maiúsculas de minúsculas, poderá usar `-CaseSensitive`.</span><span class="sxs-lookup"><span data-stu-id="3a655-145">If you need to be case-sensitive, you can use `-CaseSensitive`.</span></span> <span data-ttu-id="3a655-146">Isso pode ser usado em combinação com os outros parâmetros de opção.</span><span class="sxs-lookup"><span data-stu-id="3a655-146">This can be used in combination with the other switch parameters.</span></span>
 
-### <a name="-wildcard"></a><span data-ttu-id="cb47e-147">-Wildcard</span><span class="sxs-lookup"><span data-stu-id="cb47e-147">-Wildcard</span></span>
+### <a name="-wildcard"></a><span data-ttu-id="3a655-147">-Wildcard</span><span class="sxs-lookup"><span data-stu-id="3a655-147">-Wildcard</span></span>
 
-<span data-ttu-id="cb47e-148">Podemos habilitar o suporte a curinga com a switch `-wildcard`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-148">We can enable wildcard support with the `-wildcard` switch.</span></span> <span data-ttu-id="cb47e-149">Isso usa a mesma lógica de curinga que o operador `-like` para fazer cada correspondência.</span><span class="sxs-lookup"><span data-stu-id="cb47e-149">This uses the same wildcard logic as the `-like` operator to do each match.</span></span>
+<span data-ttu-id="3a655-148">Podemos habilitar o suporte a curinga com a switch `-wildcard`.</span><span class="sxs-lookup"><span data-stu-id="3a655-148">We can enable wildcard support with the `-wildcard` switch.</span></span> <span data-ttu-id="3a655-149">Isso usa a mesma lógica de curinga que o operador `-like` para fazer cada correspondência.</span><span class="sxs-lookup"><span data-stu-id="3a655-149">This uses the same wildcard logic as the `-like` operator to do each match.</span></span>
 
 ``` powershell
 $Message = 'Warning, out of disk space'
@@ -203,11 +203,11 @@ switch -Wildcard ( $message )
 WARNING: Warning, out of disk space
 ```
 
-<span data-ttu-id="cb47e-150">Aqui, estamos processando uma mensagem e, em seguida, gerando-a em fluxos diferentes com base no conteúdo.</span><span class="sxs-lookup"><span data-stu-id="cb47e-150">Here we are processing a message and then outputting it on different streams based on the contents.</span></span>
+<span data-ttu-id="3a655-150">Aqui, estamos processando uma mensagem e, em seguida, gerando-a em fluxos diferentes com base no conteúdo.</span><span class="sxs-lookup"><span data-stu-id="3a655-150">Here we are processing a message and then outputting it on different streams based on the contents.</span></span>
 
-### <a name="-regex"></a><span data-ttu-id="cb47e-151">-Regex</span><span class="sxs-lookup"><span data-stu-id="cb47e-151">-Regex</span></span>
+### <a name="-regex"></a><span data-ttu-id="3a655-151">-Regex</span><span class="sxs-lookup"><span data-stu-id="3a655-151">-Regex</span></span>
 
-<span data-ttu-id="cb47e-152">A instrução switch dá suporte a correspondências de expressão regular, exatamente como acontece com curingas.</span><span class="sxs-lookup"><span data-stu-id="cb47e-152">The switch statement supports regex matches just like it does wildcards.</span></span>
+<span data-ttu-id="3a655-152">A instrução switch dá suporte a correspondências de expressão regular, exatamente como acontece com curingas.</span><span class="sxs-lookup"><span data-stu-id="3a655-152">The switch statement supports regex matches just like it does wildcards.</span></span>
 
 ``` powershell
 switch -Regex ( $message )
@@ -227,11 +227,11 @@ switch -Regex ( $message )
 }
 ```
 
-<span data-ttu-id="cb47e-153">Há mais exemplos de uso de expressões regulares em outro artigo que escrevi: [As várias maneiras de usar regex][].</span><span class="sxs-lookup"><span data-stu-id="cb47e-153">I have more examples of using regex in another article I wrote: [The many ways to use regex][].</span></span>
+<span data-ttu-id="3a655-153">Há mais exemplos de uso de expressões regulares em outro artigo que escrevi: [As várias maneiras de usar regex][].</span><span class="sxs-lookup"><span data-stu-id="3a655-153">I have more examples of using regex in another article I wrote: [The many ways to use regex][].</span></span>
 
-### <a name="-file"></a><span data-ttu-id="cb47e-154">-File</span><span class="sxs-lookup"><span data-stu-id="cb47e-154">-File</span></span>
+### <a name="-file"></a><span data-ttu-id="3a655-154">-File</span><span class="sxs-lookup"><span data-stu-id="3a655-154">-File</span></span>
 
-<span data-ttu-id="cb47e-155">Um recurso pouco conhecido da instrução switch é que ela pode processar um arquivo com o parâmetro `-File`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-155">A little known feature of the switch statement is that it can process a file with the `-File` parameter.</span></span> <span data-ttu-id="cb47e-156">Você usa `-file` com um caminho para um arquivo em vez de dar a ele uma expressão variável.</span><span class="sxs-lookup"><span data-stu-id="cb47e-156">You use `-file` with a path to a file instead of giving it a variable expression.</span></span>
+<span data-ttu-id="3a655-155">Um recurso pouco conhecido da instrução switch é que ela pode processar um arquivo com o parâmetro `-File`.</span><span class="sxs-lookup"><span data-stu-id="3a655-155">A little known feature of the switch statement is that it can process a file with the `-File` parameter.</span></span> <span data-ttu-id="3a655-156">Você usa `-file` com um caminho para um arquivo em vez de dar a ele uma expressão variável.</span><span class="sxs-lookup"><span data-stu-id="3a655-156">You use `-file` with a path to a file instead of giving it a variable expression.</span></span>
 
 ``` powershell
 switch -Wildcard -File $path
@@ -251,25 +251,25 @@ switch -Wildcard -File $path
 }
 ```
 
-<span data-ttu-id="cb47e-157">Ele funciona exatamente como processar uma matriz.</span><span class="sxs-lookup"><span data-stu-id="cb47e-157">It works just like processing an array.</span></span> <span data-ttu-id="cb47e-158">Nesse exemplo, eu o combino com uma correspondência de curinga e uso o `$PSItem`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-158">In this example, I combine it with wildcard matching and make use of the `$PSItem`.</span></span> <span data-ttu-id="cb47e-159">Isso processaria um arquivo de log e o converteria em mensagens erro e de aviso, dependendo das correspondências de expressão regular.</span><span class="sxs-lookup"><span data-stu-id="cb47e-159">This would process a log file and convert it to warning and error messages depending on the regex matches.</span></span>
+<span data-ttu-id="3a655-157">Ele funciona exatamente como processar uma matriz.</span><span class="sxs-lookup"><span data-stu-id="3a655-157">It works just like processing an array.</span></span> <span data-ttu-id="3a655-158">Nesse exemplo, eu o combino com uma correspondência de curinga e uso o `$PSItem`.</span><span class="sxs-lookup"><span data-stu-id="3a655-158">In this example, I combine it with wildcard matching and make use of the `$PSItem`.</span></span> <span data-ttu-id="3a655-159">Isso processaria um arquivo de log e o converteria em mensagens erro e de aviso, dependendo das correspondências de expressão regular.</span><span class="sxs-lookup"><span data-stu-id="3a655-159">This would process a log file and convert it to warning and error messages depending on the regex matches.</span></span>
 
-## <a name="advanced-details"></a><span data-ttu-id="cb47e-160">Detalhes avançados</span><span class="sxs-lookup"><span data-stu-id="cb47e-160">Advanced details</span></span>
+## <a name="advanced-details"></a><span data-ttu-id="3a655-160">Detalhes avançados</span><span class="sxs-lookup"><span data-stu-id="3a655-160">Advanced details</span></span>
 
-<span data-ttu-id="cb47e-161">Agora que você está ciente de todos esses recursos documentados, podemos usá-los no contexto de um processamento mais avançado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-161">Now that you're aware of all these documented features, we can use them in the context of more advanced processing.</span></span>
+<span data-ttu-id="3a655-161">Agora que você está ciente de todos esses recursos documentados, podemos usá-los no contexto de um processamento mais avançado.</span><span class="sxs-lookup"><span data-stu-id="3a655-161">Now that you're aware of all these documented features, we can use them in the context of more advanced processing.</span></span>
 
-### <a name="expressions"></a><span data-ttu-id="cb47e-162">Expressões</span><span class="sxs-lookup"><span data-stu-id="cb47e-162">Expressions</span></span>
+### <a name="expressions"></a><span data-ttu-id="3a655-162">Expressões</span><span class="sxs-lookup"><span data-stu-id="3a655-162">Expressions</span></span>
 
-<span data-ttu-id="cb47e-163">O `switch` pode estar em uma expressão em vez de em uma variável.</span><span class="sxs-lookup"><span data-stu-id="cb47e-163">The `switch` can be on an expression instead of a variable.</span></span>
+<span data-ttu-id="3a655-163">O `switch` pode estar em uma expressão em vez de em uma variável.</span><span class="sxs-lookup"><span data-stu-id="3a655-163">The `switch` can be on an expression instead of a variable.</span></span>
 
 ``` powershell
 switch ( ( Get-Service | Where status -eq 'running' ).name ) {...}
 ```
 
-<span data-ttu-id="cb47e-164">Independentemente de como a expressão é avaliada, ela é o valor usado para a correspondência.</span><span class="sxs-lookup"><span data-stu-id="cb47e-164">Whatever the expression evaluates to is the value used for the match.</span></span>
+<span data-ttu-id="3a655-164">Independentemente de como a expressão é avaliada, ela é o valor usado para a correspondência.</span><span class="sxs-lookup"><span data-stu-id="3a655-164">Whatever the expression evaluates to is the value used for the match.</span></span>
 
-### <a name="multiple-matches"></a><span data-ttu-id="cb47e-165">Múltiplas correspondências</span><span class="sxs-lookup"><span data-stu-id="cb47e-165">Multiple matches</span></span>
+### <a name="multiple-matches"></a><span data-ttu-id="3a655-165">Múltiplas correspondências</span><span class="sxs-lookup"><span data-stu-id="3a655-165">Multiple matches</span></span>
 
-<span data-ttu-id="cb47e-166">Talvez você já tenha percebido, mas um `switch` pode corresponder a várias condições.</span><span class="sxs-lookup"><span data-stu-id="cb47e-166">You may have already picked up on this, but a `switch` can match to multiple conditions.</span></span> <span data-ttu-id="cb47e-167">Isso é especialmente verdadeiro ao usar as correspondências `-wildcard` ou `-regex`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-167">This is especially true when using `-wildcard` or `-regex` matches.</span></span> <span data-ttu-id="cb47e-168">Você pode adicionar a mesma condição várias vezes e todas elas serem disparadas.</span><span class="sxs-lookup"><span data-stu-id="cb47e-168">You can add the same condition multiple times and all of them are triggered.</span></span>
+<span data-ttu-id="3a655-166">Talvez você já tenha percebido, mas um `switch` pode corresponder a várias condições.</span><span class="sxs-lookup"><span data-stu-id="3a655-166">You may have already picked up on this, but a `switch` can match to multiple conditions.</span></span> <span data-ttu-id="3a655-167">Isso é especialmente verdadeiro ao usar as correspondências `-wildcard` ou `-regex`.</span><span class="sxs-lookup"><span data-stu-id="3a655-167">This is especially true when using `-wildcard` or `-regex` matches.</span></span> <span data-ttu-id="3a655-168">Você pode adicionar a mesma condição várias vezes e todas elas serem disparadas.</span><span class="sxs-lookup"><span data-stu-id="3a655-168">You can add the same condition multiple times and all of them are triggered.</span></span>
 
 ``` powershell
 switch ( 'Word' )
@@ -286,11 +286,11 @@ mixed case word match
 upper case word match
 ```
 
-<span data-ttu-id="cb47e-169">Essas três instruções são disparadas.</span><span class="sxs-lookup"><span data-stu-id="cb47e-169">All three of these statements are fired.</span></span> <span data-ttu-id="cb47e-170">Isso mostra que todas as condições são verificadas (em ordem).</span><span class="sxs-lookup"><span data-stu-id="cb47e-170">This shows that every condition is checked (in order).</span></span> <span data-ttu-id="cb47e-171">Isso é verdadeiro para matrizes de processamento, nas quais cada item verifica cada condição.</span><span class="sxs-lookup"><span data-stu-id="cb47e-171">This holds true for processing arrays where each item checks each condition.</span></span>
+<span data-ttu-id="3a655-169">Essas três instruções são disparadas.</span><span class="sxs-lookup"><span data-stu-id="3a655-169">All three of these statements are fired.</span></span> <span data-ttu-id="3a655-170">Isso mostra que todas as condições são verificadas (em ordem).</span><span class="sxs-lookup"><span data-stu-id="3a655-170">This shows that every condition is checked (in order).</span></span> <span data-ttu-id="3a655-171">Isso é verdadeiro para matrizes de processamento, nas quais cada item verifica cada condição.</span><span class="sxs-lookup"><span data-stu-id="3a655-171">This holds true for processing arrays where each item checks each condition.</span></span>
 
-### <a name="continue"></a><span data-ttu-id="cb47e-172">Continue</span><span class="sxs-lookup"><span data-stu-id="cb47e-172">Continue</span></span>
+### <a name="continue"></a><span data-ttu-id="3a655-172">Continue</span><span class="sxs-lookup"><span data-stu-id="3a655-172">Continue</span></span>
 
-<span data-ttu-id="cb47e-173">Normalmente, aqui que eu apresentaria a instrução `break`, mas é melhor que aprendemos a usar a `continue` primeiro.</span><span class="sxs-lookup"><span data-stu-id="cb47e-173">Normally, this is where I would introduce the `break` statement, but it's better that we learn how to use `continue` first.</span></span> <span data-ttu-id="cb47e-174">Assim como com um loop de `foreach`, o `continue` continua no próximo item da coleção ou sai do `switch`, se não houver mais itens.</span><span class="sxs-lookup"><span data-stu-id="cb47e-174">Just like with a `foreach` loop, `continue` continues onto the next item in the collection or exits the `switch` if there are no more items.</span></span> <span data-ttu-id="cb47e-175">Podemos reescrever esse último exemplo com instruções continue para que apenas uma instrução seja executada.</span><span class="sxs-lookup"><span data-stu-id="cb47e-175">We can rewrite that last example with continue statements so that only one statement executes.</span></span>
+<span data-ttu-id="3a655-173">Normalmente, aqui que eu apresentaria a instrução `break`, mas é melhor que aprendemos a usar a `continue` primeiro.</span><span class="sxs-lookup"><span data-stu-id="3a655-173">Normally, this is where I would introduce the `break` statement, but it's better that we learn how to use `continue` first.</span></span> <span data-ttu-id="3a655-174">Assim como com um loop de `foreach`, o `continue` continua no próximo item da coleção ou sai do `switch`, se não houver mais itens.</span><span class="sxs-lookup"><span data-stu-id="3a655-174">Just like with a `foreach` loop, `continue` continues onto the next item in the collection or exits the `switch` if there are no more items.</span></span> <span data-ttu-id="3a655-175">Podemos reescrever esse último exemplo com instruções continue para que apenas uma instrução seja executada.</span><span class="sxs-lookup"><span data-stu-id="3a655-175">We can rewrite that last example with continue statements so that only one statement executes.</span></span>
 
 ``` powershell
 switch ( 'Word' )
@@ -317,7 +317,7 @@ switch ( 'Word' )
 lower case word match
 ```
 
-<span data-ttu-id="cb47e-176">Em vez de corresponder todos os três itens, o primeiro é correspondido e a switch continua para o próximo valor.</span><span class="sxs-lookup"><span data-stu-id="cb47e-176">Instead of matching all three items, the first one is matched and the switch continues to the next value.</span></span> <span data-ttu-id="cb47e-177">Como não há valores restantes para processar, switch é fechada.</span><span class="sxs-lookup"><span data-stu-id="cb47e-177">Because there are no values left to process, the switch exits.</span></span> <span data-ttu-id="cb47e-178">Este próximo exemplo mostra como um curinga pode corresponder a vários itens.</span><span class="sxs-lookup"><span data-stu-id="cb47e-178">This next example is showing how a wildcard could match multiple items.</span></span>
+<span data-ttu-id="3a655-176">Em vez de corresponder todos os três itens, o primeiro é correspondido e a switch continua para o próximo valor.</span><span class="sxs-lookup"><span data-stu-id="3a655-176">Instead of matching all three items, the first one is matched and the switch continues to the next value.</span></span> <span data-ttu-id="3a655-177">Como não há valores restantes para processar, switch é fechada.</span><span class="sxs-lookup"><span data-stu-id="3a655-177">Because there are no values left to process, the switch exits.</span></span> <span data-ttu-id="3a655-178">Este próximo exemplo mostra como um curinga pode corresponder a vários itens.</span><span class="sxs-lookup"><span data-stu-id="3a655-178">This next example is showing how a wildcard could match multiple items.</span></span>
 
 ``` powershell
 switch -Wildcard -File $path
@@ -339,11 +339,11 @@ switch -Wildcard -File $path
 }
 ```
 
-<span data-ttu-id="cb47e-179">Como uma linha no arquivo de entrada pode conter as palavras `Error` e `Warning`, queremos que apenas a primeira seja executada e, em seguida, continue processando o arquivo.</span><span class="sxs-lookup"><span data-stu-id="cb47e-179">Because a line in the input file could contain both the word `Error` and `Warning`, we only want the first one to execute and then continue processing the file.</span></span>
+<span data-ttu-id="3a655-179">Como uma linha no arquivo de entrada pode conter as palavras `Error` e `Warning`, queremos que apenas a primeira seja executada e, em seguida, continue processando o arquivo.</span><span class="sxs-lookup"><span data-stu-id="3a655-179">Because a line in the input file could contain both the word `Error` and `Warning`, we only want the first one to execute and then continue processing the file.</span></span>
 
-### <a name="break"></a><span data-ttu-id="cb47e-180">Interromper</span><span class="sxs-lookup"><span data-stu-id="cb47e-180">Break</span></span>
+### <a name="break"></a><span data-ttu-id="3a655-180">Interromper</span><span class="sxs-lookup"><span data-stu-id="3a655-180">Break</span></span>
 
-<span data-ttu-id="cb47e-181">Uma instrução `break` sai da switch.</span><span class="sxs-lookup"><span data-stu-id="cb47e-181">A `break` statement exits the switch.</span></span> <span data-ttu-id="cb47e-182">Esse é o mesmo comportamento que o `continue` apresenta para valores únicos.</span><span class="sxs-lookup"><span data-stu-id="cb47e-182">This is the same behavior that `continue` presents for single values.</span></span> <span data-ttu-id="cb47e-183">A diferença é mostrada durante o processamento de uma matriz.</span><span class="sxs-lookup"><span data-stu-id="cb47e-183">The difference is shown when processing an array.</span></span> <span data-ttu-id="cb47e-184">`break` interrompe todo o processamento na switch e `continue` passa para o próximo item.</span><span class="sxs-lookup"><span data-stu-id="cb47e-184">`break` stops all processing in the switch and `continue` moves onto the next item.</span></span>
+<span data-ttu-id="3a655-181">Uma instrução `break` sai da switch.</span><span class="sxs-lookup"><span data-stu-id="3a655-181">A `break` statement exits the switch.</span></span> <span data-ttu-id="3a655-182">Esse é o mesmo comportamento que o `continue` apresenta para valores únicos.</span><span class="sxs-lookup"><span data-stu-id="3a655-182">This is the same behavior that `continue` presents for single values.</span></span> <span data-ttu-id="3a655-183">A diferença é mostrada durante o processamento de uma matriz.</span><span class="sxs-lookup"><span data-stu-id="3a655-183">The difference is shown when processing an array.</span></span> <span data-ttu-id="3a655-184">`break` interrompe todo o processamento na switch e `continue` passa para o próximo item.</span><span class="sxs-lookup"><span data-stu-id="3a655-184">`break` stops all processing in the switch and `continue` moves onto the next item.</span></span>
 
 ``` powershell
 $Messages = @(
@@ -386,12 +386,12 @@ write-error -message $PSItem : Error: out of disk space
 + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
 ```
 
-<span data-ttu-id="cb47e-185">Nesse caso, se atingirmos em alguma linha que começa com `Error`, obteremos um erro e a switch será interrompida.</span><span class="sxs-lookup"><span data-stu-id="cb47e-185">In this case, if we hit any lines that start with `Error` then we get an error and the switch stops.</span></span>
-<span data-ttu-id="cb47e-186">Isso é o que essa instrução `break` está fazendo para nós.</span><span class="sxs-lookup"><span data-stu-id="cb47e-186">This is what that `break` statement is doing for us.</span></span> <span data-ttu-id="cb47e-187">Se encontrarmos `Error` dentro da cadeia de caracteres e não apenas no início, vamos gravá-lo como um aviso.</span><span class="sxs-lookup"><span data-stu-id="cb47e-187">If we find `Error` inside the string and not just at the beginning, we write it as a warning.</span></span> <span data-ttu-id="cb47e-188">Faremos a mesma coisa para `Warning`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-188">We do the same thing for `Warning`.</span></span> <span data-ttu-id="cb47e-189">É possível que uma linha tenha ambas as palavras `Error` e `Warning`, mas precisamos apenas de uma para processar.</span><span class="sxs-lookup"><span data-stu-id="cb47e-189">It's possible that a line could have both the word `Error` and `Warning`, but we only need one to process.</span></span> <span data-ttu-id="cb47e-190">Isso é o que a instrução `continue` está fazendo para nós.</span><span class="sxs-lookup"><span data-stu-id="cb47e-190">This is what the `continue` statement is doing for us.</span></span>
+<span data-ttu-id="3a655-185">Nesse caso, se atingirmos em alguma linha que começa com `Error`, obteremos um erro e a switch será interrompida.</span><span class="sxs-lookup"><span data-stu-id="3a655-185">In this case, if we hit any lines that start with `Error` then we get an error and the switch stops.</span></span>
+<span data-ttu-id="3a655-186">Isso é o que essa instrução `break` está fazendo para nós.</span><span class="sxs-lookup"><span data-stu-id="3a655-186">This is what that `break` statement is doing for us.</span></span> <span data-ttu-id="3a655-187">Se encontrarmos `Error` dentro da cadeia de caracteres e não apenas no início, vamos gravá-lo como um aviso.</span><span class="sxs-lookup"><span data-stu-id="3a655-187">If we find `Error` inside the string and not just at the beginning, we write it as a warning.</span></span> <span data-ttu-id="3a655-188">Faremos a mesma coisa para `Warning`.</span><span class="sxs-lookup"><span data-stu-id="3a655-188">We do the same thing for `Warning`.</span></span> <span data-ttu-id="3a655-189">É possível que uma linha tenha ambas as palavras `Error` e `Warning`, mas precisamos apenas de uma para processar.</span><span class="sxs-lookup"><span data-stu-id="3a655-189">It's possible that a line could have both the word `Error` and `Warning`, but we only need one to process.</span></span> <span data-ttu-id="3a655-190">Isso é o que a instrução `continue` está fazendo para nós.</span><span class="sxs-lookup"><span data-stu-id="3a655-190">This is what the `continue` statement is doing for us.</span></span>
 
-### <a name="break-labels"></a><span data-ttu-id="cb47e-191">Rótulos de intervalo</span><span class="sxs-lookup"><span data-stu-id="cb47e-191">Break labels</span></span>
+### <a name="break-labels"></a><span data-ttu-id="3a655-191">Rótulos de intervalo</span><span class="sxs-lookup"><span data-stu-id="3a655-191">Break labels</span></span>
 
-<span data-ttu-id="cb47e-192">A instrução `switch` dá suporte a rótulos `break/continue`, assim como `foreach`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-192">The `switch` statement supports `break/continue` labels just like `foreach`.</span></span>
+<span data-ttu-id="3a655-192">A instrução `switch` dá suporte a rótulos `break/continue`, assim como `foreach`.</span><span class="sxs-lookup"><span data-stu-id="3a655-192">The `switch` statement supports `break/continue` labels just like `foreach`.</span></span>
 
 ``` powershell
 :filelist foreach($path in $logs)
@@ -416,11 +416,11 @@ write-error -message $PSItem : Error: out of disk space
 }
 ```
 
-<span data-ttu-id="cb47e-193">Pessoalmente, não gosto do uso de rótulos de intervalo, mas queria destacá-los porque eles são confusos se você nunca os viu antes.</span><span class="sxs-lookup"><span data-stu-id="cb47e-193">I personally don't like the use of break labels but I wanted to point them out because they're confusing if you've never seen them before.</span></span> <span data-ttu-id="cb47e-194">Quando você tiver várias instruções `switch` ou `foreach` aninhadas, talvez queira interromper mais do que o item mais interno.</span><span class="sxs-lookup"><span data-stu-id="cb47e-194">When you have multiple `switch` or `foreach` statements that are nested, you may want to break out of more than the inner most item.</span></span> <span data-ttu-id="cb47e-195">Você pode colocar um rótulo em um `switch` que pode ser o destino do seu `break`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-195">You can place a label on a `switch` that can be the target of your `break`.</span></span>
+<span data-ttu-id="3a655-193">Pessoalmente, não gosto do uso de rótulos de intervalo, mas queria destacá-los porque eles são confusos se você nunca os viu antes.</span><span class="sxs-lookup"><span data-stu-id="3a655-193">I personally don't like the use of break labels but I wanted to point them out because they're confusing if you've never seen them before.</span></span> <span data-ttu-id="3a655-194">Quando você tiver várias instruções `switch` ou `foreach` aninhadas, talvez queira interromper mais do que o item mais interno.</span><span class="sxs-lookup"><span data-stu-id="3a655-194">When you have multiple `switch` or `foreach` statements that are nested, you may want to break out of more than the inner most item.</span></span> <span data-ttu-id="3a655-195">Você pode colocar um rótulo em um `switch` que pode ser o destino do seu `break`.</span><span class="sxs-lookup"><span data-stu-id="3a655-195">You can place a label on a `switch` that can be the target of your `break`.</span></span>
 
-### <a name="enum"></a><span data-ttu-id="cb47e-196">Enum</span><span class="sxs-lookup"><span data-stu-id="cb47e-196">Enum</span></span>
+### <a name="enum"></a><span data-ttu-id="3a655-196">Enum</span><span class="sxs-lookup"><span data-stu-id="3a655-196">Enum</span></span>
 
-<span data-ttu-id="cb47e-197">O PowerShell 5.0 forneceu enumerações e podemos usá-las em uma switch.</span><span class="sxs-lookup"><span data-stu-id="cb47e-197">PowerShell 5.0 gave us enums and we can use them in a switch.</span></span>
+<span data-ttu-id="3a655-197">O PowerShell 5.0 forneceu enumerações e podemos usá-las em uma switch.</span><span class="sxs-lookup"><span data-stu-id="3a655-197">PowerShell 5.0 gave us enums and we can use them in a switch.</span></span>
 
 ``` powershell
 enum Context {
@@ -452,7 +452,7 @@ switch ( $item )
 is a role
 ```
 
-<span data-ttu-id="cb47e-198">Se você desejar manter tudo como enumerações fortemente tipadas, poderá colocá-las entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="cb47e-198">If you want to keep everything as strongly typed enums, then you can place them in parentheses.</span></span>
+<span data-ttu-id="3a655-198">Se você desejar manter tudo como enumerações fortemente tipadas, poderá colocá-las entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="3a655-198">If you want to keep everything as strongly typed enums, then you can place them in parentheses.</span></span>
 
 ``` powershell
 switch ($item )
@@ -472,11 +472,11 @@ switch ($item )
 }
 ```
 
-<span data-ttu-id="cb47e-199">Os parênteses são necessários aqui para que a switch não trate o valor `[Context]::Location` como uma cadeia de caracteres literal.</span><span class="sxs-lookup"><span data-stu-id="cb47e-199">The parentheses are needed here so that the switch doesn't treat the value `[Context]::Location` as a literal string.</span></span>
+<span data-ttu-id="3a655-199">Os parênteses são necessários aqui para que a switch não trate o valor `[Context]::Location` como uma cadeia de caracteres literal.</span><span class="sxs-lookup"><span data-stu-id="3a655-199">The parentheses are needed here so that the switch doesn't treat the value `[Context]::Location` as a literal string.</span></span>
 
-### <a name="scriptblock"></a><span data-ttu-id="cb47e-200">Bloco de script</span><span class="sxs-lookup"><span data-stu-id="cb47e-200">ScriptBlock</span></span>
+### <a name="scriptblock"></a><span data-ttu-id="3a655-200">Bloco de script</span><span class="sxs-lookup"><span data-stu-id="3a655-200">ScriptBlock</span></span>
 
-<span data-ttu-id="cb47e-201">Podemos usar um bloco de script para executar a avaliação de uma correspondência, se necessário.</span><span class="sxs-lookup"><span data-stu-id="cb47e-201">We can use a scriptblock to perform the evaluation for a match if needed.</span></span>
+<span data-ttu-id="3a655-201">Podemos usar um bloco de script para executar a avaliação de uma correspondência, se necessário.</span><span class="sxs-lookup"><span data-stu-id="3a655-201">We can use a scriptblock to perform the evaluation for a match if needed.</span></span>
 
 ``` powershell
 $age = 37
@@ -498,9 +498,9 @@ switch ( $age )
 'adult'
 ```
 
-<span data-ttu-id="cb47e-202">Isso aumenta a complexidade e pode tornar o seu `switch` difícil de ler.</span><span class="sxs-lookup"><span data-stu-id="cb47e-202">This adds complexity and can make your `switch` hard to read.</span></span> <span data-ttu-id="cb47e-203">Na maioria dos casos em que você usaria algo semelhante a isso, seria melhor usar as instruções `if` e `elseif`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-203">In most cases where you would use something like this it would be better to use `if` and `elseif` statements.</span></span> <span data-ttu-id="cb47e-204">Eu consideraria o uso desse recurso se já tivesse uma instrução switch muito longa em vigor e precisasse que dois itens atingissem o mesmo bloco de avaliação.</span><span class="sxs-lookup"><span data-stu-id="cb47e-204">I would consider using this if I already had a large switch in place and I needed two items to hit the same evaluation block.</span></span>
+<span data-ttu-id="3a655-202">Isso aumenta a complexidade e pode tornar o seu `switch` difícil de ler.</span><span class="sxs-lookup"><span data-stu-id="3a655-202">This adds complexity and can make your `switch` hard to read.</span></span> <span data-ttu-id="3a655-203">Na maioria dos casos em que você usaria algo semelhante a isso, seria melhor usar as instruções `if` e `elseif`.</span><span class="sxs-lookup"><span data-stu-id="3a655-203">In most cases where you would use something like this it would be better to use `if` and `elseif` statements.</span></span> <span data-ttu-id="3a655-204">Eu consideraria o uso desse recurso se já tivesse uma instrução switch muito longa em vigor e precisasse que dois itens atingissem o mesmo bloco de avaliação.</span><span class="sxs-lookup"><span data-stu-id="3a655-204">I would consider using this if I already had a large switch in place and I needed two items to hit the same evaluation block.</span></span>
 
-<span data-ttu-id="cb47e-205">Uma coisa que acho que me ajuda com a legibilidade é colocar o bloco de script entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="cb47e-205">One thing that I think helps with legibility is to place the scriptblock in parentheses.</span></span>
+<span data-ttu-id="3a655-205">Uma coisa que acho que me ajuda com a legibilidade é colocar o bloco de script entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="3a655-205">One thing that I think helps with legibility is to place the scriptblock in parentheses.</span></span>
 
 ``` powershell
 switch ( $age )
@@ -516,11 +516,11 @@ switch ( $age )
 }
 ```
 
-<span data-ttu-id="cb47e-206">Ele ainda é executado da mesma maneira e fornece uma quebra visual melhor ao olhar rapidamente.</span><span class="sxs-lookup"><span data-stu-id="cb47e-206">It still executes the same way and gives a better visual break when quickly looking at it.</span></span>
+<span data-ttu-id="3a655-206">Ele ainda é executado da mesma maneira e fornece uma quebra visual melhor ao olhar rapidamente.</span><span class="sxs-lookup"><span data-stu-id="3a655-206">It still executes the same way and gives a better visual break when quickly looking at it.</span></span>
 
-### <a name="regex-matches"></a><span data-ttu-id="cb47e-207">$matches de expressão regular</span><span class="sxs-lookup"><span data-stu-id="cb47e-207">Regex $matches</span></span>
+### <a name="regex-matches"></a><span data-ttu-id="3a655-207">$matches de expressão regular</span><span class="sxs-lookup"><span data-stu-id="3a655-207">Regex $matches</span></span>
 
-<span data-ttu-id="cb47e-208">Precisamos revisitar as expressões regulares para discutir algo que não é imediatamente óbvio.</span><span class="sxs-lookup"><span data-stu-id="cb47e-208">We need to revisit regex to touch on something that isn't immediately obvious.</span></span> <span data-ttu-id="cb47e-209">O uso de expressão regular popula a variável `$matches`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-209">The use of regex populates the `$matches` variable.</span></span> <span data-ttu-id="cb47e-210">Eu me aprofundo mais sobre o uso do `$matches` ao falar sobre [As várias maneiras de usar regex][].</span><span class="sxs-lookup"><span data-stu-id="cb47e-210">I do go into the use of `$matches` more when I talk about [The many ways to use regex][].</span></span> <span data-ttu-id="cb47e-211">A seguir está um exemplo rápido para mostrá-lo em ação com correspondências nomeadas.</span><span class="sxs-lookup"><span data-stu-id="cb47e-211">Here is a quick sample to show it in action with named matches.</span></span>
+<span data-ttu-id="3a655-208">Precisamos revisitar as expressões regulares para discutir algo que não é imediatamente óbvio.</span><span class="sxs-lookup"><span data-stu-id="3a655-208">We need to revisit regex to touch on something that isn't immediately obvious.</span></span> <span data-ttu-id="3a655-209">O uso de expressões regulares popula a variável `$matches`.</span><span class="sxs-lookup"><span data-stu-id="3a655-209">The use of regex populates the `$matches` variable.</span></span> <span data-ttu-id="3a655-210">Eu me aprofundo mais sobre o uso do `$matches` ao falar sobre [As várias maneiras de usar regex][].</span><span class="sxs-lookup"><span data-stu-id="3a655-210">I do go into the use of `$matches` more when I talk about [The many ways to use regex][].</span></span> <span data-ttu-id="3a655-211">A seguir está um exemplo rápido para mostrá-lo em ação com correspondências nomeadas.</span><span class="sxs-lookup"><span data-stu-id="3a655-211">Here is a quick sample to show it in action with named matches.</span></span>
 
 ``` powershell
 $message = 'my ssn is 123-23-3456 and credit card: 1234-5678-1234-5678'
@@ -547,9 +547,9 @@ WARNING: message may contain a SSN: 123-23-3456
 WARNING: message may contain a credit card number: 1234-5678-1234-5678
 ```
 
-### <a name="null"></a><span data-ttu-id="cb47e-212">$null</span><span class="sxs-lookup"><span data-stu-id="cb47e-212">$null</span></span>
+### <a name="null"></a><span data-ttu-id="3a655-212">$null</span><span class="sxs-lookup"><span data-stu-id="3a655-212">$null</span></span>
 
-<span data-ttu-id="cb47e-213">Você pode corresponder um valor `$null` que não precisa ser o padrão.</span><span class="sxs-lookup"><span data-stu-id="cb47e-213">You can match a `$null` value that doesn't have to be the default.</span></span>
+<span data-ttu-id="3a655-213">Você pode corresponder um valor `$null` que não precisa ser o padrão.</span><span class="sxs-lookup"><span data-stu-id="3a655-213">You can match a `$null` value that doesn't have to be the default.</span></span>
 
 ``` powershell
 $value = $null
@@ -570,7 +570,7 @@ switch ( $value )
 Value is null
 ```
 
-<span data-ttu-id="cb47e-214">O mesmo vale para uma cadeia de caracteres vazia.</span><span class="sxs-lookup"><span data-stu-id="cb47e-214">Same goes for an empty string.</span></span>
+<span data-ttu-id="3a655-214">O mesmo vale para uma cadeia de caracteres vazia.</span><span class="sxs-lookup"><span data-stu-id="3a655-214">Same goes for an empty string.</span></span>
 
 ``` powershell
 switch ( '' )
@@ -589,10 +589,10 @@ switch ( '' )
 Value is empty
 ```
 
-### <a name="constant-expression"></a><span data-ttu-id="cb47e-215">Expressão de constante</span><span class="sxs-lookup"><span data-stu-id="cb47e-215">Constant expression</span></span>
+### <a name="constant-expression"></a><span data-ttu-id="3a655-215">Expressão de constante</span><span class="sxs-lookup"><span data-stu-id="3a655-215">Constant expression</span></span>
 
-<span data-ttu-id="cb47e-216">Lee Dailey apontou que podemos usar uma expressão de constante `$true` para avaliar os itens `[bool]`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-216">Lee Dailey pointed out that we can use a constant `$true` expression to evaluate `[bool]` items.</span></span>
-<span data-ttu-id="cb47e-217">Imagine se tivermos várias verificações boolianas que precisam ocorrer.</span><span class="sxs-lookup"><span data-stu-id="cb47e-217">Imagine if we have several boolean checks that need to happen.</span></span>
+<span data-ttu-id="3a655-216">Lee Dailey apontou que podemos usar uma expressão de constante `$true` para avaliar os itens `[bool]`.</span><span class="sxs-lookup"><span data-stu-id="3a655-216">Lee Dailey pointed out that we can use a constant `$true` expression to evaluate `[bool]` items.</span></span>
+<span data-ttu-id="3a655-217">Imagine se tivermos várias verificações boolianas que precisam ocorrer.</span><span class="sxs-lookup"><span data-stu-id="3a655-217">Imagine if we have several boolean checks that need to happen.</span></span>
 
 ``` powershell
 $isVisible = $false
@@ -621,7 +621,7 @@ Do-Action
 Enabled-AdminMenu
 ```
 
-<span data-ttu-id="cb47e-218">Essa é um modo limpo de avaliar e agir sobre o status de vários campos boolianos.</span><span class="sxs-lookup"><span data-stu-id="cb47e-218">This is a clean way to evaluate and take action on the status of several boolean fields.</span></span> <span data-ttu-id="cb47e-219">O interessante disso é que uma correspondência pode inverter o status de um valor que ainda não foi avaliado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-219">The cool thing about this is that you can have one match flip the status of a value that hasn't been evaluated yet.</span></span>
+<span data-ttu-id="3a655-218">Essa é um modo limpo de avaliar e agir sobre o status de vários campos boolianos.</span><span class="sxs-lookup"><span data-stu-id="3a655-218">This is a clean way to evaluate and take action on the status of several boolean fields.</span></span> <span data-ttu-id="3a655-219">O interessante nisso é que uma correspondência pode inverter o status de um valor que ainda não foi avaliado.</span><span class="sxs-lookup"><span data-stu-id="3a655-219">The cool thing about this is that you can have one match flip the status of a value that hasn't been evaluated yet.</span></span>
 
 ``` powershell
 $isVisible = $false
@@ -651,30 +651,30 @@ Do-Action
 Show-Animation
 ```
 
-<span data-ttu-id="cb47e-220">A configuração de `$isEnabled` para `$true` nesse exemplo garante que `$isVisible` também seja definido como `$true`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-220">Setting `$isEnabled` to `$true` in this example makes sure that `$isVisible` is also set to `$true`.</span></span> <span data-ttu-id="cb47e-221">Em seguida, quando `$isVisible` é avaliado, o bloco de script dele é invocado.</span><span class="sxs-lookup"><span data-stu-id="cb47e-221">Then when `$isVisible` gets evaluated, its scriptblock is invoked.</span></span> <span data-ttu-id="cb47e-222">Isso é um pouco contraintuitivo, mas é um uso inteligente da mecânica.</span><span class="sxs-lookup"><span data-stu-id="cb47e-222">This is a bit counter-intuitive but is a clever use of the mechanics.</span></span>
+<span data-ttu-id="3a655-220">A configuração de `$isEnabled` para `$true` nesse exemplo garante que `$isVisible` também seja definido como `$true`.</span><span class="sxs-lookup"><span data-stu-id="3a655-220">Setting `$isEnabled` to `$true` in this example makes sure that `$isVisible` is also set to `$true`.</span></span> <span data-ttu-id="3a655-221">Em seguida, quando `$isVisible` é avaliado, o bloco de script dele é invocado.</span><span class="sxs-lookup"><span data-stu-id="3a655-221">Then when `$isVisible` gets evaluated, its scriptblock is invoked.</span></span> <span data-ttu-id="3a655-222">Isso é um pouco contraintuitivo, mas é um uso inteligente da mecânica.</span><span class="sxs-lookup"><span data-stu-id="3a655-222">This is a bit counter-intuitive but is a clever use of the mechanics.</span></span>
 
-### <a name="switch-automatic-variable"></a><span data-ttu-id="cb47e-223">Variável automática $switch</span><span class="sxs-lookup"><span data-stu-id="cb47e-223">$switch automatic variable</span></span>
+### <a name="switch-automatic-variable"></a><span data-ttu-id="3a655-223">Variável automática $switch</span><span class="sxs-lookup"><span data-stu-id="3a655-223">$switch automatic variable</span></span>
 
-<span data-ttu-id="cb47e-224">Quando o `switch` estiver processando os valores, ele criará um enumerador e o chamará de `$switch`.</span><span class="sxs-lookup"><span data-stu-id="cb47e-224">When the `switch` is processing its values, it creates an enumerator and calls it `$switch`.</span></span> <span data-ttu-id="cb47e-225">Essa é uma variável automática criada pelo PowerShell e você pode manipulá-la diretamente.</span><span class="sxs-lookup"><span data-stu-id="cb47e-225">This is an automatic variable created by PowerShell and you can manipulate it directly.</span></span>
+<span data-ttu-id="3a655-224">Quando o `switch` estiver processando os valores, ele criará um enumerador e o chamará de `$switch`.</span><span class="sxs-lookup"><span data-stu-id="3a655-224">When the `switch` is processing its values, it creates an enumerator and calls it `$switch`.</span></span> <span data-ttu-id="3a655-225">Essa é uma variável automática criada pelo PowerShell, e você pode manipulá-la diretamente.</span><span class="sxs-lookup"><span data-stu-id="3a655-225">This is an automatic variable created by PowerShell and you can manipulate it directly.</span></span>
 
-<span data-ttu-id="cb47e-226">Isso foi apontado para mim por [/u/frmadsen](https://www.reddit.com/user/frmadsen)</span><span class="sxs-lookup"><span data-stu-id="cb47e-226">This was pointed out to me by [/u/frmadsen](https://www.reddit.com/user/frmadsen)</span></span>
+<span data-ttu-id="3a655-226">Isso foi apontado para mim por [/u/frmadsen](https://www.reddit.com/user/frmadsen)</span><span class="sxs-lookup"><span data-stu-id="3a655-226">This was pointed out to me by [/u/frmadsen](https://www.reddit.com/user/frmadsen)</span></span>
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><span data-ttu-id="cb47e-227"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">Comentário</a> da discussão <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">O que eu (aluno de TI) devo aprender para dominar o PowerShell?</a>.</span><span class="sxs-lookup"><span data-stu-id="cb47e-227"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">Comment</a> from discussion <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">What should I (IT student) learn to master PowerShell?</a>.</span></span></div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><span data-ttu-id="3a655-227"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">Comentário</a> da discussão <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">O que eu (aluno de TI) devo aprender para dominar o PowerShell?</a>.</span><span class="sxs-lookup"><span data-stu-id="3a655-227"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">Comment</a> from discussion <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">What should I (IT student) learn to master PowerShell?</a>.</span></span></div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
 
-<span data-ttu-id="cb47e-228">Isso fornece os resultados de:</span><span class="sxs-lookup"><span data-stu-id="cb47e-228">This gives you the results of:</span></span>
+<span data-ttu-id="3a655-228">Isso fornece os resultados de:</span><span class="sxs-lookup"><span data-stu-id="3a655-228">This gives you the results of:</span></span>
 
 ```Output
 2
 4
 ```
 
-<span data-ttu-id="cb47e-229">Ao mover o enumerador para frente, o próximo item não é processado pelo `switch`, mas você pode acessar esse valor diretamente.</span><span class="sxs-lookup"><span data-stu-id="cb47e-229">By moving the enumerator forward, the next item doesn't get processed by the `switch` but you can access that value directly.</span></span> <span data-ttu-id="cb47e-230">Eu chamaria isso de loucura.</span><span class="sxs-lookup"><span data-stu-id="cb47e-230">I would call it madness.</span></span>
+<span data-ttu-id="3a655-229">Ao mover o enumerador para frente, o próximo item não é processado pelo `switch`, mas você pode acessar esse valor diretamente.</span><span class="sxs-lookup"><span data-stu-id="3a655-229">By moving the enumerator forward, the next item doesn't get processed by the `switch` but you can access that value directly.</span></span> <span data-ttu-id="3a655-230">Eu chamaria isso de loucura.</span><span class="sxs-lookup"><span data-stu-id="3a655-230">I would call it madness.</span></span>
 
-## <a name="other-patterns"></a><span data-ttu-id="cb47e-231">Outros padrões</span><span class="sxs-lookup"><span data-stu-id="cb47e-231">Other patterns</span></span>
+## <a name="other-patterns"></a><span data-ttu-id="3a655-231">Outros padrões</span><span class="sxs-lookup"><span data-stu-id="3a655-231">Other patterns</span></span>
 
-### <a name="hashtables"></a><span data-ttu-id="cb47e-232">Tabelas de hash</span><span class="sxs-lookup"><span data-stu-id="cb47e-232">Hashtables</span></span>
+### <a name="hashtables"></a><span data-ttu-id="3a655-232">Tabelas de hash</span><span class="sxs-lookup"><span data-stu-id="3a655-232">Hashtables</span></span>
 
-<span data-ttu-id="cb47e-233">Uma das minhas postagens mais populares é aquela que fiz sobre [tabelas de hash][].</span><span class="sxs-lookup"><span data-stu-id="cb47e-233">One of my most popular posts is the one I did on [hashtables][].</span></span> <span data-ttu-id="cb47e-234">Um dos casos de uso de um `hashtable` é ser uma tabela de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="cb47e-234">One of the use cases for a `hashtable` is to be a lookup table.</span></span> <span data-ttu-id="cb47e-235">Essa é uma abordagem alternativa para um padrão comum que uma instrução `switch` geralmente aborda.</span><span class="sxs-lookup"><span data-stu-id="cb47e-235">That is an alternate approach to a common pattern that a `switch` statement is often addressing.</span></span>
+<span data-ttu-id="3a655-233">Uma das minhas postagens mais populares é aquela que fiz sobre [tabelas de hash][].</span><span class="sxs-lookup"><span data-stu-id="3a655-233">One of my most popular posts is the one I did on [hashtables][].</span></span> <span data-ttu-id="3a655-234">Um dos casos de uso de um `hashtable` é ser uma tabela de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="3a655-234">One of the use cases for a `hashtable` is to be a lookup table.</span></span> <span data-ttu-id="3a655-235">Essa é uma abordagem alternativa para um padrão comum que uma instrução `switch` geralmente aborda.</span><span class="sxs-lookup"><span data-stu-id="3a655-235">That is an alternate approach to a common pattern that a `switch` statement is often addressing.</span></span>
 
 ``` powershell
 $day = 3
@@ -696,11 +696,11 @@ $lookup[$day]
 Wednesday
 ```
 
-<span data-ttu-id="cb47e-236">Se estiver usando um `switch` apenas como uma pesquisa, geralmente usarei um `hashtable` em vez disso.</span><span class="sxs-lookup"><span data-stu-id="cb47e-236">If I'm only using a `switch` as a lookup, I often use a `hashtable` instead.</span></span>
+<span data-ttu-id="3a655-236">Se estiver usando um `switch` apenas como uma pesquisa, geralmente usarei um `hashtable` em vez disso.</span><span class="sxs-lookup"><span data-stu-id="3a655-236">If I'm only using a `switch` as a lookup, I often use a `hashtable` instead.</span></span>
 
-### <a name="enum"></a><span data-ttu-id="cb47e-237">Enum</span><span class="sxs-lookup"><span data-stu-id="cb47e-237">Enum</span></span>
+### <a name="enum"></a><span data-ttu-id="3a655-237">Enum</span><span class="sxs-lookup"><span data-stu-id="3a655-237">Enum</span></span>
 
-<span data-ttu-id="cb47e-238">O PowerShell 5.0 apresentou o `Enum` e ele também é uma opção nesse caso.</span><span class="sxs-lookup"><span data-stu-id="cb47e-238">PowerShell 5.0 introduced the `Enum` and it's also an option in this case.</span></span>
+<span data-ttu-id="3a655-238">O PowerShell 5.0 apresentou o `Enum` e ele também é uma opção nesse caso.</span><span class="sxs-lookup"><span data-stu-id="3a655-238">PowerShell 5.0 introduced the `Enum` and it's also an option in this case.</span></span>
 
 ``` powershell
 $day = 3
@@ -722,11 +722,11 @@ enum DayOfTheWeek {
 Wednesday
 ```
 
-<span data-ttu-id="cb47e-239">Poderíamos passar o dia analisando diferentes maneiras de resolver esse problema.</span><span class="sxs-lookup"><span data-stu-id="cb47e-239">We could go all day looking at different ways to solve this problem.</span></span> <span data-ttu-id="cb47e-240">Queria apenas me certificar de que você sabe que tem opções.</span><span class="sxs-lookup"><span data-stu-id="cb47e-240">I just wanted to make sure you knew you had options.</span></span>
+<span data-ttu-id="3a655-239">Poderíamos passar o dia analisando diferentes maneiras de resolver esse problema.</span><span class="sxs-lookup"><span data-stu-id="3a655-239">We could go all day looking at different ways to solve this problem.</span></span> <span data-ttu-id="3a655-240">Queria apenas me certificar de que você sabe que tem opções.</span><span class="sxs-lookup"><span data-stu-id="3a655-240">I just wanted to make sure you knew you had options.</span></span>
 
-## <a name="final-words"></a><span data-ttu-id="cb47e-241">Conclusão</span><span class="sxs-lookup"><span data-stu-id="cb47e-241">Final words</span></span>
+## <a name="final-words"></a><span data-ttu-id="3a655-241">Conclusão</span><span class="sxs-lookup"><span data-stu-id="3a655-241">Final words</span></span>
 
-<span data-ttu-id="cb47e-242">A instrução switch é aparentemente simples, mas oferece alguns recursos avançados que a maioria das pessoas não percebe que estão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="cb47e-242">The switch statement is simple on the surface but it offers some advanced features that most people don't realize are available.</span></span> <span data-ttu-id="cb47e-243">Juntar esses recursos torna esse um recurso poderoso.</span><span class="sxs-lookup"><span data-stu-id="cb47e-243">Stringing those features together makes this a powerful feature.</span></span> <span data-ttu-id="cb47e-244">Espero que você tenha aprendido algo que não tinha percebido antes.</span><span class="sxs-lookup"><span data-stu-id="cb47e-244">I hope you learned something that you had not realized before.</span></span>
+<span data-ttu-id="3a655-242">A instrução switch é aparentemente simples, mas oferece alguns recursos avançados que a maioria das pessoas não percebe que estão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="3a655-242">The switch statement is simple on the surface but it offers some advanced features that most people don't realize are available.</span></span> <span data-ttu-id="3a655-243">Juntar esses recursos torna esse um recurso poderoso.</span><span class="sxs-lookup"><span data-stu-id="3a655-243">Stringing those features together makes this a powerful feature.</span></span> <span data-ttu-id="3a655-244">Espero que você tenha aprendido algo que não tinha percebido antes.</span><span class="sxs-lookup"><span data-stu-id="3a655-244">I hope you learned something that you had not realized before.</span></span>
 
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2018-01-12-Powershell-switch-statement/
