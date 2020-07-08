@@ -1,6 +1,6 @@
 ---
 title: Tudo o que você queria saber sobre o ShouldProcess
-description: O ShouldProcess é um recurso importante que geralmente é ignorado. Os parâmetros WhatIf e Confirm o tornam fáceis de adicionar às suas funções.
+description: O ShouldProcess é um recurso importante, mas que muitas vezes é ignorado. Com os parâmetros WhatIf e Confirm, fica fácil adicioná-lo às funções.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 1d9110302a191b90bd11bdf742f77704a8c9d6f0
@@ -12,13 +12,13 @@ ms.locfileid: "84149479"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>Tudo o que você queria saber sobre o ShouldProcess
 
-As funções do PowerShell têm vários recursos que melhoram muito a maneira como os usuários interagem com eles.
-Um recurso importante que muitas vezes é ignorado é o suporte para `-WhatIf` e `-Confirm`, e é muito fácil de adicioná-lo às suas funções. Neste artigo, vamos nos aprofundar em como implementar esse recurso.
+As funções do PowerShell têm vários recursos que aprimoram muito a interação com os usuários.
+Um recurso importante, mas que muitas vezes é ignorado é o suporte para `-WhatIf` e `-Confirm`, e é muito fácil adicioná-lo às funções. Neste artigo, vamos nos aprofundar em como implementar esse recurso.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
-Esse é um recurso simples e que você pode habilitar em suas funções para fornecer uma rede de segurança aos usuários que precisarem. Não há nada mais assustador do que executar pela primeira vez um comando que você sabe que pode ser perigoso. A opção de executá-lo com `-WhatIf` pode fazer uma grande diferença.
+É um recurso simples e que você pode habilitar nas funções para fornecer uma rede de segurança aos usuários que precisarem. Não há nada mais assustador do que executar um comando que você sabe que pode ser perigoso pela primeira vez. A opção de executá-lo com `-WhatIf` pode fazer muita diferença.
 
 ## <a name="commonparameters"></a>CommonParameters
 
@@ -26,7 +26,7 @@ Antes de vermos como implementar esses [parâmetros comuns][], vamos dar uma olh
 
 ## <a name="using--whatif"></a>Usando o -WhatIf
 
-Quando um comando dá suporte ao parâmetro `-WhatIf`, ele permite que você veja o que o comando teria feito em vez de fazer alterações. É uma boa maneira de testar o impacto de um comando, especialmente antes de fazer algo destrutivo.
+Quando um comando dá suporte ao parâmetro `-WhatIf`, ele permite que você veja o que o comando teria feito em vez de fazer as alterações. Essa é uma boa maneira de testar o impacto de um comando, especialmente antes de fazer algo destrutivo.
 
 ```powershell
 PS C:\temp> Remove-Item -Path .\myfile1.txt -WhatIf
@@ -68,7 +68,7 @@ S - Pause the current pipeline and return to the command prompt. Type "exit" to 
 
 ### <a name="localization"></a>Localização
 
-Esse prompt é localizado no PowerShell para que o idioma seja alterado com base no idioma do seu sistema operacional. Essa é mais uma das coisas que o PowerShell gerencia para você.
+Esse prompt é localizado no PowerShell para que o idioma seja alterado com base no idioma do sistema operacional. Essa é mais uma das coisas que o PowerShell gerencia para você.
 
 ### <a name="switch-parameters"></a>Parâmetros de opção
 
@@ -101,7 +101,7 @@ Caso você seja um novato em tabelas de hash ou nivelamento, escrevi outro artig
 
 ## <a name="supportsshouldprocess"></a>SupportsShouldProcess
 
-A primeira etapa para habilitar o suporte a `-WhatIf` e `-Confirm` é especificar `SupportsShouldProcess` no `CmdletBinding` de sua função.
+A primeira etapa para habilitar o suporte a `-WhatIf` e `-Confirm` é especificar `SupportsShouldProcess` no `CmdletBinding` da função.
 
 ```powershell
 function Test-ShouldProcess {
@@ -118,7 +118,7 @@ PS> Test-ShouldProcess -WhatIf
 What if: Performing the operation "Remove File" on target "C:\Temp\myfile1.txt".
 ```
 
-Observe que eu não criei um parâmetro chamado `-WhatIf`. Especificar `SupportsShouldProcess` automaticamente o cria para nós. Quando especificamos o parâmetro `-WhatIf` no `Test-ShouldProcess`, algumas coisas que chamamos também executam o processamento `-WhatIf`.
+Observe que eu não criei um parâmetro chamado `-WhatIf`. Ao especificar `SupportsShouldProcess`, ele é automaticamente o criado para nós. Quando especificamos o parâmetro `-WhatIf` no `Test-ShouldProcess`, algumas coisas que chamamos também executam o processamento `-WhatIf`.
 
 ### <a name="trust-but-verify"></a>Confiar sem deixar de verificar
 
@@ -167,7 +167,7 @@ Performing the operation "Test-ShouldProcess" on target "myfile1.txt".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-Um recurso incrível do `$PSCmdlet.ShouldProcess` é que ele dobra como saída detalhada. Eu dependo disso com frequência ao implementar `ShouldProcess`.
+Um recurso incrível do `$PSCmdlet.ShouldProcess` é que ele dobra como saída detalhada. Eu frequentemente recorro a isso ao implementar `ShouldProcess`.
 
 ```powershell
 PS> Test-ShouldProcess -Verbose
@@ -176,7 +176,7 @@ VERBOSE: Performing the operation "Test-ShouldProcess" on target "myfile1.txt".
 
 ### <a name="overloads"></a>Sobrecargas
 
-Há algumas sobrecargas diferentes para `$PSCmdlet.ShouldProcess` com parâmetros diferentes para personalizar as mensagens. Já vimos a primeira no exemplo acima. Vamos examinar cada uma com mais detalhes.
+Há algumas sobrecargas diferentes para `$PSCmdlet.ShouldProcess` com parâmetros diferentes para personalizar as mensagens. Já vimos a primeira no exemplo acima. Vamos examinar cada uma mais detalhadamente.
 
 ```powershell
 function Test-ShouldProcess {
@@ -224,11 +224,11 @@ What if: Performing the operation "OPERATION" on target "TARGET".
 What if: MESSAGE
 ```
 
-Eu tenho a tendência de usar o de dois parâmetros.
+Eu costumo usar a opção com dois parâmetros.
 
 ### <a name="shouldprocessreason"></a>ShouldProcessReason
 
-Há uma quarta sobrecarga que é mais avançada do que as outras. Ela permite que você obtenha o motivo `ShouldProcess` foi executado. Estou adicionando isso aqui apenas para fins de completude, pois podemos só verificar se `$WhatIf` está `$true`.
+Há uma quarta sobrecarga que é mais avançada do que as outras. Ela permite que você entenda o motivo pelo qual `ShouldProcess` foi executado. Estou adicionando isso aqui apenas para fins de integridade, pois é possível apenas verificar se `$WhatIf` é `$true`.
 
 ```powershell
 $reason = ''
@@ -242,7 +242,7 @@ Precisamos passar a variável `$reason` para o quarto parâmetro como uma variá
 
 ### <a name="where-to-place-it"></a>Onde colocar
 
-Você usa `ShouldProcess` para tornar seus scripts mais seguros. Portanto, você deve usá-lo quando seus scripts estão fazendo alterações. Gosto de posicionar a chamada de `$PSCmdlet.ShouldProcess` o mais próximo possível da alteração.
+Você usa `ShouldProcess` para tornar os scripts mais seguros. Portanto, você deve usá-lo quando os scripts estiverem fazendo alterações. Gosto de posicionar a chamada de `$PSCmdlet.ShouldProcess` o mais próximo possível da alteração.
 
 ```powershell
 ## general logic and variable work
@@ -262,9 +262,9 @@ foreach ($node in $collection){
 }
 ```
 
-O motivo pelo qual eu coloco `ShouldProcess` rigidamente ao redor da alteração, é porque eu quero que o máximo de códigos possível seja executado quando `-WhatIf` for especificado. Quero que a instalação e a validação sejam executadas, se possível, de maneira que o usuário veja esses erros.
+O motivo pelo qual eu coloco `ShouldProcess` rigidamente ao redor da alteração é porque eu quero que o máximo de códigos possível seja executado quando `-WhatIf` for especificado. Quero que a instalação e a validação sejam executadas, se possível, de maneira que o usuário veja esses erros.
 
-Também gosto de usar isso em testes do Pester que validem meus projetos. Se eu tiver uma parte da lógica difícil de simular em Pester, eu geralmente a encapsulo `ShouldProcess` e a chamo com `-WhatIf` em meus testes. É melhor testar parte do código do que nenhum código.
+Também gosto de usar isso em testes do Pester que validem meus projetos. Se eu tiver uma parte da lógica difícil de simular em Pester, eu geralmente a encapsulo em `ShouldProcess` e a chamo com `-WhatIf` em meus testes. É melhor testar parte do código do que nenhum código.
 
 ### <a name="whatifpreference"></a>$WhatIfPreference
 
@@ -320,11 +320,11 @@ Abordarei como adicionar o suporte a `-Force` em uma seção posterior.
 - `Low`
 - `None`
 
-Com esses valores, você pode especificar diferentes níveis de impacto para cada função. Se você tiver `$ConfirmPreference` definido com um valor maior que `ConfirmImpact`, não será solicitado que confirme a execução.
+Com esses valores, você pode especificar diferentes níveis de impacto para cada função. Se você tiver `$ConfirmPreference` definido com um valor maior que `ConfirmImpact`, não será solicitado a confirmar a execução.
 
-Por padrão, `$ConfirmPreference` é definido como `High` e `ConfirmImpact`, como `Medium`. Se você quiser que sua função solicite automaticamente o usuário, defina seu `ConfirmImpact` como `High`. Caso contrário, defina-o como `Medium` se for destrutivo e use `Low` se o comando for sempre seguro ao executar o ambiente de produção. Se você o definir como `none`, ele não será solicitado mesmo que `-Confirm` tenha sido especificado (mas ainda oferece suporte a `-WhatIf`).
+Por padrão, `$ConfirmPreference` é definido como `High` e `ConfirmImpact`, como `Medium`. Se você quiser que sua função solicite automaticamente o usuário, defina `ConfirmImpact` como `High`. Caso contrário, defina-o como `Medium` se for destrutivo e use `Low` se o comando for sempre seguro ao executar o ambiente de produção. Se você o definir como `none`, ele não será solicitado mesmo que `-Confirm` tenha sido especificado (mas ainda oferece suporte a `-WhatIf`).
 
-Ao chamar uma função com `-Confirm`, o valor de `$ConfirmPreference` é definido como `Low` dentro do escopo da sua função.
+Ao chamar uma função com `-Confirm`, o valor de `$ConfirmPreference` é definido como `Low` dentro do escopo da função.
 
 ### <a name="suppressing-nested-confirm-prompts"></a>Como suprimir prompts de confirmação aninhados
 
@@ -344,7 +344,7 @@ function Test-ShouldProcess {
 }
 ```
 
-Isso nos leva de volta para o que já chamei a atenção antes: Há nuances sobre quando `-WhatIf` não é passado para uma função e quando `-Confirm` passa para uma função. Prometo que tratarei disso depois.
+Isso nos leva de volta a algo que já alertei antes: Há nuances sobre quando `-WhatIf` não é passado para uma função e quando `-Confirm` passa para uma função. Prometo que tratarei disso depois.
 
 ## <a name="pscmdletshouldcontinue"></a>$PSCmdlet.ShouldContinue
 
@@ -376,7 +376,7 @@ TARGET
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-O maior problema com `ShouldContinue` é que ele requer que o usuário o execute interativamente porque ele sempre solicita ao usuário. Você deve estar sempre criando ferramentas que podem ser usadas por outros scripts. A maneira de fazer isso é implementar `-Force`. Voltarei a essa ideia mais tarde.
+O maior problema com `ShouldContinue` é que ele requer que o usuário o execute interativamente porque ele sempre solicita ao usuário. Você deve sempre criar ferramentas que podem ser usadas por outros scripts. A maneira de fazer isso é implementar `-Force`. Voltarei a essa ideia mais tarde.
 
 ### <a name="yes-to-all"></a>Sim para todos
 
@@ -415,14 +415,14 @@ Adicionei um loop de `foreach` e uma coleção para mostrá-lo em ação. Eu ret
 
 ### <a name="shouldprocess--force"></a>ShouldProcess -Force
 
-Se você definir seu `ConfirmImpact` como `high`, a primeira coisa que os usuários tentarão é suprimi-lo com `-Force`. Essa é a primeira coisa que eu faço, pelo menos.
+Se você definir `ConfirmImpact` como `high`, a primeira coisa que os usuários tentarão é suprimi-lo com `-Force`. Essa é a primeira coisa que eu faço, pelo menos.
 
 ```powershell
 Test-ShouldProcess -Force
 Error: Test-ShouldProcess: A parameter cannot be found that matches parameter name 'force'.
 ```
 
-Se você se lembra da seção `ConfirmImpact`, elas na verdade precisam chamá-la da seguinte maneira:
+Se você se lembra da seção `ConfirmImpact`, eles precisam chamá-la da seguinte maneira:
 
 ```powershell
 Test-ShouldProcess -Confirm:$false
@@ -471,7 +471,7 @@ if ($Force -and -not $Confirm){
 }
 ```
 
-Se o usuário especificar `-Force`, precisaremos suprimir a solicitação de confirmação, a não ser que também especifique `-Confirm`. Isso permite que um usuário Force uma alteração, mas ainda confirma a alteração. Em seguida, definimos `$ConfirmPreference` no escopo local onde nossa chamada para `ShouldProcess` os descobre.
+Se o usuário especificar `-Force`, precisaremos suprimir a solicitação de confirmação, a não ser que também especifique `-Confirm`. Isso permite que um usuário force uma alteração, mas ainda confirma a alteração. Em seguida, definimos `$ConfirmPreference` no escopo local onde nossa chamada para `ShouldProcess` os descobre.
 
 ```powershell
 if ($PSCmdlet.ShouldProcess('TARGET')){
@@ -511,9 +511,9 @@ Não precisamos nos preocupar com `-Confirm` ou `-WhatIf` nesse cenário porque 
 
 ## <a name="scope-issues"></a>Problemas de escopo
 
-`-WhatIf` e `-Confirm` devem ser aplicados a tudo dentro de suas funções e a tudo que eles chamam. Eles o fazem definindo `$WhatIfPreference` como `$true` ou definindo `$ConfirmPreference` como `Low` no escopo local da função. Quando você chama outra função, as chamadas para `ShouldProcess` usam esses valores.
+`-WhatIf` e `-Confirm` devem ser aplicados a tudo dentro de funções e a tudo que eles chamam. Eles o fazem definindo `$WhatIfPreference` como `$true` ou definindo `$ConfirmPreference` como `Low` no escopo local da função. Quando você chama outra função, as chamadas para `ShouldProcess` usam esses valores.
 
-Isso funciona corretamente na maioria das vezes. Sempre que você chamar o cmdlet interno ou uma função em seu mesmo escopo, isso funcionará. Também funcionará quando você chamar um script ou uma função em um módulo de script do console.
+Isso funciona na maioria das vezes. Sempre que você chamar o cmdlet interno ou uma função no mesmo escopo, isso funcionará. Também funcionará quando você chamar um script ou uma função em um módulo de script do console.
 
 O local específico em que ele não funciona é quando um script ou um módulo de script chama uma função em outro módulo de script. Isso pode não parecer um grande problema, mas a maioria dos módulos criados ou extraídos do PSGallery são módulos de script.
 
@@ -521,15 +521,15 @@ O principal problema é que os módulos de script não herdam os valores de `$Wh
 
 A melhor maneira de resumir isso em uma regra geral é que funciona corretamente para módulos binários, mas não é confiável para módulos de script. Caso você não tenha certeza, teste-o ou apenas presuma que ele não funciona corretamente.
 
-Pessoalmente, eu acredito que isso é muito perigoso porque cria cenários em que você adiciona suporte para `-WhatIf` a vários módulos que funcionam corretamente em isolamento, mas não quando chamam um ao outro.
+Pessoalmente, eu acredito que isso é muito perigoso, pois cria cenários em que você adiciona suporte para `-WhatIf` a vários módulos que funcionam corretamente em isolamento, mas não quando chamam um ao outro.
 
 Há uma RFC do GitHub trabalhando para corrigir esse problema. Consulte [Propagar as preferências de execução além do escopo do módulo de script][RFC] para obter mais detalhes.
 
 ## <a name="in-closing"></a>Concluindo
 
-Preciso pesquisar como usar `ShouldProcess` sempre que eu preciso usar. Demorei muito tempo para conseguir distinguir `ShouldProcess` de `ShouldContinue`. Eu quase sempre preciso pesquisar os parâmetros para usá-los. Então, não se preocupe se você ainda se sentir confuso de vez em quando. Este artigo estará aqui sempre que você precisar. Tenho certeza de que eu mesmo vou consultá-lo com frequência.
+Tenho que pesquisar como usar `ShouldProcess` toda vez que preciso usá-lo. Demorei muito tempo para conseguir distinguir `ShouldProcess` de `ShouldContinue`. Eu quase sempre preciso pesquisar os parâmetros para usá-los. Então, não se preocupe se você ainda se sentir confuso de vez em quando. Este artigo estará aqui sempre que você precisar. Tenho certeza de que eu mesmo vou consultá-lo com frequência.
 
-Se você gostou deste post, compartilhe seus pensamentos comigo no Twitter usando o link abaixo. Gosto de saber das pessoas que apreciam meus conteúdos.
+Se você gostou desta postagem, compartilhe seus pensamentos comigo no Twitter usando o link abaixo. Gosto de saber das pessoas que apreciam meus conteúdos.
 
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2020-03-15-Powershell-shouldprocess-whatif-confirm-shouldcontinue-everything/

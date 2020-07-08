@@ -1,6 +1,6 @@
 ---
 title: Tudo o que você queria saber sobre a substituição de variáveis em cadeias de caracteres
-description: Há diversas maneiras de usar variáveis em cadeias de caracteres para criar texto formatado.
+description: Há diversas maneiras de usar variáveis em cadeias de caracteres para criar textos formatados.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 1e65e90ffa09b34f62bc49ad64b062d429483c33
@@ -12,21 +12,21 @@ ms.locfileid: "84149459"
 ---
 # <a name="everything-you-wanted-to-know-about-variable-substitution-in-strings"></a>Tudo o que você queria saber sobre a substituição de variáveis em cadeias de caracteres
 
-Há diversas maneiras de usar variáveis em cadeias de caracteres. Estou chamando isso de substituição de variável, mas estou me referindo a qualquer momento que você desejar formatar uma cadeia de caracteres para incluir valores de variáveis. Isso é algo que explico com frequência para novos criadores de scripts.
+Há diversas maneiras de usar variáveis em cadeias de caracteres. Estou chamando isso de substituição de variáveis, mas me refiro a qualquer ocasião em que você queira formatar uma cadeia de caracteres para incluir valores de variáveis. Isso é algo que explico com frequência para novos criadores de scripts.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="concatenation"></a>Concatenação
 
-A primeira classe de métodos pode ser chamada de concatenação. Basicamente, ela está levando várias cadeias de caracteres e reunindo-as. Há um longo histórico de uso da concatenação para criar cadeias de caracteres formatadas.
+A primeira classe de métodos pode ser chamada de concatenação. Basicamente, ela reúne várias cadeias de caracteres. Há um longo histórico de uso da concatenação para criar cadeias de caracteres formatadas.
 
 ```powershell
 $name = 'Kevin Marquette'
 $message = 'Hello, ' + $name
 ```
 
-A concatenação funciona bem quando há apenas alguns valores a serem adicionados. Mas isso pode ficar complicado rapidamente.
+A concatenação funciona bem quando há apenas alguns valores a serem adicionados. Porém, isso logo pode ficar complicado.
 
 ```powershell
 $first = 'Kevin'
@@ -41,7 +41,7 @@ Este exemplo simples já está ficando mais difícil de ler.
 
 ## <a name="variable-substitution"></a>Substituição de variáveis
 
-O PowerShell tem outra opção que é mais fácil. Você pode especificar suas variáveis diretamente nas cadeias de caracteres.
+O PowerShell tem uma opção mais fácil. Você pode especificar variáveis diretamente nas cadeias de caracteres.
 
 ```powershell
 $message = "Hello, $first $last."
@@ -51,14 +51,14 @@ O tipo de aspas usado em volta da cadeia de caracteres faz diferença. Uma cadei
 
 ## <a name="command-substitution"></a>Substituição de comando
 
-Tudo fica um pouco complicados quando você começa a tentar colocar os valores das propriedades em uma cadeia de caracteres. É aí que muitos novatos são enganados. Primeiro, deixe-me mostrar o que eles acham que devem funcionar (e, pelo valor nominal, quase parecerá).
+Tudo fica um pouco complicado quando você tenta colocar os valores de propriedades em uma cadeia de caracteres. É aí que muitos novatos se confundem. Primeiro, deixe-me mostrar o que eles acham que deve funcionar (e, à primeira vista, quase parece que deveria funcionar).
 
 ```powershell
 $directory = Get-Item 'c:\windows'
 $message = "Time: $directory.CreationTime"
 ```
 
-Você esperaria obter `CreationTime` de `$directory`, mas, em vez disso, você obtém este `Time: c:\windows.CreationTime` como valor. O motivo é que esse tipo de substituição vê apenas a variável base. Ele considera o período como parte da cadeia de caracteres para que ele pare de resolver o valor mais profundamente.
+Você esperaria obter `CreationTime` de `$directory`, mas obtém o valor `Time: c:\windows.CreationTime`. O motivo é que esse tipo de substituição vê apenas a variável base. Ele considera o ponto como parte da cadeia de caracteres. Por isso, para de resolver o valor mais profundamente.
 
 Assim, esse objeto fornece uma cadeia de caracteres como um valor padrão quando colocado em uma cadeia de caracteres.
 Alguns objetos fornecem o nome do tipo, como `System.Collections.Hashtable`. Apenas algo a ser observado.
@@ -73,7 +73,7 @@ Isso funciona muito bem para algumas situações, mas poderá ficar tão estranh
 
 ### <a name="command-execution"></a>Execução do comando
 
-Você pode executar comandos dentro de uma cadeia de caracteres. Embora eu tenha essa opção, não gosto dela. Ele fica confuso rapidamente e difícil de depurar. Executo o comando e o salvo em uma variável ou uso uma cadeia de caracteres de formato.
+Você pode executar comandos dentro de uma cadeia de caracteres. Embora eu tenha essa opção, não gosto dela. Logo tudo fica confuso e difícil de depurar. Executo o comando e o salvo em uma variável ou uso uma cadeia de caracteres de formato.
 
 ```powershell
 $message = "Date: $(Get-Date)"
@@ -81,7 +81,7 @@ $message = "Date: $(Get-Date)"
 
 ## <a name="format-string"></a>Cadeia de formato
 
-O .NET tem um modo de formatar cadeias de caracteres com o qual acho muito fácil trabalhar. Primeiro, deixe-me mostrar o método estático para isso antes de mostrar o atalho do PowerShell para fazer a mesma ação.
+O .NET tem um modo de formatar cadeias de caracteres com o qual acho muito fácil trabalhar. Mostrarei o método estático para isso, antes de mostrar o atalho do PowerShell para a mesma ação.
 
 ```powershell
 # .NET string format string
@@ -91,9 +91,9 @@ O .NET tem um modo de formatar cadeias de caracteres com o qual acho muito fáci
 'Hello, {0} {1}.' -f $first, $last
 ```
 
-Aqui, a cadeia de caracteres é analisada para os tokens `{0}` e `{1}`. Em seguida, ela usa esse número para escolher os valores fornecidos. Se você quiser repetir um valor em algum lugar na cadeia de caracteres, poderá reutilizar esse número de valores.
+Aqui, a cadeia de caracteres é analisada para os tokens `{0}` e `{1}`. Em seguida, ela usa esse número para escolher entre os valores fornecidos. Se você quiser repetir um valor em algum lugar na cadeia de caracteres, poderá reutilizar esse número de valores.
 
-Quanto mais complicada for a cadeia de caracteres, mais valor você receberá dessa abordagem.
+Quanto mais complicada for a cadeia de caracteres, mais você aproveitará essa abordagem.
 
 ### <a name="format-values-as-arrays"></a>Formatar valores como matrizes
 
@@ -107,7 +107,7 @@ $values = @(
 'Hello, {0} {1}.' -f $values
 ```
 
-Isso não é nivelamento porque estou passando toda a matriz, mas a ideia é semelhante.
+Não é nivelamento, pois estou passando a matriz inteira, mas é semelhante.
 
 ## <a name="advanced-formatting"></a>Formatação avançada
 
@@ -118,11 +118,11 @@ Eu chamei estes intencionalmente como provenientes do .NET porque há muitas op�
 "Population {0:N0}" -f  8175133
 ```
 
-Não falarei sobre eles, mas queria apenas informar de que se trata de um mecanismo de formatação muito eficiente, se necessário.
+Não falarei sobre elas, mas queria apenas informar de que se trata de um mecanismo de formatação muito eficiente, se necessário.
 
 ## <a name="joining-strings"></a>Junção de cadeias de caracteres
 
-Às vezes, você realmente deseja concatenar uma lista de valores juntos. Há um operador `-join` que pode fazer isso para você. Ele até mesmo permite que você especifique um caractere para unir entre as cadeias de caracteres.
+Às vezes, você quer concatenar uma lista de valores. Há um operador `-join` que pode fazer isso para você. Ele até mesmo permite que você especifique um caractere para unir as cadeias de caracteres.
 
 ```powershell
 $servers = @(
@@ -146,16 +146,16 @@ Também vale a pena destacar que é possível usar `-split` para dividir cadeias
 
 ## <a name="join-path"></a>Join-Path
 
-Este geralmente é ignorado, mas é um ótimo cmdlet para a criação de um caminho de arquivo.
+Geralmente é ignorado, mas é um ótimo cmdlet para criar um caminho de arquivo.
 
 ```powershell
 $folder = 'Temp'
 Join-Path -Path 'c:\windows' -ChildPath $folder
 ```
 
-A grande vantagem disso é que ele funciona as barras invertidas corretamente quando reúne os valores. Isso é especialmente importante se você estiver usando valores de usuários ou de arquivos de configuração.
+A grande vantagem é que ele usa as barras invertidas corretamente ao reunir os valores. Isso é especialmente importante se você está usando valores de usuários ou de arquivos de configuração.
 
-Isso também vai bem com `Split-Path` e `Test-Path`. Também abordei isso em minha postagem sobre [ler e salvar em arquivos][].
+Além disso, funciona bem com `Split-Path` e `Test-Path`. Também abordei isso em minha postagem sobre [ler e salvar em arquivos][].
 
 ## <a name="strings-are-arrays"></a>Cadeia de caracteres são matrizes
 
@@ -171,12 +171,12 @@ foreach($number in 1..10000)
 }
 ```
 
-Ele parece muito básico, mas o que você não vê é que sempre que uma cadeia de caracteres é adicionada a `$message`, uma cadeia de caracteres totalmente nova é criada. A memória é alocada, os dados são copiados e o antigo é descartado.
-Não é muito importante quando isso é feito apenas algumas vezes, mas um loop como esse realmente exporia o problema.
+Ele parece muito básico, mas o que você não vê é que sempre que uma cadeia de caracteres é adicionada a `$message`, uma cadeia de caracteres totalmente nova é criada. A memória é alocada, os dados são copiados e a antiga é descartada.
+Não é muito importante quando isso é feito apenas algumas vezes, mas um loop como esse evidencia o problema.
 
 ### <a name="stringbuilder"></a>StringBuilder
 
-StringBuilder também é muito popular para a criação de cadeias de caracteres grandes de muitas cadeias de caracteres menores. O motivo disso é que ele apenas coleta todas as cadeias de caracteres que você adiciona a ele e concatena todas elas no final quando você recupera o valor.
+O StringBuilder também é muito popular para a criação de cadeias de caracteres grandes com base em várias cadeias de caracteres menores. O motivo disso é que ele apenas coleta todas as cadeias de caracteres adicionadas a ele e concatena todas elas no final quando você recupera o valor.
 
 ```powershell
 $stringBuilder = New-Object -TypeName "System.Text.StringBuilder"
@@ -189,11 +189,11 @@ foreach($number in 1..10000)
 $message = $stringBuilder.ToString()
 ```
 
-Novamente, isso é algo que estou atingindo para o .NET. Não uso mais com frequência, mas é bom saber que está lá.
+Novamente, isso é algo que estou buscando no .NET. Não uso mais com frequência, mas é bom saber que está lá.
 
 ## <a name="delineation-with-braces"></a>Delineação com chaves
 
-Isso é usado para concatenação de sufixo dentro da cadeia de caracteres. Às vezes, sua variável não tem um limite de palavra claro.
+A delineação com chaves é usada para concatenação de sufixo dentro da cadeia de caracteres. Às vezes, sua variável não tem um limite de palavra claro.
 
 ```powershell
 $test = "Bet"
@@ -210,11 +210,11 @@ Write-Host "$test $tester $($test)ter"
 Write-Host "{0} {1} {0}ter" -f $test, $tester
 ```
 
-Pessoalmente, uso a cadeia de caracteres de formato para isso, mas é bom saber caso você esteja em uma situação complicada.
+Pessoalmente, uso a cadeia de caracteres de formato para isso, mas é bom saber, caso você encontre isso na prática.
 
-## <a name="find-and-replace-tokens"></a>Localizar e substituir tokens
+## <a name="find-and-replace-tokens"></a>Localização e substituição de tokens
 
-Embora a maioria desses recursos limite a necessidade de distribuir sua própria solução, há ocasiões em que você pode ter arquivos de modelo grandes nos quais você deseja substituir as cadeias de caracteres.
+Embora a maioria desses recursos limite a necessidade de distribuir sua própria solução, há ocasiões em que você pode ter arquivos de modelo grandes em que deseja substituir cadeias de caracteres.
 
 Vamos supor que você tenha recebido um modelo de um arquivo com muito texto.
 
@@ -223,13 +223,13 @@ $letter = Get-Content -Path TemplateLetter.txt -RAW
 $letter = $letter -replace '#FULL_NAME#', 'Kevin Marquette'
 ```
 
-Você pode ter muitos tokens para substituir. O truque é usar um token muito distinto que seja fácil de localizar e substituir. Tenho a tendência de usar um caractere especial em ambas as extremidades para ajudar a diferenciá-lo.
+Pode ser necessário substituir muitos tokens. O truque é usar um token muito distinto que seja fácil de localizar e substituir. Costumo usar um caractere especial em ambas as extremidades para que seja mais fácil diferenciá-lo.
 
-Recentemente, encontrei uma nova maneira de abordar isso. Decidi deixar esta seção aqui porque esse é um padrão comumente usado.
+Recentemente, descobri uma nova abordagem. Decidi deixar esta seção aqui porque esse é um padrão comumente usado.
 
 ### <a name="replace-multiple-tokens"></a>Substituir vários tokens
 
-Quando tenho uma lista de tokens que preciso substituir, uso uma abordagem mais genérica. Eu os colocaria em uma tabela de hash e iteraria sobre eles para fazer a substituição.
+Quando tenho uma lista de tokens que preciso substituir, uso uma abordagem mais genérica. Coloco-os em uma tabela de hash e realizo uma iteração para fazer a substituição.
 
 ```powershell
 $tokenList = @{
@@ -246,11 +246,11 @@ foreach( $token in $tokenList.GetEnumerator() )
 }
 ```
 
-Esses tokens podem ser carregados de JSON ou CSV se necessário.
+Esses tokens podem ser carregados de arquivos JSON ou CSV se necessário.
 
 ### <a name="executioncontext-expandstring"></a>ExecutionContext ExpandString
 
-Há uma forma inteligente de definir uma cadeia de caracteres de substituição com aspas simples e expandir as variáveis mais tarde. Veja este exemplo:
+Há uma forma inteligente de definir uma cadeia de caracteres de substituição com aspas simples e expandir as variáveis posteriormente. Veja este exemplo:
 
 ```powershell
 $message = 'Hello, $Name!'
@@ -260,7 +260,7 @@ $string = $ExecutionContext.InvokeCommand.ExpandString($message)
 
 A chamada para `.InvokeCommand.ExpandString` no contexto de execução atual usa as variáveis no escopo atual para substituição. O importante aqui é que `$message` pode ser definido muito cedo, antes que as variáveis existam.
 
-Se expandirmos isso apenas um pouco, poderemos executar essa substituição várias vezes com valores diferentes.
+Se entrarmos em mais detalhes, poderemos executar essa substituição várias vezes com valores diferentes.
 
 ```powershell
 $message = 'Hello, $Name!'
@@ -270,15 +270,15 @@ foreach($name in $nameList){
 }
 ```
 
-Para continuar com essa ideia, você pode estar importando um modelo de email grande de um arquivo de texto para fazer isso. Preciso agradecer [Mark Kraus][] por esta [sugestão][].
+Para continuar com essa mesma ideia, você pode importar um modelo de email grande de um arquivo de texto para fazer isso. Preciso agradecer a [Mark Kraus][] por essa [sugestão][].
 
 ## <a name="whatever-works-the-best-for-you"></a>O que for mais adequado para você
 
-Sou um fã da abordagem de cadeia de caracteres de formato. Eu definitivamente faço isso com as cadeias de caracteres mais complicadas ou quando há muitas variáveis. Em algo muito curto, eu posso usar qualquer um deles.
+Sou um fã da abordagem de cadeia de caracteres de formato. Eu definitivamente faço isso com as cadeias de caracteres mais complicadas ou quando há muitas variáveis. Em algo muito curto, posso usar qualquer uma das abordagens.
 
 ## <a name="anything-else"></a>Algo mais?
 
-Abordei muitos aspectos de base. Espero que você tenha aprendido algo novo.
+Abordei muitos aspectos básicos neste artigo. Espero que você tenha aprendido algo novo.
 
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2017-01-13-powershell-variable-substitution-in-strings/

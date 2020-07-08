@@ -15,7 +15,7 @@ ms.locfileid: "84149469"
 Normalmente, o `$null` do PowerShell parece ser simples, mas tem inúmeras nuances. Vamos examinar o `$null` para entender o que acontece quando nos deparamos inesperadamente com um valor `$null`.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="what-is-null"></a>O que é NULL?
 
@@ -25,7 +25,7 @@ Você pode pensar no NULL como um valor desconhecido ou vazio. Uma variável ser
 
 O `$null` é uma variável automática do PowerShell usada para representar NULL. Você poderá atribui-la a variáveis, usá-la em comparações ou empregá-la como um espaço reservado para NULL em uma coleção.
 
-O PowerShell trata `$null` como um objeto de valor NULL. Isso é diferente do que você pode esperar se estiver acostumado com outras linguagens.
+O PowerShell trata `$null` como um objeto de valor NULL. Isso será diferente do que você pode esperar se estiver acostumado com outras linguagens.
 
 ## <a name="examples-of-null"></a>Exemplos de $null
 
@@ -271,7 +271,7 @@ PS> $null -eq $nothing
 True
 ```
 
-Se você o comparar com `$null`, receberá o valor `$null`. Quando usado em uma avaliação em que um valor seja obrigatório, o valor será sempre `$null`. Mas se você o colocr dentro de uma matriz, ele será tratado da mesma forma que uma matriz vazia.
+Se você o comparar com `$null`, receberá o valor `$null`. Quando usado em uma avaliação em que um valor seja obrigatório, o valor será sempre `$null`. Mas se você o colocar dentro de uma matriz, ele será tratado da mesma forma que uma matriz vazia.
 
 ```powershell
 PS> $containempty = @( @() )
@@ -355,7 +355,7 @@ At line:1 char:1
 
 ### <a name="function-parameters"></a>Parâmetros de função
 
-Forçar a conversão de valores em parâmetros de função é algo muito comum. Em geral, aprendemos a definir os tipos de nossos parâmetros, mesmo se tivermos a tendência de não definir os tipos das outras variáveis do script. Talvez você já tenha algumas variáveis com a conversão de tipo forçada em suas funções e sequer tenha percebido.
+Forçar a conversão de valores em parâmetros de função é algo muito comum. Em geral, aprenderemos a definir os tipos dos parâmetros, mesmo se estivermos acostumados a não definir os tipos das outras variáveis do script. Talvez você já tenha algumas variáveis com a conversão de tipo forçada em suas funções e sequer tenha percebido.
 
 ```powershell
 function Do-Something
@@ -406,7 +406,7 @@ if ($null -ne $userList){...}
 
 Eu prefiro usar `if` ou `foreach` do que `try/catch`. Não me entenda mal, eu também uso `try/catch` com frequência. Mas se eu posso testar uma condição de erro ou um conjunto de resultados vazio, posso permitir que meu tratamento de exceção seja para exceções verdadeiras.
 
-Também tenho a tendência de verificar se corresponde a `$null` antes de indexar um valor ou chamar métodos em um objeto. Essas duas ações falham em caso de objeto `$null`, portanto, acho importante validá-las primeiro. Já abordei esses cenários anteriormente nesta postagem.
+Também costumo verificar se corresponde a `$null` antes de indexar um valor ou chamar métodos em um objeto. Essas duas ações falham em caso de objeto `$null`, portanto, acho importante validá-las primeiro. Já abordei esses cenários anteriormente nesta postagem.
 
 ### <a name="no-results-scenario"></a>Cenário sem resultados
 

@@ -15,15 +15,15 @@ ms.locfileid: "84149599"
 As [matrizes][] são um recurso fundamental de linguagem da maioria das linguagens de programação. Elas são uma coleção de valores ou objetos difíceis de evitar. Vamos examinar as matrizes e tudo o que elas têm a oferecer.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="what-is-an-array"></a>O que é uma matriz?
 
 Antes de mudar para as outras formas pelas quais o PowerShell faz uso das matrizes, começarei com uma descrição técnica básica do que são matrizes e como elas são usadas pela maioria das linguagens de programação.
 
-Uma matriz é uma estrutura de dados que serve como uma coleção de vários itens. Você pode iterar sobre a matriz ou acessar itens individuais usando um índice. A matriz é criada como uma parte sequencial da memória, em que cada valor é armazenado ao lado do outro.
+Uma matriz é uma estrutura de dados que serve como uma coleção de vários itens. Você pode realizar uma iteração na matriz ou acessar itens individuais usando um índice. A matriz é criada como uma parte sequencial da memória, em que os valores são armazenados lado a lado.
 
-Falarei sobre cada um desses detalhes adiante.
+Falarei sobre cada um desses detalhes no decorrer do artigo.
 
 ## <a name="basic-usage"></a>Uso básico
 
@@ -55,7 +55,7 @@ Three
 
 Esta matriz tem quatro itens. Quando chamamos a variável `$data`, vemos a lista de nossos itens. Se for uma matriz de cadeias de caracteres, obteremos uma linha por cadeia de caracteres.
 
-Podemos declarar uma matriz em várias linhas. A vírgula é opcional nesse caso e, geralmente, deixada de fora.
+Podemos declarar uma matriz em várias linhas. A vírgula é opcional nesse caso e, geralmente, é deixada de fora.
 
 ```powershell
 $data = @(
@@ -66,11 +66,11 @@ $data = @(
 )
 ```
 
-Prefiro declarar minhas matrizes em várias linhas como essa. É mais fácil de ler quando você tem vários itens e também facilita a comparação com versões anteriores ao usar o controle do código-fonte.
+Prefiro declarar minhas matrizes em várias linhas como visto acima. É mais fácil de ler quando você tem vários itens e também facilita a comparação com versões anteriores ao usar o controle do código-fonte.
 
 #### <a name="other-syntax"></a>Outra sintaxe
 
-Normalmente compreende-se que `@()` é a sintaxe para criar uma matriz, mas as listas separadas por vírgulas funcionam na maior parte do tempo.
+`@()` é considerada a melhor sintaxe para criar uma matriz, mas as listas separadas por vírgulas funcionam na maior parte do tempo.
 
 ```powershell
 $data = 'Zero','One','Two','Three'
@@ -78,15 +78,15 @@ $data = 'Zero','One','Two','Three'
 
 #### <a name="write-output-to-create-arrays"></a>Write-Output para criar matrizes
 
-Um pequeno truque interessante que vale a pena mencionar é que você pode usar `Write-Output` para criar rapidamente cadeias de caracteres no console.
+Um pequeno truque interessante que vale a pena mencionar é que você pode usar `Write-Output` para criar cadeias de caracteres no console com rapidez.
 
 ```powershell
 $data = Write-Output Zero One Two Three
 ```
 
-Isso é útil porque você não precisa colocar aspas em volta das cadeias de caracteres quando o parâmetro aceita cadeias de caracteres. Eu nunca faria isso em um script, mas é um jogo justo no console.
+Isso é útil porque você não precisa colocar aspas nas extremidades das cadeias de caracteres quando o parâmetro aceita cadeias de caracteres. Eu nunca faria isso em um script, mas é compreensível que seja feito no console.
 
-### <a name="accessing-items"></a>Acessando itens
+### <a name="accessing-items"></a>Acessar itens
 
 Agora que você tem uma matriz com itens, talvez queira acessar e atualizar esses itens.
 
@@ -116,11 +116,11 @@ Three
 
 #### <a name="index"></a>Índice
 
-Agora você pode ver por que escolhi os valores usados para este exemplo. Apresentei isso como um deslocamento porque isso é o que realmente é, mas esse deslocamento é mais comumente referido como um índice. Um índice que começa em `0`. No restante deste artigo, chamarei o deslocamento de um índice.
+Agora você pode ver por que escolhi os valores usados para este exemplo. Apresentei a você como um deslocamento porque realmente é, mas esse deslocamento é mais comumente chamado de índice. Um índice que começa em `0`. No restante deste artigo, chamarei o deslocamento de índice.
 
-#### <a name="special-index-tricks"></a>Truques de índice especial
+#### <a name="special-index-tricks"></a>Truques especiais de índice
 
-Na maioria das linguagens, você só pode especificar um número como o índice e obter um só item de volta.
+Na maioria das linguagens, você só pode especificar um único número como o índice e obter apenas um item de volta.
 O PowerShell é muito mais flexível. Você pode usar vários índices ao mesmo tempo. Ao fornecer uma lista de índices, podemos selecionar diversos itens.
 
 ```powershell
@@ -130,7 +130,7 @@ Two
 Three
 ```
 
-Os itens são retornados com base na ordem dos índices fornecidos. Se você duplicar um índice, obterá esse item duas vezes.
+Os itens retornam com base na ordem dos índices fornecidos. Se você duplicar um índice, obterá esse item duas vezes.
 
 ```powershell
 PS> $data[3,0,3]
@@ -157,18 +157,18 @@ Two
 One
 ```
 
-Você pode usar valores de índice negativos para compensar do final. Portanto, se você precisar do último item da lista, poderá usar `-1`.
+Você pode usar valores de índice negativos para começar o deslocamento do final. Portanto, se você precisar do último item da lista, poderá usar `-1`.
 
 ```powershell
 PS> $data[-1]
 Three
 ```
 
-Uma palavra de prudência aqui com o operador `..`. A sequência `0..-1` e `-1..0` avalia os valores `0,-1` e `-1,0`. É fácil ver `$data[0..-1]` e pensar que ele enumerará todos os itens se você esquecer esse detalhe. `$data[0..-1]` fornece o mesmo valor que `$data[0,-1]` fornecendo o primeiro e o último item na matriz (e nenhum dos outros valores).
+Tenha cuidado com o operador `..`. As sequências `0..-1` e `-1..0` avaliam os valores `0,-1` e `-1,0`. É fácil ver `$data[0..-1]` e pensar que ele enumerará todos os itens se você esquecer esse detalhe. `$data[0..-1]` fornece o mesmo valor que `$data[0,-1]` ao fornecer o primeiro e o último item na matriz (e nenhum dos outros valores).
 
 #### <a name="out-of-bounds"></a>Fora dos limites
 
-Na maioria das linguagens, se você tentar acessar um índice de um item que ultrapassa o fim da matriz, obteria algum tipo de erro ou exceção. O PowerShell silenciosamente não retorna nada.
+Na maioria das linguagens, se você tentar acessar um índice de um item que ultrapassa o fim da matriz, obterá algum tipo de erro ou exceção. O PowerShell não retorna nada.
 
 ```powershell
 PS> $null -eq $data[9000]
@@ -196,7 +196,7 @@ PS> $data.count
 4
 ```
 
-O PowerShell 3.0 adicionou uma propriedade de contagem à maioria dos objetos. Você pode ter um só objeto e ele deve fornecer uma contagem de `1`.
+O PowerShell 3.0 adicionou uma propriedade de contagem à maioria dos objetos. Você pode ter apenas um objeto e ele deve fornecer uma contagem de `1`.
 
 ```powershell
 PS> $date = Get-Date
@@ -204,26 +204,26 @@ PS> $date.count
 1
 ```
 
-Até mesmo `$null` tem uma propriedade de contagem, exceto que retorna `0`.
+Até mesmo `$null` tem uma propriedade de contagem, porém ela retorna `0`.
 
 ```powershell
 PS> $null.count
 0
 ```
 
-Há algumas armadilhas aqui que vou revisitar quando eu abordar a verificação de `$null` ou de matrizes vazias posteriormente neste artigo.
+Existem algumas armadilhas aqui que vou revisitar posteriormente quando abordar a verificação de `$null` ou de matrizes vazias neste artigo.
 
 #### <a name="off-by-one-errors"></a>Erros por falta de uma repetição
 
-Um erro de programação comum é criado porque as matrizes começam no índice 0. Os erros por falta de uma repetição podem ser introduzidos de duas maneiras.
+Um erro de programação comum é criado porque as matrizes começam no índice 0. Os erros por falta de uma repetição podem ser introduzidos pensando em duas situações.
 
-A primeira é pensando que você deseja o segundo item e usando um índice de `2` e realmente obter o terceiro item. Ou, pensando que você tem quatro itens e deseja o último item, você usa a contagem para acessar o último item.
+A primeira ocorre quando você pensa em obter o segundo item e usa um índice de `2`, o que faz com que você obtenha o terceiro item. Ou quando você usa a contagem para acessar o último item em uma matriz de quatro itens.
 
 ```powershell
 $data[ $data.count ]
 ```
 
-O PowerShell está perfeitamente satisfeito em permitir que você faça isso e dá a você exatamente o item existente no índice 4: `$null`. Você deve estar usando `$data.count - 1` ou o `-1` que aprendemos acima.
+O PowerShell permite que você faça isso e dá a você exatamente o item existente no índice 4: `$null`. Você deve estar usando `$data.count - 1` ou o `-1` que aprendemos acima.
 
 ```powershell
 PS> $data[ $data.count - 1 ]
@@ -237,16 +237,16 @@ PS> $data[ -1 ]
 Three
 ```
 
-Lee Dailey também apontou para mim que podemos usar `$data.GetUpperBound(0)` para obter o número de índice máximo.
+Lee Dailey também apontou que podemos usar `$data.GetUpperBound(0)` para obter o número máximo do índice.
 
 ```powershell
 PS> $data.GetUpperBound(0)
 Three
 ```
 
-A segunda maneira mais comum é ao iterar a lista e não parar no momento certo. Revisitarei isso quando falarmos sobre o uso do loop `for`.
+A segunda situação mais comum ocorre ao iterar a lista e não parar no momento certo. Revisitarei isso quando falarmos sobre o uso do loop `for`.
 
-### <a name="updating-items"></a>Atualizando itens
+### <a name="updating-items"></a>Atualizar itens
 
 Podemos usar o mesmo índice para atualizar itens existentes na matriz. Isso nos dá acesso direto para atualizar itens individuais.
 
@@ -275,7 +275,7 @@ Em algum momento, talvez seja necessário percorrer ou iterar toda a lista e exe
 
 #### <a name="pipeline"></a>Pipeline
 
-As matrizes e o pipeline do PowerShell são destinados para si. Essa é uma das maneiras mais simples de processar esses valores. Quando você passa uma matriz para um pipeline, cada item dentro da matriz é processado individualmente.
+As matrizes e o pipeline do PowerShell são uma combinação perfeita. Essa é uma das maneiras mais simples de processar esses valores. Quando você passa uma matriz para um pipeline, cada item dentro da matriz é processado individualmente.
 
 ```powershell
 PS> $data = 'Zero','One','Two','Three'
@@ -286,7 +286,7 @@ Item: [Two]
 Item: [Three]
 ```
 
-Se você ainda não viu `$PSItem` antes, apenas saiba que ele é o mesmo que `$_`. Você pode usar um deles porque ambos representam o objeto atual no pipeline.
+Se você ainda não viu `$PSItem` antes, apenas saiba que ele é o mesmo que `$_`. Você pode usar qualquer um deles porque ambos representam o objeto atual no pipeline.
 
 #### <a name="foreach-loop"></a>Loop ForEach
 
@@ -301,7 +301,7 @@ foreach ( $node in $data )
 
 #### <a name="foreach-method"></a>Método ForEach
 
-Eu tenho a tendência de esquecer deste, mas ele funciona bem para operações simples. O PowerShell permite que você chame `.ForEach()` em uma coleção.
+Eu costumo me esquecer deste método, mas ele funciona bem para operações simples. O PowerShell permite que você chame `.ForEach()` em uma coleção.
 
 ```powershell
 PS> $data.foreach({"Item [$PSItem]"})
@@ -311,17 +311,17 @@ Item [Two]
 Item [Three]
 ```
 
-O `.foreach()` usa um parâmetro que é um bloco de script. Você pode descartar os parênteses e apenas fornecer o bloco de script.
+O `.foreach()` usa um parâmetro que é um bloco de script. Você pode descartar os parênteses e fornecer apenas o bloco de script.
 
 ```powershell
 $data.foreach{"Item [$PSItem]"}
 ```
 
-Essa é uma sintaxe menos conhecida, mas funciona exatamente da mesma forma. Este método `foreach` foi adicionado no PowerShell 4.0.
+Essa é uma sintaxe menos conhecida, mas funciona exatamente da mesma forma. O método `foreach` foi adicionado no PowerShell 4.0.
 
 #### <a name="for-loop"></a>Loop for
 
-O loop `for` é muito usado na maioria das outras linguagens, mas você não o vê muito no PowerShell. Quando você o vê, geralmente está no contexto da movimentação de uma matriz.
+O loop `for` é muito usado na maioria das linguagens, mas não é muito comum no PowerShell. Geralmente ele é usado para percorrer uma matriz.
 
 ```powershell
 for ( $index = 0; $index -lt $data.count; $index++)
@@ -332,7 +332,7 @@ for ( $index = 0; $index -lt $data.count; $index++)
 
 A primeira ação é inicializar um `$index` para `0`. Em seguida, adicionamos a condição de que `$index` deve ser menor que `$data.count`. Por fim, especificamos que, toda vez que executamos um loop, o índice precisa ser aumentado em `1`. Nesse caso, `$index++` é a abreviação de `$index = $index + 1`.
 
-Sempre que você estiver usando um loop `for`, preste atenção especial à condição. Usei `$index -lt $data.count` aqui. É fácil obter uma condição um pouco errada para obter um erro por falta de uma repetição em sua lógica. É errado usar `$index -le $data.count` ou `$index -lt ($data.count - 1)`. Isso faria com que o resultado processasse muitos ou poucos itens. Este é o clássico erro por falta de uma repetição.
+Sempre que você estiver usando um loop `for`, preste muita atenção à condição. Usei `$index -lt $data.count` aqui. É fácil obter uma condição um pouco errada para obter um erro por falta de uma repetição em sua lógica. É errado usar `$index -le $data.count` ou `$index -lt ($data.count - 1)`. Isso faria com que o resultado processasse muitos ou poucos itens. Este é o clássico erro por falta de uma repetição.
 
 #### <a name="switch-loop"></a>Loop switch
 
@@ -364,15 +364,15 @@ Tick
 Tock
 ```
 
-Há muitas ações legais que podemos fazer com a instrução switch. Tenho outro artigo dedicado a isso.
+Há muitas coisas interessantes que podemos fazer com a instrução switch. Tenho outro artigo dedicado a isso.
 
 - [Tudo o que você queria saber sobre a instrução switch][instrução switch]
 
-#### <a name="updating-values"></a>Atualizando valores
+#### <a name="updating-values"></a>Atualizar valores
 
-Quando a matriz é uma coleção de cadeia de caracteres ou inteiros (tipos de valor), às vezes, convém atualizar os valores na matriz conforme você faz um loop sobre eles. A maioria dos loops acima usa uma variável no loop que contém uma cópia do valor. Se você atualizar essa variável, o valor original na matriz não será atualizado.
+Quando a matriz é uma coleção de cadeia de caracteres ou de inteiros (tipos de valor), às vezes, convém atualizar os valores na matriz conforme você faz um loop sobre eles. A maioria dos loops acima usa uma variável que contém uma cópia do valor. Se você atualizar essa variável, o valor original na matriz não será atualizado.
 
-A exceção a essa instrução é o loop `for`. Se você quiser percorrer uma matriz e atualizar valores dentro dela, o loop `for` será o que você está procurando.
+A exceção a essa instrução é o loop `for`. Se você deseja percorrer uma matriz e atualizar valores dentro dela, o loop `for` é o que você está procurando.
 
 ```powershell
 for ( $index = 0; $index -lt $data.count; $index++ )
@@ -402,7 +402,7 @@ $processList = Get-Process
 
 Todos os recursos básicos dos quais já falamos ainda se aplicam a matrizes de objetos com alguns detalhes que valem a pena destacar.
 
-### <a name="accessing-properties"></a>Acessando propriedades
+### <a name="accessing-properties"></a>Acessar propriedades
 
 Podemos usar um índice para acessar um item individual em uma coleção, assim como ocorre com tipos de valor.
 
@@ -431,7 +431,7 @@ Jay       Marquette
 
 #### <a name="array-properties"></a>Propriedades da matriz
 
-Normalmente, você teria que enumerar a lista inteira como esta para acessar todas as propriedades:
+Normalmente, você teria que enumerar a lista inteira desta forma para acessar todas as propriedades:
 
 ```powershell
 PS> $data | ForEach-Object {$_.LastName}
@@ -486,9 +486,9 @@ As matrizes têm um método `Where()` que permite especificar um `scriptblock` p
 $data.Where({$_.FirstName -eq 'Kevin'})
 ```
 
-Este recurso foi adicionado no PowerShell 4.0.
+Esse recurso foi adicionado no PowerShell 4.0.
 
-### <a name="updating-objects-in-loops"></a>Atualizando objetos em loops
+### <a name="updating-objects-in-loops"></a>Atualizar objetos em loops
 
 Com tipos de valor, a única maneira de atualizar a matriz é usando um loop for, pois precisamos saber o índice para substituir o valor. Temos mais opções com objetos porque são tipos de referência. Aqui está um exemplo rápido:
 
@@ -499,9 +499,9 @@ foreach($person in $data)
 }
 ```
 
-Este loop está examinando cada objeto na matriz `$data`. Como os objetos são tipos de referência, a variável `$person` referencia exatamente o mesmo objeto que está na matriz. Portanto, as atualizações para suas propriedades atualizam o original.
+O loop está percorrendo cada objeto na matriz `$data`. Como os objetos são tipos de referência, a variável `$person` referencia exatamente o mesmo objeto que está na matriz. Portanto, as atualizações das suas propriedades atualizam o original.
 
-Você ainda não pode substituir o objeto inteiro dessa maneira. Se você tentar atribuir um novo objeto à variável `$person`, estará atualizando a referência de variável para algo que não aponta mais para o objeto original na matriz. Isso não funciona como você esperaria:
+Você ainda não pode substituir o objeto inteiro dessa maneira. Se você tentar atribuir um novo objeto à variável `$person`, atualizará a referência da variável para algo que não aponta mais para o objeto original na matriz. Isso não vai funcionar como esperado:
 
 ```powershell
 foreach($person in $data)
@@ -536,7 +536,7 @@ PS> 1 -join '-'
 1
 ```
 
-Uso isso dentro de mensagens de registro em log e detalhadas.
+Uso isso dentro de mensagens detalhadas e de registro em log.
 
 ```powershell
 PS> $data = @(1,2,3,4)
@@ -546,7 +546,7 @@ Data is 1,2,3,4.
 
 #### <a name="-join-array"></a>-join $array
 
-Aqui está um truque inteligente que Lee Dailey destacou para mim. Se você quiser unir tudo sem um delimitador, em vez de fazer isso:
+Este é um truque inteligente que Lee Dailey apresentou para mim. Se você quiser unir tudo sem um delimitador, em vez de fazer isso:
 
 ```powershell
 PS> $data = @(1,2,3,4)
@@ -586,7 +586,7 @@ True
 
 ### <a name="-in"></a>-in
 
-Quando você tem um só valor que deseja verificar correspondências a um de vários valores, pode usar o operador `-in`. O valor estaria à esquerda e a matriz no lado direito da operação.
+Quando você tem um único valor e deseja verificar se ele corresponde a um dos vários valores, pode usar o operador `-in`. O valor estaria no lado esquerdo e a matriz no lado direito da operação.
 
 ```powershell
 PS> $data = @('red','green','blue')
@@ -594,7 +594,7 @@ PS> 'green' -in $data
 True
 ```
 
-Isso pode ser caro se a lista for grande. Geralmente uso um padrão regex se eu estiver verificando mais do que alguns valores.
+Isso poderá sair caro se a lista for grande. Costumo usar um padrão regex para verificar mais do que alguns valores.
 
 ```powershell
 PS> $data = @('red','green','blue')
@@ -608,7 +608,7 @@ True
 
 ### <a name="-eq-and--ne"></a>-eq e -ne
 
-Igualdade e matrizes podem ficar complicadas. Quando a matriz está no lado esquerdo, cada item é comparado. Em vez de retornar `True`, ela retorna o objeto correspondente.
+Igualdade e matrizes podem ficar complicadas. Quando a matriz está no lado esquerdo, todos os itens são comparados. Em vez de retornar `True`, ela retorna o objeto correspondente.
 
 ```powershell
 PS> $data = @('red','green','blue')
@@ -639,11 +639,11 @@ if ( $data -ne 'green' )
 }
 ```
 
-Revisitarei isso daqui a pouco quando falarmos sobre testes para `$null`.
+Retornarei a este assunto daqui a pouco quando falarmos sobre testes para `$null`.
 
 ### <a name="-match"></a>-match
 
-O operador `-match` tenta corresponder a cada item na coleção.
+O operador `-match` tenta obter uma correspondência para cada item na coleção.
 
 ```powershell
 PS> $servers = @(
@@ -657,7 +657,7 @@ LAX-SQL-01
 ATX-SQL-01
 ```
 
-Quando você usa `-match` com um só valor, uma variável especial `$Matches` é populada com informações de correspondência. Esse não é o caso quando uma matriz é processada dessa maneira.
+Quando você usa `-match` com um só valor, uma variável especial `$Matches` é populada com informações de correspondência. Isso não acontece quando uma matriz é processada dessa maneira.
 
 Podemos usar a mesma abordagem com `Select-String`.
 
@@ -665,11 +665,11 @@ Podemos usar a mesma abordagem com `Select-String`.
 $servers | Select-String SQL
 ```
 
-Considero mais atentamente `Select-String`,`-match` e a variável `$matches` em outra postagem chamada [As várias maneiras de usar regex][] (As várias maneiras de usar regex).
+Falo mais detalhadamente sobre `Select-String`, `-match` e a variável `$matches` em outra postagem chamada [As várias maneiras de usar regex][].
 
-### <a name="null-or-empty"></a>$null ou vazio
+### <a name="null-or-empty"></a>$null ou vazia
 
-O teste para `$null` ou matrizes vazias pode ser complicado. Aqui estão as armadilhas comuns com matrizes.
+O teste para matrizes `$null` ou vazias pode ser complicado. Aqui estão as armadilhas mais comuns com matrizes.
 
 À primeira vista, essa instrução parece funcionar.
 
@@ -680,7 +680,7 @@ if ( $array -eq $null)
 }
 ```
 
-Mas acabei de saber como `-eq` verifica cada item na matriz. Então, podemos ter uma matriz de vários itens com um só valor $null e ele será avaliado como `$true`
+Mas acabei de mencionar como `-eq` verifica cada item na matriz. Portanto, podemos ter uma matriz de vários itens com um único valor $null e ele será avaliado como `$true`
 
 ```powershell
 $array = @('one',$null,'three')
@@ -699,7 +699,7 @@ if ( $null -eq $array )
 }
 ```
 
-Uma matriz `$null` não é o mesmo que uma matriz vazia. Se você souber que tem uma matriz, verifique a contagem de objetos nela. Se a matriz for `$null`, a contagem será `0`.
+Uma matriz `$null` não é o mesmo que uma matriz vazia. Se você sabe que tem uma matriz, verifique a contagem de objetos nela. Se a matriz for `$null`, a contagem será `0`.
 
 ```powershell
 if ( $array.count -gt 0 )
@@ -708,7 +708,7 @@ if ( $array.count -gt 0 )
 }
 ```
 
-Há mais uma armadilha a ser observada aqui. Você pode usar o `count` mesmo que tenha um só objeto, a menos que esse objeto seja um `PSCustomObject`. Esse é um bug que foi corrigido no PowerShell 6.1.
+Há mais uma armadilha a ser observada aqui. Você pode usar `count` mesmo que tenha um único objeto, a menos que esse objeto seja um `PSCustomObject`. Esse é um bug que foi corrigido no PowerShell 6.1.
 Essa é uma boa notícia, mas muitas pessoas ainda usam a versão 5.1 e precisam prestar atenção nisso.
 
 ```powershell
@@ -717,7 +717,7 @@ PS> $object.count
 $null
 ```
 
-Se ainda estiver no PowerShell 5.1, você poderá encapsular o objeto em uma matriz antes de verificar a contagem para obter uma contagem precisa.
+Se ainda estiver usando o PowerShell 5.1, você poderá encapsular o objeto em uma matriz antes de verificar a contagem para obter uma contagem precisa.
 
 ```powershell
 if ( @($array).count -gt 0 )
@@ -726,7 +726,7 @@ if ( @($array).count -gt 0 )
 }
 ```
 
-Para reproduzi-lo de maneira completa, verifique `$null` e, em seguida, verifique a contagem.
+Para não correr nenhum risco, verifique se há `$null` e, em seguida, verifique a contagem.
 
 ```powershell
 if ( $null -ne $array -and @($array).count -gt 0 )
@@ -738,7 +738,7 @@ if ( $null -ne $array -and @($array).count -gt 0 )
 ### <a name="all--eq"></a>Tudo -eq
 
 Vi recentemente alguém perguntar [como verificar se cada valor em uma matriz corresponde a um determinado valor][].
-O usuário do Reddit **/u/bis** tinha essa [solução inteligente][] que verifica se há valores incorretos e inverte o resultado.
+O usuário do Reddit **/u/bis** criou essa [solução][] inteligente que verifica se há valores incorretos e inverte o resultado.
 
 ```powershell
 $results = Test-Something
@@ -748,9 +748,9 @@ if ( -not ( $results -ne 'Passed') )
 }
 ```
 
-## <a name="adding-to-arrays"></a>Adicionando a matrizes
+## <a name="adding-to-arrays"></a>Adicionar a matrizes
 
-Neste ponto, você está começando a imaginar como adicionar itens a uma matriz. A resposta rápida é que você não pode. Uma matriz é um tamanho fixo na memória. Se você precisar aumentá-la ou adicionar um item a ela, precisará criar uma matriz e copiar todos os valores da matriz antiga. Isso soa caro e trabalhoso. No entanto, o PowerShell oculta a complexidade da criação da matriz.
+Agora você deve estar começando a imaginar como adicionar itens a uma matriz. A resposta rápida é que não é possível. Uma matriz é um tamanho fixo na memória. Se você precisar aumentá-la ou adicionar um item a ela, precisará criar uma matriz e copiar todos os valores da matriz antiga. Isso soa caro e trabalhoso. No entanto, o PowerShell oculta a complexidade da criação da matriz.
 
 ### <a name="array-addition"></a>Adição de matriz
 
@@ -767,7 +767,7 @@ $second = @(
 )
 ```
 
-Podemos adicioná-las juntas para obter uma nova matriz.
+Podemos juntá-las para obter uma nova matriz.
 
 ```powershell
 PS> $first + $second
@@ -792,7 +792,7 @@ $data = @(
 $data += 'four'
 ```
 
-Lembre-se de que sempre que usar `+=` você estará duplicando e criando uma matriz. Isso não é um problema para pequenos conjuntos de dados, mas escala de maneira muito ruim.
+Lembre-se de que sempre que usar `+=` você duplicará e criará uma matriz. Isso não é um problema para pequenos conjuntos de dados, mas não funciona bem em maior escala.
 
 ### <a name="pipeline-assignment"></a>Atribuição de pipeline
 
@@ -804,7 +804,7 @@ $array = 1..5 | ForEach-Object {
 }
 ```
 
-Normalmente, quando pensamos em usar o pipeline, consideramos os one-liners típicos do PowerShell. Podemos aproveitar o pipeline com instruções `foreach()` e outros loops. Então, em vez de adicionar itens a uma matriz em um loop, podemos soltar itens no pipeline.
+Normalmente, quando pensamos em usar o pipeline, consideramos os comandos de uma linha típicos do PowerShell. Podemos aproveitar o pipeline com instruções `foreach()` e outros loops. Então, em vez de adicionar itens a uma matriz em um loop, podemos soltar itens no pipeline.
 
 ```powershell
 $array = foreach ( $node in (1..5))
@@ -813,7 +813,7 @@ $array = foreach ( $node in (1..5))
 }
 ```
 
-Ao atribuir os resultados da `foreach` a uma variável, capturamos todos os objetos e criamos uma só matriz.
+Ao atribuir os resultados da `foreach` a uma variável, capturamos todos os objetos e criamos uma única matriz.
 
 ## <a name="array-types"></a>Tipos de matriz
 
@@ -846,17 +846,17 @@ $myarray = [System.Collections.ArrayList]::new()
 
 Estamos chamando o .NET para obter este tipo. Nesse caso, estamos usando o construtor padrão para criá-la. Em seguida, chamamos o método `Add` para adicionar um item a ela.
 
-O motivo pelo qual estou usando `[void]` no início da linha é suprimir o código de retorno. Algumas chamadas .NET fazem isso e podem criar uma saída inesperada.
+Usei `[void]` no início da linha para suprimir o código de retorno. Algumas chamadas .NET fazem isso e podem criar uma saída inesperada.
 
-Se os únicos dados que você tem em sua matriz forem cadeias de caracteres, veja também como usar [StringBuilder][]. É quase a mesma coisa, mas tem alguns métodos que são apenas para lidar com cadeias de caracteres. A `StringBuilder` é especialmente projetada para o desempenho.
+Se os únicos dados que você tem em sua matriz forem cadeias de caracteres, veja também como usar [StringBuilder][]. É quase a mesma coisa, mas alguns métodos são usados apenas para lidar com cadeias de caracteres. A `StringBuilder` é especialmente projetada para o desempenho.
 
-É comum ver as pessoas migrarem para `ArrayList` de matrizes. Mas ela vem de um momento em que C# não tinha suporte genérico. A `ArrayList` é depreciada em suporte para a `List[]` genérica
+É comum ver as pessoas migrarem para `ArrayList` de matrizes. Mas ela foi criada quando o C# não tinha suporte genérico. A `ArrayList` foi preterida para dar suporte à `List[]` genérica
 
 ### <a name="generic-list"></a>Lista genérica
 
 Um tipo genérico é um tipo especial no C# que define uma classe generalizada e o usuário especifica os tipos de dados que ele usa quando criado. Portanto, se você quiser uma lista de números ou cadeias de caracteres, definirá que deseja uma lista de tipos `int` ou `string`.
 
-Veja como criar uma lista para cadeias de caracteres.
+Veja como criar uma lista de cadeias de caracteres.
 
 ```powershell
 $mylist = [System.Collections.Generic.List[string]]::new()
@@ -874,14 +874,14 @@ Podemos converter uma matriz existente em uma lista como esta, sem criar o objet
 $mylist = [System.Collections.Generic.List[int]]@(1,2,3)
 ```
 
-Podemos reduzir a sintaxe com a instrução `using namespace` no PowerShell 5 e mais recente. A instrução `using` precisa ser a primeira linha do seu script. Ao declarar um namespace, o PowerShell permite deixá-lo fora dos tipos de dados ao referenciá-los.
+Podemos reduzir a sintaxe com a instrução `using namespace` no PowerShell 5 e em versões mais recentes. A instrução `using` precisa ser a primeira linha do seu script. Ao declarar um namespace, o PowerShell permite deixá-lo fora dos tipos de dados ao referenciá-los.
 
 ```powershell
 using namespace System.Collections.Generic
 $myList = [List[int]]@(1,2,3)
 ```
 
-Isso torna o `List` muito mais utilizável.
+Isso torna a `List` muito mais utilizável.
 
 Você tem um método `Add` semelhante disponível para você. Diferentemente de ArrayList, não há nenhum valor retornado no método `Add`. Portanto, não precisamos usar `void` para anulá-lo.
 
@@ -889,7 +889,7 @@ Você tem um método `Add` semelhante disponível para você. Diferentemente de 
 $myList.Add(10)
 ```
 
-E ainda podemos acessar os elementos como outras matrizes.
+E ainda podemos acessar os elementos como em outras matrizes.
 
 ```powershell
 PS> $myList[-1]
@@ -898,7 +898,7 @@ PS> $myList[-1]
 
 #### <a name="listpsobject"></a>List[PSObject]
 
-Você pode ter uma lista de qualquer tipo, mas quando não conhece o tipo de objetos, pode usar `[List[PSObject]]` para contê-los.
+Você pode ter uma lista de qualquer tipo, mas quando não conhece o tipo dos objetos, pode usar `[List[PSObject]]` para contê-los.
 
 ```powershell
 $list = [List[PSObject]]::new()
@@ -906,7 +906,7 @@ $list = [List[PSObject]]::new()
 
 #### <a name="remove"></a>Remove()
 
-O `ArrayList` e o `List[]` genérico dão suporte à remoção de itens da coleção.
+A `ArrayList` e a `List[]` genérica dão suporte à remoção de itens da coleção.
 
 ```powershell
 using namespace System.Collections.Generic
@@ -917,7 +917,7 @@ One
 Three
 ```
 
-Ao trabalhar com tipos de valor, ele remove o primeiro da lista. Você pode chamá-lo repetidamente para continuar a remover esse valor. Se você tiver tipos de referência, será necessário fornecer o objeto que deseja remover.
+Ao trabalhar com tipos de valor, ela remove o primeiro da lista. Você pode chamá-la repetidamente para continuar a remover esse valor. Se você tiver tipos de referência, será necessário fornecer o objeto que deseja remover.
 
 ```powershell
 [list[System.Management.Automation.PSDriveInfo]]$drives = Get-PSDrive
@@ -929,11 +929,11 @@ $delete = $drives[2]
 $drives.remove($delete)
 ```
 
-O método remove retorna `true` se foi possível localizar e remover o item da coleção.
+O método de remoção retorna `true` caso tenha sido possível localizar e remover o item da coleção.
 
 ### <a name="more-collections"></a>Mais coleções
 
-Há muitas outras coleções que podem ser usadas, mas essas são as boas substituições de matriz genéricas.
+Há muitas outras coleções que podem ser usadas, mas essas são as melhores substituições genéricas para matriz.
 Se você tiver interesse em saber mais sobre essas opções, dê uma olhada neste [Gist](https://gist.github.com/kevinblumenfeld/4a698dbc90272a336ed9367b11d91f1c) que [Mark Kraus](https://get-powershellblog.blogspot.com/2016/11/about-mark-kraus.html) reuniu.
 
 ## <a name="other-nuances"></a>Outras nuances
@@ -950,7 +950,7 @@ $data.count
 4
 ```
 
-### <a name="multiplying-arrays"></a>Multiplicando matrizes
+### <a name="multiplying-arrays"></a>Multiplicar matrizes
 
 Um pequeno truque interessante é que você pode multiplicar uma matriz por um inteiro.
 
@@ -970,7 +970,7 @@ blue
 
 ### <a name="initialize-with-0"></a>Inicializar com 0
 
-Um cenário comum é que você deseja criar uma matriz com todos os zeros. Se você for ter apenas inteiros, uma matriz fortemente tipada de inteiros assume como padrão todos os zeros.
+Um cenário comum é o desejo de criar uma matriz com todos os zeros. Se você for ter apenas inteiros, uma matriz fortemente tipada de inteiros assumirá como padrão todos os zeros.
 
 ```powershell
 PS> [int[]]::new(4)
@@ -1004,7 +1004,7 @@ PS> $data
 
 ### <a name="nested-arrays"></a>Matrizes aninhadas
 
-Uma matriz dentro de uma matriz é chamada de matriz aninhada. Não uso muito no PowerShell, mas as usei mais em outras linguagens. Considere o uso de uma matriz de matrizes quando seus dados couberem em um padrão tipo grade.
+Uma matriz dentro de uma matriz é chamada de matriz aninhada. Não uso muito no PowerShell, mas as usei mais vezes em outras linguagens. Considere o uso de uma matriz de matrizes quando seus dados couberem em um padrão tipo grade.
 
 Aqui estão duas maneiras de criar uma matriz bidimensional.
 
@@ -1029,7 +1029,7 @@ PS> $data[$outside][$inside]
 3
 ```
 
-Adicione um conjunto de colchetes para cada nível de aninhamento de matriz. O primeiro conjunto de colchetes é para a matriz mais externa e, em seguida, você trabalha de lá.
+Adicione um conjunto de colchetes para cada nível de aninhamento de matriz. O primeiro conjunto de colchetes é para a matriz mais externa e, em seguida, você continua o processo de lá.
 
 ### <a name="write-output--noenumerate"></a>Write-Output -NoEnumerate
 
@@ -1052,7 +1052,7 @@ TypeName: System.Object[]
 ...
 ```
 
-Tenho uma segunda forma que parece mais um ataque (e tento evitar ataques como esse). Você pode inserir uma vírgula na frente da matriz antes de direcioná-la.
+Tenho uma segunda forma que parece mais um ataque (e tento evitar ataques como esse). Você pode inserir uma vírgula na frente da matriz antes de redirecioná-la.
 
 ```powershell
 PS> ,$data | Get-Member
@@ -1062,13 +1062,13 @@ TypeName: System.Object[]
 
 ### <a name="return-an-array"></a>Retornar uma matriz
 
-Esse desencapsulamento de matrizes também acontece quando você gera ou retorna valores de uma função. Você ainda poderá obter uma matriz se atribuir a saída a uma variável. Portanto, isso não é normalmente um problema.
+Esse desencapsulamento de matrizes também acontece quando você gera ou retorna valores de uma função. Você ainda poderá obter uma matriz se atribuir a saída a uma variável. Portanto, isso não costuma ser um problema.
 
-O problema é que você tem uma nova matriz. Se isso nunca for um problema, você poderá usar `Write-Output -NoEnumerate $array` ou `return ,$array` para contornar isso.
+A questão é que você tem uma nova matriz. Se isso for um problema, você poderá usar `Write-Output -NoEnumerate $array` ou `return ,$array` para contorná-lo.
 
 ## <a name="anything-else"></a>Algo mais?
 
-Sei que é muita informação a ser assimilada. Espero que você aprenda algo com este artigo toda vez que lê-lo e que ele se torne uma boa referência por um bom tempo. Se você achou que este conteúdo é útil, compartilhe-o com outras pessoas para que elas possam aproveitá-lo.
+Sei que é muita informação a ser assimilada. Espero que você aprenda algo com este artigo toda vez que lê-lo e que ele se torne uma boa referência por muito tempo. Se você achou este conteúdo útil, compartilhe-o com outras pessoas que possam aproveitá-lo.
 
 Daqui em diante, recomendo que você confira uma postagem semelhante que escrevi sobre [tabelas de hash][].
 
@@ -1076,10 +1076,10 @@ Daqui em diante, recomendo que você confira uma postagem semelhante que escrevi
 [versão original]: https://powershellexplained.com/2018-10-15-Powershell-arrays-Everything-you-wanted-to-know/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
-[Matrizes]: /powershell/module/microsoft.powershell.core/about/about_arrays
+[matrizes]: /powershell/module/microsoft.powershell.core/about/about_arrays
 [instrução switch]: everything-about-switch.md
 [tabelas de hash]: everything-about-hashtable.md
 [As várias maneiras de usar regex]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [como verificar se cada valor em uma matriz corresponde a um determinado valor]: https://www.reddit.com/r/PowerShell/comments/9mzo09/if_statement_multiple_variables_but_1_condition
-[solução inteligente]: https://www.reddit.com/r/PowerShell/comments/9mzo09/if_statement_multiple_variables_but_1_condition/e7iizca
+[solução]: https://www.reddit.com/r/PowerShell/comments/9mzo09/if_statement_multiple_variables_but_1_condition/e7iizca
 [StringBuilder]: https://powershellexplained.com/2017-11-20-Powershell-StringBuilder/

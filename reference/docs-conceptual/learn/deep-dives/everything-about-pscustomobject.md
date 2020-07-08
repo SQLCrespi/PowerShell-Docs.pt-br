@@ -12,10 +12,10 @@ ms.locfileid: "84149489"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Tudo o que você queria saber sobre o PSCustomObject
 
-`PSCustomObject`s são uma excelente ferramenta para adicionar ao seu conjunto de ferramentas do PowerShell. Vamos começar com os conceitos básicos e progredir para os recursos mais avançados. A ideia por trás de usar um `PSCustomObject` é ter um jeito simples de criar dados estruturados. Dê uma olhada no primeiro exemplo e você entenderá melhor do que isso significa.
+`PSCustomObject`s são uma excelente ferramenta para adicionar ao conjunto de ferramentas do PowerShell. Vamos começar com os conceitos básicos e progredir para os recursos mais avançados. A ideia por trás de usar um `PSCustomObject` é ter um jeito simples de criar dados estruturados. Dê uma olhada no primeiro exemplo e você entenderá melhor o que isso significa.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="creating-a-pscustomobject"></a>Como criar um PSCustomObject
 
@@ -84,7 +84,7 @@ Eu abordei mais maneiras de salvar objetos em um arquivo em meu artigo sobre [As
 
 ### <a name="adding-properties"></a>Adicionando propriedades
 
-Você ainda pode adicionar novas propriedades ao seu `PSCustomObject` com `Add-Member`.
+Você ainda pode adicionar novas propriedades ao `PSCustomObject` com `Add-Member`.
 
 ```powershell
 $myObject | Add-Member -MemberType NoteProperty -Name `ID` -Value 'KevinMarquette'
@@ -139,7 +139,7 @@ $myObject.$property
 
 Eu sei que parece estranho, mas funciona.
 
-### <a name="convert-pscustomboject-into-a-hashtable"></a>Como converter pscustomboject em uma tabela de hash
+### <a name="convert-pscustomboject-into-a-hashtable"></a>Como converter PSCustomObject em uma tabela de hash
 
 Para continuar de onde paramos na última seção, podemos percorrer dinamicamente as propriedades e criar uma tabela de hash delas.
 
@@ -232,7 +232,7 @@ $fourth.Key = 4
 
 Clonar cria uma cópia superficial do objeto. Eles têm instâncias diferentes agora e `$third.key` é 3 e `$fourth.Key` é 4, neste exemplo.
 
-Eu chamo isso de cópia superficial porque, se você tiver objetos aninhados (nos quais as propriedades contêm outros objetos), somente os valores de nível superior serão copiados. Os objetos filhos se referenciarão entre si.
+Eu chamo isso de cópia superficial porque, se você tiver objetos aninhados (em que as propriedades contêm outros objetos), somente os valores de nível superior serão copiados. Os objetos filho se referenciarão entre si.
 
 ### <a name="pstypename-for-custom-object-types"></a>PSTypeName para tipos de objeto personalizados
 
@@ -242,7 +242,7 @@ Agora que temos um objeto, podemos fazer coisas bem menos óbvias com ele. Antes
 $myObject.PSObject.TypeNames.Insert(0,"My.Object")
 ```
 
-Recentemente, descobri que outra maneira de fazer isso, ao ler esse [post de /u/markekraus][]. Continuei pesquisando e encontrei mais postagens sobre o assunto de [Adam Bertram][] e [Mike Shepard][], em que eles falam sobre essa abordagem que permite defini-lo como embutido.
+Recentemente, descobri que outra maneira de fazer isso, ao ler essa [postagem de /u/markekraus][]. Continuei pesquisando e encontrei mais postagens sobre o assunto de [Adam Bertram][] e [Mike Shepard][], em que eles falam sobre essa abordagem que permite defini-lo como embutido.
 
 ```powershell
 $myObject = [PSCustomObject]@{
@@ -257,7 +257,7 @@ Eu gosto muito dessa abordagem pela compatibilidade que ela tem com a linguagem.
 
 ## <a name="using-defaultpropertyset-the-long-way"></a>Como usar DefaultPropertySet (a maneira mais longa)
 
-O PowerShell decide para nós quais propriedades exibir por padrão. Muitos dos comandos nativos têm um [arquivo de formatação][] `.ps1xml` que faz todo o trabalho pesado. Neste [post de Boe Prox][], há outra maneira de fazer isso em nosso objeto personalizado usando apenas o PowerShell. Podemos dá-lo um `MemberSet` para que use.
+O PowerShell decide para nós quais propriedades exibir por padrão. Muitos dos comandos nativos têm um [arquivo de formatação][] `.ps1xml` que faz todo o trabalho pesado. Nesta [postagem de Boe Prox][], há outra maneira de fazer isso em nosso objeto personalizado usando apenas o PowerShell. Podemos dá-lo um `MemberSet` para que use.
 
 ```powershell
 $defaultDisplaySet = 'Name','Language'
@@ -304,17 +304,17 @@ Podemos fazer isso antes ou depois que o objeto for criado e ainda funcionará. 
 
 ## <a name="function-parameters"></a>Parâmetros de função
 
-Agora, podemos usar todos esses tipos personalizados para parâmetro em nossas funções e scripts. Podemos usar uma função para criar esses objetos personalizados e, então, passá-los para outras funções.
+Agora, podemos usar todos esses tipos personalizados para parâmetros em nossas funções e scripts. Podemos usar uma função para criar esses objetos personalizados e, então, passá-los para outras funções.
 
 ```powershell
 param( [PSTypeName('My.Object')]$Data )
 ```
 
-O PowerShell requer que o objeto seja do tipo especificado. Ele gerará um erro de validação caso o tipo não corresponda automaticamente, para salvar a etapa de testá-lo em seu código. Um ótimo exemplo de como deixar que o PowerShell faça o que faz melhor.
+O PowerShell requer que o objeto seja do tipo especificado. Caso o tipo não corresponda automaticamente, ele gerará um erro de validação para evitar que você o teste em seu código. Um ótimo exemplo de como deixar que o PowerShell faça o que faz melhor.
 
 ### <a name="function-outputtype"></a>OutputType da Função
 
-Também podemos definir um `OutputType` para suas funções avançadas.
+Também podemos definir um `OutputType` para as funções avançadas.
 
 ```powershell
 function Get-MyObject
@@ -328,9 +328,9 @@ function Get-MyObject
 
 O valor do atributo **OutputType** é apenas uma observação de documentação. Ele não é derivado do código de função ou comparado à saída real da função.
 
-O principal motivo para usar um tipo de saída é para que as informações meta da função reflitam suas intenções. Coisas como `Get-Command` e `Get-Help` que o seu ambiente de desenvolvimento pode aproveitar. Se quiser mais informações, dê uma olhada na ajuda sobre o assunto: [about_Functions_OutputTypeAttribute][].
+O principal motivo para usar um tipo de saída é para que as informações meta da função reflitam suas intenções. Coisas como `Get-Command` e `Get-Help` que o seu ambiente de desenvolvimento pode aproveitar. Se deseja mais informações, dê uma olhada na ajuda sobre o assunto: [about_Functions_OutputTypeAttribute][].
 
-Dito isso, caso esteja usando Pester para executar o teste de unidade em suas funções, é melhor validar os objetos de saída que correspondam ao **OutputType**. Isso pode capturar variáveis que simplesmente se enquadram no pipe quando não deveriam.
+Dito isso, caso esteja usando Pester para executar o teste de unidade nas funções, é melhor validar os objetos de saída que correspondam ao **OutputType**. Isso pode capturar variáveis que se enquadram no pipe quando não deveriam.
 
 ## <a name="closing-thoughts"></a>Considerações finais
 
@@ -342,11 +342,11 @@ Já vi a maioria desses recursos de maneira avulsa antes, mas nunca os vi aprese
 [versão original]: https://powershellexplained.com/2016-10-28-powershell-everything-you-wanted-to-know-about-pscustomobject/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
-[post de Boe Prox]: https://learn-PowerShell.net/2013/08/03/quick-hits-set-the-default-property-display-in-PowerShell-on-custom-objects/
+[postagem de Boe Prox]: https://learn-PowerShell.net/2013/08/03/quick-hits-set-the-default-property-display-in-PowerShell-on-custom-objects/
 [arquivo de formatação]: https://mcpmag.com/articles/2014/05/13/PowerShell-properties-part-3.aspx
 [about_Functions_OutputTypeAttribute]: /powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute
 [As várias maneiras de ler e gravar em arquivos]: https://powershellexplained.com/2017-03-18-Powershell-reading-and-saving-data-to-files
-[post de /u/markekraus]: https://www.reddit.com/r/PowerShell/comments/590awc/is_it_possible_to_initialize_a_pscustoobject_with/
+[postagem de /u/markekraus]: https://www.reddit.com/r/PowerShell/comments/590awc/is_it_possible_to_initialize_a_pscustoobject_with/
 [Adam Bertram]: http://www.adamtheautomator.com/building-custom-object-types-PowerShell-pstypename/
 [Mike Shepard]: https://powershellstation.com/2016/05/22/custom-objects-and-pstypename/
 [psunplugged]: https://www.youtube.com/watch?v=Ab46gHXNm8Q

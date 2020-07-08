@@ -1,6 +1,6 @@
 ---
-title: Como criar um módulo binário da Biblioteca do PowerShell Standard
-description: A Biblioteca do PowerShell Standard nos permite criar módulos de plataforma cruzada que funcionam no PowerShell Core e com o Windows PowerShell 5.1.
+title: Como criar um módulo binário da Biblioteca Padrão
+description: A Biblioteca Padrão do PowerShell nos permite criar módulos multiplataforma que funcionam no PowerShell Core e com o Windows PowerShell 5.1.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 51734fd9232e7c33b11c6c5a6abddbcc1f28413c
@@ -12,19 +12,19 @@ ms.locfileid: "84149409"
 ---
 # <a name="how-to-create-a-standard-library-binary-module"></a>Como criar um módulo binário da Biblioteca do PowerShell Standard
 
-Recentemente, eu tinha uma ideia do módulo que queria implementar como módulo binário. Eu ainda preciso criar um usando a biblioteca do [Biblioteca do PowerShell Standard][], então achei que era uma boa oportunidade. Usei o guia [Como criar um módulo binário multiplataforma][] para criar esse módulo sem qualquer obstáculo.
-Vamos examinar esse mesmo processo e eu farei alguns comentários extras ao longo do percurso.
+Recentemente, eu tive uma ideia de um módulo que queria implementar como módulo binário. Eu ainda preciso criar um usando a [Biblioteca Padrão do PowerShell][], então achei que esta seria uma boa oportunidade. Usei o guia [Como criar um módulo binário multiplataforma][] para criar esse módulo sem qualquer obstáculo.
+Vamos examinar esse processo e eu farei alguns comentários extras ao longo do percurso.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
-## <a name="what-is-the-powershell-standard-library"></a>O que é a Biblioteca do PowerShell Standard?
+## <a name="what-is-the-powershell-standard-library"></a>O que é a Biblioteca Padrão do PowerShell?
 
-A Biblioteca do PowerShell Standard nos permite criar módulos de plataforma cruzada que funcionam no PowerShell Core e com o Windows PowerShell 5.1 (ou 3.0).
+A Biblioteca Padrão do PowerShell nos permite criar módulos multiplataforma que funcionam no PowerShell Core e com o Windows PowerShell 5.1 (ou 3.0).
 
 ## <a name="planning-our-module"></a>Como planejar nosso módulo
 
-O plano para esse módulo é criar uma pasta `src` para o C# código e estruturar o restante da maneira que eu faria para um módulo de script. Isso inclui usar um script de build para compilar tudo em uma pasta `output`. A estrutura de pastas tem esta aparência:
+O plano para esse módulo é criar uma pasta `src` para o código C# e estruturar o restante da maneira que eu faria para um módulo de script. Isso inclui usar um script de build para compilar tudo em uma pasta `output`. A estrutura de pastas tem esta aparência:
 
 ```
 MyModule
@@ -40,7 +40,7 @@ MyModule
 
 ## <a name="getting-started"></a>Introdução
 
-Normalmente, uso um modelo Plaster, mas meu modelo atual ainda não tem nenhum suporte de módulo binário. Não é nada demais. Vou criá-la manualmente dessa vez.
+Normalmente, uso um modelo Plaster, mas meu modelo atual ainda não tem suporte para módulo binário. Isso não é um problema. Vou criá-lo manualmente dessa vez.
 
 Primeiro, preciso criar a pasta e o repositório git. Estou usando `$module` como um espaço reservado para o nome do módulo. Isso deve facilitar a reutilização desses exemplos, se necessário.
 
@@ -62,7 +62,7 @@ New-Item -Path $module -Type Directory
 
 ### <a name="binary-module-setup"></a>Configuração do módulo binário
 
-O fodo deste artigo é o módulo binário, portanto, vamos começar. Esta seção usa exemplos retirados do guia [Como criar um módulo binário multiplataforma][]. Examine esse guia se precisar de mais detalhes ou tiver problemas.
+O foco deste artigo é o módulo binário, portanto, vamos começar por aí. Esta seção usa exemplos retirados do guia [Como criar um módulo binário multiplataforma][]. Examine esse guia se precisar de mais detalhes ou tiver problemas.
 
 A primeira coisa que precisamos fazer é verificar a versão do [SDK do .NET Core][] que instalamos. Estou usando a versão 2.1.4, mas você precisa da versão 2.0.0 ou posterior para continuar.
 
@@ -97,7 +97,7 @@ Especifique 2.0.0 se você estiver usando o SDK 2.0.
 dotnet new globaljson --sdk-version 2.1.0
 ```
 
-Adicione o [pacote NuGet][] da Biblioteca do PowerShell Standard ao projeto. Lembre-se de usar a versão mais recente disponível para o nível de compatibilidade de que você precisa. Eu usaria como padrão a versão mais recente, mas não acho que este módulo use recursos mais recentes do que o PowerShell 3.0.
+Adicione o [pacote NuGet][] da Biblioteca Padrão do PowerShell ao projeto. Lembre-se de usar a versão mais recente disponível para o nível de compatibilidade de que você precisa. Eu usaria como padrão a versão mais recente, mas não acho que este módulo use recursos mais recentes do que o PowerShell 3.0.
 
 ```powershell
 dotnet add package PowerShellStandard.Library --version 7.0.0-preview.1
@@ -168,7 +168,7 @@ Build succeeded.
 Time Elapsed 00:00:02.19
 ```
 
-Podemos chamar `Import-Module` na nova dll para carregar nosso novo CMDlet.
+Podemos chamar `Import-Module` na nova dll para carregar nosso novo cmdlet.
 
 ```powershell
 PS> Import-Module .\bin\Debug\netstandard2.0\$module.dll
@@ -198,13 +198,13 @@ $manifestSplat = @{
 New-ModuleManifest @manifestSplat
 ```
 
-Também vou criar um módulo raiz vazio para funções do PowerShell futuras.
+Também vou criar um módulo raiz vazio para funções futuras do PowerShell.
 
 ```powershell
 Set-Content -Value '' -Path ".\$module\$module.psm1"
 ```
 
-Isso me permite combinar tanto funções normais PowerShell, quanto Cmdlets binários no mesmo projeto.
+Isso me permite combinar tanto funções normais PowerShell, quanto cmdlets binários no mesmo projeto.
 
 ### <a name="building-the-full-module"></a>Como criar o módulo completo
 
@@ -259,7 +259,7 @@ Import-Module "bin\Debug\netstandard2.0\$module.dll"
 Get-Module $module
 ```
 
-Esse modelo minimamente viável se encarrega da adição do SDK do .NET, da Biblioteca do PowerShell Standard e cria uma classe de exemplo no projeto. Você pode compilá-lo e executá-lo imediatamente.
+Esse modelo minimamente viável se encarrega da adição do SDK do .NET, da Biblioteca Padrão do PowerShell, e cria uma classe de exemplo no projeto. Você pode compilá-lo e executá-lo imediatamente.
 
 ## <a name="important-details"></a>Detalhes importantes
 
@@ -282,11 +282,11 @@ Outra opção é ter uma boa cobertura de teste do Pester. Em seguida, você pod
 
 Esse bloqueio pode incomodar ao tentar atualizar o módulo instalado localmente. Caso alguma sessão o tenha carregado, você precisará encontrá-lo e fechá-lo. Isso não é tão problemático ao fazer a instalação de uma PSGallery, porque o controle de versão do módulo coloca o novo módulo em uma pasta diferente.
 
-Você pode configurar uma PSGallery local e publicá-la como parte de sua compilação. Em seguida, faça a instalação local por meio dessa PSGallery. Isso parece trabalhoso, mas pode ser tão simples quanto iniciar um contêiner do Docker. Eu abordei um jeito de fazer isso em minha postagem [Como usar um servidor NuGet para um PSRepository][].
+Você pode configurar uma PSGallery local e publicá-la como parte da compilação. Em seguida, faça a instalação local por meio dessa PSGallery. Isso parece trabalhoso, mas pode ser tão simples quanto iniciar um contêiner do Docker. Eu abordei um jeito de fazer isso em minha postagem [Como usar um servidor NuGet para um PSRepository][].
 
 ## <a name="why-binary-modules"></a>Por que módulos binários?
 
-Eu já comecei falando sobre como criar um módulo binário e nem comentei a razão pela qual seria interessante fazê-lo. Na realidade, você está escrevendo C# e renunciando ao acesso fácil a Cmdlets e funções do PowerShell. Esse é o principal motivo pelo qual não mudei para os módulos binários mais cedo.
+Eu já comecei falando sobre como criar um módulo binário e nem comentei a razão pela qual seria interessante fazê-lo. Na realidade, você está escrevendo em C# e renunciando ao acesso fácil a cmdlets e funções do PowerShell. Esse é o principal motivo pelo qual não mudei para os módulos binários mais cedo.
 
 Mas se você estiver criando um módulo que não dependa de muitos outros comandos do PowerShell, o benefício de desempenho poderá ser significativo. Ao colocar em C#, você consegue suprimir a sobrecarga adicionada pelo PowerShell. O PowerShell foi otimizado para o administrador, não para o computador, e isso adiciona uma pequena sobrecarga.
 
@@ -294,7 +294,7 @@ No trabalho, temos um processo crítico que trabalha muito com JSON e tabelas de
 
 ### <a name="hybrid-modules"></a>Módulos híbridos
 
-Você pode combinar Cmdlets binários com funções avançadas do PowerShell. É exatamente isso que estou fazendo nesse guia. Tudo o que você sabe sobre scripts de módulo será aplicável da mesma maneira.
+Você pode combinar cmdlet binários com funções avançadas do PowerShell. É exatamente isso que estou fazendo nesse guia. Tudo o que você sabe sobre scripts de módulo será aplicável da mesma maneira.
 O arquivo `psm1` vazio que eu criei hoje existe apenas para que você possa soltar outras funções do PowerShell mais tarde.
 
 Quase todos os cmdlets compilados que criamos começaram como uma função do PowerShell antes. Todos os nossos módulos binários são na verdade módulos híbridos.
@@ -305,13 +305,13 @@ Eu mantive o script de build simples aqui. Eu geralmente uso um script de `Invok
 
 ## <a name="final-thoughts"></a>Considerações finais
 
-Os módulos binários são fáceis de criar. Eu não mexi na sintaxe do C# para criar um cmdlet, mas há muitas documentações sobre isso [SDK do Windows PowerShell][]. Definitivamente, é algo que vale a pena tentar como ponto de partida para um nível mais sério do C#.
+Os módulos binários são fáceis de criar. Eu não mexi na sintaxe do C# para criar um cmdlet, mas há muitas documentações sobre isso no [SDK do Windows PowerShell][]. Definitivamente, é algo que vale a pena tentar como ponto de partida para um nível mais sério do C#.
 
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2018-08-04-Powershell-Standard-Library-Binary-Module/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
-[Biblioteca do PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
+[Biblioteca Padrão do PowerShell]: https://github.com/PowerShell/PowerShellStandard
 [Como criar um módulo binário multiplataforma]: https://github.com/PowerShell/PowerShell/blob/master/docs/cmdlet-example/command-line-simple-example.md
 [SDK do .NET Core]: https://www.microsoft.com/net/download/core
 [Como usar um servidor NuGet para um PSRepository]: https://powershellexplained.com/2018-03-03-Powershell-Using-a-NuGet-server-for-a-PSRepository/

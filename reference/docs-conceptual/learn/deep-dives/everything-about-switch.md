@@ -15,7 +15,7 @@ ms.locfileid: "84149419"
 Como muitas outras linguagens, o PowerShell tem comandos para controlar o fluxo de execução dentro dos seus scripts. Uma dessas instruções é a instrução [switch][] e, no PowerShell, ela oferece recursos que não são encontrados em outras linguagens. Hoje, vamos nos aprofundar sobre como trabalhar com o `switch` do PowerShell.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="if-statement"></a>Instrução If
 
@@ -520,7 +520,7 @@ Ele ainda é executado da mesma maneira e fornece uma quebra visual melhor ao ol
 
 ### <a name="regex-matches"></a>$matches de expressão regular
 
-Precisamos revisitar as expressões regulares para discutir algo que não é imediatamente óbvio. O uso de expressão regular popula a variável `$matches`. Eu me aprofundo mais sobre o uso do `$matches` ao falar sobre [As várias maneiras de usar regex][]. A seguir está um exemplo rápido para mostrá-lo em ação com correspondências nomeadas.
+Precisamos revisitar as expressões regulares para discutir algo que não é imediatamente óbvio. O uso de expressões regulares popula a variável `$matches`. Eu me aprofundo mais sobre o uso do `$matches` ao falar sobre [As várias maneiras de usar regex][]. A seguir está um exemplo rápido para mostrá-lo em ação com correspondências nomeadas.
 
 ``` powershell
 $message = 'my ssn is 123-23-3456 and credit card: 1234-5678-1234-5678'
@@ -621,7 +621,7 @@ Do-Action
 Enabled-AdminMenu
 ```
 
-Essa é um modo limpo de avaliar e agir sobre o status de vários campos boolianos. O interessante disso é que uma correspondência pode inverter o status de um valor que ainda não foi avaliado.
+Essa é um modo limpo de avaliar e agir sobre o status de vários campos boolianos. O interessante nisso é que uma correspondência pode inverter o status de um valor que ainda não foi avaliado.
 
 ``` powershell
 $isVisible = $false
@@ -655,7 +655,7 @@ A configuração de `$isEnabled` para `$true` nesse exemplo garante que `$isVisi
 
 ### <a name="switch-automatic-variable"></a>Variável automática $switch
 
-Quando o `switch` estiver processando os valores, ele criará um enumerador e o chamará de `$switch`. Essa é uma variável automática criada pelo PowerShell e você pode manipulá-la diretamente.
+Quando o `switch` estiver processando os valores, ele criará um enumerador e o chamará de `$switch`. Essa é uma variável automática criada pelo PowerShell, e você pode manipulá-la diretamente.
 
 Isso foi apontado para mim por [/u/frmadsen](https://www.reddit.com/user/frmadsen)
 

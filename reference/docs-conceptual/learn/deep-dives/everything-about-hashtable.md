@@ -3,19 +3,19 @@ title: Tudo o que você queria saber sobre as tabelas de hash
 description: As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 336c32cca351cc7d87f3300364c075ba7bd8aaeb
-ms.sourcegitcommit: 0b9268e7b92fb76b47169b72e28de43e4bfe7fbf
+ms.openlocfilehash: 60a5172485b9caf6343f54194563cd048648206e
+ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307122"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84149509"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Tudo o que você queria saber sobre as tabelas de hash
 
 Quero voltar um pouco e falar sobre as [tabelas de hash][]. Eu as utilizo o tempo todo agora. Eu estava ensinando alguém sobre elas após nossa reunião de grupo de usuários na noite passada e percebi que já tive a mesma dúvida sobre esse assunto. As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 
 > [!NOTE]
-> A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
+> A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
 ## <a name="hashtable-as-a-collection-of-things"></a>A tabela de hash como uma coleção de coisas
 
@@ -79,7 +79,7 @@ $ageList['Kevin']
 $ageList['Alex']
 ```
 
-Quando queremos recuperar a idade de Kevin, usamos o nome dele para poder acessá-la. Também podemos usar essa abordagem para adicionar ou atualizar valores na tabela de hash. Isso é exatamente como usar a função `add()`, acima.
+Quando queremos recuperar a idade de Kevin, usamos o nome dele para poder acessá-la. Também podemos usar essa abordagem para adicionar ou atualizar valores na tabela de hash. Isso é exatamente como usar a função `add()` acima.
 
 ```powershell
 $ageList = @{}
@@ -343,7 +343,7 @@ Quando você estiver definindo uma tabela de hash em uma linha, poderá separar 
 $person = @{ name = 'kevin'; age = 36; }
 ```
 
-Isso pode ser útil se você estiver criando os pares no pipe.
+Isso poderá ser útil se você estiver criando os pares no pipe.
 
 ### <a name="custom-expressions-in-common-pipeline-commands"></a>Expressões personalizadas em comandos de pipeline comuns
 
@@ -377,7 +377,7 @@ Particularmente, eu não gosto porque deixa os comandos muito longos e geralment
 
 ### <a name="custom-sort-expression"></a>Expressão de classificação personalizada
 
-É fácil classificar uma coleção se os objetos tiverem os dados pelos quais você deseja classificar. Você pode adicionar os dados ao objeto antes de classificá-los ou criar uma expressão personalizada para `Sort-Object`.
+Será fácil classificar uma coleção se os objetos tiverem os dados pelos quais você deseja classificar. Você pode adicionar os dados ao objeto antes de classificá-los ou criar uma expressão personalizada para `Sort-Object`.
 
 ```powershell
 Get-ADUser | Sort-Object -Parameter @{ e={ Get-TotalSales $_.Name } }
@@ -541,9 +541,10 @@ Isso cria a mesma tabela de hash que vimos acima e permite acessar as propriedad
 ```powershell
 $person.location.city
 Austin
-```
+```powershell
 
-Há várias maneiras de abordar a estrutura de seus objetos. Aqui está uma segunda maneira de examinar uma tabela de hash aninhada.
+There are many ways to approach the structure of your objects. Here is a second way to look at a
+nested hashtable.
 
 ```powershell
 $people = @{
@@ -571,7 +572,7 @@ PS> $people['Alex']['City']
 Austin
 ```
 
-Eu tenho a tendência de usar a propriedade do ponto quando estou tratando como uma propriedade. Normalmente, essas são as coisas que defino estaticamente em meu código e que conheço de cor e salteado. Se for preciso percorrer a lista ou acessar programaticamente as chaves, usamos os colchetes para fornecer o nome da chave.
+Eu costumo usar a propriedade do ponto quando estou tratando como uma propriedade. Normalmente, essas são as coisas que defino estaticamente em meu código e que conheço de cor e salteado. Se for preciso percorrer a lista ou acessar programaticamente as chaves, usamos os colchetes para fornecer o nome da chave.
 
 ```powershell
 foreach($name in $people.keys)
@@ -670,36 +671,6 @@ $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 
 Há dois pontos importantes sobre esse método. O primeiro é que o JSON é gravado em várias linhas, portanto, preciso usar a opção `-Raw` para lê-lo de volta em uma única cadeia de caracteres. O segundo é que o objeto importado não é mais uma `[hashtable]`. Agora é um `[pscustomobject]` e isso poderá causar problemas se você estiver esperando.
 
-Observe as tabelas de hash profundamente aninhadas. Ao convertê-las em JSON, você pode não obter os resultados esperados.
-
-```powershell
-@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json
-
-{
-  "a": {
-    "b": {
-      "c": "System.Collections.Hashtable"
-    }
-  }
-}
-```
-
-Use o parâmetro **Depth** para garantir que você expandiu todas as tabelas de hash aninhadas.
-
-```powershell
-@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
-
-{
-  "a": {
-    "b": {
-      "c": {
-        "d": "e"
-      }
-    }
-  }
-}
-```
-
 Se precisar que ele seja uma `[hashtable]` na importação, será necessário usar os comandos `Export-CliXml` e `Import-CliXml`.
 
 ### <a name="converting-json-to-hashtable"></a>Convertendo um JSON em uma tabela de hash
@@ -711,18 +682,6 @@ Se você precisa converter um JSON em uma `[hashtable]`, eu conheço apenas uma 
 $JSSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
 $JSSerializer.Deserialize($json,'Hashtable')
 ```
-
-A partir do PowerShell v6, o suporte a JSON usa o NewtonSoft JSON.NET e adiciona suporte à tabela de hash.
-
-```powershell
-'{ "a": "b" }' | ConvertFrom-Json -AsHashtable
-
-Name      Value
-----      -----
-a         b
-```
-
-O PowerShell 6.2 adicionou o parâmetro**Depth** a `ConvertFrom-Json`. O padrão **Depth** é 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Lendo diretamente de um arquivo
 
@@ -739,9 +698,9 @@ Isso importará o conteúdo do arquivo para um `scriptblock` e, em seguida, veri
 
 Nessa observação, você sabia que um manifesto de módulo (o arquivo psd1) é apenas uma tabela de hash?
 
-## <a name="keys-can-be-any-object"></a>As chaves podem ser qualquer objeto
+## <a name="keys-are-just-strings"></a>As chaves são apenas cadeias de caracteres
 
-Na maioria das vezes, as chaves são apenas cadeias de caracteres. Podemos colocar qualquer coisa entre aspas e transformar essa coisa em uma chave.
+Eu não quis sair por essa tangente anteriormente, mas as chaves são apenas cadeias de caracteres. Podemos colocar qualquer coisa entre aspas e transformar essa coisa em uma chave.
 
 ```powershell
 $person = @{
@@ -762,34 +721,13 @@ $person.$key
 
 Só porque você é capaz de fazer algo, isso não significa que você deva fazê-lo. Essa última parece um bug pronto para acontecer e seria facilmente mal interpretada por qualquer pessoa que estivesse lendo seu código.
 
-Tecnicamente, as chaves não precisam ser cadeias de caracteres, mas é mais fácil pensar nelas se você usar apenas cadeias de caracteres. No entanto, a indexação não funciona bem com as chaves complexas.
-
-```powershell
-$ht = @{ @(1,2,3) = "a" }
-$ht
-
-Name                           Value
-----                           -----
-{1, 2, 3}                      a
-```
-
-O acesso a um valor na tabela de hash por sua chave nem sempre funciona. Por exemplo:
-
-```powershell
-$key = $ht.keys[0]
-$ht.$key
-$ht[$key]
-a
-```
-
-usar a notação de acesso de membro (`.`) não retorna nada. Mas o uso da notação de índice de matriz (`[]`) funciona.
+Tecnicamente, as chaves não precisam ser cadeias de caracteres, mas é mais fácil pensar nelas se você usar apenas cadeias de caracteres.
 
 ## <a name="use-in-automatic-variables"></a>Usar em variáveis automáticas
 
 ### <a name="psboundparameters"></a>$PSBoundParameters
 
-[$PSBoundParameters][] é uma variável automática que existe apenas dentro do contexto de uma função.
-Ela contém todos os parâmetros com os quais a função foi chamada. Ela não é exatamente uma tabela de hash, mas é parecida o suficiente para que você possa tratá-la como tal.
+[$PSBoundParameters][] é uma variável automática que existe apenas dentro do contexto de uma função. Ela contém todos os parâmetros com os quais a função foi chamada. Ela não é exatamente uma tabela de hash, mas é parecida o suficiente para que você possa tratá-la como tal.
 
 Isso inclui a remoção de chaves e o fracionamento em outras funções. Se você estiver escrevendo funções de proxy, dê uma olhada mais de perto neste artigo.
 
@@ -886,7 +824,7 @@ Algo que realça que elas são a mesma coisa é o fato de que alterar os valores
 
 ### <a name="shallow-copies-single-level"></a>Cópias superficiais, nível único
 
-Se tivermos uma tabela de hash simples, como no exemplo acima, podemos usar `.Clone()` para fazer uma cópia superficial.
+Se tivermos uma tabela de hash simples, como no exemplo acima, poderemos usar `.Clone()` para fazer uma cópia superficial.
 
 ```powershell
 PS> $orig = @{name='orig'}
@@ -955,6 +893,8 @@ Ele não gerencia nenhum outro tipo de referência ou matrizes, mas é um bom po
 ## <a name="anything-else"></a>Algo mais?
 
 Abordei muitos aspectos de base rapidamente. Minha esperança é que, toda vez que ler o artigo, você saia com uma novidade aprendida ou tendo entendido melhor algo. Como abordei o espectro completo desse recurso, pode haver aspectos que não se aplicam a você neste momento. Isso é perfeitamente normal e até esperado, de certo modo, dependendo do seu nível de familiaridade com o PowerShell.
+
+Aqui está uma lista de tudo o que abordamos, caso você queira voltar para algum tópico específico. Normalmente isso vem no início do texto, mas esse artigo foi escrito do início ao fim com exemplos que acrescentam a tudo o que foi dito anteriormente.
 
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about/

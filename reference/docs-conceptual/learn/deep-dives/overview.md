@@ -10,9 +10,9 @@ ms.locfileid: "84149399"
 ---
 # <a name="deep-dive-articles"></a>Artigos de aprofundamento
 
-Os artigos nesta seção foram projetados para serem uma análise detalhada dos tópicos do PowerShell. Esses artigos não substituem os artigos de referência, mas fornecem exemplos diversificados, ilustram casos atípicos e avisam sobre armadilhas e erros comuns.
+Os artigos nesta seção foram projetados como uma análise detalhada dos tópicos do PowerShell. Esses artigos não substituem os artigos de referência, mas fornecem exemplos diversificados, ilustram casos atípicos e avisam sobre armadilhas e erros comuns.
 
-Essa coleção também é uma demonstração das contribuições da comunidade. O conjunto de artigos inaugural é proveniente de [@KevinMarquette][] e foi publicado originalmente em [PowerShellExplained.com][].
+Esta coleção também é uma demonstração das contribuições da comunidade. O conjunto de artigos inaugural é pertence a [@KevinMarquette][] e foi publicado originalmente em [PowerShellExplained.com][].
 
 ## <a name="how-to-contribute-content"></a>Como contribuir com conteúdo
 
