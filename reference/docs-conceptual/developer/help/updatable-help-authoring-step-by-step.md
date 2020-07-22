@@ -1,19 +1,12 @@
 ---
-title: 'Criação de ajuda atualizável: passo a passo | Microsoft Docs'
-ms.custom: ''
+title: Criação de ajuda atualizável-passo a passo
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 10098160-c6b4-4339-b8ff-2c4f8cc0699b
-caps.latest.revision: 13
-ms.openlocfilehash: a5290265f3d729504983b95195c793b88c4a2613
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: c9214be3c3363a4e6354595b50cf76a17d49aa67
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811375"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893111"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>Criação de ajuda atualizável: passo a passo
 
@@ -48,14 +41,10 @@ HelpInfoURI = 'https://go.microsoft.com/fwlink/?LinkID=0123'
 
 O arquivo de informações XML HelpInfo contém o URI do local da Internet dos seus arquivos de ajuda e os números de versão dos arquivos de ajuda mais recentes para seu módulo em cada cultura de interface do usuário com suporte. Cada módulo do Windows PowerShell tem um arquivo XML HelpInfo. Ao atualizar os arquivos de ajuda, você edita ou substitui o arquivo XML HelpInfo; Você não adiciona outro. Para obter mais informações, consulte [como criar um arquivo XML HelpInfo](./how-to-create-a-helpinfo-xml-file.md).
 
-### <a name="step-4-sign-your-help-files"></a>Etapa 4: assinar seus arquivos de ajuda
+### <a name="step-4-create-cab-files"></a>Etapa 4: criar arquivos CAB
 
-As assinaturas digitais não são necessárias, mas elas são uma recomendação de práticas recomendadas sempre que você estiver compartilhando arquivos.
+Use uma ferramenta que cria arquivos de gabinete ( `.cab` ), como `MakeCab.exe` , para criar um arquivo CAB que contém os arquivos de ajuda para seu módulo. Crie um arquivo CAB separado para os arquivos de ajuda em cada cultura de interface do usuário com suporte. Para obter mais informações, consulte [como preparar arquivos CAB de ajuda atualizáveis](./how-to-prepare-updatable-help-cab-files.md).
 
-### <a name="step-5-create-cab-files"></a>Etapa 5: criar arquivos CAB
-
-Use uma ferramenta que cria arquivos de gabinete (. cab), como MakeCab. exe, para criar um. Arquivo CAB que contém os arquivos de ajuda para seu módulo. Crie um arquivo CAB separado para os arquivos de ajuda em cada cultura de interface do usuário com suporte. Para obter mais informações, consulte [como preparar arquivos CAB de ajuda atualizáveis](./how-to-prepare-updatable-help-cab-files.md).
-
-### <a name="step-6-upload-your-files"></a>Etapa 6: carregar seus arquivos
+### <a name="step-5-upload-your-files"></a>Etapa 5: carregar seus arquivos
 
 Para publicar arquivos de ajuda novos ou atualizados, carregue os arquivos CAB no local da Internet que é especificado pelo elemento **HelpContentUri** no arquivo XML HelpInfo. Em seguida, carregue o arquivo XML HelpInfo no local da Internet que é especificado pelo valor da chave **HelpInfoUri** no manifesto do módulo.

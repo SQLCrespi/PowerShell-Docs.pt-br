@@ -1,32 +1,26 @@
 ---
-title: Como adicionar o nome do cmdlet e Sinopse a um tópico de ajuda de cmdlet | Microsoft Docs
-ms.custom: ''
+title: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1d0e1eb1-a962-4406-9625-175cfa3364ad
-caps.latest.revision: 10
-ms.openlocfilehash: 5b4c04a14c3d86c7a3b94b768e8fb59116d8c6f5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 399defcb596ff9e9a596f4cd25ebcb6bcb7c34d2
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560620"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892873"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
 
-Esta seção descreve como adicionar conteúdo exibido nas seções nome e Sinopse da ajuda do cmdlet. No arquivo de ajuda, esse conteúdo é adicionado ao nó de comando para cada cmdlet.
+Esta seção descreve como adicionar conteúdo exibido nas seções **nome** e **Sinopse** da ajuda do cmdlet. No arquivo de ajuda, esse conteúdo é adicionado ao nó de comando para cada cmdlet.
 
 > [!NOTE]
-> Para obter uma exibição completa de um arquivo de ajuda, abra um dos arquivos dll-Help. xml localizados no diretório de instalação do Windows PowerShell. Por exemplo, o arquivo Microsoft. PowerShell. Commands. Management. dll-Help. xml contém conteúdo para vários cmdlets do Windows PowerShell.
+> Para obter uma exibição completa de um arquivo de ajuda, abra um dos `dll-Help.xml` arquivos localizados no diretório de instalação do PowerShell. Por exemplo, o `Microsoft.PowerShell.Commands.Management.dll-Help.xml` arquivo contém conteúdo para vários cmdlets do PowerShell.
 
-### <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>Para adicionar o nome do cmdlet e uma sinopse
+## <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>Para adicionar o nome do cmdlet e uma sinopse
 
-- A ajuda do cmdlet pode exibir duas descrições para o cmdlet. A primeira descrição é uma breve descrição que é conhecida como Sinopse. A segunda descrição é uma descrição mais detalhada que é abordada na [adição da descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md). Ambas as descrições devem ser escritas como um único parágrafo.
+- A ajuda do cmdlet pode exibir duas descrições para o cmdlet. A primeira descrição é uma breve descrição que é conhecida como Sinopse. A segunda descrição é uma descrição mais detalhada que é abordada na [adição da descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md).
+  Ambas as descrições devem ser escritas como um único parágrafo.
 
-- Na Sinopse, não repita o nome do cmdlet. Informando ao usuário que o cmdlet Get-Server Obtém um servidor é curto, mas não é informativo. Em vez disso, use sinônimos e adicione detalhes à descrição.
+- Na Sinopse, não repita o nome do cmdlet. Informar ao usuário que o `Get-Server` cmdlet obtém um servidor é breve, mas não é informativo. Em vez disso, use sinônimos e adicione detalhes à descrição.
 
   Exemplo: "Obtém um objeto que representa um computador local ou remoto".
 
@@ -40,4 +34,4 @@ Esta seção descreve como adicionar conteúdo exibido nas seções nome e Sinop
 
 ## <a name="see-also"></a>Consulte Também
 
- [SDK do Windows PowerShell](../windows-powershell-reference.md)
+[SDK do Windows PowerShell](../windows-powershell-reference.md)

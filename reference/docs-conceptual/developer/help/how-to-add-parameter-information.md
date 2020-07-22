@@ -1,28 +1,21 @@
 ---
-title: Como adicionar informações de parâmetro | Microsoft Docs
-ms.custom: ''
+title: Como adicionar informações de parâmetro
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: cf6c1442-60aa-477a-8f30-ab02b1b11039
-caps.latest.revision: 7
-ms.openlocfilehash: b9ccca75c2d9126e84a7f486ffe803042a742b62
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565553"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893383"
 ---
 # <a name="how-to-add-parameter-information"></a>Como adicionar informações de parâmetro
 
-Esta seção descreve como adicionar conteúdo exibido na seção de parâmetros do tópico de ajuda do cmdlet. A seção de parâmetros do tópico da ajuda lista cada um dos parâmetros do cmdlet e fornece uma descrição detalhada de cada parâmetro.
+Esta seção descreve como adicionar conteúdo exibido na seção de **parâmetros** do tópico de ajuda do cmdlet. A seção de **parâmetros** do tópico da ajuda lista cada um dos parâmetros do cmdlet e fornece uma descrição detalhada de cada parâmetro.
 
-O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da seção de sintaxe do tópico da ajuda. É responsabilidade do autor da ajuda garantir que o nó sintaxe e parâmetros contenha elementos XML semelhantes.
+O conteúdo da seção de **parâmetros** deve ser consistente com o conteúdo da seção de **sintaxe** do tópico da ajuda. É responsabilidade do autor da ajuda garantir que o nó **sintaxe** e **parâmetros** contenha elementos XML semelhantes.
 
 > [!NOTE]
-> Para obter uma exibição completa de um arquivo de ajuda, abra um dos arquivos dll-Help. xml localizados no diretório de instalação do Windows PowerShell. Por exemplo, o arquivo Microsoft. PowerShell. Commands. Management. dll-Help. xml contém conteúdo para vários cmdlets do Windows PowerShell.
+> Para obter uma exibição completa de um arquivo de ajuda, abra um dos `dll-Help.xml` arquivos localizados no diretório de instalação do PowerShell. Por exemplo, o `Microsoft.PowerShell.Commands.Management.dll-Help.xml` arquivo contém conteúdo para vários cmdlets do PowerShell.
 
 ### <a name="to-add-parameters"></a>Para adicionar parâmetros
 
@@ -33,7 +26,8 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:command>
     ```
 
-2. No nó de comando, localize o nó descrição e adicione um nó de parâmetros, conforme mostrado abaixo. Apenas um nó de parâmetros é permitido e deve seguir imediatamente o nó de sintaxe.
+1. No nó de comando, localize o nó descrição e adicione um nó de parâmetros, conforme mostrado abaixo.
+   Apenas um nó de parâmetros é permitido e deve seguir imediatamente o nó de sintaxe.
 
     ```xml
     <command:command>
@@ -45,9 +39,9 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:command>
     ```
 
-3. Dentro do nó parâmetros, adicione um nó de parâmetro para cada parâmetro do cmdlet, conforme mostrado abaixo.
+1. Dentro do nó parâmetros, adicione um nó de **parâmetro** para cada parâmetro do cmdlet, conforme mostrado abaixo.
 
-   Neste exemplo, um nó de parâmetro é adicionado para três parâmetros.
+   Neste exemplo, um nó de **parâmetro** é adicionado para três parâmetros.
 
     ```xml
     <command:parameters>
@@ -59,7 +53,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
 
    Como essas são as mesmas marcas XML que são usadas no nó de sintaxe, e como os parâmetros especificados aqui devem corresponder aos parâmetros especificados pelo nó de sintaxe, você pode copiar os nós de parâmetro do nó de sintaxe e colá-los no nó de parâmetros. No entanto, certifique-se de copiar apenas uma instância de um nó de parâmetro, mesmo que o parâmetro seja especificado em vários conjuntos de parâmetros na sintaxe.
 
-4. Para cada nó de parâmetro, defina os valores de atributo que definem as características de cada parâmetro. Esses atributos incluem o seguinte: Required, globaling, PipelineInput e Position.
+1. Para cada nó de parâmetro, defina os valores de atributo que definem as características de cada parâmetro. Esses atributos incluem o seguinte: Required, globaling, PipelineInput e Position.
 
     ```xml
     <command:parameters>
@@ -74,7 +68,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:Parameters>
     ```
 
-5. Para cada nó de parâmetro, adicione o nome do parâmetro. Aqui está um exemplo do nome do parâmetro adicionado ao nó do parâmetro.
+1. Para cada nó de parâmetro, adicione o nome do parâmetro. Aqui está um exemplo do nome do parâmetro adicionado ao nó do parâmetro.
 
     ```xml
     <command:parameters>
@@ -85,7 +79,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:Parameters>
     ```
 
-6. Para cada nó de parâmetro, adicione a descrição do parâmetro. Aqui está um exemplo da descrição do parâmetro adicionada ao nó de parâmetro.
+1. Para cada nó de **parâmetro** , adicione a descrição do parâmetro. Aqui está um exemplo da descrição do parâmetro adicionada ao nó de **parâmetro** .
 
     ```xml
     <command:parameters>
@@ -99,9 +93,9 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:parameters>
     ```
 
-7. Para cada nó de parâmetro, adicione o tipo de .NET Framework do parâmetro. O tipo de parâmetro é exibido junto com o nome do parâmetro.
+1. Para cada nó de **parâmetro** , adicione o tipo .net do parâmetro. O tipo de parâmetro é exibido junto com o nome do parâmetro.
 
-   Aqui está um exemplo do parâmetro .NET Framework tipo adicionado ao nó de parâmetro.
+   Aqui está um exemplo do tipo de parâmetro .NET adicionado ao nó de **parâmetro** .
 
     ```xml
     <command:parameters>
@@ -116,9 +110,9 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:parameters>
     ```
 
-8. Para cada nó de parâmetro, adicione o valor padrão do parâmetro. A sentença a seguir é adicionada à descrição do parâmetro quando o conteúdo é exibido: "DefaultValue" é o padrão.
+1. Para cada nó de **parâmetro** , adicione o valor padrão do parâmetro. A sentença a seguir é adicionada à descrição do parâmetro quando o conteúdo é exibido: **DefaultValue** é o padrão.
 
-   Aqui está um exemplo do valor padrão do parâmetro que é adicionado ao nó do parâmetro.
+   Aqui está um exemplo do valor padrão do parâmetro que é adicionado ao nó do **parâmetro** .
 
     ```xml
     <command:parameters>
@@ -134,7 +128,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
     </command:parameters>
     ```
 
-9. Para cada parâmetro que tem vários valores, adicione um nó de valores possíveis.
+1. Para cada parâmetro que tem vários valores, adicione um nó de valores possíveis.
 
    Aqui está um exemplo de um nó de valores possíveis que define dois valores possíveis para o parâmetro
 
@@ -145,7 +139,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
         <maml:description>
           <maml:para></maml:para>
         </maml:description>
-      /dev:possiblevalue>
+      </dev:possiblevalue>
       <dev:possiblevalue>
         <dev:value>String</dev:value>
         <maml:description>
@@ -157,7 +151,7 @@ O conteúdo da seção de parâmetros deve ser consistente com o conteúdo da se
 
 Aqui estão algumas coisas a serem lembradas ao adicionar parâmetros.
 
-- Os atributos do parâmetro não são exibidos em todas as exibições do tópico de ajuda do cmdlet. No entanto, eles são exibidos em uma tabela após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \< cmdlets>-Full) ou parâmetro (Get-Help \< cmdlets>-Parameter) do tópico.
+- Os atributos do parâmetro não são exibidos em todas as exibições do tópico de ajuda do cmdlet. No entanto, eles são exibidos em uma tabela após a descrição do parâmetro quando o usuário solicita a exibição **completa** ( `Get-Help <cmdletname> -full` ) ou **parâmetro** ( `Get-Help <cmdletname> -parameter` ) do tópico.
 
 - A descrição do parâmetro é uma das partes mais importantes de um tópico de ajuda de cmdlet. A descrição deve ser breve, bem como completa. Além disso, lembre-se de que se a descrição do parâmetro se tornar muito longa, como quando dois parâmetros interagem entre si, você pode adicionar mais conteúdo na seção anotações do tópico de ajuda do cmdlet.
 
@@ -167,15 +161,17 @@ Aqui estão algumas coisas a serem lembradas ao adicionar parâmetros.
 
 - O que é um valor válido para o parâmetro.
 
-- Como os valores de parâmetro são expressos como objetos .NET Framework, os usuários precisam de mais informações sobre esses valores do que em uma ajuda de linha de comando tradicional. Informe ao usuário que tipo de dados o parâmetro foi projetado para aceitar e inclua exemplos.
+- Como os valores de parâmetro são expressos como objetos .NET, os usuários precisam de mais informações sobre esses valores do que em uma ajuda de linha de comando tradicional. Informe ao usuário que tipo de dados o parâmetro foi projetado para aceitar e inclua exemplos.
 
 O valor padrão do parâmetro é o valor que será usado se o parâmetro não for especificado na linha de comando. Observe que o valor padrão é opcional e não é necessário para alguns parâmetros, como os parâmetros necessários. No entanto, você deve especificar um valor padrão para a maioria dos parâmetros opcionais.
 
-O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do Windows PowerShell ($pshome)" para um caminho opcional. Você também pode escrever uma frase que descreve o padrão, como a seguinte frase usada para o `PassThru` parâmetro: "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline".  Além disso, como o valor é exibido em oposto ao nome do campo "**valor padrão**", não é necessário incluir o termo "valor padrão" na entrada.
+O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do PowerShell ( `$PSHOME` )" para um caminho opcional. Você também pode escrever uma frase que descreva o padrão, como a seguinte frase usada para o parâmetro **PassThru** : "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline". Além disso, como o valor é exibido em oposto ao **valor padrão**do nome do campo, não é necessário incluir o termo "valor padrão" na entrada.
 
-O valor padrão do parâmetro não é exibido em todas as exibições do tópico de ajuda do cmdlet. No entanto, ele é exibido em uma tabela (juntamente com os atributos de parâmetro) após a descrição do parâmetro quando o usuário solicita a exibição completa (Get-Help \< cmdlets>-Full) ou parâmetro (Get-Help \< cmdlets>-Parameter) do tópico.
+O valor padrão do parâmetro não é exibido em todas as exibições do tópico de ajuda do cmdlet. No entanto, ele é exibido em uma tabela (juntamente com os atributos de parâmetro) após a descrição do parâmetro quando o usuário solicita a exibição **completa** ( `Get-Help <cmdletname> -full` ) ou **parâmetro** ( `Get-Help
+<cmdletname> -parameter` ) do tópico.
 
-O XML a seguir mostra um par de `<dev:defaultValue>` marcas adicionadas ao `<command:parameter>` nó. Observe que o valor padrão segue imediatamente após a marca de fechamento `</command:parameterValue>` (quando o valor do parâmetro é especificado) ou a `</maml:description>` marca de fechamento da descrição do parâmetro. nome.
+O XML a seguir mostra um par de `<dev:defaultValue>` marcas adicionadas ao `<command:parameter>` nó.
+Observe que o valor padrão segue imediatamente após a marca de fechamento `</command:parameterValue>` (quando o valor do parâmetro é especificado) ou a `</maml:description>` marca de fechamento da descrição do parâmetro. nome.
 
 ```xml
 <command:parameters>
@@ -195,7 +191,7 @@ O XML a seguir mostra um par de `<dev:defaultValue>` marcas adicionadas ao `<com
 
 Adicionar valores para tipos enumerados
 
-Se o parâmetro tiver vários valores ou valores de um tipo enumerado, você poderá usar um \< nó dev: possibleValues> opcional. Esse nó permite que você especifique um nome e uma descrição para vários valores.
+Se o parâmetro tiver vários valores ou valores de um tipo enumerado, você poderá usar um \<dev:possibleValues> nó opcional. Esse nó permite que você especifique um nome e uma descrição para vários valores.
 
 Lembre-se de que as descrições dos valores enumerados não aparecem em nenhum dos modos de exibição padrão da ajuda exibidos pelo `Get-Help` cmdlet, mas outros visualizadores da ajuda podem exibir esse conteúdo em suas exibições.
 

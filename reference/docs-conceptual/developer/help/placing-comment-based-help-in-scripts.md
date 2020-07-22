@@ -1,19 +1,12 @@
 ---
-title: Colocando a ajuda baseada em comentários em scripts | Microsoft Docs
-ms.custom: ''
+title: Colocar a ajuda baseada em comentários em scripts
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 49f8267c-d887-4d7d-b9b7-80dc624b1261
-caps.latest.revision: 4
-ms.openlocfilehash: 1bebfbd822963830363012060067c656d7709543
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565519"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893179"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>Colocar a ajuda baseada em comentários em scripts
 
@@ -21,7 +14,9 @@ Este tópico explica onde posicionar a ajuda baseada em comentários para um scr
 
 ## <a name="where-to-place-comment-based-help-for-a-script"></a>Onde posicionar a ajuda baseada em comentários para um script
 
-- No início do arquivo de script. A ajuda do script pode ser precedida no script somente por comentários e linhas em branco.
+- No início do arquivo de script.
+
+  A ajuda do script pode ser precedida no script somente por comentários e linhas em branco.
 
 - No final do arquivo de script.
 
@@ -29,13 +24,13 @@ Este tópico explica onde posicionar a ajuda baseada em comentários para um scr
 
 ## <a name="examples-of-help-placement-in-a-script"></a>Exemplos de posicionamento de ajuda em um script
 
- Os exemplos a seguir mostram cada uma das opções de posicionamento da ajuda baseada em comentários para um script.
+Os exemplos a seguir mostram cada uma das opções de posicionamento da ajuda baseada em comentários para um script.
 
 ### <a name="help-at-the-beginning-of-a-script"></a>Ajuda no início de um script
 
- O exemplo a seguir mostra o comentário baseado no início de um script.
+O exemplo a seguir mostra o comentário baseado no início de um script.
 
-```
+```powershell
 <#
 .Description
 This script performs a series of network connection tests.
@@ -57,5 +52,4 @@ function Ping { Test-Connection -ComputerName $ComputerName }
 .Description
 This script performs a series of network connection tests.
 #>
-
 ```

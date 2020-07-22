@@ -1,32 +1,21 @@
 ---
-title: Como preparar arquivos CAB de ajuda atualizáveis | Microsoft Docs
-ms.custom: ''
+title: Como preparar arquivos CAB de ajuda atualizável
 ms.date: 09/03/2012
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- Windows PowerShell 3.0
-ms.assetid: a8f48736-c9fa-4e07-bd18-dd813e11f774
-caps.latest.revision: 6
-ms.openlocfilehash: 9d87b086a8309560c039b000afc1c6535dbca38e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 7f3ed2fcf03585a41e571eb2a5ebb4d850d64e01
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811665"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893315"
 ---
 # <a name="how-to-prepare-updatable-help-cab-files"></a>Como preparar arquivos CAB de ajuda atualizável
 
-Este tópico explica o conteúdo e o uso do gabinete (. CAB) na ajuda atualizável do Windows PowerShell.
+Este tópico explica o conteúdo e o uso de arquivos de gabinete (1) na ajuda atualizável do Windows PowerShell.
 
 Esta seção inclui os seguintes tópicos.
 
 - [Como criar e carregar arquivos CAB](./how-to-create-and-upload-cab-files.md)
-
 - [Como nomear um arquivo CAB de ajuda atualizável](./how-to-name-an-updatable-help-cab-file.md)
-
 - [Tipos de arquivo permitidos em um arquivo CAB de ajuda atualizável](./file-types-permitted-in-an-updatable-help-cab-file.md)
 
 ## <a name="see-also"></a>Consulte Também

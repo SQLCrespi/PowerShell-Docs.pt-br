@@ -1,31 +1,26 @@
 ---
-title: Como adicionar tipos de entrada a um tópico de ajuda de cmdlet | Microsoft Docs
-ms.custom: ''
+title: Como adicionar tipos de entrada a um tópico de ajuda do cmdlet
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 432798e4-5d69-46b1-9517-ff09bffaa4be
-caps.latest.revision: 7
-ms.openlocfilehash: 58b908be3149376547b075320b021421351b881e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d41c49ff48cf361c2ba694d11576e84a9367eef5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557049"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893417"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>Como adicionar tipos de entrada a um tópico de ajuda do cmdlet
 
-Esta seção descreve como adicionar uma seção de entradas a um tópico de ajuda do cmdlet® do Windows PowerShell. A seção de entradas lista as classes .NET de objetos que o cmdlet aceita como entrada do pipeline, seja por valor ou por nome de propriedade.
+Esta seção descreve como adicionar uma seção de **entradas** a um tópico de ajuda do cmdlet do PowerShell. A seção de **entradas** lista as classes .net de objetos que o cmdlet aceita como entrada do pipeline, seja por valor ou por nome de propriedade.
 
-Não há nenhum limite para o número de classes que você pode adicionar a uma seção de entradas. Os tipos de entrada são colocados em um \< comando: inputTypes> nó, com cada classe colocada em um \< elemento Command: InputType>.
+Não há nenhum limite para o número de classes que você pode adicionar a uma seção de **entradas** . Os tipos de entrada são colocados em um `<command:inputTypes>` nó, com cada classe colocada em um `<command:inputType>` elemento.
 
-O esquema inclui dois \< elementos maml: description> em cada \< comando: InputType> elemento. No entanto, o `Get-Help` cmdlet exibe apenas o conteúdo do \< elemento comando: InputType>/ \< maml: Description>).
+O esquema inclui dois `<maml:description>` elementos em cada `<command:inputType>` elemento.
+No entanto, o `Get-Help` cmdlet exibe apenas o conteúdo do `<command:inputType>/<maml:description>` elemento.
 
-A partir do Windows PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do \< elemento maml: URI>. Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.
+A partir do PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do `<maml:uri>` elemento.
+Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.
 
-O XML a seguir mostra o \< nó maml: inputTypes>.
+O XML a seguir mostra o `<maml:inputTypes>` nó.
 
 ```xml
 <command:inputTypes>
@@ -42,7 +37,7 @@ O XML a seguir mostra o \< nó maml: inputTypes>.
 </command:inputTypes>
 ```
 
-O XML a seguir mostra um exemplo de como usar o \< nó maml: inputTypes> para documentar um tipo de entrada.
+O XML a seguir mostra um exemplo de como usar o `<maml:inputTypes>` nó para documentar um tipo de entrada.
 
 ```xml
 <command:inputTypes>

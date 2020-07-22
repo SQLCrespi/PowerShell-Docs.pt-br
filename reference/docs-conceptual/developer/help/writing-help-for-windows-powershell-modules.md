@@ -1,12 +1,12 @@
 ---
 title: Gravando ajuda para módulos do PowerShell
 ms.date: 04/10/2020
-ms.openlocfilehash: 2c6450c03fb9847de331605fb6b9bfb203af3d89
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811455"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893060"
 ---
 # <a name="writing-help-for-powershell-modules"></a>Gravando ajuda para módulos do PowerShell
 
@@ -29,7 +29,7 @@ Um módulo pode incluir os seguintes tipos de ajuda.
 - **Ajuda conceitual ("sobre")**. Você pode usar um tópico de ajuda conceitual ("sobre") para descrever o módulo e seus membros e explicar como os membros podem ser usados juntos para executar tarefas.
   Os tópicos de ajuda conceitual são arquivos de texto com codificação Unicode (UTF-8). O nome do arquivo deve usar o `about_<name>.help.txt` formato, como `about_MyModule.help.txt` . Por padrão, o PowerShell inclui mais de 100 desses conceitos conceituais sobre tópicos de ajuda e eles são formatados como o exemplo a seguir.
 
-  ```
+  ```Output
   TOPIC
       about_<subject or module name>
 

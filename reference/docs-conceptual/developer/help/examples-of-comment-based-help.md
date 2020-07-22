@@ -1,18 +1,12 @@
 ---
-title: Exemplos de ajuda baseada em comentários | Microsoft Docs
-ms.custom: ''
+title: Exemplos de ajuda baseada em comentários
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
-caps.latest.revision: 4
-ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3858fa7f15d71c505dacaf9679910d45ef4640e5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86035426"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893485"
 ---
 # <a name="examples-of-comment-based-help"></a>Exemplos de ajuda baseada em comentários
 
@@ -70,13 +64,13 @@ function Add-Extension
 }
 ```
 
-A saída a seguir mostra os resultados de um comando Get-Help que exibe a ajuda para a função de adição de extensão.
+A saída a seguir mostra os resultados de um `Get-Help` comando que exibe a ajuda para a `Add-Extension` função.
 
 ```powershell
 C:\PS> get-help add-extension -full
 ```
 
-```output
+```Output
         NAME
             Add-Extension
 
@@ -144,7 +138,7 @@ C:\PS> get-help add-extension -full
 
 A função de exemplo a seguir inclui ajuda baseada em comentários.
 
-Observe as linhas em branco entre o fechamento **#>** e a `Param` instrução. Em um script que não tem uma `Param` instrução, deve haver pelo menos duas linhas em branco entre o comentário final no tópico da ajuda e a primeira declaração da função. Sem essas linhas em branco, Get-Help associa o tópico da ajuda com a função, em vez do script.
+Observe as linhas em branco entre o fechamento **#>** e a `Param` instrução. Em um script que não tem uma `Param` instrução, deve haver pelo menos duas linhas em branco entre o comentário final no tópico da ajuda e a primeira declaração da função. Sem essas linhas em branco, `Get-Help` o associa o tópico da ajuda com a função, em vez do script.
 
 ```powershell
 <#
@@ -184,13 +178,13 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-O comando a seguir obtém a ajuda do script. Como o script não está em um diretório listado na variável de ambiente Path, o comando Get-Help que obtém a ajuda do script deve especificar o caminho do script.
+O comando a seguir obtém a ajuda do script. Como o script não está em um diretório listado na variável de ambiente Path, o `Get-Help` comando que obtém a ajuda do script deve especificar o caminho do script.
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
 ```
 
-```output
+```Output
             NAME
                 C:\ps-test\Update-Month.ps1
 
@@ -281,11 +275,11 @@ function Add-Extension
     #>
 ```
 
-Os resultados são os mesmos dos resultados, por exemplo 1. Get-Help interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela `.Parameter` palavra-chave.
+Os resultados são os mesmos dos resultados, por exemplo 1. `Get-Help`interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela `.Parameter` palavra-chave.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Exemplo 4: redirecionando para um arquivo XML
 
-Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do script de Update-Month.ps1. O script usa a `.ExternalHelp` palavra-chave para especificar o caminho para um tópico de ajuda baseado em XML para o script.
+Você pode escrever tópicos de ajuda baseados em XML para funções e scripts. Embora a ajuda baseada em comentários seja mais fácil de implementar, a ajuda baseada em XML é necessária se você quiser um controle mais preciso sobre o conteúdo da ajuda ou se estiver traduzindo tópicos da ajuda em vários idiomas. O exemplo a seguir mostra as primeiras linhas do `Update-Month.ps1` script. O script usa a `.ExternalHelp` palavra-chave para especificar o caminho para um tópico de ajuda baseado em XML para o script.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -310,7 +304,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Exemplo 5: redirecionando para um tópico de ajuda diferente
 
-O código a seguir é um trecho do início da `Help` função interna no Windows PowerShell, que exibe uma tela de texto de ajuda de cada vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa `.ForwardHelpTargetName` as `.ForwardHelpCategory` palavras-chave e para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
+O código a seguir é um trecho do início da `Help` função interna no PowerShell, que exibe uma tela de texto de ajuda de cada vez. Como o tópico da ajuda para o cmdlet Get-Help descreve a função Help, a função Help usa `.ForwardHelpTargetName` as `.ForwardHelpCategory` palavras-chave e para redirecionar o usuário para o tópico de ajuda do cmdlet Get-Help.
 
 ```powershell
 function help
@@ -328,13 +322,13 @@ function help
     ...
 ```
 
-O comando a seguir usa esse recurso. Quando um usuário digita um comando Get-Help para a função Help, get-help exibe o tópico da ajuda para o cmdlet Get-Help.
+O comando a seguir usa esse recurso. Quando um usuário digita um `Get-Help` comando para a `Help` função, `Get-Help` o exibe o tópico da ajuda para o `Get-Help` cmdlet.
 
 ```powershell
 C:\PS> get-help help
 ```
 
-```output
+```Output
             NAME
                 Get-Help
 

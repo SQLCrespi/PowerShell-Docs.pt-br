@@ -1,33 +1,28 @@
 ---
-title: Como adicionar valores de retorno a um tópico de ajuda de cmdlet | Microsoft Docs
-ms.custom: ''
+title: Como adicionar valores retornados a um tópico de ajuda do cmdlet
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a52ab737-753c-4d04-8af7-758d5c805e18
-caps.latest.revision: 7
-ms.openlocfilehash: a5618b72827d8ef70201437c4a99ea8bf68cdfd3
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c164556cd06b332d04857987360c98f740a150b5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565536"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893349"
 ---
 # <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a>Como adicionar valores retornados a um tópico de ajuda do cmdlet
 
-Esta seção descreve como adicionar uma seção de saídas a um tópico de ajuda do cmdlet® do Windows PowerShell. A seção de saídas lista as classes .NET de objetos que o cmdlet retorna ou passa o pipeline.
+Esta seção descreve como adicionar uma seção de saídas a um tópico de ajuda do cmdlet do PowerShell. A seção de **saídas** lista as classes .net de objetos que o cmdlet retorna ou passa o pipeline.
 
-Não há nenhum limite para o número de classes que você pode adicionar à seção de saídas. Os tipos de retorno de um cmdlet são colocados em um \< comando: returnvalues> nó, com cada classe colocada em um \< elemento Command: ReturnValue>.
+Não há nenhum limite para o número de classes que você pode adicionar à seção de **saídas** . Os tipos de retorno de um cmdlet são colocados em um `<command:returnValues>` nó, com cada classe colocada em um `<command:returnValue>` elemento.
 
-Se um cmdlet não gerar nenhuma saída, use esta seção para indicar que não há nenhuma saída. Por exemplo, no lugar do nome da classe, escreva "None" e forneça uma breve explicação. Se o cmdlet gerar a saída condicionalmente, use este nó para explicar as condições e descrever a saída condicional.
+Se um cmdlet não gerar nenhuma saída, use esta seção para indicar que não há nenhuma saída. Por exemplo, no lugar do nome da classe, escreva **nenhum** e forneça uma breve explicação. Se o cmdlet gerar a saída condicionalmente, use este nó para explicar as condições e descrever a saída condicional.
 
-O esquema inclui dois \< elementos maml: description> em cada \< comando: ReturnValue> elemento. No entanto, o `Get-Help` cmdlet exibe somente o conteúdo do \< comando: ReturnValue>/ \< maml: Description> elemento.
+O esquema inclui dois `<maml:description>` elementos em cada `<command:returnValue>` elemento.
+No entanto, o `Get-Help` cmdlet exibe apenas o conteúdo do `<command:returnValue>/<maml:description>` elemento.
 
-A partir do Windows PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do \< elemento maml: URI>. Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.
+A partir do PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do `<maml:uri>` elemento.
+Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.
 
-O XML a seguir mostra o \< nó maml: returnvalues>.
+O XML a seguir mostra o `<maml:returnValues>` nó.
 
 ```xml
 <command:returnValues>
@@ -45,7 +40,7 @@ O XML a seguir mostra o \< nó maml: returnvalues>.
 </command: returnValues>
 ```
 
-O XML a seguir mostra um exemplo de como usar o \< nó maml: returnvalues> para documentar um tipo de saída.
+O XML a seguir mostra um exemplo de como usar o `<maml:returnValues>` nó para documentar um tipo de saída.
 
 ```xml
 <command:returnValues>

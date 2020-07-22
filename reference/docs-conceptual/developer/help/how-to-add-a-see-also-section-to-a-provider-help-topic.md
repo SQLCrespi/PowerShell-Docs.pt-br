@@ -1,19 +1,12 @@
 ---
-title: Como adicionar uma seção Consulte também a um tópico de ajuda do provedor | Microsoft Docs
-ms.custom: ''
+title: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9c754ac3-cee3-4c13-9bad-e499c8a68a09
-caps.latest.revision: 4
-ms.openlocfilehash: b6561120d1bbe848ab4ebcdec7de92c6cad96314
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 54adf4bb941888583eb749b7b5322b27d84c7af7
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564816"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893468"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
 
@@ -23,11 +16,12 @@ A seção **Consulte também** consiste em uma lista de tópicos relacionados ao
 
 Quando você se referir a tópicos online, forneça o URI ou um termo de pesquisa em texto sem formatação. O `Get-Help` cmdlet não é vinculado ou Redirecionado a nenhum dos tópicos na lista. Além disso, o `Online` parâmetro do `Get-Help` cmdlet não funciona com a ajuda do provedor.
 
-A seção ver também é criada a partir do `RelatedLinks` elemento e das marcas que ela contém. O XML a seguir mostra como adicionar as marcas.
+A seção **Ver também** é criada a partir do `RelatedLinks` elemento e das marcas que ela contém.
+O XML a seguir mostra como adicionar as marcas.
 
-### <a name="to-add-see-also-topics"></a>Para adicionar tópicos "Consulte também"
+### <a name="to-add-see-also-topics"></a>Para adicionar, consulte também tópicos
 
-1. No arquivo *AssemblyName*. dll-help. xml, dentro do `providerHelp` elemento, adicione um `RelatedLinks` elemento. O `RelatedLinks` elemento deve ser o último elemento no `providerHelp` elemento. Somente um `RelatedLinks` elemento é permitido em cada tópico da ajuda do provedor.
+1. No `<AssemblyName>.dll-help.xml` arquivo, dentro do `providerHelp` elemento, adicione um `RelatedLinks` elemento. O `RelatedLinks` elemento deve ser o último elemento no `providerHelp` elemento. Somente um `RelatedLinks` elemento é permitido em cada tópico da ajuda do provedor.
 
    Por exemplo:
 
@@ -38,7 +32,7 @@ A seção ver também é criada a partir do `RelatedLinks` elemento e das marcas
     </providerHelp>
     ```
 
-2. Para cada tópico na seção **Consulte também** , dentro do `RelatedLinks` elemento, adicione um `navigationLink` elemento. Em seguida, dentro de cada `navigationLink` elemento, adicione um `linkText` elemento e um `uri` elemento. Se você não estiver usando o `uri` elemento, poderá adicioná-lo como um elemento vazio ( \< uri/>).
+1. Para cada tópico na seção **Consulte também** , dentro do `RelatedLinks` elemento, adicione um `navigationLink` elemento. Em seguida, dentro de cada `navigationLink` elemento, adicione um `linkText` elemento e um `uri` elemento. Se você não estiver usando o `uri` elemento, poderá adicioná-lo como um elemento vazio ( \<uri/> ).
 
    Por exemplo:
 
@@ -53,7 +47,7 @@ A seção ver também é criada a partir do `RelatedLinks` elemento e das marcas
     </providerHelp>
     ```
 
-3. Digite o nome do tópico entre as `linkText` marcas. Se você estiver fornecendo um URI, digite-o entre as `uri` marcas. Para indicar a versão online do tópico de ajuda do provedor atual, entre as `linkText` marcas, digite "versão online:" em vez do nome do tópico. Normalmente, o link "versão online:" é o primeiro tópico na lista de tópicos consulte também.
+1. Digite o nome do tópico entre as `linkText` marcas. Se você estiver fornecendo um URI, digite-o entre as `uri` marcas. Para indicar a versão online do tópico de ajuda do provedor atual, entre as `linkText` marcas, digite "versão online:" em vez do nome do tópico. Normalmente, o link "versão online:" é o primeiro tópico na lista de tópicos consulte também.
 
    O exemplo a seguir inclui três tópicos de consulte também. A primeira refere-se à versão online do tópico atual. O segundo se refere a um tópico de ajuda de cmdlet do Windows PowerShell. O terceiro se refere a outro tópico online.
 

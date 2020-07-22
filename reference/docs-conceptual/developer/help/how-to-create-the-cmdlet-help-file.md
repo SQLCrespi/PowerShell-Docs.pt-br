@@ -8,19 +8,19 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: cc77c0546de98e492c9724e051b9d72f1ebfdcb6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b5a5f3e187634b38ba3ce3da18a7ad64ccc09ce2
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560161"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893009"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Como criar o arquivo de ajuda do cmdlet
 
 Esta seção descreve como criar um arquivo XML válido que contém conteúdo para tópicos de ajuda do cmdlet do Windows PowerShell. Esta seção discute como nomear o arquivo de ajuda, como adicionar os cabeçalhos XML apropriados e como adicionar nós que conterám as diferentes seções do conteúdo de ajuda do cmdlet.
 
 > [!NOTE]
-> Para obter uma exibição completa de um arquivo de ajuda, abra um dos arquivos dll-Help. xml localizados no diretório de instalação do Windows PowerShell. Por exemplo, o arquivo Microsoft. PowerShell. Commands. Management. dll-Help. xml contém conteúdo para vários cmdlets do Windows PowerShell.
+> Para obter uma exibição completa de um arquivo de ajuda, abra um dos `dll-Help.xml` arquivos localizados no diretório de instalação do Windows PowerShell. Por exemplo, o `Microsoft.PowerShell.Commands.Management.dll-Help.xml` arquivo contém conteúdo para vários cmdlets do PowerShell.
 
 ### <a name="how-to-create-a-cmdlet-help-file"></a>Como criar um arquivo de ajuda de cmdlet
 
@@ -28,29 +28,29 @@ Esta seção descreve como criar um arquivo XML válido que contém conteúdo pa
 
    `<PSSnapInAssemblyName>.dll-Help.xml`
 
-2. Adicione os cabeçalhos XML a seguir ao arquivo de texto. Lembre-se de que o arquivo será validado em relação ao esquema MAML (linguagem de modelagem de vários agentes). Atualmente, o Windows PowerShell não fornece nenhuma ferramenta para validar o arquivo.
+1. Adicione os cabeçalhos XML a seguir ao arquivo de texto. Lembre-se de que o arquivo será validado em relação ao esquema MAML (Microsoft assistência Markup Language). Atualmente, o PowerShell não fornece nenhuma ferramenta para validar o arquivo.
 
    `<?xml version="1.0" encoding="utf-8" ?> <helpItems xmlns="http://msh" schema="maml">`
 
-3. Adicione um nó de comando ao arquivo de ajuda de cmdlet para cada cmdlet no assembly. Cada nó dentro do nó de comando se relaciona às diferentes seções do tópico de ajuda do cmdlet.
+1. Adicione um nó de **comando** ao arquivo de ajuda de cmdlet para cada cmdlet no assembly. Cada nó dentro do nó de **comando** se relaciona às diferentes seções do tópico de ajuda do cmdlet.
 
    A tabela a seguir lista o elemento XML para cada nó, seguido por uma descrição de cada nó.
 
-   |Nó|Descrição|
-   |----------|-----------------|
-   |`<details>`|Adiciona conteúdo para as seções nome e Sinopse do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar o nome do cmdlet e Sinopse](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md).|
-   |`<maml:description>`|Adiciona o conteúdo da seção Descrição do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar a descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md).|
-   |`<command:syntax>`|Adiciona o conteúdo da seção de sintaxe do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar sintaxe a um tópico de ajuda de cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md).|
-   |`<command:parameters>`|Adiciona o conteúdo da seção de parâmetros do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar parâmetros a um tópico de ajuda de cmdlet](./how-to-add-parameter-information.md).|
-   |`<command:inputTypes>`|Adiciona o conteúdo da seção entradas do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar tipos de entrada a um tópico de ajuda de cmdlet](./how-to-add-input-types-to-a-cmdlet-help-topic.md).|
-   |`<command:returnValues>`|Adiciona o conteúdo da seção de saídas do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar valores de retorno a um tópico de ajuda de cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md).|
-   |`<maml:alertset>`|Adiciona o conteúdo à seção observações do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar anotações a um tópico de ajuda do cmdlet](./how-to-add-notes-to-a-cmdlet-help-topic.md).|
-   |`<command:examples>`|Adiciona o conteúdo para a seção exemplos do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar exemplos a um tópico de ajuda de cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md).|
-   |`<maml:relatedLinks>`|Adiciona o conteúdo da seção LINKS relacionados do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar links relacionados a um tópico de ajuda de cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md).|
+   |           Nó           |                                                                                                     Descrição                                                                                                     |
+   | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `<details>`              | Adiciona conteúdo para as seções nome e Sinopse do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar o nome do cmdlet e Sinopse](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md). |
+   | `<maml:description>`     | Adiciona o conteúdo da seção Descrição do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar a descrição detalhada a um tópico de ajuda de cmdlet](./how-to-add-a-cmdlet-description.md).                    |
+   | `<command:syntax>`       | Adiciona o conteúdo da seção de sintaxe do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar sintaxe a um tópico de ajuda de cmdlet](./how-to-add-syntax-to-a-cmdlet-help-topic.md).                                  |
+   | `<command:parameters>`   | Adiciona o conteúdo da seção de parâmetros do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar parâmetros a um tópico de ajuda de cmdlet](./how-to-add-parameter-information.md).                                  |
+   | `<command:inputTypes>`   | Adiciona o conteúdo da seção entradas do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar tipos de entrada a um tópico de ajuda de cmdlet](./how-to-add-input-types-to-a-cmdlet-help-topic.md).                        |
+   | `<command:returnValues>` | Adiciona o conteúdo da seção de saídas do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar valores de retorno a um tópico de ajuda de cmdlet](./how-to-add-return-values-to-a-cmdlet-help-topic.md).                   |
+   | `<maml:alertset>`        | Adiciona o conteúdo da seção observações do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar anotações a um tópico de ajuda do cmdlet](./how-to-add-notes-to-a-cmdlet-help-topic.md).                                      |
+   | `<command:examples>`     | Adiciona o conteúdo para a seção exemplos do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar exemplos a um tópico de ajuda de cmdlet](./how-to-add-examples-to-a-cmdlet-help-topic.md).                            |
+   | `<maml:relatedLinks>`    | Adiciona o conteúdo da seção LINKS relacionados do tópico de ajuda do cmdlet. Para obter mais informações, consulte [como adicionar links relacionados a um tópico de ajuda de cmdlet](./how-to-add-related-links-to-a-cmdlet-help-topic.md).             |
 
 ## <a name="example"></a>Exemplo
 
- Aqui está um exemplo de um nó de comando que inclui os nós das várias seções do tópico de ajuda do cmdlet.
+ Aqui está um exemplo de um nó de **comando** que inclui os nós das várias seções do tópico de ajuda do cmdlet.
 
 ```xml
 <command:command
