@@ -1,25 +1,18 @@
 ---
-title: Arquivo de exemplo XML HelpInfo | Microsoft Docs
-ms.custom: ''
+title: Arquivo de exemplo XML HelpInfo
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6544070f-5549-407f-8603-5df60fe9e013
-caps.latest.revision: 7
-ms.openlocfilehash: 3cf4790be3e26c8b55335da32152a4e2c1ee67b6
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: ccd1f61d8d40232a3e6d2228d382ef4895e13d3d
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811525"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893502"
 ---
-# <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="8dca5-102">Arquivo de exemplo XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="8dca5-102">HelpInfo XML Sample File</span></span>
+# <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="d5841-102">Arquivo de exemplo XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="d5841-102">HelpInfo XML Sample File</span></span>
 
-<span data-ttu-id="8dca5-103">Este tópico exibe um exemplo de um arquivo de informações de ajuda atualizável bem formado, normalmente conhecido como "arquivo XML HelpInfo".</span><span class="sxs-lookup"><span data-stu-id="8dca5-103">This topic displays a sample of a well-formed Updatable Help Information file, commonly known as "HelpInfo XML file."</span></span> <span data-ttu-id="8dca5-104">Neste arquivo de exemplo, os elementos de cultura da interface do usuário são organizados em ordem alfabética pelo nome de cultura da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="8dca5-104">In this sample file, the UI culture elements are arranged in alphabetical order by UI culture name.</span></span> <span data-ttu-id="8dca5-105">A ordenação alfabética é uma prática recomendada, mas não é necessária.</span><span class="sxs-lookup"><span data-stu-id="8dca5-105">Alphabetical ordering is a best practice, but it is not required.</span></span>
+<span data-ttu-id="d5841-103">Este tópico exibe um exemplo de um arquivo de informações de ajuda atualizável bem formado, normalmente conhecido como "arquivo XML HelpInfo".</span><span class="sxs-lookup"><span data-stu-id="d5841-103">This topic displays a sample of a well-formed Updatable Help Information file, commonly known as "HelpInfo XML file."</span></span> <span data-ttu-id="d5841-104">Neste arquivo de exemplo, os elementos de cultura da interface do usuário são organizados em ordem alfabética pelo nome de cultura da interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="d5841-104">In this sample file, the UI culture elements are arranged in alphabetical order by UI culture name.</span></span> <span data-ttu-id="d5841-105">A ordenação alfabética é uma prática recomendada, mas não é necessária.</span><span class="sxs-lookup"><span data-stu-id="d5841-105">Alphabetical ordering is a best practice, but it is not required.</span></span>
 
-## <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="8dca5-106">Arquivo de exemplo XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="8dca5-106">HelpInfo XML Sample File</span></span>
+## <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="d5841-106">Arquivo de exemplo XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="d5841-106">HelpInfo XML Sample File</span></span>
 
 ```xml
 

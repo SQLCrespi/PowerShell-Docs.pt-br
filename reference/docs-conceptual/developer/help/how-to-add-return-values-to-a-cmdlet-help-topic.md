@@ -1,33 +1,28 @@
 ---
-title: Como adicionar valores de retorno a um tópico de ajuda de cmdlet | Microsoft Docs
-ms.custom: ''
+title: Como adicionar valores retornados a um tópico de ajuda do cmdlet
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a52ab737-753c-4d04-8af7-758d5c805e18
-caps.latest.revision: 7
-ms.openlocfilehash: a5618b72827d8ef70201437c4a99ea8bf68cdfd3
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c164556cd06b332d04857987360c98f740a150b5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565536"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893349"
 ---
-# <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a><span data-ttu-id="ff064-102">Como adicionar valores retornados a um tópico de ajuda do cmdlet</span><span class="sxs-lookup"><span data-stu-id="ff064-102">How to Add Return Values to a Cmdlet Help Topic</span></span>
+# <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a><span data-ttu-id="ca308-102">Como adicionar valores retornados a um tópico de ajuda do cmdlet</span><span class="sxs-lookup"><span data-stu-id="ca308-102">How to Add Return Values to a Cmdlet Help Topic</span></span>
 
-<span data-ttu-id="ff064-103">Esta seção descreve como adicionar uma seção de saídas a um tópico de ajuda do cmdlet® do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ff064-103">This section describes how to add an OUTPUTS section to a Windows PowerShell® cmdlet Help topic.</span></span> <span data-ttu-id="ff064-104">A seção de saídas lista as classes .NET de objetos que o cmdlet retorna ou passa o pipeline.</span><span class="sxs-lookup"><span data-stu-id="ff064-104">The OUTPUTS section lists the .NET classes of objects that the cmdlet returns or passes down the pipeline.</span></span>
+<span data-ttu-id="ca308-103">Esta seção descreve como adicionar uma seção de saídas a um tópico de ajuda do cmdlet do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ca308-103">This section describes how to add an OUTPUTS section to a PowerShell cmdlet Help topic.</span></span> <span data-ttu-id="ca308-104">A seção de **saídas** lista as classes .net de objetos que o cmdlet retorna ou passa o pipeline.</span><span class="sxs-lookup"><span data-stu-id="ca308-104">The **OUTPUTS** section lists the .NET classes of objects that the cmdlet returns or passes down the pipeline.</span></span>
 
-<span data-ttu-id="ff064-105">Não há nenhum limite para o número de classes que você pode adicionar à seção de saídas.</span><span class="sxs-lookup"><span data-stu-id="ff064-105">There is no limit to the number of classes that you can add to the OUTPUTS section.</span></span> <span data-ttu-id="ff064-106">Os tipos de retorno de um cmdlet são colocados em um \< comando: returnvalues> nó, com cada classe colocada em um \< elemento Command: ReturnValue>.</span><span class="sxs-lookup"><span data-stu-id="ff064-106">The return types of a cmdlet are enclosed in a \<command:returnValues> node, with each class enclosed in a \<command:returnValue> element.</span></span>
+<span data-ttu-id="ca308-105">Não há nenhum limite para o número de classes que você pode adicionar à seção de **saídas** .</span><span class="sxs-lookup"><span data-stu-id="ca308-105">There is no limit to the number of classes that you can add to the **OUTPUTS** section.</span></span> <span data-ttu-id="ca308-106">Os tipos de retorno de um cmdlet são colocados em um `<command:returnValues>` nó, com cada classe colocada em um `<command:returnValue>` elemento.</span><span class="sxs-lookup"><span data-stu-id="ca308-106">The return types of a cmdlet are enclosed in a `<command:returnValues>` node, with each class enclosed in a `<command:returnValue>` element.</span></span>
 
-<span data-ttu-id="ff064-107">Se um cmdlet não gerar nenhuma saída, use esta seção para indicar que não há nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="ff064-107">If a cmdlet does not generate any output, use this section to indicate that there is no output.</span></span> <span data-ttu-id="ff064-108">Por exemplo, no lugar do nome da classe, escreva "None" e forneça uma breve explicação.</span><span class="sxs-lookup"><span data-stu-id="ff064-108">For example, in place of the class name, write "None" and provide a brief explanation.</span></span> <span data-ttu-id="ff064-109">Se o cmdlet gerar a saída condicionalmente, use este nó para explicar as condições e descrever a saída condicional.</span><span class="sxs-lookup"><span data-stu-id="ff064-109">If the cmdlet generates output conditionally, use this node to explain the conditions and describe the conditional output.</span></span>
+<span data-ttu-id="ca308-107">Se um cmdlet não gerar nenhuma saída, use esta seção para indicar que não há nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="ca308-107">If a cmdlet does not generate any output, use this section to indicate that there is no output.</span></span> <span data-ttu-id="ca308-108">Por exemplo, no lugar do nome da classe, escreva **nenhum** e forneça uma breve explicação.</span><span class="sxs-lookup"><span data-stu-id="ca308-108">For example, in place of the class name, write **None** and provide a brief explanation.</span></span> <span data-ttu-id="ca308-109">Se o cmdlet gerar a saída condicionalmente, use este nó para explicar as condições e descrever a saída condicional.</span><span class="sxs-lookup"><span data-stu-id="ca308-109">If the cmdlet generates output conditionally, use this node to explain the conditions and describe the conditional output.</span></span>
 
-<span data-ttu-id="ff064-110">O esquema inclui dois \< elementos maml: description> em cada \< comando: ReturnValue> elemento.</span><span class="sxs-lookup"><span data-stu-id="ff064-110">The schema includes two \<maml:description> elements in each \<command:returnValue> element.</span></span> <span data-ttu-id="ff064-111">No entanto, o `Get-Help` cmdlet exibe somente o conteúdo do \< comando: ReturnValue>/ \< maml: Description> elemento.</span><span class="sxs-lookup"><span data-stu-id="ff064-111">However, the `Get-Help` cmdlet displays only the content of the \<command:returnValue>/\<maml:description> element.</span></span>
+<span data-ttu-id="ca308-110">O esquema inclui dois `<maml:description>` elementos em cada `<command:returnValue>` elemento.</span><span class="sxs-lookup"><span data-stu-id="ca308-110">The schema includes two `<maml:description>` elements in each `<command:returnValue>` element.</span></span>
+<span data-ttu-id="ca308-111">No entanto, o `Get-Help` cmdlet exibe apenas o conteúdo do `<command:returnValue>/<maml:description>` elemento.</span><span class="sxs-lookup"><span data-stu-id="ca308-111">However, the `Get-Help` cmdlet displays only the content of the `<command:returnValue>/<maml:description>` element.</span></span>
 
-<span data-ttu-id="ff064-112">A partir do Windows PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do \< elemento maml: URI>.</span><span class="sxs-lookup"><span data-stu-id="ff064-112">Beginning in Windows PowerShell 3.0, the `Get-Help` cmdlet displays the content of the \<maml:uri> element.</span></span> <span data-ttu-id="ff064-113">Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.</span><span class="sxs-lookup"><span data-stu-id="ff064-113">This element lets you direct users to topics that describe the .NET class.</span></span>
+<span data-ttu-id="ca308-112">A partir do PowerShell 3,0, o `Get-Help` cmdlet exibe o conteúdo do `<maml:uri>` elemento.</span><span class="sxs-lookup"><span data-stu-id="ca308-112">Beginning in PowerShell 3.0, the `Get-Help` cmdlet displays the content of the `<maml:uri>` element.</span></span>
+<span data-ttu-id="ca308-113">Esse elemento permite direcionar os usuários para tópicos que descrevem a classe .NET.</span><span class="sxs-lookup"><span data-stu-id="ca308-113">This element lets you direct users to topics that describe the .NET class.</span></span>
 
-<span data-ttu-id="ff064-114">O XML a seguir mostra o \< nó maml: returnvalues>.</span><span class="sxs-lookup"><span data-stu-id="ff064-114">The following XML shows the \<maml:returnValues> node.</span></span>
+<span data-ttu-id="ca308-114">O XML a seguir mostra o `<maml:returnValues>` nó.</span><span class="sxs-lookup"><span data-stu-id="ca308-114">The following XML shows the `<maml:returnValues>` node.</span></span>
 
 ```xml
 <command:returnValues>
@@ -45,7 +40,7 @@ ms.locfileid: "83565536"
 </command: returnValues>
 ```
 
-<span data-ttu-id="ff064-115">O XML a seguir mostra um exemplo de como usar o \< nó maml: returnvalues> para documentar um tipo de saída.</span><span class="sxs-lookup"><span data-stu-id="ff064-115">The following XML shows an example of using the \<maml:returnValues> node to document an output type.</span></span>
+<span data-ttu-id="ca308-115">O XML a seguir mostra um exemplo de como usar o `<maml:returnValues>` nó para documentar um tipo de saída.</span><span class="sxs-lookup"><span data-stu-id="ca308-115">The following XML shows an example of using the `<maml:returnValues>` node to document an output type.</span></span>
 
 ```xml
 <command:returnValues>
