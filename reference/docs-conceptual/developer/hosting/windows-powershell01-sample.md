@@ -1,47 +1,40 @@
 ---
 title: Exemplo de PowerShell01 do Windows | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
-caps.latest.revision: 9
-ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560994"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771933"
 ---
-# <a name="windows-powershell01-sample"></a><span data-ttu-id="a23b7-102">Amostra Windows PowerShell01</span><span class="sxs-lookup"><span data-stu-id="a23b7-102">Windows PowerShell01 Sample</span></span>
+# <a name="windows-powershell01-sample"></a><span data-ttu-id="dd7b6-102">Amostra Windows PowerShell01</span><span class="sxs-lookup"><span data-stu-id="dd7b6-102">Windows PowerShell01 Sample</span></span>
 
-<span data-ttu-id="a23b7-103">Este exemplo mostra como usar um objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para limitar a funcionalidade de um runspace.</span><span class="sxs-lookup"><span data-stu-id="a23b7-103">This sample shows how to use an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to limit the functionality of a runspace.</span></span> <span data-ttu-id="a23b7-104">A saída deste exemplo demonstra como restringir o modo de linguagem do runspace, como marcar um cmdlet como particular, como adicionar e remover cmdlets e provedores, como adicionar um comando de proxy e muito mais.</span><span class="sxs-lookup"><span data-stu-id="a23b7-104">The output of this sample demonstrates how to restrict the language mode of the runspace, how to mark a cmdlet as private, how to add and remove cmdlets and providers, how to add a proxy command, and more.</span></span> <span data-ttu-id="a23b7-105">Este exemplo se concentra em como restringir o runspace programaticamente.</span><span class="sxs-lookup"><span data-stu-id="a23b7-105">This sample concentrates on how to restrict the runspace programmatically.</span></span> <span data-ttu-id="a23b7-106">As alternativas de script para restringir o runspace incluem os comandos $ExecutionContext. SessionState. Languagemode e PSSessionConfiguration.</span><span class="sxs-lookup"><span data-stu-id="a23b7-106">Scripting alternatives to restricting the runspace include the $ExecutionContext.SessionState.LanguageMode and PSSessionConfiguration commands.</span></span>
+<span data-ttu-id="dd7b6-103">Este exemplo mostra como usar um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para limitar a funcionalidade de um runspace.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-103">This sample shows how to use an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to limit the functionality of a runspace.</span></span> <span data-ttu-id="dd7b6-104">A saída deste exemplo demonstra como restringir o modo de linguagem do runspace, como marcar um cmdlet como particular, como adicionar e remover cmdlets e provedores, como adicionar um comando de proxy e muito mais.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-104">The output of this sample demonstrates how to restrict the language mode of the runspace, how to mark a cmdlet as private, how to add and remove cmdlets and providers, how to add a proxy command, and more.</span></span> <span data-ttu-id="dd7b6-105">Este exemplo se concentra em como restringir o runspace programaticamente.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-105">This sample concentrates on how to restrict the runspace programmatically.</span></span> <span data-ttu-id="dd7b6-106">As alternativas de script para restringir o runspace incluem os comandos $ExecutionContext. SessionState. Languagemode e PSSessionConfiguration.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-106">Scripting alternatives to restricting the runspace include the $ExecutionContext.SessionState.LanguageMode and PSSessionConfiguration commands.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a23b7-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a23b7-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="dd7b6-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd7b6-107">Requirements</span></span>
 
-<span data-ttu-id="a23b7-108">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="a23b7-108">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="dd7b6-108">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-108">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="a23b7-109">Demonstra</span><span class="sxs-lookup"><span data-stu-id="a23b7-109">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="dd7b6-109">Demonstra</span><span class="sxs-lookup"><span data-stu-id="dd7b6-109">Demonstrates</span></span>
 
-<span data-ttu-id="a23b7-110">Este exemplo demonstra o seguinte:</span><span class="sxs-lookup"><span data-stu-id="a23b7-110">This sample demonstrates the following:</span></span>
+<span data-ttu-id="dd7b6-110">Este exemplo demonstra o seguinte:</span><span class="sxs-lookup"><span data-stu-id="dd7b6-110">This sample demonstrates the following:</span></span>
 
-- <span data-ttu-id="a23b7-111">Restringindo o idioma definindo a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .</span><span class="sxs-lookup"><span data-stu-id="a23b7-111">Restricting the language by setting the [System.Management.Automation.Runspaces.Initialsessionstate.Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) property.</span></span>
+- <span data-ttu-id="dd7b6-111">Restringindo o idioma definindo o [System.Management.Automation.Runspaces.Initialsessionstate. Propriedade languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .</span><span class="sxs-lookup"><span data-stu-id="dd7b6-111">Restricting the language by setting the [System.Management.Automation.Runspaces.Initialsessionstate.Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) property.</span></span>
 
-- <span data-ttu-id="a23b7-112">Adicionando aliases ao estado de sessão inicial usando um [System. Management. Automation. Runspaces. Sessionstatealiasentry? Displayproperty = objeto FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) .</span><span class="sxs-lookup"><span data-stu-id="a23b7-112">Adding aliases to the initial session state by using a [System.Management.Automation.Runspaces.Sessionstatealiasentry?Displayproperty=Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) object.</span></span>
+- <span data-ttu-id="dd7b6-112">Adicionando aliases ao estado de sessão inicial usando um [System. Management. Automation. Runspaces. Sessionstatealiasentry? Displayproperty = objeto FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) .</span><span class="sxs-lookup"><span data-stu-id="dd7b6-112">Adding aliases to the initial session state by using a [System.Management.Automation.Runspaces.Sessionstatealiasentry?Displayproperty=Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) object.</span></span>
 
-- <span data-ttu-id="a23b7-113">Marcando comandos como particulares.</span><span class="sxs-lookup"><span data-stu-id="a23b7-113">Marking commands as private.</span></span>
+- <span data-ttu-id="dd7b6-113">Marcando comandos como particulares.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-113">Marking commands as private.</span></span>
 
-- <span data-ttu-id="a23b7-114">Removendo provedores do estado de sessão inicial usando a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .</span><span class="sxs-lookup"><span data-stu-id="a23b7-114">Removing providers from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) property.</span></span>
+- <span data-ttu-id="dd7b6-114">Removendo provedores do estado de sessão inicial usando o [System.Management.Automation.Runspaces.Initialsessionstate. Propriedade Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .</span><span class="sxs-lookup"><span data-stu-id="dd7b6-114">Removing providers from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) property.</span></span>
 
-- <span data-ttu-id="a23b7-115">Removendo comandos do estado de sessão inicial usando a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .</span><span class="sxs-lookup"><span data-stu-id="a23b7-115">Removing commands from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) property.</span></span>
+- <span data-ttu-id="dd7b6-115">Removendo comandos do estado de sessão inicial usando a propriedade [System.Management.Automation.Runspaces.Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .</span><span class="sxs-lookup"><span data-stu-id="dd7b6-115">Removing commands from the initial session state by using the [System.Management.Automation.Runspaces.Initialsessionstate.Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) property.</span></span>
 
-- <span data-ttu-id="a23b7-116">Adicionar comandos e provedores ao objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="a23b7-116">Adding commands and providers to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="dd7b6-116">Adicionar comandos e provedores ao objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="dd7b6-116">Adding commands and providers to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a23b7-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a23b7-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="dd7b6-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="dd7b6-117">Example</span></span>
 
-<span data-ttu-id="a23b7-118">Este exemplo mostra várias maneiras de limitar a funcionalidade de um runspace.</span><span class="sxs-lookup"><span data-stu-id="a23b7-118">This sample shows several ways to limit the functionality of a runspace.</span></span>
+<span data-ttu-id="dd7b6-118">Este exemplo mostra várias maneiras de limitar a funcionalidade de um runspace.</span><span class="sxs-lookup"><span data-stu-id="dd7b6-118">This sample shows several ways to limit the functionality of a runspace.</span></span>
 
 ```csharp
 namespace Sample
@@ -257,6 +250,6 @@ namespace Sample
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a23b7-119">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="a23b7-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd7b6-119">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="dd7b6-119">See Also</span></span>
 
-[<span data-ttu-id="a23b7-120">Escrever um aplicativo host do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="a23b7-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="dd7b6-120">Escrever um aplicativo host do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="dd7b6-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
