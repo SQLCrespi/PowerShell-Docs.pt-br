@@ -1,19 +1,12 @@
 ---
 title: Declaração de atributo de credencial | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
-caps.latest.revision: 6
-ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a6deca52fa6c9e46138ae92401f58ac5dbd15852
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369885"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784360"
 ---
 # <a name="credential-attribute-declaration"></a>Declaração de atributo de credencial
 
@@ -41,4 +34,4 @@ O atributo Credential é um atributo opcional que pode ser usado com parâmetros
 
 [Declaração de atributo de parâmetro](./parameter-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

@@ -1,19 +1,12 @@
 ---
 title: Exemplo de código de RunSpace04 (VB.NET) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
-caps.latest.revision: 6
-ms.openlocfilehash: a0c04adb64ab5f2a9fd42fa7dee3977638d3b535
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 853e3d223843fb39b2e6a08a21d041a5e696ce2c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417954"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784751"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Exemplo de código RunSpace04 (VB.NET)
 
@@ -22,9 +15,9 @@ Aqui está o código-fonte VB.NET para o exemplo de Runspace04. Este exemplo usa
 > [!NOTE]
 > Você pode baixar o arquivo de origem VB.NET (runspace02. vb) para este exemplo usando o kit de desenvolvimento de software do Windows para componentes de tempo de execução do Windows Vista e Microsoft .NET Framework 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
+> Os arquivos de origem baixados estão disponíveis no **\<PowerShell Samples>** diretório.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
 ```vb
 Imports System

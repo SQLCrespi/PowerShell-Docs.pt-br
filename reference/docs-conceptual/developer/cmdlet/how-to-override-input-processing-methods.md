@@ -1,19 +1,12 @@
 ---
 title: Como substituir métodos de processamento de entrada | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1a1ad921-5816-4937-acf1-ed4760fae740
-caps.latest.revision: 8
-ms.openlocfilehash: cfee55576518cf9ce38501192872ce94054f5213
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b245dc56b78ce9b7f1dea80b5d4988057c2f125f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364465"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784105"
 ---
 # <a name="how-to-override-input-processing-methods"></a>Como substituir os métodos de processamento de entrada
 
@@ -103,4 +96,4 @@ public class TestEndProcessingClassTemplate : Cmdlet
 
 [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

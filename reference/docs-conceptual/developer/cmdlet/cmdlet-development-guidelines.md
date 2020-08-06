@@ -1,22 +1,15 @@
 ---
 title: Diretrizes de desenvolvimento de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - development guidelines [PowerShell Programmer's Guide]
 - cmdlets [PowerShell Programmer's Guide], development guidelines
-ms.assetid: c30cc3c0-e958-4a8f-b81f-1e38de772f13
-caps.latest.revision: 14
-ms.openlocfilehash: 89c7682e87fa6f389349fc44275be0d2ffc83957
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5dd83b12a9052ff5f146c4c4e077a9358907cbd0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369915"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784479"
 ---
 # <a name="cmdlet-development-guidelines"></a>Diretrizes para desenvolvimento de cmdlets
 
@@ -24,14 +17,14 @@ Os tópicos nesta seção fornecem diretrizes de desenvolvimento que você pode 
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
+- [Diretrizes para desenvolvimento necessárias](./required-development-guidelines.md)
 
-- [Diretrizes de desenvolvimento altamente incentivadas](./strongly-encouraged-development-guidelines.md)
+- [Diretrizes de desenvolvimento altamente recomendadas](./strongly-encouraged-development-guidelines.md)
 
-- [Diretrizes de desenvolvimento de consultoria](./advisory-development-guidelines.md)
+- [Diretrizes para desenvolvimento de consultoria](./advisory-development-guidelines.md)
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

@@ -1,25 +1,18 @@
 ---
 title: Elemento SelectionSetName para EntrySelectedBy para EnumerableExpansion (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 936d09f2-2c48-49e8-ab2d-0c8729199a2e
-caps.latest.revision: 8
-ms.openlocfilehash: 8ba8931ea5e34f610878351396cad42023393ad6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8745ef9e6f326c3e8a5dbf185a595bbe93e92414
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368325"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785312"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format"></a>Elemento SelectionSetName para EntrySelectedBy para EnumerableExpansion (formato)
 
 Especifica o conjunto de tipos .NET que são expandidos por essa definição.
 
-Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableExpansions elemento (Format) EnumerableExpansion Element (Format) EntrySelectedBy elemento para EnumerableExpansion (Format) SelectionSetName Element for EntrySelectedBy para EnumerableExpansion (formato)
+Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableExpansions elemento (Format) EnumerableExpansion Element (Format) o elemento EntrySelectedBy para EnumerableExpansion (Format) SelectionSetName Element for EntrySelectedBy for EnumerableExpansion (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,23 +23,23 @@ Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableE
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `SelectionSetName`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `SelectionSetName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Define os objetos da coleção .NET que são expandidos por essa definição.|
+|[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)|Define os objetos da coleção .NET que são expandidos por essa definição.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome do conjunto de seleção.
 
@@ -58,8 +51,8 @@ Os conjuntos de seleção são normalmente usados quando você deseja definir um
 
 ## <a name="see-also"></a>Consulte Também
 
-[Definindo conjuntos de seleção](./defining-selection-sets.md)
+[Definir conjuntos de seleção](./defining-selection-sets.md)
 
-[Elemento EntrySelectedBy para EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)
+[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
 title: Elemento Alignment para TableColumnItem para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b07a53df-64f1-49b0-8cea-c993b3f1f76b
-caps.latest.revision: 10
-ms.openlocfilehash: 1bc936b94ee6fd6239e9e3c4afcdb8f14fbe36eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: baa858b7c15b5afcc7f6087e8a9eace8d8fb67bb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369075"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783901"
 ---
 # <a name="alignment-element-for-tablecolumnitem-for-tablecontrol-format"></a>Elemento Alignment para TableColumnItem para TableControl (formato)
 
 Define como os dados em uma coluna da linha são exibidos.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) TableControl elemento (Format) TableRowEntries Element (Format) TableRowEntry elemento (Format) TableColumnItems elemento (Format) TableColumnItem Element (Format) Elemento Alignment para TableColumnItem (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) TableControl elemento (Format) TableRowEntries Element (Format) TableRowEntry elemento (Format) TableColumnItems elemento (Format) TableColumnItem Element (Format) (Formatar) o elemento de alinhamento para TableColumnItem (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Alignment`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Alignment` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento TableColumnItem (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|Define um rótulo, a largura e o alinhamento dos dados para uma coluna da tabela.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique um dos valores a seguir. (Esses valores não diferenciam maiúsculas de minúsculas.)
 

@@ -1,19 +1,12 @@
 ---
 title: Elemento ListControl (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 37beeb0b-7a81-4747-becb-e309e17278fb
-caps.latest.revision: 12
-ms.openlocfilehash: 7a117c25b0d117dc846ba8e060e31e838b5edd52
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0173b9797bffcca74f1a32903686f771366ebb1b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362775"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785720"
 ---
 # <a name="listcontrol-element-format"></a>Elemento ListControl (formato)
 
@@ -32,19 +25,19 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `ListControl`. Este elemento deve conter apenas um único elemento filho.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `ListControl` elemento. Este elemento deve conter apenas um único elemento filho.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento ListEntries (formato)](./listentries-element-for-listcontrol-format.md)|Elemento obrigatório.<br /><br /> Fornece as definições da exibição de lista.|
+|[Elemento ListEntries (formato)](./listentries-element-for-listcontrol-format.md)|Elemento necessário.<br /><br /> Fornece as definições da exibição de lista.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -78,6 +71,6 @@ Este exemplo mostra um modo de exibição de lista para o objeto [System. Servic
 
 [Elemento ListEntries (formato)](./listentries-element-for-listcontrol-format.md)
 
-[Criando um modo de exibição de lista](./creating-a-list-view.md)
+[Criar uma exibição de lista](./creating-a-list-view.md)
 
 [Escrevendo um arquivo de tipos e formatação do Windows PowerShell](./writing-a-powershell-formatting-file.md)

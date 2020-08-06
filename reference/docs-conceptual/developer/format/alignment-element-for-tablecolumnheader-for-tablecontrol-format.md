@@ -1,19 +1,12 @@
 ---
 title: Elemento Alignment para TableColumnHeader para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ff85e83a-c9c2-4c37-accc-e6a27c182f3c
-caps.latest.revision: 19
-ms.openlocfilehash: 16b41535109ca503e679a135f5ba30054e33de5b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1bf395b84af90d725c14b2f0ef569f72b5fcc613
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364375"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783918"
 ---
 # <a name="alignment-element-for-tablecolumnheader-for-tablecontrol-format"></a>Elemento Alignment para TableColumnHeader para TableControl (formato)
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibição
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Alignment`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Alignment` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableColumnHeader (Format)](./tablecolumnheader-element-format.md)|Define um rótulo, a largura e o alinhamento dos dados para uma coluna da tabela.|
+|[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)|Define um rótulo, a largura e o alinhamento dos dados para uma coluna da tabela.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique um dos valores a seguir. Esses valores não diferenciam maiúsculas de minúsculas.
 
@@ -61,7 +54,7 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra um elemento `TableColumnHeader` cujos dados estão alinhados à esquerda.
+Este exemplo mostra um `TableColumnHeader` elemento cujos dados estão alinhados à esquerda.
 
 ```xml
 <TableColumnHeader>
@@ -73,8 +66,8 @@ Este exemplo mostra um elemento `TableColumnHeader` cujos dados estão alinhados
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableColumnHeader (Format)](./tablecolumnheader-element-format.md)
+[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

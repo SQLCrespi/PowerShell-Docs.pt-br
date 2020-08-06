@@ -1,19 +1,12 @@
 ---
 title: Exemplo de GetProcessSample01 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
-caps.latest.revision: 10
-ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563798"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784241"
 ---
 # <a name="getprocesssample01-sample"></a>Amostra GetProcessSample01
 
@@ -35,7 +28,7 @@ Este exemplo mostra como implementar um cmdlet que recupera os processos no comp
 
 2. Navegue até o diretório que contém o arquivo. dll de exemplo.
 
-3. Execute InstallUtil "GetProcessSample01. dll".
+3. Execute InstallUtil "GetProcessSample01.dll".
 
 4. Inicie o Windows PowerShell.
 

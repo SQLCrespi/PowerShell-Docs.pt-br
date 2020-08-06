@@ -1,22 +1,15 @@
 ---
 title: Declaração de classe de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], declaring
 - declaring cmdlets [PowerShell SDK]
-ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
-caps.latest.revision: 14
-ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978705"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784496"
 ---
 # <a name="cmdlet-class-declaration"></a>Declaração de classe do cmdlet
 
@@ -30,7 +23,7 @@ Ao especificar o atributo de **cmdlet** , você deve especificar o par verbo-e-s
 
 O substantivo do cmdlet especifica os recursos sobre os quais o cmdlet atua. O substantivo diferencia seus cmdlets de outros cmdlets.
 
-Os substantivos nos nomes de cmdlet devem ser específicos e, no caso de substantivos genéricos, como *servidor*, é melhor adicionar um prefixo curto que diferencie seu recurso de outros recursos semelhantes. Por exemplo, um nome de cmdlet que inclui um substantivo com um prefixo é `Get-SQLServer`. A combinação de um substantivo específico com um verbo mais geral permite que o usuário localize rapidamente o cmdlet por sua ação e, em seguida, identifique o cmdlet por seu recurso, evitando, ao mesmo tempo, a duplicação do nome do cmdlet desnecessário.
+Os substantivos nos nomes de cmdlet devem ser específicos e, no caso de substantivos genéricos, como *servidor*, é melhor adicionar um prefixo curto que diferencie seu recurso de outros recursos semelhantes. Por exemplo, um nome de cmdlet que inclui um substantivo com um prefixo é `Get-SQLServer` . A combinação de um substantivo específico com um verbo mais geral permite que o usuário localize rapidamente o cmdlet por sua ação e, em seguida, identifique o cmdlet por seu recurso, evitando, ao mesmo tempo, a duplicação do nome do cmdlet desnecessário.
 
 Para obter uma lista de caracteres especiais que não podem ser usados em nomes de cmdlet, consulte [diretrizes de desenvolvimento necessárias](./required-development-guidelines.md).
 
@@ -54,7 +47,7 @@ O código a seguir é a definição de uma classe de cmdlet getproc. Observe que
 
 ## <a name="pascal-casing"></a>Compartimento de Pascal
 
-Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os cmdlets `Get-Item` e `Get-ItemProperty` mostram a maneira correta de usar maiúsculas e minúsculas ao nomear cmdlets.
+Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os `Get-Item` `Get-ItemProperty` cmdlets e mostram a maneira correta de usar a capitalização ao nomear cmdlets.
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -64,6 +57,6 @@ Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os cmdlets 
 
 [Nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

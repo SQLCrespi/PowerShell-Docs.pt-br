@@ -1,19 +1,12 @@
 ---
 title: Elemento TableRowEntries para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
-caps.latest.revision: 15
-ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4cc5d354df3e552e181a95148caa020f0041db92
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368145"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785108"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Elemento TableRowEntries para TableControl (formato)
 
@@ -31,33 +24,33 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `TableRowEntries`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `TableRowEntries` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableRowEntry para TableRowEntries para TableControl (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Elemento obrigatório.<br /><br /> Define os dados que são exibidos em uma linha da tabela.|
+|[Elemento TableRowEntry para TableRowEntries para TableControl (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Define os dados que são exibidos em uma linha da tabela.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableControl (Format)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
+|[Elemento TableControl (formato)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
 
 ## <a name="remarks"></a>Comentários
 
-Você deve especificar um ou mais elementos de `TableRowEntry` para a exibição de tabela. Não há nenhum limite máximo para o número de elementos `TableRowEntry` que podem ser adicionados, nem sua ordem é significativa.
+Você deve especificar um ou mais `TableRowEntry` elementos para a exibição de tabela. Não há nenhum limite máximo para o número de `TableRowEntry` elementos que podem ser adicionados, nem sua ordem significativa.
 
 Para obter mais informações sobre os componentes de uma exibição de tabela, consulte [criando uma exibição de tabela](./creating-a-table-view.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um elemento `TableRowEntries` que define uma linha que exibe os valores de duas propriedades do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+O exemplo a seguir mostra um `TableRowEntries` elemento que define uma linha que exibe os valores de duas propriedades do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntries>
@@ -80,10 +73,10 @@ O exemplo a seguir mostra um elemento `TableRowEntries` que define uma linha que
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableControl (Format)](./tablecontrol-element-format.md)
+[Elemento TableControl (formato)](./tablecontrol-element-format.md)
 
 [Elemento TableRowEntry (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

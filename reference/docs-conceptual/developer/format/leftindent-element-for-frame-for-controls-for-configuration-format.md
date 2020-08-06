@@ -1,25 +1,18 @@
 ---
 title: Elemento LeftIndent para frame para controles para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b97ee165-f1bd-4360-8ff0-7a1bb54adcd5
-caps.latest.revision: 7
-ms.openlocfilehash: e48fb31e96041bea6ab0c91061b9f48e6a4c76ab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8de21173780047cb8af6bb76ea51c092b38d30a9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362855"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783578"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-configuration-format"></a>Elemento LeftIndent para Frame para Controls para Configuration (formato)
 
 Especifica quantos caracteres os dados são deslocados para fora da margem esquerda. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para configuração ( Format) elemento CustomEntry para CustomControl para controles para o elemento de configuração (Format) CustomItem para CustomEntry para controles para o elemento de quadro de configuração para CustomItem para controles para o elemento de configuração (Format) LeftIndent para frame para Controles para configuração (formato)
+Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para o elemento de configuração (Format) CustomEntry para CustomControl para controles para o elemento de configuração (Format) CustomItem para CustomEntry para controles para o elemento de quadro de configuração para CustomItem para controles para o elemento de configuração (Format) LeftIndent para frame para controles para configuração (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) controla o elemento de controle de configura
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `LeftIndent`.
+As seções a seguir descrevem atributos, elementos filho e elemento pai do `LeftIndent` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento frame para CustomItem para controles para configuração (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Define como os dados são exibidos, como deslocar os dados para a esquerda ou para a direita.|
+|[Elemento Frame para CustomItem para Controls para Configuration (formato)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Define como os dados são exibidos, como deslocar os dados para a esquerda ou para a direita.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o número de caracteres que você deseja que os dados sejam deslocados para a esquerda.
 
@@ -53,6 +46,6 @@ Especifique o número de caracteres que você deseja que os dados sejam deslocad
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento frame para CustomItem para controles para configuração (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)
+[Elemento Frame para CustomItem para Controls para Configuration (formato)](./frame-element-for-customitem-for-controls-for-configuration-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

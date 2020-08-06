@@ -1,25 +1,18 @@
 ---
 title: Elemento ScriptBlock para ExpressionBinding para CustomControl para View (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d52d020c-3271-40d5-b4bb-7a5ef0caec8f
-caps.latest.revision: 6
-ms.openlocfilehash: 9f5f188b006c5dfac1d04ef4d5aa5606935db9be
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de8dc60ac92d92b85c88f222db0d8e237cd5c858
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364905"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785465"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Elemento ScriptBlock para ExpressionBinding para CustomControl para View (formato)
 
 Especifica o script cujo valor é exibido pelo controle. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl Element para View (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries for CustomControl for View ( Format) elemento CustomItem para CustomEntry para CustomControl para o elemento ExpressionBinding View (Format) para CustomItem para CustomControl para o elemento de ScriptBlock View (Format) para ExpressionBinding para CustomCustomControl para View (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl Element para View (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries for CustomControl para o elemento View (Format) CustomItem para CustomEntry para CustomControl para o elemento ExpressionBinding de View (Format) para CustomItem para CustomControl para o elemento View (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ScriptBlock`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento ExpressionBinding para CustomItem para CustomControl para exibição (formato)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|Define os dados que são exibidos pelo controle.|
+|[Elemento ExpressionBinding para CustomItem para CustomControl para View (formato)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|Define os dados que são exibidos pelo controle.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script cujo valor é exibido pelo controle.
 
@@ -53,6 +46,6 @@ Especifique o script cujo valor é exibido pelo controle.
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento ExpressionBinding para CustomItem para CustomControl para exibição (formato)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
+[Elemento ExpressionBinding para CustomItem para CustomControl para View (formato)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
 title: Elemento TypeName para EntrySelectedBy para EnumerableExpansion (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c0506928-db92-4ec4-855f-6f3592a383ae
-caps.latest.revision: 6
-ms.openlocfilehash: 5ead806d956ebbef95eeffc42bb39ef784208017
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 670aeb0986b07c8b7834a9f4f9510f1757a62186
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361745"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785074"
 ---
 # <a name="typename-element-for-entryselectedby-for-enumerableexpansion-format"></a>Elemento TypeName para EntrySelectedBy para EnumerableExpansion (formato)
 
 Especifica um tipo .NET que é expandido por essa definição. Esse elemento é usado ao definir as configurações padrão.
 
-Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableExpansions elemento (Format) EnumerableExpansion Element (Format) o elemento EntrySelectedBy para EnumerableExpansion (Format) elemento TypeName para EntrySelectedBy para EnumerableExpansion (formato)
+Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableExpansions elemento (Format) EnumerableExpansion Element (Format) o elemento EntrySelectedBy para EnumerableExpansion (Format) TypeName Element for EntrySelectedBy for EnumerableExpansion (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,30 +23,30 @@ Elemento de configuração (Format) DefaultSettings Element (Format) EnumerableE
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `TypeName`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TypeName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Define os tipos .NET que usam essa definição ou a condição que deve existir para que essa definição seja usada.|
+|[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)|Define os tipos .NET que usam essa definição ou a condição que deve existir para que essa definição seja usada.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
+Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento EntrySelectedBy para EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)
+[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

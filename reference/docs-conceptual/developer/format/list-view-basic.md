@@ -1,19 +1,12 @@
 ---
 title: Exibição de lista (básica) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 918f381c-43e6-4594-a468-a40bfa8a16d6
-caps.latest.revision: 7
-ms.openlocfilehash: 3c94d8e98f179286112a417230fce659dc0b614c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 74ff8f6eee0a9358c123455aa00736a11e7f085d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362805"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783544"
 ---
 # <a name="list-view-basic"></a>Exibição de lista (Básica)
 
@@ -23,12 +16,12 @@ Este exemplo mostra como implementar um modo de exibição de lista básico que 
 
 1. Copie o XML da seção de exemplo deste tópico em um arquivo de texto.
 
-2. Salve o arquivo de texto. Certifique-se de adicionar a extensão de `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
+2. Salve o arquivo de texto. Certifique-se de adicionar a `format.ps1xml` extensão ao arquivo para identificá-lo como um arquivo de formatação.
 
-3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile`.
+3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile` .
 
    > [!WARNING]
-   > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o parâmetro `prependPath` ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
+   > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o `prependPath` parâmetro ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
 
 ## <a name="demonstrates"></a>Demonstra
 
@@ -131,4 +124,4 @@ ServiceType : Win32OwnProcess
 
 [Exemplos de arquivos de formatação](./examples-of-formatting-files.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: Instalando um módulo do PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
-caps.latest.revision: 28
-ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6a4e9ac2884d0b300b5c1ad8b6156525438a1650
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367065"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784853"
 ---
 # <a name="installing-a-powershell-module"></a>Instalar um módulo do PowerShell
 
@@ -31,14 +24,14 @@ A variável de ambiente **PSModulePath** ($env:P smodulepath) contém os locais 
 
 Por padrão, o valor da variável de ambiente **PSModulePath** contém os seguintes diretórios de sistema e de módulo de usuário, mas você pode adicionar e editar o valor.
 
-- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules`(%Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > Esse local é reservado para módulos que acompanham o Windows. Não instale módulos nesse local.
 
-- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Documents\WindowsPowerShell\Modules)
+- `$Home\Documents\WindowsPowerShell\Modules`(%UserProfile%\Documents\WindowsPowerShell\Modules)
 
-- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules`%ProgramFiles%\WindowsPowerShell\Modules
 
   Para obter o valor da variável de ambiente **PSModulePath** , use um dos comandos a seguir.
 
@@ -70,7 +63,7 @@ Um módulo bem formado é um módulo que é armazenado em um diretório que tem 
 
 O "nome base" de um arquivo é o nome sem a extensão de nome de arquivo. Em um módulo bem formado, o nome do diretório que contém os arquivos de módulo deve corresponder ao nome de base de pelo menos um arquivo no módulo.
 
-Por exemplo, no módulo Fabrikam de exemplo, o diretório que contém os arquivos de módulo é denominado "fabrikam" e pelo menos um arquivo tem o nome de base "fabrikam". Nesse caso, a Fabrikam. psd1 e a Fabrikam. dll têm o nome de base "fabrikam".
+Por exemplo, no módulo Fabrikam de exemplo, o diretório que contém os arquivos de módulo é denominado "fabrikam" e pelo menos um arquivo tem o nome de base "fabrikam". Nesse caso, Fabrikam.psd1 e Fabrikam.dll têm o nome base "fabrikam".
 
 ```
 C:\Program Files
@@ -89,7 +82,7 @@ Se o módulo não estiver bem formado e seu local não estiver incluído no valo
 
 - O recurso de carregamento automático do módulo não pode importar o módulo automaticamente.
 
-- O parâmetro `ListAvailable` do cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) não pode localizar o módulo.
+- O `ListAvailable` parâmetro do cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) não pode localizar o módulo.
 
 - O cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) não pode localizar o módulo. Para importar o módulo, você deve fornecer o caminho completo para o arquivo de módulo raiz ou arquivo de manifesto de módulo.
 
@@ -101,7 +94,7 @@ Se o módulo não estiver bem formado e seu local não estiver incluído no valo
 
 - O cmdlet [show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) não pode localizar e exibir os comandos no módulo.
 
-  Os comandos no módulo estão ausentes na janela de `Show-Command` no Ambiente de Script Integrado do Windows PowerShell (ISE).
+  Os comandos no módulo estão ausentes na `Show-Command` janela no ambiente de script integrado do Windows PowerShell (ISE).
 
 ## <a name="where-to-install-modules"></a>Onde instalar os módulos
 
@@ -153,7 +146,7 @@ $p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 Se um módulo for usado por vários componentes de um produto ou por várias versões de um produto, instale o módulo em um subdiretório específico de módulo do subdiretório%ProgramFiles%\Common Files\Modules.
 
-No exemplo a seguir, o módulo Fabrikam é instalado em um subdiretório Fabrikam do subdiretório `%ProgramFiles%\Common Files\Modules`. Observe que cada módulo reside em seu próprio subdiretório no subdiretório módulos.
+No exemplo a seguir, o módulo Fabrikam é instalado em um subdiretório Fabrikam do `%ProgramFiles%\Common Files\Modules` subdiretório. Observe que cada módulo reside em seu próprio subdiretório no subdiretório módulos.
 
 ```
 C:\Program Files
@@ -185,7 +178,7 @@ Para instalar várias versões do mesmo módulo, use o procedimento a seguir.
 2. Crie um manifesto de módulo para cada versão do módulo. No valor da chave **ModuleVersion** no manifesto, insira o número de versão do módulo. Salve o arquivo de manifesto (. psd1) no diretório específico da versão do módulo.
 3. Adicione o caminho da pasta raiz do módulo ao valor da variável de ambiente **PSModulePath** , conforme mostrado nos exemplos a seguir.
 
-Para importar uma versão específica do módulo, o usuário final pode usar os parâmetros `MinimumVersion` ou `RequiredVersion` do cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Para importar uma versão específica do módulo, o usuário final pode usar os `MinimumVersion` `RequiredVersion` parâmetros ou do cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Por exemplo, se o módulo Fabrikam estiver disponível nas versões 8,0 e 9,0, a estrutura de diretório do módulo Fabrikam poderá ser semelhante à seguinte.
 
@@ -210,7 +203,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Quando essas etapas forem concluídas, o parâmetro **listAvailable** do cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) obterá ambos os módulos da Fabrikam. Para importar um módulo específico, use os parâmetros `MinimumVersion` ou `RequiredVersion` do cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Quando essas etapas forem concluídas, o parâmetro **listAvailable** do cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) obterá ambos os módulos da Fabrikam. Para importar um módulo específico, use os `MinimumVersion` `RequiredVersion` parâmetros ou do cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Se ambos os módulos forem importados para a mesma sessão e os módulos contiverem cmdlets com os mesmos nomes, os cmdlets que são importados por último entram em vigor na sessão.
 
@@ -220,7 +213,7 @@ Conflitos de nome de comando podem ocorrer quando os comandos que um módulo exp
 
 Quando uma sessão contém dois comandos que têm o mesmo nome, o Windows PowerShell executa o tipo de comando que tem precedência. Quando uma sessão contém dois comandos que têm o mesmo nome e o mesmo tipo, o Windows PowerShell executa o comando que foi adicionado à sessão mais recentemente. Para executar um comando que não é executado por padrão, os usuários podem qualificar o nome do comando com o nome do módulo.
 
-Por exemplo, se a sessão contiver uma função `Get-Date` e o cmdlet `Get-Date`, o Windows PowerShell executará a função por padrão. Para executar o cmdlet, preceda o comando com o nome do módulo, como:
+Por exemplo, se a sessão contiver uma `Get-Date` função e o `Get-Date` cmdlet, o Windows PowerShell executará a função por padrão. Para executar o cmdlet, preceda o comando com o nome do módulo, como:
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date
@@ -228,7 +221,7 @@ Microsoft.PowerShell.Utility\Get-Date
 
 Para evitar conflitos de nome, os autores de módulo podem usar a chave **DefaultCommandPrefix** no manifesto do módulo para especificar um prefixo de substantivo para todos os comandos exportados do módulo.
 
-Os usuários podem usar o parâmetro **prefix** do cmdlet `Import-Module` para usar um prefixo alternativo. O valor do parâmetro **prefix** tem precedência sobre o valor da chave **DefaultCommandPrefix** .
+Os usuários podem usar o parâmetro **prefix** do `Import-Module` cmdlet para usar um prefixo alternativo. O valor do parâmetro **prefix** tem precedência sobre o valor da chave **DefaultCommandPrefix** .
 
 ## <a name="see-also"></a>Consulte Também
 

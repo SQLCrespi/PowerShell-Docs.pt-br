@@ -1,22 +1,15 @@
 ---
 title: Criando um cmdlet sem parâmetros | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], creating
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
-caps.latest.revision: 8
-ms.openlocfilehash: af41c2c9855310d047404114a07b27180a7aa8fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415678"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784377"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Criar um cmdlet sem parâmetros
 
@@ -29,11 +22,11 @@ Esta seção descreve como criar um cmdlet que recupera informações do computa
 
 Um nome de cmdlet consiste em um verbo que indica a ação que o cmdlet usa e um substantivo que indica os itens que o cmdlet atua. Como esse cmdlet Get-proc de exemplo recupera objetos de processo, ele usa o verbo "Get", definido pela enumeração [System. Management. Automation. Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) e o substantivo "proc" para indicar que o cmdlet funciona em itens de processo.
 
-Ao nomear cmdlets, não use nenhum dos seguintes caracteres: #, () {} [] &-/\ $; : "' < > &#124; ? @ ` .
+Ao nomear cmdlets, não use nenhum dos seguintes caracteres: #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
 ### <a name="choosing-a-noun"></a>Escolhendo um substantivo
 
-Você deve escolher um substantivo específico. É melhor usar um substantivo singular prefixado com uma versão reduzida do nome do produto. Um exemplo de nome de cmdlet desse tipo é "`Get-SQLServer`".
+Você deve escolher um substantivo específico. É melhor usar um substantivo singular prefixado com uma versão reduzida do nome do produto. Um exemplo de nome de cmdlet desse tipo é " `Get-SQLServer` ".
 
 ### <a name="choosing-a-verb"></a>Escolhendo um verbo
 
@@ -54,7 +47,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Observe que, antes da definição de classe, o atributo [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , com a sintaxe `[Cmdlet(verb, noun, ...)]`, é usado para identificar essa classe como um cmdlet. Esse é o único atributo necessário para todos os cmdlets e permite que o tempo de execução do Windows PowerShell os chame corretamente. Você pode definir palavras-chave de atributo para declarar ainda mais a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe GetProcCommand de exemplo declara apenas os nomes de substantivo e verbo para o cmdlet Get-proc.
+Observe que, antes da definição de classe, o atributo [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , com a sintaxe `[Cmdlet(verb, noun, ...)]` , é usado para identificar essa classe como um cmdlet. Esse é o único atributo necessário para todos os cmdlets e permite que o tempo de execução do Windows PowerShell os chame corretamente. Você pode definir palavras-chave de atributo para declarar ainda mais a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe GetProcCommand de exemplo declara apenas os nomes de substantivo e verbo para o cmdlet Get-proc.
 
 > [!NOTE]
 > Para todas as classes de atributo do Windows PowerShell, as palavras-chave que você pode definir correspondem às propriedades da classe de atributo.
@@ -78,7 +71,7 @@ Para todos os tipos de entrada, o tempo de execução do Windows PowerShell cham
 > [!NOTE]
 > O Windows PowerShell usa o termo "registro" para descrever o conjunto de valores de parâmetro fornecidos quando um cmdlet é chamado.
 
-Se o cmdlet aceitar a entrada do pipeline, ele deverá substituir o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, opcionalmente, o método [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, um cmdlet poderá substituir os dois métodos se ele reunir todas as entradas usando [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, em seguida, operar na entrada como um elemento inteiro, em vez de um Element de cada vez, como o cmdlet `Sort-Object`.
+Se o cmdlet aceitar a entrada do pipeline, ele deverá substituir o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, opcionalmente, o método [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, um cmdlet poderá substituir os dois métodos se ele reunir todas as entradas usando [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, em seguida, operar na entrada como um elemento inteiro, em vez de um Element de cada vez, como o `Sort-Object` cmdlet faz.
 
 Se o cmdlet não receber a entrada do pipeline, ele deverá substituir o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Lembre-se de que esse método é usado frequentemente no lugar de [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) quando o cmdlet não pode operar em um elemento por vez, como é o caso de um cmdlet de classificação.
 
@@ -129,9 +122,9 @@ End Sub 'ProcessRecord
 
 Por exemplo, [System. Management. Automation. cmdlet. endprocesso](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) não poderá ser chamado se o cmdlet for cancelado no Midway ou se um erro de encerramento ocorrer em qualquer parte do cmdlet. Portanto, um cmdlet que exige a limpeza de objeto deve implementar o padrão [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo o finalizador, para que o tempo de execução possa chamar o [System. Management. Automation. cmdlet. endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
 
-## <a name="code-sample"></a>Exemplo de Código
+## <a name="code-sample"></a>Exemplo de código
 
-Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample01](./getprocesssample01-sample.md).
+Para obter o código de exemplo completo em C#, consulte [exemplo de GetProcessSample01](./getprocesssample01-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
@@ -151,7 +144,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     get-proc
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -175,7 +168,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     $p.length
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     63
@@ -187,7 +180,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     $p[6]
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id    ProcessName
@@ -201,7 +194,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     $p[6].starttime
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     Tuesday, July 26, 2005 9:34:15 AM
@@ -221,7 +214,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     $p | Where-Object {$_.HandleCount -gt 500 } | Sort-Object HandleCount
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -233,7 +226,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
     ...
     ```
 
-7. Use o cmdlet `Get-Member` para listar as propriedades disponíveis para cada processo.
+7. Use o `Get-Member` cmdlet para listar as propriedades disponíveis para cada processo.
 
     ```powershell
     $p | Get-Member -MemberType property
@@ -243,7 +236,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
         TypeName: System.Diagnostics.Process
     ```
 
-    A seguinte saída aparece.
+    A saída a seguir aparece.
 
     ```output
     Name                     MemberType Definition
@@ -270,4 +263,4 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá te
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)
 
-[Exemplos de cmdlet](./cmdlet-samples.md)
+[Amostras de cmdlet](./cmdlet-samples.md)

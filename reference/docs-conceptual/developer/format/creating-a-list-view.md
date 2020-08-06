@@ -1,19 +1,12 @@
 ---
 title: Criando um modo de exibição de lista | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8c7a40ca-1786-46f0-bab5-6ce229daa7ee
-caps.latest.revision: 14
-ms.openlocfilehash: 25d24063501196d44e0f806a55bb699c82f771ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 24eb673e0db011a1439fa5ba1f2966fcc3bdc338
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368975"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783765"
 ---
 # <a name="creating-a-list-view"></a>Criar uma exibição de lista
 
@@ -255,7 +248,7 @@ Para obter um exemplo de um arquivo de formatação completo que define grupos, 
 
 ## <a name="using-format-strings"></a>Usando cadeias de caracteres de formato
 
-As cadeias de caracteres de formatação podem ser adicionadas a uma exibição para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da propriedade `StartTime`.
+As cadeias de caracteres de formatação podem ser adicionadas a uma exibição para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da `StartTime` propriedade.
 
 ```xml
 <ListItem>
@@ -274,7 +267,7 @@ Os seguintes elementos XML podem ser usados para especificar um padrão de forma
 
 - O elemento [scriptblock](./scriptblock-element-for-listitem-for-listcontrol-format.md) (não mostrado) especifica o script cujo valor é exibido pela exibição. Você deve especificar um script ou uma propriedade, mas não pode especificar ambos.
 
-No exemplo a seguir, o método `ToString` é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString`, que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
+No exemplo a seguir, o `ToString` método é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString` , que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
 
 ```xml
 <ListItem>
@@ -285,7 +278,7 @@ No exemplo a seguir, o método `ToString` é chamado para formatar o valor do sc
 </ListItem>
 ```
 
-O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
+O elemento XML a seguir pode ser usado para chamar o `ToString` método:
 
 - O elemento [ListItem](./listitem-element-for-listitems-for-listcontrol-format.md) especifica os dados que são exibidos pela exibição.
 
@@ -293,4 +286,4 @@ O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](../cmdlet/writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](../cmdlet/writing-a-windows-powershell-cmdlet.md)

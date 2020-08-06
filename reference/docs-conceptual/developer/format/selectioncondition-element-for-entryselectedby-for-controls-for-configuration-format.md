@@ -1,25 +1,18 @@
 ---
 title: Elemento SelectionCondition para EntrySelectedBy para controles para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f23ef405-0f1e-4607-b3f4-4017b7ead106
-caps.latest.revision: 7
-ms.openlocfilehash: a5098da55d0a63272a121b973cb05e26dc47e3e1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 748aa1aa0ba603a44334d9401e9e2c0e68f14e03
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368445"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783408"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format"></a>Elemento SelectionCondition para EntrySelectedBy para Controls para Configuration (formato)
 
 Define uma condição que deve existir para que uma definição de controle comum seja usada. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para controles para Configuração (Format) elemento CustomEntry para CustomControl para controles para o elemento de configuração (Format) EntrySelectedBy para CustomEntry para controles para o elemento de configuração (Format) SelectionCondition para EntrySelectedBy para CustomEntry para Configuração (formato)
+Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para controles para o elemento de configuração (Format) CustomEntry para CustomControl para controles para EntrySelectedBy para CustomEntry para a configuração (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,26 +27,26 @@ Elemento de configuração (Format) controla o elemento de controle de configura
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `SelectionCondition`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `SelectionCondition` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento PropertyName para SelectionCondition para controles para configuração (formato)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica uma propriedade .NET que dispara a condição.|
-|[Elemento ScriptBlock para SelectionCondition para controles para configuração (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o script que dispara a condição.|
-|[Elemento SelectionSetName para SelectionCondition para controles para configuração (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos .NET que dispara a condição.|
-|[Elemento TypeName para SelectionCondition para controles para configuração (Format)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que dispara a condição.|
+|[Elemento PropertyName para SelectionCondition para Controls para Configuration (formato)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica uma propriedade .NET que dispara a condição.|
+|[Elemento ScriptBlock para SelectionCondition para Controls para Configuration (formato)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o script que dispara a condição.|
+|[Elemento SelectionSetName para SelectionCondition para Controls para Configuration (formato)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos .NET que dispara a condição.|
+|[Elemento TypeName para SelectionCondition para Controls para Configuration (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que dispara a condição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para CustomEntry para controles para configuração (Format)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Define os tipos .NET que usam essa entrada da definição de controle comum.|
+|[Elemento EntrySelectedBy para CustomEntry para Controls para Configuration (formato)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Define os tipos .NET que usam essa entrada da definição de controle comum.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -67,14 +60,14 @@ Para obter mais informações sobre como as condições de seleção podem ser u
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento PropertyName para SelectionCondition para controles para configuração (formato)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento PropertyName para SelectionCondition para Controls para Configuration (formato)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-[Elemento ScriptBlock para SelectionCondition para controles para configuração (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento ScriptBlock para SelectionCondition para Controls para Configuration (formato)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-[Elemento SelectionSetName para SelectionCondition para controles para configuração (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento SelectionSetName para SelectionCondition para Controls para Configuration (formato)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-[Elemento TypeName para SelectionCondition para controles para configuração (Format)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento TypeName para SelectionCondition para Controls para Configuration (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-[Elemento EntrySelectedBy para CustomEntry para controles para configuração (Format)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)
+[Elemento EntrySelectedBy para CustomEntry para Controls para Configuration (formato)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)
 
 [Escrevendo um arquivo de tipos e formatação do Windows PowerShell](./writing-a-powershell-formatting-file.md)

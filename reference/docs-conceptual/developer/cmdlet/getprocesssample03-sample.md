@@ -1,23 +1,16 @@
 ---
 title: Exemplo de GetProcessSample03 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fc9d80ee-6ebd-48cd-a7ea-53cb2b442a22
-caps.latest.revision: 6
-ms.openlocfilehash: ec5a8c284dd3fa772261099281aba1fb68c49118
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369705"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784207"
 ---
 # <a name="getprocesssample03-sample"></a>Amostra GetProcessSample03
 
-Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele fornece um parâmetro `Name` que pode aceitar um objeto do pipeline ou um valor de uma propriedade de um objeto cujo nome de propriedade é igual ao nome do parâmetro. Este cmdlet é uma versão simplificada do cmdlet `Get-Process` fornecido pelo Windows PowerShell 2,0.
+Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele fornece um `Name` parâmetro que pode aceitar um objeto do pipeline ou um valor de uma propriedade de um objeto cujo nome de propriedade é igual ao nome do parâmetro. Este cmdlet é uma versão simplificada do `Get-Process` cmdlet fornecida pelo Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
@@ -67,7 +60,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra uma implementação do cmdlet Get-proc que inclui um parâmetro `Name` que aceita entrada do pipeline.
+Este exemplo mostra uma implementação do cmdlet Get-proc que inclui um `Name` parâmetro que aceita entrada do pipeline.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -142,4 +135,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

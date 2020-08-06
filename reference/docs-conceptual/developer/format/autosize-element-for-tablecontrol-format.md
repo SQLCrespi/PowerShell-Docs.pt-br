@@ -1,19 +1,12 @@
 ---
 title: Elemento AutoSize para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1df5de23-9ffc-427e-bb34-f5efe073f3fe
-caps.latest.revision: 11
-ms.openlocfilehash: f50ba257ee57c36aedc6b37c680a0130842b69b0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364205"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783884"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>Elemento AutoSize para TableControl (formato)
 
@@ -29,21 +22,21 @@ Elemento ViewDefinitions (Format) View element (Format) elemento TableControl El
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `AutoSize`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `AutoSize` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableControl (Format)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
+|[Elemento TableControl (formato)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -51,8 +44,8 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableControl (Format)](./tablecontrol-element-format.md)
+[Elemento TableControl (formato)](./tablecontrol-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

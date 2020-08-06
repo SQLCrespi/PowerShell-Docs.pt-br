@@ -1,19 +1,12 @@
 ---
 title: Elemento ColumnNumber para WideControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe9eb5f9-a193-41a4-ad47-a96ba3f8d7e3
-caps.latest.revision: 8
-ms.openlocfilehash: 49f501538b8f72777984a5e575b999866abcdebf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364215"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783850"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>Elemento ColumnNumber para WideControl (formato)
 
@@ -29,29 +22,29 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ColumnNumber`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ColumnNumber` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento WideControl (Format)](./widecontrol-element-format.md)|Define um formato de lista largo (valor único) para a exibição.|
+|[Elemento WideControl (formato)](./widecontrol-element-format.md)|Define um formato de lista largo (valor único) para a exibição.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique um valor inteiro positivo.
 
 ## <a name="remarks"></a>Comentários
 
-Ao definir uma exibição ampla, você pode adicionar o elemento `AutoSize` ou o elemento `ColumnNumber`, mas não pode adicionar ambos.
+Ao definir uma exibição ampla, você pode adicionar o `AutoSize` elemento ou o `ColumnNumber` elemento, mas não pode adicionar ambos.
 
 Para obter mais informações sobre os componentes de uma exibição ampla, consulte [criando uma exibição ampla](./creating-a-wide-view.md).
 
@@ -61,8 +54,8 @@ Para obter um exemplo de uma exibição ampla, consulte [Wide View (básica)](./
 
 [Elemento AutoSize para WideControl (Format)](./autosize-element-for-widecontrol-format.md)
 
-[Criando uma exibição ampla](./creating-a-wide-view.md)
+[Criar uma exibição ampla](./creating-a-wide-view.md)
 
-[Exibição ampla (básica)](./wide-view-basic.md)
+[Exibição ampla (Básica)](./wide-view-basic.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

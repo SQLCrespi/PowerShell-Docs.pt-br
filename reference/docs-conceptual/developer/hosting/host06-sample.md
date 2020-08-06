@@ -1,19 +1,12 @@
 ---
 title: Exemplo de Host06 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
-caps.latest.revision: 10
-ms.openlocfilehash: 8b89d7bf8a69626dc3e6bd566dab7951a4c7c5ab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5dfcdb2b8a968d91e938c27c6e1e6a8503c90aba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361015"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783238"
 ---
 # <a name="host06-sample"></a>Amostra Host06
 
@@ -31,7 +24,7 @@ Este exemplo mostra como criar um aplicativo de host baseado em console interati
 
 - Criar um aplicativo de console que usa essas classes de host para criar um shell interativo do Windows PowerShell.
 
-- Criar uma variável `$profile` e carregar os perfis a seguir.
+- Criando uma `$profile` variável e carregando os perfis a seguir.
 
   - usuário atual, host atual
 

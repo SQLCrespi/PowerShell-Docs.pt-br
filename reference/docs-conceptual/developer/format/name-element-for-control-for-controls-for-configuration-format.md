@@ -1,19 +1,12 @@
 ---
 title: Elemento Name para controle de controles para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b4371d45-49a4-4303-8384-5b54105bd0d6
-caps.latest.revision: 8
-ms.openlocfilehash: 2704a530e0ae269efb772ac10e531bcbb12f6eff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3d45ba98b909ebee18e01d2b6985a48906ce39d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362705"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783527"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Elemento Name para Control para Controls para Configuration (formato)
 
@@ -30,23 +23,23 @@ Elemento de configuração (Format) controla o elemento de controle de configura
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `Name`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Name` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)|Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação e pelo nome usado para fazer referência ao controle.|
+|[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)|Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação e pelo nome usado para fazer referência ao controle.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome que é usado para fazer referência a esse controle.
 
@@ -62,12 +55,12 @@ O nome especificado aqui pode ser usado nos seguintes elementos para fazer refer
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)
+[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)
 
-[Elemento ExpressionBinding para CustomItem para controles para configuração (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
+[Elemento ExpressionBinding para CustomItem para Controls para Configuration (formato)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
 
-[Elemento ExpressionBinding para CustomItem para controles para View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Elemento ExpressionBinding para CustomItem para Controls para View (formato)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)
+[Elemento GroupBy para View (formato)](./groupby-element-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

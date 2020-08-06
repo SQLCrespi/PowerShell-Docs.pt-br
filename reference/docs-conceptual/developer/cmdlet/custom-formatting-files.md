@@ -1,23 +1,16 @@
 ---
 title: Arquivos de formatação personalizados | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
-caps.latest.revision: 15
-ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a9633e2ee18e1817459645b4a5950ea8a622850b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369825"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784343"
 ---
 # <a name="custom-formatting-files"></a>Arquivos de formatação personalizada
 
-O formato de exibição dos objetos retornados por cmdlets, funções e scripts é definido usando arquivos de formatação (arquivos Format. ps1xml). Vários desses arquivos são fornecidos pelo Windows PowerShell para definir o formato de exibição padrão para os objetos retornados pelos cmdlets do Windows PowerShell. No entanto, você também pode criar seus próprios arquivos de formatação personalizados para substituir os formatos de exibição padrão ou para definir a exibição de objetos retornados por seus próprios comandos.
+O formato de exibição dos objetos retornados por cmdlets, funções e scripts é definido usando arquivos de formatação (format.ps1arquivos XML). Vários desses arquivos são fornecidos pelo Windows PowerShell para definir o formato de exibição padrão para os objetos retornados pelos cmdlets do Windows PowerShell. No entanto, você também pode criar seus próprios arquivos de formatação personalizados para substituir os formatos de exibição padrão ou para definir a exibição de objetos retornados por seus próprios comandos.
 
 O Windows PowerShell usa os dados nesses arquivos de formatação para determinar o que é exibido e como os dados são formatados. Os dados exibidos podem incluir as propriedades de um objeto ou o valor de um bloco de script.  Blocos de script são usados se você quiser exibir algum valor que não esteja disponível diretamente das propriedades de um objeto. Por exemplo, talvez você queira adicionar o valor de duas propriedades de um objeto e exibir a soma como uma parte separada dos dados. Ao escrever seu próprio arquivo de formatação, você precisará definir *modos* de exibição para os objetos que deseja exibir. Você pode definir uma única exibição para cada objeto, pode definir uma única exibição para vários objetos ou pode definir várias exibições para o mesmo objeto. Não há nenhum limite para o número de exibições que você pode definir.
 
@@ -40,7 +33,7 @@ Exibição personalizada exibe uma exibição personalizável de propriedades de
 
 ## <a name="view-xml-elements"></a>Exibir elementos XML
 
-O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](../format/viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](../format/view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada exibição, o elemento [Name](../format/name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](../format/viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o elemento `TableControl`) definem o formato da exibição.
+O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](../format/viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](../format/view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada exibição, o elemento [Name](../format/name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](../format/viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o `TableControl` elemento) definem o formato da exibição.
 
 ```xml
 ViewDefinitions
@@ -81,10 +74,10 @@ ViewDefinitions
 
 [Exibição de tabela](../format/creating-a-table-view.md)
 
-[Exibição de Lista](../format/creating-a-list-view.md)
+[Exibição de lista](../format/creating-a-list-view.md)
 
 [Exibição ampla](../format/creating-a-wide-view.md)
 
 [Exibição personalizada](../format/creating-custom-controls.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

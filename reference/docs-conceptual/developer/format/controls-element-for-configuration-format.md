@@ -1,19 +1,12 @@
 ---
 title: Elemento Controls para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4d4ef63d-5866-4319-ba00-7ed96de26821
-caps.latest.revision: 18
-ms.openlocfilehash: ac9f7ff08f6e87ef83b5a2fe23fc58ee2651566d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 44b9db0d3523e5e9086da9911882b258a2a54ca6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368995"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783782"
 ---
 # <a name="controls-element-for-configuration-format"></a>Elemento Controls para Configuration (formato)
 
@@ -31,23 +24,23 @@ Elemento de configuração (Format) controla o elemento de configuração (forma
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Controls`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Controls` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)|Elemento obrigatório.<br /><br /> Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação.|
+|[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Configuration (Format)](./configuration-element-format.md)|Representa o elemento de nível superior de um arquivo de formatação.|
+|[Elemento Configuration (formato)](./configuration-element-format.md)|Representa o elemento de nível superior de um arquivo de formatação.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -55,8 +48,8 @@ Você pode criar qualquer número de controles comuns. Para cada controle, você
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento Configuration (Format)](./configuration-element-format.md)
+[Elemento Configuration (formato)](./configuration-element-format.md)
 
-[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)
+[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

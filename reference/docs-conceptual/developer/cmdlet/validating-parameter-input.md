@@ -1,23 +1,16 @@
 ---
 title: Validando entrada de parâmetro | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - parameters, validation rules
 - validation, examples
 - validation
-ms.assetid: 3f15bf20-a068-4a7d-a170-bc43f755d1fe
-caps.latest.revision: 14
-ms.openlocfilehash: 171e3e974619e197a0bcc9dfc759297005e34568
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e12c715cfa24edfff958b12be1f3517b2f545256
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363505"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783986"
 ---
 # <a name="validating-parameter-input"></a>Validação de entrada de parâmetro
 
@@ -61,4 +54,4 @@ Para obter mais informações, consulte [declaração de atributo ValidateSet](.
 
 [Como validar a entrada de parâmetro](./how-to-validate-parameter-input.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

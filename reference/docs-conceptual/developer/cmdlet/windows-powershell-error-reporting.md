@@ -1,19 +1,12 @@
 ---
 title: Relatório de erros do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 61b7773a-c346-4835-a928-7212dc4c85bc
-caps.latest.revision: 7
-ms.openlocfilehash: 259de341fd2fcce2b0c4629f806b4348cba1ff2c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7f7afcf5186732734976304c8e58e4d940156e1e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364265"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783952"
 ---
 # <a name="windows-powershell-error-reporting"></a>Relatório de erros do Windows PowerShell
 
@@ -35,4 +28,4 @@ Os tópicos nesta seção discutem como os cmdlets relatam erros.
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

@@ -1,19 +1,12 @@
 ---
 title: Elemento ListEntry para ListControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6d16bca8-d025-432d-aa84-8b607b8af3ae
-caps.latest.revision: 12
-ms.openlocfilehash: 1a3bafd4ca94aee70e869c699f7a4ef8befc5511
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d98f0b5215eea7668f866d2733214ade79d748f1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362745"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785686"
 ---
 # <a name="listentry-element-for-listcontrol-format"></a>Elemento ListEntry para ListControl (formato)
 
@@ -32,20 +25,20 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `ListEntry`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `ListEntry` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Define os objetos .NET que usam essa definição de exibição de lista ou a condição que deve existir para que essa definição seja usada.|
-|[Elemento ListItems (formato)](./listitems-element-for-listentry-for-listcontrol-format.md)|Elemento obrigatório.<br /><br /> Define as propriedades e os scripts cujos valores são exibidos pela exibição de lista.|
+|[Elemento ListItems (formato)](./listitems-element-for-listentry-for-listcontrol-format.md)|Elemento necessário.<br /><br /> Define as propriedades e os scripts cujos valores são exibidos pela exibição de lista.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -77,7 +70,7 @@ Este exemplo mostra os elementos XML que definem a exibição de lista para o ob
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um modo de exibição de lista](./creating-a-list-view.md)
+[Criar uma exibição de lista](./creating-a-list-view.md)
 
 [Elemento EntrySelectedBy para ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)
 

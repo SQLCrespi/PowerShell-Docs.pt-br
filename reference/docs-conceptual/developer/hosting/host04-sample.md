@@ -1,19 +1,12 @@
 ---
 title: Exemplo de Host04 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3cbf64e5-f9e8-4002-b40c-4d3f39025c83
-caps.latest.revision: 11
-ms.openlocfilehash: 0ca522cebb22c624902ab986b13e425db3754adf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a34c8424fd661b9c41e6233c4d8d48177a9cfb4e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361025"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783272"
 ---
 # <a name="host04-sample"></a>Amostra Host04
 
@@ -29,7 +22,7 @@ Este exemplo mostra como criar um aplicativo de host baseado em console interati
 
 - Criar um aplicativo de console que usa essas classes de host para criar um shell interativo do Windows PowerShell.
 
-- Criar uma variável `$profile` e carregar os perfis a seguir.
+- Criando uma `$profile` variável e carregando os perfis a seguir.
 
   - usuário atual, host atual
 

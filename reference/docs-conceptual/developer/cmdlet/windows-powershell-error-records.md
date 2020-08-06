@@ -1,24 +1,17 @@
 ---
 title: Registros de erro do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error category [PowerShell SDK]
 - error identifier [PowerShell SDK]
 - error records [PowerShell SDK]
 - error category string [PowerShell SDK]
-ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
-caps.latest.revision: 9
-ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52243916adf18b4f3a1e00f1fb4199c2619946e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369105"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783969"
 ---
 # <a name="windows-powershell-error-records"></a>Registros de erros do Windows PowerShell
 
@@ -38,7 +31,7 @@ Se o cmdlet não capturou uma exceção, ele deve criar uma nova exceção e esc
 
 - Informações de invocação opcionais sobre o cmdlet que gerou o erro. Essas informações são especificadas pelo Windows PowerShell (consulte mensagem de invocação).
 
-- O objeto de destino que estava sendo processado quando o erro ocorreu. Esse pode ser o objeto de entrada ou pode ser outro objeto que o seu cmdlet estava processando. Por exemplo, para o comando `remove-item -recurse c:\somedirectory`, o erro pode ser uma instância de um objeto FileInfo para "c:\somedirectory\lockedfile". As informações do objeto de destino são opcionais.
+- O objeto de destino que estava sendo processado quando o erro ocorreu. Esse pode ser o objeto de entrada ou pode ser outro objeto que o seu cmdlet estava processando. Por exemplo, para o comando `remove-item -recurse c:\somedirectory` , o erro pode ser uma instância de um objeto FileInfo para "c:\somedirectory\lockedfile". As informações do objeto de destino são opcionais.
 
 ## <a name="error-identifier"></a>Identificador de erro
 
@@ -60,7 +53,7 @@ Use as diretrizes a seguir para gerar identificadores de erro ao criar registros
 
 ## <a name="error-category"></a>Categoria do erro
 
-Ao criar um registro de erro, especifique a categoria do erro usando uma das constantes definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . O Windows PowerShell usa a categoria de erro para exibir informações de erro quando os usuários definem a variável de `$ErrorView` como `"CategoryView"`.
+Ao criar um registro de erro, especifique a categoria do erro usando uma das constantes definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) . O Windows PowerShell usa a categoria de erro para exibir informações de erro quando os usuários definem a `$ErrorView` variável como `"CategoryView"` .
 
 Evite usar a constante [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **não especificada** . Se você tiver alguma informação sobre o erro ou sobre a operação que causou o erro, escolha a categoria que melhor descreve o erro ou a operação, mesmo que a categoria não seja uma correspondência perfeita.
 
@@ -102,7 +95,7 @@ O objeto [System. Management. Automation. ErrorDetails](/dotnet/api/System.Manag
 
 ## <a name="invocation-information"></a>Informações de invocação
 
-Quando um cmdlet usa [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) para relatar um registro de erro, o Windows PowerShell adiciona automaticamente informações que descrevem o comando que foi invocado quando o erro ocorreu. Essas informações são fornecidas por um objeto [System. Management. Automation. InvocationInfo](/dotnet/api/System.Management.Automation.InvocationInfo) que contém o nome do cmdlet que foi invocado pelo comando, o próprio comando e as informações sobre o pipeline ou script. Esta propriedade é somente leitura.
+Quando um cmdlet usa [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) para relatar um registro de erro, o Windows PowerShell adiciona automaticamente informações que descrevem o comando que foi invocado quando o erro ocorreu. Essas informações são fornecidas por um objeto [System. Management. Automation. InvocationInfo](/dotnet/api/System.Management.Automation.InvocationInfo) que contém o nome do cmdlet que foi invocado pelo comando, o próprio comando e as informações sobre o pipeline ou script. Esta propriedade é somente para leitura.
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -122,4 +115,4 @@ Quando um cmdlet usa [System. Management. Automation. cmdlet. WriteError](/dotne
 
 [Relatório de erros do Windows PowerShell](./error-reporting-concepts.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

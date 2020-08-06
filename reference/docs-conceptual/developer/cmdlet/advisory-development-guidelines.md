@@ -1,19 +1,12 @@
 ---
 title: Diretrizes de desenvolvimento de consultoria | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
-caps.latest.revision: 9
-ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370035"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782422"
 ---
 # <a name="advisory-development-guidelines"></a>Diretrizes para desenvolvimento de consultoria
 
@@ -25,17 +18,17 @@ As diretrizes a seguir devem ser consideradas ao criar cmdlets. Quando encontrar
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Suporte a um parâmetro InputObject (AD01)
 
-Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject` é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um parâmetro `InputObject` do tipo Process que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
+Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject`é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um `InputObject` parâmetro do tipo Process que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
 
 ### <a name="support-the-force-parameter-ad02"></a>Suporte ao parâmetro Force (AD02)
 
-Ocasionalmente, um cmdlet precisa proteger o usuário de executar uma operação solicitada. Esse cmdlet deve dar suporte a um parâmetro `Force` para permitir que o usuário substitua essa proteção se o usuário tiver permissões para executar a operação.
+Ocasionalmente, um cmdlet precisa proteger o usuário de executar uma operação solicitada. Esse cmdlet deve dar suporte a um `Force` parâmetro para permitir que o usuário substitua essa proteção se o usuário tiver permissões para executar a operação.
 
-Por exemplo, o cmdlet [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) normalmente não remove um arquivo somente leitura. No entanto, esse cmdlet dá suporte a um parâmetro `Force` para que um usuário possa forçar a remoção de um arquivo somente leitura. Se o usuário já tiver permissão para modificar o atributo somente leitura e o usuário remover o arquivo, o uso do parâmetro `Force` simplificará a operação. No entanto, se o usuário não tiver permissão para remover o arquivo, o parâmetro `Force` não terá nenhum efeito.
+Por exemplo, o cmdlet [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) normalmente não remove um arquivo somente leitura. No entanto, esse cmdlet dá suporte a um `Force` parâmetro para que um usuário possa forçar a remoção de um arquivo somente leitura. Se o usuário já tiver permissão para modificar o atributo somente leitura e o usuário remover o arquivo, o uso do `Force` parâmetro simplificará a operação. No entanto, se o usuário não tiver permissão para remover o arquivo, o `Force` parâmetro não terá nenhum efeito.
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Tratar credenciais por meio do Windows PowerShell (AD03)
 
-Um cmdlet deve definir um parâmetro `Credential` para representar as credenciais. Esse parâmetro deve ser do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) e deve ser definido usando uma declaração de atributo de credencial. Esse suporte solicita automaticamente ao usuário o nome de usuário, para a senha ou para ambos quando uma credencial completa não é fornecida diretamente. Para obter mais informações sobre o atributo Credential, consulte [declaração de atributo de credencial](./credential-attribute-declaration.md).
+Um cmdlet deve definir um `Credential` parâmetro para representar credenciais. Esse parâmetro deve ser do tipo [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) e deve ser definido usando uma declaração de atributo de credencial. Esse suporte solicita automaticamente ao usuário o nome de usuário, para a senha ou para ambos quando uma credencial completa não é fornecida diretamente. Para obter mais informações sobre o atributo Credential, consulte [declaração de atributo de credencial](./credential-attribute-declaration.md).
 
 ### <a name="support-encoding-parameters-ad04"></a>Suporte a parâmetros de codificação (AD04)
 
@@ -55,11 +48,11 @@ Seguindo as convenções de nomenclatura padrão, você torna os cmdlets mais de
 
 #### <a name="define-a-cmdlet-in-the-correct-namespace"></a>Definir um cmdlet no namespace correto
 
-Normalmente, você define a classe para um cmdlet em um namespace .NET Framework que acrescenta ". Commands "para o namespace que representa o produto no qual o cmdlet é executado. Por exemplo, os cmdlets incluídos no Windows PowerShell são definidos no namespace `Microsoft.PowerShell.Commands`.
+Normalmente, você define a classe para um cmdlet em um namespace .NET Framework que acrescenta ". Commands "para o namespace que representa o produto no qual o cmdlet é executado. Por exemplo, os cmdlets incluídos com o Windows PowerShell são definidos no `Microsoft.PowerShell.Commands` namespace.
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>Nomeie a classe de cmdlet para corresponder ao nome do cmdlet
 
-Quando você nomear a classe .NET Framework que implementa um cmdlet, nomeie a classe " *\<verbo > **\<substantivo >** \<comando*>", em que você substitui os\<de *verbo >* e\<de > *substantivo* pelo verbo e pelo substantivo usados para o nome do cmdlet. Por exemplo, o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) é implementado por uma classe chamada `GetProcessCommand`.
+Quando você nomear a classe .NET Framework que implementa um cmdlet, nomeie a classe " *\<Verb>**\<Noun>**\<Command>* ", em que você substitui os *\<Verb>* *\<Noun>* espaços reservados e pelo verbo e o substantivo usados para o nome do cmdlet. Por exemplo, o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) é implementado por uma classe chamada `GetProcessCommand` .
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Se nenhuma entrada de pipeline substituir o método BeginProcessing (AC02)
 
@@ -117,8 +110,8 @@ Ao lidar com dados confidenciais, sempre use o tipo de dados [System. Security. 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Diretrizes de desenvolvimento necessárias](./required-development-guidelines.md)
+[Diretrizes para desenvolvimento necessárias](./required-development-guidelines.md)
 
-[Diretrizes de desenvolvimento altamente incentivadas](./strongly-encouraged-development-guidelines.md)
+[Diretrizes de desenvolvimento altamente recomendadas](./strongly-encouraged-development-guidelines.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

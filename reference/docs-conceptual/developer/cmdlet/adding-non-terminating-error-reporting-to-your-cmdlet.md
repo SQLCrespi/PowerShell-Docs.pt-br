@@ -1,25 +1,18 @@
 ---
 title: Adicionando relatórios de erros não conclusivos ao cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
-caps.latest.revision: 8
-ms.openlocfilehash: ec29d1cffa083e4cce667d3e1efbd4eeecbffb51
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870108"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784581"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Adicionar relatórios de erros de não encerramento ao seu cmdlet
 
 Os cmdlets podem relatar erros não conclusivos chamando o método [System. Management. Automation. cmdlet. WriteError][] e ainda continuam a operar no objeto de entrada atual ou em outros objetos de pipeline de entrada. Esta seção explica como criar um cmdlet que relata erros não conclusivos de seus métodos de processamento de entrada.
 
-Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar um objeto [System. Management. Automation. ErrorRecord][] identificando o erro. Cada registro de erro é identificado por uma cadeia de caracteres exclusiva chamada "identificador de erro". Além do identificador, a categoria de cada erro é especificada por constantes definidas por uma enumeração [System. Management. Automation. ErrorCategory][] . O usuário pode exibir erros com base em sua categoria definindo a variável `$ErrorView` como "CategoryView".
+Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar um objeto [System. Management. Automation. ErrorRecord][] identificando o erro. Cada registro de erro é identificado por uma cadeia de caracteres exclusiva chamada "identificador de erro". Além do identificador, a categoria de cada erro é especificada por constantes definidas por uma enumeração [System. Management. Automation. ErrorCategory][] . O usuário pode exibir erros com base em sua categoria definindo a `$ErrorView` variável como "CategoryView".
 
 Para obter mais informações sobre registros de erro, consulte [registros de erro do Windows PowerShell](./windows-powershell-error-records.md).
 
@@ -27,7 +20,7 @@ Para obter mais informações sobre registros de erro, consulte [registros de er
 
 A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet. Esse cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get". (Quase qualquer tipo de cmdlet capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](approved-verbs-for-windows-powershell-commands.md).
 
-A seguir está a definição para este `Get-Proc` cmdlet. Detalhes dessa definição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
+A seguir está a definição deste `Get-Proc` cmdlet. Detalhes dessa definição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -161,13 +154,13 @@ protected override void ProcessRecord()
 
 Para um erro de não encerramento, o cmdlet deve gerar um identificador de erro específico para cada objeto de entrada específico.
 
-Geralmente, um cmdlet precisa modificar a ação do PowerShell produzida por um erro de não encerramento. Isso pode fazer isso definindo os parâmetros `ErrorAction` e `ErrorVariable`. Se definir o parâmetro `ErrorAction`, o cmdlet apresentará as opções de usuário [System. Management. Automation. preferência][], você também poderá influenciar diretamente a ação definindo a variável `$ErrorActionPreference`.
+Geralmente, um cmdlet precisa modificar a ação do PowerShell produzida por um erro de não encerramento. Isso pode fazer isso definindo os `ErrorAction` parâmetros e `ErrorVariable` . Se definir o `ErrorAction` parâmetro, o cmdlet apresentará as opções de usuário [System. Management. Automation. preferência][], você também pode influenciar diretamente a ação definindo a `$ErrorActionPreference` variável.
 
-O cmdlet pode salvar erros não conclusivos em uma variável usando o parâmetro `ErrorVariable`, que não é afetado pela configuração de `ErrorAction`. As falhas podem ser acrescentadas a uma variável de erro existente adicionando um sinal de adição (+) à frente do nome da variável.
+O cmdlet pode salvar erros não conclusivos em uma variável usando o `ErrorVariable` parâmetro, que não é afetado pela configuração de `ErrorAction` . As falhas podem ser acrescentadas a uma variável de erro existente adicionando um sinal de adição (+) à frente do nome da variável.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-Para obter o C# código de exemplo completo, consulte [exemplo de GetProcessSample04](./getprocesssample04-sample.md).
+Para obter o código de exemplo completo em C#, consulte [exemplo de GetProcessSample04](./getprocesssample04-sample.md).
 
 ## <a name="define-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
@@ -195,9 +188,9 @@ Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo 
   + get-proc  <<<< -name test
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
-[Adicionando parâmetros que processam a entrada do pipeline](./adding-parameters-that-process-pipeline-input.md)
+[Adicionar parâmetros que processam a entrada de pipeline](./adding-parameters-that-process-pipeline-input.md)
 
 [Adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md)
 
@@ -209,7 +202,7 @@ Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo 
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)
 
-[Exemplos de cmdlet](./cmdlet-samples.md)
+[Amostras de cmdlet](./cmdlet-samples.md)
 
 [System. Exception]: /dotnet/api/System.Exception
 [System. Management. Automation. preferência]: /dotnet/api/System.Management.Automation.ActionPreference

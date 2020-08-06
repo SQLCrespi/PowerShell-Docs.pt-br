@@ -1,27 +1,20 @@
 ---
 title: Estendendo objetos de saída | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
-caps.latest.revision: 11
-ms.openlocfilehash: 12a826363221b8a7ce06245c787a7bd0529e42f8
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690906"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784309"
 ---
 # <a name="extending-output-objects"></a>Estender os objetos de saída
 
-Você pode estender os objetos de .NET Framework que são retornados por cmdlets, funções e scripts usando arquivos de tipos (. ps1xml). Os arquivos de tipos são arquivos baseados em XML que permitem adicionar propriedades e métodos a objetos existentes. Por exemplo, o Windows PowerShell fornece o arquivo Types. ps1xml, que adiciona elementos a vários objetos de .NET Framework existentes. O arquivo Types. ps1xml está localizado no diretório de instalação do Windows PowerShell ( `$pshome` ). Você pode criar seu próprio arquivo de tipos para estender ainda mais esses objetos ou para estender outros objetos. Quando você estende um objeto usando um arquivo de tipos, qualquer instância do objeto é estendida com os novos elementos.
+Você pode estender os objetos de .NET Framework que são retornados por cmdlets, funções e scripts usando arquivos de tipos (. ps1xml). Os arquivos de tipos são arquivos baseados em XML que permitem adicionar propriedades e métodos a objetos existentes. Por exemplo, o Windows PowerShell fornece o arquivo XML Types.ps1, que adiciona elementos a vários objetos .NET Framework existentes. O arquivo XML de Types.ps1está localizado no diretório de instalação do Windows PowerShell ( `$pshome` ). Você pode criar seu próprio arquivo de tipos para estender ainda mais esses objetos ou para estender outros objetos. Quando você estende um objeto usando um arquivo de tipos, qualquer instância do objeto é estendida com os novos elementos.
 
 ## <a name="extending-the-systemarray-object"></a>Estendendo o objeto System. array
 
-O exemplo a seguir mostra como o Windows PowerShell estende o objeto [System. array](/dotnet/api/System.Array) no arquivo Types. ps1xml. Por padrão, os objetos [System. array](/dotnet/api/System.Array) têm uma `Length` propriedade que lista o número de objetos na matriz. No entanto, como o nome "Length" não descreve claramente a propriedade, o Windows PowerShell adiciona a `Count` Propriedade Alias, que exibe o mesmo valor que a `Length` propriedade. O XML a seguir adiciona a `Count` propriedade ao tipo [System. array](/dotnet/api/System.Array) .
+O exemplo a seguir mostra como o Windows PowerShell estende o objeto [System. array](/dotnet/api/System.Array) no arquivo XML Types.ps1. Por padrão, os objetos [System. array](/dotnet/api/System.Array) têm uma `Length` propriedade que lista o número de objetos na matriz. No entanto, como o nome "Length" não descreve claramente a propriedade, o Windows PowerShell adiciona a `Count` Propriedade Alias, que exibe o mesmo valor que a `Length` propriedade. O XML a seguir adiciona a `Count` propriedade ao tipo [System. array](/dotnet/api/System.Array) .
 
 ```xml
 <Type>
@@ -89,7 +82,7 @@ Para adicionar seus próprios tipos estendidos ao arquivo, adicione um elemento 
 
 Depois de definir seus próprios tipos estendidos, use um dos seguintes métodos para disponibilizar seus objetos estendidos:
 
-- Para tornar o arquivo de tipos estendidos disponível para a sessão atual, use o cmdlet [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) para adicionar o novo arquivo. Se você quiser que seus tipos tenham precedência sobre os tipos que são definidos em outros tipos de arquivos (incluindo o arquivo Types. ps1xml), use o `PrependData` parâmetro do cmdlet [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) .
+- Para tornar o arquivo de tipos estendidos disponível para a sessão atual, use o cmdlet [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) para adicionar o novo arquivo. Se você quiser que seus tipos tenham precedência sobre os tipos que são definidos em outros tipos de arquivos (incluindo o arquivo XML Types.ps1), use o `PrependData` parâmetro do cmdlet [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) .
 - Para disponibilizar o arquivo de tipos estendidos para todas as sessões futuras, adicione o arquivo de tipos a um módulo, exporte a sessão atual ou adicione o comando [Update-TypeData](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) ao seu perfil do Windows PowerShell.
 
 ## <a name="signing-types-files"></a>Arquivos de tipos de assinatura

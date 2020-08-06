@@ -1,23 +1,16 @@
 ---
 title: Como invocar um cmdlet de dentro de um cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
-caps.latest.revision: 12
-ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365545"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784139"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Como invocar um cmdlet de dentro de um cmdlet
 
-Este exemplo mostra como invocar um cmdlet de dentro de outro cmdlet, que permite adicionar a funcionalidade do cmdlet invocado ao cmdlet que você está desenvolvendo. Neste exemplo, o cmdlet `Get-Process` é invocado para obter os processos em execução no computador local. A chamada para o cmdlet `Get-Process` é equivalente ao comando a seguir. Esse comando recupera todos os processos cujos nomes começam com os caracteres "a" por meio de "t".
+Este exemplo mostra como invocar um cmdlet de dentro de outro cmdlet, que permite adicionar a funcionalidade do cmdlet invocado ao cmdlet que você está desenvolvendo. Neste exemplo, o `Get-Process` cmdlet é invocado para obter os processos em execução no computador local. A chamada para o `Get-Process` cmdlet é equivalente ao comando a seguir. Esse comando recupera todos os processos cujos nomes começam com os caracteres "a" por meio de "t".
 
 ```powershell
 Get-Process -name [a-t]
@@ -28,7 +21,7 @@ Get-Process -name [a-t]
 
 ## <a name="to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Para invocar um cmdlet de dentro de um cmdlet
 
-1. Verifique se o assembly que define o cmdlet a ser invocado é referenciado e se a instrução de `using` apropriada foi adicionada. Neste exemplo, os namespaces a seguir são adicionados.
+1. Verifique se o assembly que define o cmdlet a ser invocado é referenciado e se a `using` instrução apropriada foi adicionada. Neste exemplo, os namespaces a seguir são adicionados.
 
     ```csharp
     using System.Diagnostics;
@@ -43,7 +36,7 @@ Get-Process -name [a-t]
     gp.Name = new string[] { "[a-t]*" };
     ```
 
-3. Chame o método [System. Management. Automation. cmdlet. Invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) para invocar o cmdlet `Get-Process`.
+3. Chame o método [System. Management. Automation. cmdlet. Invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) para invocar o `Get-Process` cmdlet.
 
     ```csharp
       foreach (Process p in gp.Invoke<Process>())
@@ -55,7 +48,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, o cmdlet `Get-Process` é invocado de dentro do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) de um cmdlet.
+Neste exemplo, o `Get-Process` cmdlet é invocado de dentro do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) de um cmdlet.
 
 ```csharp
 using System;
@@ -105,4 +98,4 @@ namespace SendGreeting
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

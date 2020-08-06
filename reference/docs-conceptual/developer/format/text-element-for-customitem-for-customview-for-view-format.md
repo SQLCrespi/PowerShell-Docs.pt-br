@@ -1,19 +1,12 @@
 ---
 title: Elemento Text para CustomItem para CustomView para View (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fab6c0f4-ba55-48ae-9c16-f9a998169239
-caps.latest.revision: 9
-ms.openlocfilehash: 00ff3a357cfef0b250bb55dd3a206d69d5d42609
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 94294665b481edabdb8ed920d1a209a609b18fd8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368115"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783374"
 ---
 # <a name="text-element-for-customitem-for-customview-for-view-format"></a>Elemento Text para CustomItem para CustomView para View (formato)
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `Text`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Text` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento CustomItem para CustomEntry para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Define um controle para o modo de exibição de controle personalizado.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o texto de um controle para os dados que você deseja exibir.
 
@@ -55,4 +48,4 @@ Especifique o texto de um controle para os dados que você deseja exibir.
 
 [Elemento CustomItem para CustomEntry para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

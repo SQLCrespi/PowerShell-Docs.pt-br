@@ -1,19 +1,12 @@
 ---
 title: Como escrever um manifesto de módulo do PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 10/16/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
-caps.latest.revision: 23
-ms.openlocfilehash: 992148c9e39b6edbfa26907de03a5ae57691d831
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 734adab5ce26df6e26353de8e0bc9084e0fd3f3b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84148389"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784904"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Como escrever um manifesto de módulo do PowerShell
 
@@ -63,7 +56,7 @@ A tabela a seguir descreve os elementos que você pode incluir em um manifesto d
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Digite: `String`|`<empty string>`|Módulo de script ou arquivo de módulo binário associado a este manifesto. As versões anteriores do PowerShell chamaram esse elemento de **ModuleToProcess**.<br /> Os tipos possíveis para o módulo raiz podem estar vazios, o que cria um módulo de **manifesto** , o nome de um módulo de script ( `.psm1` ) ou o nome de um módulo binário ( `.exe` ou `.dll` ). Colocar o nome de um manifesto de módulo ( `.psd1` ) ou um arquivo de script ( `.ps1` ) neste elemento causa um erro. <br /> Exemplo: `RootModule = 'ScriptModule.psm1'`|
 |**ModuleVersion**<br /> Digite: `Version`|`'0.0.1'`|Número de versão deste módulo. Se um valor não for especificado, `New-ModuleManifest` o usará o padrão. A cadeia de caracteres deve ser capaz de converter para o tipo, `Version` por exemplo `#.#.#.#.#` . `Import-Module`carrega o primeiro módulo encontrado no **$PSModulePath** que corresponde ao nome e tem pelo menos o alto de **ModuleVersion**, como o parâmetro **MinimumVersion** . Para importar uma versão específica, use o `Import-Module` parâmetro **RequiredVersion** do cmdlet.<br /> Exemplo: `ModuleVersion = '1.0'`|
-|**VOLUME**<br /> Digite: `GUID`|`'<GUID>'`|ID usada para identificar exclusivamente este módulo. Se um valor não for especificado, `New-ModuleManifest` o gerará o valor. No momento, não é possível importar um módulo pelo **GUID**. <br /> Exemplo: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
+|**GUID**<br /> Digite: `GUID`|`'<GUID>'`|ID usada para identificar exclusivamente este módulo. Se um valor não for especificado, `New-ModuleManifest` o gerará o valor. No momento, não é possível importar um módulo pelo **GUID**. <br /> Exemplo: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |**Author**<br /> Digite: `String`|`'<Current user>'`|Autor deste módulo. Se um valor não for especificado, `New-ModuleManifest` o usará o usuário atual. <br /> Exemplo: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> Digite: `String`|`'Unknown'`|Empresa ou fornecedor deste módulo. Se um valor não for especificado, `New-ModuleManifest` o usará o padrão.<br /> Exemplo: `CompanyName = 'Fabrikam'`|
 |**Internacionais**<br /> Digite: `String`|`'(c) <Author>. All rights reserved.'`| Declaração de direitos autorais deste módulo. Se um valor não for especificado, o `New-ModuleManifest` usará o padrão com o usuário atual como o `<Author>` . Para especificar um autor, use o parâmetro **Author** . <br /> Exemplo: `Copyright = '2019 AuthorName. All rights reserved.'`|
@@ -88,7 +81,7 @@ A tabela a seguir descreve os elementos que você pode incluir em um manifesto d
 |**Módulolist**<br /> Digite: `Object[]`|`@()`|Especifica todos os módulos que são empacotados com este módulo. Esses módulos podem ser inseridos por nome, usando uma cadeia de caracteres separada por vírgulas ou como uma tabela de hash com nome de **módulo** e chaves de **GUID** . A tabela de hash também pode ter uma chave **ModuleVersion** opcional. A chave **ModuleList** foi projetada para atuar como um inventário de módulo. Esses módulos não são processados automaticamente. <br /> Exemplo: `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
 |**Lista de arquivos**<br /> Digite: `String[]`|`@()`|Lista de todos os arquivos empacotados com este módulo. Assim como com **ModuleList**, **FileList** é uma lista de inventário e não é processado de outra forma. <br /> Exemplo: `FileList = @("File1", "File2", "File3")`|
 |**PrivateData**<br /> Digite: `Object`|`@{...}`|Especifica todos os dados privados que precisam ser passados para o módulo raiz especificado pela chave **RootModule** (alias: **ModuleToProcess**). **PrivateData** é uma tabela de hash que compreende vários elementos: **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **releasenotes**, **pré-lançamento**, **RequireLicenseAcceptance**e **ExternalModuleDependencies**. |
-|**Tags** <br /> Digite: `String[]` |`@()`| Marcas ajudam com a descoberta de módulo em galerias online. <br /> Exemplo: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
+|**Marcas** <br /> Digite: `String[]` |`@()`| Marcas ajudam com a descoberta de módulo em galerias online. <br /> Exemplo: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
 |**LicenseUri**<br /> Digite: `Uri` |`<empty string>`| Uma URL para a licença deste módulo. <br /> Exemplo: `LicenseUri = 'https://www.contoso.com/license'`|
 |**ProjectUri**<br /> Digite: `Uri` |`<empty string>`| Uma URL para o site principal deste projeto. <br /> Exemplo: `ProjectUri = 'https://www.contoso.com/project'`|
 |**IconUri**<br /> Digite: `Uri` |`<empty string>`| Uma URL para um ícone que representa este módulo. <br /> Exemplo: `IconUri = 'https://www.contoso.com/icons/icon.png'`|
@@ -253,4 +246,4 @@ PrivateData = @{
 
 [Update-ModuleManifest](/powershell/module/powershellget/update-modulemanifest)
 
-[Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+[Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

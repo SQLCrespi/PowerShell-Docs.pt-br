@@ -1,25 +1,18 @@
 ---
 title: Elemento de rótulo para TableColumnHeader para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
-caps.latest.revision: 11
-ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7b1d6825d3bca0e36b230415d19c2ac48377a46
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365165"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785737"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Elemento Label para TableColumnHeader para TableControl (formato)
 
 Define o rótulo que é exibido na parte superior de uma coluna. Esse elemento é usado ao definir um modo de exibição de tabela.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) TableControl Element (Format) TableHeaders elemento para TableControl (Format) TableColumnHeader Element for TableHeaders for TableControl (Format) rótulo Element para TableColumnHeader para TableControl (formato)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) TableControl Element (Format) TableHeaders elemento para TableControl (Format) TableColumnHeader Element para TableHeaders para TableControl (Format) rótulo Element para TableColumnHeader para TableControl (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,23 +23,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Label`. Apenas um rótulo é permitido para cada coluna.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Label` elemento. Apenas um rótulo é permitido para cada coluna.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento TableColumnHeader para TableHeaders para TableControl (Format)](./tablecolumnheader-element-format.md)|Define um rótulo, a largura e o alinhamento dos dados para uma coluna da tabela.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o texto que é exibido na parte superior da coluna da tabela. Não há caracteres restritos para o rótulo de coluna.
 
@@ -58,7 +51,7 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra um elemento `TableColumnHeader` cujo rótulo é "coluna 1".
+Este exemplo mostra um `TableColumnHeader` elemento cujo rótulo é "coluna 1".
 
 ```xml
 <TableColumnHeader>
@@ -70,8 +63,8 @@ Este exemplo mostra um elemento `TableColumnHeader` cujo rótulo é "coluna 1".
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableColumnHeader (Format)](./tablecolumnheader-element-format.md)
+[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

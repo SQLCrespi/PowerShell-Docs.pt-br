@@ -1,19 +1,12 @@
 ---
 title: Elemento Configuration (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d46df0cb-50b7-4b81-82ba-37186a7b7a7f
-caps.latest.revision: 28
-ms.openlocfilehash: 296c63d0c774a0bf56e90dbaa32f2c221d4c3dbd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 90be02f8e27c0bd391e01da1a08ecd8eeb29b84c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363495"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783833"
 ---
 # <a name="configuration-element-format"></a>Elemento Configuration (formato)
 
@@ -35,22 +28,22 @@ Elemento de configuração
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Configuration`. Esse elemento deve ser o elemento raiz para cada arquivo de formatação, e esse elemento deve conter pelo menos um elemento filho.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Configuration` elemento. Esse elemento deve ser o elemento raiz para cada arquivo de formatação, e esse elemento deve conter pelo menos um elemento filho.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Controls para configuração (Format)](./controls-element-for-configuration-format.md)|Elemento opcional.<br /><br /> Define os controles comuns que podem ser usados por todas as exibições do arquivo de formatação.|
+|[Elemento Controls para Configuration (formato)](./controls-element-for-configuration-format.md)|Elemento opcional.<br /><br /> Define os controles comuns que podem ser usados por todas as exibições do arquivo de formatação.|
 |[Elemento DefaultSettings (formato)](./defaultsettings-element-format.md)|Elemento opcional.<br /><br /> Define as configurações comuns que se aplicam a todas as exibições do arquivo de formatação.|
 |[Formato do elemento SelectionSets](./selectionsets-element-format.md)|Elemento opcional.<br /><br /> Define os conjuntos comuns de objetos .NET que podem ser usados por todas as exibições do arquivo de formatação.|
-|[Elemento ViewDefinitions (Format)](./viewdefinitions-element-format.md)|Elemento opcional.<br /><br /> Define as exibições usadas para exibir objetos.|
+|[Elemento ViewDefinitions (formato)](./viewdefinitions-element-format.md)|Elemento opcional.<br /><br /> Define as exibições usadas para exibir objetos.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 Nenhum.
 
@@ -60,12 +53,12 @@ Arquivos de formatação definem como os objetos são exibidos. Na maioria dos c
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento Controls para configuração (Format)](./controls-element-for-configuration-format.md)
+[Elemento Controls para Configuration (formato)](./controls-element-for-configuration-format.md)
 
 [Elemento DefaultSettings (formato)](./defaultsettings-element-format.md)
 
-[Elemento SelectionSets (Format)](./selectionsets-element-format.md)
+[Elemento SelectionSets (formato)](./selectionsets-element-format.md)
 
-[Elemento ViewDefinitions (Format)](./viewdefinitions-element-format.md)
+[Elemento ViewDefinitions (formato)](./viewdefinitions-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

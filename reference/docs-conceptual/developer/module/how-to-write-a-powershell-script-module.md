@@ -1,40 +1,33 @@
 ---
 title: Como escrever um módulo de script do PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 11/21/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ed7645ea-5e52-4a45-81a7-aa3c2d605cde
-caps.latest.revision: 16
-ms.openlocfilehash: 7742eedd67283535b9e5898adc74d0d48faf68fe
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dc387909a9e55df9f1846b02755e284c408f7dc6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416265"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784887"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>Como escrever um módulo de script do Windows PowerShell
 
-Um módulo de script é qualquer script do PowerShell válido salvo em uma extensão `.psm1`. Essa extensão permite que o mecanismo do PowerShell use regras e cmdlets de módulo em seu arquivo. A maioria desses recursos está lá para ajudá-lo a instalar seu código em outros sistemas, bem como gerenciar o escopo. Você também pode usar um arquivo de manifesto de módulo, que descreve instalações e soluções mais complexas.
+Um módulo de script é qualquer script do PowerShell válido salvo em uma `.psm1` extensão. Essa extensão permite que o mecanismo do PowerShell use regras e cmdlets de módulo em seu arquivo. A maioria desses recursos está lá para ajudá-lo a instalar seu código em outros sistemas, bem como gerenciar o escopo. Você também pode usar um arquivo de manifesto de módulo, que descreve instalações e soluções mais complexas.
 
 ## <a name="writing-a-powershell-script-module"></a>Gravando um módulo de script do PowerShell
 
-Para criar um módulo de script, salve um script do PowerShell válido em um arquivo `.psm1`. O script e o diretório em que ele está armazenado devem usar o mesmo nome. Por exemplo, um script chamado `MyPsScript.psm1` é armazenado em um diretório chamado `MyPsScript`.
+Para criar um módulo de script, salve um script do PowerShell válido em um `.psm1` arquivo. O script e o diretório em que ele está armazenado devem usar o mesmo nome. Por exemplo, um script chamado `MyPsScript.psm1` é armazenado em um diretório chamado `MyPsScript` .
 
-O diretório do módulo precisa estar em um caminho especificado em `$env:PSModulePath`. O diretório do módulo pode conter todos os recursos necessários para executar o script e um arquivo de manifesto de módulo que descreve ao PowerShell como o módulo funciona.
+O diretório do módulo precisa estar em um caminho especificado em `$env:PSModulePath` . O diretório do módulo pode conter todos os recursos necessários para executar o script e um arquivo de manifesto de módulo que descreve ao PowerShell como o módulo funciona.
 
 ## <a name="create-a-basic-powershell-module"></a>Criar um módulo do PowerShell básico
 
 As etapas a seguir descrevem como criar um módulo do PowerShell.
 
-1. Salve um script do PowerShell com uma extensão `.psm1`. Use o mesmo nome para o script e o diretório onde o script é salvo.
+1. Salve um script do PowerShell com uma `.psm1` extensão. Use o mesmo nome para o script e o diretório onde o script é salvo.
 
-   Salvar um script com a extensão `.psm1` significa que você pode usar os cmdlets do módulo, como [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module). Os cmdlets de módulo existem principalmente para que você possa importar e exportar seu código para os sistemas de outros usuários. A solução alternativa seria carregar seu código em outros sistemas e, em seguida, criar uma origem de um ponto na memória ativa, o que não é uma solução escalonável. Para obter mais informações, consulte [noções básicas sobre um módulo do Windows PowerShell](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables).
-   Por padrão, quando os usuários importam seu arquivo de `.psm1`, todas as funções em seu script são acessíveis, mas as variáveis não são.
+   Salvar um script com a `.psm1` extensão significa que você pode usar os cmdlets do módulo, como [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module). Os cmdlets de módulo existem principalmente para que você possa importar e exportar seu código para os sistemas de outros usuários. A solução alternativa seria carregar seu código em outros sistemas e, em seguida, criar uma origem de um ponto na memória ativa, o que não é uma solução escalonável. Para obter mais informações, consulte [noções básicas sobre um módulo do Windows PowerShell](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables).
+   Por padrão, quando os usuários importam o `.psm1` arquivo, todas as funções em seu script são acessíveis, mas as variáveis não são.
 
-   Um exemplo de script do PowerShell, intitulado `Show-Calendar`, está disponível no final deste artigo.
+   Um exemplo de script do PowerShell, intitulado `Show-Calendar` , está disponível no final deste artigo.
 
    ```powershell
    function Show-Calendar {
@@ -62,9 +55,9 @@ As etapas a seguir descrevem como criar um módulo do PowerShell.
 
    Você pode restringir o que é importado usando um manifesto de módulo. Para obter mais informações, consulte [importando um módulo do PowerShell](./importing-a-powershell-module.md) e [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
-3. Se você tiver módulos que seu próprio módulo precisa carregar, você pode usar `Import-Module`, na parte superior do módulo.
+3. Se você tiver módulos que seu próprio módulo precisa carregar, você pode usar `Import-Module` , na parte superior do módulo.
 
-   O cmdlet `Import-Module` importa um módulo de destino para um sistema e pode ser usado em um ponto posterior no procedimento para instalar seu próprio módulo. O código de exemplo na parte inferior deste artigo não usa nenhum módulo de importação. Mas, se tiver feito isso, eles seriam listados na parte superior do arquivo, conforme mostrado no código a seguir:
+   O `Import-Module` cmdlet importa um módulo de destino para um sistema e pode ser usado em um ponto posterior no procedimento para instalar seu próprio módulo. O código de exemplo na parte inferior deste artigo não usa nenhum módulo de importação. Mas, se tiver feito isso, eles seriam listados na parte superior do arquivo, conforme mostrado no código a seguir:
 
    ```powershell
    Import-Module GenericModule
@@ -78,20 +71,20 @@ As etapas a seguir descrevem como criar um módulo do PowerShell.
 
    Um manifesto de módulo é um arquivo que contém os nomes de outros módulos, layouts de diretório, números de versão, dados de criação e outras partes de informações. O PowerShell usa o arquivo de manifesto de módulo para organizar e implantar sua solução. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
-6. Para instalar e executar o módulo, salve o módulo em um dos caminhos apropriados do PowerShell e use `Import-Module`.
+6. Para instalar e executar o módulo, salve o módulo em um dos caminhos apropriados do PowerShell e use o `Import-Module` .
 
-   Os caminhos em que você pode instalar o módulo estão localizados na variável global `$env:PSModulePath`. Por exemplo, um caminho comum para salvar um módulo em um sistema seria `%SystemRoot%/users/<user>/Documents/PowerShell/Modules/<moduleName>`. Certifique-se de criar um diretório para o módulo que usa o mesmo nome que o módulo de script, mesmo que ele seja apenas um único arquivo de `.psm1`. Se você não salvou o módulo em um desses caminhos, precisaria especificar o local do módulo no comando `Import-Module`. Caso contrário, o PowerShell não poderá encontrar o módulo.
+   Os caminhos em que você pode instalar o módulo estão localizados na `$env:PSModulePath` variável global. Por exemplo, um caminho comum para salvar um módulo em um sistema seria `%SystemRoot%/users/<user>/Documents/PowerShell/Modules/<moduleName>` . Certifique-se de criar um diretório para o módulo que usa o mesmo nome que o módulo de script, mesmo que ele seja apenas um único `.psm1` arquivo. Se você não salvou o módulo em um desses caminhos, precisaria especificar o local do módulo no `Import-Module` comando. Caso contrário, o PowerShell não poderá encontrar o módulo.
 
    A partir do PowerShell 3,0, se você colocou o módulo em um dos caminhos de módulo do PowerShell, não precisará importá-lo explicitamente. Seu módulo é carregado automaticamente quando um usuário chama sua função. Para obter mais informações sobre o caminho do módulo, consulte [importando um módulo do PowerShell](./importing-a-powershell-module.md) e [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
 7. Para remover um módulo do serviço ativo na sessão atual do PowerShell, use [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module).
 
    > [!NOTE]
-   > `Remove-Module` remove um módulo da sessão atual do PowerShell, mas não desinstala o módulo nem exclui os arquivos do módulo.
+   > `Remove-Module`Remove um módulo da sessão atual do PowerShell, mas não desinstala o módulo nem exclui os arquivos do módulo.
 
 ## <a name="show-calendar-code-example"></a>Mostrar-exemplo de código do calendário
 
-O exemplo a seguir é um módulo de script que contém uma única função chamada `Show-Calendar`. Essa função exibe uma representação visual de um calendário. O exemplo contém as cadeias de caracteres de ajuda do PowerShell para Sinopse, descrição, valores de parâmetro e código. Quando o módulo é importado, o comando `Export-ModuleMember` garante que a função `Show-Calendar` seja exportada como um membro do módulo.
+O exemplo a seguir é um módulo de script que contém uma única função denominada `Show-Calendar` . Essa função exibe uma representação visual de um calendário. O exemplo contém as cadeias de caracteres de ajuda do PowerShell para Sinopse, descrição, valores de parâmetro e código. Quando o módulo é importado, o `Export-ModuleMember` comando garante que a `Show-Calendar` função seja exportada como um membro do módulo.
 
 ```powershell
 <#

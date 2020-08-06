@@ -1,19 +1,12 @@
 ---
 title: Tutorial do getproc | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4663905f-560a-4e39-9b03-6db2c315c322
-caps.latest.revision: 6
-ms.openlocfilehash: bbd07a0d0abd30742b7e02482adedae3af43aca4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cc99cb4de8e3b8fcab8eac28b21162764aecd8a1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364435"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784258"
 ---
 # <a name="getproc-tutorial"></a>Tutorial de GetProc
 
@@ -33,11 +26,11 @@ Os tópicos deste tutorial foram criados para serem lidos sequencialmente, com c
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um cmdlet sem parâmetros](./creating-a-cmdlet-without-parameters.md)
+[Criar um cmdlet sem parâmetros](./creating-a-cmdlet-without-parameters.md)
 
 [Adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md)
 
-[Adicionando parâmetros que processam a entrada do pipeline](./adding-parameters-that-process-pipeline-input.md)
+[Adicionar parâmetros que processam a entrada de pipeline](./adding-parameters-that-process-pipeline-input.md)
 
 [Adicionando relatórios de erros não finalizados ao seu cmdlet](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
 

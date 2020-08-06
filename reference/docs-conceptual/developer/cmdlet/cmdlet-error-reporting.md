@@ -1,25 +1,18 @@
 ---
 title: Relatório de erros do cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error records [PowerShell], terminating
 - non-terminating errors [PowerShell]
 - error records [PowerShell]
 - terminating errors [PowerShell]
 - error records [PowerShell], non-terminating
-ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
-caps.latest.revision: 8
-ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365915"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784462"
 ---
 # <a name="cmdlet-error-reporting"></a>Relatório de erros do cmdlet
 
@@ -82,9 +75,9 @@ As categorias de erro são usadas para agrupar erros para o usuário. O PowerShe
 
 Para obter uma descrição das categorias de erro disponíveis, consulte a enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Em geral, você deve evitar o uso de **NOERROR**, **UndefinedError**e **erro genérico** sempre que possível.
 
-Os usuários podem exibir erros com base na categoria quando eles definem `$ErrorView` como **CategoryView**.
+Os usuários podem exibir erros com base na categoria quando configurados `$ErrorView` como **CategoryView**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do cmdlet](./cmdlet-overview.md)
 

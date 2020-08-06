@@ -1,19 +1,12 @@
 ---
 title: Parâmetros dinâmicos de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
-caps.latest.revision: 13
-ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369875"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782354"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Parâmetros dinâmicos de cmdlet
 
@@ -24,7 +17,7 @@ Os cmdlets podem definir parâmetros que estão disponíveis para o usuário em 
 
 ## <a name="dynamic-parameters-in-powershell-cmdlets"></a>Parâmetros dinâmicos nos cmdlets do PowerShell
 
-O PowerShell usa parâmetros dinâmicos em vários dos seus cmdlets de provedor. Por exemplo, os cmdlets `Get-Item` e `Get-ChildItem` adicionam um parâmetro **CodeSigningCert** em tempo de execução quando o parâmetro **Path** especifica o caminho do provedor de **certificado** . Se o parâmetro **path** especificar um caminho para um provedor diferente, o parâmetro **CodeSigningCert** não estará disponível.
+O PowerShell usa parâmetros dinâmicos em vários dos seus cmdlets de provedor. Por exemplo, os `Get-Item` `Get-ChildItem` cmdlets e adicionam um parâmetro **CodeSigningCert** em tempo de execução quando o parâmetro **Path** especifica o caminho do provedor de **certificado** . Se o parâmetro **path** especificar um caminho para um provedor diferente, o parâmetro **CodeSigningCert** não estará disponível.
 
 Os exemplos a seguir mostram como o parâmetro **CodeSigningCert** é adicionado em tempo de execução quando `Get-Item` é executado.
 
@@ -109,7 +102,7 @@ public class SendGreetingCommandDynamicParameters
 
 Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâmicos, consulte [como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [System. Management. Automation. IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
@@ -117,4 +110,4 @@ Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâm
 
 [Como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

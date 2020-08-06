@@ -1,23 +1,16 @@
 ---
 title: Referência de XML de esquema de formato | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
-caps.latest.revision: 21
-ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 111f90269e669aa6f8f97082ccc6063a62ddc7b1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363715"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785788"
 ---
 # <a name="format-schema-xml-reference"></a>Referência XML de esquema de formato
 
-Os tópicos nesta seção descrevem os elementos XML usados pela formatação de arquivos (arquivos Format. ps1xml). Arquivos de formatação definem como o objeto .NET é exibido; Eles não alteram o objeto em si.
+Os tópicos nesta seção descrevem os elementos XML usados pela formatação de arquivos (Format.ps1arquivos XML). Arquivos de formatação definem como o objeto .NET é exibido; Eles não alteram o objeto em si.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -213,33 +206,33 @@ Os tópicos nesta seção descrevem os elementos XML usados pela formatação de
 
 [Elemento PropertyName para GroupBy (Format)](./propertyname-element-for-groupby-format.md) Especifica a propriedade .NET que inicia um novo grupo sempre que seu valor é alterado.
 
-[Elemento PropertyName para ItemSeclectionCondition para controles para configuração (formato)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
+[Elemento PropertyName para ItemSeclectionCondition para controles para configuração (formato)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-[Elemento PropertyName para ItemSelectionCondition para controles para View (Format)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
+[Elemento PropertyName para ItemSelectionCondition para controles para View (Format)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
 
-[Elemento PropertyName para ItemSelectionCondition para CustomControl para exibição (Format](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
+[Elemento PropertyName para ItemSelectionCondition para CustomControl para exibição (Format](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-[Elemento PropertyName para ItemSelectionCondition para GroupBy (Format)](./propertyname-element-for-itemselectioncondition-for-groupby-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
+[Elemento PropertyName para ItemSelectionCondition para GroupBy (Format)](./propertyname-element-for-itemselectioncondition-for-groupby-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-[Elemento PropertyName para ItemSelectionCondition para ListItem (Format)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a exibição é usada. Esse elemento é usado ao definir um modo de exibição de lista.
+[Elemento PropertyName para ItemSelectionCondition para ListItem (Format)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a exibição é usada. Esse elemento é usado ao definir um modo de exibição de lista.
 
 [Elemento PropertyName para ListItem para ListControl (formato)](./propertyname-element-for-listitem-for-listcontrol-format.md) Especifica a propriedade .NET cujo valor é exibido na lista.
 
-[Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a entrada é usada. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
+[Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a entrada é usada. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-[Elemento PropertyName para SelectionCondition para controles para View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a entrada é usada. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
+[Elemento PropertyName para SelectionCondition para controles para View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a entrada é usada. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
 
-[Elemento PropertyName para SelectionCondition para CustomControl para exibição (formato)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
+[Elemento PropertyName para SelectionCondition para CustomControl para exibição (formato)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-[Elemento PropertyName para SelectionCondition para EntrySelectedBy para EnumerableExpansion (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a definição é usada.
+[Elemento PropertyName para SelectionCondition para EntrySelectedBy para EnumerableExpansion (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a definição é usada.
 
-[Elemento PropertyName para SelectionCondition para GroupBy (Format)](./propertyname-element-for-selectioncondition-for-groupby-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
+[Elemento PropertyName para SelectionCondition para GroupBy (Format)](./propertyname-element-for-selectioncondition-for-groupby-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-[Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a entrada da lista é usada.
+[Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a entrada da lista é usada.
 
-[Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a entrada da tabela é usada.
+[Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a entrada da tabela é usada.
 
-[Elemento PropertyName para SelectionCondition para EntrySelectedBy para WideEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true`, a condição é atendida e a definição é usada.
+[Elemento PropertyName para SelectionCondition para EntrySelectedBy para WideEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md) Especifica a propriedade .NET que dispara a condição. Quando essa propriedade está presente ou quando é avaliada como `true` , a condição é atendida e a definição é usada.
 
 [Elemento PropertyName para TableColumnItem (Format)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md) Especifica a propriedade cujo valor é exibido na coluna da linha.
 
@@ -263,33 +256,33 @@ Os tópicos nesta seção descrevem os elementos XML usados pela formatação de
 
 [Elemento ScriptBlock para GroupBy (Format)](./scriptblock-element-for-groupby-format.md) Especifica o script que inicia um novo grupo sempre que seu valor é alterado.
 
-[Elemento ScriptBlock para ItemSelectionCondition para controles para configuração (Format)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
+[Elemento ScriptBlock para ItemSelectionCondition para controles para configuração (Format)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-[Elemento ScriptBlock para ItemSelectionCondition para controles para View (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
+[Elemento ScriptBlock para ItemSelectionCondition para controles para View (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
 
-[Elemento ScriptBlock para ItemSelectionCondition para CustomControl para View (Format)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
+[Elemento ScriptBlock para ItemSelectionCondition para CustomControl para View (Format)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-[Elemento ScriptBlock para ItemSelectionCondition para GroupBy (Format)](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
+[Elemento ScriptBlock para ItemSelectionCondition para GroupBy (Format)](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-[Elemento ScriptBlock para ItemSelectionCondition para ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o item de lista é usado. Esse elemento é usado ao definir um modo de exibição de lista.
+[Elemento ScriptBlock para ItemSelectionCondition para ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o item de lista é usado. Esse elemento é usado ao definir um modo de exibição de lista.
 
 [Elemento ScriptBlock para ListItem (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md) Especifica o script cujo valor é exibido na linha da lista.
 
-[Elemento ScriptBlock para SelectionCondition para controles para configuração (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
+[Elemento ScriptBlock para SelectionCondition para controles para configuração (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-[Elemento ScriptBlock para SelectionCondition para controles para View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
+[Elemento ScriptBlock para SelectionCondition para controles para View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir controles que podem ser usados por uma exibição.
 
-[Elemento ScriptBlock para SelectionCondition para CustomControl para View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
+[Elemento ScriptBlock para SelectionCondition para CustomControl para View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
 [Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para EnumerableExpansion (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) Especifica o script que dispara a condição.
 
-[Elemento ScriptBlock para SelectionCondition para GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a definição é usada. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
+[Elemento ScriptBlock para SelectionCondition para GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a definição é usada. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a entrada da lista é usada.
+[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a entrada da lista é usada.
 
-[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para TableRowEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) Especifica o bloco de script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a entrada da tabela é usada.
+[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para TableRowEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) Especifica o bloco de script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a entrada da tabela é usada.
 
-[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para WideEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e a definição de entrada larga é usada.
+[Elemento ScriptBlock para SelectionCondition para EntrySelectedBy para WideEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e a definição de entrada larga é usada.
 
 [Elemento ScriptBlock para TableColumnItem (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) Especifica o script cujo valor é exibido na coluna da linha.
 
@@ -433,4 +426,4 @@ Os tópicos nesta seção descrevem os elementos XML usados pela formatação de
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
