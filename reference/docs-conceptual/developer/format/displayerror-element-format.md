@@ -1,19 +1,12 @@
 ---
 title: Elemento DisplayError (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 45c45800-a87d-456e-b07c-12d4d8c27c67
-caps.latest.revision: 8
-ms.openlocfilehash: 2c6a3d678ca68dc0d189f6ab981fdea5fef894cb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5d46c2fbd48f592db5ba1b33eb6cead8dc1c4698
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363985"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774279"
 ---
 # <a name="displayerror-element-format"></a>Elemento DisplayError (formato)
 
@@ -29,17 +22,17 @@ Elemento de configuração (Format) DefaultSettings Element (Format) elemento Di
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `DisplayError`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `DisplayError` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -53,4 +46,4 @@ Por padrão, quando ocorre um erro durante a tentativa de exibir um dado, o loca
 
 [Elemento DefaultSettings (formato)](./defaultsettings-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

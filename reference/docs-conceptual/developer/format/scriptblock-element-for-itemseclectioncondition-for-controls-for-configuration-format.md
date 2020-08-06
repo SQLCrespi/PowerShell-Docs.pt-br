@@ -1,25 +1,18 @@
 ---
 title: Elemento ScriptBlock para ItemSeclectionCondition para controles para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 51f7aec9-7b01-4370-84f4-1e58508a851f
-caps.latest.revision: 6
-ms.openlocfilehash: e92b2dfff07358132c480c47c34279e5365fe400
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f44b1a7f059fa5f41c19eed93762b61eda5110e8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362115"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772885"
 ---
 # <a name="scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format"></a>Elemento ScriptBlock para ItemSeletionCondition para Controls para Configuration (formato)
 
-Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
+Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um controle comum que pode ser usado por todas as exibições no arquivo de formatação.
 
-Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para configuração ( Format) elemento CustomEntry para CustomControl para controles para o elemento de configuração (Format) CustomItem para CustomEntry para controles para o elemento ExpressionBinding de configuração para CustomItem para controles para configuração (Format) Elemento ItemSelectionCondition para ExpressionBinding para controles de elemento de ScriptBlock de configuração (Format) para ItemSelectionCondition para controles para configuração (Format)
+Elemento de configuração (Format) controla o elemento de controle de configuração (formato) para controles para o elemento de configuração (Format) CustomControl para controle para o elemento de configuração (Format) CustomEntries para CustomControl para o elemento de configuração (Format) CustomEntry para CustomControl para controles para a configuração (Format) elemento CustomItem para CustomEntry para controles para o elemento ExpressionBinding de configuração para CustomItem para controles para o elemento Configuration (Format) ItemSelectionCondition para ExpressionBinding para controles para o elemento ScriptBlock Configuration (Format) para ItemSelectionCondition para controles para Configuration (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) controla o elemento de controle de configura
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ScriptBlock`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento ItemSelectionCondition para ExpressionBinding para controles para configuração (Format)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md)|Define a condição que deve existir para que esse controle seja usado.|
+|[Elemento ItemSelectionCondition para ExpressionBinding para Controls para Configuration (formato)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md)|Define a condição que deve existir para que esse controle seja usado.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script que é avaliado.
 
@@ -55,8 +48,8 @@ Se esse elemento for usado, você não poderá especificar o elemento [PropertyN
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento PropertyName para ItemSeclectionCondition para controles para configuração (formato)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)
+[Elemento PropertyName para ItemSelectionCondition para Controls para Configuration (formato)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)
 
-[Elemento ItemSelectionCondition para ExpressionBinding para controles para configuração (Format)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md)
+[Elemento ItemSelectionCondition para ExpressionBinding para Controls para Configuration (formato)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

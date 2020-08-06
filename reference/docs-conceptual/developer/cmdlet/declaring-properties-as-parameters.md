@@ -1,25 +1,18 @@
 ---
 title: Declarando propriedades como parâmetros | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f71ea35d-cff5-4e44-a5c6-3a747ed4c4d9
-caps.latest.revision: 9
-ms.openlocfilehash: 6f6640afb15b3608669538f9b5f53d7a8a5c380d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365745"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774636"
 ---
 # <a name="declaring-properties-as-parameters"></a>Declarar propriedades como parâmetros
 
 Este tópico fornece informações básicas que você deve entender antes de declarar os parâmetros de um cmdlet.
 
-Para declarar os parâmetros de um cmdlet dentro de sua classe de cmdlet, defina as propriedades públicas que representam cada parâmetro e, em seguida, adicione um ou mais atributos de parâmetro a cada propriedade. O tempo de execução do Windows PowerShell usa os atributos de parâmetro para identificar a propriedade como um parâmetro de cmdlet. A sintaxe básica para declarar o atributo de parâmetro é `[Parameter()]`.
+Para declarar os parâmetros de um cmdlet dentro de sua classe de cmdlet, defina as propriedades públicas que representam cada parâmetro e, em seguida, adicione um ou mais atributos de parâmetro a cada propriedade. O tempo de execução do Windows PowerShell usa os atributos de parâmetro para identificar a propriedade como um parâmetro de cmdlet. A sintaxe básica para declarar o atributo de parâmetro é `[Parameter()]` .
 
 Aqui está um exemplo de uma propriedade definida como um parâmetro obrigatório.
 
@@ -51,4 +44,4 @@ O Windows PowerShell também fornece um conjunto de parâmetros comuns que estã
 
 [Tipos de parâmetro de cmdlet](./types-of-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

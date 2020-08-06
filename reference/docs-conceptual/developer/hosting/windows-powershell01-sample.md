@@ -1,23 +1,16 @@
 ---
 title: Exemplo de PowerShell01 do Windows | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
-caps.latest.revision: 9
-ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560994"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771933"
 ---
 # <a name="windows-powershell01-sample"></a>Amostra Windows PowerShell01
 
-Este exemplo mostra como usar um objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para limitar a funcionalidade de um runspace. A saída deste exemplo demonstra como restringir o modo de linguagem do runspace, como marcar um cmdlet como particular, como adicionar e remover cmdlets e provedores, como adicionar um comando de proxy e muito mais. Este exemplo se concentra em como restringir o runspace programaticamente. As alternativas de script para restringir o runspace incluem os comandos $ExecutionContext. SessionState. Languagemode e PSSessionConfiguration.
+Este exemplo mostra como usar um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para limitar a funcionalidade de um runspace. A saída deste exemplo demonstra como restringir o modo de linguagem do runspace, como marcar um cmdlet como particular, como adicionar e remover cmdlets e provedores, como adicionar um comando de proxy e muito mais. Este exemplo se concentra em como restringir o runspace programaticamente. As alternativas de script para restringir o runspace incluem os comandos $ExecutionContext. SessionState. Languagemode e PSSessionConfiguration.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -27,17 +20,17 @@ Este exemplo requer o Windows PowerShell 2,0.
 
 Este exemplo demonstra o seguinte:
 
-- Restringindo o idioma definindo a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .
+- Restringindo o idioma definindo o [System.Management.Automation.Runspaces.Initialsessionstate. Propriedade languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) .
 
 - Adicionando aliases ao estado de sessão inicial usando um [System. Management. Automation. Runspaces. Sessionstatealiasentry? Displayproperty = objeto FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) .
 
 - Marcando comandos como particulares.
 
-- Removendo provedores do estado de sessão inicial usando a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .
+- Removendo provedores do estado de sessão inicial usando o [System.Management.Automation.Runspaces.Initialsessionstate. Propriedade Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) .
 
-- Removendo comandos do estado de sessão inicial usando a propriedade [System. Management. Automation. Runspaces. Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .
+- Removendo comandos do estado de sessão inicial usando a propriedade [System.Management.Automation.Runspaces.Initialsessionstate. Commands](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) .
 
-- Adicionar comandos e provedores ao objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+- Adicionar comandos e provedores ao objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 ## <a name="example"></a>Exemplo
 

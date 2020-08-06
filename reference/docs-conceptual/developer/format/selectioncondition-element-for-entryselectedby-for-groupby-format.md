@@ -1,25 +1,18 @@
 ---
 title: Elemento SelectionCondition para EntrySelectedBy para GroupBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6dc2093a-dc54-42c4-ada3-c8d089ba1e8e
-caps.latest.revision: 6
-ms.openlocfilehash: a6738a7c4c934b2d6a16695a711f7c6c80afdd2d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0930d8076c314c12cac6cdfa2b33716b7efeb6a9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368425"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772834"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>Elemento SelectionCondition para EntrySelectedBy para GroupBy (formato)
 
 Define uma condição que deve existir para que uma definição de controle seja usada. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) elemento GroupBy para o elemento de exibição (Format) CustomControl para o elemento CustomEntries GroupBy (Format) para CustomControl para o elemento GroupBy (Format) CustomEntry para CustomControl para GroupBy (Format) EntrySelectedBy elemento para CustomEntry para GroupBy (Format) SelectionCondition elemento para EntrySelectedBy para GroupBy (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) elemento GroupBy para View (Format) CustomControl Element para GroupBy (Format) CustomEntries Element for CustomControl para GroupBy (Format) CustomEntry Element for CustomControl para GroupBy (Format) EntrySelectedBy Element for CustomEntry para o elemento SelectionCondition GroupBy (Format) para EntrySelectedBy para GroupBy (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,26 +27,26 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `SelectionCondition`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `SelectionCondition` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento PropertyName para SelectionCondition para GroupBy (Format)](./propertyname-element-for-selectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica uma propriedade .NET que dispara a condição.|
+|[Elemento PropertyName para SelectionCondition para GroupBy (formato)](./propertyname-element-for-selectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica uma propriedade .NET que dispara a condição.|
 |[Elemento ScriptBlock para SelectionCondition para GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que dispara a condição.|
-|[Elemento SelectionSetName para SelectionCondition para GroupBy (Format)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos .NET que dispara a condição.|
+|[Elemento SelectionSetName para SelectionCondition para GroupBy (formato)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos .NET que dispara a condição.|
 |[Elemento TypeName para SelectionCondition para GroupBy (Format)](./typename-element-for-selectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que dispara a condição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para CustomEntry para GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Define os tipos .NET que usam essa definição de controle ou a condição que deve existir para que essa definição seja usada.|
+|[Elemento EntrySelectedBy para CustomEntry para GroupBy (formato)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Define os tipos .NET que usam essa definição de controle ou a condição que deve existir para que essa definição seja usada.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -67,14 +60,14 @@ Para obter mais informações sobre como usar condições de seleção, consulte
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento PropertyName para SelectionCondition para CustomControl para exibição (formato)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[Elemento PropertyName para SelectionCondition para CustomControl para View (formato)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-[Elemento ScriptBlock para SelectionCondition para CustomControl para View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[Elemento ScriptBlock para SelectionCondition para CustomControl para View (formato)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
 [Elemento SelectionSetName para SelectionCondition para controle personalizado para exibição (formato)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
 [Elemento TypeName para SelectionCondition para GroupBy (Format)](./typename-element-for-selectioncondition-for-groupby-format.md)
 
-[Elemento EntrySelectedBy para CustomEntry para GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[Elemento EntrySelectedBy para CustomEntry para GroupBy (formato)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

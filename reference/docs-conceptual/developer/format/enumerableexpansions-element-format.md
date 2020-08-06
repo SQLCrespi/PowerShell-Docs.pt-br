@@ -1,19 +1,12 @@
 ---
 title: Elemento EnumerableExpansions (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 50c33892-2ade-44c2-906c-81e5f5ca21f2
-caps.latest.revision: 9
-ms.openlocfilehash: 1ecbda8a3b623757517019105e3b1ee46ccbb55c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2b536b1ab9b34b0089d0a38d3c5dc7a937176443
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363295"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774007"
 ---
 # <a name="enumerableexpansions-element-format"></a>Elemento EnumerableExpansions (formato)
 
@@ -31,19 +24,19 @@ Elemento de configuração (Format) DefaultSettings Element (Format) elemento En
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `EnumerableExpansions`. Não há nenhum limite para o número de elementos filho que você pode usar.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `EnumerableExpansions` elemento. Não há nenhum limite para o número de elementos filho que você pode usar.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EnumerableExpansion (Format)](./enumerableexpansion-element-format.md)|Elemento opcional.<br /><br /> Define os objetos de coleção .NET específicos que são expandidos quando são exibidos em uma exibição.|
+|[Elemento EnumerableExpansion (formato)](./enumerableexpansion-element-format.md)|Elemento opcional.<br /><br /> Define os objetos de coleção .NET específicos que são expandidos quando são exibidos em uma exibição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -55,4 +48,4 @@ Esse elemento é usado para definir como os objetos de coleção e os objetos na
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

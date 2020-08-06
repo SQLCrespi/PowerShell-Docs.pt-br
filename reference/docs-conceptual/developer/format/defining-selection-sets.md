@@ -1,23 +1,16 @@
 ---
 title: Definindo conjuntos de seleção | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
-caps.latest.revision: 16
-ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692287"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774296"
 ---
 # <a name="defining-selection-sets"></a>Definir conjuntos de seleção
 
-Ao criar vários modos de exibição e controles, você pode definir conjuntos de objetos que são chamados de conjuntos de seleção. Um conjunto de seleção permite que você defina os objetos uma vez, sem precisar defini-los repetidamente para cada exibição ou controle. Normalmente, os conjuntos de seleção são usados quando você tem um conjunto de objetos .NET relacionados. Por exemplo, o `FileSystem` arquivo de formatação (FileSystem. Format. ps1xml) define um conjunto de seleção dos tipos de sistema de arquivos que várias exibições usam.
+Ao criar vários modos de exibição e controles, você pode definir conjuntos de objetos que são chamados de conjuntos de seleção. Um conjunto de seleção permite que você defina os objetos uma vez, sem precisar defini-los repetidamente para cada exibição ou controle. Normalmente, os conjuntos de seleção são usados quando você tem um conjunto de objetos .NET relacionados. Por exemplo, o `FileSystem` arquivo de formatação (FileSystem.format.ps1XML) define um conjunto de seleção dos tipos de sistema de arquivos que várias exibições usam.
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>Onde os conjuntos de seleção são definidos e referenciados
 
@@ -140,7 +133,7 @@ O conjunto de seleção anterior é referenciado no `ViewSelectedBy` elemento de
 
 [Nome](./name-element-for-selectionset-format.md)
 
-[Tipos](./types-element-for-selectionset-format.md)
+[Types](./types-element-for-selectionset-format.md)
 
 [Arquivos de formatação do PowerShell](./powershell-formatting-files.md)
 

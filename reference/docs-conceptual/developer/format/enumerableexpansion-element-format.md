@@ -1,19 +1,12 @@
 ---
 title: Elemento EnumerableExpansion (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 93d27173-9ae4-46e5-bb78-90525915cd70
-caps.latest.revision: 9
-ms.openlocfilehash: bc1e58c00ca8419f9204076f0a46050281e704db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 81a8959c19502a2e56f4cfa48a1e480509d84b6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368745"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774041"
 ---
 # <a name="enumerableexpansion-element-format"></a>Elemento EnumerableExpansion (formato)
 
@@ -32,24 +25,24 @@ Elemento de configuração (Format) DefaultSettings Element (Format) elemento En
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `EnumerableExpansion`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `EnumerableExpansion` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Elemento opcional.<br /><br /> Define quais objetos de coleção .NET são expandidos por essa definição.|
+|[Elemento EntrySelectedBy para EnumerableExpansion (formato)](./entryselectedby-element-for-enumerableexpansion-format.md)|Elemento opcional.<br /><br /> Define quais objetos de coleção .NET são expandidos por essa definição.|
 |[Elemento Expand (formato)](./expand-element-format.md)|Especifica como o objeto de coleção é expandido para essa definição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EnumerableExpansions (Format)](./enumerableexpansions-element-format.md)|Define as diferentes maneiras como os objetos de coleção .NET são expandidos quando são exibidos em uma exibição.|
+|[Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)|Define as diferentes maneiras como os objetos de coleção .NET são expandidos quando são exibidos em uma exibição.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -59,4 +52,4 @@ O comportamento padrão é exibir apenas as propriedades dos objetos na coleçã
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

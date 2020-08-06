@@ -1,11 +1,6 @@
 ---
 title: Parâmetros de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [PowerShell SDK]
 - aliases [PowerShell SDK]
@@ -14,14 +9,12 @@ helpviewer_keywords:
 - mandatory parameters [PowerShell SDK]
 - positional parameters [PowerShell SDK]
 - cmdlets [PowerShell SDK], parameters
-ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
-caps.latest.revision: 23
-ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022216"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774755"
 ---
 # <a name="cmdlet-parameters"></a>Parâmetros de cmdlets
 
@@ -47,13 +40,13 @@ Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceite e
 
 [Validando entrada de parâmetro](./validating-parameter-input.md) Descreve como o Windows PowerShell valida os argumentos passados para parâmetros de cmdlet.
 
-[Parâmetros de filtro de entrada](./input-filter-parameters.md) Discute os parâmetros `Filter`, `Include`e `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
+[Parâmetros de filtro de entrada](./input-filter-parameters.md) Discute os `Filter` parâmetros, `Include` e `Exclude` que filtram o conjunto de objetos de entrada que o cmdlet afeta.
 
-## <a name="related-sections"></a>Seções pertinentes
+## <a name="related-sections"></a>Seções relacionadas
 
 [Como validar a entrada de parâmetro](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Declaração de atributo de parâmetro](./parameter-attribute-declaration.md)
 

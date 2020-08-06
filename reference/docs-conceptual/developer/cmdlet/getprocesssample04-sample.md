@@ -1,23 +1,16 @@
 ---
 title: Exemplo de GetProcessSample04 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: aa2aa4c4-3457-4601-806a-801afe3dcc80
-caps.latest.revision: 6
-ms.openlocfilehash: 095bebf868efd00f8eeaec979a5606f140714cb1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365705"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774415"
 ---
 # <a name="getprocesssample04-sample"></a>Amostra GetProcessSample04
 
-Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele gera um erro de não encerramento se ocorrer um erro durante a recuperação de um processo. Este cmdlet é uma versão simplificada do cmdlet `Get-Process` fornecido pelo Windows PowerShell 2,0.
+Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele gera um erro de não encerramento se ocorrer um erro durante a recuperação de um processo. Este cmdlet é uma versão simplificada do `Get-Process` cmdlet fornecida pelo Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
@@ -164,4 +157,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

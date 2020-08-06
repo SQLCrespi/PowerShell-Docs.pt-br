@@ -1,25 +1,18 @@
 ---
 title: Elemento ExpressionBinding para CustomItem para CustomControl para exibição (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7f5ebea5-ee9c-4b90-a116-12a1daa28fc7
-caps.latest.revision: 7
-ms.openlocfilehash: 226bbea1d7613ad3099e05e8caa9817ff16c1f42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1885a2820c0cb250aa6fda80544f58d06136cfeb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363145"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773786"
 ---
 # <a name="expressionbinding-element-for-customitem-for-customcontrol-for-view-format"></a>Elemento ExpressionBinding para CustomItem para CustomControl para View (formato)
 
 Define os dados que são exibidos pelo controle. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl Element para View (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries for CustomControl for View ( Format) elemento CustomItem para CustomEntry para CustomControl para exibição (Format) o elemento ExpressionBinding para CustomItem para CustomControl para a exibição (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl Element para View (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries for CustomControl para o elemento View (Format) CustomItem para CustomEntry para CustomControl para o elemento ExpressionBinding de exibição (Format) para CustomItem para CustomControl para View (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,43 +29,43 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ExpressionBinding`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ExpressionBinding` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |`CustomControl Element`|Elemento opcional.<br /><br /> Define um controle que é usado por este controle.|
-|[Elemento CustomControlName para ExpressionBinding para CustomControl para View (Format)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o nome de um controle comum ou um controle de exibição.|
-|[Elemento enumeracollection para ExpressionBinding para CustomControl para exibição (formato)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especificado que os elementos das coleções são exibidos.|
+|[Elemento CustomControlName para ExpressionBinding para CustomControl para View (formato)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o nome de um controle comum ou um controle de exibição.|
+|[Elemento EnumerateCollection para ExpressionBinding para CustomControl para View (formato)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especificado que os elementos das coleções são exibidos.|
 |[Elemento ItemSelectionCondition para ExpressionBinding para CustomControl para View (Format)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)|Elemento opcional.<br /><br /> Define a condição que deve existir para que esse controle seja usado.|
-|[Elemento PropertyName para ExpressionBinding para CustomControl para exibição (Format)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET cujo valor é exibido pelo controle.|
+|[Elemento PropertyName para ExpressionBinding para CustomControl para View (formato)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET cujo valor é exibido pelo controle.|
 |[Elemento ScriptBlock para ExpressionBinding para CustomCustomControl para View (Format)](./scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o script cujo valor é exibido pelo controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomItem para CustomEntry para CustomControl para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Define quais dados são exibidos pelo modo de exibição de controle personalizado e como eles são exibidos.|
+|[Elemento CustomItem para CustomEntry para CustomControl para View (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Define quais dados são exibidos pelo modo de exibição de controle personalizado e como eles são exibidos.|
 
 ## <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento CustomControlName para ExpressionBinding para CustomControl para View (Format)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+[Elemento CustomControlName para ExpressionBinding para CustomControl para View (formato)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-[Elemento enumeracollection para ExpressionBinding para CustomControl para exibição (formato)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+[Elemento EnumerateCollection para ExpressionBinding para CustomControl para View (formato)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
 [Elemento ItemSelectionCondition para ExpressionBinding para CustomControl para View (Format)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
 
-[Elemento PropertyName para ExpressionBinding para CustomControl para exibição (Format)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+[Elemento PropertyName para ExpressionBinding para CustomControl para View (formato)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-[Elemento ScriptBlock para ExpressionBinding para CustomControl para View (Format)](./scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md)
+[Elemento ScriptBlock para ExpressionBinding para CustomControl para View (formato)](./scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-[Elemento CustomItem para CustomEntry para CustomControl para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
+[Elemento CustomItem para CustomEntry para CustomControl para View (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

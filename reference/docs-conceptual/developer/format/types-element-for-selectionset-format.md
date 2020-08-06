@@ -1,19 +1,12 @@
 ---
 title: Elemento types para SelectionSet (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4606fec0-ff31-4d36-af68-227405335ec3
-caps.latest.revision: 15
-ms.openlocfilehash: 0427367efa2c8a7e352d718706d1341a0c8e3621
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367955"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772511"
 ---
 # <a name="types-element-for-selectionset-format"></a>Elemento Types para SelectionSet (formato)
 
@@ -32,19 +25,19 @@ Elemento de configuração (Format) elemento SelectionSets (formato) elemento Se
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `Types`. Deve haver pelo menos um elemento filho, mas não há um limite máximo para o número de elementos filho que podem ser adicionados.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `Types` elemento. Deve haver pelo menos um elemento filho, mas não há um limite máximo para o número de elementos filho que podem ser adicionados.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TypeName de tipos (Format)](./typename-element-for-types-format.md)|Elemento obrigatório.<br /><br /> Especifica o objeto .NET que pertence ao conjunto de seleção.|
+|[Elemento TypeName de tipos (Format)](./typename-element-for-types-format.md)|Elemento necessário.<br /><br /> Especifica o objeto .NET que pertence ao conjunto de seleção.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -56,7 +49,7 @@ Os objetos definidos por esse elemento compõem um conjunto de seleção que pod
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra um elemento `SelectionSet` que define quatro tipos .NET.
+Este exemplo mostra um `SelectionSet` elemento que define quatro tipos .net.
 
 ```xml
 <SelectionSets>
@@ -80,4 +73,4 @@ Este exemplo mostra um elemento `SelectionSet` que define quatro tipos .NET.
 
 [Elemento TypeName de tipos (Format)](./typename-element-for-types-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: Definindo métodos padrão para objetos | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
-caps.latest.revision: 9
-ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 10917de9e897fc1eed362430d63ff5b9cb7e813d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365685"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774585"
 ---
 # <a name="defining-default-methods-for-objects"></a>Definir os métodos padrão para objetos
 
@@ -21,13 +14,13 @@ Ao estender .NET Framework objetos, você pode adicionar métodos de código e m
 O XML que é usado para definir esses métodos é descrito nas seções a seguir.
 
 > [!NOTE]
-> Os exemplos nas seções a seguir são do arquivo de tipos de `Types.ps1xml` no diretório de instalação do Windows PowerShell (`$PSHOME`). Para obter mais informações, consulte [sobre tipos. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Os exemplos nas seções a seguir são do `Types.ps1xml` arquivo de tipos no diretório de instalação do Windows PowerShell ( `$PSHOME` ). Para obter mais informações, consulte [About Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="code-methods"></a>Métodos de código
 
 Um método de código faz referência a um método estático de um objeto .NET Framework.
 
-No exemplo a seguir, o método **ToString** é adicionado ao tipo [System. xml. XMLNode](/dotnet/api/System.Xml.XmlNode) . O elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) define o método estendido como um método de código. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) especifica o nome do método estendido. E, o elemento [CodeReference](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) especifica o método estático. Você também pode adicionar o elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) aos membros do elemento [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
+No exemplo a seguir, o método **ToString** é adicionado ao tipo de [nóSystem.Xml.Xml](/dotnet/api/System.Xml.XmlNode) . O elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) define o método estendido como um método de código. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) especifica o nome do método estendido. E, o elemento [CodeReference](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) especifica o método estático. Você também pode adicionar o elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) aos membros do elemento [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
 
 ```xml
 <Type>
@@ -62,6 +55,6 @@ Um método de script define um método cujo valor é a saída de um script. No e
 </Type>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

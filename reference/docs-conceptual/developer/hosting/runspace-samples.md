@@ -1,19 +1,12 @@
 ---
 title: Exemplos de runspace | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c92a6d3d-8d34-4a76-bdc3-dea923d9858e
-caps.latest.revision: 17
-ms.openlocfilehash: e24d40746da91f60aaf2af655ddcadc88ab6a4db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f7c11101a570f89657f9ffc4d52fa6ebce3a91e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360995"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772205"
 ---
 # <a name="runspace-samples"></a>Amostras de runspace
 
@@ -32,9 +25,9 @@ Esta seção inclui um código de exemplo que mostra como usar diferentes tipos 
 
  [Exemplo de Runspace04](./runspace04-sample.md) Este exemplo mostra como usar a classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar comandos e como detectar erros de encerramento que são lançados durante a execução dos comandos. Dois comandos são executados e o último comando é passado um argumento de parâmetro que não é válido. Como resultado, nenhum objeto é retornado e um erro de encerramento é gerado.
 
- [Exemplo de Runspace05](./runspace05-sample.md) Este exemplo mostra como adicionar um snap-in a um objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o cmdlet do snap-in esteja disponível quando o runspace for aberto. O snap-in fornece um cmdlet Get-proc (definido pelo [exemplo GetProcessSample01](../cmdlet/getprocesssample01-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Exemplo de Runspace05](./runspace05-sample.md) Este exemplo mostra como adicionar um snap-in a um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o cmdlet do snap-in esteja disponível quando o runspace é aberto. O snap-in fornece um cmdlet Get-proc (definido pelo [exemplo GetProcessSample01](../cmdlet/getprocesssample01-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
- [Exemplo de Runspace06](./runspace06-sample.md) Este exemplo mostra como adicionar um módulo a um objeto [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o módulo seja carregado quando o runspace for aberto. O módulo fornece um cmdlet Get-proc (definido pelo [exemplo GetProcessSample02](../cmdlet/getprocesssample02-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Exemplo de Runspace06](./runspace06-sample.md) Este exemplo mostra como adicionar um módulo a um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o módulo seja carregado quando o runspace for aberto. O módulo fornece um cmdlet Get-proc (definido pelo [exemplo GetProcessSample02](../cmdlet/getprocesssample02-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Exemplo de Runspace07](./runspace07-sample.md) Este exemplo mostra como criar um runspace e, em seguida, usar esse runspace para executar dois cmdlets de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
@@ -42,7 +35,7 @@ Esta seção inclui um código de exemplo que mostra como usar diferentes tipos 
 
  [Exemplo de Runspace09](./runspace09-sample.md) Este exemplo mostra como adicionar um script ao pipeline de um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) e como executar o script de forma assíncrona. Eventos são usados para tratar a saída do script.
 
- [Exemplo de Runspace10](./runspace10-sample.md) Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Exemplo de Runspace10](./runspace10-sample.md) Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Exemplo de Runspace11](./runspace11-sample.md) Isso mostra como usar a classe [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) para criar um comando de proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros disponíveis. O comando de proxy é adicionado a um estado de sessão inicial que é usado para criar um espaço de execução restrito. Isso significa que o usuário pode acessar a funcionalidade do cmdlet apenas por meio do comando proxy.
 

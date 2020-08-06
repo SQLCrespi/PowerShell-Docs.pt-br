@@ -1,19 +1,12 @@
 ---
 title: Elemento frame para CustomItem para controles para View (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a5729091-78a9-4bc1-abac-210bc20c6dbe
-caps.latest.revision: 7
-ms.openlocfilehash: f93dc20a9c5f87c14605578062b1e60f5a3d25cf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5ade36c183a026cb9001a2abbe91d31638a87108
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363645"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773446"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-view-format"></a>Elemento Frame para CustomItem para Controls para View (formato)
 
@@ -35,13 +28,13 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `Frame`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `Frame` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,15 +44,15 @@ Nenhum.
 |[Elemento LeftIndent do quadro de controles de View (Format)](./leftindent-element-for-frame-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica quantos caracteres os dados são deslocados para fora da margem esquerda.|
 |[Elemento RightIndent do quadro de controles de View (Format)](./rightindent-element-for-frame-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica quantos caracteres os dados são deslocados para fora da margem direita.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomItem para CustomEntry para controles para View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Define quais dados são exibidos pelo controle e como eles são exibidos.|
+|[Elemento CustomItem para CustomEntry para Controls para View (formato)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Define quais dados são exibidos pelo controle e como eles são exibidos.|
 
 ## <a name="remarks"></a>Comentários
 
-Você não pode especificar os elementos [FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md) e [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md) no mesmo elemento `Frame`.
+Você não pode especificar os elementos [FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md) e [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md) no mesmo `Frame` elemento.
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -71,6 +64,6 @@ Você não pode especificar os elementos [FirstLineHanging](./firstlinehanging-e
 
 [Elemento RightIndent do quadro de controles de View (Format)](./rightindent-element-for-frame-for-controls-for-view-format.md)
 
-[Elemento CustomItem para CustomEntry para controles para View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)
+[Elemento CustomItem para CustomEntry para Controls para View (formato)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

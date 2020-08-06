@@ -1,19 +1,12 @@
 ---
 title: Elemento SelectionSetName para ViewSelectedBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
-caps.latest.revision: 13
-ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368255"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772596"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>Elemento SelectionSetName para ViewSelectedBy (formato)
 
@@ -29,25 +22,25 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `SelectionSetName`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `SelectionSetName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento ViewSelectedBy (Format)](./viewselectedby-element-format.md)|Define os objetos .NET que são exibidos pela exibição.|
+|[Elemento ViewSelectedBy (formato)](./viewselectedby-element-format.md)|Define os objetos .NET que são exibidos pela exibição.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome do conjunto de seleção que é definido pelo elemento `Name` para o conjunto de seleção.
+Especifique o nome do conjunto de seleção definido pelo `Name` elemento para o conjunto de seleção.
 
 ## <a name="remarks"></a>Comentários
 
@@ -69,8 +62,8 @@ O exemplo a seguir mostra como especificar um conjunto de seleção para uma exi
 
 ## <a name="see-also"></a>Consulte Também
 
-[Definindo conjuntos de seleção](./defining-selection-sets.md)
+[Definir conjuntos de seleção](./defining-selection-sets.md)
 
-[Elemento ViewSelectedBy (Format)](./viewselectedby-element-format.md)
+[Elemento ViewSelectedBy (formato)](./viewselectedby-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

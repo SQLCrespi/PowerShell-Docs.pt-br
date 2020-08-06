@@ -1,25 +1,18 @@
 ---
 title: Elemento TypeName para SelectionCondition para GroupBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 290d38e3-b9bd-4382-9671-2e28b32b7260
-caps.latest.revision: 6
-ms.openlocfilehash: a4036b1e9de85da7e0029e02cca9e0eaed462f70
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ea1e0cb50c3a749f6c26d13fff4b001240ce6b95
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361475"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772545"
 ---
 # <a name="typename-element-for-selectioncondition-for-groupby-format"></a>Elemento TypeName para SelectionCondition para GroupBy (formato)
 
 Especifica um tipo .NET que dispara a condição. Esse elemento é usado ao definir como um novo grupo de objetos é exibido.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) elemento GroupBy para o elemento de exibição (Format) CustomControl para o elemento CustomEntries GroupBy (Format) para CustomControl para o elemento GroupBy (Format) CustomEntry para CustomControl para GroupBy (Format) EntrySelectedBy Element para CustomEntry para GroupBy (Format) SelectionCondition Element for EntrySelectedBy for GroupBy (Format) TypeName para SelectionCondition para GroupBy (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) elemento GroupBy para o elemento de exibição (Format) CustomControl para o elemento CustomEntries GroupBy (Format) para CustomControl para o elemento GroupBy (Format) CustomEntry para CustomControl para o elemento de EntrySelectedBy GroupBy (Format) para CustomEntry para o elemento GroupBy (Format) SelectionCondition para EntrySelectedBy para o elemento TypeName (Format) do SelectionCondition para GroupBy (
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,32 +23,32 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `TypeName`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TypeName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento SelectionCondition para EntrySelectedBy para GroupBy (Format)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)|Define uma condição que deve existir para que a definição de controle seja usada.|
+|[Elemento SelectionCondition para EntrySelectedBy para GroupBy (formato)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)|Define uma condição que deve existir para que a definição de controle seja usada.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
+Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>Comentários
 
-Quando esse elemento é especificado, você não pode especificar o elemento `SelectionSetName`. Para obter mais informações sobre como definir condições de seleção, consulte [definindo condições para exibir dados](./defining-conditions-for-displaying-data.md).
+Quando esse elemento é especificado, você não pode especificar o `SelectionSetName` elemento. Para obter mais informações sobre como definir condições de seleção, consulte [definindo condições para exibir dados](./defining-conditions-for-displaying-data.md).
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento SelectionCondition para EntrySelectedBy para GroupBy (Format)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)
+[Elemento SelectionCondition para EntrySelectedBy para GroupBy (formato)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

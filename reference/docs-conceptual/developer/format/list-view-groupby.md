@@ -1,19 +1,12 @@
 ---
 title: Modo de exibição de lista (GroupBy) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
-caps.latest.revision: 6
-ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7956d13e196454a3f6da185e9be74f9d3cb8ef63
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365135"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773395"
 ---
 # <a name="list-view-groupby"></a>Exibição de lista (GroupBy)
 
@@ -23,12 +16,12 @@ Este exemplo mostra como implementar um modo de exibição de lista que separa a
 
 1. Copie o XML da seção de exemplo deste tópico em um arquivo de texto.
 
-2. Salve o arquivo de texto. Certifique-se de adicionar a extensão de `format.ps1xml` ao arquivo para identificá-lo como um arquivo de formatação.
+2. Salve o arquivo de texto. Certifique-se de adicionar a `format.ps1xml` extensão ao arquivo para identificá-lo como um arquivo de formatação.
 
-3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile`.
+3. Abra o Windows PowerShell e execute o seguinte comando para carregar o arquivo de formatação na sessão atual: `Update-formatdata -prependpath PathToFormattingFile` .
 
    > [!WARNING]
-   > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o parâmetro `prependPath` ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
+   > Esse arquivo de formatação define a exibição de um objeto que já está definido por um arquivo de formatação do Windows PowerShell. Você deve usar o `prependPath` parâmetro ao executar o cmdlet e não pode carregar esse arquivo de formatação como um módulo.
 
 ## <a name="demonstrates"></a>Demonstra
 
@@ -140,4 +133,4 @@ ServiceType : Win32OwnProcess
 
 [Exemplos de arquivos de formatação](./examples-of-formatting-files.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

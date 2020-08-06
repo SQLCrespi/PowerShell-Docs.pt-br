@@ -1,19 +1,12 @@
 ---
 title: Elemento WrapTables (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 47358eca-7719-4d77-9e49-676b78e25aec
-caps.latest.revision: 7
-ms.openlocfilehash: 66d32f1a5c4994ae578aea0a2a52c2510f97a3b9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bb0bf4785eed0c2d271e01968cf2ccbc862d94c7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367915"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772307"
 ---
 # <a name="wraptables-element-format"></a>Elemento WrapTables (formato)
 
@@ -29,17 +22,17 @@ Elemento de configuração (Format) DefaultSettings Element (Format) elemento Wr
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `WrapTables`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `WrapTables` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -49,4 +42,4 @@ Nenhum.
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: Exibindo informações de erro | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 76fcc0c1-9795-45d3-a564-40f822b657b5
-caps.latest.revision: 8
-ms.openlocfilehash: 4bc8666ee9053eb368402c8644558f4fe2dcc9ee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e542110e9c35a74c5d4c112b0a831f7f8ad9242e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369965"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774568"
 ---
 # <a name="displaying-error-information"></a>Exibir informações de erro
 
@@ -26,7 +19,7 @@ $ stop-service lanmanworkstation
 You do not have sufficient permissions to stop the service Workstation.
 ```
 
-No entanto, os usuários podem exibir erros por categoria definindo a variável `$ErrorView` como `"CategoryView"`. A exibição de categoria exibe informações específicas do registro de erro em vez de uma descrição de texto livre do erro. Esse modo de exibição pode ser útil se você tiver uma longa lista de erros a serem verificados. No modo de exibição de categoria, a mensagem de erro anterior é exibida da seguinte maneira.
+No entanto, os usuários podem exibir erros por categoria definindo a `$ErrorView` variável como `"CategoryView"` . A exibição de categoria exibe informações específicas do registro de erro em vez de uma descrição de texto livre do erro. Esse modo de exibição pode ser útil se você tiver uma longa lista de erros a serem verificados. No modo de exibição de categoria, a mensagem de erro anterior é exibida da seguinte maneira.
 
 ```powershell
 $ $ErrorView = "CategoryView"
@@ -38,6 +31,6 @@ Para obter mais informações sobre categorias de erro, consulte [registros de e
 
 ## <a name="see-also"></a>Consulte Também
 
-[Registros de erro do Windows PowerShell](./windows-powershell-error-records.md)
+[Registros de erros do Windows PowerShell](./windows-powershell-error-records.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

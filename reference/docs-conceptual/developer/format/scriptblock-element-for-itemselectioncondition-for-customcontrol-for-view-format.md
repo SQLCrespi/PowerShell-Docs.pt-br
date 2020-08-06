@@ -1,25 +1,18 @@
 ---
 title: Elemento ScriptBlock para ItemSelectionCondition para CustomControl para View (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 946cd2b5-ac37-4a13-bb49-29fbc70ec8d7
-caps.latest.revision: 6
-ms.openlocfilehash: 0c07ab0e5d04c4056a7e7215bfa55773bfccb41d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 31873e886af04f8eedaf859af1d6bc1d5bcfdbf7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362065"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772868"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>Elemento ScriptBlock para ItemSelectionCondition para CustomControl para View (formato)
 
-Especifica o script que dispara a condição. Quando esse script é avaliado como `true`, a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
+Especifica o script que dispara a condição. Quando esse script é avaliado como `true` , a condição é atendida e o controle é usado. Esse elemento é usado ao definir um modo de exibição de controle personalizado.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl elemento (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries para o elemento View (Format) CustomItem para CustomEntry para o elemento ExpressionBinding View (Format) para CustomItem para CustomControl para o elemento View (Format) ItemSelectionCondition para a associação de expressão para CustomControl para o elemento ScriptBlock (Format) View para ItemSelectionCondition para CustomControl para exibição (formato)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) CustomControl elemento (Format) CustomEntries Element for CustomControl para View (Format) CustomEntry Element for CustomEntries para o elemento View (Format) CustomItem para CustomEntry para o elemento ExpressionBinding View (Format) para CustomItem para CustomControl para o elemento View (Format) ItemSelectionCondition para a associação de expressão para CustomControl para o elemento ScriptBlock View (Format) para ItemSelectionCondition para CustomControl para View (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ScriptBlock`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento ItemSelectionCondition para a associação de expressão para CustomControl para exibição (formato)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)|Define a condição que deve existir para que esse controle seja usado.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script que é avaliado.
 
@@ -55,8 +48,8 @@ Se esse elemento for usado, você não poderá especificar o elemento [PropertyN
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento PropertyName para ItemSelectionCondition para CustomControl para exibição (formato)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)
+[Elemento PropertyName para ItemSelectionCondition para CustomControl para View (formato)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)
 
 [Elemento ItemSelectionCondition para a associação de expressão para CustomControl para exibição (formato)](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: Trabalhos em segundo plano | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
-caps.latest.revision: 13
-ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363555"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774840"
 ---
 # <a name="background-jobs"></a>Trabalhos em segundo plano
 
@@ -35,11 +28,11 @@ Para obter mais informações sobre como os trabalhos em segundo plano são trat
 
 Para gravar um cmdlet que pode ser executado como um trabalho em segundo plano, você deve concluir as seguintes tarefas:
 
-- Defina um parâmetro de opção de `asJob` para que o usuário possa decidir se deseja executar o cmdlet como um trabalho em segundo plano.
+- Defina um `asJob` parâmetro de opção para que o usuário possa decidir se deseja executar o cmdlet como um trabalho em segundo plano.
 
 - Crie um objeto derivado da classe [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) . Esse objeto pode ser um objeto de trabalho personalizado ou um objeto de trabalho fornecido pelo Windows PowerShell, como um objeto [System. Management. Automation. PSEventJob](/dotnet/api/System.Management.Automation.PSEventJob) .
 
-- Em um método de processamento de registros, adicione uma instrução `if` que detecta se o cmdlet deve ser executado como um trabalho em segundo plano.
+- Em um método de processamento de registros, adicione uma `if` instrução que detecta se o cmdlet deve ser executado como um trabalho em segundo plano.
 
 - Para objetos de trabalho personalizados, implemente a classe Job.
 
@@ -91,4 +84,4 @@ Suprime o prompt de comando até que um ou todos os trabalhos em segundo plano d
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

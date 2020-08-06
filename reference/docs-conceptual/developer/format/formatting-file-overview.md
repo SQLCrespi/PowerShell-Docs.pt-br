@@ -1,23 +1,16 @@
 ---
 title: Visão geral do arquivo de formatação | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
-caps.latest.revision: 13
-ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363685"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773497"
 ---
 # <a name="formatting-file-overview"></a>Visão geral do arquivo de formatação
 
-O formato de exibição para os objetos que são retornados por comandos (cmdlets, funções e scripts) são definidos usando arquivos de formatação (arquivos Format. ps1xml). Vários desses arquivos são fornecidos pelo PowerShell para definir o formato de exibição para os objetos retornados pelos comandos fornecidos pelo PowerShell, como o objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) retornado pelo cmdlet `Get-Process`. No entanto, você também pode criar seus próprios arquivos de formatação personalizados para substituir os formatos de exibição padrão ou pode escrever um arquivo de formatação personalizado para definir a exibição de objetos retornados por seus próprios comandos.
+O formato de exibição para os objetos que são retornados por comandos (cmdlets, funções e scripts) são definidos usando arquivos de formatação (format.ps1arquivos XML). Vários desses arquivos são fornecidos pelo PowerShell para definir o formato de exibição para os objetos retornados pelos comandos fornecidos pelo PowerShell, como o objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) retornado pelo `Get-Process` cmdlet. No entanto, você também pode criar seus próprios arquivos de formatação personalizados para substituir os formatos de exibição padrão ou pode escrever um arquivo de formatação personalizado para definir a exibição de objetos retornados por seus próprios comandos.
 
 > [!IMPORTANT]
 > Os arquivos de formatação não determinam os elementos de um objeto que são retornados para o pipeline. Quando um objeto é retornado para o pipeline, todos os membros desse objeto ficam disponíveis mesmo que alguns não sejam exibidos.
@@ -38,19 +31,19 @@ Cada arquivo de formatação pode definir os seguintes componentes que podem ser
 
 As exibições de formatação podem exibir objetos em formato de tabela, formato de lista, formato largo e formato personalizado. Para a maior parte, cada definição de formatação é descrita por um conjunto de marcas XML que descrevem a exibição. Cada exibição contém o nome da exibição, os objetos que usam a exibição e os elementos da exibição, como as informações de coluna e linha de uma exibição de tabela.
 
-Exibição de tabela lista as propriedades de um objeto ou um valor de bloco de script em uma ou mais colunas. Cada coluna representa uma única propriedade do objeto ou um valor de script. Você pode definir um modo de exibição de tabela que exibe todas as propriedades de um objeto, um subconjunto das propriedades de um objeto ou uma combinação de propriedades e valores de script. Cada linha da tabela representa um objeto retornado. Criar uma exibição de tabela é muito semelhante ao quando você canaliza um objeto para o cmdlet `Format-Table`. Para obter mais informações sobre essa exibição, consulte [exibição de tabela](./creating-a-table-view.md).
+Exibição de tabela lista as propriedades de um objeto ou um valor de bloco de script em uma ou mais colunas. Cada coluna representa uma única propriedade do objeto ou um valor de script. Você pode definir um modo de exibição de tabela que exibe todas as propriedades de um objeto, um subconjunto das propriedades de um objeto ou uma combinação de propriedades e valores de script. Cada linha da tabela representa um objeto retornado. Criar uma exibição de tabela é muito semelhante a quando você canaliza um objeto para o `Format-Table` cmdlet. Para obter mais informações sobre essa exibição, consulte [exibição de tabela](./creating-a-table-view.md).
 
-Exibição de lista lista as propriedades de um objeto ou um valor de script em uma única coluna. Cada linha da lista exibe um rótulo opcional ou o nome da propriedade seguido pelo valor da propriedade ou do script. Criar um modo de exibição de lista é muito semelhante a canalizar um objeto para o cmdlet `Format-List`. Para obter mais informações sobre essa exibição, consulte [exibição de lista](./creating-a-list-view.md).
+Exibição de lista lista as propriedades de um objeto ou um valor de script em uma única coluna. Cada linha da lista exibe um rótulo opcional ou o nome da propriedade seguido pelo valor da propriedade ou do script. Criar um modo de exibição de lista é muito semelhante a canalizar um objeto para o `Format-List` cmdlet. Para obter mais informações sobre essa exibição, consulte [exibição de lista](./creating-a-list-view.md).
 
-Exibição ampla lista uma única propriedade de um objeto ou um valor de script em uma ou mais colunas. Não há rótulo ou cabeçalho para esta exibição. Criar uma exibição ampla é muito semelhante a canalizar um objeto para o cmdlet `Format-Wide`. Para obter mais informações sobre essa exibição, consulte [Wide View](./creating-a-wide-view.md).
+Exibição ampla lista uma única propriedade de um objeto ou um valor de script em uma ou mais colunas. Não há rótulo ou cabeçalho para esta exibição. Criar uma exibição ampla é muito semelhante a canalizar um objeto para o `Format-Wide` cmdlet. Para obter mais informações sobre essa exibição, consulte [Wide View](./creating-a-wide-view.md).
 
-Exibição personalizada exibe uma exibição personalizável de propriedades de objeto ou valores de script que não aderem à estrutura rígida de exibições de tabela, exibições de lista ou exibições amplas. Você pode definir uma exibição personalizada autônoma ou pode definir uma exibição personalizada que é usada por outra exibição, como uma exibição de tabela ou exibição de lista. Criar uma exibição personalizada é muito semelhante a canalizar um objeto para o cmdlet `Format-Custom`. Para obter mais informações sobre essa exibição, consulte [modo de exibição personalizado](./creating-custom-controls.md).
+Exibição personalizada exibe uma exibição personalizável de propriedades de objeto ou valores de script que não aderem à estrutura rígida de exibições de tabela, exibições de lista ou exibições amplas. Você pode definir uma exibição personalizada autônoma ou pode definir uma exibição personalizada que é usada por outra exibição, como uma exibição de tabela ou exibição de lista. Criar uma exibição personalizada é muito semelhante a canalizar um objeto para o `Format-Custom` cmdlet. Para obter mais informações sobre essa exibição, consulte [modo de exibição personalizado](./creating-custom-controls.md).
 
 ## <a name="components-of-a-view"></a>Componentes de uma exibição
 
 Os exemplos de XML a seguir mostram os componentes XML básicos de uma exibição. Os elementos XML individuais variam de acordo com a exibição que você deseja criar, mas os componentes básicos das exibições são os mesmos.
 
-Para começar, cada exibição tem um elemento `Name` que especifica um nome amigável de usuário que é usado para fazer referência à exibição. um elemento `ViewSelectedBy` que define quais objetos .NET são exibidos pela exibição e um elemento de *controle* que define a exibição.
+Para começar, cada exibição tem um `Name` elemento que especifica um nome amigável de usuário que é usado para fazer referência à exibição. um `ViewSelectedBy` elemento que define quais objetos .NET são exibidos pela exibição e um elemento de *controle* que define a exibição.
 
 ```xml
 <ViewDefinitions>
@@ -116,7 +109,7 @@ Conforme mostrado nos exemplos anteriores, o arquivo de formatação pode conter
 
 ## <a name="example-of-a-table-view"></a>Exemplo de uma exibição de tabela
 
-O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](./viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](./view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada elemento [View](./view-element-format.md) , o elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o elemento `TableControl` mostrado no exemplo a seguir) definem o tipo da exibição.
+O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibição de tabela que contém duas colunas. O elemento [ViewDefinitions](./viewdefinitions-element-format.md) é o elemento contêiner para todas as exibições definidas no arquivo de formatação. O elemento [View](./view-element-format.md) define a tabela, lista, largura ou exibição personalizada específica. Dentro de cada elemento [View](./view-element-format.md) , o elemento [Name](./name-element-for-view-format.md) especifica o nome da exibição, o elemento [ViewSelectedBy](./viewselectedby-element-format.md) define os objetos que usam a exibição e os elementos de controle diferentes (como o `TableControl` elemento mostrado no exemplo a seguir) definem o tipo da exibição.
 
 ```xml
 <ViewDefinitions>
@@ -155,11 +148,11 @@ O exemplo a seguir mostra as marcas XML usadas para definir um modo de exibiçã
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um modo de exibição de lista](./creating-a-list-view.md)
+[Criar uma exibição de lista](./creating-a-list-view.md)
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Criando uma exibição ampla](./creating-a-wide-view.md)
+[Criar uma exibição ampla](./creating-a-wide-view.md)
 
 [Criar controles personalizados](./creating-custom-controls.md)
 

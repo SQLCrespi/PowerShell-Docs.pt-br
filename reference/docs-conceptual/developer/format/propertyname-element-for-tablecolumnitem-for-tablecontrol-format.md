@@ -1,25 +1,18 @@
 ---
 title: Elemento PropertyName para TableColumnItem para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fb26d72c-2f77-4801-badf-0537ccc55e31
-caps.latest.revision: 10
-ms.openlocfilehash: 6e86b6a0874b385703121802bc8108a0410442cd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bf267eeb83aef59abea2d945af12e849252309c8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362245"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772970"
 ---
 # <a name="propertyname-element-for-tablecolumnitem-for-tablecontrol-format"></a>Elemento PropertyName para TableColumnItem para TableControl (formato)
 
 Especifica a propriedade cujo valor é exibido na coluna da linha.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) TableControl elemento (Format) TableRowEntries Element (Format) TableRowEntry elemento (Format) TableColumnItems elemento (Format) TableColumnItem Element (Format) Elemento PropertyName para TableColumnItem (Format)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) TableControl elemento (Format) TableRowEntries Element (Format) TableRowEntry elemento (Format) TableColumnItems Element (Format) TableColumnItem Element (Format) PropertyName elemento TableColumnItem (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `PropertyName`.
+As seções a seguir descrevem atributos, elementos filho e elemento pai do `PropertyName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento TableColumnItem (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|Define a propriedade ou o script cujo valor é exibido na coluna da linha.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome da propriedade cujo valor é exibido.
 
@@ -55,7 +48,7 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra um elemento `TableColumnItem` que especifica a propriedade `Status` do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+Este exemplo mostra um `TableColumnItem` elemento que especifica a `Status` Propriedade do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableColumnItem>
@@ -67,8 +60,8 @@ Este exemplo mostra um elemento `TableColumnItem` que especifica a propriedade `
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
 [Elemento TableColumnItem (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

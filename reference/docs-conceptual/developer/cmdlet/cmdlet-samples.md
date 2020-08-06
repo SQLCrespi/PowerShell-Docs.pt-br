@@ -1,23 +1,16 @@
 ---
 title: Exemplos de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
-caps.latest.revision: 13
-ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 633e4a5108673b09a92679c7992421b6b3405b72
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365875"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774738"
 ---
 # <a name="cmdlet-samples"></a>Amostras de cmdlet
 
-Esta seção descreve o código de exemplo que é fornecido no SDK do Windows PowerShell 2,0. Você pode copiar o código dos tópicos nesta seção ou abrir os arquivos de origem instalados com o SDK. O [SDK (Software Development Kit) do Windows PowerShell 2,0](https://www.microsoft.com/en-us/download/details.aspx?id=2560) fornece arquivos leiame, arquivos de origem e arquivos de projeto do Visual Studio para cada exemplo. Com o SDK instalado, você pode encontrar os exemplos na pasta `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`.
+Esta seção descreve o código de exemplo que é fornecido no SDK do Windows PowerShell 2,0. Você pode copiar o código dos tópicos nesta seção ou abrir os arquivos de origem instalados com o SDK. O [SDK (Software Development Kit) do Windows PowerShell 2,0](https://www.microsoft.com/en-us/download/details.aspx?id=2560) fornece arquivos leiame, arquivos de origem e arquivos de projeto do Visual Studio para cada exemplo. Com o SDK instalado, você pode encontrar os exemplos na `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` pasta.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -31,7 +24,7 @@ Esta seção descreve o código de exemplo que é fornecido no SDK do Windows Po
 
 [Exemplo de GetProcessSample05](./getprocesssample05-sample.md) Este exemplo mostra uma versão completa do cmdlet Get-proc.
 
-[Exemplo de StopProcessSample01](./stopprocesssample01-sample.md) Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro de `PassThru` que indica que o usuário deseja que o cmdlet retorne um objeto.
+[Exemplo de StopProcessSample01](./stopprocesssample01-sample.md) Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um `PassThru` parâmetro que indica que o usuário deseja que o cmdlet retorne um objeto.
 
 [Exemplo de StopProcessSample02](./stopprocesssample02-sample.md) Este exemplo mostra como escrever um cmdlet que grava mensagens de depuração, detalhadas e de aviso ao parar os processos no computador local.
 
@@ -43,4 +36,4 @@ Esta seção descreve o código de exemplo que é fornecido no SDK do Windows Po
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
