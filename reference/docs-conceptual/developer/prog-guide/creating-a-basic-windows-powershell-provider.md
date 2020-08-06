@@ -1,22 +1,15 @@
 ---
 title: Criando um provedor básico do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - base provider [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], base provider
-ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
-caps.latest.revision: 7
-ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978501"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787216"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Criar um provedor básico do Windows PowerShell
 
@@ -29,9 +22,9 @@ Conforme mencionado anteriormente, o provedor básico descrito aqui implementa m
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Definindo a classe do provedor do Windows PowerShell
 
-A primeira etapa na criação de um provedor do Windows PowerShell é definir sua classe .NET. Esse provedor básico define uma classe chamada `AccessDBProvider` que deriva da classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
+A primeira etapa na criação de um provedor do Windows PowerShell é definir sua classe .NET. Esse provedor básico define uma classe chamada `AccessDBProvider` derivada da classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
 
-É recomendável que você coloque suas classes de provedor em um namespace `Providers` de seu namespace de API, por exemplo, XXX. PowerShell. Providers. Esse provedor usa o namespace `Microsoft.Samples.PowerShell.Provider`, no qual todos os exemplos de provedor do Windows PowerShell são executados.
+É recomendável que você coloque suas classes de provedor em um `Providers` namespace do seu namespace de API, por exemplo, XXX. PowerShell. Providers. Esse provedor usa o `Microsoft.Samples.PowerShell.Provider` namespace, no qual todos os exemplos de provedor do Windows PowerShell são executados.
 
 > [!NOTE]
 > A classe para um provedor do Windows PowerShell deve ser explicitamente marcada como pública. As classes não marcadas como públicas usarão como padrão o interno e não serão encontradas pelo tempo de execução do Windows PowerShell.
@@ -85,13 +78,13 @@ Para obter o código de exemplo completo, consulte [exemplo de código AccessDbP
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
 
-Depois que o provedor do Windows PowerShell tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando os cmdlets com suporte na linha de comando. Para este provedor básico, execute o novo shell e use o cmdlet `Get-PSProvider` para recuperar a lista de provedores e verifique se o provedor AccessDb está presente.
+Depois que o provedor do Windows PowerShell tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando os cmdlets com suporte na linha de comando. Para este provedor básico, execute o novo shell e use o `Get-PSProvider` cmdlet para recuperar a lista de provedores e verifique se o provedor AccessDb está presente.
 
 ```powershell
 Get-PSProvider
 ```
 
-A saída a seguir é exibida:
+O seguinte resultado é exibido:
 
 ```Output
 Name                 Capabilities                  Drives
@@ -108,4 +101,4 @@ Registry             ShouldProcess                 {HKLM, HKCU}
 
 [Criando provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
-[Criando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
+[Projetar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)

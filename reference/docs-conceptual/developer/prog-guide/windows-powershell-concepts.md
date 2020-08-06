@@ -1,19 +1,12 @@
 ---
 title: Conceitos do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 6/12/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3dd5608e-50b6-4c6a-aee3-dde0e86032bc
-caps.latest.revision: 7
-ms.openlocfilehash: 56545599f1f5e593045294ed645c79df20738159
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a31c1df784b7b5f872c4647aece8fafa535db66b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563260"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786944"
 ---
 # <a name="windows-powershell-concepts"></a>Conceitos do Windows PowerShell
 
@@ -23,7 +16,7 @@ Esta seção contém informações conceituais que ajudarão você a entender o 
 |----------------|-----------------|
 |[about_Objects](/powershell/module/microsoft.powershell.core/about/about_objects)|Descrição de objetos do PowerShell. Para obter mais informações, consulte [sobre a criação de objetos](/powershell/module/microsoft.powershell.core/about/about_object_creation)|
 |[Criar runspaces](../hosting/creating-runspaces.md)|Os ambientes operacionais em que os comandos são processados. Para obter mais informações, consulte [classe de runspace](/dotnet/api/system.management.automation.runspaces.runspace).|
-|[Estender os objetos de saída](../cmdlet/extending-output-objects.md)|Como estender objetos do PowerShell. Para obter mais informações, consulte [sobre tipos. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)|
+|[Estender os objetos de saída](../cmdlet/extending-output-objects.md)|Como estender objetos do PowerShell. Para obter mais informações, consulte [About Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)|
 |[Registrar cmdlets](../cmdlet/registering-cmdlets.md)|Como disponibilizar módulos e snap-ins no PowerShell. Para obter mais informações, consulte [módulos e snap-ins](../cmdlet/modules-and-snap-ins.md).|
 |[Solicitar confirmação por meio de cmdlets](../cmdlet/requesting-confirmation-from-cmdlets.md)|Como os cmdlets e provedores solicitam comentários do usuário antes que uma ação seja executada.|
 |[Classe RuntimeDefinedParameter](/dotnet/api/system.management.automation.runtimedefinedparameter)|Declarações de parâmetro de tempo de execução.|
@@ -31,7 +24,7 @@ Esta seção contém informações conceituais que ajudarão você a entender o 
 |[Visão geral do provedor do Windows PowerShell](../provider/windows-powershell-provider-overview.md)|Visão geral sobre provedores do PowerShell que são usados para acessar armazenamentos de dados.|
 |[Gravando ajuda para cmdlets do PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Como escrever a ajuda do cmdlet do PowerShell.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Classe do PowerShell](/dotnet/api/system.management.automation.powershell)
 

@@ -1,19 +1,12 @@
 ---
 title: Elemento TableHeaders (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
-caps.latest.revision: 15
-ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361815"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787420"
 ---
 # <a name="tableheaders-element-format"></a>Elemento TableHeaders (formato)
 
@@ -32,23 +25,23 @@ Elemento ViewDefinitions (Format) View element (Format) o elemento TableControl 
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e os elementos pai do elemento `TableHeaders`. Deve haver um elemento filho para cada propriedade do objeto a ser exibido. As informações de cabeçalho de coluna são exibidas na ordem em que os elementos filho são especificados.
+As seções a seguir descrevem os atributos, os elementos filho e os elementos pai do `TableHeaders` elemento. Deve haver um elemento filho para cada propriedade do objeto a ser exibido. As informações de cabeçalho de coluna são exibidas na ordem em que os elementos filho são especificados.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableColumnHeader (Format)](./tablecolumnheader-element-format.md)|Elemento opcional.<br /><br /> Define o rótulo, a largura e o alinhamento dos dados para uma coluna de uma exibição de tabela.|
+|[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)|Elemento opcional.<br /><br /> Define o rótulo, a largura e o alinhamento dos dados para uma coluna de uma exibição de tabela.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableControl (Format)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
+|[Elemento TableControl (formato)](./tablecontrol-element-format.md)|Define um formato de tabela para uma exibição.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -56,7 +49,7 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra um elemento `TableHeaders` que define dois cabeçalhos de coluna.
+Este exemplo mostra um `TableHeaders` elemento que define dois cabeçalhos de coluna.
 
 ```xml
 <TableHeaders>
@@ -75,10 +68,10 @@ Este exemplo mostra um elemento `TableHeaders` que define dois cabeçalhos de co
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableColumnHeader (Format)](./tablecolumnheader-element-format.md)
+[Elemento TableColumnHeader (formato)](./tablecolumnheader-element-format.md)
 
-[Elemento TableControl (Format)](./tablecontrol-element-format.md)
+[Elemento TableControl (formato)](./tablecontrol-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

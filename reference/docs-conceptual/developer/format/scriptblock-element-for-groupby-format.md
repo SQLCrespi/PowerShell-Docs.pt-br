@@ -1,19 +1,12 @@
 ---
 title: Elemento ScriptBlock para GroupBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
-caps.latest.revision: 6
-ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364925"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787675"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>Elemento ScriptBlock para GroupBy (formato)
 
@@ -29,23 +22,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `ScriptBlock`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `ScriptBlock` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)|Define como um grupo de objetos .NET é exibido.|
+|[Elemento GroupBy para View (formato)](./groupby-element-for-view-format.md)|Define como um grupo de objetos .NET é exibido.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script que é avaliado.
 
@@ -57,8 +50,8 @@ Quando esse elemento é especificado, você não pode especificar o elemento [Pr
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento PropertyName para GroupBy (Format)](propertyname-element-for-groupby-format.md)
+[Elemento PropertyName para GroupBy (formato)](propertyname-element-for-groupby-format.md)
 
-[Elemento GroupBy para exibição (formato)](groupby-element-for-view-format.md)
+[Elemento GroupBy para View (formato)](groupby-element-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](writing-a-powershell-formatting-file.md)

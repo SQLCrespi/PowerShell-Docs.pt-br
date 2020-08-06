@@ -1,19 +1,12 @@
 ---
 title: Elemento CustomControl para exibição (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2edac16c-0b30-4985-ac84-0821aa9a9f6d
-caps.latest.revision: 12
-ms.openlocfilehash: bd0f7ca4de8dede97d1553cd62884ea45876e0c7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 660e8fd6531862790a2af7ab27a82e073c230693
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363355"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786043"
 ---
 # <a name="customcontrol-element-for-view-format"></a>Elemento CustomControl para View (formato)
 
@@ -31,19 +24,19 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `CustomControl`. Você deve especificar um elemento filho.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `CustomControl` elemento. Você deve especificar um elemento filho.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomEntries para CustomControl para exibição (formato)](./customentries-element-for-customcontrol-for-view-format.md)|Elemento obrigatório.<br /><br /> Fornece as definições do modo de exibição de controle personalizado.|
+|[Elemento CustomEntries para CustomControl para View (formato)](./customentries-element-for-customcontrol-for-view-format.md)|Elemento necessário.<br /><br /> Fornece as definições do modo de exibição de controle personalizado.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -55,8 +48,8 @@ Na maioria dos casos, apenas uma definição é necessária para cada exibição
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento CustomEntries para CustomControl para exibição (formato)](./customentries-element-for-customcontrol-for-view-format.md)
+[Elemento CustomEntries para CustomControl para View (formato)](./customentries-element-for-customcontrol-for-view-format.md)
 
 [Elemento View (formato)](./view-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

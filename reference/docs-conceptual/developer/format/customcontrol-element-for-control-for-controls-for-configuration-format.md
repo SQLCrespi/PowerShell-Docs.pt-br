@@ -1,19 +1,12 @@
 ---
 title: Elemento CustomControl para controle de controles para configuração (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
-caps.latest.revision: 10
-ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5aacf824421dfce19f1f495fc0a95e766cdbaf8b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368965"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786077"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Elemento CustomControl para Control para Controls para Configuration (formato)
 
@@ -31,30 +24,30 @@ Elemento de configuração (Format) controla o elemento de controle de configura
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `CustomControl`. Esse elemento deve ter pelo menos um elemento filho. Não há nenhum limite máximo para o número de elementos filho que podem ser especificados.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `CustomControl` elemento. Esse elemento deve ter pelo menos um elemento filho. Não há nenhum limite máximo para o número de elementos filho que podem ser especificados.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomEntries para CustomControl para configuração (formato)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|Elemento obrigatório.<br /><br /> Fornece as definições de um controle.|
+|[Elemento CustomEntries para CustomControl para configuração (formato)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|Elemento necessário.<br /><br /> Fornece as definições de um controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)|Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação e pelo nome usado para fazer referência ao controle.|
+|[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)|Define um controle comum que pode ser usado por todas as exibições do arquivo de formatação e pelo nome usado para fazer referência ao controle.|
 
 ## <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento Control para controles para configuração (Format)](./control-element-for-controls-for-configuration-format.md)
+[Elemento Control para Controls para Configuration (formato)](./control-element-for-controls-for-configuration-format.md)
 
 [Elemento CustomEntries para CustomControl para configuração (formato)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

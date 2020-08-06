@@ -1,19 +1,12 @@
 ---
 title: Criando controles personalizados | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
-caps.latest.revision: 8
-ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c36fa9b778e01501a3c88f735cdefdfbb04411a0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363375"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786111"
 ---
 # <a name="creating-custom-controls"></a>Criar controles personalizados
 
@@ -21,7 +14,7 @@ Os controles personalizados são os componentes mais flexíveis de um arquivo de
 
 ## <a name="custom-control-example"></a>Exemplo de controle personalizado
 
-O exemplo a seguir mostra um controle personalizado que é definido no arquivo Certificates. Format. ps1xml. Esse controle personalizado é usado para separar os objetos [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) exibidos em uma exibição de tabela.
+O exemplo a seguir mostra um controle personalizado que é definido no arquivo XML de Certificates.Format.ps1. Esse controle personalizado é usado para separar os objetos [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) exibidos em uma exibição de tabela.
 
 ```xml
 <Controls>
@@ -53,4 +46,4 @@ O exemplo a seguir mostra um controle personalizado que é definido no arquivo C
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

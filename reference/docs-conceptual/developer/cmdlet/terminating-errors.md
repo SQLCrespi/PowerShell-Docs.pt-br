@@ -1,19 +1,12 @@
 ---
 title: Erros de encerramento | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b804e738-aefa-41bb-9649-f9ed897fd96c
-caps.latest.revision: 8
-ms.openlocfilehash: d1967fe7996f75ec5229920f7ec49aa5ff6bdbfd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 272e6cdd9a1da3cfd2e4f730f6aeb27577948278
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369325"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786383"
 ---
 # <a name="terminating-errors"></a>Erros de encerramento
 
@@ -29,7 +22,7 @@ Os cmdlets podem gravar qualquer número de objetos de saída ou erros de não f
 
 Os cmdlets podem chamar [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) somente a partir do thread que chamou o método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)ou [System. Management. Automation. cmdlet.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) endprocessation Input. Não tente chamar [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) ou [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) de outro thread. Em vez disso, os erros devem ser comunicados de volta ao thread principal.
 
-É possível que um cmdlet lance uma exceção em sua implementação do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)ou [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Qualquer exceção gerada a partir desses métodos (com exceção de algumas condições de erro graves que interrompem o host do Windows PowerShell) é interpretada como um erro de encerramento que interrompe o pipeline, mas não o Windows PowerShell como um todo. (Isso se aplica somente ao thread do cmdlet principal. Exceções não capturadas em threads gerados pelo cmdlet, em geral, interrompem o host do Windows PowerShell.) Recomendamos que você use [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) em vez de lançar uma exceção porque o registro de erro fornece informações adicionais sobre a condição de erro, que é útil para o usuário final. Os cmdlets devem honrar a diretriz de código gerenciado contra a captura e manipulação de todas as exceções (`catch (Exception e)`). Converta somente exceções de tipos conhecidos e esperados em registros de erros.
+É possível que um cmdlet lance uma exceção em sua implementação do método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)ou [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Qualquer exceção gerada a partir desses métodos (com exceção de algumas condições de erro graves que interrompem o host do Windows PowerShell) é interpretada como um erro de encerramento que interrompe o pipeline, mas não o Windows PowerShell como um todo. (Isso se aplica somente ao thread do cmdlet principal. Exceções não capturadas em threads gerados pelo cmdlet, em geral, interrompem o host do Windows PowerShell.) Recomendamos que você use [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) em vez de lançar uma exceção porque o registro de erro fornece informações adicionais sobre a condição de erro, que é útil para o usuário final. Os cmdlets devem honrar a diretriz de código gerenciado contra a captura e manipulação de todas as exceções ( `catch (Exception e)` ). Converta somente exceções de tipos conhecidos e esperados em registros de erros.
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -45,6 +38,6 @@ Os cmdlets podem chamar [System. Management. Automation. cmdlet. ThrowTerminatin
 
 [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
-[Registros de erro do Windows PowerShell](./windows-powershell-error-records.md)
+[Registros de erros do Windows PowerShell](./windows-powershell-error-records.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

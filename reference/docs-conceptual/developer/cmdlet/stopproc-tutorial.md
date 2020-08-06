@@ -1,19 +1,12 @@
 ---
 title: Tutorial do StopProc | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a142aeb6-9c11-44a0-b34f-1f9470fa347b
-caps.latest.revision: 5
-ms.openlocfilehash: 27c8e2c7525aba38e69e50b2b7fd3b18b8e54989
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369405"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786468"
 ---
 # <a name="stopproc-tutorial"></a>Tutorial de StopProc
 
@@ -33,11 +26,11 @@ Os tópicos deste tutorial foram criados para serem lidos sequencialmente, com c
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
+[Criar um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Adicionando mensagens de usuário ao seu cmdlet](./adding-user-messages-to-your-cmdlet.md)
+[Adicionar mensagens de usuário para o cmdlet](./adding-user-messages-to-your-cmdlet.md)
 
-[Adicionando aliases, expansão de curinga e ajuda para parâmetros de cmdlet](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
+[Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
 
 [Adicionando conjuntos de parâmetros a cmdlets](./adding-parameter-sets-to-a-cmdlet.md)
 

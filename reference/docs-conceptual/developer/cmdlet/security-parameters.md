@@ -1,19 +1,12 @@
 ---
 title: Parâmetros de segurança | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
-caps.latest.revision: 6
-ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 290905b04547af932182005869b18dc1bc210ca4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369495"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786502"
 ---
 # <a name="security-parameters"></a>Parâmetros de segurança
 
@@ -22,7 +15,7 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 |Parâmetro|Funcionalidade|
 |---|---|
 |**LCA**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para especificar o nível de proteção de controle de acesso para um catálogo ou para um Uniform Resource Identifier (URI).|
-|**Arquivo CertFile**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o nome de um arquivo que contém um dos seguintes:<br>-Um certificado x. 509 codificado em base64 ou Distinguished Encoding Rules (DER)<br>-Um arquivo de #12 PKCS (padrões de criptografia de chave pública) que contém pelo menos um certificado e uma chave|
+|**CertFile**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o nome de um arquivo que contém um dos seguintes:<br>-Um certificado x. 509 codificado em base64 ou Distinguished Encoding Rules (DER)<br>-Um arquivo de #12 PKCS (padrões de criptografia de chave pública) que contém pelo menos um certificado e uma chave|
 |**CertIssuerName**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o nome do emissor de um certificado ou para que o usuário possa especificar uma subcadeia de caracteres.|
 |**CertRequestFile**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para especificar o nome de um arquivo que contém uma solicitação de certificado de #10 PKCS codificada em base64 ou DER.|
 |**CertSerialNumber**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para especificar o número de série que foi emitido pela autoridade de certificação.|
@@ -39,18 +32,18 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 |**Operação**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma ação que pode ser executada em um objeto protegido.|
 |**Principal**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar uma entidade identificável exclusiva para acesso.|
 |**Privilégio**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o direito que um cmdlet precisa para executar uma operação para uma entidade específica.|
-|**Privilégios**<br>Tipo de dados: matriz de privilégios|Implemente esse parâmetro para que o usuário possa especificar os direitos que um cmdlet precisa para executar sua operação para uma determinada entrada.|
+|**Direitos**<br>Tipo de dados: matriz de privilégios|Implemente esse parâmetro para que o usuário possa especificar os direitos que um cmdlet precisa para executar sua operação para uma determinada entrada.|
 |**Função**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um conjunto de operações que podem ser executadas por uma entidade.|
 |**SaveCred**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro de forma que as credenciais que foram salvas anteriormente pelo usuário serão usadas quando o parâmetro for especificado.|
 |**Escopo**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o grupo de objetos protegidos para o cmdlet.|
-|**SID**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
+|**SIDs**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
 |**Confiável**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro para que os níveis de confiança tenham suporte quando o parâmetro for especificado.|
 |**TrustLevel**<br>Tipo de dados: palavra-chave|Implemente esse parâmetro para que o usuário possa especificar o nível de confiança que tem suporte. Por exemplo, os valores possíveis incluem Internet, intranet e FullTrust.|
 
 ## <a name="see-also"></a>Consulte Também
 
-[Parâmetros de cmdlet](./cmdlet-parameters.md)
+[Parâmetros de cmdlets](./cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

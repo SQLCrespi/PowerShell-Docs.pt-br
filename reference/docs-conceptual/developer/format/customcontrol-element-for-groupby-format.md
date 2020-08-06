@@ -1,19 +1,12 @@
 ---
 title: Elemento CustomControl para GroupBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2472e256-8f4f-4288-8b67-a3300649dafa
-caps.latest.revision: 9
-ms.openlocfilehash: 2e84e770a345e272d4c5917b00afe7520840e1db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b8265e872d34ea5dbcedfaa1668d21df8c3b35eb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368955"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786060"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>Elemento CustomControl para GroupBy (formato)
 
@@ -31,30 +24,30 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `CustomControl`. Você pode especificar qualquer número de elementos filho e listá-los em qualquer ordem.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `CustomControl` elemento. Você pode especificar qualquer número de elementos filho e listá-los em qualquer ordem.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomEntries para CustomControl para GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)|Elemento obrigatório.<br /><br /> Fornece as definições para o controle.|
+|[Elemento CustomEntries para CustomControl para GroupBy (formato)](./customentries-element-for-customcontrol-for-groupby-format.md)|Elemento necessário.<br /><br /> Fornece as definições para o controle.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)|Define como o Windows PowerShell exibe um novo grupo de objetos.|
+|[Elemento GroupBy para View (formato)](./groupby-element-for-view-format.md)|Define como o Windows PowerShell exibe um novo grupo de objetos.|
 
 ## <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento CustomEntries para CustomControl para GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)
+[Elemento CustomEntries para CustomControl para GroupBy (formato)](./customentries-element-for-customcontrol-for-groupby-format.md)
 
-[Elemento GroupBy para exibição (formato)](./groupby-element-for-view-format.md)
+[Elemento GroupBy para View (formato)](./groupby-element-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

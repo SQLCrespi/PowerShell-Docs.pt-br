@@ -1,19 +1,12 @@
 ---
 title: Criando uma exibição de tabela | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
-caps.latest.revision: 23
-ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363405"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786145"
 ---
 # <a name="creating-a-table-view"></a>Criar uma exibição de tabela
 
@@ -21,7 +14,7 @@ Uma exibição de tabela exibe dados em uma ou mais colunas. Cada linha na tabel
 
 ## <a name="a-table-view-display"></a>Exibição de uma exibição de tabela
 
-O exemplo a seguir mostra como o Windows PowerShell exibe o objeto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) que é retornado pelo cmdlet [Get-Service](/powershell/module/microsoft.powershell.management/get-service) . Para esse objeto, o Windows PowerShell definiu um modo de exibição de tabela que exibe a propriedade `Status`, a propriedade `Name` (essa propriedade é uma propriedade de alias para a propriedade `ServiceName`) e a propriedade `DisplayName`. Cada linha na tabela representa um objeto retornado pelo cmdlet.
+O exemplo a seguir mostra como o Windows PowerShell exibe o objeto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) que é retornado pelo cmdlet [Get-Service](/powershell/module/microsoft.powershell.management/get-service) . Para esse objeto, o Windows PowerShell definiu um modo de exibição de tabela que exibe a `Status` propriedade, a `Name` Propriedade (essa propriedade é uma propriedade de alias para a `ServiceName` Propriedade) e a `DisplayName` propriedade. Cada linha na tabela representa um objeto retornado pelo cmdlet.
 
 ```output
 Status   Name               DisplayName
@@ -215,7 +208,7 @@ Os seguintes elementos XML podem ser usados para especificar os objetos que são
 
 ## <a name="using-format-strings"></a>Usando cadeias de caracteres de formato
 
-As cadeias de caracteres de formatação podem ser adicionadas a uma exibição para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da propriedade `StartTime`.
+As cadeias de caracteres de formatação podem ser adicionadas a uma exibição para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da `StartTime` propriedade.
 
 ```xml
 <TableColumnItem>
@@ -232,7 +225,7 @@ Os seguintes elementos XML podem ser usados para especificar um padrão de forma
 
 - O elemento [FormatString](./label-element-for-listitem-for-listcontrol-format.md) especifica um padrão de formato que define como o valor de propriedade ou script é exibido.
 
-No exemplo a seguir, o método `ToString` é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString`, que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
+No exemplo a seguir, o `ToString` método é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString` , que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
 
 ```xml
 <ListItem>
@@ -243,7 +236,7 @@ No exemplo a seguir, o método `ToString` é chamado para formatar o valor do sc
 </ListItem>
 ```
 
-O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
+O elemento XML a seguir pode ser usado para chamar o `ToString` método:
 
 - O elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) define a propriedade ou o script cujo valor é exibido na coluna da linha. Um elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) é necessário para cada coluna da linha. A primeira entrada é exibida na primeira coluna, a segunda entrada na segunda coluna e assim por diante.
 
@@ -251,4 +244,4 @@ O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
 
 ## <a name="see-also"></a>Consulte Também
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

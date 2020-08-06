@@ -1,23 +1,16 @@
 ---
 title: Exemplo de StopProcessSample02 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369375"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786434"
 ---
 # <a name="stopprocesssample02-sample"></a>Amostra StopProcessSample02
 
-Este exemplo mostra como escrever um cmdlet que grava mensagens de depuração (WriteDebug), detalhadas (WriteVerbose) e de aviso (WriteWarning) ao parar os processos no computador local. Esse cmdlet é semelhante ao cmdlet `Stop-Process` fornecido pelo Windows PowerShell 2,0.
+Este exemplo mostra como escrever um cmdlet que grava mensagens de depuração (WriteDebug), detalhadas (WriteVerbose) e de aviso (WriteWarning) ao parar os processos no computador local. Esse cmdlet é semelhante ao `Stop-Process` cmdlet fornecido pelo Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
@@ -69,7 +62,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como gravar mensagens de depuração, detalhadas e de aviso usando os métodos `WriteDebug`, `WriteVerbose`e `WriteWarning`.
+Este exemplo mostra como gravar mensagens de depuração, detalhadas e de aviso usando os `WriteDebug` métodos, `WriteVerbose` e `WriteWarning` .
 
 ```csharp
 using System;
@@ -312,4 +305,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

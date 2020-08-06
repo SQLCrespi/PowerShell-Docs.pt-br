@@ -1,19 +1,12 @@
 ---
 title: Elemento TableRowEntry para TableRowEntries para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 18d86af7-7ff9-4968-81be-2caa61937d49
-caps.latest.revision: 10
-ms.openlocfilehash: 946ffb3fe857503c02b9000238a86775969abbd6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361795"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787403"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Elemento TableRowEntry para TableRowEntries para TableControl (formato)
 
@@ -33,35 +26,35 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `TableRowEntry`.
+As seções a seguir descrevem atributos, elementos filho e elemento pai do `TableRowEntry` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para TableRowEntry para TableControl (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Elemento obrigatório.<br /><br /> Define os objetos cujos valores de propriedade são exibidos na linha.|
-|[Elemento TableColumnItems para TableRowEntry para TableControl (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Elemento obrigatório.<br /><br /> Define as propriedades ou os scripts cujos valores são exibidos.|
+|[Elemento EntrySelectedBy para TableRowEntry para TableControl (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Define os objetos cujos valores de propriedade são exibidos na linha.|
+|[Elemento TableColumnItems para TableRowEntry para TableControl (formato)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Define as propriedades ou os scripts cujos valores são exibidos.|
 |[Elemento Wrap para TableRowEntry para TableControl (Format)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Especifica que o texto que excede a largura da coluna é exibido na próxima linha.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableRowEntries para TableControl (Format)](./tablerowentries-element-for-tablecontrol-format.md)|Define as linhas da tabela.|
+|[Elemento TableRowEntries para TableControl (formato)](./tablerowentries-element-for-tablecontrol-format.md)|Define as linhas da tabela.|
 
 ## <a name="remarks"></a>Comentários
 
-Um elemento `TableColumnItems` e um elemento `EntrySelectedBy` devem ser especificados.
+Um `TableColumnItems` elemento e um `EntrySelectedBy` elemento devem ser especificados.
 
 Para obter mais informações sobre os componentes de uma exibição de tabela, consulte [criando uma exibição de tabela](./creating-a-table-view.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um elemento `TableRowEntry` que define uma linha que exibe os valores de duas propriedades do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+O exemplo a seguir mostra um `TableRowEntry` elemento que define uma linha que exibe os valores de duas propriedades do objeto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntry>
@@ -81,14 +74,14 @@ O exemplo a seguir mostra um elemento `TableRowEntry` que define uma linha que e
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
 [Elemento EntrySelectedBy para TableRowEntry para TableControl (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Elemento TableColumnItems para TableRowEntry para TableControl (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
+[Elemento TableColumnItems para TableRowEntry para TableControl (formato)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Elemento TableRowEntries para TableControl (Format)](./tablerowentries-element-for-tablecontrol-format.md)
+[Elemento TableRowEntries para TableControl (formato)](./tablerowentries-element-for-tablecontrol-format.md)
 
 [Elemento Wrap para TableRowEntry para TableControl (Format)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

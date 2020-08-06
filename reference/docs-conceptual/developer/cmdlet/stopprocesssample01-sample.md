@@ -1,23 +1,16 @@
 ---
 title: Exemplo de StopProcessSample01 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
-caps.latest.revision: 9
-ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365295"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786451"
 ---
 # <a name="stopprocesssample01-sample"></a>Amostra StopProcessSample01
 
-Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um parâmetro de `PassThru` indicando que o usuário deseja que o cmdlet retorne um objeto. Esse cmdlet é semelhante ao cmdlet `Stop-Process` fornecido pelo Windows PowerShell 2,0.
+Este exemplo mostra como escrever um cmdlet que solicita comentários do usuário antes de tentar parar um processo e como implementar um `PassThru` parâmetro que indica que o usuário deseja que o cmdlet retorne um objeto. Esse cmdlet é semelhante ao `Stop-Process` cmdlet fornecido pelo Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
@@ -61,11 +54,11 @@ Este exemplo demonstra o seguinte.
 
 - Chamando o método ShouldProcess para solicitar confirmação.
 
-- Implementar um parâmetro `PassThru` que indica se o usuário deseja que o cmdlet retorne um objeto. Por padrão, esse cmdlet não retorna um objeto para o pipeline.
+- Implementar um `PassThru` parâmetro que indica se o usuário deseja que o cmdlet retorne um objeto. Por padrão, esse cmdlet não retorna um objeto para o pipeline.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como implementar um parâmetro `PassThru` que indica que o usuário deseja que o cmdlet retorne um objeto e como solicitar comentários do usuário por meio de chamadas para os métodos `ShouldProcess` e `ShouldContinue`.
+Este exemplo mostra como implementar um `PassThru` parâmetro que indica que o usuário deseja que o cmdlet retorne um objeto e como solicitar comentários do usuário por meio de chamadas para `ShouldProcess` os `ShouldContinue` métodos e.
 
 ```csharp
 using System;
@@ -265,4 +258,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

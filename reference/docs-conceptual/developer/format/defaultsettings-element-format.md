@@ -1,19 +1,12 @@
 ---
 title: Elemento DefaultSettings (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
-caps.latest.revision: 11
-ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363865"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787726"
 ---
 # <a name="defaultsettings-element-format"></a>Elemento DefaultSettings (formato)
 
@@ -35,23 +28,23 @@ Elemento Configuration (formato) DefaultSettings Element (Format)
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `DefaultSettings`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `DefaultSettings` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento DisplayError (Format)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro durante a exibição de um dado.|
-|[Elemento EnumerableExpansions (Format)](./enumerableexpansions-element-format.md)|Elemento opcional.<br /><br /> Define as diferentes maneiras como os objetos .NET são expandidos quando são exibidos em uma exibição.|
+|[Elemento DisplayError (formato)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro durante a exibição de um dado.|
+|[Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)|Elemento opcional.<br /><br /> Define as diferentes maneiras como os objetos .NET são expandidos quando são exibidos em uma exibição.|
 |[PropertyCountForTable (formato)](./propertycountfortable-element-format.md)|Elemento opcional.<br /><br /> Especifica o número mínimo de propriedades que um objeto deve ter para exibir o objeto em uma exibição de tabela.|
-|[Elemento TextError (formato)](./showerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que o registro de erro completo é exibido quando ocorre um erro durante a exibição de um dado.|
-|[Elemento WrapTables (Format)](./wraptables-element-format.md)|Elemento opcional.<br /><br /> Especifica que os dados em uma tabela serão movidos para a próxima linha se não couberem na largura da coluna.|
+|[Elemento ShowError (formato)](./showerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que o registro de erro completo é exibido quando ocorre um erro durante a exibição de um dado.|
+|[Elemento WrapTables (formato)](./wraptables-element-format.md)|Elemento opcional.<br /><br /> Especifica que os dados em uma tabela serão movidos para a próxima linha se não couberem na largura da coluna.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -63,14 +56,14 @@ Nenhum.
 
 [Elemento de configuração](./configuration-element-format.md)
 
-[Elemento DisplayError (Format)](./displayerror-element-format.md)
+[Elemento DisplayError (formato)](./displayerror-element-format.md)
 
-[Elemento EnumerableExpansions (Format)](./enumerableexpansions-element-format.md)
+[Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)
 
 [PropertyCountForTable (formato)](./propertycountfortable-element-format.md)
 
-[Elemento TextError (formato)](./showerror-element-format.md)
+[Elemento ShowError (formato)](./showerror-element-format.md)
 
-[Elemento WrapTables (Format)](./wraptables-element-format.md)
+[Elemento WrapTables (formato)](./wraptables-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

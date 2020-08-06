@@ -1,19 +1,12 @@
 ---
 title: Elemento CustomEntries para CustomControl para exibição (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: cb412831-94f7-4054-b19e-32c1b14c66dd
-caps.latest.revision: 11
-ms.openlocfilehash: 827baacd22ef258dd9b0c8a383a23fce7d975f7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c89eb25f6922a92e2c18298d0128c4c2ca93df3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364075"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785958"
 ---
 # <a name="customentries-element-for-customcontrol-for-view-format"></a>Elemento CustomEntries para CustomControl para View (formato)
 
@@ -31,32 +24,32 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `CustomControlEntries`. Você deve especificar um ou mais elementos filho.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `CustomControlEntries` elemento. Você deve especificar um ou mais elementos filho.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomEntry para CustomEntries para exibição (formato)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|Elemento obrigatório.<br /><br /> Fornece uma definição da exibição de controle personalizado.|
+|[Elemento CustomEntry para CustomEntries para exibição (formato)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|Elemento necessário.<br /><br /> Fornece uma definição da exibição de controle personalizado.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomControl para exibição (formato)](./customcontrol-element-for-view-format.md)|Elemento obrigatório.<br /><br /> Define um formato de controle personalizado para a exibição.|
+|[Elemento CustomControl para View (formato)](./customcontrol-element-for-view-format.md)|Elemento necessário.<br /><br /> Define um formato de controle personalizado para a exibição.|
 
 ## <a name="remarks"></a>Comentários
 
-Na maioria dos casos, um controle tem apenas uma definição, que é definida em um único elemento `CustomEntry`. No entanto, é possível ter várias definições se você quiser usar o mesmo controle para exibir diferentes objetos .NET. Nesses casos, você pode definir um elemento `CustomEntry` para cada objeto ou conjunto de objetos.
+Na maioria dos casos, um controle tem apenas uma definição, que é definida em um único `CustomEntry` elemento. No entanto, é possível ter várias definições se você quiser usar o mesmo controle para exibir diferentes objetos .NET. Nesses casos, você pode definir um `CustomEntry` elemento para cada objeto ou conjunto de objetos.
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento CustomControl para exibição (formato)](./customcontrol-element-for-view-format.md)
+[Elemento CustomControl para View (formato)](./customcontrol-element-for-view-format.md)
 
 [Elemento CustomEntry para CustomEntries para exibição (formato)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

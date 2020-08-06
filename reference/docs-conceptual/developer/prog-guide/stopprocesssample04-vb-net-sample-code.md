@@ -1,28 +1,21 @@
 ---
 title: Código de exemplo do StopProcessSample04 (VB.NET) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
-caps.latest.revision: 5
-ms.openlocfilehash: 3e709f0897b0d77f4c5f12e1c042edd4e24b142a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5526bec79f3bb38f0de11680302a94699240a3d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417812"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786978"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>Código de exemplo StopProcessSample04 (VB.NET)
 
-Aqui está o código de exemplo VB.NET completo para o cmdlet de exemplo StopProc04. Este é o código para o cmdlet `Stop-Process` descrito em [Adicionando conjuntos de parâmetros a um cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). O cmdlet `Stop-Process` foi projetado para interromper processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Aqui está o código de exemplo VB.NET completo para o cmdlet de exemplo StopProc04. Este é o código para o `Stop-Process` cmdlet descrito em [Adicionando conjuntos de parâmetros a um cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). O `Stop-Process` cmdlet é projetado para interromper processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
 > Você pode baixar o arquivo de origem VB.NET (stopprocesssample04. vb) para este cmdlet Stop-proc usando o Software Development Kit do Microsoft Windows para Windows Vista e .NET Framework os componentes de tempo de execução do 3,0. Para obter instruções de download, consulte [como instalar o Windows PowerShell e baixar o SDK do Windows PowerShell](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Os arquivos de origem baixados estão disponíveis no **\<exemplos do PowerShell >** diretório.
+> Os arquivos de origem baixados estão disponíveis no **\<PowerShell Samples>** diretório.
 
 ```vb
 Imports System

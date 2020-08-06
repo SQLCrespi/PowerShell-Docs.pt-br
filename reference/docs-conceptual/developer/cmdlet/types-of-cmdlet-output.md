@@ -1,21 +1,14 @@
 ---
 title: Tipos de saída de cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
-ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
-caps.latest.revision: 12
-ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561400"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786349"
 ---
 # <a name="types-of-cmdlet-output"></a>Tipos de saída de cmdlet
 
@@ -62,9 +55,9 @@ Para todas as chamadas de método de gravação, a exibição de conteúdo é de
 
 ## <a name="accessing-the-output-functionality-of-a-host-application"></a>Acessando a funcionalidade de saída de um aplicativo host
 
-Você também pode criar um cmdlet para acessar diretamente a funcionalidade de saída de um aplicativo host por meio do tempo de execução do PowerShell. Usar as APIs de host fornecidas pelo PowerShell em vez de [System. console](/dotnet/api/System.Console) ou [System. Windows. Forms](/dotnet/api/System.Windows.Forms) garante que o cmdlet funcionará com uma variedade de hosts. Por exemplo: o host do console do **PowerShell. exe** , o host gráfico **Powershell_ise. exe** , o host remoto do PowerShell e hosts de terceiros.
+Você também pode criar um cmdlet para acessar diretamente a funcionalidade de saída de um aplicativo host por meio do tempo de execução do PowerShell. Usar as APIs de host fornecidas pelo PowerShell em vez de [System. console](/dotnet/api/System.Console) ou [System. Windows. Forms](/dotnet/api/System.Windows.Forms) garante que o cmdlet funcionará com uma variedade de hosts. Por exemplo: o host do console do **powershell.exe** , o host de **powershell_ise.exe** gráfico, o host de comunicação remota do PowerShell e hosts de terceiros.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Conceitos de relatórios de erro](./error-reporting-concepts.md)
 

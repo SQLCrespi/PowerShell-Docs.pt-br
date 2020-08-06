@@ -1,19 +1,12 @@
 ---
 title: Criando uma exibição ampla | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
-caps.latest.revision: 16
-ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0cf6a35201c47e4b12dd160191570eccec3427ef
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368945"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786128"
 ---
 # <a name="creating-a-wide-view"></a>Criar uma exibição ampla
 
@@ -220,7 +213,7 @@ Para obter um exemplo de um arquivo de formatação completo que define grupos, 
 
 ## <a name="using-format-strings"></a>Usando cadeias de caracteres de formato
 
-As cadeias de caracteres de formatação podem ser adicionadas a uma exibição ampla para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da propriedade `StartTime`.
+As cadeias de caracteres de formatação podem ser adicionadas a uma exibição ampla para definir ainda mais como os dados são exibidos. O exemplo a seguir mostra como definir uma cadeia de caracteres de formatação para o valor da `StartTime` propriedade.
 
 ```xml
 <WideItem>
@@ -239,7 +232,7 @@ Os seguintes elementos XML podem ser usados para especificar um padrão de forma
 
 - O elemento [scriptblock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) (não mostrado) especifica o script cujo valor é exibido pela exibição. Você deve especificar um script ou uma propriedade, mas não pode especificar ambos.
 
-No exemplo a seguir, o método `ToString` é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString`, que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
+No exemplo a seguir, o `ToString` método é chamado para formatar o valor do script. Os scripts podem chamar qualquer método de um objeto. Portanto, se um objeto tiver um método, como `ToString` , que tem parâmetros de formatação, o script poderá chamar esse método para formatar o valor de saída do script.
 
 ```xml
 <WideItem>
@@ -250,7 +243,7 @@ No exemplo a seguir, o método `ToString` é chamado para formatar o valor do sc
 </WideItem>
 ```
 
-O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
+O elemento XML a seguir pode ser usado para chamar o `ToString` método:
 
 - O elemento [WideItem](./wideitem-element-for-widecontrol-format.md) especifica os dados que são exibidos pela exibição.
 
@@ -258,8 +251,8 @@ O elemento XML a seguir pode ser usado para chamar o método de `ToString`:
 
 ## <a name="see-also"></a>Consulte Também
 
-[Exibição ampla (básica)](./wide-view-basic.md)
+[Exibição ampla (Básica)](./wide-view-basic.md)
 
-[Modo de exibição largo (GroupBy)](./wide-view-groupby.md)
+[Exibição ampla (GroupBy)](./wide-view-groupby.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

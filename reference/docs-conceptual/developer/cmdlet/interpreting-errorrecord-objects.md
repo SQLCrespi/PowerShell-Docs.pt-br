@@ -1,19 +1,12 @@
 ---
 title: Interpretando objetos ErrorRecord | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365415"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786587"
 ---
 # <a name="interpreting-errorrecord-objects"></a>Interpretar objetos ErrorRecord
 
@@ -52,7 +45,7 @@ O cmdlet pode especificar as categorias CloseError, OpenError, invalidatype, Rea
 
 A exceção incluída no registro de erro é fornecida pelo cmdlet e pode ser acessada por meio da propriedade [System. Management. Automation. ErrorRecord. Exception *](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) do objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) .
 
-Os aplicativos host podem usar a palavra-chave `is` para identificar que a exceção é de uma classe específica ou de uma classe derivada. É melhor ramificar o tipo de exceção, conforme mostrado no exemplo a seguir.
+Os aplicativos host podem usar a `is` palavra-chave para identificar que a exceção é de uma classe específica ou de uma classe derivada. É melhor ramificar o tipo de exceção, conforme mostrado no exemplo a seguir.
 
 `if (MyNonTerminatingError.Exception is AccessDeniedException)`
 
@@ -68,7 +61,7 @@ O FQID foi projetado para ser inspecionado como uma única cadeia de caracteres.
 
 No exemplo anterior, o primeiro token é o identificador de erro, que é seguido pelo nome da classe de cmdlet. O identificador de erro pode ser um único token ou pode ser um identificador separado por ponto que permite a ramificação na inspeção do identificador. Não use espaço em branco ou pontuação no identificador de erro. É especialmente importante não usar uma vírgula; uma vírgula é usada pelo Windows PowerShell para separar o identificador e o nome da classe do cmdlet.
 
-### <a name="other-information"></a>Outras informações
+### <a name="other-information"></a>Outras Informações
 
 O objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) também pode fornecer informações que descrevem o ambiente no qual o erro ocorreu. Essas informações incluem itens como detalhes do erro, informações de invocação e o objeto de destino que estava sendo processado quando o erro ocorreu. Embora essas informações possam ser úteis para o aplicativo host, ela normalmente não é usada para identificar o erro. Essas informações estão disponíveis por meio das seguintes propriedades:
 
@@ -90,8 +83,8 @@ O objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Manage
 
 [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[Adicionando relatórios de erros não conclusivos ao seu cmdlet](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
+[Adicionar relatórios de erros de não encerramento ao seu cmdlet](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
 
 [Relatório de erros do Windows PowerShell](./error-reporting-concepts.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

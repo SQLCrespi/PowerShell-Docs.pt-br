@@ -1,23 +1,16 @@
 ---
 title: Como criar um provedor do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - providers [PowerShell Programmer's Guide]
 - providers [PowerShellProgrammer's Guide], creating
 - Windows PowerShell Programmer's Guide, providers
-ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
-caps.latest.revision: 5
-ms.openlocfilehash: 4c84d015aba327c0ab039558414c5777d43ec4ba
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 5e7424c035d22d0f5eb154b369427a6da80b1c49
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870873"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787097"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Como criar um provedor do Windows PowerShell
 
@@ -29,7 +22,7 @@ Para o desenvolvedor, o provedor do Windows PowerShell é a interface entre o us
 
 O Windows PowerShell fornece vários provedores (como o provedor FileSystem, o provedor de registro e o provedor de alias) usados para acessar armazenamentos de dados conhecidos. Para obter mais informações sobre os provedores fornecidos pelo Windows PowerShell, use o seguinte comando para acessar a ajuda online:
 
-**PS > Get-Help about_providers**
+**PS>Get-Help about_providers**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Acessando os dados armazenados usando caminhos do Windows PowerShell
 
@@ -47,20 +40,20 @@ O Windows PowerShell aplica as seguintes regras para uma unidade do Windows Powe
 
 ## <a name="in-this-section"></a>Nesta seção
 
-A tabela a seguir lista os tópicos que incluem exemplos de código que se baseiam um no outro. A partir do segundo tópico, o provedor básico do Windows PowerShell pode ser inicializado e não inicializado pelo tempo de execução do Windows PowerShell, o próximo tópico adiciona a funcionalidade para acessar os dados, o próximo tópico adiciona a funcionalidade para manipular os dados ( os itens nos dados armazenados) e assim por diante.
+A tabela a seguir lista os tópicos que incluem exemplos de código que se baseiam um no outro. A partir do segundo tópico, o provedor básico do Windows PowerShell pode ser inicializado e não inicializado pelo tempo de execução do Windows PowerShell, o próximo tópico adiciona a funcionalidade para acessar os dados, o próximo tópico adiciona funcionalidade para manipular os dados (os itens nos dados armazenados) e assim por diante.
 
 |                                                    Tópico                                                    |                                                                                         Definição                                                                                          |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Criando seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)               | Este tópico discute as coisas que você deve considerar antes de implementar um provedor do Windows PowerShell. Ele resume as classes base do provedor do Windows PowerShell e as interfaces que são usadas. |
-| [Criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)           | Este tópico mostra como criar um provedor do Windows PowerShell que permite que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor.                                        |
-| [Criando um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)           | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário acessar um armazenamento de dados por meio de uma unidade do Windows PowerShell.                                                |
-| [Criando um provedor de item do Windows PowerShell](./creating-a-windows-powershell-item-provider.md)             | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular os itens em um armazenamento de dados.                                                                  |
-| [Criando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md)   | Este tópico mostra como criar um provedor do Windows PowerShell que permite que o usuário trabalhe em armazenamentos de dados de várias camadas.                                                                        |
-| [Criando um provedor de navegação do Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md) | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário navegar pelos itens de um armazenamento de dados de maneira hierárquica.                                           |
-| [Criando um provedor de conteúdo do Windows PowerShell](./creating-a-windows-powershell-content-provider.md)       | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular o conteúdo de itens em um armazenamento de dados.                                                       |
-| [Criando um provedor de propriedades do Windows PowerShell](./creating-a-windows-powershell-property-provider.md)     | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular as propriedades de itens em um armazenamento de dados.                                                    |
+| [Projetar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)               | Este tópico discute as coisas que você deve considerar antes de implementar um provedor do Windows PowerShell. Ele resume as classes base do provedor do Windows PowerShell e as interfaces que são usadas. |
+| [Criar um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)           | Este tópico mostra como criar um provedor do Windows PowerShell que permite que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor.                                        |
+| [Criar um provedor de unidade do Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)           | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário acessar um armazenamento de dados por meio de uma unidade do Windows PowerShell.                                                |
+| [Criar um provedor de itens do Windows PowerShell](./creating-a-windows-powershell-item-provider.md)             | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular os itens em um armazenamento de dados.                                                                  |
+| [Criar um provedor de contêineres do Windows PowerShell](./creating-a-windows-powershell-container-provider.md)   | Este tópico mostra como criar um provedor do Windows PowerShell que permite que o usuário trabalhe em armazenamentos de dados de várias camadas.                                                                        |
+| [Criar um provedor de navegação do Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md) | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário navegar pelos itens de um armazenamento de dados de maneira hierárquica.                                           |
+| [Criar um provedor de conteúdo do Windows PowerShell](./creating-a-windows-powershell-content-provider.md)       | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular o conteúdo de itens em um armazenamento de dados.                                                       |
+| [Criar um provedor de propriedade do Windows PowerShell](./creating-a-windows-powershell-property-provider.md)     | Este tópico mostra como criar um provedor do Windows PowerShell que permite ao usuário manipular as propriedades de itens em um armazenamento de dados.                                                    |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Como funciona o Windows PowerShell](/previous-versions/ms714658(v=vs.85))
 

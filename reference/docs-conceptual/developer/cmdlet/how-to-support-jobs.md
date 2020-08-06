@@ -1,19 +1,12 @@
 ---
 title: Como dar suporte a trabalhos | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
-caps.latest.revision: 9
-ms.openlocfilehash: 65f6b3d44910a0a3e848b4d2cd3e619186e5ed25
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706233"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786621"
 ---
 # <a name="how-to-support-jobs"></a>Como dar suporte a trabalhos
 
@@ -21,7 +14,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
 ## <a name="to-support-jobs"></a>Para dar suporte a trabalhos
 
-1. Defina um parâmetro de opção de `AsJob` para que o usuário possa decidir se deseja executar o cmdlet como um trabalho.
+1. Defina um `AsJob` parâmetro de opção para que o usuário possa decidir se deseja executar o cmdlet como um trabalho.
 
     O exemplo a seguir mostra uma declaração de parâmetro AsJob.
 
@@ -47,7 +40,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. Em um método de processamento de registros, adicione uma instrução `if` para detectar se o cmdlet deve ser executado como um trabalho. O código a seguir usa o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
+3. Em um método de processamento de registros, adicione uma `if` instrução para detectar se o cmdlet deve ser executado como um trabalho. O código a seguir usa o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
 
     ```csharp
     protected override void ProcessRecord()
@@ -154,7 +147,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06Output](msh_samplesGetProc06#GetProc06Output)]  -->
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O código de exemplo a seguir mostra o código para um cmdlet **Get-proc** que pode recuperar processos internamente ou usando um trabalho em segundo plano.
 

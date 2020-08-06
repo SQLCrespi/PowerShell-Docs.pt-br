@@ -1,23 +1,16 @@
 ---
 title: Criando um provedor de unidade do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - drive providers [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], drive provider
 - drives [PowerShell Programmer's Guide]
-ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
-caps.latest.revision: 6
-ms.openlocfilehash: 88be7cc6cc0ab54604bc9de71e0ae07c20457514
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978450"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787182"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Criar um provedor de unidade do Windows PowerShell
 
@@ -44,7 +37,7 @@ No entanto, a maioria dos provedores (incluindo o provedor descrito aqui) pode u
 
 Todos os provedores do Windows PowerShell são considerados sem monitoração de estado, o que significa que o seu provedor de unidade precisa criar qualquer informação de estado necessária para o tempo de execução do Windows PowerShell quando ele chama seu provedor.
 
-Para este provedor de unidade, as informações de estado incluem a conexão com o banco de dados que é mantido como parte das informações da unidade. Aqui está o código que mostra como essas informações são armazenadas no objeto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) que descreve a unidade:
+Para este provedor de unidade, as informações de estado incluem a conexão com o banco de dados que é mantido como parte das informações da unidade. Aqui está o código que mostra como essas informações são armazenadas no objeto [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) que descreve a unidade:
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="130-151":::
 
@@ -56,17 +49,17 @@ Para permitir que o tempo de execução do Windows PowerShell crie uma unidade, 
 
 A substituição desse método deve fazer o seguinte:
 
-- Verifique se o membro [System. Management. Automation. PSDriveinfo. raiz *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) existe e se uma conexão com o repositório de dados pode ser feita.
-- Crie uma unidade e preencha o membro de conexão, em suporte ao cmdlet `New-PSDrive`.
-- Valide o objeto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) para a unidade proposta.
-- Modifique o objeto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) que descreve a unidade com qualquer informação de desempenho ou confiabilidade necessária ou forneça dados adicionais para os chamadores usando a unidade.
-- Manipule falhas usando o método [System. Management. Automation. Provider. cmdletprovider. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) e, em seguida, retorne `null`.
+- Verifique se o [System.Management.Automation.PSDriveinfo. O membro raiz *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) existe e pode ser feita uma conexão com o armazenamento de dados.
+- Crie uma unidade e preencha o membro de conexão, em suporte ao `New-PSDrive` cmdlet.
+- Valide o [System.Management.Automation.PSDobjeto riveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) para a unidade proposta.
+- Modifique o objeto [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) que descreve a unidade com qualquer informação de desempenho ou confiabilidade necessária ou forneça dados adicionais para os chamadores usando a unidade.
+- Lide com falhas usando o método [System. Management. Automation. Provider. cmdletprovider. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) e, em seguida, Return `null` .
 
   Esse método retorna as informações da unidade que foram passadas para o método ou uma versão específica do provedor.
 
 ## <a name="attaching-dynamic-parameters-to-newdrive"></a>Anexando parâmetros dinâmicos a NewDrive
 
-O cmdlet `New-PSDrive` suportado pelo seu provedor de unidade pode exigir parâmetros adicionais. Para anexar esses parâmetros dinâmicos ao cmdlet, o provedor implementa o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Esse método retorna um objeto que tem propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+O `New-PSDrive` cmdlet com suporte pelo seu provedor de unidade pode exigir parâmetros adicionais. Para anexar esses parâmetros dinâmicos ao cmdlet, o provedor implementa o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) . Esse método retorna um objeto que tem propriedades e campos com atributos de análise semelhantes a uma classe de cmdlet ou um objeto [System. Management. Automation. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Este provedor de unidade não substitui esse método. No entanto, o código a seguir mostra a implementação padrão desse método:
 
@@ -80,21 +73,21 @@ O código a seguir mostra a implementação do método [System. Management. Auto
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="91-116":::
 
-Se a unidade puder ser removida, o método deverá retornar as informações passadas para o método por meio do parâmetro `drive`. Se a unidade não puder ser removida, o método deverá gravar uma exceção e, em seguida, retornar `null`. Se o seu provedor não substituir esse método, a implementação padrão desse método retornará apenas as informações da unidade passadas como entrada.
+Se a unidade puder ser removida, o método deverá retornar as informações passadas para o método por meio do `drive` parâmetro. Se a unidade não puder ser removida, o método deverá gravar uma exceção e, em seguida, retornar `null` . Se o seu provedor não substituir esse método, a implementação padrão desse método retornará apenas as informações da unidade passadas como entrada.
 
 ## <a name="initializing-default-drives"></a>Inicializando unidades padrão
 
-O provedor de unidade implementa o método [System. Management. Automation. Provider. Drivecmdletprovider. Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) para montar unidades. Por exemplo, o provedor de Active Directory pode montar uma unidade para o contexto de nomenclatura padrão se o computador for ingressado em um domínio.
+O provedor de unidade implementa o método [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) para montar unidades. Por exemplo, o provedor de Active Directory pode montar uma unidade para o contexto de nomenclatura padrão se o computador for ingressado em um domínio.
 
 Esse método retorna uma coleção de informações de unidade sobre as unidades inicializadas ou uma coleção vazia. A chamada para esse método é feita depois que o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) para inicializar o provedor.
 
-Este provedor de unidade não substitui o método [System. Management. Automation. Provider. Drivecmdletprovider. Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) . No entanto, o código a seguir mostra a implementação padrão, que retorna uma coleção de unidades vazia:
+Este provedor de unidade não substitui o método [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) . No entanto, o código a seguir mostra a implementação padrão, que retorna uma coleção de unidades vazia:
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinitializedefaultdrives](Msh_samplestestcmdlets#testproviderinitializedefaultdrives)]  -->
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>Coisas a serem lembradas sobre a implementação de InitializeDefaultDrives
 
-Todos os provedores de unidade devem montar uma unidade raiz para ajudar o usuário com a capacidade de descoberta. A unidade raiz pode listar locais que servem como raízes para outras unidades montadas. Por exemplo, o provedor de Active Directory pode criar uma unidade que lista os contextos de nomenclatura encontrados nos atributos de `namingContext` no ambiente de sistema distribuído raiz (DSE). Isso ajuda os usuários a descobrir pontos de montagem para outras unidades.
+Todos os provedores de unidade devem montar uma unidade raiz para ajudar o usuário com a capacidade de descoberta. A unidade raiz pode listar locais que servem como raízes para outras unidades montadas. Por exemplo, o provedor de Active Directory pode criar uma unidade que lista os contextos de nomenclatura encontrados nos `namingContext` atributos no DSE (ambiente de sistema distribuído) raiz. Isso ajuda os usuários a descobrir pontos de montagem para outras unidades.
 
 ## <a name="code-sample"></a>Exemplo de código
 
@@ -104,11 +97,11 @@ Para obter o código de exemplo completo, consulte [exemplo de código AccessDbP
 
 Quando o provedor do Windows PowerShell tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando os cmdlets com suporte na linha de comando, incluindo todos os cmdlets disponibilizados pela derivação. Vamos testar o provedor de unidade de exemplo.
 
-1. Execute o cmdlet `Get-PSProvider` para recuperar a lista de provedores para garantir que o provedor da unidade AccessDB esteja presente:
+1. Execute o `Get-PSProvider` cmdlet para recuperar a lista de provedores para garantir que o provedor da unidade AccessDB esteja presente:
 
-   **> PS `Get-PSProvider`**
+   **> PS`Get-PSProvider`**
 
-   A saída a seguir é exibida:
+   O seguinte resultado é exibido:
 
    ```Output
    Name                 Capabilities                  Drives
@@ -121,7 +114,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    Registry             ShouldProcess                 {HKLM, HKCU}
    ```
 
-2. Certifique-se de que existe um nome de servidor de banco de dados (DSN) para o banco de dado, acessando a parte de **fontes de dados** das **Ferramentas administrativas** do sistema operacional. Na tabela **DSN do usuário** , clique duas vezes em **banco de dados do MS Access** e adicione o caminho da unidade `C:\ps\northwind.mdb`.
+2. Certifique-se de que existe um nome de servidor de banco de dados (DSN) para o banco de dado, acessando a parte de **fontes de dados** das **Ferramentas administrativas** do sistema operacional. Na tabela **DSN de usuário** , clique duas vezes em **banco de dados do MS Access** e adicione o caminho da unidade `C:\ps\northwind.mdb` .
 
 3. Crie uma nova unidade usando o provedor de unidade de exemplo:
 
@@ -129,7 +122,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
    ```
 
-   A saída a seguir é exibida:
+   O seguinte resultado é exibido:
 
    ```Output
    Name     Provider     Root                   CurrentLocation
@@ -142,9 +135,9 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
    > [!NOTE]
    > O usuário ainda não pode interagir com o provedor como uma unidade, pois o provedor precisa de funcionalidade de contêiner para essa interação. Para obter mais informações, consulte [criando um provedor de contêiner do Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
-   **PS > (Get-PSDrive MyDB). Connection**
+   **PS> (Get-PSDrive MyDB). Connection**
 
-   A saída a seguir é exibida:
+   O seguinte resultado é exibido:
 
    ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb
@@ -171,4 +164,4 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
 
 [Criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Criando um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)
+[Criar um provedor básico do Windows PowerShell](./creating-a-basic-windows-powershell-provider.md)

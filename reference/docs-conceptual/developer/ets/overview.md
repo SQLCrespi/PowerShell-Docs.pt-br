@@ -1,13 +1,12 @@
 ---
 title: Visão geral do sistema de tipo estendido
 ms.date: 07/09/2020
-ms.topic: conceptual
-ms.openlocfilehash: 82170bd7e8943f68141159a7ac964f9ec1b2cfbc
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+ms.openlocfilehash: 5c190f0d9b852a4b5658227085092f33d71453c9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217906"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786213"
 ---
 # <a name="extended-type-system-overview"></a>Visão geral do sistema de tipo estendido
 

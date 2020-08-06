@@ -1,19 +1,12 @@
 ---
 title: Elemento Controls para View (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3bd82666-447f-40fe-bd87-c8b182522f4f
-caps.latest.revision: 14
-ms.openlocfilehash: 477b8b54c8edd2fa0e6939041d04322d861197c9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 26b7e73afd465b1be9632cd71a75e4be6cc4aeca
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363385"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786162"
 ---
 # <a name="controls-element-for-view-format"></a>Elemento Controls para View (formato)
 
@@ -31,19 +24,19 @@ Elemento de configuração (Format) elemento ViewDefinitions (formato) exibir el
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e os elementos pai do elemento `Controls`. Esse elemento deve ter pelo menos um elemento filho. Não há um número máximo de elementos filho, nem sua ordem é significativa.
+As seções a seguir descrevem os atributos, os elementos filho e os elementos pai do `Controls` elemento. Esse elemento deve ter pelo menos um elemento filho. Não há um número máximo de elementos filho, nem sua ordem é significativa.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento Control para controles para View (Format)](./control-element-for-controls-for-view-format.md)|Define um controle que pode ser usado pela exibição.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -57,4 +50,4 @@ Nenhum.
 
 [Elemento View (formato)](./view-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
