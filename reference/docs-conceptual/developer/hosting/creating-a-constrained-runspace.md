@@ -1,23 +1,16 @@
 ---
 title: Criando um runspace restrito | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367645"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779804"
 ---
 # <a name="creating-a-constrained-runspace"></a>Criar um runspace com restrição
 
-Por motivos de desempenho ou de segurança, talvez você queira restringir os comandos do Windows PowerShell disponíveis para seu aplicativo host. Para fazer isso, você cria um [System. Management. Automation. Runspaces. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) vazio chamando o método [System. Management. Automation. Runspaces. Initialsessionstate. Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) e, em seguida, adiciona apenas os comandos que você deseja disponibilizar.
+Por motivos de desempenho ou de segurança, talvez você queira restringir os comandos do Windows PowerShell disponíveis para seu aplicativo host. Para fazer isso, você cria um [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) vazio chamando o [System.Management.Automation.Runspaces.Initialsessionstate. Crie](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) o método * e, em seguida, adicione apenas os comandos que você deseja disponibilizar.
 
  Usar um runspace que carrega apenas os comandos que você especificar fornece um desempenho significativamente aprimorado.
 
@@ -122,4 +115,4 @@ this.runspace.Open();
 
 ## <a name="see-also"></a>Consulte Também
 
- [Criando um InitialSessionState](./creating-an-initialsessionstate.md)
+ [Criar um InitialSessionState](./creating-an-initialsessionstate.md)

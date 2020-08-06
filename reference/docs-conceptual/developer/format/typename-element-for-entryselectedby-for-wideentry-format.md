@@ -1,25 +1,18 @@
 ---
 title: Elemento TypeName para EntrySelectedBy para WideEntry (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 81a91c74-6229-4b64-aa2b-9123e8b7e9e5
-caps.latest.revision: 11
-ms.openlocfilehash: be35f6e9e2ad0b2d9a21a91c053aa0f70cafaf9c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361615"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780178"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>Elemento TypeName para EntrySelectedBy para WideEntry (formato)
 
 Especifica um tipo .NET para a definição. A definição é usada sempre que este objeto é exibido.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) WideControl elemento (Format) WideEntries Element (Format) WideEntry elemento (Format) EntrySelectedBy Element para WideEntry (Format) TypeName Element para WideEntry ( Ao
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) WideControl elemento (Format) WideEntries Element (Format) WideEntry elemento (Format) EntrySelectedBy Element para WideEntry (Format) TypeName Element for WideEntry (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,25 +22,25 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `TypeName`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `TypeName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Define os tipos .NET que usam essa entrada ampla ou a condição que deve existir para que essa entrada seja usada.|
+|[Elemento EntrySelectedBy para WideEntry (formato)](./entryselectedby-element-for-wideentry-format.md)|Define os tipos .NET que usam essa entrada ampla ou a condição que deve existir para que essa entrada seja usada.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
+Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>Comentários
 
@@ -57,8 +50,8 @@ Para obter mais informações sobre outros componentes de uma exibição ampla, 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição ampla](./creating-a-wide-view.md)
+[Criar uma exibição ampla](./creating-a-wide-view.md)
 
-[Elemento EntrySelectedBy para WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)
+[Elemento EntrySelectedBy para WideEntry (formato)](./entryselectedby-element-for-wideentry-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

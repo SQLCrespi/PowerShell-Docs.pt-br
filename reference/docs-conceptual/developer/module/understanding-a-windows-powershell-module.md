@@ -1,19 +1,12 @@
 ---
 title: Compreendendo um módulo do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
-caps.latest.revision: 19
-ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79407149"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779226"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Noções básicas sobre um módulo do Windows PowerShell
 
@@ -51,11 +44,11 @@ Assim como acontece com os módulos de script, você pode incluir um arquivo de 
 
 ### <a name="manifest-modules"></a>Módulos de manifesto
 
-Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem nenhum tipo de assembly ou script de núcleo. (Formalmente, um módulo de manifesto deixa o `ModuleToProcess` ou `RootModule` elemento do manifesto vazio.) No entanto, você ainda pode usar os outros recursos de um módulo, como a capacidade de carregar assemblies dependentes ou executar automaticamente determinados scripts de pré-processamento. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar recursos que outros módulos usarão, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
+Um *módulo de manifesto* é um módulo que usa um arquivo de manifesto para descrever todos os seus componentes, mas não tem nenhum tipo de assembly ou script de núcleo. (Formalmente, um módulo de manifesto deixa `ModuleToProcess` o `RootModule` elemento ou do manifesto vazio.) No entanto, você ainda pode usar os outros recursos de um módulo, como a capacidade de carregar assemblies dependentes ou executar automaticamente determinados scripts de pré-processamento. Você também pode usar um módulo de manifesto como uma maneira conveniente de empacotar recursos que outros módulos usarão, como módulos aninhados, assemblies, tipos ou formatos. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
 ### <a name="dynamic-modules"></a>Módulos dinâmicos
 
-Um *módulo dinâmico* é um módulo que não é carregado de um arquivo ou salvo nele. Em vez disso, eles são criados dinamicamente por um script, usando o cmdlet [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) . Esse tipo de módulo permite que um script crie um módulo sob demanda que não precise ser carregado nem salvo no armazenamento persistente. Por sua natureza, um módulo dinâmico deve ser de curta duração e, portanto, não pode ser acessado pelo cmdlet `Get-Module`. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem eles provavelmente precisam de pastas permanentes para armazenar seus assemblies relacionados.
+Um *módulo dinâmico* é um módulo que não é carregado de um arquivo ou salvo nele. Em vez disso, eles são criados dinamicamente por um script, usando o cmdlet [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) . Esse tipo de módulo permite que um script crie um módulo sob demanda que não precise ser carregado nem salvo no armazenamento persistente. Por sua natureza, um módulo dinâmico deve ser de curta duração e, portanto, não pode ser acessado pelo `Get-Module` cmdlet. Da mesma forma, eles geralmente não precisam de manifestos de módulo, nem eles provavelmente precisam de pastas permanentes para armazenar seus assemblies relacionados.
 
 ## <a name="module-manifests"></a>Manifestos de módulo
 
@@ -85,13 +78,13 @@ Um *manifesto de módulo* é um arquivo. psd1 que contém uma tabela de hash. As
 
 Depois de criar um módulo script, binário ou manifesto, você pode salvar seu trabalho em um local que outras pessoas possam acessá-lo. Por exemplo, o módulo pode ser armazenado na pasta do sistema em que o Windows PowerShell está instalado ou pode ser armazenado em uma pasta de usuário.
 
-Em termos gerais, você pode determinar onde você deve instalar o módulo usando um dos caminhos armazenados na variável `$ENV:PSModulePath`. Usar um desses caminhos significa que o PowerShell pode localizar e carregar automaticamente seu módulo quando um usuário fizer uma chamada para ele em seu código. Se você armazenar seu módulo em outro lugar, poderá explicitamente permitir que o PowerShell saiba passando o local do seu módulo como um parâmetro ao chamar `Install-Module`.
+Em termos gerais, você pode determinar onde você deve instalar o módulo usando um dos caminhos armazenados na `$ENV:PSModulePath` variável. Usar um desses caminhos significa que o PowerShell pode localizar e carregar automaticamente seu módulo quando um usuário fizer uma chamada para ele em seu código. Se você armazenar seu módulo em outro lugar, poderá explicitamente permitir que o PowerShell saiba passando o local do seu módulo como um parâmetro quando você chamar `Install-Module` .
 
 Independentemente, o caminho da pasta é chamado de *base* do módulo (ModuleBase), e o nome do arquivo de módulo script, binário ou manifesto deve ser o mesmo que o nome da pasta do módulo, com as seguintes exceções:
 
-- Módulos dinâmicos criados pelo cmdlet `New-Module` podem ser nomeados usando o parâmetro `Name` do cmdlet.
+- Módulos dinâmicos criados pelo `New-Module` cmdlet podem ser nomeados usando o `Name` parâmetro do cmdlet.
 
-- Os módulos importados de objetos de assembly pelo comando **`Import-Module`-assembly** são nomeados de acordo com a seguinte sintaxe: `"dynamic_code_module_" + assembly.GetName()`.
+- Os módulos importados de objetos de assembly pelo comando ** `Import-Module` -assembly** são nomeados de acordo com a seguinte sintaxe: `"dynamic_code_module_" + assembly.GetName()` .
 
   Para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md) e [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
@@ -107,7 +100,7 @@ Cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Modul
 
 Cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) este cmdlet recupera informações sobre os módulos que foram ou que podem ser importados para a sessão atual.
 
-Cmdlet [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) esse cmdlet especifica os membros do módulo (como cmdlets, funções, variáveis e aliases) exportados de um arquivo de módulo de script (. psm1) ou de um módulo dinâmico criado usando o cmdlet `New-Module`.
+Cmdlet [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) este cmdlet especifica os membros do módulo (como cmdlets, funções, variáveis e aliases) que são exportados de um arquivo de módulo de script (. psm1) ou de um módulo dinâmico criado usando o `New-Module` cmdlet.
 
 Cmdlet [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) este cmdlet Remove módulos da sessão atual.
 

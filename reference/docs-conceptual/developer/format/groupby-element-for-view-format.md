@@ -1,19 +1,12 @@
 ---
 title: Elemento GroupBy para exibição (formato) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
-caps.latest.revision: 8
-ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f9071a3ebbc7cc2ccb7721dd518e82723e9cc4e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363625"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781419"
 ---
 # <a name="groupby-element-for-view-format"></a>Elemento GroupBy para View (formato)
 
@@ -35,23 +28,23 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
+As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento CustomControl para GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Define o controle personalizado que exibe novos grupos.|
-|[Elemento CustomControlName para GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o nome de um controle usado para exibir o novo grupo.|
-|[Elemento Label para GroupBy (Format)](./label-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica um rótulo que é exibido quando um novo grupo é encontrado.|
-|[Elemento PropertyName para GroupBy (Format)](./propertyname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET que inicia um novo grupo sempre que seu valor é alterado.|
-|[Elemento ScriptBlock para GroupBy (Format)](./scriptblock-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que inicia um novo grupo sempre que seu valor é alterado.|
+|[Elemento CustomControl para GroupBy (formato)](./customcontrol-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Define o controle personalizado que exibe novos grupos.|
+|[Elemento CustomControlName para GroupBy (formato)](./customcontrolname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o nome de um controle usado para exibir o novo grupo.|
+|[Elemento Label para GroupBy (formato)](./label-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica um rótulo que é exibido quando um novo grupo é encontrado.|
+|[Elemento PropertyName para GroupBy (formato)](./propertyname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET que inicia um novo grupo sempre que seu valor é alterado.|
+|[Elemento ScriptBlock para GroupBy (formato)](./scriptblock-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que inicia um novo grupo sempre que seu valor é alterado.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -63,14 +56,14 @@ Ao definir como um novo grupo de objetos é exibido, você deve especificar a pr
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento CustomControlName para GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)
+[Elemento CustomControlName para GroupBy (formato)](./customcontrolname-element-for-groupby-format.md)
 
-[Elemento Label para GroupBy (Format)](./label-element-for-groupby-format.md)
+[Elemento Label para GroupBy (formato)](./label-element-for-groupby-format.md)
 
-[Elemento PropertyName para GroupBy (Format)](./propertyname-element-for-groupby-format.md)
+[Elemento PropertyName para GroupBy (formato)](./propertyname-element-for-groupby-format.md)
 
-[Elemento ScriptBlock para GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
+[Elemento ScriptBlock para GroupBy (formato)](./scriptblock-element-for-groupby-format.md)
 
 [Elemento View (formato)](./view-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

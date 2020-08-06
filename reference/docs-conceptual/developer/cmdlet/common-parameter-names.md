@@ -1,26 +1,19 @@
 ---
 title: Nomes de parâmetro comuns | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
-caps.latest.revision: 12
-ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365735"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782218"
 ---
 # <a name="common-parameter-names"></a>Nomes de parâmetro comuns
 
 Os parâmetros descritos neste tópico são chamados de *parâmetros comuns*. Eles são adicionados aos cmdlets pelo tempo de execução do Windows PowerShell e não podem ser declarados pelo cmdlet.
 
 > [!NOTE]
-> Esses parâmetros também são adicionados aos cmdlets do provedor e às funções que são decoradas com o atributo `CmdletBinding`.
+> Esses parâmetros também são adicionados aos cmdlets do provedor e às funções que são decoradas com o `CmdletBinding` atributo.
 
 ## <a name="general-common-parameters"></a>Parâmetros gerais comuns
 
@@ -108,6 +101,6 @@ Esse parâmetro especifica se o cmdlet usará a transação atual para executar 
 
 [System. Management. Automation. Internal. transactionparameters](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

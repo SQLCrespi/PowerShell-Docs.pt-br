@@ -1,19 +1,12 @@
 ---
 title: Elemento TypeName para ViewSelectedBy (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0ad807a9-d7d8-4e96-b799-9c6a7677cc2d
-caps.latest.revision: 12
-ms.openlocfilehash: e2028c479103cc414295dc24a0f9bb69190bfc66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361435"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780025"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>Elemento TypeName para ViewSelectedBy (formato)
 
@@ -29,25 +22,25 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e os elementos pai do elemento `TypeName`.
+As seções a seguir descrevem atributos, elementos filho e os elementos pai do `TypeName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento ViewSelectedBy (Format)](./viewselectedby-element-format.md)|Define os objetos .NET que são exibidos pela exibição.|
+|[Elemento ViewSelectedBy (formato)](./viewselectedby-element-format.md)|Define os objetos .NET que são exibidos pela exibição.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
+Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>Comentários
 
@@ -69,14 +62,14 @@ O exemplo a seguir mostra como especificar o objeto [System. ServiceProcess. Ser
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um modo de exibição de lista](./creating-a-list-view.md)
+[Criar uma exibição de lista](./creating-a-list-view.md)
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Criando uma exibição ampla](./creating-a-wide-view.md)
+[Criar uma exibição ampla](./creating-a-wide-view.md)
 
 [Criar controles personalizados](./creating-custom-controls.md)
 
-[Elemento ViewSelectedBy (Format)](./viewselectedby-element-format.md)
+[Elemento ViewSelectedBy (formato)](./viewselectedby-element-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

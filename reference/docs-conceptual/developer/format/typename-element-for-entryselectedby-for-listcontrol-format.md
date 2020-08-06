@@ -1,25 +1,18 @@
 ---
 title: Elemento TypeName para EntrySelectedBy para ListControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
-caps.latest.revision: 14
-ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e7b73db5aa597d96141454008c5c58b1827df24
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361655"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780212"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Elemento TypeName para EntrySelectedBy para ListControl (formato)
 
 Especifica um tipo .NET que usa essa entrada da exibição de lista. Não há nenhum limite para o número de tipos que podem ser especificados para uma entrada de lista.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) exibição de elemento (Format) ListControl Element (Format) o elemento de ListEntries (Format) ListEntry Element (Format) o elemento EntrySelectedBy para o elemento ListEntry (Format) TypeName para EntrySelectedBy para ListControl (formato)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) View element (Format) ListControl Element (Format) ListEntries elemento (Format) ListEntry Element (Format) o elemento EntrySelectedBy para ListEntry (Format) TypeName Element for EntrySelectedBy for ListControl (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,25 +22,25 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibição
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e o elemento pai do elemento `TypeName`.
+As seções a seguir descrevem atributos, elementos filho e o elemento pai do `TypeName` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy para ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|Define os tipos .NET que usam essa entrada de lista ou a condição que deve existir para que essa entrada seja usada.|
 
-## <a name="text-value"></a>Valor de Texto
+## <a name="text-value"></a>Valor de texto
 
-Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo`.
+Especifique o nome totalmente qualificado do tipo .NET, como `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>Comentários
 
@@ -70,10 +63,10 @@ O exemplo a seguir mostra como especificar um conjunto de seleção para uma ent
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando um modo de exibição de lista](./creating-a-list-view.md)
+[Criar uma exibição de lista](./creating-a-list-view.md)
 
 [Elemento EntrySelectedBy para ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)
 
 [Elemento SelectionSetName para EntrySelectedBy para ListEntry (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

@@ -1,28 +1,21 @@
 ---
-title: Como criar um arquivo de formatação (. Format. ps1xml) | Microsoft Docs
-ms.custom: ''
+title: Como criar um arquivo de formatação (.format.ps1XML) | Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
-caps.latest.revision: 8
-ms.openlocfilehash: 7a578dd63a53562f992b2970573258b8676e2a52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692278"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781249"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Como criar um arquivo de formatação (.format.ps1xml)
 
-Este tópico descreve como criar um arquivo de formatação (. Format. ps1xml).
+Este tópico descreve como criar um arquivo de formatação (.format.ps1XML).
 
 > [!NOTE]
 > Você também pode criar um arquivo de formatação fazendo uma cópia de um dos arquivos fornecidos pelo Windows PowerShell. Se você fizer uma cópia de um arquivo existente, exclua a assinatura digital existente e adicione sua própria assinatura ao novo arquivo.
 
-### <a name="to-create-a-formatps1xml-file"></a>Para criar um arquivo. Format. ps1xml.
+### <a name="to-create-a-formatps1xml-file"></a>Para criar um arquivo XML .format.ps1.
 
 1. Crie um arquivo de texto (. txt) usando um editor de texto como o bloco de notas.
 

@@ -1,25 +1,18 @@
 ---
 title: Elemento Wrap para TableRowEntry para TableControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 64087c6c-2abd-446d-b837-7d3ee03a6874
-caps.latest.revision: 11
-ms.openlocfilehash: 102fe1b9c3bd04562aa296f390ec549d5f8f35e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1ef1f6133f9e5e7da685933cfe90d39a0519ff44
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361385"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779872"
 ---
 # <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Elemento Wrap para TableRowEntry para TableControl (formato)
 
 Especifica que o texto que excede a largura da coluna é exibido na próxima linha. Por padrão, o texto que excede a largura da coluna é truncado.
 
-Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) TableControl Element (Format) TableRowEntries elemento para TableControl (Format) TableRowEntry Element for TableRowEntries para TableControl (Format) Wrap elemento para TableRowEntry para TableControl (formato)
+Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) TableControl Element (Format) TableRowEntries elemento para TableControl (Format) TableRowEntry Element para TableRowEntries para TableControl (Format) Wrap elemento para TableRowEntry para TableControl (Format)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,21 +22,21 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir ele
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai do elemento `Wrap`.
+As seções a seguir descrevem atributos, elementos filho e elementos pai do `Wrap` elemento.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento TableRowEntry para TableRowEntries para TableControl (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Define os dados que são exibidos em uma linha da tabela.|
+|[Elemento TableRowEntry para TableRowEntries para TableControl (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Define os dados que são exibidos em uma linha da tabela.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -51,8 +44,8 @@ Para obter mais informações sobre os componentes de uma exibição de tabela, 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição de tabela](./creating-a-table-view.md)
+[Criar uma exibição de tabela](./creating-a-table-view.md)
 
-[Elemento TableRowEntry para TableRowEntries para TableControl (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
+[Elemento TableRowEntry para TableRowEntries para TableControl (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

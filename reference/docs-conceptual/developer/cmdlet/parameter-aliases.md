@@ -1,23 +1,16 @@
 ---
 title: Aliases de parâmetro | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
-caps.latest.revision: 13
-ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369585"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781980"
 ---
 # <a name="parameter-aliases"></a>Aliases de parâmetro
 
-Os parâmetros de cmdlets também podem ter aliases. Você pode usar os aliases em vez dos nomes de parâmetro ao digitar ou especificar o parâmetro em um comando.
+Parâmetros de cmdlet também podem ter aliases. Você pode usar os aliases em vez dos nomes de parâmetro ao digitar ou especificar o parâmetro em um comando.
 
 ## <a name="benefits-of-using-aliases"></a>Benefícios do uso de aliases
 
@@ -54,4 +47,4 @@ private string userName;
 
 [Como declarar parâmetros de cmdlet](./how-to-declare-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

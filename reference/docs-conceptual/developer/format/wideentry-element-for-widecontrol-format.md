@@ -1,19 +1,12 @@
 ---
 title: Elemento WideEntry para WideControl (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
-caps.latest.revision: 15
-ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 13dd1f6ad7ac1e9d8d0524f0a0f18fe80ffaf8e2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367895"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780008"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>Elemento WideEntry para WideControl (formato)
 
@@ -32,20 +25,20 @@ Elemento de configuração (Format) elemento ViewDefinitions (Format) View eleme
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do elemento `WideEntry`. Você deve especificar um único elemento filho `WideItem`.
+As seções a seguir descrevem os atributos, os elementos filho e o elemento pai do `WideEntry` elemento. Você deve especificar um único `WideItem` elemento filho.
 
 ### <a name="attributes"></a>Atributos
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos filhos
+### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento EntrySelectedBy para WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Elemento opcional.<br /><br /> Define os tipos .NET que usam essa definição de entrada larga ou a condição que deve existir para que essa definição seja usada.|
-|[Elemento WideItem (Format)](./wideitem-element-for-widecontrol-format.md)|Elemento obrigatório.<br /><br /> Define a propriedade ou o script cujo valor é exibido.|
+|[Elemento EntrySelectedBy para WideEntry (formato)](./entryselectedby-element-for-wideentry-format.md)|Elemento opcional.<br /><br /> Define os tipos .NET que usam essa definição de entrada larga ou a condição que deve existir para que essa definição seja usada.|
+|[Elemento WideItem (Format)](./wideitem-element-for-widecontrol-format.md)|Elemento necessário.<br /><br /> Define a propriedade ou o script cujo valor é exibido.|
 
-### <a name="parent-elements"></a>Elementos pais
+### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -57,7 +50,7 @@ Uma exibição ampla é um formato de lista que exibe um valor de propriedade ú
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um elemento `WideEntry` que define um único elemento `WideItem`. O elemento `WideItem` define a propriedade cujo valor é exibido na exibição.
+O exemplo a seguir mostra um `WideEntry` elemento que define um único `WideItem` elemento. O `WideItem` elemento define a propriedade cujo valor é exibido na exibição.
 
 ```xml
 <WideEntries>
@@ -74,7 +67,7 @@ Para obter um exemplo completo de uma exibição ampla, consulte [Wide View (bá
 
 ## <a name="see-also"></a>Consulte Também
 
-[Criando uma exibição ampla](./creating-a-wide-view.md)
+[Criar uma exibição ampla](./creating-a-wide-view.md)
 
 [Elemento SelectionCondition para WideEntry (Format)](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)
 
@@ -86,4 +79,4 @@ Para obter um exemplo completo de uma exibição ampla, consulte [Wide View (bá
 
 [Elemento WideItem (Format)](./wideitem-element-for-widecontrol-format.md)
 
-[Gravando um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um arquivo de formatação do PowerShell](./writing-a-powershell-formatting-file.md)

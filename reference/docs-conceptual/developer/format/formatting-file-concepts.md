@@ -1,19 +1,12 @@
 ---
 title: Formatando conceitos de arquivo | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
-caps.latest.revision: 10
-ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6849a61ab1796ae49c73550b48e78de6f787274e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362975"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781487"
 ---
 # <a name="formatting-file-concepts"></a>Conceitos de arquivo de formatação
 
@@ -29,7 +22,7 @@ Os tópicos nesta seção fornecem informações que talvez você precise saber 
 
 [Criando controles personalizados](./creating-custom-controls.md) Fornece um exemplo de um controle personalizado.
 
-[Definindo recursos de configuração comuns](./defining-common-configuration-features.md)
+[Definir recursos de configuração comuns](./defining-common-configuration-features.md)
 
 [Definindo conjuntos de seleção](./defining-selection-sets.md) Fornece informações, um exemplo e descreve os elementos XML usados para criar um conjunto de seleção.
 

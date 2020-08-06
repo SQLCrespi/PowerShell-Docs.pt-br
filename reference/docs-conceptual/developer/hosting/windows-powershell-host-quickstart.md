@@ -1,19 +1,12 @@
 ---
 title: Início rápido do host do Windows PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
-caps.latest.revision: 9
-ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fea6bd5ae49ecf552c583271ee9d869b1ccebae8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360815"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779396"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Início rápido do Windows PowerShell Host
 
@@ -91,7 +84,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>Addstatement
 
 Você pode simular o envio em lote usando o método [System. Management. Automation. PowerShell. Addstatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , que adiciona uma instrução adicional ao final do pipeline.
-O código a seguir obtém uma lista de processos em execução com o nome `PowerShell`e, em seguida, obtém a lista de serviços em execução.
+O código a seguir obtém uma lista de processos em execução com o nome `PowerShell` e obtém a lista de serviços em execução.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -104,15 +97,15 @@ ps.Invoke();
 
 Você pode executar um script existente chamando o método [System. Management. Automation. PowerShell. addScript](/dotnet/api/System.Management.Automation.PowerShell.AddScript) .
 O exemplo a seguir adiciona um script ao pipeline e o executa.
-Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts`.
+Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts` .
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-Há também uma versão do método addScript que usa um parâmetro booleano chamado `useLocalScope`.
-Se esse parâmetro for definido como `true`, o script será executado no escopo local.
+Há também uma versão do método addScript que usa um parâmetro booleano denominado `useLocalScope` .
+Se esse parâmetro for definido como `true` , o script será executado no escopo local.
 O código a seguir executará o script no escopo local.
 
 ```csharp
@@ -125,11 +118,11 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 Embora o runspace padrão usado nos exemplos anteriores carregue todos os comandos principais do Windows PowerShell, você pode criar um runspace personalizado que carrega apenas um subconjunto especificado de todos os comandos.
 Talvez você queira fazer isso para melhorar o desempenho (carregar um número maior de comandos é um impacto no desempenho) ou para restringir a capacidade do usuário de executar operações.
 Um runspace que expõe apenas um número limitado de comandos é chamado de runspace restrito.
-Para criar um runspace restrito, use as classes [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) e [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+Para criar um runspace restrito, use as classes [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) e [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 
 ### <a name="creating-an-initialsessionstate-object"></a>Criando um objeto InitialSessionState
 
-Para criar um runspace personalizado, você deve primeiro criar um objeto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+Para criar um runspace personalizado, você deve primeiro criar um objeto [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
 No exemplo a seguir, usamos o [System. Management. Automation. Runspaces. RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) para criar um runspace depois de criar um objeto InitialSessionState padrão.
 
 ```csharp
@@ -144,14 +137,14 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Restringindo o runspace
 
-No exemplo anterior, criamos um objeto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) padrão que carrega todo o Windows PowerShell interno.
-Também poderíamos ter chamado o método [System. Management. Automation. Runspaces. InitialSessionState. CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) para criar um objeto InitialSessionState que carregaria apenas os comandos no snap-in Microsoft. PowerShell. Core.
-Para criar um runspace mais restrito, você deve criar um objeto InitialSessionState vazio chamando o método [System. Management. Automation. Runspaces. InitialSessionState. Create](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) e, em seguida, adicionar comandos ao InitialSessionState.
+No exemplo anterior, criamos um objeto de [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) padrão que carrega todo o Windows PowerShell interno.
+Também poderíamos ter chamado o método [System.Management.Automation.Runspaces.InitialSessionState. CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) para criar um objeto InitialSessionState que carregaria apenas os comandos no snap-in Microsoft. PowerShell. Core.
+Para criar um runspace mais restrito, você deve criar um objeto InitialSessionState vazio chamando o método [System.Management.Automation.Runspaces.InitialSessionState. Create](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) e, em seguida, adicionar comandos ao InitialSessionState.
 
 Usar um runspace que carrega apenas os comandos que você especificar fornece um desempenho significativamente aprimorado.
 
 Você usa os métodos da classe [System. Management. Automation. Runspaces. SessionStateCmdletEntry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) para definir cmdlets para o estado de sessão inicial.
-O exemplo a seguir cria um estado de sessão inicial vazio e, em seguida, define e adiciona os comandos `Get-Command` e `Import-Module` ao estado de sessão inicial.
+O exemplo a seguir cria um estado de sessão inicial vazio e, em seguida, define e adiciona os `Get-Command` `Import-Module` comandos e ao estado de sessão inicial.
 Em seguida, criamos um runspace restrito por esse estado de sessão inicial e executamos os comandos nesse espaço de execução.
 
 Crie o estado de sessão inicial.

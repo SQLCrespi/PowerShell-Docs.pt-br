@@ -1,19 +1,12 @@
 ---
 title: Carregando e exportando dados de formatação | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
-caps.latest.revision: 6
-ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365115"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781113"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Carregar e exportar dados de formatação
 
@@ -31,11 +24,11 @@ Os arquivos de formatação podem ser carregados na sessão atual usando os segu
 
 - Se você estiver invocando comandos programaticamente, poderá adicionar uma entrada de arquivo de formatação ao estado de sessão inicial do runspace em que os comandos são executados. Para obter mais informações sobre o tipo .NET usado para adicionar o arquivo de formatação, consulte [System. Management. Automation. Runspaces. Sessionstateformatentry? Classe displayproperty = FullName](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) .
 
-Quando um arquivo de formatação é carregado, ele é adicionado a uma lista interna que o Windows PowerShell usa para determinar qual exibição usar ao exibir objetos na linha de comando. Você pode colocar o arquivo de formatação no início da lista ou acrescentá-lo ao final da lista. Saber onde o arquivo de formatação é adicionado a essa lista é importante se você estiver carregando o arquivo de formatação que define uma exibição para um objeto que tem uma exibição existente definida, como quando você deseja alterar a forma como um objeto retornado por um cmdlet do Windows PowerShell Core é  visível. Se você estiver carregando um arquivo de formatação que define a única exibição de um objeto, poderá usar qualquer um dos métodos descritos anteriormente.  Se você estiver carregando um arquivo de formatação que define outra exibição para um objeto, deverá usar o cmdlet [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) e preceder o arquivo até o início da lista.
+Quando um arquivo de formatação é carregado, ele é adicionado a uma lista interna que o Windows PowerShell usa para determinar qual exibição usar ao exibir objetos na linha de comando. Você pode colocar o arquivo de formatação no início da lista ou acrescentá-lo ao final da lista. Saber onde o arquivo de formatação é adicionado a essa lista é importante se você estiver carregando o arquivo de formatação que define uma exibição para um objeto que tem uma exibição existente definida, como quando você deseja alterar a forma como um objeto retornado por um cmdlet do Windows PowerShell Core é exibido. Se você estiver carregando um arquivo de formatação que define a única exibição de um objeto, poderá usar qualquer um dos métodos descritos anteriormente.  Se você estiver carregando um arquivo de formatação que define outra exibição para um objeto, deverá usar o cmdlet [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) e preceder o arquivo até o início da lista.
 
 ## <a name="storing-your-formatting-file"></a>Armazenando o arquivo de formatação
 
-Não há nenhum requisito para o local em que os arquivos de formatação são armazenados no disco. No entanto, é altamente recomendável que você os armazene na seguinte pasta: `user\documents\windowspowershell\`
+Não há nenhum requisito para o local em que os arquivos de formatação são armazenados no disco. No entanto, é altamente recomendável que você os armazene na seguinte pasta:`user\documents\windowspowershell\`
 
 #### <a name="loading-a-format-file-using-import-formatdata"></a>Carregando um arquivo de formato usando Import-FormatData
 

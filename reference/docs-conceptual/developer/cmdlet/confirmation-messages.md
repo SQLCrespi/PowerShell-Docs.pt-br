@@ -1,19 +1,12 @@
 ---
 title: Mensagens de confirmação | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
-caps.latest.revision: 8
-ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8f8192f6ed96b1eeb22e3b28ce1366eee8e7c16a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365725"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782184"
 ---
 # <a name="confirmation-messages"></a>Mensagens de confirmação
 
@@ -24,7 +17,7 @@ Aqui estão as diferentes mensagens de confirmação que podem ser exibidas depe
 
 ## <a name="specifying-the-resource"></a>Especificando o recurso
 
-Você pode especificar o recurso que está prestes a ser alterado chamando o [System. Management. Automation. cmdlet. ShouldProcess% 2a? Método displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) . Nesse caso, você fornece o recurso usando o parâmetro `target` do método e a operação é adicionada pelo Windows PowerShell. Na mensagem a seguir, o texto "MyResource" é o recurso acionado e a operação é o nome do comando que faz a chamada.
+Você pode especificar o recurso que está prestes a ser alterado chamando o [System. Management. Automation. cmdlet. ShouldProcess% 2a? Método displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) . Nesse caso, você fornece o recurso usando o `target` parâmetro do método e a operação é adicionada pelo Windows PowerShell. Na mensagem a seguir, o texto "MyResource" é o recurso acionado e a operação é o nome do comando que faz a chamada.
 
 ```output
 Confirm
@@ -48,7 +41,7 @@ Continue with this operation?
 
 ## <a name="specifying-the-operation-and-resource"></a>Especificando a operação e o recurso
 
-Você pode especificar o recurso que está prestes a ser alterado e a operação que o comando está prestes a executar chamando o [System. Management. Automation. cmdlet. ShouldProcess% 2a? Método displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) . Nesse caso, você fornece o recurso usando o parâmetro `target` e a operação usando o parâmetro `target`. Na mensagem a seguir, o texto "MyResource" é o recurso acionado e "myaction" é a operação a ser executada.
+Você pode especificar o recurso que está prestes a ser alterado e a operação que o comando está prestes a executar chamando o [System. Management. Automation. cmdlet. ShouldProcess% 2a? Método displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) . Nesse caso, você fornece o recurso usando o `target` parâmetro e a operação usando o `target` parâmetro. Na mensagem a seguir, o texto "MyResource" é o recurso acionado e "myaction" é a operação a ser executada.
 
 ```output
 Confirm
@@ -72,4 +65,4 @@ Continue with this operation?
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

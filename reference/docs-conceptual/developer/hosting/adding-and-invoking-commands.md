@@ -1,19 +1,12 @@
 ---
 title: Adicionando e invocando comandos | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
-caps.latest.revision: 5
-ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b51c4ae3fa5c5239e3c5c5e65bf7aa63c58c4da9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367635"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779787"
 ---
 # <a name="adding-and-invoking-commands"></a>Adicionar e invocar comandos
 
@@ -79,7 +72,7 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>Addstatement
 
- Você pode simular o envio em lote usando o método [System. Management. Automation. PowerShell. addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , que adiciona uma instrução adicional ao final do pipeline. o código a seguir obtém uma lista de processos em execução com o nome `PowerShell`e obtém a lista de serviços em execução.
+ Você pode simular o envio em lote usando o método [System. Management. Automation. PowerShell. addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , que adiciona uma instrução adicional ao final do pipeline. o código a seguir obtém uma lista de processos em execução com o nome `PowerShell` e, em seguida, obtém a lista de serviços em execução.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -90,14 +83,14 @@ ps.Invoke();
 
 ### <a name="addscript"></a>AddScript
 
- Você pode executar um script existente chamando o método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . O exemplo a seguir adiciona um script ao pipeline e o executa. Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts`.
+ Você pode executar um script existente chamando o método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) . O exemplo a seguir adiciona um script ao pipeline e o executa. Este exemplo pressupõe que já existe um script chamado `MyScript.ps1` em uma pasta chamada `D:\PSScripts` .
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- Também há uma versão do método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) que usa um parâmetro booleano chamado `useLocalScope`. Se esse parâmetro for definido como `true`, o script será executado no escopo local. O código a seguir executará o script no escopo local.
+ Também há uma versão do método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) que usa um parâmetro booliano denominado `useLocalScope` . Se esse parâmetro for definido como `true` , o script será executado no escopo local. O código a seguir executará o script no escopo local.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -184,6 +177,6 @@ namespace HostPS3
 
 ## <a name="see-also"></a>Consulte Também
 
- [Criando um InitialSessionState](./creating-an-initialsessionstate.md)
+ [Criar um InitialSessionState](./creating-an-initialsessionstate.md)
 
- [Criando um runspace restrito](./creating-a-constrained-runspace.md)
+ [Criar um runspace com restrição](./creating-a-constrained-runspace.md)

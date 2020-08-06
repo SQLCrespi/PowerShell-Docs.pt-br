@@ -1,19 +1,12 @@
 ---
 title: Como importar cmdlets usando módulos | Microsoft Docs
-ms.custom: ''
 ms.date: 08/28/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
-caps.latest.revision: 8
-ms.openlocfilehash: 840c5bc92d718ec4e54d864dc5e012cd33f83905
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811315"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779362"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Como importar cmdlets por meio de módulos
 
@@ -46,7 +39,7 @@ Este artigo descreve como importar cmdlets para uma sessão do PowerShell usando
 
 [Importar um módulo do PowerShell](../module/importing-a-powershell-module.md)
 
-[Importar-módulo](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+[Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [Instalando módulos](../module/installing-a-powershell-module.md)
 

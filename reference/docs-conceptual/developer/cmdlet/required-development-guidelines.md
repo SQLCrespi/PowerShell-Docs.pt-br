@@ -1,19 +1,12 @@
 ---
 title: Diretrizes de desenvolvimento necessárias | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
-caps.latest.revision: 19
-ms.openlocfilehash: e68e43a91f9139e8d3dc636b5740121515aab2e6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369515"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781691"
 ---
 # <a name="required-development-guidelines"></a>Diretrizes para desenvolvimento necessárias
 
@@ -75,7 +68,7 @@ O verbo especificado no atributo cmdlet deve vir do conjunto reconhecido de verb
 
 Para obter mais informações sobre os nomes de verbo aprovados, consulte [verbos de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-Os usuários precisam de um conjunto de nomes de cmdlet detectáveis e esperados. Use o verbo apropriado para que o usuário possa fazer uma rápida avaliação do que um cmdlet faz e descobrir facilmente os recursos do sistema. Por exemplo, o comando de linha de comando a seguir obtém uma lista de todos os comandos no sistema cujos nomes começam com "Start": `get-command start-*`. Use os substantivos em seus cmdlets para diferenciar seus cmdlets de outros cmdlets. O substantivo indica o recurso no qual a operação será executada. A própria operação é representada pelo verbo.
+Os usuários precisam de um conjunto de nomes de cmdlet detectáveis e esperados. Use o verbo apropriado para que o usuário possa fazer uma rápida avaliação do que um cmdlet faz e descobrir facilmente os recursos do sistema. Por exemplo, o comando de linha de comando a seguir obtém uma lista de todos os comandos no sistema cujos nomes começam com "Start": `get-command start-*` . Use os substantivos em seus cmdlets para diferenciar seus cmdlets de outros cmdlets. O substantivo indica o recurso no qual a operação será executada. A própria operação é representada pelo verbo.
 
 ### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Nomes de cmdlet: caracteres que não podem ser usados (RD02)
 
@@ -93,7 +86,7 @@ Ao nomear cmdlets, não use nenhum dos caracteres especiais a seguir.
 |/|barra de marcas|
 |\\| barra invertida|
 |$|cifrão|
-|^|caret|
+|^|sinal de interpolação|
 |;|ponto e vírgula|
 |:|pontos|
 |"|aspas duplas|
@@ -117,12 +110,12 @@ O Windows PowerShell fornece um conjunto comum de parâmetros a todos os cmdlets
 
 Para cmdlets que executam uma operação que modifica o sistema, eles devem chamar o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) para solicitar a confirmação e, em casos especiais, chamar o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) . (O método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve ser chamado somente depois que o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) for chamado.)
 
-Para fazer essas chamadas, o cmdlet deve especificar que ele dá suporte a solicitações de confirmação definindo a palavra-chave `SupportsShouldProcess` do atributo cmdlet. Para obter mais informações sobre como definir esse atributo, consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
+Para fazer essas chamadas, o cmdlet deve especificar que ele dá suporte a solicitações de confirmação definindo a `SupportsShouldProcess` palavra-chave do atributo cmdlet. Para obter mais informações sobre como definir esse atributo, consulte [declaração de atributo de cmdlet](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
 > Se o atributo cmdlet da classe cmdlet indicar que o cmdlet dá suporte a chamadas para o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e o cmdlet não fará a chamada para o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) , o usuário poderá modificar o sistema inesperadamente.
 
-Use o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) para qualquer modificação no sistema. Uma preferência de usuário e o parâmetro `WhatIf` controle o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Por outro lado, a chamada [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) executa uma verificação adicional para modificações potencialmente perigosas. Esse método não é controlado por nenhuma preferência de usuário nem pelo parâmetro `WhatIf`. Se o cmdlet chama o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , ele deve ter um parâmetro `Force` que ignora as chamadas para esses dois métodos e que prossegue com a operação. Isso é importante porque permite que o cmdlet seja usado em hosts e scripts não interativos.
+Use o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) para qualquer modificação no sistema. Uma preferência de usuário e o `WhatIf` parâmetro controlam o método [System. Management. Automation. cmdlet. ShouldProcess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . Por outro lado, a chamada [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) executa uma verificação adicional para modificações potencialmente perigosas. Esse método não é controlado por nenhuma preferência de usuário ou `WhatIf` parâmetro. Se o cmdlet chama o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , ele deve ter um `Force` parâmetro que ignora as chamadas para esses dois métodos e que prossegue com a operação. Isso é importante porque permite que o cmdlet seja usado em hosts e scripts não interativos.
 
 Se os cmdlets suportarem essas chamadas, o usuário poderá determinar se a ação deve realmente ser executada. Por exemplo, o cmdlet [Stop-Process](/powershell/module/microsoft.powershell.management/stop-process) chama o método [System. Management. Automation. cmdlet. ShouldContinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) antes de parar um conjunto de processos críticos, incluindo os processos System, Winlogon e spoolsv.
 
@@ -200,7 +193,7 @@ Um ambiente de administração detecta inerentemente e faz alterações importan
 
 - O objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) que é referenciado pelos métodos [System. Management. Automation. cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) e [System. Management. Automation. cmdlet. WriteError *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) requer uma exceção em seu núcleo. Siga as diretrizes de design de .NET Framework ao determinar a exceção a ser usada. Se o erro for semanticamente igual a uma exceção existente, use essa exceção ou derive dessa exceção. Caso contrário, derive uma nova exceção ou hierarquia de exceção diretamente do tipo [System. Exception](/dotnet/api/System.Exception) .
 
-Um objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) também requer uma categoria de erro que agrupa erros para o usuário. O usuário pode exibir erros com base na categoria definindo o valor da variável de shell `$ErrorView` como CategoryView. As categorias possíveis são definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) .
+Um objeto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) também requer uma categoria de erro que agrupa erros para o usuário. O usuário pode exibir erros com base na categoria definindo o valor da `$ErrorView` variável shell como CategoryView. As categorias possíveis são definidas pela enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) .
 
 - Se um cmdlet criar um novo thread e se o código que está sendo executado nesse thread lançar uma exceção sem tratamento, o Windows PowerShell não detectará o erro e encerrará o processo.
 
@@ -212,8 +205,8 @@ Crie um módulo do Windows PowerShell para empacotar e implantar seus cmdlets. O
 
 ## <a name="see-also"></a>Consulte Também
 
-[Diretrizes de desenvolvimento altamente incentivadas](./strongly-encouraged-development-guidelines.md)
+[Diretrizes de desenvolvimento altamente recomendadas](./strongly-encouraged-development-guidelines.md)
 
-[Diretrizes de desenvolvimento de consultoria](./advisory-development-guidelines.md)
+[Diretrizes para desenvolvimento de consultoria](./advisory-development-guidelines.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

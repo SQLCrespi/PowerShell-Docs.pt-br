@@ -1,19 +1,12 @@
 ---
 title: Como escrever um módulo binário do PowerShell | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
-caps.latest.revision: 15
-ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 92395bd6b8be1bd3741888eb3716d62f0253e213
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367115"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779260"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Como escrever um módulo binário do Windows PowerShell
 
@@ -34,7 +27,7 @@ O procedimento a seguir descreve como criar e instalar um módulo binário do Po
    Dessa forma, um manifesto de módulo é útil principalmente para combinar vários arquivos em um único pacote ou para controlar explicitamente a publicação para um determinado assembly.
    Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](how-to-write-a-powershell-module-manifest.md).
 
-   O código a seguir é um bloco C# de código extremamente simples que contém três cmdlets no mesmo arquivo que pode ser usado como um módulo.
+   O código a seguir é um bloco de código C# extremamente simples que contém três cmdlets no mesmo arquivo que pode ser usado como um módulo.
 
    ```csharp
    using System.Management.Automation;           // Windows PowerShell namespace.
@@ -73,9 +66,9 @@ O procedimento a seguir descreve como criar e instalar um módulo binário do Po
 
 3. Empacote sua solução e salve o pacote em algum lugar no caminho do módulo do PowerShell.
 
-   A variável de ambiente global `PSModulePath` descreve os caminhos padrão que o PowerShell usará para localizar o módulo. Por exemplo, um caminho comum para salvar um módulo em um sistema seria `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`. Se você não usar os caminhos padrão, será necessário declarar explicitamente o local do seu módulo durante a instalação. Certifique-se de criar uma pasta na qual salvar o módulo, pois talvez seja necessário que a pasta armazene vários assemblies e arquivos para sua solução.
+   A `PSModulePath` variável de ambiente global descreve os caminhos padrão que o PowerShell usará para localizar o módulo. Por exemplo, um caminho comum para salvar um módulo em um sistema seria `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>` . Se você não usar os caminhos padrão, será necessário declarar explicitamente o local do seu módulo durante a instalação. Certifique-se de criar uma pasta na qual salvar o módulo, pois talvez seja necessário que a pasta armazene vários assemblies e arquivos para sua solução.
 
-   Observe que, tecnicamente, não é necessário instalar seu módulo em qualquer lugar do `PSModulePath`-esses são simplesmente os locais padrão que o PowerShell procurará no seu módulo. No entanto, é considerado a prática recomendada fazer isso, a menos que você tenha um bom motivo para armazenar seu módulo em outro lugar. Para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md) e [modificando o caminho de instalação do módulo do PowerShell](./modifying-the-psmodulepath-installation-path.md).
+   Observe que, tecnicamente, não é necessário instalar seu módulo em qualquer lugar no `PSModulePath` -aqueles são simplesmente os locais padrão que o PowerShell procurará no seu módulo. No entanto, é considerado a prática recomendada fazer isso, a menos que você tenha um bom motivo para armazenar seu módulo em outro lugar. Para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md) e [modificando o caminho de instalação do módulo do PowerShell](./modifying-the-psmodulepath-installation-path.md).
 
 4. Importe seu módulo no PowerShell com uma chamada para [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module).
 

@@ -1,21 +1,14 @@
 ---
 title: Como validar um conjunto de argumentos | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateSet attribute, example
-ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
-caps.latest.revision: 8
-ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365505"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781997"
 ---
 # <a name="how-to-validate-an-argument-set"></a>Como validar um conjunto de argumentos
 
@@ -26,7 +19,7 @@ Este exemplo mostra como especificar uma regra de validação que o tempo de exe
 
 ## <a name="to-validate-an-argument-set"></a>Para validar um conjunto de argumentos
 
-- Adicione o atributo ValidateSet, conforme mostrado no código a seguir. Este exemplo especifica um conjunto de três valores possíveis para o parâmetro `UserName`.
+- Adicione o atributo ValidateSet, conforme mostrado no código a seguir. Este exemplo especifica um conjunto de três valores possíveis para o `UserName` parâmetro.
 
     ```csharp
     [ValidateSet("Steve", "Mary", "Carl", IgnoreCase = true)]
@@ -48,4 +41,4 @@ Para obter mais informações sobre como declarar esse atributo, consulte [decla
 
 [Declaração de atributo ValidateSet](./validateset-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

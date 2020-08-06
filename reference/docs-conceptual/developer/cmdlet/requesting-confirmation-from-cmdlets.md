@@ -1,25 +1,18 @@
 ---
 title: Solicitando confirmação de cmdlets | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ConfirmImpact [PowerShell Programmer's Guide], described
 - ShouldContinue [PowerShell Programmer's Guide], described
 - user feedback [PowerShell Programmer's Guide], requesting
 - ShouldProcess [PowerShell Programmer's Guide], described
 - ConfirmPreference [PowerShell Programmer's Guide], described
-ms.assetid: 37d6e87f-57b7-40bd-b645-392cf0b6e88e
-caps.latest.revision: 13
-ms.openlocfilehash: 0c0517ef7fbd5ae6434773a2dfe276f3a8c35f39
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bcc4c766d0012e7173550e3b6cb3ef058baa06bb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369525"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781793"
 ---
 # <a name="requesting-confirmation-from-cmdlets"></a>Solicitar confirmação por meio de cmdlets
 
@@ -29,7 +22,7 @@ Para fazer uma solicitação de confirmação, o cmdlet deve indicar que ele dá
 
 ## <a name="supporting-confirmation-requests"></a>Suporte a solicitações de confirmação
 
-Para dar suporte a solicitações de confirmação, o cmdlet deve definir o parâmetro `SupportsShouldProcess` do atributo cmdlet como `true`. Isso habilita os parâmetros de cmdlet `Confirm` e `WhatIf` fornecidos pelo Windows PowerShell. O parâmetro `Confirm` permite que o usuário controle se a solicitação de confirmação é exibida. O parâmetro `WhatIf` permite que o usuário determine se o cmdlet deve exibir uma mensagem ou executar sua ação. Não adicione manualmente os parâmetros `Confirm` e `WhatIf` a um cmdlet.
+Para dar suporte a solicitações de confirmação, o cmdlet deve definir o `SupportsShouldProcess` parâmetro do atributo de cmdlet como `true` . Isso habilita os `Confirm` `WhatIf` parâmetros do cmdlet e que são fornecidos pelo Windows PowerShell. O `Confirm` parâmetro permite que o usuário controle se a solicitação de confirmação é exibida. O `WhatIf` parâmetro permite que o usuário determine se o cmdlet deve exibir uma mensagem ou executar sua ação. Não adicione manualmente os `Confirm` parâmetros e `WhatIf` a um cmdlet.
 
 O exemplo a seguir mostra uma declaração de atributo de cmdlet que dá suporte a solicitações de confirmação.
 
@@ -40,15 +33,15 @@ O exemplo a seguir mostra uma declaração de atributo de cmdlet que dá suporte
 
 ## <a name="calling-the-confirmation-request-methods"></a>Chamando os métodos de solicitação de confirmação
 
-No código do cmdlet, chame o método [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) antes que a operação que altera o sistema seja executada. Projete o cmdlet para que, se a chamada retornar um valor de `false`, a operação não seja executada e o cmdlet processe a próxima operação.
+No código do cmdlet, chame o método [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) antes que a operação que altera o sistema seja executada. Projete o cmdlet para que, se a chamada retornar um valor `false` , a operação não seja executada e o cmdlet processe a próxima operação.
 
 ## <a name="calling-the-shouldcontinue-method"></a>Chamando o método ShouldContinue
 
 A maioria dos cmdlets solicita confirmação usando apenas o método [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . No entanto, alguns casos podem exigir confirmação adicional. Nesses casos, complemente a chamada [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) com uma chamada para o método [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) . Isso permite que o cmdlet ou o provedor controle mais minuciosamente o escopo do **Sim para todas as** respostas ao prompt de confirmação.
 
-Se um cmdlet chama o método [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , o cmdlet também deve fornecer um parâmetro de opção `Force`. Se o usuário especificar `Force` quando o usuário chamar o cmdlet, o cmdlet ainda deverá chamar [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), mas deverá ignorar a chamada para [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
+Se um cmdlet chama o método [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) , o cmdlet também deve fornecer um `Force` parâmetro switch. Se o usuário especificar `Force` quando o usuário invoca o cmdlet, o cmdlet ainda deve chamar [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess), mas deve ignorar a chamada para [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
-[System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) gerará uma exceção quando for chamado a partir de um ambiente não interativo em que o usuário não pode ser solicitado. A adição de um parâmetro de `Force` garante que o comando ainda possa ser executado quando for invocado em um ambiente não interativo.
+[System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) gerará uma exceção quando for chamado a partir de um ambiente não interativo em que o usuário não pode ser solicitado. A adição de um `Force` parâmetro garante que o comando ainda possa ser executado quando for invocado em um ambiente não interativo.
 
 O exemplo a seguir mostra como chamar [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue).
 
@@ -68,9 +61,9 @@ Para obter um exemplo de como chamar o método [System. Management. Automation. 
 
 ## <a name="specify-the-impact-level"></a>Especificar o nível de impacto
 
-Ao criar o cmdlet, especifique o nível de impacto (a severidade) da alteração. Para fazer isso, defina o valor do parâmetro `ConfirmImpact` do atributo cmdlet como alto, médio ou baixo. Você pode especificar um valor para `ConfirmImpact` somente quando você também especificar o parâmetro `SupportsShouldProcess` para o cmdlet.
+Ao criar o cmdlet, especifique o nível de impacto (a severidade) da alteração. Para fazer isso, defina o valor do `ConfirmImpact` parâmetro do atributo cmdlet como alto, médio ou baixo. Você pode especificar um valor `ConfirmImpact` somente para quando também especificar o `SupportsShouldProcess` parâmetro para o cmdlet.
 
-Para a maioria dos cmdlets, você não precisa especificar explicitamente `ConfirmImpact`.  Em vez disso, use a configuração padrão do parâmetro, que é médio. Se você definir `ConfirmImpact` como alta, a operação será confirmada por padrão. Reserve essa configuração para ações altamente perturbadoras, como reformatar um volume de disco rígido.
+Para a maioria dos cmdlets, você não precisa especificar explicitamente `ConfirmImpact` .  Em vez disso, use a configuração padrão do parâmetro, que é médio. Se você definir `ConfirmImpact` como alto, a operação será confirmada por padrão. Reserve essa configuração para ações altamente perturbadoras, como reformatar um volume de disco rígido.
 
 ## <a name="calling-non-confirmation-methods"></a>Chamando métodos que não são de confirmação
 
@@ -78,9 +71,9 @@ Se o cmdlet ou o provedor precisar enviar uma mensagem, mas não a confirmação
 
 - Para ter cuidado com o usuário e continuar com a operação, o cmdlet ou o provedor pode chamar o método [System. Management. Automation. cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) .
 
-- Para fornecer informações adicionais que o usuário pode recuperar usando o parâmetro `Verbose`, o cmdlet ou o provedor pode chamar o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) .
+- Para fornecer informações adicionais que o usuário pode recuperar usando o `Verbose` parâmetro, o cmdlet ou o provedor pode chamar o método [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) .
 
-- Para fornecer detalhes de nível de depuração para outros desenvolvedores ou para o suporte do produto, o cmdlet ou o provedor pode chamar o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) . O usuário pode recuperar essas informações usando o parâmetro `Debug`.
+- Para fornecer detalhes de nível de depuração para outros desenvolvedores ou para o suporte do produto, o cmdlet ou o provedor pode chamar o método [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) . O usuário pode recuperar essas informações usando o `Debug` parâmetro.
 
 Os cmdlets e os provedores primeiro chamam os seguintes métodos para solicitar confirmação antes de tentarem executar uma operação que altera um sistema fora do Windows PowerShell:
 
@@ -92,4 +85,4 @@ Eles fazem isso chamando o método [System. Management. Automation. cmdlet. Shou
 
 ## <a name="see-also"></a>Consulte Também
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
+[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
