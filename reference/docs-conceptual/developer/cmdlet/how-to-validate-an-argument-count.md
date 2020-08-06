@@ -1,32 +1,25 @@
 ---
 title: Como validar uma contagem de argumentos | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateCount attribute, example
-ms.assetid: 4e6b6ac4-1003-4e7e-9d4a-9f1cf74fc4af
-caps.latest.revision: 8
-ms.openlocfilehash: b6ddb8185f21a65b2e3142ebb640962047e11763
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365525"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782116"
 ---
-# <a name="how-to-validate-an-argument-count"></a><span data-ttu-id="56168-102">Como validar uma contagem de argumentos</span><span class="sxs-lookup"><span data-stu-id="56168-102">How to Validate an Argument Count</span></span>
+# <a name="how-to-validate-an-argument-count"></a><span data-ttu-id="b5cfe-102">Como validar uma contagem de argumentos</span><span class="sxs-lookup"><span data-stu-id="b5cfe-102">How to Validate an Argument Count</span></span>
 
-<span data-ttu-id="56168-103">Este exemplo mostra como especificar uma regra de validação que o tempo de execução do Windows PowerShell pode usar para verificar o número de argumentos (a contagem) que um parâmetro aceita antes de o cmdlet ser executado.</span><span class="sxs-lookup"><span data-stu-id="56168-103">This example shows how to specify a validation rule that the Windows PowerShell runtime can use to check the number of arguments (the count) that a parameter accepts before the cmdlet is run.</span></span> <span data-ttu-id="56168-104">Você define essa regra de validação declarando o atributo ValidateCount.</span><span class="sxs-lookup"><span data-stu-id="56168-104">You set this validation rule by declaring the ValidateCount attribute.</span></span>
+<span data-ttu-id="b5cfe-103">Este exemplo mostra como especificar uma regra de validação que o tempo de execução do Windows PowerShell pode usar para verificar o número de argumentos (a contagem) que um parâmetro aceita antes de o cmdlet ser executado.</span><span class="sxs-lookup"><span data-stu-id="b5cfe-103">This example shows how to specify a validation rule that the Windows PowerShell runtime can use to check the number of arguments (the count) that a parameter accepts before the cmdlet is run.</span></span> <span data-ttu-id="b5cfe-104">Você define essa regra de validação declarando o atributo ValidateCount.</span><span class="sxs-lookup"><span data-stu-id="b5cfe-104">You set this validation rule by declaring the ValidateCount attribute.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="56168-105">Para obter mais informações sobre a classe que define esse atributo, consulte [System. Management. Automation. Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute).</span><span class="sxs-lookup"><span data-stu-id="56168-105">For more information about the class that defines this attribute, see [System.Management.Automation.Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute).</span></span>
+> <span data-ttu-id="b5cfe-105">Para obter mais informações sobre a classe que define esse atributo, consulte [System. Management. Automation. Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute).</span><span class="sxs-lookup"><span data-stu-id="b5cfe-105">For more information about the class that defines this attribute, see [System.Management.Automation.Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute).</span></span>
 
-## <a name="to-validate-an-argument-count"></a><span data-ttu-id="56168-106">Para validar uma contagem de argumentos</span><span class="sxs-lookup"><span data-stu-id="56168-106">To validate an argument count</span></span>
+## <a name="to-validate-an-argument-count"></a><span data-ttu-id="b5cfe-106">Para validar uma contagem de argumentos</span><span class="sxs-lookup"><span data-stu-id="b5cfe-106">To validate an argument count</span></span>
 
-- <span data-ttu-id="56168-107">Adicione o atributo Validate conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="56168-107">Add the Validate attribute as shown in the following code.</span></span> <span data-ttu-id="56168-108">Este exemplo especifica que o parâmetro aceitará um argumento ou até três argumentos.</span><span class="sxs-lookup"><span data-stu-id="56168-108">This example specifies that the parameter will accept one argument or as many as three arguments.</span></span>
+- <span data-ttu-id="b5cfe-107">Adicione o atributo Validate conforme mostrado no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="b5cfe-107">Add the Validate attribute as shown in the following code.</span></span> <span data-ttu-id="b5cfe-108">Este exemplo especifica que o parâmetro aceitará um argumento ou até três argumentos.</span><span class="sxs-lookup"><span data-stu-id="b5cfe-108">This example specifies that the parameter will accept one argument or as many as three arguments.</span></span>
 
     ```csharp
     [ValidateCount(1, 3)]
@@ -40,10 +33,10 @@ ms.locfileid: "72365525"
     private string[] userNames;
     ```
 
-<span data-ttu-id="56168-109">Para obter mais informações sobre como declarar esse atributo, consulte [declaração de atributo ValidateCount](./validatecount-attribute-declaration.md).</span><span class="sxs-lookup"><span data-stu-id="56168-109">For more information about how to declare this attribute, see [ValidateCount Attribute Declaration](./validatecount-attribute-declaration.md).</span></span>
+<span data-ttu-id="b5cfe-109">Para obter mais informações sobre como declarar esse atributo, consulte [declaração de atributo ValidateCount](./validatecount-attribute-declaration.md).</span><span class="sxs-lookup"><span data-stu-id="b5cfe-109">For more information about how to declare this attribute, see [ValidateCount Attribute Declaration](./validatecount-attribute-declaration.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="56168-110">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="56168-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5cfe-110">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="b5cfe-110">See Also</span></span>
 
-[<span data-ttu-id="56168-111">Declaração de atributo ValidateCount</span><span class="sxs-lookup"><span data-stu-id="56168-111">ValidateCount Attribute Declaration</span></span>](./validatecount-attribute-declaration.md)
+[<span data-ttu-id="b5cfe-111">Declaração de atributo ValidateCount</span><span class="sxs-lookup"><span data-stu-id="b5cfe-111">ValidateCount Attribute Declaration</span></span>](./validatecount-attribute-declaration.md)
 
-<span data-ttu-id="56168-112">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="56168-112">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+[<span data-ttu-id="b5cfe-112">Escrevendo um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="b5cfe-112">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
