@@ -5,12 +5,12 @@ helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 1cdfed5727c0b93bd1d4008fd0d6c03c448c6aed
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782388"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162470"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
 
@@ -18,6 +18,14 @@ O PowerShell usa um par verbo-substantivo para os nomes dos cmdlets e para suas 
 
 > [!NOTE]
 > O PowerShell usa o termo _verbo_ para descrever uma palavra que implica uma ação, mesmo que essa palavra não seja um verbo padrão no idioma inglês. Por exemplo, o termo _novo_ é um nome de verbo válido do PowerShell porque ele implica uma ação, embora não seja um verbo no idioma inglês.
+
+<!--
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+-->
+
+Cada verbo aprovado tem um _prefixo de alias_ correspondente definido.
+Esse prefixo de alias é comumente usado para nomear aliases para comandos que usam esse verbo.
+Por exemplo, o prefixo do alias para `Import` é `ip` e, de acordo, o alias para `Import-Module` é `ipmo` .  Essa é uma recomendação, mas não uma regra; em particular, ele não precisa ser respeitado para aliases de comando imitando comandos bem conhecidos de outros ambientes.
 
 ## <a name="verb-naming-rules"></a>Regras de nomenclatura de verbo
 
