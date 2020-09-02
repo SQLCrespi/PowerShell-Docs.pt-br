@@ -1,16 +1,16 @@
 ---
 title: Suporte à ajuda atualizável
 ms.date: 10/28/2012
-ms.openlocfilehash: 6fa1a9e1f7f3cd42b512a72d7b68ae4a4976978f
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
-ms.translationtype: MT
+ms.openlocfilehash: bc5f08d2989b1031806c91acf43dd6a3b2646f04
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893332"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236332"
 ---
 # <a name="supporting-updatable-help"></a>Suporte à ajuda atualizável
 
-O *sistema de ajuda atualizável do Windows PowerShell*, introduzido no Windows 8 e no windows Server 2012, foi projetado para garantir que os usuários sempre tenham os tópicos mais recentes de ajuda no prompt de comando em seu computador local. Junto com a ajuda online do Windows PowerShell, a ajuda atualizável fornece uma solução de ajuda completa para os usuários. Esta seção descreve o sistema de ajuda atualizável e explica como os autores de módulo podem dar suporte à ajuda atualizável para seus módulos.
+O *Sistema de ajuda atualizável do Windows PowerShell*, introduzido no Windows 8 e no Windows Server 2012, foi projetado para garantir que os usuários sempre tenham os tópicos de ajuda mais recentes no prompt de comando em seu computador local. Em conjunto com a ajuda online do Windows PowerShell, a Ajuda atualizável fornece uma solução completa aos usuários. Esta seção descreve o Sistema de ajuda atualizável e explica como os autores de módulos podem dar suporte à ajuda atualizável nos módulos.
 
 Esta seção inclui os seguintes tópicos.
 
@@ -32,4 +32,4 @@ Esta seção inclui os seguintes tópicos.
 
 [Suporte à ajuda online](./supporting-online-help.md)
 
-[Tabela de status da ajuda atualizável](https://www.microsoft.com/en-us/itpro/windows)
+[Tabela de status da Ajuda atualizável](/windows/deployment/deploy-whats-new)
