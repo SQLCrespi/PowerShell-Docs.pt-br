@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método PerformRequiredConfigurationChecks
-ms.openlocfilehash: 909e3a48d08e0220ab0efc6a03bea7ead5d9843e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955003"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464444"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>Método PerformRequiredConfigurationChecks
 
@@ -23,7 +23,7 @@ uint32 PerformRequiredConfigurationChecks(
 
 ## <a name="parameters"></a>Parâmetros
 
-*Flags* \[in\] Um bitmask que especifica o tipo de verificação de consistência que deve ser executada. Os seguintes valores são válidos e podem ser combinados usando um operação **OR** bit a bit:
+**Flags** \[in\] Um bitmask que especifica o tipo de verificação de consistência que deve ser executada. Os seguintes valores são válidos e podem ser combinados usando um operação **OR** bit a bit:
 
 |Valor |Descrição |
 |:--- |:---|

@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recurso WindowsFeature de DSC
-ms.openlocfilehash: 7f9b200b4d10aef6c8a3f76c497f4d60e8062cb5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557390"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464104"
 ---
 # <a name="dsc-windowsfeature-resource"></a>Recurso WindowsFeature de DSC
 
@@ -24,7 +24,6 @@ WindowsFeature [string] #ResourceName
     [ Credential = [PSCredential] ]
     [ IncludeAllSubFeature = [bool] ]
     [ LogPath = [string] ]
-    [ Source = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
     [ PsDscRunAsCredential = [PSCredential] ]
@@ -39,11 +38,10 @@ WindowsFeature [string] #ResourceName
 |Credencial |Indica as credenciais que devem ser usadas para adicionar ou remover a função ou recurso. |
 |IncludeAllSubFeature |Defina essa propriedade como `$true` para garantir o estado de todos os sub-recursos necessários com o estado do recurso especificado com a propriedade **Name**. |
 |LogPath |Indica o caminho até um arquivo de log em que você deseja que o provedor de recursos registre a operação. |
-|Fonte |Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
-|Propriedade |DESCRIÇÃO |
+|Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se a função ou o recurso foi adicionado. Para garantir que a função ou o recurso sejam adicionados, defina essa propriedade como **Present**. Para garantir que a função ou o recurso sejam removidos, defina essa propriedade como **Absent**. O valor padrão é **Present**. |

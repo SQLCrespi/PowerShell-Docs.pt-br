@@ -3,12 +3,12 @@ title: Tudo o que você sempre quis saber sobre a instrução switch
 description: A instrução switch no PowerShell oferece recursos que não são encontrados em outras linguagens.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ebf6191d56374273465ae6bee49ef82a02cc1580
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149419"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469711"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Tudo o que você sempre quis saber sobre a instrução switch
 
@@ -17,7 +17,7 @@ Como muitas outras linguagens, o PowerShell tem comandos para controlar o fluxo 
 > [!NOTE]
 > A [versão original][] deste artigo foi publicada no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece a Kevin por compartilhar o conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
 
-## <a name="if-statement"></a>Instrução If
+## <a name="the-if-statement"></a>A instrução `if`
 
 Uma das primeiras instruções que você aprende é a instrução `if`. Ela permitirá que você execute um bloco de script se uma instrução for `$true`.
 

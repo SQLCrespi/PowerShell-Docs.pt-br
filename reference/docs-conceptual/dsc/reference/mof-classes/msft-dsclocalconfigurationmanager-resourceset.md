@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método ResourceSet
-ms.openlocfilehash: 18364027b249e502e1f0b8802d9f3e031c7b07ce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c015960b2a5ffca0d28b714d571aa616400555bd
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954953"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464037"
 ---
 # <a name="resourceset-method"></a>Método ResourceSet
 
@@ -26,13 +26,13 @@ uint32 ResourceSet(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ResourceType* \[in\] O nome do recurso a chamar.
+**ResourceType** \[in\] O nome do recurso a chamar.
 
-*ModuleName* \[in\] O nome do módulo que contém o recurso a chamar.
+**ModuleName** \[in\] O nome do módulo que contém o recurso a chamar.
 
-*resourceProperty* \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
+**resourceProperty** \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
 
-*RebootRequired* \[out\] No retorno, essa propriedade será definida como **true**, se for necessário reiniciar o nó de destino.
+**RebootRequired** \[out\] No retorno, essa propriedade será definida como **true**, se for necessário reiniciar o nó de destino.
 
 ## <a name="return-value"></a>Valor retornado
 

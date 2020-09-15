@@ -3,12 +3,12 @@ ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 description: Oferece um mecanismo para gerenciar grupos locais no nó de destino.
 title: Recurso de GroupSet DSC
-ms.openlocfilehash: 99b9cafdd4d799e18e1b9b1f08d7dd41ec435711
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560331"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464184"
 ---
 # <a name="dsc-groupset-resource"></a>Recurso de GroupSet DSC
 
@@ -24,8 +24,6 @@ Use esse recurso quando desejar adicionar e/ou remover a mesma lista de membros 
 Group [string] #ResourceName
 {
     GroupName = [string[]]
-    [ Members = [string[]] ]
-    [ Description = [string[]] ]
     [ MembersToInclude = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ Credential = [PSCredential] ]
@@ -41,7 +39,6 @@ Group [string] #ResourceName
 |---|---|
 |GroupName |Os nomes dos grupos para os quais você deseja garantir um estado específico. |
 |Membros |Use essa propriedade para substituir a associação ao grupo pelos membros especificados. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **MembersToExclude** ou **MembersToInclude**. Isso vai gerar um erro. |
-|Descrição |A descrição do grupo. |
 |MembersToInclude |Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro. |
 |MembersToExclude |Use essa propriedade para remover membros da associação existente dos grupos. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro. |
 |Credencial |As credenciais necessárias para acessar recursos remotos. Essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro. |
@@ -57,7 +54,7 @@ Group [string] #ResourceName
 > [!NOTE]
 > A propriedade comum **PsDscRunAsCredential** foi adicionada ao WMF 5.0 para permitir a execução de qualquer recurso de DSC no contexto de outras credenciais. Para saber mais, confira [Usar credenciais com recursos de DSC](../../../configurations/runasuser.md).
 
-## <a name="example-1-ensuring-groups-are-present"></a>Exemplo 1: Garantindo que grupos estejam presentes
+## <a name="example-1-ensuring-groups-are-present"></a>Exemplo 1: Garantir que grupos estejam presentes
 
 O exemplo a seguir mostra como garantir que dois grupos chamados "myGroup" e "myOtherGroup" estejam presentes.
 
