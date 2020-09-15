@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c4e725569db776fe0dbd5395b2f0f8b8e70cbbeb
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500718"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837470"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -278,5 +278,5 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 - [Visão geral da Desired State Configuration do Windows PowerShell](../overview/overview.md)
 - [Aplicando configurações](enactingConfigurations.md)
 - [Usando um servidor de relatório de DSC](reportServer.md)
-- [[MS-DSCPM]: protocolo Desired State Configuration Pull Model](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
-- [[MS-DSCPM]: errata do protocolo Desired State Configuration Pull Model](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)
+- [[MS-DSCPM]: protocolo Desired State Configuration Pull Model](/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
+- [[MS-DSCPM]: errata do protocolo Desired State Configuration Pull Model](/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)

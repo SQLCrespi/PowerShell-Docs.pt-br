@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell, cmdlet
 title: Atalhos do teclado para o ISE do Windows PowerShell
-ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809762"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092109"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
@@ -75,7 +75,7 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 | **Executar/continuar**           | <kbd>F5</kbd>                                  | Painel de Script ao depurar um script |
 | **Intervir**              | <kbd>F11</kbd>                                 | Painel de Script ao depurar um script |
 | **Contornar**              | <kbd>F10</kbd>                                 | Painel de Script ao depurar um script |
-| **Sair**               | <kbd>SHIFT</kbd>+<kbd><kbd>F11</kbd></kbd>     | Painel de Script ao depurar um script |
+| **Sair**               | <kbd>SHIFT</kbd>+<kbd>F11</kbd>                | Painel de Script ao depurar um script |
 | **Exibir pilha de chamadas**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>  | Painel de Script ao depurar um script |
 | **Listar pontos de interrupção**       | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>L</kbd>  | Painel de Script ao depurar um script |
 | **Alternar ponto de interrupção**      | <kbd>F9</kbd>                                  | Painel de Script ao depurar um script |

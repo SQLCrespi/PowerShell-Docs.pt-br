@@ -1,13 +1,13 @@
 ---
-ms.date: 06/18/2019
+ms.date: 06/11/2020
 keywords: powershell, cmdlet
 title: Recursos de aprendizagem do PowerShell
-ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d9d2f77090a7da7a5bef0c6d0c2af80c3a07be46
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808428"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722840"
 ---
 # <a name="powershell-learning-resources"></a>Recursos de aprendizagem do PowerShell
 
@@ -23,7 +23,7 @@ Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem m
 
 ## <a name="channel-9-videos"></a>Vídeos do Channel 9
 
-Channel 9 é nossa plataforma de publicação de vídeos. Há centenas de vídeos disponíveis sobre o PowerShell. [Procure por "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) para ver quais vídeos estão disponíveis.
+Channel 9 é nossa plataforma de publicação de vídeos. Há centenas de vídeos disponíveis sobre o PowerShell. [Procure por "PowerShell"](https://channel9.msdn.com/Tags/powershell) para ver quais vídeos estão disponíveis.
 
 ### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 

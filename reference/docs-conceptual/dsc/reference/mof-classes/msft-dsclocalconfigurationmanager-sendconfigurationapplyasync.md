@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método SendConfigurationApplyAsync
-ms.openlocfilehash: c0e6dc9418757ee719e848fa8e7006dd73d91ad8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cfac5edb5fed94ee69deb98d7aa6be56b51c5b3
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953373"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463730"
 ---
 # <a name="sendconfigurationapplyasync-method"></a>Método SendConfigurationApplyAsync
 
@@ -25,11 +25,11 @@ uint32 SendConfigurationApplyAsync(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ConfigurationData* \[in\] Os dados de ambiente da configuração.
+**ConfigurationData** \[in\] Os dados de ambiente da configuração.
 
-*force* \[in\] **true** para forçar a configuração a parar.
+**force** \[in\] **true** para forçar a configuração a parar.
 
-*jobId* \[in\] A ID do trabalho para a qual enviar a configuração.
+**jobId** \[in\] A ID do trabalho para a qual enviar a configuração.
 
 ## <a name="return-value"></a>Valor retornado
 

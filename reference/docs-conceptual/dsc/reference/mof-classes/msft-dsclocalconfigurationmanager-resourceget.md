@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método ResourceGet
-ms.openlocfilehash: dbe610dfcef5ef6c79783801ecb6fdb7408bdfa5
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: aa7671989db6f4a98d879fd449d09503eddbeda3
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954993"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463951"
 ---
 # <a name="resourceget-method"></a>Método ResourceGet
 
@@ -26,13 +26,13 @@ uint32 ResourceGet(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ResourceType* \[in\] O nome do recurso a chamar.
+**ResourceType** \[in\] O nome do recurso a chamar.
 
-*ModuleName* \[in\] O nome do módulo que contém o recurso a chamar.
+**ModuleName** \[in\] O nome do módulo que contém o recurso a chamar.
 
-*resourceProperty* \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
+**resourceProperty** \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
 
-*configurations* \[out\] No retorno, contém uma instância inserida das configurações.
+**configurations** \[out\] No retorno, contém uma instância inserida das configurações.
 
 ## <a name="return-value"></a>Valor retornado
 

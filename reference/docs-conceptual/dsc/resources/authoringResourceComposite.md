@@ -1,19 +1,20 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: 'Recursos de composição: usando uma configuração DSC como um recurso'
-ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1baa5e4ca5dfa808edc4452db4874a83aa78107e
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415900"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217535"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Recursos de composição: usando uma configuração DSC como um recurso
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Em situações reais, as configurações podem se tornar longas e complexas, chamando muitos recursos diferentes e definindo um grande número de propriedades. Para ajudar a resolver essa complexidade, é possível usar uma configuração do tipo Configuração de Estado Desejado (DSC) do Windows PowerShell como um recurso para outras configurações. Isso é chamado de recurso de composição. Um recurso de composição é uma configuração DSC que usa parâmetros. Os parâmetros da configuração atuam como as propriedades do recurso. A configuração é salva como um arquivo com uma extensão `.schema.psm1`. Ela substitui o esquema MOF e o script em um recurso de DSC típico. Para obter mais informações sobre recursos de DSC, confira [Recursos de Desired State Configuration do Windows PowerShell](resources.md).
+Em situações reais, as configurações podem se tornar longas e complexas, chamando muitos recursos diferentes e definindo um grande número de propriedades. Para ajudar a resolver essa complexidade, é possível usar uma configuração do tipo Configuração de Estado Desejado (DSC) do Windows PowerShell como um recurso para outras configurações. Isso é chamado de recurso de composição. Um recurso de composição é uma configuração DSC que usa parâmetros. Os parâmetros da configuração atuam como as propriedades do recurso.
+A configuração é salva como um arquivo com uma extensão `.schema.psm1`. Ela substitui o esquema MOF e o script em um recurso de DSC típico. Para obter mais informações sobre recursos de DSC, confira [Recursos de Desired State Configuration do Windows PowerShell](resources.md).
 
 ## <a name="creating-the-composite-resource"></a>Criando o recurso de composição
 

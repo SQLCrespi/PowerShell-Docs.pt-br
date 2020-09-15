@@ -1,17 +1,18 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso de DSC de instância única (melhor prática)
-ms.openlocfilehash: 4d9e07c6aaa064f808a03d4252e8d352b82183ec
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: cd6048c0f8aeef7fb5458a5f0bfefef25169297c
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952813"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217603"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Escrevendo um recurso de DSC de instância única (melhor prática)
 
->**Observação:** este tópico descreve a melhor prática para a definição de um recurso de DSC que permite apenas uma única instância em uma configuração. Atualmente, não há nenhum recurso interno do DSC para fazer isso. Isso pode mudar no futuro.
+> [!NOTE]
+> Este tópico descreve a melhor prática para a definição de um recurso de DSC que permite apenas uma única instância em uma configuração. Atualmente, não há nenhum recurso interno do DSC para fazer isso. Isso pode mudar no futuro.
 
 Há situações em que você não deseja permitir que um recurso seja usado várias vezes em uma configuração. Por exemplo, um uma implementação anterior do recurso [xTimeZone](https://github.com/PowerShell/xTimeZone), uma configuração poderia chamar o recurso várias vezes, configurando o fuso horário para uma definição diferente em cada bloco de recurso:
 
@@ -48,8 +49,7 @@ Configuration SetTimeZone
 
 Isso ocorre devido à forma como as chaves de recurso de DSC funcionam. Um recurso deve ter pelo menos uma propriedade de chave. Uma instância do recurso é considerada exclusiva se a combinação de valores de todas as suas propriedades de chave for exclusiva. Em sua implementação anterior, o recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) apresentava apenas uma propriedade --**TimeZone**, que obrigatoriamente tinha que ser uma chave. Por isso, uma configuração, como mostrado acima seria compilada e executada sem aviso. Cada um do blocos de recurso de **xTimeZone** é considerado exclusivo. Isso faria com que a configuração fosse aplicada várias vezes ao nó, alternando o fuso horário.
 
-Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade principal.
-O **IsSingleInstance** foi limitado a um único valor, "Yes" (Sim) usando um **ValueMap**. O esquema MOF antigo para o recurso foi:
+Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade principal. O **IsSingleInstance** foi limitado a um único valor, "Yes" (Sim) usando um **ValueMap**. O esquema MOF antigo para o recurso foi:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -122,7 +122,7 @@ function Set-TargetResource
     $CurrentTimeZone = Get-TimeZone
 
     Write-Verbose -Message "Replace the System Time Zone to $TimeZone"
-    
+
     try
     {
         if($CurrentTimeZone -ne $TimeZone)
@@ -204,7 +204,7 @@ Export-ModuleMember -Function *-TargetResource
 
 Observe que a propriedade **TimeZone** propriedade não é mais uma chave. Agora, se uma configuração tentar definir o fuso horário duas vezes (usando dois blocos **xTimeZone** diferentes com valores de **TimeZone** diferentes), tentar compilar a configuração vai gerar um erro:
 
-```powershell
+```Output
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and
 '[xTimeZone]TimeZoneExample2 (::22::10::xTimeZone)' in node 'CONTOSO-CLIENT'. Resources have identical key properties but there are differences in the
 following non-key properties: 'TimeZone'. Values 'Eastern Standard Time' don't match values 'Pacific Standard Time'. Please update these property
