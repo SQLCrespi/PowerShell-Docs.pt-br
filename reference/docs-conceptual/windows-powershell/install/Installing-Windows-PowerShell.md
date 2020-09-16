@@ -2,12 +2,12 @@
 ms.date: 08/09/2017
 keywords: powershell, cmdlet, baixar, instalar, configurar, windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
-ms.openlocfilehash: c94ef8493c7d41bcb26c39010591319a8df8da9a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808662"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236213"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
 
@@ -66,9 +66,9 @@ Se você precisa atualizar a versão existente do PowerShell, no Windows, use a 
 |                    Windows                     |                                  PS 3.0                                   |                                  PS 4.0                                   |                                  PS 5.0                                   |                                  PS 5.1                                   |
 | ---------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Windows 10 (consulte a Observação 1)<br/>Windows Server 2016 | -                                                                         | -                                                                         | -                                                                         | instalado                                                                 |
-| Windows 8.1<br/>Windows Server 2012 R2         | -                                                                         | instalado                                                                 | [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
-| Windows 8<br/>Windows Server 2012              | instalado                                                                 | [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
-| Windows 7 SP1<br/>Windows Server 2008 R2 SP1   | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
+| Windows 8.1<br/>Windows Server 2012 R2         | -                                                                         | instalado                                                                 | [Windows Management Framework 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
+| Windows 8<br/>Windows Server 2012              | instalado                                                                 | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) | [Windows Management Framework 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
+| Windows 7 SP1<br/>Windows Server 2008 R2 SP1   | [WMF 3.0](https://www.microsoft.com/download/details.aspx?id=34595) | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) | [Windows Management Framework 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
 
 > [!NOTE]
 > Na versão inicial do Windows 10, com as atualizações automáticas ativadas, o PowerShell é atualizado da versão 5.0 para a 5.1. Se a versão original do Windows 10 não for atualizada por meio de atualizações do Windows, a versão do PowerShell será a 5.0.

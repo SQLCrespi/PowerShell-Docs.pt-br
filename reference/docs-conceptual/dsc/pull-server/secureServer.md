@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: 2d707dc64c327cf30d09104aee140e5b78ee7c29
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692261"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236247"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -64,7 +64,7 @@ Além de instalar o conteúdo mais recente do Windows Update, dois downloads sã
 ### <a name="wmf"></a>WINDOWS MANAGEMENT FRAMEWORK
 
 O Windows Server 2012 R2 inclui um recurso chamado de serviço DSC. O recurso de serviço DSC fornece a funcionalidade do servidor de pull, incluindo os binários que oferecem suporte ao ponto de extremidade OData. O WMF está incluído no Windows Server e é atualizado em uma cadência ágil entre as versões do Windows Server.
-[Novas versões do WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=54616) podem incluir atualizações do recurso de Serviço do DSC. Por esse motivo, é uma prática recomendada baixar a versão mais recente do WMF e examinar as notas de versão para determinar se a versão inclui uma atualização do recurso de serviço DSC. Também é necessário examinar a seção das notas de versão que indica se o status de design para uma atualização ou cenário está listado como estável ou experimental. Para permitir um ciclo de lançamento ágil, recursos individuais podem ser declarados estáveis, o que indica que o recurso está pronto para ser usado em um ambiente de produção ainda que o WMF esteja lançado como visualização. Outros recursos que têm sido historicamente atualizados por versões do WMF (consulte as Notas de Versão do WMF para obter mais detalhes):
+[Novas versões do WMF 5.0](https://www.microsoft.com/download/details.aspx?id=54616) podem incluir atualizações do recurso de Serviço do DSC. Por esse motivo, é uma prática recomendada baixar a versão mais recente do WMF e examinar as notas de versão para determinar se a versão inclui uma atualização do recurso de serviço DSC. Também é necessário examinar a seção das notas de versão que indica se o status de design para uma atualização ou cenário está listado como estável ou experimental. Para permitir um ciclo de lançamento ágil, recursos individuais podem ser declarados estáveis, o que indica que o recurso está pronto para ser usado em um ambiente de produção ainda que o WMF esteja lançado como visualização. Outros recursos que têm sido historicamente atualizados por versões do WMF (consulte as Notas de Versão do WMF para obter mais detalhes):
 
 - Windows PowerShell, ISE (Ambiente de Script Integrado) do Windows PowerShell
 - Serviços Web do Windows PowerShell (Extensão do IIS do Management OData)

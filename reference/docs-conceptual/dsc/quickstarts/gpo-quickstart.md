@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: DSC, GPO, PowerShell, configuração, instalação
 title: Início Rápido – Converter a Política de Grupo em DSC
-ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808241"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236230"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Início Rápido: Converter a Política de Grupo em DSC
 
@@ -23,7 +23,7 @@ Você pode gerar uma configuração DSC de uma Política de Grupo ou uma linha d
 
 Os cmdlets listados acima convertem uma linha de base em um arquivo `.mof` DSC. Você também pode optar por gerar um script de configuração (`.ps1`), que pode ser editado e recompilado. Os cmdlets detectam erros de compilação para os recursos ausentes ou blocos de recursos duplicados. Os blocos de recursos que causam erros de compilação são comentados.
 
-O exemplo a seguir converte uma [Linha de Base de Segurança da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=55319) em um script de configuração DSC (`.ps1`) e um arquivo `.mof`.
+O exemplo a seguir converte uma [Linha de Base de Segurança da Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) em um script de configuração DSC (`.ps1`) e um arquivo `.mof`.
 
 ```powershell
 Install-Module BaselineManagement
