@@ -73,6 +73,8 @@
           href: learn/deep-dives/everything-about-null.md
         - name: Tudo o que você quer saber sobre ShouldProcess
           href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: Write-Progress durante o multithreading
+          href: learn/deep-dives/write-progress-across-multiple-threads.md
     - name: Comunicação remota do PowerShell
       items:
         - name: JEA (Administração Just Enough)
@@ -225,7 +227,7 @@
               href: windows-powershell/wmf/whats-new/bugfixes.md
             - name: Cmdlets novos e atualizados
               href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
-            - name: Criando tipos personalizados usando classes do PowerShell
+            - name: Novos recursos de linguagem no PowerShell 5.0
               href: windows-powershell/wmf/whats-new/class-overview.md
             - name: Melhorias do Console no WMF 5.1
               href: windows-powershell/wmf/whats-new/console-improvements.md
@@ -358,7 +360,7 @@
               href: dsc/resources/authoringResourceClass.md
             - name: Escrever recursos de composição no PowerShell
               href: dsc/resources/authoringResourceComposite.md
-            - name: 'Escrever recursos baseados em MOF em C#'
+            - name: Escrever recursos baseados em MOF em C#
               href: dsc/resources/authoringResourceMofCS.md
             - name: Usando a ferramenta Designer de Recursos
               href: dsc/resources/authoringResourceMofDesigner.md
@@ -562,6 +564,8 @@
       href: community/hall-of-fame.md
     - name: Novidades no Docs
       items:
+        - name: T3 de 2020
+          href: community/2020-Q3.md
         - name: T2 de 2020
           href: community/2020-Q2.md
         - name: T1 de 2020
@@ -626,7 +630,7 @@
           href: samples/managing-processes-with-process-cmdlets.md
         - name: Gerenciando serviços
           href: samples/managing-services.md
-        - name: Gerenciando unidades do Windows PowerShell
+        - name: Gerenciar unidades do PowerShell
           href: samples/managing-windows-powershell-drives.md
         - name: Trabalhando com impressoras
           href: samples/working-with-printers.md
@@ -782,8 +786,14 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: Escrevendo módulos portáteis
       href: dev-cross-plat/writing-portable-modules.md
+    - name: Criar tópicos de ajuda do módulo usando PlatyPS
+      href: dev-cross-plat/create-help-using-platyps.md
     - name: Como criar um módulo binário da Biblioteca do PowerShell Standard
       href: dev-cross-plat/create-standard-library-binary-module.md
+    - name: Escolher o pacote NuGet correto para seu projeto .NET
+      href: dev-cross-plat/choosing-the-right-nuget-package.md
+    - name: Resolver conflitos de dependência de assembly de módulo
+      href: dev-cross-plat/resolving-dependency-conflicts.md
     - name: SDK do PowerShell Herdado
       items:
         - name: Visão geral
@@ -794,11 +804,11 @@
           href: developer/windows-powershell-reference.md
         - name: What's New
           href: developer/windows-powershell-reference-whats-new.md
-        - name: Escrevendo um Cmdlet do Windows PowerShell
+        - name: Gravar um cmdlet do PowerShell
           items:
             - name: Visão geral do cmdlet
               href: developer/cmdlet/cmdlet-overview.md
-            - name: Conceitos de cmdlet do Windows PowerShell
+            - name: Conceitos de cmdlet do PowerShell
               href: developer/cmdlet/windows-powershell-cmdlet-concepts.md
               items:
                 - name: Diretrizes para desenvolvimento de cmdlets
@@ -812,7 +822,7 @@
                       href: developer/cmdlet/advisory-development-guidelines.md
                 - name: Declaração de classe do cmdlet
                   href: developer/cmdlet/cmdlet-class-declaration.md
-                - name: Verbos aprovados para comandos do Windows PowerShell
+                - name: Verbos aprovados para comandos do PowerShell
                   href: developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
                 - name: Métodos de processamento de entrada de cmdlet
                   href: developer/cmdlet/cmdlet-input-processing-methods.md
@@ -910,7 +920,7 @@
                       href: developer/cmdlet/users-requesting-confirmation.md
                     - name: Mensagens de confirmação
                       href: developer/cmdlet/confirmation-messages.md
-                - name: Relatório de erros do Windows PowerShell
+                - name: Relatório de erros do PowerShell
                   href: developer/cmdlet/windows-powershell-error-reporting.md
                   items:
                     - name: Conceitos de relatórios de erro
@@ -921,7 +931,7 @@
                       href: developer/cmdlet/non-terminating-errors.md
                     - name: Exibir informações de erro
                       href: developer/cmdlet/displaying-error-information.md
-                    - name: Registros de erros do Windows PowerShell
+                    - name: Registros de erros do PowerShell
                       href: developer/cmdlet/windows-powershell-error-records.md
                     - name: Interpretar objetos ErrorRecord
                       href: developer/cmdlet/interpreting-errorrecord-objects.md
@@ -931,7 +941,7 @@
                   href: developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
                 - name: Conjuntos de cmdlets
                   href: developer/cmdlet/cmdlet-sets.md
-                - name: Estado de sessão do Windows PowerShell
+                - name: Estado de sessão do PowerShell
                   href: developer/cmdlet/windows-powershell-session-state.md
             - name: Exemplos de código do cmdlet
               href: developer/cmdlet/examples-of-cmdlet-code.md
@@ -1022,11 +1032,11 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Amostra Events01
                   href: developer/cmdlet/events01-sample.md
-        - name: Escrever um módulo do Windows PowerShell
+        - name: Como escrever um módulo do PowerShell
           items:
             - name: Visão geral
               href: developer/module/writing-a-windows-powershell-module.md
-            - name: Noções básicas sobre um módulo do Windows PowerShell
+            - name: Noções básicas sobre o módulo do PowerShell
               href: developer/module/understanding-a-windows-powershell-module.md
             - name: Como escrever um módulo de script do Windows PowerShell
               href: developer/module/how-to-write-a-powershell-script-module.md
@@ -1050,17 +1060,17 @@
                   items:
                     - name: Visão geral
                       href: developer/module/how-to-create-a-windows-powershell-snap-in.md
-                    - name: Escrever um snap-in do Windows PowerShell
+                    - name: Escrever um snap-in do PowerShell
                       href: developer/module/writing-a-windows-powershell-snap-in.md
-                    - name: Escrever um snap-in personalizado do Windows PowerShell
+                    - name: Escrever um snap-in personalizado do PowerShell
                       href: developer/module/writing-a-custom-windows-powershell-snap-in.md
             - name: Importar um módulo do PowerShell
               href: developer/module/importing-a-powershell-module.md
-        - name: Escrever um provedor do Windows PowerShell
+        - name: Escrever um provedor do PowerShell
           items:
-            - name: Início rápido do provedor do Windows PowerShell
+            - name: Início rápido do provedor do PowerShell
               href: developer/provider/windows-powershell-provider-quickstart.md
-            - name: Visão geral do provedor do Windows PowerShell
+            - name: Visão geral do provedor do PowerShell
               href: developer/provider/windows-powershell-provider-overview.md
               items:
                 - name: Tipos de provedor
@@ -1092,9 +1102,9 @@
                   href: developer/provider/accessdbprovidersample05.md
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
-        - name: Escrever um aplicativo host do Windows PowerShell
+        - name: Escrever um aplicativo host do PowerShell
           items:
-            - name: Início rápido do Windows PowerShell Host
+            - name: Início rápido do host do PowerShell
               href: developer/hosting/windows-powershell-host-quickstart.md
             - name: Criar runspaces
               href: developer/hosting/creating-runspaces.md
@@ -1114,12 +1124,12 @@
             - name: Amostras de aplicativos host
               href: developer/hosting/host-application-samples.md
               items:
-                - name: Amostras de API do Windows PowerShell
+                - name: Exemplos de API do PowerShell
                   href: developer/hosting/windows-powershell-api-samples.md
                   items:
-                    - name: Amostra Windows PowerShell01
+                    - name: Exemplo de PowerShell01
                       href: developer/hosting/windows-powershell01-sample.md
-                    - name: Amostra Windows PowerShell02
+                    - name: Exemplo de PowerShell02
                       href: developer/hosting/windows-powershell02-sample.md
                 - name: Amostras de host personalizadas
                   href: developer/hosting/custom-host-samples.md
@@ -1633,7 +1643,7 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: Elemento WrapTables (formato)
                   href: developer/format/wraptables-element-format.md
-        - name: Escrever tópicos de ajuda para o Windows PowerShell
+        - name: Escrever tópicos de ajuda para o PowerShell
           items:
             - name: Visão geral
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
@@ -1655,7 +1665,7 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: Escrever tópicos de ajuda com base em XML para comandos
               items:
-                - name: Escrever ajuda para cmdlets do Windows PowerShell
+                - name: Escrever tópicos de ajuda para cmdlets do PowerShell
                   items:
                     - name: Visão geral
                       href: developer/help/writing-help-for-windows-powershell-cmdlets.md
@@ -1679,9 +1689,10 @@
                       href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
                     - name: Como adicionar links relacionados a um tópico de ajuda do cmdlet
                       href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
-                - name: Escrever ajuda para módulos do Windows PowerShell
-                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                - name: Escrever tópicos de ajuda para módulos do PowerShell
                   items:
+                    - name: Visão geral
+                      href: developer/help/writing-help-for-windows-powershell-modules.md
                     - name: Nomear arquivos de ajuda
                       href: developer/help/naming-help-files.md
                     - name: Suporte à ajuda atualizável
@@ -1719,93 +1730,55 @@
                               href: developer/help/how-to-test-updatable-help.md
                         - name: Suporte à ajuda online
                           href: developer/help/supporting-online-help.md
-                - name: Escrever ajuda para provedores do Windows PowerShell
+                - name: Escrever tópicos de ajuda para Provedores do PowerShell
                   items:
                     - name: Como adicionar parâmetros dinâmicos a um tópico de ajuda do provedor
                       href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
                     - name: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
                       href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-        - name: Criar um serviço Web OData de gerenciamento
+        - name: ETS (Sistema de Tipo Estendido)
           items:
-            - name: Visão geral
-              href: developer/webservices/creating-a-management-odata-web-service.md
-            - name: Adicionar recursos a um serviço Web OData de gerenciamento
-              href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
-            - name: Implementar autorização personalizada para um serviço Web OData de gerenciamento
-              items:
-                - name: Visão geral
-                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
-                - name: Configurar a autorização baseada em função
-                  href: developer/webservices/configuring-role-based-authorization.md
-                - name: Esquema de configuração de autorização baseada em função
-                  href: developer/webservices/role-based-authorization-configuration-schema.md
-                - name: Invocar cmdlets do Windows PowerShell com serviços Web OData de gerenciamento
-                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
-            - name: Implementar SessionConfiguration para um serviço Web OData de gerenciamento
-              href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
-            - name: Criação do arquivo de esquema MOF para um serviço Web OData de gerenciamento
-              href: developer/webservices/authoring-the-mof-schema-file-for-a-management-odata-web-service.md
-            - name: Criação do arquivo de esquema XML para um serviço Web OData de gerenciamento
-              href: developer/webservices/authoring-the-xml-schema-file-for-a-management-odata-web-service.md
-            - name: Criação do arquivo Web.config para um serviço Web OData de gerenciamento
-              href: developer/webservices/authoring-the-web-config-file-for-a-management-odata-web-service.md
-            - name: Implantar um serviço Web OData de gerenciamento
-              href: developer/webservices/deploying-a-management-odata-web-service.md
-            - name: Associar entidades OData de gerenciamento
-              href: developer/webservices/associating-management-odata-entities.md
-            - name: Arquivos de esquema de extensões do IIS OData de gerenciamento
-              items:
-                - name: Visão geral
-                  href: developer/webservices/management-odata-iis-extension-schema-files.md
-                - name: Esquema de mapeamento de recursos
-                  href: developer/webservices/resource-mapping-schema.md
-                - name: Esquema de recursos públicos
-                  href: developer/webservices/public-resource-schema.md
-        - name: Escrevendo um Fluxo de Trabalho do Windows PowerShell
-          items:
-            - name: Visão geral
-              href: developer/workflow/writing-a-windows-powershell-workflow.md
-            - name: Adicionar atividades do Windows PowerShell à caixa de ferramentas do Visual Studio
-              href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: Criar um fluxo de trabalho com atividades do Windows PowerShell
-              href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
-            - name: Criar um fluxo de trabalho pelo uso de um script do Windows PowerShell
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
-            - name: Importar e invocar um fluxo de trabalho do Windows PowerShell
-              href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
-            - name: Criar uma atividade de fluxo de trabalho de um cmdlet do Windows PowerShell
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: Agendar trabalhos com a API do Windows PowerShell
-              href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
-            - name: Parâmetros de fluxo de trabalho comuns
-              href: developer/workflow/common-workflow-parameters.md
+            - name: Visão Geral do ETS
+              href: developer/ets/overview.md
+            - name: Membros do ETS
+              href: developer/ets/members.md
+            - name: Conjuntos de membros do ETS
+              href: developer/ets/membersets.md
+            - name: Propriedades do ETS
+              href: developer/ets/properties.md
+            - name: Métodos do ETS
+              href: developer/ets/methods.md
+            - name: Conversores de tipo do ETS
+              href: developer/ets/typeconverters.md
+            - name: Erros e exceções no ETS
+              href: developer/ets/errors-exceptions.md
         - name: Guia do programador do Windows PowerShell
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
-            - name: Como criar um provedor do Windows PowerShell
+            - name: Como criar um provedor do PowerShell
               href: developer/prog-guide/how-to-create-a-windows-powershell-provider.md
               items:
-                - name: Projetar seu provedor do Windows PowerShell
+                - name: Criar seu provedor do PowerShell
                   href: developer/prog-guide/designing-your-windows-powershell-provider.md
-                - name: Criar um provedor básico do Windows PowerShell
+                - name: Criar um provedor básico do PowerShell
                   href: developer/prog-guide/creating-a-basic-windows-powershell-provider.md
-                - name: Criar um provedor de unidade do Windows PowerShell
+                - name: Criar um provedor de unidade do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-drive-provider.md
-                - name: Criar um provedor de itens do Windows PowerShell
+                - name: Criar um provedor de itens do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-item-provider.md
-                - name: Criar um provedor de contêineres do Windows PowerShell
+                - name: Criar um provedor de contêineres do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-container-provider.md
-                - name: Criar um provedor de navegação do Windows PowerShell
+                - name: Criar um provedor de navegação do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
-                - name: Criar um provedor de conteúdo do Windows PowerShell
+                - name: Criar um provedor de conteúdo do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-content-provider.md
-                - name: Criar um provedor de propriedade do Windows PowerShell
+                - name: Criar um provedor de propriedade do PowerShell
                   href: developer/prog-guide/creating-a-windows-powershell-property-provider.md
             - name: Como criar um shell do console
               href: developer/prog-guide/how-to-create-a-console-shell.md
-            - name: Conceitos do Windows PowerShell
+            - name: Conceitos do PowerShell
               href: developer/prog-guide/windows-powershell-concepts.md
-            - name: Código de exemplo do Windows PowerShell
+            - name: Código de exemplo do PowerShell
               href: developer/prog-guide/windows-powershell-sample-code.md
               items:
                 - name: Exemplo de código AccessDbProviderSample01
@@ -1823,68 +1796,68 @@
                 - name: Exemplos de código GetProc01
                   href: developer/prog-guide/getproc01-code-samples.md
                   items:
-                    - name: 'Código de exemplo GetProc01 (C#)'
+                    - name: Código de exemplo GetProc01 (C#)
                       href: developer/prog-guide/getproc01-csharp-sample-code.md
                     - name: Código de exemplo GetProc01 (VB.NET)
                       href: developer/prog-guide/getproc01-vb-net-sample-code.md
                 - name: Exemplos de código GetProc02
                   href: developer/prog-guide/getproc02-code-samples.md
                   items:
-                    - name: 'Código de exemplo GetProc02 (C#)'
+                    - name: Código de exemplo GetProc02 (C#)
                       href: developer/prog-guide/getproc02-csharp-sample-code.md
                     - name: Código de exemplo GetProc02 (VB.NET)
                       href: developer/prog-guide/getproc02-vb-net-sample-code.md
                 - name: Exemplos de código GetProc03
                   href: developer/prog-guide/getproc03-code-samples.md
                   items:
-                    - name: 'Código de exemplo GetProc03 (C#)'
+                    - name: Código de exemplo GetProc03 (C#)
                       href: developer/prog-guide/getproc03-csharp-sample-code.md
                     - name: Código de exemplo GetProc03 (VB.NET)
                       href: developer/prog-guide/getproc03-vb-net-sample-code.md
                 - name: Exemplos de código GetProc04
                   href: developer/prog-guide/getproc04-code-samples.md
                   items:
-                    - name: 'Código de exemplo GetProc04 (C#)'
+                    - name: Código de exemplo GetProc04 (C#)
                       href: developer/prog-guide/getproc04-csharp-sample-code.md
                     - name: Código de exemplo GetProc04 (VB.NET)
                       href: developer/prog-guide/getproc04-vb-net-sample-code.md
                 - name: Exemplos de código GetProc05
                   href: developer/prog-guide/getproc05-code-samples.md
                   items:
-                    - name: 'Código de exemplo GetProc05 (C#)'
+                    - name: Código de exemplo GetProc05 (C#)
                       href: developer/prog-guide/getproc05-csharp-sample-code.md
                     - name: Código de exemplo GetProc05 (VB.NET)
                       href: developer/prog-guide/getproc05-vb-net-sample-code.md
                 - name: Exemplos de código StopProc01
                   href: developer/prog-guide/stopproc01-code-samples.md
                   items:
-                    - name: 'Código de exemplo StopProc01 (C#)'
+                    - name: Código de exemplo StopProc01 (C#)
                       href: developer/prog-guide/stopproc01-csharp-sample-code.md
                 - name: Exemplos de código StopProcessSample04
                   href: developer/prog-guide/stopprocesssample04-code-samples.md
                   items:
-                    - name: 'Código de exemplo StopProcessSample04 (C#)'
+                    - name: Código de exemplo StopProcessSample04 (C#)
                       href: developer/prog-guide/stopprocesssample04-csharp-sample-code.md
                     - name: Código de exemplo StopProcessSample04 (VB.NET)
                       href: developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
                 - name: Exemplos de código Runspace01
                   href: developer/prog-guide/runspace01-code-samples.md
                   items:
-                    - name: 'Exemplo de código Runspace01 (C#)'
+                    - name: Exemplo de código Runspace01 (C#)
                       href: developer/prog-guide/runspace01-csharp-code-sample.md
                     - name: Exemplo de código Runspace01 (VB.NET)
                       href: developer/prog-guide/runspace01-vb-net-code-sample.md
                 - name: Exemplos de código Runspace02
                   href: developer/prog-guide/runspace02-code-samples.md
                   items:
-                    - name: 'Exemplo de código Runspace02 (C#)'
+                    - name: Exemplo de código Runspace02 (C#)
                       href: developer/prog-guide/runspace02-csharp-code-sample.md
                     - name: Exemplo de código Runspace02 (VB.NET)
                       href: developer/prog-guide/runspace02-vb-net-code-sample.md
                 - name: Exemplos de código RunSpace03
                   href: developer/prog-guide/runspace03-code-samples.md
                   items:
-                    - name: 'Exemplo de código RunSpace03 (C#)'
+                    - name: Exemplo de código RunSpace03 (C#)
                       href: developer/prog-guide/runspace03-csharp-code-sample.md
                     - name: Exemplo de código RunSpace03 (VB.NET)
                       href: developer/prog-guide/runspace03-vb-net-code-sample.md
