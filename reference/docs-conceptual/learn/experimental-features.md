@@ -1,13 +1,13 @@
 ---
-ms.date: 04/28/2020
+ms.date: 09/14/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: 72a4309d6eeede4cd2ff7c38ce8e99ce3ace30eb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
+ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809182"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574463"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -24,22 +24,46 @@ Para obter mais informações sobre como habilitar ou desabilitar esses recursos
 
 Este artigo descreve os recursos experimentais que estão disponíveis e como usar o recurso.
 
-|                            Nome                            |   6.2   |   7.0   | 7.1 (versão prévia) |
-| ---------------------------------------------------------- | :-----: | :-----: | :-----------: |
-| PSTempDrive (base no PS 7.0+)                        | &check; |         |               |
-| PSUseAbbreviationExpansion (base no PS 7.0+)         | &check; |         |               |
-| PSCommandNotFoundSuggestion                                | &check; | &check; |    &check;    |
-| PSImplicitRemotingBatching                                 | &check; | &check; |    &check;    |
-| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; |    &check;    |
-| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; |    &check;    |
-| PSNullConditionalOperators                                 |         | &check; |    &check;    |
-| PSUnixFileStat (somente não Windows)                          |         | &check; |    &check;    |
-| PSNativePSPathResolution                                   |         |         |    &check;    |
-| PSCultureInvariantReplaceOperator                          |         |         |    &check;    |
+|                            Nome                            |   6.2   |   7.0   |   7.1   |
+| ---------------------------------------------------------- | :-----: | :-----: | :-----: |
+| PSTempDrive (base no PS 7.0+)                        | &check; |         |         |
+| PSUseAbbreviationExpansion (base no PS 7.0+)         | &check; |         |         |
+| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
+| PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
+| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
+| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
+| PSNullConditionalOperators (base no PS 7.1+)         |         | &check; |         |
+| PSUnixFileStat (somente não Windows)                          |         | &check; | &check; |
+| PSNativePSPathResolution (base no PS 7.1+)           |         |         |         |
+| PSCultureInvariantReplaceOperator                          |         |         | &check; |
+| PSNotApplyErrorActionToStderr                              |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
-Habilita o parâmetro **BreakAll** nos cmdlets `Debug-Runspace` e `Debug-Job` para permitir que os usuários decidam se querem que o PowerShell seja interrompido imediatamente no local atual quando eles anexarem um depurador.
+No PowerShell 7.0, o experimento habilita o parâmetro **BreakAll** nos cmdlets `Debug-Runspace` e `Debug-Job` para permitir que os usuários decidam se querem que o PowerShell seja interrompido imediatamente no local atual quando eles anexarem um depurador.
+
+No PowerShell 7.1, esse experimento também adiciona o parâmetro **Runspace** aos cmdlets `*-PSBreakpoint`.
+
+- `Disable-PSBreakpoint`
+- `Enable-PSBreakpoint`
+- `Get-PSBreakpoint`
+- `Remove-PSBreakpoint`
+- `Set-PSBreakpoint`
+
+O parâmetro **Runspace** especifica um objeto **Runspace** para interagir com pontos de interrupção no runspace especificado.
+
+```powershell
+Start-Job -ScriptBlock {
+    Set-PSBreakpoint -Command Start-Sleep
+    Start-Sleep -Seconds 10
+}
+
+$runspace = Get-Runspace -Id 1
+
+$breakpoint = Get-PSBreakPoint -Runspace $runspace
+```
+
+Nesse exemplo, um trabalho é iniciado e um ponto de interrupção é definido para interromper quando `Set-PSBreakPoint` for executado. O runspace é armazenado em uma variável e transmitido para o comando `Get-PSBreakPoint` com o parâmetro **Runspace**. Em seguida, você pode inspecionar o ponto de interrupção na variável `$breakpoint`.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
@@ -129,6 +153,17 @@ Além disso, no Windows, se o caminho começar com `~`, isso será resolvido par
 - Se o caminho não for um PSDrive ou `~` (no Windows), a normalização de caminho não ocorrerá
 - Se o caminho estiver entre aspas simples, ele não será resolvido e tratado como literal
 
+> [!NOTE]
+> Esse recurso foi removido da fase experimental e é um recurso base do PowerShell 7.1 e posterior.
+
+## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
+
+Quando esse recurso experimental está habilitado, os registros de erro redirecionados de comandos nativos, como ao usar operadores de redirecionamento (`2>&1`), não são gravados na variável `$Error`, e a variável de preferência `$ErrorActionPreference` não afeta a saída redirecionada.
+
+Muitos comandos nativos gravam em `stderr` como um fluxo alternativo para obter informações adicionais. Esse comportamento pode causar confusão ao examinar erros, ou o usuário pode perder as informações de saída adicionais caso `$ErrorActionPreference` esteja definido como um estado que desativa a saída.
+
+Quando um comando nativo tem um código de saída diferente de zero, `$?` é definido como `$false`. Se o código de saída for zero, `$?` será definido como `$true`.
+
 ## <a name="psnullconditionaloperators"></a>PSNullConditionalOperators
 
 Apresenta novos operadores para operadores de acesso a membros condicional nulo – `?.` e `?[]`. Operadores de acesso a membros nulo podem ser usados em tipos escalares e tipos de matriz. Retorne o valor do membro acessado se a variável não for nula. Se o valor da variável for nulo, retornará nulo.
@@ -150,6 +185,9 @@ Os operadores `?.` e `?[]` são operadores de acesso a membros e não permitem u
 
 Como o PowerShell permite `?` como parte do nome da variável, a desambiguidade é necessária quando os operadores são usados sem um espaço entre o nome da variável e o operador. Para desambiguar, as variáveis devem usar `{}` em volta do nome da variável, como: `${x?}?.propertyName` ou `${y}?[0]`.
 
+> [!NOTE]
+> Esse recurso foi removido da fase experimental e é um recurso base do PowerShell 7.1 e posterior.
+
 ## <a name="pstempdrive"></a>PSTempDrive
 
 Cria o PSDrive `TEMP:` mapeado para o caminho do diretório temporário do usuário.
@@ -164,7 +202,7 @@ Esse recurso fornece um novo comportamento para incluir dados da API **stat** do
 A saída de `Get-ChildItem` deve ser semelhante a esta:
 
 ```powershell
-PS> dir | select -first 4 -skip 5
+dir | select -first 4 -skip 5
 
 
     Directory: /Users/jimtru/src/github/forks/JamesWTruher/PowerShell-1
