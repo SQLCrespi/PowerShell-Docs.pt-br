@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 070ecb871003487e2f1ff7b0d56c44c562acaaf8
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837522"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -34,9 +34,9 @@ Adicionamos o pacote de compatibilidade do Windows à versão do PowerShell Core
 
 O pacote de compatibilidade do Windows permite que o PowerShell Core use **mais de 1900 cmdlets que acompanham a atualização de outubro de 2018 do Windows 10 e o Windows Server 2019**.
 
-## <a name="support-for-application-whitelisting"></a>Suporte à lista de permissões de aplicativos
+## <a name="support-for-application-allow-lists"></a>Suporte para listas de permissões de Aplicativos
 
-O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). A lista de permissões de aplicativos permite um controle granular de quais binários podem ser executados, usado com o [modo de linguagem restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) do PowerShell.
+O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). As listas de permissões de aplicativos permitem um controle granular de quais binários podem ser executados, usados com o [modo de linguagem restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) do PowerShell.
 
 ## <a name="performance-improvements"></a>Melhorias de desempenho
 
@@ -88,9 +88,9 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | Tempo (s)   | 0,259                  | 0,577               | 0,125                  |
 | Aceleração (%) | N/D                    | -122,8%             | 78,3% (51,7% de WPS) |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>Verificar `system32` se há módulos de caixa de entrada compatíveis no Windows
+## <a name="check-system32-for-compatible-built-in-modules-on-windows"></a>Verificar em `system32` se há módulos internos compatíveis no Windows
 
-Na atualização 1809 do Windows 10 e no Windows Server 2019, atualizamos alguns módulos do PowerShell na caixa de entrada para marcá-los como compatíveis com o PowerShell Core.
+Na atualização 1809 do Windows 10 e no Windows Server 2019, atualizamos alguns módulos internos do PowerShell para marcá-los como compatíveis com o PowerShell Core.
 
 Quando o PowerShell Core 6.1 for iniciado, ele incluirá `$windir\System32` automaticamente como parte da variável de ambiente `PSModulePath`. No entanto, expõe módulos somente para `Get-Module` e `Import-Module` se seu `CompatiblePSEdition` está marcado como compatível `Core`.
 
@@ -197,7 +197,7 @@ e [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-r
 
 O [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) é um recurso do PowerShell e do Hyper-V que permite que você se conecte a uma VM ou Contêiner do Hyper-V sem conectividade de rede ou outros serviços de gerenciamento remoto.
 
-No passado, o PowerShell Direct era conectado usando a instância do Windows PowerShell de caixa de entrada no Contêiner. Agora, o PowerShell Direct primeiro tenta se conectar usando algum `pwsh.exe` disponível na variável de ambiente `PATH`. Se `pwsh.exe` não estiver disponível, o PowerShell Direct voltará a usar `powershell.exe`.
+No passado, o PowerShell Direct era conectado usando a instância do Windows PowerShell interna no Contêiner. Agora, o PowerShell Direct primeiro tenta se conectar usando algum `pwsh.exe` disponível na variável de ambiente `PATH`. Se `pwsh.exe` não estiver disponível, o PowerShell Direct voltará a usar `powershell.exe`.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` já cria pontos de extremidade de comunicação remota separados para versões prévias
 

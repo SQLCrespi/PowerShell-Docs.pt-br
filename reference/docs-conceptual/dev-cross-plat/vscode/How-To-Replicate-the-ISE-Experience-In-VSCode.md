@@ -2,12 +2,12 @@
 title: Como replicar a experiência do ISE no Visual Studio Code
 description: Como replicar a experiência do ISE no Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 899e1c393fd49b0659631b88d610e80ec885e69e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 6b0b8ce054695d6cc0fc578290c554e2dc1472bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809592"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784615"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Como replicar a experiência do ISE no Visual Studio Code
 
@@ -25,7 +25,7 @@ Para fazer isso, abra a paleta de comandos (<kbd>F1</kbd> OU <kbd>Ctrl</kbd>+<kb
 
 Esse comando aplica automaticamente as configurações descritas abaixo. O resultado é semelhante a este:
 
-![Modo ISE](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+![Visual Studio Code no modo ISE](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
 
 ## <a name="ise-mode-configuration-settings"></a>Definições de configuração do modo ISE
 
@@ -53,7 +53,7 @@ O modo ISE faz as alterações a seguir nas configurações do VS Code.
 
   Essas configurações ocultam as seções "Barra de Atividades" e "Barra Lateral de Depuração" mostradas na caixa vermelha abaixo:
 
-  ![a seção realçada inclui a Barra de Atividades e a Barra Lateral de Depuração](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+  ![A seção realçada inclui a Barra de Atividades e a Barra Lateral de Depuração](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
 
   O resultado final se parece com o seguinte:
 
@@ -122,7 +122,7 @@ O modo ISE faz as alterações a seguir nas configurações do VS Code.
 
 - O blog 4sysops tem [um excelente artigo][4sysops] sobre como configurar o VS Code para que ele fique mais parecido com o ISE.
 - Mike F. Robbins tem [uma excelente postagem][mikefrobbins] sobre como configurar o VS Code.
-- Saiba mais sobre a [excelente configuração de gravação][learnpwsh] para o PowerShell.
+<!-- - Learn PowerShell has [an excellent write up][learnpwsh] setup for PowerShell. -->
 
 ## <a name="vs-code-tips"></a>Dicas de VS Code
 
@@ -145,7 +145,7 @@ Também gostamos de receber PRs e contribuições!
 <!-- link references -->
 [vsc-docs]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
 [Paleta de comandos]: #vs-code-tips
-[abra uma ocorrência]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
+[abrir um problema]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
 
 [4sysops]: https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/
 [mikefrobbins]: https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/

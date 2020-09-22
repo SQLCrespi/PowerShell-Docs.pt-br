@@ -2,12 +2,12 @@
 title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: b492e59f340f4cec92c177ad44bbab9dc95da5da
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808852"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782524"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
@@ -54,7 +54,7 @@ Para cargas de trabalho tradicionais do Windows PowerShell, confira [Como instal
    1. A exibição **Extensões** será aberta na barra lateral. Selecione a extensão do PowerShell da Microsoft.
       Você deverá ver uma tela do Visual Studio Code semelhante à seguinte imagem:
 
-      ![Visual Studio Code](media/using-vscode/vscode.png)
+      ![Visual Studio Code – Exibição da extensão do PowerShell](media/using-vscode/vscode.png)
 
    1. Clique no botão **Instalar** na extensão do PowerShell da Microsoft.
    1. Após a instalação, se o botão **Instalar** mudar para **Recarregar**, clique em **Recarregar**.
@@ -190,7 +190,7 @@ A extensão atual do PowerShell não dá suporte ao [PowerShell v3 e v4][i1310].
 
 Primeiro, abra o painel Extensão e pesquise por `PowerShell`. Em seguida, clique na engrenagem e selecione **Instalar outra versão...** .
 
-![Instalar outra versão...](media/using-vscode/install-another-version.png)
+![Item de menu – Instalar outra versão…](media/using-vscode/install-another-version.png)
 
 Selecione a versão **2020.1.0**. Essa versão da extensão foi a última com suporte ao v3 e v4. Adicione a seguinte configuração para que a versão da extensão não seja atualizada automaticamente:
 

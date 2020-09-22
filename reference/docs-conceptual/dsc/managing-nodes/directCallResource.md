@@ -1,24 +1,26 @@
 ---
-ms.date: 06/12/2017
+ms.date: 08/11/2020
 keywords: DSC,powershell,configuração,instalação
 title: Chamando métodos do recurso DSC diretamente
-ms.openlocfilehash: 9955de4f284c182a724b004c17080a8b8e19808d
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 029a278c938e414820e172b85fac3cb3ad4b4afa
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692405"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162487"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chamando métodos do recurso DSC diretamente
 
 >Aplica-se a: Windows PowerShell 5.0
 
-Você pode usar o cmdlet [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) para chamar diretamente as funções ou os métodos de um recurso DSC (As funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** de um recurso baseado em MOF ou os métodos **Get**, **Set** e **Test** de um recurso baseado em classe).
-Isso pode ser usado por terceiros que querem usar recursos DSC, ou como uma ferramenta útil ao desenvolver recursos.
+Use o cmdlet [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) para chamar diretamente as funções ou os métodos de um recurso de DSC (as funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` de um recurso baseado em MOF ou os métodos **Get**, **Set** e **Test** de um recurso baseado em classe). Isso pode ser usado por terceiros que querem usar recursos DSC, ou como uma ferramenta útil ao desenvolver recursos.
+
+> [!NOTE]
+> No PowerShell 7.0+, `Invoke-DscResource` não é mais compatível com a invocação de recursos de DSC do WMI. Isso inclui os recursos de **Arquivo** e **Log** em **PSDesiredStateConfiguration**.
 
 Geralmente, esse cmdlet é usado em combinação com uma propriedade de metaconfiguração `refreshMode = 'Disabled'`, mas pode ser usado, independentemente do **refreshMode** para o qual está definido.
 
-Ao chamar o cmdlet **Invoke-DscResource**, você especifica qual método ou função chamar usando o parâmetro **Method**. Especifique as propriedades do recurso passando uma tabela de hash como o valor do parâmetro **Property**.
+Ao chamar o cmdlet `Invoke-DscResource`, você especifica qual método ou função chamar usando o parâmetro **Method**. Especifique as propriedades do recurso passando uma tabela de hash como o valor do parâmetro **Property**.
 
 A seguir, exemplos de chamada direta aos métodos do recurso:
 
@@ -49,7 +51,8 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->**Observação:** não é permitido chamar diretamente métodos de recurso de composição. Em vez disso, chame os métodos de recursos subjacentes que compõem o recurso de composição.
+>[!NOTE]
+> não é permitido chamar diretamente métodos de recurso de composição. Em vez disso, chame os métodos de recursos subjacentes que compõem o recurso de composição.
 
 ## <a name="see-also"></a>Consulte Também
 

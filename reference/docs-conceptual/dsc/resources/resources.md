@@ -1,13 +1,13 @@
 ---
-ms.date: 02/28/2020
+ms.date: 07/23/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recursos de DSC
-ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 6ab831c9d423c6189951b43bfab92f800366ceca
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692210"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777932"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 
@@ -22,11 +22,11 @@ Um recurso pode modelar algo tão genérico quanto um arquivo ou tão específic
 Cada recurso tem um *esquema que determina a sintaxe necessária para usar o recurso em uma [Configuração](../configurations/configurations.md).
 Um esquema de recurso pode ser definido das seguintes maneiras:
 
-- Arquivo `Schema.Mof`: A maioria dos recursos define seus _esquemas_ em um arquivo 'schema.mof' usando o [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
-- Arquivo `<Resource Name>.schema.psm1`: [Recursos de composição](../configurations/compositeConfigs.md) definem o *esquema* em um arquivo `<ResourceName>.schema.psm1` usando um [bloco de parâmetro](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
+- Arquivo `Schema.Mof`: A maioria dos recursos define seus _esquemas_ em um arquivo `schema.mof` usando um [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
+- Arquivo `<Resource Name>.schema.psm1`: [Recursos de composição](../configurations/compositeConfigs.md) definem o _esquema_ em um arquivo `<ResourceName>.schema.psm1` usando um [bloco de parâmetro](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
 - Arquivo `<Resource Name>.psm1`: Recursos DSC baseado em classe definem seus _esquemas_ na definição da classe. Os itens de sintaxe são indicados como propriedades de Classe. Para saber mais, confira [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc).
 
-Para recuperar a sintaxe para um recurso DSC, use o cmdlet [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) com o parâmetro `-Syntax`. Esse uso é semelhante ao uso de [Get-Command](/powershell/module/microsoft.powershell.core/get-command) com o parâmetro `-Syntax` para obter a sintaxe do cmdlet. A saída que você vê mostrará o modelo usado para um bloco de recursos do recurso que você especificar.
+Para recuperar a sintaxe para um recurso DSC, use o cmdlet [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) com o parâmetro **Syntax**. Esse uso é semelhante ao uso de [Get-Command](/powershell/module/microsoft.powershell.core/get-command) com o parâmetro **Syntax** para obter a sintaxe do cmdlet. A saída que você vê mostrará o modelo usado para um bloco de recursos do recurso que você especificar.
 
 ```powershell
 Get-DscResource -Syntax Service
@@ -54,6 +54,9 @@ Service [String] #ResourceName
     [State = [string]{ Running | Stopped }]
 }
 ```
+
+> [!NOTE]
+> Nas versões do PowerShell antes de 7.0, `Get-DscResource` não encontra recursos de DSC baseados em classe.
 
 Dentro de uma Configuração, um bloco de recursos de **Serviço** poderia se parecer com isso para **Garantir** que o serviço de Spooler está em execução.
 
@@ -106,7 +109,7 @@ Configuration TestConfig
 > [!NOTE]
 > A partir do PowerShell 5.0, o IntelliSense foi adicionado para DSC. Esse novo recurso permite que você use <kbd>TAB</kbd> e <kbd>Ctrl</kbd>+<kbd>Espaço</kbd> para preenchimento automático de nomes de chaves.
 
-![Preenchimento de Recursos com Tab](media/resources/resource-tabcompletion.png)
+![Recurso IntelliSense usando o preenchimento com Tab](media/resources/resource-tabcompletion.png)
 
 ## <a name="types-of-resources"></a>Tipos de recursos
 

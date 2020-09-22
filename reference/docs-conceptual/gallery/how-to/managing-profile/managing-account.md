@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
-ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560450"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771780"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -36,7 +36,7 @@ A Galeria do PowerShell oferece as seguintes opções de notificação:
 - Os usuários podem entrar em contato comigo por meio da Galeria do PowerShell
 - Notificar-me quando um pacote for movido para a Galeria do PowerShell usando minha conta
 
-![Alterar o endereço de email](media/managing-account/PSGallery_AccountEmailOptions.png)
+![Selecionar opções de endereço de email](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Conforme observado na página, as notificações críticas da Galeria do PowerShell não podem ser desabilitadas.
 Eles incluem:
@@ -49,20 +49,20 @@ Eles incluem:
 
 Para alterar a conta de logon, é necessário estar conectado com a conta atual. Realize as seguintes etapas para concluir alteração.
 
-![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountSettings.png)
+![Alterar configurações da Conta de Logon](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Clique em **Alterar conta**. Uma janela pop-up explica que alterar a conta de logon se aplica a todos os usos dessa conta na Galeria do PowerShell. Examine as informações e clique em **OK** para continuar.
 
-   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-1.png)
+   ![Alterar confirmação – OK/Cancelar](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Em seguida, você precisará entrar usando a _nova conta_.
 
-   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-2.png)
+   ![Entrar com a nova conta](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. Ao clicar em **Próximo**, será exibida uma mensagem informando que você está conectado com a conta atual.
    Clique em **Sair e entrar com uma conta diferente**.
 
-   ![Configurações da conta de logon](media/managing-account/PSGallery_LoginAccountChange-3.png)
+   ![Sair e entrar com uma conta diferente](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Digite a senha da nova conta. Após inserir a senha, você retornará para a página "Configurações da conta" e verá que a conta de logon foi atualizada.
 

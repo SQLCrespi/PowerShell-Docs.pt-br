@@ -1,21 +1,20 @@
 ---
-ms.date: 12/12/2018
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Get-Test-Set
-ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f7b7e947a85832365a783e40c25a25bfaa9fff8d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278403"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771508"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Obter, testar e definir](media/get-test-set/get-test-set.png)
-
-O PowerShell Desired State Configuration é construído ao redor de um processo **Get**, **Test** e **Set**. Os [recursos](resources.md) do DSC contêm métodos para concluir cada uma dessas operações. Em [Configuração](../configurations/configurations.md), você define os blocos de recursos para preencher as chaves que se tornam parâmetros para os métodos **Get**, **Test** e **Set** de recursos.
+O PowerShell Desired State Configuration é construído ao redor de um processo **Get**, **Test** e **Set**. Os [recursos](resources.md) do DSC contêm métodos para concluir cada uma dessas operações.
+Em [Configuração](../configurations/configurations.md), você define os blocos de recursos para preencher as chaves que se tornam parâmetros para os métodos **Get**, **Test** e **Set** de recursos.
 
 Esta é a sintaxe para um bloco de recurso de **Serviço**. O recurso **Serviço** configura os serviços do Windows.
 
@@ -40,49 +39,49 @@ Service [String] #ResourceName
 Os métodos **Get**, **Test** e **Set** do recurso **Serviço** terão blocos de parâmetro que aceitam esses valores.
 
 ```powershell
-    param
-    (
-        [parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [System.String]
-        $Name,
+param
+(
+    [parameter(Mandatory = $true)]
+    [ValidateNotNullOrEmpty()]
+    [System.String]
+    $Name,
 
-        [System.String]
-        [ValidateSet("Automatic", "Manual", "Disabled")]
-        $StartupType,
+    [System.String]
+    [ValidateSet("Automatic", "Manual", "Disabled")]
+    $StartupType,
 
-        [System.String]
-        [ValidateSet("LocalSystem", "LocalService", "NetworkService")]
-        $BuiltInAccount,
+    [System.String]
+    [ValidateSet("LocalSystem", "LocalService", "NetworkService")]
+    $BuiltInAccount,
 
-        [System.Management.Automation.PSCredential]
-        [ValidateNotNull()]
-        $Credential,
+    [System.Management.Automation.PSCredential]
+    [ValidateNotNull()]
+    $Credential,
 
-        [System.String]
-        [ValidateSet("Running", "Stopped")]
-        $State="Running",
+    [System.String]
+    [ValidateSet("Running", "Stopped")]
+    $State="Running",
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $DisplayName,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $DisplayName,
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $Description,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $Description,
 
-        [System.String]
-        [ValidateNotNullOrEmpty()]
-        $Path,
+    [System.String]
+    [ValidateNotNullOrEmpty()]
+    $Path,
 
-        [System.String[]]
-        [ValidateNotNullOrEmpty()]
-        $Dependencies,
+    [System.String[]]
+    [ValidateNotNullOrEmpty()]
+    $Dependencies,
 
-        [System.String]
-        [ValidateSet("Present", "Absent")]
-        $Ensure="Present"
-    )
+    [System.String]
+    [ValidateSet("Present", "Absent")]
+    $Ensure="Present"
+)
 ```
 
 > [!NOTE]
@@ -104,7 +103,7 @@ Configuration TestConfig
 }
 ```
 
-Ao compilar a Configuração acima, os valores especificados para uma chave são armazenados no arquivo ".mof" gerado. Para saber mais, confira [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
+Quando você compila a Configuração acima, os valores especificados para uma chave são armazenados no arquivo `.mof` gerado. Para saber mais, confira [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).
 
 ```
 instance of MSFT_ServiceResource as $MSFT_ServiceResource1ref
@@ -121,13 +120,14 @@ ModuleVersion = "1.0";
 };
 ```
 
-Quando aplicado, o LCM [(Configuration Manager local)](../managing-nodes/metaConfig.md) lerá o valor "Spooler" do arquivo ".mof" e o enviará para o parâmetro `-Name` dos métodos **Get**, **Test** e **Set** da instância "MyService" do recurso **Serviço**.
+Quando aplicado, o [LCM](../managing-nodes/metaConfig.md) (Configuration Manager local) lerá o valor "Spooler" do arquivo `.mof` e o passará para o parâmetro **Name** dos métodos **Get**, **Test** e **Set** da instância "MyService" do recurso **Serviço**.
 
 ## <a name="get"></a>Obter
 
-O método **Get** de um recurso recupera o estado do recurso como está configurado no nó de destino. Esse estado é retornado como uma [tabela de hash](/powershell/module/microsoft.powershell.core/about/about_hash_tables). As chaves da **tabela de hash** serão valores ou parâmetros configuráveis que o recurso aceita.
+O método **Get** de um recurso recupera o estado do recurso como está configurado no nó de destino. Esse estado é retornado como uma [tabela de hash](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
+As chaves da **tabela de hash** serão valores ou parâmetros configuráveis que o recurso aceita.
 
-O método **Get** mapeia diretamente no cmdlet [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration). Quando você chama `Get-DSCConfiguration`, o LCM executa o método **Get** de cada recurso na configuração aplicada no momento. O LCM usa os valores de chave armazenados no arquivo ".mof" como parâmetros para cada instância do recurso correspondente.
+O método **Get** mapeia diretamente no cmdlet [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration). Quando você chama `Get-DSCConfiguration`, o LCM executa o método **Get** de cada recurso na configuração aplicada no momento. O LCM usa os valores de chave armazenados no arquivo `.mof` como parâmetros para cada instância do recurso correspondente.
 
 Isso é o exemplo de saída de um recurso **Serviço** que configura o serviço "Spooler".
 
@@ -177,10 +177,9 @@ Service [String] #ResourceName
 
 ## <a name="test"></a>Teste
 
-O método **Test** de um recurso determina se o nó de destino é compatível atualmente com o *estado desejado* do recurso. O método **Test** retorna `$True` ou `$False` apenas para indicar se o nó está em conformidade.
-Quando você chama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), o LCM chama o método **Test** de cada recurso na configuração aplicada no momento. O LCM usa os valores de chave armazenados no arquivo ".mof" como parâmetros para cada instância do recurso correspondente.
+O método **Test** de um recurso determina se o nó de destino é compatível atualmente com o _estado desejado_ do recurso. O método **Test** retorna `$true` ou `$false` apenas para indicar se o nó está em conformidade. Quando você chama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), o LCM chama o método **Test** de cada recurso na configuração aplicada no momento. O LCM usa os valores de chave armazenados no arquivo ".mof" como parâmetros para cada instância do recurso correspondente.
 
-Se o resultado de qualquer recurso **Test** individual for `$False`, `Test-DSCConfiguration` retorna `$False` indicando que o nó não está em conformidade. Se todos os métodos **Test** do recurso retornam `$True`, `Test-DSCConfiguration` retorna `$True` para indicar que o nó está em conformidade.
+Se o resultado de qualquer recurso **Test** individual for `$false`, `Test-DSCConfiguration` retorna `$false` indicando que o nó não está em conformidade. Se todos os métodos **Test** do recurso retornam `$true`, `Test-DSCConfiguration` retorna `$true` para indicar que o nó está em conformidade.
 
 ```powershell
 Test-DSCConfiguration
@@ -190,7 +189,7 @@ Test-DSCConfiguration
 True
 ```
 
-Começando no PowerShell 5.0, o parâmetro `-Detailed` foi adicionado. Especificar `-Detailed` faz com que `Test-DSCConfiguration` retorne um objeto que contém os conjuntos de resultados para os recursos conformidade e fora de conformidade.
+Começando no PowerShell 5.0, o parâmetro **Detailed** foi adicionado. Especificar **Detailed** faz `Test-DSCConfiguration` retornar um objeto que contém os conjuntos de resultados para os recursos em conformidade e os que não estão em conformidade.
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -206,9 +205,9 @@ Para saber mais, confira [Test-DSCConfiguration](/powershell/module/psdesiredsta
 
 ## <a name="set"></a>Definir
 
-O método **Set** de um recurso tenta forçar o nó para estar em conformidade com o *estado desejado* do recurso. O método **Set** deve ser **idempotent**, o que significa que **Set** pode ser executado várias vezes e sempre obterá o mesmo resultado sem erros.  Quando você chama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), o LCM percorre cada recurso na configuração aplicada no momento. O LCM recupera os valores de chave para a instância atual do recurso do arquivo ".mof" e os usa como parâmetros para o método **Test**. Se o método **Test** retornar `$True`, o nó está em conformidade com o recurso atual e o método **Set** será ignorado. Se o **Test** retornar `$False`, o nó não está em conformidade.  O LCM passa os valores de chave da instância do recurso como parâmetros para do método **Set** do recurso, restaurando o nó para conformidade.
+O método **Set** de um recurso tenta forçar o nó para estar em conformidade com o *estado desejado* do recurso. O método **Set** deve ser **idempotent**, o que significa que **Set** pode ser executado várias vezes e sempre obterá o mesmo resultado sem erros. Quando você chama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), o LCM percorre cada recurso na configuração aplicada no momento. O LCM recupera os valores de chave para a instância atual do recurso do arquivo ".mof" e os usa como parâmetros para o método **Test**. Se o método **Test** retornar `$true`, o nó está em conformidade com o recurso atual e o método **Set** será ignorado. Se o **Test** retornar `$false`, o nó não está em conformidade. O LCM passa os valores de chave da instância do recurso como parâmetros para do método **Set** do recurso, restaurando o nó para conformidade.
 
-Especificando os parâmetros `-Verbose` e `-Wait`, você pode observar o progresso do cmdlet `Start-DSCConfiguration`. Neste exemplo, o nó já está em conformidade. A saída `Verbose` indica que o método **Set** foi ignorado.
+Especificando os parâmetros **Verbose** e **Wait**, você pode observar o progresso do cmdlet `Start-DSCConfiguration`. Neste exemplo, o nó já está em conformidade. A saída `Verbose` indica que o método **Set** foi ignorado.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting
@@ -237,6 +236,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>Confira também
 
-- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
+- [Visão geral do DSC de Automação do Azure](/azure/automation/automation-dsc-overview)
 - [Configurando um servidor de pull da Web e SMB](../pull-server/pullServerSMB.md)
 - [Configurando um cliente de pull](../pull-server/pullClientConfigID.md)

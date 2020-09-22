@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre as tabelas de hash
 description: As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 60a5172485b9caf6343f54194563cd048648206e
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
+ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85353814"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Tudo o que você queria saber sobre as tabelas de hash
 
@@ -541,10 +541,9 @@ Isso cria a mesma tabela de hash que vimos acima e permite acessar as propriedad
 ```powershell
 $person.location.city
 Austin
-```powershell
+```
 
-There are many ways to approach the structure of your objects. Here is a second way to look at a
-nested hashtable.
+Há várias maneiras de abordar a estrutura de seus objetos. Aqui está uma segunda maneira de examinar uma tabela de hash aninhada.
 
 ```powershell
 $people = @{
@@ -671,6 +670,36 @@ $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 
 Há dois pontos importantes sobre esse método. O primeiro é que o JSON é gravado em várias linhas, portanto, preciso usar a opção `-Raw` para lê-lo de volta em uma única cadeia de caracteres. O segundo é que o objeto importado não é mais uma `[hashtable]`. Agora é um `[pscustomobject]` e isso poderá causar problemas se você estiver esperando.
 
+Observe as tabelas de hash profundamente aninhadas. Ao convertê-las em JSON, você pode não obter os resultados esperados.
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json
+
+{
+  "a": {
+    "b": {
+      "c": "System.Collections.Hashtable"
+    }
+  }
+}
+```
+
+Use o parâmetro **Depth** para garantir que você expandiu todas as tabelas de hash aninhadas.
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
+
+{
+  "a": {
+    "b": {
+      "c": {
+        "d": "e"
+      }
+    }
+  }
+}
+```
+
 Se precisar que ele seja uma `[hashtable]` na importação, será necessário usar os comandos `Export-CliXml` e `Import-CliXml`.
 
 ### <a name="converting-json-to-hashtable"></a>Convertendo um JSON em uma tabela de hash
@@ -682,6 +711,18 @@ Se você precisa converter um JSON em uma `[hashtable]`, eu conheço apenas uma 
 $JSSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
 $JSSerializer.Deserialize($json,'Hashtable')
 ```
+
+A partir do PowerShell v6, o suporte a JSON usa o NewtonSoft JSON.NET e adiciona suporte à tabela de hash.
+
+```powershell
+'{ "a": "b" }' | ConvertFrom-Json -AsHashtable
+
+Name      Value
+----      -----
+a         b
+```
+
+O PowerShell 6.2 adicionou o parâmetro**Depth** a `ConvertFrom-Json`. O padrão **Depth** é 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Lendo diretamente de um arquivo
 
@@ -698,9 +739,9 @@ Isso importará o conteúdo do arquivo para um `scriptblock` e, em seguida, veri
 
 Nessa observação, você sabia que um manifesto de módulo (o arquivo psd1) é apenas uma tabela de hash?
 
-## <a name="keys-are-just-strings"></a>As chaves são apenas cadeias de caracteres
+## <a name="keys-can-be-any-object"></a>As chaves podem ser qualquer objeto
 
-Eu não quis sair por essa tangente anteriormente, mas as chaves são apenas cadeias de caracteres. Podemos colocar qualquer coisa entre aspas e transformar essa coisa em uma chave.
+Na maioria das vezes, as chaves são apenas cadeias de caracteres. Podemos colocar qualquer coisa entre aspas e transformar essa coisa em uma chave.
 
 ```powershell
 $person = @{
@@ -721,13 +762,35 @@ $person.$key
 
 Só porque você é capaz de fazer algo, isso não significa que você deva fazê-lo. Essa última parece um bug pronto para acontecer e seria facilmente mal interpretada por qualquer pessoa que estivesse lendo seu código.
 
-Tecnicamente, as chaves não precisam ser cadeias de caracteres, mas é mais fácil pensar nelas se você usar apenas cadeias de caracteres.
+Tecnicamente, as chaves não precisam ser cadeias de caracteres, mas é mais fácil pensar nelas se você usar apenas cadeias de caracteres. No entanto, a indexação não funciona bem com as chaves complexas.
+
+```powershell
+$ht = @{ @(1,2,3) = "a" }
+$ht
+
+Name                           Value
+----                           -----
+{1, 2, 3}                      a
+```
+
+O acesso a um valor na tabela de hash por sua chave nem sempre funciona. Por exemplo:
+
+```powershell
+$key = $ht.keys[0]
+$ht.$($key)
+a
+$ht[$key]
+a
+```
+
+Quando a chave é uma matriz, você precisa encapsular a variável `$key` em uma subexpressão para que ela possa ser usada com a notação de acesso de membro (`.`). Ou, você pode usar a notação de índice de matriz (`[]`).
 
 ## <a name="use-in-automatic-variables"></a>Usar em variáveis automáticas
 
 ### <a name="psboundparameters"></a>$PSBoundParameters
 
-[$PSBoundParameters][] é uma variável automática que existe apenas dentro do contexto de uma função. Ela contém todos os parâmetros com os quais a função foi chamada. Ela não é exatamente uma tabela de hash, mas é parecida o suficiente para que você possa tratá-la como tal.
+[$PSBoundParameters][] é uma variável automática que existe apenas dentro do contexto de uma função.
+Ela contém todos os parâmetros com os quais a função foi chamada. Ela não é exatamente uma tabela de hash, mas é parecida o suficiente para que você possa tratá-la como tal.
 
 Isso inclui a remoção de chaves e o fracionamento em outras funções. Se você estiver escrevendo funções de proxy, dê uma olhada mais de perto neste artigo.
 
@@ -894,15 +957,13 @@ Ele não gerencia nenhum outro tipo de referência ou matrizes, mas é um bom po
 
 Abordei muitos aspectos de base rapidamente. Minha esperança é que, toda vez que ler o artigo, você saia com uma novidade aprendida ou tendo entendido melhor algo. Como abordei o espectro completo desse recurso, pode haver aspectos que não se aplicam a você neste momento. Isso é perfeitamente normal e até esperado, de certo modo, dependendo do seu nível de familiaridade com o PowerShell.
 
-Aqui está uma lista de tudo o que abordamos, caso você queira voltar para algum tópico específico. Normalmente isso vem no início do texto, mas esse artigo foi escrito do início ao fim com exemplos que acrescentam a tudo o que foi dito anteriormente.
-
 <!-- link references -->
 [versão original]: https://powershellexplained.com/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [tabelas de hash]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
 [matrizes]: /powershell/module/microsoft.powershell.core/about/about_arrays
-[Se o desempenho for importante, teste-o]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[Se o desempenho for importante, teste-o]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [fracionamento]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
 [JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8

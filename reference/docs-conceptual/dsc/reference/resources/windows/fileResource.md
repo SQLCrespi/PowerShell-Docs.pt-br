@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recursos File de DSC
-ms.openlocfilehash: 54f4de9b3d337a6b9ad36c143eac70d5ef6b1c15
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 28e9ea3a590a0972e505912efae4a934bc39ba1d
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560467"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799597"
 ---
 # <a name="dsc-file-resource"></a>Recursos File de DSC
 
@@ -46,7 +46,7 @@ File [string] #ResourceName
 |Conteúdo |Válido apenas quando usado com o **Type** **File**. Indica se o conteúdo a **Ensure** está **Present** ou **Absent** no arquivo de destino. |
 |Credencial |As credenciais necessárias para acessar recursos, como arquivos de origem. |
 |Force |Substitui as operações de acesso que resultariam em erro (como substituir um arquivo ou excluir um diretório que não esteja vazio). O valor padrão é `$false`. |
-|Recurse |Válido apenas quando usado com o **Type** **Directory**. Executa recursivamente a operação de estado em todos os subdiretórios. O valor padrão é `$false`. |
+|Recurse |Válido apenas quando usado com o **Type** **Directory**. Executa a operação de estado recursivamente para todo o conteúdo do diretório, subdiretórios e conteúdo de subdiretório. O valor padrão é `$false`. |
 |SourcePath |O caminho do qual o recurso de arquivo ou pasta deve ser copiado. |
 |Type |O tipo de recurso que está sendo configurado. Os valores válidos são **Directory** e **File**. O valor padrão é **File**. |
 |MatchSource |Determina se o recurso deve monitorar novos arquivos adicionados ao diretório de origem após a cópia inicial. Um valor `$true` indica que, após a cópia inicial, os novos arquivos de origem devem ser copiados para o destino. Se for definido como `$false`, o recurso armazena em cache o conteúdo do diretório de origem e ignora todos os arquivos adicionados após a cópia inicial. O valor padrão é `$false`. |
@@ -69,7 +69,8 @@ File [string] #ResourceName
 
 - Ao especificar apenas um **DestinationPath**, o recurso garante que o caminho existe caso seja **Present** ou se não existe caso seja **Absent**.
 - Quando você especifica um **SourcePath** e um **DestinationPath** com um valor **Type** do **Diretório**, o recurso copia o diretório de origem para o caminho de destino. As propriedades **Recurse**, **Force** e **MatchSource** alteram o tipo de operação de cópia executada, embora **Credential** determine qual conta usar para acessar o diretório de origem.
-- Se você tiver especificado um valor **ReadOnly** para a propriedade **Attributes** junto com um **DestinationPath**, **Ensure** e **Present** criará o caminho especificado, enquanto **Contents** definirá o conteúdo do arquivo. Uma configuração **Ensure** **Absent** ignoraria a propriedade **Attributes** completamente e removeria qualquer arquivo no caminho especificado.
+- Se você não definir a propriedade **Recurse** como `$true` ao copiar um diretório, nenhum dos conteúdos do diretório existente será copiado. Somente o diretório especificado será copiado.
+- Se você tiver especificado um valor de **ReadOnly** para a propriedade **Attributes** junto com um **DestinationPath**, **Ensure** **Present** criarão o caminho especificado, enquanto **Contents** definirá o conteúdo do arquivo. Uma configuração **Ensure** **Absent** ignoraria a propriedade **Attributes** completamente e removeria qualquer arquivo no caminho especificado.
 
 ## <a name="example"></a>Exemplo
 

@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: galeria, powershell, psgallery
 title: Download manual do pacote
-ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278690"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782847"
 ---
 # <a name="manual-package-download"></a>Download manual do pacote
 
@@ -22,7 +22,7 @@ Na Galeria do PowerShell, é possível baixar um pacote diretamente do site, sem
 
 Cada página tem um link para Download Manual, conforme mostrado aqui:
 
-![Download manual](media/manual-download/packagedisplaypagewithpseditions.png)
+![Página de exibição de pacote com opções de instalação](media/manual-download/packagedisplaypagewithpseditions.png)
 
 Para baixar manualmente, clique em **Baixar o arquivo nupkg bruto**. Uma cópia do pacote é copiada para a pasta de download do navegador com o nome `<name>.<version>.nupkg`.
 

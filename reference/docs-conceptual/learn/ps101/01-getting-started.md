@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 0f72fb5baf5b829142b18ed774261e9b3b66291b
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438017"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786740"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>Capítulo 1 – Introdução ao PowerShell
 
@@ -29,7 +29,7 @@ Todas as versões modernas de sistemas operacionais Windows são fornecidas com 
 
 A maneira mais fácil de encontrar o PowerShell no Windows 10 é digitar **PowerShell** na barra de pesquisa, conforme mostrado na Figura 1-1.
 
-![Figura 1-1](media/figure1-1.png)
+![Figura 1-1 – Pesquisar o PowerShell no menu Iniciar](media/figure1-1.png)
 
 Observe que quatro atalhos diferentes para o PowerShell são mostrados na Figura 1-1. O computador usado para fins de demonstração neste livro executa a versão de 64 bits do Windows 10 e, portanto, há uma versão de 64 bits do console do PowerShell e do ISE (Ambiente de Script Integrado) do PowerShell e uma versão de 32 bits de cada um, conforme indicado pelo sufixo (x86) nos atalhos. Se você estiver executando uma versão de 32 bits do Windows 10, terá apenas dois atalhos. Esses itens não têm o sufixo (x86), mas são versões de 32 bits. Se você tem um sistema operacional de 64 bits, minha recomendação é executar a versão de 64 bits do PowerShell, a menos que você tenha um motivo específico para executar a versão de 32 bits.
 
@@ -41,7 +41,7 @@ Nos ambientes corporativos de produção aos quais dou suporte, uso três contas
 
 Iniciei o console do PowerShell clicando no atalho "Windows PowerShell", conforme mostrado na Figura 1-1.
 
-![Figura 1-4](media/figure1-4.png)
+![Figure 1-4 – Barra de título da janela do PowerShell](media/figure1-4.png)
 
 Observe que a barra de título do console do PowerShell indica "Windows PowerShell", conforme mostrado na Figura 1-4. Alguns comandos são executados corretamente, mas o PowerShell não pode participar do UAC (Controle de Acesso do Usuário). Isso significa que não é possível solicitar a elevação para tarefas que exigem a aprovação de um administrador.
 A seguinte mensagem de erro é gerada:
@@ -66,7 +66,7 @@ A solução para esse problema é executar o PowerShell como um usuário de dom�
 
 Feche o PowerShell. Reinicie o console do PowerShell, mas, desta vez, clique com o botão direito do mouse no atalho do **Windows PowerShell** e selecione **Executar como administrador**, conforme mostrado na Figura 1-5.
 
-![Figura 1-5](media/figure1-5.png)
+![Figure 1-5 – Menu de contexto – Executar como administrador](media/figure1-5.png)
 
 Se você estiver conectado ao Windows como um usuário normal, precisará fornecer suas credenciais. Vou inserir as credenciais da minha conta de usuário que é um usuário de domínio e um administrador local, conforme mostrado na Figura 1-6.
 
@@ -86,11 +86,11 @@ Pesquise o PowerShell novamente, mas, desta vez, clique com o botão direito do 
 
 Clique com o botão direito do mouse no atalho do PowerShell que agora está fixado à barra de tarefas e selecione Propriedades, conforme mostrado na Figura 1-9.
 
-![Figura 1-9](media/figure1-9.png)
+![Figure 1-9 – Controle de conta de usuário – Inserir credenciais](media/figure1-9.png)
 
 Clique em "Avançado", como indicado no nº 1 na Figura 1-10, marque a caixa de seleção "Executar como administrador", como indicado no nº 2 na Figura 1-10 e clique em OK duas vezes para aceitar as alterações e sair das duas caixas de diálogo.
 
-![Figura 1-10](media/figure1-10.png)
+![Figure 1-10 – Barra de título mostrando "Administrador"](media/figure1-10.png)
 
 Você nunca precisará se preocupar em localizar o PowerShell ou se ele está sendo executado como administrador novamente.
 
@@ -217,13 +217,15 @@ Neste capítulo, você aprendeu a localizar e iniciar o PowerShell e a criar um 
 Para aqueles que desejam saber mais sobre os tópicos abordados neste capítulo, recomendo a leitura dos tópicos da Ajuda do PowerShell a seguir.
 
 - [about_Automatic_Variables][]
+- [about_Hash_Tables][]
 - [about_Execution_Policies][]
 
 No próximo capítulo, você aprenderá mais sobre a detectabilidade de comandos no PowerShell. Uma das coisas que será abordada é como atualizar o PowerShell para que esses tópicos da Ajuda possam ser exibidos diretamente no PowerShell, em vez de precisar exibi-los na Internet.
 
 <!-- link references -->
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
-[about_Execution_Policies]: /powershell//powershell/module/microsoft.powershell.core/about/about_execution_policies
+[about_Hash_Tables]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[about_Execution_Policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [Como atualizar um Windows PowerShell existente]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [Instalando o PowerShell]: /powershell/scripting/install/installing-powershell
 [Iniciando o Windows PowerShell]: /powershell/scripting/windows-powershell/starting-windows-powershell

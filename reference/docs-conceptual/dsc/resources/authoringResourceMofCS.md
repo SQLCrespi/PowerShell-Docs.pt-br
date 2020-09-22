@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Criando um recurso de DSC em C#
-ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417686"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217501"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Criando um recurso de DSC em C\#
 
@@ -18,6 +18,7 @@ Normalmente, um recurso personalizado de Configuração de Estado Desejado (DSC)
 Além de implementar o recurso em C# como cmdlets, o processo de criar o esquema MOF, criando a estrutura de pastas, importar e usar o recurso personalizado de DSC é igual ao descrito em [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md).
 
 ## <a name="writing-a-cmdlet-based-resource"></a>Escrevendo um recurso baseado em cmdlet
+
 Para este exemplo, vamos implementar um recurso simples que gerencia um arquivo de texto e seu conteúdo.
 
 ### <a name="writing-the-mof-schema"></a>Escrevendo o esquema MOF
@@ -35,6 +36,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ```
 
 ### <a name="setting-up-the-visual-studio-project"></a>Configurando o projeto do Visual Studio
+
 #### <a name="setting-up-a-cmdlet-project"></a>Configurando um projeto de cmdlet
 
 1. Abra o Visual Studio.
@@ -46,11 +48,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 ### <a name="writing-the-cmdlet-code"></a>Escrevendo o código do cmdlet
 
-O código C# a seguir implementa os cmdlets **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**.
+O código C# a seguir implementa os cmdlets `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource`.
 
 ```C#
-
-
 namespace cSharpDSCResourceExample
 {
     using System;
@@ -278,7 +278,11 @@ $env: psmodulepath (folder)
 ```
 
 ### <a name="see-also"></a>Consulte Também
+
 #### <a name="concepts"></a>Conceitos
+
 [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
+
 #### <a name="other-resources"></a>Outros recursos
+
 [Writing a Windows PowerShell Cmdlet](/powershell/scripting/developer/windows-powershell) (Escrevendo um Cmdlet do Windows PowerShell)

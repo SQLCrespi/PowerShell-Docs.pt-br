@@ -3,12 +3,12 @@ ms.date: 09/19/2019
 contributor: manikb
 keywords: galeria,powershell,cmdlet,psget
 title: Instalando o PowerShellGet
-ms.openlocfilehash: f42eb0df101eb63a5dc267196fa9f666747b8e35
-ms.sourcegitcommit: 23ea4a36ee85f923684657de5313a5adf0b6b094
+ms.openlocfilehash: 4a10699be9ff2b64e5848c6749bdd3dedf55e3c7
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83727788"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162504"
 ---
 # <a name="installing-powershellget"></a>Instalando o PowerShellGet
 
@@ -25,7 +25,6 @@ Antes de atualizar o **PowerShellGet**, você sempre deve instalar o provedor do
 
 ```powershell
 Install-PackageProvider -Name NuGet -Force
-Exit
 ```
 
 ### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>Para sistemas com o PowerShell 5.0 (ou mais recente), você pode instalar o PowerShellGet mais recente
@@ -34,7 +33,6 @@ Para instalar o PowerShellGet no Windows 10, no Windows Server 2016, em qualquer
 
 ```powershell
 Install-Module -Name PowerShellGet -Force
-Exit
 ```
 
 Use o `Update-Module` para obter versões mais recentes.
@@ -53,28 +51,50 @@ O cmdlet `Save-Module` é usado em ambos os conjuntos de instruções. `Save-Mod
 Para saber mais, confira [Save-Module](/powershell/module/PowershellGet/Save-Module).
 
 > [!NOTE]
-> O PowerShell 3.0 e o 4.0 davam suporte a apenas uma versão de um módulo. Do PowerShell 5.0 em diante, os módulos são instalados em `<modulename>\<version>`. Isso permitia a instalação de várias versões lado a lado. Depois do download do módulo usando `Save-Module`, é necessário copiar os arquivos de `<modulename>\<version>` na pasta `<modulename>` no computador de destino.
+> O PowerShell 3.0 e o 4.0 davam suporte a apenas uma versão de um módulo. Do PowerShell 5.0 em diante, os módulos são instalados em `<modulename>\<version>`. Isso permite instalar várias versões lado a lado. Depois do download do módulo usando `Save-Module`, é necessário copiar os arquivos de `<modulename>\<version>` na pasta `<modulename>` no computador de destino, conforme mostrado nas instruções abaixo.
+
+#### <a name="preparatory-step-on-computers-running-powershell-30"></a>Etapa preparatória em computadores com o PowerShell 3.0
+
+As instruções nas seções a seguir instalam os módulos no diretório `$env:ProgramFiles\WindowsPowerShell\Modules`.
+No PowerShell 3.0, esse diretório não está listado em `$env:PSModulePath` por padrão. Portanto, você precisará adicioná-lo para que os módulos sejam carregados automaticamente. 
+
+Abra uma sessão do PowerShell com privilégios elevados e execute o seguinte comando (que entrará em vigor em sessões futuras):
+
+```powershell
+[Environment]::SetEnvironmentVariable(
+  'PSModulePath',
+  ((([Environment]::GetEnvironmentVariable('PSModulePath', 'Machine') -split ';') + "$env:ProgramFiles\WindowsPowerShell\Modules") -join ';'),
+  'Machine'
+)
+```
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>Computadores com a versão prévia de PackageManagement instalada
 
-1. Em uma sessão do PowerShell, use `Save-Module` para salvar os módulos em um diretório local.
+> [!NOTE] 
+> A versão prévia do PackageManagement era um componente baixável que disponibilizava o PowerShellGet para as versões 3 e 4 do PowerShell. Porém, ela não está mais disponível.
+> Para testar se ela foi instalada em um computador específico, execute `Get-Module -ListAvailable PowerShellGet`.
+
+1. Em uma sessão do PowerShell, use `Save-Module` para baixar a versão atual do **PowerShellGet**. Duas pastas serão baixadas: **PowerShellGet** e **PackageManagement**. Cada pasta contém uma subpasta com um número de versão.
 
    ```powershell
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
 1. Verifique se os módulos **PowerShellGet** e **PackageManagement** não estão carregados em nenhum outro processo.
-1. Exclua o conteúdo das pastas: `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` e `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`.
+
 1. Reabra o console do PowerShell com permissões elevadas e execute os comandos a seguir.
 
    ```powershell
-   Copy-Item "C:\LocalFolder\PowerShellGet\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-   Copy-Item "C:\LocalFolder\PackageManagement\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   'PowerShellGet', 'PackageManagement' | % { 
+     $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
+     Remove-Item $targetDir\* -Recurse -Force
+     Copy-Item C:\LocalFolder\$_\*\* $targetDir\ -Recurse -Force
+   }
    ```
 
 #### <a name="computers-without-powershellget"></a>Computadores sem PowerShellGet
 
-Para computadores sem qualquer versão do **PowerShellGet** instalada, é necessário ter um computador com o **PowerShellGet** instalado para baixar os módulos.
+Para computadores sem qualquer versão do **PowerShellGet** instalada (teste com `Get-Module -ListAvailable PowerShellGet`), é necessário ter um computador com o **PowerShellGet** instalado para baixar os módulos.
 
 1. No computador com o **PowerShellGet** instalado, use o `Save-Module` para baixar a versão atual do **PowerShellGet**. Duas pastas serão baixadas: **PowerShellGet** e **PackageManagement**. Cada pasta contém uma subpasta com um número de versão.
 
@@ -82,6 +102,16 @@ Para computadores sem qualquer versão do **PowerShellGet** instalada, é necess
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
-1. Copie as pastas **PowerShellGet** e **PackageManagement** para o computador que não tem o **PowerShellGet** instalado.
+1. Copie a subpasta `<version>` nas pastas **PowerShellGet** e **PackageManagement** para o computador que não tem o **PowerShellGet** instalado, para as pastas `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` e `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`, respectivamente, o que exige uma sessão com privilégios.
+   
+1. Por exemplo, se for possível acessar a pasta de download no outro computador (`ws1`) no computador de destino por meio de um caminho UNC (`\\ws1\C$\LocalFolder`), abra um console do PowerShell com permissões elevadas e execute o seguinte comando:
 
-   O diretório de destino será: `$env:ProgramFiles\WindowsPowerShell\Modules`
+   ```powershell
+   'PowerShellGet', 'PackageManagement' | % {
+     $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
+     $null = New-Item -Type Directory -Force $targetDir
+     $fromComputer = 'ws1'  # Specify the name of the other computer here.
+     Copy-Item \\$fromComputer\C$\LocalFolder\$_\*\* $targetDir -Recurse -Force
+     if (-not (Get-ChildItem $targetDir)) { Throw "Copying failed." }
+   }
+   ```

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809092"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771542"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -80,7 +80,7 @@ Confira os instantâneos abaixo:
 
 - "ConfigurationName" inserido no arquivo MOF gerado.
 
-  ![Arquivo mof de exemplo gerado](media/DSC-improvements/PartialGeneratedMof.png)
+  ![Arquivo MOF de exemplo gerado](media/DSC-improvements/PartialGeneratedMof.png)
 
 - FileName no repositório de configuração de pull
 
@@ -345,12 +345,12 @@ Uma configuração entregue com o uso de push pode ser violada em sua origem ant
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
+  ![Erro – arquivo MOF não assinado enviado por push](media/DSC-improvements/PushUnsignedMof.png)
 
 - Assine o arquivo de configuração usando um certificado de assinatura de código.
 
-  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
+  ![Assinar o arquivo MOF](media/DSC-improvements/SignMofFile.png)
 
 - Tente enviar o arquivo MOF assinado por push.
 
-  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
+  ![Enviar por push o arquivo MOF assinado](media/DSC-improvements/PushSignedMof.png)

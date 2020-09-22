@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: DSC,powershell,configuração,instalação
 title: Aplicando configurações
-ms.openlocfilehash: 3bbe90c7cf09a7e236f6dd14f731ae306f497a0d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277875"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783068"
 ---
 # <a name="enacting-configurations"></a>Aplicando configurações
 
@@ -17,7 +17,7 @@ Há duas maneiras de aplicar configurações da Configuração de Estado Desejad
 
 ## <a name="push-mode"></a>Modo de push
 
-![Modo de push](media/enactingConfigurations/pushModel.png "Como funciona o modo de push")
+![Visão geral do modo de push](media/enactingConfigurations/pushModel.png "Como funciona o modo de push")
 
 O modo de push se refere a um usuário aplicando ativamente uma configuração a um nó de destino chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 
@@ -28,7 +28,7 @@ Depois de criar e compilar uma configuração, você pode aplicá-la no modo de 
 
 ## <a name="pull-mode"></a>Modo de pull
 
-![Modo de Pull](media/enactingConfigurations/pullModel.png "Como funciona o modo de pull")
+![Visão geral do modo de pull](media/enactingConfigurations/pullModel.png "Como funciona o modo de pull")
 
 No modo de pull, os clientes de pull são configurados para obter suas configurações de estado desejado de um serviço de pull remoto. Da mesma forma, o serviço de pull foi configurado para hospedar o serviço de DSC e recebeu as configurações e os recursos necessários para os clientes de pull. Cada um dos clientes de pull tem um evento agendado que executa uma verificação periódica de conformidade na configuração do nó. Quando o evento é disparado pela primeira vez, o LCM (Gerenciador de Configurações Local) no cliente de pull faz uma solicitação ao serviço de pull para obter a configuração especificada no LCM. Se essa configuração existir no serviço de pull e passar nas verificações iniciais de validação, ela será baixada para o cliente de pull, no qual será executada pelo LCM.
 
@@ -40,6 +40,6 @@ Para saber mais sobre a configuração de um Serviço de Pull no Windows Server,
 
 Os tópicos a seguir explicam o serviço de pull e os clientes:
 
-- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
+- [Visão geral do DSC de Automação do Azure](/azure/automation/automation-dsc-overview)
 - [Configurando um servidor de pull da Web e SMB](pullServerSMB.md)
 - [Configurando um cliente de pull](pullClientConfigID.md)

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/14/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método ApplyConfiguration
-ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953453"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463832"
 ---
 # <a name="applyconfiguration-method"></a>Método ApplyConfiguration
 
@@ -25,7 +25,9 @@ uint32 ApplyConfiguration(
 
 ## <a name="parameters"></a>Parâmetros
 
-*force* \[in\] Se for **true**, a configuração atual será reaplicada, mesmo que haja uma configuração pendente.
+### <a name="force"></a>force
+
+Se isso for **true**, a configuração atual é reaplicada, mesmo que haja uma configuração pendente.
 
 ## <a name="return-value"></a>Valor retornado
 

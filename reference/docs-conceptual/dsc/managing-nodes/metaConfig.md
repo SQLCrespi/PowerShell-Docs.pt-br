@@ -2,37 +2,32 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando o Gerenciador de Configurações Local
-ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b4766157bca72a7c2bb385ab2255c9780846830a
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837555"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
 > Aplica-se a: Windows PowerShell 5.0
 
-O Gerenciador de Configurações Local (LCM) é o mecanismo de Configuração de Estado Desejado (DSC).
-Ele é executado em cada nó de destino e é responsável pela análise e aplicação das configurações que são enviadas para o nó.
-Também é responsável por uma série de outros aspectos da DSC, incluindo os itens a seguir.
+O Gerenciador de Configurações Local (LCM) é o mecanismo de Configuração de Estado Desejado (DSC). Ele é executado em cada nó de destino e é responsável pela análise e aplicação das configurações que são enviadas para o nó. Também é responsável por uma série de outros aspectos da DSC, incluindo os itens a seguir.
 
 - Determinar o modo de atualização (push ou pull).
 - Especificar com que frequência um nó recebe e aplica as configurações.
 - Associar o nó ao serviço de pull.
 - Especificar configurações parciais.
 
-Um tipo especial de configuração é utilizado para configurar o LCM para especificar cada um desses comportamentos.
-As seções a seguir descrevem como configurar o LCM.
+Um tipo especial de configuração é utilizado para configurar o LCM para especificar cada um desses comportamentos. As seções a seguir descrevem como configurar o LCM.
 
-O Windows PowerShell 5.0 introduziu novas configurações para gerenciar o Gerenciador de Configurações Local.
-Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, veja [Configurar o Gerenciador de Configurações Local em versões anteriores do Windows PowerShell](metaconfig4.md).
+O Windows PowerShell 5.0 introduziu novas configurações para gerenciar o Gerenciador de Configurações Local. Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, veja [Configurar o Gerenciador de Configurações Local em versões anteriores do Windows PowerShell](metaconfig4.md).
 
 ## <a name="writing-and-enacting-an-lcm-configuration"></a>Escrevendo e aplicando uma configuração do LCM
 
 Para configurar o LCM, você cria e executa um tipo especial de configuração que aplica as configurações de LCM.
-Para especificar uma configuração do LCM, é necessário usar o atributo DscLocalConfigurationManager.
-Segue uma configuração simples que define o LCM para o modo de push.
+Para especificar uma configuração do LCM, é necessário usar o atributo DscLocalConfigurationManager. Segue uma configuração simples que define o LCM para o modo de push.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -48,27 +43,20 @@ configuration LCMConfig
 }
 ```
 
-O processo de aplicação das configurações do LCM é semelhante à aplicação de uma configuração de DSC.
-Você criará uma configuração do LCM, a compilará em um arquivo MOF e a aplicará ao nó.
-Ao contrário de configurações de DSC, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
-Em vez disso, chama [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager), fornecendo o caminho até o MOF de configuração do LCM como parâmetro.
-Depois de aplicar a configuração do LCM, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
+O processo de aplicação das configurações do LCM é semelhante à aplicação de uma configuração de DSC. Você criará uma configuração do LCM, a compilará em um arquivo MOF e a aplicará ao nó. Ao contrário de configurações de DSC, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Em vez disso, chama [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager), fornecendo o caminho até o MOF de configuração do LCM como parâmetro. Depois de aplicar a configuração do LCM, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
-Uma configuração do LCM pode conter blocos somente para um conjunto limitado de recursos.
-No exemplo anterior, o único recurso chamado é **Settings**.
-Os outros recursos disponíveis são:
+Uma configuração do LCM pode conter blocos somente para um conjunto limitado de recursos. No exemplo anterior, o único recurso chamado é **Settings**. Os outros recursos disponíveis são:
 
-* **ConfigurationRepositoryWeb**: especifica um serviço de pull de HTTP para configurações.
-* **ConfigurationRepositoryShare**: especifica um serviço de pull de SMB para configurações.
-* **ResourceRepositoryWeb**: especifica um serviço de pull de HTTP para os módulos.
-* **ResourceRepositoryShare**: especifica um compartilhamento de SMB para os módulos.
-* **ReportServerWeb**: especifica um serviço de pull de HTTP para o qual os relatórios serão enviados.
-* **PartialConfiguration**: fornece dados para habilitar as configurações parciais.
+- **ConfigurationRepositoryWeb**: especifica um serviço de pull de HTTP para configurações.
+- **ConfigurationRepositoryShare**: especifica um serviço de pull de SMB para configurações.
+- **ResourceRepositoryWeb**: especifica um serviço de pull de HTTP para os módulos.
+- **ResourceRepositoryShare**: especifica um compartilhamento de SMB para os módulos.
+- **ReportServerWeb**: especifica um serviço de pull de HTTP para o qual os relatórios serão enviados.
+- **PartialConfiguration**: fornece dados para habilitar as configurações parciais.
 
 ## <a name="basic-settings"></a>Configurações Básicas
 
-Além de especificar pontos de extremidade/caminhos do serviço de pull e configurações parciais, todas as propriedades do LCM são configuradas em um bloco **Settings**.
-As seguintes propriedades estão disponíveis em um bloco **Settings**.
+Além de especificar pontos de extremidade/caminhos do serviço de pull e configurações parciais, todas as propriedades do LCM são configuradas em um bloco **Settings**. As seguintes propriedades estão disponíveis em um bloco **Settings**.
 
 |  Propriedade  |  Type  |  Descrição   |
 |----------- |------- |--------------- |
@@ -91,13 +79,10 @@ As seguintes propriedades estão disponíveis em um bloco **Settings**.
 > [!NOTE]
 > O LCM inicia o ciclo **ConfigurationModeFrequencyMins** com base em:
 >
-> - Uma nova metaconfiguração aplicada usando `Set-DscLocalConfigurationManager`
+> - Uma nova metaconfiguração com uma alteração em **ConfigurationModeFrequencyMins** é aplicada usando `Set-DscLocalConfigurationManager`
 > - Uma reinicialização do computador
 >
-> Para qualquer condição em que o processo de temporizador apresentar uma falha, ela será detectada dentro de 30 segundos e o ciclo será reiniciado.
-> Uma operação simultânea pode atrasar o início do ciclo; se a duração dessa operação ultrapassar a frequência de ciclo configurada, o próximo temporizador não será iniciado.
->
-> Por exemplo, a metaconfiguração é configurada com uma frequência de pull de 15 minutos e um pull ocorre em T1.  O Nó não conclui o trabalho por 16 minutos.  O primeiro ciclo de 15 minutos será ignorado e próximo pull ocorrerá em T1 + 15 + 15.
+> Para qualquer condição em que o processo de temporizador apresentar uma falha, ela será detectada dentro de 30 segundos e o ciclo será reiniciado. Uma operação simultânea pode atrasar o início do ciclo; se a duração dessa operação ultrapassar a frequência de ciclo configurada, o próximo temporizador não será iniciado. Por exemplo, a metaconfiguração é configurada com uma frequência de pull de 15 minutos e um pull ocorre em T1. O Nó não conclui o trabalho por 16 minutos. O primeiro ciclo de 15 minutos será ignorado e próximo pull ocorrerá em T1 + 15 + 15.
 
 ## <a name="pull-service"></a>Serviço de pull
 
@@ -111,8 +96,7 @@ Para obter mais detalhes sobre o serviço de pull, veja [Serviço de pull de Des
 
 ## <a name="configuration-server-blocks"></a>Blocos do servidor de configuração
 
-Para definir um servidor de configuração baseado na Web, crie um bloco **ConfigurationRepositoryWeb**.
-Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
+Para definir um servidor de configuração baseado na Web, crie um bloco **ConfigurationRepositoryWeb**. Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 
 |Propriedade|Type|Descrição|
 |---|---|---|
@@ -125,38 +109,35 @@ Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 |ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
 
 > [!NOTE]
->
-> * Compatível com as versões 1809 e posteriores do Windows.
+> Compatível com as versões 1809 e posteriores do Windows.
 
-Um exemplo de script para simplificar a configuração do valor ConfigurationRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+Um exemplo de script para simplificar a configuração do valor ConfigurationRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
-Para definir um servidor de configuração baseado em SMB, crie um bloco **ConfigurationRepositoryShare**.
-Um **ConfigurationRepositoryShare** define as propriedades a seguir.
+Para definir um servidor de configuração baseado em SMB, crie um bloco **ConfigurationRepositoryShare**. Um **ConfigurationRepositoryShare** define as propriedades a seguir.
 
-|Propriedade|Type|Descrição|
-|---|---|---|
-|Credencial|MSFT_Credential|A credencial usada para autenticar para o compartilhamento SMB.|
-|SourcePath|string|O caminho do compartilhamento SMB.|
+|  Propriedade  |      Type       |                      Descrição                      |
+| ---------- | --------------- | ----------------------------------------------------- |
+| Credencial | MSFT_Credential | A credencial usada para autenticar para o compartilhamento SMB. |
+| SourcePath | string          | O caminho do compartilhamento SMB.                            |
 
 ## <a name="resource-server-blocks"></a>Blocos do servidor de recurso
 
 Para definir um servidor de recurso baseado na Web, crie um bloco **ResourceRepositoryWeb**.
 Um **ResourceRepositoryWeb** define as propriedades a seguir.
 
-|Propriedade|Type|Descrição|
-|---|---|---|
-|AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
-|CertificateID|string|A impressão digital de um certificado usado para autenticar o servidor.|
-|RegistrationKey|string|Um GUID que identifica o nó para o serviço de pull.|
-|ServerURL|string|A URL do servidor de configuração.|
-|ProxyURL*|string|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
-|ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
+|        Propriedade         |     Type     |                                                              Descrição                                                               |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| AllowUnsecureConnection | bool         | Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação. |
+| CertificateID           | string       | A impressão digital de um certificado usado para autenticar o servidor.                                                                    |
+| RegistrationKey         | string       | Um GUID que identifica o nó para o serviço de pull.                                                                                   |
+| ServerURL               | string       | A URL do servidor de configuração.                                                                                                   |
+| ProxyURL*               | string       | A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.                                                    |
+| ProxyCredential*        | pscredential | Credencial a ser usada para o proxy http.                                                                                                  |
 
 > [!NOTE]
->
-> * Compatível com as versões 1809 e posteriores do Windows.
+> Compatível com as versões 1809 e posteriores do Windows.
 
-Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
 Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepositoryShare**.
 **ResourceRepositoryShare** define as propriedades a seguir.
@@ -168,29 +149,25 @@ Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepo
 
 ## <a name="report-server-blocks"></a>Blocos do servidor de relatório
 
-Para definir um servidor de relatório, crie um bloco **ReportServerWeb**.
-A função de servidor de relatório não é compatível com o serviço de pull baseado em SMB.
-**ReportServerWeb** define as propriedades a seguir.
+Para definir um servidor de relatório, crie um bloco **ReportServerWeb**. A função de servidor de relatório não é compatível com o serviço de pull baseado em SMB. **ReportServerWeb** define as propriedades a seguir.
 
-|Propriedade|Type|Descrição|
-|---|---|---|
-|AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
-|CertificateID|string|A impressão digital de um certificado usado para autenticar o servidor.|
-|RegistrationKey|string|Um GUID que identifica o nó para o serviço de pull.|
-|ServerURL|string|A URL do servidor de configuração.|
-|ProxyURL*|string|A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.|
-|ProxyCredential*|pscredential|Credencial a ser usada para o proxy http.|
+|        Propriedade         |     Type     |                                                              Descrição                                                               |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| AllowUnsecureConnection | bool         | Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação. |
+| CertificateID           | string       | A impressão digital de um certificado usado para autenticar o servidor.                                                                    |
+| RegistrationKey         | string       | Um GUID que identifica o nó para o serviço de pull.                                                                                   |
+| ServerURL               | string       | A URL do servidor de configuração.                                                                                                   |
+| ProxyURL*               | string       | A URL do proxy http a ser usada ao se comunicar com o serviço de configuração.                                                    |
+| ProxyCredential*        | pscredential | Credencial a ser usada para o proxy http.                                                                                                  |
 
 > [!NOTE]
->
-> * Compatível com as versões 1809 e posteriores do Windows.
+> Compatível com as versões 1809 e posteriores do Windows.
 
-Um exemplo de script para simplificar a configuração do valor ReportServerWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+Um exemplo de script para simplificar a configuração do valor ReportServerWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
 ## <a name="partial-configurations"></a>Configurações parciais
 
-Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**.
-Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](../pull-server/partialConfigs.md).
+Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**. Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](../pull-server/partialConfigs.md).
 **PartialConfiguration** define as propriedades a seguir.
 
 |Propriedade|Type|Descrição|
@@ -199,17 +176,19 @@ Para obter mais informações sobre configurações parciais, consulte [Configur
 |DependsOn|string{}|Uma lista de nomes de outras configurações que devem ser concluídas antes que essa configuração parcial seja aplicada.|
 |Descrição|string|Texto usado para descrever a configuração parcial.|
 |ExclusiveResources|string[]|Uma matriz de recursos exclusivos para essa configuração parcial.|
-|RefreshMode|string|Especifica como o LCM obtém essa configuração parcial. Os valores possíveis são __"Disabled"__ , __"Push"__ e __"Pull"__ . <ul><li>__Disabled__: esta configuração parcial está desabilitada.</li><li> __Push__: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um serviço, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Esse é o valor padrão.</li><li>__Pull:__ o nó é configurado para verificar regularmente a configuração parcial de um serviço de pull. Se essa propriedade for definida como __Pull__, você deverá especificar um serviço de pull em uma propriedade __ConfigurationSource__. Para saber mais sobre o serviço de pull da Automação do Azure, consulte [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview).</li></ul>|
+|RefreshMode|string|Especifica como o LCM obtém essa configuração parcial. Os valores possíveis são __"Disabled"__ , __"Push"__ e __"Pull"__ . <ul><li>__Disabled__: esta configuração parcial está desabilitada.</li><li> __Push__: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um serviço, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Esse é o valor padrão.</li><li>__Pull:__ o nó é configurado para verificar regularmente a configuração parcial de um serviço de pull. Se essa propriedade for definida como __Pull__, você deverá especificar um serviço de pull em uma propriedade __ConfigurationSource__. Para saber mais sobre o serviço de pull da Automação do Azure, consulte [Visão geral do DSC de Automação do Azure](/azure/automation/automation-dsc-overview).</li></ul>|
 |ResourceModuleSource|string[]|Uma matriz de nomes de servidores de recurso por meio dos quais é possível baixar os recursos necessários para essa configuração parcial. Esses nomes devem se referir a pontos de extremidade de serviço definidos previamente nos blocos **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
 
-__Observação:__ configurações parciais são compatíveis com o DSC de Automação do Azure, mas somente uma configuração pode ser extraída de cada conta de automação por nó.
+> [!NOTE]
+> configurações parciais tê suporte com o DSC de Automação do Azure, mas somente uma configuração pode ser extraída de cada conta de automação por nó.
 
 ## <a name="see-also"></a>Consulte Também
 
 ### <a name="concepts"></a>Conceitos
+
 [Visão geral da Configuração do Estado Desejado](../overview/overview.md)
 
-[Introdução à DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-getting-started)
+[Introdução à DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started)
 
 ### <a name="other-resources"></a>Outros recursos
 

@@ -1,13 +1,13 @@
 ---
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
-ms.date: 09/30/2019
-ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
-ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
+ms.date: 07/23/2020
+ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
+ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82174120"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133462"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -25,7 +25,7 @@ Agora, os cmdlets `New-PSSession`, `Enter-PSSession` e `Invoke-Command` têm um 
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Para criar uma sessão remota, especifique o computador de destino com o parâmetro `HostName` e forneça o nome de usuário com `UserName`. Ao executar os cmdlets interativamente, você receberá uma solicitação de senha. Você também pode usar a autenticação de chave SSH usando um arquivo de chave privada com o parâmetro `KeyFilePath`.
+Para criar uma sessão remota, especifique o computador de destino com o parâmetro **HostName** e forneça o nome de usuário com **UserName**. Ao executar os cmdlets interativamente, você receberá uma solicitação de senha. Você também pode usar a autenticação de chave SSH usando um arquivo de chave privada com o parâmetro **KeyFilePath**.
 
 ## <a name="general-setup-information"></a>Informações gerais de configuração
 
@@ -64,7 +64,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Crie o subsistema SSH que hospeda um processo do PowerShell no computador remoto:
 
    ```
-   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -122,7 +122,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Adicione uma entrada do subsistema PowerShell:
 
    ```
-   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -168,7 +168,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    Adicione uma entrada do subsistema PowerShell:
 
    ```
-   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -191,12 +191,14 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
 
 A comunicação remota do PowerShell por SSH depende da troca de autenticação entre o cliente do SSH e o serviço de SSH; ela própria não implementa nenhum esquema de autenticação. Isso significa que os esquemas de autenticação configurada, incluindo a autenticação multifator, são manipulados por SSH e são independentes do PowerShell. Por exemplo, é possível configurar o serviço SSH para exigir autenticação de chave pública, bem como uma senha única para aumentar a segurança. A configuração da autenticação multifator está fora do escopo desta documentação. Consulte a documentação para o SSH sobre como configurar a autenticação multifator corretamente e validar seu trabalho fora do PowerShell antes de tentar usá-la com a comunicação remota do PowerShell.
 
+> [!NOTE]
+> Os usuários mantêm os mesmos privilégios em sessões remotas. Isso quer dizer que os administradores têm acesso a um shell elevado, e os usuários normais não terão.
+
 ## <a name="powershell-remoting-example"></a>Exemplo de comunicação remota do PowerShell
 
 A maneira mais fácil de testar a comunicação remota é experimentá-la em um único computador. Neste exemplo, criamos uma sessão remota para o mesmo computador com Linux. Estamos usando cmdlets do PowerShell de forma interativa para que possamos ver avisos do SSH para verificar o computador host, bem como solicitar uma senha. É possível fazer a mesma coisa em um computador com Windows para garantir o funcionamento da comunicação remota. Em seguida, realize a comunicação remota entre os computadores alterando o nome do host.
 
 ```powershell
-#
 # Linux to Linux
 #
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
@@ -249,7 +251,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName           
 Enter-PSSession -HostName WinVM1 -UserName PTestName
 ```
 
-```Output
+```
 PTestName@WinVM1s password:
 ```
 
@@ -318,9 +320,13 @@ GitCommitId                    v6.0.0-alpha.17
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents>
 ```
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="limitations"></a>Limitações
 
-O comando **sudo** não funciona em uma sessão remota para computador com Linux.
+- O comando **sudo** não funciona em uma sessão remota para computador com Linux.
+
+- O PSRemoting no SSH não dá suporte a perfis e não tem acesso a `$PROFILE`. Estando em uma sessão, você pode carregar um perfil executando dot source dele com o caminho de arquivo completo. Isso não está relacionado aos perfis SSH. Você pode configurar o servidor SSH para usar o PowerShell como o shell padrão e carregar um perfil por meio do SSH. Confira a documentação do SSH para obter mais informações.
+
+- Antes do PowerShell 7.1, a comunicação remota por SSH não dava suporte a sessões remotas de segundo salto. Essa funcionalidade estava limitada a sessões que usavam o WinRM. O PowerShell 7.1 permite que `Enter-PSSession` e `Enter-PSHostProcess` funcionem em qualquer sessão remota interativa.
 
 ## <a name="see-also"></a>Confira também
 

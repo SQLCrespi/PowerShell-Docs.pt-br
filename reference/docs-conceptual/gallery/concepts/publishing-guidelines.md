@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: 5ee33ba12475f9d3e5ceb3b31f37d9f2acc19d9e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500597"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777856"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -127,8 +127,8 @@ Use as seguintes marcas para demonstrar aos usuários quais pacotes funcionarão
 - Linux: pacotes compatíveis com os sistemas operacionais Linux
 - MacOS: pacotes compatíveis com o sistema operacional Mac
 
-Marcando o seu pacote com as plataformas compatíveis, ele será incluído nos filtros de pesquisa da Galeria no painel à esquerda dos resultados da pesquisa. Se você hospedar seu pacote no GitHub, ao marcar a seu pacote, também poderá aproveitar os nossos [escudos de compatibilidade da Galeria do PowerShell](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![escudo de compatibilidade](media/publishing-guidelines/CosmosDB.svg).
+Marcando o seu pacote com as plataformas compatíveis, ele será incluído nos filtros de pesquisa da Galeria no painel à esquerda dos resultados da pesquisa. Se você hospedar seu pacote no GitHub, ao marcar a seu pacote, também poderá aproveitar nossos [escudos de compatibilidade da Galeria do PowerShell](https://img.shields.io/powershellgallery/p/:packageName.svg)
+![exemplo de escudo de compatibilidade](media/publishing-guidelines/CosmosDB.svg).
 
 ## <a name="include-tests"></a>Incluir testes
 

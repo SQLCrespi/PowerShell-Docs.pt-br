@@ -1,31 +1,33 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
-ms.openlocfilehash: 9e7488e922bdca70bb152e7e976077e43cfad7af
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 04fd2fbcc5afd9f1c7cbfaa44d6bdfde93bca399
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692188"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217484"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md). Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory. Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
+A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md).
+Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory. Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
 
 ## <a name="creating-resource-properties"></a>Criando propriedades de recurso
+
 A primeira coisa que precisamos fazer é decidir sobre as propriedades que serão expostas pelo recuso. Para esse exemplo, definiremos um usuário do Active Directory com as seguintes propriedades.
 
 Nome do parâmetro Descrição
 
-* **UserName**: propriedade de chave que identifica um usuário com exclusividade.
-* **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
-* **DomainCredential**: a senha do domínio para o usuário.
-* **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
+- **UserName**: propriedade de chave que identifica um usuário com exclusividade.
+- **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
+- **DomainCredential**: a senha do domínio para o usuário.
+- **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
 
-Para criar as propriedades, usamos o cmdlet **novo xDscResourceProperty**. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
+Para criar as propriedades, usamos o cmdlet `New-xDscResourceProperty`. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
 
 ```powershell
 $UserName = New-xDscResourceProperty –Name UserName -Type String -Attribute Key
@@ -36,15 +38,15 @@ $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attrib
 
 ## <a name="create-the-resource"></a>Criar o recurso
 
-Agora que as propriedades do recurso foram criadas, podemos chamar o cmdlet **New-xDscResource** para criar o recurso. O cmdlet **New-xDscResource** utiliza a lista de propriedades como parâmetros. Também usa o caminho no qual o módulo deve ser criado, o nome do novo recurso e o nome do módulo no qual ele está contido. O comando do PowerShell a seguir cria o recurso.
+Agora que as propriedades do recurso foram criadas, podemos chamar o cmdlet `New-xDscResource` para criar o recurso. O cmdlet `New-xDscResource` utiliza a lista de propriedades como parâmetros. Também usa o caminho no qual o módulo deve ser criado, o nome do novo recurso e o nome do módulo no qual ele está contido. O comando do PowerShell a seguir cria o recurso.
 
 ```powershell
 New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path 'C:\Program Files\WindowsPowerShell\Modules' –ModuleName Demo_DSCModule
 ```
 
-O cmdlet **New-xDscResource** cria o esquema MOF, um script de recurso esqueleto, a estrutura de diretório necessária para o novo recurso e um manifesto para o módulo que expõe o novo recurso.
+O cmdlet `New-xDscResource` cria o esquema MOF, um script de recurso esqueleto, a estrutura de diretório necessária para o novo recurso e um manifesto para o módulo que expõe o novo recurso.
 
-O arquivo do esquema MOF está em **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.schema.mof** e seu conteúdo é o seguinte.
+O arquivo de esquema MOF está em `C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.schema.mof`, e o conteúdo dele é descrito a seguir.
 
 ```
 [ClassVersion("1.0.0.0"), FriendlyName("Demo_ADUser")]
@@ -57,7 +59,7 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-O script do recurso está em **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.
+O script de recurso está em `C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1`.
 Não inclui a lógica real para implementar o recurso, que você mesmo deve adicionar. O conteúdo do script esqueleto é o seguinte.
 
 ```powershell
@@ -76,7 +78,6 @@ function Get-TargetResource
 
   #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-
   <#
   $returnValue = @{
   UserName = [System.String]
@@ -88,7 +89,6 @@ function Get-TargetResource
   $returnValue
   #>
 }
-
 
 function Set-TargetResource
 {
@@ -116,10 +116,7 @@ function Set-TargetResource
 
   #Include this line if the resource requires a system reboot.
   #$global:DSCMachineStatus = 1
-
-
 }
-
 
 function Test-TargetResource
 {
@@ -146,7 +143,6 @@ function Test-TargetResource
 
   #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-
   <#
   $result = [System.Boolean]
 
@@ -154,15 +150,14 @@ function Test-TargetResource
   #>
 }
 
-
 Export-ModuleMember -Function *-TargetResource
 ```
 
 ## <a name="updating-the-resource"></a>Atualizando o recurso
 
-Se você precisar adicionar ou modificar a lista de parâmetros do recurso, poderá chamar o cmdlet **Update-xDscResource**. O cmdlet atualiza o recurso com uma nova lista de parâmetros. Se você já tiver adicionado lógica no script do recurso, ele permanecerá intacto.
+Se você precisar adicionar ou modificar a lista de parâmetros do recurso, poderá chamar o cmdlet `Update-xDscResource`. O cmdlet atualiza o recurso com uma nova lista de parâmetros. Se você já tiver adicionado lógica no script do recurso, ele permanecerá intacto.
 
-Suponha, por exemplo, que você deseja incluir o horário do último logon para o usuário no nosso recurso. Em vez de reescrever o recurso por completo, é possível chamar **New-xDscResourceProperty** para criar a nova propriedade e, depois, chamar **Update-xDscResource** e adicionar a nova propriedade à sua lista de propriedades.
+Suponha, por exemplo, que você deseja incluir o horário do último logon para o usuário no nosso recurso. Em vez de reescrever o recurso por completo, é possível chamar `New-xDscResourceProperty` para criar a propriedade e, depois, chamar `Update-xDscResource` e adicionar a nova propriedade à sua lista de propriedades.
 
 ```powershell
 $lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description "For mapping users to their last log on time"
@@ -171,12 +166,14 @@ Update-xDscResource –Name 'Demo_ADUser' –Property $UserName, $Ensure, $Domai
 
 ## <a name="testing-a-resource-schema"></a>Testando um esquema de recursos
 
-A ferramenta Designer de Recursos expõe mais um cmdlet que pode ser usado para testar a validade de um esquema MOF escrito manualmente. Chame o cmdlet **Test-xDscSchema**, passando o caminho de um esquema de recursos MOF como parâmetro. O cmdlet mostrará os erros no esquema.
+A ferramenta Designer de Recursos expõe mais um cmdlet que pode ser usado para testar a validade de um esquema MOF escrito manualmente. Chame o cmdlet `Test-xDscSchema`, passando o caminho de um esquema de recursos MOF como parâmetro. O cmdlet mostrará os erros no esquema.
 
 ### <a name="see-also"></a>Consulte Também
 
 #### <a name="concepts"></a>Conceitos
+
 [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
 
 #### <a name="other-resources"></a>Outros recursos
+
 [xDscResourceDesigner Module](https://www.powershellgallery.com/packages/xDscResourceDesigner/1.12.0.0) (Módulo xDscResourceDesigner)

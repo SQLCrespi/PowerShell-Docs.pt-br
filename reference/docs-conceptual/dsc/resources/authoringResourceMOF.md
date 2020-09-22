@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com MOF
-ms.openlocfilehash: 7dd107431e756e5cbfc2d6babec41331b89743cc
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: ba857fa504bfd84accfd7f260b1fff1228db40ba
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692231"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217518"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrevendo um recurso personalizado de DSC com MOF
 
@@ -21,7 +21,7 @@ O esquema define as propriedades do recurso que pode ser configurado por um scri
 
 ### <a name="folder-structure-for-a-mof-resource"></a>Estrutura de pastas para um recurso MOF
 
-Para implementar um recurso personalizado de DSC com esquema MOF, crie a seguinte estrutura de pastas. O esquema MOF é definido no arquivo Demo_IISWebsite.schema.mof e o script de recurso é definido no Demo_IISWebsite.psm1. Opcionalmente, você pode criar um arquivo de manifesto do módulo (psd1).
+Para implementar um recurso personalizado de DSC com esquema MOF, crie a seguinte estrutura de pastas. O esquema MOF é definido no arquivo `Demo_IISWebsite.schema.mof`, e o script de recurso é definido em `Demo_IISWebsite.psm1`. Opcionalmente, você pode criar um arquivo de manifesto do módulo (psd1).
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -33,11 +33,12 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
                 |- Demo_IISWebsite.schema.mof (file, required)
 ```
 
-Observe que é necessário criar uma pasta chamada DSCResources na pasta de nível superior e que a pasta para cada recurso deve ter o mesmo nome que o recurso.
+> [!NOTE]
+> É necessário criar uma pasta chamada DSCResources na pasta de nível superior e que a pasta para cada recurso tenha o mesmo nome que o recurso.
 
 ### <a name="the-contents-of-the-mof-file"></a>O conteúdo do arquivo MOF
 
-Segue um exemplo de arquivo MOF que pode ser usado para um recurso de sites personalizados. Para seguir esse exemplo, salve o esquema em um arquivo e chame o arquivo de *Demo_IISWebsite.schema.mof*.
+Segue um exemplo de arquivo MOF que pode ser usado para um recurso de sites personalizados. Para seguir esse exemplo, salve o esquema em um arquivo e chame o arquivo de `Demo_IISWebsite.schema.mof`.
 
 ```
 [ClassVersion("1.0.0"), FriendlyName("Website")]
@@ -56,23 +57,24 @@ class Demo_IISWebsite : OMI_BaseResource
 
 Observe o seguinte sobre o código anterior:
 
-* `FriendlyName` define o nome que você pode usar para se referir a esse recurso personalizado em scripts de configuração DSC. Neste exemplo, `Website` é equivalente ao nome amigável `Archive` para o recurso interno Archive.
-* A classe que você define para o recurso personalizado deve derivar de `OMI_BaseResource`.
-* O qualificador de tipo, `[Key]`, em uma propriedade indica que essa propriedade identificará exclusivamente a instância do recurso. Pelo menos uma propriedade `[Key]` é necessária.
-* O qualificador `[Required]` indica que a propriedade é necessária (um valor deve ser especificado em qualquer script de configuração que usa esse recurso).
-* O qualificador `[write]` indica que essa propriedade é opcional ao usar o recurso personalizado em um script de configuração. O qualificador `[read]` indica que uma propriedade não pode ser definida por uma configuração e destina-se apenas para fins de relatório.
-* `Values` restringe os valores que podem ser atribuídos à propriedade para a lista de valores definidos em `ValueMap`. Para obter mais informações, consulte [ValueMap e Qualificadores de Valor](/windows/desktop/WmiSdk/value-map).
-* É recomendável incluir uma propriedade chamada `Ensure` com os valores `Present` e `Absent` em seu recurso como uma maneira de manter um estilo consistente com recursos internos de DSC.
-* Nomeie o arquivo de esquema para o recurso personalizado da seguinte maneira: `classname.schema.mof`, em que `classname` é o identificador que segue a palavra-chave `class` na definição do esquema.
+- `FriendlyName` define o nome que você pode usar para se referir a esse recurso personalizado em scripts de configuração DSC. Neste exemplo, `Website` é equivalente ao nome amigável `Archive` para o recurso interno Archive.
+- A classe que você define para o recurso personalizado deve derivar de `OMI_BaseResource`.
+- O qualificador de tipo, `[Key]`, em uma propriedade indica que essa propriedade identificará exclusivamente a instância do recurso. Pelo menos uma propriedade `[Key]` é necessária.
+- O qualificador `[Required]` indica que a propriedade é necessária (um valor deve ser especificado em qualquer script de configuração que usa esse recurso).
+- O qualificador `[write]` indica que essa propriedade é opcional ao usar o recurso personalizado em um script de configuração. O qualificador `[read]` indica que uma propriedade não pode ser definida por uma configuração e destina-se apenas para fins de relatório.
+- `Values` restringe os valores que podem ser atribuídos à propriedade para a lista de valores definidos em `ValueMap`. Para obter mais informações, consulte [ValueMap e Qualificadores de Valor](/windows/desktop/WmiSdk/value-map).
+- É recomendável incluir uma propriedade chamada `Ensure` com os valores `Present` e `Absent` em seu recurso como uma maneira de manter um estilo consistente com recursos internos de DSC.
+- Nomeie o arquivo de esquema para o recurso personalizado da seguinte maneira: `classname.schema.mof`, em que `classname` é o identificador que segue a palavra-chave `class` na definição do esquema.
 
 ### <a name="writing-the-resource-script"></a>Escrevendo o script de recurso
 
-O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado `<ResourceName>.psm1`. No exemplo a seguir, as funções são armazenadas em um arquivo chamado Demo_IISWebsite.psm1.
+O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource`. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado `<ResourceName>.psm1`.
+No exemplo a seguir, as funções são armazenadas em um arquivo chamado `Demo_IISWebsite.psm1`.
 
 > [!NOTE]
-> Ao executar o mesmo script de configuração no recurso mais de uma vez, você não receberá erros e o recurso permanecerá no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções **Get-TargetResource** e **Test-TargetResource** deixam o recurso inalterado e se chamar a função **Set-TargetResource** mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
+> Ao executar o mesmo script de configuração no recurso mais de uma vez, você não receberá erros e o recurso permanecerá no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções `Get-TargetResource` e `Test-TargetResource` deixam o recurso inalterado e se chamar a função `Set-TargetResource` mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
 
-Na implementação da função **Get-TargetResource**, utilize os valores da propriedade de recurso de chave que são fornecidos como parâmetros para verificar o status da instância do recurso especificado. Essa função deve gerar uma tabela de hash que liste todas as propriedades de recursos como chaves e os valores reais dessas propriedades como valores correspondentes. O código a seguir fornece um exemplo.
+Na implementação da função `Get-TargetResource`, utilize os valores da propriedade de recurso de chave que são fornecidos como parâmetros para verificar o status da instância do recurso especificado. Essa função deve gerar uma tabela de hash que liste todas as propriedades de recursos como chaves e os valores reais dessas propriedades como valores correspondentes. O código a seguir fornece um exemplo.
 
 ```powershell
 # DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
@@ -109,25 +111,25 @@ function Get-TargetResource
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
         $getTargetResourceResult = @{
-                                      Name = $Website.Name;
-                                        Ensure = $ensureResult;
-                                        PhysicalPath = $Website.physicalPath;
-                                        State = $Website.state;
-                                        ID = $Website.id;
-                                        ApplicationPool = $Website.applicationPool;
-                                        Protocol = $Website.bindings.Collection.protocol;
-                                        Binding = $Website.bindings.Collection.bindingInformation;
-                                    }
+            Name = $Website.Name
+            Ensure = $ensureResult
+            PhysicalPath = $Website.physicalPath
+            State = $Website.state
+            ID = $Website.id
+            ApplicationPool = $Website.applicationPool
+            Protocol = $Website.bindings.Collection.protocol
+            Binding = $Website.bindings.Collection.bindingInformation
+        }
 
-        $getTargetResourceResult;
+        $getTargetResourceResult
 }
 ```
 
-Dependendo dos valores especificados para as propriedades do recurso no script de configuração, a função **Set-TargetResource** deve fazer o seguinte:
+Dependendo dos valores especificados para as propriedades do recurso no script de configuração, a função `Set-TargetResource` deve fazer o seguinte:
 
-* Criar um novo site da web
-* Atualizar um site da web existente
-* Excluir um site da web existente
+- Criar um novo site da web
+- Atualizar um site da web existente
+- Excluir um site da web existente
 
 O exemplo a seguir ilustra isto.
 
@@ -166,62 +168,63 @@ function Set-TargetResource
 }
 ```
 
-Por fim, a função **Test-TargetResource** precisa utilizar o mesmo parâmetro configurado como **Get-TargetResource** e **Set-TargetResource**. Na implementação de **Test-TargetResource**, verifique o status da instância do recurso que está especificada nos parâmetros de chave. Se o estado real da instância do recurso não coincidir com os valores especificados no conjunto de parâmetros, gere **$false**. Caso contrário, gere **$true**.
+Por fim, a função `Test-TargetResource` precisa utilizar o mesmo parâmetro configurado como `Get-TargetResource` e `Set-TargetResource`. Na implementação de `Test-TargetResource`, verifique o status da instância do recurso que está especificada nos parâmetros de chave. Se o estado real da instância do recurso não coincidir com os valores especificados no conjunto de parâmetros, gere `$false`. Caso contrário, gere `$true`.
 
-O código a seguir implementa a função **Test-TargetResource**.
+O código a seguir implementa a função `Test-TargetResource`.
 
 ```powershell
 function Test-TargetResource
 {
-[CmdletBinding()]
-[OutputType([System.Boolean])]
-param
-(
-[ValidateSet("Present","Absent")]
-[System.String]
-$Ensure,
+    [CmdletBinding()]
+    [OutputType([System.Boolean])]
+    param
+    (
+        [ValidateSet("Present","Absent")]
+        [System.String]
+        $Ensure,
 
-[parameter(Mandatory = $true)]
-[System.String]
-$Name,
+        [parameter(Mandatory = $true)]
+        [System.String]
+        $Name,
 
-[parameter(Mandatory = $true)]
-[System.String]
-$PhysicalPath,
+        [parameter(Mandatory = $true)]
+        [System.String]
+        $PhysicalPath,
 
-[ValidateSet("Started","Stopped")]
-[System.String]
-$State,
+        [ValidateSet("Started","Stopped")]
+        [System.String]
+        $State,
 
-[System.String[]]
-$Protocol,
+        [System.String[]]
+        $Protocol,
 
-[System.String[]]
-$BindingData,
+        [System.String[]]
+        $BindingData,
 
-[System.String]
-$ApplicationPool
-)
+        [System.String]
+        $ApplicationPool
+    )
 
-#Write-Verbose "Use this cmdlet to deliver information about command processing."
+    # Get the current state
+    $currentState = Get-TargetResource -Ensure $Ensure -Name $Name -PhysicalPath $PhysicalPath -State $State -ApplicationPool $ApplicationPool -BindingInfo $BindingInfo -Protocol $Protocol
 
-#Write-Debug "Use this cmdlet to write debug information while troubleshooting."
+    #Write-Verbose "Use this cmdlet to deliver information about command processing."
 
+    #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-#Include logic to
-$result = [System.Boolean]
-#Add logic to test whether the website is present and its status mathes the supplied parameter values. If it does, return true. If it does not, return false.
-$result
+    #Include logic to
+    $result = [System.Boolean]
+    #Add logic to test whether the website is present and its status matches the supplied parameter values. If it does, return true. If it does not, return false.
+    $result
 }
 ```
 
-**Observação**: Para uma depuração mais fácil, use o cmdlet **Write-Verbose** na implementação das três funções anteriores.
->Esse cmdlet escreve o texto para o fluxo de mensagem detalhada.
->Por padrão, o fluxo de mensagem detalhada não é exibido, mas você pode exibi-lo alterando o valor da variável **$VerbosePreference** ou usando o parâmetro **Verbose** nos cmdlets DSC = novo.
+> [!Note]
+> Para uma depuração mais fácil, use o cmdlet `Write-Verbose` na implementação das três funções anteriores. Esse cmdlet escreve o texto para o fluxo de mensagem detalhada. Por padrão, o fluxo de mensagem detalhada não é exibido, mas você pode exibi-lo alterando o valor da variável **$VerbosePreference** ou usando o parâmetro **Verbose** nos cmdlets DSC = novo.
 
 ### <a name="creating-the-module-manifest"></a>Criando o manifesto de módulo
 
-Por fim, use o cmdlet **New-ModuleManifest** para definir um arquivo `<ResourceName>.psd1` para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
+Por fim, use o cmdlet `New-ModuleManifest` para definir um arquivo `<ResourceName>.psd1` para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'
@@ -277,10 +280,10 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 ## <a name="supporting-psdscrunascredential"></a>Dando suporte a PsDscRunAsCredential
 
->**Observação:** **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e posterior.
+> [!Note]
+> **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e posterior.
 
-A propriedade **PsDscRunAsCredential** pode ser usada no bloco de recurso [Configurações DSC](../configurations/configurations.md) para especificar que o recurso deve ser executado em um conjunto de credenciais específico.
-Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](../configurations/runAsUser.md).
+A propriedade **PsDscRunAsCredential** pode ser usada no bloco de recurso [Configurações DSC](../configurations/configurations.md) para especificar que o recurso deve ser executado em um conjunto de credenciais específico. Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](../configurations/runAsUser.md).
 
 Para acessar o contexto do usuário de dentro de um recurso personalizado, você pode usar a variável automática `$PsDscContext`.
 
@@ -303,4 +306,5 @@ Dentro de sua função `Set-TargetResource`, adicione a seguinte linha de códig
 $global:DSCMachineStatus = 1
 ```
 
-Para que o LCM reinicialize o nó, o sinalizador **RebootNodeIfNeeded** precisa ser definido como `$true`. A configuração **ActionAfterReboot** também deve ser definida como **ContinueConfiguration**, que é o padrão. Para obter mais informações sobre como configurar o LCM, confira [Configurando o Configuration Manager Local](../managing-nodes/metaConfig.md) ou [Configurando o Configuration Manager Local (v4)](../managing-nodes/metaConfig4.md).
+Para que o LCM reinicialize o nó, o sinalizador **RebootNodeIfNeeded** precisa ser definido como `$true`.
+A configuração **ActionAfterReboot** também deve ser definida como **ContinueConfiguration**, que é o padrão. Para obter mais informações sobre como configurar o LCM, confira [Configurando o Configuration Manager Local](../managing-nodes/metaConfig.md) ou [Configurando o Configuration Manager Local (v4)](../managing-nodes/metaConfig4.md).

@@ -1,12 +1,12 @@
 ---
 title: Compatibilidade de módulo do PowerShell 7
 ms.date: 02/03/2020
-ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565056"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722806"
 ---
 # <a name="powershell-7-module-compatibility"></a>Compatibilidade de módulo do PowerShell 7
 
@@ -69,13 +69,14 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | Nome do módulo                        | Status                               | SO com suporte                       |
 | ---------------------------------- | ------------------------------------ | ---------------------------------- |
 | Active Directory                    | Nativamente compatível                  | Windows Server 1809 e posteriores com RSAT-AD-PowerShell<br>Windows 10 1809 e posteriores com Rsat.ActiveDirectory.DS-LDS.Tools |
+| ADDSDeployment                     | Funciona com a camada de compatibilidade       |  Windows Server 2019 1809 ou superior         |
 | ADFS                               | Não testado com a camada de compatibilidade    |                                    |
 | AppBackgroundTask                  | Nativamente compatível                  | Windows 10 1903 e posteriores                   |
 | AppLocker                          | Não testado com a camada de compatibilidade    |                                    |
 | AppvClient                         | Não testado com a camada de compatibilidade    |                                    |
 | Appx                               | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores |
 | AssignedAccess                     | Nativamente compatível                  | Windows 10 1809 e posteriores                   |
-| BestPractices                      | Não testado com a camada de compatibilidade    |                                    |
+| BestPractices                      | Sem suporte na camada de compatibilidade |                                    |
 | BitLocker                          | Nativamente compatível                  | Windows Server 1809 e posteriores com BitLocker<br>Windows 10 1809 e posteriores |
 | BitsTransfer                       | Nativamente compatível                  | Windows Server 20H1<br>Windows 10 20H1 |
 | BootEventCollector                 | Não testado com a camada de compatibilidade    |                                        |
@@ -99,7 +100,7 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | GroupPolicy                        | Não testado com a camada de compatibilidade    |                                               |
 | HgsClient                          | Nativamente compatível                  | Windows Server 1903 e posteriores com Hyper-V ou RSAT-Shielded-VM-Tools<br>Windows 10 1903 e posteriores com Rsat.Shielded.VM.Tools |
 | HgsDiagnostics                     | Nativamente compatível                  | Windows Server 1809 e posteriores com Hyper-V ou RSAT-Shielded-VM-Tools<br>Windows 10 1809 e posteriores com Rsat.Shielded.VM.Tools |
-| Hyper-v                            | Nativamente compatível                  | Windows Server 1809 e posteriores com Hyper-V-PowerShell<br>Windows 10 1809 e posteriores com Microsoft-Hyper-V-Management-PowerShell |
+| Hyper-V                            | Nativamente compatível                  | Windows Server 1809 e posteriores com Hyper-V-PowerShell<br>Windows 10 1809 e posteriores com Microsoft-Hyper-V-Management-PowerShell |
 | IISAdministration                  | Não testado com a camada de compatibilidade    |                                               |
 | Internacional                      | Nativamente compatível                  | Windows Server 1903 e posteriores<br>Windows 10 1903 e posteriores      |
 | IpamServer                         | Não testado com a camada de compatibilidade    |                                               |
@@ -148,7 +149,7 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | Provisionamento                       | Não testado com a camada de compatibilidade    |                                               |
 | PSDesiredStateConfiguration        | Parcialmente                            | Integrado ao PowerShell 7                       |
 | PSDiagnostics                      | Nativamente compatível                  | Integrado ao PowerShell 7                       |
-| PSScheduledJob                     | Não testado com a camada de compatibilidade | Integrado ao PowerShell 5.1                     |
+| PSScheduledJob                     | Sem suporte na camada de compatibilidade | Integrado ao PowerShell 5.1                     |
 | PSWorkflow                         | Não testado com a camada de compatibilidade    |                                               |
 | PSWorkflowUtility                  | Não testado com a camada de compatibilidade    |                                               |
 | RemoteAccess                       | Não testado com a camada de compatibilidade    |                                               |
@@ -156,7 +157,7 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | ScheduledTasks                     | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | SecureBoot                         | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | ServerCore                         | Não testado com a camada de compatibilidade    |                                               |
-| ServerManager                      | Não testado com a camada de compatibilidade    |                                               |
+| ServerManager                      | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores com Rsat.ServerManager.Tools<br>_Veja as observações abaixo_ |
 | ServerManagerTasks                 | Não testado com a camada de compatibilidade    |                                               |
 | ShieldedVMDataFile                 | Nativamente compatível                  | Windows Server 1903 e posteriores com RSAT-Shielded-VM-Tools<br>Windows 10 1903 e posteriores com Rsat.Shielded.VM.Tools |
 | ShieldedVMProvisioning             | Nativamente compatível                  | Windows Server 1809 e posteriores com HostGuardian<br>Windows 10 1809 e posteriores com HostGuardian  |
@@ -164,7 +165,7 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | SmbShare                           | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | SmbWitness                         | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | SMISConfig                         | Nativamente compatível                  | Windows Server 1903 e posteriores com WindowsStorageManagementService |
-| sms                                | Não testado com a camada de compatibilidade    |                                               |
+| SMS                                | Não testado com a camada de compatibilidade    |                                               |
 | SoftwareInventoryLogging           | Nativamente compatível                  | Windows Server 1809 e posteriores                          |
 | StartLayout                        | Nativamente compatível                  | Windows Server 1809 e posteriores com Experiência Desktop<br>Windows 10 1809 e posteriores |
 | Armazenamento                            | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
@@ -178,7 +179,7 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | TroubleshootingPack                | Nativamente compatível                  | Windows 10 1903 e posteriores                              |
 | TrustedPlatformModule              | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | UEV                                | Nativamente compatível                  | Windows Server ??versão futura do Server com Experiência Desktop??<br>Windows 10 1903 e posteriores |
-| UpdateServices                     | Não testado com a camada de compatibilidade |                                               |
+| UpdateServices                     | Sem suporte na camada de compatibilidade |                                               |
 | VpnClient                          | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | Wdac                               | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores      |
 | WebAdministration                  | Não testado com a camada de compatibilidade    |                                               |
@@ -189,3 +190,10 @@ No Windows 10, os módulos de gerenciamento do Windows são disponibilizados com
 | WindowsServerBackup                | Nativamente compatível                  | Windows Server 19H2 com Windows-Server-Backup |
 | WindowsUpdate                      | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores       |
 | WindowsUpdateProvider              | Nativamente compatível                  | Windows Server 1809 e posteriores<br>Windows 10 1809 e posteriores       |
+
+## <a name="notes"></a>Observações
+
+### <a name="servermanager-module"></a>Módulo ServerManager
+
+O módulo tem alguns problemas de compatibilidade secundários com a saída formatada no PowerShell 7. Por exemplo, o cmdlet `Get-WindowsFeature` retorna o objeto apropriado com todas as propriedades, mas a formatação de exibição padrão faz com que algumas propriedades pareçam estar vazias. Encontre os valores reais nas propriedades do objeto usando `Select-Object` ou por acesso de membro direto.
+

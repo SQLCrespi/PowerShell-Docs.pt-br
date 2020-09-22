@@ -1,18 +1,18 @@
 ---
-title: Tudo o que você queria saber sobre a instrução IF
+title: Tudo o que você queria saber sobre a instrução if
 description: Como muitas outras linguagens, o PowerShell tem instruções para executar código condicionalmente em seus scripts.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6ffb70af694e80430d31991045b9fadc1a2cc3f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149519"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469745"
 ---
-# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Tudo o que você queria saber sobre a instrução IF
+# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Tudo o que você queria saber sobre a instrução `if`
 
-Como muitas outras linguagens, o PowerShell tem instruções para executar código condicionalmente em seus scripts. Uma dessas instruções é a instrução [if][]. Hoje, vamos nos aprofundar em um dos comandos mais fundamentais no PowerShell.
+Como muitas outras linguagens, o PowerShell tem instruções para executar código condicionalmente em seus scripts. Uma dessas instruções é a instrução [If][]. Hoje, vamos nos aprofundar em um dos comandos mais fundamentais no PowerShell.
 
 > [!NOTE]
 > A [versão original][] deste artigo apareceu no blog escrito por [@KevinMarquette][]. A equipe do PowerShell agradece ao Kevin por compartilhar esse conteúdo conosco. Confira o blog dele em [PowerShellExplained.com][].
@@ -22,7 +22,7 @@ Como muitas outras linguagens, o PowerShell tem instruções para executar códi
 Os scripts geralmente precisam tomar decisões e executar diferentes lógicas com base nessas decisões.
 Isso é o que quero dizer pela execução condicional. Você tem uma instrução ou valor a ser avaliado e executa uma seção diferente do código com base nessa avaliação. Isso é exatamente o que a instrução `if` faz.
 
-## <a name="the-if-statement"></a>A instrução if
+## <a name="the-if-statement"></a>A instrução `if`
 
 Aqui está um exemplo básico da instrução `if`:
 
@@ -60,7 +60,7 @@ Neste exemplo, estou assumindo um valor conhecido de `5` e comparando com meu `$
 
 Um possível caso de uso é verificar o status de um valor antes de executar uma ação. Você pode obter um serviço e verificar se o status estava definido como em execução antes de chamar `Restart-Service`.
 
-É comum em outras linguagens, como C#, usar `==` para igualdade (por exemplo, `5 == $value`). Mas isso não funciona com o PowerShell. Outro erro comum é usar o sinal de igual (por exemplo, `5 = $value`) que é reservado para atribuir valores para variáveis. Colocar seu valor conhecido à esquerda torna o erro difícil.
+É comum em outras linguagens, como C#, usar `==` para igualdade (por exemplo, `5 == $value`). Mas isso não funciona com o PowerShell. Outro erro comum é usar o sinal de igual (por exemplo, `5 = $value`) que é reservado para atribuir valores para variáveis. Colocar seu valor conhecido à esquerda torna o erro mais embaraçoso.
 
 Este operador (e outros) tem algumas variações.
 
@@ -533,7 +533,7 @@ else
 }
 ```
 
-Cada scriptblock está colocando os resultados dos comandos ou do valor no pipeline. Atribuímos o resultado da instrução If à variável `$discount`. Esse exemplo poderia ser tão facilmente atribuído aos valores para a variável `$discount` diretamente em cada scriptblock. Não posso dizer que uso com a instrução `if` com frequência, mas tenho um exemplo onde usei recentemente.
+Cada scriptblock está colocando os resultados dos comandos ou do valor no pipeline. Em seguida, atribuímos o resultado da instrução `if` à variável `$discount`. Esse exemplo poderia ser tão facilmente atribuído aos valores para a variável `$discount` diretamente em cada scriptblock. Não posso dizer que uso com a instrução `if` com frequência, mas tenho um exemplo onde usei recentemente.
 
 ### <a name="array-inline"></a>Matriz embutida
 
@@ -567,7 +567,7 @@ Posso avaliar embutidos dentro da inicialização da minha matriz. Se `$Debug` f
 
 ## <a name="simplify-complex-operations"></a>Simplificar operações complexas
 
-É inevitável que você se depare com uma situação que tenha muitas comparações a serem verificadas e sua instrução if passa para o lado direito da tela.
+É inevitável enfrentar situações em que haja muitas comparações a serem verificadas e a instrução `If` fique na extremidade direita da tela.
 
 ```powershell
 $user = Get-ADUser -Identity $UserName
@@ -599,7 +599,7 @@ Geralmente uso quando obtenho mais de duas comparações ou se preciso rolar par
 
 ### <a name="pre-calculating-results"></a>Pré-calcular resultados
 
-Podemos retirar essa instrução da instrução if e verificar apenas o resultado.
+Podemos retirar essa instrução da instrução `if` e verificar apenas o resultado.
 
 ```powershell
 $needsSecureHomeDrive = $null -ne $user -and
@@ -691,11 +691,11 @@ Se você quiser se aprofundar mais no tratamento de exceções, tenho um artigo 
 A instrução `if` é uma instrução simples, mas é uma parte fundamental do PowerShell. Você se encontrará usando-a várias vezes em quase todos os scripts que escrever. Espero que você tenha um entendimento melhor do que antes.
 
 <!-- link references -->
-[versão original]: https://powershellexplained.com/2019-08-11-PowerShell-if-then-else-equals-operator/
+[versão original]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [if]: /powershell/module/microsoft.powershell.core/about/about_if
-[operadores bit a bit]: https://powershellexplained.com/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
+[operadores bit a bit]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [, as várias maneiras de usar regex]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [tudo o que você quis saber sobre exceções]: everything-about-exceptions.md
 [tudo o que você precisa saber sobre $null]: everything-about-null.md

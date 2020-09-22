@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 314be1d4da2d3df967ac8898745b7b1aaf69de2a
+ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809212"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215998"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 
@@ -187,7 +187,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Novos recursos no ISE do Windows PowerShell
 
-- Agora, você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e executando **PSEdit \<caminho e nome do arquivo no computador remoto\>** . Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
+- Agora você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e executando **PSEdit \<path and file name on the remote computer\>** . Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
 - Agora há suporte para o cmdlet Start-Transcript no ISE do Windows PowerShell.
 - Agora você pode depurar scripts remotos no ISE do Windows PowerShell.
 - Um novo comando de menu, **Interromper Tudo** (Ctrl+B), interrompe o depurador de scripts em execução local e remota.
@@ -353,7 +353,7 @@ A seguir estão os benefícios do fluxo de trabalho do Windows PowerShell
 
 O Windows PowerShell Web Access é um recurso do Windows Server 2012 que permite aos usuários executar comandos e scripts do Windows PowerShell em um console baseado na Web. Dispositivos que usam o console baseado na Web não exigem o Windows PowerShell, o software de gerenciamento remoto nem as instalações de plug-in de navegador. Basta um gateway do Windows PowerShell Web Access devidamente configurado e um navegador de dispositivo cliente que dê suporte a JavaScript e aceite cookies.
 
-Para obter mais informações, consulte [Implantar o Windows PowerShell Web Access](/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access).
+Para obter mais informações, consulte [Implantar o Windows PowerShell Web Access](/previous-versions/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access).
 
 ### <a name="new-windows-powershell-ise-features"></a>Novos recursos do Windows PowerShell ISE
 

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com entradas do Registro
-ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
+ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030722"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758475"
 ---
 # <a name="working-with-registry-entries"></a>Trabalhando com entradas do Registro
 
@@ -111,7 +111,7 @@ DevicePath   : C:\WINDOWS\inf
 Esse comando retorna as propriedades padrão do Windows PowerShell, bem como a propriedade **DevicePath**.
 
 > [!NOTE]
-> Embora `Get-ItemProperty` tenha os parâmetros **Filter**, **Include** e **Exclude**, eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do registro, que são caminhos de item e não entradas do registro. Entradas de registro são propriedades do item.
+> Embora `Get-ItemProperty` tenha os parâmetros **Filter**, **Include** e **Exclude**, eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do Registro, que são caminhos de item, e não entradas do Registro, que são propriedades do item.
 
 Outra opção é usar a ferramenta de linha de comando Reg.exe. Para obter ajuda com reg.exe, digite `reg.exe /?` em um prompt de comando. Para localizar a entrada DevicePath, use reg.exe, conforme mostrado no comando a seguir:
 
@@ -200,7 +200,7 @@ O **PropertyType** deve ter o mesmo nome de um membro da enumeração **Microsof
 |QWord|8 bytes de dados binários|
 
 > [!NOTE]
-> Você pode adicionar uma entrada de Registro em vários locais, especificando uma matriz de valores para o parâmetro **Path**:
+> Você pode adicionar uma entrada de registro em vários locais, especificando uma matriz de valores para o parâmetro **Path**:
 
 ```powershell
 New-ItemProperty -Name PowerShellPath -PropertyType String -Value $PSHome `

@@ -1,14 +1,14 @@
 ---
 title: Tudo o que você queria saber sobre matrizes
 description: As matrizes são um recurso fundamental de linguagem da maioria das linguagens de programação.
-ms.date: 05/23/2020
+ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 5cab354a99b122401f8f8119de24e075cf9d21f8
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149599"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092092"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Tudo o que você queria saber sobre matrizes
 
@@ -241,6 +241,8 @@ Lee Dailey também apontou que podemos usar `$data.GetUpperBound(0)` para obter 
 
 ```powershell
 PS> $data.GetUpperBound(0)
+3
+PS> $data[ $data.GetUpperBound(0) ]
 Three
 ```
 
@@ -586,7 +588,7 @@ True
 
 ### <a name="-in"></a>-in
 
-Quando você tem um único valor e deseja verificar se ele corresponde a um dos vários valores, pode usar o operador `-in`. O valor estaria no lado esquerdo e a matriz no lado direito da operação.
+Quando você tem um único valor e deseja verificar se ele corresponde a um dos vários valores, pode usar o operador `-in`. O valor estaria no lado esquerdo e a matriz, no lado direito do operador.
 
 ```powershell
 PS> $data = @('red','green','blue')

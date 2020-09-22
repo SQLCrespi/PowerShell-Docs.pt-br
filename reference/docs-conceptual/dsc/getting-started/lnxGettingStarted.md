@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
-ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 64657dda04fa2df97fa2ad7c7a5c2d15b66a270a
+ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73933845"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301328"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
@@ -15,33 +15,22 @@ Este tópico explica como começar a usar a Configuração de Estado Desejado (D
 
 ## <a name="supported-linux-operation-system-versions"></a>Versões do sistema operacional Linux com suporte
 
-Há suporte para as seguintes versões de sistema operacional do Linux para DSC para Linux.
+Há suporte para as seguintes versões de sistema operacional do Linux no DSC para Linux.
 
 - CentOS 5, 6 e 7 (x86/x64)
 - Debian GNU/Linux 6, 7 e 8 (x86/x64)
 - Oracle Linux 5, 6 e 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 e 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 e 12 (x86/x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS e 16.04 LTS (x86/x64)
-
-A tabela a seguir descreve as dependências de pacote necessárias para a DSC para Linux.
-
-|  Pacote necessário |  DESCRIÇÃO |  Versão mínima |
-|---|---|---|
-| glibc| Biblioteca do GNU| 2…4 – 31.30|
-| python| Python| 2.4 – 3.4|
-| omiserver| Infraestrutura de gerenciamento aberta| 1.0.8.1|
-| openssl| Bibliotecas OpenSSL| 0.9.8 ou 1.0|
-| ctypes| Biblioteca do Python CTypes| Deve coincidir com a versão do Python|
-| libcurl| biblioteca de cliente http do cURL| 7.15.1|
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Instalando a DSC para Linux
 
-É necessário instalar a [Infraestrutura de Gerenciamento Aberta (OMI)](https://github.com/Microsoft/omi) antes de instalar a DSC para Linux.
+É necessário instalar a [OMI (Infraestrutura de Gerenciamento Aberta)](https://github.com/Microsoft/omi) antes de instalar a DSC para Linux.
 
 ### <a name="installing-omi"></a>Instalando a OMI
 
-A Desired State Configuration para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1 ou posterior. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://github.com/Microsoft/omi).
+A Desired State Configuration para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1 ou posterior. A OMI pode ser baixada do The Open Group: [OMI (Infraestrutura de Gerenciamento Aberta)](https://github.com/Microsoft/omi).
 
 Para instalar a OMI, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -54,7 +43,7 @@ Execute o seguinte comando para instalar a OMI em um sistema CentOS 7 x64.
 
 ### <a name="installing-dsc"></a>Instalando a DSC
 
-DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294).
+A DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294).
 
 Para instalar a DSC, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -137,7 +126,7 @@ Execute o seguinte comando para enviar a configuração DSC por push para o nó 
 
 ### <a name="distribute-the-configuration-with-a-pull-server"></a>Distribuir a configuração com um servidor de pull
 
-As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter orientações sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](../pull-server/pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
+As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter diretrizes sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](../pull-server/pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
 
 ### <a name="working-with-configurations-locally"></a>Trabalhando com configurações localmente
 
@@ -183,7 +172,7 @@ Aplica um arquivo MOF de metaconfiguração ao computador. Semelhante ao cmdlet 
 
 Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 
-|Arquivo de log|Diretório|DESCRIÇÃO|
+|Arquivo de log|Diretório|Descrição|
 |---|---|---|
 |**omiserver.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação do servidor CIM da OMI.|
 |**dsc.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|

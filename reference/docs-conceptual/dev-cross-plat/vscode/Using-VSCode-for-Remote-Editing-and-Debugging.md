@@ -2,12 +2,12 @@
 title: Usando o Visual Studio Code para edição e depuração remotas
 description: Usando o Visual Studio Code para edição e depuração remotas
 ms.date: 06/13/2019
-ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 0394348b4dfbe813549c02035e9d3b035cba72e4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809272"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784632"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Usando o Visual Studio Code para edição e depuração remotas
 
@@ -47,11 +47,11 @@ A partir daí, podemos:
 
 - Adicionar pontos de interrupção à medianiz
 
-  ![adicionando pontos de interrupção à medianiz](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+  ![Adicionar um ponto de interrupção à medianiz](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
 
 - Pressione F5 para depurar o script do PowerShell.
 
-  ![depurando o script local do PowerShell](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
+  ![Depurar o script local do PowerShell](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 Durante a depuração, você pode interagir com o console de depuração, ver as variáveis no escopo à esquerda e todas as outras ferramentas de depuração padrão.
 
@@ -73,20 +73,20 @@ Como estamos passando de um macOS para uma VM Ubuntu no Azure, vamos usar SSH pa
 
 Primeiro, no Console Integrado, execute `Enter-PSSession`. Você estará conectado à sessão remota quando o `[<hostname>]` aparecer à esquerda de seu prompt.
 
-![A chamada a Enter-PSSession](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![Chame Enter-PSSession para conectar a uma sessão remota](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 Agora podemos executar as mesmas etapas como se estivéssemos editando um script local.
 
 1. Execute `Open-EditorFile test.ps1` ou `psedit test.ps1` para abrir o arquivo `test.ps1` remoto
 
-  ![Abrir o arquivo test.ps1 no EditorFile](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![Edite o script no sistema remoto](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. Edite os pontos de interrupção do arquivo/conjunto
 
-   ![editar e definir pontos de interrupção](media/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
+   ![Edite e defina os pontos de interrupção](media/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
 
 1. Comece a depurar (F5) o arquivo remoto
 
-   ![depurando o arquivo remoto](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![Depurar o script remoto](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 Em caso de problemas, você pode abrir ocorrências [no repositório GitHub](https://github.com/powershell/vscode-powershell).

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com classes do PowerShell
-ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692220"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217552"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrevendo um recurso personalizado de DSC com classes do PowerShell
 
@@ -15,17 +15,19 @@ ms.locfileid: "83692220"
 
 Com a introdução de classes do PowerShell no Windows PowerShell 5.0, já é possível definir um recurso de DSC criando uma classe. A classe define o esquema e a implementação do recurso; portanto, não há necessidade de criar um arquivo MOF separado. A estrutura de pastas para um recurso baseado em classe também é mais simples, pois uma pasta **DSCResources** não é necessária.
 
-Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos **Get ()** , **Set()** e **Test ()** (equivalentes às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script).
+Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos `Get()` , `Set()` e `Test()` (equivalentes às funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` em um recurso de script).
 
 Neste tópico, criaremos um recurso simples chamado **FileResource**, que gerencia um arquivo em um caminho especificado.
 
 Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
 
->**Observação:** coleções genéricas não são permitidas em recursos baseados em classe.
+> [!Note]
+> coleções genéricas não são permitidas em recursos baseados em classe.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Estrutura de pastas para um recurso de classe
 
-Para implementar um recurso personalizado de DSC com uma classe do PowerShell, crie a seguinte estrutura de pastas. A classe é definida em **MyDscResource.psm1** e o manifesto de módulo é definido em **MyDscResource.psd1**.
+Para implementar um recurso personalizado de DSC com uma classe do PowerShell, crie a seguinte estrutura de pastas.
+A classe é definida em `MyDscResource.psm1` e o manifesto de módulo é definido em `MyDscResource.psd1`.
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -36,7 +38,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>Criar a classe
 
-A palavra-chave class é utilizada para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, use o atributo **DscResource()** . O nome da classe é o nome do recurso de DSC.
+A palavra-chave class é utilizada para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, use o atributo `DscResource()` . O nome da classe é o nome do recurso de DSC.
 
 ```powershell
 [DscResource()]
@@ -66,10 +68,10 @@ Observe que as propriedades são modificadas por atributos. O significado dos at
 
 - **DscProperty(Key)** : a propriedade é obrigatória. A propriedade é uma chave. Os valores de todas as propriedades marcadas como chaves devem se combinar para identificar exclusivamente uma instância de recursos dentro de uma configuração.
 - **DscProperty(Mandatory)** : a propriedade é obrigatória.
-- **DscProperty(NotConfigurable)** : a propriedade é somente leitura. As propriedades marcadas com esse atributo não podem ser definidas por uma configuração, mas são preenchidas pelo método **Get ()** quando presentes.
+- **DscProperty(NotConfigurable)** : a propriedade é somente leitura. As propriedades marcadas com esse atributo não podem ser definidas por uma configuração, mas são preenchidas pelo método `Get()` quando presentes.
 - **DscProperty()** : a propriedade é configurável, mas não é obrigatória.
 
-As propriedades **$Path** e **$SourcePath** são ambas cadeias de caracteres. O **$CreationTime** é uma propriedade [DateTime](/dotnet/api/system.datetime). A propriedade **$Ensure** é um tipo de enumeração definido da seguinte maneira.
+As propriedades `$Path` e `$SourcePath` são ambas cadeias de caracteres. O `$CreationTime` é uma propriedade [DateTime](/dotnet/api/system.datetime). A propriedade `$Ensure` é um tipo de enumeração definido da seguinte maneira.
 
 ```powershell
 enum Ensure
@@ -81,9 +83,9 @@ enum Ensure
 
 ### <a name="implementing-the-methods"></a>Implementando os métodos
 
-Os métodos **Get()** , **Set()** e **Test()** são análogos às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script.
+Os métodos `Get()` , `Set()` e `Test()` são análogos às funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` em um recurso de script.
 
-Esse código também inclui a função CopyFile (), uma função auxiliar que copia o arquivo de **$SourcePath** para **$Path**.
+Esse código também inclui a função `CopyFile()`, uma função auxiliar que copia o arquivo de `$SourcePath` para `$Path`.
 
 ```powershell
     <#
@@ -416,7 +418,7 @@ class FileResource
 
 ## <a name="create-a-manifest"></a>Criar um manifesto
 
-Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você precisa incluir uma declaração **DscResourcesToExport** no arquivo de manifesto que instrui o módulo para exportar recursos. Nosso manifesto tem essa aparência:
+Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você precisa incluir uma declaração `DscResourcesToExport` no arquivo de manifesto que instrui o módulo para exportar recursos. Nosso manifesto tem essa aparência:
 
 ```powershell
 @{
@@ -473,15 +475,13 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>Dando suporte a PsDscRunAsCredential
 
->**Observação:** **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e posterior.
+> [Observação] **PsDscRunAsCredential** tem suporte no PowerShell 5.0 e versões posteriores.
 
-A propriedade **PsDscRunAsCredential** pode ser usada no bloco de recurso [Configurações DSC](../configurations/configurations.md) para especificar que o recurso deve ser executado em um conjunto de credenciais específico.
-Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](../configurations/runAsUser.md).
+A propriedade **PsDscRunAsCredential** pode ser usada no bloco de recurso [Configurações DSC](../configurations/configurations.md) para especificar que o recurso deve ser executado em um conjunto de credenciais específico. Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](../configurations/runAsUser.md).
 
 ### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>Solicitar ou desautorizar PsDscRunAsCredential para o recurso
 
-O atributo **DscResource()** usa um parâmetro opcional **RunAsCredential**.
-Esse parâmetro usa um dos três valores:
+O atributo `DscResource()` usa um parâmetro opcional **RunAsCredential**. Esse parâmetro usa um dos três valores:
 
 - `Optional` **PsDscRunAsCredential** é opcional para as configurações que chamam esse recurso. Esse é o valor padrão.
 - `Mandatory` **PsDscRunAsCredential** deve ser usado para qualquer configuração que chame esse recurso.
@@ -511,7 +511,7 @@ Um módulo pode definir vários recursos DSC baseados em classe. Você pode cria
            |- SecondResource.psm1
    ```
 
-2. Defina todos os recursos na pasta **DSCResources**.
+1. Defina todos os recursos na pasta **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

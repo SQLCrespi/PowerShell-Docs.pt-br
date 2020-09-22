@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Service de DSC
-ms.openlocfilehash: acd0710fb4b131876e3edece15b07cff8e9a8a9e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f936f58ffd00f84d8c6d5d41d93378eaa8db5879
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556998"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463577"
 ---
 # <a name="dsc-service-resource"></a>Recurso Service de DSC
 
@@ -23,14 +23,18 @@ Service [string] #ResourceName
     Name = [string]
     [ BuiltInAccount = [string] { LocalService | LocalSystem | NetworkService }  ]
     [ Credential = [PSCredential] ]
+    [ StartupTimeout = [uint32]]
     [ StartupType = [string] { Automatic | Disabled | Manual }  ]
-    [ State = [string] { Running | Stopped }  ]
+    [ State = [string] { Ignore | Running | Stopped }  ]
+    [ Dependencies = [string[]] ]
     [ Description = [string] ]
+    [ DesktopInteract = [boolean]]
     [ DisplayName = [string] ]
     [ Path = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present } ]
     [ PsDscRunAsCredential = [PSCredential] ]
+    [ TerminateTimeout = [uint32] ]
 }
 ```
 
@@ -41,9 +45,13 @@ Service [string] #ResourceName
 |Nome |Indica o nome do serviço. Observe que, às vezes, é diferente do nome de exibição. É possível obter uma lista dos serviços e seus estados atuais com o cmdlet `Get-Service`. |
 |BuiltInAccount |Indica a conta de entrada que deve ser usada para o serviço. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem** e **NetworkService**. |
 |Credencial |Indica as credenciais para a conta em que o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
+|StartupTimeout | O tempo de espera para o serviço ser executado em milissegundos.|
 |StartupType |Indica o tipo de inicialização para o serviço. Os valores permitidos para essa propriedade são: **Automático**, **Desabilitado** e **Manual**. |
 |Estado |Indica o estado que você deseja garantir para o serviço. Os valores são: **Em execução** ou **Parado**. |
+|TerminateTimeout |O tempo de espera para o serviço ser interrompido em milissegundos.|
+|Dependências | Uma matriz dos nomes das dependências que o serviço deve ter. |
 |Descrição |Indica a descrição do serviço de destino. |
+|DesktopInteract | Indica se o serviço deve poder se comunicar ou não com uma janela na área de trabalho. Precisa ser false para que os serviços não sejam executados como LocalSystem.|
 |DisplayName |Indica o nome de exibição do serviço de destino. |
 |Caminho |Indica o caminho para o arquivo binário para um novo serviço. |
 

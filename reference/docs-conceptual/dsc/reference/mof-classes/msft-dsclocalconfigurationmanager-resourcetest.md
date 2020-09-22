@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,powershell,configuração,instalação
 title: Método ResourceTest
-ms.openlocfilehash: ff06fd645a94055e79aa0f8d20f2f06e16483720
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954943"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463798"
 ---
 # <a name="resourcetest-method"></a>Método ResourceTest
 
@@ -26,13 +26,13 @@ uint32 ResourceTest(
 
 ## <a name="parameters"></a>Parâmetros
 
-*ResourceType* \[in\] O nome do recurso a chamar.
+**ResourceType** \[in\] O nome do recurso a chamar.
 
-*ModuleName* \[in\] O nome do módulo que contém o recurso a chamar.
+**ModuleName** \[in\] O nome do módulo que contém o recurso a chamar.
 
-*resourceProperty* \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
+***resourceProperty** \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
 
-*InDesiredState* \[out\] No retorno, essa propriedade será definida como **true** se o nó de destino estiver no estado desejado.
+*InDesiredState** \[out\] No retorno, essa propriedade será definida como **true** se o nó de destino estiver no estado desejado.
 
 ## <a name="return-value"></a>Valor retornado
 

@@ -2,28 +2,29 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Usando o Import-DSCResource
-ms.openlocfilehash: 1b066e231d158fb5b6333e42c91d24690e9b0223
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 0fa11755558510b986ac24df120579ea15a43689
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692466"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786706"
 ---
 # <a name="using-import-dscresource"></a>Usando o Import-DSCResource
 
-`Import-DScResource` é uma palavra-chave dinâmica, que só pode ser usada dentro do bloco de script de Configuração. A palavra-chave `Import-DSCResource` para importar todos os recursos necessários em sua Configuração. Os recursos em `$pshome` são importados automaticamente, mas ainda consideramos que a melhor prática é importar explicitamente todos os recursos usados na sua [Configuração](Configurations.md).
+`Import-DScResource` é uma palavra-chave dinâmica, que só pode ser usada dentro do bloco de script de Configuração. A palavra-chave `Import-DSCResource` para importar todos os recursos necessários em sua Configuração.
+Os recursos em `$pshome` são importados automaticamente, mas ainda consideramos que a melhor prática é importar explicitamente todos os recursos usados na sua [Configuração](Configurations.md).
 
-A sintaxe para `Import-DSCResource` é mostrada abaixo.  Ao especificar os módulos por nome, é necessário listar cada um deles em uma nova linha.
+A sintaxe para `Import-DSCResource` é mostrada abaixo. Ao especificar os módulos por nome, é necessário listar cada um deles em uma nova linha.
 
 ```syntax
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-ModuleVersion <ModuleVersion>]
 ```
 
-|Parâmetro  |Descrição  |
-|---------|---------|
-|`-Name`|Os nomes do recurso DSC que você deve importar. Se o nome do módulo for especificado, o comando procurará pelos recursos DSC neste módulo; caso contrário, o comando procurará os recursos DSC em todos os caminhos de recursos DSC. Há suporte para caracteres curinga.|
-|`-ModuleName`|O nome ou a especificação do módulo.  Se você especificar os recursos a importar de um módulo, o comando tentará importar apenas os recursos. Se você especificar apenas o módulo, o comando importará todos os recursos DSC no módulo.|
-|`-ModuleVersion`|A partir do PowerShell 5.0, é possível especificar qual versão de um módulo a configuração deve usar. Para saber mais, confira [Importar uma versão específica de um recurso instalado](sxsresource.md).|
+|    Parâmetro     |                                                                                                                      Descrição                                                                                                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-Name`          | Os nomes do recurso DSC que você deve importar. Se o nome do módulo for especificado, o comando procurará pelos recursos DSC neste módulo; caso contrário, o comando procurará os recursos DSC em todos os caminhos de recursos DSC. Há suporte para caracteres curinga. |
+| `-ModuleName`    | O nome ou a especificação do módulo.  Se você especificar os recursos a importar de um módulo, o comando tentará importar apenas os recursos. Se você especificar apenas o módulo, o comando importará todos os recursos DSC no módulo.            |
+| `-ModuleVersion` | A partir do PowerShell 5.0, é possível especificar qual versão de um módulo a configuração deve usar. Para saber mais, confira [Importar uma versão específica de um recurso instalado](sxsresource.md).                                                    |
 
 ```powershell
 Import-DscResource -ModuleName xActiveDirectory
@@ -54,7 +55,8 @@ Configuration MSDSCConfiguration
 ```
 
 > [!NOTE]
-> Não há suporte para especificar vários valores para os nomes de recursos e módulos no mesmo comando. Pode haver um comportamento não determinístico sobre qual recurso deve ser carregado de qual módulo, caso o mesmo recurso exista em vários módulos. O comando abaixo resultará em erro durante a compilação.
+> Não há suporte para especificar vários valores para os nomes de recursos e módulos no mesmo comando.
+> Pode haver um comportamento não determinístico sobre qual recurso deve ser carregado de qual módulo, caso o mesmo recurso exista em vários módulos. O comando abaixo resultará em erro durante a compilação.
 >
 > ```powershell
 > Import-DscResource -Name UserConfigProvider*,TestLogger1 -ModuleName UserConfigProv,PsModuleForTestLogger
@@ -73,20 +75,19 @@ Esse uso oferece os seguintes benefícios:
 - Define explicitamente o módulo de definição do recurso, garantindo que o recurso correto seja carregado.
 
 > [!NOTE]
-> No PowerShell 5.0, recursos de DSC podem ter várias versões e as versões podem ser instaladas em um computador lado a lado. Isso é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta de módulo.
-> Para obter mais informações, veja [Usando recursos com várias versões](sxsresource.md).
+> No PowerShell 5.0, recursos de DSC podem ter várias versões e as versões podem ser instaladas em um computador lado a lado. Isso é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta de módulo. Para obter mais informações, veja [Usando recursos com várias versões](sxsresource.md).
 
 ## <a name="intellisense-with-import-dscresource"></a>IntelliSense com Import-DSCResource
 
-Ao criar a configuração DSC no ISE, o PowerShell fornece o IntelliSence para recursos e propriedades do recurso. Definições de recurso sob o caminho do módulo `$pshome` são carregados automaticamente. Quando você importa os recursos usando a palavra-chave `Import-DSCResource`, as definições de recursos especificadas são adicionadas e o Intellisense é expandido para incluir o esquema de recurso importado.
+Ao criar a configuração DSC no ISE, o PowerShell fornece o IntelliSence para recursos e propriedades do recurso. Definições de recurso sob o caminho do módulo `$pshome` são carregados automaticamente.
+Quando você importa os recursos usando a palavra-chave `Import-DSCResource`, as definições de recursos especificadas são adicionadas e o Intellisense é expandido para incluir o esquema de recurso importado.
 
-![Recurso Intellisense](media/import-dscresource/resource-intellisense.png)
+![IntelliSense no ISE para um recurso de DSC](media/import-dscresource/resource-intellisense.png)
 
 > [!NOTE]
 > A partir do PowerShell 5.0, o preenchimento com Tab foi adicionado ao ISE para recursos DSC e suas propriedades. Para saber mais, confira [Recursos](../resources/resources.md).
 
-Ao compilar a configuração, o PowerShell usa as definições de recurso importadas para validar todos os blocos de recursos na configuração.
-Cada bloco de recurso é validado, usando a definição de esquema do recurso, para as regras a seguir.
+Ao compilar a configuração, o PowerShell usa as definições de recurso importadas para validar todos os blocos de recursos na configuração. Cada bloco de recurso é validado, usando a definição de esquema do recurso, para as regras a seguir.
 
 - Apenas as propriedades definidas no esquema são usadas.
 - Os tipos de dados de cada propriedade estão corretos.
@@ -115,8 +116,10 @@ Configuration SchemaValidationInCorrectEnumValue
 
 Compilar essa configuração resulta em um erro.
 
-```output
-PSDesiredStateConfiguration\WindowsFeature: At least one of the values 'Invalid' is not supported or valid for property 'Ensure' on class 'WindowsFeature'. Please specify only supported values: Present, Absent.
+```Output
+PSDesiredStateConfiguration\WindowsFeature: At least one of the values 'Invalid' is not supported or
+valid for property 'Ensure' on class 'WindowsFeature'. Please specify only supported values:
+Present, Absent.
 ```
 
 O IntelliSense e a validação de esquema permitem capturar mais erros durante o tempo de análise e compilação, evitando complicações no tempo de execução.
@@ -141,15 +144,16 @@ Não havia suporte para instalar e usar várias versões de recursos lado a lado
 
 Na imagem abaixo, estão instaladas duas versões do módulo **xPSDesiredStateConfiguration**.
 
-![Várias versões fixas de recurso](media/import-dscresource/multiple-resource-versions-broken.png)
+![Várias versões de recurso instaladas na pasta](media/import-dscresource/multiple-resource-versions-broken.png)
 
 Copie o conteúdo da sua versão de módulo desejada para o nível superior do diretório do módulo.
 
-![Várias versões fixas de recurso](media/import-dscresource/multiple-resource-versions-fixed.png)
+![Copie a versão desejada para o diretório de módulo de nível superior](media/import-dscresource/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Localização do recurso
 
-Ao criar e compilar configurações, seus recursos podem ser armazenados em qualquer diretório especificado por seu [PSModulePath](/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path). No PowerShell 4.0, o LCM requer que todos os módulos de recursos DSC sejam armazenados em "Arquivos de Programa\WindowsPowerShell\Modules" ou `$pshome\Modules`. A partir do PowerShell 5.0, esse requisito foi removido e os módulos de recursos podem ser armazenados em qualquer diretório especificado por `PSModulePath`.
+Ao criar e compilar configurações, seus recursos podem ser armazenados em qualquer diretório especificado por seu [PSModulePath](/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path).
+No PowerShell 4.0, o LCM requer que todos os módulos de recursos DSC sejam armazenados em "Arquivos de Programa\WindowsPowerShell\Modules" ou `$pshome\Modules`. A partir do PowerShell 5.0, esse requisito foi removido e os módulos de recursos podem ser armazenados em qualquer diretório especificado por `PSModulePath`.
 
 ### <a name="moduleversion-added"></a>ModuleVersion adicionado
 

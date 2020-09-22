@@ -1,14 +1,14 @@
 ---
 title: Tudo o que você queria saber sobre o PSCustomObject
 description: O PSCustomObject é um jeito simples de criar dados estruturados.
-ms.date: 05/23/2020
+ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fbc8b5b6d2cfafaa75fa820f420762a1804074ac
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
+ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149489"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410131"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Tudo o que você queria saber sobre o PSCustomObject
 
@@ -71,7 +71,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 
 ### <a name="saving-to-a-file"></a>Como salvar em uma pasta
 
-Na minha opinião, a melhor maneira de salvar uma tabela de hash em um arquivo é salvá-la como JSON. Assim, será possível importá-la de volta para um `[PSCusomObject]`
+Na minha opinião, a melhor maneira de salvar uma tabela de hash em um arquivo é salvá-la como JSON. Assim, será possível importá-la de volta para um `[PSCustomObject]`
 
 ```powershell
 $myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
@@ -139,7 +139,7 @@ $myObject.$property
 
 Eu sei que parece estranho, mas funciona.
 
-### <a name="convert-pscustomboject-into-a-hashtable"></a>Como converter PSCustomObject em uma tabela de hash
+### <a name="convert-pscustombobject-into-a-hashtable"></a>Converter PSCustombObject em uma tabela de hash
 
 Para continuar de onde paramos na última seção, podemos percorrer dinamicamente as propriedades e criar uma tabela de hash delas.
 
@@ -254,6 +254,9 @@ $myObject = [PSCustomObject]@{
 ```
 
 Eu gosto muito dessa abordagem pela compatibilidade que ela tem com a linguagem. Agora que temos um objeto com um nome de tipo adequado, podemos fazer mais algumas coisas.
+
+> [!NOTE]
+> Você também pode criar tipos personalizados do PowerShell usando classes do PowerShell. Para obter mais informações, confira [Visão geral da classe do PowerShell](/powershell/module/Microsoft.PowerShell.Core/About/about_Classes).
 
 ## <a name="using-defaultpropertyset-the-long-way"></a>Como usar DefaultPropertySet (a maneira mais longa)
 

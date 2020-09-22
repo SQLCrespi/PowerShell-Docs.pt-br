@@ -1,19 +1,19 @@
 ---
-ms.date: 08/14/2018
+ms.date: 08/21/2020
 keywords: powershell, cmdlet
 title: Executando comandos remotos
-ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030323"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799614"
 ---
 # <a name="running-remote-commands"></a>Executando comandos remotos
 
 Você pode executar comandos em uma ou centenas de computadores com um único comando do PowerShell. O Windows PowerShell oferece suporte à computação remota usando diversas tecnologias, incluindo WMI, RPC e WS-Management.
 
-O PowerShell Core dá suporte a WMI, WS-Management e comunicação remota de SSH. Não há mais suporte para RPC.
+O PowerShell Core dá suporte a WMI, WS-Management e comunicação remota de SSH. Não há compatibilidade com a RPC no PowerShell 6. No PowerShell 7 e versões superiores, o RPC só é compatível com o Windows.
 
 Para saber mais sobre a comunicação remota no PowerShell Core, consulte os seguintes artigos:
 
@@ -55,8 +55,7 @@ Este artigo lista algumas delas. Saiba mais em [Sobre comunicação remota](/pow
 
 ### <a name="start-an-interactive-session"></a>Iniciar uma sessão interativa
 
-Para iniciar uma sessão interativa com um único computador remoto, use o cmdlet [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
-Por exemplo, para iniciar uma sessão interativa com o computador remoto Server01, digite:
+Para iniciar uma sessão interativa com um único computador remoto, use o cmdlet [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession). Por exemplo, para iniciar uma sessão interativa com o computador remoto Server01, digite:
 
 ```powershell
 Enter-PSSession Server01
@@ -72,7 +71,7 @@ Exit-PSSession
 
 Para saber mais sobre os cmdlets Enter-PSSession e Exit-PSSession, consulte:
 
-- [ENTER-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
+- [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession)
 - [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession)
 
 ### <a name="run-a-remote-command"></a>Executar um comando remoto

@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Archive da DSC
-ms.openlocfilehash: 679de8b965304c149b10321e73e42b224f49ecc5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: cbe32012c2035fb3e145bd06fadd73cdba93fd3e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560365"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463781"
 ---
 # <a name="dsc-archive-resource"></a>Recurso Archive da DSC
 
@@ -23,6 +23,7 @@ Archive [string] #ResourceName
     Destination = [string]
     Path = [string]
     [ Checksum = [string] { CreatedDate | ModifiedDate | SHA-1 | SHA-256 | SHA-512 } ]
+    [ Credential = [PSCredential] ]
     [ Force = [bool] ]
     [ Validate = [bool] ]
     [ Ensure = [string] { Absent | Present } ]
@@ -35,11 +36,12 @@ Archive [string] #ResourceName
 
 |Propriedade |Descrição |
 |---|---|
-|Destino |Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído. |
-|Caminho |Especifica o caminho de origem do arquivo morto. |
-|Checksum (soma de verificação) |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. |
-|Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **Falso**. |
-|Validar| Usa a propriedade **Checksum** para determinar se o arquivo corresponde à assinatura. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. Se você especificar **Validate** sem **Checksum**, uma soma de verificação _SHA-256_ **Checksum** será usada por padrão. |
+| Destino | Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído. |
+| Caminho | Especifica o caminho de origem do arquivo morto. |
+| Checksum (soma de verificação) | Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores válidos incluem: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. |
+| Credencial | A credencial de uma conta de usuário com permissões para acessar o caminho e o destino de arquivamento especificados, se necessário. |
+| Force | Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **Falso**. |
+| Validar| Usa a propriedade **Checksum** para determinar se o arquivo corresponde à assinatura. Se você especificar **Checksum** sem **Validate**, ocorrerá uma falha na configuração. Se você especificar **Validate** sem **Checksum**, uma soma de verificação _SHA-256_ **Checksum** será usada por padrão. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
@@ -54,7 +56,7 @@ Archive [string] #ResourceName
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como usar o recurso Archive para garantir que o conteúdo de um arquivo chamado `Test.zip` exista e seja extraído em um destino específico.
+O exemplo a seguir mostra como usar o recurso Archive para garantir que o conteúdo de um arquivo chamado `Test.zip` exista e seja extraído em um destino específico usado e autorizado.
 
 ```powershell
 Archive ArchiveExample {

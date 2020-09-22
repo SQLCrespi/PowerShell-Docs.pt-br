@@ -1,13 +1,13 @@
 ---
-ms.date: 10/31/2017
+ms.date: 07/06/2020
 keywords: DSC,powershell,configuração,instalação
 title: Protegendo o Arquivo MOF
-ms.openlocfilehash: 30b7ff276781b398aeae94e710c810f5fccafdfb
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b1319167010a85e639fdb51a1a0b8b472dfda3a6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556380"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778148"
 ---
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
 
@@ -15,10 +15,10 @@ ms.locfileid: "83556380"
 
 O DSC gerencia a configuração dos nós de servidor aplicando as informações armazenadas em um arquivo MOF, em que o LCM (Gerenciador de Configurações Local) implementa o estado final desejado. Como esse arquivo contém os detalhes da configuração, é importante mantê-lo em segurança. Este tópico descreve como garantir que o nó de destino criptografou o arquivo.
 
-A partir do PowerShell versão 5.0, o arquivo MOF inteiro é criptografado por padrão quando aplicado ao nó usando o cmdlet `Start-DSCConfiguration`. O processo descrito neste artigo será necessário somente ao implementar uma solução usando o protocolo de serviço de pull se os certificados não forem gerenciados, para garantir que as configurações baixadas pelo nó de destino possam ser criptografadas e lidas pelo sistema antes de serem aplicadas (por exemplo, o serviço de pull disponível no Windows Server). Nós registrados no [DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview) terão certificados automaticamente instalados e gerenciados pelo serviço sem a necessidade de sobrecarga administrativa.
+A partir do PowerShell versão 5.0, o arquivo MOF inteiro é criptografado por padrão quando aplicado ao nó usando o cmdlet `Start-DSCConfiguration`. O processo descrito neste artigo será necessário somente ao implementar uma solução usando o protocolo de serviço de pull se os certificados não forem gerenciados, para garantir que as configurações baixadas pelo nó de destino possam ser criptografadas e lidas pelo sistema antes de serem aplicadas (por exemplo, o serviço de pull disponível no Windows Server). Nós registrados no [DSC de Automação do Azure](/azure/automation/automation-dsc-overview) terão certificados automaticamente instalados e gerenciados pelo serviço sem a necessidade de sobrecarga administrativa.
 
 > [!NOTE]
-> Este tópico discute os certificados usados para criptografia. Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento. Certificados autoassinados *não* devem ser usados para fins de autenticação. Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
+> Este tópico discute os certificados usados para criptografia. Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento. Certificados autoassinados _não_ devem ser usados para fins de autenticação. Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -29,14 +29,17 @@ Para criptografar com êxito as credenciais usadas para proteger uma configuraç
 - **Cada nó de destino tem um certificado com capacidade de criptografia salvo no seu Repositório Pessoal**. No Windows PowerShell, o caminho até o repositório é Cert:\LocalMachine\My. Os exemplos neste tópico usam o modelo "autenticação de estação de trabalho", que você pode encontrar (junto com outros modelos de certificado) em [Modelos de Certificados Padrão](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx).
 - Se você for executar essa configuração em um computador diferente do nó de destino, **exporte a chave pública do certificado** e, em seguida, importe-a para o computador no qual executará a configuração. Certifique-se de exportar apenas a chave **pública**; mantenha a chave privada em segurança.
 
+> [!NOTE]
+> Os recursos de script têm limitações quando se trata de criptografia. Para saber mais, confira [Recurso de script](../reference/resources/windows/scriptResource.md#known-limitations)
+
 ## <a name="overall-process"></a>Processo geral
 
  1. Configure os certificados, chaves e as impressões digitais, certificando-se de que cada nó de destino possua cópias do certificado e que o computador de configuração tenha a chave pública e a impressão digital.
- 2. Crie um bloco de dados de configuração que contenha o caminho e a impressão digital da chave pública.
- 3. Crie um script de configuração que defina a configuração desejada para o nó de destino e configure a descriptografia em nós de destino ao ordenar que o Gerenciador de Configurações Local descriptografe os dados de configuração usando o certificado e sua impressão digital.
- 4. Execute a configuração, que definirá as configurações do Gerenciador de Configurações Local e iniciará a configuração DSC.
+ 1. Crie um bloco de dados de configuração que contenha o caminho e a impressão digital da chave pública.
+ 1. Crie um script de configuração que defina a configuração desejada para o nó de destino e configure a descriptografia em nós de destino ao ordenar que o Gerenciador de Configurações Local descriptografe os dados de configuração usando o certificado e sua impressão digital.
+ 1. Execute a configuração, que definirá as configurações do Gerenciador de Configurações Local e iniciará a configuração DSC.
 
-![Diagrama1](media/secureMOF/CredentialEncryptionDiagram1.png)
+![Fluxo de processo para a criptografia de credenciais](media/secureMOF/CredentialEncryptionDiagram1.png)
 
 ## <a name="certificate-requirements"></a>Requisitos de certificado
 
@@ -45,14 +48,14 @@ Para ativar a criptografia de credenciais, um certificado de chave pública deve
 1. **Uso de chave**:
    - Deve conter: 'KeyEncipherment' e 'DataEncipherment'.
    - _Não_ deve conter: 'Assinatura digital'.
-2. **Uso avançado de chave**:
+1. **Uso avançado de chave**:
    - Deve conter: Criptografia de documento (1.3.6.1.4.1.311.80.1).
    - _Não_ deve conter: Autenticação de cliente (1.3.6.1.5.5.7.3.2) e Autenticação de servidor (1.3.6.1.5.5.7.3.1).
-3. A Chave Privada do certificado está disponível no *Nó de Destino_.
-4. O **Provedor** para o certificado deve ser "Microsoft RSA SChannel Cryptographic Provider".
+1. A Chave Privada do certificado está disponível no *Nó de Destino_.
+1. O **Provedor** para o certificado deve ser "Microsoft RSA SChannel Cryptographic Provider".
 
 > [!IMPORTANT]
-> Embora você possa usar um certificado contendo um Uso de Chave de 'Assinatura Digital' ou um dos EKUs de autenticação, isso permitirá que a chave de criptografia seja mais facilmente usada de modo incorreto e fique mais vulnerável a ataques. Assim, a melhor prática é usar um certificado criado especificamente para a finalidade de proteger credenciais DSC que omite esses Usos de Chave e EKUs.
+> Embora você possa usar um certificado com um Uso de Chave de "Assinatura Digital" ou um dos EKUs de Autenticação, isso permitirá que a chave de criptografia seja mais facilmente usada de modo incorreto e fique mais vulnerável a ataques. Assim, a melhor prática é usar um certificado criado especificamente para a finalidade de proteger credenciais DSC que omite esses Usos de Chave e EKUs.
 
 Qualquer certificado existente no _Nó de Destino_ que atende esses critérios pode ser usado para proteger credenciais DSC.
 
@@ -61,7 +64,7 @@ Qualquer certificado existente no _Nó de Destino_ que atende esses critérios p
 Há duas abordagens que você pode executar para criar e usar o certificado de criptografia necessário (par de chaves públicas-privadas).
 
 1. Criá-lo no **Nó de Destino** e exportar apenas a chave pública para o **Nó de Criação**
-2. Criá-lo no **Nó de Criação** e exportar o par de chaves inteiro para o **Nó de Destino**
+1. Criá-lo no **Nó de Criação** e exportar o par de chaves inteiro para o **Nó de Destino**
 
 O Método 1 é recomendado porque a chave privada usada para descriptografar credenciais no MOF permanece no nó de destino em todos os momentos.
 
@@ -70,8 +73,8 @@ O Método 1 é recomendado porque a chave privada usada para descriptografar cre
 A chave privada deve ser mantida em segredo, pois é usada para descriptografar o MOF no **Nó de Destino**. A forma mais fácil de fazer isso é criar o certificado da chave privada no **Nó de Destino** e copiar o **certificado de chave pública** no computador que está sendo usado para criar a configuração DSC em um arquivo MOF. O exemplo a seguir:
 
 1. cria um certificado no **Nó de destino**
-2. exporta o certificado de chave pública para o **Nó de destino**.
-3. importa o certificado de chave pública para o **meu** repositório de certificados no **Nó de criação**.
+1. exporta o certificado de chave pública para o **Nó de destino**.
+1. importa o certificado de chave pública para o **meu** repositório de certificados no **Nó de criação**.
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>No Nó de destino: criar e exportar o certificado
 
@@ -87,6 +90,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 Uma vez exportado, o `DscPublicKey.cer` precisaria ser copiados no **Nó de Criação**.
 
 > Nó de destino: Windows Server 2012 R2/Windows 8.1 e versões anteriores
+
 > [!WARNING]
 > Como não há suporte para o cmdlet `New-SelfSignedCertificate` em sistemas operacionais Windows anteriores ao Windows 10 e o Windows Server 2016 não dá suporte ao parâmetro **Type**, um método alternativo de criar esse certificado é necessário nesses sistemas operacionais. Nesse caso, você pode usar `makecert.exe` ou `certutil.exe` para criar o certificado. Um método alternativo é [baixar o script New-SelfSignedCertificateEx.ps1 do Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) e usá-lo para criar o certificado em vez disso:
 
@@ -128,9 +132,9 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 Como alternativa, o certificado de criptografia pode ser criado no **Nó de Criação**, exportado com a **chave privada** como um arquivo PFX e, em seguida, importado no **Nó de Destino**. Esse é o método atual para implementar a criptografia de credencial DSC no _Nano Server_. Embora o PFX seja protegido por uma senha, ele deve ser mantido seguro durante o trânsito. O exemplo a seguir:
 
 1. cria um certificado no **Nó de criação**.
-2. exporta o certificado, incluindo a chave privada do **Nó de criação**.
-3. remove a chave privada do **Nó de criação**, mas mantém o certificado de chave pública no **meu** repositório.
-4. importa o certificado de chave privada no repositório de certificados My(Personal) no **Nó de destino**.
+1. exporta o certificado, incluindo a chave privada do **Nó de criação**.
+1. remove a chave privada do **Nó de criação**, mas mantém o certificado de chave pública no **meu** repositório.
+1. importa o certificado de chave privada no repositório de certificados My(Personal) no **Nó de destino**.
    - ele deve ser adicionado ao repositório raiz para que seja confiável pelo **Nó de destino**.
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>No Nó de criação: criar e exportar o certificado
@@ -152,6 +156,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 Uma vez exportado, o `DscPrivateKey.pfx` precisaria ser copiado no **Nó de Destino**.
 
 > Nó de destino: Windows Server 2012 R2/Windows 8.1 e versões anteriores
+
 > [!WARNING]
 > Como não há suporte para o cmdlet `New-SelfSignedCertificate` em sistemas operacionais Windows anteriores ao Windows 10 e o Windows Server 2016 não dá suporte ao parâmetro **Type**, um método alternativo de criar esse certificado é necessário nesses sistemas operacionais. Nesse caso, você pode usar `makecert.exe` ou `certutil.exe` para criar o certificado. Um método alternativo é [baixar o script New-SelfSignedCertificateEx.ps1 do Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) e usá-lo para criar o certificado em vez disso:
 
@@ -221,8 +226,8 @@ $ConfigData= @{
                 # The thumbprint of the Encryption Certificate
                 # used to decrypt the credentials on target node
                 Thumbprint = "AC23EA3A9E291A75757A556D0B71CBBF8C4F6FD8"
-            };
-        );
+            }
+        )
     }
 ```
 
@@ -237,8 +242,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -279,8 +283,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -336,8 +339,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -361,7 +363,6 @@ function Start-CredentialEncryptionExample
 {
     [CmdletBinding()]
     param ($computerName)
-
 
     [string] $thumbprint = Get-EncryptionCertificate -computerName $computerName -Verbose
     Write-Verbose "using cert: $thumbprint"
@@ -394,9 +395,7 @@ function Start-CredentialEncryptionExample
 
     Write-Verbose "Starting Configuration..."
     Start-DscConfiguration .\CredentialEncryptionExample -wait -Verbose
-
 }
-
 
 #region HelperFunctions
 
@@ -408,28 +407,30 @@ function Get-EncryptionCertificate
 {
     [CmdletBinding()]
     param ($computerName)
+
     $returnValue= Invoke-Command -ComputerName $computerName -ScriptBlock {
-            $certificates = dir Cert:\LocalMachine\my
+        $certificates = dir Cert:\LocalMachine\my
 
-            $certificates | %{
+        $certificates | %{
                     # Verify the certificate is for Encryption and valid
-                    if ($_.PrivateKey.KeyExchangeAlgorithm -and $_.Verify())
-                    {
-                        # Create the folder to hold the exported public key
-                        $folder= Join-Path -Path $env:SystemDrive\ -ChildPath $using:publicKeyFolder
-                        if (! (Test-Path $folder))
-                        {
-                            md $folder | Out-Null
-                        }
+            if ($_.PrivateKey.KeyExchangeAlgorithm -and $_.Verify())
+            {
+                # Create the folder to hold the exported public key
+                $folder= Join-Path -Path $env:SystemDrive\ -ChildPath $using:publicKeyFolder
+                if (! (Test-Path $folder))
+                {
+                    md $folder | Out-Null
+                }
 
-                        # Export the public key to a well known location
-                        $certPath = Export-Certificate -Cert $_ -FilePath (Join-Path -path $folder -childPath "EncryptionCertificate.cer")
+                # Export the public key to a well known location
+                $certPath = Export-Certificate -Cert $_ -FilePath (Join-Path -path $folder -childPath "EncryptionCertificate.cer")
 
-                        # Return the thumbprint, and exported certificate path
-                        return @($_.Thumbprint,$certPath);
-                    }
-                  }
+                # Return the thumbprint, and exported certificate path
+                return @($_.Thumbprint,$certPath);
+            }
         }
+    }
+
     Write-Verbose "Identified and exported cert..."
     # Copy the exported certificate locally
     $destinationPath = join-path -Path "$env:SystemDrive\$script:publicKeyFolder" -childPath "$computername.EncryptionCertificate.cer"

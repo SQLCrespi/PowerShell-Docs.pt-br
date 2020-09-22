@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 08/28/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recurso do WindowsOptionalFeature DSC
-ms.openlocfilehash: bca6294db74c92a2c1940cfbe00305542a1c5d19
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f24173c1a9ed605bac43767a9da2d4dbded78883
+ms.sourcegitcommit: 06b6f4012e4eca71d414733cdba23ef75535223c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565359"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093243"
 ---
 # <a name="dsc-windowsoptionalfeature-resource"></a>Recurso do WindowsOptionalFeature DSC
 
@@ -15,13 +15,15 @@ ms.locfileid: "83565359"
 
 O recurso **WindowsOptionalFeature** na DSC (Configuração de Estado Desejado) do Windows PowerShell oferece um mecanismo para garantir que os recursos opcionais sejam habilitados em um nó de destino.
 
+> [!NOTE]
+> O **WindowsOptionalFeature** só funciona em computadores cliente do Windows, como o Windows 10.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```Syntax
 WindowsOptionalFeature [string] #ResourceName
 {
     Name = [string]
-    [ Source = [string[]] ]
     [ NoWindowsUpdateCheck = [bool] ]
     [ RemoveFilesOnDisable = [bool] ]
     [ LogLevel = [string] { ErrorsOnly | ErrorsAndWarning | ErrorsAndWarningAndInformation }  ]
@@ -37,7 +39,6 @@ WindowsOptionalFeature [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |Nome |Indica o nome do recurso que você deseja garantir que esteja habilitado ou desabilitado. |
-|Fonte |Não implementado. |
 |NoWindowsUpdateCheck |Especifica se o DISM contata o WU (Windows Update) ao procurar os arquivos de origem para habilitar um recurso. Se `$true`, o DISM não contatará o WU. |
 |RemoveFilesOnDisable |Definido como `$true` para remover todos os arquivos associados ao recurso quando **Ensure** estiver definido como **Absent**. |
 |LogLevel |O nível máximo de saída mostrado nos logs. Os valores aceitos são: **ErrorsOnly**, **ErrorsAndWarning** e **ErrorsAndWarningAndInformation**. |

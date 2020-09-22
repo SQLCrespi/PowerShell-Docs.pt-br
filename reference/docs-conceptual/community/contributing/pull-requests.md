@@ -3,12 +3,12 @@ title: Como enviar solicitações de pull
 description: Este artigo explica como enviar solicitações de pull ao repositório do PowerShell-Docs.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b56911dd4703530f31dd077a8d85ac131c82ee65
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690952"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782643"
 ---
 # <a name="how-to-submit-pull-requests"></a>Como enviar solicitações de pull
 
@@ -58,7 +58,7 @@ Você verá o seguinte comportamento:
 1. Você envia uma PR.
 1. No comentário do GitHub que indica o status da PR, você verá o status de "verificações" habilitadas no repositório. Neste exemplo, há duas verificações habilitadas, "Validação do Commit" e "OpenPublishing.Build":
 
-   ![algumas verificações falharam](media/pull-requests/validation-failed.png)
+   ![Status de validação – Algumas verificações falharam](media/pull-requests/validation-failed.png)
 
    O build poderá passar mesmo se a validação do commit falhar.
 
@@ -66,7 +66,7 @@ Você verá o seguinte comportamento:
 1. Na página Detalhes, você verá todas as verificações de validação que falharam, com informações sobre como corrigir os problemas.
 1. Quando a validação é bem-sucedida, o seguinte comentário é adicionado à PR:
 
-   ![validação de build](media/pull-requests/build-validation.png)
+   ![Status da validação: sucesso](media/pull-requests/build-validation.png)
 
 > [!NOTE]
 > Se você for um colaborador externo (não funcionário da Microsoft), não terá acesso aos relatórios detalhados de build nem aos links de visualização.

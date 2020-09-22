@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Noções básicas sobre a função da DSC em um pipeline de CI/CD
-ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500816"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783102"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Noções básicas sobre a função da DSC em um pipeline de CI/CD
 
 Este artigo descreve os tipos de abordagens disponíveis para combinar configurações e recursos.
 A meta para cada cenário é a mesma, para reduzir a complexidade quando várias configurações são preferíveis para acessar o estado final de implantação de um servidor. Um exemplo disso seria várias equipes que contribuem para o resultado de uma implantação de servidor, como um proprietário de aplicativo que mantém o estado do aplicativo e uma equipe central liberar alterações em linhas de base de segurança. As nuances de cada abordagem, incluindo benefícios e riscos, são descritas aqui.
 
-![Pipeline](media/authoringAdvanced/Pipeline.jpg)
+![Fluxo de processo de um pipeline de CI/CD](media/authoringAdvanced/Pipeline.jpg)
 
 ## <a name="types-of-collaborative-authoring-techniques"></a>Tipos de técnicas de criação colaborativa
 
@@ -33,7 +33,7 @@ Qualquer uma dessas soluções pode ser usada para gerenciar o resultado de uma 
 
 Ao usar Configurações Parciais, o Configuration Manager Local é configurado para gerenciar várias configurações de forma independente. As configurações são compiladas de forma independente e, em seguida, são atribuídas ao nó. Isso exige que o LCM seja configurado com antecedência com o nome de cada configuração.
 
-![PartialConfiguration](media/authoringAdvanced/PartialConfiguration.jpg)
+![Diagrama de configurações parciais](media/authoringAdvanced/PartialConfiguration.jpg)
 
 As Configurações Parciais oferecem controle completo sobre a configuração de um servidor a duas ou mais equipes, geralmente sem o benefício da comunicação ou da colaboração.
 
@@ -45,7 +45,7 @@ Além disso, comentaram que ao usar esse modelo, é improvável que as alteraç�
 
 Na ilustração abaixo, a Equipe B libera a configuração parcial para a Equipe A. Em seguida, a Equipe A executa seus testes em um servidor com ambas as configurações aplicadas. Nesse modelo, somente uma autoridade tem permissão para fazer alterações na produção.
 
-![PartialSinglePipeline](media/authoringAdvanced/PartialSinglePipeline.jpg)
+![Diagrama de um pipeline parcial único](media/authoringAdvanced/PartialSinglePipeline.jpg)
 
 Quando a Equipe B requisitar alterações, ela deverá enviar uma solicitação de pull para o ambiente de controle do código-fonte da Equipe A. Depois, a Equipe A examinará as alterações usando a automação de teste e liberará para a produção quando estiver certa de que as alterações não gerarão erros nos aplicativos ou serviços hospedados pelo servidor.
 
@@ -53,7 +53,7 @@ Quando a Equipe B requisitar alterações, ela deverá enviar uma solicitação 
 
 Um recurso de composição é simplesmente uma configuração de DSC empacotada como um recurso. Não há nenhum requisito especial para configurar o LCM para aceitar os recursos de composição. Os recursos são usados dentro de uma nova configuração e uma única compilação resulta em um arquivo MOF.
 
-![CompositeResource](media/authoringAdvanced/CompositeResource.jpg)
+![Diagrama de um recurso de composição](media/authoringAdvanced/CompositeResource.jpg)
 
 Há dois cenários comuns para recursos de composição. O primeiro é reduzir a complexidade e os conceitos abstratos únicos. O segundo é permitir que as linhas de base sejam empacotadas para uma equipe do aplicativo implantar com segurança por meio do pipeline de lançamento para produção após todos os testes serem aprovados.
 

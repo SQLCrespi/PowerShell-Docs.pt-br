@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Gerenciar chaves de API
-ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278266"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777586"
 ---
 # <a name="managing-api-keys"></a>Gerenciar chaves de API
 
@@ -59,7 +59,7 @@ Essas configurações não podem ser alteradas após a criação da chave. Não 
 
 É possível alterar algumas configurações de uma chave existente. Conforme mencionado anteriormente, não é possível modificar o escopo de segurança de uma chave de API existente ou alterar a expiração. As opções que podem ser alteradas são mostradas na captura de tela a seguir:
 
-![Obter um novo valor de chave de API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
+![Editar o valor da chave de API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 Para alterar os pacotes controlados por uma chave, escolha pacotes individuais na lista ou altere o padrão glob.
 

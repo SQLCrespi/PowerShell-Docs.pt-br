@@ -2,12 +2,12 @@
 title: Novidades no PowerShell 7.0
 description: Novos recursos e alterações lançados no PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808394"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162453"
 ---
 # <a name="whats-new-in-powershell-70"></a>Novidades no PowerShell 7.0
 
@@ -284,7 +284,7 @@ Se o erro ocorrer durante a execução do script ou for um erro de análise, o P
 ![Exibição de erro de um script](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
 O modo de exibição padrão no PowerShell 7 é **ConciseView**. O modo de exibição padrão anterior era **NormalView**, que você pode selecionar ao definir a variável de preferência `$ErrorView`.
- 
+
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -357,11 +357,12 @@ O cmdlet `Invoke-DscResource` executa um método de um recurso de DSC (Desired S
 
 Esse cmdlet invoca um recurso de DSC diretamente, sem criar um documento de configuração. Usando esse cmdlet, os produtos de gerenciamento de configuração podem gerenciar o Windows ou o Linux usando recursos de DSC. Esse cmdlet também habilita a depuração de recursos quando o mecanismo de DSC está em execução com a depuração habilitada.
 
-Esse comando invoca o método **Set** de um recurso chamado log e especifica uma propriedade **Message**.
+Esse comando invoca o método **Set** de um recurso chamado **WindowsProcess** e fornece propriedades obrigatórias de **Caminho** e **Argumentos** para iniciar o processo especificado do Windows.
 
 ```powershell
-Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
-  Message = 'Hello World'
+Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
+  Path = 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+  Arguments = ''
 }
 ```
 
@@ -518,7 +519,7 @@ Saiba mais informações sobre [Invoke-DSCResource](/powershell/module/psdesired
 - Limpar problemas de estilo de CodeFactor provenientes de commits no último mês (nº 10591) (Obrigado, @iSazonov!)
 - Corrigir erro de digitação na descrição do recurso experimental PSTernaryOperator (nº 10586) (Obrigado, @bergmeister!)
 - Converter o valor de enumeração ActionPreference.Suspend em um estado reservado sem suporte e remover a restrição do uso de ActionPreference.Ignore nas variáveis de preferência (nº 10317) (Obrigado, @KirkMunro!)
-- Substituir ArrayList por List\<T> para obter um código mais legível e confiável sem alterar a funcionalidade (nº 10333) (Agradecemos, @iSazonov!)
+- Substituir ArrayList por List\<T> para obter um código mais legível e confiável sem alterar a funcionalidade (nº 10333) (Obrigado, @iSazonov!)
 - Fazer correções de estilo de código em TestConnectionCommand (nº 10439) (Obrigado, @vexx32!)
 - Limpar AutomationEngine e remover a chamada de método extra SetSessionStateDrive (nº 10416) (Obrigado, @iSazonov!)
 - Renomear ParameterSetName padrão de volta para Delimiter em ConvertTo-Csv e ConvertFrom-Csv (nº 10425)

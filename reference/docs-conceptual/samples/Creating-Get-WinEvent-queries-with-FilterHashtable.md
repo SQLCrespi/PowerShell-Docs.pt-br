@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Criando consultas Get-WinEvent com FilterHashtable
-ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563931"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786638"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Criando consultas Get-WinEvent com FilterHashtable
 
@@ -97,7 +97,7 @@ Get-WinEvent -FilterHashtable @{
 
 Continue a criar a tabela de hash com a chave **ProviderName**. O **ProviderName** é o nome exibido no campo **Fonte** no **Visualizador de Eventos do Windows**. Por exemplo, **Runtime do .NET** na captura de tela a seguir:
 
-![Imagem das fontes do Visualizador de Eventos do Windows.](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
+![Imagem das fontes do Visualizador de Eventos do Windows](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
 Atualize a tabela de hash e inclua o par **chave-valor** com a chave, **ProviderName**, e o valor, **Runtime do .NET**.
 
@@ -127,7 +127,7 @@ Para a chave **Palavras-chave**, o PowerShell usa um número, não uma cadeia de
 Abra o **Visualizador de Eventos do Windows** e, no painel **Ações**, clique em **Filtrar o registro atual**.
 O menu suspenso **Palavras-chave** exibe as palavras-chave disponíveis, conforme mostrado na captura de tela a seguir:
 
-![Imagem de palavras-chave do Visualizador de Eventos do Windows.](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
+![Imagem das palavras-chave do Visualizador de Eventos do Windows](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
 
 Use o seguinte comando para exibir os nomes das propriedades `StandardEventKeywords`.
 
