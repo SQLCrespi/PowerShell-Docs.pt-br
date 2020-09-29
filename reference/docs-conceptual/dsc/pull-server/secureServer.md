@@ -1,13 +1,14 @@
 ---
 ms.date: 06/12/2017
+description: Este documento fornece as melhores práticas para auxiliar os engenheiros que estão implantando o Servidor de Pull DSC.
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236247"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90846942"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -16,13 +17,11 @@ Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 > [!IMPORTANT]
 > O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
-Resumo: este documento tem a finalidade de incluir o processo e a extensibilidade para ajudar engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
+Resumo: este documento destina-se a incluir processo e extensibilidade para ajudar os engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
 
-|           |                      Informações do documento                      |
-| :-------- | :------------------------------------------------- |
-| Autor    | Michael Greene                                     |
-| Revisores | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic |
-| Publicado | Abril de 2015                                        |
+- Autor: Michael Greene
+- Revisores: Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic
+- Publicado em: Abril de 2015
 
 ## <a name="abstract"></a>Resumo
 
@@ -59,7 +58,7 @@ A implantação de um servidor de pull requer o recurso de Serviço DSC do Windo
 
 ### <a name="software-downloads"></a>Downloads de software
 
-Além de instalar o conteúdo mais recente do Windows Update, dois downloads são considerados melhores práticas ao implantar um servidor de pull de DSC: A versão mais recente do Windows Management Framework e um módulo de DSC para automatizar o provisionamento do servidor de pull.
+Além de instalar o conteúdo mais recente do Windows Update, há dois downloads que são considerados como práticas recomendadas para implantar um servidor de pull de DSC: a versão mais recente do Windows Management Framework e um módulo de DSC para automatizar o provisionamento do servidor de pull.
 
 ### <a name="wmf"></a>WINDOWS MANAGEMENT FRAMEWORK
 
@@ -97,7 +96,7 @@ Tarefa de planejamento
 
 As implantações de servidor de pull têm suporte em servidores físicos e virtuais. Os requisitos de dimensionamento para o servidor de pull estão alinhados com os requisitos do Windows Server 2012 R2.
 
-- CPU: processador de 64 bits e 1,4 GHz
+- CPU: processador de 1,4 GHz e 64 bits
 - Memória: 512 MB
 - Espaço em disco: 32 GB
 - Rede: Adaptador Gigabit Ethernet
@@ -248,7 +247,7 @@ O comando solicitará sua aprovação antes de baixar o módulo.
 
 O melhor método para implantar um servidor de pull de DSC é usar um script de configuração DSC. Este documento apresentará scripts que incluem as configurações básicas que configurariam apenas o serviço Web da DSC e as configurações avançadas, que configurariam um Windows Server de ponta a ponta, incluindo o serviço Web da DSC.
 
-Observação:  atualmente, o módulo `xPSDesiredStateConfiguration` de DSC exige que o servidor esteja na localidade EN-US.
+Observação: atualmente o módulo `xPSDesiredStateConfiguration` da DSC exige que o servidor seja de localidade EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configuração básica para Windows Server 2012
 
