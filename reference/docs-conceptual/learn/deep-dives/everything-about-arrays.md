@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre matrizes
 description: As matrizes são um recurso fundamental de linguagem da maioria das linguagens de programação.
 ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
+ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092092"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91543365"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Tudo o que você queria saber sobre matrizes
 
@@ -752,7 +752,10 @@ if ( -not ( $results -ne 'Passed') )
 
 ## <a name="adding-to-arrays"></a>Adicionar a matrizes
 
-Agora você deve estar começando a imaginar como adicionar itens a uma matriz. A resposta rápida é que não é possível. Uma matriz é um tamanho fixo na memória. Se você precisar aumentá-la ou adicionar um item a ela, precisará criar uma matriz e copiar todos os valores da matriz antiga. Isso soa caro e trabalhoso. No entanto, o PowerShell oculta a complexidade da criação da matriz.
+Agora você deve estar começando a imaginar como adicionar itens a uma matriz. A resposta rápida é que não é possível. Uma matriz é um tamanho fixo na memória. Se você precisar aumentá-la ou adicionar um item a ela, precisará criar uma matriz e copiar todos os valores da matriz antiga. Parece trabalhoso, no entanto, o PowerShell oculta a complexidade da criação da matriz. O PowerShell implementa o operador de adição (`+`) para matrizes.
+
+> [!NOTE]
+> O PowerShell não implementa uma operação de subtração. Se desejar uma alternativa flexível para uma matriz, você precisará usar um objeto [`List` genérico](#generic-list).
 
 ### <a name="array-addition"></a>Adição de matriz
 
@@ -814,8 +817,6 @@ $array = foreach ( $node in (1..5))
     "ATX-SQL-$node"
 }
 ```
-
-Ao atribuir os resultados da `foreach` a uma variável, capturamos todos os objetos e criamos uma única matriz.
 
 ## <a name="array-types"></a>Tipos de matriz
 
