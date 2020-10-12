@@ -1,14 +1,14 @@
 ---
 title: Tudo o que você queria saber sobre matrizes
 description: As matrizes são um recurso fundamental de linguagem da maioria das linguagens de programação.
-ms.date: 07/07/2020
+ms.date: 10/08/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: b26aa11aadbeea1984b2754cfcad061c7fa3ff1e
+ms.sourcegitcommit: 3445a343e0683124652f64abef6fe911f9eb989f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91543365"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91852554"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Tudo o que você queria saber sobre matrizes
 
@@ -706,7 +706,7 @@ Uma matriz `$null` não é o mesmo que uma matriz vazia. Se você sabe que tem u
 ```powershell
 if ( $array.count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
@@ -724,7 +724,7 @@ Se ainda estiver usando o PowerShell 5.1, você poderá encapsular o objeto em u
 ```powershell
 if ( @($array).count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
@@ -733,7 +733,7 @@ Para não correr nenhum risco, verifique se há `$null` e, em seguida, verifique
 ```powershell
 if ( $null -ne $array -and @($array).count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
