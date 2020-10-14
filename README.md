@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0d91230aa063e58106b35a4ada1d577f316f8f27
-ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
+ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
+ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840987"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91899261"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta Aberto da Microsoft
 
@@ -21,27 +21,37 @@ Este projeto adotou o [Código de Conduta de Software Livre da Microsoft](https:
 
 ## <a name="powershell-documentation"></a>Documentação do PowerShell
 
-Bem-vindo ao repositório de documentos do PowerShell, que abriga a documentação oficial do PowerShell.
+Bem-vindo(a) ao repositório de documentos do PowerShell, o lar da documentação oficial do PowerShell.
 
 ## <a name="repository-structure"></a>Estrutura do Repositório
 
-Cada uma das seguintes pastas de nível superior neste repositório contém um DocSet publicado no [Microsoft Docs](https://docs.microsoft.com/powershell).
+A lista a seguir descreve as pastas principais neste repositório.
 
-- [/reference/](https://docs.microsoft.com/powershell/scripting/) é para tópicos conceituais do PowerShell e referência de módulo nas versões 5.1, 6.0 e 7.0. Este conteúdo também é a origem do conteúdo da Ajuda recuperado pelo cmdlet `Get-Help`.
-  - [docs-conceptual/](https://docs.microsoft.com/powershell) – esta pasta contém a documentação conceitual e os seguintes documentos:
-    - [developer/](https://docs.microsoft.com/powershell/scripting/developer/) é a documentação do SDK do PowerShell (migrada do MSDN)
-    - [dsc/](https://docs.microsoft.com/powershell/scripting/dsc/) é para o recurso Desired State Configuration
-    - [gallery/](https://docs.microsoft.com/powershell/scripting/gallery) é para a [Galeria do PowerShell](https://www.powershellgallery.com/)
-    - [jea/](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/overview) é para o recurso Administração Apenas Suficiente
-    - [wmf/](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) contém notas de versão do Windows Management Framework, o pacote usado para distribuir novas versões do PowerShell para versões anteriores do Windows.
+- `.github` – Contém as definições de configuração usadas pelo GitHub para esse repositório
+- `.vscode` – Contém definições de configuração e extensões recomendadas para o VS Code (Visual Studio Code)
+- `assets` – Contém arquivos para download vinculados na documentação
+- `reference` – Contém a documentação publicada em [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/). Isso inclui o conteúdo conceitual e de referência.
+  - `5.1` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 5.1
+  - `6` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 6
+  - `7.0` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 7.0
+  - `7.1` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 7.1
+  - `bread` – Contém o Sumário usado para a navegação estrutural
+  - `docs-conceptual` – Contém os artigos conceituais publicados no site do Docs. Em geral, a estrutura de pastas espelha o Sumário.
+  - `mapping` – Contém a configuração de mapeamento de versão usada pelo sistema de build
+  - `media` – Contém arquivos de imagem usados na documentação. Há pastas de mídia em todo o conteúdo `docs-conceptual`. Confira o Guia do Colaborador para obter informações sobre como usar imagens na documentação.
+  - `module` – Contém a origem do markdown para a página do Module Browser
+- `tests` – Contém os testes Pester usados pelo sistema de build
+- `tools` – Contém outras ferramentas usadas pelo sistema de build
+
+> OBSERVAÇÃO: O conteúdo de referência (nas pastas numeradas) é usado para criar as páginas da Web no site do Docs, bem como a ajuda atualizável usada pelo PowerShell.
+> Os artigos na pasta `docs-conceptual` são publicados apenas no site do Docs.
 
 ## <a name="contributing"></a>Participante
 
-Mesclamos ativamente as contribuições neste repositório por meio de [solicitações de pull](https://help.github.com/articles/using-pull-requests/) no branch de _preparo_.
-Observe que, antes do envio de uma solicitação de pull, é necessário assinar um [Contrato de Licença de Contribuição](https://cla.microsoft.com/) a fim de verificar se a comunidade está livre para usar os envios.
+Estamos abertos a contribuições públicas neste repositório por meio de [solicitações de pull](https://help.github.com/articles/using-pull-requests/) no branch de _preparo_.
+Observe que, para aceitarmos sua solicitação de pull, assine nosso [Contrato de Licença de Contribuição](https://cla.microsoft.com/). Esse é um requisito avulso.
 
-Saiba mais sobre como contribuir no [guia do colaborador](https://docs.microsoft.com/powershell/scripting/community/contributing/overview).
-Ele traz informações detalhadas sobre como contribuir com a documentação, ferramentas sugeridas e requisitos de formatação e estilo. Use os modelos de Solicitação Pull e de Problemas para ajudar a manter a consistência da documentação em diferentes versões.
+Saiba mais sobre como contribuir no [guia do colaborador](https://aka.ms/PSDocsContributor). Ele traz informações detalhadas sobre como contribuir com a documentação, ferramentas sugeridas e requisitos de formatação e estilo. Use os modelos de Solicitação Pull e de Problemas para ajudar a manter a consistência da documentação em diferentes versões.
 
 ## <a name="licenses"></a>Licenças
 

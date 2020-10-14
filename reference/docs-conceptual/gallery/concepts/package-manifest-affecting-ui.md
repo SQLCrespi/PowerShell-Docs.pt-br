@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
-ms.openlocfilehash: 460b1c67af0af81dd993a45c4f988b825dc2f3eb
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d5e0b85a635c4090f8ccb814277a1a6dd6a951e2
+ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560416"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91772296"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 
@@ -33,8 +33,8 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 | **Direitos autorais** | Este é o campo Direitos autorais no manifesto de módulo e .COPYRIGHT em um manifesto de script. | Sim | Sim |
 | **FileList** | A lista de arquivos é extraída do pacote quando ele é publicado na Galeria do PowerShell. Ela não é controlada pelas informações do manifesto. Observação: há um arquivo .nuspec adicional relacionado a cada pacote na Galeria do PowerShell, que fica ausente após a instalação do pacote no sistema. Este é o manifesto do Pacote Nuget do pacote e pode ser ignorado. | Não | Não |
 | **Marcas** | Nos módulos, as Marcas estão incluídas em PSData\PrivateData. Nos scripts, a seção é rotulada como .TAGS. Observe que as marcas não podem conter espaços, mesmo quando estão entre aspas. Elas têm significados e requisitos adicionais que são descritos mais adiante neste artigo, na seção Detalhes da marca. | Sim | Sim |
-| **Cmdlets** | São fornecidos no manifesto de módulo com CmdletsToExport. Observe que a prática recomendada consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de melhorar o desempenho do módulo de carga para os usuários. | Sim | Não |
-| **Funções** | São fornecidas no manifesto de módulo com FunctionsToExport. Observe que a prática recomendada consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de melhorar o desempenho do módulo de carga para os usuários. | Sim | Não |
+| **Cmdlets** | São fornecidos no manifesto de módulo com CmdletsToExport. Observe que a melhor prática consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de aprimorar o desempenho do módulo de carga para os usuários. | Sim | Não |
+| **Funções** | São fornecidas no manifesto de módulo com FunctionsToExport. Observe que a melhor prática consiste em relacionar explicitamente os itens, em vez de usar o curinga "*", a fim de aprimorar o desempenho do módulo de carga para os usuários. | Sim | Não |
 | **Recursos de DSC** | No caso dos módulos que serão usados no PowerShell 5.0 ou superior, são fornecidos no manifesto com DscResourcesToExport. Se o módulo for usado no PowerShell 4, DSCResourcesToExport não deverá ser usada, por não se tratar de uma Chave de Manifesto compatível. (A DSC não era disponibilizada antes do PowerShell 4.) | Sim | Não |
 | **Fluxos de trabalho** | Os fluxos de trabalho são publicados na Galeria do PowerShell como scripts e identificados como fluxos de trabalho (confira [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) para obter um exemplo) no código. Eles não são controlados pelo manifesto. | Não | Não |
 | **Recursos de função** | São relacionados quando o módulo publicado na Galeria do PowerShell contém um ou mais arquivos de recurso de função (.psrc), que são usados pelo JEA. Confira a documentação do JEA para saber mais sobre [recursos de função](/powershell/scripting/learn/remoting/jea/role-capabilities). | Sim | Não |
@@ -44,7 +44,7 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 | **Histórico de versão** | O histórico de versão representa as atualizações feitas em um módulo na Galeria do PowerShell. Quando a versão de um pacote é ocultada com o recurso Excluir, ela não é exibida no histórico de versão, exceto para os proprietários do pacote. | Não | Não |
 | **Site do Projeto** | O site do projeto é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando um ProjectURI. No manifesto de script, ele é controlado pela especificação .PROJECTURI. | Sim | Sim |
 | **Licença** | O link da licença é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando uma propriedade LicenseURI. No manifesto de script, ele é controlado pela especificação .LICENSEURI. É importante observar que, quando uma licença não é fornecida por meio de uma propriedade LicenseURI ou dentro de um módulo, os termos de uso da Galeria do PowerShell especificam os termos de uso do pacote. Confira os termos de uso para saber mais. | Sim | Sim |
-| **Ícone** | Um ícone pode ser especificado para qualquer pacote na Galeria do PowerShell; basta fornecer o sinalizador IconURI no manifesto do script ou na seção Privatedata-PSData do manifesto do módulo. O IconURI deve apontar para uma imagem de 32 x 32, com tela de fundo transparente. O URI **precisa** ser uma URL de imagem direta e **não deve** conduzir para uma página da Web que contenha a imagem ou um arquivo no pacote da Galeria do PowerShell. | Sim | Sim |
+| **Ícone** | Um ícone pode ser especificado para qualquer pacote na Galeria do PowerShell; basta fornecer o sinalizador IconURI no manifesto do script ou na seção Privatedata-PSData do manifesto do módulo. O IconURI deve apontar para uma imagem 85x85 com tela de fundo transparente. O URI **precisa** ser uma URL de imagem direta e **não deve** conduzir para uma página da Web que contenha a imagem ou um arquivo no pacote da Galeria do PowerShell. | Sim | Sim |
 
 ## <a name="editing-package-details"></a>Editar detalhes do pacote
 
