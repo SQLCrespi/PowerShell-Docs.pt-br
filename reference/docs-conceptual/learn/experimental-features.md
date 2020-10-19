@@ -1,13 +1,13 @@
 ---
-ms.date: 09/14/2020
+ms.date: 10/15/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
+ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574463"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156568"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -34,9 +34,10 @@ Este artigo descreve os recursos experimentais que estão disponíveis e como us
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
 | PSNullConditionalOperators (base no PS 7.1+)         |         | &check; |         |
 | PSUnixFileStat (somente não Windows)                          |         | &check; | &check; |
-| PSNativePSPathResolution (base no PS 7.1+)           |         |         |         |
+| PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -153,9 +154,6 @@ Além disso, no Windows, se o caminho começar com `~`, isso será resolvido par
 - Se o caminho não for um PSDrive ou `~` (no Windows), a normalização de caminho não ocorrerá
 - Se o caminho estiver entre aspas simples, ele não será resolvido e tratado como literal
 
-> [!NOTE]
-> Esse recurso foi removido da fase experimental e é um recurso base do PowerShell 7.1 e posterior.
-
 ## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
 
 Quando esse recurso experimental está habilitado, os registros de erro redirecionados de comandos nativos, como ao usar operadores de redirecionamento (`2>&1`), não são gravados na variável `$Error`, e a variável de preferência `$ErrorActionPreference` não afeta a saída redirecionada.
@@ -228,3 +226,11 @@ Isso só funciona para preenchimento com Tab (uso interativo), portanto, `i-psdf
 
 > [!NOTE]
 > Esse recurso foi removido da fase experimental e é um recurso base do PowerShell 7 e superior.
+
+## <a name="pssubsystempluginmodel"></a>PSSubsystemPluginModel
+
+Esse recurso habilita o modelo de plug-in do subsistema no PowerShell. Ele possibilita a separação dos componentes de `System.Management.Automation.dll` em subsistemas individuais que residem no próprio assembly. Essa divisão reduz o volume de disco do mecanismo principal do PowerShell e permite que esses componentes se tornem recursos opcionais para uma instalação mínima do PowerShell.
+
+Atualmente, há suporte apenas para o subsistema **CommandPredictor**. Esse subsistema é usado com o módulo PSReadLine para fornecer plug-ins de previsão personalizados. No futuro, será possível dividir **Job**, **CommandCompleter**, **Remoting** e outros componentes em assemblies de subsistema fora do `System.Management.Automation.dll`.
+
+O recurso experimental inclui um novo cmdlet, o [Get-PSSubsystem](xref:Microsoft.PowerShell.Core.Get-PSSubsystem). Esse cmdlet só está disponível quando o recurso está habilitado. Esse cmdlet retorna informações sobre os subsistemas disponíveis no sistema.

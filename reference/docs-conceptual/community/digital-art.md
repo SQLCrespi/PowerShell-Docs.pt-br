@@ -2,13 +2,14 @@
 author: sdwheeler
 ms.author: sewhee
 ms.date: 02/14/2020
+description: Faça o download da arte e dos cartazes relacionados ao PowerShell
 title: PowerShell Digital Art
-ms.openlocfilehash: e67cafa274ca1720661aa24953278c13444d7698
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: efc246af2ae946c10d4ce9d759bd42d041663e98
+ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91980148"
 ---
 # <a name="powershell-digital-art"></a>PowerShell Digital Art
 
@@ -26,7 +27,7 @@ Aproveite a arte digital vinculada abaixo. Demonstre aos seus colegas que *você
 - [PowerShell Hero Comic (resolução de impressão)](https://aka.ms/powershellherocomic_print)
 - [PowerShell Hero Comic (resolução da Web)](https://aka.ms/powershellherocomic_web)
 
-## <a name="wallpaper"></a>Wallpaper
+## <a name="wallpaper"></a>Papel de parede
 
 - [PowerShell Hero Comic (resolução de 4k)](https://aka.ms/powershellherowallpaper)
 - [PowerShell Hero Pink Wallpaper (resolução de 4k)](https://aka.ms/powershellherowallpaper1)

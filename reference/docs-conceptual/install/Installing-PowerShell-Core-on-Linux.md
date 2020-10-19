@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no Linux
 description: Informações sobre como instalar o PowerShell em várias distribuições do Linux
 ms.date: 07/30/2020
-ms.openlocfilehash: ce69f75416eb326e38d42991a4ae85a3a7298c5d
-ms.sourcegitcommit: 79d430fe48ad77a058f42b6bc9955d21b657987e
+ms.openlocfilehash: f35366b5b1a0f54ce2c90d0e3cba59be7b9ce82c
+ms.sourcegitcommit: 2ca12827dc64198b4263e8873a45b9466f22a67c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87441775"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079788"
 ---
 # <a name="installing-powershell-on-linux"></a>Instalar o PowerShell no Linux
 
@@ -60,7 +60,7 @@ Sem suporte no momento
 - Ubuntu 20.04
 
 > [!NOTE]
-> O PowerShell pode somente dar suporte às distribuições com suporte do .NET. Confira as [notas sobre a versão do .NET Core][distros] para obter uma lista de distribuições com suporte. Se houver uma distribuição com suporte do .NET não listada aqui, você poderá solicitar esse suporte para a distribuição ser adicionada. Registre uma solicitação usando o modelo de [Solicitação de Suporte à Distribuição][].
+> O PowerShell pode somente dar suporte às distribuições com suporte do .NET. Confira as [notas sobre a versão do .NET Core][distros] para obter uma lista de distribuições com suporte. Caso haja uma distribuição com suporte do .NET não listada aqui, solicite a inclusão dela. Registre uma solicitação usando o modelo de [Solicitação de Suporte à Distribuição][].
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -71,18 +71,18 @@ O PowerShell Core Linux é publicado nos repositórios de pacote para facilitar 
 O método preferencial é o seguinte:
 
 ```sh
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-
 # Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
-
-# Update the list of products
+# Update the list of packages after we added packages.microsoft.com
 sudo apt-get update
-
 # Install PowerShell
 sudo apt-get install -y powershell
-
 # Start PowerShell
 pwsh
 ```
@@ -118,21 +118,20 @@ O PowerShell para Linux é publicado nos repositórios de pacote para facilitar 
 O método preferencial é o seguinte:
 
 ```sh
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-
 # Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
-
 # Update the list of products
 sudo apt-get update
-
 # Enable the "universe" repositories
 sudo add-apt-repository universe
-
 # Install PowerShell
 sudo apt-get install -y powershell
-
 # Start PowerShell
 pwsh
 ```
