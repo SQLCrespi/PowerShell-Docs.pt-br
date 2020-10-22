@@ -778,12 +778,14 @@
       items:
         - name: Usar o Visual Studio Code
           href: dev-cross-plat/vscode/using-vscode.md
-        - name: Como replicar a experiência do ISE no Visual Studio Code
+        - name: Como replicar a experiência do ISE no VS Code
           href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-        - name: Usando o Visual Studio Code para edição e depuração remotas
+        - name: Usar o VS Code para edição e depuração remotas
           href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: Noções básicas sobre a codificação de arquivos no VS Code e PowerShell
           href: dev-cross-plat/vscode/understanding-file-encoding.md
+        - name: Usar o VS Code para depurar cmdlets compilados
+          href: dev-cross-plat/vscode/using-vscode-for-debugging-compiled-cmdlets.md
     - name: Escrevendo módulos portáteis
       href: dev-cross-plat/writing-portable-modules.md
     - name: Criar tópicos de ajuda do módulo usando PlatyPS
