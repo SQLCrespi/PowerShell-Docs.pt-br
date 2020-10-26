@@ -3,12 +3,13 @@ ms.date: 11/13/2018
 keywords: powershell, cmdlet
 title: Decodificar um comando do PowerShell por meio de um processo em execução
 author: randomnote1
-ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como decodificar um bloco de script que um processo do PowerShell está executando no momento.
+ms.openlocfilehash: 95b4b806665bf8137712ebb183329039bc1e1deb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "66470972"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500480"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Decodificar um comando do PowerShell por meio de um processo em execução
 
@@ -81,7 +82,7 @@ $commandDetails[0]
 
 Agora o comando decodificado pode ser analisado selecionando a propriedade do comando decodificado.
 
-```output
+```Output
 ProcessId      : 8752
 EncodedCommand : IAAKAAoACgAgAAoAIAAgACAAIAAkAGkAIAA9ACAAMQAgAAoACgAKACAACgAgACAAIAAgAHcAaABpAGwAZQAgACgAIAAkAGkAIAAtAG
                  wAZQAgADEAMAAgACkAIAAKAAoACgAgAAoAIAAgACAAIAB7ACAACgAKAAoAIAAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBP
