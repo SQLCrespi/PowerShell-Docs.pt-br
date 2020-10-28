@@ -720,8 +720,6 @@
               href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
             - name: Contatando proprietários de pacotes
               href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: Fornecendo comentários por meio de mídia social ou do recurso Comentários
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
         - name: Gerenciando o perfil da conta
           items:
             - name: Configurações de conta da Galeria do PowerShell
