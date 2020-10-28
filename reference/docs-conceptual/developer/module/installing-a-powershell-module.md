@@ -1,12 +1,14 @@
 ---
-title: Instalar um módulo do PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 201679c97acdccae9aa4c2be641ee1da09a8275c
-ms.sourcegitcommit: d073e69708bd499ea42642b4b923ce5f11cca295
+ms.topic: reference
+title: Instalar um módulo do PowerShell
+description: Instalar um módulo do PowerShell
+ms.openlocfilehash: 3c7a4413168934ca4de1912c9615a6ae0fc45788
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197818"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645330"
 ---
 # <a name="installing-a-powershell-module"></a>Instalar um módulo do PowerShell
 
@@ -18,7 +20,7 @@ As informações a seguir se relacionam a todos os módulos, incluindo aqueles q
 
 ### <a name="install-modules-in-psmodulepath"></a>Instalar módulos no PSModulePath
 
-Sempre que possível, instale todos os módulos em um caminho listado na variável de ambiente **PSModulePath** ou adicione o caminho do módulo ao valor da variável de ambiente **PSModulePath**.
+Sempre que possível, instale todos os módulos em um caminho listado na variável de ambiente **PSModulePath** ou adicione o caminho do módulo ao valor da variável de ambiente **PSModulePath** .
 
 A variável de ambiente **PSModulePath** ($Env:PSModulePath) contém os locais dos módulos do Windows PowerShell. Os cmdlets dependem do valor dessa variável de ambiente para localizar módulos.
 
@@ -33,14 +35,14 @@ Por padrão, o valor da variável de ambiente **PSModulePath** contém os diret�
 
 - `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
 
-  Para obter o valor da variável de ambiente **PSModulePath**, use um dos comandos a seguir.
+  Para obter o valor da variável de ambiente **PSModulePath** , use um dos comandos a seguir.
 
   ```powershell
   $Env:PSModulePath
   [Environment]::GetEnvironmentVariable("PSModulePath")
   ```
 
-  Para adicionar um caminho de módulo ao valor da variável de ambiente **PSModulePath**, use o formato de comando a seguir. Esse formato usa o método **SetEnvironmentVariable** da classe **System.Environment** para fazer uma alteração independente da sessão à variável de ambiente **PSModulePath**.
+  Para adicionar um caminho de módulo ao valor da variável de ambiente **PSModulePath** , use o formato de comando a seguir. Esse formato usa o método **SetEnvironmentVariable** da classe **System.Environment** para fazer uma alteração independente da sessão à variável de ambiente **PSModulePath** .
 
   ```powershell
   #Save the current value in the $p variable.
@@ -55,7 +57,7 @@ Por padrão, o valor da variável de ambiente **PSModulePath** contém os diret�
   ```
 
   > [!IMPORTANT]
-  > Depois de adicionar o caminho a **PSModulePath**, você deve transmitir uma mensagem de ambiente sobre a alteração. A transmissão da alteração permite que outros aplicativos, como o Shell, adotem a alteração. Para transmitir a alteração, faça com que o código de instalação do produto envie a mensagem **WM_SETTINGCHANGE** com `lParam` definido como a cadeia de caracteres "Ambiente". Lembre-se de enviar a mensagem depois que o código de instalação do módulo atualizar **PSModulePath**.
+  > Depois de adicionar o caminho a **PSModulePath** , você deve transmitir uma mensagem de ambiente sobre a alteração. A transmissão da alteração permite que outros aplicativos, como o Shell, adotem a alteração. Para transmitir a alteração, faça com que o código de instalação do produto envie a mensagem **WM_SETTINGCHANGE** com `lParam` definido como a cadeia de caracteres "Ambiente". Lembre-se de enviar a mensagem depois que o código de instalação do módulo atualizar **PSModulePath** .
 
 ### <a name="use-the-correct-module-directory-name"></a>Usar o nome do diretório de módulo correto
 
@@ -78,7 +80,7 @@ C:\Program Files
 
 ### <a name="effect-of-incorrect-installation"></a>Efeito da instalação incorreta
 
-Se o módulo não estiver bem formado e o local dele não estiver incluído no valor da variável de ambiente **PSModulePath**, os recursos da descoberta básica do Windows PowerShell, como os indicados a seguir, não funcionarão.
+Se o módulo não estiver bem formado e o local dele não estiver incluído no valor da variável de ambiente **PSModulePath** , os recursos da descoberta básica do Windows PowerShell, como os indicados a seguir, não funcionarão.
 
 - O recurso Carregamento Automático de Módulo não consegue importar o módulo automaticamente.
 
@@ -86,7 +88,7 @@ Se o módulo não estiver bem formado e o local dele não estiver incluído no v
 
 - O cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) não consegue localizar o módulo. Para importar o módulo, você deve fornecer o caminho completo até o arquivo de módulo raiz ou o arquivo de manifesto do módulo.
 
-  Recursos adicionais, como os indicados a seguir, só funcionarão se o módulo for importado para a sessão. Em módulos bem formados na variável de ambiente **PSModulePath**, esses recursos funcionam mesmo quando o módulo não é importado para a sessão.
+  Recursos adicionais, como os indicados a seguir, só funcionarão se o módulo for importado para a sessão. Em módulos bem formados na variável de ambiente **PSModulePath** , esses recursos funcionam mesmo quando o módulo não é importado para a sessão.
 
 - O cmdlet [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) não consegue localizar comandos no módulo.
 
@@ -134,7 +136,7 @@ C:\Program Files
 
 ```
 
-Para habilitar os recursos de descoberta de módulo do Windows PowerShell a localizarem o módulo Fabrikam, o instalador do módulo Fabrikam adiciona o local do módulo ao valor da variável de ambiente **PSModulePath**.
+Para habilitar os recursos de descoberta de módulo do Windows PowerShell a localizarem o módulo Fabrikam, o instalador do módulo Fabrikam adiciona o local do módulo ao valor da variável de ambiente **PSModulePath** .
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
@@ -176,7 +178,7 @@ Para instalar várias versões do mesmo módulo, use o procedimento a seguir.
 
 1. Crie um diretório para cada versão do módulo. Inclua o número de versão no nome do diretório.
 2. Crie um manifesto do módulo para cada versão. No valor da chave **ModuleVersion** no manifesto, insira o número da versão do módulo. Salve o arquivo de manifesto (.psd1) no diretório específico da versão do módulo.
-3. Adicione o caminho da pasta raiz do módulo ao valor da variável de ambiente **PSModulePath**, conforme mostrado nos exemplos a seguir.
+3. Adicione o caminho da pasta raiz do módulo ao valor da variável de ambiente **PSModulePath** , conforme mostrado nos exemplos a seguir.
 
 Para importar uma versão específica do módulo, o usuário final pode usar os parâmetros `MinimumVersion` ou `RequiredVersion` do cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module).
 
@@ -195,7 +197,7 @@ Fabrikam Manager
       Fabrikam.dll (module assembly)
 ```
 
-O instalador adiciona os caminhos do módulo ao valor da variável de ambiente **PSModulePath**.
+O instalador adiciona os caminhos do módulo ao valor da variável de ambiente **PSModulePath** .
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
@@ -221,7 +223,7 @@ Microsoft.PowerShell.Utility\Get-Date
 
 Para evitar conflitos de nome, os autores de módulos podem usar a chave **DefaultCommandPrefix** no manifesto do módulo a fim de especificar um prefixo de substantivo para todos os comandos exportados do módulo.
 
-Os usuários podem usar o parâmetro **Prefix** do cmdlet `Import-Module` para usar um prefixo alternativo. O valor do parâmetro **Prefix** tem precedência sobre o valor da chave **DefaultCommandPrefix**.
+Os usuários podem usar o parâmetro **Prefix** do cmdlet `Import-Module` para usar um prefixo alternativo. O valor do parâmetro **Prefix** tem precedência sobre o valor da chave **DefaultCommandPrefix** .
 
 ## <a name="see-also"></a>Consulte Também
 
