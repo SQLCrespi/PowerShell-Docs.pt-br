@@ -1,12 +1,13 @@
 ---
 title: Compatibilidade de módulo do PowerShell 7
 ms.date: 02/03/2020
-ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+description: Este artigo lista o status do PowerShell 7 com módulos do PowerShell publicados para outros produtos da Microsoft.
+ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722806"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501619"
 ---
 # <a name="powershell-7-module-compatibility"></a>Compatibilidade de módulo do PowerShell 7
 
@@ -24,7 +25,7 @@ No Windows Server, use o nome do recurso com o cmdlet [Install-WindowsFeature](/
 Install-WindowsFeature -Name ActiveDirectory
 ```
 
-No Windows 10, os módulos de gerenciamento do Windows são disponibilizados como **Recursos Opcionais do Windows** ou **Recursos do Windows**. Os comandos a seguir devem ser executados a partir de uma sessão com privilégios elevados usando **Executar como administrador**.
+No Windows 10, os módulos de gerenciamento do Windows são disponibilizados como **Recursos Opcionais do Windows** ou **Recursos do Windows** . Os comandos a seguir devem ser executados a partir de uma sessão com privilégios elevados usando **Executar como administrador** .
 
 - Para os Recursos Opcionais do Windows
 

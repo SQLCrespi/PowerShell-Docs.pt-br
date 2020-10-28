@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Coletando informações sobre computadores
-ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como coletar informações sobre a configuração do computador usando cmdlets de WMI e CIM.
+ms.openlocfilehash: 5088960ab7c049085a9d7c05ec4571b6fd7e3545
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737229"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500582"
 ---
 # <a name="collecting-information-about-computers"></a>Coletando informações sobre computadores
 
@@ -26,7 +27,7 @@ Isso retorna informações para todos os desktops, independentemente de estarem 
 > [!NOTE]
 > Informações retornadas por algumas classes WMI podem ser muito detalhadas e geralmente incluem metadados sobre a classe WMI.
 
-Como a maioria dessas propriedades de metadados tem nomes que começam com **Cim**, é possível filtrar as propriedades usando `Select-Object`. Especifique o parâmetro **-ExcludeProperty** com "Cim*" como o valor. Por exemplo:
+Como a maioria dessas propriedades de metadados tem nomes que começam com **Cim** , é possível filtrar as propriedades usando `Select-Object`. Especifique o parâmetro **-ExcludeProperty** com "Cim*" como o valor. Por exemplo:
 
 ```powershell
 Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
@@ -50,7 +51,7 @@ Você pode recuperar informações gerais do processador por meio da classe **Wi
 Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*"
 ```
 
-Para ver uma cadeia de caracteres de descrição genérica da família do processador, basta retornar a propriedade **SystemType**:
+Para ver uma cadeia de caracteres de descrição genérica da família do processador, basta retornar a propriedade **SystemType** :
 
 ```powershell
 Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object -Property SystemType
@@ -62,7 +63,7 @@ X86-based PC
 
 ## <a name="listing-computer-manufacturer-and-model"></a>Listar o modelo e o fabricante do computador
 
-As informações de modelo do computador também estão disponíveis no **Win32_ComputerSystem**. A saída padrão exibida não precisará de filtragem para fornecer dados de OEM:
+As informações de modelo do computador também estão disponíveis no **Win32_ComputerSystem** . A saída padrão exibida não precisará de filtragem para fornecer dados de OEM:
 
 ```powershell
 Get-CimInstance -ClassName Win32_ComputerSystem
@@ -78,7 +79,7 @@ A saída de comandos como este, que retornam informações diretamente de alguns
 
 ## <a name="listing-installed-hotfixes"></a>Listar os hotfixes instalados
 
-Você pode listar os hotfixes instalados usando **Win32_QuickFixEngineering**:
+Você pode listar os hotfixes instalados usando **Win32_QuickFixEngineering** :
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering
@@ -92,7 +93,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-Para uma saída mais sucinta, pode ser útil excluir algumas propriedades. Embora você possa usar o parâmetro **Property** de `Get-CimInstance` para escolher somente a **HotFixID**, fazer isso, na verdade, retornará mais informações, pois todos os metadados são exibidos por padrão:
+Para uma saída mais sucinta, pode ser útil excluir algumas propriedades. Embora você possa usar o parâmetro **Property** de `Get-CimInstance` para escolher somente a **HotFixID** , fazer isso, na verdade, retornará mais informações, pois todos os metadados são exibidos por padrão:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -117,7 +118,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-Os dados adicionais são retornados, pois o parâmetro**Property** no `Get-CimInstance` restringe as propriedades retornadas de instâncias da classe WMI, não o objeto retornado para o PowerShell. Para reduzir a saída, use `Select-Object`:
+Os dados adicionais são retornados, pois o parâmetro **Property** no `Get-CimInstance` restringe as propriedades retornadas de instâncias da classe WMI, não o objeto retornado para o PowerShell. Para reduzir a saída, use `Select-Object`:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -131,7 +132,7 @@ KB4048951
 
 ## <a name="listing-operating-system-version-information"></a>Listar informações de versão do sistema operacional
 
-As propriedades da classe **Win32_OperatingSystem** incluem informações sobre versão e service pack. Você pode selecionar apenas essas propriedades para obter um resumo das informações de versão de **Win32_OperatingSystem**:
+As propriedades da classe **Win32_OperatingSystem** incluem informações sobre versão e service pack. Você pode selecionar apenas essas propriedades para obter um resumo das informações de versão de **Win32_OperatingSystem** :
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem |
@@ -154,7 +155,7 @@ ServicePackMinorVersion : 0
 
 ## <a name="listing-local-users-and-owner"></a>Listar proprietário e usuários locais
 
-Informações gerais de usuário local – o número de usuários licenciados, número de usuários atuais e nome do proprietário – podem ser encontradas com uma seleção das propriedades da classe **Win32_OperatingSystem**. Você pode selecionar as propriedades a serem exibidas desta forma:
+Informações gerais de usuário local – o número de usuários licenciados, número de usuários atuais e nome do proprietário – podem ser encontradas com uma seleção das propriedades da classe **Win32_OperatingSystem** . Você pode selecionar as propriedades a serem exibidas desta forma:
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem |
@@ -198,7 +199,7 @@ Size      326846914560
 
 ## <a name="getting-logon-session-information"></a>Obter informações de sessão de logon
 
-Você pode obter informações gerais sobre as sessões de logon associadas aos usuários por meio da classe WMI **Win32_LogonSession**:
+Você pode obter informações gerais sobre as sessões de logon associadas aos usuários por meio da classe WMI **Win32_LogonSession** :
 
 ```powershell
 Get-CimInstance -ClassName Win32_LogonSession
@@ -214,7 +215,7 @@ Get-CimInstance -ClassName Win32_ComputerSystem -Property UserName
 
 ## <a name="getting-local-time-from-a-computer"></a>Obter a hora local de um computador
 
-Você pode recuperar a hora local atual em um computador específico usando a classe WMI **Win32_LocalTime**.
+Você pode recuperar a hora local atual em um computador específico usando a classe WMI **Win32_LocalTime** .
 
 ```powershell
 Get-CimInstance -ClassName Win32_LocalTime
@@ -236,7 +237,7 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>Exibir o status do serviço
 
-Para exibir o status de todos os serviços em um computador específico, você pode usar o cmdlet `Get-Service` localmente. Para sistemas remotos, você pode usar a classe WMI **Win32_Service**. Se você também usar `Select-Object` para filtrar os resultados para **Status**, **Nome** e **DisplayName**, o formato de saída será praticamente idêntico ao de `Get-Service`:
+Para exibir o status de todos os serviços em um computador específico, você pode usar o cmdlet `Get-Service` localmente. Para sistemas remotos, você pode usar a classe WMI **Win32_Service** . Se você também usar `Select-Object` para filtrar os resultados para **Status** , **Nome** e **DisplayName** , o formato de saída será praticamente idêntico ao de `Get-Service`:
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName

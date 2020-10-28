@@ -2,12 +2,13 @@
 ms.date: 06/11/2020
 keywords: powershell, cmdlet
 title: Glossário do PowerShell
-ms.openlocfilehash: 8df76fa3a78e9701c28488db0bde25fa245b1160
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+description: Um glossário de terminologia relacionada ao PowerShell.
+ms.openlocfilehash: 75b1ed69df7547474687361a9ad3a15e1d677cdc
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722857"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499885"
 ---
 # <a name="powershell-glossary"></a>Glossário do PowerShell
 

@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Obter objetos WMI (Get-CimInstance)
-ms.openlocfilehash: 4ff47844fd367a49f554c7c05c491bdddf28eabc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra vários exemplos de como obter instâncias de objetos WMI de um sistema de computador.
+ms.openlocfilehash: f7a005bbf39cf141e6474815d3e050314830453c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77002646"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500446"
 ---
 # <a name="getting-wmi-objects-get-ciminstance"></a>Obter objetos WMI (Get-CimInstance)
 
@@ -57,7 +58,7 @@ A listagem de classe retornada por computadores remotos pode variar por sistema 
 
 ### <a name="displaying-wmi-class-details"></a>Exibir detalhes da classe WMI
 
-Se você já souber o nome de uma classe WMI, poderá usá-la para obter informações imediatamente. Por exemplo, uma das classes WMI geralmente usadas para recuperar informações sobre um computador é **Win32_OperatingSystem**.
+Se você já souber o nome de uma classe WMI, poderá usá-la para obter informações imediatamente. Por exemplo, uma das classes WMI geralmente usadas para recuperar informações sobre um computador é **Win32_OperatingSystem** .
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem
@@ -70,7 +71,7 @@ C:\WINDOWS\system32 Microsoft    18362       USER1          00330-80000-00000-AA
 ```
 
 Embora mostremos todos os parâmetros, o comando pode ser expresso de forma mais sucinta.
-O parâmetro **ComputerName** não é necessário ao se conectar ao sistema local. Vamos mostrá-lo para demonstrar o caso mais geral e lembrá-lo sobre o parâmetro. O **Namespace** usa `root/CIMV2` como padrão e também pode ser omitido. Por fim, a maioria dos cmdlets permitem omitir o nome dos parâmetros comuns. Com `Get-CimInstance`, se nenhum nome for especificado para o primeiro parâmetro, o PowerShell o tratará como o parâmetro **Class**. Isso significa que o último comando pode ter sido emitido digitando:
+O parâmetro **ComputerName** não é necessário ao se conectar ao sistema local. Vamos mostrá-lo para demonstrar o caso mais geral e lembrá-lo sobre o parâmetro. O **Namespace** usa `root/CIMV2` como padrão e também pode ser omitido. Por fim, a maioria dos cmdlets permitem omitir o nome dos parâmetros comuns. Com `Get-CimInstance`, se nenhum nome for especificado para o primeiro parâmetro, o PowerShell o tratará como o parâmetro **Class** . Isso significa que o último comando pode ter sido emitido digitando:
 
 ```powershell
 Get-CimInstance Win32_OperatingSystem
@@ -104,7 +105,7 @@ DataExecutionPrevention_Available         Property   bool DataExecutionPreventio
 
 #### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Exibindo propriedades não padrão com cmdlets Format
 
-Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format**. Por exemplo, se você deseja exibir dados de memória disponível, digite:
+Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format** . Por exemplo, se você deseja exibir dados de memória disponível, digite:
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem |

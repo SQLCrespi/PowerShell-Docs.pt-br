@@ -1,20 +1,19 @@
 ---
 title: Ciclo de vida de suporte do PowerShell Core
-description: Políticas que regem o suporte ao PowerShell Core
+description: Políticas que regem o suporte para o PowerShell
 ms.date: 03/09/2020
-ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236196"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501738"
 ---
 # <a name="powershell-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell
 
 O PowerShell é um conjunto distinto de ferramentas e componentes que é enviado, instalado e configurado separadamente do Windows PowerShell. O PowerShell não está incluído nos contratos de licenciamento do Windows.
 
-O PowerShell é aceito pelos contratos de suporte tradicionais da Microsoft, incluindo [suporte pago][], [Microsoft Enterprise Agreements][enterprise-agreement] e [Microsoft Software Assurance][assurance].
-Você também pode pagar por [suporte assistido][] do PowerShell preenchendo uma solicitação de suporte para o seu problema.
+O PowerShell é aceito pelos contratos de suporte tradicionais da Microsoft, incluindo [suporte pago][], [Microsoft Enterprise Agreements][enterprise-agreement] e [Microsoft Software Assurance][assurance]. Você também pode pagar por [suporte assistido][] do PowerShell preenchendo uma solicitação de suporte para o seu problema.
 
 ## <a name="community-support"></a>Suporte da comunidade
 
@@ -98,7 +97,7 @@ Com base no [Ciclo de vida do PowerShell](#lifecycle-of-powershell-7), a tabela 
 |   6,0   | 13 de fevereiro de 2019  |
 
 > [!NOTE]
-> Este documento trata do suporte para o PowerShell Core 6 e o PowerShell 7. O Windows PowerShell (1.0 – 5.1) é um componente do sistema operacional Windows. Os componentes recebem o mesmo suporte que seu produto ou plataforma pai. Para saber mais, confira [Informações do ciclo de vida de produtos e serviços](/lifecycle/products/)
+> Este documento trata do suporte para o PowerShell Core 6 e o PowerShell 7. O Windows PowerShell (1.0 – 5.1) é um componente do sistema operacional Windows. Os componentes recebem o mesmo suporte que seu produto ou plataforma pai. Para saber mais, confira [Informações do ciclo de vida de produtos e serviços](/lifecycle/products/).
 
 ## <a name="unsupported-platforms"></a>Plataformas sem suporte
 

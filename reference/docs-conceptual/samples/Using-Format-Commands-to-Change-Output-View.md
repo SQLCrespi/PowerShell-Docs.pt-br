@@ -2,12 +2,13 @@
 ms.date: 11/22/2019
 keywords: powershell, cmdlet
 title: Usando comandos de formatação para alterar a exibição de saída
-ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O PowerShell tem um sistema de formatação extensível que permite apresentar saída em listas, tabelas ou layouts personalizados.
+ms.openlocfilehash: ebb285a19c7fe1bc80608385f9e2842469e95817
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417594"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500939"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Usando comandos de formatação para alterar a exibição de saída
 
@@ -128,7 +129,7 @@ Id          : 21748
 
 ### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Obtendo informações detalhadas usando Format-List com curingas
 
-O cmdlet `Format-List` permite usar um caractere curinga como o valor do parâmetro **Property**. Isso permite exibir informações detalhadas. Geralmente, os objetos incluem mais informações do que você precisa, por isso, o PowerShell não mostra todos os valores de propriedade por padrão. Para mostrar todas as propriedades de um objeto, use o comando `Format-List -Property *`. O comando a seguir gera mais de 60 linhas de saída para um único processo:
+O cmdlet `Format-List` permite usar um caractere curinga como o valor do parâmetro **Property** . Isso permite exibir informações detalhadas. Geralmente, os objetos incluem mais informações do que você precisa, por isso, o PowerShell não mostra todos os valores de propriedade por padrão. Para mostrar todas as propriedades de um objeto, use o comando `Format-List -Property *`. O comando a seguir gera mais de 60 linhas de saída para um único processo:
 
 ```powershell
 Get-Process -Name iexplore | Format-List -Property *
@@ -190,7 +191,7 @@ O comando `Format-Table` assume que as propriedades são listadas em ordem de im
 
 ### <a name="wrapping-format-table-output-in-columns-wrap"></a>Quebra automática de linha na saída de Format-Table em colunas (Wrap)
 
-Você pode forçar dados do `Format-Table` longos a serem encapsulados em sua coluna de exibição usando o parâmetro **Wrap**. Usar o parâmetro **Wrap** pode não fazer o que você espera, já que ele usará as configurações padrão se você não especificar **AutoSize**:
+Você pode forçar dados do `Format-Table` longos a serem encapsulados em sua coluna de exibição usando o parâmetro **Wrap** . Usar o parâmetro **Wrap** pode não fazer o que você espera, já que ele usará as configurações padrão se você não especificar **AutoSize** :
 
 ```powershell
 Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -Wrap
@@ -212,7 +213,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 Usar o parâmetro **Wrap** por si só não deixa o processamento muito mais lento. No entanto, usar **AutoSize** para formatar uma lista de arquivos recursivos de uma estrutura de diretório grande pode levar muito tempo e usar muita memória antes de exibir os primeiros itens de saída.
 
-Se você não estiver preocupado com a carga do sistema, **AutoSize** funcionará bem com o parâmetro **Wrap**.
+Se você não estiver preocupado com a carga do sistema, **AutoSize** funcionará bem com o parâmetro **Wrap** .
 As colunas iniciais ainda usam a largura necessária para exibir itens em uma linha, mas a coluna final é quebrada, caso necessário.
 
 > [!NOTE]
@@ -240,7 +241,7 @@ FileVersion                          Path                                       
 
 ### <a name="organizing-table-output--groupby"></a>Organizando a saída da tabela (-GroupBy)
 
-Outro parâmetro útil para controlar a saída tabular é **GroupBy**. Listagens de tabela mais longas podem ser especialmente difíceis de comparar. O parâmetro **GroupBy** agrupa a saída com base em um valor da propriedade. Por exemplo, podemos agrupar serviços por **StartType** para uma inspeção mais fácil, omitindo o valor **StartType** da listagem de propriedades:
+Outro parâmetro útil para controlar a saída tabular é **GroupBy** . Listagens de tabela mais longas podem ser especialmente difíceis de comparar. O parâmetro **GroupBy** agrupa a saída com base em um valor da propriedade. Por exemplo, podemos agrupar serviços por **StartType** para uma inspeção mais fácil, omitindo o valor **StartType** da listagem de propriedades:
 
 ```powershell
 Get-Service -Name win* | Sort-Object StartType | Format-Table -GroupBy StartType

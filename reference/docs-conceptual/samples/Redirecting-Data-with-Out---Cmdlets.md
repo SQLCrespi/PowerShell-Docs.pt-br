@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Redirecionamento de dados com cmdlets Out
-ms.openlocfilehash: d4cc14e26bdef0f973f948177d0c1e68929605fa
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como usar os cmdlets que gerenciam a saída no PowerShell.
+ms.openlocfilehash: 3a9e3b1ac06f5be4e6f3bbc52a15c4afb5b12cef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030084"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500206"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Redirecionamento de dados com cmdlets Out-*
 
@@ -62,10 +63,10 @@ Name    : explorer
 ...
 ```
 
-Isso se aplica a todos os cmdlets **Out**. Um cmdlet **Out** sempre deve aparecer no final do pipeline.
+Isso se aplica a todos os cmdlets **Out** . Um cmdlet **Out** sempre deve aparecer no final do pipeline.
 
 > [!NOTE]
-> Todos os cmdlets **Out** renderizam a saída como texto, usando a formatação em vigor para a janela de console, incluindo os limites de tamanho da linha.
+>  Todos os cmdlets **Out** renderizam a saída como texto, usando a formatação em vigor para a janela de console, incluindo os limites de tamanho da linha.
 
 ## <a name="paging-console-output-out-host"></a>Paginando a saída do console (Out-Host)
 
@@ -75,7 +76,7 @@ Por padrão, o Windows PowerShell envia dados para a janela do host, que é exat
 Get-Command | Out-Host -Paging
 ```
 
-Você também pode usar a função **more** para paginar os dados. No Windows PowerShell, **more** é uma função que chama **Out-Host -Paging**. O comando a seguir demonstra como usar a função **more** para paginar a saída de Get-Command:
+Você também pode usar a função **more** para paginar os dados. No Windows PowerShell, **more** é uma função que chama **Out-Host -Paging** . O comando a seguir demonstra como usar a função **more** para paginar a saída de Get-Command:
 
 ```powershell
 Get-Command | more
@@ -112,7 +113,7 @@ At line:1 char:12
 
 ## <a name="printing-data-out-printer"></a>Imprimindo dados (Out-Printer)
 
-Você pode imprimir dados usando o cmdlet **Out-Printer**. O cmdlet **Out-Printer** usará sua impressora padrão se você não fornecer um nome de impressora. Você pode usar qualquer impressora baseada em Windows especificando seu nome de exibição. Não é necessário nenhum tipo de mapeamento de porta de impressora nem mesmo uma impressora física real. Por exemplo, se você tiver as ferramentas de geração de imagens de documento do Microsoft Office instaladas, poderá enviar os dados para um arquivo de imagem digitando:
+Você pode imprimir dados usando o cmdlet **Out-Printer** . O cmdlet **Out-Printer** usará sua impressora padrão se você não fornecer um nome de impressora. Você pode usar qualquer impressora baseada em Windows especificando seu nome de exibição. Não é necessário nenhum tipo de mapeamento de porta de impressora nem mesmo uma impressora física real. Por exemplo, se você tiver as ferramentas de geração de imagens de documento do Microsoft Office instaladas, poderá enviar os dados para um arquivo de imagem digitando:
 
 ```powershell
 Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Writer'
@@ -120,7 +121,7 @@ Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Wri
 
 ## <a name="saving-data-out-file"></a>Salvando dados (Out-File)
 
-Você pode enviar a saída para um arquivo em vez da janela de console usando o cmdlet **Out-File**. A linha de comando a seguir envia uma lista de processos para o arquivo **C:\\temp\\processlist.txt**:
+Você pode enviar a saída para um arquivo em vez da janela de console usando o cmdlet **Out-File** . A linha de comando a seguir envia uma lista de processos para o arquivo **C:\\temp\\processlist.txt** :
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt
@@ -128,7 +129,7 @@ Get-Process | Out-File -FilePath C:\temp\processlist.txt
 
 Os resultados do uso do cmdlet **Out-File** poderão não ser o esperado se você estiver acostumado com o redirecionamento de saída tradicional. Para entender seu comportamento, você deve estar ciente do contexto no qual o cmdlet **Out-File** opera.
 
-Por padrão, o cmdlet **Out-File** cria um arquivo Unicode. Esse é o melhor padrão a longo prazo, porém significa que ferramentas que esperam arquivos ASCII não funcionarão corretamente com o formato de saída padrão. Você pode alterar o formato de saída padrão para ASCII usando o parâmetro **Encoding**:
+Por padrão, o cmdlet **Out-File** cria um arquivo Unicode. Esse é o melhor padrão a longo prazo, porém significa que ferramentas que esperam arquivos ASCII não funcionarão corretamente com o formato de saída padrão. Você pode alterar o formato de saída padrão para ASCII usando o parâmetro **Encoding** :
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt -Encoding ASCII

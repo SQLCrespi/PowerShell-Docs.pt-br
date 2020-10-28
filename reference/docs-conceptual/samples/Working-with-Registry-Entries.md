@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com entradas do Registro
-ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
-ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
+description: Este artigo discute como lidar com entradas do Registro usando o PowerShell.
+ms.openlocfilehash: 65f8b4ed7b2f9af26bfd22f34577a4bd52f35e70
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758475"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501449"
 ---
 # <a name="working-with-registry-entries"></a>Trabalhando com entradas do Registro
 
@@ -57,9 +58,9 @@ PF_AccessoriesName  : Accessories
 (default)           :
 ```
 
-Todas as propriedades relacionadas ao Windows PowerShell para a chave são precedidas por "PS", tal como **PSPath**, **PSParentPath**, **PSChildName** e **PSProvider**.
+Todas as propriedades relacionadas ao Windows PowerShell para a chave são precedidas por "PS", tal como **PSPath** , **PSParentPath** , **PSChildName** e **PSProvider** .
 
-Você pode usar a notação `*.*` para se referir ao local atual. Você pode usar `Set-Location` para primeiro mudar para o contêiner do registro **CurrentVersion**:
+Você pode usar a notação `*.*` para se referir ao local atual. Você pode usar `Set-Location` para primeiro mudar para o contêiner do registro **CurrentVersion** :
 
 ```powershell
 Set-Location -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
@@ -91,7 +92,7 @@ A expansão de caminho funciona da mesma maneira que no sistema de arquivos e, p
 
 Se você desejar obter uma entrada específica de uma chave do registro, poderá usar várias abordagens. Este exemplo localiza o valor de **DevicePath** em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`.
 
-Com `Get-ItemProperty`, use o parâmetro **Path** para especificar o nome da chave e o parâmetro **Name** para especificar o nome da entrada **DevicePath**.
+Com `Get-ItemProperty`, use o parâmetro **Path** para especificar o nome da chave e o parâmetro **Name** para especificar o nome da entrada **DevicePath** .
 
 ```powershell
 Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion -Name DevicePath
@@ -108,10 +109,10 @@ PSProvider   : Microsoft.PowerShell.Core\Registry
 DevicePath   : C:\WINDOWS\inf
 ```
 
-Esse comando retorna as propriedades padrão do Windows PowerShell, bem como a propriedade **DevicePath**.
+Esse comando retorna as propriedades padrão do Windows PowerShell, bem como a propriedade **DevicePath** .
 
 > [!NOTE]
-> Embora `Get-ItemProperty` tenha os parâmetros **Filter**, **Include** e **Exclude**, eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do Registro, que são caminhos de item, e não entradas do Registro, que são propriedades do item.
+> Embora `Get-ItemProperty` tenha os parâmetros **Filter** , **Include** e **Exclude** , eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do Registro, que são caminhos de item, e não entradas do Registro, que são propriedades do item.
 
 Outra opção é usar a ferramenta de linha de comando Reg.exe. Para obter ajuda com reg.exe, digite `reg.exe /?` em um prompt de comando. Para localizar a entrada DevicePath, use reg.exe, conforme mostrado no comando a seguir:
 
@@ -151,13 +152,13 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 ```
 
 > [!NOTE]
-> Embora `Set-ItemProperty` tenha os parâmetros **Filter**, **Include** e **Exclude**, eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do registro, (que são caminhos de item e não entradas do registro) que são propriedades do item.
+> Embora `Set-ItemProperty` tenha os parâmetros **Filter** , **Include** e **Exclude** , eles não podem ser usados para filtrar pelo nome da propriedade. Esses parâmetros se referem às chaves do registro, (que são caminhos de item e não entradas do registro) que são propriedades do item.
 
 Outra opção é usar a ferramenta de linha de comando Reg.exe. Para obter ajuda com reg.exe, digite **reg.exe /?**
 em um prompt de comando.
 
 O exemplo a seguir altera a entrada **Path** ao remover o caminho adicionado no exemplo acima.
-`Get-ItemProperty` ainda é usado para recuperar o valor atual para evitar ter que analisar a cadeia de caracteres retornada de `reg query`. Os métodos **SubString** e **LastIndexOf** são usados para recuperar o último caminho adicionado à entrada **Path**.
+`Get-ItemProperty` ainda é usado para recuperar o valor atual para evitar ter que analisar a cadeia de caracteres retornada de `reg query`. Os métodos **SubString** e **LastIndexOf** são usados para recuperar o último caminho adicionado à entrada **Path** .
 
 ```powershell
 $value = Get-ItemProperty -Path HKCU:\Environment -Name Path
@@ -171,7 +172,7 @@ The operation completed successfully.
 
 ## <a name="creating-new-registry-entries"></a>Criando novas entradas do registro
 
-Para adicionar uma nova entrada denominada "PowerShellPath" à chave **CurrentVersion**, use `New-ItemProperty` com o caminho para a chave, o nome da entrada e o valor da entrada. Neste exemplo, obtemos o valor da variável `$PSHome` do Windows PowerShell, que armazena o caminho para o diretório de instalação do Windows PowerShell.
+Para adicionar uma nova entrada denominada "PowerShellPath" à chave **CurrentVersion** , use `New-ItemProperty` com o caminho para a chave, o nome da entrada e o valor da entrada. Neste exemplo, obtemos o valor da variável `$PSHome` do Windows PowerShell, que armazena o caminho para o diretório de instalação do Windows PowerShell.
 
 Você pode adicionar a nova entrada à chave usando o seguinte comando, e ele também retorna informações sobre a nova entrada:
 
@@ -200,7 +201,7 @@ O **PropertyType** deve ter o mesmo nome de um membro da enumeração **Microsof
 |QWord|8 bytes de dados binários|
 
 > [!NOTE]
-> Você pode adicionar uma entrada de registro em vários locais, especificando uma matriz de valores para o parâmetro **Path**:
+> Você pode adicionar uma entrada de registro em vários locais, especificando uma matriz de valores para o parâmetro **Path** :
 
 ```powershell
 New-ItemProperty -Name PowerShellPath -PropertyType String -Value $PSHome `

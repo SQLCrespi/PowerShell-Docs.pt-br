@@ -2,12 +2,13 @@
 ms.date: 07/28/2020
 keywords: powershell, cmdlet
 title: Trabalhando com pastas de arquivos e chaves de Registro
-ms.openlocfilehash: 7ead5d0e82feb852845468fb3a012a0908a4ce75
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: Este artigo discute como lidar com as tarefas de manipulação de chave do Registro usando o PowerShell.
+ms.openlocfilehash: 6f653c1fb409a238aa05658e89261a12e96f6fe1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410182"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499970"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Trabalhando com arquivos, pastas e chaves do Registro
 
@@ -129,7 +130,7 @@ Para obter mais informações sobre curingas, confira [about_Wildcards](/powersh
 
 Você pode excluir itens específicos usando o parâmetro **Exclude** de `Get-ChildItem`. Isso permite executar filtragem complexa em uma única instrução.
 
-Por exemplo, suponha que você está tentando localizar a DLL de Serviço de Tempo do Windows na pasta **System32**, e tudo o que você lembra do nome da DLL é que começa com "W" e contém "32".
+Por exemplo, suponha que você está tentando localizar a DLL de Serviço de Tempo do Windows na pasta **System32** , e tudo o que você lembra do nome da DLL é que começa com "W" e contém "32".
 
 Uma expressão como `w*32*.dll` encontrará todas as DLLs que atendem às condições, mas talvez seja interessante filtrar ainda mais os arquivos e omitir arquivos win32. Você pode omitir esses arquivos usando o parâmetro **Exclude** com o padrão `win*`:
 
@@ -161,7 +162,7 @@ Não haverá nenhum resultado, mesmo que haja duas DLLs que comecem com a letra 
 
 Nenhum resultado foi retornado, pois especificamos o curinga como parte do caminho. Mesmo que o comando seja recursivo, o cmdlet `Get-ChildItem` restringiu os itens àqueles que estão na pasta do Windows com nomes que terminam com `.dll`.
 
-Para especificar uma pesquisa recursiva de arquivos cujos nomes correspondem a um padrão especial, use o parâmetro **Include**.
+Para especificar uma pesquisa recursiva de arquivos cujos nomes correspondem a um padrão especial, use o parâmetro **Include** .
 
 ```
 PS> Get-ChildItem -Path C:\Windows -Include *.dll -Recurse -Exclude [a-y]*.dll

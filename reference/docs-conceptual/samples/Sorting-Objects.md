@@ -2,21 +2,23 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Classificação de objetos
-ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O cmdlet Sort-Object permite que você classifique uma coleção de objetos em uma ou mais propriedades.
+ms.openlocfilehash: 836207adfc566003e9714e45920d9b4e24a677e9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030777"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501007"
 ---
 # <a name="sorting-objects"></a>Classificação de objetos
 
-É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet `Sort-Object`. `Sort-Object` usa o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
+É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet `Sort-Object`.
+`Sort-Object` usa o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
 
 ## <a name="basic-sorting"></a>Classificação básica
 
 Pense no problema de listar os subdiretórios e os arquivos no diretório atual.
-Se quisermos classificar por **LastWriteTime** e depois por **Nome**, poderemos fazer isso digitando:
+Se quisermos classificar por **LastWriteTime** e depois por **Nome** , poderemos fazer isso digitando:
 
 ```powershell
 Get-ChildItem |
@@ -39,7 +41,7 @@ LastWriteTime          Name
 ...
 ```
 
-Você também pode classificar os objetos na ordem inversa, especificando o parâmetro de opção **Descending**.
+Você também pode classificar os objetos na ordem inversa, especificando o parâmetro de opção **Descending** .
 
 ```powershell
 Get-ChildItem |
@@ -71,7 +73,7 @@ Cada tabela de hash usa uma chave **Expression** para especificar o nome da prop
 A chave **Expression** é obrigatória.
 A chave **Ascending** ou **Descending** é opcional.
 
-O exemplo a seguir classifica os objetos em ordem decrescente por **LastWriteTime** e ordem crescente por **Name**.
+O exemplo a seguir classifica os objetos em ordem decrescente por **LastWriteTime** e ordem crescente por **Name** .
 
 ```powershell
 Get-ChildItem |
@@ -91,10 +93,10 @@ LastWriteTime          Name
 ...
 ```
 
-Você também pode definir um scriptblock como a chave **Expression**.
+Você também pode definir um scriptblock como a chave **Expression** .
 Ao executar o cmdlet `Sort-Object`, o scriptblock é executado e o resultado é usado para classificação.
 
-O exemplo a seguir classifica objetos em ordem decrescente pelo período de tempo entre **CreationTime** e **LastWriteTime**.
+O exemplo a seguir classifica objetos em ordem decrescente pelo período de tempo entre **CreationTime** e **LastWriteTime** .
 
 ```powershell
 Get-ChildItem |
@@ -136,7 +138,7 @@ As chaves nas tabelas de hash para a classificação podem ser abreviadas da seg
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-Neste exemplo, o **e** significa **Expression**, o **d** significa **Descending** e o **a** significa **Ascending**.
+Neste exemplo, o **e** significa **Expression** , o **d** significa **Descending** e o **a** significa **Ascending** .
 
 Para melhorar a legibilidade, você pode colocar as tabelas de hash em uma variável separada:
 

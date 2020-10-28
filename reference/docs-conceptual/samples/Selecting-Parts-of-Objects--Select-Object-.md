@@ -2,16 +2,17 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Selecionar partes de objetos com Select Object
-ms.openlocfilehash: 06b92c7c4c5098c707a7d9f9d9a96e6b6a897f80
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Você pode usar o cmdlet `Select-Object` para criar objetos do PowerShell novos e personalizados que contenham as propriedades selecionadas dos objetos no pipeline.
+ms.openlocfilehash: 92635ac54ea1469739bcb228c5e9a0a8dbfc648b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737161"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501024"
 ---
 # <a name="selecting-parts-of-objects-select-object"></a>Selecionar partes de objetos (Select-Object)
 
-Você pode usar o cmdlet `Select-Object` para criar objetos do PowerShell novos e personalizados que contenhas as propriedades selecionadas dos objetos usados para criá-los. Digite o seguinte comando para criar um objeto que inclua apenas as propriedades **Name** e **FreeSpace** da classe WMI **Win32_LogicalDisk**:
+Você pode usar o cmdlet `Select-Object` para criar objetos do PowerShell novos e personalizados que contenhas as propriedades selecionadas dos objetos usados para criá-los. Digite o seguinte comando para criar um objeto que inclua apenas as propriedades **Name** e **FreeSpace** da classe WMI **Win32_LogicalDisk** :
 
 ```powershell
 Get-CimInstance -Class Win32_LogicalDisk | Select-Object -Property Name,FreeSpace

@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Trabalhando com chaves do Registro
-ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo discute como lidar com chaves do Registro usando o PowerShell.
+ms.openlocfilehash: 90e8417fc3454b959dc2a86fc63e722832bdab23
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736838"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501381"
 ---
 # <a name="working-with-registry-keys"></a>Trabalhando com chaves do Registro
 
@@ -57,13 +58,13 @@ Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
 Get-ChildItem HKCU:
 ```
 
-Esses comandos listam apenas os itens contidos diretamente, similar ao uso do comando `DIR` do **Cmd.exe** ou `ls` em um shell do UNIX. Para mostrar os itens contidos, você precisa especificar o parâmetro **Recurse**. Use o comando a seguir para listar todas as chave do Registro em `HKCU:`.
+Esses comandos listam apenas os itens contidos diretamente, similar ao uso do comando `DIR` do **Cmd.exe** ou `ls` em um shell do UNIX. Para mostrar os itens contidos, você precisa especificar o parâmetro **Recurse** . Use o comando a seguir para listar todas as chave do Registro em `HKCU:`.
 
 ```powershell
 Get-ChildItem -Path HKCU:\ -Recurse
 ```
 
-`Get-ChildItem` pode executar as funcionalidades de filtragem complexas por meio de seus parâmetros **Path**, **Filter**, **Include** e **Exclude**, mas esses parâmetros normalmente são baseados apenas no nome. Você pode executar a filtragem complexa com base em outras propriedades de itens usando o cmdlet `Where-Object`. O comando a seguir encontra todas as chaves no `HKCU:\Software` que têm, no máximo, uma subchave e que também têm exatamente quatro valores:
+`Get-ChildItem` pode executar as funcionalidades de filtragem complexas por meio de seus parâmetros **Path** , **Filter** , **Include** e **Exclude** , mas esses parâmetros normalmente são baseados apenas no nome. Você pode executar a filtragem complexa com base em outras propriedades de itens usando o cmdlet `Where-Object`. O comando a seguir encontra todas as chaves no `HKCU:\Software` que têm, no máximo, uma subchave e que também têm exatamente quatro valores:
 
 ```powershell
 Get-ChildItem -Path HKCU:\Software -Recurse |
@@ -78,13 +79,13 @@ A cópia é feita com `Copy-Item`. O exemplo a seguir copia a subchave `CurrentV
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU:
 ```
 
-Se você examinar essa nova chave no editor do Registro ou por meio de `Get-ChildItem`, observará que não há cópias das subchaves contidas no novo local. Para copiar todo o conteúdo de um contêiner, você precisa especificar o parâmetro **Recurse**. Para tornar o comando de cópia anterior recursivo, você usaria este comando:
+Se você examinar essa nova chave no editor do Registro ou por meio de `Get-ChildItem`, observará que não há cópias das subchaves contidas no novo local. Para copiar todo o conteúdo de um contêiner, você precisa especificar o parâmetro **Recurse** . Para tornar o comando de cópia anterior recursivo, você usaria este comando:
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU: -Recurse
 ```
 
-Você ainda pode usar outras ferramentas que já estão disponíveis para executar cópias do sistema de arquivos. Quaisquer ferramentas de edição de Registro, incluindo **reg.exe**, **regini.exe**, **regedit.exe** e objetos COM que dão suporte à edição do Registro, como o **WScript.Shell** e a classe **StdRegProv** do WMI, podem ser usados de dentro do Windows PowerShell.
+Você ainda pode usar outras ferramentas que já estão disponíveis para executar cópias do sistema de arquivos. Quaisquer ferramentas de edição de Registro, incluindo **reg.exe** , **regini.exe** , **regedit.exe** e objetos COM que dão suporte à edição do Registro, como o **WScript.Shell** e a classe **StdRegProv** do WMI, podem ser usados de dentro do Windows PowerShell.
 
 ## <a name="creating-keys"></a>Criar chaves
 
@@ -125,7 +126,7 @@ the item. Are you sure you want to continue?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-Para excluir os itens contidos sem nenhuma solicitação, especifique o parâmetro **Recurse**:
+Para excluir os itens contidos sem nenhuma solicitação, especifique o parâmetro **Recurse** :
 
 ```powershell
 Remove-Item -Path HKCU:\CurrentVersion -Recurse

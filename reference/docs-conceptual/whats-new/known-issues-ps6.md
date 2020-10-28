@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este é um resumo de problemas conhecidos ou limitações no PowerShell 6
+ms.openlocfilehash: 528315eff660167513045542227dce335355a7b8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996112"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501670"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -98,11 +99,11 @@ Este problema está sendo acompanhado como parte da [#3232](https://github.com/P
 
 Muitos comandos (cmdlets) normalmente disponíveis no PowerShell não está disponíveis no Linux/macOS. Em muitos casos, esses comandos não fazem nenhum sentido nessas plataformas (por exemplo, recursos específicos do Windows como o Registro). Outros comandos, como os comandos de controle de serviço (Get/Start/Stop-Service) estão presentes, mas não são funcionais. As versões futuras podem corrigir esses problemas arrumando os cmdlets quebrados e adicionando novos valores ao longo do tempo.
 
-### <a name="command-availability"></a>Disponibilidade do comando
+### <a name="command-availability"></a>Disponibilidade de comando
 
 A tabela a seguir lista os comandos que não funcionam no PowerShell no Linux/macOS.
 
-|Comandos|Estado Operacional|Observações|
+|Comandos|Estado Operacional|Anotações|
 |--------|-----------------|-----|
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não são reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Get-Acl`, `Get-AuthenticodeSignature`, `Get-CmsMessage`, `New-FileCatalog`, `Protect-CmsMessage`, `Set-Acl`, `Set-AuthenticodeSignature`, `Test-FileCatalog`, `Unprotect-CmsMessage`|Não disponível.|Esses comandos não são reconhecidos. Isso deve ser corrigido em uma versão futura.|

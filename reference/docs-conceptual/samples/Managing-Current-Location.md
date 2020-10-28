@@ -2,22 +2,23 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando o local atual
-ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O PowerShell usa o substantivo Location para referir-se ao diretório de trabalho e implementa uma família de cmdlets para examinar e manipular sua localização.
+ms.openlocfilehash: 0ce9ed1269921233b0d6b07da832c12e159a84dc
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030190"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500463"
 ---
 # <a name="managing-current-location"></a>Gerenciando o local atual
 
 Ao navegar em sistemas de pasta no Explorador de arquivos, você normalmente tem um local de trabalho específico, ou seja, a pasta aberta atual. Itens na pasta atual podem ser manipulados facilmente clicando neles. Para interfaces de linha de comando como Cmd.exe, quando você estiver na mesma pasta que um arquivo específico, poderá acessá-lo especificando um nome relativamente curto, em vez de precisar especificar todo o caminho para o arquivo. O diretório atual é chamado no diretório de trabalho.
 
-O Windows PowerShell usa o substantivo **Location** para referir-se ao diretório de trabalho e implementa uma família de cmdlets para examinar e manipular seu local.
+O Windows PowerShell usa o substantivo **Location** para referir-se à pasta de trabalho e implementa uma família de cmdlets para examinar e manipular seu local.
 
 ## <a name="getting-your-current-location-get-location"></a>Obtendo seu local atual (Get-Location)
 
-Para determinar o caminho do seu local de diretório atual, digite o comando **Get-Location**:
+Para determinar o caminho do seu local de diretório atual, digite o comando **Get-Location** :
 
 ```
 PS> Get-Location
@@ -27,17 +28,17 @@ C:\Documents and Settings\PowerUser
 ```
 
 > [!NOTE]
-> O cmdlet Get-Location é semelhante ao comando **pwd** no shell BASH. O cmdlet Set-Location é semelhante ao comando **cd** do Cmd.exe.
+> O cmdlet Get-Location é semelhante do comando **pwd** no shell BASH. O cmdlet Set-Location é semelhante do comando **cd** do Cmd.exe.
 
 ## <a name="setting-your-current-location-set-location"></a>Definindo seu local atual (Set-Location)
 
-O comando **Get-Location** é usado com o comando **Set-Location**. O comando **Set-Location** permite especificar seu local de diretório atual.
+O comando **Get-Location** é usado com o comando **Set-Location** . O comando **Set-Location** permite especificar seu local de diretório atual.
 
 ```powershell
 Set-Location -Path C:\Windows
 ```
 
-Depois de inserir o comando, você observará que não receberá nenhum feedback direto sobre o efeito do comando. A maioria dos comandos do Windows PowerShell que executam uma ação produzem pouca ou nenhuma saída porque a saída nem é sempre útil. Para confirmar que uma alteração de diretório foi executada com êxito ao digitar o comando **Set-Location**, inclua o parâmetro **-PassThru** ao digitar o comando **Set-Location**:
+Depois de inserir o comando, você observará que não receberá nenhum feedback direto sobre o efeito do comando. A maioria dos comandos do Windows PowerShell que executam uma ação produzem pouca ou nenhuma saída porque a saída nem é sempre útil. Para confirmar que uma alteração de diretório foi executada com êxito ao digitar o comando **Set-Location** , inclua o parâmetro **-PassThru** ao digitar o comando **Set-Location** :
 
 ```
 PS> Set-Location -Path C:\Windows -PassThru
@@ -47,11 +48,11 @@ Path
 C:\WINDOWS
 ```
 
-O parâmetro **-PassThru** pode ser usado com muitos comandos Set no Windows PowerShell para retornar informações sobre o resultado em casos em que não há nenhuma saída padrão.
+O parâmetro **-PassThru** pode ser usado com muitos comandos definidos no Windows PowerShell para retornar informações sobre o resultado em casos em que não há nenhuma saída padrão.
 
 Você pode especificar caminhos em relação ao seu local atual da mesma forma que faria na maioria dos shells de comando UNIX e Windows. Na notação padrão para caminhos relativos, um ponto ( **.** ) representa a pasta atual e um ponto duplo ( **..** ) representa o diretório pai do seu local atual.
 
-Por exemplo, se você está na pasta **C:\\Windows**, um ponto ( **.** ) representa **C:\\Windows** e um ponto duplo ( **..** ) representa **C:** . Você pode alterar do seu local atual para a raiz da unidade C: digitando:
+Por exemplo, se você está na pasta **C:\\Windows** , um ponto ( **.** ) representa **C:\\Windows** e um ponto duplo ( **..** ) representa **C:** . Você pode alterar do seu local atual para a raiz da unidade C: digitando:
 
 ```
 PS> Set-Location -Path .. -PassThru
@@ -97,7 +98,7 @@ sl -Path HKLM:\SOFTWARE -PassThru
 
 ## <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvar e recuperar locais recentes (Push-Location e Pop-Location)
 
-Ao alterar locais, é muito útil controlar onde você esteve para poder retornar ao local anterior. O cmdlet do Windows PowerShell **Push-Location** cria um histórico ordenado (uma "pilha") de caminhos de diretório nos quais você esteve, para que seja possível percorrer novamente o histórico de caminhos de diretório usando o cmdlet complementar **Pop-Location**.
+Ao alterar locais, é muito útil controlar onde você esteve para poder retornar ao local anterior. O cmdlet do Windows PowerShell **Push-Location** cria um histórico ordenado (uma "pilha") de caminhos de diretório onde você esteve, para que você possa percorrer novamente o histórico de caminhos de diretório usando o cmdlet complementar **Pop-Location** .
 
 Por exemplo, o Windows PowerShell inicia normalmente no diretório base do usuário.
 
@@ -124,7 +125,7 @@ Em seguida, você pode enviar o local de configurações para a pilha e movê-lo
 Push-Location -Path Temp
 ```
 
-É possível confirmar a alteração dos diretórios digitando o comando **Get-Location**:
+É possível confirmar a alteração dos diretórios digitando o comando **Get-Location** :
 
 ```
 PS> Get-Location
@@ -134,7 +135,7 @@ Path
 C:\Documents and Settings\PowerUser\Local Settings\Temp
 ```
 
-Você poderá então retornar para o último diretório visitado digitando o comando **Pop-Location** e verificar a mudança digitando o comando **Get-Location**:
+Você poderá então retornar para o último diretório visitado digitando o comando **Pop-Location** e verificar a mudança digitando o comando **Get-Location** :
 
 ```
 PS> Pop-Location
@@ -145,7 +146,7 @@ Path
 C:\Documents and Settings\me\Local Settings
 ```
 
-Assim como no cmdlet **Set-Location**, você pode incluir o parâmetro **-PassThru** ao inserir o cmdlet **Pop-Location** para exibir o diretório inserido:
+Assim como no cmdlet **Set-Location** , você poderá incluir o parâmetro **-PassThru** ao inserir o cmdlet **Pop-Location** para exibir o diretório inserido:
 
 ```
 PS> Pop-Location -PassThru
@@ -167,7 +168,7 @@ ou
 Push-Location \\FS01\Public
 ```
 
-Você pode usar os comandos **Push-Location** e **Set-Location** para alterar o local de qualquer unidade disponível. Por exemplo, se você tiver uma unidade de CD-ROM local com a letra da unidade D contendo um CD de dados, será possível alterar o local da unidade de CD digitando o comando **Set-Location D:** .
+Você pode usar os comandos **Push-Location** e **Set-Location** para alterar o local de qualquer unidade disponível. Por exemplo, se você tiver uma unidade de CD-ROM local com a letra de unidade D contendo um CD de dados, poderá alterar o local na unidade de CD digitando o comando **Set-Location D:** .
 
 Se a unidade estiver vazia, você receberá a seguinte mensagem de erro:
 

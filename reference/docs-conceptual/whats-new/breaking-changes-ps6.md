@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: Este artigo resume as diferenças entre o Windows PowerShell 5.1 e o PowerShell 6.0.
+ms.openlocfilehash: 7ed6e811b9136cb1c35422a9d682ba2bfaa136a0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158183"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501687"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Alterações da falha no PowerShell 6.x
 
@@ -27,7 +28,7 @@ Por vários motivos de compatibilidade, os seguintes módulos não estão inclu�
 
 ### <a name="powershell-workflow"></a>Fluxo de trabalho do PowerShell
 
-O [Fluxo de Trabalho do PowerShell][workflow] é um recurso no Windows PowerShell baseado no [WF (Windows Workflow Foundation)][workflow-foundation] que permite a criação de runbooks robustos para tarefas em paralelo ou de longa duração.
+[Fluxo de Trabalho do PowerShell][workflow] é um recurso no Windows PowerShell baseado no [Windows Workflow Foundation (WF)][workflow-foundation] que permite a criação de runbooks robustos para tarefas em paralelo ou de longa duração.
 
 Devido à falta de suporte a Windows Workflow Foundation no .NET Core, não damos suporte ao Fluxo de Trabalho do PowerShell no PowerShell Core.
 
@@ -40,7 +41,7 @@ Se houver a necessidade de usar pontos de verificação para retomar um script a
 
 ### <a name="custom-snap-ins"></a>Snap-ins personalizados
 
-Os [snap-ins do PowerShell][snapin] são um antecessor dos módulos do PowerShell que não têm ampla adoção da comunidade do PowerShell.
+[Snap-ins do PowerShell][snapin] são um predecessor dos módulos do PowerShell que não têm ampla adoção da comunidade do PowerShell.
 
 Devido à complexidade do suporte aos snap-ins e à falta de uso da comunidade, não oferecemos mais suporte a snap-ins personalizados no PowerShell Core.
 
@@ -279,7 +280,7 @@ Devido à falta de suporte às APIs, o módulo `LocalAccounts` e os cmdlets `Cou
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>A execução de script do PowerShell com o parâmetro bool não funciona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Antes, usar **powershell.exe** (agora **pwsh.exe**) para executar um script do PowerShell usando `-File` não fornecia uma maneira de passar `$true`/`$false` como valores de parâmetro. Adicionamos suporte para `$true`/`$false` como valores analisados para parâmetros. Também há suporte para valores de opção, pois a sintaxe documentada no momento não funciona.
+Antes, usar **powershell.exe** (agora **pwsh.exe** ) para executar um script do PowerShell usando `-File` não fornecia uma maneira de passar `$true`/`$false` como valores de parâmetro. Adicionamos suporte para `$true`/`$false` como valores analisados para parâmetros. Também há suporte para valores de opção, pois a sintaxe documentada no momento não funciona.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027"></a>Remoção da propriedade `ClrVersion` de `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 

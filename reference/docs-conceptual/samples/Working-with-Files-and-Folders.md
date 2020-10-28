@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com arquivos e pastas
-ms.openlocfilehash: 8876ff70adbd10c9019f6d80ce7ad327f2932c74
-ms.sourcegitcommit: 08acbea14c69a347f2f46aafcb215a5233c7d830
+description: Este artigo discute como lidar com tarefas de manipulação de arquivos e pastas específicas usando o PowerShell.
+ms.openlocfilehash: c0c3abb082b05296daa480ac06bcbfa3a784e0c9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82691494"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500021"
 ---
 # <a name="working-with-files-and-folders"></a>Trabalhando com arquivos e pastas
 
-Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Esta seção discute como lidar com tarefas de manipulação de arquivos e pastas específicas usando o PowerShell.
+Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Este artigo discute como lidar com tarefas de manipulação de arquivos e pastas específicas usando o PowerShell.
 
 ## <a name="listing-all-the-files-and-folders-within-a-folder"></a>Listar todos os arquivos e pastas dentro de uma pasta
 
@@ -27,7 +28,7 @@ O comando lista apenas os itens contidos diretamente, similar ao uso do comando 
 Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
-`Get-ChildItem` pode filtrar itens com seus parâmetros **Path**, **Filter**, **Include** e **Exclude**, mas eles normalmente se baseiam apenas no nome. Você pode executar a filtragem complexa com base em outras propriedades de itens usando `Where-Object`.
+`Get-ChildItem` pode filtrar itens com seus parâmetros **Path** , **Filter** , **Include** e **Exclude** , mas eles normalmente se baseiam apenas no nome. Você pode executar a filtragem complexa com base em outras propriedades de itens usando `Where-Object`.
 
 O comando a seguir localiza todos os executáveis na pasta Arquivos de Programa que foi modificado após 1º de outubro de 2005 e que não são menores que 1 megabyte nem maiores que 10 megabytes:
 
@@ -43,7 +44,7 @@ A cópia é feita com `Copy-Item`. O comando a seguir faz backup de C:\\boot.ini
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak
 ```
 
-Se o arquivo de destino já existir, a tentativa de cópia falhará. Para substituir um destino pré-existente, use o parâmetro **Force**:
+Se o arquivo de destino já existir, a tentativa de cópia falhará. Para substituir um destino pré-existente, use o parâmetro **Force** :
 
 ```powershell
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak -Force
@@ -103,7 +104,7 @@ sure you want to continue?
 (default is "Y"):
 ```
 
-Se você não quiser ser solicitado para cada item contido, especifique o parâmetro **Recurse**:
+Se você não quiser ser solicitado para cada item contido, especifique o parâmetro **Recurse** :
 
 ```powershell
 Remove-Item -Path C:\temp\DeleteMe -Recurse

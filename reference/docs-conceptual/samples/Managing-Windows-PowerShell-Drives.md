@@ -2,18 +2,19 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando unidades do Windows PowerShell
-ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Uma unidade do PowerShell é um local de armazenamento de dados que pode ser acessado como uma unidade de sistema de arquivos no PowerShell. Por padrão, o PowerShell inclui provedores que dão suporte ao sistema de arquivos, ao Registro, aos repositórios de certificados e a outros.
+ms.openlocfilehash: e4e5347c3f3458f25cea31c8e5a499474985220a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70215517"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500327"
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerenciando unidades do Windows PowerShell
 
 Uma *unidade do Windows PowerShell* é um local de armazenamento de dados que pode ser acessado como uma unidade de sistema de arquivos no Windows PowerShell. Provedores do Windows PowerShell criam algumas unidades, como unidades de sistema de arquivos (inclusive C: e D:), as unidades do registro (HKCU: e HKLM:) e a unidade de certificado (Cert:), e você também pode criar suas próprias unidades no Windows PowerShell. Essas unidades são muito úteis, mas estão disponíveis apenas no Windows PowerShell. Você não poderá acessá-las usando outras ferramentas do Windows, como o Explorador de Arquivos ou Cmd.exe.
 
-O Windows PowerShell usa o substantivo **PSDrive** para comandos que funcionam com o Windows PowerShell. Para ver uma lista de unidades do Windows PowerShell presentes na sua sessão do Windows PowerShell, use o cmdlet **Get-PSDrive**.
+O Windows PowerShell usa o substantivo **PSDrive** para comandos que funcionam com o Windows PowerShell. Para ver uma lista de unidades do Windows PowerShell presentes na sua sessão do Windows PowerShell, use o cmdlet **Get-PSDrive** .
 
 ```
 PS> Get-PSDrive
@@ -36,7 +37,7 @@ Embora as unidades na exibição variem de acordo com as unidades no sistema, a 
 
 Unidades do sistema de arquivos são um subconjunto das unidades do Windows PowerShell. Você pode identificar as unidades de sistema de arquivo pela entrada FileSystem na coluna de Provider. (As unidades do sistema de arquivo no Windows PowerShell têm suporte no provedor do sistema de arquivos do Windows PowerShell).
 
-Para ver a sintaxe do cmdlet **Get-PSDrive**, digite um comando **Get-Command** com o parâmetro **Syntax**:
+Para ver a sintaxe do cmdlet **Get-PSDrive** , digite um comando **Get-Command** com o parâmetro **Syntax** :
 
 ```
 PS> Get-Command -Name Get-PSDrive -Syntax
@@ -46,7 +47,7 @@ erbose] [-Debug] [-ErrorAction <ActionPreference>] [-ErrorVariable <String>] [-
 OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-O parâmetro **PSProvider** permite exibir somente as unidades do Windows PowerShell com suporte em um provedor específico. Por exemplo, para exibir somente unidades do Windows PowerShell com suporte no provedor do Sistema de Arquivos do Windows PowerShell, digite um comando **Get-PSDrive** com o parâmetro **PSProvider** e valor **FileSystem**:
+O parâmetro **PSProvider** permite exibir somente as unidades do Windows PowerShell suportadas por um provedor específico. Por exemplo, para exibir somente unidades do Windows PowerShell suportadas pelo provedor do Sistema de Arquivos do Windows PowerShell, digite um comando **Get-PSDrive** com o parâmetro **PSProvider** e valor **FileSystem** :
 
 ```
 PS> Get-PSDrive -PSProvider FileSystem
@@ -58,7 +59,7 @@ C          FileSystem    C:\                           ...nd Settings\PowerUser
 D          FileSystem    D:\
 ```
 
-Para exibir as unidades do Windows PowerShell que representam os hives do Registro, use o parâmetro **PSProvider** para exibir somente as unidades do Windows PowerShell que têm suporte no provedor de Registro do Windows PowerShell:
+Para exibir as unidades do Windows PowerShell que representam os hives do registro, use o parâmetro **PSProvider** para exibir somente as unidades do Windows PowerShell que possuem suporte no provedor de registro do Windows PowerShell:
 
 ```
 PS> Get-PSDrive -PSProvider Registry
@@ -83,7 +84,7 @@ HKLM:\SOFTWARE\Microsoft
 
 ## <a name="adding-new-windows-powershell-drives-new-psdrive"></a>Adicionando novas unidades do Windows PowerShell (New-PSDrive)
 
-Você pode adicionar suas próprias unidades do Windows PowerShell usando o comando **New-PSDrive**. Para obter a sintaxe do comando **New-PSDrive**, digite o comando **Get-Command** com o parâmetro **Syntax**:
+Você pode adicionar suas próprias unidades do Windows PowerShell usando o comando **New-PSDrive** . Para ver a sintaxe do comando **New-PSDrive** , digite o comando **Get-Command** com o parâmetro **Syntax** :
 
 ```
 PS> Get-Command -Name New-PSDrive -Syntax
@@ -102,7 +103,7 @@ Para criar uma nova unidade do Windows PowerShell, você deve fornecer três par
 
 - A raiz, ou seja, o caminho para a raiz da unidade nova
 
-Por exemplo, você pode criar uma unidade chamada “Office” mapeada para a pasta que contém os aplicativos do Microsoft Office em seu computador, como **C:\\Arquivos de Programas\\Microsoft Office\\OFFICE11**. Para criar a unidade, digite o seguinte comando:
+Por exemplo, você pode criar uma unidade chamada “Office” mapeada para a pasta que contém os aplicativos do Microsoft Office em seu computador, como **C:\\Arquivos de Programas\\Microsoft Office\\OFFICE11** . Para criar a unidade, digite o seguinte comando:
 
 ```
 PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Microsoft Office\OFFICE11"
@@ -115,9 +116,9 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 > [!NOTE]
 > Em geral, os caminhos não diferenciam maiúsculas de minúsculas.
 
-Faça referência à nova unidade do Windows PowerShell como todas as demais unidades do Windows PowerShell – pelo nome seguido por dois-pontos ( **:** ).
+Referencie a nova unidade do Windows PowerShell como todas as demais unidades do Windows PowerShell: pelo nome seguido por dois pontos ( **:** ).
 
-Uma unidade do Windows PowerShell pode tornar diversas tarefas muito mais simples. Por exemplo, algumas das chaves mais importantes no registro do Windows têm caminhos extremamente longos, tornando-os complicados de acessar e difíceis de serem lembradas. Informações de configuração crítica residem em **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Para exibir e alterar itens na chave do registro CurrentVersion, você pode criar uma unidade do Windows PowerShell que está enraizada na chave digitando:
+Uma unidade do Windows PowerShell pode tornar diversas tarefas muito mais simples. Por exemplo, algumas das chaves mais importantes no registro do Windows têm caminhos extremamente longos, tornando-os complicados de acessar e difíceis de serem lembradas. Informações de configuração crítica residem em **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion** . Para exibir e alterar itens na chave do registro CurrentVersion, você pode criar uma unidade do Windows PowerShell que está enraizada na chave digitando:
 
 ```
 PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\Windows\CurrentVersion
@@ -147,15 +148,15 @@ O cmdlet New-PsDrive adiciona a nova unidade apenas à sessão atual do Windows 
 
 ## <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Excluindo unidades do Windows PowerShell (Remove-PSDrive)
 
-Você pode excluir unidades do Windows PowerShell usando o cmdlet **Remove-PSDrive**. O cmdlet **Remove-PSDrive** é fácil de usar. Para excluir uma unidade específica do Windows PowerShell, basta fornecer o nome da unidade.
+Você pode excluir unidades do Windows PowerShell usando o cmdlet **Remove-PSDrive** . O cmdlet **Remove-PSDrive** é fácil de usar. Para excluir uma unidade específica do Windows PowerShell, basta fornecer o nome da unidade.
 
-Por exemplo, se você adicionou a unidade do Windows PowerShell **Office:** , como mostrado no tópico **New-PSDrive**, você poderá excluí-la digitando:
+Por exemplo, se adicionar a unidade **Office:** ao Windows PowerShell, como mostrado no tópico **New-PSDrive** , você poderá excluí-la digitando:
 
 ```powershell
 Remove-PSDrive -Name Office
 ```
 
-Para excluir a unidade **cvkey:** do Windows PowerShell, também mostrada no tópico **New-PSDrive**, use o seguinte comando:
+Para excluir a unidade **cvkey:** do Windows PowerShell, também mostrada no tópico **New-PSDrive** , use o seguinte comando:
 
 ```powershell
 Remove-PSDrive -Name cvkey

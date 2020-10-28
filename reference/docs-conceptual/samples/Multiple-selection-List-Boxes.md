@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Caixas de listagem de seleção múltipla
-ms.openlocfilehash: 7bf71fb76a11f88c4ad4790bf3a2b383d0babb81
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: Este artigo mostra como criar um controle de caixa de listagem de seleção múltipla usando os recursos de criação de formulário do .NET Framework no Windows PowerShell.
+ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216066"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500276"
 ---
 # <a name="multiple-selection-list-boxes"></a>Caixas de listagem de seleção múltipla
 
@@ -73,7 +74,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**. Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
+O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms** . Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form** , que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -83,9 +84,9 @@ Depois de criar uma instância da classe Form, atribua valores a três proprieda
 
 - **Text.** Isso se torna o título da janela.
 
-- **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário que possui 300 pixels de largura por 200 pixels de altura.
+- **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário de 300 pixels de largura por 200 pixels de altura.
 
-- **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente. Se você não adicionar essa propriedade, o Windows seleciona um local quando o formulário aberto. Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
+- **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente. Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen** , você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -93,7 +94,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK**. Neste exemplo, a posição do botão é de 120 pixels a partir da borda superior do formulário e 75 pixels a partir da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
+Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK** . Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -170,7 +171,7 @@ Adicione a seguinte linha de código para exibir o formulário do Windows.
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter**.
+Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter** .
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)

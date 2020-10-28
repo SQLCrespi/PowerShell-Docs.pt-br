@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Criando uma caixa de entrada personalizada
-ms.openlocfilehash: ff0588b44169bc276e2833254cec60eda759e2c8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como criar uma caixa de entrada personalizada usando os recursos de criação de formulário do .NET Framework no Windows PowerShell.
+ms.openlocfilehash: 18fba743b169010936d2ea83dca4e95203664fe9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706182"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500548"
 ---
 # <a name="creating-a-custom-input-box"></a>Criando uma caixa de entrada personalizada
 
@@ -65,7 +66,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**. Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
+O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms** . Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form** , que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -75,10 +76,10 @@ Depois de criar uma instância da classe Form, atribua valores a três proprieda
 
 - **Text.** Isso se torna o título da janela.
 
-- **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário que possui 300 pixels de largura por 200 pixels de altura.
+- **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário de 300 pixels de largura por 200 pixels de altura.
 
 - **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente.
-  Se você não adicionar essa propriedade, o Windows seleciona um local quando o formulário aberto. Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
+  Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen** , você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -86,7 +87,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK**. Neste exemplo, a posição do botão é de 120 pixels a partir da borda superior do formulário e 75 pixels a partir da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
+Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK** . Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
 
 ```powershell
 $okButton = New-Object System.Windows.Forms.Button
@@ -147,17 +148,17 @@ Adicione a seguinte linha de código para exibir o formulário do Windows.
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários fornecem texto na caixa de texto e clicam no botão **OK** ou pressionam a tecla **Enter**.
+Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários fornecem texto na caixa de texto e clicam no botão **OK** ou pressionam a tecla **Enter** .
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $textBox.Text
-    $x
+    $x = $textBox.Text
+    $x
 }
 ```
 
 ## <a name="see-also"></a>Consulte Também
 
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730941(v=technet.10))
-- [Windows PowerShell Tip of the Week: Creating a Custom Input Box](https://technet.microsoft.com/library/ff730941.aspx) (Dica da Semana do Windows PowerShell: criar uma caixa de entrada personalizada)
+- [Dica da Semana do Windows PowerShell: criar uma caixa de entrada personalizada](https://technet.microsoft.com/library/ff730941.aspx)

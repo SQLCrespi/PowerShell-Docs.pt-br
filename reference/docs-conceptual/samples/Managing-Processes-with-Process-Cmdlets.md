@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando processos com os Cmdlets de processo
-ms.openlocfilehash: 8de0cbae508958bf7970ce69e03257ea0a8dca6f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O PowerShell fornece vários cmdlets que ajudam a gerenciar processos em computadores locais e remotos.
+ms.openlocfilehash: 977a3459eeac22536341753ccd59357d718745f2
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870737"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500429"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Gerenciando processos com os Cmdlets de processo
 
@@ -121,7 +122,7 @@ At line:1 char:13
 + Stop-Process  <<<< -Name Idle
 ```
 
-Você também pode forçar um prompt com o parâmetro **Confirm**. Esse parâmetro será especialmente útil se você usar um caractere curinga ao especificar o nome do processo, pois você poderá corresponder acidentalmente alguns processos que não deseja interromper:
+Você também pode forçar um prompt com o parâmetro **Confirm** . Esse parâmetro será especialmente útil se você usar um caractere curinga ao especificar o nome do processo, pois você poderá corresponder acidentalmente alguns processos que não deseja interromper:
 
 ```
 PS> Stop-Process -Name t*,e* -Confirm
@@ -143,7 +144,7 @@ A manipulação complexa de processos é possível usando alguns cmdlets de filt
 Get-Process | Where-Object -FilterScript {$_.Responding -eq $false} | Stop-Process
 ```
 
-Você pode usar a mesma abordagem em outras situações. Por exemplo, suponha que um aplicativo de área de notificação secundário é executado automaticamente quando os usuários iniciam o outro aplicativo. Você pode achar que isso não funciona corretamente em sessões de Serviços de Terminal, mas você ainda deseja mantê-lo em sessões que são executadas no console do computador físico. Sessões conectadas à área de trabalho do computador físico sempre têm uma ID de sessão 0, portanto você pode parar todas as instâncias do processo que estão em outras sessões usando **Where-Object** e o processo, com **SessionId**:
+Você pode usar a mesma abordagem em outras situações. Por exemplo, suponha que um aplicativo de área de notificação secundário é executado automaticamente quando os usuários iniciam o outro aplicativo. Você pode achar que isso não funciona corretamente em sessões de Serviços de Terminal, mas você ainda deseja mantê-lo em sessões que são executadas no console do computador físico. Sessões conectadas à área de trabalho do computador físico sempre têm uma ID de sessão 0, portanto você pode parar todas as instâncias do processo que estão em outras sessões usando **Where-Object** e o processo, com **SessionId** :
 
 ```powershell
 Get-Process -Name BadApp | Where-Object -FilterScript {$_.SessionId -neq 0} | Stop-Process
@@ -159,7 +160,7 @@ Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
 
 Ocasionalmente, pode ser útil poder parar a execução de todas as sessões do Windows PowerShell que não sejam a sessão atual. Se uma sessão usar muitos recursos ou estiver inacessível (ela pode estar em execução remotamente ou em outra sessão de área de trabalho), poderá não ser possível pará-la diretamente. Se você tentar interromper todas as sessões, no entanto, a sessão atual talvez seja encerrada.
 
-Cada sessão do Windows PowerShell tem uma variável de ambiente PID que contém a ID do processo do Windows PowerShell. Você pode verificar o $PID com a ID de cada sessão e encerrar somente sessões do Windows PowerShell que têm uma ID diferente. O comando de pipeline a seguir faz isso e retorna a lista de sessões finalizadas (devido ao uso do parâmetro **PassThru**):
+Cada sessão do Windows PowerShell tem uma variável de ambiente PID que contém a ID do processo do Windows PowerShell. Você pode verificar o $PID com a ID de cada sessão e encerrar somente sessões do Windows PowerShell que têm uma ID diferente. O comando de pipeline a seguir faz isso e retorna a lista de sessões finalizadas (devido ao uso do parâmetro **PassThru** ):
 
 ```
 PS> Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru

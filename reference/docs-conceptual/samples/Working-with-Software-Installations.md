@@ -2,16 +2,17 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Trabalhando com instalações de software
-ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como usar o WMI para gerenciar o software instalado no Windows.
+ms.openlocfilehash: 3cf8e3c58e9f2814e2551b3602bd7b47b375aed8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996119"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500871"
 ---
 # <a name="working-with-software-installations"></a>Trabalhando com instalações de software
 
-Aplicativos que são projetados para usar o Windows Installer podem ser acessados por meio da classe do WMI **Win32_Product**, mas nem todos os aplicativos usados atualmente usam o Windows Installer.
+Aplicativos que são projetados para usar o Windows Installer podem ser acessados através da classe do WMI **Win32_Product** , mas nem todos os aplicativos usados atualmente usam o Windows Installer.
 Aplicativos que usam rotinas de instalação alternativas geralmente não são gerenciados pelo Windows Installer.
 As técnicas específicas para trabalhar com esses aplicativos dependem do instalador do software e das decisões tomadas pelo desenvolvedor do aplicativo. Por exemplo, aplicativos instalados ao copiar os arquivos para uma pasta do computador, geralmente não podem ser gerenciados por meio das técnicas discutidas aqui. É possível gerenciar esses aplicativos como arquivos e pastas, usando as técnicas discutidas em [Como trabalhar com arquivos e pastas](Working-with-Files-and-Folders.md).
 
@@ -184,7 +185,7 @@ BB71E00}                       Comments            :
 
 ## <a name="installing-applications"></a>Instalando aplicativos
 
-Você pode usar a classe **Win32_Product** para instalar os pacotes do Windows Installer, local ou remotamente.
+Você pode usar a classe **Win32_Product** para instalar os pacotes do Windows Installer, localmente ou remotamente.
 
 > [!NOTE]
 > Para instalar um aplicativo, inicie o PowerShell com a opção "Executar como administrador".
@@ -199,13 +200,13 @@ Aplicativos que não usam a tecnologia Windows Installer podem ter métodos espe
 
 ## <a name="removing-applications"></a>Removendo aplicativos
 
-Remover um pacote do Windows Installer, usando o PowerShell funciona quase da mesma forma que a instalação de um pacote. Aqui está um exemplo que seleciona o pacote para desinstalar com base em seu nome; em alguns casos pode ser mais fácil de filtrar com o **IdentifyingNumber**:
+Remover um pacote do Windows Installer, usando o PowerShell funciona quase da mesma forma que a instalação de um pacote. Aqui está um exemplo que seleciona o pacote para desinstalar com base em seu nome; em alguns casos pode ser mais fácil de filtrar com o **IdentifyingNumber** :
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='ILMerge'" | Invoke-CimMethod -MethodName Uninstall
 ```
 
-Remover outros aplicativos não é tão simples, mesmo quando feito localmente. Podemos encontrar as cadeias de caracteres de desinstalação de linha de comando para esses aplicativos por meio da extração da propriedade **UninstallString**.
+Remover outros aplicativos não é tão simples, mesmo quando feito localmente. Podemos encontrar as cadeias de caracteres de desinstalação de linha de comando para esses aplicativos por meio da extração da propriedade **UninstallString** .
 Esse método funciona para aplicativos do Windows Installer em programas mais antigos que aparecem sob a Chave de desinstalação:
 
 ```powershell

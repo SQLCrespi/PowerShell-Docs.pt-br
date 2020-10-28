@@ -2,18 +2,19 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Removendo objetos do pipeline Where-Object
-ms.openlocfilehash: 370e7745341b70c0794352a690d5750d21f53ac2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O cmdlet Where-Object permite filtrar objetos passados no pipeline.
+ms.openlocfilehash: e744dc671303711f1cbe8cc724a97c3327c1da85
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737178"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500106"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Removendo objetos do pipeline (Where-Object)
 
 No PowerShell, você muitas vezes gera e passa mais objetos para um pipeline do que deseja. É possível especificar as propriedades de determinados objetos para exibição usando os cmdlets `Format-*`, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Talvez você queira filtrar objetos antes do final de um pipeline para poder executar ações em apenas um subconjunto dos objetos gerados inicialmente.
 
-O PowerShell inclui um cmdlet `Where-Object` que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a determinada condição de teste. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **FilterScript**.
+O PowerShell inclui um cmdlet `Where-Object` que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a determinada condição de teste. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **FilterScript** .
 
 ## <a name="performing-simple-tests-with-where-object"></a>Executando testes simples com Where-Object
 
@@ -49,14 +50,14 @@ Os blocos de script de `Where-Object` usam a variável especial `$_` para fazer 
 
 Como `$_` se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
 
-Por exemplo, podemos ver a classe **Win32_SystemDriver** no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Para a classe **Win32_SystemDriver**, a propriedade relevante é **State**. Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
+Por exemplo, podemos ver a classe **Win32_SystemDriver** no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Para a classe **Win32_SystemDriver** , a propriedade relevante é **State** . Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |
   Where-Object {$_.State -eq 'Running'}
 ```
 
-Isso ainda produz uma longa lista. Você pode filtrar para escolher apenas os drivers definidos para iniciar automaticamente testando também o valor de **StartMode**:
+Isso ainda produz uma longa lista. Você pode filtrar para escolher apenas os drivers definidos para iniciar automaticamente testando também o valor de **StartMode** :
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

@@ -2,12 +2,13 @@
 ms.date: 05/22/2020
 keywords: powershell, cmdlet
 title: O que é o PowerShell?
-ms.openlocfilehash: 267b2938a0892c99c3a961bc7107f573df40a683
-ms.sourcegitcommit: 38215ad49e237b219e62bb5a5f0eb3b6b048df1e
+description: Este artigo é uma introdução ao ambiente de script do PowerShell e seus recursos.
+ms.openlocfilehash: 91fc580af9a3adf43a24c40b4aaf3f1843882705
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868472"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500769"
 ---
 # <a name="what-is-powershell"></a>O que é o PowerShell?
 
@@ -44,7 +45,7 @@ Se você já usou ferramentas de processamento de texto para processar dados, pe
 
 Interfaces como a do `cmd.exe` não fornecem uma forma de estender diretamente o conjunto de comandos internos. Você pode criar ferramentas de linha de comando externas que são executadas no `cmd.exe`. Mas essas ferramentas externas não têm serviços, como a integração com a Ajuda. O `cmd.exe` não sabe automaticamente que essas ferramentas externas são comandos válidos.
 
-Os comandos no PowerShell são conhecidos como _cmdlets_. Você pode usar cada cmdlet separadamente, mas o potencial deles é atingido quando você os combina para executar tarefas complexas. Como muitos shells, o PowerShell fornece acesso ao sistema de arquivos no computador. Os _provedores_ do PowerShell permitem que você acesse outros armazenamentos de dados, como o Registro e os repositórios de certificados, com tanta facilidade quanto o sistema de arquivos.
+Os comandos no PowerShell são conhecidos como _cmdlets_ . Você pode usar cada cmdlet separadamente, mas o potencial deles é atingido quando você os combina para executar tarefas complexas. Como muitos shells, o PowerShell fornece acesso ao sistema de arquivos no computador. Os _provedores_ do PowerShell permitem que você acesse outros armazenamentos de dados, como o Registro e os repositórios de certificados, com tanta facilidade quanto o sistema de arquivos.
 
 Você pode criar módulos de cmdlet e de função usando código compilado ou scripts. Os módulos podem adicionar cmdlets e provedores ao shell. O PowerShell também dá suporte a scripts que são análogos aos scripts de shell do UNIX e aos arquivos em lotes do `cmd.exe`.
 

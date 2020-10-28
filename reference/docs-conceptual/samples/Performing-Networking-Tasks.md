@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Executando tarefas de rede
-ms.openlocfilehash: e0aa3b8ef3d911ab0fe851f6621d70e1265c5bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como usar as classes WMI no PowerShell para gerenciar a configuração de rede no Windows.
+ms.openlocfilehash: 95b05c193f4168cdcdf8414399c4f8c569bff754
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737195"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500242"
 ---
 # <a name="performing-networking-tasks"></a>Executando tarefas de rede
 
@@ -38,7 +39,7 @@ fe80::60ea:29a7:a233:7cb7
 2601:600:a27f:a470::2ec1
 ```
 
-Para entender por que as chaves são exibidas, use o cmdlet `Get-Member` para examinar a propriedade **IPAddress**:
+Para entender por que as chaves são exibidas, use o cmdlet `Get-Member` para examinar a propriedade **IPAddress** :
 
 ```powershell
  Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -52,7 +53,7 @@ Name      MemberType Definition
 IPAddress Property   string[] IPAddress {get;}
 ```
 
-A propriedade IPAddress para cada adaptador de rede na verdade é uma matriz. As chaves na definição indicam que **IPAddress** não é um valor de **System.String**, mas sim uma matriz de valores **System.String**.
+A propriedade IPAddress para cada adaptador de rede na verdade é uma matriz. As chaves na definição indicam que **IPAddress** não é um valor de **System.String** , mas sim uma matriz de valores **System.String** .
 
 ## <a name="listing-ip-configuration-data"></a>Listando dados de configuração de IP
 
@@ -75,7 +76,7 @@ Esse comando retorna informações detalhadas sobre o DHCP, DNS, roteamento e ou
 
 ## <a name="pinging-computers"></a>Executando ping em computadores
 
-Você pode executar um ping simples em um computador usando **Win32_PingStatus**. O comando a seguir executa o ping, mas retorna uma saída longa:
+Você pode executar um ping simples em um computador usando **Win32_PingStatus** . O comando a seguir executa o ping, mas retorna uma saída longa:
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
@@ -125,7 +126,7 @@ $ips = 1..254 | ForEach-Object -Process {'192.168.1.' + $_}
 
 ## <a name="retrieving-network-adapter-properties"></a>Recuperando propriedades do adaptador de rede
 
-Mencionamos anteriormente que você pode recuperar propriedades de configuração geral usando a classe **Win32_NetworkAdapterConfiguration**. Embora não sejam estritamente informações TCP/IP, informações do adaptador de rede, como endereços MAC e tipos de adaptador podem ser úteis para entender o que está acontecendo com um computador. Para obter um resumo dessas informações, use o seguinte comando:
+Mencionamos anteriormente que você pode recuperar propriedades de configuração geral usando a classe **Win32_NetworkAdapterConfiguration** . Embora não sejam estritamente informações TCP/IP, informações do adaptador de rede, como endereços MAC e tipos de adaptador podem ser úteis para entender o que está acontecendo com um computador. Para obter um resumo dessas informações, use o seguinte comando:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
@@ -133,7 +134,7 @@ Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
 
 ## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>Atribuindo o domínio DNS a um adaptador de rede
 
-Para atribuir o domínio DNS à resolução de nomes automática, use o método **SetDNSDomain** de **Win32_NetworkAdapterConfiguration**. Como você atribui o domínio DNS a cada configuração de adaptador de rede de modo independente, é necessário usar uma instrução `ForEach-Object` para atribuir o domínio a cada adaptador:
+Para atribuir o domínio DNS à resolução de nomes automática, use o método **SetDNSDomain** de **Win32_NetworkAdapterConfiguration** . Como você atribui o domínio DNS a cada configuração de adaptador de rede de modo independente, é necessário usar uma instrução `ForEach-Object` para atribuir o domínio a cada adaptador:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -186,11 +187,11 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
   ForEach-Object -Process {$_.EnableDHCP()}
 ```
 
-É possível usar a instrução **Filter** `IPEnabled=$true and DHCPEnabled=$false` para evitar habilitar o DHCP nos locais em que ele já estiver habilitado, mas omitir essa etapa não causará erros.
+É possível usar a instrução **Filter**`IPEnabled=$true and DHCPEnabled=$false` para evitar habilitar o DHCP nos locais em que ele já estiver habilitado, mas omitir essa etapa não causará erros.
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>Liberar e renovar concessões de DHCP nos adaptadores específicos
 
-A classe **Win32_NetworkAdapterConfiguration** tem os métodos **ReleaseDHCPLease** e **RenewDHCPLease**. Ambos são usados da mesma maneira. Em geral, use esses métodos se você só precisar liberar ou renovar endereços para um adaptador em uma sub-rede específica. A maneira mais fácil de filtrar os adaptadores em uma sub-rede é escolher apenas as configurações de adaptador que usam o gateway para essa sub-rede. Por exemplo, o comando a seguir libera todas as concessões DHCP nos adaptadores no computador local que estão obtendo concessões de DHCP do 192.168.1.254:
+A classe **Win32_NetworkAdapterConfiguration** tem os métodos **ReleaseDHCPLease** e **RenewDHCPLease** . Ambos são usados da mesma maneira. Em geral, use esses métodos se você só precisar liberar ou renovar endereços para um adaptador em uma sub-rede específica. A maneira mais fácil de filtrar os adaptadores em uma sub-rede é escolher apenas as configurações de adaptador que usam o gateway para essa sub-rede. Por exemplo, o comando a seguir libera todas as concessões DHCP nos adaptadores no computador local que estão obtendo concessões de DHCP do 192.168.1.254:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true and DHCPEnabled=$true" |
@@ -198,7 +199,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
     ForEach-Object -Process {$_.ReleaseDHCPLease()}
 ```
 
-A única alteração para renovar uma concessão de DHCP é usar o método **RenewDHCPLease** em vez do **ReleaseDHCPLease**:
+A única alteração para renovar uma concessão de DHCP é usar o método **RenewDHCPLease** em vez do **ReleaseDHCPLease** :
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true and DHCPEnabled=$true" |
@@ -211,23 +212,23 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>Liberar e renovar concessões de DHCP em todos os adaptadores
 
-Você pode executar liberações ou renovações de endereço DHCP globais em todos os adaptadores usando os métodos **Win32_NetworkAdapterConfiguration**, **ReleaseDHCPLeaseAll** e **RenewDHCPLeaseAll**.
+Você pode executar liberações ou renovações de endereço DHCP globais em todos os adaptadores usando os métodos **Win32_NetworkAdapterConfiguration** , **ReleaseDHCPLeaseAll** e **RenewDHCPLeaseAll** .
 No entanto, o comando deve ser aplicado à classe WMI, em vez de um adaptador específico, pois liberações e renovações de concessões globais são executada na classe, não em um adaptador específico.
 
-Você pode obter uma referência a uma classe WMI, em vez de instâncias de classe, listando todas as classes WMI e selecionando somente a classe desejada por nome. Por exemplo, o comando a seguir retorna a classe **Win32_NetworkAdapterConfiguration**:
+Você pode obter uma referência a uma classe WMI, em vez de instâncias de classe, listando todas as classes WMI e selecionando somente a classe desejada por nome. Por exemplo, o comando a seguir retorna a classe **Win32_NetworkAdapterConfiguration** :
 
 ```powershell
 Get-CimInstance -List | Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfiguration'}
 ```
 
-Você pode tratar o comando inteiro como a classe e, em seguida, invocar o método **ReleaseDHCPAdapterLease**. No comando a seguir, os parênteses em torno dos elementos de pipeline `Get-CimInstance` e `Where-Object` direcionam o PowerShell para avaliá-los primeiro:
+Você pode tratar o comando inteiro como a classe e, em seguida, invocar o método **ReleaseDHCPAdapterLease** . No comando a seguir, os parênteses em torno dos elementos de pipeline `Get-CimInstance` e `Where-Object` direcionam o PowerShell para avaliá-los primeiro:
 
 ```powershell
 (Get-CimInstance -List |
   Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfiguration'}).ReleaseDHCPLeaseAll()
 ```
 
-Você pode usar o mesmo formato de comando para invocar o método **RenewDHCPLeaseAll**:
+Você pode usar o mesmo formato de comando para invocar o método **RenewDHCPLeaseAll** :
 
 ```powershell
 (Get-CimInstance -List |
@@ -236,7 +237,7 @@ Você pode usar o mesmo formato de comando para invocar o método **RenewDHCPLea
 
 ## <a name="creating-a-network-share"></a>Criando um compartilhamento de rede
 
-Para criar um compartilhamento de rede, use o método **Create** de **Win32_Share**:
+Para criar um compartilhamento de rede, use o método **Create** de **Win32_Share** :
 
 ```powershell
 (Get-CimInstance -List |
@@ -253,7 +254,7 @@ net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 
 ## <a name="removing-a-network-share"></a>Removendo um compartilhamento de rede
 
-É possível remover um compartilhamento de rede com o **Win32_Share**, mas o processo é ligeiramente diferente da criação de um compartilhamento, pois você precisa recuperar o compartilhamento específico a ser removido em vez da classe **Win32_Share**. A instrução a seguir exclui o compartilhamento **TempShare**:
+É possível remover um compartilhamento de rede com o **Win32_Share** , mas o processo é ligeiramente diferente da criação de um compartilhamento, pois você precisa recuperar o compartilhamento específico a ser removido em vez da classe **Win32_Share** . A instrução a seguir exclui o compartilhamento **TempShare** :
 
 ```powershell
 (Get-CimInstance -Class Win32_Share -Filter "Name='TempShare'").Delete()
@@ -271,7 +272,7 @@ tempshare was deleted successfully.
 
 ## <a name="connecting-a-windows-accessible-network-drive"></a>Conectando-se a uma unidade de rede acessível do Windows
 
-Os cmdlets `New-PSDrive` criam uma unidade do PowerShell, mas as unidades criadas dessa forma estão disponíveis somente para o PowerShell. Para criar uma nova unidade em rede, você pode usar o objeto COM **WScript.Network**. O comando a seguir mapeia o compartilhamento `\\FPS01\users` para a unidade `B:` local,
+Os cmdlets `New-PSDrive` criam uma unidade do PowerShell, mas as unidades criadas dessa forma estão disponíveis somente para o PowerShell. Para criar uma nova unidade em rede, você pode usar o objeto COM **WScript.Network** . O comando a seguir mapeia o compartilhamento `\\FPS01\users` para a unidade `B:` local,
 
 ```powershell
 (New-Object -ComObject WScript.Network).MapNetworkDrive('B:', '\\FPS01\users')

@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Usando classes e métodos estáticos
-ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo explica como identificar e usar as propriedades e métodos de classes estáticas do .NET.
+ms.openlocfilehash: 2e83fe442f7b3fdf62ceaab587450251ac4e7958
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030741"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501245"
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 
-Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:
+Nem todas as classes do .NET Framework podem ser criadas usando **New-Object** . Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object** , as mensagens de erro a seguir poderão ser exibidas:
 
 ```
 PS> New-Object System.Environment
@@ -46,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> Conforme mencionado anteriormente, o Windows PowerShell adiciona “**System.** ” automaticamente no início de nomes de tipo quando você usa **New-Object**. A mesma coisa acontece ao usar um nome de tipo entre colchetes, por isso você pode especificar **\[System.Environment]** como **\[Environment]** .
+> Conforme mencionado anteriormente, o Windows PowerShell adiciona “ **System.** ” automaticamente no início de nomes de tipo quando você usa **New-Object** . A mesma coisa acontece ao usar um nome de tipo entre colchetes, por isso você pode especificar **\[System.Environment]** como **\[Environment]** .
 
 A classe **System. Environment** classe contém informações gerais sobre o ambiente de trabalho para o processo atual, que é powershell.exe ao trabalhar no Windows PowerShell.
 
-Se você tentar exibir detalhes dessa classe digitando **\[System.Environment] | Get-Member**, o tipo de objeto será relatado como **System.RuntimeType**, não **System.Environment**:
+Se você tentar exibir detalhes dessa classe digitando **\[System.Environment] | Get-Member** , o tipo de objeto será relatado como **System.RuntimeType** , não **System.Environment** :
 
 ```
 PS> [System.Environment] | Get-Member
@@ -58,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-Para exibir membros estáticos com Get-Member, especifique o parâmetro **Static**:
+Para exibir membros estáticos com Get-Member, especifique o parâmetro **Static** :
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -110,7 +111,7 @@ PS> [System.Environment]::OSVersion
             Win32NT Service Pack 2      5.1.2600.131072     Microsoft Windows...
 ```
 
-Podemos verificar se o computador está no processo de desligamento exibindo a propriedade **HasShutdownStarted**:
+Podemos verificar se o computador está no processo de desligamento exibindo a propriedade **HasShutdownStarted** :
 
 ```
 PS> [System.Environment]::HasShutdownStarted
@@ -119,12 +120,12 @@ False
 
 ## <a name="doing-math-with-systemmath"></a>Fazendo cálculos com o System.Math
 
-A classe estática System.Math é útil para executar algumas operações matemáticas. Os membros importantes do **System.Math** são em sua maioria métodos, que podemos exibir usando **Get-Member**.
+A classe estática System.Math é útil para executar algumas operações matemáticas. Os membros importantes do **System.Math** são em sua maioria métodos, que podemos exibir usando **Get-Member** .
 
 > [!NOTE]
 > O System.Math tem vários métodos com o mesmo nome, mas eles são diferenciados pelo tipo dos seus parâmetros.
 
-Digite o comando a seguir para listar os métodos da classe **System.Math**.
+Digite o comando a seguir para listar os métodos da classe **System.Math** .
 
 ```
 PS> [System.Math] | Get-Member -Static -MemberType Methods

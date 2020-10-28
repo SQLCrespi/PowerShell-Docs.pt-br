@@ -2,12 +2,13 @@
 ms.date: 07/29/2020
 keywords: powershell, cmdlet
 title: Como usar a documentação do PowerShell
-ms.openlocfilehash: 1cfeb9eea564e7618062e1b8ada4948bd9e22969
-ms.sourcegitcommit: 9f9eb95bc859e9e0fed48101327a602b2ced351d
+description: Este artigo explica como usar os recursos deste site, incluindo filtragem de pesquisa e seleção de versão.
+ms.openlocfilehash: 32f0c613e10329cc4830386b744e766eeeab0187
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821522"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501109"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Como usar a documentação do PowerShell
 

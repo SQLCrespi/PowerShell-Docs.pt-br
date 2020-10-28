@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Alterando o estado do computador
-ms.openlocfilehash: 9278df55ba027134a61c8ed4e89b5b839d460b29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este exemplo mostra como você pode usar comandos externos do PowerShell para gerenciar a configuração de um computador.
+ms.openlocfilehash: 341f29f24d7e4bd341ccc0954b16d4b75880678b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736906"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500667"
 ---
 # <a name="changing-computer-state"></a>Alterando o estado do computador
 
@@ -16,17 +17,17 @@ Embora você esteja usando o PowerShell somente para executar a ferramenta, apre
 
 ## <a name="locking-a-computer"></a>Bloquear um computador
 
-A única maneira de bloquear um computador diretamente com as ferramentas padrão disponíveis é chamar a função **LockWorkstation ()** em **user32.dll**:
+A única maneira de bloquear um computador diretamente com as ferramentas padrão disponíveis é chamar a função **LockWorkstation ()** em **user32.dll** :
 
 ```powershell
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-Esse comando bloqueia imediatamente a estação de trabalho. Ele usa o **rundll32.exe**, que executa DLLs Windows (e salva suas bibliotecas para uso repetido) para executar `user32.dll`, uma biblioteca de funções de gerenciamento do Windows.
+Esse comando bloqueia imediatamente a estação de trabalho. Ele usa o **rundll32.exe** , que executa DLLs Windows (e salva suas bibliotecas para uso repetido) para executar `user32.dll`, uma biblioteca de funções de gerenciamento do Windows.
 
 Quando você bloqueia uma estação de trabalho enquanto a Troca Rápida de Usuário estiver habilitada, como no Windows XP, o computador exibe a tela de logon do usuário em vez de iniciar a proteção de tela do usuário atual.
 
-Para encerrar uma sessão específica em um Servidor de Terminal, use a ferramenta de linha de comando **tsshutdn.exe**.
+Para encerrar uma sessão específica em um Servidor de Terminal, use a ferramenta de linha de comando **tsshutdn.exe** .
 
 ## <a name="logging-off-the-current-session"></a>Sair da sessão atual
 
@@ -38,10 +39,10 @@ Você também pode usar a ferramenta **shutdown.exe** com a opção de fazer log
 shutdown.exe -l
 ```
 
-Outra opção é usar o WMI. A classe **Win32_OperatingSystem** tem um método **Shutdown**.
+Outra opção é usar o WMI. A classe **Win32_OperatingSystem** tem um método **Shutdown** .
 Chamar o método com o sinalizador 0 inicia o logoff:
 
-Para saber mais sobre o método **Shutdown**, confira [Método Shutdown da Classe Win32_OperatingSystem](/windows/win32/cimwin32prov/shutdown-method-in-class-win32-operatingsystem)
+Para saber mais sobre o método **Shutdown** , confira [Método Shutdown da Classe Win32_OperatingSystem](/windows/win32/cimwin32prov/shutdown-method-in-class-win32-operatingsystem)
 
 ```powershell
 Get-CimInstance -Classname Win32_OperatingSystem | Invoke-CimMethod -MethodName Shutdown

@@ -2,18 +2,19 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Exibindo a estrutura do objeto Get Member
-ms.openlocfilehash: 80b36abd303a708195f12d96511e616178d11b5a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Get-Member é uma ferramenta poderosa que permite ver o tipo e a estrutura de objetos no PowerShell.
+ms.openlocfilehash: 3c294fe47294e2cf8daf125aac55661dd38cf9bb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030709"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501211"
 ---
 # <a name="viewing-object-structure-get-member"></a>Exibindo a estrutura do objeto (Get-Member)
 
-Como objetos representam um papel central no Windows PowerShell, há vários comandos nativos projetados para trabalhar com tipos de objetos arbitrários. O mais importante é o comando **Get-Member**.
+Como objetos representam um papel central no Windows PowerShell, há vários comandos nativos projetados para trabalhar com tipos de objetos arbitrários. O mais importante é o comando **Get-Member** .
 
-A técnica mais simples para analisar os objetos que um comando retorna é direcionar a saída desse comando para o cmdlet **Get-Member**. O cmdlet **Get-Member** mostra o nome formal do tipo de objeto e uma lista completa de seus membros. O número de elementos que são retornados, às vezes, pode ser imenso. Por exemplo, um objeto de processo pode ter mais de 100 membros.
+A técnica mais simples para analisar os objetos que um comando retorna é direcionar a saída desse comando para o cmdlet **Get-Member** . O cmdlet **Get-Member** mostra o nome formal do tipo de objeto e uma lista completa de seus membros. O número de elementos que são retornados, às vezes, pode ser imenso. Por exemplo, um objeto de processo pode ter mais de 100 membros.
 
 Para ver todos os membros de um objeto e Process e paginar a saída para que você possa exibir tudo, digite:
 
@@ -23,7 +24,7 @@ Get-Process | Get-Member | Out-Host -Paging
 
 A saída deste comando será parecida com isto:
 
-```output
+```Output
 TypeName: System.Diagnostics.Process
 
 Name                           MemberType     Definition
@@ -38,7 +39,7 @@ add_Disposed                   Method         System.Void add_Disposed(Event...
 ...
 ```
 
-Podemos tornar essa longa lista de informações mais utilizável com filtragem dos elementos que você deseja ver. O comando **Get-Member** permite listar somente os membros que são propriedades. Há várias formas de propriedades. O cmdlet exibirá as propriedades de qualquer tipo se definirmos o **Get-Member MemberType** parâmetro para o valor **Properties**. A lista resultante ainda é muito longa, mas um pouco mais fácil de gerenciar:
+Podemos tornar essa longa lista de informações mais utilizável com filtragem dos elementos que você deseja ver. O comando **Get-Member** permite listar somente os membros que são propriedades. Há várias formas de propriedades. O cmdlet exibirá as propriedades de qualquer tipo se definirmos o **Get-Member MemberType** parâmetro para o valor **Properties** . A lista resultante ainda é muito longa, mas um pouco mais fácil de gerenciar:
 
 ```
 PS> Get-Process | Get-Member -MemberType Properties

@@ -2,12 +2,13 @@
 ms.date: 08/09/2018
 keywords: instalação, windows, linux, macOS, ARM, raspbian
 title: Instalar o PowerShell
-ms.openlocfilehash: fd62d33945e0253b43b80f294964d5e9b8ba03a0
-ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
+description: Onde encontrar instruções para instalar o PowerShell para cada uma das plataformas com suporte.
+ms.openlocfilehash: c9e3eefb2c4af14525d3106ef1a403a886b75a2f
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840997"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501585"
 ---
 # <a name="installing-various-versions-of-powershell"></a>Instalar várias versões do PowerShell
 

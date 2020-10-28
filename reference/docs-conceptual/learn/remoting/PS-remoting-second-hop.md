@@ -2,21 +2,22 @@
 ms.date: 05/14/2020
 keywords: powershell, cmdlet
 title: Dando o segundo salto na Comunicação Remota do PowerShell
-ms.openlocfilehash: 3a9db11726d4c02dc69e52c45da304f7422def39
-ms.sourcegitcommit: 843756c8277e7afb874867703963248abc8a6c91
+description: Este artigo explica os vários métodos para configurar a autenticação de segundo salto para comunicação remota do PowerShell, incluindo as implicações e as recomendações de segurança.
+ms.openlocfilehash: 905b27b4e6c612249c945a741bbe0d2ba9ae28aa
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83439369"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501364"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Dando o segundo salto na Comunicação Remota do PowerShell
 
 O "problema do segundo salto" refere-se a uma situação semelhante ao seguinte:
 
-1. Você está conectado no _ServerA_.
-2. No _ServerA_, você inicia uma sessão remota do PowerShell para se conectar ao _ServerB_.
-3. Um comando executado no _ServerB_ por meio de sua sessão de Conexão Remota do PowerShell tenta acessar um recurso no _ServerC_.
-4. O acesso ao recurso no _ServerC_ é negado, pois as credenciais usadas para criar a sessão de Comunicação Remota do PowerShell não foram passadas do _ServerB_ para o _ServerC_.
+1. Você está conectado no _ServerA_ .
+2. No _ServerA_ , você inicia uma sessão remota do PowerShell para se conectar ao _ServerB_ .
+3. Um comando executado no _ServerB_ por meio de sua sessão de Conexão Remota do PowerShell tenta acessar um recurso no _ServerC_ .
+4. O acesso ao recurso no _ServerC_ é negado, pois as credenciais usadas para criar a sessão de Comunicação Remota do PowerShell não foram passadas do _ServerB_ para o _ServerC_ .
 
 Há várias maneiras de resolver esse problema. A tabela a seguir lista os métodos por ordem de preferência.
 
@@ -33,7 +34,7 @@ Há várias maneiras de resolver esse problema. A tabela a seguir lista os méto
 ## <a name="credssp"></a>CredSSP
 
 Você pode usar o [CredSSP (Credential Security Support Provider)][credssp] para autenticação.
-O CredSSP armazena em cache as credenciais no servidor remoto (_ServerB_), portanto, usá-lo abre para ataques de roubo de credenciais. Se o computador remoto estiver comprometido, o invasor terá acesso às credenciais do usuário. O CredSSP é desabilitado por padrão nos computadores cliente e servidor. Você só deve habilitar o CredSSP nos ambientes mais confiáveis. Por exemplo, um administrador de domínio que se conecta a um controlador de domínio porque o controlador de domínio é altamente confiável.
+O CredSSP armazena em cache as credenciais no servidor remoto ( _ServerB_ ), portanto, usá-lo abre para ataques de roubo de credenciais. Se o computador remoto estiver comprometido, o invasor terá acesso às credenciais do usuário. O CredSSP é desabilitado por padrão nos computadores cliente e servidor. Você só deve habilitar o CredSSP nos ambientes mais confiáveis. Por exemplo, um administrador de domínio que se conecta a um controlador de domínio porque o controlador de domínio é altamente confiável.
 
 Para saber mais sobre questões de segurança ao usar o CredSSP para comunicação remota do PowerShell, confira [Sabotagem acidental: cuidado com o CredSSP][beware].
 
@@ -64,7 +65,7 @@ Você pode usar a delegação restrita herdada (não baseada em recursos) para r
 
 - Não oferece suporte ao segundo salto para o WinRM.
 - Requer acesso de administrador de domínio para configuração.
-- Deve ser configurada no objeto do Active Directory do servidor remoto (_ServerB_).
+- Deve ser configurada no objeto do Active Directory do servidor remoto ( _ServerB_ ).
 - Limitado a um domínio. Não pode cruzar domínios ou florestas.
 - Requer direitos para atualizar objetos e SPNs (Nomes de Entidade de Serviço).
 - O _ServerB_ pode adquirir um tíquete Kerberos para o _ServerC_ em nome do usuário sem que este intervenha.
@@ -94,7 +95,7 @@ A utilização da delegação restrita de Kerberos baseada em recursos (introduz
 
 ### <a name="example"></a>Exemplo
 
-Vejamos um exemplo do PowerShell que configura a delegação restrita baseada em recursos no _ServerC_ para permitir credenciais delegadas de um _ServerB_. Este exemplo pressupõe que todos os servidores estão executando o Windows Server 2012 ou posterior, e que há pelo menos um controlador de domínio do Windows Server 2012 em cada domínio aos quais os servidores pertencem.
+Vejamos um exemplo do PowerShell que configura a delegação restrita baseada em recursos no _ServerC_ para permitir credenciais delegadas de um _ServerB_ . Este exemplo pressupõe que todos os servidores estão executando o Windows Server 2012 ou posterior, e que há pelo menos um controlador de domínio do Windows Server 2012 em cada domínio aos quais os servidores pertencem.
 
 Antes de configurar a delegação restrita, você deve adicionar o recurso `RSAT-AD-PowerShell` para instalar o módulo Active Directory PowerShell e, em seguida, importar esse módulo na sua sessão:
 
@@ -104,7 +105,7 @@ Import-Module ActiveDirectory
 Get-Command -ParameterName PrincipalsAllowedToDelegateToAccount
 ```
 
-Vários cmdlets disponíveis agora têm um parâmetro **PrincipalsAllowedToDelegateToAccount**:
+Vários cmdlets disponíveis agora têm um parâmetro **PrincipalsAllowedToDelegateToAccount** :
 
 ```Output
 CommandType Name                 ModuleName
@@ -117,7 +118,7 @@ Cmdlet      Set-ADServiceAccount ActiveDirectory
 Cmdlet      Set-ADUser           ActiveDirectory
 ```
 
-O parâmetro **PrincipalsAllowedToDelegateToAccount** define o atributo do objeto do Active Directory **msDS-AllowedToActOnBehalfOfOtherIdentity**, que contém uma ACL (lista de controle de acesso) que especifica quais contas têm permissão para delegar credenciais à conta associada (em nosso exemplo, será a conta da máquina do _ServerA_).
+O parâmetro **PrincipalsAllowedToDelegateToAccount** define o atributo do objeto do Active Directory **msDS-AllowedToActOnBehalfOfOtherIdentity** , que contém uma ACL (lista de controle de acesso) que especifica quais contas têm permissão para delegar credenciais à conta associada (em nosso exemplo, será a conta da máquina do _ServerA_ ).
 
 Agora vamos configurar as variáveis que usaremos para representar os servidores:
 
@@ -140,7 +141,7 @@ StartName
 NT AUTHORITY\NetworkService
 ```
 
-Para que o _ServerC_ permita a delegação de uma sessão de comunicação remota do PowerShell no _ServerB_, é necessário definir o parâmetro **PrincipalsAllowedToDelegateToAccount** no _ServerC_ como o objeto de computador do _ServerB_:
+Para que o _ServerC_ permita a delegação de uma sessão de comunicação remota do PowerShell no _ServerB_ , é necessário definir o parâmetro **PrincipalsAllowedToDelegateToAccount** no _ServerC_ como o objeto de computador do _ServerB_ :
 
 ```powershell
 # Grant resource-based Kerberos constrained delegation
@@ -154,7 +155,7 @@ $x.'msDS-AllowedToActOnBehalfOfOtherIdentity'.Access
 Get-ADComputer -Identity $ServerC -Properties PrincipalsAllowedToDelegateToAccount
 ```
 
-O [KDC (Centro de distribuição de chaves)](/windows/win32/secauthn/key-distribution-center) Kerberos armazena em cache as tentativas de acesso negado (cache negativo) por 15 minutos. Se _ServerB_ tentou acessar anteriormente o _ServerC_, será necessário limpar o cache no _ServerB_ invocando o seguinte comando:
+O [KDC (Centro de distribuição de chaves)](/windows/win32/secauthn/key-distribution-center) Kerberos armazena em cache as tentativas de acesso negado (cache negativo) por 15 minutos. Se _ServerB_ tentou acessar anteriormente o _ServerC_ , será necessário limpar o cache no _ServerB_ invocando o seguinte comando:
 
 ```powershell
 Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
@@ -164,7 +165,7 @@ Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
 
 Você também pode reiniciar o computador ou aguardar pelo menos 15 minutos para limpar o cache.
 
-Depois de limpar o cache, é possível executar com êxito o código do _ServerA_ por meio do _ServerB_ no _ServerC_:
+Depois de limpar o cache, é possível executar com êxito o código do _ServerA_ por meio do _ServerB_ no _ServerC_ :
 
 ```powershell
 # Capture a credential
@@ -178,10 +179,10 @@ Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
 }
 ```
 
-Neste exemplo, a variável `$using` é usada para tornar a variável `$ServerC` visível ao _ServerB_.
+Neste exemplo, a variável `$using` é usada para tornar a variável `$ServerC` visível ao _ServerB_ .
 Para obter mais informações sobre a variável `$using`, consulte [about_Remote_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Remote_Variables).
 
-Para permitir que vários servidores deleguem credenciais ao _ServerC_, defina o valor do parâmetro **PrincipalsAllowedToDelegateToAccount** no _ServerC_ em uma matriz:
+Para permitir que vários servidores deleguem credenciais ao _ServerC_ , defina o valor do parâmetro **PrincipalsAllowedToDelegateToAccount** no _ServerC_ em uma matriz:
 
 ```powershell
 # Set up variables for each server
@@ -240,11 +241,11 @@ Para obter informações sobre o JEA, consulte [Just Enough Administration](/pow
 **Contras**
 
 - Requer o WMF 5.0 ou posterior.
-- Requer a configuração em cada servidor intermediário (_ServerB_).
+- Requer a configuração em cada servidor intermediário ( _ServerB_ ).
 
 ## <a name="pssessionconfiguration-using-runas"></a>PSSessionConfiguration usando RunAs
 
-Você pode criar uma configuração de sessão no _ServerB_ e definir o parâmetro **RunAsCredential**.
+Você pode criar uma configuração de sessão no _ServerB_ e definir o parâmetro **RunAsCredential** .
 
 Para obter mais informações sobre como usar **PSSessionConfiguration** e **RunAs** para solucionar o problema do segundo salto, confira [Outra solução para a comunicação remota do PowerShell com vários saltos][pssessionconfig].
 
@@ -254,7 +255,7 @@ Para obter mais informações sobre como usar **PSSessionConfiguration** e **Run
 
 **Contras**
 
-- Requer a configuração de **PSSessionConfiguration** e de **RunAs** em cada servidor intermediário (_ServerB_).
+- Requer a configuração de **PSSessionConfiguration** e de **RunAs** em cada servidor intermediário ( _ServerB_ ).
 - Requer manutenção de senha ao usar uma conta **RunAs** de domínio
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Passar credenciais dentro de um bloco de script Invoke-Command
@@ -273,7 +274,7 @@ Para obter mais informações sobre como usar **PSSessionConfiguration** e **Run
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como passar credenciais em um bloco de script **Invoke-Command**:
+O exemplo a seguir mostra como passar credenciais em um bloco de script **Invoke-Command** :
 
 ```powershell
 # This works without delegation, passing fresh creds

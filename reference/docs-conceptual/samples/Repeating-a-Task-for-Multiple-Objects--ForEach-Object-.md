@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell, cmdlet
 title: Repetir uma tarefa para vários objetos ForEach Object
-ms.openlocfilehash: bf89070fd9b006fa9b0b262ab63ffadd81072ecc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O ForEach-Object permite que você repita um conjunto de comandos para cada objeto passado pelo pipeline.
+ms.openlocfilehash: 7353be833dc8bf77dd18b7fc45bdd97e092ff6ef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736872"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499942"
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Repetir uma tarefa para vários objetos (ForEach-Object)
 
@@ -36,7 +37,7 @@ Get-CimInstance -Class Win32_LogicalDisk |
 48318.01171875
 ```
 
-Infelizmente, a saída agora é de dados sem nenhum rótulo associado. Como propriedades WMI como essa são somente leitura, não é possível converter diretamente o **FreeSpace**. Se você digitar:
+Infelizmente, a saída agora é de dados sem nenhum rótulo associado. Como propriedades WMI como essa são somente leitura, não é possível converter diretamente o **FreeSpace** . Se você digitar:
 
 ```powershell
 Get-CimInstance -Class Win32_LogicalDisk |

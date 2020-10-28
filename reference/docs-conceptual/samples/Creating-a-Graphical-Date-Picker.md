@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Criando um seletor de data gráfico
-ms.openlocfilehash: b748e301b24ed643488079b547e2da1a5a7a6551
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como criar um controle no estilo calendário personalizado usando os recursos de criação de formulário do .NET Framework no Windows PowerShell.
+ms.openlocfilehash: b73c9ba78817af7c38c20642402752765a7a3674
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706115"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500497"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Criando um seletor de data gráfico
 
@@ -60,7 +61,7 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 }
 ```
 
-O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**. Inicie uma nova instância da classe do .NET Framework **Windows.Forms.Form**, que fornece um formulário em branco ou ao qual você pode começar a adicionar controles de janela.
+O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms** . Inicie uma nova instância da classe do .NET Framework **Windows.Forms.Form** , que fornece um formulário em branco ou ao qual você pode começar a adicionar controles de janela.
 
 ```powershell
 $form = New-Object Windows.Forms.Form -Property @{
@@ -73,14 +74,14 @@ $form = New-Object Windows.Forms.Form -Property @{
 
 Este exemplo atribui valores a quatro propriedades dessa classe usando a propriedade **Property** e tabela de hash.
 
-1. **StartPosition**: Se você não adicionar essa propriedade, o Windows seleciona um local quando o formulário aberto. Definindo essa propriedade como **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
+1. **StartPosition** : Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar essa propriedade como **CenterScreen** , você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
 
-2. **Size**: Esse é o tamanho do formulário, em pixels.
-   O script anterior cria um formulário que possui 243 pixels de largura por 230 pixels de altura.
+2. **Size** : Esse é o tamanho do formulário, em pixels.
+   O script anterior cria um formulário de 243 pixels de largura por 230 pixels de altura.
 
-3. **Text**: Isso se torna o título da janela.
+3. **Text** : Isso se torna o título da janela.
 
-4. **Topmost**: Definindo essa propriedade como `$true`, você poderá forçar a janela a abrir por cima de outras janelas e caixas de diálogo abertas.
+4. **Topmost** : Definindo essa propriedade como `$true`, você poderá forçar a janela a abrir por cima de outras janelas e caixas de diálogo abertas.
 
 Em seguida, crie e adicione um controle de calendário ao seu formulário.
 Neste exemplo, o dia atual não é realçado ou circulado.
@@ -94,7 +95,7 @@ $calendar = New-Object Windows.Forms.MonthCalendar -Property @{
 $form.Controls.Add($calendar)
 ```
 
-Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK**. Neste exemplo, a posição do botão é de 165 pixels a partir da borda superior do formulário e 38 pixels a partir da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
+Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK** . Neste exemplo, a posição do botão é de 165 pixels da borda superior do formulário e 38 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
 
 ```powershell
 $okButton = New-Object Windows.Forms.Button -Property @{
@@ -127,7 +128,7 @@ Adicione a seguinte linha de código para exibir o formulário do Windows.
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código dentro do bloco `if` instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam um dia no calendário e clicam no botão **OK** ou pressionam a tecla **Enter**. O Windows PowerShell exibe as datas selecionadas para os usuários.
+Por fim, o código dentro do bloco `if` instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam um dia no calendário e clicam no botão **OK** ou pressionam a tecla **Enter** . O Windows PowerShell exibe as datas selecionadas para os usuários.
 
 ```powershell
 if ($result -eq [Windows.Forms.DialogResult]::OK) {
@@ -138,5 +139,5 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 
 ## <a name="see-also"></a>Consulte Também
 
-- [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana para o Windows PowerShell:  criar um seletor de data gráfico](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))
+- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Dica da Semana do Windows PowerShell: criar um seletor de data gráfico](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))

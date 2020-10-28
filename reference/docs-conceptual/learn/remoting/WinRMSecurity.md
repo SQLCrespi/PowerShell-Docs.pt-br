@@ -1,15 +1,16 @@
 ---
 ms.date: 06/11/2020
 keywords: powershell, cmdlet
-title: WinRMSecurity
-ms.openlocfilehash: ee7e5f2c9c9a863e29c9278c40703a05c1943246
-ms.sourcegitcommit: fd223afa50092839c74d8d5fbba791869665455f
+title: Considerações de segurança para comunicação remota do PowerShell usando WinRM
+description: Este documento aborda questões, recomendações e práticas recomendadas de segurança ao usar a comunicação remota do PowerShell.
+ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353831"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501466"
 ---
-# <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell
+# <a name="security-considerations-for-powershell-remoting-using-winrm"></a>Considerações de segurança para comunicação remota do PowerShell usando WinRM
 
 Comunicação remota do PowerShell é a maneira recomendada de gerenciar sistemas Windows. A comunicação remota do PowerShell é habilitada por padrão no Windows Server 2012 R2. Este documento aborda questões, recomendações e práticas recomendadas de segurança ao usar a comunicação remota do PowerShell.
 
