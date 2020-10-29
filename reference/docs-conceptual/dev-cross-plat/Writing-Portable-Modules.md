@@ -1,26 +1,26 @@
 ---
-ms.date: 01/10/2020
+ms.date: 10/21/2020
 keywords: powershell, cmdlet
 title: Gravação de módulos portáteis
-ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: Este artigo explica como criar ou atualizar módulos para que eles funcionem entre as plataformas compatíveis com o PowerShell.
+ms.openlocfilehash: 6d5c36263c3c6d1219f963cea2e94ae92b07e863
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158115"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500786"
 ---
 # <a name="portable-modules"></a>Módulos portáteis
 
 O Windows PowerShell é escrito para [.NET Framework][] enquanto o PowerShell Core é escrito para [.NET Core][]. Os módulos portáteis são módulos que funcionam no Windows PowerShell e no PowerShell Core. Embora o .NET Framework e .NET Core sejam altamente compatíveis, há diferenças entre os dois nas APIs disponíveis. Também há diferenças nas APIs disponíveis no Windows PowerShell e PowerShell Core. Os módulos destinados ao uso em ambos os ambientes precisam levar essas diferenças em consideração.
 
-## <a name="porting-an-existing-module"></a>Fazendo a portabilidade de um módulo existente
+## <a name="porting-an-existing-module"></a>Como realizar a portabilidade de um módulo
 
 ### <a name="porting-a-pssnapin"></a>Fazendo a portabilidade de um PSSnapIn
 
-Os PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) não são aceitos no PowerShell Core. No entanto, é comum converter um PSSnapIn em um módulo do PowerShell. Normalmente, o código de registro do PSSnapIn está em um único arquivo de origem de uma classe que deriva de [PSSnapIn][].
-Remova esse arquivo de origem do build; ele não é mais necessário.
+Os PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) não são aceitos no PowerShell Core. No entanto, é comum converter um PSSnapIn em um módulo do PowerShell. Normalmente, o código de registro do PSSnapIn está em um único arquivo de origem de uma classe que deriva de [PSSnapIn][]. Remova esse arquivo de origem do build; ele não é mais necessário.
 
-Use [New-ModuleManifest][] para criar um novo manifesto de módulo que substitui a necessidade do código de registro do PSSnapIn. Alguns dos valores do **PSSnapIn** (como **Descrição**) podem ser reutilizados no manifesto do módulo.
+Use [New-ModuleManifest][] para criar um novo manifesto de módulo que substitui a necessidade do código de registro do PSSnapIn. Alguns dos valores do **PSSnapIn** (como **Descrição** ) podem ser reutilizados no manifesto do módulo.
 
 A propriedade **RootModule** no manifesto do módulo deve ser definida como o nome do assembly (dll) que implementa os cmdlets.
 
@@ -28,11 +28,11 @@ A propriedade **RootModule** no manifesto do módulo deve ser definida como o no
 
 Para fazer a portabilidade de módulos escritos para o Windows PowerShell de modo que funcionem com o PowerShell Core, comece com o [.NET Portability Analyzer][]. Execute essa ferramenta em seu assembly compilado para determinar se as APIs do .NET usadas no módulo são compatíveis com o .NET Framework, o .NET Core e outros runtimes do .NET. A ferramenta sugere APIs alternativas, se houver. Caso contrário, talvez você precise adicionar [verificações de runtime][] e restringir recursos não disponíveis em runtimes específicos.
 
-## <a name="creating-a-new-module"></a>Criando um novo módulo
+## <a name="creating-a-new-module"></a>Como criar um módulo
 
 Se estiver criando um novo módulo, a recomendação é usar a [CLI do .NET][].
 
-### <a name="installing-the-powershell-standard-module-template"></a>Instalando o modelo de módulo padrão do PowerShell
+### <a name="installing-the-powershell-standard-module-template"></a>Como instalar o modelo de módulo padrão do PowerShell
 
 Depois que a CLI do .NET for instalada, instale uma biblioteca de modelos para gerar um módulo simples do PowerShell.
 O módulo será compatível com Windows PowerShell, PowerShell Core, Windows, Linux e macOS.
@@ -65,15 +65,15 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
 
 
-Templates                                         Short Name         Language          Tags
-----------------------------------------------------------------------------------------------------------------------------
-Console Application                               console            [C#], F#, VB      Common/Console
-Class library                                     classlib           [C#], F#, VB      Common/Library
-PowerShell Standard Module                        psmodule           [C#]              Library/PowerShell/Module
+Templates                        Short Name         Language          Tags
+-----------------------------------------------------------------------------------------------
+Console Application              console            [C#], F#, VB      Common/Console
+Class library                    classlib           [C#], F#, VB      Common/Library
+PowerShell Standard Module       psmodule           [C#]              Library/PowerShell/Module
 ...
 ```
 
-### <a name="creating-a-new-module-project"></a>Criando um novo projeto de módulo
+### <a name="creating-a-new-module-project"></a>Como criar um projeto de módulo
 
 Depois que o modelo for instalado, é possível criar um novo projeto de módulo do PowerShell usando esse modelo. Neste exemplo, o módulo de exemplo é chamado de 'myModule'.
 
@@ -102,7 +102,7 @@ Running 'dotnet restore' on C:\Users\Steve\myModule\myModule.csproj...
 Restore succeeded.
 ```
 
-### <a name="building-the-module"></a>Criando o módulo
+### <a name="building-the-module"></a>Como compilar o módulo
 
 Use comandos padrão da CLI do .NET para criar o projeto.
 
@@ -125,7 +125,7 @@ Build succeeded.
 Time Elapsed 00:00:05.40
 ```
 
-### <a name="testing-the-module"></a>Testando o módulo
+### <a name="testing-the-module"></a>Como testar o módulo
 
 Depois de criar o módulo, é possível importá-lo e executar o cmdlet de exemplo.
 
@@ -156,9 +156,15 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
+### <a name="debugging-the-module"></a>Como depurar o módulo
+
+Para um guia sobre como configurar o Visual Studio Code para depurar o módulo, confira [Usando o Visual Studio Code para depurar cmdlets compilados][].
+
+## <a name="supporting-technologies"></a>Tecnologias de suporte
+
 As seções a seguir descrevem algumas das tecnologias usadas por esse modelo em detalhes.
 
-## <a name="net-standard-library"></a>Biblioteca .NET Standard
+### <a name="net-standard-library"></a>Biblioteca .NET Standard
 
 [.NET Standard][] é uma especificação formal de APIs do .NET que estão disponíveis em todas as implementações do .NET. O código gerenciado que se destina ao .NET Standard funciona com as versões do .NET Framework e .NET Core compatíveis com essa versão do .NET Standard.
 
@@ -170,7 +176,7 @@ O direcionamento do .NET Standard ajuda a garantir que, à medida que o módulo 
 
 No entanto, não é obrigatório direcionar o .NET Standard para que um módulo funcione com o Windows PowerShell e o PowerShell Core, desde que você use APIs compatíveis. A Linguagem Intermediária (IL) é compatível entre os dois runtimes. Você pode visar o .NET Framework 4.6.1, que é compatível com o .NET Standard 2.0. Se você não usar APIs fora do .NET Standard 2.0, seu módulo funcionará com o PowerShell Core 6 sem recompilação.
 
-## <a name="powershell-standard-library"></a>Biblioteca Padrão do PowerShell
+### <a name="powershell-standard-library"></a>Biblioteca Padrão do PowerShell
 
 A biblioteca [Padrão do PowerShell][] é uma especificação formal das APIs do PowerShell disponíveis em todas as versões superiores ou iguais à versão desse padrão.
 
@@ -179,9 +185,9 @@ Por exemplo, o [Padrão 5.1 do PowerShell][] é compatível com o Windows PowerS
 É recomendável compilar seu módulo usando a Biblioteca Padrão do PowerShell. A biblioteca garante que as APIs estejam disponíveis e sejam implementadas no Windows PowerShell e no PowerShell Core 6.
 O Padrão do PowerShell destina-se a sempre ser compatível com versões posteriores. Um módulo compilado com a Biblioteca Padrão 5.1 do PowerShell sempre será compatível com versões futuras do PowerShell.
 
-## <a name="module-manifest"></a>Manifesto de módulo
+### <a name="module-manifest"></a>Manifesto de módulo
 
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Indicando compatibilidade com o Windows PowerShell e o PowerShell Core
+#### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Indicando compatibilidade com o Windows PowerShell e o PowerShell Core
 
 Depois de confirmar que o módulo funciona com o Windows PowerShell e o PowerShell Core, o manifesto do módulo deve indicar explicitamente a compatibilidade usando a propriedade [CompatiblePSEditions][]. Um valor `Desktop` significa que o módulo é compatível com o Windows PowerShell, enquanto um valor `Core` significa compatibilidade com o PowerShell Core. Incluir `Desktop` e `Core` significa que o módulo é compatível com o Windows PowerShell e o PowerShell Core.
 
@@ -195,7 +201,7 @@ Primeiramente, confirme se o módulo funciona no Linux e no macOS. Em seguida, i
 
 No manifesto do módulo, a propriedade `PrivateData` tem uma subpropriedade `PSData`. A propriedade `Tags` opcional de `PSData` usa uma matriz de valores que é exibida na Galeria do PowerShell. A Galeria do PowerShell aceita os seguintes valores de compatibilidade:
 
-| Marca               | DESCRIÇÃO                                |
+| Marca               | Descrição                                |
 |-------------------|--------------------------------------------|
 | PSEdition_Core    | Compatível com o PowerShell Core 6          |
 | PSEdition_Desktop | Compatível com o Windows PowerShell         |
@@ -249,7 +255,7 @@ Exemplo:
 }
 ```
 
-## <a name="dependency-on-native-libraries"></a>Dependência em bibliotecas nativas
+### <a name="dependency-on-native-libraries"></a>Dependência em bibliotecas nativas
 
 Os módulos destinados ao uso em diferentes sistemas operacionais ou arquiteturas de processadores podem depender de uma biblioteca gerenciada que, por sua vez, depende de algumas bibliotecas nativas.
 
@@ -259,33 +265,33 @@ Com o PowerShell 7, os binários nativos que serão carregados são pesquisados 
 
 ```
 managed.dll folder
-                |
-                |--- 'win-x64' folder
-                |       |--- native.dll
-                |
-                |--- 'win-x86' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm64' folder
-                |       |--- native.dll
-                |
-                |--- 'linux-x64' folder
-                |       |--- native.so
-                |
-                |--- 'linux-x86' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm64' folder
-                |       |--- native.so
-                |
-                |--- 'osx-x64' folder
-                |       |--- native.dylib
+    |
+    |--- 'win-x64' folder
+    |       |--- native.dll
+    |
+    |--- 'win-x86' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm64' folder
+    |       |--- native.dll
+    |
+    |--- 'linux-x64' folder
+    |       |--- native.so
+    |
+    |--- 'linux-x86' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm64' folder
+    |       |--- native.so
+    |
+    |--- 'osx-x64' folder
+    |       |--- native.dylib
 ```
 
 <!-- reference links -->
@@ -295,6 +301,7 @@ managed.dll folder
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [verificações de runtime]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [CLI do .NET]: /dotnet/core/tools/?tabs=netcore2x
+[Usando o Visual Studio Code para depurar cmdlets compilados]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
 [.NET Standard]: /dotnet/standard/net-standard
 [Padrão do PowerShell]: https://github.com/PowerShell/PowerShellStandard
 [Padrão 5.1 do PowerShell]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
