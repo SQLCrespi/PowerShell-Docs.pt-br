@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método ResourceSet
-ms.openlocfilehash: c015960b2a5ffca0d28b714d571aa616400555bd
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método ResourceSet
+ms.openlocfilehash: 2554ff5805d7ed9518bd283565dc879a0fdfdfd0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464037"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650694"
 ---
 # <a name="resourceset-method"></a>Método ResourceSet
 
@@ -17,10 +18,10 @@ Chama diretamente o método **Set** de um recurso de DSC.
 
 ```mof
 uint32 ResourceSet(
-  [in]  string  ResourceType,
-  [in]  string  ModuleName,
-  [in]  uint8   resourceProperty[],
-  [out] boolean RebootRequired
+  [in]  string  ResourceType,
+  [in]  string  ModuleName,
+  [in]  uint8   resourceProperty[],
+  [out] boolean RebootRequired
 );
 ```
 
@@ -32,7 +33,7 @@ uint32 ResourceSet(
 
 **resourceProperty** \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
 
-**RebootRequired** \[out\] No retorno, essa propriedade será definida como **true**, se for necessário reiniciar o nó de destino.
+**RebootRequired** \[out\] No retorno, essa propriedade será definida como **true** , se for necessário reiniciar o nó de destino.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -46,7 +47,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

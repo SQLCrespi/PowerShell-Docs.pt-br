@@ -2,12 +2,13 @@
 ms.date: 10/13/2017
 keywords: DSC,powershell,configuração,instalação
 title: Visão Geral da Configuração de Estado Desejado para Engenheiros
-ms.openlocfilehash: dbed274d5333c216970247b88d2a0956025e969d
-ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
+description: Elaboramos este documento para que as equipes de operações e os desenvolvedores possam compreender os benefícios da DSC (Configuração de Estado Desejado) do PowerShell.
+ms.openlocfilehash: c98295d0e78f4dc89e5df429e3c1de9a0c024054
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82584503"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646941"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>Visão Geral da Configuração de Estado Desejado para Engenheiros
 
@@ -67,7 +68,7 @@ else
 }
 ```
 
-Esse script é mais complexo, com muita lógica e tratamento de erros. O script é mais complexo porque você não informa mais o que pretende fazer, e sim _como fazê-lo_.
+Esse script é mais complexo, com muita lógica e tratamento de erros. O script é mais complexo porque você não informa mais o que pretende fazer, e sim _como fazê-lo_ .
 
 Na DSC, você pode informar o que pretende fazer e a lógica subjacente é simplificada.
 

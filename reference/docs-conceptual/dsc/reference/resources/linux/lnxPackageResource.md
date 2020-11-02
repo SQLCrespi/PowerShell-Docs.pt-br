@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso nxPackage de DSC para Linux
-ms.openlocfilehash: f61b337f6fbb8e2ea48128642874f050787fc576
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso nxPackage de DSC para Linux
+ms.openlocfilehash: b84c7963297e8a88e729cd67611245b017c27fb7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464478"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648843"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>Recurso nxPackage de DSC para Linux
 
@@ -34,8 +35,8 @@ nxPackage <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |O nome do pacote para o qual você deseja garantir um estado específico. |
-|PackageManager |Os valores compatíveis são **yum**, **apt** e **zypper**. Especifica o gerenciador de pacotes que deve ser usado ao instalar pacotes. Se **FilePath** for especificado, o caminho fornecido será usado para instalar o pacote. Caso contrário, será usado um Gerenciador de Pacotes para instalar o pacote por meio de um repositório pré-configurado. Se não for fornecido o **PackageManager** ou o **FilePath**, o gerenciador de pacotes padrão para o sistema será usado. |
-|PackageGroup |Se for `$true`, o **Name** deverá ser o nome de um grupo de pacotes para usar com um **PackageManager**. **PackageGroup** não é válido quando fornece um **FilePath**. |
+|PackageManager |Os valores compatíveis são **yum** , **apt** e **zypper** . Especifica o gerenciador de pacotes que deve ser usado ao instalar pacotes. Se **FilePath** for especificado, o caminho fornecido será usado para instalar o pacote. Caso contrário, será usado um Gerenciador de Pacotes para instalar o pacote por meio de um repositório pré-configurado. Se não for fornecido o **PackageManager** ou o **FilePath** , o gerenciador de pacotes padrão para o sistema será usado. |
+|PackageGroup |Se for `$true`, o **Name** deverá ser o nome de um grupo de pacotes para usar com um **PackageManager** . **PackageGroup** não é válido quando fornece um **FilePath** . |
 |Argumentos |Uma cadeia de caracteres de argumentos que será passada para o pacote exatamente conforme fornecido. |
 |ReturnCode |O código de retorno esperado. Se o código de retorno real não corresponder ao valor esperado fornecido aqui, a configuração gerará um erro. |
 |FilePath |O caminho do arquivo em que o pacote reside. |
@@ -45,7 +46,7 @@ nxPackage <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Determina se é necessário verificar se o pacote existe. Defina essa propriedade como **Present** para garantir que o pacote exista. Defina-a como **Absent** para garantir que o pacote não exista. O valor padrão é **Present**. |
+|Ensure |Determina se é necessário verificar se o pacote existe. Defina essa propriedade como **Present** para garantir que o pacote exista. Defina-a como **Absent** para garantir que o pacote não exista. O valor padrão é **Present** . |
 
 ## <a name="example"></a>Exemplo
 

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso nxEnvironment de DSC para Linux
-ms.openlocfilehash: 2f673dfbc3b6e93d7e186e4a63b75d16a31b5181
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso nxEnvironment de DSC para Linux
+ms.openlocfilehash: 86ed538732254967cb4a3bb55af4f6b179947e52
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463679"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644677"
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>Recurso nxEnvironment de DSC para Linux
 
@@ -32,14 +33,14 @@ nxEnvironment <string> #ResourceName
 |---|---|
 |Nome |Indica o nome da variável de ambiente para a qual você deseja garantir um estado específico. |
 |Valor |O valor que será atribuído à variável de ambiente. |
-|Caminho |Define a variável de ambiente que está sendo configurada. Defina essa propriedade como `$true` se a variável for **Path**. Caso contrário, defina-a como `$false`. O padrão é `$false`. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente. |
+|Caminho |Define a variável de ambiente que está sendo configurada. Defina essa propriedade como `$true` se a variável for **Path** . Caso contrário, defina-a como `$false`. O padrão é `$false`. Se a variável que estiver sendo configurada for a variável **Path** , o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Determina se é necessário verificar se a variável existe. Defina essa propriedade como **Present** para garantir que a variável exista. Defina-a como **Absent** para garantir que a variável não exista. O valor padrão é **Present**. |
+|Ensure |Determina se é necessário verificar se a variável existe. Defina essa propriedade como **Present** para garantir que a variável exista. Defina-a como **Absent** para garantir que a variável não exista. O valor padrão é **Present** . |
 
 ## <a name="additional-information"></a>Informações adicionais
 

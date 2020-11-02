@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método GetConfigurationStatus
-ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método GetConfigurationStatus
+ms.openlocfilehash: fe25d17069d9011e931ac50fec27cb9ebafba365
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464036"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650865"
 ---
 # <a name="getconfigurationstatus-method"></a>Método GetConfigurationStatus
 
@@ -17,8 +18,8 @@ Obtém o histórico do status de configuração.
 
 ```mof
 uint32 GetConfigurationStatus(
-  [in]  boolean                     All,
-  [out] MSFT_DSCConfigurationStatus configurationStatus[]
+  [in]  boolean                     All,
+  [out] MSFT_DSCConfigurationStatus configurationStatus[]
 );
 ```
 
@@ -40,7 +41,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

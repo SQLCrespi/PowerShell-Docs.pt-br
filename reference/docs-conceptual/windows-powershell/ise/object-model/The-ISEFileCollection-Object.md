@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell, cmdlet
 title: O objeto ISEFileCollection
-ms.openlocfilehash: 4192afa9dc91d9ea4c4c084d3ba0175483620229
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O objeto ISEFileCollection é uma coleção de objetos ISEFile.
+ms.openlocfilehash: 2feef1200c611d5181bcbc55d5464a0bd390084e
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809332"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646744"
 ---
 # <a name="the-isefilecollection-object"></a>O objeto ISEFileCollection
 
-O objeto **ISEFileCollection** é uma coleção de objetos **ISEFile**. Um exemplo é a coleção `$psISE.CurrentPowerShellTab.Files`.
+O objeto **ISEFileCollection** é uma coleção de objetos **ISEFile** . Um exemplo é a coleção `$psISE.CurrentPowerShellTab.Files`.
 
 ## <a name="methods"></a>Métodos
 
@@ -56,7 +56,7 @@ $psISE.CurrentPowerShellTab.Files.Remove($firstfile, $true)
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Escolhe o arquivo especificado pelo parâmetro **SelectedFile**.
+Escolhe o arquivo especificado pelo parâmetro **SelectedFile** .
 
 **SelectedFile** – Microsoft.PowerShell.Host.ISE.ISEFile, o arquivo ISEFile que você quer escolher.
 

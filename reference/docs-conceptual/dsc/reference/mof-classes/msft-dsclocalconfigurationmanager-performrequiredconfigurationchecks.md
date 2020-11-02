@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método PerformRequiredConfigurationChecks
-ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método PerformRequiredConfigurationChecks
+ms.openlocfilehash: c5e847cda6376f4266cc771dc947032a279e25f4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464444"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650825"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>Método PerformRequiredConfigurationChecks
 
@@ -17,7 +18,7 @@ Inicia uma verificação de consistência usando o Agendador de Tarefas.
 
 ```mof
 uint32 PerformRequiredConfigurationChecks(
-  [in] uint32 Flags
+  [in] uint32 Flags
 );
 ```
 
@@ -29,7 +30,7 @@ uint32 PerformRequiredConfigurationChecks(
 |:--- |:---|
 |**1** | Uma verificação de consistência normal. |
 |**2** | Uma continuação de uma verificação de consistência após uma reinicialização. Esse valor não deve ser combinado com outros valores. |
-|**4** | A configuração deve ser extraída do servidor de pull especificado na metaconfiguração do nó. Esse valor deve sempre ser combinado com **1**, para um valor de **5**. |
+|**4** | A configuração deve ser extraída do servidor de pull especificado na metaconfiguração do nó. Esse valor deve sempre ser combinado com **1** , para um valor de **5** . |
 |**8** | Envie status para o servidor de relatório. |
 
 ## <a name="return-value"></a>Valor retornado
@@ -44,7 +45,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

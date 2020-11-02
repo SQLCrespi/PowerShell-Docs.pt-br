@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,instalação
 title: Notas de versão do WMF 5.x
-ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Notas de versão do WMF 5.x
+ms.openlocfilehash: d783592104262b08815b12bd8de01adf13b60372
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809872"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655849"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Notas de versão do Windows Management Framework (WMF) 5.x
 
@@ -92,7 +91,7 @@ Anteriormente, não era possível especificar uma versão de módulo específica
 
 No WMF 5.1:
 
-- Você pode usar o [Construtor ModuleSpecification (tabela de hash)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
+- Você pode usar o [Construtor ModuleSpecification (tabela de hash)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
   Essa tabela de hash tem o mesmo formato que `Get-Module -FullyQualifiedName`.
 

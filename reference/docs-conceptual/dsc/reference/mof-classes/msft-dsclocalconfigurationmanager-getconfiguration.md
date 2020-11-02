@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método GetConfiguration
-ms.openlocfilehash: 989aeef4cd9aa5d55741b48c8565c657c4b6512c
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método GetConfiguration
+ms.openlocfilehash: a49f810bd227142c8c3ae4de45f69450400e4e8c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463815"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650886"
 ---
 # <a name="getconfiguration-method"></a>Método GetConfiguration
 
@@ -17,8 +18,8 @@ Envia o documento de configuração para o nó gerenciado e usa o método **Get*
 
 ```mof
 uint32 GetConfiguration(
-  [in]  uint8            configurationData[],
-  [out] OMI_BaseResource configurations[]
+  [in]  uint8            configurationData[],
+  [out] OMI_BaseResource configurations[]
 );
 ```
 
@@ -40,7 +41,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

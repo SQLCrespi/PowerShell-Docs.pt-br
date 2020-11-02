@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Publicar em um servidor de Pull usando IDs de configuração (v4/v5)
-ms.openlocfilehash: 99c5b89e7d556fa72eaa6a3ba1654936f96a0b9d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como carregar recursos para que fiquem disponíveis para download e como configurar clientes para baixar automaticamente os recursos.
+ms.openlocfilehash: 20e12e3cac6b6e4a86563576f4a915429b18aadb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500754"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646831"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>Publicar em um servidor de Pull usando IDs de configuração (v4/v5)
 
@@ -37,7 +38,7 @@ Depois de compilar sua configuração genérica, você deve ter um arquivo `loca
 
 ## <a name="renaming-the-mof-file"></a>Renomeando o arquivo MOF
 
-Você pode armazenar arquivos de configuração `.mof` em um servidor de pull por **ConfigurationName** ou **ConfigurationID**. Dependendo de como você planeja configurar os clientes de pull, é possível escolher uma seção abaixo para renomear corretamente seus arquivos `.mof` compilados.
+Você pode armazenar arquivos de configuração `.mof` em um servidor de pull por **ConfigurationName** ou **ConfigurationID** . Dependendo de como você planeja configurar os clientes de pull, é possível escolher uma seção abaixo para renomear corretamente seus arquivos `.mof` compilados.
 
 ### <a name="configuration-ids-guid"></a>IDs de configuração (GUID)
 
@@ -89,7 +90,7 @@ Nenhuma saída será exibida, mas agora você deve ver um arquivo `<GUID or Conf
 
 ### <a name="on-a-dsc-http-pull-server"></a>Em um servidor de pull HTTP de DSC
 
-Ao configurar seu servidor de Pull HTTP, conforme explicado em [Configurar um servidor de pull HTTP de DSC](pullServer.md), você especifica diretórios para as chaves **ModulePath** e **ConfigurationPath**. A chave **ModulePath** indica onde os arquivos `.zip` empacotados de um módulo devem ser armazenados. O **ConfigurationPath** indica onde os arquivos `.mof` e `.checksum` devem ser armazenados.
+Ao configurar seu servidor de Pull HTTP, conforme explicado em [Configurar um servidor de pull HTTP de DSC](pullServer.md), você especifica diretórios para as chaves **ModulePath** e **ConfigurationPath** . A chave **ModulePath** indica onde os arquivos `.zip` empacotados de um módulo devem ser armazenados. O **ConfigurationPath** indica onde os arquivos `.mof` e `.checksum` devem ser armazenados.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -104,8 +105,8 @@ Ao configurar seu servidor de Pull HTTP, conforme explicado em [Configurar um se
 
 ### <a name="on-an-smb-share"></a>Em um compartilhamento SMB
 
-Quando você configurar um cliente de pull para usar um compartilhamento SMB, especifique um **ConfigurationRepositoryShare**.
-Todos os arquivos `.mof` e `.checksum` devem ser armazenados no diretório **SourcePath** do bloco **ConfigurationRepositoryShare**.
+Quando você configurar um cliente de pull para usar um compartilhamento SMB, especifique um **ConfigurationRepositoryShare** .
+Todos os arquivos `.mof` e `.checksum` devem ser armazenados no diretório **SourcePath** do bloco **ConfigurationRepositoryShare** .
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

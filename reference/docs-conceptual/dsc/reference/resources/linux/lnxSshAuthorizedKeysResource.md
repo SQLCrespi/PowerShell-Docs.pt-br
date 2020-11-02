@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso nxSshAuthorizedKeys de DSC para Linux
-ms.openlocfilehash: 3a62bb7a3dbdebae4f0ca6084db1624c1b76ab1f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso nxSshAuthorizedKeys de DSC para Linux
+ms.openlocfilehash: 881e94aa583a745cdac7f01b6e445352ef4ca937
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464461"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662765"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Recurso nxSshAuthorizedKeys de DSC para Linux
 
@@ -31,8 +32,8 @@ nxAuthorizedKeys <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |KeyComment |Um comentário exclusivo para a chave. É usado para identificar as chaves com exclusividade. |
-|Nome de Usuário |O nome de usuário para o qual as chaves ssh autorizadas serão gerenciadas. Se não for definido, o usuário padrão será **root**. |
-|Chave |O conteúdo da chave. Será obrigatório se **Ensure** for definido como **Present**.|
+|Nome de Usuário |O nome de usuário para o qual as chaves ssh autorizadas serão gerenciadas. Se não for definido, o usuário padrão será **root** . |
+|Chave |O conteúdo da chave. Será obrigatório se **Ensure** for definido como **Present** .|
 
 ## <a name="common-properties"></a>Propriedades comuns
 

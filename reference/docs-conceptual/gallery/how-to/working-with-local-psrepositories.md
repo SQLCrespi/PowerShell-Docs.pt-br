@@ -1,14 +1,13 @@
 ---
 ms.date: 11/06/2018
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery,psget
 title: Trabalhando com PSRepositories locais
-ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: O módulo PowerShellGet dá suporte a repositórios diferentes da Galeria do PowerShell. Este artigo descreve como configurar um repositório local do PowerShell.
+ms.openlocfilehash: 24a2fd23124b3897952d64a347d103d9ee10248f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837572"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662347"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>Trabalhar com repositórios privados do PowerShellGet
 
@@ -62,7 +61,7 @@ Para um repositório com base em compartilhamento de arquivo, verifique se os us
 ## <a name="registering-a-local-repository"></a>Registrando um repositório local
 
 Antes de poder usar um repositório, ele deve ser registrado usando o comando `Register-PSRepository`.
-Nos exemplos a seguir, **InstallationPolicy** é definido como *Confiável*, supondo que você confie no seu próprio repositório.
+Nos exemplos a seguir, **InstallationPolicy** é definido como *Confiável* , supondo que você confie no seu próprio repositório.
 
 ```powershell
 # Register a NuGet-based server
@@ -72,7 +71,7 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation http://MyLocalNuget/Api/
 Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal\' -ScriptSourceLocation '\\localhost\PSRepoLocal\' -InstallationPolicy Trusted
 ```
 
-Observe a diferença entre como os dois comandos tratam **ScriptSourceLocation**. Para um repositório baseado em compartilhamento de arquivo, **SourceLocation** e **ScriptSourceLocation** devem corresponder. Para um repositório baseado na Web, eles devem ser diferentes; portanto, neste exemplo à direita "/" é adicionado a **SourceLocation**.
+Observe a diferença entre como os dois comandos tratam **ScriptSourceLocation** . Para um repositório baseado em compartilhamento de arquivo, **SourceLocation** e **ScriptSourceLocation** devem corresponder. Para um repositório baseado na Web, eles devem ser diferentes; portanto, neste exemplo à direita "/" é adicionado a **SourceLocation** .
 
 Se você quiser que o PSRepository recém-criado seja o repositório padrão, cancele o registro de todos os outros PSRepositories. Por exemplo:
 

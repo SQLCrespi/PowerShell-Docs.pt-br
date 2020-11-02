@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: Fluxo de informações
-ms.openlocfilehash: 1a8df66f7489910b964ec398e90b76e9f30cd2e2
-ms.sourcegitcommit: 87b9b989f261b52969e99159e99ee28ad8d8839a
+description: O PowerShell 5.0 adiciona um novo fluxo de **Information** estruturado para transmitir dados estruturados entre um script e seu host.
+ms.openlocfilehash: 818c99ce281f5ada596ff92cd7bafb8b7cacf709
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86567834"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646715"
 ---
 # <a name="information-stream"></a>Fluxo de informações
 
-O PowerShell 5.0 adiciona um novo fluxo de **Information** estruturado para transmitir dados estruturados entre um script e seu host. `Write-Host` também foi atualizado para emitir sua saída para o fluxo **Information**, onde é possível capturá-lo ou silenciá-lo. O novo cmdlet `Write-Information` usado com os parâmetros comuns **InformationVariable** e **InformationAction** permite mais flexibilidade e capacidade.
+O PowerShell 5.0 adiciona um novo fluxo de **Information** estruturado para transmitir dados estruturados entre um script e seu host. `Write-Host` também foi atualizado para emitir sua saída para o fluxo **Information** , onde é possível capturá-lo ou silenciá-lo. O novo cmdlet `Write-Information` usado com os parâmetros comuns **InformationVariable** e **InformationAction** permite mais flexibilidade e capacidade.
 
-A função a seguir usa os cmdlets que se aproveitam do novo fluxo **Information**.
+A função a seguir usa os cmdlets que se aproveitam do novo fluxo **Information** .
 
 ```powershell
 function OutputGusher {
@@ -60,7 +60,7 @@ $r.Id
 4008
 ```
 
-Ao contrário do cmdlet `Write-Host`, usar o parâmetro **InformationVariable** de `Write-Information` possibilita capturar a saída em uma variável. Usando a **Tag**, é possível criar canais separados para mensagens enviadas para o fluxo **Information**.
+Ao contrário do cmdlet `Write-Host`, usar o parâmetro **InformationVariable** de `Write-Information` possibilita capturar a saída em uma variável. Usando a **Tag** , é possível criar canais separados para mensagens enviadas para o fluxo **Information** .
 
 ```powershell
 $r = OutputGusher -InformationVariable iv

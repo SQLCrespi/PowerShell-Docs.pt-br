@@ -1,13 +1,13 @@
 ---
 ms.date: 12/19/2019
-keywords: powershell, cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
-ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell que podem ser úteis.
+ms.openlocfilehash: 18acf447965eaaa7f93bb4c443a304b37216a9ba
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808512"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663848"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -46,15 +46,15 @@ Você pode usar as etapas a seguir para alterar o tamanho e o local do Painel de
 
 Realize um dos seguintes procedimentos:
 
-- Para mover o Painel de Script acima do Painel de Console, pressione <kbd>CTRL</kbd>+<kbd>1</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Acima** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Acima**.
+- Para mover o Painel de Script acima do Painel de Console, pressione <kbd>CTRL</kbd>+<kbd>1</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Acima** ou então, no menu **Exibir** , clique em **Mostrar Painel de Script Acima** .
 
-- Para mover o Painel de Script para a direita do Painel de Console, pressione <kbd>CTRL</kbd>+<kbd>2</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script à Direita** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script à Direita**.
+- Para mover o Painel de Script para a direita do Painel de Console, pressione <kbd>CTRL</kbd>+<kbd>2</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script à Direita** ou então, no menu **Exibir** , clique em **Mostrar Painel de Script à Direita** .
 
-- Para maximizar o Painel de Script, pressione <kbd>CTRL</kbd>+<kbd>3</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Maximizado** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Maximizado**.
+- Para maximizar o Painel de Script, pressione <kbd>CTRL</kbd>+<kbd>3</kbd> ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Maximizado** ou então, no menu **Exibir** , clique em **Mostrar Painel de Script Maximizado** .
 
-- Para maximizar o Painel de Console e ocultar o Painel de Script, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script**, no menu **Exibir**, clique para desmarcar a opção de menu **Mostrar Painel de Script**.
+- Para maximizar o Painel de Console e ocultar o Painel de Script, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** , no menu **Exibir** , clique para desmarcar a opção de menu **Mostrar Painel de Script** .
 
-- Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir**, clique para marcar a opção de menu **Mostrar Painel de Script**.
+- Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir** , clique para marcar a opção de menu **Mostrar Painel de Script** .
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Atalhos de teclado para edição de texto
 
@@ -148,7 +148,7 @@ Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows 
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Atalhos de teclado para iniciar e sair
 
-Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (**PowerShell.exe**) ou para sair do ISE do Windows PowerShell.
+Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell ( **PowerShell.exe** ) ou para sair do ISE do Windows PowerShell.
 
 |                        Ação                         |               Atalho do Teclado               |
 | ----------------------------------------------------- | --------------------------------------------- |

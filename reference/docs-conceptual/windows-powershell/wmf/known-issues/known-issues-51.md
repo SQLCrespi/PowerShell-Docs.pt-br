@@ -1,14 +1,14 @@
 ---
 ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: wmf,powershell,instalação
 title: Problemas conhecidos no WMF 5.1
-ms.openlocfilehash: 4f4c85e1f4984d9e91ea74ba65fdbf7188c5c7ab
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Problemas conhecidos no WMF 5.1
+ms.openlocfilehash: 7d27bc570108a0ae1470ae06f5bdf5fcd7849d16
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808702"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663324"
 ---
 # <a name="known-issues-in-wmf-51"></a>Problemas conhecidos no WMF 5.1
 
@@ -20,7 +20,7 @@ Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no
 
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
 
-- A execução de testes em relação ao Pester em si pode resultar em algumas falhas devido às diferenças entre FULL CLR e CORE CLR. Particularmente, o método **Validate** não está disponível no tipo **XmlDocument**. Seis testes que tentam validar o esquema dos logs de saída do NUnit são conhecidos por falharem.
+- A execução de testes em relação ao Pester em si pode resultar em algumas falhas devido às diferenças entre FULL CLR e CORE CLR. Particularmente, o método **Validate** não está disponível no tipo **XmlDocument** . Seis testes que tentam validar o esquema dos logs de saída do NUnit são conhecidos por falharem.
 - Um teste de cobertura de código falha porque o Recurso de DSC **WindowsFeature** não existe no Nano Server. No entanto, essas falhas geralmente são benignas e podem ser ignoradas com segurança.
 
 ## <a name="operation-validation"></a>Validação da operação

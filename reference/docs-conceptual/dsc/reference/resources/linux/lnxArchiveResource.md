@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso nxArchive de DSC para Linux
-ms.openlocfilehash: 386378fa6e1608117d6934b983dcebe23e55d60d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso nxArchive de DSC para Linux
+ms.openlocfilehash: 2705829ccae0c1baa27324030433340e7f3949c1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464240"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648851"
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>Recurso nxArchive de DSC para Linux
 
@@ -33,7 +34,7 @@ nxArchive <string> #ResourceName
 |---|---|
 |SourcePath |Especifica o caminho de origem do arquivo morto. Deve ser um arquivo .tar, .zip ou .tar.gz. |
 |DestinationPath |Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído. |
-|Checksum (soma de verificação) |Define o tipo que deve ser usado ao determinar se o arquivo de origem foi atualizado. Os valores são: **ctime**, **mtime** ou **md5**. O valor padrão é **md5**. |
+|Checksum (soma de verificação) |Define o tipo que deve ser usado ao determinar se o arquivo de origem foi atualizado. Os valores são: **ctime** , **mtime** ou **md5** . O valor padrão é **md5** . |
 |Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é `$false`. |
 
 ## <a name="common-properties"></a>Propriedades comuns
@@ -41,7 +42,7 @@ nxArchive <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination**. Defina essa propriedade como **Present** para garantir que o conteúdo exista. Defina-a como **Absent** para garantir que não exista. O valor padrão é **Present**. |
+|Ensure |Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination** . Defina essa propriedade como **Present** para garantir que o conteúdo exista. Defina-a como **Absent** para garantir que não exista. O valor padrão é **Present** . |
 
 ## <a name="example"></a>Exemplo
 

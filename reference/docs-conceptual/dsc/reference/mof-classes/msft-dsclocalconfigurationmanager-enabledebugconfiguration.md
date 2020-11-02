@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método EnableDebugConfiguration
-ms.openlocfilehash: be75b1012f49db79eb75a68c6912ffd5772bf16f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método EnableDebugConfiguration
+ms.openlocfilehash: 536366e6e1627a249f3bc2dc19bfd8ff3de42117
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464087"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644774"
 ---
 # <a name="enabledebugconfiguration-method"></a>Método EnableDebugConfiguration
 
@@ -17,7 +18,7 @@ Habilita a depuração do recurso DSC.
 
 ```mof
 uint32 EnableDebugConfiguration(
-  [in] boolean BreakAll
+  [in] boolean BreakAll
 );
 ```
 
@@ -37,7 +38,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

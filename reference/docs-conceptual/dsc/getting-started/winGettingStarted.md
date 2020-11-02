@@ -2,17 +2,17 @@
 ms.date: 08/15/2019
 keywords: DSC,powershell,configuração,instalação
 title: Introdução a DSC (Desired State Configuration) para Windows
-ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Este tópico explica como começar a usar a DSC (Desired State Configuration) do PowerShell para Windows.
+ms.openlocfilehash: 2b9ddba2023a3933e3ad70d7bfee798ff07f0484
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236315"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662810"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Introdução a DSC (Desired State Configuration) para Windows
 
-Este tópico explica como começar a usar a DSC (Desired State Configuration) do PowerShell para Windows.
-Para obter informações gerais sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](../overview/overview.md).
+Este tópico explica como começar a usar a DSC (Desired State Configuration) do PowerShell para Windows. Para obter informações gerais sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](../overview/overview.md).
 
 ## <a name="supported-windows-operation-system-versions"></a>Versões compatíveis do sistema operacional Windows
 
@@ -115,8 +115,7 @@ Remove-DscConfigurationDocument -Stage Current -Verbose
 
 #### <a name="configure-settings-in-local-configuration-manager"></a>Configurar o Local Configuration Manager
 
-Aplique um arquivo MOF de metaconfiguração ao computador usando o cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager).
-Exige o caminho até o MOF de metaconfiguração.
+Aplique um arquivo MOF de metaconfiguração ao computador usando o cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager). Exige o caminho até o MOF de metaconfiguração.
 
 ```powershell
 Set-DSCLocalConfigurationManager -Path 'c:\metaconfig\localhost.meta.mof' -Verbose

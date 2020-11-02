@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método SendConfigurationApplyAsync
-ms.openlocfilehash: 4cfac5edb5fed94ee69deb98d7aa6be56b51c5b3
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método SendConfigurationApplyAsync
+ms.openlocfilehash: 92c9d03a7653e72b1ff04084caea4a8b5aadb0e5
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463730"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644799"
 ---
 # <a name="sendconfigurationapplyasync-method"></a>Método SendConfigurationApplyAsync
 
@@ -17,9 +18,9 @@ Envia o documento de configuração de maneira assíncrona para o nó gerenciado
 
 ```mof
 uint32 SendConfigurationApplyAsync(
-  [in] uint8   ConfigurationData[],
-  [in] boolean force,
-  [in] string  jobId
+  [in] uint8   ConfigurationData[],
+  [in] boolean force,
+  [in] string  jobId
 );
 ```
 
@@ -43,7 +44,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

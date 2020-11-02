@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Dependências de recursos usando DependsOn
-ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Conforme sua configuração se torna maior e mais complexa, você pode usar a chave `DependsOn` para alterar a ordem aplicada de seus recursos especificando que um recurso depende de outro.
+ms.openlocfilehash: 18f19a3606834ede0737213930e6af0e251225ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954473"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645098"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Dependências de recursos usando DependsOn
 
@@ -141,6 +142,6 @@ Se tiver aplicado a configuração acima, você poderá reverter as chaves para 
         }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Usar dependências entre nós](./crossNodeDependencies.md)
