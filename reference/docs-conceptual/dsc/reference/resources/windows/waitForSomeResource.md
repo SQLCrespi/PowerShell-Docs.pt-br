@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso de DSC WaitForSome
-ms.openlocfilehash: ea2618fbb77dd24a0c73fd9357e87862da514b66
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso de DSC WaitForSome
+ms.openlocfilehash: bc9c3df2b476e7046ccfe6257acc1d1641e7594b
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464376"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143085"
 ---
 # <a name="dsc-waitforsome-resource"></a>Recurso de DSC WaitForSome
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464376"
 
 O recurso de DSC (Desired State Configuration) **WaitForSome** pode ser usado dentro de um bloco de nó em uma [configuração DSC](../../../configurations/configurations.md) para especificar dependências de configurações em outros nós.
 
-O recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em um número mínimo de nós (especificado por **NodeCount**) definidos pela propriedade **NodeName**.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+O recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em um número mínimo de nós (especificado por **NodeCount** ) definidos pela propriedade **NodeName** .
 
 > [!NOTE]
-> O recurso **WaitForSome** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> O recurso **WaitForSome** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Sintaxe
 

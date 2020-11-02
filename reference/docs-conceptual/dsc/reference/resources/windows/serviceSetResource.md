@@ -1,21 +1,24 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso do ServiceSet DSC
-ms.openlocfilehash: b51cfa86aa6d2114553a0eee681cb88ea93e213f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso do ServiceSet DSC
+ms.openlocfilehash: bcb8382440d80c37179cdc1d1e17376b2511c3f3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464393"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142949"
 ---
 # <a name="dsc-serviceset-resource"></a>Recurso do ServiceSet DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
-O recurso **ServiceSet** na DSC (Configuração de Estado Desejado) do Windows PowerShell oferece um mecanismo para gerenciar serviços no nó de destino. Esse recurso é um [recurso composto](../../../resources/authoringResourceComposite.md) que chama o [Recurso de serviço](serviceResource.md) para cada serviço especificado na propriedade **Name**.
+O recurso **ServiceSet** na DSC (Configuração de Estado Desejado) do Windows PowerShell oferece um mecanismo para gerenciar serviços no nó de destino. Esse recurso é um [recurso composto](../../../resources/authoringResourceComposite.md) que chama o [Recurso de serviço](serviceResource.md) para cada serviço especificado na propriedade **Name** .
 
 Use esse recurso quando desejar configurar vários serviços para o mesmo estado.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,9 +41,9 @@ ServiceSet [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |Nome |Indica os nomes do serviço. Observe que, às vezes, isso é diferente dos nomes de exibição. É possível obter uma lista dos serviços e seus estados atuais com o cmdlet `Get-Service`. |
-|StartupType |Indica o tipo de inicialização para os serviços. Os valores permitidos para essa propriedade são: **Automático**, **Desabilitado** e **Manual**. |
-|BuiltInAccount |Indica a conta de credenciais a ser usada para os serviços. Os valores permitidos para essa propriedade são: **LocalService**, **LocalSystem** e **NetworkService**. |
-|Estado |Indica o estado que você deseja garantir para os serviços: **Parado** ou **Em execução**. |
+|StartupType |Indica o tipo de inicialização para os serviços. Os valores permitidos para essa propriedade são: **Automático** , **Desabilitado** e **Manual** . |
+|BuiltInAccount |Indica a conta de credenciais a ser usada para os serviços. Os valores permitidos para essa propriedade são: **LocalService** , **LocalSystem** e **NetworkService** . |
+|Estado |Indica o estado que você deseja garantir para os serviços: **Parado** ou **Em execução** . |
 |Credencial |Indica as credenciais para a conta sob a qual o serviço será executado. Essa propriedade e a propriedade **BuiltinAccount** não podem ser usadas juntas. |
 
 ## <a name="common-properties"></a>Propriedades comuns
@@ -48,7 +51,7 @@ ServiceSet [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se os serviços existem no sistema. Defina essa propriedade como **Ausente** para garantir que os serviços não existam. Defini-la como **Present** garantirá que os serviços de destino existam. O valor padrão é **Present**. |
+|Ensure |Indica se os serviços existem no sistema. Defina essa propriedade como **Ausente** para garantir que os serviços não existam. Defini-la como **Present** garantirá que os serviços de destino existam. O valor padrão é **Present** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
 
 > [!NOTE]

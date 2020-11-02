@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell, cmdlet
 title: O objeto PowerShellTabCollection
-ms.openlocfilehash: 0aad885afd3ba3ae3b00f5c11d2c62a9ff303798
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O objeto da coleção PowerShellTab é uma coleção de objetos PowerShellTab. Cada objeto PowerShellTab funciona como um ambiente de tempo de execução separado.
+ms.openlocfilehash: 60f8001f096b50bd8433a5685f1f70a350f07f61
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808562"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658277"
 ---
 # <a name="the-powershelltabcollection-object"></a>O objeto PowerShellTabCollection
 
-O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab**. Cada objeto **PowerShellTab** funciona como um ambiente de runtime separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto `$psISE.PowerShellTabs`.
+O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab** . Cada objeto **PowerShellTab** funciona como um ambiente de runtime separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto `$psISE.PowerShellTabs`.
 
 ## <a name="methods"></a>Métodos
 
@@ -30,7 +30,7 @@ $newTab.DisplayName = 'Brand New Tab'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Remove a guia especificada pelo parâmetro **psTab**.
+Remove a guia especificada pelo parâmetro **psTab** .
 
 **psTab** A guia do PowerShell a ser removida.
 

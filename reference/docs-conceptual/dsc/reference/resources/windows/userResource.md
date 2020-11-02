@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso User de DSC
-ms.openlocfilehash: 340fce45a2074930ae14ca1aaeef7eff78531916
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso User de DSC
+ms.openlocfilehash: b14f8d434ef3e1eb220fe7b0b18a011014c9ae6c
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463764"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142593"
 ---
 # <a name="dsc-user-resource"></a>Recurso User de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 O recurso **User** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para contas de usuário locais no nó de destino.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,7 +55,7 @@ User [string] #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se a conta existe. Defina essa propriedade como **Present** para garantir que a conta exista e defina-o como **Absent** para garantir que a conta não exista. O valor padrão é **Present**. |
+|Ensure |Indica se a conta existe. Defina essa propriedade como **Present** para garantir que a conta exista e defina-o como **Absent** para garantir que a conta não exista. O valor padrão é **Present** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
 
 > [!NOTE]

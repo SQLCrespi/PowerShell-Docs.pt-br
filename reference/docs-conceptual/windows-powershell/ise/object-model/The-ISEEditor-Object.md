@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell, cmdlet
 title: O objeto ISEEditor
-ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Um objeto ISEEditor é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor. O painel de Console é um objeto ISEEditor.
+ms.openlocfilehash: ffcb6e35e1160beab6efb29cc84847fa9ffd012b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809692"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654056"
 ---
 # <a name="the-iseeditor-object"></a>O objeto ISEEditor
 
-Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor. O painel de Console é um objeto **ISEEditor**. Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado. As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor**.
+Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor. O painel de Console é um objeto **ISEEditor** . Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado. As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor** .
 
 ## <a name="methods"></a>Métodos
 
@@ -90,7 +90,7 @@ Veja o [Exemplo de script](#scripting-example), posteriormente neste tópico.
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Seleciona o texto dos parâmetros **startLine**, **startColumn**, **endLine** e **endColumn**.
+Seleciona o texto dos parâmetros **startLine** , **startColumn** , **endLine** e **endColumn** .
 
 **startLine** – inteiro, a linha na qual a seleção começa.
 

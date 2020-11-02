@@ -2,19 +2,20 @@
 ms.date: 04/11/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando um servidor de pull de SMB para DSC
-ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Um servidor de pull do SMB é um computador que hospeda compartilhamentos de arquivo SMB que disponibilizam arquivos de configuração DSC e/ou recursos de DSC para nós de destino quando esses nós os solicitam.
+ms.openlocfilehash: 4ac1b0db719fa124d6fa9a654acb64ec24d9ea41
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658432"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurando um servidor de pull de SMB para DSC
 
 Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Um servidor de pull do [SMB](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) é um computador que hospeda compartilhamentos de arquivo SMB que disponibilizam arquivos de configuração DSC e/ou recursos de DSC para nós de destino quando esses nós os solicitam.
 
@@ -29,11 +30,11 @@ Há várias maneiras para configurar um compartilhamento de arquivos SMB, mas va
 
 ### <a name="install-the-xsmbshare-resource"></a>Instalar o recurso xSmbShare
 
-Chame o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xSmbShare**.
+Chame o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xSmbShare** .
 
 > [!NOTE]
-> `Install-Module` está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0.
-> O **xSmbShare** contém o recurso de DSC **xSmbShare**, que pode ser usado para criar um compartilhamento de arquivo SMB.
+> `Install-Module` está incluído no módulo **PowerShellGet** , que está incluído no PowerShell 5.0.
+> O **xSmbShare** contém o recurso de DSC **xSmbShare** , que pode ser usado para criar um compartilhamento de arquivo SMB.
 
 ### <a name="create-the-directory-and-file-share"></a>Criar o diretório e o compartilhamento de arquivos
 
@@ -76,8 +77,8 @@ A configuração cria o diretório `C:\DscSmbShare` se ele ainda não existe e, 
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Conceder acesso ao sistema de arquivos para o cliente de pull
 
-Conceder **ReadAccess** para um nó do cliente permite que esse nó acesse o compartilhamento SMB, mas não arquivos ou pastas dentro desse compartilhamento. Você precisa conceder explicitamente aos nós do cliente acesso à pasta e às subpastas de compartilhamento SMB. Podemos fazer isso com o DSC adicionando/usando o recurso **cNtfsPermissionEntry**, que está contido no módulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0).
-A configuração a seguir adiciona um bloco **cNtfsPermissionEntry**, que concede acesso ReadAndExecute ao cliente de pull:
+Conceder **ReadAccess** para um nó do cliente permite que esse nó acesse o compartilhamento SMB, mas não arquivos ou pastas dentro desse compartilhamento. Você precisa conceder explicitamente aos nós do cliente acesso à pasta e às subpastas de compartilhamento SMB. Podemos fazer isso com o DSC adicionando/usando o recurso **cNtfsPermissionEntry** , que está contido no módulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0).
+A configuração a seguir adiciona um bloco **cNtfsPermissionEntry** , que concede acesso ReadAndExecute ao cliente de pull:
 
 ```powershell
 Configuration DSCSMB
@@ -131,7 +132,7 @@ Configuration DSCSMB
 
 Salve todos os arquivos MOF de configuração e/ou recursos DSC que você deseja que sejam obtidos por pull do compartilhamento de pasta SMB pelos nós do cliente.
 
-O arquivo MOF de configuração no servidor de pull deve ser nomeado como *ConfigurationID*.mof, em que *ConfigurationID* é o valor da propriedade **ConfigurationID** do LCM do nó de destino. Para obter mais informações sobre como configurar clientes de pull, confira [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md).
+O arquivo MOF de configuração no servidor de pull deve ser nomeado como *ConfigurationID* .mof, em que *ConfigurationID* é o valor da propriedade **ConfigurationID** do LCM do nó de destino. Para obter mais informações sobre como configurar clientes de pull, confira [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md).
 
 > [!NOTE]
 > Você deverá usar IDs de configuração se estiver usando um servidor de pull de SMB. Não há suporte para nomes de configuração para SMB.
@@ -159,7 +160,7 @@ Para configurar um cliente que recebe as configurações e/ou recursos de um com
 Para obter mais informações sobre como configurar um LCM, consulte [Configurando um cliente de pull usando a ID de configuração](pullClientConfigID.md).
 
 > [!NOTE]
-> Para simplificar, este exemplo usa o **PSDscAllowPlainTextPassword** para permitir a passagem de uma senha de texto não criptografado para o parâmetro **Credencial**. Para obter informações sobre como passar credenciais de forma mais segura, consulte [Opções de Credenciais nos Dados de Configuração](../configurations/configDataCredentials.md). Você **DEVE** especificar uma **ConfigurationID** no bloco **Configurações** de uma metaconfiguração de um servidor de pull de SMB, mesmo que só esteja extraindo recursos.
+> Para simplificar, este exemplo usa o **PSDscAllowPlainTextPassword** para permitir a passagem de uma senha de texto não criptografado para o parâmetro **Credencial** . Para obter informações sobre como passar credenciais de forma mais segura, consulte [Opções de Credenciais nos Dados de Configuração](../configurations/configDataCredentials.md). Você **DEVE** especificar uma **ConfigurationID** no bloco **Configurações** de uma metaconfiguração de um servidor de pull de SMB, mesmo que só esteja extraindo recursos.
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
@@ -208,7 +209,7 @@ $ConfigurationData = @{
 Agradecimentos especiais às pessoas a seguir:
 
 - Mike F. Robbins, cujas postagens sobre o uso de SMB para DSC ajudaram a informar o conteúdo deste tópico. Seu blog está em [Mike F Robbins](http://mikefrobbins.com/).
-- Serge Nikalaichyk, que criou o módulo **cNtfsAccessControl**. A fonte para esse módulo está em [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl).
+- Serge Nikalaichyk, que criou o módulo **cNtfsAccessControl** . A fonte para esse módulo está em [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl).
 
 ## <a name="see-also"></a>Confira também
 

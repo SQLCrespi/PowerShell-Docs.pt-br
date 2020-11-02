@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso de DSC WindowsPackageCab
-ms.openlocfilehash: 7205a454d100bb369fd6cf0c5ac419585c8bbe86
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso de DSC WindowsPackageCab
+ms.openlocfilehash: 3ac10eb2a7da502b8cac23ab8bfee869a4e26fd3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464138"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143017"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Recurso de DSC WindowsPackageCab
 
@@ -16,6 +17,8 @@ ms.locfileid: "86464138"
 O **WindowsPackageCab** no DSC (Desired State Configuration) do Windows PowerShell fornece um mecanismo para instalar ou desinstalar pacotes de gabinete (.cab) do Windows em um nó de destino.
 
 O nó de destino deve ter o módulo PowerShell do DISM instalado. Para obter informações, consulte [Usar DISM no Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14).
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,7 +46,7 @@ O nó de destino deve ter o módulo PowerShell do DISM instalado. Para obter inf
 |Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se o pacote foi instalado. Defina esta propriedade como **Absent** para garantir que o pacote não seja instalado (ou desinstalar o pacote, se ele estiver instalado). Defina-a como **Present** para garantir que o pacote seja instalado. **Ensure** é uma propriedade obrigatória no recurso **WindowsPackageCab**. |
+|Ensure |Indica se o pacote foi instalado. Defina esta propriedade como **Absent** para garantir que o pacote não seja instalado (ou desinstalar o pacote, se ele estiver instalado). Defina-a como **Present** para garantir que o pacote seja instalado. **Ensure** é uma propriedade obrigatória no recurso **WindowsPackageCab** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
 
 ## <a name="example"></a>Exemplo

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso de DSC WaitForAny
-ms.openlocfilehash: fa895c78f233a2e446552bb27d4491a90076e05a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso de DSC WaitForAny
+ms.openlocfilehash: d997176c81ec390b9e58f5a28cae1814ee3dbcde
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463866"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143119"
 ---
 # <a name="dsc-waitforany-resource"></a>Recurso de DSC WaitForAny
 
@@ -15,10 +16,12 @@ ms.locfileid: "86463866"
 
 O recurso de DSC (Desired State Configuration) **WaitForAny** pode ser usado dentro de um bloco de nó em uma [configuração DSC](../../../configurations/configurations.md) para especificar dependências de configurações em outros nós.
 
-Esse recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em qualquer nó de destino definido na propriedade **NodeName**.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+Esse recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em qualquer nó de destino definido na propriedade **NodeName** .
 
 > [!NOTE]
-> O recurso **WaitForAny** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> O recurso **WaitForAny** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Sintaxe
 

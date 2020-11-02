@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso de DSC WaitForAll
-ms.openlocfilehash: a0cf553af96ecc3df4968581f8f393b72fc3dabf
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso de DSC WaitForAll
+ms.openlocfilehash: a477584cf97a56815bda9973cb2befc9b71d14d1
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464359"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143102"
 ---
 # <a name="dsc-waitforall-resource"></a>Recurso de DSC WaitForAll
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464359"
 
 O recurso de DSC (Desired State Configuration) **WaitForAll** pode ser usado dentro de um bloco de nó em uma [configuração DSC](../../../configurations/configurations.md) para especificar dependências em configurações em outros nós.
 
-Esse recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em todos os nós de destino definidos na propriedade **NodeName**.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+Esse recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em todos os nós de destino definidos na propriedade **NodeName** .
 
 > [!NOTE]
-> O recurso **WaitForAll** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> O recurso **WaitForAll** usa o Gerenciamento Remoto do Windows para verificar o estado dos outros nós. Para obter mais informações sobre os requisitos de porta e segurança do WinRM, confira [Considerações sobre segurança da comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Sintaxe
 

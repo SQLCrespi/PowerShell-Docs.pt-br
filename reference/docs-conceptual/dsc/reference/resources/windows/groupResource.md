@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso Group de DSC
-ms.openlocfilehash: 5570d46d872e205917eef49bfa869419b20a77b0
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso Group de DSC
+ms.openlocfilehash: 8e2d1139c9573d7e310fec2410b14df04b79e1b2
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464206"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142439"
 ---
 # <a name="dsc-group-resource"></a>Recurso Group de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 O recurso **Grupo** na DSC (Desired State Configuration) do Windows PowerShell fornece um mecanismo para gerenciar grupos locais no nó de destino.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,16 +42,16 @@ Group [string] #ResourceName
 |GroupName |O nome do grupo para o qual você deseja garantir um estado específico. |
 |Credencial |As credenciais necessárias para acessar recursos remotos. Essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro quando a configuração for executada no nó de destino.
 |Descrição |A descrição do grupo. |
-|Membros |Use essa propriedade para substituir a associação ao grupo pelos membros especificados. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **MembersToExclude** ou **MembersToInclude**. Isso gerará um erro. |
-|MembersToExclude |Use essa propriedade para remover membros da associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso gerará um erro. |
-|MembersToInclude |Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro. |
+|Membros |Use essa propriedade para substituir a associação ao grupo pelos membros especificados. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **MembersToExclude** ou **MembersToInclude** . Isso gerará um erro. |
+|MembersToExclude |Use essa propriedade para remover membros da associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros** . Isso gerará um erro. |
+|MembersToInclude |Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário `Domain\UserName`. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros** . Isso vai gerar um erro. |
 
 ## <a name="common-properties"></a>Propriedades comuns
 
 |Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se o grupo existe. Defina essa propriedade como **Absent** para garantir que o grupo não exista. Ao defini-la como **Present**, você garante que o grupo exista. O valor padrão é **Present**. |
+|Ensure |Indica se o grupo existe. Defina essa propriedade como **Absent** para garantir que o grupo não exista. Ao defini-la como **Present** , você garante que o grupo exista. O valor padrão é **Present** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
 
 > [!NOTE]

@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso WindowsProcess de DSC
-ms.openlocfilehash: a1f8840a5894049efd27c5d213a66363cd8dbebc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso WindowsProcess de DSC
+ms.openlocfilehash: 3076e9cb857b78953c164253351b23e7da9b40c6
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464121"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143000"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Recurso WindowsProcess de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 O recurso **WindowsProcess** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para configurar processos em um nó de destino.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,5 +53,5 @@ WindowsProcess [string] #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se o processo existe. Defina essa propriedade como **Present** para garantir que o processo exista. Caso contrário, defina-a como **Absent**. O valor padrão é **Present**. |
+|Ensure |Indica se o processo existe. Defina essa propriedade como **Present** para garantir que o processo exista. Caso contrário, defina-a como **Absent** . O valor padrão é **Present** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |

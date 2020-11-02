@@ -2,34 +2,30 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando dados de configuração
-ms.openlocfilehash: 5eb7fedec9a0abece1068496cdf5cb940eae3340
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: Este tópico descreve a estrutura da tabela de hash ConfigurationData. Isso permite que você crie uma única configuração que pode ser usada para vários nós ou para ambientes diferentes.
+ms.openlocfilehash: aa4a0545aec529dbc923908612d2e1f9e60b3c9c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557032"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647108"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Usando dados de configuração em DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Usando o parâmetro **ConfigurationData** da DSC interna, você pode definir os dados que podem ser usados dentro de uma configuração.
-Isso permite que você crie uma única configuração que pode ser usada para vários nós ou para ambientes diferentes.
-Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configuração para os ambientes de desenvolvimento e produção e usar dados de configuração para especificar dados para cada ambiente.
+Usando o parâmetro **ConfigurationData** da DSC interna, você pode definir os dados que podem ser usados dentro de uma configuração. Isso permite que você crie uma única configuração que pode ser usada para vários nós ou para ambientes diferentes. Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configuração para os ambientes de desenvolvimento e produção e usar dados de configuração para especificar dados para cada ambiente.
 
-Este tópico descreve a estrutura da tabela de hash **ConfigurationData**.
-Para obter exemplos de como usar dados de configuração, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).
+Este tópico descreve a estrutura da tabela de hash **ConfigurationData** . Para obter exemplos de como usar dados de configuração, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).
 
 ## <a name="the-configurationdata-common-parameter"></a>O parâmetro comum de ConfigurationData
 
-Uma configuração DSC usa um parâmetro comum, **ConfigurationData**, que você especifica ao compilar a configuração.
-Para obter informações de como compilar configurações, consulte [Configurações DSC](configurations.md).
+Uma configuração DSC usa um parâmetro comum, **ConfigurationData** , que você especifica ao compilar a configuração. Para obter informações de como compilar configurações, consulte [Configurações DSC](configurations.md).
 
-O parâmetro **ConfigurationData** é uma tabela de hash que precisa ter pelo menos uma chave chamada **AllNodes**.
-Ele também pode ter uma ou mais chaves.
+O parâmetro **ConfigurationData** é uma tabela de hash que precisa ter pelo menos uma chave chamada **AllNodes** . Ele também pode ter uma ou mais chaves.
 
 > [!NOTE]
-> Os exemplos neste tópico usam uma única chave adicional (que não é a chave nomeada **AllNodes**) denominada `NonNodeData`, mas você pode incluir qualquer número de chaves adicionais e nomeá-las como desejar.
+> Os exemplos neste tópico usam uma única chave adicional (que não é a chave nomeada **AllNodes** ) denominada `NonNodeData`, mas você pode incluir qualquer número de chaves adicionais e nomeá-las como desejar.
 
 ```powershell
 $MyData =
@@ -39,7 +35,7 @@ $MyData =
 }
 ```
 
-O valor da chave **AllNodes** é uma matriz. Cada elemento dessa matriz também é uma tabela de hash que deve ter pelo menos uma chave chamada **NodeName**:
+O valor da chave **AllNodes** é uma matriz. Cada elemento dessa matriz também é uma tabela de hash que deve ter pelo menos uma chave chamada **NodeName** :
 
 ```powershell
 $MyData =
@@ -94,8 +90,7 @@ $MyData =
 }
 ```
 
-Para aplicar uma propriedade para todos os nós, você pode criar um membro da matriz **AllNodes** que possua um **NodeName** de `*`.
-Por exemplo, para atribuir uma propriedade `LogPath` a cada nó, você pode fazer o seguinte:
+Para aplicar uma propriedade para todos os nós, você pode criar um membro da matriz **AllNodes** que possua um **NodeName** de `*`. Por exemplo, para atribuir uma propriedade `LogPath` a cada nó, você pode fazer o seguinte:
 
 ```powershell
 $MyData =
@@ -136,8 +131,7 @@ Isso é o equivalente a adicionar uma propriedade com um nome de `LogPath` com u
 
 ## <a name="defining-the-configurationdata-hashtable"></a>Definição da tabela de hash de ConfigurationData
 
-Você pode definir **ConfigurationData** como uma variável dentro do mesmo arquivo de script que uma configuração (como em nossos exemplos anteriores) ou em um arquivo `.psd1` separado.
-Para definir **ConfigurationData** em um arquivo `.psd1`, crie um arquivo que contenha somente a tabela de hash que representa os dados de configuração.
+Você pode definir **ConfigurationData** como uma variável dentro do mesmo arquivo de script que uma configuração (como em nossos exemplos anteriores) ou em um arquivo `.psd1` separado. Para definir **ConfigurationData** em um arquivo `.psd1`, crie um arquivo que contenha somente a tabela de hash que representa os dados de configuração.
 
 Por exemplo, você poderia criar um arquivo chamado `MyData.psd1` com o seguinte conteúdo:
 
@@ -160,10 +154,9 @@ Por exemplo, você poderia criar um arquivo chamado `MyData.psd1` com o seguinte
 
 ## <a name="compiling-a-configuration-with-configuration-data"></a>Compilando uma configuração com os dados de configuração
 
-Para compilar uma configuração para a qual você definiu os dados de configuração, passe os dados de configuração como o valor do parâmetro **ConfigurationData**.
+Para compilar uma configuração para a qual você definiu os dados de configuração, passe os dados de configuração como o valor do parâmetro **ConfigurationData** .
 
-Isso criará um arquivo MOF para cada entrada na matriz **AllNodes**.
-Cada arquivo MOF será nomeado com a propriedade `NodeName` da entrada de matriz correspondente.
+Isso criará um arquivo MOF para cada entrada na matriz **AllNodes** . Cada arquivo MOF será nomeado com a propriedade `NodeName` da entrada de matriz correspondente.
 
 Por exemplo, se você definir dados de configuração como o arquivo `MyData.psd1` acima, compilar uma configuração criará os arquivos `VM-1.mof` e `VM-2.mof`.
 
@@ -187,7 +180,7 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 O DSC fornece as seguintes variáveis especiais que podem ser usadas em um script de configuração:
 
-- A **$AllNodes** refere-se a toda a coleção de nós definida em **ConfigurationData**. Você pode filtrar a coleção **AllNodes** usando **.Where()** e **.ForEach()** .
+- A **$AllNodes** refere-se a toda a coleção de nós definida em **ConfigurationData** . Você pode filtrar a coleção **AllNodes** usando **.Where()** e **.ForEach()** .
 - O **ConfigurationData** refere-se à tabela de hash inteira que é passada como parâmetro ao compilar uma configuração.
 - **MyTypeName** contém o nome da [configuração](configurations.md) na qual a variável é usada. Por exemplo, na configuração `MyDscConfiguration`, `$MyTypeName` terá um valor de `MyDscConfiguration`.
 - O **Nó** refere-se a uma entrada específica na coleção **AllNodes** depois que ela é filtrada usando **.Where()** ou **.ForEach()** .
@@ -195,9 +188,7 @@ O DSC fornece as seguintes variáveis especiais que podem ser usadas em um scrip
 
 ## <a name="using-non-node-data"></a>Usar dados sem nós
 
-Como vimos nos exemplos anteriores, a tabela de hash **ConfigurationData** pode ter uma ou mais chaves além da chave **AllNodes** necessária.
-Nos exemplos deste tópico, usamos apenas um único nó adicional e o nomeamos como `NonNodeData`.
-No entanto, você pode definir quantas chaves adicionais quiser e nomeá-las da maneira desejada.
+Como vimos nos exemplos anteriores, a tabela de hash **ConfigurationData** pode ter uma ou mais chaves além da chave **AllNodes** necessária. Nos exemplos deste tópico, usamos apenas um único nó adicional e o nomeamos como `NonNodeData`. No entanto, você pode definir quantas chaves adicionais quiser e nomeá-las da maneira desejada.
 
 Para obter um exemplo de como usar dados que não são do nó, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).
 

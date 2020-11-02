@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso Registry de DSC
-ms.openlocfilehash: da4be9152a58d9945051f9c811270e871612ca0d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso Registry de DSC
+ms.openlocfilehash: 075f64abffb429b83958d859b0328b4eeec4cee6
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463611"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142490"
 ---
 # <a name="dsc-registry-resource"></a>Recurso Registry de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 O recurso **Registry** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar chaves e valores do registro em um nó de destino.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +40,7 @@ Registry [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |Chave |Indica o caminho da chave do Registro para o qual você deseja garantir um estado específico. Esse caminho deve incluir o hive. |
-|ValueName |Indica o nome do valor de registro. Para adicionar ou remover uma chave do Registro, especifique essa propriedade como uma cadeia de caracteres vazia sem especificar **ValueType** ou **ValueData**. Para modificar ou remover o valor padrão de uma chave do Registro, especifique essa propriedade como uma cadeia de caracteres vazia e também especifique **ValueType** ou **ValueData**. |
+|ValueName |Indica o nome do valor de registro. Para adicionar ou remover uma chave do Registro, especifique essa propriedade como uma cadeia de caracteres vazia sem especificar **ValueType** ou **ValueData** . Para modificar ou remover o valor padrão de uma chave do Registro, especifique essa propriedade como uma cadeia de caracteres vazia e também especifique **ValueType** ou **ValueData** . |
 |Force |Se a chave do Registro especificada estiver presente, **Force** a substituirá pelo novo valor. Para excluir uma chave do Registro com subchaves, isso deve ser `$true`. |
 |Hex |Indica se os dados serão expressos em formato hexadecimal. Se especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor padrão é `$false`. |
 |ValueData |Os dados para o valor de registro. |
@@ -48,7 +51,7 @@ Registry [string] #ResourceName
 |Propriedade |Descrição |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Indica se a chave e o valor existem. Para garantir que existam, defina essa propriedade como **Present**. Para garantir que não existam, defina a propriedade como **Absent**. O valor padrão é **Present**. |
+|Ensure |Indica se a chave e o valor existem. Para garantir que existam, defina essa propriedade como **Present** . Para garantir que não existam, defina a propriedade como **Absent** . O valor padrão é **Present** . |
 |PsDscRunAsCredential |Define a credencial para executar todo o recurso. |
 
 > [!NOTE]
@@ -75,7 +78,7 @@ Configuration RegistryTest
 
 ### <a name="example-2-ensure-specified-registry-key-exists"></a>Exemplo 2: Verifique se a chave do Registro especificada existe
 
-Este exemplo verifica se uma chave chamada "ExampleKey2" está presente no hive **HKEY\_LOCAL\_MACHINE**.
+Este exemplo verifica se uma chave chamada "ExampleKey2" está presente no hive **HKEY\_LOCAL\_MACHINE** .
 
 ```powershell
 Configuration RegistryTest

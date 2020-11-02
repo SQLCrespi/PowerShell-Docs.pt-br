@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Separando Dados de Configuração e de Ambiente
-ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Isto pode ser útil para separar os dados usados em uma configuração do DSC da configuração em si usando dados da configuração. Fazendo isso, você pode usar uma configuração simples para vários ambientes.
+ms.openlocfilehash: 84ca4e4945a36111d23116524fd8f98c04e16d32
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692425"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645064"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separando Dados de Configuração e de Ambiente
 
->Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Isto pode ser útil para separar os dados usados em uma configuração do DSC da configuração em si usando dados da configuração.
-Fazendo isso, você pode usar uma configuração simples para vários ambientes.
+Isto pode ser útil para separar os dados usados em uma configuração do DSC da configuração em si usando dados da configuração. Fazendo isso, você pode usar uma configuração simples para vários ambientes.
 
 Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configuração para os ambientes de desenvolvimento e produção e usar dados de configuração para especificar dados para cada ambiente.
 
@@ -22,12 +22,11 @@ Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configu
 
 Dados de configuração são dados definidos em uma tabela de hash e passados a uma configuração de DSC ao compilar a configuração.
 
-Para obter uma descrição detalhada da tabela de hash **ConfigurationData**, veja [Usar dados de configuração](configData.md).
+Para obter uma descrição detalhada da tabela de hash **ConfigurationData** , veja [Usar dados de configuração](configData.md).
 
 ## <a name="a-simple-example"></a>Um exemplo simples
 
-Vamos observar um exemplo muito simples para ver como isso funciona.
-Vamos criar uma única configuração que garante que **IIS** esteja presente em alguns nós e que **Hyper-V** esteja presente em outros:
+Vamos observar um exemplo muito simples para ver como isso funciona. Vamos criar uma única configuração que garante que **IIS** esteja presente em alguns nós e que **Hyper-V** esteja presente em outros:
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -68,7 +67,7 @@ $MyData =
 MyDscConfiguration -ConfigurationData $MyData
 ```
 
-A última linha desse script compila a configuração, passando `$MyData` como o valor do parâmetro **ConfigurationData**.
+A última linha desse script compila a configuração, passando `$MyData` como o valor do parâmetro **ConfigurationData** .
 
 O resultado é a criação de dois arquivos MOF:
 
@@ -129,13 +128,11 @@ Definiremos os dados do ambiente de desenvolvimento e de produção em um arquiv
 
 ### <a name="configuration-script-file"></a>Arquivo de script para configuração
 
-Agora, na configuração, definida por um arquivo `.ps1`, filtramos os nós que definimos em `DevProdEnvData.psd1` por função (`MSSQL`, `Dev` ou ambas) e os configuramos adequadamente.
-O ambiente de desenvolvimento tem o SQL Server e o IIS em um nó, enquanto que o ambiente de produção os tem em dois nós diferentes.
-O conteúdo do site também é diferente, conforme especificado pelas propriedades `SiteContents`.
+Agora, na configuração, definida por um arquivo `.ps1`, filtramos os nós que definimos em `DevProdEnvData.psd1` por função (`MSSQL`, `Dev` ou ambas) e os configuramos adequadamente. O ambiente de desenvolvimento tem o SQL Server e o IIS em um nó, enquanto que o ambiente de produção os tem em dois nós diferentes. O conteúdo do site também é diferente, conforme especificado pelas propriedades `SiteContents`.
 
 No final do script de configuração, chamamos a configuração (compilamos isso em um documento MOF), passando o `DevProdEnvData.psd1` como o parâmetro `$ConfigurationData`.
 
->**Observação:** essa configuração requer que os módulos `xSqlPs` e `xWebAdministration` estejam instalados no nó de destino.
+> **Observação:** essa configuração requer que os módulos `xSqlPs` e `xWebAdministration` estejam instalados no nó de destino.
 
 Vamos definir a configuração em um arquivo chamado `MyWebApp.ps1`:
 
@@ -229,7 +226,7 @@ Configuration MyWebApp
 MyWebApp -ConfigurationData DevProdEnvData.psd1
 ```
 
-Ao executar essa configuração, são criados três arquivos MOF (um para cada entrada nomeada na matriz **AllNodes**):
+Ao executar essa configuração, são criados três arquivos MOF (um para cada entrada nomeada na matriz **AllNodes** ):
 
 ```
     Directory: C:\DscTests\MyWebApp
@@ -244,15 +241,9 @@ Mode                LastWriteTime         Length Name
 
 ## <a name="using-non-node-data"></a>Usar dados sem nós
 
-Você pode adicionar mais chaves à tabela de hash **ConfigurationData** para dados que não são específicos de um nó.
-A configuração a seguir garante a presença dos dois sites.
-Os dados de cada site são definidos na matriz **AllNodes**.
-O arquivo `Config.xml` é usado para ambos os sites, portanto podemos defini-lo em uma outra chave com o nome `NonNodeData`.
-Observe que você pode ter quantas chaves adicionais quiser, e pode nomeá-las como desejar.
-`NonNodeData` não é uma palavra reservada, é apenas o que decidimos usar como nome da chave adicional.
+Você pode adicionar mais chaves à tabela de hash **ConfigurationData** para dados que não são específicos de um nó. A configuração a seguir garante a presença dos dois sites. Os dados de cada site são definidos na matriz **AllNodes** . O arquivo `Config.xml` é usado para ambos os sites, portanto podemos defini-lo em uma outra chave com o nome `NonNodeData`. Observe que você pode ter quantas chaves adicionais quiser, e pode nomeá-las como desejar. `NonNodeData` não é uma palavra reservada, é apenas o que decidimos usar como nome da chave adicional.
 
-Acesse as chaves adicionais usando a variável especial **$ConfigurationData**.
-Neste exemplo, `ConfigFileContents` é acessado com a linha:
+Acesse as chaves adicionais usando a variável especial **$ConfigurationData** . Neste exemplo, `ConfigFileContents` é acessado com a linha:
 
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
@@ -263,52 +254,52 @@ Neste exemplo, `ConfigFileContents` é acessado com a linha:
 ```powershell
 $MyData =
 @{
-    AllNodes =
-    @(
-        @{
-            NodeName           = "*"
-            LogPath            = "C:\Logs"
-        },
+    AllNodes =
+    @(
+        @{
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
+        },
 
-        @{
-            NodeName = "VM-1"
-            SiteContents = "C:\Site1"
-            SiteName = "Website1"
-        },
+        @{
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
+        },
 
 
-        @{
-            NodeName = "VM-2"
-            SiteContents = "C:\Site2"
-            SiteName = "Website2"
-        }
-    );
+        @{
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
+        }
+    );
 
-    NonNodeData =
-    @{
-        ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }
+    NonNodeData =
+    @{
+        ConfigFileContents = (Get-Content C:\Template\Config.xml)
+     }
 }
 
 configuration WebsiteConfig
 {
-    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
+    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
 
-    node $AllNodes.NodeName
-    {
-        xWebsite Site
-        {
-            Name         = $Node.SiteName
-            PhysicalPath = $Node.SiteContents
-            Ensure       = "Present"
-        }
+    node $AllNodes.NodeName
+    {
+        xWebsite Site
+        {
+            Name         = $Node.SiteName
+            PhysicalPath = $Node.SiteContents
+            Ensure       = "Present"
+        }
 
-        File ConfigFile
-        {
-            DestinationPath = $Node.SiteContents + "\\config.xml"
-            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
-        }
-    }
+        File ConfigFile
+        {
+            DestinationPath = $Node.SiteContents + "\\config.xml"
+            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
+        }
+    }
 }
 ```
 

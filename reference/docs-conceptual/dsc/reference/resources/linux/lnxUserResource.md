@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso nxUser de DSC para Linux
-ms.openlocfilehash: 30c9d4efb5bcbce9f18652b6f34e9a1b060cece4
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso nxUser de DSC para Linux
+ms.openlocfilehash: 298caa8f5ea6d4587f9782a02d0544147ee33e84
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463900"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667378"
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Recurso nxUser de DSC para Linux
 

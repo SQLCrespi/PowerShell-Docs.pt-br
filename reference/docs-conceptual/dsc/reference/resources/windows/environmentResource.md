@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Recurso Environment de DSC
-ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Recurso Environment de DSC
+ms.openlocfilehash: c7995fc5e7efdfb9a1dbae3da9f824d33c67085c
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464410"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142575"
 ---
 # <a name="dsc-environment-resource"></a>Recurso Environment de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 O recurso **Environment** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar as variáveis de ambiente do sistema.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -22,7 +25,6 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
-    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,8 +37,7 @@ Environment [string] #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |Nome |Indica o nome da variável de ambiente para a qual você deseja garantir um estado específico. |
-|Caminho |Define a variável de ambiente que está sendo configurada. Defina essa propriedade como `$true` se a variável for **Path**. Caso contrário, defina-a como `$false`. O padrão é `$false`. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente. |
-|Destino| Indica onde recuperar a variável: O computador ou o processo. Se ambos estiverem indicados, somente o valor do computador será retornado. O padrão é ambos, pois esse é o padrão para o restante do recurso. |
+|Caminho |Define a variável de ambiente que está sendo configurada. Defina essa propriedade como `$true` se a variável for **Path** . Caso contrário, defina-a como `$false`. O padrão é `$false`. Se a variável que estiver sendo configurada for a variável **Path** , o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente. |
 |Valor |O valor que será atribuído à variável de ambiente. |
 
 ## <a name="common-properties"></a>Propriedades comuns
@@ -52,7 +53,7 @@ Environment [string] #ResourceName
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir assegura que TestEnvironmentVariable esteja presente e tenha o valor _TestValue_. Se não estiver presente, será criado.
+O exemplo a seguir assegura que TestEnvironmentVariable esteja presente e tenha o valor _TestValue_ . Se não estiver presente, será criado.
 
 ```powershell
 Environment EnvironmentExample
