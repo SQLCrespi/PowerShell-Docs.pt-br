@@ -3,63 +3,67 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 03/28/2019
+ms.date: 11/01/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Culture
-ms.openlocfilehash: 2c987376524291ab3a51e8182de8f9842cf7d003
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6cadebfbcdc8cc7a333d62c3c7b9ff5fb6635168
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193591"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239827"
 ---
-# <span data-ttu-id="064e8-103">Get-Culture</span><span class="sxs-lookup"><span data-stu-id="064e8-103">Get-Culture</span></span>
+# <span data-ttu-id="02fa3-103">Get-Culture</span><span class="sxs-lookup"><span data-stu-id="02fa3-103">Get-Culture</span></span>
 
-## <span data-ttu-id="064e8-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="064e8-104">SYNOPSIS</span></span>
-<span data-ttu-id="064e8-105">Obtém a cultura atual definida no sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="064e8-105">Gets the current culture set in the operating system.</span></span>
+## <span data-ttu-id="02fa3-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="02fa3-104">SYNOPSIS</span></span>
+<span data-ttu-id="02fa3-105">Obtém a cultura atual definida no sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="02fa3-105">Gets the current culture set in the operating system.</span></span>
 
-## <span data-ttu-id="064e8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="064e8-106">SYNTAX</span></span>
+## <span data-ttu-id="02fa3-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="02fa3-106">SYNTAX</span></span>
 
-### <span data-ttu-id="064e8-107">CurrentCulture (padrão)</span><span class="sxs-lookup"><span data-stu-id="064e8-107">CurrentCulture (Default)</span></span>
+### <span data-ttu-id="02fa3-107">CurrentCulture (padrão)</span><span class="sxs-lookup"><span data-stu-id="02fa3-107">CurrentCulture (Default)</span></span>
 
 ```
 Get-Culture [-NoUserOverrides] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="064e8-108">Name</span><span class="sxs-lookup"><span data-stu-id="064e8-108">Name</span></span>
+### <span data-ttu-id="02fa3-108">Name</span><span class="sxs-lookup"><span data-stu-id="02fa3-108">Name</span></span>
 
 ```
 Get-Culture [-Name <String[]>] [-NoUserOverrides] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="064e8-109">ListAvailable</span><span class="sxs-lookup"><span data-stu-id="064e8-109">ListAvailable</span></span>
+### <span data-ttu-id="02fa3-109">ListAvailable</span><span class="sxs-lookup"><span data-stu-id="02fa3-109">ListAvailable</span></span>
 
 ```
 Get-Culture [-ListAvailable] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="064e8-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="064e8-110">DESCRIPTION</span></span>
+## <span data-ttu-id="02fa3-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="02fa3-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="064e8-111">O `Get-Culture` cmdlet obtém informações sobre as configurações de cultura atuais.</span><span class="sxs-lookup"><span data-stu-id="064e8-111">The `Get-Culture` cmdlet gets information about the current culture settings.</span></span>
-<span data-ttu-id="064e8-112">Isso inclui informações sobre as configurações de idioma atuais no sistema, como o layout do teclado e o formato de exibição de itens como números, moeda e datas.</span><span class="sxs-lookup"><span data-stu-id="064e8-112">This includes information about the current language settings on the system, such as the keyboard layout, and the display format of items such as numbers, currency, and dates.</span></span>
+<span data-ttu-id="02fa3-111">O `Get-Culture` cmdlet obtém informações sobre as configurações de cultura atuais.</span><span class="sxs-lookup"><span data-stu-id="02fa3-111">The `Get-Culture` cmdlet gets information about the current culture settings.</span></span> <span data-ttu-id="02fa3-112">Isso inclui informações sobre as configurações de idioma atuais no sistema, como o layout do teclado e o formato de exibição de itens como números, moeda e datas.</span><span class="sxs-lookup"><span data-stu-id="02fa3-112">This includes information about the current language settings on the system, such as the keyboard layout, and the display format of items such as numbers, currency, and dates.</span></span>
 
-<span data-ttu-id="064e8-113">Você também pode usar o `Get-UICulture` cmdlet, que obtém a cultura da interface do usuário atual no sistema e o cmdlet [set-Culture](/powershell/module/international/set-culture?view=win10-ps) no módulo internacional.</span><span class="sxs-lookup"><span data-stu-id="064e8-113">You can also use the `Get-UICulture` cmdlet, which gets the current user interface culture on the system, and the [Set-Culture](/powershell/module/international/set-culture?view=win10-ps) cmdlet in the International module.</span></span>
-<span data-ttu-id="064e8-114">A cultura da interface do usuário determina quais cadeias de caracteres de texto serão usadas para elementos de interface do usuário, como menus e mensagens.</span><span class="sxs-lookup"><span data-stu-id="064e8-114">The user-interface (UI) culture determines which text strings are used for user interface elements, such as menus and messages.</span></span>
+<span data-ttu-id="02fa3-113">Você também pode usar o `Get-UICulture` cmdlet, que obtém a cultura da interface do usuário atual no sistema e o cmdlet [set-Culture](/powershell/module/international/set-culture) no módulo internacional.</span><span class="sxs-lookup"><span data-stu-id="02fa3-113">You can also use the `Get-UICulture` cmdlet, which gets the current user interface culture on the system, and the [Set-Culture](/powershell/module/international/set-culture) cmdlet in the International module.</span></span> <span data-ttu-id="02fa3-114">A cultura da interface do usuário determina quais cadeias de caracteres de texto serão usadas para elementos de interface do usuário, como menus e mensagens.</span><span class="sxs-lookup"><span data-stu-id="02fa3-114">The user-interface (UI) culture determines which text strings are used for user interface elements, such as menus and messages.</span></span>
 
-## <span data-ttu-id="064e8-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="064e8-115">EXAMPLES</span></span>
+## <span data-ttu-id="02fa3-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="02fa3-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="064e8-116">Exemplo 1: obter configurações de cultura</span><span class="sxs-lookup"><span data-stu-id="064e8-116">Example 1: Get culture settings</span></span>
+### <span data-ttu-id="02fa3-116">Exemplo 1: obter configurações de cultura</span><span class="sxs-lookup"><span data-stu-id="02fa3-116">Example 1: Get culture settings</span></span>
 
-```
-PS C:\> Get-Culture
+```powershell
+Get-Culture
 ```
 
-<span data-ttu-id="064e8-117">Este comando exibe informações sobre as configurações regionais do computador.</span><span class="sxs-lookup"><span data-stu-id="064e8-117">This command displays information about the regional settings on the computer.</span></span>
-
-### <span data-ttu-id="064e8-118">Exemplo 2: Formatar as propriedades de um objeto de cultura</span><span class="sxs-lookup"><span data-stu-id="064e8-118">Example 2: Format the properties of a culture object</span></span>
-
+```Output
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
 ```
+
+<span data-ttu-id="02fa3-117">Este comando exibe informações sobre as configurações regionais do computador.</span><span class="sxs-lookup"><span data-stu-id="02fa3-117">This command displays information about the regional settings on the computer.</span></span>
+
+### <span data-ttu-id="02fa3-118">Exemplo 2: Formatar as propriedades de um objeto de cultura</span><span class="sxs-lookup"><span data-stu-id="02fa3-118">Example 2: Format the properties of a culture object</span></span>
+
+```powershell
 PS C:\> $C = Get-Culture
 PS C:\> $C | Format-List -Property *
 Parent                         : en
@@ -82,14 +86,18 @@ DateTimeFormat                 : System.Globalization.DateTimeFormatInfo
 Calendar                       : System.Globalization.GregorianCalendar
 OptionalCalendars              : {System.Globalization.GregorianCalendar, System.Globalization.GregorianCalendar}
 UseUserOverride                : True
-IsReadOnly                     : False PS C:\> $C.Calendar
+IsReadOnly                     : False
+
+PS C:\> $C.Calendar
 MinSupportedDateTime : 1/1/0001 12:00:00 AM
 MaxSupportedDateTime : 12/31/9999 11:59:59 PM
 AlgorithmType        : SolarCalendar
 CalendarType         : Localized
 Eras                 : {1}
 TwoDigitYearMax      : 2029
-IsReadOnly           : False PS C:\> $C.DateTimeFormat
+IsReadOnly           : False
+
+PS C:\> $C.DateTimeFormat
 AMDesignator                     : AM
 Calendar                         : System.Globalization.GregorianCalendar
 DateSeparator                    : /
@@ -115,52 +123,48 @@ MonthNames                       : {January, February, March, April...}
 IsReadOnly                       : False
 NativeCalendarName               : Gregorian Calendar
 AbbreviatedMonthGenitiveNames    : {Jan, Feb, Mar, Apr...}
-MonthGenitiveNames               : {January, February, March, April...} PS C:\> $C.DateTimeFormat.FirstDayOfWeek
+MonthGenitiveNames               : {January, February, March, April...}
+
+PS C:\> $C.DateTimeFormat.FirstDayOfWeek
 Sunday
 ```
 
-<span data-ttu-id="064e8-119">Este exemplo demonstra a enorme quantidade de dados do objeto de cultura.</span><span class="sxs-lookup"><span data-stu-id="064e8-119">This example demonstrates the vast amount of data in the culture object.</span></span>
-<span data-ttu-id="064e8-120">Ele mostra como exibir as propriedades e subpropriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="064e8-120">It shows how to display the properties and sub-properties of the object.</span></span>
+<span data-ttu-id="02fa3-119">Este exemplo demonstra a enorme quantidade de dados do objeto de cultura.</span><span class="sxs-lookup"><span data-stu-id="02fa3-119">This example demonstrates the vast amount of data in the culture object.</span></span> <span data-ttu-id="02fa3-120">Ele mostra como exibir as propriedades e subpropriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="02fa3-120">It shows how to display the properties and sub-properties of the object.</span></span>
 
-<span data-ttu-id="064e8-121">O primeiro comando usa o cmdlet **Get-Culture** para obter as configurações de cultura atuais no computador.</span><span class="sxs-lookup"><span data-stu-id="064e8-121">The first command uses the **Get-Culture** cmdlet to get the current culture settings on the computer.</span></span>
-<span data-ttu-id="064e8-122">Ele armazena o objeto de cultura resultante na variável $C.</span><span class="sxs-lookup"><span data-stu-id="064e8-122">It stores the resulting culture object in the $C variable.</span></span>
+<span data-ttu-id="02fa3-121">O primeiro comando usa o `Get-Culture` cmdlet para obter as configurações de cultura atuais no computador.</span><span class="sxs-lookup"><span data-stu-id="02fa3-121">The first command uses the `Get-Culture` cmdlet to get the current culture settings on the computer.</span></span>
+<span data-ttu-id="02fa3-122">Ele armazena o objeto de cultura resultante na `$C` variável.</span><span class="sxs-lookup"><span data-stu-id="02fa3-122">It stores the resulting culture object in the `$C` variable.</span></span>
 
-<span data-ttu-id="064e8-123">O segundo comando exibe todas as propriedades do objeto de cultura.</span><span class="sxs-lookup"><span data-stu-id="064e8-123">The second command displays all of the properties of the culture object.</span></span>
-<span data-ttu-id="064e8-124">Ele usa um operador de pipeline (|) para enviar o objeto de cultura `$C` para o `Format-List` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="064e8-124">It uses a pipeline operator (|) to send the culture object in `$C` to the `Format-List` cmdlet.</span></span>
-<span data-ttu-id="064e8-125">Ele usa o parâmetro **Property** para exibir todas as \* Propriedades () do objeto.</span><span class="sxs-lookup"><span data-stu-id="064e8-125">It uses the **Property** parameter to display all (\*) properties of the object.</span></span>
-<span data-ttu-id="064e8-126">Esse comando pode ser abreviado como `$c | fl *` .</span><span class="sxs-lookup"><span data-stu-id="064e8-126">This command can be abbreviated as `$c | fl *`.</span></span>
+<span data-ttu-id="02fa3-123">O segundo comando exibe todas as propriedades do objeto de cultura.</span><span class="sxs-lookup"><span data-stu-id="02fa3-123">The second command displays all of the properties of the culture object.</span></span> <span data-ttu-id="02fa3-124">Ele usa um operador de pipeline ( `|` ) para enviar o objeto de cultura `$C` para o `Format-List` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="02fa3-124">It uses a pipeline operator (`|`) to send the culture object in `$C` to the `Format-List` cmdlet.</span></span> <span data-ttu-id="02fa3-125">Ele usa o parâmetro **Property** para exibir todas as `*` Propriedades () do objeto.</span><span class="sxs-lookup"><span data-stu-id="02fa3-125">It uses the **Property** parameter to display all (`*`) properties of the object.</span></span> <span data-ttu-id="02fa3-126">Esse comando pode ser abreviado como `$c | fl *` .</span><span class="sxs-lookup"><span data-stu-id="02fa3-126">This command can be abbreviated as `$c | fl *`.</span></span>
 
-<span data-ttu-id="064e8-127">Os comandos restantes exploram as propriedades do objeto cultura usando a notação de ponto para exibir os valores das propriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="064e8-127">The remaining commands explore the properties of the culture object by using dot notation to display the values of the object properties.</span></span>
-<span data-ttu-id="064e8-128">Você pode usar essa notação para exibir o valor de qualquer propriedade do objeto.</span><span class="sxs-lookup"><span data-stu-id="064e8-128">You can use this notation to display the value of any property of the object.</span></span>
+<span data-ttu-id="02fa3-127">Os comandos restantes exploram as propriedades do objeto cultura usando a notação de ponto para exibir os valores das propriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="02fa3-127">The remaining commands explore the properties of the culture object by using dot notation to display the values of the object properties.</span></span> <span data-ttu-id="02fa3-128">Você pode usar essa notação para exibir o valor de qualquer propriedade do objeto.</span><span class="sxs-lookup"><span data-stu-id="02fa3-128">You can use this notation to display the value of any property of the object.</span></span>
 
-<span data-ttu-id="064e8-129">O terceiro comando usa a notação de ponto para exibir o valor da propriedade **Calendar** do objeto Culture.</span><span class="sxs-lookup"><span data-stu-id="064e8-129">The third command uses dot notation to display the value of the **Calendar** property of the culture object.</span></span>
+<span data-ttu-id="02fa3-129">O terceiro comando usa a notação de ponto para exibir o valor da propriedade **Calendar** do objeto Culture.</span><span class="sxs-lookup"><span data-stu-id="02fa3-129">The third command uses dot notation to display the value of the **Calendar** property of the culture object.</span></span>
 
-<span data-ttu-id="064e8-130">O quarto comando usa a notação de ponto para exibir o valor da propriedade **DataTimeFormat** do objeto Culture.</span><span class="sxs-lookup"><span data-stu-id="064e8-130">The fourth command uses dot notation to display the value of the **DataTimeFormat** property of the culture object.</span></span>
+<span data-ttu-id="02fa3-130">O quarto comando usa a notação de ponto para exibir o valor da propriedade **DataTimeFormat** do objeto Culture.</span><span class="sxs-lookup"><span data-stu-id="02fa3-130">The fourth command uses dot notation to display the value of the **DataTimeFormat** property of the culture object.</span></span>
 
-<span data-ttu-id="064e8-131">Muitas propriedades de objeto têm propriedades.</span><span class="sxs-lookup"><span data-stu-id="064e8-131">Many object properties have properties.</span></span>
-<span data-ttu-id="064e8-132">O quinto comando usa a notação de ponto para exibir o valor da propriedade **FirstDayOfWeek** da propriedade **DateTimeFormat** .</span><span class="sxs-lookup"><span data-stu-id="064e8-132">The fifth command uses dot notation to display the value of the **FirstDayOfWeek** property of the **DateTimeFormat** property.</span></span>
+<span data-ttu-id="02fa3-131">Muitas propriedades de objeto têm propriedades.</span><span class="sxs-lookup"><span data-stu-id="02fa3-131">Many object properties have properties.</span></span> <span data-ttu-id="02fa3-132">O quinto comando usa a notação de ponto para exibir o valor da propriedade **FirstDayOfWeek** da propriedade **DateTimeFormat** .</span><span class="sxs-lookup"><span data-stu-id="02fa3-132">The fifth command uses dot notation to display the value of the **FirstDayOfWeek** property of the **DateTimeFormat** property.</span></span>
 
-### <span data-ttu-id="064e8-133">Exemplo 3: obter uma cultura específica</span><span class="sxs-lookup"><span data-stu-id="064e8-133">Example 3: Get a specific culture</span></span>
+### <span data-ttu-id="02fa3-133">Exemplo 3: obter uma cultura específica</span><span class="sxs-lookup"><span data-stu-id="02fa3-133">Example 3: Get a specific culture</span></span>
 
-<span data-ttu-id="064e8-134">Obtenha o objeto CultureInfo para inglês no Estados Unidos.</span><span class="sxs-lookup"><span data-stu-id="064e8-134">Get the CultureInfo object for English in the United States.</span></span>
+<span data-ttu-id="02fa3-134">Obtenha o objeto CultureInfo para francês na França.</span><span class="sxs-lookup"><span data-stu-id="02fa3-134">Get the CultureInfo object for French in France.</span></span>
 
 ```powershell
-Get-Culture -Name en-US
+Get-Culture -Name fr-FR
 ```
 
-```output
+```Output
 LCID             Name             DisplayName
 ----             ----             -----------
-1033             en-US            English (United States)
+1036             fr-FR            French (France)
 ```
 
-## <span data-ttu-id="064e8-135">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="064e8-135">PARAMETERS</span></span>
+## <span data-ttu-id="02fa3-135">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="02fa3-135">PARAMETERS</span></span>
 
-### <span data-ttu-id="064e8-136">-ListAvailable</span><span class="sxs-lookup"><span data-stu-id="064e8-136">-ListAvailable</span></span>
+### <span data-ttu-id="02fa3-136">-ListAvailable</span><span class="sxs-lookup"><span data-stu-id="02fa3-136">-ListAvailable</span></span>
 
-<span data-ttu-id="064e8-137">Recupera todas as culturas suportadas pelo sistema operacional atual.</span><span class="sxs-lookup"><span data-stu-id="064e8-137">Retrieves all cultures supported by the current operating system.</span></span>
+<span data-ttu-id="02fa3-137">Recupera todas as culturas suportadas pelo sistema operacional atual.</span><span class="sxs-lookup"><span data-stu-id="02fa3-137">Retrieves all cultures supported by the current operating system.</span></span>
 
-<span data-ttu-id="064e8-138">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="064e8-138">This parameter was introduced in PowerShell 6.2.</span></span>
+<span data-ttu-id="02fa3-138">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="02fa3-138">This parameter was introduced in PowerShell 6.2.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -174,11 +178,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="064e8-139">-Name</span><span class="sxs-lookup"><span data-stu-id="064e8-139">-Name</span></span>
+### <span data-ttu-id="02fa3-139">-Name</span><span class="sxs-lookup"><span data-stu-id="02fa3-139">-Name</span></span>
 
-<span data-ttu-id="064e8-140">Recupere uma cultura específica com base no nome.</span><span class="sxs-lookup"><span data-stu-id="064e8-140">Retrieve a specific culture based on the name.</span></span>
+<span data-ttu-id="02fa3-140">Recupere uma cultura específica com base no nome.</span><span class="sxs-lookup"><span data-stu-id="02fa3-140">Retrieve a specific culture based on the name.</span></span>
 
-<span data-ttu-id="064e8-141">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="064e8-141">This parameter was introduced in PowerShell 6.2.</span></span>
+<span data-ttu-id="02fa3-141">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="02fa3-141">This parameter was introduced in PowerShell 6.2.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -192,11 +196,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="064e8-142">-NoUserOverrides</span><span class="sxs-lookup"><span data-stu-id="064e8-142">-NoUserOverrides</span></span>
+### <span data-ttu-id="02fa3-142">-NoUserOverrides</span><span class="sxs-lookup"><span data-stu-id="02fa3-142">-NoUserOverrides</span></span>
 
-<span data-ttu-id="064e8-143">Ignorar alterações de usuário para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="064e8-143">Ignore user changes for current culture.</span></span>
+<span data-ttu-id="02fa3-143">Ignorar alterações de usuário para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="02fa3-143">Ignore user changes for current culture.</span></span>
 
-<span data-ttu-id="064e8-144">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="064e8-144">This parameter was introduced in PowerShell 6.2.</span></span>
+<span data-ttu-id="02fa3-144">Esse parâmetro foi introduzido no PowerShell 6,2.</span><span class="sxs-lookup"><span data-stu-id="02fa3-144">This parameter was introduced in PowerShell 6.2.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -210,29 +214,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="064e8-145">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="064e8-145">CommonParameters</span></span>
+### <span data-ttu-id="02fa3-145">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="02fa3-145">CommonParameters</span></span>
 
-<span data-ttu-id="064e8-146">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="064e8-146">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="064e8-147">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="064e8-147">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="02fa3-146">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="02fa3-146">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="02fa3-147">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="02fa3-147">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="064e8-148">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="064e8-148">INPUTS</span></span>
+## <span data-ttu-id="02fa3-148">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="02fa3-148">INPUTS</span></span>
 
-### <span data-ttu-id="064e8-149">Nenhum</span><span class="sxs-lookup"><span data-stu-id="064e8-149">None</span></span>
+### <span data-ttu-id="02fa3-149">Nenhum</span><span class="sxs-lookup"><span data-stu-id="02fa3-149">None</span></span>
 
-<span data-ttu-id="064e8-150">Não é possível redirecionar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="064e8-150">You cannot pipe input to this cmdlet.</span></span>
+<span data-ttu-id="02fa3-150">Não é possível redirecionar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="02fa3-150">You cannot pipe input to this cmdlet.</span></span>
 
-## <span data-ttu-id="064e8-151">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="064e8-151">OUTPUTS</span></span>
+## <span data-ttu-id="02fa3-151">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="02fa3-151">OUTPUTS</span></span>
 
-### <span data-ttu-id="064e8-152">System. Globalization. CultureInfo</span><span class="sxs-lookup"><span data-stu-id="064e8-152">System.Globalization.CultureInfo</span></span>
+### <span data-ttu-id="02fa3-152">System. Globalization. CultureInfo</span><span class="sxs-lookup"><span data-stu-id="02fa3-152">System.Globalization.CultureInfo</span></span>
 
-<span data-ttu-id="064e8-153">`Get-Culture` Retorna um objeto que representa a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="064e8-153">`Get-Culture` returns an object that represents the current culture.</span></span>
+<span data-ttu-id="02fa3-153">`Get-Culture` Retorna um objeto que representa a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="02fa3-153">`Get-Culture` returns an object that represents the current culture.</span></span>
 
-## <span data-ttu-id="064e8-154">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="064e8-154">NOTES</span></span>
+## <span data-ttu-id="02fa3-154">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="02fa3-154">NOTES</span></span>
 
-<span data-ttu-id="064e8-155">Você também pode usar as `$PsCulture` `$PsUICulture` variáveis e.</span><span class="sxs-lookup"><span data-stu-id="064e8-155">You can also use the `$PsCulture` and `$PsUICulture` variables.</span></span> <span data-ttu-id="064e8-156">A `$PsCulture` variável armazena o nome da cultura atual e a `$PsUICulture` variável armazena o nome da cultura da interface do usuário atual.</span><span class="sxs-lookup"><span data-stu-id="064e8-156">The `$PsCulture` variable stores the name of the current culture and the `$PsUICulture` variable stores the name of the current UI culture.</span></span>
+<span data-ttu-id="02fa3-155">Você também pode usar as `$PsCulture` `$PsUICulture` variáveis e.</span><span class="sxs-lookup"><span data-stu-id="02fa3-155">You can also use the `$PsCulture` and `$PsUICulture` variables.</span></span> <span data-ttu-id="02fa3-156">A `$PsCulture` variável armazena o nome da cultura atual e a `$PsUICulture` variável armazena o nome da cultura da interface do usuário atual.</span><span class="sxs-lookup"><span data-stu-id="02fa3-156">The `$PsCulture` variable stores the name of the current culture and the `$PsUICulture` variable stores the name of the current UI culture.</span></span>
 
-## <span data-ttu-id="064e8-157">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="064e8-157">RELATED LINKS</span></span>
+## <span data-ttu-id="02fa3-157">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="02fa3-157">RELATED LINKS</span></span>
 
-[<span data-ttu-id="064e8-158">Set-Culture</span><span class="sxs-lookup"><span data-stu-id="064e8-158">Set-Culture</span></span>](/powershell/module/international/set-culture?view=win10-ps)
+[<span data-ttu-id="02fa3-158">Set-Culture</span><span class="sxs-lookup"><span data-stu-id="02fa3-158">Set-Culture</span></span>](/powershell/module/international/set-culture)
 
-[<span data-ttu-id="064e8-159">Get-UICulture</span><span class="sxs-lookup"><span data-stu-id="064e8-159">Get-UICulture</span></span>](Get-UICulture.md)
-
+[<span data-ttu-id="02fa3-159">Get-UICulture</span><span class="sxs-lookup"><span data-stu-id="02fa3-159">Get-UICulture</span></span>](Get-UICulture.md)
