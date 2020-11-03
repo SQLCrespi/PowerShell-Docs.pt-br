@@ -1,0 +1,295 @@
+---
+external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+keywords: powershell, cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Utility
+ms.date: 12/19/2018
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/format-list?view=powershell-6&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Format-List
+ms.openlocfilehash: 6433eb5298097345d49e3e9a58e29bc299837f07
+ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "93195173"
+---
+# <span data-ttu-id="93bb9-103">Format-List</span><span class="sxs-lookup"><span data-stu-id="93bb9-103">Format-List</span></span>
+
+## <span data-ttu-id="93bb9-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="93bb9-104">SYNOPSIS</span></span>
+<span data-ttu-id="93bb9-105">Formata a saída como uma lista de propriedades na qual cada propriedade aparece em uma nova linha.</span><span class="sxs-lookup"><span data-stu-id="93bb9-105">Formats the output as a list of properties in which each property appears on a new line.</span></span>
+
+## <span data-ttu-id="93bb9-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="93bb9-106">SYNTAX</span></span>
+
+```
+Format-List [[-Property] <Object[]>] [-GroupBy <Object>] [-View <string>] [-ShowError]
+[-DisplayError] [-Force] [-Expand <string>] [-InputObject <psobject>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="93bb9-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="93bb9-107">DESCRIPTION</span></span>
+
+<span data-ttu-id="93bb9-108">O `Format-List` cmdlet formata a saída de um comando como uma lista de propriedades nas quais cada propriedade é exibida em uma linha separada.</span><span class="sxs-lookup"><span data-stu-id="93bb9-108">The `Format-List` cmdlet formats the output of a command as a list of properties in which each property is displayed on a separate line.</span></span> <span data-ttu-id="93bb9-109">Você pode usar `Format-List` para formatar e exibir todas as propriedades ou de um objeto selecionado como uma lista (Format-List \*).</span><span class="sxs-lookup"><span data-stu-id="93bb9-109">You can use `Format-List` to format and display all or selected properties of an object as a list (format-list \*).</span></span>
+
+<span data-ttu-id="93bb9-110">Como mais espaço está disponível para cada item em uma lista do que em uma tabela, o PowerShell exibe mais propriedades do objeto na lista e os valores de propriedade são menos prováveis de serem truncados.</span><span class="sxs-lookup"><span data-stu-id="93bb9-110">Because more space is available for each item in a list than in a table, PowerShell displays more properties of the object in the list, and the property values are less likely to be truncated.</span></span>
+
+## <span data-ttu-id="93bb9-111">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="93bb9-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="93bb9-112">Exemplo 1: Formatar serviços de computador</span><span class="sxs-lookup"><span data-stu-id="93bb9-112">Example 1: Format computer services</span></span>
+
+```powershell
+Get-Service | Format-List
+```
+
+<span data-ttu-id="93bb9-113">Esse comando formata informações sobre os serviços no computador como uma lista.</span><span class="sxs-lookup"><span data-stu-id="93bb9-113">This command formats information about services on the computer as a list.</span></span> <span data-ttu-id="93bb9-114">Por padrão, os serviços são formatados como uma tabela.</span><span class="sxs-lookup"><span data-stu-id="93bb9-114">By default, the services are formatted as a table.</span></span> <span data-ttu-id="93bb9-115">O `Get-Service` cmdlet obtém os objetos que representam os serviços no computador.</span><span class="sxs-lookup"><span data-stu-id="93bb9-115">The `Get-Service` cmdlet gets objects representing the services on the computer.</span></span> <span data-ttu-id="93bb9-116">O operador de pipeline (|) passa os resultados por meio do pipeline para `Format-List` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-116">The pipeline operator (|) passes the results through the pipeline to `Format-List`.</span></span>
+<span data-ttu-id="93bb9-117">Em seguida, o `Format-List` comando formata as informações de serviço em uma lista e as envia para o cmdlet de saída padrão para exibição.</span><span class="sxs-lookup"><span data-stu-id="93bb9-117">Then, the `Format-List` command formats the service information in a list and sends it to the default output cmdlet for display.</span></span>
+
+### <span data-ttu-id="93bb9-118">Exemplo 2: Formatar arquivos PS1XML</span><span class="sxs-lookup"><span data-stu-id="93bb9-118">Example 2: Format PS1XML files</span></span>
+
+<span data-ttu-id="93bb9-119">Esses comandos exibem informações sobre os arquivos PS1XML no diretório do PowerShell como uma lista.</span><span class="sxs-lookup"><span data-stu-id="93bb9-119">These commands display information about the PS1XML files in the PowerShell directory as a list.</span></span>
+
+```powershell
+$A = Get-ChildItem $pshome\*.ps1xml
+Format-List -InputObject $A
+```
+
+<span data-ttu-id="93bb9-120">O primeiro comando obtém os objetos que representam os arquivos e os armazena na `$A` variável.</span><span class="sxs-lookup"><span data-stu-id="93bb9-120">The first command gets the objects representing the files and stores them in the `$A` variable.</span></span>
+
+<span data-ttu-id="93bb9-121">O segundo comando usa `Format-List` para formatar informações sobre objetos armazenados no `$A` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-121">The second command uses `Format-List` to format information about objects stored in `$A`.</span></span> <span data-ttu-id="93bb9-122">Esse comando usa o parâmetro **InputObject** para passar a variável para `Format-List` , que envia a saída formatada para o cmdlet de saída padrão para exibição.</span><span class="sxs-lookup"><span data-stu-id="93bb9-122">This command uses the **InputObject** parameter to pass the variable to `Format-List`, which then sends the formatted output to the default output cmdlet for display.</span></span>
+
+### <span data-ttu-id="93bb9-123">Exemplo 3: Formatar Propriedades do processo por nome</span><span class="sxs-lookup"><span data-stu-id="93bb9-123">Example 3: Format process properties by name</span></span>
+
+<span data-ttu-id="93bb9-124">Este comando exibe o nome, a prioridade básica e a classe de prioridade de cada processo no computador.</span><span class="sxs-lookup"><span data-stu-id="93bb9-124">This command displays the name, base priority, and priority class of each process on the computer.</span></span>
+
+```powershell
+Get-Process | Format-List -Property name, basepriority, priorityclass
+```
+
+<span data-ttu-id="93bb9-125">Ele usa o `Get-Process` cmdlet para obter um objeto que representa cada processo.</span><span class="sxs-lookup"><span data-stu-id="93bb9-125">It uses the `Get-Process` cmdlet to get an object representing each process.</span></span> <span data-ttu-id="93bb9-126">O operador de pipeline (|) passa os objetos de processo por meio do pipeline para `Format-List` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-126">The pipeline operator (|) passes the process objects through the pipeline to `Format-List`.</span></span> <span data-ttu-id="93bb9-127">`Format-List` formata os processos como uma lista das propriedades especificadas.</span><span class="sxs-lookup"><span data-stu-id="93bb9-127">`Format-List` formats the processes as a list of the specified properties.</span></span> <span data-ttu-id="93bb9-128">O nome do parâmetro de *Propriedade* é opcional, portanto, você pode omiti-lo.</span><span class="sxs-lookup"><span data-stu-id="93bb9-128">The *Property* parameter name is optional, so you can omit it.</span></span>
+
+### <span data-ttu-id="93bb9-129">Exemplo 4: Formatar todas as propriedades de um processo</span><span class="sxs-lookup"><span data-stu-id="93bb9-129">Example 4: Format all properties for a process</span></span>
+
+<span data-ttu-id="93bb9-130">Esse comando exibe todas as propriedades do processo Winlogon.</span><span class="sxs-lookup"><span data-stu-id="93bb9-130">This command displays all of the properties of the Winlogon process.</span></span>
+
+```powershell
+Get-Process winlogon | Format-List -Property *
+```
+
+<span data-ttu-id="93bb9-131">Ele usa o cmdlet Get-Process para obter um objeto que representa o processo do Winlogon.</span><span class="sxs-lookup"><span data-stu-id="93bb9-131">It uses the Get-Process cmdlet to get an object representing the Winlogon process.</span></span> <span data-ttu-id="93bb9-132">O operador de pipeline (|) passa o objeto de processo do Winlogon por meio do pipeline para `Format-List` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-132">The pipeline operator (|) passes the Winlogon process object through the pipeline to `Format-List`.</span></span> <span data-ttu-id="93bb9-133">O comando usa o parâmetro *Property* para especificar as propriedades e o \* para indicar todas as propriedades.</span><span class="sxs-lookup"><span data-stu-id="93bb9-133">The command uses the *Property* parameter to specify the properties and the \* to indicate all properties.</span></span>
+<span data-ttu-id="93bb9-134">Como o nome do parâmetro de *Propriedade* é opcional, você pode omiti-lo e digitar o comando como `Format-List *` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-134">Because the name of the *Property* parameter is optional, you can omit it and type the command as `Format-List *`.</span></span> <span data-ttu-id="93bb9-135">`Format-List` envia automaticamente os resultados para o cmdlet de saída padrão para exibição.</span><span class="sxs-lookup"><span data-stu-id="93bb9-135">`Format-List` automatically sends the results to the default output cmdlet for display.</span></span>
+
+### <span data-ttu-id="93bb9-136">Exemplo 5: erros de formato de solução de problemas</span><span class="sxs-lookup"><span data-stu-id="93bb9-136">Example 5: Troubleshooting format errors</span></span>
+
+<span data-ttu-id="93bb9-137">Os exemplos a seguir mostram os resultados da adição dos parâmetros **DisplayError** ou **exerror** com uma expressão.</span><span class="sxs-lookup"><span data-stu-id="93bb9-137">The following examples show of the results of adding the **DisplayError** or **ShowError** parameters with an expression.</span></span>
+
+```powershell
+PC /> Get-Date | Format-List DayOfWeek,{ $_ / $null } -DisplayError
+
+DayOfWeek    : Friday
+ $_ / $null  : #ERR
+
+PC /> Get-Date | Format-List DayOfWeek,{ $_ / $null } -ShowError
+
+DayOfWeek    : Friday
+ $_ / $null  :
+
+Failed to evaluate expression " $_ / $null ".
++ CategoryInfo          : InvalidArgument: (12/21/2018 7:59:23 AM:PSObject) [], RuntimeException
++ FullyQualifiedErrorId : PSPropertyExpressionError
+```
+
+## <span data-ttu-id="93bb9-138">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="93bb9-138">PARAMETERS</span></span>
+
+### <span data-ttu-id="93bb9-139">-DisplayError</span><span class="sxs-lookup"><span data-stu-id="93bb9-139">-DisplayError</span></span>
+
+<span data-ttu-id="93bb9-140">Indica que esse cmdlet exibe erros na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="93bb9-140">Indicates that this cmdlet displays errors at the command line.</span></span> <span data-ttu-id="93bb9-141">Esse parâmetro raramente é usado, mas pode ser usado como um auxílio de depuração quando você estiver Formatando expressões em um `Format-List` comando e as expressões não parecerem estar funcionando.</span><span class="sxs-lookup"><span data-stu-id="93bb9-141">This parameter is rarely used, but can be used as a debugging aid when you are formatting expressions in a `Format-List` command, and the expressions do not appear to be working.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-142">-Expandir</span><span class="sxs-lookup"><span data-stu-id="93bb9-142">-Expand</span></span>
+
+<span data-ttu-id="93bb9-143">Especifica o objeto de coleção formatado, bem como os objetos na coleção.</span><span class="sxs-lookup"><span data-stu-id="93bb9-143">Specifies the formatted collection object, as well as the objects in the collection.</span></span> <span data-ttu-id="93bb9-144">Este parâmetro é projetado para formatar objetos que dão suporte à interface ICollection (System. Collections).</span><span class="sxs-lookup"><span data-stu-id="93bb9-144">This parameter is designed to format objects that support the ICollection (System.Collections) interface.</span></span> <span data-ttu-id="93bb9-145">O valor padrão é EnumOnly.</span><span class="sxs-lookup"><span data-stu-id="93bb9-145">The default value is EnumOnly.</span></span> <span data-ttu-id="93bb9-146">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="93bb9-146">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="93bb9-147">EnumOnly.</span><span class="sxs-lookup"><span data-stu-id="93bb9-147">EnumOnly.</span></span> <span data-ttu-id="93bb9-148">Exibe as propriedades dos objetos contidos na coleção.</span><span class="sxs-lookup"><span data-stu-id="93bb9-148">Displays the properties of the objects in the collection.</span></span>
+- <span data-ttu-id="93bb9-149">CoreOnly.</span><span class="sxs-lookup"><span data-stu-id="93bb9-149">CoreOnly.</span></span> <span data-ttu-id="93bb9-150">Exibe as propriedades do objeto da coleção.</span><span class="sxs-lookup"><span data-stu-id="93bb9-150">Displays the properties of the collection object.</span></span>
+- <span data-ttu-id="93bb9-151">Both:</span><span class="sxs-lookup"><span data-stu-id="93bb9-151">Both.</span></span> <span data-ttu-id="93bb9-152">Exibe as propriedades do objeto da coleção e também as propriedades dos objetos contidos na coleção.</span><span class="sxs-lookup"><span data-stu-id="93bb9-152">Displays the properties of the collection object and the properties of objects in the collection.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: CoreOnly, EnumOnly, Both
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-153">-Force</span><span class="sxs-lookup"><span data-stu-id="93bb9-153">-Force</span></span>
+
+<span data-ttu-id="93bb9-154">Indica que esse cmdlet exibe todas as informações de erro.</span><span class="sxs-lookup"><span data-stu-id="93bb9-154">Indicates that this cmdlet displays all of the error information.</span></span> <span data-ttu-id="93bb9-155">Use com o parâmetro **DisplayError** ou **exerror** .</span><span class="sxs-lookup"><span data-stu-id="93bb9-155">Use with the **DisplayError** or **ShowError** parameter.</span></span> <span data-ttu-id="93bb9-156">Por padrão, quando um objeto de erro é gravado para os fluxos de erro ou de exibição, apenas algumas das informações de erro são exibidas.</span><span class="sxs-lookup"><span data-stu-id="93bb9-156">By default, when an error object is written to the error or display streams, only some of the error information is displayed.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-157">-GroupBy</span><span class="sxs-lookup"><span data-stu-id="93bb9-157">-GroupBy</span></span>
+
+<span data-ttu-id="93bb9-158">Especifica a saída em grupos com base em um valor ou propriedade compartilhada.</span><span class="sxs-lookup"><span data-stu-id="93bb9-158">Specifies the output in groups based on a shared property or value.</span></span> <span data-ttu-id="93bb9-159">Insira uma expressão ou uma propriedade da saída.</span><span class="sxs-lookup"><span data-stu-id="93bb9-159">Enter an expression or a property of the output.</span></span>
+
+<span data-ttu-id="93bb9-160">O valor do parâmetro **GroupBy** pode ser uma nova propriedade calculada.</span><span class="sxs-lookup"><span data-stu-id="93bb9-160">The value of the **GroupBy** parameter can be a new calculated property.</span></span> <span data-ttu-id="93bb9-161">A propriedade calculada pode ser um bloco de script ou uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="93bb9-161">The calculated property can be a script block or a hash table.</span></span> <span data-ttu-id="93bb9-162">Os pares de chave-valor válidos são:</span><span class="sxs-lookup"><span data-stu-id="93bb9-162">Valid key-value pairs are:</span></span>
+
+- <span data-ttu-id="93bb9-163">Nome (ou rótulo)- `<string>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-163">Name (or Label) - `<string>`</span></span>
+- <span data-ttu-id="93bb9-164">Expressão- `<string>` ou `<script block>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-164">Expression - `<string>` or `<script block>`</span></span>
+- <span data-ttu-id="93bb9-165">FormatString `<string>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-165">FormatString - `<string>`</span></span>
+
+<span data-ttu-id="93bb9-166">Para obter mais informações, consulte [about_Calculated_Properties](../Microsoft.PowerShell.Core/About/about_Calculated_Properties.md).</span><span class="sxs-lookup"><span data-stu-id="93bb9-166">For more information, see [about_Calculated_Properties](../Microsoft.PowerShell.Core/About/about_Calculated_Properties.md).</span></span>
+
+```yaml
+Type: System.Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-167">-InputObject</span><span class="sxs-lookup"><span data-stu-id="93bb9-167">-InputObject</span></span>
+
+<span data-ttu-id="93bb9-168">Especifica os objetos a serem formatados.</span><span class="sxs-lookup"><span data-stu-id="93bb9-168">Specifies the objects to be formatted.</span></span> <span data-ttu-id="93bb9-169">Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.</span><span class="sxs-lookup"><span data-stu-id="93bb9-169">Enter a variable that contains the objects or type a command or expression that gets the objects.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-170">-Propriedade</span><span class="sxs-lookup"><span data-stu-id="93bb9-170">-Property</span></span>
+
+<span data-ttu-id="93bb9-171">Especifica as propriedades do objeto que aparecem na exibição e a ordem em que aparecem.</span><span class="sxs-lookup"><span data-stu-id="93bb9-171">Specifies the object properties that appear in the display and the order in which they appear.</span></span>
+<span data-ttu-id="93bb9-172">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="93bb9-172">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="93bb9-173">Se você omitir esse parâmetro, as propriedades a serem exibidas dependerão do objeto sendo exibido.</span><span class="sxs-lookup"><span data-stu-id="93bb9-173">If you omit this parameter, the properties that appear in the display depend on the object being displayed.</span></span> <span data-ttu-id="93bb9-174">O nome do parâmetro "Property" é opcional.</span><span class="sxs-lookup"><span data-stu-id="93bb9-174">The parameter name "Property" is optional.</span></span> <span data-ttu-id="93bb9-175">Você não pode usar os parâmetros **Property** e **View** no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="93bb9-175">You cannot use the **Property** and **View** parameters in the same command.</span></span>
+
+<span data-ttu-id="93bb9-176">O valor do parâmetro **Property** pode ser uma nova propriedade calculada.</span><span class="sxs-lookup"><span data-stu-id="93bb9-176">The value of the **Property** parameter can be a new calculated property.</span></span> <span data-ttu-id="93bb9-177">A propriedade calculada pode ser um bloco de script ou uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="93bb9-177">The calculated property can be a script block or a hash table.</span></span> <span data-ttu-id="93bb9-178">Os pares de chave-valor válidos são:</span><span class="sxs-lookup"><span data-stu-id="93bb9-178">Valid key-value pairs are:</span></span>
+
+- <span data-ttu-id="93bb9-179">Nome (ou rótulo)- `<string>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-179">Name (or Label) - `<string>`</span></span>
+- <span data-ttu-id="93bb9-180">Expressão- `<string>` ou `<script block>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-180">Expression - `<string>` or `<script block>`</span></span>
+- <span data-ttu-id="93bb9-181">FormatString `<string>`</span><span class="sxs-lookup"><span data-stu-id="93bb9-181">FormatString - `<string>`</span></span>
+
+<span data-ttu-id="93bb9-182">Para obter mais informações, consulte [about_Calculated_Properties](../Microsoft.PowerShell.Core/About/about_Calculated_Properties.md).</span><span class="sxs-lookup"><span data-stu-id="93bb9-182">For more information, see [about_Calculated_Properties](../Microsoft.PowerShell.Core/About/about_Calculated_Properties.md).</span></span>
+
+```yaml
+Type: System.Object[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="93bb9-183">-Erro</span><span class="sxs-lookup"><span data-stu-id="93bb9-183">-ShowError</span></span>
+
+<span data-ttu-id="93bb9-184">Indica que o cmdlet envia erros por meio do pipeline.</span><span class="sxs-lookup"><span data-stu-id="93bb9-184">Indicates that the cmdlet sends errors through the pipeline.</span></span> <span data-ttu-id="93bb9-185">Esse parâmetro raramente é usado, mas pode ser usado como um auxílio de depuração quando você estiver Formatando expressões em um `Format-List` comando e as expressões não parecerem estar funcionando.</span><span class="sxs-lookup"><span data-stu-id="93bb9-185">This parameter is rarely used, but can be used as a debugging aid when you are formatting expressions in a `Format-List` command, and the expressions do not appear to be working.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-186">-Exibição</span><span class="sxs-lookup"><span data-stu-id="93bb9-186">-View</span></span>
+
+<span data-ttu-id="93bb9-187">Especifica o nome de um formato de lista ou exibição alternativa.</span><span class="sxs-lookup"><span data-stu-id="93bb9-187">Specifies the name of an alternate list format or view.</span></span> <span data-ttu-id="93bb9-188">Você não pode usar os parâmetros **Property** e **View** no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="93bb9-188">You cannot use the **Property** and **View** parameters in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="93bb9-189">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="93bb9-189">CommonParameters</span></span>
+
+<span data-ttu-id="93bb9-190">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="93bb9-190">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="93bb9-191">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="93bb9-191">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="93bb9-192">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="93bb9-192">INPUTS</span></span>
+
+### <span data-ttu-id="93bb9-193">System. Management. Automation. PSObject</span><span class="sxs-lookup"><span data-stu-id="93bb9-193">System.Management.Automation.PSObject</span></span>
+
+<span data-ttu-id="93bb9-194">Você pode canalizar qualquer objeto para `Format-List` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-194">You can pipe any object to `Format-List`.</span></span>
+
+## <span data-ttu-id="93bb9-195">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="93bb9-195">OUTPUTS</span></span>
+
+### <span data-ttu-id="93bb9-196">Microsoft. PowerShell. Commands. Internal. Format</span><span class="sxs-lookup"><span data-stu-id="93bb9-196">Microsoft.PowerShell.Commands.Internal.Format</span></span>
+
+<span data-ttu-id="93bb9-197">`Format-List` Retorna os objetos de formato que representam a lista.</span><span class="sxs-lookup"><span data-stu-id="93bb9-197">`Format-List` returns the format objects that represent the list.</span></span>
+
+## <span data-ttu-id="93bb9-198">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="93bb9-198">NOTES</span></span>
+
+<span data-ttu-id="93bb9-199">Você também pode se referir a Format-List por seu alias interno, FL.</span><span class="sxs-lookup"><span data-stu-id="93bb9-199">You can also refer to Format-List by its built-in alias, FL.</span></span> <span data-ttu-id="93bb9-200">Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span><span class="sxs-lookup"><span data-stu-id="93bb9-200">For more information, see [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).</span></span>
+
+<span data-ttu-id="93bb9-201">Os cmdlets de formato, como `Format-List` , organizam os dados a serem exibidos, mas não os exibem.</span><span class="sxs-lookup"><span data-stu-id="93bb9-201">The format cmdlets, such as `Format-List`, arrange the data to be displayed but do not display it.</span></span>
+<span data-ttu-id="93bb9-202">Os dados são exibidos pelos recursos de saída do PowerShell e pelos cmdlets que contêm o verbo out (os cmdlets Out), como `Out-Host` ou `Out-File` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-202">The data is displayed by the output features of PowerShell and by the cmdlets that contain the Out verb (the Out cmdlets), such as `Out-Host` or `Out-File`.</span></span>
+
+<span data-ttu-id="93bb9-203">Se você não usar um cmdlet de formato, o PowerShell aplicará esse formato padrão a cada objeto exibido.</span><span class="sxs-lookup"><span data-stu-id="93bb9-203">If you do not use a format cmdlet, PowerShell applies that default format for each object that it displays.</span></span>
+
+<span data-ttu-id="93bb9-204">O parâmetro **GroupBy** pressupõe que os objetos são classificados.</span><span class="sxs-lookup"><span data-stu-id="93bb9-204">The **GroupBy** parameter assumes that the objects are sorted.</span></span> <span data-ttu-id="93bb9-205">Use Sort-Object antes `Format-List` de usar para agrupar os objetos.</span><span class="sxs-lookup"><span data-stu-id="93bb9-205">Use Sort-Object before using `Format-List` to group the objects.</span></span>
+
+<span data-ttu-id="93bb9-206">O parâmetro **View** permite especificar um formato alternativo para a tabela.</span><span class="sxs-lookup"><span data-stu-id="93bb9-206">The **View** parameter lets you specify an alternate format for the table.</span></span> <span data-ttu-id="93bb9-207">Você pode usar os modos de exibição definidos nos `*.format.PS1XML` arquivos no diretório do PowerShell ou pode criar seus próprios modos de exibição em novos arquivos ps1xml e usar o cmdlet Update-FormatData para incluí-los no PowerShell.</span><span class="sxs-lookup"><span data-stu-id="93bb9-207">You can use the views defined in the `*.format.PS1XML` files in the PowerShell directory, or you can create your own views in new PS1XML files and use the Update-FormatData cmdlet to include them in PowerShell.</span></span>
+
+<span data-ttu-id="93bb9-208">O modo de exibição alternativo para o parâmetro de **exibição** deve usar o formato de lista, caso contrário, o comando falhará.</span><span class="sxs-lookup"><span data-stu-id="93bb9-208">The alternate view for the **View** parameter must use the list format, otherwise, the command fails.</span></span> <span data-ttu-id="93bb9-209">Se a exibição alternativa for uma tabela, use `Format-Table` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-209">If the alternate view is a table, use `Format-Table`.</span></span> <span data-ttu-id="93bb9-210">Se a exibição alternativa não for uma lista ou uma tabela, use `Format-Custom` .</span><span class="sxs-lookup"><span data-stu-id="93bb9-210">If the alternate view is not a list or a table, use `Format-Custom`.</span></span>
+
+## <span data-ttu-id="93bb9-211">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="93bb9-211">RELATED LINKS</span></span>
+
+[<span data-ttu-id="93bb9-212">about_Calculated_Properties</span><span class="sxs-lookup"><span data-stu-id="93bb9-212">about_Calculated_Properties</span></span>](../Microsoft.PowerShell.Core/About/about_Calculated_Properties.md)
+
+[<span data-ttu-id="93bb9-213">Format-Custom</span><span class="sxs-lookup"><span data-stu-id="93bb9-213">Format-Custom</span></span>](Format-Custom.md)
+
+[<span data-ttu-id="93bb9-214">Format-Hex</span><span class="sxs-lookup"><span data-stu-id="93bb9-214">Format-Hex</span></span>](Format-Hex.md)
+
+[<span data-ttu-id="93bb9-215">Format-Table</span><span class="sxs-lookup"><span data-stu-id="93bb9-215">Format-Table</span></span>](Format-Table.md)
+
+[<span data-ttu-id="93bb9-216">Format-Wide</span><span class="sxs-lookup"><span data-stu-id="93bb9-216">Format-Wide</span></span>](Format-Wide.md)

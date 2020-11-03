@@ -1,0 +1,420 @@
+---
+external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
+keywords: powershell, cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Management
+ms.date: 04/07/2020
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-item?view=powershell-6&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Remove-Item
+ms.openlocfilehash: b50decf6757140d4273dd2f3ed58281fe6f8f903
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "93194554"
+---
+# <span data-ttu-id="f6aaf-103">Remove-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-103">Remove-Item</span></span>
+
+## <span data-ttu-id="f6aaf-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="f6aaf-104">SYNOPSIS</span></span>
+<span data-ttu-id="f6aaf-105">Exclui os itens especificados.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-105">Deletes the specified items.</span></span>
+
+## <span data-ttu-id="f6aaf-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="f6aaf-106">SYNTAX</span></span>
+
+### <span data-ttu-id="f6aaf-107">Caminho (padrão)</span><span class="sxs-lookup"><span data-stu-id="f6aaf-107">Path (Default)</span></span>
+
+```
+Remove-Item [-Path] <String[]> [-Filter <String>] [-Include <String[]>] [-Exclude <String[]>]
+ [-Recurse] [-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm] [-Stream <String[]>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="f6aaf-108">LiteralPath</span><span class="sxs-lookup"><span data-stu-id="f6aaf-108">LiteralPath</span></span>
+
+```
+Remove-Item -LiteralPath <String[]> [-Filter <String>] [-Include <String[]>] [-Exclude <String[]>]
+ [-Recurse] [-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm] [-Stream <String[]>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="f6aaf-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="f6aaf-109">DESCRIPTION</span></span>
+
+<span data-ttu-id="f6aaf-110">O `Remove-Item` cmdlet exclui um ou mais itens.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-110">The `Remove-Item` cmdlet deletes one or more items.</span></span> <span data-ttu-id="f6aaf-111">Como há suporte para vários provedores, ele pode excluir vários tipos diferentes de itens, incluindo arquivos, pastas, chaves do registro, variáveis, aliases e funções.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-111">Because it is supported by many providers, it can delete many different types of items, including files, folders, registry keys, variables, aliases, and functions.</span></span>
+
+## <span data-ttu-id="f6aaf-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="f6aaf-112">EXAMPLES</span></span>
+
+### <span data-ttu-id="f6aaf-113">Exemplo 1: excluir arquivos que têm qualquer extensão de nome de arquivo</span><span class="sxs-lookup"><span data-stu-id="f6aaf-113">Example 1: Delete files that have any file name extension</span></span>
+
+<span data-ttu-id="f6aaf-114">Este exemplo exclui todos os arquivos que têm nomes que incluem um ponto ( `.` ) da `C:\Test` pasta.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-114">This example deletes all of the files that have names that include a dot (`.`) from the `C:\Test` folder.</span></span> <span data-ttu-id="f6aaf-115">Como o comando especifica um ponto, o comando não exclui pastas ou arquivos que não têm nenhuma extensão de nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-115">Because the command specifies a dot, the command does not delete folders or files that have no file name extension.</span></span>
+
+```powershell
+Remove-Item C:\Test\*.*
+```
+
+### <span data-ttu-id="f6aaf-116">Exemplo 2: excluir alguns dos arquivos de documento em uma pasta</span><span class="sxs-lookup"><span data-stu-id="f6aaf-116">Example 2: Delete some of the document files in a folder</span></span>
+
+<span data-ttu-id="f6aaf-117">Este exemplo exclui da pasta atual todos os arquivos que têm uma `.doc` extensão de nome de arquivo e um nome que não inclui `*1*` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-117">This example deletes from the current folder all files that have a `.doc` file name extension and a name that does not include `*1*`.</span></span>
+
+```powershell
+Remove-Item * -Include *.doc -Exclude *1*
+```
+
+<span data-ttu-id="f6aaf-118">Ele usa o caractere curinga ( `*` ) para especificar o conteúdo da pasta atual.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-118">It uses the wildcard character (`*`) to specify the contents of the current folder.</span></span> <span data-ttu-id="f6aaf-119">Ele usa os parâmetros **include** e **Exclude** para especificar os arquivos a serem excluídos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-119">It uses the **Include** and **Exclude** parameters to specify the files to delete.</span></span>
+
+### <span data-ttu-id="f6aaf-120">Exemplo 3: excluir arquivos ocultos e somente leitura</span><span class="sxs-lookup"><span data-stu-id="f6aaf-120">Example 3: Delete hidden, read-only files</span></span>
+
+<span data-ttu-id="f6aaf-121">Esse comando exclui um arquivo que está *oculto* e *somente leitura* .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-121">This command deletes a file that is both *hidden* and *read-only* .</span></span>
+
+```powershell
+Remove-Item -Path C:\Test\hidden-RO-file.txt -Force
+```
+
+<span data-ttu-id="f6aaf-122">Ele usa o parâmetro **path** para especificar o arquivo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-122">It uses the **Path** parameter to specify the file.</span></span> <span data-ttu-id="f6aaf-123">Ele usa o parâmetro **Force** para excluí-lo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-123">It uses the **Force** parameter to delete it.</span></span> <span data-ttu-id="f6aaf-124">Sem **forçar** , você não pode excluir arquivos _somente leitura_ ou _ocultos_ .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-124">Without **Force** , you cannot delete _read-only_ or _hidden_ files.</span></span>
+
+### <span data-ttu-id="f6aaf-125">Exemplo 4: excluir arquivos em subpastas de forma recursiva</span><span class="sxs-lookup"><span data-stu-id="f6aaf-125">Example 4: Delete files in subfolders recursively</span></span>
+
+<span data-ttu-id="f6aaf-126">Esse comando exclui todos os arquivos CSV na pasta atual e todas as subpastas de forma recursiva.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-126">This command deletes all of the CSV files in the current folder and all subfolders recursively.</span></span>
+
+<span data-ttu-id="f6aaf-127">Como o parâmetro **recurse** no `Remove-Item` tem um problema conhecido, o comando neste exemplo usa `Get-ChildItem` para obter os arquivos desejados e, em seguida, usa o operador de pipeline para passá-los para `Remove-Item` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-127">Because the **Recurse** parameter in `Remove-Item` has a known issue, the command in this example uses `Get-ChildItem` to get the desired files, and then uses the pipeline operator to pass them to `Remove-Item`.</span></span>
+
+```powershell
+Get-ChildItem * -Include *.csv -Recurse | Remove-Item
+```
+
+<span data-ttu-id="f6aaf-128">No `Get-ChildItem` comando, **Path** tem um valor de ( `*` ), que representa o conteúdo da pasta atual.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-128">In the `Get-ChildItem` command, **Path** has a value of (`*`), which represents the contents of the current folder.</span></span> <span data-ttu-id="f6aaf-129">Ele usa **include** para especificar o tipo de arquivo CSV e usa **recurse** para tornar a recuperação recursiva.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-129">It uses **Include** to specify the CSV file type, and it uses **Recurse** to make the retrieval recursive.</span></span> <span data-ttu-id="f6aaf-130">Se você tentar especificar o tipo de arquivo o caminho, como `-Path *.csv` , o cmdlet interpretará o assunto da pesquisa para ser um arquivo que não tem itens filhos e **recurse** falhará.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-130">If you try to specify the file type the path, such as `-Path *.csv`, the cmdlet interprets the subject of the search to be a file that has no child items, and **Recurse** fails.</span></span>
+
+### <span data-ttu-id="f6aaf-131">Exemplo 5: excluir subchaves recursivamente</span><span class="sxs-lookup"><span data-stu-id="f6aaf-131">Example 5: Delete subkeys recursively</span></span>
+
+<span data-ttu-id="f6aaf-132">Esse comando exclui a chave do registro "OldApp" e todas as suas subchaves e valores.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-132">This command deletes the "OldApp" registry key and all its subkeys and values.</span></span> <span data-ttu-id="f6aaf-133">Ele usa `Remove-Item` para remover a chave.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-133">It uses `Remove-Item` to remove the key.</span></span> <span data-ttu-id="f6aaf-134">O caminho é especificado, mas o nome de parâmetro opcional ( **caminho** ) é omitido.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-134">The path is specified, but the optional parameter name ( **Path** ) is omitted.</span></span>
+
+<span data-ttu-id="f6aaf-135">O parâmetro **recurse** exclui todo o conteúdo da chave "OldApp" recursivamente.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-135">The **Recurse** parameter deletes all of the contents of the "OldApp" key recursively.</span></span> <span data-ttu-id="f6aaf-136">Se a chave contiver subchaves e você omitir o parâmetro **recurse** , será solicitado que você confirme se deseja excluir o conteúdo da chave.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-136">If the key contains subkeys and you omit the **Recurse** parameter, you are prompted to confirm that you want to delete the contents of the key.</span></span>
+
+```powershell
+Remove-Item HKLM:\Software\MyCompany\OldApp -Recurse
+```
+
+### <span data-ttu-id="f6aaf-137">Exemplo 6: excluindo arquivos com caracteres especiais</span><span class="sxs-lookup"><span data-stu-id="f6aaf-137">Example 6: Deleting files with special characters</span></span>
+
+<span data-ttu-id="f6aaf-138">O exemplo a seguir mostra como excluir arquivos que contêm caracteres especiais, como colchetes ou parênteses.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-138">The following example shows how to delete files that contain special characters like brackets or parentheses.</span></span>
+
+```powershell
+Get-ChildItem
+```
+
+```Output
+    Directory: C:\temp\Downloads
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a---          6/1/2018  12:19 PM           1362 myFile.txt
+-a---          6/1/2018  12:30 PM           1132 myFile[1].txt
+-a---          6/1/2018  12:19 PM           1283 myFile[2].txt
+-a---          6/1/2018  12:19 PM           1432 myFile[3].txt
+
+```
+
+```powershell
+Get-ChildItem | Where-Object Name -Like '*`[*'
+```
+
+```Output
+    Directory: C:\temp\Downloads
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a---          6/1/2018  12:30 PM           1132 myFile[1].txt
+-a---          6/1/2018  12:19 PM           1283 myFile[2].txt
+-a---          6/1/2018  12:19 PM           1432 myFile[3].txt
+
+```
+
+```powershell
+Get-ChildItem | Where-Object Name -Like '*`[*' | ForEach-Object { Remove-Item -LiteralPath $_.Name }
+Get-ChildItem
+```
+
+```Output
+    Directory: C:\temp\Downloads
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a---          6/1/2018  12:19 PM           1362 myFile.txt
+```
+
+### <span data-ttu-id="f6aaf-139">Exemplo 7: remover um fluxo de dados alternativo</span><span class="sxs-lookup"><span data-stu-id="f6aaf-139">Example 7: Remove an alternate data stream</span></span>
+
+<span data-ttu-id="f6aaf-140">Este exemplo mostra como usar o parâmetro **Stream** dinâmico do `Remove-Item` cmdlet para excluir um fluxo de dados alternativo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-140">This example shows how to use the **Stream** dynamic parameter of the `Remove-Item` cmdlet to delete an alternate data stream.</span></span> <span data-ttu-id="f6aaf-141">O parâmetro Stream é introduzido no Windows PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-141">The stream parameter is introduced in Windows PowerShell 3.0.</span></span>
+
+```powershell
+Get-Item C:\Test\Copy-Script.ps1 -Stream Zone.Identifier
+```
+
+```Output
+   FileName: \\C:\Test\Copy-Script.ps1
+
+Stream                   Length
+------                   ------
+Zone.Identifier              26
+
+```
+
+```powershell
+Remove-Item C:\Test\Copy-Script.ps1 -Stream Zone.Identifier
+Get-Item C:\Test\Copy-Script.ps1 -Stream Zone.Identifier
+```
+
+```Output
+Get-Item : Could not open alternate data stream 'Zone.Identifier' of file 'C:\Test\Copy-Script.ps1'.
+At line:1 char:1
++ Get-Item 'C:\Test\Copy-Script.ps1' -Stream Zone.Identifier
++ [!INCLUDE[]()][!INCLUDE[]()][!INCLUDE[]()][!INCLUDE[]()][!INCLUDE[]()]~~
+    + CategoryInfo          : ObjectNotFound: (C:\Test\Copy-Script.ps1:String) [Get-Item], FileNotFoundE
+   xception
+    + FullyQualifiedErrorId : AlternateDataStreamNotFound,Microsoft.PowerShell.Commands.GetItemCommand
+
+```
+
+<span data-ttu-id="f6aaf-142">O parâmetro de **fluxo** `Get-Item` Obtém o fluxo de **Zone. identificador** do `Copy-Script.ps1` arquivo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-142">The **Stream** parameter `Get-Item` gets the **Zone.Identifier** stream of the `Copy-Script.ps1` file.</span></span> <span data-ttu-id="f6aaf-143">`Remove-Item` usa o parâmetro de **fluxo** para remover o fluxo de **zona. identificador** do arquivo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-143">`Remove-Item` uses the **Stream** parameter to remove the **Zone.Identifier** stream of the file.</span></span> <span data-ttu-id="f6aaf-144">Por fim, o `Get-Item` cmdlet mostra que o fluxo de **Zone. identificador** foi excluído.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-144">Finally, the `Get-Item` cmdlet shows that the **Zone.Identifier** stream was deleted.</span></span>
+
+## <span data-ttu-id="f6aaf-145">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f6aaf-145">PARAMETERS</span></span>
+
+### <span data-ttu-id="f6aaf-146">-Credential</span><span class="sxs-lookup"><span data-stu-id="f6aaf-146">-Credential</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="f6aaf-147">Não há suporte para esse parâmetro em nenhum provedor instalado com o PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-147">This parameter is not supported by any providers installed with PowerShell.</span></span>
+> <span data-ttu-id="f6aaf-148">Para representar outro usuário ou elevar suas credenciais ao executar esse cmdlet, use [Invoke-Command](../Microsoft.PowerShell.Core/Invoke-Command.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-148">To impersonate another user, or elevate your credentials when running this cmdlet, use [Invoke-Command](../Microsoft.PowerShell.Core/Invoke-Command.md).</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Current user
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-149">-Excluir</span><span class="sxs-lookup"><span data-stu-id="f6aaf-149">-Exclude</span></span>
+
+<span data-ttu-id="f6aaf-150">Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-150">Specifies, as a string array, an item or items that this cmdlet excludes in the operation.</span></span> <span data-ttu-id="f6aaf-151">O valor deste parâmetro qualifica o parâmetro **Path** .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-151">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="f6aaf-152">Insira um elemento ou padrão de caminho, como `*.txt` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-152">Enter a path element or pattern, such as `*.txt`.</span></span> <span data-ttu-id="f6aaf-153">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-153">Wildcard characters are permitted.</span></span> <span data-ttu-id="f6aaf-154">O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-154">The **Exclude** parameter is effective only when the command includes the contents of an item, such as `C:\Windows\*`, where the wildcard character specifies the contents of the `C:\Windows` directory.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="f6aaf-155">-Filter</span><span class="sxs-lookup"><span data-stu-id="f6aaf-155">-Filter</span></span>
+
+<span data-ttu-id="f6aaf-156">Especifica um filtro para qualificar o parâmetro **path** .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-156">Specifies a filter to qualify the **Path** parameter.</span></span> <span data-ttu-id="f6aaf-157">O provedor [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) é o único provedor do PowerShell instalado que dá suporte ao uso de filtros.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-157">The [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) provider is the only installed PowerShell provider that supports the use of filters.</span></span> <span data-ttu-id="f6aaf-158">Você pode encontrar a sintaxe para o idioma do filtro do **sistema de arquivos** em [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-158">You can find the syntax for the **FileSystem** filter language in [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md).</span></span>
+<span data-ttu-id="f6aaf-159">Os filtros são mais eficientes do que outros parâmetros, porque o provedor os aplica quando o cmdlet obtém os objetos em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-159">Filters are more efficient than other parameters, because the provider applies them when the cmdlet gets the objects rather than having PowerShell filter the objects after they are retrieved.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="f6aaf-160">-Force</span><span class="sxs-lookup"><span data-stu-id="f6aaf-160">-Force</span></span>
+
+<span data-ttu-id="f6aaf-161">Força o cmdlet a remover itens que não podem ser alterados de outra forma, como arquivos ocultos ou somente leitura ou aliases ou variáveis somente leitura.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-161">Forces the cmdlet to remove items that cannot otherwise be changed, such as hidden or read-only files or read-only aliases or variables.</span></span> <span data-ttu-id="f6aaf-162">O cmdlet não pode remover variáveis nem aliases constantes.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-162">The cmdlet cannot remove constant aliases or variables.</span></span>
+<span data-ttu-id="f6aaf-163">A implementação varia de provedor para provedor.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-163">Implementation varies from provider to provider.</span></span> <span data-ttu-id="f6aaf-164">Para obter mais informações, consulte [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-164">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span> <span data-ttu-id="f6aaf-165">Mesmo usando o parâmetro **Force** , o cmdlet não pode substituir as restrições de segurança.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-165">Even using the **Force** parameter, the cmdlet cannot override security restrictions.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-166">-Incluir</span><span class="sxs-lookup"><span data-stu-id="f6aaf-166">-Include</span></span>
+
+<span data-ttu-id="f6aaf-167">Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-167">Specifies, as a string array, an item or items that this cmdlet includes in the operation.</span></span> <span data-ttu-id="f6aaf-168">O valor deste parâmetro qualifica o parâmetro **Path** .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-168">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="f6aaf-169">Insira um elemento ou padrão de caminho, como `"*.txt"` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-169">Enter a path element or pattern, such as `"*.txt"`.</span></span> <span data-ttu-id="f6aaf-170">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-170">Wildcard characters are permitted.</span></span> <span data-ttu-id="f6aaf-171">O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-171">The **Include** parameter is effective only when the command includes the contents of an item, such as `C:\Windows\*`, where the wildcard character specifies the contents of the `C:\Windows` directory.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="f6aaf-172">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="f6aaf-172">-LiteralPath</span></span>
+
+<span data-ttu-id="f6aaf-173">Especifica um caminho para um ou mais locais.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-173">Specifies a path to one or more locations.</span></span> <span data-ttu-id="f6aaf-174">O valor de **LiteralPath** é usado exatamente como é digitado.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-174">The value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="f6aaf-175">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-175">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="f6aaf-176">Se o caminho incluir caracteres de escape, coloque-o entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-176">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="f6aaf-177">Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-177">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+
+<span data-ttu-id="f6aaf-178">Para obter mais informações, consulte [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-178">For more information, see [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: LiteralPath
+Aliases: PSPath, LP
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-179">-Path</span><span class="sxs-lookup"><span data-stu-id="f6aaf-179">-Path</span></span>
+
+<span data-ttu-id="f6aaf-180">Especifica um caminho dos itens que estão sendo removidos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-180">Specifies a path of the items being removed.</span></span>
+<span data-ttu-id="f6aaf-181">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-181">Wildcard characters are permitted.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: Path
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="f6aaf-182">-Recurse</span><span class="sxs-lookup"><span data-stu-id="f6aaf-182">-Recurse</span></span>
+
+<span data-ttu-id="f6aaf-183">Indica que esse cmdlet exclui os itens nos locais especificados e em todos os itens filho dos locais.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-183">Indicates that this cmdlet deletes the items in the specified locations and in all child items of the locations.</span></span>
+
+<span data-ttu-id="f6aaf-184">Quando usado com o parâmetro **include** , o parâmetro **recurse** pode não excluir todas as subpastas ou todos os itens filho.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-184">When it is used with the **Include** parameter, the **Recurse** parameter might not delete all subfolders or all child items.</span></span> <span data-ttu-id="f6aaf-185">Este é um problema conhecido.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-185">This is a known issue.</span></span> <span data-ttu-id="f6aaf-186">Como alternativa, tente canalizar os resultados do `Get-ChildItem -Recurse` comando para `Remove-Item` , conforme descrito no "exemplo 4" neste tópico.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-186">As a workaround, try piping results of the `Get-ChildItem -Recurse` command to `Remove-Item`, as described in "Example 4" in this topic.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-187">-Fluxo</span><span class="sxs-lookup"><span data-stu-id="f6aaf-187">-Stream</span></span>
+
+<span data-ttu-id="f6aaf-188">O parâmetro de **fluxo** é um parâmetro dinâmico que o provedor FileSystem adiciona `Remove-Item` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-188">The **Stream** parameter is a dynamic parameter that the FileSystem provider adds to `Remove-Item`.</span></span>
+<span data-ttu-id="f6aaf-189">Esse parâmetro funciona somente em unidades de sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-189">This parameter works only in file system drives.</span></span>
+
+<span data-ttu-id="f6aaf-190">Você pode usar `Remove-Item` para excluir um fluxo de dados alternativo.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-190">You can use `Remove-Item` to delete an alternative data stream.</span></span> <span data-ttu-id="f6aaf-191">No entanto, não é a maneira recomendada para eliminar verificações de segurança que bloqueiam arquivos baixados da Internet.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-191">However, it is not the recommended way to eliminate security checks that block files that are downloaded from the Internet.</span></span> <span data-ttu-id="f6aaf-192">Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-192">If you verify that a downloaded file is safe, use the `Unblock-File` cmdlet.</span></span>
+
+<span data-ttu-id="f6aaf-193">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-193">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="f6aaf-194">-Confirm</span><span class="sxs-lookup"><span data-stu-id="f6aaf-194">-Confirm</span></span>
+
+<span data-ttu-id="f6aaf-195">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-195">Prompts you for confirmation before running the cmdlet.</span></span> <span data-ttu-id="f6aaf-196">Para obter mais informações, consulte os seguintes artigos:</span><span class="sxs-lookup"><span data-stu-id="f6aaf-196">For more information, see the following articles:</span></span>
+
+- [<span data-ttu-id="f6aaf-197">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="f6aaf-197">about_Preference_Variables</span></span>](../microsoft.powershell.core/about/about_preference_variables.md#confirmpreference)
+- [<span data-ttu-id="f6aaf-198">about_Functions_CmdletBindingAttribute</span><span class="sxs-lookup"><span data-stu-id="f6aaf-198">about_Functions_CmdletBindingAttribute</span></span>](../microsoft.powershell.core/about/about_functions_cmdletbindingattribute.md?#confirmimpact)
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-199">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="f6aaf-199">-WhatIf</span></span>
+
+<span data-ttu-id="f6aaf-200">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-200">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="f6aaf-201">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-201">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f6aaf-202">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f6aaf-202">CommonParameters</span></span>
+
+<span data-ttu-id="f6aaf-203">Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-203">This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`.</span></span> <span data-ttu-id="f6aaf-204">Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-204">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+
+## <span data-ttu-id="f6aaf-205">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="f6aaf-205">INPUTS</span></span>
+
+### <span data-ttu-id="f6aaf-206">System.String</span><span class="sxs-lookup"><span data-stu-id="f6aaf-206">System.String</span></span>
+
+<span data-ttu-id="f6aaf-207">É possível canalizar uma cadeia de caracteres que contém um caminho, mas não um caminho literal, para esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-207">You can pipe a string that contains a path, but not a literal path, to this cmdlet.</span></span>
+
+## <span data-ttu-id="f6aaf-208">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="f6aaf-208">OUTPUTS</span></span>
+
+### <span data-ttu-id="f6aaf-209">Nenhum</span><span class="sxs-lookup"><span data-stu-id="f6aaf-209">None</span></span>
+
+<span data-ttu-id="f6aaf-210">Este cmdlet não retorna nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-210">This cmdlet does not return any output.</span></span>
+
+## <span data-ttu-id="f6aaf-211">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="f6aaf-211">NOTES</span></span>
+
+<span data-ttu-id="f6aaf-212">O `Remove-Item` cmdlet é projetado para trabalhar com os dados expostos por qualquer provedor.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-212">The `Remove-Item` cmdlet is designed to work with the data exposed by any provider.</span></span> <span data-ttu-id="f6aaf-213">Para listar os provedores disponíveis em sua sessão, digite `Get-PsProvider` .</span><span class="sxs-lookup"><span data-stu-id="f6aaf-213">To list the providers available in your session, type `Get-PsProvider`.</span></span> <span data-ttu-id="f6aaf-214">Para obter mais informações, consulte [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="f6aaf-214">For more information, see [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).</span></span>
+
+<span data-ttu-id="f6aaf-215">Quando você tenta excluir uma pasta que contém itens sem usar o parâmetro **recurse** , o cmdlet solicita confirmação.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-215">When you try to delete a folder that contains items without using the **Recurse** parameter, the cmdlet prompts for confirmation.</span></span> <span data-ttu-id="f6aaf-216">Usar não `-Confirm:$false` suprime o prompt.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-216">Using `-Confirm:$false` does not suppress the prompt.</span></span> <span data-ttu-id="f6aaf-217">Isso ocorre por design.</span><span class="sxs-lookup"><span data-stu-id="f6aaf-217">This is by design.</span></span>
+
+## <span data-ttu-id="f6aaf-218">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="f6aaf-218">RELATED LINKS</span></span>
+
+[<span data-ttu-id="f6aaf-219">Clear-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-219">Clear-Item</span></span>](Clear-Item.md)
+
+[<span data-ttu-id="f6aaf-220">Copy-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-220">Copy-Item</span></span>](Copy-Item.md)
+
+[<span data-ttu-id="f6aaf-221">Get-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-221">Get-Item</span></span>](Get-Item.md)
+
+[<span data-ttu-id="f6aaf-222">Invoke-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-222">Invoke-Item</span></span>](Invoke-Item.md)
+
+[<span data-ttu-id="f6aaf-223">Move-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-223">Move-Item</span></span>](Move-Item.md)
+
+[<span data-ttu-id="f6aaf-224">New-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-224">New-Item</span></span>](New-Item.md)
+
+[<span data-ttu-id="f6aaf-225">Remove-ItemProperty</span><span class="sxs-lookup"><span data-stu-id="f6aaf-225">Remove-ItemProperty</span></span>](Remove-ItemProperty.md)
+
+[<span data-ttu-id="f6aaf-226">Rename-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-226">Rename-Item</span></span>](Rename-Item.md)
+
+[<span data-ttu-id="f6aaf-227">Set-Item</span><span class="sxs-lookup"><span data-stu-id="f6aaf-227">Set-Item</span></span>](Set-Item.md)
+
+[<span data-ttu-id="f6aaf-228">about_Providers</span><span class="sxs-lookup"><span data-stu-id="f6aaf-228">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
+
+[<span data-ttu-id="f6aaf-229">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="f6aaf-229">about_Preference_Variables</span></span>](../microsoft.powershell.core/about/about_preference_variables.md#confirmpreference)
+
+[<span data-ttu-id="f6aaf-230">about_Functions_CmdletBindingAttribute</span><span class="sxs-lookup"><span data-stu-id="f6aaf-230">about_Functions_CmdletBindingAttribute</span></span>](../microsoft.powershell.core/about/about_functions_cmdletbindingattribute.md?#confirmimpact)
