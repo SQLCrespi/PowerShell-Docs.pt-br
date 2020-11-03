@@ -7,20 +7,17 @@ ms.date: 09/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-clipboard?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Clipboard
-ms.openlocfilehash: bf3934ed711eac30573b173f2c3fac3378ca2f3a
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 9da33bcf0bc1142859d547debedfb242819041aa
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "93195349"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239627"
 ---
 # Get-Clipboard
 
 ## SINOPSE
 Obtém o conteúdo da área de transferência.
-
-[!NOTE]
-> No Linux, esse cmdlet requer `xclip` que o utilitário esteja no caminho.
 
 ## SYNTAX
 
@@ -31,6 +28,9 @@ Get-Clipboard [-Raw] [<CommonParameters>]
 ## DESCRIPTION
 
 O `Get-Clipboard` cmdlet obtém o conteúdo da área de transferência como texto. Várias linhas de texto são retornadas como uma matriz de cadeias de caracteres semelhantes a `Get-Content` .
+
+> [!NOTE]
+> No Linux, esse cmdlet requer `xclip` que o utilitário esteja no caminho.
 
 ## EXEMPLOS
 

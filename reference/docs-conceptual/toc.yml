@@ -75,6 +75,8 @@
           href: learn/deep-dives/everything-about-shouldprocess.md
         - name: Write-Progress durante o multithreading
           href: learn/deep-dives/write-progress-across-multiple-threads.md
+        - name: Suporte para adicionar credencial às funções do PowerShell
+          href: learn/deep-dives/add-credentials-to-powershell-functions.md
     - name: Comunicação remota do PowerShell
       items:
         - name: JEA (Administração Just Enough)
@@ -564,6 +566,8 @@
       href: community/hall-of-fame.md
     - name: Novidades no Docs
       items:
+        - name: T4-2020
+          href: community/2020-Q4.md
         - name: T3 de 2020
           href: community/2020-Q3.md
         - name: T2 de 2020

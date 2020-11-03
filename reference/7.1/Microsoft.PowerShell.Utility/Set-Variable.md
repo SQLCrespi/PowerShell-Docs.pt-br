@@ -7,18 +7,17 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: ba17b526de91e470149e90913814ecfac0f75392
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c175fce3df41a3860a54ccb13a280955dce4a55c
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193261"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239887"
 ---
 # Set-Variable
 
 ## SINOPSE
-Define o valor de uma variável.
-Cria a variável se uma com o nome solicitado não existir.
+Define o valor de uma variável. Cria a variável se uma com o nome solicitado não existir.
 
 ## SYNTAX
 
@@ -30,41 +29,47 @@ Set-Variable [-Name] <String[]> [[-Value] <Object>] [-Include <String[]>] [-Excl
 
 ## DESCRIPTION
 
-O cmdlet **Set-Variable** atribui um valor a uma variável especificada ou altera o valor atual.
-Se a variável não existir, o cmdlet a criará.
+O `Set-Variable` cmdlet atribui um valor a uma variável especificada ou altera o valor atual. Se a variável não existir, o cmdlet a criará.
 
 ## EXEMPLOS
 
 ### Exemplo 1: definir uma variável e obter seu valor
 
-```
-PS C:\> Set-Variable -Name "desc" -Value "A description"
-PS C:\> Get-Variable -Name "desc"
+Esses comandos definem o valor da `$desc` variável como `A description` e, em seguida, obtém o valor da variável.
+
+```powershell
+Set-Variable -Name "desc" -Value "A description"
+Get-Variable -Name "desc"
 ```
 
-Esses comandos definem o valor da variável DESC como uma descrição e, em seguida, obtém o valor da variável.
+```Output
+Name                           Value
+----                           -----
+desc                           A description
+```
 
 ### Exemplo 2: definir uma variável global, somente leitura
 
+Este exemplo cria uma variável global, somente leitura que contém todos os processos no sistema e, em seguida, exibe todas as propriedades da variável.
+
+```powershell
+Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope global -Description "All processes" -PassThru |
+    Format-List -Property *
 ```
-PS C:\> Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope global -Description "All processes" -PassThru | Format-List -Property *
-```
 
-Este comando cria uma variável global, somente leitura, que contém todos os processos do sistema e, em seguida, exibe todas as propriedades da variável.
+O comando usa o `Set-Variable` cmdlet para criar a variável. Ele usa o parâmetro **PassThru** para criar um objeto que representa a nova variável e usa o operador de pipeline ( `|` ) para passar o objeto para o `Format-List` cmdlet. Ele usa o parâmetro **Property** de `Format-List` com um valor de All ( `*` ) para exibir todas as propriedades da variável recém-criada.
 
-O comando usa o cmdlet **Set-Variable** para criar a variável.
-Ele usa o parâmetro *PassThru* para criar um objeto que representa a nova variável e usa o operador de pipeline (|) para passar o objeto para o cmdlet Format-List.
-Ele usa o parâmetro de *Propriedade* de Format-List com um valor de todos (*) para exibir todas as propriedades da variável recém-criada.
-
-O valor "(Get-Process)" é colocado entre parênteses para garantir que seja executado antes de ser armazenado na variável.
-Caso contrário, a variável contém as palavras "Get-Process".
+O valor, `(Get-Process)` , é colocado entre parênteses para garantir que ele seja executado antes de ser armazenado na variável. Caso contrário, a variável conterá as palavras " **Get-Process** ".
 
 ### Exemplo 3: entender as variáveis públicas versus privadas
+
+Este exemplo mostra como alterar a visibilidade de uma variável para `Private` . Essa variável pode ser lida e alterada por scripts com as permissões necessárias, mas não fica visível para o usuário.
 
 ```
 PS C:\> New-Variable -Name "counter" -Visibility Public -Value 26
 PS C:\> $Counter
 26
+
 PS C:\> Get-Variable c*
 
 Name                  Value
@@ -73,7 +78,7 @@ Culture               en-US
 ConsoleFileName
 ConfirmPreference     High
 CommandLineParameters {}
-Counter               26 
+Counter               26
 
 PS C:\> Set-Variable -Name "counter" -Visibility Private
 PS C:\> Get-Variable c*
@@ -85,17 +90,14 @@ ConsoleFileName
 ConfirmPreference     High
 CommandLineParameters {}
 
- PS C:\> $counter
+PS C:\> $counter
 "Cannot access the variable '$counter' because it is a private variable"
 
 PS C:\> .\use-counter.ps1
 #Commands completed successfully.
 ```
 
-Este comando mostra como alterar a visibilidade de uma variável para particular.
-Essa variável pode ser lida e alterada por scripts com as permissões necessárias, mas não fica visível para o usuário.
-
-A saída de exemplo mostra a diferença de comportamento de variáveis públicas e privadas.
+Este comando mostra como alterar a visibilidade de uma variável para particular. Essa variável pode ser lida e alterada por scripts com as permissões necessárias, mas não fica visível para o usuário.
 
 ## PARAMETERS
 
@@ -117,9 +119,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica uma matriz de itens que esse cmdlet exclui da operação.
-O valor deste parâmetro qualifica o parâmetro *Path* .
-Insira um elemento ou padrão de caminho, como `*.txt` .
+Especifica uma matriz de itens que esse cmdlet exclui da operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` .
 Caracteres curinga são permitidos.
 
 ```yaml
@@ -138,8 +138,7 @@ Accept wildcard characters: True
 
 Permite que você crie uma variável com o mesmo nome de uma variável somente leitura existente, ou altere o valor de uma variável somente leitura.
 
-Por padrão, você pode substituir uma variável, a menos que a variável tenha um valor de opção de ReadOnly ou Constant.
-Para obter mais informações, consulte o parâmetro *Option* .
+Por padrão, você pode substituir uma variável, a menos que a variável tenha um valor de opção de `ReadOnly` ou `Constant` . Para obter mais informações, consulte o parâmetro **Option** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,10 +154,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica uma matriz de itens que esse cmdlet inclui na operação.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um nome ou padrão de nome, como `c*` .
-Caracteres curinga são permitidos.
+Especifica uma matriz de itens que esse cmdlet inclui na operação. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um nome ou padrão de nome, como `c*` . Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -194,13 +190,11 @@ Especifica o valor da propriedade **Options** da variável.
 
 Os valores válidos são:
 
-- Nenhum: não define opções. ("None" é o padrão.)
-- ReadOnly: pode ser excluído. Não pode ser alterado, exceto pelo uso do parâmetro Force.
-- Constante: não pode ser excluída ou alterada. "Constant" é válido somente quando você estiver criando uma variável. Você não pode alterar as opções de uma variável existente para "Constant".
-- Particular: a variável está disponível somente no escopo atual.
-- Escopo: a variável é copiada para todos os novos escopos criados.
-
-Para ver a propriedade **Options** de todas as variáveis na sessão, digite `Get-Variable | Format-Table -Property name, options -Autosize` .
+- `None`: Não define opções. ("None" é o padrão.)
+- `ReadOnly`: Pode ser excluído. Não pode ser alterado, exceto pelo uso do parâmetro Force.
+- `Constant`: Não pode ser excluído ou alterado. `Constant` é válido somente quando você está criando uma variável. Você não pode alterar as opções de uma variável existente para `Constant` .
+- `Private`: A variável está disponível somente no escopo atual.
+- `AllScope`: A variável é copiada para todos os novos escopos criados.
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -216,8 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Retorna um objeto que representa a nova variável.
-Por padrão, este cmdlet não gera saída.
+
+Retorna um objeto que representa a nova variável. Por padrão, este cmdlet não gera saída.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -275,17 +269,14 @@ Accept wildcard characters: False
 
 ### -Visibilidade
 
-Determina se a variável é visível fora da sessão na qual ela foi criada.
-Esse parâmetro é voltado para uso em scripts e comandos que serão entregues a outros usuários.
+Determina se a variável é visível fora da sessão na qual ela foi criada. Esse parâmetro é projetado para uso em scripts e comandos que serão entregues a outros usuários.
 
 Os valores válidos são:
 
 - Público: a variável está visível. ("Public" é o padrão.)
 - Particular: a variável não é visível.
 
-Quando uma variável é privada, ele não aparece nas listas de variáveis como aquelas retornadas por Get-Variable ou em exibições da unidade Variable:.
-Comandos para ler ou alterar o valor de uma variável privada retornam um erro.
-No entanto, o usuário pode executar comandos que usam uma variável privada se os comandos tiverem sido escritos na sessão em que a variável foi definida.
+Quando uma variável é privada, ela não aparece em listas de variáveis, como as retornadas por `Get-Variable` , ou em exibições da unidade **Variable:** . Comandos para ler ou alterar o valor de uma variável privada retornam um erro. No entanto, o usuário pode executar comandos que usam uma variável privada se os comandos tiverem sido escritos na sessão em que a variável foi definida.
 
 ```yaml
 Type: System.Management.Automation.SessionStateEntryVisibility
@@ -301,6 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Solicita sua confirmação antes de executar o cmdlet.
 
 ```yaml
@@ -317,8 +309,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -340,13 +331,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### System.Object
 
-É possível canalizar um objeto que representa o valor da variável para **Set-Variable** .
+É possível canalizar um objeto que representa o valor da variável para `Set-Variable` .
 
 ## SAÍDAS
 
 ### Nenhum ou System. Management. Automation. PSVariable
 
-Quando você usa o parâmetro *PassThru* , o **Set-Variable** gera um objeto **System. Management. Automation. PSVariable** que representa a variável nova ou alterada.
+Quando você usa o parâmetro **PassThru** , o `Set-Variable` gera um objeto **System. Management. Automation. PSVariable** que representa a variável nova ou alterada.
 Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
@@ -360,4 +351,3 @@ Caso contrário, este cmdlet não gera nenhuma saída.
 [New-Variable](New-Variable.md)
 
 [Remove-Variable](Remove-Variable.md)
-
