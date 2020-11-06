@@ -2,17 +2,17 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Usando o Import-DSCResource
-ms.openlocfilehash: 0fa11755558510b986ac24df120579ea15a43689
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: O Import-DSCResource é uma palavra-chave dinâmica que só pode ser usada dentro do bloco de script de Configuração. Ele é usado para importar os módulos de recursos necessários em sua Configuração.
+ms.openlocfilehash: f6dcad2c56848ec25eb79332c96fe6b0d438fe95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786706"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658513"
 ---
 # <a name="using-import-dscresource"></a>Usando o Import-DSCResource
 
-`Import-DScResource` é uma palavra-chave dinâmica, que só pode ser usada dentro do bloco de script de Configuração. A palavra-chave `Import-DSCResource` para importar todos os recursos necessários em sua Configuração.
-Os recursos em `$pshome` são importados automaticamente, mas ainda consideramos que a melhor prática é importar explicitamente todos os recursos usados na sua [Configuração](Configurations.md).
+`Import-DSCResource` é uma palavra-chave dinâmica que só pode ser usada dentro de um bloco de script de Configuração para importar os recursos necessários em sua Configuração. Os recursos em `$PSHOME` são importados automaticamente, mas ainda consideramos que a melhor prática é importar explicitamente todos os recursos usados na sua [Configuração](Configurations.md).
 
 A sintaxe para `Import-DSCResource` é mostrada abaixo. Ao especificar os módulos por nome, é necessário listar cada um deles em uma nova linha.
 

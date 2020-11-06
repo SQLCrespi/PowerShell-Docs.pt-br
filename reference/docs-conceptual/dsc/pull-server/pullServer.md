@@ -2,19 +2,22 @@
 ms.date: 01/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: c4e725569db776fe0dbd5395b2f0f8b8e70cbbeb
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: O LCM (Gerenciador de Configurações Local) pode ser gerenciado centralmente por uma solução de Serviço de Pull. Ao usar essa abordagem, o nó que está sendo gerenciado é registrado com um serviço e uma configuração é atribuída a ele em configurações de LCM.
+ms.openlocfilehash: 67d405deda23569964e5eb401a4405a584369430
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837470"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92659130"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
-O LCM (Gerenciador de Configurações Local) pode ser gerenciado centralmente por uma solução de Serviço de Pull. Ao usar essa abordagem, o nó que está sendo gerenciado é registrado com um serviço e uma configuração é atribuída a ele em configurações de LCM. A configuração e todos os recursos de DSC necessários como dependências para a configuração são baixados para o computador e usados pelo LCM para gerenciar a configuração. As informações sobre o estado do computador que está sendo gerenciado são carregadas no serviço para relatório. Esse conceito é conhecido como "serviço de pull".
+O LCM (Gerenciador de Configurações Local) pode ser gerenciado centralmente por uma solução de Serviço de Pull. Ao usar essa abordagem, o nó que está sendo gerenciado é registrado com um serviço e uma configuração é atribuída a ele em configurações de LCM. A configuração e todos os recursos de DSC necessários como dependências para a configuração são baixados para o computador e usados pelo LCM para gerenciar a configuração.
+As informações sobre o estado do computador que está sendo gerenciado são carregadas no serviço para relatório.
+Esse conceito é conhecido como "serviço de pull".
 
 As opções atuais para o serviço de pull incluem:
 
@@ -31,7 +34,7 @@ A escala recomendada para cada solução é a seguinte:
 | Servidor de Pull do Windows usando o banco de dados SQL       | Até 3.500 nós                       |
 | DSC de Automação do Azure                         | Ambientes pequenos e grandes      |
 
-**A solução recomendada**, e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started). Não foi identificado um limite superior para o número de nós por Conta de Automação.
+**A solução recomendada** , e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started). Não foi identificado um limite superior para o número de nós por Conta de Automação.
 
 O serviço do Azure pode gerenciar nós localmente em datacenters privados ou em nuvens públicas, como AWS e o Azure. Para ambientes privados, onde os servidores não podem se conectar diretamente à Internet, considere limitar o tráfego de saída apenas ao intervalo de IPs do Azure publicado (consulte [Intervalos de IP de Datacenter do Azure](https://www.microsoft.com/download/details.aspx?id=41653)).
 
@@ -50,7 +53,7 @@ Entre os recursos do serviço online que não estão disponíveis no serviço de
 
 ## <a name="dsc-pull-service-in-windows-server"></a>Serviço de pull de DSC no Windows Server
 
-É possível configurar um serviço de pull para ser executado no Windows Server. Fique ciente de que a solução de serviço de pull incluída no Windows Server inclui apenas as funcionalidades de armazenamento de configurações/módulos para download e de captura de dados de relatório para um banco de dados. Ela não inclui muitas das funcionalidades oferecidas pelo serviço no Azure e, portanto, não é uma boa ferramenta para avaliar o modo como o serviço seria usado.
+É possível configurar um serviço de pull para ser executado no Windows Server. Fique ciente de que a solução de serviço de pull incluída no Windows Server contém apenas as funcionalidades de armazenamento de configurações e módulos para download e de captura de dados de relatório para um banco de dados. Ela não inclui muitas das funcionalidades oferecidas pelo serviço no Azure e, portanto, não é uma boa ferramenta para avaliar o modo como o serviço seria usado.
 
 O serviço de pull oferecido no Windows Server é um serviço Web no IIS que utiliza uma interface OData para disponibilizar arquivos de configuração DSC para nós de destino quando são pedidos por tais nós.
 
@@ -70,28 +73,28 @@ A melhor maneira de configurar o Windows Server para hospedar o serviço de pull
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT (padrão), MDB | ESENT (padrão), MDB | ESENT (padrão), SQL Server, MDB               |
 
-A partir da versão 17090 do Windows Server, o SQL Server é uma opção compatível com o serviço de pull (Recurso do Windows *Serviço DSC*). Essa é uma nova opção para dimensionar grandes ambientes de DSC que não foram migrados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
+A partir da versão 17090 do Windows Server, o SQL Server é uma opção compatível com o serviço de pull (Recurso do Windows *Serviço DSC* ). Essa é uma nova opção para dimensionar grandes ambientes de DSC que não foram migrados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
 
 > [!NOTE]
 > O suporte ao SQL Server não será adicionado às versões anteriores do WMF 5.1 (ou mais antigas) e só estará disponível nas versões do Windows Server maiores ou iguais à 17090.
 
 Para configurar o servidor de recepção para usar o SQL Server, defina **SqlProvider** para `$true` e **SqlConnectionString** para uma cadeia de conexão válida do SQL Server. Para obter mais informações, confira [Cadeias de conexão SqlClient](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings).
-Para obter um exemplo de configuração do SQL Server com **xDscWebService**, primeiro leia [Usando o recurso xDscWebService](#using-the-xdscwebservice-resource) e, em seguida, examine [Sample_xDscWebServiceRegistration_UseSQLProvider.ps1 no GitHub](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1).
+Para obter um exemplo de configuração do SQL Server com **xDscWebService** , primeiro leia [Usando o recurso xDscWebService](#using-the-xdscwebservice-resource) e, em seguida, examine [Sample_xDscWebServiceRegistration_UseSQLProvider.ps1 no GitHub](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1).
 
 ### <a name="using-the-xdscwebservice-resource"></a>Usando o recurso xDscWebService
 
-A maneira mais fácil de configurar um servidor de recepção Web é usar o recurso **xDscWebService**, incluído no módulo **xPSDesiredStateConfiguration**. As etapas a seguir explicam como usar o recurso em uma `Configuration` que defina o serviço Web.
+A maneira mais fácil de configurar um servidor de recepção Web é usar o recurso **xDscWebService** , incluído no módulo **xPSDesiredStateConfiguration**. As etapas a seguir explicam como usar o recurso em uma `Configuration` que defina o serviço Web.
 
 1. Chame o cmdlet [Install-Module](/powershell/module/PowerShellGet/Install-Module) para instalar o módulo **xPSDesiredStateConfiguration**.
 
    > [!NOTE]
-   > `Install-Module` está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0 e posterior.
+   > `Install-Module` está incluído no módulo **PowerShellGet** , que está incluído no PowerShell 5.0 e posterior.
 
 1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX.
 1. Instale o certificado no nó que se tornará o servidor de pull de DSC na localização padrão, que deve ser `CERT:\LocalMachine\My`.
    - Anote a impressão digital do certificado.
 1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: `[guid]::newGuid()` ou `New-Guid`. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, confira a seção Chave de registro abaixo.
-1. No ISE do PowerShell, inicie (<kbd>F5</kbd>) o script de configuração a seguir (incluído na pasta do módulo **xPSDesiredStateConfiguration** como `Sample_xDscWebServiceRegistration.ps1`). Esse script configura o servidor de pull.
+1. No ISE do PowerShell, inicie ( <kbd>F5</kbd>) o script de configuração a seguir (incluído na pasta do módulo **xPSDesiredStateConfiguration** como `Sample_xDscWebServiceRegistration.ps1`). Esse script configura o servidor de pull.
 
     ```powershell
     configuration Sample_xDscWebServiceRegistration
@@ -147,11 +150,13 @@ A maneira mais fácil de configurar um servidor de recepção Web é usar o recu
     }
     ```
 
-1. Execute a configuração, passando a impressão digital do certificado SSL como o parâmetro **certificateThumbPrint** e uma chave de Registro GUID como o parâmetro **RegistrationKey**:
+1. Execute a configuração, passando a impressão digital do certificado SSL como o parâmetro **certificateThumbPrint** e uma chave de registro GUID como o parâmetro **RegistrationKey** :
 
     ```powershell
-    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store
-    # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
+    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all
+    # certificates in your local store and then copy the thumbprint for the appropriate certificate
+    # by     reviewing the certificate subjects
+
     dir Cert:\LocalMachine\my
 
     # Then include this thumbprint when running the configuration
@@ -214,14 +219,14 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 > [!NOTE]
 > A seção **ReportServerWeb** permite que dados de relatório sejam enviados ao servidor de pull.
 
-A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração significa implicitamente que esse servidor pull dá suporte à versão V2 do protocolo de servidor pull, de modo que um registro inicial é necessário. Por outro lado, a presença de uma **ConfigurationID** significa que a versão V1 do protocolo do servidor de pull é usada e não há nenhum processamento de registro.
+A falta da propriedade **ConfigurationID** no arquivo metaconfiguração significa, implicitamente, que esse servidor de pull dá suporte à versão V2 do protocolo de servidor de pull, de modo que um registro inicial é necessário. Por outro lado, a presença de uma **ConfigurationID** significa que a versão V1 do protocolo do servidor de pull é usada e não há nenhum processamento de registro.
 
 > [!NOTE]
 > Em um cenário de PUSH, há um bug na versão atual que exige a definição de uma propriedade ConfigurationID no arquivo de metaconfiguração para nós que nunca foram registrados em um servidor de pull. Isso forçará o uso do protocolo de Servidor de Pull V1 e evitará mensagens de falha de registro.
 
 ## <a name="placing-configurations-and-resources"></a>Colocando configurações e recursos
 
-Após a instalação do servidor pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente.
+Após a instalação do servidor de pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor de pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente.
 
 ### <a name="dsc-resource-module-package-format"></a>Formato de pacote do módulo de recursos DSC
 
@@ -234,7 +239,7 @@ Use `New-DscChecksum {module zip file}` para criar um arquivo de soma de verific
 
 ### <a name="configuration-mof-format"></a>Formato MOF de configuração
 
-Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e os arquivos de soma de verificação associados na pasta **ConfigurationPath**.
+Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). O cmdlet usa um parâmetro **Path** , que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e os arquivos de soma de verificação associados na pasta **ConfigurationPath**.
 
 > [!NOTE]
 > Se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
@@ -248,15 +253,16 @@ Para facilitar a configuração, validação e gerenciamento do servidor de pull
    Exemplos abaixo:
 
     ```powershell
-        # Example 1 - Package all versions of given modules installed locally and MOF files are in c:\LocalDepot
-         $moduleList = @('xWebAdministration', 'xPhp')
-         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList
+    # Example 1 - Package all versions of given modules installed locally and MOF files are in c:\LocalDepot
+    $moduleList = @('xWebAdministration', 'xPhp')
+    Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList
 
-         # Example 2 - Package modules and mof documents from c:\LocalDepot
-         Publish-DSCModuleAndMof -Source C:\LocalDepot -Force
+    # Example 2 - Package modules and mof documents from c:\LocalDepot
+    Publish-DSCModuleAndMof -Source C:\LocalDepot -Force
     ```
 
-1. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/Modules/DscPullServerSetup/DscPullServerSetupTest/DscPullServerSetupTest.ps1).
+1. Um script que valida o Servidor de Pull está configurado corretamente.
+   [PullServerSetupTests.ps1](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/Modules/DscPullServerSetup/DscPullServerSetupTest/DscPullServerSetupTest.ps1).
 
 ## <a name="community-solutions-for-pull-service"></a>Soluções da comunidade para o Serviço de Pull
 

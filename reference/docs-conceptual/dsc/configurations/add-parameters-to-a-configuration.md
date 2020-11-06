@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,recurso,galeria,instalação
 title: Adicionar parâmetros a uma configuração
-ms.openlocfilehash: 9aa4c746042e89d7767e1b326233dcca1e5c4c24
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+description: As configurações DSC podem ter parâmetros que possibilitam configurações mais dinâmicas com base na entrada de usuário.
+ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141397"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656818"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Adicionar parâmetros a uma configuração
 
@@ -36,13 +37,13 @@ Configuration TestConfig
 
 Porém, diferente de uma Função, o atributo [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) não adiciona funcionalidade. Além de [Parâmetros Comuns](/powershell/module/microsoft.powershell.core/about/about_commonparameters), as Configurações também podem usar os parâmetros internos a seguir, sem exigir que você os defina.
 
-|        Parâmetro        |                                         DESCRIÇÃO                                          |
+|        Parâmetro        |                                         Descrição                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------- |
 | `-InstanceName`         | Usado na definição de [Configurações de Composição](compositeconfigs.md)                             |
 | `-DependsOn`            | Usado na definição de [Configurações de Composição](compositeconfigs.md)                             |
 | `-PSDSCRunAsCredential` | Usado na definição de [Configurações de Composição](compositeconfigs.md)                             |
 | `-ConfigurationData`    | Usado para passar [Dados de Configuração](configData.md) estruturados para uso na Configuração. |
-| `-OutputPath`           | Usado para especificar onde o arquivo "\<nome_do_computador\>.mof" será compilado                      |
+| `-OutputPath`           | Usado para especificar onde o arquivo "\<computername\>.mof" será compilado                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>Adicionando seus próprios parâmetros às Configurações
 
@@ -178,7 +179,7 @@ Você pode especificar argumentos para cada atributo `parameter`, de modo a cont
 $ServiceName
 ```
 
-Para o parâmetro `$State`, gostaríamos de impedir o usuário de especificar valores fora de um conjunto predefinido (como Running ou Stopped). O atributo `ValidationSet*` impediria o usuário de especificar esses valores. O exemplo a seguir adiciona o atributo `ValidationSet` ao parâmetro `$State`. Uma vez que não queremos transformar o parâmetro `$State` como **Mandatory**, precisaremos adicionar um valor padrão para ele.
+Para o parâmetro `$State`, gostaríamos de impedir o usuário de especificar valores fora de um conjunto predefinido (como Running ou Stopped). O atributo `ValidationSet*` impediria o usuário de especificar esses valores. O exemplo a seguir adiciona o atributo `ValidationSet` ao parâmetro `$State`. Uma vez que não queremos transformar o parâmetro `$State` como **Mandatory** , precisaremos adicionar um valor padrão para ele.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -226,9 +227,9 @@ Configuration TestConfig
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Gravar ajuda para configurações de DSC](configHelp.md)
+- [Escrever ajuda para configurações de DSC](configHelp.md)
 - [Configurações dinâmicas](flow-control-in-configurations.md)
 - [Usar Dados de Configuração em suas Configurações](configData.md)
 - [Separar dados de configuração e de ambiente](separatingEnvData.md)

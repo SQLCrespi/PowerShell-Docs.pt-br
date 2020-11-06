@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,instalação
 title: Melhorias ao Gerenciamento de Pacotes do WMF 5.1
-ms.openlocfilehash: 59f76562f4d0e9ef5f50ff94f04f2eb540d39f18
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O Windows PowerShell 5.1 inclui cmdlets atualizados do Gerenciamento de Pacotes.
+ms.openlocfilehash: 572ebd1f0aa3cf09579e13c3ea52ae3e979e421f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809292"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663194"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Melhorias ao Gerenciamento de Pacotes do WMF 5.1
 
@@ -16,31 +15,31 @@ Veja a seguir as correções feitas no WMF 5.1:
 
 ## <a name="version-alias"></a>Alias de versão
 
-**Cenário**: se você tiver as versões 1.0 e 2.0 de um pacote, P1, instaladas em seu sistema e desejar desinstalar a versão 1.0, você executará `Uninstall-Package -Name P1 -Version 1.0` e esperará a versão 1.0 ser desinstalada após a execução do cmdlet. No entanto o resultado é que a versão 2.0 é desinstalada.
+**Cenário** : se você tiver as versões 1.0 e 2.0 de um pacote, P1, instaladas em seu sistema e desejar desinstalar a versão 1.0, você executará `Uninstall-Package -Name P1 -Version 1.0` e esperará a versão 1.0 ser desinstalada após a execução do cmdlet. No entanto o resultado é que a versão 2.0 é desinstalada.
 
 Isso ocorre porque o parâmetro `-Version` é um alias do parâmetro `-MinimumVersion`. Quando PackageManagement está procurando um pacote qualificado com a versão mínima de 1.0, ele retorna a versão mais recente. Esse comportamento é esperado em casos normais, pois encontrar a versão mais recente é geralmente o resultado desejado. No entanto, ele não deve se aplicar ao caso de `Uninstall-Package`.
 
-**Solução**: alias `-Version` removido inteiramente em PackageManagement (também conhecido como OneGet) e PowerShellGet.
+**Solução** : alias `-Version` removido inteiramente em PackageManagement (também conhecido como OneGet) e PowerShellGet.
 
 ## <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>Vários prompts para inicializar o provedor do NuGet
 
-**Cenário**: ao executar `Find-Module` ou `Install-Module` ou outros cmdlets PackageManagement em seu computador pela primeira vez, o PackageManagement tenta inicializar o provedor de NuGet. Isso ocorre porque o provedor PowerShellGet também usa o provedor do NuGet para baixar os módulos do PowerShell.
+**Cenário** : ao executar `Find-Module` ou `Install-Module` ou outros cmdlets PackageManagement em seu computador pela primeira vez, o PackageManagement tenta inicializar o provedor de NuGet. Isso ocorre porque o provedor PowerShellGet também usa o provedor do NuGet para baixar os módulos do PowerShell.
 Depois, o PackageManagement solicita permissão do usuário para instalar o provedor de NuGet. Após o usuário selecionar "sim" para a inicialização, a versão mais recente do provedor do NuGet será instalada.
 
 No entanto, em alguns casos, quando há uma versão antiga do provedor de NuGet instalada em seu computador, a versão mais antiga do NuGet às vezes é carregada primeiro na sessão do PowerShell (ou seja, a condição de corrida no PackageManagement). No entanto, o PowerShellGet requer a versão mais recente do provedor de NuGet para funcionar, portanto, o PowerShellGet solicita que o PackageManagement inicialize o provedor de NuGet novamente.
 Isso resulta em vários prompts para inicializar o provedor do NuGet.
 
-**Solução**: no WMF 5.1, o PackageManagement carrega a versão mais recente do provedor de NuGet para evitar vários prompts para inicialização do provedor de NuGet.
+**Solução** : no WMF 5.1, o PackageManagement carrega a versão mais recente do provedor de NuGet para evitar vários prompts para inicialização do provedor de NuGet.
 
 Você também pode utilizar uma solução alternativa para esse problema excluindo manualmente a versão antiga do provedor do NuGet (NuGet Anycpu.exe), caso ele exista, de $env:ProgramFiles\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
 ## <a name="support-for-packagemanagement-on-computers-with-intranet-access-only"></a>Suporte para PackageManagement em computadores somente com acesso à intranet
 
-**Cenário**: para o cenário corporativo, as pessoas estão trabalhando em um ambiente em que não há acesso à Internet, somente à intranet. O PackageManagement não dava suporte a esse caso no WMF 5.0.
+**Cenário** : para o cenário corporativo, as pessoas estão trabalhando em um ambiente em que não há acesso à Internet, somente à intranet. O PackageManagement não dava suporte a esse caso no WMF 5.0.
 
-**Cenário**: no WMF 5.0, o PackageManagement não dava suporte a computadores com acesso somente à intranet (e não à Internet).
+**Cenário** : no WMF 5.0, o PackageManagement não dava suporte a computadores com acesso somente à intranet (e não à Internet).
 
-**Solução**: no WMF 5.1, você pode seguir estas etapas para permitir que computadores com intranet usem o PackageManagement:
+**Solução** : no WMF 5.1, você pode seguir estas etapas para permitir que computadores com intranet usem o PackageManagement:
 
 1. Baixe o provedor de NuGet usando outro computador que tenha conexão com a Internet usando `Install-PackageProvider -Name NuGet`.
 

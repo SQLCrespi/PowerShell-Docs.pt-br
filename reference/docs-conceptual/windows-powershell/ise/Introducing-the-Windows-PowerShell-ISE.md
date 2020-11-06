@@ -1,13 +1,13 @@
 ---
 ms.date: 08/14/2018
-keywords: powershell, cmdlet
 title: Apresentando o Windows PowerShell ISE
-ms.openlocfilehash: 3e4471d0982ba4d7ef1a9d59906a9ff297f6f7cb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O ISE do PowerShell é um aplicativo host do Windows PowerShell que permite executar comandos e escrever, testar e depurar scripts em uma interface gráfica de usuário única baseada em Windows.
+ms.openlocfilehash: ab2b11e5d81933b166d404c0b24c96aa73253895
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808712"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663616"
 ---
 # <a name="the-windows-powershell-ise"></a>O ISE do Windows PowerShell
 
@@ -35,9 +35,9 @@ O ISE do Windows PowerShell permite personalizar alguns aspectos de sua aparênc
 
 ## <a name="to-start-the-windows-powershell-ise"></a>Para iniciar o Windows PowerShell ISE
 
-Clique em **Iniciar**, selecione **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
+Clique em **Iniciar** , selecione **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
 Como alternativa, você pode digitar `powershell_ise.exe` em qualquer shell de comando ou na caixa Executar.
 
 ## <a name="to-get-help-in-the-windows-powershell-ise"></a>Para obter ajuda no Windows PowerShell ISE
 
-No menu **Ajuda**, clique em **Ajuda do Windows PowerShell**. Ou pressione <kbd>F1</kbd>. O arquivo aberto descreve o ISE do Windows PowerShell e o Windows PowerShell, inclusive toda a ajuda disponível no cmdlet `Get-Help`.
+No menu **Ajuda** , clique em **Ajuda do Windows PowerShell**. Ou pressione <kbd>F1</kbd>. O arquivo aberto descreve o ISE do Windows PowerShell e o Windows PowerShell, inclusive toda a ajuda disponível no cmdlet `Get-Help`.

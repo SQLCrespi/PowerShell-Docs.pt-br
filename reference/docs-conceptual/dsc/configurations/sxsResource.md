@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Importar uma versão específica de um recurso instalado
-ms.openlocfilehash: 5ed81e11aa67eb6590d958647f48a33b1b5f1c0e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como instalar e importar versões específicas de módulos de recursos em suas configurações.
+ms.openlocfilehash: bb7b3273a5a3fed94fecd90dd3ea1e623fbc332b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953983"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645045"
 ---
 # <a name="import-a-specific-version-of-an-installed-resource"></a>Importar uma versão específica de um recurso instalado
 
@@ -17,19 +18,19 @@ No PowerShell 5.0, versões separadas de recursos DSC podem ser instaladas em um
 
 ## <a name="installing-separate-resource-versions-side-by-side"></a>Instalando versões separadas de recursos lado a lado
 
-Você pode usar os parâmetros **MinimumVersion**, **MaximumVersion** e **RequiredVersion** do cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para especificar qual versão de um módulo instalar. Se você chamar **Install-Module** sem especificar uma versão, a versão mais recente será instalada.
+Você pode usar os parâmetros **MinimumVersion** , **MaximumVersion** e **RequiredVersion** do cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para especificar qual versão de um módulo instalar. Se você chamar **Install-Module** sem especificar uma versão, a versão mais recente será instalada.
 
-Por exemplo, há várias versões do módulo **xFailOverCluster**, cada uma com um recurso **xCluster**. Chamar **Install-Module** sem especificar o número de uma versão instala a versão mais recente.
+Por exemplo, há várias versões do módulo **xFailOverCluster** , cada uma com um recurso **xCluster**. Chamar **Install-Module** sem especificar o número de uma versão instala a versão mais recente.
 
 ```powershell
 PS> Install-Module xFailOverCluster
 PS> Get-DscResource xCluster
 ```
 
-```output
-ImplementedAs   Name                      ModuleName                     Version    Properties
--------------   ----                      ----------                     -------    ----------
-PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, ...
+```Output
+ImplementedAs   Name          ModuleName           Version    Properties
+-------------   ----          ----------           -------    ----------
+PowerShell      xCluster      xFailOverCluster     1.2.0.0    {DomainAdministratorCredential, ...
 ```
 
 Para instalar a versão específica de um módulo, especifique **RequiredVersion** de 1.1.0.0. Isso instala a versão especificada lado a lado com a versão instalada.
@@ -44,11 +45,11 @@ Agora você verá as duas versões do módulo listadas ao usar `Get-DSCResource`
 PS> Get-DscResource xCluster
 ```
 
-```output
-ImplementedAs   Name                      ModuleName                     Version    Properties
--------------   ----                      ----------                     -------    ----------
-PowerShell      xCluster                  xFailOverCluster               1.1        {DomainAdministratorCredential, Name, ...
-PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, Name, ...
+```Output
+ImplementedAs   Name          ModuleName            Version    Properties
+-------------   ----          ----------            -------    ----------
+PowerShell      xCluster      xFailOverCluster      1.1        {DomainAdministratorCredential, Name, ...
+PowerShell      xCluster      xFailOverCluster      1.2.0.0    {DomainAdministratorCredential, Name, ...
 ```
 
 ## <a name="specifying-a-resource-version-in-a-configuration"></a>Especificando uma versão do recurso em uma configuração
@@ -74,7 +75,7 @@ configuration VersionTest
 }
 ```
 
->Observação: o parâmetro ModuleVersion de Import-DscResource não está disponível no PowerShell 4.0. No PowerShell 4.0, é possível especificar uma versão de módulo passando um objeto de especificação de módulo para o parâmetro ModuleName de Import-DscResource. Um objeto de especificação de módulo é uma tabela de hash que contém as chaves ModuleName e RequiredVersion. Por exemplo:
+o parâmetro ModuleVersion de Import-DscResource não está disponível no PowerShell 4.0. No PowerShell 4.0, é possível especificar uma versão de módulo passando um objeto de especificação de módulo para o parâmetro ModuleName de Import-DscResource. Um objeto de especificação de módulo é uma tabela de hash que contém as chaves ModuleName e RequiredVersion. Por exemplo:
 
 ```powershell
 configuration VersionTest
@@ -95,7 +96,7 @@ configuration VersionTest
 
 Isso também funcionará no PowerShell 5.0, mas é recomendável que você use o parâmetro **ModuleVersion**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configurações DSC](configurations.md)
 - [Recursos de DSC](../resources/resources.md)

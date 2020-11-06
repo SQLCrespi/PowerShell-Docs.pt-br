@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell, cmdlet
 title: O objeto ISEMenuItemCollection
-ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Um objeto ISEMenuItemCollection é uma coleção de objetos ISEMenuItem.
+ms.openlocfilehash: cd86768d13b1326a8f35c44f0391ab60669cee4f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809582"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656001"
 ---
 # <a name="the-isemenuitemcollection-object"></a>O objeto ISEMenuItemCollection
 
-Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Um exemplo é o objeto `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.
+Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**. Um exemplo é o objeto `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`, que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;.
 
 ## <a name="method"></a>Método
 

@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando DSC no Nano Server
-ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: A DSC é um pacote opcional que pode ser instalado quando você cria um VHD para um Windows Nano Server.
+ms.openlocfilehash: 18585323359abd85515d4db194dae4adbad7c3d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953853"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647073"
 ---
 # <a name="using-dsc-on-nano-server"></a>Usando DSC no Nano Server
 
@@ -44,7 +45,7 @@ Nos modos push e pull
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
@@ -80,34 +81,38 @@ Nos modos push e pull
 
 - Recursos que são totalmente funcionais
 
-- **Arquivar**
-- **Ambiente**
-- **Arquivo**
-- **Log**
-- **ProcessSet**
-- **Registro**
-- **Script**
-- **WindowsPackageCab**
-- **WindowsProcess**
-- **WaitForAll** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
-- **WaitForAny** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
-- **WaitForSome** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
+  - **Arquivar**
+  - **Ambiente**
+  - **Arquivo**
+  - **Log**
+  - **ProcessSet**
+  - **Registro**
+  - **script**
+  - **WindowsPackageCab**
+  - **WindowsProcess**
+  - **WaitForAll** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
+  - **WaitForAny** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
+  - **WaitForSome** (confira [Especificação de dependências de nó cruzado](../configurations/crossNodeDependencies.md))
 
 - Recursos que são parcialmente funcionais
-- **Agrupar**
-- **GroupSet**
 
-  **Problema:** os recursos acima falharão se a instância for chamada duas vezes (executando a mesma configuração duas vezes)
+  - **Grupo**
+  - **GroupSet**
 
-- **Serviço**
-- **ServiceSet**
+    **Problema:** os recursos acima falharão se a instância for chamada duas vezes (executando a mesma configuração duas vezes)
 
-  **Problema:** só funciona para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
+  - **Serviço**
+  - **ServiceSet**
 
-  *Não é possível localizar o tipo [management.managementobject]: verifique se o assembly que contém esse tipo é carregado.*
+    **Problema:** só funciona para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
+
+    ```
+    Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.
+    ```
 
 - Recursos que não são funcionais
-- **Usuário**
+
+  - **Usuário**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Recursos de DSC não disponíveis no Nano Server
 

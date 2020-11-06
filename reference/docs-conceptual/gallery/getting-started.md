@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Introdução à Galeria do PowerShell
-ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo explica como começar a usar a Galeria do PowerShell e os cmdles PowerShellGet
+ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81219686"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661411"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
@@ -23,7 +22,7 @@ A Galeria do PowerShell é um repositório de pacotes contendo scripts, módulos
 
 É possível filtrar os resultados da Galeria usando os seguintes parâmetros:
 
-- Nome
+- Name
 - AllVersions
 - MinimumVersion
 - RequiredVersion
@@ -34,7 +33,7 @@ A Galeria do PowerShell é um repositório de pacotes contendo scripts, módulos
 - Comando
 - Filtrar
 
-Caso tenha interesse apenas em descobrir recursos de DSC específicos na Galeria, execute o cmdlet [Find-DscResource][]. Find-DscResource retorna dados em recursos de DSC contidos na Galeria. Como os recursos de DSC sempre são fornecidos como parte de um módulo, você ainda precisa executar [Install-Module][] para instalar esses recursos.
+Se estiver interessado apenas em descobrir recursos de DSC específicos na galeria, você poderá executar o cmdlet [Find-DscResource][]. Find-DscResource retorna dados em recursos de DSC contidos na Galeria. Como os recursos de DSC sempre são enviados como parte de um módulo, você ainda precisará executar [Install-Module][] para instalar esses recursos de DSC.
 
 ## <a name="learning-about-packages-in-the-powershell-gallery"></a>Aprender sobre itens na Galeria do PowerShell
 
@@ -60,10 +59,10 @@ Se você descobrir que um pacote que acredita que não tenha sido publicado de b
 
 Para instalar um pacote da Galeria para uso, execute o cmdlet [Install-Module][] ou [Install-Script][], dependendo do tipo de pacote.
 
-[Install-Module][] instala o módulo em `$env:ProgramFiles\WindowsPowerShell\Modules` por padrão.
+[Install-Module][] instala o módulo em `$env:ProgramFiles\WindowsPowerShell\Modules`, por padrão.
 Isso requer uma conta de administrador. Se você adicionar o parâmetro `-Scope CurrentUser`, o módulo será instalado em `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`.
 
-[Install-Script][] instala o script em `$env:ProgramFiles\WindowsPowerShell\Scripts` por padrão.
+[Install-Script][] instala o script em `$env:ProgramFiles\WindowsPowerShell\Scripts`, por padrão.
 Isso requer uma conta de administrador. Se você adicionar o parâmetro `-Scope CurrentUser`, o script será instalado em `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`.
 
 Por padrão, [Install-Module][] e [Install-Script][] instalam a versão mais recente de um pacote. Para instalar uma versão mais antiga do pacote, adicione o parâmetro `-RequiredVersion`.

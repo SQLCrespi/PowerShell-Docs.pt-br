@@ -1,14 +1,13 @@
 ---
 ms.date: 09/11/2018
-contributor: JKeithB
-keywords: galeria, powershell, psgallery
 title: Download manual do pacote
-ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Descreve como baixar manualmente um pacote da Galeria do PowerShell.
+ms.openlocfilehash: 50cd51d970bf21f8e957e60ceed2e98f306b57ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782847"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662292"
 ---
 # <a name="manual-package-download"></a>Download manual do pacote
 
@@ -47,10 +46,10 @@ Para obter a lista de elementos específicos do NuGet, confira [Usar o download 
 As etapas são as seguintes:
 
 1. Desbloqueie o arquivo de pacote NuGet (`.nupkg`) baixado da Internet, por exemplo, usando o cmdlet `Unblock-File -Path C:\Downloads\module.nupkg`.
-2. Extrair o conteúdo do pacote do NuGet em uma pasta local.
-2. Exclua os elementos específicos do NuGet da pasta.
-3. Renomear a pasta. Normalmente, o nome de pasta padrão é `<name>.<version>`. A versão poderá incluir `-prerelease` se o módulo estiver marcado como uma versão de pré-lançamento. Renomeie a pasta somente com o nome do módulo. Por exemplo, `azurerm.storage.5.0.4-preview` torna-se `azurerm.storage`.
-4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de caminhos delimitados por ponto e vírgula no qual o PowerShell deve procurar os módulos.
+1. Extrair o conteúdo do pacote do NuGet em uma pasta local.
+1. Exclua os elementos específicos do NuGet da pasta.
+1. Renomear a pasta. Normalmente, o nome de pasta padrão é `<name>.<version>`. A versão poderá incluir `-prerelease` se o módulo estiver marcado como uma versão de pré-lançamento. Renomeie a pasta somente com o nome do módulo. Por exemplo, `azurerm.storage.5.0.4-preview` torna-se `azurerm.storage`.
+1. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de caminhos delimitados por ponto e vírgula no qual o PowerShell deve procurar os módulos.
 
 > [!IMPORTANT]
 > O download manual não inclui nenhuma dependência exigida pelo módulo. Se o pacote tiver dependências, elas precisarão ser instaladas no sistema para que esse módulo funcione corretamente. A Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.
@@ -65,9 +64,9 @@ A abordagem mais fácil é extrair o pacote do NuGet e, em seguida, usar o scrip
 As etapas são as seguintes:
 
 1. Desbloqueie o arquivo de pacote NuGet (`.nupkg`) baixado da Internet, por exemplo, usando o cmdlet `Unblock-File -Path C:\Downloads\package.nupkg`.
-2. Extrair o conteúdo do pacote do NuGet.
-2. O arquivo `.PS1` na pasta pode ser usado diretamente desse local.
-3. Você pode excluir os elementos específicos do NuGet da pasta.
+1. Extrair o conteúdo do pacote do NuGet.
+1. O arquivo `.PS1` na pasta pode ser usado diretamente desse local.
+1. Você pode excluir os elementos específicos do NuGet da pasta.
 
 Para obter a lista de elementos específicos do NuGet, confira [Usar o download manual para adquirir um pacote](#using-manual-download-to-acquire-a-package).
 

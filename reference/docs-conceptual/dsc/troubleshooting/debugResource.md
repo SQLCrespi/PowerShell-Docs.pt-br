@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Depurando os recursos de DSC
-ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Este artigo mostra como habilitar a depuração para configurações DSC.
+ms.openlocfilehash: 5dda217e8dc9cc4b8699c82153c1a588d405d99e
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691960"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654121"
 ---
 # <a name="debugging-dsc-resources"></a>Depurando os recursos de DSC
 
@@ -16,8 +17,8 @@ ms.locfileid: "83691960"
 No PowerShell 5.0, foi introduzido um novo recurso na DSC (Desired State Configuration) que permite depurar um recurso de DSC enquanto uma configuração está sendo aplicada.
 
 ## <a name="enabling-dsc-debugging"></a>Habilitando a depuração de DSC
-Para poder depurar um recurso, é preciso habilitar a depuração chamando o cmdlet [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug).
-Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**.
+
+Para poder depurar um recurso, é preciso habilitar a depuração chamando o cmdlet [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug). Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**.
 
 É possível verificar se a depuração foi habilitada analisando o resultado de uma chamada para o [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
@@ -41,8 +42,8 @@ PS C:\DebugTest>
 ```
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>Iniciando uma configuração com a depuração habilitada
-Para depurar um recurso de DSC, inicie uma configuração que chame esse recurso.
-Para este exemplo, analisaremos uma configuração simples que chame o recurso **WindowsFeature** a fim de garantir que o recurso "WindowsPowerShellWebAccess" seja instalado:
+
+Para depurar um recurso de DSC, inicie uma configuração que chame esse recurso. Para este exemplo, analisaremos uma configuração simples que chame o recurso **WindowsFeature** a fim de garantir que o recurso "WindowsPowerShellWebAccess" seja instalado:
 
 ```powershell
 Configuration PSWebAccess
@@ -60,9 +61,7 @@ Configuration PSWebAccess
 PSWebAccess
 ```
 
-Depois de compilar a configuração, inicie chamando [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
-A configuração parará quando o LCM (Gerenciador de Configurações Local) chamar o primeiro recurso na configuração.
-Se você usar os parâmetros `-Verbose` e `-Wait`, a saída exibirá as linhas que você precisa inserir para iniciar a depuração.
+Depois de compilar a configuração, inicie chamando [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). A configuração parará quando o LCM (Gerenciador de Configurações Local) chamar o primeiro recurso na configuração. Se você usar os parâmetros `-Verbose` e `-Wait`, a saída exibirá as linhas que você precisa inserir para iniciar a depuração.
 
 ```powershell
 Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -85,27 +84,24 @@ Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
 
-Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção.
-As três últimas linhas na saída mostram como anexar ao processo e iniciar a depuração do script do recurso.
+Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção. As três últimas linhas na saída mostram como anexar ao processo e iniciar a depuração do script do recurso.
 
 ## <a name="debugging-the-resource-script"></a>Depurando o script de recurso
 
-Inicie uma nova instância do ISE do PowerShell.
-No painel do console, digite as três últimas linhas da saída `Start-DscConfiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas.
-Agora você verá um prompt semelhante a:
+Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas da saída `Start-DscConfiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas. Agora você verá um prompt semelhante a:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
 ```
 
-O script de recurso será aberto no painel de script e o depurador será interrompido na primeira linha da função **Test-TargetResource** (o método **Test()** de um recurso baseado em classe).
-Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
+O script de recurso será aberto no painel de script e o depurador será interrompido na primeira linha da função **Test-TargetResource** (o método **Test()** de um recurso baseado em classe). Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
 
 ## <a name="disabling-dsc-debugging"></a>Desabilitando a depuração de DSC
 
 Depois de chamar [Enable DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug), todas as chamadas a [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) resultarão na interrupção do depurador pela configuração. Para permitir que as configurações sejam executadas normalmente, você deve desabilitar a depuração chamando o cmdlet [Disable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug).
 
->**Observação:** a reinicialização não altera o estado de depuração do LCM. Se a depuração estiver desabilitada, iniciar uma configuração ainda interromperá o depurador após uma reinicialização.
+> [!NOTE]
+> a reinicialização não altera o estado de depuração do LCM. Se a depuração estiver desabilitada, iniciar uma configuração ainda interromperá o depurador após uma reinicialização.
 
 ## <a name="see-also"></a>Consulte Também
 

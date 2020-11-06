@@ -1,13 +1,14 @@
 ---
 ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
-title: 'Recursos de composição: usando uma configuração DSC como um recurso'
-ms.openlocfilehash: 1baa5e4ca5dfa808edc4452db4874a83aa78107e
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+title: Recursos de composição – Usar uma configuração DSC como um recurso
+description: Este artigo descreve como criar e usar um recurso de composição.
+ms.openlocfilehash: c1f0e3b45c3a393c04700b5a4bc88be365794820
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217535"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667293"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Recursos de composição: usando uma configuração DSC como um recurso
 

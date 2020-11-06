@@ -1,17 +1,17 @@
 ---
 ms.date: 08/25/2017
-keywords: powershell, cmdlet
 title: O objeto ObjectModelRoot
-ms.openlocfilehash: cd94e69de2e62f7ce9fac413e15458ae9986540e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O objeto $psISE, que é o objeto raiz da entidade de segurança no ISE do PowerShell, é uma instância da classe Microsoft.PowerShell.Host.ISE.ObjectModelRoot. Este tópico descreve as propriedades do objeto ObjectModelRoot.
+ms.openlocfilehash: c8ae703c2663256ca037090fd3b1eb239cfc431a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809562"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660939"
 ---
 # <a name="the-objectmodelroot-object"></a>O objeto ObjectModelRoot
 
-O objeto `$psISE`, que é o objeto raiz da entidade de segurança no ISE (Ambiente de Script Integrado) do Windows PowerShell®, é uma instância da classe Microsoft.PowerShell.Host.ISE.ObjectModelRoot. Este tópico descreve as propriedades do objeto **ObjectModelRoot**.
+O objeto `$psISE`, que é o objeto raiz da entidade de segurança no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;, é uma instância da classe Microsoft.PowerShell.Host.ISE.ObjectModelRoot. Este tópico descreve as propriedades do objeto **ObjectModelRoot**.
 
 ## <a name="properties"></a>Propriedades
 

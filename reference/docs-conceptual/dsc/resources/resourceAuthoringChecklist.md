@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Lista de verificação da criação de recursos
-ms.openlocfilehash: f21e2e8563880e0c10cf50b044e9c56ca09fe0fa
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: Este artigo contém uma lista de verificação com melhores práticas que devem ser usadas ao criar um recurso de DSC.
+ms.openlocfilehash: 5b618511f730c80104620c84e693c13ae4f536ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217637"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656328"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação da criação de recursos
 
@@ -16,7 +17,7 @@ Esta lista de verificação é uma lista de melhores práticas ao criar um novo 
 ## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>O módulo de recurso contém os arquivos .psd1 e schema.mof de cada um dos recursos
 
 Verifique se o recurso tem a estrutura correta e se ele contém todos os arquivos necessários. Cada módulo de recurso deve conter um arquivo .psd1 e cada recurso de não composição deve ter o arquivo schema.mof.
-Os recursos que não contêm o esquema não serão listados por `Get-DscResource` e os usuários não poderão usar o IntelliSense ao gravar código nesses módulos no ISE. A estrutura de diretório para o recurso xRemoteFile, que faz parte do módulo de recurso [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration), tem a seguinte aparência:
+Os recursos que não contêm o esquema não serão listados por `Get-DscResource`, e os usuários não poderão usar o IntelliSense ao gravar código nesses módulos no ISE. A estrutura de diretório para o recurso xRemoteFile, que faz parte do módulo de recurso [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration), tem a seguinte aparência:
 
 ```
 xPSDesiredStateConfiguration

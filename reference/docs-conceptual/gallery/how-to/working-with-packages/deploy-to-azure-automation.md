@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Implantar na Automação do Azure
-ms.openlocfilehash: 5d09a0777c59b642400d683c8cb6f881319fb881
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo descreve como usar a Galeria do PowerShell para implantar um pacote para a Automação do Azure.
+ms.openlocfilehash: e9de079ee6cc950c8a268423b9eabd515959b718
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278682"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662363"
 ---
 # <a name="deploy-to-azure-automation"></a>Implantar na Automação do Azure
 
@@ -16,13 +15,12 @@ O botão Implantar na Automação do Azure na página de detalhes do pacote impl
 
 ![Botão Implantar na Automação do Azure](media/deploy-to-azure-automation/DeployToAzureAutomationButton.png)
 
-Quando acionado, ele redirecionará você para o Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure.
-Se o pacote incluir dependências, todas as dependências serão implantadas também na Automação do Azure.
+Quando acionado, ele redirecionará você para o Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure. Se o pacote incluir dependências, todas as dependências serão implantadas também na Automação do Azure.
 
 > [!WARNING]
 > Se o mesmo pacote com a mesma versão já existir na sua conta de Automação, implantá-lo novamente por meio da Galeria do PowerShell substituirá o pacote na conta de Automação.
 
-Se você implantar um módulo, ele será exibido na seção Módulos da Automação do Azure.  Se você implantar um script, ele será exibido na seção Runbooks da Automação do Azure.
+Se você implantar um módulo, ele será exibido na seção Módulos da Automação do Azure. Se você implantar um script, ele será exibido na seção Runbooks da Automação do Azure.
 
 O botão Implantar na Automação do Azure pode ser desabilitado, adicionando a marca AzureAutomationNotSupported aos metadados do pacote.
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
-title: Recurso FileList na Galeria
-ms.openlocfilehash: 5f372c943c73fa8e1014657394e40eaedef5d045
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: Como usar o recurso FileList na Galeria
+description: Como usar o recurso FileList na Galeria
+ms.openlocfilehash: 45e39cb3f2620228be9ad16c2bb697f23642195d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328237"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662263"
 ---
 # <a name="filelist-feature-in-the-gallery"></a>Recurso FileList na Galeria
 
@@ -18,6 +17,7 @@ Esse recurso inclui duas partes: listagem dos arquivos no pacote e exibição do
 
 ## <a name="where-to-find-filelist"></a>Onde encontrar FileList
 
-Em cada página de pacote individual, você poderá encontrar a seção FileList e um link **Mostrar**. Clique em Mostrar e você encontrará uma lista completa dos itens contidos no pacote.
+Em cada página de pacote individual, você poderá encontrar a seção FileList e um link **Mostrar**.
+Clique em Mostrar e você encontrará uma lista completa dos itens contidos no pacote.
 
 Cada tipo de arquivo com suporte é exibido como um hiperlink e, ao clicar nele, você será levado para uma nova página com o conteúdo de arquivo exibido no realce de sintaxe do PowerShell. Ao clicar no título ou na versão do pacote, que são exibidos na parte superior da tela, você será levado de volta à página de detalhes do pacote.

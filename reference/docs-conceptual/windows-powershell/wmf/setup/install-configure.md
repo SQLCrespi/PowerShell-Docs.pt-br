@@ -1,15 +1,13 @@
 ---
 ms.date: 06/10/2020
-ms.topic: conceptual
-keywords: wmf,powershell,instalação
-contributor: keithb
 title: Como instalar e configurar o WMF 5.1
-ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+description: Este artigo descreve como instalar o WMF 5.1 e os pré-requisitos dele.
+ms.openlocfilehash: 0e076bfab684b6c83d62d236eea3bbd7ab2ad411
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671386"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660833"
 ---
 # <a name="install-and-configure-wmf-51"></a>Como instalar e configurar o WMF 5.1
 
@@ -65,8 +63,8 @@ Os pré-requisitos para instalação do WMF 5.1 no Windows Server 2008 R2 SP1 ou
 
    O `Install-WMF5.1.ps1` usa os seguintes parâmetros para facilitar a automação e a instalação no Windows Server 2008 R2 e no Windows 7:
 
-   - **AcceptEula**: quando este parâmetro é incluído, o EULA é aceito automaticamente e, portanto, não é exibido.
-   - **AllowRestart**: este parâmetro poderá ser usado apenas se AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
+   - **AcceptEula** : quando este parâmetro é incluído, o EULA é aceito automaticamente e, portanto, não é exibido.
+   - **AllowRestart** : este parâmetro poderá ser usado apenas se AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
 
 ## <a name="winrm-dependency"></a>Dependência do WinRM
 

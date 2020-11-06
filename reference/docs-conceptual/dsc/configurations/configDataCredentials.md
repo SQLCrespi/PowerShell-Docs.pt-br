@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
-ms.openlocfilehash: aac27f1ff4b4287b53745fa3b946fb3de84771c2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: A DSC permite fornecer as credenciais para que a configuração possa ser aplicada no contexto de uma conta de usuário específica, e não na conta Sistema Local.
+ms.openlocfilehash: 41478dc042ca59fb70aa033de81b589a4a8c09c7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870550"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658629"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 
@@ -205,9 +206,9 @@ ModuleVersion = "1.0";
 ### <a name="credentials-in-transit-and-at-rest"></a>Credenciais em trânsito e em repouso
 
 - O sinalizador **PSDscAllowPlainTextPassword** possibilitar compilar os arquivos MOF que contêm senhas com texto não criptografado. Tenha cuidado ao armazenar arquivos MOF contendo senhas com texto não criptografado.
-- Quando o arquivo MOF é entregue a um Nó no modo **Push**, o WinRM criptografa a comunicação para proteger a senha com texto não criptografado, a menos que você substitua o padrão pelo parâmetro **AllowUnencrypted**.
+- Quando o arquivo MOF é entregue a um Nó no modo **Push** , o WinRM criptografa a comunicação para proteger a senha com texto não criptografado, a menos que você substitua o padrão pelo parâmetro **AllowUnencrypted**.
   - A criptografia do MOF com um certificado protege o arquivo MOF em repouso antes que ele seja aplicado a um nó.
-- No modo **Pull**, você pode configurar o servidor de pull do Windows para usar HTTPS de modo a criptografar o tráfego usando o protocolo especificado no Servidor de Informações da Internet. Para saber mais, confira os artigos [Configurando um cliente pull de DSC](../pull-server/pullclient.md) e [Protegendo arquivos MOF com certificados](../pull-server/secureMOF.md).
+- No modo **Pull** , você pode configurar o servidor de pull do Windows para usar HTTPS de modo a criptografar o tráfego usando o protocolo especificado no Servidor de Informações da Internet. Para saber mais, confira os artigos [Configurando um cliente pull de DSC](../pull-server/pullclient.md) e [Protegendo arquivos MOF com certificados](../pull-server/secureMOF.md).
   - No serviço [State Configuration da Automação do Azure](/azure/automation/automation-dsc-overview), o tráfego de Pull sempre é criptografado.
 - No Nó, os arquivos MOF são criptografados em repouso, começando no PowerShell 5.0.
   - No PowerShell 4.0, os arquivos MOF são descriptografados em repouso, a menos que sejam criptografados com um certificado quando o push e o pull são efetuados no Nó.

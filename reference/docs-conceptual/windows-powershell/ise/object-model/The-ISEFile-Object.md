@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell, cmdlet
 title: O objeto ISEFile
-ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Um objeto ISEFile representa um arquivo no Windows PowerShell ISE.
+ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809882"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662127"
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile
 
-Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
+Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Métodos
 
@@ -25,7 +25,7 @@ Salva o arquivo no disco.
 
 ### <a name="exceptions"></a>Exceções
 
-- **System.IO.IOException**: não foi possível salvar o arquivo.
+- **System.IO.IOException** : não foi possível salvar o arquivo.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -51,9 +51,9 @@ Salva o arquivo com o nome de arquivo e codificação especificados.
 
 ### <a name="exceptions"></a>Exceções
 
-- **System.ArgumentNullException**: o parâmetro **filename** é nulo.
-- **System.ArgumentException**: o parâmetro **filename** está vazio.
-- **System.IO.IOException**: não foi possível salvar o arquivo.
+- **System.ArgumentNullException** : o parâmetro **filename** é nulo.
+- **System.ArgumentException** : o parâmetro **filename** está vazio.
+- **System.IO.IOException** : não foi possível salvar o arquivo.
 
 ```powershell
 # Save the file with a full path and name.

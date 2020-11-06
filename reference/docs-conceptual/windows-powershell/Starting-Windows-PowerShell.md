@@ -2,60 +2,61 @@
 ms.date: 12/05/2019
 keywords: powershell, cmdlet
 title: Iniciando o Windows PowerShell
-ms.openlocfilehash: 32ed85510899ea239c9dc332a023554ce9b53e47
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este artigo explica as maneiras de iniciar várias versões do PowerShell.
+ms.openlocfilehash: 47da7d85c9f7e6966a7f7e809c77979cd24cf129
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809012"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664027"
 ---
 # <a name="starting-windows-powershell"></a>Iniciando o Windows PowerShell
 
-O Windows PowerShell é uma `.DLL` de mecanismo de script que é inserida em vários hosts. Os hosts mais comuns que você iniciará são a linha de comando interativa **powershell.exe** e o Ambiente de Script Integrado **powershell_ise.exe**.
+O Windows PowerShell é uma `.DLL` de mecanismo de script que é inserida em vários hosts. Os hosts mais comuns que você iniciará são a linha de comando interativa `powershell.exe` e o Ambiente de Script Integrado `powershell_ise.exe`.
 
-Para iniciar o Windows PowerShell® no Windows Server® 2012 R2, no Windows® 8.1, no Windows Server 2012 e no Windows 8, confira [Tarefas comuns de gerenciamento e navegação no Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831491(v=ws.11)).
+Para iniciar o Windows PowerShell&reg; no Windows Server&reg; 2012 R2, no Windows&reg; 8.1, no Windows Server 2012 e no Windows 8, confira [Tarefas comuns de gerenciamento e navegação no Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831491(v=ws.11)).
 
 ## <a name="powershell-core-has-renamed-binary"></a>O PowerShell Core renomeou o binário
 
 O PowerShell Core, conhecido como PowerShell, é a versão 6 e posterior que é de software livre e usa o .NET Core. As versões compatíveis estão disponíveis no Windows, no macOS e no Linux.
 
-No PowerShell 6 em diante, o binário do PowerShell foi renomeado **pwsh.exe** para o Windows e **pwsh** para o macOS e o Linux. Você pode iniciar as versões prévias do PowerShell usando **pwsh-preview**. Para obter mais informações, confira [Novidades do PowerShell Core 6.0](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60#renamed-powershellexe-to-pwshexe) e [Sobre o pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7).
+No PowerShell 6 em diante, o binário do PowerShell foi renomeado `pwsh.exe` para o Windows e `pwsh` para o macOS e o Linux. Você pode iniciar as versões prévias do PowerShell usando `pwsh-preview`. Para obter mais informações, confira [Novidades do PowerShell Core 6.0](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60#renamed-powershellexe-to-pwshexe) e [Sobre o pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh).
 
 Para encontrar a referência de cmdlet e a documentação de instalação do PowerShell 7, use os seguintes links:
 
-| Document | Link |
+| Documento | Link |
 | ----- | ----- |
-| Referência de cmdlet | [Navegador do Módulo do PowerShell](/powershell/module/?view=powershell-7) |
-| Instalação do Windows | [Instalar o PowerShell Core no Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
-| Instalação do macOS | [Instalar o PowerShell Core no macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
-| Instalação do Linux | [Instalar o PowerShell Core no Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
+| Referência de cmdlet | [Navegador do Módulo do PowerShell](/powershell/module/) |
+| Instalação do Windows | [Instalar o PowerShell Core no Windows](/powershell/scripting/install/installing-powershell-core-on-windows) |
+| Instalação do macOS | [Instalar o PowerShell Core no macOS](/powershell/scripting/install/installing-powershell-core-on-macos) |
+| Instalação do Linux | [Instalar o PowerShell Core no Linux](/powershell/scripting/install/installing-powershell-core-on-linux) |
 
 Para exibir o conteúdo de outras versões do PowerShell, confira [Como usar a documentação do PowerShell](../how-to-use-docs.md).
 
 ## <a name="how-to-start-windows-powershell-on-earlier-versions-of-windows"></a>Como iniciar o Windows PowerShell em versões anteriores do Windows
 
-Esta seção explica como iniciar o Windows PowerShell e o ISE (Ambiente de Script Integrado) do Windows PowerShell no Windows® 7, Windows Server® 2008 R2 e Windows Server® 2008. Também explica como habilitar o recurso opcional para o ISE do Windows PowerShell no Windows PowerShell 2.0 no Windows Server® 2008 R2 e Windows Server 2008.
+Esta seção explica como iniciar o Windows PowerShell e o ISE (Ambiente de Script Integrado) do Windows PowerShell no Windows&reg; 7, Windows Server&reg; 2008 R2 e Windows Server&reg; 2008. Também explica como habilitar o recurso opcional para o ISE do Windows PowerShell no Windows PowerShell 2.0 no Windows Server&reg; 2008 R2 e Windows Server&reg; 2008.
 
 Use qualquer um dos seguintes métodos para iniciar a versão instalada do Windows PowerShell 3.0 ou o Windows PowerShell 4.0, quando aplicável.
 
 #### <a name="from-the-start-menu"></a>Do menu Iniciar
 
-- Clique em **Iniciar**, digite **PowerShell** e clique em **Windows PowerShell**.
-- No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **Windows PowerShell**.
+- Clique em **Iniciar** , digite **PowerShell** e clique em **Windows PowerShell**.
+- No menu **Iniciar** , clique em **Iniciar** , **Todos os Programas** , **Acessórios** , clique na pasta **Windows PowerShell** e clique em **Windows PowerShell**.
 
 #### <a name="at-the-command-prompt"></a>No prompt de comando
 
-No **cmd.exe**, no Windows PowerShell ou no ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
+No **cmd.exe** , no Windows PowerShell ou no ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
 
 ```
 PowerShell
 ```
 
-Use também os parâmetros do programa **powershell.exe** para personalizar a sessão. Para obter mais informações, consulte [Ajuda de linha de comando do PowerShell.exe](/powershell/module/Microsoft.PowerShell.Core/About/about_PowerShell_exe).
+Use também os parâmetros do programa `powershell.exe` para personalizar a sessão. Para obter mais informações, consulte [Ajuda de linha de comando do PowerShell.exe](/powershell/module/Microsoft.PowerShell.Core/About/about_PowerShell_exe).
 
 #### <a name="with-administrative-privileges-run-as-administrator"></a>Com privilégios administrativos (Executar como administrador)
 
-Clique em **Iniciar**, digite **PowerShell**, clique com o botão direito do mouse em **Windows PowerShell** e depois clique em **Executar como administrador**.
+Clique em **Iniciar** , digite **PowerShell** , clique com o botão direito do mouse em **Windows PowerShell** e depois clique em **Executar como administrador**.
 
 ## <a name="how-to-start-windows-powershell-ise-on-earlier-releases-of-windows"></a>Como iniciar o ISE do Windows PowerShell em versões anteriores do Windows
 
@@ -63,12 +64,12 @@ Use qualquer um dos seguintes métodos para iniciar o ISE do Windows PowerShell.
 
 #### <a name="from-the-start-menu"></a>Do menu Iniciar
 
-- Clique em **Iniciar**, digite **ISE** e clique em **ISE do Windows PowerShell**.
-- No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
+- Clique em **Iniciar** , digite **ISE** e clique em **ISE do Windows PowerShell**.
+- No menu **Iniciar** , clique em **Iniciar** , **Todos os Programas** , **Acessórios** , clique na pasta **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
 
 #### <a name="at-the-command-prompt"></a>No prompt de comando
 
-No **cmd.exe**, no Windows PowerShell ou no ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
+No `cmd.exe`, Windows PowerShell ou ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
 
 ```
 PowerShell_ISE
@@ -82,7 +83,7 @@ ISE
 
 #### <a name="with-administrative-privileges-run-as-administrator"></a>Com privilégios administrativos (Executar como administrador)
 
-Clique em **Iniciar**, digite **ISE**, clique com o botão direito do mouse em **ISE do Windows PowerShell** e depois clique em **Executar como administrador**.
+Clique em **Iniciar** , digite **ISE** , clique com o botão direito do mouse em **ISE do Windows PowerShell** e depois clique em **Executar como administrador**.
 
 ## <a name="how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows"></a>Como habilitar o ISE do Windows PowerShell em versões anteriores do Windows
 
@@ -106,30 +107,30 @@ No entanto, ocasionalmente poderá ser necessário executar o **Windows PowerShe
 
 Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos procedimentos a seguir.
 
-#### <a name="in-windows-server-2012-r2"></a>No Windows Server® 2012 R2
+#### <a name="in-windows-serverreg-2012-r2"></a>No Windows Server&reg; 2012 R2
 
-- Na tela **Iniciar**, clique em **Windows PowerShell (x86)** . Clique no bloco **Windows PowerShell x86**.
-- Em **Gerenciador do Servidor**, no menu **Ferramentas**, selecione **Windows PowerShell (x86)** .
-- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar**, digite **PowerShell x86** e clique em **Windows PowerShell (x86)** .
+- Na tela **Iniciar** , clique em **Windows PowerShell (x86)**. Clique no bloco **Windows PowerShell x86**.
+- Em **Gerenciador do Servidor** , no menu **Ferramentas** , selecione **Windows PowerShell (x86)**.
+- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar** , digite **PowerShell x86** e clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### <a name="in-windows-server-2012"></a>No Windows Server® 2012
+#### <a name="in-windows-serverreg-2012"></a>No Windows Server&reg; 2012
 
-- Na tela **Iniciar**, digite **PowerShell** e clique em **Windows PowerShell (x86)** .
-- Em **Gerenciador do Servidor**, no menu **Ferramentas**, selecione **Windows PowerShell (x86)** .
-- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar**, digite **PowerShell** e clique em **Windows PowerShell (x86)** .
+- Na tela **Iniciar** , digite **PowerShell** e clique em **Windows PowerShell (x86)**.
+- Em **Gerenciador do Servidor** , no menu **Ferramentas** , selecione **Windows PowerShell (x86)**.
+- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar** , digite **PowerShell** e clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### <a name="in-windows-81"></a>No Windows® 8.1
+#### <a name="in-windowsreg-81"></a>No Windows&reg; 8.1
 
-- Na tela **Iniciar**, clique em **Windows PowerShell (x86)** . Clique no bloco **Windows PowerShell x86**.
-- Se estiver executando as [Ferramentas de Administração de Servidor Remoto](https://go.microsoft.com/fwlink/?LinkID=304145) para o Windows 8.1, abra também o Windows PowerShell x86 no menu **Ferramentas do Gerenciador do Servidor**. Selecione **Windows PowerShell (x86)** .
-- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar**, digite **PowerShell x86** e clique em **Windows PowerShell (x86)** .
+- Na tela **Iniciar** , clique em **Windows PowerShell (x86)**. Clique no bloco **Windows PowerShell x86**.
+- Se estiver executando as [Ferramentas de Administração de Servidor Remoto](https://go.microsoft.com/fwlink/?LinkID=304145) para o Windows 8.1, abra também o Windows PowerShell x86 no menu **Ferramentas do Gerenciador do Servidor**. Selecione **Windows PowerShell (x86)**.
+- Na área de trabalho, mova o cursor para o canto superior direito, clique em **Pesquisar** , digite **PowerShell x86** e clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### <a name="in-windows-8"></a>No Windows® 8
+#### <a name="in-windowsreg-8"></a>No Windows&reg; 8
 
-- Na tela **Iniciar**, mova o cursor para o canto superior direito, clique em **Configurações**, **Blocos** e, em seguida, mova o controle deslizante **Mostrar Ferramentas Administrativas** para **Sim**. Em seguida, digite **PowerShell** e clique em **Windows PowerShell (x86)** .
-- Se estiver executando as [Ferramentas de Administração de Servidor Remoto](https://www.microsoft.com/download/details.aspx?id=28972) para o Windows 8, abra também o Windows PowerShell x86 no menu **Ferramentas do Gerenciador do Servidor**. Selecione **Windows PowerShell (x86)** .
-- Na tela **Iniciar** ou na área de trabalho, digite **PowerShell (x86)** e clique em **Windows PowerShell (x86)** .
+- Na tela **Iniciar** , mova o cursor para o canto superior direito, clique em **Configurações** , **Blocos** e, em seguida, mova o controle deslizante **Mostrar Ferramentas Administrativas** para **Sim**. Em seguida, digite **PowerShell** e clique em **Windows PowerShell (x86)**.
+- Se estiver executando as [Ferramentas de Administração de Servidor Remoto](https://www.microsoft.com/download/details.aspx?id=28972) para o Windows 8, abra também o Windows PowerShell x86 no menu **Ferramentas do Gerenciador do Servidor**. Selecione **Windows PowerShell (x86)**.
+- Na tela **Iniciar** ou na área de trabalho, digite **PowerShell (x86)** e clique em **Windows PowerShell (x86)**.
 - Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`

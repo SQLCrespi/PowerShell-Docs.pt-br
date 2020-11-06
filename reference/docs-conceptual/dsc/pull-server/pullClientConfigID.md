@@ -2,19 +2,20 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurar um cliente de pull usando IDs de configuração no PowerShell 5.0 e posterior
-ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo explica como configurar um cliente de pull usando IDs de configuração no PowerShell 5.0 e posterior
+ms.openlocfilehash: 601858c08ce9a893a8941823d27fef3a60882b48
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500730"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664308"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Configurar um cliente de pull usando IDs de configuração no PowerShell 5.0 e posterior
 
 > Aplica-se a: Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Antes de configurar um cliente de pull, você deve configurar um servidor de pull. Embora essa ordem não seja obrigatória, ela ajuda na solução de problemas e ajuda a garantir que o registro seja bem-sucedido. Para configurar um servidor de pull, você pode usar os guias a seguir:
 
@@ -30,7 +31,7 @@ Cada nó de destino pode ser configurado para baixar configurações, recursos e
 
 A execução de qualquer um dos exemplos abaixo cria uma nova pasta de saída denominada **PullClientConfigID** e coloca nela um arquivo MOF de metaconfiguração. Nesse caso, o arquivo MOF de metaconfiguração será nomeado `localhost.meta.mof`.
 
-Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager**, com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
+Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager** , com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -244,7 +245,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-Para especificar um servidor de relatório, utilize um bloco **ReportRepositoryWeb**. Um servidor de relatório não pode ser um servidor de SMB. A metaconfiguração a seguir configura um cliente de pull para obter suas configurações de **CONTOSO PullSrv** e seus recursos de **CONTOSO ResourceSrv**, bem como enviar relatórios de status para **CONTOSO ReportSrv**:
+Para especificar um servidor de relatório, utilize um bloco **ReportRepositoryWeb**. Um servidor de relatório não pode ser um servidor de SMB. A metaconfiguração a seguir configura um cliente de pull para obter suas configurações de **CONTOSO-PullSrv** e seus recursos de **CONTOSO-ResourceSrv** , bem como enviar relatórios de status para **CONTOSO-ReportSrv** :
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -293,4 +294,4 @@ Após o cliente de pull ser configurado, você pode usar os guias a seguir para 
 
 ## <a name="see-also"></a>Consulte Também
 
-* [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md)
+- [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md)

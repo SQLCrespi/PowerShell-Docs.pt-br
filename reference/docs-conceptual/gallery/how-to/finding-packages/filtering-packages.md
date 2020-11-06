@@ -1,21 +1,19 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Filtrando resultados da pesquisa
-ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Este artigo descreve a interface do usuário usada para filtrar conteúdo na Galeria do PowerShell.
+ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691469"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661407"
 ---
 # <a name="filtering-search-results"></a>Filtrando resultados da pesquisa
 
 A [guia Pacotes](https://www.powershellgallery.com/packages) exibe todos os pacotes disponíveis na Galeria do PowerShell.
 
-Há várias maneiras de filtrar, classificar e pesquisar os pacotes.
-Para ver mais detalhes sobre um pacote específico, clique nele.
+Há várias maneiras de filtrar, classificar e pesquisar os pacotes. Para ver mais detalhes sobre um pacote específico, clique nele.
 
 ## <a name="filter-by"></a>Filtrar Por
 
@@ -38,15 +36,10 @@ Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resul
   - Capacidade da função
   - Fluxo de trabalho
 
-Para ver somente módulos na Galeria do PowerShell, marque a opção Módulo nos Tipos de Pacote.
-Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opção Script nos Tipos de Pacote.
+Para ver somente módulos na Galeria do PowerShell, marque a opção Módulo nos Tipos de Pacote. Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opção Script nos Tipos de Pacote.
 
 > [!NOTE]
-> Os filtros são inclusivos.
-> Exemplo: um pacote que contém cmdlets e funções será exibido se Cmdlet ou Função (ou ambos) estiverem marcados.
-> Se nenhum dos dois for selecionado, o pacote não será exibido.
-> De forma semelhante, se todas as categorias forem selecionadas, apenas pacotes que contêm uma dessas categorias serão exibidos.
-> **Pacotes que não pertencem a nenhuma dessas categorias não serão exibidos.**
+> Os filtros são inclusivos. Exemplo: um pacote que contém cmdlets e funções será exibido se Cmdlet ou Função (ou ambos) estiverem marcados. Se nenhum dos dois for selecionado, o pacote não será exibido. De forma semelhante, se todas as categorias forem selecionadas, apenas pacotes que contêm uma dessas categorias serão exibidos. **Pacotes que não pertencem a nenhuma dessas categorias não serão exibidos.**
 
 ## <a name="sort-by"></a>Classificar Por
 

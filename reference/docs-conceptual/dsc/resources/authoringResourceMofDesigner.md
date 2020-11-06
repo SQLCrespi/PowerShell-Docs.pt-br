@@ -2,19 +2,19 @@
 ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
-ms.openlocfilehash: 04fd2fbcc5afd9f1c7cbfaa44d6bdfde93bca399
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo xDscResourceDesigner que facilitam a criação de recursos de DSC do PowerShell.
+ms.openlocfilehash: efe36d045ac3fba3823cb1f812bb5761d238fdf1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217484"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656487"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md).
-Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory. Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
+A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módulo **xDscResourceDesigner** que facilitam a criação de recursos de Configuração de Estado Desejado (DSC) do Windows PowerShell. Os cmdlets nesse recurso ajudam a criar o esquema MOF, o módulo de script e a estrutura de diretórios para seu novo recurso. Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md). Neste artigo, criaremos um recurso de DSC que gerencia os usuários do Active Directory. Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
 
 ## <a name="creating-resource-properties"></a>Criando propriedades de recurso
 
@@ -22,10 +22,10 @@ A primeira coisa que precisamos fazer é decidir sobre as propriedades que serã
 
 Nome do parâmetro Descrição
 
-- **UserName**: propriedade de chave que identifica um usuário com exclusividade.
-- **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
-- **DomainCredential**: a senha do domínio para o usuário.
-- **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
+- **UserName** : propriedade de chave que identifica um usuário com exclusividade.
+- **Ensure** : especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
+- **DomainCredential** : a senha do domínio para o usuário.
+- **Password** : a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
 
 Para criar as propriedades, usamos o cmdlet `New-xDscResourceProperty`. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
 

@@ -2,18 +2,19 @@
 ms.date: 08/11/2020
 keywords: DSC,powershell,configuração,instalação
 title: Chamando métodos do recurso DSC diretamente
-ms.openlocfilehash: 029a278c938e414820e172b85fac3cb3ad4b4afa
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: O cmdlet Invoke-DscResource pode ser usado para chamar as funções ou os métodos de um recurso de DSC. Ele pode ser usado por terceiros que queiram usar recursos de DSC ou como uma ferramenta útil ao desenvolver recursos.
+ms.openlocfilehash: 5ccf0f589b60cef4ec197d1e0a583af9ed60d5e7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162487"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650996"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chamando métodos do recurso DSC diretamente
 
->Aplica-se a: Windows PowerShell 5.0
+> Aplica-se a: Windows PowerShell 5.0
 
-Use o cmdlet [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) para chamar diretamente as funções ou os métodos de um recurso de DSC (as funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` de um recurso baseado em MOF ou os métodos **Get**, **Set** e **Test** de um recurso baseado em classe). Isso pode ser usado por terceiros que querem usar recursos DSC, ou como uma ferramenta útil ao desenvolver recursos.
+Use o cmdlet [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) para chamar diretamente as funções ou os métodos de um recurso de DSC (as funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` de um recurso baseado em MOF ou os métodos **Get** , **Set** e **Test** de um recurso baseado em classe). Isso pode ser usado por terceiros que querem usar recursos DSC, ou como uma ferramenta útil ao desenvolver recursos.
 
 > [!NOTE]
 > No PowerShell 7.0+, `Invoke-DscResource` não é mais compatível com a invocação de recursos de DSC do WMI. Isso inclui os recursos de **Arquivo** e **Log** em **PSDesiredStateConfiguration**.
@@ -51,7 +52,7 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->[!NOTE]
+> [!NOTE]
 > não é permitido chamar diretamente métodos de recurso de composição. Em vez disso, chame os métodos de recursos subjacentes que compõem o recurso de composição.
 
 ## <a name="see-also"></a>Consulte Também

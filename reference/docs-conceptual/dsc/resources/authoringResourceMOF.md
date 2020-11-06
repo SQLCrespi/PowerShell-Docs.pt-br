@@ -2,18 +2,20 @@
 ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com MOF
-ms.openlocfilehash: ba857fa504bfd84accfd7f260b1fff1228db40ba
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: Este artigo define o esquema para um recurso de DSC personalizado em um arquivo MOF e implementa o recurso em um arquivo de script do PowerShell.
+ms.openlocfilehash: e79a37699c468b2c55c307c96f1c193a2c1595b3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217518"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667174"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrevendo um recurso personalizado de DSC com MOF
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Neste tópico, definiremos o esquema para um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell em um arquivo MOF, além de implementar o recurso em um arquivo de script do Windows PowerShell. Esse recurso personalizado serve para criar e manter um site da web.
+Neste artigo, definiremos o esquema para um recurso personalizado de DSC (Desired State Configuration) do Windows PowerShell em um arquivo MOF e implementaremos o recurso em um arquivo de script do Windows PowerShell.
+Esse recurso personalizado serve para criar e manter um site da web.
 
 ## <a name="creating-the-mof-schema"></a>Criando o esquema MOF
 
@@ -68,8 +70,7 @@ Observe o seguinte sobre o código anterior:
 
 ### <a name="writing-the-resource-script"></a>Escrevendo o script de recurso
 
-O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource`. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado `<ResourceName>.psm1`.
-No exemplo a seguir, as funções são armazenadas em um arquivo chamado `Demo_IISWebsite.psm1`.
+O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource`. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de "propriedades de recursos". Armazene essas três funções em um arquivo chamado `<ResourceName>.psm1`. No exemplo a seguir, as funções são armazenadas em um arquivo chamado `Demo_IISWebsite.psm1`.
 
 > [!NOTE]
 > Ao executar o mesmo script de configuração no recurso mais de uma vez, você não receberá erros e o recurso permanecerá no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções `Get-TargetResource` e `Test-TargetResource` deixam o recurso inalterado e se chamar a função `Set-TargetResource` mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
@@ -77,7 +78,8 @@ No exemplo a seguir, as funções são armazenadas em um arquivo chamado `Demo_I
 Na implementação da função `Get-TargetResource`, utilize os valores da propriedade de recurso de chave que são fornecidos como parâmetros para verificar o status da instância do recurso especificado. Essa função deve gerar uma tabela de hash que liste todas as propriedades de recursos como chaves e os valores reais dessas propriedades como valores correspondentes. O código a seguir fornece um exemplo.
 
 ```powershell
-# DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
+# DSC uses the Get-TargetResource function to fetch the status of the resource instance
+# specified in the parameters for the target machine
 function Get-TargetResource
 {
     param
@@ -105,8 +107,11 @@ function Get-TargetResource
 
         $getTargetResourceResult = $null;
 
-        <# Insert logic that uses the mandatory parameter values to get the website and assign it to a variable called $Website #>
-        <# Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise #>
+        <#
+          Insert logic that uses the mandatory parameter values to get the website and
+          assign it to a variable called $Website
+          Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise
+        #>
 
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
@@ -161,10 +166,14 @@ function Set-TargetResource
         [string[]]$Protocol
     )
 
-    <# If Ensure is set to "Present" and the website specified in the mandatory input parameters does not exist, then create it using the specified parameter values #>
-    <# Else, if Ensure is set to "Present" and the website does exist, then update its properties to match the values provided in the non-mandatory parameter values #>
-    <# Else, if Ensure is set to "Absent" and the website does not exist, then do nothing #>
-    <# Else, if Ensure is set to "Absent" and the website does exist, then delete the website #>
+    <#
+        If Ensure is set to "Present" and the website specified in the mandatory input parameters
+          does not exist, then create it using the specified parameter values
+        Else, if Ensure is set to "Present" and the website does exist, then update its properties
+          to match the values provided in the non-mandatory parameter values
+        Else, if Ensure is set to "Absent" and the website does not exist, then do nothing
+        Else, if Ensure is set to "Absent" and the website does exist, then delete the website
+    #>
 }
 ```
 
@@ -208,18 +217,19 @@ function Test-TargetResource
     # Get the current state
     $currentState = Get-TargetResource -Ensure $Ensure -Name $Name -PhysicalPath $PhysicalPath -State $State -ApplicationPool $ApplicationPool -BindingInfo $BindingInfo -Protocol $Protocol
 
-    #Write-Verbose "Use this cmdlet to deliver information about command processing."
+    # Write-Verbose "Use this cmdlet to deliver information about command processing."
 
-    #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
+    # Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-    #Include logic to
+    # Include logic to
     $result = [System.Boolean]
-    #Add logic to test whether the website is present and its status matches the supplied parameter values. If it does, return true. If it does not, return false.
+    # Add logic to test whether the website is present and its status matches the supplied
+    # parameter values. If it does, return true. If it does not, return false.
     $result
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > Para uma depuração mais fácil, use o cmdlet `Write-Verbose` na implementação das três funções anteriores. Esse cmdlet escreve o texto para o fluxo de mensagem detalhada. Por padrão, o fluxo de mensagem detalhada não é exibido, mas você pode exibi-lo alterando o valor da variável **$VerbosePreference** ou usando o parâmetro **Verbose** nos cmdlets DSC = novo.
 
 ### <a name="creating-the-module-manifest"></a>Criando o manifesto de módulo
@@ -307,4 +317,4 @@ $global:DSCMachineStatus = 1
 ```
 
 Para que o LCM reinicialize o nó, o sinalizador **RebootNodeIfNeeded** precisa ser definido como `$true`.
-A configuração **ActionAfterReboot** também deve ser definida como **ContinueConfiguration**, que é o padrão. Para obter mais informações sobre como configurar o LCM, confira [Configurando o Configuration Manager Local](../managing-nodes/metaConfig.md) ou [Configurando o Configuration Manager Local (v4)](../managing-nodes/metaConfig4.md).
+A configuração **ActionAfterReboot** também deve ser definida como **ContinueConfiguration** , que é o padrão. Para obter mais informações sobre como configurar o LCM, confira [Configurando o Configuration Manager Local](../managing-nodes/metaConfig.md) ou [Configurando o Configuration Manager Local (v4)](../managing-nodes/metaConfig4.md).

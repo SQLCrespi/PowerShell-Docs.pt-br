@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Aninhar configurações
-ms.openlocfilehash: e74c0fe1d7f7b198c2d6f796c0bf120eb0ec21d9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: A DSC permite criar configurações compostas aninhando uma configuração dentro de outra.
+ms.openlocfilehash: d7a81cb9673126e92e9185aacf19c5c7c17da8ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564030"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667412"
 ---
 # <a name="nesting-dsc-configurations"></a>Aninhar configurações do DSC
 
@@ -49,7 +50,7 @@ Configuration NestedFileConfig
 }
 ```
 
-Neste exemplo, `FileConfig` usa dois parâmetros obrigatórios: **CopyFrom** e **CopyTo**, que são utilizados como valores para as propriedades **SourcePath** e **DestinationPath** no bloco de recursos `File`. A configuração `NestedConfig` chama `FileConfig` como se fosse um recurso. As propriedades do bloco de recursos `NestedConfig` (**CopyFrom** e **CopyTo**) são os parâmetros da configuração `FileConfig`.
+Neste exemplo, `FileConfig` usa dois parâmetros obrigatórios: **CopyFrom** e **CopyTo** , que são utilizados como valores para as propriedades **SourcePath** e **DestinationPath** no bloco de recursos `File`. A configuração `NestedConfig` chama `FileConfig` como se fosse um recurso. As propriedades do bloco de recursos `NestedConfig` ( **CopyFrom** e **CopyTo** ) são os parâmetros da configuração `FileConfig`.
 
 Atualmente, a DSC não dá suporte a configurações aninhadas em configurações aninhadas. Só é possível aninhar uma configuração com uma camada de profundidade.
 

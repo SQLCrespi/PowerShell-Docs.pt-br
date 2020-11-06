@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell, cmdlet
 title: O objeto PowerShellTab
-ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O objeto PowerShellTab representa um ambiente de tempo de execução do Windows PowerShell.
+ms.openlocfilehash: ac89875e408a41a92d7e3d1a83a849466296c3c6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809552"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663388"
 ---
 # <a name="the-powershelltab-object"></a>O objeto PowerShellTab
 
@@ -39,7 +39,7 @@ Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em ve
 Executa o script determinado na guia PowerShell.
 
 > [!NOTE]
-> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando demorar mais para executar do que o que estiver especificado no valor **millisecondsTimeout**, o comando falhará com uma exceção: “A operação alcançou o tempo limite.”
+> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando demorar mais para executar do que o que estiver especificado no valor **millisecondsTimeout** , o comando falhará com uma exceção: “A operação alcançou o tempo limite.”
 
 **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 

@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Com usar o Mecanismo Windows PowerShell 2.0
-ms.openlocfilehash: c5ac92159d63e5669643908016186ed32dfb46db
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: O Mecanismo Windows PowerShell 2.0 deve ser usado somente quando um programa de script ou host existente não puder ser executado porque programas de host gravados no Windows PowerShell 2.0 e compilados com CLR 2.0 não podem ser executados sem modificação.
+ms.openlocfilehash: 214b87b7314f31974801bb07f98ddea3b68008f0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216015"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664009"
 ---
 # <a name="using-the-windows-powershell-20-engine"></a>Com usar o Mecanismo Windows PowerShell 2.0
 
@@ -40,7 +41,7 @@ PowerShell.exe -Version 2
 
 ## <a name="how-to-start-a-remote-session-with-the-windows-powershell-20-engine"></a>Como iniciar uma sessão remota com o Mecanismo Windows PowerShell 2.0
 
-Para executar o Mecanismo Windows PowerShell 2.0 em uma sessão remota, crie uma configuração de sessão (também conhecida como _ponto de extremidade_) no computador remoto que carrega o Mecanismo Windows PowerShell 2.0. A configuração da sessão é salva no computador remoto e pode ser usada por qualquer usuário autorizado para criar sessões que utilizam o Mecanismo Windows PowerShell 2.0.
+Para executar o Mecanismo Windows PowerShell 2.0 em uma sessão remota, crie uma configuração de sessão (também conhecida como _ponto de extremidade_ ) no computador remoto que carrega o Mecanismo Windows PowerShell 2.0. A configuração da sessão é salva no computador remoto e pode ser usada por qualquer usuário autorizado para criar sessões que utilizam o Mecanismo Windows PowerShell 2.0.
 
 Essa é uma tarefa avançada que normalmente é executada por um administrador do sistema.
 

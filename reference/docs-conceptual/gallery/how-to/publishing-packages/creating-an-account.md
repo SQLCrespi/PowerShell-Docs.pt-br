@@ -1,21 +1,20 @@
 ---
 ms.date: 09/11/2018
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Criando uma conta da Galeria do PowerShell
-ms.openlocfilehash: f43d7e65bb8bf9a9bbdda9790cc622786377fa38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo descreve os requisitos da conta de usuário para a Galeria do PowerShell
+ms.openlocfilehash: 24c7531e61128415a284d1b438b43f3af0d1053a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278766"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662607"
 ---
 # <a name="creating-a-powershell-gallery-account"></a>Criando uma conta da Galeria do PowerShell
 
 É necessário criar uma conta antes de publicar algo na Galeria do PowerShell.
 As contas da Galeria do PowerShell precisam estar vinculadas a uma conta de logon habilitada por email. Essa conta pode ser uma do Azure Active Directory ou uma ID da Microsoft, como uma conta de email do outlook.com ou hotmail.com.
 
-Para criar uma conta da Galeria do PowerShell, acesse [https://PowerShellGallery.com](https://PowerShellGallery.com) e clique em **Entrar**, conforme mostrado na imagem a seguir.
+Para criar uma conta da Galeria do PowerShell, acesse [https://PowerShellGallery.com](https://PowerShellGallery.com) e clique em **Entrar** , conforme mostrado na imagem a seguir.
 
 ![Registrar nova conta](media/creating-an-account/CreateAccount-Register.png)
 

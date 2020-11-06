@@ -2,18 +2,19 @@
 ms.date: 12/06/2019
 keywords: powershell, cmdlet
 title: Requisitos do Sistema do Windows PowerShell
-ms.openlocfilehash: 883da2f91c4a0b46e4bccbacd9933a52f8f476f6
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Este artigo lista os requisitos do sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0, o Windows PowerShell 5.0 e o Windows PowerShell 5.1.
+ms.openlocfilehash: a82c0b1d6bf53e4a97db8414050a122ae5b7745d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236077"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663830"
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos do Sistema do Windows PowerShell
 
 Este artigo lista os requisitos do sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0, o Windows PowerShell 5.0 e o Windows PowerShell 5.1. Além disso, recursos especiais, como o ISE (Ambiente de Script Integrado) do Windows PowerShell, comandos CIM e fluxos de trabalho.
 
-O Windows® 8.1 e o Windows Server® 2012 R2 incluem todos os programas necessários. Este artigo foi projetado para usuários de versões anteriores do Windows.
+O Windows&reg; 8.1 e o Windows Server&reg; 2012 R2 incluem todos os programas necessários. Este artigo foi projetado para usuários de versões anteriores do Windows.
 
 ## <a name="operating-system-requirements"></a>Requisitos do sistema operacional
 
@@ -57,8 +58,8 @@ O Windows PowerShell 4.0 é executado nas seguintes versões do Windows. Para ex
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8.1                                 | Instalado por padrão                                                                                       |
 | Windows Server 2012 R2                      | Instalado por padrão                                                                                       |
-| Windows® 7 com Service Pack 1              | Instalar o [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
-| Windows Server® 2008 R2 com Service Pack 1 | Instalar o [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows&reg; 7 com Service Pack 1              | Instalar o [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows Server&reg; 2008 R2 com Service Pack 1 | Instalar o [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
 
 ### <a name="windows-powershell-30"></a>Windows PowerShell 3.0
 
@@ -68,8 +69,8 @@ O Windows PowerShell 3.0 é executado nas seguintes versões do Windows. Para ex
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8                                   | Instalado por padrão                                                                                       |
 | Windows Server 2012                         | Instalado por padrão                                                                                       |
-| Windows® 7 com Service Pack 1              | Instalar o [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
-| Windows Server® 2008 R2 com Service Pack 1 | Instalar o [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows&reg; 7 com Service Pack 1              | Instalar o [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows Server&reg; 2008 R2 com Service Pack 1 | Instalar o [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 | Windows Server 2008 com Service Pack 2     | Instalar o [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 
 ## <a name="microsoft-net-framework-requirements"></a>Requisitos do Microsoft .NET Framework
@@ -137,7 +138,7 @@ Para obter informações sobre como adicionar ou instalar o mecanismo do Windows
 
 O Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 são executados no Windows PE (Ambiente de Pré-Instalação do Windows). No entanto, não há suporte para os cmdlets a seguir.
 
-- Cmdlets do BITS (Serviço de Transferência Inteligente em Segundo Plano). Para obter mais informações, confira [BitsTransfer](/powershell/module/bitstransfer/?view=win10-ps).
+- Cmdlets do BITS (Serviço de Transferência Inteligente em Segundo Plano). Para obter mais informações, confira [BitsTransfer](/powershell/module/bitstransfer/).
 - [Get-EventLog](/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 - [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 - [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)

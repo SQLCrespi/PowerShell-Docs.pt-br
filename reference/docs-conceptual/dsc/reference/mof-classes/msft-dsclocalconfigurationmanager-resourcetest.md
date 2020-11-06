@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,powershell,configuração,instalação
+ms.topic: reference
 title: Método ResourceTest
-ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Método ResourceTest
+ms.openlocfilehash: cbac53ea96a59ec92fa840f75cd264a3125b965a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463798"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650675"
 ---
 # <a name="resourcetest-method"></a>Método ResourceTest
 
@@ -17,10 +18,10 @@ Chama diretamente o método **Test** de um recurso de DSC.
 
 ```mof
 uint32 ResourceTest(
-  [in]  string  ResourceType,
-  [in]  string  ModuleName,
-  [in]  uint8   resourceProperty[],
-  [out] boolean InDesiredState
+  [in]  string  ResourceType,
+  [in]  string  ModuleName,
+  [in]  uint8   resourceProperty[],
+  [out] boolean InDesiredState
 );
 ```
 
@@ -30,7 +31,7 @@ uint32 ResourceTest(
 
 **ModuleName** \[in\] O nome do módulo que contém o recurso a chamar.
 
-***resourceProperty** \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
+**_resourceProperty_* \[in\] Especifica o nome da propriedade do recurso e o respectivo valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) para descobrir as propriedades de recurso e seus tipos.
 
 *InDesiredState** \[out\] No retorno, essa propriedade será definida como **true** se o nó de destino estiver no estado desejado.
 
@@ -46,7 +47,7 @@ Esse é um método estático.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Confira também
 

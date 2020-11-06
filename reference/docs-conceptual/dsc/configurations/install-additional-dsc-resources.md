@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,recurso,galeria,instalação
 title: Instalar recursos adicionais do DSC
-ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo lista os recursos de DSC incluídos no módulo PSDesiredStateConfiguration. Ele também aborda como localizar e instalar recursos da Galeria do PowerShell.
+ms.openlocfilehash: e75561ed539e06716c9a103f905b9d1e4f3e71d3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417802"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645127"
 ---
 # <a name="install-additional-dsc-resources"></a>Instalar recursos adicionais do DSC
 
@@ -18,20 +19,20 @@ Esta é uma lista dos recursos OOB incluídos no PowerShell 4.0 e uma descriçã
 > [!NOTE]
 > Essa lista está incompleta, pois o número de recursos OOB cresce a cada versão do PowerShell.
 
-|Recurso  |Descrição  |
-|---------|---------|
-|**Arquivo**|Controla o estado dos arquivos e diretórios. Copia os arquivos de uma **Fonte** para um **Destino** e os atualiza quando a **Fonte** muda comparando datas, somas de verificação e hashes.|
-|**Arquivar**|Desempacota os arquivos e um local especificado. Valida os arquivos com a **soma de verificação** especificada.|
-|**Ambiente**|Gerencia as variáveis de ambiente.|
-|**Agrupar**|Gerencia os grupos locais e controla a associação de grupo.|
-|**Log**|Grava as mensagens no log de eventos `Microsoft-Windows-Desired State Configuration/Analytic`.|
-|**Pacote**|Instala ou desinstala pacotes usando **Arguments**, **LogPath**, **ReturnCode** e outras configurações.|
-|**Registro**|Gerencia os valores e as chaves do registro.|
-|**Script**|Permite que você crie seus próprios blocos de script [get-test-set](../resources/get-test-set.md).|
-|**Serviço**|Configura os serviços do Windows.|
-|**Usuário** |Gerencia os atributos e usuários locais.|
-|**WindowsFeature**|Gerencia as funções e os recursos.|
-|**WindowsProcess**|Configura os processos do Windows.|
+|      Recurso      |                                                                                       Descrição                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Arquivo**           | Controla o estado dos arquivos e diretórios. Copia os arquivos de uma **Fonte** para um **Destino** e os atualiza quando a **Fonte** muda comparando datas, somas de verificação e hashes. |
+| **Arquivar**        | Desempacota os arquivos e um local especificado. Valida os arquivos com a **soma de verificação** especificada.                                                                                         |
+| **Ambiente**    | Gerencia as variáveis de ambiente.                                                                                                                                                           |
+| **Grupo**          | Gerencia os grupos locais e controla a associação de grupo.                                                                                                                                      |
+| **Log**            | Grava as mensagens no log de eventos `Microsoft-Windows-Desired State Configuration/Analytic`.                                                                                               |
+| **Pacote**        | Instala ou desinstala pacotes usando **Arguments** , **LogPath** , **ReturnCode** e outras configurações.                                                                                        |
+| **Registro**       | Gerencia os valores e as chaves do registro.                                                                                                                                                        |
+| **script**         | Permite que você crie seus próprios blocos de script [get-test-set](../resources/get-test-set.md).                                                                                                |
+| **Serviço**        | Configura os serviços do Windows.                                                                                                                                                             |
+| **Usuário**           | Gerencia os atributos e usuários locais.                                                                                                                                                      |
+| **WindowsFeature** | Gerencia as funções e os recursos.                                                                                                                                                              |
+| **WindowsProcess** | Configura os processos do Windows.                                                                                                                                                            |
 
 Os recursos OOB proporcionam um bom ponto de partida para operações comuns. Se os recursos OOB não atenderem às suas necessidades, você poderá escrever seu próprio [Recurso personalizado](../resources/authoringResource.md). Antes de escrever um recurso personalizado para resolver seu problema, procure na vasta gama de recursos DSC que já foram criados pela Microsoft e pela comunidade do PowerShell.
 
@@ -51,11 +52,11 @@ Primeiro, use o cmdlet [Find-DSCResource](/powershell/module/powershellget/find-
 PS> Find-DSCResource
 
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The
-NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider
- by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to
-install and import the NuGet provider now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies'
+or 'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install
+the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201
+-Force'. Do you want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
 ```
 
@@ -115,9 +116,9 @@ O recurso de "Fuso horário" existe no módulo "ComputerManagementDSC", portanto
 PS> Install-Module -Name ComputerManagementDSC
 
 Untrusted repository
-You are installing the modules from an untrusted repository. If you trust this repository, change its
-InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
-'PSGallery'?
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to
+install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
@@ -151,6 +152,6 @@ PowerShell      TimeZone                  ComputerManagementDsc          6.0.0.0
 PowerShell      VirtualMemory             ComputerManagementDsc          6.0.0.0    {Drive, Type, DependsOn, Initi...
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [O que são recursos?](../resources/resources.md)

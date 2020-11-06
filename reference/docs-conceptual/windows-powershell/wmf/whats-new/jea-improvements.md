@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: Aprimoramentos no recurso JEA (Administração Suficiente)
-ms.openlocfilehash: 9bb45ad2ddd459b99fc58610dfd8145992093624
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O JEA é um novo recurso no WMF 5.0 que permite a administração baseada em funções por meio da comunicação remota do PowerShell. Isso amplia a infraestrutura existente do ponto de extremidade restrito, permitindo que não administradores executem comandos, scripts e executáveis específicos como administrador.
+ms.openlocfilehash: f255d0ecbd4bbd9a5ade4b6e19f066cc007481fb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808912"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654030"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
 

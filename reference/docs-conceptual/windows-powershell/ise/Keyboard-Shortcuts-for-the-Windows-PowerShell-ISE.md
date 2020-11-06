@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell, cmdlet
 title: Atalhos do teclado para o ISE do Windows PowerShell
-ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+description: Este artigo é uma lista dos atalhos de teclado usados no ISE do PowerShell.
+ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092109"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663465"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
-Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell®. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
+Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Atalhos de teclado para edição de texto
 
@@ -19,7 +19,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 
 |              Ação              |       Atalhos do teclado       |                                                                                                                                                 Usar em                                                                                                                                                 |
 | -------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Ajuda**                         | <kbd>F1</kbd>                  | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha da Biblioteca do TechNet na Web ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
+| **Ajuda**                         | <kbd>F1</kbd>                  | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha da Biblioteca do TechNet na Web ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas** , **Opções** e, na guia **Configurações Gerais** , defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
 | **Copy**                         | <kbd>CTRL</kbd>+<kbd>C</kbd>   | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                                 |
 | **Recortar**                          | <kbd>CTRL</kbd>+<kbd>X</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
 | **Expandir ou Recolher a Estrutura de Tópicos** | <kbd>CTRL</kbd>+<kbd>M</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
@@ -115,7 +115,7 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 |                        Ação                        |               Atalho do Teclado               |
 | ---------------------------------------------------- | --------------------------------------------- |
 | **Sair**                                             | <kbd>ALT</kbd>+<kbd>F4</kbd>                  |
-| **Iniciar o PowerShell.exe**(console do Windows PowerShell) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
+| **Iniciar o PowerShell.exe** (console do Windows PowerShell) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
 
 ## <a name="see-also"></a>Consulte Também
 

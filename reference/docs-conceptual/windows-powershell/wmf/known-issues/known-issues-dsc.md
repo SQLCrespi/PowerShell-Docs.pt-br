@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: Limitações e problemas conhecidos do DSC (Configuração de Estado Desejado)
-ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Limitações e problemas conhecidos da DSC no Windows PowerShell 5.x
+ms.openlocfilehash: 1163ed9e130430f6bbca98405a8993bb054dd1a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808692"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662044"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Limitações e problemas conhecidos do DSC (Configuração de Estado Desejado)
 
@@ -44,9 +44,9 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="lcm-can-go-into-an-unstable-state-while-using-get-dscconfiguration-in-debugmode"></a>O LCM pode entrar em um estado instável durante o uso de Get-DscConfiguration em DebugMode
 
-Se o LCM estiver em DebugMode, pressionar CTRL+C para interromper o processamento de `Get-DscConfiguration` poderá fazer com que o LCM entre em um estado instável, a tal ponto que a maioria dos cmdlets do DSC não funcionará.
+Se o LCM estiver em DebugMode, pressionar CTRL+C para interromper o processamento de `Get-DscConfiguration` poderá fazer com que o LCM entre em um estado instável, a tal ponto que a maioria dos cmdlets da DSC não funcionará.
 
-**Resolução:** não pressione CTRL+C durante a depuração do cmdlet `Get-DscConfiguration`.
+**Resolução:** Não pressione CTRL+C durante a depuração do cmdlet `Get-DscConfiguration`.
 
 ## <a name="stop-dscconfiguration-may-not-respond-in-debugmode"></a>Stop-DscConfiguration poderá não responder em DebugMode
 
@@ -56,13 +56,13 @@ Se o LCM estiver em DebugMode, `Stop-DscConfiguration` poderá não responder ao
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>Nenhuma mensagem de erro detalhada é mostrada em DebugMode
 
-Se o LCM estiver em **DebugMode**, nenhuma mensagem de erro detalhada será exibida nos recursos de DSC.
+Se o LCM estiver em **DebugMode** , nenhuma mensagem de erro detalhada será exibida nos recursos de DSC.
 
 **Resolução:** desabilite **DebugMode** para ver as mensagens detalhadas no recurso
 
 ## <a name="invoke-dscresource-operations-cannot-be-retrieved-by-get-dscconfigurationstatus-cmdlet"></a>As operações Invoke-DscResource não podem ser recuperadas pelo cmdlet Get-DscConfigurationStatus
 
-Depois que o cmdlet `Invoke-DscResource` é usado para chamar diretamente os métodos de um recurso, não é possível recuperar os registros dessa operação por meio de `Get-DscConfigurationStatus`.
+Depois que o cmdlet `Invoke-DscResource` for usado para chamar diretamente os métodos de um recurso, não será possível recuperar os registros dessa operação por meio de `Get-DscConfigurationStatus`.
 
 **Resolução:** Nenhum.
 
@@ -117,7 +117,7 @@ Para várias configurações parciais que são implantadas em um único nó, nom
 
 ## <a name="start-dscconfiguration-useexisting-does-not-work-with--credential"></a>–UseExisting de Start-DscConfiguration não funciona com –Credential
 
-Ao usar `Start-DscConfiguration` com o parâmetro **UseExisting**, o parâmetro **Credential** é ignorado. O DSC usa a identidade de processo padrão para continuar a operação. Isso causa erros quando uma credencial diferente é necessária para continuar no nó remoto.
+Ao usar `Start-DscConfiguration` com o parâmetro **UseExisting** , o parâmetro **Credential** é ignorado. O DSC usa a identidade de processo padrão para continuar a operação. Isso causa erros quando uma credencial diferente é necessária para continuar no nó remoto.
 
 **Resolução:** use a sessão CIM para operações de DSC remotas:
 

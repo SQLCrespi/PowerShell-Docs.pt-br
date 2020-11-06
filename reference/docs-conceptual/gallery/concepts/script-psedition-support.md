@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: manikb
-keywords: galeria,powershell,cmdlet,psget
 title: Script com edições compatíveis do PowerShell
-ms.openlocfilehash: e364879f611429a8583e550fb7704431e456fbb1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo explica como os cmdlets do PowerShellGet dão suporte às edições Desktop e Core dos scripts do PowerShell.
+ms.openlocfilehash: c9d8af24be8138283027263c62140b3fd04d6b24
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328057"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656053"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Script com edições compatíveis do PowerShell
 

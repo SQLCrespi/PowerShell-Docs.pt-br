@@ -2,19 +2,19 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Instruções condicionais e loops em configurações
-ms.openlocfilehash: 86f75be4a3d1c1760dd6269335431e8ab9fd8d09
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo mostra como usar instruções condicionais e loops para tornar a Configuração mais dinâmica. Combinar instruções condicionais e loops com parâmetros e Dados de Configuração proporciona a você mais flexibilidade e controle ao compilar a Configuração.
+ms.openlocfilehash: 7af8a360c17a0842fa2b95d1d1fb288323c327ef
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736889"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658459"
 ---
 # <a name="conditional-statements-and-loops-in-a-configuration"></a>Instruções condicionais e loops em uma configuração
 
 Você pode tornar sua [Configuração](configurations.md) mais dinâmica usando palavras-chave de controle de fluxo do PowerShell. Este artigo mostra como usar instruções condicionais e loops para tornar a `Configuration` mais dinâmica. Combinar instruções condicionais e loops com [parâmetros](add-parameters-to-a-configuration.md) e [Dados de Configuração](configData.md) proporciona a você mais flexibilidade e controle ao compilar a `Configuration`.
 
-Assim como uma função ou um bloco de script, é possível usar qualquer recurso de linguagem do PowerShell em uma `Configuration`.
-As instruções usadas serão avaliadas somente quando você chamar a `Configuration` para compilar um arquivo `.mof`. Os exemplos abaixo mostram cenários para demonstrar conceitos. As instruções condicionais e loops são usados com mais frequência com parâmetros e Dados de Configuração.
+Assim como uma função ou um bloco de script, é possível usar qualquer recurso de linguagem do PowerShell em uma `Configuration`. As instruções usadas serão avaliadas somente quando você chamar a `Configuration` para compilar um arquivo `.mof`. Os exemplos abaixo mostram cenários para demonstrar conceitos. As instruções condicionais e loops são usados com mais frequência com parâmetros e Dados de Configuração.
 
 Neste exemplo, o bloco de recurso **Service** recupera o estado atual de um serviço no tempo de compilação para gerar um arquivo `.mof` que mantém seu estado atual.
 
@@ -104,11 +104,11 @@ Isso inclui itens como:
 - Comunicação remota
 - WMI e CIM
 - Objetos do ActiveDirectory
-- e mais...
+- e muito mais...
 
 Qualquer código do PowerShell definido em uma `Configuration` será avaliado no tempo de compilação, mas você também pode colocar o código no script que contém sua `Configuration`. Qualquer código fora do bloco de `Configuration` será executado quando você importar sua `Configuration`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Adicionar parâmetros a uma configuração](add-parameters-to-a-configuration.md)
-- [Separar dados de configuração das Configurações](configData.md)
+- [Separar dados de configuração de configurações](configData.md)

@@ -2,12 +2,13 @@
 ms.date: 06/22/2020
 keywords: DSC,powershell,configuração,serviço,instalação
 title: Escrever, compilar e aplicar uma configuração
-ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
-ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
+description: Este exercício oferece instruções de como criar e aplicar uma configuração DSC do início ao fim. No exemplo a seguir, você aprenderá como escrever e aplicar uma Configuração muito simples
+ms.openlocfilehash: f173fe0dc6cd73e2b49bb8c44a9ee1a53eab475f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295668"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645023"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>Escrever, compilar e aplicar uma configuração
 
@@ -69,7 +70,7 @@ A configuração chama um [recurso](../resources/resources.md), o recurso `File`
 
 ## <a name="compile-the-configuration"></a>Compilar a configuração
 
-Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF. A execução da configuração, como no caso de uma função, compilará um arquivo `.mof` para cada Nó definido pelo bloco `Node`. Para executar a configuração, você precisa executar _dot source_ no script `HelloWorld.ps1` para o escopo atual. Para obter mais informações, confira [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
+Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF. A execução da configuração, como no caso de uma função, compilará um arquivo `.mof` para cada Nó definido pelo bloco `Node`. Para executar a configuração, você precisa executar _dot source_ no script `HelloWorld.ps1` para o escopo atual. Para obter mais informações, confira [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing).
 
 <!-- markdownlint-disable MD038 -->
 Execute _dot source_ no script `HelloWorld.ps1` digitando o caminho em que você o armazenou, após o `. ` (ponto, espaço). Em seguida, você poderá executar a configuração chamando-a como uma função. Você também pode invocar a função de configuração na parte inferior do script para que não seja necessário executar dot source.

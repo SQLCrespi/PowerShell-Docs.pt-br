@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: 59ccc83c7d4736181f13b72c4d3725694f80c1c8
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+description: Estas notas de versão descrevem os novos recursos e as alterações no Windows PowerShell 5.x.
+ms.openlocfilehash: 82d3e10fa417085911242241dcfc54e931df8eb4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90847027"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663374"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 
@@ -100,7 +101,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ### <a name="new-features-in-windows-powershell"></a>Novos recursos no Windows PowerShell
 
-- No Windows PowerShell 5.0, você pode desenvolver usando classes, usando sintaxe formal e semântica semelhantes a outras linguagens de programação orientadas a objeto. **Class**, **Enum** e outras palavras-chave foram adicionadas à linguagem do Windows PowerShell para dar suporte ao novo recurso.
+- No Windows PowerShell 5.0, você pode desenvolver usando classes, usando sintaxe formal e semântica semelhantes a outras linguagens de programação orientadas a objeto. **Class** , **Enum** e outras palavras-chave foram adicionadas à linguagem do Windows PowerShell para dar suporte ao novo recurso.
   Para obter mais informações sobre como trabalhar com classes, consulte about_Classes.
 
 - O Windows PowerShell 5.0 introduz um fluxo de informações novo e estruturado que pode ser usado para transmitir dados estruturados entre um script e seus chamadores (ou ambiente de hospedagem). Agora você pode usar o Write-Host para emitir a saída para o fluxo de informações. Fluxos de informações também funcionam para PowerShell.Streams, trabalhos, trabalhos agendados e fluxos de trabalho. Os recursos a seguir dão suporte ao fluxo de informações.
@@ -116,12 +117,12 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - Um novo módulo, PackageManagement, permite descobrir e instalar pacotes de software na Internet.
   O módulo PackageManagement (conhecido anteriormente como OneGet) é um gerenciador ou multiplexador de gerenciadores de pacotes existentes (também chamados de provedores de pacote) que unifica o gerenciamento de pacotes do Windows com uma única interface do Windows PowerShell.
 - Um novo módulo, PowerShellGet, permite localizar, instalar, publicar e atualizar módulos e recursos de DSC na [Galeria do PowerShell](https://www.powershellgallery.com/) ou em um repositório de módulos interno que você pode configurar executando o cmdlet Register-PSRepository.
-- Uma nova palavra-chave de linguagem, **Hidden**, foi adicionada para especificar que um membro (uma propriedade ou um método) não é exibido por padrão nos resultados de Get-Member (a menos que você adicione o parâmetro -Force).
+- Uma nova palavra-chave de linguagem, **Hidden** , foi adicionada para especificar que um membro (uma propriedade ou um método) não é exibido por padrão nos resultados de Get-Member (a menos que você adicione o parâmetro -Force).
   Propriedades ou métodos que foram marcados como ocultos também não aparecem nos resultados do IntelliSense, a menos que você esteja em um contexto em que o membro deve ser visível; por exemplo, a variável automática $This deve mostrar membros ocultos no método da classe.
 - New-Item, Remove-Item e Get-ChildItem foram aprimorados para dar suporte à criação e ao gerenciamento de [links simbólicos](https://en.wikipedia.org/wiki/Symbolic_link). O parâmetro **ItemType** para New-Item aceita um novo valor, **SymbolicLink**. Agora, é possível criar links simbólicos em uma única linha simples com o cmdlet New-Item.
 - Get-ChildItem também tem um novo parâmetro, -Depth, que você pode usar com o parâmetro -Recurse para limitar a recursão. Por exemplo, Get-ChildItem -Recurse -Depth 2 retorna resultados da pasta atual, todas as pastas filho dentro da pasta atual e todas as pastas dentro das pastas filho.
 - Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que estão conectadas a computadores remotos (incluindo computadores que executam o Windows Nano Server e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
-- A transcrição do Windows PowerShell foi aperfeiçoada para ser aplicada a todos os aplicativos de hospedagem (como o ISE do Windows PowerShell), além do host do console (**powershell.exe**). As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser configuradas habilitando a configuração Política de Grupo de **Ativar Transcrição do PowerShell** encontrada em Modelos Administrativos/Componentes do Windows/Windows PowerShell.
+- A transcrição do Windows PowerShell foi aperfeiçoada para ser aplicada a todos os aplicativos de hospedagem (como o ISE do Windows PowerShell), além do host do console ( **powershell.exe** ). As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser configuradas habilitando a configuração Política de Grupo de **Ativar Transcrição do PowerShell** encontrada em Modelos Administrativos/Componentes do Windows/Windows PowerShell.
 - O novo recurso de rastreamento de script detalhado permite habilitar o acompanhamento detalhado e a análise de uso de scripts do Windows PowerShell em um sistema. Depois de habilitar o rastreamento de script detalhado, o Windows PowerShell registra em log todos os blocos de script no log de eventos do ETW (Rastreamento de Eventos para Windows), **Microsoft-Windows-PowerShell/Operational**.
 - No Windows PowerShell 5.0 os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e decriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](https://tools.ietf.org/html/rfc5652). Os cmdlets Get-CmsMessage, Protect-CmsMessage e Unprotect-CmsMessage foram adicionados ao módulo [Microsoft.PowerShell.Security](/powershell/module/Microsoft.PowerShell.Security).
 - Os novos cmdlets no módulo do [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility), Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug e Disable-RunspaceDebug, permitem definir opções de depuração em um runspace e iniciar e parar a depuração em um runspace. Para depurar runspaces arbitrários (isto é, runspaces que não são o runspace padrão para um console do Windows PowerShell ou uma sessão do ISE do Windows PowerShell), o Windows PowerShell permite definir pontos de interrupção em um script e, tendo adicionado pontos de interrupção, impede que o script seja executado até que você possa anexar um depurador para depurar o script de runspace. Suporte à depuração aninhada de runspaces arbitrários foi adicionado ao depurador de script do Windows PowerShell para runspaces.
@@ -175,7 +176,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - O Windows PowerShell agora inclui suporte para ajuda personalizada para configurações da DSC, definidas pela adição de \[CmdletBinding()] à função de configuração gerada.
 - Um novo atributo **DscLocalConfigurationManager** designa um bloco de configuração como uma metaconfiguração, que é usada para configurar o Gerenciador de Configurações Local da DSC. Esse atributo restringe uma configuração para que ela contenha somente os itens que configuram o Gerenciador de Configurações Local do DSC. Durante o processamento, essa configuração gera um arquivo \*.meta.mof que é enviado para os nós de destino apropriados executando o cmdlet Set-DscLocalConfigurationManager.
 - Configurações parciais agora são permitidas no Windows PowerShell 5.0. É possível entregar documentos de configuração para um nó em fragmentos. Para que um nó receba vários fragmentos de um documento de configuração, o Gerenciador de Configurações Local do nó deve ser definido para especificar os fragmentos esperados
-- Sincronização entre computadores é a novidade na DSC no Windows PowerShell 5.0. Com os recursos internos WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), agora é possível especificar dependências entre computadores durante execuções de configuração, sem a orquestração externa. Estes recursos fornecem sincronização de nó para nó usando conexões CIM por meio do protocolo WS-Man.
+- Sincronização entre computadores é a novidade na DSC no Windows PowerShell 5.0. Com os recursos internos WaitFor\* ( **WaitForAll** , **WaitForAny** e **WaitForSome** ), agora é possível especificar dependências entre computadores durante execuções de configuração, sem a orquestração externa. Estes recursos fornecem sincronização de nó para nó usando conexões CIM por meio do protocolo WS-Man.
   Uma configuração pode esperar que o estado de recurso específico de outro computador mude.
 - JEA (Just Enough Administration), um novo recurso de segurança de delegação, aproveita a DSC e os runspaces restritos do Windows PowerShell para ajudar a proteger as empresas contra perda de dados ou o comprometimento pelos funcionários, intencional ou não. Para obter mais informações sobre o JEA, incluindo onde você pode baixar o recurso xJEA DSC, confira [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview).
 - Os seguintes cmdlets novos foram adicionados ao módulo PSDesiredStateConfiguration.
@@ -223,19 +224,19 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 - O depurador do Windows PowerShell foi aprimorado para permitir a depuração de fluxos de trabalho do Windows PowerShell, bem como scripts que são executados em computadores remotos. Os fluxos de trabalho do Windows PowerShell agora podem ser depurados no nível de script da linha de comando do Windows PowerShell ou do ISE do Windows PowerShell. Scripts do Windows PowerShell, incluindo fluxos de trabalho de script, agora podem ser depurados em sessões remotas. Sessões de depuração remota são salvas sobre as sessões remotas do Windows PowerShell, que são desconectadas e reconectadas posteriormente.
 - Um parâmetro **RunNow** do **Register-ScheduledJob** e **Set-ScheduledJob** elimina a necessidade de definir uma data e hora de início imediato para trabalhos usando o parâmetro **Trigger**.
 - **Invoke-RestMethod** e **Invoke-WebRequest** agora permitem definir todos os cabeçalhos usando o parâmetro Headers. Embora esse parâmetro sempre tenha existido, ele era um dos diversos parâmetros dos cmdlets Web que resultavam em erros ou exceções.
-- **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName**, do tipo **ModuleSpecification\[]** . O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo, usando o nome, a versão e, opcionalmente, o GUID do módulo.
+- **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName** , do tipo **ModuleSpecification\[]** . O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo, usando o nome, a versão e, opcionalmente, o GUID do módulo.
 - A configuração de política de execução padrão no Windows Server 2012 R2 é **RemoteSigned**. No Windows 8.1, não há nenhuma alteração da configuração padrão.
 - No Windows PowerShell 4.0 há suporte para a invocação de método usando nomes de método dinâmico.
   Você pode usar uma variável para armazenar um nome de método e, em seguida, chamar o método dinamicamente ao chamar a variável.
 - Trabalhos de fluxo de trabalho assíncrono não são mais excluídos quando o período de tempo limite especificado pelo parâmetro **PSElapsedTimeoutSec** comum de fluxo de trabalho é atingido.
-- Um novo parâmetro, **RepeatIndefinitely**, foi adicionado aos cmdlets **New-JobTrigger** e **Set-JobTrigger**. Esse parâmetro elimina a necessidade de especificar um valor **TimeSpan.MaxValue** para o parâmetro **RepetitionDuration** para executar um trabalho agendado repetidamente por um período indefinido.
+- Um novo parâmetro, **RepeatIndefinitely** , foi adicionado aos cmdlets **New-JobTrigger** e **Set-JobTrigger**. Esse parâmetro elimina a necessidade de especificar um valor **TimeSpan.MaxValue** para o parâmetro **RepetitionDuration** para executar um trabalho agendado repetidamente por um período indefinido.
 - Um parâmetro **Passthru** foi adicionado aos cmdlets **Enable-JobTrigger** e **Disable-JobTrigger**. O parâmetro Passthru exibe todos os objetos que são criados ou modificados por seu comando.
 - Os nomes de parâmetro para especificar um grupo de trabalho nos cmdlets **Add-Computer** e **Remove-Computer** agora são consistentes. Ambos os cmdlets agora usam o parâmetro **WorkgroupName**.
-- Um novo parâmetro comum, o **PipelineVariable**, foi adicionado. O PipelineVariable permite salvar os resultados de um comando canalizado (ou parte de um comando canalizado) como uma variável que pode ser passada através do restante do pipeline.
+- Um novo parâmetro comum, o **PipelineVariable** , foi adicionado. O PipelineVariable permite salvar os resultados de um comando canalizado (ou parte de um comando canalizado) como uma variável que pode ser passada através do restante do pipeline.
 - Agora há suporte para a filtragem de coleta usando uma sintaxe de método. Isso significa que agora você pode filtrar uma coleção de objetos usando sintaxe simplificada, semelhante ao Where() ou Where-Object, formatada como uma chamada de método. A seguir, é mostrado um exemplo: (Get-Process).where({$_.Name -match 'powershell'})
 - O cmdlet **Get-Process** tem um novo parâmetro de opção, o **IncludeUserName**.
-- Um novo cmdlet, o **Get-FileHash**, que retorna um hash de arquivo em vários formatos para um arquivo especificado, foi adicionado.
-- No Windows PowerShell 4.0, se um módulo usar a chave **DefaultCommandPrefix** em seu manifesto ou se o usuário importar um módulo com o parâmetro **Prefix**, a propriedade **ExportedCommands** do módulo mostrará os comandos no módulo com o prefixo. Quando você executa os comandos usando a sintaxe qualificada por módulo, ModuleName\\CommandName, os nomes de comando devem incluir o prefixo.
+- Um novo cmdlet, o **Get-FileHash** , que retorna um hash de arquivo em vários formatos para um arquivo especificado, foi adicionado.
+- No Windows PowerShell 4.0, se um módulo usar a chave **DefaultCommandPrefix** em seu manifesto ou se o usuário importar um módulo com o parâmetro **Prefix** , a propriedade **ExportedCommands** do módulo mostrará os comandos no módulo com o prefixo. Quando você executa os comandos usando a sintaxe qualificada por módulo, ModuleName\\CommandName, os nomes de comando devem incluir o prefixo.
 - O valor de **$PSVersionTable.PSVersion** foi atualizado para 4.0.
 - O comportamento do operador **Where()** foi alterado. Não há mais suporte para o `Collection.Where('property -match name')` aceitar uma expressão de cadeia de caracteres no formato `"Property -CompareOperator Value"`.
   No entanto, o operador **Where()** aceita expressões de cadeia de caracteres no formato de um scriptblock; ainda há suporte para isso.
@@ -249,10 +250,10 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 - Foi adicionado suporte a um novo parâmetro comum **PipelineVariable** no contexto de pipelines iterativos, como os usados pelo System Center Orchestrator, ou seja, pipelines que executam comandos simplesmente da esquerda para a direita, em vez de intercalados em execução usando streaming.
 - A associação de parâmetros foi aprimorada significativamente para trabalhar fora de cenários de preenchimento de guias, como com os comandos que não existem no runspace atual.
-- O suporte para atividades de contêiner personalizado foi adicionado ao fluxo de trabalho do Windows PowerShell. Se um parâmetro de atividade for dos tipos **Activity**, **Activity\[]** (ou for uma coleção genérica de atividades) e o usuário fornecer um bloco de script como argumento, o fluxo de trabalho do Windows PowerShell converterá o bloco de script para XAML, assim como na compilação de fluxo de trabalho para script normal do Windows PowerShell.
+- O suporte para atividades de contêiner personalizado foi adicionado ao fluxo de trabalho do Windows PowerShell. Se um parâmetro de atividade for dos tipos **Activity** , **Activity\[]** (ou for uma coleção genérica de atividades) e o usuário fornecer um bloco de script como argumento, o fluxo de trabalho do Windows PowerShell converterá o bloco de script para XAML, assim como na compilação de fluxo de trabalho para script normal do Windows PowerShell.
 - Após uma falha, o fluxo de trabalho do Windows PowerShell se reconecta a nós gerenciados.
 - Agora você pode restringir instruções da atividade **Foreach -Parallel** usando a propriedade **ThrottleLimit**.
-- O parâmetro comum **ErrorAction** tem um novo valor válido, **Suspend**, que é exclusivo para fluxos de trabalho.
+- O parâmetro comum **ErrorAction** tem um novo valor válido, **Suspend** , que é exclusivo para fluxos de trabalho.
 - Um ponto de extremidade do fluxo de trabalho agora fecha automaticamente se não houver nenhuma sessão ativa, nem trabalhos em andamento ou pendentes. Esse recurso preserva os recursos no computador que está atuando como servidor de fluxo de trabalho quando as condições de fechamento automático são atendidas.
 
 ### <a name="new-features-in-windows-powershell-web-services"></a>Novos recursos no Windows PowerShell Web Services
@@ -340,9 +341,9 @@ A seguir estão os benefícios do fluxo de trabalho do Windows PowerShell
 - Automação de tarefas sequenciadas de longa duração.
 - **Monitoramento remoto de tarefas de execução longa**. O status e progresso das atividades são visíveis a qualquer momento.
 - **Gerenciamento de vários computadores.** Executar tarefas como fluxos de trabalho simultaneamente em centenas de nós gerenciados.
-  O Fluxo de Trabalho do Windows PowerShell inclui uma biblioteca integrada de parâmetros comuns de gerenciamento, como o **PSComputerName**, que permitem cenários de gerenciamento de vários computadores.
+  O Fluxo de Trabalho do Windows PowerShell inclui uma biblioteca integrada de parâmetros comuns de gerenciamento, como o **PSComputerName** , que permitem cenários de gerenciamento de vários computadores.
 - **Execução de tarefa única de processos complexos.** Você pode combinar scripts relacionados que implementam um cenário inteiro ponta a ponta em um único fluxo de trabalho.
-- **Persistência**: um fluxo de trabalho é salvo (ou verificado) em determinados pontos definidos por seu autor para que você possa retomar o fluxo de trabalho da última tarefa (ou ponto de verificação) persistida, em vez de reiniciá-lo desde o início.
+- **Persistência** : um fluxo de trabalho é salvo (ou verificado) em determinados pontos definidos por seu autor para que você possa retomar o fluxo de trabalho da última tarefa (ou ponto de verificação) persistida, em vez de reiniciá-lo desde o início.
 - **Robustez.** Recuperação de falhas automatizada. Fluxos de trabalho sobrevivem a reinicializações planejadas e não planejadas. Você pode suspender a execução do fluxo de trabalho e depois retomar o fluxo de trabalho a partir do último ponto de persistência.
   Os autores de fluxo de trabalho podem designar atividades específicas para serem executadas novamente em caso de falha em um ou mais nós gerenciados.
 - **Capacidade de desconectar, reconectar e executar em sessões desconectadas.** Os usuários podem se conectar e desconectar do servidor, mas o fluxo de trabalho permanece em execução. Saia do computador cliente ou reinicie-o e monitore a execução do fluxo de trabalho de outro computador sem interromper o fluxo de trabalho.
@@ -460,7 +461,7 @@ Assim como tarefas do Agendador de Tarefas, você pode executar trabalhos agenda
 
 Além disso, os trabalhos agendados são fornecidos com um conjunto personalizado de cmdlets para gerenciá-las. Os cmdlets permitem criar, editar, gerenciar, desabilitar e habilitar novamente os trabalhos agendados, criar disparadores de trabalho agendado e definir opções de trabalho agendado.
 
-Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1).
+Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs).
 
 ### <a name="windows-powershell-language-enhancements"></a>Aprimoramentos da Linguagem do Windows PowerShell
 
@@ -571,7 +572,7 @@ O Windows PowerShell 3.0 oferece suporte a recursos avançados para módulos, in
 
 1. Log de módulo para os módulos individuais (LogPipelineExecutionDetails) e a nova configuração de política de grupo "Ativar registro em log do modulo"
 2. Módulo objetos estendidos que expõem os valores do manifesto de módulo
-3. Nova propriedade de módulos **ExportedCommands**, incluindo módulos aninhados que combinam os comandos de todos os tipos
+3. Nova propriedade de módulos **ExportedCommands** , incluindo módulos aninhados que combinam os comandos de todos os tipos
 4. Descoberta aprimorada de módulos disponíveis (não importados), incluindo permitir os parâmetros **Path** e **ListAvailable** no mesmo comando
 5. Nova chave **DefaultCommandPrefix** nos manifestos de módulo que evita conflitos de nomes sem alterar o código do módulo.
 6. Requisitos de módulo aprimorados, incluindo módulos necessários totalmente qualificado com versão e GUID, bem como importação automática de módulos necessários
@@ -591,7 +592,7 @@ O Windows PowerShell 3.0 melhora o registro em log e o suporte de rastreamento p
 
 ### <a name="formatting-and-output-improvements"></a>Aprimoramentos de saída e formatação
 
-A nova formatação e aprimoramentos na saída melhoram a eficiência de todos os usuários do Windows PowerShell. Os aprimoramentos incluem o redirecionamento de saída para todos os fluxos, um cmdlet Update-Type aprimorado que adiciona tipos dinamicamente sem arquivos Format.ps1xml, quebra automática de linha na saída, propriedades de formatação padrão de objetos personalizados, o tipo **PSCustomObject**, formatação aprimorada para objetos WMI e objetos heterogêneos, bem como suporte para descobrir as sobrecargas de método.
+A nova formatação e aprimoramentos na saída melhoram a eficiência de todos os usuários do Windows PowerShell. Os aprimoramentos incluem o redirecionamento de saída para todos os fluxos, um cmdlet Update-Type aprimorado que adiciona tipos dinamicamente sem arquivos Format.ps1xml, quebra automática de linha na saída, propriedades de formatação padrão de objetos personalizados, o tipo **PSCustomObject** , formatação aprimorada para objetos WMI e objetos heterogêneos, bem como suporte para descobrir as sobrecargas de método.
 
 ### <a name="enhanced-console-host-experience"></a>Experiência de host de console aprimorada
 
@@ -609,15 +610,15 @@ As melhorias de desempenho significativas no Windows PowerShell ocorrem graças 
 
 O Windows PowerShell 3.0 inclui suporte para os recursos Executar Como e Host Compartilhado.
 
-O recurso *Executar como*, projetado para o Fluxo de Trabalho do Windows PowerShell, permite que os usuários de uma configuração de sessão criem sessões executadas com a permissão de uma conta de usuário compartilhada. Isso permite que os usuários com menos privilégios executem determinados comandos e scripts com permissões de administrador e reduz a necessidade de adicionar usuários mais inexperientes ao grupo Administradores.
+O recurso *Executar como* , projetado para o Fluxo de Trabalho do Windows PowerShell, permite que os usuários de uma configuração de sessão criem sessões executadas com a permissão de uma conta de usuário compartilhada. Isso permite que os usuários com menos privilégios executem determinados comandos e scripts com permissões de administrador e reduz a necessidade de adicionar usuários mais inexperientes ao grupo Administradores.
 
 O recurso **SharedHost** permite que vários usuários em vários computadores conectem-se a uma sessão de fluxo de trabalho simultaneamente e monitorem o progresso de um fluxo de trabalho. Os usuários podem iniciar um fluxo de trabalho em um computador e conectar-se à sessão de fluxo de trabalho em outro computador sem desconectar a sessão do computador original. Os usuários devem ter as mesmas permissões e usar a mesma configuração de sessão. Para obter mais informações, consulte "Executando um Fluxo de Trabalho do Windows PowerShell" na Introdução ao Fluxo de Trabalho do Windows PowerShell.
 
 ### <a name="special-character-handling-improvements"></a>Aprimoramentos na manipulação de caracteres especiais
 
-Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath**, que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path**, incluindo os novos cmdlets `Update-Help` e `Save-Help`. O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
+Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath** , que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path** , incluindo os novos cmdlets `Update-Help` e `Save-Help`. O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [about_Windows_PowerShell_5.0](/previous-versions/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
-- [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+- [about_Windows_PowerShell_5.0](/previous-versions/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0)
+- [Windows PowerShell](/powershell/)

@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: SIL (Log de Inventário de Software)
-ms.openlocfilehash: b12cfc4ae1e505bbc4d47596bed9352ce53a98f2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O WMF 5.x introduz os recursos do Log de Inventário de Software, que permitem coletar informações sobre o software instalado em uma localização central para facilitar o gerenciamento e a auditoria.
+ms.openlocfilehash: 85e261782a3df5fe5561a80529ba699d686a8779
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808462"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646607"
 ---
 # <a name="software-inventory-logging-sil"></a>SIL (Log de Inventário de Software)
 
@@ -18,6 +18,6 @@ O Log de Inventário de Software ajuda a reduzir os custos operacionais da obten
 
 Embora também seja possível registrar em log os dados de inventário de software consultando cada computador diretamente, o Log de Inventário de Software, ao utilizar uma arquitetura de encaminhamento (pela rede) iniciada por cada servidor, pode superar os desafios comuns da descoberta de servidor para muitos cenários de gerenciamento de ativos e de inventário de software. O Log de Inventário de Software usa o SSL para proteger os dados que são encaminhados por HTTPS para um servidor de agregação. Armazenar os dados em um único local torna os dados mais fáceis de analisar, manipular e compartilhar, quando necessário.
 
-Nenhum desses dados são enviados à Microsoft como parte da funcionalidade do recurso. Os dados e a funcionalidade do Log de Inventário de Software destinam-se para utilização exclusiva do proprietário e administradores autorizados do software do servidor.
+Nenhum desses dados são enviados à Microsoft como parte da funcionalidade do recurso. Os dados e a funcionalidade do Log de Inventário de Software destinam-se para utilização exclusiva do proprietário e de administradores autorizados do software do servidor.
 
 Para saber mais e obter a documentação sobre os cmdlets do Log de Inventário de Software, confira [Gerenciar o Log de Inventário de Software no Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11)).

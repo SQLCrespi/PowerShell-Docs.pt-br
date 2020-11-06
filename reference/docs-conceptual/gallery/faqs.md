@@ -1,16 +1,15 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Perguntas frequentes sobre a Galeria do PowerShell
-ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Perguntas frequentes sobre a Galeria do PowerShell
+ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777815"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654158"
 ---
-# <a name="frequently-asked-questions"></a>Perguntas frequentes
+# <a name="frequently-asked-questions-about-the-powershell-gallery"></a>Perguntas frequentes sobre a Galeria do PowerShell
 
 ## <a name="what-is-a-powershell-module"></a>O que é um módulo do PowerShell?
 
@@ -65,7 +64,7 @@ Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários o
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Como posso criar um manifesto de módulo formatado corretamente?
 
-A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [New-ModuleManifest][]. No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [New-ModuleManifest][]. No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri** , **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
 
 Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ModuleManifest][].
 
@@ -94,7 +93,7 @@ Portanto, por exemplo, quando você pesquisa PowerShellVersion: "2.0", apenas os
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Como posso criar um arquivo de script formatado corretamente?
 
-A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [New-ScriptFileInfo][]. No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [New-ScriptFileInfo][]. No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri** , **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
 
 Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ScriptFileInfo][].
 

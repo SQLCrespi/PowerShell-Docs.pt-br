@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,instalação
 title: Correções de Bug no WMF 5.1
-ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este artigo lista os bugs que foram corrigidos na versão do WMF 5.1.
+ms.openlocfilehash: 2673860852ecd6e0b6582f6f69076f8c463eeccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809302"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660766"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Correções de Bug no WMF 5.1
 
@@ -49,7 +48,7 @@ $obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
-O método **SendKeys** espera uma cadeia de caracteres, mas o PowerShell não converte o caractere para uma cadeia de caracteres, adiando a conversão para **IDispatch::Invoke**, que usa **VariantChangeType** para fazer a conversão. Neste exemplo, o resultado foi enviar as chaves “1”, “7” e “3” ao invés da chave **Volume.Mute** esperada.
+O método **SendKeys** espera uma cadeia de caracteres, mas o PowerShell não converte o caractere para uma cadeia de caracteres, adiando a conversão para **IDispatch::Invoke** , que usa **VariantChangeType** para fazer a conversão. Neste exemplo, o resultado foi enviar as chaves “1”, “7” e “3” ao invés da chave **Volume.Mute** esperada.
 
 #### <a name="enumerable-com-objects-not-always-handled-correctly"></a>Objetos COM enumeráveis nem sempre eram tratados corretamente
 

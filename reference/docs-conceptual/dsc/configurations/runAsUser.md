@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usar credenciais com recursos de DSC
-ms.openlocfilehash: fea2e3cad8d081c17853e127203f1d40d98c5de2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: A DSC permite fornecer as credenciais a uma configuração para que ela possa ser aplicada no contexto de uma conta de usuário específica, e não na conta Sistema Local.
+ms.openlocfilehash: e4ca39e099afacd7cb06c4d9ef889f94deb73cee
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953973"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645079"
 ---
 # <a name="use-credentials-with-dsc-resources"></a>Usar credenciais com recursos de DSC
 
@@ -15,7 +16,7 @@ ms.locfileid: "71953973"
 
 Você pode executar um recurso de DSC em um conjunto específico de credenciais usando a propriedade automática **PsDscRunAsCredential** na configuração. Por padrão, o DSC executa cada recurso como a conta do sistema. Há vezes em que executar como usuário é necessário, como ao fazer a instalação de pacotes MSI em um contexto de usuário específico, ao configurar as chaves do registro do um usuário, ao acessar o diretório local específico de um usuário ou ao acessar um compartilhamento de rede. O **SeInteractiveLogonRight** é necessário, pelo computador de destino, para as contas que você especificar para **PSDSCRunAsCredential**. Para obter mais informações, confira [Conta de direitos constantes](/windows/desktop/secauthz/account-rights-constants).
 
-Cada recurso de DSC tem uma propriedade **PsDscRunAsCredential** que pode ser definida para qualquer credencial de usuário (um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential)). A credencial pode ser embutida em código como o valor da propriedade na configuração ou você pode definir o valor para [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential), que solicitará ao usuário uma credencial quando a configuração for compilada (para informações sobre como compilar configurações, confira [Configurações](configurations.md).
+Cada recurso DSC tem uma propriedade **PsDscRunAsCredential** que pode ser definida para quaisquer credenciais de usuário (um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential)). A credencial pode ser embutida em código como o valor da propriedade na configuração ou você pode definir o valor para [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential), que solicitará ao usuário uma credencial quando a configuração for compilada (para informações sobre como compilar configurações, confira [Configurações](configurations.md).
 
 > [!NOTE]
 > No PowerShell 5.0, o uso da propriedade **PsDscRunAsCredential** nas configurações chamando recursos de composição não tem suporte. No PowerShell 5.1, a propriedade **PsDscRunAsCredential** tem suporte nas configurações chamando recursos de composição. A propriedade **PsDscRunAsCredential** não está disponível no PowerShell 4.0.
@@ -58,4 +59,4 @@ ChangeCmdBackGroundColor -ConfigurationData $configData
 ```
 
 > [!NOTE]
-> Este exemplo pressupõe que você tenha um certificado válido em `C:\publicKeys\targetNode.cer`, e que a impressão digital desse certificado seja o valor exibido. Para saber mais sobre como criptografar credenciais em arquivos MOF de configuração de DSC, confira [Proteção do arquivo MOF](../pull-server/secureMOF.md).
+> Este exemplo pressupõe que você tenha um certificado válido em `C:\publicKeys\targetNode.cer`, e que a impressão digital desse certificado seja o valor exibido. Para obter informações sobre como criptografar credenciais em arquivos MOF de configuração DSC, consulte [Protegendo o arquivo MOF](../pull-server/secureMOF.md).

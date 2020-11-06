@@ -1,15 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB, SydneyhSmith
-keywords: galeria,powershell,cmdlet,psgallery
-description: Diretrizes para publicadores
+description: Este artigo descreve as etapas recomendadas para garantir que os pacotes publicados na Galeria do PowerShell sejam amplamente adotados e forneçam alto valor aos usuários.
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 949340aeba36df26c68f92422b8c11869ed3bf11
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777856"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656152"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -43,7 +41,7 @@ Cada uma delas é abordada brevemente nas seções a seguir.
 
 ## <a name="use-psscriptanalyzer"></a>Usar PSScriptAnalyzer
 
-O [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer) é uma ferramenta de análise de código estático gratuita que funciona em códigos do PowerShell. O **PSScriptAnalyzer** identificará os problemas mais comuns vistos no código do PowerShell e, geralmente, uma recomendação para corrigir o problema. A ferramenta é fácil de usar e categoriza os problemas como Erros (graves, devem ser abordados), Avisos (precisam ser examinados e devem ser resolvidos) e Informações (vale a pena verificar visando as melhores práticas). Todos os pacotes publicados na Galeria do PowerShell serão examinados usando o **PSScriptAnalyzer**, e todos os erros serão relatados para o proprietário e deverão ser abordados.
+O [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer) é uma ferramenta de análise de código estático gratuita que funciona em códigos do PowerShell. O **PSScriptAnalyzer** identificará os problemas mais comuns vistos no código do PowerShell e, geralmente, uma recomendação para corrigir o problema. A ferramenta é fácil de usar e categoriza os problemas como Erros (graves, devem ser abordados), Avisos (precisam ser examinados e devem ser resolvidos) e Informações (vale a pena verificar visando as melhores práticas). Todos os pacotes publicados na Galeria do PowerShell serão examinados usando o **PSScriptAnalyzer** , e todos os erros serão relatados para o proprietário e deverão ser abordados.
 
 A prática recomendada é executar `Invoke-ScriptAnalyzer` com Aviso `-Recurse` e `-Severity`.
 
@@ -73,7 +71,7 @@ Um bom padrão de exemplos pode ser encontrado no [Módulo PSDscResource](https:
 
 ## <a name="manage-dependencies"></a>Dependências de módulo
 
-É importante especificar os módulos dos quais seu módulo depende no Manifesto do módulo. Isso permite que o usuário final não precise se preocupar com a instalação das versões apropriadas dos módulos em que sua dependência se baseia. Para especificar módulos dependentes, use o campo de módulo necessário no manifesto do módulo. Isso carregará todos os módulos listados no ambiente global antes de importar seu módulo, a menos que eles já tenham sido carregados. Por exemplo, alguns módulos podem já ter sido carregados por um módulo diferente. Também é possível especificar determinada versão a ser carregada usando o campo **RequiredVersion** em vez do campo **ModuleVersion**. Ao usar o **ModuleVersion**, será carregada a versão mais recente disponível, sendo no mínimo a versão especificada. Caso não use o campo **RequiredVersion** para especificar uma versão, é importante monitorar as atualizações de versão do módulo exigido. É especialmente importante estar ciente de quaisquer alterações significativas que possam afetar a experiência do usuário com seu módulo.
+É importante especificar os módulos dos quais seu módulo depende no Manifesto do módulo. Isso permite que o usuário final não precise se preocupar com a instalação das versões apropriadas dos módulos em que sua dependência se baseia. Para especificar módulos dependentes, use o campo de módulo necessário no manifesto do módulo. Isso carregará todos os módulos listados no ambiente global antes de importar seu módulo, a menos que eles já tenham sido carregados. Por exemplo, alguns módulos podem já ter sido carregados por um módulo diferente. Também é possível especificar determinada versão a ser carregada usando o campo **RequiredVersion** em vez do campo **ModuleVersion**. Ao usar o **ModuleVersion** , será carregada a versão mais recente disponível, sendo no mínimo a versão especificada. Caso não use o campo **RequiredVersion** para especificar uma versão, é importante monitorar as atualizações de versão do módulo exigido. É especialmente importante estar ciente de quaisquer alterações significativas que possam afetar a experiência do usuário com seu módulo.
 
 ```powershell
 Example: RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})
@@ -85,10 +83,9 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 
 Os proprietários de pacote que respondem corretamente aos comentários são altamente valorizados pela comunidade. É importante responder aos usuários que fornecem comentários construtivos, pois eles estão interessados no pacote o bastante para tentar ajudar a melhorá-lo.
 
-Há dois métodos de comentários disponíveis na Galeria do PowerShell:
+Há um método de comentários disponível na Galeria do PowerShell:
 
 - Contatar proprietário: permite que um usuário envie um email para o proprietário do pacote. Como um proprietário de pacote, é importante monitorar o endereço de email usado com os pacotes da Galeria do PowerShell e responder aos problemas que surgirem. Uma desvantagem desse método é que apenas o usuário e o proprietário verão a comunicação, portanto, o proprietário poderá precisar responder à mesma pergunta várias vezes.
-- Comentários: na parte inferior da página do pacote, há um campo **Comentário**. A vantagem desse sistema é que outros usuários podem ver os comentários e as respostas, o que reduz o número de vezes que uma mesma pergunta deve ser respondida. Como proprietário de um pacote, é altamente recomendável que você siga os comentários de cada pacote. Consulte [Fornecendo comentários por meio de mídia social ou do recurso Comentários](../how-to/working-with-packages/social-media-feedback.md) para obter detalhes de como fazer isso.
 
 Os proprietários que respondem aos comentários de forma construtiva são apreciados pela comunidade. Use a oportunidade no relatório para solicitar mais informações. Se necessário, forneça uma solução alternativa ou identifique se uma atualização corrige um problema.
 
@@ -195,13 +192,13 @@ A Galeria do PowerShell não foi projetada para ser um destino para testar o pro
   Essa opção dará mais trabalho para configurar, mas terá a vantagem de validar mais alguns dos requisitos, como, validar o uso de uma chave de API e se há ou não há dependências presentes no destino ao publicar.
 - Configurar um compartilhamento de arquivos como o **repositório** do teste. Essa opção é fácil de configurar, porém, como se trata de um compartilhamento de arquivos, as validações indicadas acima não ocorrerão. A vantagem dessa opção é que o compartilhamento de arquivos não verifica a chave de API obrigatória, então você pode usar a mesma chave que usaria para publicar na Galeria do PowerShell.
 
-Com qualquer uma dessas soluções, use `Register-PSRepository` para definir um novo **repositório**, que você usa no parâmetro `-Repository` para `Publish-Module`.
+Com qualquer uma dessas soluções, use `Register-PSRepository` para definir um novo **repositório** , que você usa no parâmetro `-Repository` para `Publish-Module`.
 
 Um ponto adicional sobre teste de publicação: os pacotes que você publicar na Galeria do PowerShell não poderão ser excluídos sem a ajuda da equipe de operações, que confirmará se não há nada dependente do pacote que você deseja publicar. Por esse motivo, não damos suporte à Galeria do PowerShell como um destino de teste e entraremos em contato com qualquer publicador que fizer isso.
 
 ## <a name="use-powershellget-to-publish"></a>Usar o PowerShellGet para publicar
 
-É altamente recomendável que os publicadores usem os cmdlets `Publish-Module` e `Publish-Script` ao trabalhar com a Galeria do PowerShell. O **PowerShellGet** foi criado para você não ter que se lembrar de todos os detalhes importantes sobre como instalar e publicar pela Galeria do PowerShell. Às vezes, os publicadores optaram por ignorar o **PowerShellGet** e usar o cliente do **NuGet** ou os cmdlets **PackageManagement**, em vez do `Publish-Module`. Há inúmeros detalhes que são facilmente perdidos, o que resulta em uma variedade de solicitações de suporte.
+É altamente recomendável que os publicadores usem os cmdlets `Publish-Module` e `Publish-Script` ao trabalhar com a Galeria do PowerShell. O **PowerShellGet** foi criado para você não ter que se lembrar de todos os detalhes importantes sobre como instalar e publicar pela Galeria do PowerShell. Às vezes, os publicadores optaram por ignorar o **PowerShellGet** e usar o cliente do **NuGet** ou os cmdlets **PackageManagement** , em vez do `Publish-Module`. Há inúmeros detalhes que são facilmente perdidos, o que resulta em uma variedade de solicitações de suporte.
 
 Se houver um motivo para você não poder usar `Publish-Module` ou `Publish-Script`, informe-nos.
 Registre um problema no repositório GitHub do **PowerShellGet** e forneça os detalhes que fazem você optar pelo **NuGet** ou **PackageManagement**.

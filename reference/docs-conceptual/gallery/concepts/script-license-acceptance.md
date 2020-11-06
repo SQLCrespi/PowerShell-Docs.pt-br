@@ -1,20 +1,19 @@
 ---
 ms.date: 06/09/2017
-schema: 2.0.0
-keywords: powershell
 title: Exigindo a aceitação da licença para scripts
-ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O artigo explica como trabalhar com scripts publicados na Galeria do PowerShell que exigem a aceitação de uma licença de usuário final.
+ms.openlocfilehash: d82974810fd1e73ef8d9e5771fc430d0f7964e87
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328077"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656076"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Exigindo a aceitação da licença para scripts
 
 Não há suporte para a Aceitação de Licença para scripts. No entanto, há suporte para o cenário em que um script depende de um módulo que exige a aceitação da licença.
 
-Os comandos de script (Install-Script/Save-Script/Update-Script) oferecem suporte a um novo parâmetro -AcceptLicense que se comporta como se o usuário tivesse visto a licença. Se -AcceptLicense não for especificado; o usuário verá o license.txt para o módulo dependente e receberá a solicitação para aceitar a licença.
+Os comandos de script PowerShellGet dão suporte ao parâmetro **AcceptLicense** , que se comporta como se o usuário tivesse visto a licença. Se **AcceptLicense** não for especificado, o usuário verá o arquivo `license.txt` para o módulo dependente e receberá a solicitação para aceitar a licença.
 
 ## <a name="examples"></a>EXEMPLOS
 

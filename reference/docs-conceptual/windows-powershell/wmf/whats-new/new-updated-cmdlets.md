@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: Cmdlets novos e atualizados
-ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: O Windows PowerShell 5.1 inclui muitos cmdlets novos ou atualizados.
+ms.openlocfilehash: bdfbe5a263864a172aefb0aa5731f59b95ab43ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809112"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663228"
 ---
 # <a name="new-and-updated-cmdlets"></a>Cmdlets novos e atualizados
 
@@ -41,7 +41,7 @@ Para obter mais informações, consulte:
 
 Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](https://tools.ietf.org/html/rfc5652.html).
 
-O padrão de criptografia CMS implementa a criptografia por chave pública, em que a chave usada para criptografar o conteúdo (a *chave pública*) e a chave usada para descriptografá-lo (a *chave privada*) são separadas.
+O padrão de criptografia CMS implementa a criptografia por chave pública, em que a chave usada para criptografar o conteúdo (a *chave pública* ) e a chave usada para descriptografá-lo (a *chave privada* ) são separadas.
 
 Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações, consulte [Criptografia por chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
@@ -297,7 +297,7 @@ Export-ODataEndpointProxy -Uri $uri -OutputModule $generatedProxyModuleDir -Forc
 
 No exemplo a seguir, recuperamos o produto principal e capturamos a saída na variável `$infoStream`.
 
-Se especificarmos o parâmetro **IncludeTotalResponseCount**, obteremos a contagem total de todos os registros de **Product** disponíveis no servidor.
+Se especificarmos o parâmetro **IncludeTotalResponseCount** , obteremos a contagem total de todos os registros de **Product** disponíveis no servidor.
 
 ```powershell
 Import-Module $generatedProxyModuleDir -Force

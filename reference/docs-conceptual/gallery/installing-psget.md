@@ -1,14 +1,13 @@
 ---
 ms.date: 09/19/2019
-contributor: manikb
-keywords: galeria,powershell,cmdlet,psget
 title: Instalando o PowerShellGet
-ms.openlocfilehash: 4a10699be9ff2b64e5848c6749bdd3dedf55e3c7
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: Este artigo explica como instalar o módulo do PowerShellGet em várias versões do PowerShell.
+ms.openlocfilehash: 06ec331446849784bb8464912fbce0e5a940823f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162504"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662153"
 ---
 # <a name="installing-powershellget"></a>Instalando o PowerShellGet
 
@@ -21,7 +20,7 @@ ms.locfileid: "88162504"
 
 ## <a name="get-the-latest-version-from-powershell-gallery"></a>Obter a versão mais recente da Galeria do PowerShell
 
-Antes de atualizar o **PowerShellGet**, você sempre deve instalar o provedor do **NuGet** mais recente. Em uma sessão do PowerShell com privilégios elevados, execute os comandos a seguir.
+Antes de atualizar o **PowerShellGet** , você sempre deve instalar o provedor do **NuGet** mais recente. Em uma sessão do PowerShell com privilégios elevados, execute os comandos a seguir.
 
 ```powershell
 Install-PackageProvider -Name NuGet -Force
@@ -56,7 +55,7 @@ Para saber mais, confira [Save-Module](/powershell/module/PowershellGet/Save-Mod
 #### <a name="preparatory-step-on-computers-running-powershell-30"></a>Etapa preparatória em computadores com o PowerShell 3.0
 
 As instruções nas seções a seguir instalam os módulos no diretório `$env:ProgramFiles\WindowsPowerShell\Modules`.
-No PowerShell 3.0, esse diretório não está listado em `$env:PSModulePath` por padrão. Portanto, você precisará adicioná-lo para que os módulos sejam carregados automaticamente. 
+No PowerShell 3.0, esse diretório não está listado em `$env:PSModulePath` por padrão. Portanto, você precisará adicioná-lo para que os módulos sejam carregados automaticamente.
 
 Abra uma sessão do PowerShell com privilégios elevados e execute o seguinte comando (que entrará em vigor em sessões futuras):
 
@@ -70,7 +69,7 @@ Abra uma sessão do PowerShell com privilégios elevados e execute o seguinte co
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>Computadores com a versão prévia de PackageManagement instalada
 
-> [!NOTE] 
+> [!NOTE]
 > A versão prévia do PackageManagement era um componente baixável que disponibilizava o PowerShellGet para as versões 3 e 4 do PowerShell. Porém, ela não está mais disponível.
 > Para testar se ela foi instalada em um computador específico, execute `Get-Module -ListAvailable PowerShellGet`.
 
@@ -85,7 +84,7 @@ Abra uma sessão do PowerShell com privilégios elevados e execute o seguinte co
 1. Reabra o console do PowerShell com permissões elevadas e execute os comandos a seguir.
 
    ```powershell
-   'PowerShellGet', 'PackageManagement' | % { 
+   'PowerShellGet', 'PackageManagement' | % {
      $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
      Remove-Item $targetDir\* -Recurse -Force
      Copy-Item C:\LocalFolder\$_\*\* $targetDir\ -Recurse -Force
@@ -103,7 +102,7 @@ Para computadores sem qualquer versão do **PowerShellGet** instalada (teste com
    ```
 
 1. Copie a subpasta `<version>` nas pastas **PowerShellGet** e **PackageManagement** para o computador que não tem o **PowerShellGet** instalado, para as pastas `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` e `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`, respectivamente, o que exige uma sessão com privilégios.
-   
+
 1. Por exemplo, se for possível acessar a pasta de download no outro computador (`ws1`) no computador de destino por meio de um caminho UNC (`\\ws1\C$\LocalFolder`), abra um console do PowerShell com permissões elevadas e execute o seguinte comando:
 
    ```powershell

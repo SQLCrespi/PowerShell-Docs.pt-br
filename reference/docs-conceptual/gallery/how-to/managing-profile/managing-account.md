@@ -1,14 +1,13 @@
 ---
 ms.date: 09/05/2018
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
-ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Este artigo descreve as configurações do perfil da sua conta na Galeria do PowerShell
+ms.openlocfilehash: ab0e09aae6fea26ac6d85a35e30c8d06f31b121a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771780"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662745"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -59,7 +58,7 @@ Para alterar a conta de logon, é necessário estar conectado com a conta atual.
 
    ![Entrar com a nova conta](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
-3. Ao clicar em **Próximo**, será exibida uma mensagem informando que você está conectado com a conta atual.
+3. Ao clicar em **Próximo** , será exibida uma mensagem informando que você está conectado com a conta atual.
    Clique em **Sair e entrar com uma conta diferente**.
 
    ![Sair e entrar com uma conta diferente](media/managing-account/PSGallery_LoginAccountChange-3.png)

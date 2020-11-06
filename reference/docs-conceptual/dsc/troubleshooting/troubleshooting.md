@@ -2,18 +2,19 @@
 ms.date: 10/30/2018
 keywords: DSC,powershell,configuração,instalação
 title: Solucionando problemas de DSC
-ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Este artigo apresenta instruções sobre como solucionar erros comuns.
+ms.openlocfilehash: 2ac86689fa2695add247995bfb91c0ea85e22d60
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692301"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656257"
 ---
 # <a name="troubleshooting-dsc"></a>Solucionando problemas de DSC
 
-_Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0_
+> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Este tópico descreve maneiras de solucionar o DSC quando surgem problemas.
+Este artigo apresenta instruções sobre como solucionar erros comuns.
 
 ## <a name="winrm-dependency"></a>Dependência do WinRM
 
@@ -82,8 +83,8 @@ PSComputerName        :
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Meu script não funciona: usando logs de DSC para diagnosticar erros de script
 
-Como todos os softwares do Windows, a DSC registra erros e eventos em [logs](/windows/desktop/EventLog/about-event-logging) que podem ser exibidos no [Visualizador de Eventos](https://support.microsoft.com/hub/4338813/windows-help).
-Um exame desses logs pode ajudá-lo a entender por que uma determinada operação falhou e como evitar falhas no futuro. Escrever scripts de configuração pode ser complicado; portanto, para facilitar o rastreamento de erros durante a criação, use o recurso de Log de DSC para acompanhar o progresso da sua configuração no log de eventos Analítico de DSC.
+Como todos os softwares do Windows, a DSC registra erros e eventos em [logs](/windows/desktop/EventLog/about-event-logging) que podem ser exibidos no [Visualizador de Eventos](https://support.microsoft.com/hub/4338813/windows-help). Um exame desses logs pode ajudá-lo a entender por que uma determinada operação falhou e como evitar falhas no futuro.
+Escrever scripts de configuração pode ser complicado; portanto, para facilitar o rastreamento de erros durante a criação, use o recurso de Log de DSC para acompanhar o progresso da sua configuração no log de eventos Analítico de DSC.
 
 ## <a name="where-are-dsc-event-logs"></a>Onde estão os logs de eventos de DSC?
 
@@ -101,8 +102,9 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Como mostrado acima, o nome do log primário da DSC é **Microsoft->Windows->DSC** (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC grava principalmente em três tipos de logs: [Logs Operacionais, Analíticos e de Depuração](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos. Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão **Iniciar**, clique em **Painel de Controle**, em **Ferramentas Administrativas** e, em seguida, clique em **Visualizador de Eventos**.
-No menu **Exibir** no Visualizador de Eventos, clique em **Mostrar Logs Analítico e de Depuração**. O nome do log para o canal analítico **Microsoft-Windows-Dsc/Analytic**; para o canal de depuração é **Microsoft-Windows-Dsc/Debug**. Também é possível usar o utilitário [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) para habilitar os logs, conforme mostrado no exemplo a seguir.
+Como mostrado acima, o nome do log primário da DSC é **Microsoft->Windows->DSC** (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC grava principalmente em três tipos de logs: [Logs Operacionais, Analíticos e de Depuração](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)).
+Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos.
+Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão **Iniciar** , clique em **Painel de Controle** , em **Ferramentas Administrativas** e, em seguida, clique em **Visualizador de Eventos**. No menu **Exibir** no Visualizador de Eventos, clique em **Mostrar Logs Analítico e de Depuração**. O nome do log para o canal analítico **Microsoft-Windows-Dsc/Analytic** ; para o canal de depuração é **Microsoft-Windows-Dsc/Debug**. Também é possível usar o utilitário [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) para habilitar os logs, conforme mostrado no exemplo a seguir.
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -254,8 +256,8 @@ PS C:\> $myFailedEvent.Message
 
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 DSC Engine Error :
- Error Message Current configuration does not exist. Execute Start-DscConfiguration command with -Path pa
-rameter to specify a configuration file and create a current configuration first.
+ Error Message Current configuration does not exist. Execute Start-DscConfiguration command with
+ -Path parameter to specify a configuration file and create a current configuration first.
 Error Code : 1
 ```
 
@@ -489,7 +491,7 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 ## <a name="using-debugmode"></a>Usando o DebugMode
 
-Você pode configurar o Gerenciador de Configurações Local (LCM) de DSC para usar `DebugMode` para sempre limpar o cache quando o processo de host for reiniciado. Quando definido como **TRUE**, faz com que o mecanismo sempre recarregue o recurso de DSC do PowerShell. Depois de escrever seu recurso, você pode defini-lo como **FALSE** e o mecanismo será revertido para o comportamento de armazenamento em cache dos módulos.
+Você pode configurar o Gerenciador de Configurações Local (LCM) de DSC para usar `DebugMode` para sempre limpar o cache quando o processo de host for reiniciado. Quando definido como **TRUE** , faz com que o mecanismo sempre recarregue o recurso de DSC do PowerShell. Depois de escrever seu recurso, você pode defini-lo como **FALSE** e o mecanismo será revertido para o comportamento de armazenamento em cache dos módulos.
 
 Segue uma demonstração para mostrar como `DebugMode` pode atualizar o cache automaticamente. Primeiro, vamos examinar a configuração padrão:
 
@@ -602,7 +604,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Esse script gera um número aleatório e atualiza o código do provedor correspondentemente. Com `DebugMode` definido como falso, o conteúdo do arquivo "**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**" nunca é alterado.
+Esse script gera um número aleatório e atualiza o código do provedor correspondentemente. Com `DebugMode` definido como false, o conteúdo do arquivo `$env:SystemDrive\OutputFromTestProviderDebugMode.txt` nunca é alterado.
 
 Agora, defina `DebugMode` como **"ForceModuleImport"** no script de configuração:
 
@@ -633,16 +635,15 @@ onlyProperty                            PSComputerName
 
 Ao aplicar uma metaconfiguração em um servidor para registrá-lo com uma instância do Servidor de Pull do Windows, você poderá encontrar o erro a seguir.
 
-```PowerShell
-Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+```
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server
 https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
     + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
     + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
     + PSComputerName        : <computername>
 ```
 
-Isso pode ocorrer quando o certificado usado no servidor para criptografar o tráfego tem um CN (nome comum) diferente do nome DNS usado pelo nó para resolver a URL.
-Atualize a instância do Servidor de Pull do Windows para usar um certificado com um nome corrigido.
+Isso pode ocorrer quando o certificado usado no servidor para criptografar o tráfego tem um CN (nome comum) diferente do nome DNS usado pelo nó para resolver a URL. Atualize a instância do Servidor de Pull do Windows para usar um certificado com um nome corrigido.
 
 ## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>Erro ao executar o Sysprep depois de aplicar uma configuração de DSC
 
@@ -652,7 +653,7 @@ Se você aplicou uma configuração DSC, ao tentar executar o Sysprep para gener
 SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
 ```
 
-Generalizar um servidor que foi configurado usando a Desired State Configuration do Windows PowerShell é um cenário sem suporte.  Em vez disso, aplique as configurações ao Windows depois que a fase de Especialização da Instalação do Windows for concluída.
+Generalizar um servidor que foi configurado usando a Desired State Configuration do Windows PowerShell é um cenário sem suporte. Em vez disso, aplique as configurações ao Windows depois que a fase de Especialização da Instalação do Windows for concluída.
 
 ## <a name="see-also"></a>Consulte Também
 

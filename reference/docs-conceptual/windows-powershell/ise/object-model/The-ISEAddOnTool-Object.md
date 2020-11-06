@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell, cmdlet
 title: O objeto ISEAddOnTool
-ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Um objeto ISEAddonTool representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell.
+ms.openlocfilehash: cc2d50881b7d0033e08de9af5d4cc9e1a9aa55db
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809722"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667123"
 ---
 # <a name="the-iseaddontool-object"></a>O objeto ISEAddOnTool
 

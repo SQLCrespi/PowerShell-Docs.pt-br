@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,instalação
 title: Desinstalar o WMF 5.0
-ms.openlocfilehash: fa76bacb4b62025d0d2350b9a0e072068ca83ab1
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Este artigo explica como desinstalar o WMF de versões mais antigas do Windows.
+ms.openlocfilehash: d8078ea918db2c1cf9a7ddd6ea8d1413b593c0ff
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236298"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660810"
 ---
 # <a name="uninstallation-instructions"></a>Instruções de desinstalação
 
@@ -39,4 +39,4 @@ wusa /uninstall /kb:3134760
 1. Abra o **Painel de Controle.**
 2. Abra **Programas** e, em seguida, **Desinstalar um programa.**
 3. Clique em **Exibir atualizações instaladas.**
-4. Selecione **Windows Management Framework 5.0** na lista de atualizações instaladas. Isso corresponde à *KB3134758*, *KB3134759* ou *KB3134760*. Clique em **Desinstalar.**
+4. Selecione **Windows Management Framework 5.0** na lista de atualizações instaladas. Isso corresponde à *KB3134758* , *KB3134759* ou *KB3134760*. Clique em **Desinstalar.**

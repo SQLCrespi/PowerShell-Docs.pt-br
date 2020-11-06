@@ -1,18 +1,17 @@
 ---
 ms.date: 06/12/2017
-contributor: Farehar
-keywords: galeria, powershell, psgallery
 title: Exigir a aceitação da licença
-ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Como visualizar a licença do pacote na página de detalhes do item
+ms.openlocfilehash: 0d8a9ed671f7993726bc3fa41d11159b366e5a28
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278629"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662310"
 ---
 # <a name="require-license-acceptance"></a>Exigir a aceitação da licença
 
-O texto Exigir a Aceitação da Licença aparece na página de detalhes do item para módulos que exigem a aceitação da licença. A licença para o módulo pode ser exibida clicando no link 'Exibir Licença.txt'.
+O texto Exigir a Aceitação da Licença aparece na página de detalhes do item para módulos que exigem a aceitação da licença. A licença para o módulo pode ser exibida clicando no link **Exibir Licença.txt**.
 
 ![Exigir a Aceitação da Licença](media/packages-that-require-license-acceptance/RequireLicenseAcceptance.png)
 

@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: Este documento fornece as melhores práticas para auxiliar os engenheiros que estão implantando o Servidor de Pull DSC.
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846942"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664325"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
 Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Resumo: este documento destina-se a incluir processo e extensibilidade para ajudar os engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
 
@@ -72,7 +72,7 @@ O Windows Server 2012 R2 inclui um recurso chamado de serviço DSC. O recurso de
 
 ### <a name="dsc-resource"></a>Recurso DSC
 
-Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
+Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration** , que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
 
 Use o cmdlet `Install-Module` do módulo **PowerShellGet**.
 
@@ -119,8 +119,7 @@ Em ambientes de teste, normalmente será usado o nome do host do servidor ou pod
 
 Um DNS CNAME permite a criação de um alias para se referir ao seu registro de host (A). O objetivo do registro de nome adicional é o aumento da flexibilidade, caso uma alteração seja necessária no futuro. Um CNAME pode ajudar a isolar a configuração do cliente de maneira que as alterações no ambiente de servidor, como a substituição de um servidor de pull ou adição de servidores de pull, não exijam uma alteração correspondente na configuração do cliente.
 
-Ao escolher um nome para o registro DNS, lembre-se da arquitetura da solução.
-Se estiver usando o balanceamento de carga, o certificado usado para proteger o tráfego por meio de HTTPS precisará compartilhar o mesmo nome do registro DNS.
+Ao escolher um nome para o registro DNS, lembre-se da arquitetura da solução. Se estiver usando o balanceamento de carga, o certificado usado para proteger o tráfego por meio de HTTPS precisará compartilhar o mesmo nome do registro DNS.
 
 |       Cenário        |                                                                                         Melhor prática
 |:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -212,7 +211,7 @@ O planejamento de **Guids** de configuração merece atenção adicional quando 
 - **Atribuição de Guids por servidor** — Fornece uma medida de garantia de que todas as configurações de servidor sejam controladas individualmente. Isso fornece um nível de precisão em relação às atualizações e pode funcionar bem em ambientes com poucos servidores.
 - **Atribuição de Guids por função de servidor** — Todos os servidores que executam a mesma função, como servidores Web, usam o mesmo GUID para fazer referência aos dados de configuração necessários. Lembre-se de que se vários servidores compartilham o mesmo GUID, todos eles serão atualizados simultaneamente quando as configurações forem alteradas.
 
-  O GUID é algo que deve ser considerado como dado confidencial, porque ele pode ser aproveitado por alguém mal-intencionado para obter informações sobre como os servidores estão implantados e configurados no seu ambiente. Para obter mais informações, consulte [Alocar Guids com segurança no Modo Pull do Desired State Configuration do PowerShell](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/).
+  O GUID é algo que deve ser considerado como dado confidencial, porque ele pode ser aproveitado por alguém mal-intencionado para obter informações sobre como os servidores estão implantados e configurados no seu ambiente. Para obter mais informações, consulte [Alocar Guids com segurança no Modo Pull do Desired State Configuration do PowerShell](https://devblogs.microsoft.com/powershell/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/).
 
 Tarefa de planejamento
 
@@ -247,7 +246,7 @@ O comando solicitará sua aprovação antes de baixar o módulo.
 
 O melhor método para implantar um servidor de pull de DSC é usar um script de configuração DSC. Este documento apresentará scripts que incluem as configurações básicas que configurariam apenas o serviço Web da DSC e as configurações avançadas, que configurariam um Windows Server de ponta a ponta, incluindo o serviço Web da DSC.
 
-Observação: atualmente o módulo `xPSDesiredStateConfiguration` da DSC exige que o servidor seja de localidade EN-US.
+Observação: atualmente, o módulo `xPSDesiredStateConfiguration` de DSC exige que o servidor esteja na localidade EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configuração básica para Windows Server 2012
 
@@ -537,7 +536,7 @@ A função do PowerShell para [Criar uma soma de verificação e publicar o MOF 
 
 Um arquivo de dados é armazenado para criar informações durante a implantação de um servidor de pull que inclui o serviço Web OData. O tipo de arquivo depende do sistema operacional, conforme descrito abaixo.
 
-- **Windows Server 2012** O tipo de arquivo será sempre .mdb
-- **Windows Server 2012 R2** O tipo de arquivo padrão será .edb, a menos que um .mdb seja especificado na configuração
+- **Windows Server 2012** – o tipo de arquivo será sempre `.mdb`
+- **Windows Server 2012 R2** – o tipo de arquivo padrão será `.edb`, a menos que um `.mdb` seja especificado na configuração
 
 No [Script de exemplo avançado](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) para a instalação de um Servidor de Pull, você também encontrará um exemplo de como controlar automaticamente as configurações do arquivo web.config para evitar qualquer possibilidade de erro causado pelo tipo de arquivo.

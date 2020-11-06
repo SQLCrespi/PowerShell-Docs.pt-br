@@ -2,12 +2,13 @@
 ms.date: 07/09/2019
 keywords: DSC, GPO, PowerShell, configuração, instalação
 title: Início Rápido – Converter a Política de Grupo em DSC
-ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Este Início Rápido mostra as etapas necessárias para converter uma Política de Grupo do Windows em uma configuração DSC.
+ms.openlocfilehash: b67f6dd2cf6c91d90fa6ac5b6367f9efc7f40ee0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236230"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644687"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Início Rápido: Converter a Política de Grupo em DSC
 
@@ -16,7 +17,7 @@ ms.locfileid: "89236230"
 Você pode gerar uma configuração DSC de uma Política de Grupo ou uma linha de base da Central de Segurança do Azure. O módulo [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) inclui os comandos a seguir para realizar essa tarefa.
 
 - `ConvertFrom-GPO` – converte as Políticas de Grupo armazenadas como arquivos. Você também pode especificar um diretório que contém várias políticas que serão combinadas em uma única configuração.
-  - Para exportar as Políticas de Grupo em seu ambiente, use o cmdlet [Backup-GPO](/powershell/module/grouppolicy/backup-gpo?view=win10-ps) ou siga as instruções em [Exportar um GPO para um arquivo](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
+  - Para exportar as Políticas de Grupo em seu ambiente, use o cmdlet [Backup-GPO](/powershell/module/grouppolicy/backup-gpo) ou siga as instruções em [Exportar um GPO para um arquivo](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
 - `ConvertFrom-SCM` – converte as linhas de base do Gerenciador de Conformidade de Segurança, armazenadas como `.xml` arquivos.
 - `ConvertFrom-ASC` – converte as linhas de base da Central de Segurança do Azure, armazenadas como arquivos `.json`.
 - `Merge-GPOs` – converte as Políticas de Grupo aplicadas a um computador de destino.

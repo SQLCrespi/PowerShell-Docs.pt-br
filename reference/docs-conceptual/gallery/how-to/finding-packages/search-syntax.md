@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Sintaxe de pesquisa da Galeria
-ms.openlocfilehash: 9eaabc22090655076dabe177f04130738e081179
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+description: Este artigo descreve a interface do usuário usada para pesquisar conteúdo na Galeria do PowerShell.
+ms.openlocfilehash: 7ad486095647f99056b37c2ca1a50db099a166c0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846993"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661364"
 ---
 # <a name="gallery-search-syntax"></a>Sintaxe de pesquisa da Galeria
 

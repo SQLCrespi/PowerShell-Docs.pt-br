@@ -1,14 +1,13 @@
 ---
 ms.date: 09/10/2018
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Gerenciar chaves de API
-ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: A Galeria do PowerShell usa chaves de API a fim de autenticar o acesso à Galeria para editores de conteúdo.
+ms.openlocfilehash: 4b70ac7d56fc1d63719c2acf93da3dd4ac22abed
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777586"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661127"
 ---
 # <a name="managing-api-keys"></a>Gerenciar chaves de API
 
@@ -63,7 +62,7 @@ Essas configurações não podem ser alteradas após a criação da chave. Não 
 
 Para alterar os pacotes controlados por uma chave, escolha pacotes individuais na lista ou altere o padrão glob.
 
-Ao clicar em **Regenerar**, um novo valor de chave é criado. Do mesmo modo que a chave foi inicialmente criada, é necessário **Copiar** o valor de chave imediatamente após a atualização. A opção **Copiar** não estará mais disponível depois que você sair da página.
+Ao clicar em **Regenerar** , um novo valor de chave é criado. Do mesmo modo que a chave foi inicialmente criada, é necessário **Copiar** o valor de chave imediatamente após a atualização. A opção **Copiar** não estará mais disponível depois que você sair da página.
 
 Clicar em **Excluir** mostra uma mensagem de confirmação. Depois de excluída, uma chave não pode mais ser usada.
 

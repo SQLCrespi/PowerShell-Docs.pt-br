@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: galeria,powershell,cmdlet,psgallery
 title: Criando e publicando um item
-ms.openlocfilehash: 1aa9cc84f259869ca6f8b8e2f6952e43eaac14df
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo aborda a mecânica e etapas importantes para preparar um script ou um módulo e publicá-lo na Galeria do PowerShell
+ms.openlocfilehash: be846799aff71d38bdd0c98b3f43eaee5aef7798
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71327917"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662513"
 ---
 # <a name="creating-and-publishing-an-item"></a>Criando e publicando um item
 
@@ -67,7 +66,8 @@ Há algumas ferramentas que você precisa executar no código antes de publicar 
 
 [PowerShell Script Analyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer/) é uma ferramenta de análise de código estático que examina seu código para garantir que ele atenda às diretrizes de codificação básicas do PowerShell. Essa ferramenta identifica os problemas críticos e comuns no código e deve ser executada regularmente durante o desenvolvimento para ajudá-lo a preparar o item para ser publicado. O PowerShell Script Analyzer fornecerá a lista dos problemas identificados como Erros, Aviso e Informações. Todos os erros deverão ser resolvidos antes que você publique na Galeria do PowerShell. Os avisos precisam ser examinados e a maioria deles deve ser resolvida. O PowerShell Script Analyzer é executado sempre que um item é publicado ou atualizado na Galeria do PowerShell. A equipe de Operações de Galeria entrará em contato com os proprietários de item para resolver os erros encontrados.
 
-Se as informações de manifesto no item não puderem ser lidas pela infraestrutura da Galeria do PowerShell, você não poderá publicar. O [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) detectará problemas comuns que possam fazer com que o módulo fique inutilizável ao ser instalado. Ele deve ser executado para cada módulo antes de publicar na Galeria do PowerShell.
+Se as informações de manifesto no item não puderem ser lidas pela infraestrutura da Galeria do PowerShell, você não poderá publicar.
+O [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) detectará problemas comuns que possam fazer com que o módulo fique inutilizável ao ser instalado. Ele deve ser executado para cada módulo antes de publicar na Galeria do PowerShell.
 
 Da mesma forma, [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) valida os metadados em um script e deve ser executado em cada script (publicado separado de um módulo) antes da publicação na Galeria do PowerShell.
 
@@ -94,4 +94,3 @@ Todos os itens que são publicados na Galeria do PowerShell serão verificados e
 Depois de publicar um item na Galeria do PowerShell, você precisará observar os comentários sobre o item.
 
 - Monitore o endereço de email associado à conta usada para publicar. Os usuários e a equipe de operações da Galeria do PowerShell fornecem comentários por meio dessa conta, incluindo problemas do PSSA ou das verificações antivírus. Se a conta de email for inválida ou se forem relatados problemas sérios à conta que ficarem muito tempo sem resolução, os itens poderão ser considerados abandonados e serão removidos da Galeria do PowerShell, conforme descrito em nossos [Termos de uso](https://www.powershellgallery.com/policies/Terms).
-- Recomendamos que você assine os Comentários de cada item da Galeria do PowerShell que você publicar. Isso permite que você seja notificado se alguém comentar sobre seus itens na Galeria do PowerShell. Isso é opcional, pois requer a criação de uma conta do LiveFyre.

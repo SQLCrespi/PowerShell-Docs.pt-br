@@ -2,16 +2,18 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
-ms.openlocfilehash: 64657dda04fa2df97fa2ad7c7a5c2d15b66a270a
-ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
+description: Este tópico explica como começar a usar a Configuração de Estado Desejado (DSC) do PowerShell para Linux.
+ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301328"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651119"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
-Este tópico explica como começar a usar a Configuração de Estado Desejado (DSC) do PowerShell para Linux. Para obter informações gerais sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](../overview/overview.md).
+Este tópico explica como começar a usar a Configuração de Estado Desejado (DSC) do PowerShell para Linux.
+Para obter informações gerais sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](../overview/overview.md).
 
 ## <a name="supported-linux-operation-system-versions"></a>Versões do sistema operacional Linux com suporte
 
@@ -43,7 +45,7 @@ Execute o seguinte comando para instalar a OMI em um sistema CentOS 7 x64.
 
 ### <a name="installing-dsc"></a>Instalando a DSC
 
-A DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294).
+A DSC para Linux está disponível para download no repositório [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) do repositório.
 
 Para instalar a DSC, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -83,7 +85,7 @@ A palavra-chave Configuration do Windows PowerShell é usada para criar uma conf
 
         Node  "linuxhost.contoso.com"
         {
-            nxFile ExampleFile 
+            nxFile ExampleFile
             {
                 DestinationPath = "/tmp/example"
                 Contents = "hello world `n"
@@ -98,7 +100,7 @@ A palavra-chave Configuration do Windows PowerShell é usada para criar uma conf
 
 ### <a name="push-the-configuration-to-the-linux-computer"></a>Envie a configuração por push para o computador Linux
 
-Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) ou [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) é usado para criar uma CIMSession para o computador Linux.
+Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) ou [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) é usado para criar uma **CIMSession** para o computador Linux.
 
 O código a seguir mostra como criar uma CIMSession para DSC para Linux.
 
@@ -115,10 +117,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 ```
 
 > [!NOTE]
-> No modo de "Push", a credencial do usuário precisa ser o usuário raiz no computador Linux.
-> Há suporte apenas para conexões SSL/TLS para DSC para Linux; a `New-CimSession` precisa ser usada com o parâmetro –UseSSL definido como $true.
-> O certificado SSL usado pela OMI (para DSC) é especificado no arquivo: `/etc/opt/omi/conf/omiserver.conf` com as propriedades: pemfile e keyfile.
-> Se o computador Windows em que você está executando o cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) não confiar nesse certificado, será possível optar por ignorar a validação do certificado com as Opções de CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
+> No modo de "Push", a credencial do usuário precisa ser o usuário raiz no computador Linux. Há suporte apenas para conexões SSL/TLS para DSC para Linux; a `New-CimSession` precisa ser usada com o parâmetro –UseSSL definido como $true. O certificado SSL usado pela OMI (para DSC) é especificado no arquivo: `/etc/opt/omi/conf/omiserver.conf` com as propriedades: pemfile e keyfile. Se o computador Windows em que você está executando o cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) não confiar nesse certificado, será possível optar por ignorar a validação do certificado com as Opções de CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 Execute o seguinte comando para enviar a configuração DSC por push para o nó do Linux.
 
@@ -134,45 +133,45 @@ A DSC para Linux inclui scripts para trabalhar com a configuração no computado
 
 - GetDscConfiguration.py
 
-Gera a configuração atual aplicada ao computador. Semelhante ao cmdlet `Get-DscConfiguration` do cmdlet do Windows PowerShell.
+  Gera a configuração atual aplicada ao computador. Semelhante ao cmdlet `Get-DscConfiguration` do cmdlet do Windows PowerShell.
 
-`# sudo ./GetDscConfiguration.py`
+  `# sudo ./GetDscConfiguration.py`
 
 - GetDscLocalConfigurationManager.py
 
-Gera a metaconfiguração atual aplicada ao computador. Semelhante ao cmdlet [Get-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
+  Gera a metaconfiguração atual aplicada ao computador. Semelhante ao cmdlet [Get-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
-`# sudo ./GetDscLocalConfigurationManager.py`
+  `# sudo ./GetDscLocalConfigurationManager.py`
 
 - InstallModule.py
 
-Instala um módulo personalizado de recurso de DSC. Requer o caminho para um arquivo. zip que contém a biblioteca de objeto compartilhado do módulo e os arquivos MOF do esquema.
+  Instala um módulo personalizado de recurso de DSC. Requer o caminho para um arquivo. zip que contém a biblioteca de objeto compartilhado do módulo e os arquivos MOF do esquema.
 
-`# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
+ `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
 - RemoveModule.py
 
-Remove um módulo personalizado de recurso de DSC. Requer o nome do módulo que será removido.
+  Remove um módulo personalizado de recurso de DSC. Requer o nome do módulo que será removido.
 
-`# sudo ./RemoveModule.py cnx_Resource`
+  `# sudo ./RemoveModule.py cnx_Resource`
 
 - StartDscLocalConfigurationManager.py
 
-Aplica um arquivo MOF de configuração ao computador. Semelhante ao cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Exige o caminho até o MOF de configuração para aplicar.
+  Aplica um arquivo MOF de configuração ao computador. Semelhante ao cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Exige o caminho até o MOF de configuração para aplicar.
 
-`# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
+  `# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
 
 - SetDscLocalConfigurationManager.py
 
-Aplica um arquivo MOF de metaconfiguração ao computador. Semelhante ao cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager). Exige o caminho até o MOF de metaconfiguração para aplicar.
+  Aplica um arquivo MOF de metaconfiguração ao computador. Semelhante ao cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager). Exige o caminho até o MOF de metaconfiguração para aplicar.
 
-`# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
+  `# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
 ## <a name="powershell-desired-state-configuration-for-linux-log-files"></a>Arquivos de Log da Configuração de Estado Desejado do PowerShell para Linux
 
 Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 
-|Arquivo de log|Diretório|Descrição|
-|---|---|---|
-|**omiserver.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação do servidor CIM da OMI.|
-|**dsc.log**|`/var/opt/omi/log`|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|
+|     Arquivo de log      |     Diretório      |                                               Descrição                                                |
+| ----------------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
+| **omiserver.log** | `/var/opt/omi/log` | Mensagens relacionadas à operação do servidor CIM da OMI.                                                |
+| **dsc.log**       | `/var/opt/omi/log` | Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC. |

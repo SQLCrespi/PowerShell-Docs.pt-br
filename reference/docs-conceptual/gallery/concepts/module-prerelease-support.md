@@ -1,14 +1,13 @@
 ---
 ms.date: 09/26/2017
-contributor: keithb
-keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento do módulo
-ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O módulo do PowerShellGet oferece suporte à marcação de módulos com versões superiores à 1.0.0 como um pré-lançamento usando o controle de versão semântico.
+ms.openlocfilehash: f794722f0a89f98f8f445ecd45dad9d3d2d7f3cb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328137"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661520"
 ---
 # <a name="prerelease-module-versions"></a>Versões de pré-lançamento do módulo
 

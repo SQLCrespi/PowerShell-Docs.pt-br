@@ -2,19 +2,20 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Configurar um cliente de pull usando nomes de configuração no PowerShell 5.0 e posterior
-ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O artigo explica como configurar um cliente de pull usando Nomes de configuração no PowerShell 5.0 e posterior
+ms.openlocfilehash: db2b08605dd8bc7e48d9d5153861ce9b36118e21
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953623"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644918"
 ---
 # <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurar um cliente de pull usando nomes de configuração no PowerShell 5.0 e posterior
 
 > Aplica-se a: Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Antes de configurar um cliente de pull, você deve configurar um servidor de pull. Embora essa ordem não seja obrigatória, ela ajuda na solução de problemas e ajuda a garantir que o registro seja bem-sucedido. Para configurar um servidor de pull, você pode usar os guias a seguir:
 
@@ -24,14 +25,13 @@ Antes de configurar um cliente de pull, você deve configurar um servidor de pul
 Cada nó de destino pode ser configurado para baixar configurações, recursos e até mesmo relatar seu status. As seções a seguir mostram como configurar um cliente de pull com um compartilhamento SMB ou servidor de pull de DSC HTTP. Quando o nó do LCM for atualizado, ele entrará em contato com a localização configurada para baixar as configurações atribuídas. Se algum dos recursos necessários não existir no nó, ele será baixado automaticamente da localização configurada. Se o nó for configurado com um [Servidor de relatório](reportServer.md), ele relatará o status da operação.
 
 > [!NOTE]
-> Este tópico se aplica ao PowerShell 5.0.
-> Para obter informações sobre como configurar um cliente de pull no PowerShell 4.0, confira [Configurar um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
+> Este tópico se aplica ao PowerShell 5.0. Para obter informações sobre como configurar um cliente de pull no PowerShell 4.0, confira [Configurar um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
 
 ## <a name="configure-the-pull-client-lcm"></a>Configurar o LCM do cliente de pull
 
 A execução de qualquer um dos exemplos abaixo cria uma nova pasta de saída denominada **PullClientConfigName** e coloca nela um arquivo MOF de metaconfiguração. Nesse caso, o arquivo MOF de metaconfiguração será nomeado `localhost.meta.mof`.
 
-Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager**, com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
+Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager** , com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigName –Verbose.
@@ -49,14 +49,9 @@ O script a seguir configura o LCM para efetuar o pull de configurações de um s
 
 - No script, o bloco **ConfigurationRepositoryWeb** define o servidor de pull. A propriedade **ServerURL** especifica o ponto de extremidade para o servidor de pull.
 
-- A propriedade **RegistrationKey** é uma chave compartilhada entre todos os nós de cliente para um servidor de pull e esse servidor de pull. O mesmo valor é armazenado em um arquivo no servidor de pull.
-  > [!NOTE]
-  > As chaves de registro funcionam apenas com servidores de pull da **Web**. Você ainda deve usar **ConfigurationID** com um servidor de pull de **SMB**.
-  > Para obter informações sobre como configurar um servidor de pull usando **ConfigurationID**, consulte [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigId.md)
+- A propriedade **RegistrationKey** é uma chave compartilhada entre todos os nós de cliente para um servidor de pull e esse servidor de pull. O mesmo valor é armazenado em um arquivo no servidor de pull. > [!NOTE] > As chaves de registro funcionam apenas com servidores de pull da **Web**. Você ainda deve usar **ConfigurationID** com um servidor de pull de **SMB**. > Para obter informações sobre como configurar um servidor de pull usando **ConfigurationID** , confira [Configurar um cliente de pull usando uma ID de configuração](pullClientConfigId.md)
 
-- A propriedade **ConfigurationNames** em uma matriz que especifica os nomes das configurações destinadas ao nó do cliente.
-  >**Observação:** se você especificar mais de um valor em **ConfigurationNames**, também será necessário especificar blocos **PartialConfiguration** na configuração.
-  >Para obter informações sobre configurações parciais, veja [Configurações parciais da Configuração de Estado Desejado do PowerShell](partialConfigs.md).
+- A propriedade **ConfigurationNames** em uma matriz que especifica os nomes das configurações destinadas ao nó do cliente. >**Observação:** Se você especificar mais de um valor em **ConfigurationNames** , também será necessário especificar blocos **PartialConfiguration** na configuração. > Para obter informações sobre configurações parciais, veja [Configurações parciais do Desired State Configuration do PowerShell](partialConfigs.md).
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -153,5 +148,5 @@ PullClientConfigNames
 
 ## <a name="see-also"></a>Consulte Também
 
-* [Configurando um cliente de pull com uma ID de configuração](PullClientConfigNames.md)
-* [Configurando um servidor de pull da Web de DSC](pullServer.md)
+- [Configurando um cliente de pull com uma ID de configuração](PullClientConfigNames.md)
+- [Configurando um servidor de pull da Web de DSC](pullServer.md)

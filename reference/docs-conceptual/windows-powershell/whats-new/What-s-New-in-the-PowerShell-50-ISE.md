@@ -2,16 +2,17 @@
 ms.date: 09/06/2019
 keywords: powershell, cmdlet
 title: Novidades no ISE do PowerShell 5.0
-ms.openlocfilehash: 1f5d32d583165ff8ead0a95b1c882386cf654326
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este artigo explica os recursos novos e atualizados introduzidos na versão 5.0 do ISE (Ambiente de Script Integrado) do Windows PowerShell.
+ms.openlocfilehash: 75d37d0dafe381c84898ac48343336cd525d2dd1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809132"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660830"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Novidades no ISE do Windows PowerShell 5.0
 
-Este tópico explica os recursos novos e atualizados introduzidos na versão 5.0 do ISE (Ambiente de Script Integrado) do Windows PowerShell.
+Este artigo explica os recursos novos e atualizados introduzidos na versão 5.0 do ISE (Ambiente de Script Integrado) do Windows PowerShell.
 
 > [!NOTE]
 > O ISE do PowerShell não está mais no desenvolvimento ativo de recursos. Como componente de remessa do Windows, ele continua com suporte oficial para correções de segurança e serviços de alta prioridade.
@@ -34,7 +35,7 @@ A tabela a seguir lista os recursos novos e alterados para esta versão do ISE d
 O IntelliSense é um recurso de assistência de preenchimento automático que faz parte do ISE do Windows PowerShell.
 O IntelliSense exibe menus clicáveis dos cmdlets, parâmetros, valores de parâmetro, arquivos ou pastas potencialmente correspondentes conforme você digita.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Com a adição do IntelliSense, é mais fácil descobrir cmdlets e sintaxes ao usar o ISE do Windows PowerShell para criar scripts. Você também pode usar o ISE do Windows PowerShell para conhecer o Windows PowerShell enquanto cria novos scripts.
 
@@ -48,13 +49,13 @@ Quando você digita cmdlets no ISE do Windows PowerShell, é exibido um menu de 
 
 *Snippets de código* são sessões de código Windows PowerShell curtas que você pode inserir nos scritps que cria no ISE do Windows PowerShell. O ISE do Windows PowerShell vem com um conjunto padrão de snippets. Você pode adicionar snippets usando o cmdlet `New-Snippet` enquanto trabalha no ISE do Windows PowerShell.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Usando snippets, você pode montar e criar scripts para automatizar seu ambiente rapidamente.
 
 **O que passou a funcionar de maneira diferente?**
 
-Para usar snippets no Windows PowerShell 3.0 ou posterior, no menu **Editar**, clique em **Iniciar Snippets** ou pressione <kbd>Ctrl</kbd>+<kbd>J</kbd>.
+Para usar snippets no Windows PowerShell 3.0 ou posterior, no menu **Editar** , clique em **Iniciar Snippets** ou pressione <kbd>Ctrl</kbd>+<kbd>J</kbd>.
 
 ## <a name="add-on-tools"></a>Ferramentas complementares
 
@@ -62,7 +63,7 @@ Para usar snippets no Windows PowerShell 3.0 ou posterior, no menu **Editar**, c
 
 Agora o ISE do Windows PowerShell dá suporte a ferramentas complementares usando o modelo de objeto. Esses complementos são controles do WPF (Windows Presentation Foundation), exibidos como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações, confira [Objetivo do modelo de objeto de script do ISE do Windows PowerShell](../ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md).
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Os complementos permitem estender e personalizar o ISE do Windows PowerShell com ferramentas que adicionam funcionalidades e podem melhorar sua experiência com scripts.
 
@@ -80,7 +81,7 @@ O ISE do Windows PowerShell agora salva automaticamente os scripts abertos a cad
 
 Para alterar o intervalo de salvamento automático, execute o seguinte comando no painel de console: `$psise.Options.AutoSaveMinuteInterval`.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Agora você pode trabalhar no ISE do Windows PowerShell sabendo que os scripts abertos são salvos automaticamente.
 
@@ -96,7 +97,7 @@ O ISE do Windows PowerShell agora tem uma lista de arquivos recém-usados. Quand
 
 Para alterar o número padrão de arquivos na lista de recém-usados, execute o seguinte comando no Painel de Console: `$psise.Options.MruCount`.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Agora você pode usar a lista de recém-usados para acessar facilmente os arquivos mais usados.
 
@@ -123,7 +124,7 @@ Os Painéis de Comando e Saída separados que estavam disponíveis na primeira v
 - Modos de seleção de linha e seleção de blocos
 - Preservação do conteúdo digitado na linha de comando quando você pressiona a <kbd>Seta para cima</kbd> para exibir o histórico no console
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 A adição dessas alterações do Painel de Console fornece uma experiência de script que é mais consistente com a interface do console.
 
@@ -135,13 +136,13 @@ O ISE do Windows PowerShell 2.0 tem Painéis de Comando e de Saída separados.
 
 > Adicionado no PowerShell 3.0
 
-Se você iniciar o ISE do Windows PowerShell com a linha de comando (digitando **powershell_ise.exe**), será possível adicionar as novas opções de linha de comando a seguir.
+Se você iniciar o ISE do Windows PowerShell com a linha de comando (digitando **powershell_ise.exe** ), será possível adicionar as novas opções de linha de comando a seguir.
 
 - `-NoProfile`: inicia o ISE do Windows PowerShell sem executar `$profile`
 - `-Help`: exibe uma janela Ajuda
 - `-mta`: inicia o ISE do Windows PowerShell no modo Multi-Threaded Apartment. O modo de operação padrão do ISE do Windows PowerShell é o modo Single-Threaded Apartment ou `-sta`.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 A adição dessas opções de linha de comando permite controlar o ambiente no qual o ISE do Windows PowerShell é executado.
 
@@ -164,7 +165,7 @@ Outros recursos de edição do ISE do Windows PowerShell incluem:
 - **Copiar e colar rich text** – A cópia para a área de transferência no ISE do Windows PowerShell preserva as informações de fonte, tamanho e cor da seleção original.
 - **Seleção de bloco** – Você pode selecionar um bloco de texto mantendo a tecla <kbd>ALT</kbd> pressionada enquanto seleciona o texto no Painel de Script com o mouse ou pressionando <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Seta</kbd>.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Os recursos de edição adicionais fornecem um ambiente de edição mais consistente e eficiente.
 
@@ -180,9 +181,9 @@ Se você pressionar <kbd>F1</kbd> quando o cursor estiver em um cmdlet ou se par
 
 Antes de usar este recurso, baixe a versão mais atual dos tópicos de ajuda do Windows PowerShell do site da Microsoft. O método mais simples para baixar os tópicos da Ajuda é executar o cmdlet `Update-Help` no painel de console durante a execução do ISE do Windows PowerShell como administrador.
 
-Você pode alterar onde a tecla <kbd>F1</kbd> busca Ajuda. No menu **Ferramentas**/**Opções**, na guia **Configurações Gerais** em **Outras Configurações**, você pode marcar ou desmarcar a caixa de seleção **Usar conteúdo da ajuda local em vez de conteúdo online**. Quando marcada, o cliente procurará o cmdlet Help na Ajuda baixada que se encontra na pasta de módulos. Se a caixa de seleção for desmarcada, o cliente procurará na ajuda online.
+Você pode alterar onde a tecla <kbd>F1</kbd> busca Ajuda. No menu **Ferramentas**/**Opções** , na guia **Configurações Gerais** em **Outras Configurações** , você pode marcar ou desmarcar a caixa de seleção **Usar conteúdo da ajuda local em vez de conteúdo online**. Quando marcada, o cliente procurará o cmdlet Help na Ajuda baixada que se encontra na pasta de módulos. Se a caixa de seleção for desmarcada, o cliente procurará na ajuda online.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 A ajuda contextual sem deixar seu cmdlet ou script atual fornece uma experiência integrada de aprendizado.
 
@@ -197,7 +198,7 @@ Pressionar <kbd>F1</kbd> em versões anteriores do ISE do Windows PowerShell abr
 O cmdlet `Show-Command` permite compor ou executar um cmdlet ou uma função com o preenchimento de um formulário gráfico. O formulário permite que os usuários trabalhem com o Windows PowerShell em um ambiente gráfico.
 `Show-Command` também permite que os desenvolvedores de scripts avançados criem rapidamente uma GUI baseada no Windows PowerShell.
 
-**Qual é o valor adicionado por esta alteração?**
+**Qual é o valor agregado desta alteração?**
 
 Usando `Show-Command` em seus scripts do Windows PowerShell, é possível fornecer aos usuários o ambiente gráfico com o qual eles estão familiarizados. `Show-Command` também pode ajudar os usuários iniciantes a aprender o Windows PowerShell.
 
@@ -205,6 +206,6 @@ Usando `Show-Command` em seus scripts do Windows PowerShell, é possível fornec
 
 `Show-Command` é o novo ISE do Windows PowerShell 3.0.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 Para obter mais informações sobre como usar o ISE do Windows PowerShell, confira [Explorar o Ambiente de Script Integrado do Windows PowerShell](../ise/exploring-the-windows-powershell-ise.md).

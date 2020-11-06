@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Este artigo lista as melhorias na DSC (Desired State Configuration) incluídas no WMF 5.1
+ms.openlocfilehash: 564cf0e8321b6b2b2e5d856acd4d3644d6566100
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771542"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667196"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -149,7 +148,7 @@ Confira os instantâneos abaixo:
 
 Adicionamos suporte para usar [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) com os recursos de [Composição](/powershell/scripting/dsc/resources/authoringresourcecomposite) da DSC.
 
-Agora é possível especificar o valor para **PsDscRunAsCredential** ao usar recursos de composição nas configurações. Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs. Se o recurso de composição chamar outro recurso de composição, todos os seus recursos também serão executados como usuário RunAs. As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição. Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para **PsDscRunAsCredential**, ocorrerá um erro de mesclagem durante a compilação da configuração.
+Agora é possível especificar o valor para **PsDscRunAsCredential** ao usar recursos de composição nas configurações. Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs. Se o recurso de composição chamar outro recurso de composição, todos os seus recursos também serão executados como usuário RunAs. As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição. Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para **PsDscRunAsCredential** , ocorrerá um erro de mesclagem durante a compilação da configuração.
 
 Este exemplo mostra o uso com o recurso de composição [WindowsFeatureSet](/powershell/scripting/dsc/reference/resources/windows/windowsfeaturesetresource) incluso no módulo PSDesiredStateConfiguration.
 

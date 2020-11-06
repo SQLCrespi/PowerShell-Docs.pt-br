@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com classes do PowerShell
-ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: Este artigo mostra como criar um recurso simples que gerencia um arquivo em um caminho especificado.
+ms.openlocfilehash: 72a828795c29e10ff66f164b8871b0fea7a1e0a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217552"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667310"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrevendo um recurso personalizado de DSC com classes do PowerShell
 
@@ -17,7 +18,7 @@ Com a introdução de classes do PowerShell no Windows PowerShell 5.0, já é po
 
 Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos `Get()` , `Set()` e `Test()` (equivalentes às funções `Get-TargetResource`, `Set-TargetResource` e `Test-TargetResource` em um recurso de script).
 
-Neste tópico, criaremos um recurso simples chamado **FileResource**, que gerencia um arquivo em um caminho especificado.
+Neste artigo, criaremos um recurso simples chamado **FileResource** , que gerencia um arquivo em um caminho especificado.
 
 Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
 
@@ -488,7 +489,7 @@ O atributo `DscResource()` usa um parâmetro opcional **RunAsCredential**. Esse 
 - `NotSupported` As configurações que chamam este recurso não podem usar o **PsDscRunAsCredential**.
 - `Default` Igual a `Optional`.
 
-Por exemplo, use o seguinte atributo para especificar que o recurso personalizado não dá suporte ao uso de **PsDscRunAsCredential**:
+Por exemplo, use o seguinte atributo para especificar que o recurso personalizado não dá suporte ao uso de **PsDscRunAsCredential** :
 
 ```powershell
 [DscResource(RunAsCredential=NotSupported)]

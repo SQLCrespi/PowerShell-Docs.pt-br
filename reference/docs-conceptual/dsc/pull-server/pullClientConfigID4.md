@@ -2,19 +2,20 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurar um cliente de pull usando IDs de configuração no PowerShell 4.0
-ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Este artigo explica como configurar um cliente de pull usando IDs de configuração no PowerShell 4.0
+ms.openlocfilehash: 2a3d7b79f29030620cddc2b2131cb4432e41e4eb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955143"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92649008"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Configurar um cliente de pull usando IDs de configuração no PowerShell 4.0
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Antes de configurar um cliente de pull, você deve configurar um servidor de pull. Embora essa ordem não seja obrigatória, ela ajuda na solução de problemas e ajuda a garantir que o registro seja bem-sucedido. Para configurar um servidor de pull, você pode usar os guias a seguir:
 
@@ -27,7 +28,7 @@ Cada nó de destino pode ser configurado para baixar configurações, recursos e
 
 A execução de qualquer um dos exemplos abaixo cria uma nova pasta de saída denominada **PullClientConfigID** e coloca nela um arquivo MOF de metaconfiguração. Nesse caso, o arquivo MOF de metaconfiguração será nomeado `localhost.meta.mof`.
 
-Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager**, com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
+Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager** , com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -49,7 +50,7 @@ Cada cliente deve ser configurado no modo **Pull** e receber a URL do servidor d
 
 ## <a name="http-dsc-pull-server"></a>Servidor de pull de DSC HTTP
 
-Se o servidor de pull estiver configurado como um serviço Web, defina **DownloadManagerName** como **WebDownloadManager**. O **WebDownloadManager** exige que você especifique uma **ServerUrl** para a chave **DownloadManagerCustomData**. Você também pode especificar um valor para **AllowUnsecureConnection**, conforme mostrado no exemplo abaixo. O script a seguir configura o LCM para efetuar o pull de configurações de um servidor chamado "PullServer".
+Se o servidor de pull estiver configurado como um serviço Web, defina **DownloadManagerName** como **WebDownloadManager**. O **WebDownloadManager** exige que você especifique uma **ServerUrl** para a chave **DownloadManagerCustomData**. Você também pode especificar um valor para **AllowUnsecureConnection** , conforme mostrado no exemplo abaixo. O script a seguir configura o LCM para efetuar o pull de configurações de um servidor chamado "PullServer".
 
 ```powershell
 Configuration PullClientConfigId

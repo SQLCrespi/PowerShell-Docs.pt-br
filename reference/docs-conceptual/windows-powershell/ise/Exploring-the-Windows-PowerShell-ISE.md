@@ -1,24 +1,24 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell, cmdlet
 title: Explorando o ISE do Windows PowerShell
-ms.openlocfilehash: 03728a8c83962894b27738609a5b1bec841fdb13
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este artigo é uma visão geral dos recursos do ISE do Windows PowerShell
+ms.openlocfilehash: f389ac60da13141329d81baf08e9100b144022c3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809822"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663812"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorando o ISE do Windows PowerShell
 
-Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell® para criar, executar e depurar scripts e comandos. O ISE do Windows PowerShell é composto por uma barra de menus, guias do Windows PowerShell, a barra de ferramentas, guias de script, um Painel de Script, um Painel Console, uma barra de status, um controle deslizante de tamanho de texto e a Ajuda contextual.
+Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell&reg; para criar, executar e depurar scripts e comandos. O ISE do Windows PowerShell é composto por uma barra de menus, guias do Windows PowerShell, a barra de ferramentas, guias de script, um Painel de Script, um Painel Console, uma barra de status, um controle deslizante de tamanho de texto e a Ajuda contextual.
 
 > [!NOTE]
 > No ISE do Windows PowerShell 3.0 os Painéis de Comando e de Saída foram combinados em um único Painel de Console.
 
 ## <a name="menu-bar"></a>Barra de menu
 
-A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](object-model/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
+A barra de menus contém os menus **Arquivo** , **Editar** , **Exibir** , **Ferramentas** , **Depurar** , **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](object-model/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
 
 > [!NOTE]
 > No ISE do Windows PowerShell 2.0, os menus **Ferramentas** e **Complementos** não existiam.
@@ -80,7 +80,7 @@ Aumenta ou diminui o tamanho do texto na tela.
 ## <a name="help"></a>Ajuda
 
 A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla <kbd>F1</kbd> em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console.
-No menu **Ajuda**, você também pode executar o cmdlet `Update-Help` e exibir a janela Comando, que auxilia na construção de comandos mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
+No menu **Ajuda** , você também pode executar o cmdlet `Update-Help` e exibir a janela Comando, que auxilia na construção de comandos mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
 
 ## <a name="see-also"></a>Consulte Também
 

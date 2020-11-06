@@ -1,25 +1,25 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell, cmdlet
 title: Como usar perfis no ISE do Windows PowerShell
-ms.openlocfilehash: da7dc2f234ad0c2968fbb213e9e57da875f456e4
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Este artigo explica como usar perfis no ISE do Windows PowerShell.
+ms.openlocfilehash: e677a4aaa3b2b8b76f289b0797aaa75c80c2b370
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808812"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663745"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Como usar perfis no ISE do Windows PowerShell
 
-Este tópico explica como usar perfis no ISE (Ambiente de Script Integrado) do Windows PowerShell®. Antes de executar as tarefas nesta seção, recomendamos examinar [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles) ou, no Painel de Console, digite `Get-Help about_Profiles` e pressione <kbd>Enter</kbd>.
+Este artigo explica como usar perfis no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;. Antes de executar as tarefas nesta seção, recomendamos examinar [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles) ou, no Painel de Console, digite `Get-Help about_Profiles` e pressione <kbd>Enter</kbd>.
 
 Um perfil é um script do ISE do Windows PowerShell executado automaticamente quando você inicia uma nova sessão.
 Você pode criar um ou mais perfis do Windows PowerShell para o ISE do Windows PowerShell e usá-los para adicionar a configuração do Windows PowerShell ou o ambiente ISE do Windows PowerShell, preparando-o para seu uso, com variáveis, aliases, funções, cores e preferências de fonte que você quer disponíveis. Um perfil afeta cada sessão de ISE do Windows PowerShell que você começar.
 
 > [!NOTE]
 > A política de execução do Windows PowerShell determina se você pode executar scripts e carregar um perfil.
-> A política de execução padrão, “Restricted”, impede a execução de todos os scripts, incluindo perfis.
-> Se você usar a política “Restricted”, não será possível carregar o perfil. Para saber mais sobre Política de Execução, confira [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+> A política de execução padrão, "Restricted", impede a execução de todos os scripts, incluindo perfis.
+> Se você usar a política "Restricted", não será possível carregar o perfil. Para saber mais sobre Política de Execução, confira [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## <a name="selecting-a-profile-to-use-in-the-windows-powershell-ise"></a>Selecionar um perfil para usar com o ISE do Windows PowerShell
 
@@ -29,7 +29,7 @@ O perfil que você usa é determinado pela forma como você usa o Windows PowerS
 
 - Se você usar apenas o ISE do Windows PowerShell para executar o Windows PowerShell, salve todos os seus itens em um dos perfis específicos do ISE, como o perfil **CurrentUserCurrentHost** ou o perfil **AllUsersCurrentHost** para o ISE do Windows PowerShell.
 
-- Se você usar vários programas host para executar o Windows PowerShell, salve funções, aliases, variáveis e comandos em um perfil que afete todos os programas host, como o perfil CurrentUserAllHosts ou **AllUsersAllHosts**, e salve recursos específicos do ISE, como cor e personalização de fonte, no perfil **CurrentUserCurrentHost** do perfil do ISE do Windows PowerShell ou o perfil **AllUsersCurrentHost** do ISE do Windows PowerShell.
+- Se você usar vários programas host para executar o Windows PowerShell, salve funções, aliases, variáveis e comandos em um perfil que afete todos os programas host, como o perfil CurrentUserAllHosts ou **AllUsersAllHosts** , e salve recursos específicos do ISE, como cor e personalização de fonte, no perfil **CurrentUserCurrentHost** do perfil do ISE do Windows PowerShell ou o perfil **AllUsersCurrentHost** do ISE do Windows PowerShell.
 
 A seguir, os perfis que podem ser criados e usados no ISE do Windows PowerShell. Cada perfil é salvo em seu próprio caminho específico.
 
@@ -42,28 +42,28 @@ A seguir, os perfis que podem ser criados e usados no ISE do Windows PowerShell.
 
 ## <a name="to-create-a-new-profile"></a>Para criar um novo perfil
 
-Para criar um novo perfil de "Usuário atual, ISE do Windows PowerShell", execute este comando:
+Para criar um perfil de "Usuário atual, ISE do Windows PowerShell", execute este comando:
 
 ```powershell
 if (!(Test-Path -Path $PROFILE ))
 { New-Item -Type File -Path $PROFILE -Force }
 ```
 
-Para criar um novo perfil de "Todos os usuários, ISE do Windows PowerShell", execute este comando:
+Para criar um perfil de "Todos os usuários, ISE do Windows PowerShell", execute este comando:
 
 ```powershell
 if (!(Test-Path -Path $PROFILE.AllUsersCurrentHost))
 { New-Item -Type File -Path $PROFILE.AllUsersCurrentHost -Force }
 ```
 
-Para criar um novo perfil de "Usuário atual, Todos os Hosts", execute este comando:
+Para criar um perfil de "Usuário atual, Todos os Hosts", execute este comando:
 
 ```powershell
 if (!(Test-Path -Path $PROFILE.CurrentUserAllHosts))
 { New-Item -Type File -Path $PROFILE.CurrentUserAllHosts -Force }
 ```
 
-Para criar um novo perfil de "Todos os usuários, Todos os Hosts", digite:
+Para criar um perfil de "Todos os usuários, Todos os Hosts", digite:
 
 ```powershell
 if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
@@ -80,7 +80,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
    - Para alterar o tamanho da fonte para 20, digite o seguinte no tipo de arquivo do perfil: `$psISE.Options.FontSize =20`
 
-3. Para salvar esse arquivo de perfil, no menu **Arquivo**, clique em **Salvar**. Da próxima vez que você abrir o ISE do Windows PowerShell, as personalizações serão aplicadas.
+3. Para salvar esse arquivo de perfil, no menu **Arquivo** , clique em **Salvar**. Da próxima vez que você abrir o ISE do Windows PowerShell, as personalizações serão aplicadas.
 
 ## <a name="see-also"></a>Consulte Também
 

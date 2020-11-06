@@ -1,13 +1,13 @@
 ---
 ms.date: 08/09/2017
-keywords: powershell, cmdlet, baixar, instalar, configurar, windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
-ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Este artigo explica como instalar o Windows PowerShell em várias versões do Windows.
+ms.openlocfilehash: 04e6d791e6895dd50825c58c905ff9cf8fa86ca8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236213"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663992"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
 
@@ -17,7 +17,7 @@ Se você estiver interessado no PowerShell 6 e posterior, você precisa instalar
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Localizando o PowerShell no Windows 7, 8.0, 8.1 e 10
 
-Nem sempre é fácil localizar o console do PowerShell ou o ISE (Ambiente de Script Integrado) no Windows, já que sua localização muda de uma versão do Windows para a outra.
+Nem sempre é fácil localizar o console do PowerShell ou o ISE (Ambiente de Script Integrado) no Windows, já que essa localização muda de uma versão do Windows para a outra.
 
 As tabelas a seguir devem ajudar você a localizar PowerShell na sua versão do Windows. Todas as versões listadas aqui são a versão original, conforme lançada, sem atualizações.
 
@@ -75,7 +75,7 @@ Se você precisa atualizar a versão existente do PowerShell, no Windows, use a 
 
 ## <a name="need-azure-powershell"></a>O Azure PowerShell é necessário
 
-Se você estiver procurando o **Azure PowerShell**, você poderá começar com a [Visão geral do Azure PowerShell](/powershell/azure/overview).
+Se você estiver procurando o **Azure PowerShell** , você poderá começar com a [Visão geral do Azure PowerShell](/powershell/azure/overview).
 
 Caso contrário, talvez seja necessário [instalar e configurar o Azure PowerShell](/powershell/azure/install-az-ps)
 
