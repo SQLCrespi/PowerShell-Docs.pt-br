@@ -1,33 +1,33 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell, cmdlet
 title: O objeto ISEAddOnTool
-ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Um objeto ISEAddonTool representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell.
+ms.openlocfilehash: cc2d50881b7d0033e08de9af5d4cc9e1a9aa55db
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809722"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667123"
 ---
-# <a name="the-iseaddontool-object"></a><span data-ttu-id="31296-103">O objeto ISEAddOnTool</span><span class="sxs-lookup"><span data-stu-id="31296-103">The ISEAddOnTool Object</span></span>
+# <a name="the-iseaddontool-object"></a><span data-ttu-id="b2e69-103">O objeto ISEAddOnTool</span><span class="sxs-lookup"><span data-stu-id="b2e69-103">The ISEAddOnTool Object</span></span>
 
-<span data-ttu-id="31296-104">Um objeto **ISEAddonTool** representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="31296-104">An **ISEAddonTool** object represents an installed add-on tool that provides additional functionality toWindows PowerShell ISE.</span></span> <span data-ttu-id="31296-105">Um exemplo é a ferramenta **Comandos** que você pode exibir clicando em **Exibir** e em **Mostrar Complemento de Comando**.</span><span class="sxs-lookup"><span data-stu-id="31296-105">An example is the **Commands** tool that you can display by clicking **View**, then **Show Command Add-on**.</span></span> <span data-ttu-id="31296-106">Esta ferramenta fica, então, acessível a você, manipulando os vários objetos disponíveis **ISEAddOnTool**.</span><span class="sxs-lookup"><span data-stu-id="31296-106">This tool is then accessible to you by manipulating the various available **ISEAddOnTool** objects.</span></span>
+<span data-ttu-id="b2e69-104">Um objeto **ISEAddonTool** representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b2e69-104">An **ISEAddonTool** object represents an installed add-on tool that provides additional functionality to Windows PowerShell ISE.</span></span> <span data-ttu-id="b2e69-105">Um exemplo é a ferramenta **Comandos** que você pode exibir clicando em **Exibir** e em **Mostrar Complemento de Comando**.</span><span class="sxs-lookup"><span data-stu-id="b2e69-105">An example is the **Commands** tool that you can display by clicking **View** , then **Show Command Add-on**.</span></span> <span data-ttu-id="b2e69-106">Esta ferramenta fica, então, acessível a você, manipulando os vários objetos disponíveis **ISEAddOnTool**.</span><span class="sxs-lookup"><span data-stu-id="b2e69-106">This tool is then accessible to you by manipulating the various available **ISEAddOnTool** objects.</span></span>
 
-<span data-ttu-id="31296-107">Cada ferramenta complementar pode ser associada ao painel vertical ou ao painel horizontal.</span><span class="sxs-lookup"><span data-stu-id="31296-107">Each add-on tool can be associated with either the vertical pane or the horizontal pane.</span></span> <span data-ttu-id="31296-108">O painel vertical é encaixado na borda direita do ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="31296-108">The vertical pane is docked to the right edge of Windows PowerShell ISE.</span></span> <span data-ttu-id="31296-109">O painel horizontal está encaixado na borda inferior.</span><span class="sxs-lookup"><span data-stu-id="31296-109">The horizontal pane is docked to the bottom edge.</span></span>
+<span data-ttu-id="b2e69-107">Cada ferramenta complementar pode ser associada ao painel vertical ou ao painel horizontal.</span><span class="sxs-lookup"><span data-stu-id="b2e69-107">Each add-on tool can be associated with either the vertical pane or the horizontal pane.</span></span> <span data-ttu-id="b2e69-108">O painel vertical é encaixado na borda direita do ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b2e69-108">The vertical pane is docked to the right edge of Windows PowerShell ISE.</span></span> <span data-ttu-id="b2e69-109">O painel horizontal está encaixado na borda inferior.</span><span class="sxs-lookup"><span data-stu-id="b2e69-109">The horizontal pane is docked to the bottom edge.</span></span>
 
-<span data-ttu-id="31296-110">Cada guia PowerShell no ISE do Windows PowerShell pode ter seu próprio conjunto de ferramentas complementares instaladas.</span><span class="sxs-lookup"><span data-stu-id="31296-110">Each PowerShell tab in Windows PowerShell ISE can have its own set of add-on tools installed.</span></span> <span data-ttu-id="31296-111">Consulte [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) e [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) para acessar a coleção de ferramentas disponíveis para a guia selecionada no momento ou as mesmas propriedades em qualquer um dos objetos **PowerShellTab** no objeto do conjunto [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).</span><span class="sxs-lookup"><span data-stu-id="31296-111">See [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) and [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) to access the collection of tools available to the currently selected tab or the same properties on any of the **PowerShellTab** objects in the [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md) collection object.</span></span>
+<span data-ttu-id="b2e69-110">Cada guia PowerShell no ISE do Windows PowerShell pode ter seu próprio conjunto de ferramentas complementares instaladas.</span><span class="sxs-lookup"><span data-stu-id="b2e69-110">Each PowerShell tab in Windows PowerShell ISE can have its own set of add-on tools installed.</span></span> <span data-ttu-id="b2e69-111">Consulte [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) e [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) para acessar a coleção de ferramentas disponíveis para a guia selecionada no momento ou as mesmas propriedades em qualquer um dos objetos **PowerShellTab** no objeto do conjunto [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).</span><span class="sxs-lookup"><span data-stu-id="b2e69-111">See [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) and [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) to access the collection of tools available to the currently selected tab or the same properties on any of the **PowerShellTab** objects in the [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md) collection object.</span></span>
 
-## <a name="methods"></a><span data-ttu-id="31296-112">Métodos</span><span class="sxs-lookup"><span data-stu-id="31296-112">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="b2e69-112">Métodos</span><span class="sxs-lookup"><span data-stu-id="b2e69-112">Methods</span></span>
 
-<span data-ttu-id="31296-113">Não há métodos específicos de ISE do Windows PowerShell disponíveis para objetos desta classe.</span><span class="sxs-lookup"><span data-stu-id="31296-113">There are no Windows PowerShell ISE-specific methods available for objects of this class.</span></span>
+<span data-ttu-id="b2e69-113">Não há métodos específicos de ISE do Windows PowerShell disponíveis para objetos desta classe.</span><span class="sxs-lookup"><span data-stu-id="b2e69-113">There are no Windows PowerShell ISE-specific methods available for objects of this class.</span></span>
 
-## <a name="properties"></a><span data-ttu-id="31296-114">Propriedades</span><span class="sxs-lookup"><span data-stu-id="31296-114">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="b2e69-114">Propriedades</span><span class="sxs-lookup"><span data-stu-id="b2e69-114">Properties</span></span>
 
-### <a name="control"></a><span data-ttu-id="31296-115">Control</span><span class="sxs-lookup"><span data-stu-id="31296-115">Control</span></span>
+### <a name="control"></a><span data-ttu-id="b2e69-115">Control</span><span class="sxs-lookup"><span data-stu-id="b2e69-115">Control</span></span>
 
-<span data-ttu-id="31296-116">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="31296-116">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="b2e69-116">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="b2e69-116">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="31296-117">A propriedade **Control** fornece acesso de leitura a muitos dos detalhes da ferramenta complementar Comandos.</span><span class="sxs-lookup"><span data-stu-id="31296-117">The **Control** property provides read access to many of the details of the Commands add-on tool.</span></span>
+<span data-ttu-id="b2e69-117">A propriedade **Control** fornece acesso de leitura a muitos dos detalhes da ferramenta complementar Comandos.</span><span class="sxs-lookup"><span data-stu-id="b2e69-117">The **Control** property provides read access to many of the details of the Commands add-on tool.</span></span>
 
 ```powershell
 # View the properties of the Commands add-on tool.
@@ -142,11 +142,11 @@ IsSealed                    : False
 Dispatcher                  : System.Windows.Threading.Dispatcher
 ```
 
-### <a name="isvisible"></a><span data-ttu-id="31296-118">IsVisible</span><span class="sxs-lookup"><span data-stu-id="31296-118">IsVisible</span></span>
+### <a name="isvisible"></a><span data-ttu-id="b2e69-118">IsVisible</span><span class="sxs-lookup"><span data-stu-id="b2e69-118">IsVisible</span></span>
 
-<span data-ttu-id="31296-119">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="31296-119">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="b2e69-119">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="b2e69-119">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="31296-120">A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído.</span><span class="sxs-lookup"><span data-stu-id="31296-120">The Boolean property that indicates whether the add-on tool is currently visible in its assigned pane.</span></span> <span data-ttu-id="31296-121">Se estiver visível, você poderá definir a propriedade **IsVisible** como `$false` para ocultar a ferramenta ou definir a propriedade **IsVisible** como `$true` para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.</span><span class="sxs-lookup"><span data-stu-id="31296-121">If it is visible, you can set the **IsVisible** property to `$false` to hide the tool, or set the **IsVisible** property to `$true` to make an add-on tool visible on its PowerShell tab. Note that after an add-on tool is hidden, it is no longer accessible through the **CurrentVisibleHorizontalTool** or **CurrentVisibleVerticalTool** objects, and therefore cannot be made visible by using this property on that object.</span></span>
+<span data-ttu-id="b2e69-120">A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído.</span><span class="sxs-lookup"><span data-stu-id="b2e69-120">The Boolean property that indicates whether the add-on tool is currently visible in its assigned pane.</span></span> <span data-ttu-id="b2e69-121">Se estiver visível, você poderá definir a propriedade **IsVisible** como `$false` para ocultar a ferramenta ou definir a propriedade **IsVisible** como `$true` para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.</span><span class="sxs-lookup"><span data-stu-id="b2e69-121">If it is visible, you can set the **IsVisible** property to `$false` to hide the tool, or set the **IsVisible** property to `$true` to make an add-on tool visible on its PowerShell tab. Note that after an add-on tool is hidden, it is no longer accessible through the **CurrentVisibleHorizontalTool** or **CurrentVisibleVerticalTool** objects, and therefore cannot be made visible by using this property on that object.</span></span>
 
 ```powershell
 # Hide the current tool in the vertical tool pane
@@ -155,11 +155,11 @@ $psISE.CurrentVisibleVerticalTool.IsVisible = $false
 $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible = $true
 ```
 
-### <a name="name"></a><span data-ttu-id="31296-122">Nome</span><span class="sxs-lookup"><span data-stu-id="31296-122">Name</span></span>
+### <a name="name"></a><span data-ttu-id="b2e69-122">Nome</span><span class="sxs-lookup"><span data-stu-id="b2e69-122">Name</span></span>
 
-<span data-ttu-id="31296-123">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="31296-123">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="b2e69-123">Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="b2e69-123">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="31296-124">A propriedade somente leitura que obtém o nome da ferramenta complementar.</span><span class="sxs-lookup"><span data-stu-id="31296-124">The read-only property that gets the name of the add-on tool.</span></span>
+<span data-ttu-id="b2e69-124">A propriedade somente leitura que obtém o nome da ferramenta complementar.</span><span class="sxs-lookup"><span data-stu-id="b2e69-124">The read-only property that gets the name of the add-on tool.</span></span>
 
 ```powershell
 # Gets the name of the visible vertical pane add-on tool.
@@ -170,8 +170,8 @@ $psISE.CurrentVisibleVerticalTool.Name
 Commands
 ```
 
-## <a name="see-also"></a><span data-ttu-id="31296-125">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="31296-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2e69-125">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="b2e69-125">See Also</span></span>
 
-- [<span data-ttu-id="31296-126">O objeto ISEAddOnToolCollection</span><span class="sxs-lookup"><span data-stu-id="31296-126">The ISEAddOnToolCollection Object</span></span>](The-ISEAddOnToolCollection-Object.md)
-- [<span data-ttu-id="31296-127">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="31296-127">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [<span data-ttu-id="31296-128">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="31296-128">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
+- [<span data-ttu-id="b2e69-126">O objeto ISEAddOnToolCollection</span><span class="sxs-lookup"><span data-stu-id="b2e69-126">The ISEAddOnToolCollection Object</span></span>](The-ISEAddOnToolCollection-Object.md)
+- [<span data-ttu-id="b2e69-127">Objetivo do modelo de objeto de script do ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="b2e69-127">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [<span data-ttu-id="b2e69-128">A hierarquia de modelo de objeto do ISE</span><span class="sxs-lookup"><span data-stu-id="b2e69-128">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)

@@ -2,32 +2,34 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando um servidor de relatório de DSC
-ms.openlocfilehash: 1ccd4f96b782b41b7d7c953735cb41b3ba3d2bce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: O LCM (Gerenciador de Configurações Local) de um nó pode ser configurado para enviar relatórios sobre o status de configuração a um servidor de pull que, por sua vez, pode ser consultado para recuperar esses dados.
+ms.openlocfilehash: 58ff1684bbe1d23fa68296aa56dd94ba6bc5b148
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953573"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92653724"
 ---
-# <a name="using-a-dsc-report-server"></a><span data-ttu-id="ef3f0-103">Usando um servidor de relatório de DSC</span><span class="sxs-lookup"><span data-stu-id="ef3f0-103">Using a DSC report server</span></span>
+# <a name="using-a-dsc-report-server"></a><span data-ttu-id="b3ecc-104">Usando um servidor de relatório de DSC</span><span class="sxs-lookup"><span data-stu-id="b3ecc-104">Using a DSC report server</span></span>
 
-<span data-ttu-id="ef3f0-104">Aplica-se a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="ef3f0-104">Applies To: Windows PowerShell 5.0</span></span>
+<span data-ttu-id="b3ecc-105">Aplica-se a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="b3ecc-105">Applies To: Windows PowerShell 5.0</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="ef3f0-105">O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-105">The Pull Server (Windows Feature *DSC-Service*) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="ef3f0-106">É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="ef3f0-106">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
+> <span data-ttu-id="b3ecc-106">O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-106">The Pull Server (Windows Feature *DSC-Service* ) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="b3ecc-107">É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="b3ecc-107">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
 >
 > [!NOTE]
-> <span data-ttu-id="ef3f0-107">O servidor de relatório descrito neste tópico não está disponível no PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-107">The report server described in this topic is not available in PowerShell 4.0.</span></span>
+> <span data-ttu-id="b3ecc-108">O servidor de relatório descrito neste tópico não está disponível no PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-108">The report server described in this topic is not available in PowerShell 4.0.</span></span>
 
-<span data-ttu-id="ef3f0-108">O Gerenciador de Configurações Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o status de configuração para um servidor de pull, que, por sua vez, pode ser consultado para recuperar dados.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-108">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server, which can then be queried to retrieve that data.</span></span> <span data-ttu-id="ef3f0-109">Cada vez que o nó verifica e aplica uma configuração, ele envia um relatório para o servidor de relatório.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-109">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="ef3f0-110">Esses relatórios são armazenados em um banco de dados no servidor e podem ser recuperados chamando o serviço Web de relatórios.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-110">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span> <span data-ttu-id="ef3f0-111">Cada relatório contém informações como quais configurações foram aplicadas e se tiveram êxito, os recursos usados, os erros que foram lançados e os horários de início e término.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-111">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
+<span data-ttu-id="b3ecc-109">O LCM (Gerenciador de Configurações Local) de um nó pode ser configurado para enviar relatórios sobre o status de configuração a um servidor de pull que, por sua vez, pode ser consultado para recuperar esses dados.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-109">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server that can then be queried to retrieve that data.</span></span> <span data-ttu-id="b3ecc-110">Cada vez que o nó verifica e aplica uma configuração, ele envia um relatório para o servidor de relatório.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-110">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="b3ecc-111">Esses relatórios são armazenados em um banco de dados no servidor e podem ser recuperados chamando o serviço Web de relatórios.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-111">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span>
+<span data-ttu-id="b3ecc-112">Cada relatório contém informações como quais configurações foram aplicadas e se tiveram êxito, os recursos usados, os erros que foram lançados e os horários de início e término.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-112">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
 
-## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="ef3f0-112">Configurando um nó para enviar relatórios</span><span class="sxs-lookup"><span data-stu-id="ef3f0-112">Configuring a node to send reports</span></span>
+## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="b3ecc-113">Configurando um nó para enviar relatórios</span><span class="sxs-lookup"><span data-stu-id="b3ecc-113">Configuring a node to send reports</span></span>
 
-<span data-ttu-id="ef3f0-113">Um nó é instruído a enviar relatórios para um servidor usando um bloco **ReportServerWeb** na configuração do LCM do nó (para obter informações sobre como configurar o LCM, confira [Configurando o Gerenciador de Configurações Local](../managing-nodes/metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="ef3f0-113">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](../managing-nodes/metaConfig.md)).</span></span> <span data-ttu-id="ef3f0-114">O servidor ao qual o nó envia relatórios deve ser configurado como servidor de pull da Web (não é possível enviar relatórios para um compartilhamento SMB).</span><span class="sxs-lookup"><span data-stu-id="ef3f0-114">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="ef3f0-115">Para obter informações sobre a configuração de um servidor de pull, consulte [Configurando um servidor de pull da Web de DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="ef3f0-115">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="ef3f0-116">O servidor de relatório pode ser o mesmo serviço do qual o nó efetua pull de configurações e obtém recursos ou pode ser um serviço diferente.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-116">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
+<span data-ttu-id="b3ecc-114">Um nó é instruído a enviar relatórios para um servidor usando um bloco **ReportServerWeb** na configuração do LCM do nó (para obter informações sobre como configurar o LCM, confira [Configurando o Gerenciador de Configurações Local](../managing-nodes/metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="b3ecc-114">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](../managing-nodes/metaConfig.md)).</span></span> <span data-ttu-id="b3ecc-115">O servidor ao qual o nó envia relatórios deve ser configurado como servidor de pull da Web (não é possível enviar relatórios para um compartilhamento SMB).</span><span class="sxs-lookup"><span data-stu-id="b3ecc-115">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="b3ecc-116">Para obter informações sobre a configuração de um servidor de pull, veja [Configurando um servidor de pull da Web de DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="b3ecc-116">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="b3ecc-117">O servidor de relatório pode ser o mesmo serviço do qual o nó efetua pull de configurações e obtém recursos ou pode ser um serviço diferente.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-117">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
 
-<span data-ttu-id="ef3f0-117">No bloco **ReportServerWeb**, especifique a URL do serviço de pull e uma chave de Registro que seja conhecida pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-117">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
+<span data-ttu-id="b3ecc-118">No bloco **ReportServerWeb** , especifique a URL do serviço de pull e uma chave de Registro que seja conhecida pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-118">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
 
-<span data-ttu-id="ef3f0-118">A configuração a seguir define um nó para efetuar pull de configurações por meio de um serviço e enviar relatórios para um serviço em um servidor diferente.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-118">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span>
+<span data-ttu-id="b3ecc-119">A configuração a seguir define um nó para efetuar pull de configurações por meio de um serviço e enviar relatórios para um serviço em um servidor diferente.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-119">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span>
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -61,7 +63,7 @@ configuration ReportClientConfig
 ReportClientConfig
 ```
 
-<span data-ttu-id="ef3f0-119">A configuração a seguir configura um nó para usar um único servidor de relatórios, recursos e configurações.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-119">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
+<span data-ttu-id="b3ecc-120">A configuração a seguir configura um nó para usar um único servidor de relatórios, recursos e configurações.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-120">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -94,23 +96,26 @@ PullClientConfig
 ```
 
 > [!NOTE]
-> <span data-ttu-id="ef3f0-120">Você pode nomear o serviço Web que desejar ao configurar um servidor de pull, mas a propriedade **ServerURL** deve corresponder ao nome do serviço.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-120">You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
+> <span data-ttu-id="b3ecc-121">Você pode nomear o serviço Web que desejar ao configurar um servidor de pull, mas a propriedade **ServerURL** deve corresponder ao nome do serviço.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-121">You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
 
-## <a name="getting-report-data"></a><span data-ttu-id="ef3f0-121">Obtendo dados de relatório</span><span class="sxs-lookup"><span data-stu-id="ef3f0-121">Getting report data</span></span>
+## <a name="getting-report-data"></a><span data-ttu-id="b3ecc-122">Obtendo dados de relatório</span><span class="sxs-lookup"><span data-stu-id="b3ecc-122">Getting report data</span></span>
 
-<span data-ttu-id="ef3f0-122">Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-122">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="ef3f0-123">Os relatórios estão disponíveis por meio de chamadas para o serviço Web.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-123">The reports are available through calls to the web service.</span></span> <span data-ttu-id="ef3f0-124">Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web de relatório no formato a seguir: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`</span><span class="sxs-lookup"><span data-stu-id="ef3f0-124">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`</span></span>
-<span data-ttu-id="ef3f0-125">em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-125">where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="ef3f0-126">É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) no nó em questão.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-126">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) on that node.</span></span>
+<span data-ttu-id="b3ecc-123">Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-123">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="b3ecc-124">Os relatórios estão disponíveis por meio de chamadas para o serviço Web.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-124">The reports are available through calls to the web service.</span></span> <span data-ttu-id="b3ecc-125">Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web de relatório no formato a seguir: </span><span class="sxs-lookup"><span data-stu-id="b3ecc-125">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form:</span></span>
 
-<span data-ttu-id="ef3f0-127">Os relatórios são gerados como uma matriz de objetos JSON.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-127">The reports are returned as an array of JSON objects.</span></span>
+`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
 
-<span data-ttu-id="ef3f0-128">O script a seguir gera os relatórios para o nó no qual é executado:</span><span class="sxs-lookup"><span data-stu-id="ef3f0-128">The following script returns the reports for the node on which it is run:</span></span>
+<span data-ttu-id="b3ecc-126">Em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-126">Where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="b3ecc-127">É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) no nó em questão.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-127">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) on that node.</span></span>
+
+<span data-ttu-id="b3ecc-128">Os relatórios são gerados como uma matriz de objetos JSON.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-128">The reports are returned as an array of JSON objects.</span></span>
+
+<span data-ttu-id="b3ecc-129">O script a seguir gera os relatórios para o nó no qual é executado:</span><span class="sxs-lookup"><span data-stu-id="b3ecc-129">The following script returns the reports for the node on which it is run:</span></span>
 
 ```powershell
 function GetReport
 {
     param
     (
-        $AgentId = "$((glcm).AgentId)", 
+        $AgentId = "$((glcm).AgentId)",
         $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc"
     )
 
@@ -123,9 +128,9 @@ function GetReport
 }
 ```
 
-## <a name="viewing-report-data"></a><span data-ttu-id="ef3f0-129">Exibindo dados de relatório</span><span class="sxs-lookup"><span data-stu-id="ef3f0-129">Viewing report data</span></span>
+## <a name="viewing-report-data"></a><span data-ttu-id="b3ecc-130">Exibindo dados de relatório</span><span class="sxs-lookup"><span data-stu-id="b3ecc-130">Viewing report data</span></span>
 
-<span data-ttu-id="ef3f0-130">Se você definir uma variável como o resultado da função **GetReport**, poderá exibir os campos individuais em um elemento da matriz que é gerada:</span><span class="sxs-lookup"><span data-stu-id="ef3f0-130">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
+<span data-ttu-id="b3ecc-131">Se definir uma variável como o resultado da função **GetReport** , você poderá exibir os campos individuais em um elemento da matriz que é gerada:</span><span class="sxs-lookup"><span data-stu-id="b3ecc-131">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
 
 ```powershell
 $reports = GetReport
@@ -166,14 +171,14 @@ StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Ad
 AdditionalData       : {}
 ```
 
-<span data-ttu-id="ef3f0-131">Por padrão, os relatórios são classificados por **JobID**.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-131">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="ef3f0-132">Para obter o relatório mais recente, você pode classificar os relatórios pela propriedade **StartTime** decrescente e obter o primeiro elemento da matriz:</span><span class="sxs-lookup"><span data-stu-id="ef3f0-132">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
+<span data-ttu-id="b3ecc-132">Por padrão, os relatórios são classificados por **JobID**.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-132">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="b3ecc-133">Para obter o relatório mais recente, você pode classificar os relatórios pela propriedade **StartTime** decrescente e obter o primeiro elemento da matriz:</span><span class="sxs-lookup"><span data-stu-id="b3ecc-133">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
 
 ```powershell
 $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-<span data-ttu-id="ef3f0-133">Observe que a propriedade **StatusData** é um objeto com diversas propriedades.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-133">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="ef3f0-134">É aqui que se encontra grande parte dos dados de relatório.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-134">This is where much of the reporting data is.</span></span> <span data-ttu-id="ef3f0-135">Vamos observar os campos individuais da propriedade **StatusData** do relatório mais recente:</span><span class="sxs-lookup"><span data-stu-id="ef3f0-135">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
+<span data-ttu-id="b3ecc-134">Observe que a propriedade **StatusData** é um objeto com diversas propriedades.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-134">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="b3ecc-135">É aqui que se encontra grande parte dos dados de relatório.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-135">This is where much of the reporting data is.</span></span> <span data-ttu-id="b3ecc-136">Vamos observar os campos individuais da propriedade **StatusData** do relatório mais recente:</span><span class="sxs-lookup"><span data-stu-id="b3ecc-136">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -213,7 +218,7 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-<span data-ttu-id="ef3f0-136">Entre outras coisas, isso mostra que a configuração mais recente chamou dois recursos e que um deles estava no estado desejado e outro não estava.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-136">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="ef3f0-137">Você pode obter uma saída mais legível apenas da propriedade **ResourcesNotInDesiredState**:</span><span class="sxs-lookup"><span data-stu-id="ef3f0-137">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
+<span data-ttu-id="b3ecc-137">Entre outras coisas, isso mostra que a configuração mais recente chamou dois recursos e que um deles estava no estado desejado e outro não estava.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-137">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="b3ecc-138">Você pode obter uma saída mais legível apenas da propriedade **ResourcesNotInDesiredState** :</span><span class="sxs-lookup"><span data-stu-id="b3ecc-138">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
 
 ```powershell
 $statusData.ResourcesInDesiredState
@@ -233,12 +238,12 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-<span data-ttu-id="ef3f0-138">Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer com os dados de relatório.</span><span class="sxs-lookup"><span data-stu-id="ef3f0-138">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="ef3f0-139">Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Playing with JSON and PowerShell (Brincando com JSON e PowerShell)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="ef3f0-139">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span></span>
+<span data-ttu-id="b3ecc-139">Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer com os dados de relatório.</span><span class="sxs-lookup"><span data-stu-id="b3ecc-139">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="b3ecc-140">Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Playing with JSON and PowerShell (Brincando com JSON e PowerShell)](https://devblogs.microsoft.com/scripting/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="b3ecc-140">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://devblogs.microsoft.com/scripting/playing-with-json-and-powershell/).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ef3f0-140">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="ef3f0-140">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3ecc-141">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="b3ecc-141">See Also</span></span>
 
-[<span data-ttu-id="ef3f0-141">Configurando o Gerenciador de Configurações Local</span><span class="sxs-lookup"><span data-stu-id="ef3f0-141">Configuring the Local Configuration Manager</span></span>](../managing-nodes/metaConfig.md)
+[<span data-ttu-id="b3ecc-142">Configurando o Gerenciador de Configurações Local</span><span class="sxs-lookup"><span data-stu-id="b3ecc-142">Configuring the Local Configuration Manager</span></span>](../managing-nodes/metaConfig.md)
 
-[<span data-ttu-id="ef3f0-142">Configurando um servidor de pull da Web de DSC</span><span class="sxs-lookup"><span data-stu-id="ef3f0-142">Setting up a DSC web pull server</span></span>](pullServer.md)
+[<span data-ttu-id="b3ecc-143">Configurando um servidor de pull da Web de DSC</span><span class="sxs-lookup"><span data-stu-id="b3ecc-143">Setting up a DSC web pull server</span></span>](pullServer.md)
 
-[<span data-ttu-id="ef3f0-143">Configurando um cliente de pull usando nomes de configuração</span><span class="sxs-lookup"><span data-stu-id="ef3f0-143">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
+[<span data-ttu-id="b3ecc-144">Configurando um cliente de pull usando nomes de configuração</span><span class="sxs-lookup"><span data-stu-id="b3ecc-144">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
