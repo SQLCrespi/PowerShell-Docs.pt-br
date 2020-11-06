@@ -2,16 +2,16 @@
 description: Explica o conceito de escopo no PowerShell e mostra como definir e alterar o escopo dos elementos.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 03/13/2020
+ms.date: 11/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_scopes
-ms.openlocfilehash: 3e165867be5887ae15890f795531b5a3048c4550
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 15c3d606ec13166e137bbcd633269dbf03ab7817
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195635"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354841"
 ---
 # <a name="about-scopes"></a>Sobre escopos
 
@@ -36,7 +36,7 @@ Se você criar um item em um escopo e o item compartilhar seu nome com um item e
 
 O PowerShell dá suporte aos seguintes escopos:
 
-- Global: o escopo que está em vigor quando o PowerShell é iniciado. Variáveis e funções que estão presentes quando o PowerShell é iniciado foram criadas no escopo global, como variáveis automáticas e variáveis de preferência. As variáveis, os aliases e as funções nos perfis do PowerShell também são criados no escopo global.
+- Global: o escopo que está em vigor quando o PowerShell é iniciado ou quando você cria uma nova sessão ou runspace. Variáveis e funções que estão presentes quando o PowerShell é iniciado foram criadas no escopo global, como variáveis automáticas e variáveis de preferência. As variáveis, os aliases e as funções nos perfis do PowerShell também são criados no escopo global. O escopo global é o escopo pai raiz em uma sessão.
 
 - Local: o escopo atual. O escopo local pode ser o escopo global ou qualquer outro escopo.
 
@@ -47,11 +47,15 @@ O PowerShell dá suporte aos seguintes escopos:
 
 ## <a name="parent-and-child-scopes"></a>Escopos pai e filho
 
-Você pode criar um novo escopo executando um script ou uma função, criando uma sessão ou iniciando uma nova instância do PowerShell. Quando você cria um novo escopo, o resultado é um escopo pai (o escopo original) e um escopo filho (o escopo que você criou).
-
-No PowerShell, todos os escopos são escopos filho do escopo global, mas você pode criar muitos escopos e muitos escopos recursivos.
+Você pode criar um novo escopo filho chamando um script ou uma função. O escopo de chamada é o escopo pai. O script ou a função chamada é o escopo filho.
+As funções ou os scripts chamados podem chamar outras funções, criando uma hierarquia de escopos filho cujo escopo raiz é o escopo global.
 
 A menos que você explicitamente torne os itens particulares, os itens no escopo pai estão disponíveis para o escopo filho. No entanto, os itens que você cria e alteram no escopo filho não afetam o escopo pai, a menos que você especifique explicitamente o escopo ao criar os itens.
+
+> [!NOTE]
+> As funções de um módulo não são executadas em um escopo filho do escopo de chamada.
+> Os módulos têm seu próprio estado de sessão que está vinculado ao escopo global.
+> Todos os códigos de módulo são executados em uma hierarquia específica de módulo de escopos que tem seu próprio escopo raiz.
 
 ## <a name="inheritance"></a>Herança
 
@@ -180,7 +184,7 @@ Instâncias de todos os outros tipos são instâncias de **PSObject** . A propri
 
 ### <a name="the-allscope-option"></a>A opção de escopo
 
-Variáveis e aliases têm uma propriedade **Option** que pode assumir um valor de **escopo** . Os itens que têm a propriedade de **escopo** se tornam parte de qualquer escopo filho que você criar, embora eles não sejam herdados retroativamente por escopos pai.
+Variáveis e aliases têm uma propriedade **Option** que pode assumir um valor de **escopo**. Os itens que têm a propriedade de **escopo** se tornam parte de qualquer escopo filho que você criar, embora eles não sejam herdados retroativamente por escopos pai.
 
 Um item que tem a propriedade de **escopo** é visível no escopo filho e faz parte desse escopo. As alterações no item em qualquer escopo afetam todos os escopos nos quais a variável é definida.
 
@@ -277,7 +281,7 @@ function foo {
 }
 ```
 
-Agora, criamos uma variável global `$a` , atribuimos a ela um valor e chamamos a função **foo** .
+Agora, criamos uma variável global `$a` , atribuimos a ela um valor e chamamos a função **foo**.
 
 ```powershell
 $a = "Goodbye"
@@ -299,7 +303,7 @@ Os scripts têm seu próprio escopo. Se você estiver depurando um script e cheg
 
 ### <a name="private-option"></a>Opção particular
 
-Aliases e variáveis têm uma propriedade **Option** que pode ter um valor de **Private** . Os itens que têm a opção **particular** podem ser exibidos e alterados no escopo no qual eles são criados, mas não podem ser exibidos ou alterados fora desse escopo.
+Aliases e variáveis têm uma propriedade **Option** que pode ter um valor de **Private**. Os itens que têm a opção **particular** podem ser exibidos e alterados no escopo no qual eles são criados, mas não podem ser exibidos ou alterados fora desse escopo.
 
 Por exemplo, se você criar uma variável que tenha uma opção particular no escopo global e, em seguida, executar um script, `Get-Variable` os comandos no script não exibirão a variável particular. Usar o modificador de escopo global nessa instância não exibe a variável particular.
 
@@ -415,7 +419,7 @@ Local
 
 ### <a name="example-4-creating-a-private-variable"></a>Exemplo 4: criando uma variável privada
 
-Uma variável particular é uma variável que tem uma propriedade **Option** que tem um valor de *Private* . As variáveis *privadas* são herdadas pelo escopo filho, mas só podem ser exibidas ou alteradas no escopo no qual foram criadas.
+Uma variável particular é uma variável que tem uma propriedade **Option** que tem um valor de *Private*. As variáveis *privadas* são herdadas pelo escopo filho, mas só podem ser exibidas ou alteradas no escopo no qual foram criadas.
 
 O comando a seguir cria uma variável privada chamada `$ptest` no escopo local.
 

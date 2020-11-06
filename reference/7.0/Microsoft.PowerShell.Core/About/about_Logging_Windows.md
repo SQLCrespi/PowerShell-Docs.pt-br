@@ -1,23 +1,22 @@
 ---
-description: O PowerShell registra em log as operações internas do mecanismo, provedores e cmdlets.
+description: O PowerShell registra as operações internas do mecanismo, provedores e cmdlets no log de eventos do Windows.
 keywords: powershell
 Locale: en-US
 ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging-Windows
-ms.openlocfilehash: 62fa0592d931f5f675661f4d41ee01df6b89dc06
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: b36c45e0e8192a292dab88615cdd23f877068774
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195882"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354772"
 ---
 # <a name="about-logging-windows"></a>Sobre o registro em log do Windows
 
 ## <a name="short-description"></a>Descrição breve
-
-O PowerShell registra em log as operações internas do mecanismo, provedores e cmdlets.
+O PowerShell registra as operações internas do mecanismo, provedores e cmdlets no log de eventos do Windows.
 
 ## <a name="long-description"></a>Descrição longa
 
@@ -32,14 +31,14 @@ Os logs do PowerShell podem ser exibidos usando o Windows Visualizador de Evento
 
 Quando o log de bloco de script estiver habilitado, o PowerShell registrará os seguintes eventos no `PowerShellCore/Operational` log:
 
-|Campo| Valor|
-|-|-|
-|EventId|`4104` / `0x1008`|
-|Canal|`Operational`|
-|Nível|`Verbose`|
-|Opcode|`Create`|
-|Tarefa|`CommandStart`|
-|Palavra-chave|`Runspace`|
+|  Campo  |       Valor       |
+| ------- | ----------------- |
+| EventId | `4104` / `0x1008` |
+| Canal | `Operational`     |
+| Nível   | `Verbose`         |
+| Opcode  | `Create`          |
+| Tarefa    | `CommandStart`    |
+| Palavra-chave | `Runspace`        |
 
 ### <a name="registering-the-powershell-event-provider-on-windows"></a>Registrando o provedor de eventos do PowerShell no Windows
 

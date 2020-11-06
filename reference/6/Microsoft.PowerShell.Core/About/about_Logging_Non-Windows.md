@@ -6,17 +6,16 @@ ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_non-windows?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging_Non-Windows
-ms.openlocfilehash: 402c59f839de4a2b16e2abde29e1e9cfa6be6fa7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ef96fd9037b30e4f366704e747582fa03a036589
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195712"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354891"
 ---
 # <a name="about-logging-non-windows"></a>Sobre o log de não Windows
 
 ## <a name="short-description"></a>Descrição breve
-
 O PowerShell registra em log as operações internas do mecanismo, provedores e cmdlets.
 
 ## <a name="long-description"></a>Descrição longa
@@ -56,7 +55,7 @@ TIMESTAMP MACHINENAME powershell[PID]: (COMMITID:TID:CID)
 
 ### <a name="filtering-powershell-log-entries-using-rsyslog"></a>Filtrando entradas de log do PowerShell usando rsyslog
 
-Normalmente, as entradas de log do PowerShell são gravadas no padrão `location/file` para **syslog** . No entanto, é possível redirecionar as entradas para um arquivo personalizado.
+Normalmente, as entradas de log do PowerShell são gravadas no padrão `location/file` para **syslog**. No entanto, é possível redirecionar as entradas para um arquivo personalizado.
 
 1. Crie uma conf para a configuração de log do PowerShell e forneça um número menor que 50 (para `50-default.conf` ), como `40-powershell.conf` . O arquivo deve ser colocado em `/etc/rsyslog.d` .
 
@@ -79,7 +78,7 @@ Normalmente, as entradas de log do PowerShell são gravadas no padrão `location
    -rw-r--r-- 1 root root   67 Nov 28 12:51 40-powershell.conf
    ```
 
-1. Defina a propriedade como **raiz** .
+1. Defina a propriedade como **raiz**.
 
    ```
    chown root:root /etc/rsyslog.d/40-powershell.conf
@@ -96,7 +95,7 @@ Normalmente, as entradas de log do PowerShell são gravadas no padrão `location
 O método mais fácil para exibir a saída de log do PowerShell no macOS é usando o aplicativo de **console** .
 
 1. Pesquise o aplicativo de **console** e inicie-o.
-1. Selecione o nome do computador em **dispositivos** .
+1. Selecione o nome do computador em **dispositivos**.
 1. No campo de **pesquisa** , insira `pwsh` para o binário principal do PowerShell.
 1. Altere o filtro de pesquisa de `Any` para `Process` .
 1. Execute as operações.
@@ -223,7 +222,7 @@ As propriedades para configurar o log do PowerShell são listadas na tabela a se
 |`LogKeywords`|Runspace      |As palavras-chave fornecem a capacidade de limitar o registro em log|
 |           |Pipeline      |para componentes específicos no PowerShell. Por |
 |           |Protocolo      |padrão, todas as palavras-chave são habilitadas e alteradas |
-|           |Transport     |Esse valor só é útil para           |
+|           |Transporte     |Esse valor só é útil para           |
 |           |Host          |solução de problemas especializada.                |
 |           |Cmdlets       |                                             |
 |           |serializador    |                                             |

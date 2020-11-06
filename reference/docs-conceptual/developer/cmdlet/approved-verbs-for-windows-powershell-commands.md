@@ -3,12 +3,12 @@ ms.date: 09/07/2018
 ms.topic: reference
 title: Verbos aprovados para comandos do PowerShell
 description: Verbos aprovados para comandos do PowerShell
-ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92655825"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355095"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
 
@@ -18,13 +18,7 @@ A parte do nome correspondente ao verbo identifica a ação que o cmdlet executa
 > [!NOTE]
 > O PowerShell usa o termo _verbo_ para descrever uma palavra que implica uma ação, mesmo que essa palavra não seja um verbo padrão no idioma inglês. Por exemplo, o termo _New_ é um nome de verbo válido do PowerShell porque implica uma ação, embora não seja um verbo no idioma inglês.
 
-<!--
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
--->
-
-Cada verbo aprovado tem um _prefixo de alias_ correspondente definido.
-Usamos esse prefixo de alias em aliases para comandos que usam esse verbo.
-Por exemplo, o prefixo do alias para `Import` é `ip` e, dessa maneira, o alias para `Import-Module` é `ipmo`.  Essa é uma recomendação, mas não uma regra; em particular, ela não precisa ser respeitada para aliases de comando que imitam comandos conhecidos de outros ambientes.
+Cada verbo aprovado tem um _prefixo de alias_ correspondente definido. Usamos esse prefixo de alias em aliases para comandos que usam esse verbo. Por exemplo, o prefixo do alias para `Import` é `ip` e, dessa maneira, o alias para `Import-Module` é `ipmo`. Essa é uma recomendação, mas não uma regra; em particular, ela não precisa ser respeitada para aliases de comando que imitam comandos conhecidos de outros ambientes.
 
 ## <a name="verb-naming-recommendations"></a>Recomendações de nomenclatura de verbo
 
@@ -35,13 +29,13 @@ As recomendações a seguir ajudam a escolher um verbo apropriado para o cmdlet,
 - Não use um sinônimo de um verbo aprovado. Por exemplo, sempre use `Remove`; nunca use `Delete` nem `Eliminate`.
 - Use apenas a forma de cada verbo listada neste tópico. Por exemplo, use `Get`, mas não use `Getting` nem `Gets`.
 - Não use os aliases ou verbos reservados a seguir. A linguagem do PowerShell ou alguns poucos cmdlets dela usam esses verbos em circunstâncias excepcionais.
-    - ForEach (foreach)
-    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): organiza objetos em uma forma ou layout especificado
-    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): organiza ou associa um ou mais recursos
-    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
-    - Sort (sr)
-    - Tee (te)
-    - Where (wh)
+  - ForEach (foreach)
+  - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): organiza objetos em uma forma ou layout especificado
+  - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): organiza ou associa um ou mais recursos
+  - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
+  - Sort (sr)
+  - Tee (te)
+  - Where (wh)
 
 Você pode obter uma lista completa de verbos usando o cmdlet `Get-Verb`.
 
@@ -174,7 +168,7 @@ O PowerShell usa a classe [System.Management.Automation.VerbsLifeCycle](/dotnet/
 |[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (ap)|Confirma o status de um recurso ou processo ou concorda com ele.||
 |[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (as)|Afirma o estado de um recurso.|Certify|
 |[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (bd)|Cria um artefato (geralmente um binário ou documento) de algum conjunto de arquivos de entrada (geralmente código-fonte ou documentos declarativos). O verbo foi adicionado no PowerShell 6.||
-|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (cp)|Conclui uma operação.||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype) (cp)|Conclui uma operação.||
 |[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (cn)|Reconhece, verifica ou valida o estado de um recurso ou processo.|Acknowledge, Agree, Certify, Validate, Verify|
 |[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (dn)|Recusa ou bloqueia o estado de um recurso ou processo ou faz objeção ou oposição a ele.|Block, Object, Refuse, Reject|
 |[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (dp)|Envia um aplicativo, site ou solução para um destino remoto de modo que um consumidor dessa solução possa acessá-lo após a conclusão da implantação. O verbo foi adicionado no PowerShell 6.||

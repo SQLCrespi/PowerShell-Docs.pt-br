@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sobre literais numéricos
-ms.openlocfilehash: 8e26e8c67b1acadc75a67cd51bd6adb07fb7daf3
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f9d23a37c06c8285c23328ea8ddcebf8d6caae9e
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195580"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354721"
 ---
 # <a name="about-numeric-literals"></a>Sobre literais numéricos
 
@@ -291,4 +291,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 Além disso, os valores entre `[ulong]::MaxValue` e `[decimal]::MaxValue` devem ser indicados usando o sufixo decimal `D` para manter a precisão. Sem o sufixo, esses valores são analisados como `[Double]` usando o modo de análise real.
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger
