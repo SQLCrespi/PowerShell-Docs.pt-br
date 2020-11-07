@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-event?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Event
-ms.openlocfilehash: 6056861bc6b472e389939e446d922d2bc4302294
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6b44322c21549c31f62c7b35e2fef1732f9f0c25
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194459"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343429"
 ---
 # New-Event
 
@@ -28,16 +28,13 @@ New-Event [-SourceIdentifier] <String> [[-Sender] <PSObject>] [[-EventArguments]
 
 ## DESCRIPTION
 
-O cmdlet **New-Event** cria um novo evento personalizado.
+O `New-Event` cmdlet cria um novo evento personalizado.
 
 Você pode usar eventos personalizados para notificar os usuários sobre as alterações de estado em seu programa e qualquer alteração que seu programa puder detectar, incluindo hardware ou condições do sistema, status de aplicativos, status do disco, status da rede ou a conclusão de um trabalho em segundo plano.
 
-Eventos personalizados são adicionados automaticamente à fila de eventos na sessão sempre que são gerados. Você não precisa se inscrever neles.
-No entanto, se você quiser encaminhar um evento para a sessão local ou especificar uma ação para responder ao evento, use o cmdlet de Register-EngineEvent para inscrever-se no evento personalizado.
+Eventos personalizados são adicionados automaticamente à fila de eventos na sessão sempre que são gerados. Você não precisa se inscrever neles. No entanto, se você quiser encaminhar um evento para a sessão local ou especificar uma ação para responder ao evento, use o `Register-EngineEvent` cmdlet para assinar o evento personalizado.
 
-Quando você se inscreve em um evento personalizado, o assinante do evento é adicionado à sua sessão.
-Se você cancelar a inscrição do evento usando o cmdlet Unregister-Event, o assinante do evento e o evento personalizado são excluídos da sessão.
-Se você não assinar o evento personalizado, para excluir o evento, será necessário alterar as condições do programa ou fechar a sessão do PowerShell.
+Quando você se inscreve em um evento personalizado, o assinante do evento é adicionado à sua sessão. Se você cancelar a assinatura de evento usando o `Unregister-Event` cmdlet, o Assinante de evento e o evento personalizado serão excluídos da sessão. Se você não assinar o evento personalizado, para excluir o evento, será necessário alterar as condições do programa ou fechar a sessão do PowerShell.
 
 ## EXEMPLOS
 
@@ -47,8 +44,7 @@ Se você não assinar o evento personalizado, para excluir o evento, será neces
 PS C:\> New-Event -SourceIdentifier Timer -Sender windows.timer -MessageData "Test"
 ```
 
-Esse comando cria um novo evento na fila de eventos do PowerShell.
-Ele usa um objeto **Windows. Timer** para enviar o evento.
+Esse comando cria um novo evento na fila de eventos do PowerShell. Ele usa um objeto **Windows. Timer** para enviar o evento.
 
 ### Exemplo 2: gerar um evento em resposta a outro evento
 
@@ -65,11 +61,9 @@ PS C:\> function Enable-ProcessCreationEvent
 }
 ```
 
-Esta função de exemplo usa o cmdlet **New-Event** para gerar um evento em resposta a outro evento.
-O comando usa o cmdlet Register-ObjectEvent para inscrever-se no evento do Windows Management Instrumentation (WMI) que é gerado quando um novo processo é criado.
-O comando usa o parâmetro *Action* do cmdlet para chamar o cmdlet **New-Event** , que cria o novo evento.
+Esta função de exemplo usa o `New-Event` cmdlet para gerar um evento em resposta a outro evento. O comando usa o `Register-ObjectEvent` cmdlet para assinar o evento Instrumentação de gerenciamento do Windows (WMI) que é gerado quando um novo processo é criado. O comando usa o parâmetro **Action** do cmdlet para chamar o `New-Event` cmdlet, que cria o novo evento.
 
-Como os eventos que o **novo evento** gera são automaticamente adicionados à fila de eventos do PowerShell, você não precisa se registrar para esse evento.
+Como os eventos que `New-Event` geram são automaticamente adicionados à fila de eventos do PowerShell, você não precisa se registrar para esse evento.
 
 ## PARAMETERS
 
@@ -91,8 +85,7 @@ Accept wildcard characters: False
 
 ### -MessageData
 
-Especifica os dados adicionais associados ao evento.
-O valor desse parâmetro é exibido na propriedade **MessageData** do objeto de evento.
+Especifica os dados adicionais associados ao evento. O valor desse parâmetro é exibido na propriedade **MessageData** do objeto de evento.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -108,8 +101,7 @@ Accept wildcard characters: False
 
 ### -Remetente
 
-Especifica o objeto que gera o evento.
-O padrão é o mecanismo do PowerShell.
+Especifica o objeto que gera o evento. O padrão é o mecanismo do PowerShell.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -125,8 +117,7 @@ Accept wildcard characters: False
 
 ### -SourceIdentifier
 
-Especifica um nome para o novo evento.
-Este parâmetro é obrigatório e deve ser exclusivo na sessão.
+Especifica um nome para o novo evento. Este parâmetro é obrigatório e deve ser exclusivo na sessão.
 
 O valor desse parâmetro é exibido na propriedade **SourceIdentifier** dos eventos.
 
@@ -158,7 +149,10 @@ Não é possível redirecionar a entrada para este cmdlet.
 
 ## OBSERVAÇÕES
 
-O novo evento personalizado, a inscrição do evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
+Nenhuma fonte de eventos disponível nas plataformas Linux ou macOS.
+
+O novo evento personalizado, a inscrição do evento e a fila de eventos existem apenas na sessão atual.
+Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
 
 ## LINKS RELACIONADOS
 

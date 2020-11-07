@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 3249ce91a63417f2790997d37e2420c6fcb374d8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5647f9bfa909cba9740e7be17f262b6be0e5c8e9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193967"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342919"
 ---
 # New-Service
 
@@ -177,8 +177,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica o nome do serviço.
-Este parâmetro é necessário.
+Especifica o nome do serviço. Este parâmetro é necessário.
 
 ```yaml
 Type: System.String
@@ -203,7 +202,7 @@ Define o tipo de inicialização do serviço. Os valores aceitáveis para esse p
 - **Inicialização** -indica que o serviço é um driver de dispositivo iniciado pelo carregador do sistema. Esse valor é válido somente para drivers de dispositivo.
 - **Sistema** -indica que o serviço é um driver de dispositivo iniciado pela função ' IOInitSystem () '. Esse valor é válido somente para drivers de dispositivo.
 
- O valor padrão é **automático** .
+ O valor padrão é **automático**.
 
 ```yaml
 Type: System.ServiceProcess.ServiceStartMode
@@ -236,8 +235,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -269,7 +267,7 @@ Esse cmdlet retorna um objeto que representa o novo serviço.
 
 ## OBSERVAÇÕES
 
-Para executar esse cmdlet no Windows Vista e em versões posteriores do sistema operacional Windows, inicie o PowerShell usando a opção Executar como administrador.
+Para executar esse cmdlet, inicie o PowerShell usando a opção **Executar como administrador** .
 
 Para excluir um serviço, use Sc.exe ou use o `Get-CimInstance` cmdlet para obter o **Win32_Service** objeto que representa o serviço e, em seguida, use o método **delete** para excluir o serviço. O objeto que `Get-Service` retorna não tem um método Delete.
 

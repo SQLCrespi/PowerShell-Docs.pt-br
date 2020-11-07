@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Service
-ms.openlocfilehash: edbe7f93a3bef4b82adbba6b8a39b761fa54c28e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 44d9ba20bfc8a9423b8a1e67477e95da424c43a7
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193392"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343769"
 ---
 # Restart-Service
 
@@ -44,9 +44,7 @@ Restart-Service [-Force] [-PassThru] -DisplayName <String[]> [-Include <String[]
 
 ## DESCRIPTION
 
-O cmdlet **Restart-Service** envia uma mensagem de parada e, em seguida, uma mensagem de início para o controlador de serviço do Windows para um serviço especificado.
-Se um serviço já foi interrompido, ele é iniciado sem notificá-lo de um erro.
-Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro *InputObject* para passar um objeto que representa cada serviço que você deseja reiniciar.
+O `Restart-Service` cmdlet envia uma mensagem de parada e, em seguida, uma mensagem de início para o controlador de serviço do Windows para um serviço especificado. Se um serviço já foi interrompido, ele é iniciado sem notificá-lo de um erro. Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro **InputObject** para passar um objeto que representa cada serviço que você deseja reiniciar.
 
 ## EXEMPLOS
 
@@ -74,18 +72,15 @@ PS C:\> Get-Service -Name "net*" | Where-Object {$_.Status -eq "Stopped"} | Rest
 
 Esse comando inicia todos os serviços de rede interrompidos no computador.
 
-Esse comando usa o cmdlet Get-Service para obter objetos que representam os serviços cujo nome do serviço começa com net.
-O operador de pipeline (|) envia o objeto de serviços para o cmdlet Where-Object, que seleciona apenas os serviços que têm um status de parado.
-Outro operador de pipeline envia os serviços selecionados para **Restart-Service** .
+Esse comando usa o `Get-Service` cmdlet para obter objetos que representam os serviços cujo nome do serviço começa com net. O operador de pipeline ( `|` ) envia o objeto de serviços para o `Where-Object` cmdlet, que seleciona apenas os serviços que têm um status de parado. Outro operador de pipeline envia os serviços selecionados para `Restart-Service` .
 
-Na prática, você usaria o parâmetro *WhatIf* para determinar o efeito do comando antes de executá-lo.
+Na prática, você usaria o parâmetro **WhatIf** para determinar o efeito do comando antes de executá-lo.
 
 ## PARAMETERS
 
 ### -DisplayName
 
-Especifica os nomes de exibição dos serviços a serem reiniciados.
-Caracteres curinga são permitidos.
+Especifica os nomes de exibição dos serviços a serem reiniciados. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -101,10 +96,7 @@ Accept wildcard characters: True
 
 ### -Excluir
 
-Especifica os serviços que esse cmdlet omite.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços que esse cmdlet omite. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -136,10 +128,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica os serviços que este cmdlet reinicia.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços que este cmdlet reinicia. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -155,8 +144,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Especifica objetos **ServiceController** que representam os serviços a serem reiniciados.
-Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
+Especifica objetos **ServiceController** que representam os serviços a serem reiniciados. Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -188,8 +176,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-Retorna um objeto que representa o serviço.
-Por padrão, este cmdlet não gera saída.
+Retorna um objeto que representa o serviço. Por padrão, este cmdlet não gera saída.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,8 +208,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -250,13 +236,15 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum, System. ServiceProcess. ServiceController
 
-Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço reiniciado, se você especificar o parâmetro *PassThru* .
-Caso contrário, este cmdlet não gera nenhuma saída.
+Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço reiniciado, se você especificar o parâmetro **PassThru** . Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 
-* **Restart-Service** pode controlar serviços somente quando o usuário atual tem permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
-* Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite **Get-Service** ". Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
+Esse cmdlet só está disponível em plataformas Windows.
+
+- `Restart-Service` pode controlar serviços somente quando o usuário atual tem permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
+- Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` ".
+  Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
 
 ## LINKS RELACIONADOS
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/resume-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-Service
-ms.openlocfilehash: a799326c943b09b5b9c0f9cecfdae3b64e6af409
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2d627625dec5afe6397a3fb346716adfd3fdb31c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193128"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342902"
 ---
 # Resume-Service
 
@@ -44,10 +44,7 @@ Resume-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclu
 
 ## DESCRIPTION
 
-O cmdlet **Resume-Service** envia uma mensagem de retomada para o controlador de serviço do Windows para cada um dos serviços especificados.
-Se um serviço for suspenso, ele será retomado.
-Se estiver em execução no momento, a mensagem será ignorada.
-Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro *InputObject* para passar um objeto de serviço que representa os serviços que você deseja retomar.
+O `Resume-Service` cmdlet envia uma mensagem de retomada para o controlador de serviço do Windows para cada um dos serviços especificados. Se um serviço for suspenso, ele será retomado. Se estiver em execução no momento, a mensagem será ignorada. Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro **InputObject** para passar um objeto de serviço que representa os serviços que você deseja retomar.
 
 ## EXEMPLOS
 
@@ -57,9 +54,7 @@ Você pode especificar os serviços por seus nomes de serviço ou nomes de exibi
 PS C:\> Resume-Service "sens"
 ```
 
-Esse comando retoma o serviço de notificação de eventos do sistema no computador local.
-O nome do serviço é representado no comando pelo sens.
-O comando usa o parâmetro *Name* para especificar o nome do serviço do serviço, mas o comando omite o nome do parâmetro porque o nome do parâmetro é opcional.
+Esse comando retoma o serviço de notificação de eventos do sistema no computador local. O nome do serviço é representado no comando pelo sens. O comando usa o parâmetro **Name** para especificar o nome do serviço do serviço, mas o comando omite o nome do parâmetro porque o nome do parâmetro é opcional.
 
 ### Exemplo 2: retomar todos os serviços suspensos
 
@@ -67,12 +62,9 @@ O comando usa o parâmetro *Name* para especificar o nome do serviço do serviç
 PS C:\> Get-Service | Where-Object {$_.Status -eq "Paused"} | Resume-Service
 ```
 
-Esse comando retoma todos os serviços suspensos no computador.
-O comando do cmdlet Get-Service Obtém todos os serviços no computador.
-O operador de pipeline (|) passa os resultados para o cmdlet Where-Object, que seleciona os serviços que têm uma propriedade **status** em pausa.
-O próximo operador de pipeline envia os resultados para **retomar-Service** , o que retoma os serviços em pausa.
+Esse comando retoma todos os serviços suspensos no computador. O `Get-Service` comando do cmdlet obtém todos os serviços no computador. O operador de pipeline ( `|` ) passa os resultados para o `Where-Object` cmdlet, que seleciona os serviços que têm uma propriedade **status** em pausa. O próximo operador de pipeline envia os resultados para `Resume-Service` , o que retoma os serviços em pausa.
 
-Na prática, você usaria o parâmetro *WhatIf* para determinar o efeito do comando antes de executá-lo.
+Na prática, você usaria o parâmetro **WhatIf** para determinar o efeito do comando antes de executá-lo.
 
 ## PARAMETERS
 
@@ -95,10 +87,7 @@ Accept wildcard characters: True
 
 ### -Excluir
 
-Especifica os serviços que esse cmdlet omite.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços que esse cmdlet omite. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -114,10 +103,7 @@ Accept wildcard characters: True
 
 ### -Incluir
 
-Especifica os serviços a serem retomados.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços a serem retomados. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -133,8 +119,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Especifica objetos **ServiceController** que representam os serviços a serem retomados.
-Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
+Especifica objetos **ServiceController** que representam os serviços a serem retomados. Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -166,8 +151,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Retorna um objeto que representa o serviço.
-Por padrão, este cmdlet não gera saída.
+Retorna um objeto que representa o serviço. Por padrão, este cmdlet não gera saída.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,8 +183,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -228,14 +211,16 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum, System. ServiceProcess. ServiceController
 
-Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço retomado, se você especificar o parâmetro *PassThru* .
-Caso contrário, este cmdlet não gera nenhuma saída.
+Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço retomado, se você especificar o parâmetro **PassThru** . Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 
-* O status dos serviços que foram suspensos está em pausa. Quando os serviços são retomados, seu status é em execução.
-* O **Resume-Service** pode controlar os serviços somente quando o usuário atual tem permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
-* Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` . Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
+Esse cmdlet só está disponível em plataformas Windows.
+
+- O status dos serviços que foram suspensos está em pausa. Quando os serviços são retomados, seu status é em execução.
+- `Resume-Service` pode controlar serviços somente quando o usuário atual tem permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
+- Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` .
+  Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
 
 ## LINKS RELACIONADOS
 

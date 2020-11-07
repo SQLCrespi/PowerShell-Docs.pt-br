@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/stop-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Service
-ms.openlocfilehash: 6bffe41f1efd42c686d06f59cf86b374b596d80d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 77ce507d0eaf476e2c24f41e433bd69fdcb416bb
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193904"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342562"
 ---
 # Stop-Service
 
@@ -44,8 +44,7 @@ Stop-Service [-Force] [-NoWait] [-PassThru] -DisplayName <String[]> [-Include <S
 
 ## DESCRIPTION
 
-O cmdlet **Stop-Service** envia uma mensagem de parada ao controlador de serviço do Windows para cada um dos serviços especificados.
-Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro **InputObject** para passar um objeto de serviço que representa o serviço que você deseja parar.
+O `Stop-Service` cmdlet envia uma mensagem de parada para o controlador de serviço do Windows para cada um dos serviços especificados. Você pode especificar os serviços por seus nomes de serviço ou nomes de exibição, ou pode usar o parâmetro **InputObject** para passar um objeto de serviço que representa o serviço que você deseja parar.
 
 ## EXEMPLOS
 
@@ -63,9 +62,7 @@ Esse comando para os Alertas e Logs de Desempenho (SysmonLog) do serviço no com
 PS C:\> Get-Service -DisplayName "telnet" | Stop-Service
 ```
 
-Esse comando para o serviço Telnet no computador local.
-O comando usa **Get-Service** para obter um objeto que representa o serviço Telnet.
-O operador de pipeline (|) canaliza o objeto para **Stop-Service** , o que interrompe o serviço.
+Esse comando para o serviço Telnet no computador local. O comando usa `Get-Service` para obter um objeto que representa o serviço Telnet. O operador de pipeline ( `|` ) canaliza o objeto para `Stop-Service` , o que interrompe o serviço.
 
 ### Exemplo 3: parar um serviço que tem serviços dependentes
 
@@ -74,17 +71,11 @@ PS C:\> Get-Service -Name "iisadmin" | Format-List -Property Name, DependentServ
 PS C:\> Stop-Service -Name "iisadmin" -Force -Confirm
 ```
 
-Este exemplo interrompe o serviço IISAdmin no computador local.
-Como a interrupção desse serviço também interrompe os serviços que dependem do serviço IISAdmin, é melhor preceder o **serviço Stop** com um comando que lista os serviços que dependem do serviço IISAdmin.
+Este exemplo interrompe o serviço IISAdmin no computador local. Como a interrupção desse serviço também interrompe os serviços que dependem do serviço IISAdmin, é melhor preceder `Stop-Service` um comando que lista os serviços que dependem do serviço IISAdmin.
 
-O primeiro comando lista os serviços que dependem do IISAdmin.
-Ele usa **Get-Service** para obter um objeto que representa o serviço IISAdmin.
-O operador de pipeline (|) passa o resultado para o cmdlet Format-List.
-O comando usa o parâmetro *Property* de **Format-List** para listar apenas as propriedades **Name** e **DependentServices** do serviço.
+O primeiro comando lista os serviços que dependem do IISAdmin. Ele usa `Get-Service` para obter um objeto que representa o serviço IISAdmin. O operador de pipeline ( `|` ) passa o resultado para o `Format-List` cmdlet. O comando usa o parâmetro **Property** de `Format-List` para listar apenas as propriedades **Name** e **DependentServices** do serviço.
 
-O segundo comando interrompe o serviço IISAdmin.
-O parâmetro *Force* é necessário para interromper um serviço que tem serviços dependentes.
-O comando usa o parâmetro *Confirm* para solicitar a confirmação do usuário antes de parar cada serviço.
+O segundo comando interrompe o serviço IISAdmin. O parâmetro **Force** é necessário para interromper um serviço que tem serviços dependentes. O comando usa o parâmetro **Confirm** para solicitar a confirmação do usuário antes de parar cada serviço.
 
 ## PARAMETERS
 
@@ -107,10 +98,7 @@ Accept wildcard characters: True
 
 ### -Excluir
 
-Especifica os serviços que esse cmdlet omite.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços que esse cmdlet omite. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -142,10 +130,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica os serviços que este cmdlet interrompe.
-O valor desse parâmetro qualifica o parâmetro de *nome* .
-Insira um elemento de nome ou padrão, como s *.
-Caracteres curinga são permitidos.
+Especifica os serviços que este cmdlet interrompe. O valor desse parâmetro qualifica o parâmetro de **nome** . Insira um elemento de nome ou padrão, como s *. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -161,8 +146,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Especifica objetos **ServiceController** que representam os serviços a serem interrompidos.
-Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
+Especifica objetos **ServiceController** que representam os serviços a serem interrompidos. Insira uma variável que contém os objetos ou digite um comando ou uma expressão que obtém os objetos.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -178,8 +162,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica os nomes de serviço dos serviços a serem interrompidos.
-Caracteres curinga são permitidos.
+Especifica os nomes de serviço dos serviços a serem interrompidos. Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -211,8 +194,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Retorna um objeto que representa o serviço.
-Por padrão, este cmdlet não gera saída.
+Retorna um objeto que representa o serviço. Por padrão, este cmdlet não gera saída.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -244,8 +226,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -273,20 +254,15 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum, System. ServiceProcess. ServiceController
 
-Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço, se você usar o parâmetro *PassThru* .
-Caso contrário, este cmdlet não gera nenhuma saída.
+Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço, se você usar o parâmetro **PassThru** . Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 
-* Você também pode se referir ao **Stop-Service** por seu alias interno, **spsv** . Para obter mais informações, consulte about_Aliases.
+Você também pode consultar `Stop-Service` por seu alias interno, **spsv**. Para obter mais informações, consulte about_Aliases.
 
-  O **Stop-Service** pode controlar serviços somente quando o usuário atual tem permissão para fazer isso.
-Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
+`Stop-Service` pode controlar serviços somente quando o usuário atual tem permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
 
-  Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` .
-Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
-
-*
+Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` . Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
 
 ## LINKS RELACIONADOS
 

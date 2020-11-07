@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: 7f44f1d363c5fae79722fdfb5bd894cb24e00d0c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1cbecd37217c4c0113079dfa9ac7008dd0d91823
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194804"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342222"
 ---
 # Get-Service
 
@@ -298,6 +298,8 @@ Esse cmdlet retorna objetos que representam os serviços no computador.
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 A partir do PowerShell 6,0, as seguintes propriedades são adicionadas aos objetos **ServiceController** : **username** , **Description** , **DelayedAutoStart** , **BinaryPathName** e **StartupType** .
 
 Você também pode consultar `Get-Service` por seu alias interno, `gsv` . Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
@@ -325,4 +327,3 @@ Quando você classifica em ordem crescente pelo valor da propriedade **status** 
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

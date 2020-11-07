@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-event?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Event
-ms.openlocfilehash: d8f10fd9a0244d6f6bf84d2042b188d5c73215b7
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 45d9e45bfbbeba7b9467985dc6abf3a28cd8702b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193040"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342341"
 ---
 # Get-Event
 
@@ -35,15 +35,11 @@ Get-Event [-EventIdentifier] <Int32> [<CommonParameters>]
 
 ## DESCRIPTION
 
-O cmdlet **Get-Event** obtém eventos na fila de eventos do PowerShell para a sessão atual.
-Você pode obter todos os eventos ou usar o parâmetro *EventIdentifier* ou *SourceIdentifier* para especificar os eventos.
+O `Get-Event` cmdlet obtém eventos na fila de eventos do PowerShell para a sessão atual. Você pode obter todos os eventos ou usar o parâmetro **EventIdentifier** ou **SourceIdentifier** para especificar os eventos.
 
-Quando ocorre um evento, ele é adicionado à fila de eventos.
-A fila de eventos inclui eventos para os quais você registrou, eventos criados usando o cmdlet New-Event e o evento que é gerado quando o PowerShell é encerrado.
-Você pode usar **Get-Event** ou Wait-Event para obter os eventos.
+Quando ocorre um evento, ele é adicionado à fila de eventos. A fila de eventos inclui eventos para os quais você registrou, eventos criados usando o `New-Event` cmdlet e o evento que é gerado quando o PowerShell é encerrado. Você pode usar `Get-Event` ou `Wait-Event` para obter os eventos.
 
-Esse cmdlet não recebe eventos dos logs do Event Viewer.
-Para obter esses eventos, use Get-WinEvent ou Get-EventLog.
+Esse cmdlet não recebe eventos dos logs do Event Viewer. Para obter esses eventos, use `Get-WinEvent` ou `Get-EventLog` .
 
 ## EXEMPLOS
 
@@ -90,13 +86,11 @@ MessageData      :
 
 Este exemplo mostra como obter eventos usando propriedades que não sejam SourceIdentifier.
 
-O primeiro comando obtém todos os eventos na fila de eventos e os salva na variável $Events.
+O primeiro comando obtém todos os eventos na fila de eventos e os salva na `$Events` variável.
 
-O segundo comando usa a notação de matriz para obter o primeiro evento (0-index) na matriz na variável $Events.
-O comando usa um operador de pipeline (|) para enviar o evento para o comando Format-List, que exibe todas as propriedades do evento em uma lista.
-Isso permite que você examine as propriedades do objeto de evento.
+O segundo comando usa a notação de matriz para obter o primeiro evento (0-index) na matriz na `$Events` variável. O comando usa um operador de pipeline ( `|` ) para enviar o evento para o `Format-List` comando, que exibe todas as propriedades do evento em uma lista. Isso permite que você examine as propriedades do objeto de evento.
 
-O terceiro comando mostra como usar o cmdlet Where-Object para obter um evento com base no horário em que foi gerado.
+O terceiro comando mostra como usar o `Where-Object` cmdlet para obter um evento com base no horário em que foi gerado.
 
 ### Exemplo 4: obter um evento por seu identificador
 
@@ -126,9 +120,7 @@ Accept wildcard characters: False
 
 ### -SourceIdentifier
 
-Especifica identificadores de origem para os quais este cmdlet obtém eventos.
-O padrão é todos os eventos da fila de eventos.
-Caracteres curinga não são permitidos.
+Especifica identificadores de origem para os quais este cmdlet obtém eventos. O padrão é todos os eventos da fila de eventos. Caracteres curinga não são permitidos.
 
 ```yaml
 Type: System.String
@@ -156,52 +148,34 @@ Não é possível redirecionar a entrada para este cmdlet.
 
 ### System. Management. Automation. PSEventArgs
 
-O **Get-Event** retorna um objeto **PSEventArgs** para cada evento.
-Para ver uma descrição desse objeto, digite `Get-Help Get-Event -Full` e veja a seção observações do tópico da ajuda.
+`Get-Event` Retorna um objeto **PSEventArgs** para cada evento. Para ver uma descrição desse objeto, digite `Get-Help Get-Event -Full` e veja a seção observações do tópico da ajuda.
 
 ## OBSERVAÇÕES
 
-* Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
+Nenhuma fonte de eventos disponível nas plataformas Linux ou macOS.
 
-  O cmdlet **Get-Event** retorna um objeto **PSEventArgs** ( **System. Management. Automation. PSEventArgs** ) com as seguintes propriedades:
+Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
 
-  - ComputerName.
-O nome do computador no qual o evento ocorreu.
-Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
+O `Get-Event` cmdlet retorna um objeto **PSEventArgs** ( **System. Management. Automation. PSEventArgs** ) com as seguintes propriedades:
 
-  - RunspaceId.
-Um GUID que identifica exclusivamente a sessão na qual o evento ocorreu.
-Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
+- ComputerName. O nome do computador no qual o evento ocorreu. Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
 
-  - EventIdentifier.
-Um inteiro (Int32) que identifica exclusivamente a notificação de eventos na sessão atual.
+- RunspaceId. Um GUID que identifica exclusivamente a sessão na qual o evento ocorreu. Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
 
-  - Sender.
-O objeto que gerou o evento.
-No valor do parâmetro *Action* , a variável automática $Sender contém o objeto Sender.
+- EventIdentifier. Um inteiro (Int32) que identifica exclusivamente a notificação de eventos na sessão atual.
 
-  - Origemeventargs.
-O primeiro parâmetro deriva de EventArgs, se ele existir.
-Por exemplo, em um evento decorrido de temporizador no qual a assinatura tem o formulário object sender, Timers. ElapsedEventArgs e, a propriedade SourceEventArgs conterá os timers. ElapsedEventArgs.
-No valor do parâmetro *Action* , a variável automática $EventArgs contém esse valor.
+- Sender. O objeto que gerou o evento. No valor do parâmetro **Action** , a `$Sender` variável automática contém o objeto Sender.
 
-  - SourceArgs.
-Todos os parâmetros da assinatura do evento original.
-Para uma assinatura de evento padrão, $Args \[ 0 \] representa o remetente e $args \[ 1 \] representa a origemeventargs.
-No valor do parâmetro *Action* , a variável automática $args contém esse valor.
+- Origemeventargs. O primeiro parâmetro deriva de EventArgs, se ele existir. Por exemplo, em um evento decorrido de temporizador no qual a assinatura tem o formulário object sender, **Timers. ElapsedEventArgs** e, a propriedade **SourceEventArgs** conterá os **Timers. ElapsedEventArgs**. No valor do parâmetro **Action** , a `$EventArgs` variável automática contém esse valor.
 
-  - SourceIdentifier.
-Uma cadeia de caracteres que identifica a inscrição do evento.
-No valor do parâmetro *Action* , a propriedade SourceIdentifier da variável automática $Event contém esse valor.
+- SourceArgs. Todos os parâmetros da assinatura do evento original. Para uma assinatura de evento padrão, `$Args[0]` representa o remetente e `$Args[1]` representa a **origemeventargs**. No valor do parâmetro **Action** , a `$Args` variável automática contém esse valor.
 
-  - TimeGenerated.
-Um objeto **DateTime** que representa a hora em que o evento foi gerado.
-No valor do parâmetro *Action* , a Propriedade TimeGenerated da variável automática $Event contém esse valor.
+- SourceIdentifier. Uma cadeia de caracteres que identifica a inscrição do evento. No valor do parâmetro **Action** , a propriedade **SourceIdentifier** da `$Event` variável Automatic contém esse valor.
 
-  - MessageData.
-Dados associados a inscrição do evento.
-Os usuários especificam esses dados quando registram um evento.
-No valor do parâmetro *Action* , a propriedade MessageData da variável automática $Event contém esse valor.
+- TimeGenerated. Um objeto **DateTime** que representa a hora em que o evento foi gerado.
+  No valor do parâmetro **Action** , a propriedade **TimeGenerated** da `$Event` variável Automatic contém esse valor.
+
+- MessageData. Dados associados a inscrição do evento. Os usuários especificam esses dados quando registram um evento. No valor do parâmetro **Action** , a propriedade **MessageData** da `$Event` variável Automatic contém esse valor.
 
 ## LINKS RELACIONADOS
 

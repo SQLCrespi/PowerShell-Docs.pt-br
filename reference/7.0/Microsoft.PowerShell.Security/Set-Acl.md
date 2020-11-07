@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Acl
-ms.openlocfilehash: 3c8f26884ac0eda1ece799bbd49a7863b6d2239c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 56a9625a42062cf787f0c92aaa319a0a344b5919
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193124"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342528"
 ---
 # Set-Acl
 
@@ -46,7 +46,7 @@ Set-Acl -LiteralPath <String[]> [-AclObject] <Object> [-ClearCentralAccessPolicy
 
 O `Set-Acl` cmdlet altera o descritor de segurança de um item especificado, como um arquivo ou uma chave do registro, para corresponder aos valores em um descritor de segurança fornecido por você.
 
-Para usar `Set-Acl` , use o **caminho** ou o parâmetro **InputObject** para identificar o item cujo descritor de segurança você deseja alterar. Em seguida, use os parâmetros **AclObject** ou **SecurityDescriptor** para fornecer um descritor de segurança com os valores que deseja aplicar. `Set-Acl` aplica o descritor de segurança fornecido. Ele usa o valor do parâmetro **AclObject** como um modelo e altera os valores no descritor de segurança do item para que correspondam aos valores do parâmetro **AclObject** .
+Para usar `Set-Acl` , use o **caminho** ou o parâmetro **InputObject** para identificar o item cujo descritor de segurança você deseja alterar. Em seguida, use os parâmetros **AclObject** ou **SecurityDescriptor** para fornecer um descritor de segurança com os valores que deseja aplicar. `Set-Acl` aplica o descritor de segurança fornecido. Ele usa o valor do parâmetro **AclObject** como um modelo e altera os valores no descritor de segurança do item para que correspondam aos valores do parâmetro **AclObject**.
 
 ## EXEMPLOS
 
@@ -135,11 +135,9 @@ Esse comando concederá ao grupo **BUILTIN\Administradores** controle total do a
 
 O primeiro comando usa o `Get-Acl` cmdlet para obter o descritor de segurança do arquivo de Dog.txt.
 
-As variáveis seguintes são criadas para conceder ao grupo **BUILTIN\Administradores** controle total do arquivo de Dog.txt. A `$identity` variável definida como o nome de uma [conta de usuário](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor).
-A `$fileSystemRights` variável definida como FullControl e pode ser qualquer um dos valores de [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) que especifica o tipo de operação associado à regra de acesso. A `$type` variável definida como "Allow" especifica se a operação deve ser permitida ou negada. A `$fileSystemAccessRuleArgumentList` variável é uma lista de argumentos que deve ser passada ao fazer o novo objeto **FileSystemAccessRule** . Em seguida, um novo objeto **FileSystemAccessRule** é criado e o objeto **FileSystemAccessRule** é passado para o método **SetAccessRule ()** , adiciona a nova regra de acesso.
+As variáveis seguintes são criadas para conceder ao grupo **BUILTIN\Administradores** controle total do arquivo de Dog.txt. A `$identity` variável definida como o nome de uma [conta de usuário](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor). A `$fileSystemRights` variável definida como FullControl e pode ser qualquer um dos valores de [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) que especifica o tipo de operação associado à regra de acesso. A `$type` variável definida como "Allow" especifica se a operação deve ser permitida ou negada. A `$fileSystemAccessRuleArgumentList` variável é uma lista de argumentos que deve ser passada ao fazer o novo objeto **FileSystemAccessRule** . Em seguida, um novo objeto **FileSystemAccessRule** é criado e o objeto **FileSystemAccessRule** é passado para o método **SetAccessRule ()** , adiciona a nova regra de acesso.
 
-O último comando usa `Set-Acl` para aplicar o descritor de segurança do ao Dog.txt.
-Quando o comando for concluído, o grupo **BUILTIN\Administradores** terá controle total da Dog.txt.
+O último comando usa `Set-Acl` para aplicar o descritor de segurança do ao Dog.txt. Quando o comando for concluído, o grupo **BUILTIN\Administradores** terá controle total da Dog.txt.
 
 ## PARAMETERS
 
@@ -183,7 +181,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Omite os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
+Omite os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -199,7 +197,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Especifica um filtro no formato ou linguagem do provedor. O valor deste parâmetro qualifica o parâmetro **Path** . A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor. Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao recuperar os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
+Especifica um filtro no formato ou linguagem do provedor. O valor deste parâmetro qualifica o parâmetro **Path**. A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor. Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao recuperar os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
 
 ```yaml
 Type: System.String
@@ -215,7 +213,7 @@ Accept wildcard characters: True
 
 ### -Incluir
 
-Altera somente os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path** .
+Altera somente os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path**.
 Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
 
 ```yaml
@@ -349,13 +347,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### System. Security. AccessControl. FileSecurity
 
-Por padrão, `Set-Acl` o não gera nenhuma saída.
-No entanto, se usar o parâmetro **Passthru** , ele gera um objeto de segurança.
-O tipo do objeto de segurança depende do tipo do item.
+Por padrão, `Set-Acl` o não gera nenhuma saída. No entanto, se usar o parâmetro **Passthru** , ele gera um objeto de segurança. O tipo do objeto de segurança depende do tipo do item.
 
 ## OBSERVAÇÕES
 
- O `Set-Acl` cmdlet é suportado pelo sistema de arquivos do PowerShell e pelos provedores de registro. Dessa forma, você pode usá-lo para alterar os descritores de segurança dos arquivos, diretórios e chaves do registro.
+Esse cmdlet só está disponível em plataformas Windows.
+
+O `Set-Acl` cmdlet é suportado pelo sistema de arquivos do PowerShell e pelos provedores de registro. Dessa forma, você pode usá-lo para alterar os descritores de segurança dos arquivos, diretórios e chaves do registro.
 
 ## LINKS RELACIONADOS
 

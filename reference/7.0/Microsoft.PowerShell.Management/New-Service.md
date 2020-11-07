@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 17b28b14a9610dd48a03cc8c654806e75d3d97e3
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 0963e90f1f994a9bd6f3f61e80bf56eebff09384
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193055"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343106"
 ---
 # New-Service
 
@@ -186,8 +186,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica o nome do serviço.
-Este parâmetro é necessário.
+Especifica o nome do serviço. Este parâmetro é necessário.
 
 ```yaml
 Type: System.String
@@ -212,7 +211,7 @@ Define o tipo de inicialização do serviço. Os valores aceitáveis para esse p
 - **Inválidos** -esse valor não tem suporte. O uso desse valor resulta em um erro.
 - **Manual** -o serviço é iniciado apenas manualmente, por um usuário, usando o Gerenciador de controle de serviço ou por um aplicativo.
 
- O valor padrão é **automático** .
+ O valor padrão é **automático**.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ServiceStartupType
@@ -261,8 +260,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -294,7 +292,9 @@ Esse cmdlet retorna um objeto que representa o novo serviço.
 
 ## OBSERVAÇÕES
 
-Para executar esse cmdlet no Windows Vista e em versões posteriores do sistema operacional Windows, inicie o PowerShell usando a opção Executar como administrador.
+Esse cmdlet só está disponível em plataformas Windows.
+
+Para executar esse cmdlet, inicie o PowerShell usando a opção **Executar como administrador** .
 
 ## LINKS RELACIONADOS
 

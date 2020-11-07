@@ -7,17 +7,16 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 128405fdbcf0c1d059287191850ffdca53278ec1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8f5e11fca51bf92386c19a77fa9a66503b2d47a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193866"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343230"
 ---
 # Test-FileCatalog
 
 ## SINOPSE
-
 `Test-FileCatalog` Valida se os hashes contidos em um arquivo de catálogo (. cat) correspondem aos hashes dos arquivos reais a fim de validar sua autenticidade.
 
 Só há suporte para esse cmdlet no Windows.
@@ -31,10 +30,7 @@ Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <Strin
 
 ## DESCRIPTION
 
-`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco.
-Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed. Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed.
-Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo.
-Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.
+`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco. Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed. Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed. Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo. Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.
 
 Só há suporte para esse cmdlet no Windows.
 
@@ -154,8 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
