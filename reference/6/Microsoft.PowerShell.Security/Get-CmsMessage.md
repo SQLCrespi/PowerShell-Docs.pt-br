@@ -7,54 +7,54 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-cmsmessage?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CmsMessage
-ms.openlocfilehash: 30e70549b648f7fb63bb250744cf52f0979c201f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fcc4305ee5a7198f78eb7b6ce735cf45b90bbf6f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194063"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344840"
 ---
-# <span data-ttu-id="353a8-103">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="353a8-103">Get-CmsMessage</span></span>
+# <span data-ttu-id="8b524-103">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="8b524-103">Get-CmsMessage</span></span>
 
-## <span data-ttu-id="353a8-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="353a8-104">SYNOPSIS</span></span>
-<span data-ttu-id="353a8-105">Obtém o conteúdo que foi criptografado usando o formato de sintaxe da mensagem criptográfica.</span><span class="sxs-lookup"><span data-stu-id="353a8-105">Gets content that has been encrypted by using the Cryptographic Message Syntax format.</span></span>
+## <span data-ttu-id="8b524-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="8b524-104">SYNOPSIS</span></span>
+<span data-ttu-id="8b524-105">Obtém o conteúdo que foi criptografado usando o formato de sintaxe da mensagem criptográfica.</span><span class="sxs-lookup"><span data-stu-id="8b524-105">Gets content that has been encrypted by using the Cryptographic Message Syntax format.</span></span>
 
-## <span data-ttu-id="353a8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="353a8-106">SYNTAX</span></span>
+## <span data-ttu-id="8b524-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8b524-106">SYNTAX</span></span>
 
-### <span data-ttu-id="353a8-107">ByContent</span><span class="sxs-lookup"><span data-stu-id="353a8-107">ByContent</span></span>
+### <span data-ttu-id="8b524-107">ByContent</span><span class="sxs-lookup"><span data-stu-id="8b524-107">ByContent</span></span>
 
 ```
 Get-CmsMessage [-Content] <String> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="353a8-108">ByPath</span><span class="sxs-lookup"><span data-stu-id="353a8-108">ByPath</span></span>
+### <span data-ttu-id="8b524-108">ByPath</span><span class="sxs-lookup"><span data-stu-id="8b524-108">ByPath</span></span>
 
 ```
 Get-CmsMessage [-Path] <String> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="353a8-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="353a8-109">ByLiteralPath</span></span>
+### <span data-ttu-id="8b524-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="8b524-109">ByLiteralPath</span></span>
 
 ```
 Get-CmsMessage [-LiteralPath] <String> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="353a8-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="353a8-110">DESCRIPTION</span></span>
+## <span data-ttu-id="8b524-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8b524-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="353a8-111">O `Get-CmsMessage` cmdlet obtém o conteúdo que foi criptografado usando o formato CMS (sintaxe de mensagem criptografada).</span><span class="sxs-lookup"><span data-stu-id="353a8-111">The `Get-CmsMessage` cmdlet gets content that has been encrypted using the Cryptographic Message Syntax (CMS) format.</span></span>
+<span data-ttu-id="8b524-111">O `Get-CmsMessage` cmdlet obtém o conteúdo que foi criptografado usando o formato CMS (sintaxe de mensagem criptografada).</span><span class="sxs-lookup"><span data-stu-id="8b524-111">The `Get-CmsMessage` cmdlet gets content that has been encrypted using the Cryptographic Message Syntax (CMS) format.</span></span>
 
-<span data-ttu-id="353a8-112">Os cmdlets CMS dão suporte à criptografia e descriptografia de conteúdo usando o formato IETF para proteger as mensagens criptograficamente, conforme documentado por [RFC5652](https://tools.ietf.org/html/rfc5652).</span><span class="sxs-lookup"><span data-stu-id="353a8-112">The CMS cmdlets support encryption and decryption of content using the IETF format for cryptographically protecting messages, as documented by [RFC5652](https://tools.ietf.org/html/rfc5652).</span></span>
+<span data-ttu-id="8b524-112">Os cmdlets CMS dão suporte à criptografia e descriptografia de conteúdo usando o formato IETF para proteger as mensagens criptograficamente, conforme documentado por [RFC5652](https://tools.ietf.org/html/rfc5652).</span><span class="sxs-lookup"><span data-stu-id="8b524-112">The CMS cmdlets support encryption and decryption of content using the IETF format for cryptographically protecting messages, as documented by [RFC5652](https://tools.ietf.org/html/rfc5652).</span></span>
 
-<span data-ttu-id="353a8-113">O padrão de criptografia do CMS usa criptografia de chave pública, em que as chaves usadas para criptografar conteúdo (a chave pública) e as chaves usadas para descriptografar conteúdo (a chave privada) são separadas.</span><span class="sxs-lookup"><span data-stu-id="353a8-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="353a8-114">Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais.</span><span class="sxs-lookup"><span data-stu-id="353a8-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="353a8-115">Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo.</span><span class="sxs-lookup"><span data-stu-id="353a8-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="353a8-116">Para obter mais informações, consulte [Criptografia por chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).</span><span class="sxs-lookup"><span data-stu-id="353a8-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
+<span data-ttu-id="8b524-113">O padrão de criptografia do CMS usa criptografia de chave pública, em que as chaves usadas para criptografar conteúdo (a chave pública) e as chaves usadas para descriptografar conteúdo (a chave privada) são separadas.</span><span class="sxs-lookup"><span data-stu-id="8b524-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="8b524-114">Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais.</span><span class="sxs-lookup"><span data-stu-id="8b524-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="8b524-115">Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo.</span><span class="sxs-lookup"><span data-stu-id="8b524-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="8b524-116">Para obter mais informações, consulte [Criptografia por chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).</span><span class="sxs-lookup"><span data-stu-id="8b524-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
 
-<span data-ttu-id="353a8-117">`Get-CmsMessage` Obtém o conteúdo que foi criptografado no formato CMS.</span><span class="sxs-lookup"><span data-stu-id="353a8-117">`Get-CmsMessage` gets content that has been encrypted in CMS format.</span></span> <span data-ttu-id="353a8-118">Ele não descriptografa nem desprotege o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="353a8-118">It does not decrypt or unprotect content.</span></span> <span data-ttu-id="353a8-119">Você pode executar este cmdlet para obter o conteúdo que você criptografou executando o `Protect-CmsMessage` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="353a8-119">You can run this cmdlet to get content that you have encrypted by running the `Protect-CmsMessage` cmdlet.</span></span> <span data-ttu-id="353a8-120">Você pode especificar o conteúdo que deseja descriptografar como uma cadeia de caracteres ou por caminho para o conteúdo criptografado.</span><span class="sxs-lookup"><span data-stu-id="353a8-120">You can specify content that you want to decrypt as a string, or by path to the encrypted content.</span></span> <span data-ttu-id="353a8-121">É possível canalizar os resultados de `Get-CmsMessage` para `Unprotect-CmsMessage` para descriptografar o conteúdo, desde que você tenha informações sobre o certificado de criptografia do documento que foi usado para criptografar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="353a8-121">You can pipe the results of `Get-CmsMessage` to `Unprotect-CmsMessage` to decrypt the content, provided that you have information about the document encryption certificate that was used to encrypt the content.</span></span>
+<span data-ttu-id="8b524-117">`Get-CmsMessage` Obtém o conteúdo que foi criptografado no formato CMS.</span><span class="sxs-lookup"><span data-stu-id="8b524-117">`Get-CmsMessage` gets content that has been encrypted in CMS format.</span></span> <span data-ttu-id="8b524-118">Ele não descriptografa nem desprotege o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="8b524-118">It does not decrypt or unprotect content.</span></span> <span data-ttu-id="8b524-119">Você pode executar este cmdlet para obter o conteúdo que você criptografou executando o `Protect-CmsMessage` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="8b524-119">You can run this cmdlet to get content that you have encrypted by running the `Protect-CmsMessage` cmdlet.</span></span> <span data-ttu-id="8b524-120">Você pode especificar o conteúdo que deseja descriptografar como uma cadeia de caracteres ou por caminho para o conteúdo criptografado.</span><span class="sxs-lookup"><span data-stu-id="8b524-120">You can specify content that you want to decrypt as a string, or by path to the encrypted content.</span></span> <span data-ttu-id="8b524-121">É possível canalizar os resultados de `Get-CmsMessage` para `Unprotect-CmsMessage` para descriptografar o conteúdo, desde que você tenha informações sobre o certificado de criptografia do documento que foi usado para criptografar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="8b524-121">You can pipe the results of `Get-CmsMessage` to `Unprotect-CmsMessage` to decrypt the content, provided that you have information about the document encryption certificate that was used to encrypt the content.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="353a8-122">Esse cmdlet só está disponível no Windows.</span><span class="sxs-lookup"><span data-stu-id="353a8-122">This cmdlet is only available on Windows.</span></span>
+> <span data-ttu-id="8b524-122">Esse cmdlet só está disponível no Windows.</span><span class="sxs-lookup"><span data-stu-id="8b524-122">This cmdlet is only available on Windows.</span></span>
 
-## <span data-ttu-id="353a8-123">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="353a8-123">EXAMPLES</span></span>
+## <span data-ttu-id="8b524-123">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="8b524-123">EXAMPLES</span></span>
 
-### <span data-ttu-id="353a8-124">Exemplo 1: obter conteúdo criptografado</span><span class="sxs-lookup"><span data-stu-id="353a8-124">Example 1: Get encrypted content</span></span>
+### <span data-ttu-id="8b524-124">Exemplo 1: obter conteúdo criptografado</span><span class="sxs-lookup"><span data-stu-id="8b524-124">Example 1: Get encrypted content</span></span>
 
 ```powershell
 $Msg = Get-CmsMessage -Path "C:\Users\Test\Documents\PowerShell\Future_Plans.txt"
@@ -74,9 +74,9 @@ KMnBoD1dkb/FzSWAEBaL8xkFwCu0e1AtDj7nSJc=
 -----END CMS-----
 ```
 
-<span data-ttu-id="353a8-125">Este comando obtém o conteúdo criptografado localizado em C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span><span class="sxs-lookup"><span data-stu-id="353a8-125">This command gets encrypted content located at C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span></span>
+<span data-ttu-id="8b524-125">Este comando obtém o conteúdo criptografado localizado em C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span><span class="sxs-lookup"><span data-stu-id="8b524-125">This command gets encrypted content located at C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span></span>
 
-### <span data-ttu-id="353a8-126">Exemplo 2: direcionar conteúdo criptografado para Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="353a8-126">Example 2: Pipe encrypted content to Unprotect-CmsMessage</span></span>
+### <span data-ttu-id="8b524-126">Exemplo 2: direcionar conteúdo criptografado para Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="8b524-126">Example 2: Pipe encrypted content to Unprotect-CmsMessage</span></span>
 
 ```powershell
 $Msg = Get-CmsMessage -Path "C:\Users\Test\Documents\PowerShell\Future_Plans.txt"
@@ -87,13 +87,13 @@ $Msg | Unprotect-CmsMessage -To "cn=youralias@emailaddress.com"
 Try the new Break All command
 ```
 
-<span data-ttu-id="353a8-127">Esse comando canaliza os resultados do `Get-CmsMessage` cmdlet do exemplo 1 para `Unprotect-CmsMessage` , para descriptografar a mensagem e lê-la em texto sem formatação.</span><span class="sxs-lookup"><span data-stu-id="353a8-127">This command pipes the results of the `Get-CmsMessage` cmdlet from Example 1 to `Unprotect-CmsMessage`, to decrypt the message and read it in plain text.</span></span> <span data-ttu-id="353a8-128">Nesse caso, o valor do parâmetro **to** é o valor da linha de assunto do certificado de criptografia.</span><span class="sxs-lookup"><span data-stu-id="353a8-128">In this case, the value of the **To** parameter is the value of the encrypting certificate's Subject line.</span></span> <span data-ttu-id="353a8-129">A mensagem descriptografada, "Experimente o comando interromper tudo", é o resultado.</span><span class="sxs-lookup"><span data-stu-id="353a8-129">The decrypted message, "Try the new Break All command," is the result.</span></span>
+<span data-ttu-id="8b524-127">Esse comando canaliza os resultados do `Get-CmsMessage` cmdlet do exemplo 1 para `Unprotect-CmsMessage` , para descriptografar a mensagem e lê-la em texto sem formatação.</span><span class="sxs-lookup"><span data-stu-id="8b524-127">This command pipes the results of the `Get-CmsMessage` cmdlet from Example 1 to `Unprotect-CmsMessage`, to decrypt the message and read it in plain text.</span></span> <span data-ttu-id="8b524-128">Nesse caso, o valor do parâmetro **to** é o valor da linha de assunto do certificado de criptografia.</span><span class="sxs-lookup"><span data-stu-id="8b524-128">In this case, the value of the **To** parameter is the value of the encrypting certificate's Subject line.</span></span> <span data-ttu-id="8b524-129">A mensagem descriptografada, "Experimente o comando interromper tudo", é o resultado.</span><span class="sxs-lookup"><span data-stu-id="8b524-129">The decrypted message, "Try the new Break All command," is the result.</span></span>
 
-## <span data-ttu-id="353a8-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="353a8-130">PARAMETERS</span></span>
+## <span data-ttu-id="8b524-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8b524-130">PARAMETERS</span></span>
 
-### <span data-ttu-id="353a8-131">-Conteúdo</span><span class="sxs-lookup"><span data-stu-id="353a8-131">-Content</span></span>
+### <span data-ttu-id="8b524-131">-Conteúdo</span><span class="sxs-lookup"><span data-stu-id="8b524-131">-Content</span></span>
 
-<span data-ttu-id="353a8-132">Especifica uma cadeia de caracteres criptografada ou uma variável que contém uma cadeia de caracteres criptografada.</span><span class="sxs-lookup"><span data-stu-id="353a8-132">Specifies an encrypted string, or a variable containing an encrypted string.</span></span>
+<span data-ttu-id="8b524-132">Especifica uma cadeia de caracteres criptografada ou uma variável que contém uma cadeia de caracteres criptografada.</span><span class="sxs-lookup"><span data-stu-id="8b524-132">Specifies an encrypted string, or a variable containing an encrypted string.</span></span>
 
 ```yaml
 Type: System.String
@@ -107,10 +107,10 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="353a8-133">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="353a8-133">-LiteralPath</span></span>
+### <span data-ttu-id="8b524-133">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="8b524-133">-LiteralPath</span></span>
 
-<span data-ttu-id="353a8-134">Especifica o caminho para o conteúdo criptografado que você deseja obter.</span><span class="sxs-lookup"><span data-stu-id="353a8-134">Specifies the path to encrypted content that you want to get.</span></span> <span data-ttu-id="353a8-135">Ao contrário de **Path** , o valor de **LiteralPath** é usado exatamente como digitado.</span><span class="sxs-lookup"><span data-stu-id="353a8-135">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="353a8-136">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="353a8-136">No characters are interpreted as wildcard characters.</span></span> <span data-ttu-id="353a8-137">Se o caminho incluir caracteres de escape, coloque cada um entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="353a8-137">If the path includes escape characters, enclose each one in single quotation marks.</span></span>
-<span data-ttu-id="353a8-138">Aspas simples instruem o PowerShell a não interpretar caracteres incluídos como caracteres de escape.</span><span class="sxs-lookup"><span data-stu-id="353a8-138">Single quotation marks tell PowerShell not to interpret enclosed characters as escape characters.</span></span>
+<span data-ttu-id="8b524-134">Especifica o caminho para o conteúdo criptografado que você deseja obter.</span><span class="sxs-lookup"><span data-stu-id="8b524-134">Specifies the path to encrypted content that you want to get.</span></span> <span data-ttu-id="8b524-135">Ao contrário de **Path** , o valor de **LiteralPath** é usado exatamente como digitado.</span><span class="sxs-lookup"><span data-stu-id="8b524-135">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="8b524-136">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="8b524-136">No characters are interpreted as wildcard characters.</span></span> <span data-ttu-id="8b524-137">Se o caminho incluir caracteres de escape, coloque cada um entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="8b524-137">If the path includes escape characters, enclose each one in single quotation marks.</span></span>
+<span data-ttu-id="8b524-138">Aspas simples instruem o PowerShell a não interpretar caracteres incluídos como caracteres de escape.</span><span class="sxs-lookup"><span data-stu-id="8b524-138">Single quotation marks tell PowerShell not to interpret enclosed characters as escape characters.</span></span>
 
 ```yaml
 Type: System.String
@@ -124,9 +124,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="353a8-139">-Path</span><span class="sxs-lookup"><span data-stu-id="353a8-139">-Path</span></span>
+### <span data-ttu-id="8b524-139">-Path</span><span class="sxs-lookup"><span data-stu-id="8b524-139">-Path</span></span>
 
-<span data-ttu-id="353a8-140">Especifica o caminho para o conteúdo criptografado que você deseja descriptografar.</span><span class="sxs-lookup"><span data-stu-id="353a8-140">Specifies the path to encrypted content that you want to decrypt.</span></span>
+<span data-ttu-id="8b524-140">Especifica o caminho para o conteúdo criptografado que você deseja descriptografar.</span><span class="sxs-lookup"><span data-stu-id="8b524-140">Specifies the path to encrypted content that you want to decrypt.</span></span>
 
 ```yaml
 Type: System.String
@@ -140,20 +140,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="353a8-141">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="353a8-141">CommonParameters</span></span>
+### <span data-ttu-id="8b524-141">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8b524-141">CommonParameters</span></span>
 
-<span data-ttu-id="353a8-142">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="353a8-142">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="353a8-143">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="353a8-143">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="8b524-142">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8b524-142">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8b524-143">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8b524-143">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="353a8-144">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="353a8-144">INPUTS</span></span>
+## <span data-ttu-id="8b524-144">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="8b524-144">INPUTS</span></span>
 
-## <span data-ttu-id="353a8-145">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="353a8-145">OUTPUTS</span></span>
+## <span data-ttu-id="8b524-145">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="8b524-145">OUTPUTS</span></span>
 
-## <span data-ttu-id="353a8-146">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="353a8-146">NOTES</span></span>
+## <span data-ttu-id="8b524-146">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="8b524-146">NOTES</span></span>
 
-## <span data-ttu-id="353a8-147">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="353a8-147">RELATED LINKS</span></span>
+<span data-ttu-id="8b524-147">Esse cmdlet só está disponível em plataformas Windows.</span><span class="sxs-lookup"><span data-stu-id="8b524-147">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="353a8-148">about_Providers</span><span class="sxs-lookup"><span data-stu-id="353a8-148">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
+## <span data-ttu-id="8b524-148">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="8b524-148">RELATED LINKS</span></span>
 
-[<span data-ttu-id="353a8-149">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="353a8-149">Protect-CmsMessage</span></span>](Protect-CmsMessage.md)
+[<span data-ttu-id="8b524-149">about_Providers</span><span class="sxs-lookup"><span data-stu-id="8b524-149">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
 
-[<span data-ttu-id="353a8-150">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="353a8-150">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)
+[<span data-ttu-id="8b524-150">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="8b524-150">Protect-CmsMessage</span></span>](Protect-CmsMessage.md)
+
+[<span data-ttu-id="8b524-151">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="8b524-151">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)

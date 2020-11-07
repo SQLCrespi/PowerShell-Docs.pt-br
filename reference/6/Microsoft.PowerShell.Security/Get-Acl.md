@@ -7,105 +7,105 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: 018a1da2a3fd40a95d378a563cacd68a734d9cd6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: be190b4cb0c18bdbf6a868f9116ea9bcdba441c3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194594"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344993"
 ---
-# <span data-ttu-id="295b9-103">Get-Acl</span><span class="sxs-lookup"><span data-stu-id="295b9-103">Get-Acl</span></span>
+# <span data-ttu-id="8f099-103">Get-Acl</span><span class="sxs-lookup"><span data-stu-id="8f099-103">Get-Acl</span></span>
 
-## <span data-ttu-id="295b9-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="295b9-104">SYNOPSIS</span></span>
-<span data-ttu-id="295b9-105">Obtém o descritor de segurança para um recurso, como um arquivo ou chave do registro.</span><span class="sxs-lookup"><span data-stu-id="295b9-105">Gets the security descriptor for a resource, such as a file or registry key.</span></span>
+## <span data-ttu-id="8f099-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="8f099-104">SYNOPSIS</span></span>
+<span data-ttu-id="8f099-105">Obtém o descritor de segurança para um recurso, como um arquivo ou chave do registro.</span><span class="sxs-lookup"><span data-stu-id="8f099-105">Gets the security descriptor for a resource, such as a file or registry key.</span></span>
 
-## <span data-ttu-id="295b9-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="295b9-106">SYNTAX</span></span>
+## <span data-ttu-id="8f099-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8f099-106">SYNTAX</span></span>
 
-### <span data-ttu-id="295b9-107">ByPath (padrão)</span><span class="sxs-lookup"><span data-stu-id="295b9-107">ByPath (Default)</span></span>
+### <span data-ttu-id="8f099-107">ByPath (padrão)</span><span class="sxs-lookup"><span data-stu-id="8f099-107">ByPath (Default)</span></span>
 
 ```
 Get-Acl [[-Path] <String[]>] [-Audit] [-Filter <String>] [-Include <String[]>] [-Exclude <String[]>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="295b9-108">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="295b9-108">ByInputObject</span></span>
+### <span data-ttu-id="8f099-108">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="8f099-108">ByInputObject</span></span>
 
 ```
 Get-Acl -InputObject <PSObject> [-Audit] [-Filter <String>] [-Include <String[]>]
  [-Exclude <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="295b9-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="295b9-109">ByLiteralPath</span></span>
+### <span data-ttu-id="8f099-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="8f099-109">ByLiteralPath</span></span>
 
 ```
 Get-Acl [-LiteralPath <String[]>] [-Audit] [-Filter <String>] [-Include <String[]>]
  [-Exclude <String[]>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="295b9-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="295b9-110">DESCRIPTION</span></span>
+## <span data-ttu-id="8f099-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8f099-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="295b9-111">O `Get-Acl` cmdlet obtém objetos que representam o descritor de segurança de um arquivo ou recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-111">The `Get-Acl` cmdlet gets objects that represent the security descriptor of a file or resource.</span></span> <span data-ttu-id="295b9-112">O descritor de segurança contém as listas de controle de acesso (ACLs) do recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-112">The security descriptor contains the access control lists (ACLs) of the resource.</span></span> <span data-ttu-id="295b9-113">A ACL especifica as permissões que os usuários e grupos de usuários têm para acessar o recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-113">The ACL specifies the permissions that users and user groups have to access the resource.</span></span>
+<span data-ttu-id="8f099-111">O `Get-Acl` cmdlet obtém objetos que representam o descritor de segurança de um arquivo ou recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-111">The `Get-Acl` cmdlet gets objects that represent the security descriptor of a file or resource.</span></span> <span data-ttu-id="8f099-112">O descritor de segurança contém as listas de controle de acesso (ACLs) do recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-112">The security descriptor contains the access control lists (ACLs) of the resource.</span></span> <span data-ttu-id="8f099-113">A ACL especifica as permissões que os usuários e grupos de usuários têm para acessar o recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-113">The ACL specifies the permissions that users and user groups have to access the resource.</span></span>
 
-<span data-ttu-id="295b9-114">A partir do Windows PowerShell 3,0, você pode usar o parâmetro **InputObject** de `Get-Acl` para obter o descritor de segurança de objetos que não têm um caminho.</span><span class="sxs-lookup"><span data-stu-id="295b9-114">Beginning in Windows PowerShell 3.0, you can use the **InputObject** parameter of `Get-Acl` to get the security descriptor of objects that do not have a path.</span></span>
+<span data-ttu-id="8f099-114">A partir do Windows PowerShell 3,0, você pode usar o parâmetro **InputObject** de `Get-Acl` para obter o descritor de segurança de objetos que não têm um caminho.</span><span class="sxs-lookup"><span data-stu-id="8f099-114">Beginning in Windows PowerShell 3.0, you can use the **InputObject** parameter of `Get-Acl` to get the security descriptor of objects that do not have a path.</span></span>
 
-## <span data-ttu-id="295b9-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="295b9-115">EXAMPLES</span></span>
+## <span data-ttu-id="8f099-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="8f099-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="295b9-116">Exemplo 1-obter uma ACL para uma pasta</span><span class="sxs-lookup"><span data-stu-id="295b9-116">Example 1- Get an ACL for a folder</span></span>
+### <span data-ttu-id="8f099-116">Exemplo 1-obter uma ACL para uma pasta</span><span class="sxs-lookup"><span data-stu-id="8f099-116">Example 1- Get an ACL for a folder</span></span>
 
-<span data-ttu-id="295b9-117">Este exemplo obtém o descritor de segurança do `C:\Windows` diretório.</span><span class="sxs-lookup"><span data-stu-id="295b9-117">This example gets the security descriptor of the `C:\Windows` directory.</span></span>
+<span data-ttu-id="8f099-117">Este exemplo obtém o descritor de segurança do `C:\Windows` diretório.</span><span class="sxs-lookup"><span data-stu-id="8f099-117">This example gets the security descriptor of the `C:\Windows` directory.</span></span>
 
 ```powershell
 Get-Acl C:\Windows
 ```
 
-### <span data-ttu-id="295b9-118">Exemplo 2-obter uma ACL para uma pasta usando curingas</span><span class="sxs-lookup"><span data-stu-id="295b9-118">Example 2 - Get an ACL for a folder using wildcards</span></span>
+### <span data-ttu-id="8f099-118">Exemplo 2-obter uma ACL para uma pasta usando curingas</span><span class="sxs-lookup"><span data-stu-id="8f099-118">Example 2 - Get an ACL for a folder using wildcards</span></span>
 
-<span data-ttu-id="295b9-119">Este exemplo obtém o caminho e o SDDL do PowerShell para todos os `.log` arquivos no `C:\Windows` diretório cujos nomes começam com `s` .</span><span class="sxs-lookup"><span data-stu-id="295b9-119">This example gets the PowerShell path and SDDL for all of the `.log` files in the `C:\Windows` directory whose names begin with `s`.</span></span>
+<span data-ttu-id="8f099-119">Este exemplo obtém o caminho e o SDDL do PowerShell para todos os `.log` arquivos no `C:\Windows` diretório cujos nomes começam com `s` .</span><span class="sxs-lookup"><span data-stu-id="8f099-119">This example gets the PowerShell path and SDDL for all of the `.log` files in the `C:\Windows` directory whose names begin with `s`.</span></span>
 
 ```powershell
 Get-Acl C:\Windows\s*.log | Format-List -Property PSPath, Sddl
 ```
 
-<span data-ttu-id="295b9-120">O comando usa o `Get-Acl` cmdlet para obter objetos que representam os descritores de segurança de cada arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="295b9-120">The command uses the `Get-Acl` cmdlet to get objects representing the security descriptors of each log file.</span></span> <span data-ttu-id="295b9-121">Ele usa um operador de pipeline ( `|` ) para enviar os resultados para o `Format-List` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="295b9-121">It uses a pipeline operator (`|`) to send the results to the `Format-List` cmdlet.</span></span> <span data-ttu-id="295b9-122">O comando usa o parâmetro **Property** de `Format-List` para exibir somente as propriedades **PSPath** e **SDDL** de cada objeto de descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="295b9-122">The command uses the **Property** parameter of `Format-List` to display only the **PsPath** and **SDDL** properties of each security descriptor object.</span></span>
+<span data-ttu-id="8f099-120">O comando usa o `Get-Acl` cmdlet para obter objetos que representam os descritores de segurança de cada arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="8f099-120">The command uses the `Get-Acl` cmdlet to get objects representing the security descriptors of each log file.</span></span> <span data-ttu-id="8f099-121">Ele usa um operador de pipeline ( `|` ) para enviar os resultados para o `Format-List` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="8f099-121">It uses a pipeline operator (`|`) to send the results to the `Format-List` cmdlet.</span></span> <span data-ttu-id="8f099-122">O comando usa o parâmetro **Property** de `Format-List` para exibir somente as propriedades **PSPath** e **SDDL** de cada objeto de descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="8f099-122">The command uses the **Property** parameter of `Format-List` to display only the **PsPath** and **SDDL** properties of each security descriptor object.</span></span>
 
-<span data-ttu-id="295b9-123">As listas geralmente são usadas no PowerShell, porque os valores longos aparecem truncados nas tabelas.</span><span class="sxs-lookup"><span data-stu-id="295b9-123">Lists are often used in PowerShell, because long values appear truncated in tables.</span></span>
+<span data-ttu-id="8f099-123">As listas geralmente são usadas no PowerShell, porque os valores longos aparecem truncados nas tabelas.</span><span class="sxs-lookup"><span data-stu-id="8f099-123">Lists are often used in PowerShell, because long values appear truncated in tables.</span></span>
 
-<span data-ttu-id="295b9-124">Os valores **SDDL** são importantes para administradores de sistema, porque eles são cadeias de caracteres de texto simples que contêm todas as informações no descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="295b9-124">The **SDDL** values are valuable to system administrators, because they are simple text strings that contain all of the information in the security descriptor.</span></span> <span data-ttu-id="295b9-125">Assim, é fácil que ocorra com eles passar e armazenar, eles que podem ser analisados quando necessário.</span><span class="sxs-lookup"><span data-stu-id="295b9-125">As such, they are easy to pass and store, and they can be parsed when needed.</span></span>
+<span data-ttu-id="8f099-124">Os valores **SDDL** são importantes para administradores de sistema, porque eles são cadeias de caracteres de texto simples que contêm todas as informações no descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="8f099-124">The **SDDL** values are valuable to system administrators, because they are simple text strings that contain all of the information in the security descriptor.</span></span> <span data-ttu-id="8f099-125">Assim, é fácil que ocorra com eles passar e armazenar, eles que podem ser analisados quando necessário.</span><span class="sxs-lookup"><span data-stu-id="8f099-125">As such, they are easy to pass and store, and they can be parsed when needed.</span></span>
 
-### <span data-ttu-id="295b9-126">Exemplo 3-obter a contagem de entradas de auditoria para uma ACL</span><span class="sxs-lookup"><span data-stu-id="295b9-126">Example 3 - Get count of Audit entries for an ACL</span></span>
+### <span data-ttu-id="8f099-126">Exemplo 3-obter a contagem de entradas de auditoria para uma ACL</span><span class="sxs-lookup"><span data-stu-id="8f099-126">Example 3 - Get count of Audit entries for an ACL</span></span>
 
-<span data-ttu-id="295b9-127">Este exemplo obtém os descritores de segurança dos `.log` arquivos no `C:\Windows` diretório cujos nomes começam com `s` .</span><span class="sxs-lookup"><span data-stu-id="295b9-127">This example gets the security descriptors of the `.log` files in the `C:\Windows` directory whose names begin with `s`.</span></span>
+<span data-ttu-id="8f099-127">Este exemplo obtém os descritores de segurança dos `.log` arquivos no `C:\Windows` diretório cujos nomes começam com `s` .</span><span class="sxs-lookup"><span data-stu-id="8f099-127">This example gets the security descriptors of the `.log` files in the `C:\Windows` directory whose names begin with `s`.</span></span>
 
 ```powershell
 Get-Acl C:\Windows\s*.log -Audit | ForEach-Object { $_.Audit.Count }
 ```
 
-<span data-ttu-id="295b9-128">Ele usa o parâmetro **Audit** para obter os registros de auditoria da SACL no descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="295b9-128">It uses the **Audit** parameter to get the audit records from the SACL in the security descriptor.</span></span>
-<span data-ttu-id="295b9-129">Em seguida, ele usa o `ForEach-Object` cmdlet para contar o número de registros de auditoria associados a cada arquivo.</span><span class="sxs-lookup"><span data-stu-id="295b9-129">Then it uses the `ForEach-Object` cmdlet to count the number of audit records associated with each file.</span></span> <span data-ttu-id="295b9-130">O resultado é uma lista de números que representam o número de registros de auditoria para cada arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="295b9-130">The result is a list of numbers representing the number of audit records for each log file.</span></span>
+<span data-ttu-id="8f099-128">Ele usa o parâmetro **Audit** para obter os registros de auditoria da SACL no descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="8f099-128">It uses the **Audit** parameter to get the audit records from the SACL in the security descriptor.</span></span>
+<span data-ttu-id="8f099-129">Em seguida, ele usa o `ForEach-Object` cmdlet para contar o número de registros de auditoria associados a cada arquivo.</span><span class="sxs-lookup"><span data-stu-id="8f099-129">Then it uses the `ForEach-Object` cmdlet to count the number of audit records associated with each file.</span></span> <span data-ttu-id="8f099-130">O resultado é uma lista de números que representam o número de registros de auditoria para cada arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="8f099-130">The result is a list of numbers representing the number of audit records for each log file.</span></span>
 
-### <span data-ttu-id="295b9-131">Exemplo 4-obter uma ACL para uma chave do registro</span><span class="sxs-lookup"><span data-stu-id="295b9-131">Example 4 - Get an ACL for a registry key</span></span>
+### <span data-ttu-id="8f099-131">Exemplo 4-obter uma ACL para uma chave do registro</span><span class="sxs-lookup"><span data-stu-id="8f099-131">Example 4 - Get an ACL for a registry key</span></span>
 
-<span data-ttu-id="295b9-132">Este exemplo usa o `Get-Acl` cmdlet para obter o descritor de segurança da subchave de controle ( `HKLM:\SYSTEM\CurrentControlSet\Control` ) do registro.</span><span class="sxs-lookup"><span data-stu-id="295b9-132">This example uses the `Get-Acl` cmdlet to get the security descriptor of the Control subkey (`HKLM:\SYSTEM\CurrentControlSet\Control`) of the registry.</span></span>
+<span data-ttu-id="8f099-132">Este exemplo usa o `Get-Acl` cmdlet para obter o descritor de segurança da subchave de controle ( `HKLM:\SYSTEM\CurrentControlSet\Control` ) do registro.</span><span class="sxs-lookup"><span data-stu-id="8f099-132">This example uses the `Get-Acl` cmdlet to get the security descriptor of the Control subkey (`HKLM:\SYSTEM\CurrentControlSet\Control`) of the registry.</span></span>
 
 ```powershell
 Get-Acl -Path HKLM:\System\CurrentControlSet\Control | Format-List
 ```
 
-<span data-ttu-id="295b9-133">O parâmetro **path** especifica a subchave Control.</span><span class="sxs-lookup"><span data-stu-id="295b9-133">The **Path** parameter specifies the Control subkey.</span></span> <span data-ttu-id="295b9-134">O operador de pipeline ( `|` ) passa o descritor de segurança que `Get-Acl` Obtém o `Format-List` comando, que formata as propriedades do descritor de segurança como uma lista para que sejam fáceis de ler.</span><span class="sxs-lookup"><span data-stu-id="295b9-134">The pipeline operator (`|`) passes the security descriptor that `Get-Acl` gets to the `Format-List` command, which formats the properties of the security descriptor as a list so that they are easy to read.</span></span>
+<span data-ttu-id="8f099-133">O parâmetro **path** especifica a subchave Control.</span><span class="sxs-lookup"><span data-stu-id="8f099-133">The **Path** parameter specifies the Control subkey.</span></span> <span data-ttu-id="8f099-134">O operador de pipeline ( `|` ) passa o descritor de segurança que `Get-Acl` Obtém o `Format-List` comando, que formata as propriedades do descritor de segurança como uma lista para que sejam fáceis de ler.</span><span class="sxs-lookup"><span data-stu-id="8f099-134">The pipeline operator (`|`) passes the security descriptor that `Get-Acl` gets to the `Format-List` command, which formats the properties of the security descriptor as a list so that they are easy to read.</span></span>
 
-### <span data-ttu-id="295b9-135">Exemplo 5-obter uma ACL usando **InputObject**</span><span class="sxs-lookup"><span data-stu-id="295b9-135">Example 5 - Get an ACL using **InputObject**</span></span>
+### <span data-ttu-id="8f099-135">Exemplo 5-obter uma ACL usando **InputObject**</span><span class="sxs-lookup"><span data-stu-id="8f099-135">Example 5 - Get an ACL using **InputObject**</span></span>
 
-<span data-ttu-id="295b9-136">Este exemplo usa o parâmetro **InputObject** de `Get-Acl` para obter o descritor de segurança de um objeto de subsistema de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="295b9-136">This example uses the **InputObject** parameter of `Get-Acl` to get the security descriptor of a storage subsystem object.</span></span>
+<span data-ttu-id="8f099-136">Este exemplo usa o parâmetro **InputObject** de `Get-Acl` para obter o descritor de segurança de um objeto de subsistema de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="8f099-136">This example uses the **InputObject** parameter of `Get-Acl` to get the security descriptor of a storage subsystem object.</span></span>
 
 ```powershell
 Get-Acl -InputObject (Get-StorageSubSystem -Name S087)
 ```
 
-## <span data-ttu-id="295b9-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="295b9-137">PARAMETERS</span></span>
+## <span data-ttu-id="8f099-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8f099-137">PARAMETERS</span></span>
 
-### <span data-ttu-id="295b9-138">-Auditoria</span><span class="sxs-lookup"><span data-stu-id="295b9-138">-Audit</span></span>
+### <span data-ttu-id="8f099-138">-Auditoria</span><span class="sxs-lookup"><span data-stu-id="8f099-138">-Audit</span></span>
 
-<span data-ttu-id="295b9-139">Obtém os dados de auditoria para o descritor de segurança da lista de controle de acesso do sistema (SACL).</span><span class="sxs-lookup"><span data-stu-id="295b9-139">Gets the audit data for the security descriptor from the system access control list (SACL).</span></span>
+<span data-ttu-id="8f099-139">Obtém os dados de auditoria para o descritor de segurança da lista de controle de acesso do sistema (SACL).</span><span class="sxs-lookup"><span data-stu-id="8f099-139">Gets the audit data for the security descriptor from the system access control list (SACL).</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,9 +119,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="295b9-140">-Excluir</span><span class="sxs-lookup"><span data-stu-id="295b9-140">-Exclude</span></span>
+### <span data-ttu-id="8f099-140">-Excluir</span><span class="sxs-lookup"><span data-stu-id="8f099-140">-Exclude</span></span>
 
-<span data-ttu-id="295b9-141">Omite os itens especificados.</span><span class="sxs-lookup"><span data-stu-id="295b9-141">Omits the specified items.</span></span> <span data-ttu-id="295b9-142">O valor deste parâmetro qualifica o parâmetro **Path** .</span><span class="sxs-lookup"><span data-stu-id="295b9-142">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="295b9-143">Insira um elemento ou padrão de caminho, como `*.txt` .</span><span class="sxs-lookup"><span data-stu-id="295b9-143">Enter a path element or pattern, such as `*.txt`.</span></span> <span data-ttu-id="295b9-144">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="295b9-144">Wildcards are permitted.</span></span>
+<span data-ttu-id="8f099-141">Omite os itens especificados.</span><span class="sxs-lookup"><span data-stu-id="8f099-141">Omits the specified items.</span></span> <span data-ttu-id="8f099-142">O valor deste parâmetro qualifica o parâmetro **Path**.</span><span class="sxs-lookup"><span data-stu-id="8f099-142">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="8f099-143">Insira um elemento ou padrão de caminho, como `*.txt` .</span><span class="sxs-lookup"><span data-stu-id="8f099-143">Enter a path element or pattern, such as `*.txt`.</span></span> <span data-ttu-id="8f099-144">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="8f099-144">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -135,9 +135,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="295b9-145">-Filter</span><span class="sxs-lookup"><span data-stu-id="295b9-145">-Filter</span></span>
+### <span data-ttu-id="8f099-145">-Filter</span><span class="sxs-lookup"><span data-stu-id="8f099-145">-Filter</span></span>
 
-<span data-ttu-id="295b9-146">Especifica um filtro no formato ou linguagem do provedor.</span><span class="sxs-lookup"><span data-stu-id="295b9-146">Specifies a filter in the provider's format or language.</span></span> <span data-ttu-id="295b9-147">O valor deste parâmetro qualifica o parâmetro **Path** .</span><span class="sxs-lookup"><span data-stu-id="295b9-147">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="295b9-148">A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor.</span><span class="sxs-lookup"><span data-stu-id="295b9-148">The syntax of the filter, including the use of wildcards, depends on the provider.</span></span> <span data-ttu-id="295b9-149">Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao obter os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.</span><span class="sxs-lookup"><span data-stu-id="295b9-149">Filters are more efficient than other parameters, because the provider applies them when getting the objects, rather than having PowerShell filter the objects after they are retrieved.</span></span>
+<span data-ttu-id="8f099-146">Especifica um filtro no formato ou linguagem do provedor.</span><span class="sxs-lookup"><span data-stu-id="8f099-146">Specifies a filter in the provider's format or language.</span></span> <span data-ttu-id="8f099-147">O valor deste parâmetro qualifica o parâmetro **Path**.</span><span class="sxs-lookup"><span data-stu-id="8f099-147">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="8f099-148">A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor.</span><span class="sxs-lookup"><span data-stu-id="8f099-148">The syntax of the filter, including the use of wildcards, depends on the provider.</span></span> <span data-ttu-id="8f099-149">Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao obter os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.</span><span class="sxs-lookup"><span data-stu-id="8f099-149">Filters are more efficient than other parameters, because the provider applies them when getting the objects, rather than having PowerShell filter the objects after they are retrieved.</span></span>
 
 ```yaml
 Type: System.String
@@ -151,9 +151,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="295b9-150">-Incluir</span><span class="sxs-lookup"><span data-stu-id="295b9-150">-Include</span></span>
+### <span data-ttu-id="8f099-150">-Incluir</span><span class="sxs-lookup"><span data-stu-id="8f099-150">-Include</span></span>
 
-<span data-ttu-id="295b9-151">Obtém somente os itens especificados.</span><span class="sxs-lookup"><span data-stu-id="295b9-151">Gets only the specified items.</span></span> <span data-ttu-id="295b9-152">O valor deste parâmetro qualifica o parâmetro **Path** .</span><span class="sxs-lookup"><span data-stu-id="295b9-152">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="295b9-153">Insira um elemento ou padrão de caminho, como `*.txt` .</span><span class="sxs-lookup"><span data-stu-id="295b9-153">Enter a path element or pattern, such as `*.txt`.</span></span> <span data-ttu-id="295b9-154">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="295b9-154">Wildcards are permitted.</span></span>
+<span data-ttu-id="8f099-151">Obtém somente os itens especificados.</span><span class="sxs-lookup"><span data-stu-id="8f099-151">Gets only the specified items.</span></span> <span data-ttu-id="8f099-152">O valor deste parâmetro qualifica o parâmetro **Path**.</span><span class="sxs-lookup"><span data-stu-id="8f099-152">The value of this parameter qualifies the **Path** parameter.</span></span> <span data-ttu-id="8f099-153">Insira um elemento ou padrão de caminho, como `*.txt` .</span><span class="sxs-lookup"><span data-stu-id="8f099-153">Enter a path element or pattern, such as `*.txt`.</span></span> <span data-ttu-id="8f099-154">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="8f099-154">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -167,11 +167,11 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="295b9-155">-Path</span><span class="sxs-lookup"><span data-stu-id="295b9-155">-Path</span></span>
+### <span data-ttu-id="8f099-155">-Path</span><span class="sxs-lookup"><span data-stu-id="8f099-155">-Path</span></span>
 
-<span data-ttu-id="295b9-156">Especifica o caminho para um recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-156">Specifies the path to a resource.</span></span> <span data-ttu-id="295b9-157">`Get-Acl` Obtém o descritor de segurança do recurso indicado pelo caminho.</span><span class="sxs-lookup"><span data-stu-id="295b9-157">`Get-Acl` gets the security descriptor of the resource indicated by the path.</span></span> <span data-ttu-id="295b9-158">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="295b9-158">Wildcards are permitted.</span></span> <span data-ttu-id="295b9-159">Se você omitir o parâmetro **path** , `Get-Acl` obterá o descritor de segurança do diretório atual.</span><span class="sxs-lookup"><span data-stu-id="295b9-159">If you omit the **Path** parameter, `Get-Acl` gets the security descriptor of the current directory.</span></span>
+<span data-ttu-id="8f099-156">Especifica o caminho para um recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-156">Specifies the path to a resource.</span></span> <span data-ttu-id="8f099-157">`Get-Acl` Obtém o descritor de segurança do recurso indicado pelo caminho.</span><span class="sxs-lookup"><span data-stu-id="8f099-157">`Get-Acl` gets the security descriptor of the resource indicated by the path.</span></span> <span data-ttu-id="8f099-158">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="8f099-158">Wildcards are permitted.</span></span> <span data-ttu-id="8f099-159">Se você omitir o parâmetro **path** , `Get-Acl` obterá o descritor de segurança do diretório atual.</span><span class="sxs-lookup"><span data-stu-id="8f099-159">If you omit the **Path** parameter, `Get-Acl` gets the security descriptor of the current directory.</span></span>
 
-<span data-ttu-id="295b9-160">O nome do parâmetro ("Path") é opcional.</span><span class="sxs-lookup"><span data-stu-id="295b9-160">The parameter name ("Path") is optional.</span></span>
+<span data-ttu-id="8f099-160">O nome do parâmetro ("Path") é opcional.</span><span class="sxs-lookup"><span data-stu-id="8f099-160">The parameter name ("Path") is optional.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -185,13 +185,13 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="295b9-161">-InputObject</span><span class="sxs-lookup"><span data-stu-id="295b9-161">-InputObject</span></span>
+### <span data-ttu-id="8f099-161">-InputObject</span><span class="sxs-lookup"><span data-stu-id="8f099-161">-InputObject</span></span>
 
-<span data-ttu-id="295b9-162">Obtém o descritor de segurança para o objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="295b9-162">Gets the security descriptor for the specified object.</span></span> <span data-ttu-id="295b9-163">Insira uma variável que contenha o objeto ou um comando que obtenha o objeto.</span><span class="sxs-lookup"><span data-stu-id="295b9-163">Enter a variable that contains the object or a command that gets the object.</span></span>
+<span data-ttu-id="8f099-162">Obtém o descritor de segurança para o objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="8f099-162">Gets the security descriptor for the specified object.</span></span> <span data-ttu-id="8f099-163">Insira uma variável que contenha o objeto ou um comando que obtenha o objeto.</span><span class="sxs-lookup"><span data-stu-id="8f099-163">Enter a variable that contains the object or a command that gets the object.</span></span>
 
-<span data-ttu-id="295b9-164">Não é possível canalizar um objeto, que não seja um caminho, para `Get-Acl` .</span><span class="sxs-lookup"><span data-stu-id="295b9-164">You cannot pipe an object, other than a path, to `Get-Acl`.</span></span> <span data-ttu-id="295b9-165">Em vez disso, use o parâmetro **InputObject** explicitamente no comando.</span><span class="sxs-lookup"><span data-stu-id="295b9-165">Instead, use the **InputObject** parameter explicitly in the command.</span></span>
+<span data-ttu-id="8f099-164">Não é possível canalizar um objeto, que não seja um caminho, para `Get-Acl` .</span><span class="sxs-lookup"><span data-stu-id="8f099-164">You cannot pipe an object, other than a path, to `Get-Acl`.</span></span> <span data-ttu-id="8f099-165">Em vez disso, use o parâmetro **InputObject** explicitamente no comando.</span><span class="sxs-lookup"><span data-stu-id="8f099-165">Instead, use the **InputObject** parameter explicitly in the command.</span></span>
 
-<span data-ttu-id="295b9-166">Este parâmetro é introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="295b9-166">This parameter is introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="8f099-166">Este parâmetro é introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="8f099-166">This parameter is introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -205,11 +205,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="295b9-167">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="295b9-167">-LiteralPath</span></span>
+### <span data-ttu-id="8f099-167">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="8f099-167">-LiteralPath</span></span>
 
-<span data-ttu-id="295b9-168">Especifica o caminho para um recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-168">Specifies the path to a resource.</span></span> <span data-ttu-id="295b9-169">Ao contrário de **Path** , o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado.</span><span class="sxs-lookup"><span data-stu-id="295b9-169">Unlike **Path** , the value of the **LiteralPath** parameter is used exactly as it is typed.</span></span> <span data-ttu-id="295b9-170">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="295b9-170">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="295b9-171">Se o caminho incluir caracteres de escape, coloque-o entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="295b9-171">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="295b9-172">Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.</span><span class="sxs-lookup"><span data-stu-id="295b9-172">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="8f099-168">Especifica o caminho para um recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-168">Specifies the path to a resource.</span></span> <span data-ttu-id="8f099-169">Ao contrário de **Path** , o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado.</span><span class="sxs-lookup"><span data-stu-id="8f099-169">Unlike **Path** , the value of the **LiteralPath** parameter is used exactly as it is typed.</span></span> <span data-ttu-id="8f099-170">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="8f099-170">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="8f099-171">Se o caminho incluir caracteres de escape, coloque-o entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="8f099-171">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="8f099-172">Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.</span><span class="sxs-lookup"><span data-stu-id="8f099-172">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
 
-<span data-ttu-id="295b9-173">Este parâmetro é introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="295b9-173">This parameter is introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="8f099-173">Este parâmetro é introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="8f099-173">This parameter is introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -223,34 +223,36 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="295b9-174">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="295b9-174">CommonParameters</span></span>
+### <span data-ttu-id="8f099-174">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8f099-174">CommonParameters</span></span>
 
-<span data-ttu-id="295b9-175">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="295b9-175">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="295b9-176">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="295b9-176">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="8f099-175">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8f099-175">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8f099-176">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8f099-176">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="295b9-177">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="295b9-177">INPUTS</span></span>
+## <span data-ttu-id="8f099-177">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="8f099-177">INPUTS</span></span>
 
-### <span data-ttu-id="295b9-178">System.String</span><span class="sxs-lookup"><span data-stu-id="295b9-178">System.String</span></span>
+### <span data-ttu-id="8f099-178">System.String</span><span class="sxs-lookup"><span data-stu-id="8f099-178">System.String</span></span>
 
-<span data-ttu-id="295b9-179">É possível canalizar uma cadeia de caracteres que contém um caminho para `Get-Acl` .</span><span class="sxs-lookup"><span data-stu-id="295b9-179">You can pipe a string that contains a path to `Get-Acl`.</span></span>
+<span data-ttu-id="8f099-179">É possível canalizar uma cadeia de caracteres que contém um caminho para `Get-Acl` .</span><span class="sxs-lookup"><span data-stu-id="8f099-179">You can pipe a string that contains a path to `Get-Acl`.</span></span>
 
-## <span data-ttu-id="295b9-180">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="295b9-180">OUTPUTS</span></span>
+## <span data-ttu-id="8f099-180">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="8f099-180">OUTPUTS</span></span>
 
-### <span data-ttu-id="295b9-181">System. Security. AccessControl. FileSecurity, System. Security. AccessControl. DirectorySecurity, System. Security. AccessControl. RegistrySecurity</span><span class="sxs-lookup"><span data-stu-id="295b9-181">System.Security.AccessControl.FileSecurity, System.Security.AccessControl.DirectorySecurity, System.Security.AccessControl.RegistrySecurity</span></span>
+### <span data-ttu-id="8f099-181">System. Security. AccessControl. FileSecurity, System. Security. AccessControl. DirectorySecurity, System. Security. AccessControl. RegistrySecurity</span><span class="sxs-lookup"><span data-stu-id="8f099-181">System.Security.AccessControl.FileSecurity, System.Security.AccessControl.DirectorySecurity, System.Security.AccessControl.RegistrySecurity</span></span>
 
-<span data-ttu-id="295b9-182">`Get-Acl` Retorna um objeto que representa as ACLs que ele obtém.</span><span class="sxs-lookup"><span data-stu-id="295b9-182">`Get-Acl` returns an object that represents the ACLs that it gets.</span></span> <span data-ttu-id="295b9-183">O tipo de objeto depende do tipo da ACL.</span><span class="sxs-lookup"><span data-stu-id="295b9-183">The object type depends upon the ACL type.</span></span>
+<span data-ttu-id="8f099-182">`Get-Acl` Retorna um objeto que representa as ACLs que ele obtém.</span><span class="sxs-lookup"><span data-stu-id="8f099-182">`Get-Acl` returns an object that represents the ACLs that it gets.</span></span> <span data-ttu-id="8f099-183">O tipo de objeto depende do tipo da ACL.</span><span class="sxs-lookup"><span data-stu-id="8f099-183">The object type depends upon the ACL type.</span></span>
 
-## <span data-ttu-id="295b9-184">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="295b9-184">NOTES</span></span>
+## <span data-ttu-id="8f099-184">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="8f099-184">NOTES</span></span>
 
-<span data-ttu-id="295b9-185">Por padrão, `Get-Acl` o exibe o caminho do PowerShell para o recurso ( `<provider>::<resource-path>` ), o proprietário do recurso e "acesso", uma lista (matriz) das entradas de controle de acesso na DACL (lista de controle de acesso discricionário) do recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-185">By default, `Get-Acl` displays the PowerShell path to the resource (`<provider>::<resource-path>`), the owner of the resource, and "Access", a list (array) of the access control entries in the discretionary access control list (DACL) for the resource.</span></span> <span data-ttu-id="295b9-186">A lista de DACL é controlada pelo proprietário do recurso.</span><span class="sxs-lookup"><span data-stu-id="295b9-186">The DACL list is controlled by the resource owner.</span></span>
+<span data-ttu-id="8f099-185">Esse cmdlet só está disponível em plataformas Windows.</span><span class="sxs-lookup"><span data-stu-id="8f099-185">This cmdlet is only available on Windows platforms.</span></span>
 
-<span data-ttu-id="295b9-187">Quando você formata o resultado como uma lista, ( `Get-Acl | Format-List` ), além do caminho, do proprietário e da lista de acesso, o PowerShell exibe as propriedades e os valores de propriedade a seguir:</span><span class="sxs-lookup"><span data-stu-id="295b9-187">When you format the result as a list, (`Get-Acl | Format-List`), in addition to the path, owner, and access list, PowerShell displays the following properties and property values:</span></span>
+<span data-ttu-id="8f099-186">Por padrão, `Get-Acl` o exibe o caminho do PowerShell para o recurso ( `<provider>::<resource-path>` ), o proprietário do recurso e "acesso", uma lista (matriz) das entradas de controle de acesso na DACL (lista de controle de acesso discricionário) do recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-186">By default, `Get-Acl` displays the PowerShell path to the resource (`<provider>::<resource-path>`), the owner of the resource, and "Access", a list (array) of the access control entries in the discretionary access control list (DACL) for the resource.</span></span> <span data-ttu-id="8f099-187">A lista de DACL é controlada pelo proprietário do recurso.</span><span class="sxs-lookup"><span data-stu-id="8f099-187">The DACL list is controlled by the resource owner.</span></span>
 
-- <span data-ttu-id="295b9-188">**Grupo** : o grupo de segurança do proprietário.</span><span class="sxs-lookup"><span data-stu-id="295b9-188">**Group** : The security group of the owner.</span></span>
-- <span data-ttu-id="295b9-189">**Auditoria** : uma lista (matriz) de entradas na SACL (lista de controle de acesso) do sistema.</span><span class="sxs-lookup"><span data-stu-id="295b9-189">**Audit** :  A list (array) of entries in the system access control list (SACL).</span></span> <span data-ttu-id="295b9-190">A SACL especifica os tipos de tentativas de acesso para as quais o Windows gera registros de auditoria.</span><span class="sxs-lookup"><span data-stu-id="295b9-190">The SACL specifies the types of access attempts for which Windows generates audit records.</span></span>
-- <span data-ttu-id="295b9-191">**SDDL** : o descritor de segurança do recurso exibido em uma única cadeia de texto no formato de linguagem de definição do descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="295b9-191">**Sddl** : The security descriptor of the resource displayed in a single text string in Security Descriptor Definition Language format.</span></span> <span data-ttu-id="295b9-192">O PowerShell usa o método **GetSddlForm** de descritores de segurança para obter esses dados.</span><span class="sxs-lookup"><span data-stu-id="295b9-192">PowerShell uses the **GetSddlForm** method of security descriptors to get this data.</span></span>
+<span data-ttu-id="8f099-188">Quando você formata o resultado como uma lista, ( `Get-Acl | Format-List` ), além do caminho, do proprietário e da lista de acesso, o PowerShell exibe as propriedades e os valores de propriedade a seguir:</span><span class="sxs-lookup"><span data-stu-id="8f099-188">When you format the result as a list, (`Get-Acl | Format-List`), in addition to the path, owner, and access list, PowerShell displays the following properties and property values:</span></span>
 
-<span data-ttu-id="295b9-193">Como `Get-Acl` o é compatível com o sistema de arquivos e os provedores de registro, você pode usar `Get-Acl` o para exibir a ACL de objetos do sistema de arquivos, como arquivos e diretórios e objetos do registro, como chaves e entradas do registro.</span><span class="sxs-lookup"><span data-stu-id="295b9-193">Because `Get-Acl` is supported by the file system and registry providers, you can use `Get-Acl` to view the ACL of file system objects, such as files and directories, and registry objects, such as registry keys and entries.</span></span>
+- <span data-ttu-id="8f099-189">**Grupo** : o grupo de segurança do proprietário.</span><span class="sxs-lookup"><span data-stu-id="8f099-189">**Group** : The security group of the owner.</span></span>
+- <span data-ttu-id="8f099-190">**Auditoria** : uma lista (matriz) de entradas na SACL (lista de controle de acesso) do sistema.</span><span class="sxs-lookup"><span data-stu-id="8f099-190">**Audit** :  A list (array) of entries in the system access control list (SACL).</span></span> <span data-ttu-id="8f099-191">A SACL especifica os tipos de tentativas de acesso para as quais o Windows gera registros de auditoria.</span><span class="sxs-lookup"><span data-stu-id="8f099-191">The SACL specifies the types of access attempts for which Windows generates audit records.</span></span>
+- <span data-ttu-id="8f099-192">**SDDL** : o descritor de segurança do recurso exibido em uma única cadeia de texto no formato de linguagem de definição do descritor de segurança.</span><span class="sxs-lookup"><span data-stu-id="8f099-192">**Sddl** : The security descriptor of the resource displayed in a single text string in Security Descriptor Definition Language format.</span></span> <span data-ttu-id="8f099-193">O PowerShell usa o método **GetSddlForm** de descritores de segurança para obter esses dados.</span><span class="sxs-lookup"><span data-stu-id="8f099-193">PowerShell uses the **GetSddlForm** method of security descriptors to get this data.</span></span>
 
-## <span data-ttu-id="295b9-194">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="295b9-194">RELATED LINKS</span></span>
+<span data-ttu-id="8f099-194">Como `Get-Acl` o é compatível com o sistema de arquivos e os provedores de registro, você pode usar `Get-Acl` o para exibir a ACL de objetos do sistema de arquivos, como arquivos e diretórios e objetos do registro, como chaves e entradas do registro.</span><span class="sxs-lookup"><span data-stu-id="8f099-194">Because `Get-Acl` is supported by the file system and registry providers, you can use `Get-Acl` to view the ACL of file system objects, such as files and directories, and registry objects, such as registry keys and entries.</span></span>
 
-[<span data-ttu-id="295b9-195">Set-Acl</span><span class="sxs-lookup"><span data-stu-id="295b9-195">Set-Acl</span></span>](Set-Acl.md)
+## <span data-ttu-id="8f099-195">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="8f099-195">RELATED LINKS</span></span>
+
+[<span data-ttu-id="8f099-196">Set-Acl</span><span class="sxs-lookup"><span data-stu-id="8f099-196">Set-Acl</span></span>](Set-Acl.md)

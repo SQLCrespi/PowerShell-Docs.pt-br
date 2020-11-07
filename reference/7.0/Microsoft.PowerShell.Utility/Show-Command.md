@@ -7,76 +7,76 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 976a9ba6047d79bc1ac6225896c7285702daf38a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e6995da1e9ff2a1678c5703b79223481533bc9a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192857"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346149"
 ---
-# <span data-ttu-id="27341-103">Show-Command</span><span class="sxs-lookup"><span data-stu-id="27341-103">Show-Command</span></span>
+# <span data-ttu-id="9309a-103">Show-Command</span><span class="sxs-lookup"><span data-stu-id="9309a-103">Show-Command</span></span>
 
-## <span data-ttu-id="27341-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="27341-104">SYNOPSIS</span></span>
-<span data-ttu-id="27341-105">Exibe informações de comando do PowerShell em uma janela gráfica.</span><span class="sxs-lookup"><span data-stu-id="27341-105">Displays PowerShell command information in a graphical window.</span></span>
+## <span data-ttu-id="9309a-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="9309a-104">SYNOPSIS</span></span>
+<span data-ttu-id="9309a-105">Exibe informações de comando do PowerShell em uma janela gráfica.</span><span class="sxs-lookup"><span data-stu-id="9309a-105">Displays PowerShell command information in a graphical window.</span></span>
 
-## <span data-ttu-id="27341-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="27341-106">SYNTAX</span></span>
+## <span data-ttu-id="9309a-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9309a-106">SYNTAX</span></span>
 
 ```
 Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonParameter]
  [-ErrorPopup] [-PassThru] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="27341-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="27341-107">DESCRIPTION</span></span>
+## <span data-ttu-id="9309a-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="9309a-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="27341-108">O `Show-Command` cmdlet permite criar um comando do PowerShell em uma janela de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-108">The `Show-Command` cmdlet lets you create a PowerShell command in a command window.</span></span> <span data-ttu-id="27341-109">Você pode usar os recursos da janela de comando para executar o comando ou fazê-la retornar o comando para você.</span><span class="sxs-lookup"><span data-stu-id="27341-109">You can use the features of the command window to run the command or have it return the command to you.</span></span>
+<span data-ttu-id="9309a-108">O `Show-Command` cmdlet permite criar um comando do PowerShell em uma janela de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-108">The `Show-Command` cmdlet lets you create a PowerShell command in a command window.</span></span> <span data-ttu-id="9309a-109">Você pode usar os recursos da janela de comando para executar o comando ou fazê-la retornar o comando para você.</span><span class="sxs-lookup"><span data-stu-id="9309a-109">You can use the features of the command window to run the command or have it return the command to you.</span></span>
 
-<span data-ttu-id="27341-110">`Show-Command` é uma ferramenta de ensino e aprendizado muito útil.</span><span class="sxs-lookup"><span data-stu-id="27341-110">`Show-Command` is a very useful teaching and learning tool.</span></span> <span data-ttu-id="27341-111">`Show-Command` funciona em todos os tipos de comando, incluindo cmdlets, funções, fluxos de trabalho e comandos CIM.</span><span class="sxs-lookup"><span data-stu-id="27341-111">`Show-Command` works on all command types, including cmdlets, functions, workflows and CIM commands.</span></span>
+<span data-ttu-id="9309a-110">`Show-Command` é uma ferramenta de ensino e aprendizado muito útil.</span><span class="sxs-lookup"><span data-stu-id="9309a-110">`Show-Command` is a very useful teaching and learning tool.</span></span> <span data-ttu-id="9309a-111">`Show-Command` funciona em todos os tipos de comando, incluindo cmdlets, funções, fluxos de trabalho e comandos CIM.</span><span class="sxs-lookup"><span data-stu-id="9309a-111">`Show-Command` works on all command types, including cmdlets, functions, workflows and CIM commands.</span></span>
 
-<span data-ttu-id="27341-112">Sem parâmetros, `Show-Command` exibe uma janela de comando que lista todos os comandos disponíveis em todos os módulos instalados.</span><span class="sxs-lookup"><span data-stu-id="27341-112">Without parameters, `Show-Command` displays a command window that lists all available commands in all installed modules.</span></span> <span data-ttu-id="27341-113">Para localizar os comandos em um módulo, selecione o módulo na lista suspensa Modules.</span><span class="sxs-lookup"><span data-stu-id="27341-113">To find the commands in a module, select the module from the Modules drop-down list.</span></span> <span data-ttu-id="27341-114">Para selecionar um comando, clique no nome do comando.</span><span class="sxs-lookup"><span data-stu-id="27341-114">To select a command, click the command name.</span></span>
+<span data-ttu-id="9309a-112">Sem parâmetros, `Show-Command` exibe uma janela de comando que lista todos os comandos disponíveis em todos os módulos instalados.</span><span class="sxs-lookup"><span data-stu-id="9309a-112">Without parameters, `Show-Command` displays a command window that lists all available commands in all installed modules.</span></span> <span data-ttu-id="9309a-113">Para localizar os comandos em um módulo, selecione o módulo na lista suspensa Modules.</span><span class="sxs-lookup"><span data-stu-id="9309a-113">To find the commands in a module, select the module from the Modules drop-down list.</span></span> <span data-ttu-id="9309a-114">Para selecionar um comando, clique no nome do comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-114">To select a command, click the command name.</span></span>
 
-<span data-ttu-id="27341-115">Para usar a janela de comando, selecione um comando, seja usando o nome ou clicando no nome do comando na lista **comandos** .</span><span class="sxs-lookup"><span data-stu-id="27341-115">To use the command window, select a command, either by using the Name or by clicking the command name in the **Commands** list.</span></span> <span data-ttu-id="27341-116">Cada conjunto de parâmetros é exibido em uma guia separada. Os asteriscos indicam os parâmetros obrigatórios.</span><span class="sxs-lookup"><span data-stu-id="27341-116">Each parameter set is displayed on a separate tab. Asterisks indicate the mandatory parameters.</span></span> <span data-ttu-id="27341-117">Para inserir valores para um parâmetro, digite o valor na caixa de texto ou selecione o valor da caixa suspensa.</span><span class="sxs-lookup"><span data-stu-id="27341-117">To enter values for a parameter, type the value in the text box or select the value from the drop-down box.</span></span> <span data-ttu-id="27341-118">Para adicionar um parâmetro de opção, clique para selecionar a caixa de seleção do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="27341-118">To add a switch parameter, click to select the parameter check box.</span></span>
+<span data-ttu-id="9309a-115">Para usar a janela de comando, selecione um comando, seja usando o nome ou clicando no nome do comando na lista **comandos** .</span><span class="sxs-lookup"><span data-stu-id="9309a-115">To use the command window, select a command, either by using the Name or by clicking the command name in the **Commands** list.</span></span> <span data-ttu-id="9309a-116">Cada conjunto de parâmetros é exibido em uma guia separada. Os asteriscos indicam os parâmetros obrigatórios.</span><span class="sxs-lookup"><span data-stu-id="9309a-116">Each parameter set is displayed on a separate tab. Asterisks indicate the mandatory parameters.</span></span> <span data-ttu-id="9309a-117">Para inserir valores para um parâmetro, digite o valor na caixa de texto ou selecione o valor da caixa suspensa.</span><span class="sxs-lookup"><span data-stu-id="9309a-117">To enter values for a parameter, type the value in the text box or select the value from the drop-down box.</span></span> <span data-ttu-id="9309a-118">Para adicionar um parâmetro de opção, clique para selecionar a caixa de seleção do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="9309a-118">To add a switch parameter, click to select the parameter check box.</span></span>
 
-<span data-ttu-id="27341-119">Quando estiver pronto, você pode clicar em **Copy** para copiar o comando que criou para a área de transferência ou clicar em **Run** para executar o comando.</span><span class="sxs-lookup"><span data-stu-id="27341-119">When you're ready, you can click **Copy** to copy the command that you've created to the clipboard or click **Run** to run the command.</span></span> <span data-ttu-id="27341-120">Você também pode usar o parâmetro **PassThru** para retornar o comando para o programa host, como o console do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="27341-120">You can also use the **PassThru** parameter to return the command to the host program, such as the PowerShell console.</span></span> <span data-ttu-id="27341-121">Para cancelar a seleção de comando e retornar à exibição que exibe todos os comandos, pressione CTRL e clique no comando selecionado.</span><span class="sxs-lookup"><span data-stu-id="27341-121">To cancel the command selection and return to the view that displays all commands, press Ctrl and click the selected command.</span></span>
+<span data-ttu-id="9309a-119">Quando estiver pronto, você pode clicar em **Copy** para copiar o comando que criou para a área de transferência ou clicar em **Run** para executar o comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-119">When you're ready, you can click **Copy** to copy the command that you've created to the clipboard or click **Run** to run the command.</span></span> <span data-ttu-id="9309a-120">Você também pode usar o parâmetro **PassThru** para retornar o comando para o programa host, como o console do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9309a-120">You can also use the **PassThru** parameter to return the command to the host program, such as the PowerShell console.</span></span> <span data-ttu-id="9309a-121">Para cancelar a seleção de comando e retornar à exibição que exibe todos os comandos, pressione CTRL e clique no comando selecionado.</span><span class="sxs-lookup"><span data-stu-id="9309a-121">To cancel the command selection and return to the view that displays all commands, press Ctrl and click the selected command.</span></span>
 
-<span data-ttu-id="27341-122">No ISE (ambiente de script integrado) do PowerShell, uma variação da `Show-Command` janela é exibida por padrão.</span><span class="sxs-lookup"><span data-stu-id="27341-122">In the PowerShell Integrated Scripting Environment (ISE), a variation of the `Show-Command` window is displayed by default.</span></span> <span data-ttu-id="27341-123">Para obter informações sobre como usar essa janela de comando, consulte os tópicos de ajuda do ISE do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="27341-123">For information about using this command window, see the PowerShell ISE Help topics.</span></span>
+<span data-ttu-id="9309a-122">No ISE (ambiente de script integrado) do PowerShell, uma variação da `Show-Command` janela é exibida por padrão.</span><span class="sxs-lookup"><span data-stu-id="9309a-122">In the PowerShell Integrated Scripting Environment (ISE), a variation of the `Show-Command` window is displayed by default.</span></span> <span data-ttu-id="9309a-123">Para obter informações sobre como usar essa janela de comando, consulte os tópicos de ajuda do ISE do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9309a-123">For information about using this command window, see the PowerShell ISE Help topics.</span></span>
 
-<span data-ttu-id="27341-124">Esse cmdlet foi reintroduzido no PowerShell 7.</span><span class="sxs-lookup"><span data-stu-id="27341-124">This cmdlet was reintroduced in PowerShell 7.</span></span> 
+<span data-ttu-id="9309a-124">Esse cmdlet foi reintroduzido no PowerShell 7.</span><span class="sxs-lookup"><span data-stu-id="9309a-124">This cmdlet was reintroduced in PowerShell 7.</span></span>
 
-<span data-ttu-id="27341-125">Como esse cmdlet requer uma interface do usuário, ele não funciona no Windows Server Core ou no Windows nano Server.</span><span class="sxs-lookup"><span data-stu-id="27341-125">Because this cmdlet requires a user interface, it does not work on Windows Server Core or Windows Nano Server.</span></span> <span data-ttu-id="27341-126">Esse cmdlet só está disponível em sistemas Windows que dão suporte à área de trabalho do Windows.</span><span class="sxs-lookup"><span data-stu-id="27341-126">This cmdlet is only available on Windows systems that support the Windows Desktop.</span></span>
+<span data-ttu-id="9309a-125">Como esse cmdlet requer uma interface do usuário, ele não funciona no Windows Server Core ou no Windows nano Server.</span><span class="sxs-lookup"><span data-stu-id="9309a-125">Because this cmdlet requires a user interface, it does not work on Windows Server Core or Windows Nano Server.</span></span> <span data-ttu-id="9309a-126">Esse cmdlet só está disponível em sistemas Windows que dão suporte à área de trabalho do Windows.</span><span class="sxs-lookup"><span data-stu-id="9309a-126">This cmdlet is only available on Windows systems that support the Windows Desktop.</span></span>
 
-## <span data-ttu-id="27341-127">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="27341-127">EXAMPLES</span></span>
+## <span data-ttu-id="9309a-127">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="9309a-127">EXAMPLES</span></span>
 
-### <span data-ttu-id="27341-128">Exemplo 1: abrir a janela de comandos</span><span class="sxs-lookup"><span data-stu-id="27341-128">Example 1: Open the Commands window</span></span>
+### <span data-ttu-id="9309a-128">Exemplo 1: abrir a janela de comandos</span><span class="sxs-lookup"><span data-stu-id="9309a-128">Example 1: Open the Commands window</span></span>
 
-<span data-ttu-id="27341-129">Este exemplo exibe a exibição padrão da `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="27341-129">This example displays the default view of the `Show-Command` window.</span></span> <span data-ttu-id="27341-130">A janela **comandos** exibe uma lista de todos os comandos em todos os módulos que estão instalados no computador.</span><span class="sxs-lookup"><span data-stu-id="27341-130">The **Commands** window displays a list of all commands in all modules that are installed on the computer.</span></span>
+<span data-ttu-id="9309a-129">Este exemplo exibe a exibição padrão da `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="9309a-129">This example displays the default view of the `Show-Command` window.</span></span> <span data-ttu-id="9309a-130">A janela **comandos** exibe uma lista de todos os comandos em todos os módulos que estão instalados no computador.</span><span class="sxs-lookup"><span data-stu-id="9309a-130">The **Commands** window displays a list of all commands in all modules that are installed on the computer.</span></span>
 
 ```powershell
 Show-Command
 ```
 
-### <span data-ttu-id="27341-131">Exemplo 2: abrir um cmdlet na janela de comandos</span><span class="sxs-lookup"><span data-stu-id="27341-131">Example 2: Open a cmdlet in the Commands window</span></span>
+### <span data-ttu-id="9309a-131">Exemplo 2: abrir um cmdlet na janela de comandos</span><span class="sxs-lookup"><span data-stu-id="9309a-131">Example 2: Open a cmdlet in the Commands window</span></span>
 
-<span data-ttu-id="27341-132">Este exemplo exibe o `Invoke-Command` cmdlet na janela de **comando** .</span><span class="sxs-lookup"><span data-stu-id="27341-132">This example display the `Invoke-Command` cmdlet in the **Command** window.</span></span> <span data-ttu-id="27341-133">Você pode usar essa exibição para executar `Invoke-Command` comandos.</span><span class="sxs-lookup"><span data-stu-id="27341-133">You can use this display to run `Invoke-Command` commands.</span></span>
+<span data-ttu-id="9309a-132">Este exemplo exibe o `Invoke-Command` cmdlet na janela de **comando** .</span><span class="sxs-lookup"><span data-stu-id="9309a-132">This example display the `Invoke-Command` cmdlet in the **Command** window.</span></span> <span data-ttu-id="9309a-133">Você pode usar essa exibição para executar `Invoke-Command` comandos.</span><span class="sxs-lookup"><span data-stu-id="9309a-133">You can use this display to run `Invoke-Command` commands.</span></span>
 
 ```powershell
 Show-Command -Name "Invoke-Command"
 ```
 
-### <span data-ttu-id="27341-134">Exemplo 3: abrir um cmdlet com parâmetros especificados</span><span class="sxs-lookup"><span data-stu-id="27341-134">Example 3: Open a cmdlet with specified parameters</span></span>
+### <span data-ttu-id="9309a-134">Exemplo 3: abrir um cmdlet com parâmetros especificados</span><span class="sxs-lookup"><span data-stu-id="9309a-134">Example 3: Open a cmdlet with specified parameters</span></span>
 
-<span data-ttu-id="27341-135">Esse comando abre uma `Show-Command` janela para o `Connect-PSSession` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="27341-135">This command opens a `Show-Command` window for the`Connect-PSSession`cmdlet.</span></span>
+<span data-ttu-id="9309a-135">Esse comando abre uma `Show-Command` janela para o `Connect-PSSession` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9309a-135">This command opens a `Show-Command` window for the`Connect-PSSession`cmdlet.</span></span>
 
 ```powershell
 Show-Command -Name "Connect-PSSession" -Height 700 -Width 1000 -ErrorPopup
 ```
 
-<span data-ttu-id="27341-136">Os parâmetros de **altura** e **largura** especificam a dimensão da janela de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-136">The **Height** and **Width** parameters specify the dimension of the command window.</span></span> <span data-ttu-id="27341-137">O parâmetro **ErrorPopup** exibe a janela de comando de erro.</span><span class="sxs-lookup"><span data-stu-id="27341-137">The **ErrorPopup** parameter displays the error command window.</span></span>
+<span data-ttu-id="9309a-136">Os parâmetros de **altura** e **largura** especificam a dimensão da janela de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-136">The **Height** and **Width** parameters specify the dimension of the command window.</span></span> <span data-ttu-id="9309a-137">O parâmetro **ErrorPopup** exibe a janela de comando de erro.</span><span class="sxs-lookup"><span data-stu-id="9309a-137">The **ErrorPopup** parameter displays the error command window.</span></span>
 
-<span data-ttu-id="27341-138">Quando você clica em **executar** , o `Connect-PSSession` comando é executado, assim como faria se você tivesse digitado o `Connect-PSSession` comando na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-138">When you click **Run** , the `Connect-PSSession` command runs, just as would if you typed the `Connect-PSSession` command at the command line.</span></span>
+<span data-ttu-id="9309a-138">Quando você clica em **executar** , o `Connect-PSSession` comando é executado, assim como faria se você tivesse digitado o `Connect-PSSession` comando na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-138">When you click **Run** , the `Connect-PSSession` command runs, just as would if you typed the `Connect-PSSession` command at the command line.</span></span>
 
-### <span data-ttu-id="27341-139">Exemplo 4: especificar novos valores de parâmetro padrão para um cmdlet</span><span class="sxs-lookup"><span data-stu-id="27341-139">Example 4: Specify new default parameter values for a cmdlet</span></span>
+### <span data-ttu-id="9309a-139">Exemplo 4: especificar novos valores de parâmetro padrão para um cmdlet</span><span class="sxs-lookup"><span data-stu-id="9309a-139">Example 4: Specify new default parameter values for a cmdlet</span></span>
 
-<span data-ttu-id="27341-140">Este exemplo usa a `$PSDefaultParameterValues` variável automática para definir novos valores padrão para os parâmetros de **altura** , **largura** e **ErrorPopup** do `Show-Command` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="27341-140">This example uses the `$PSDefaultParameterValues` automatic variable to set new default values for the **Height** , **Width** , and **ErrorPopup** parameters of the `Show-Command` cmdlet.</span></span>
+<span data-ttu-id="9309a-140">Este exemplo usa a `$PSDefaultParameterValues` variável automática para definir novos valores padrão para os parâmetros de **altura** , **largura** e **ErrorPopup** do `Show-Command` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9309a-140">This example uses the `$PSDefaultParameterValues` automatic variable to set new default values for the **Height** , **Width** , and **ErrorPopup** parameters of the `Show-Command` cmdlet.</span></span>
 
 ```powershell
 $PSDefaultParameterValues = @{
@@ -86,22 +86,22 @@ $PSDefaultParameterValues = @{
 }
 ```
 
-<span data-ttu-id="27341-141">Agora, quando você executa um `Show-Command` comando, os novos padrões são aplicados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="27341-141">Now when you run a `Show-Command` command, the new defaults are applied automatically.</span></span> <span data-ttu-id="27341-142">Para usar esses valores padrão em cada sessão do PowerShell, adicione a `$PSDefaultParameterValues` variável ao seu perfil do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="27341-142">To use these default values in every PowerShell session, add the `$PSDefaultParameterValues` variable to your PowerShell profile.</span></span> <span data-ttu-id="27341-143">Para obter mais informações, consulte [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md) e [about_Parameters_Default_Values](../Microsoft.PowerShell.Core/About/about_Parameters_Default_Values.md).</span><span class="sxs-lookup"><span data-stu-id="27341-143">For more information, see [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md) and [about_Parameters_Default_Values](../Microsoft.PowerShell.Core/About/about_Parameters_Default_Values.md).</span></span>
+<span data-ttu-id="9309a-141">Agora, quando você executa um `Show-Command` comando, os novos padrões são aplicados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="9309a-141">Now when you run a `Show-Command` command, the new defaults are applied automatically.</span></span> <span data-ttu-id="9309a-142">Para usar esses valores padrão em cada sessão do PowerShell, adicione a `$PSDefaultParameterValues` variável ao seu perfil do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9309a-142">To use these default values in every PowerShell session, add the `$PSDefaultParameterValues` variable to your PowerShell profile.</span></span> <span data-ttu-id="9309a-143">Para obter mais informações, consulte [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md) e [about_Parameters_Default_Values](../Microsoft.PowerShell.Core/About/about_Parameters_Default_Values.md).</span><span class="sxs-lookup"><span data-stu-id="9309a-143">For more information, see [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md) and [about_Parameters_Default_Values](../Microsoft.PowerShell.Core/About/about_Parameters_Default_Values.md).</span></span>
 
-### <span data-ttu-id="27341-144">Exemplo 5: enviar a saída para um modo de exibição de grade</span><span class="sxs-lookup"><span data-stu-id="27341-144">Example 5: Send output to a grid view</span></span>
+### <span data-ttu-id="9309a-144">Exemplo 5: enviar a saída para um modo de exibição de grade</span><span class="sxs-lookup"><span data-stu-id="9309a-144">Example 5: Send output to a grid view</span></span>
 
-<span data-ttu-id="27341-145">Este comando mostra como usar os `Show-Command` `Out-GridView` cmdlets e juntos.</span><span class="sxs-lookup"><span data-stu-id="27341-145">This command shows how to use the `Show-Command` and `Out-GridView` cmdlets together.</span></span>
+<span data-ttu-id="9309a-145">Este comando mostra como usar os `Show-Command` `Out-GridView` cmdlets e juntos.</span><span class="sxs-lookup"><span data-stu-id="9309a-145">This command shows how to use the `Show-Command` and `Out-GridView` cmdlets together.</span></span>
 
 ```powershell
 Show-Command Get-ChildItem | Out-GridView
 ```
 
-<span data-ttu-id="27341-146">O comando usa o `Show-Command` cmdlet para abrir uma janela de comando para o `Get-ChildItem` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="27341-146">The command uses the `Show-Command` cmdlet to open a command window for the`Get-ChildItem`cmdlet.</span></span>
-<span data-ttu-id="27341-147">Quando você clica no botão **executar** , o `Get-ChildItem` comando é executado e gera a saída.</span><span class="sxs-lookup"><span data-stu-id="27341-147">When you click the **Run** button, the `Get-ChildItem` command runs and generates output.</span></span> <span data-ttu-id="27341-148">O operador de pipeline (|) envia a saída do `Get-ChildItem` comando para o `Out-GridView` cmdlet, que exibe a `Get-ChildItem` saída em uma janela interativa.</span><span class="sxs-lookup"><span data-stu-id="27341-148">The pipeline operator ( | ) sends the output of the `Get-ChildItem` command to the `Out-GridView` cmdlet, which displays the `Get-ChildItem` output in an interactive window.</span></span>
+<span data-ttu-id="9309a-146">O comando usa o `Show-Command` cmdlet para abrir uma janela de comando para o `Get-ChildItem` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9309a-146">The command uses the `Show-Command` cmdlet to open a command window for the`Get-ChildItem`cmdlet.</span></span>
+<span data-ttu-id="9309a-147">Quando você clica no botão **executar** , o `Get-ChildItem` comando é executado e gera a saída.</span><span class="sxs-lookup"><span data-stu-id="9309a-147">When you click the **Run** button, the `Get-ChildItem` command runs and generates output.</span></span> <span data-ttu-id="9309a-148">O operador de pipeline (|) envia a saída do `Get-ChildItem` comando para o `Out-GridView` cmdlet, que exibe a `Get-ChildItem` saída em uma janela interativa.</span><span class="sxs-lookup"><span data-stu-id="9309a-148">The pipeline operator ( | ) sends the output of the `Get-ChildItem` command to the `Out-GridView` cmdlet, which displays the `Get-ChildItem` output in an interactive window.</span></span>
 
-### <span data-ttu-id="27341-149">Exemplo 6: exibir um comando que você cria na janela comandos</span><span class="sxs-lookup"><span data-stu-id="27341-149">Example 6: Display a command that you create in the Commands window</span></span>
+### <span data-ttu-id="9309a-149">Exemplo 6: exibir um comando que você cria na janela comandos</span><span class="sxs-lookup"><span data-stu-id="9309a-149">Example 6: Display a command that you create in the Commands window</span></span>
 
-<span data-ttu-id="27341-150">Este exemplo mostra o comando que você criou na `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="27341-150">This example shows the command that you created in the `Show-Command` window.</span></span> <span data-ttu-id="27341-151">O comando usa o parâmetro **PassThru** , que retorna os `Show-Command` resultados em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="27341-151">The command uses the **PassThru** parameter, which returns the `Show-Command` results in a string.</span></span>
+<span data-ttu-id="9309a-150">Este exemplo mostra o comando que você criou na `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="9309a-150">This example shows the command that you created in the `Show-Command` window.</span></span> <span data-ttu-id="9309a-151">O comando usa o parâmetro **PassThru** , que retorna os `Show-Command` resultados em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="9309a-151">The command uses the **PassThru** parameter, which returns the `Show-Command` results in a string.</span></span>
 
 ```powershell
 Show-Command -PassThru
@@ -111,11 +111,11 @@ Show-Command -PassThru
 Get-EventLog -LogName "Windows PowerShell" -Newest 5
 ```
 
-<span data-ttu-id="27341-152">Por exemplo, se você usar a `Show-Command` janela para criar um `Get-EventLog` comando que obtém os cinco eventos mais recentes no log de eventos do Windows PowerShell e, em seguida, clicar em **OK** , o comando retornará a saída mostrada acima.</span><span class="sxs-lookup"><span data-stu-id="27341-152">For example, if you use the `Show-Command` window to create a `Get-EventLog` command that gets the five newest events in the Windows PowerShell event log, and then click **OK** , the command returns the output shown above.</span></span> <span data-ttu-id="27341-153">A exibição da cadeia de caracteres de comando ajuda você a aprender o PowerShell.</span><span class="sxs-lookup"><span data-stu-id="27341-153">Viewing the command string helps you learn PowerShell.</span></span>
+<span data-ttu-id="9309a-152">Por exemplo, se você usar a `Show-Command` janela para criar um `Get-EventLog` comando que obtém os cinco eventos mais recentes no log de eventos do Windows PowerShell e, em seguida, clicar em **OK** , o comando retornará a saída mostrada acima.</span><span class="sxs-lookup"><span data-stu-id="9309a-152">For example, if you use the `Show-Command` window to create a `Get-EventLog` command that gets the five newest events in the Windows PowerShell event log, and then click **OK** , the command returns the output shown above.</span></span> <span data-ttu-id="9309a-153">A exibição da cadeia de caracteres de comando ajuda você a aprender o PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9309a-153">Viewing the command string helps you learn PowerShell.</span></span>
 
-### <span data-ttu-id="27341-154">Exemplo 7: salvar um comando em uma variável</span><span class="sxs-lookup"><span data-stu-id="27341-154">Example 7: Save a command to a variable</span></span>
+### <span data-ttu-id="9309a-154">Exemplo 7: salvar um comando em uma variável</span><span class="sxs-lookup"><span data-stu-id="9309a-154">Example 7: Save a command to a variable</span></span>
 
-<span data-ttu-id="27341-155">Este exemplo mostra como executar a cadeia de caracteres de comando que você obtém ao usar o parâmetro **PassThru** do `Show-Command` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="27341-155">This example shows how to run the command string that you get when you use the **PassThru** parameter of the `Show-Command` cmdlet.</span></span> <span data-ttu-id="27341-156">Essa estratégia permite ver o comando e usá-lo.</span><span class="sxs-lookup"><span data-stu-id="27341-156">This strategy lets you see the command and use it.</span></span>
+<span data-ttu-id="9309a-155">Este exemplo mostra como executar a cadeia de caracteres de comando que você obtém ao usar o parâmetro **PassThru** do `Show-Command` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9309a-155">This example shows how to run the command string that you get when you use the **PassThru** parameter of the `Show-Command` cmdlet.</span></span> <span data-ttu-id="9309a-156">Essa estratégia permite ver o comando e usá-lo.</span><span class="sxs-lookup"><span data-stu-id="9309a-156">This strategy lets you see the command and use it.</span></span>
 
 ```powershell
 $C = Show-Command -PassThru
@@ -135,11 +135,11 @@ Index Time          EntryType   Source                 InstanceID Message
 11516 Dec 16 16:37  Information Windows PowerShell            600 Provider "FileSystem" is Started. ...
 ```
 
-<span data-ttu-id="27341-157">O primeiro comando usa o parâmetro **PassThru** do `Show-Command` cmdlet e salva os resultados do comando na `$C` variável.</span><span class="sxs-lookup"><span data-stu-id="27341-157">The first command uses the **PassThru** parameter of the `Show-Command` cmdlet and saves the results of the command in the `$C` variable.</span></span> <span data-ttu-id="27341-158">Nesse caso, usamos a `Show-Command` janela para criar um `Get-EventLog` comando que obtém os cinco eventos mais recentes no log de eventos do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="27341-158">In this case, we use the `Show-Command` window to create a `Get-EventLog` command that gets the five newest events in the Windows PowerShell event log.</span></span> <span data-ttu-id="27341-159">Quando você clica em **OK** , `Show-Command` retorna a cadeia de caracteres de comando, que é salva na `$C` variável.</span><span class="sxs-lookup"><span data-stu-id="27341-159">When you click **OK** , `Show-Command` returns the command string, which is saved in the `$C` variable.</span></span>
+<span data-ttu-id="9309a-157">O primeiro comando usa o parâmetro **PassThru** do `Show-Command` cmdlet e salva os resultados do comando na `$C` variável.</span><span class="sxs-lookup"><span data-stu-id="9309a-157">The first command uses the **PassThru** parameter of the `Show-Command` cmdlet and saves the results of the command in the `$C` variable.</span></span> <span data-ttu-id="9309a-158">Nesse caso, usamos a `Show-Command` janela para criar um `Get-EventLog` comando que obtém os cinco eventos mais recentes no log de eventos do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9309a-158">In this case, we use the `Show-Command` window to create a `Get-EventLog` command that gets the five newest events in the Windows PowerShell event log.</span></span> <span data-ttu-id="9309a-159">Quando você clica em **OK** , `Show-Command` retorna a cadeia de caracteres de comando, que é salva na `$C` variável.</span><span class="sxs-lookup"><span data-stu-id="9309a-159">When you click **OK** , `Show-Command` returns the command string, which is saved in the `$C` variable.</span></span>
 
-### <span data-ttu-id="27341-160">Exemplo 8: salvar a saída de um comando em uma variável</span><span class="sxs-lookup"><span data-stu-id="27341-160">Example 8: Save the output of a command to a variable</span></span>
+### <span data-ttu-id="9309a-160">Exemplo 8: salvar a saída de um comando em uma variável</span><span class="sxs-lookup"><span data-stu-id="9309a-160">Example 8: Save the output of a command to a variable</span></span>
 
-<span data-ttu-id="27341-161">Este exemplo usa o parâmetro **ErrorPopup** para salvar a saída de um comando em uma variável.</span><span class="sxs-lookup"><span data-stu-id="27341-161">This example uses the **ErrorPopup** parameter to save the output of a command in a variable.</span></span>
+<span data-ttu-id="9309a-161">Este exemplo usa o parâmetro **ErrorPopup** para salvar a saída de um comando em uma variável.</span><span class="sxs-lookup"><span data-stu-id="9309a-161">This example uses the **ErrorPopup** parameter to save the output of a command in a variable.</span></span>
 
 ```powershell
 $P = Show-Command Get-Process -ErrorPopup
@@ -152,15 +152,15 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     473      33    94096     112532   709     2.06   4492 powershell
 ```
 
-<span data-ttu-id="27341-162">Além de exibir erros em uma janela, o **ErrorPopup** retorna a saída do comando para o comando atual, em vez de criar um novo comando.</span><span class="sxs-lookup"><span data-stu-id="27341-162">In addition to displaying errors in a window, **ErrorPopup** returns command output to the current command, instead of creating a new command.</span></span> <span data-ttu-id="27341-163">Quando você executar esse comando, a `Show-Command` janela será aberta.</span><span class="sxs-lookup"><span data-stu-id="27341-163">When you run this command, the `Show-Command` window opens.</span></span> <span data-ttu-id="27341-164">Você pode usar os recursos de janela para definir valores de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="27341-164">You can use the window features to set parameter values.</span></span> <span data-ttu-id="27341-165">Para executar o comando, clique no botão **executar** na `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="27341-165">To run the command, click the **Run** button in the `Show-Command` window.</span></span>
+<span data-ttu-id="9309a-162">Além de exibir erros em uma janela, o **ErrorPopup** retorna a saída do comando para o comando atual, em vez de criar um novo comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-162">In addition to displaying errors in a window, **ErrorPopup** returns command output to the current command, instead of creating a new command.</span></span> <span data-ttu-id="9309a-163">Quando você executar esse comando, a `Show-Command` janela será aberta.</span><span class="sxs-lookup"><span data-stu-id="9309a-163">When you run this command, the `Show-Command` window opens.</span></span> <span data-ttu-id="9309a-164">Você pode usar os recursos de janela para definir valores de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="9309a-164">You can use the window features to set parameter values.</span></span> <span data-ttu-id="9309a-165">Para executar o comando, clique no botão **executar** na `Show-Command` janela.</span><span class="sxs-lookup"><span data-stu-id="9309a-165">To run the command, click the **Run** button in the `Show-Command` window.</span></span>
 
-## <span data-ttu-id="27341-166">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="27341-166">PARAMETERS</span></span>
+## <span data-ttu-id="9309a-166">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9309a-166">PARAMETERS</span></span>
 
-### <span data-ttu-id="27341-167">-ErrorPopup</span><span class="sxs-lookup"><span data-stu-id="27341-167">-ErrorPopup</span></span>
+### <span data-ttu-id="9309a-167">-ErrorPopup</span><span class="sxs-lookup"><span data-stu-id="9309a-167">-ErrorPopup</span></span>
 
-<span data-ttu-id="27341-168">Indica que o cmdlet exibe erros em uma janela pop-up, além de exibi-los na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-168">Indicates that the cmdlet displays errors in a pop-up window, in addition to displaying them at the command line.</span></span> <span data-ttu-id="27341-169">Por padrão, quando um comando executado em uma `Show-Command` janela gera um erro, o erro é exibido somente na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-169">By default, when a command that is run in a `Show-Command` window generates an error, the error is displayed only at the command line.</span></span>
+<span data-ttu-id="9309a-168">Indica que o cmdlet exibe erros em uma janela pop-up, além de exibi-los na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-168">Indicates that the cmdlet displays errors in a pop-up window, in addition to displaying them at the command line.</span></span> <span data-ttu-id="9309a-169">Por padrão, quando um comando executado em uma `Show-Command` janela gera um erro, o erro é exibido somente na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-169">By default, when a command that is run in a `Show-Command` window generates an error, the error is displayed only at the command line.</span></span>
 
-<span data-ttu-id="27341-170">Além disso, quando você executa o comando (usando o botão **executar** na `Show-Command` janela), o parâmetro **ErrorPopup** retorna os resultados do comando para o comando atual, em vez de executar o comando e retornar sua saída para um novo comando.</span><span class="sxs-lookup"><span data-stu-id="27341-170">Also, when you run the command (by using the **Run** button in the `Show-Command` window), the **ErrorPopup** parameter returns the command results to the current command, instead of running the command and returning its output to a new command.</span></span> <span data-ttu-id="27341-171">Você pode usar esse recurso para salvar os resultados do comando em uma variável.</span><span class="sxs-lookup"><span data-stu-id="27341-171">You can use this feature to save the command results in a variable.</span></span>
+<span data-ttu-id="9309a-170">Além disso, quando você executa o comando (usando o botão **executar** na `Show-Command` janela), o parâmetro **ErrorPopup** retorna os resultados do comando para o comando atual, em vez de executar o comando e retornar sua saída para um novo comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-170">Also, when you run the command (by using the **Run** button in the `Show-Command` window), the **ErrorPopup** parameter returns the command results to the current command, instead of running the command and returning its output to a new command.</span></span> <span data-ttu-id="9309a-171">Você pode usar esse recurso para salvar os resultados do comando em uma variável.</span><span class="sxs-lookup"><span data-stu-id="9309a-171">You can use this feature to save the command results in a variable.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -174,9 +174,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="27341-172">-Altura</span><span class="sxs-lookup"><span data-stu-id="27341-172">-Height</span></span>
+### <span data-ttu-id="9309a-172">-Altura</span><span class="sxs-lookup"><span data-stu-id="9309a-172">-Height</span></span>
 
-<span data-ttu-id="27341-173">Especifica a altura da `Show-Command` janela em pixels.</span><span class="sxs-lookup"><span data-stu-id="27341-173">Specifies the height of the `Show-Command` window in pixels.</span></span> <span data-ttu-id="27341-174">Insira um valor entre 300 e o número de pixels na resolução de tela.</span><span class="sxs-lookup"><span data-stu-id="27341-174">Enter a value between 300 and the number of pixels in the screen resolution.</span></span> <span data-ttu-id="27341-175">Se o valor for muito grande para exibir a janela de comando na tela, o `Show-Command` gerará um erro.</span><span class="sxs-lookup"><span data-stu-id="27341-175">If the value is too large to display the command window on the screen, `Show-Command` generates an error.</span></span> <span data-ttu-id="27341-176">A altura padrão é 600 pixels.</span><span class="sxs-lookup"><span data-stu-id="27341-176">The default height is 600 pixels.</span></span> <span data-ttu-id="27341-177">Para um `Show-Command` comando que inclui o parâmetro **Name** , a altura padrão é de 300 pixels.</span><span class="sxs-lookup"><span data-stu-id="27341-177">For a `Show-Command` command that includes the **Name** parameter, the default height is 300 pixels.</span></span>
+<span data-ttu-id="9309a-173">Especifica a altura da `Show-Command` janela em pixels.</span><span class="sxs-lookup"><span data-stu-id="9309a-173">Specifies the height of the `Show-Command` window in pixels.</span></span> <span data-ttu-id="9309a-174">Insira um valor entre 300 e o número de pixels na resolução de tela.</span><span class="sxs-lookup"><span data-stu-id="9309a-174">Enter a value between 300 and the number of pixels in the screen resolution.</span></span> <span data-ttu-id="9309a-175">Se o valor for muito grande para exibir a janela de comando na tela, o `Show-Command` gerará um erro.</span><span class="sxs-lookup"><span data-stu-id="9309a-175">If the value is too large to display the command window on the screen, `Show-Command` generates an error.</span></span> <span data-ttu-id="9309a-176">A altura padrão é 600 pixels.</span><span class="sxs-lookup"><span data-stu-id="9309a-176">The default height is 600 pixels.</span></span> <span data-ttu-id="9309a-177">Para um `Show-Command` comando que inclui o parâmetro **Name** , a altura padrão é de 300 pixels.</span><span class="sxs-lookup"><span data-stu-id="9309a-177">For a `Show-Command` command that includes the **Name** parameter, the default height is 300 pixels.</span></span>
 
 ```yaml
 Type: System.Double
@@ -190,9 +190,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="27341-178">-Name</span><span class="sxs-lookup"><span data-stu-id="27341-178">-Name</span></span>
+### <span data-ttu-id="9309a-178">-Name</span><span class="sxs-lookup"><span data-stu-id="9309a-178">-Name</span></span>
 
-<span data-ttu-id="27341-179">Exibe uma janela de comando para o comando especificado.</span><span class="sxs-lookup"><span data-stu-id="27341-179">Displays a command window for the specified command.</span></span> <span data-ttu-id="27341-180">Insira o nome de um comando, como o nome de um cmdlet, uma função ou um comando CIM.</span><span class="sxs-lookup"><span data-stu-id="27341-180">Enter the name of one command, such as the name of a cmdlet, function, or CIM command.</span></span> <span data-ttu-id="27341-181">Se você omitir esse parâmetro, `Show-Command` o exibirá uma janela de comando que lista todos os comandos do PowerShell em todos os módulos instalados no computador.</span><span class="sxs-lookup"><span data-stu-id="27341-181">If you omit this parameter, `Show-Command` displays a command window that lists all of the PowerShell commands in all modules installed on the computer.</span></span>
+<span data-ttu-id="9309a-179">Exibe uma janela de comando para o comando especificado.</span><span class="sxs-lookup"><span data-stu-id="9309a-179">Displays a command window for the specified command.</span></span> <span data-ttu-id="9309a-180">Insira o nome de um comando, como o nome de um cmdlet, uma função ou um comando CIM.</span><span class="sxs-lookup"><span data-stu-id="9309a-180">Enter the name of one command, such as the name of a cmdlet, function, or CIM command.</span></span> <span data-ttu-id="9309a-181">Se você omitir esse parâmetro, `Show-Command` o exibirá uma janela de comando que lista todos os comandos do PowerShell em todos os módulos instalados no computador.</span><span class="sxs-lookup"><span data-stu-id="9309a-181">If you omit this parameter, `Show-Command` displays a command window that lists all of the PowerShell commands in all modules installed on the computer.</span></span>
 
 ```yaml
 Type: System.String
@@ -206,25 +206,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="27341-182">-NoCommonParameter</span><span class="sxs-lookup"><span data-stu-id="27341-182">-NoCommonParameter</span></span>
+### <span data-ttu-id="9309a-182">-NoCommonParameter</span><span class="sxs-lookup"><span data-stu-id="9309a-182">-NoCommonParameter</span></span>
 
-<span data-ttu-id="27341-183">Indica que esse cmdlet omite a seção de parâmetros comuns da exibição do comando.</span><span class="sxs-lookup"><span data-stu-id="27341-183">Indicates that this cmdlet omits the Common Parameters section of the command display.</span></span> <span data-ttu-id="27341-184">Por padrão, Parâmetros Comuns aparece em uma seção expansível na parte inferior da janela de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-184">By default, the Common Parameters appear in an expandable section at the bottom of the command window.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="27341-185">-PassThru</span><span class="sxs-lookup"><span data-stu-id="27341-185">-PassThru</span></span>
-
-<span data-ttu-id="27341-186">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="27341-186">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="27341-187">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="27341-187">By default, this cmdlet does not generate any output.</span></span> <span data-ttu-id="27341-188">Para executar a cadeia de caracteres de comando, copie e cole-a no prompt de comando ou salve-a em uma variável e use o `Invoke-Expression` cmdlet para executar a cadeia de caracteres na variável.</span><span class="sxs-lookup"><span data-stu-id="27341-188">To run the command string, copy and paste it at the command prompt or save it in a variable and use the `Invoke-Expression` cmdlet to run the string in the variable.</span></span>
+<span data-ttu-id="9309a-183">Indica que esse cmdlet omite a seção de parâmetros comuns da exibição do comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-183">Indicates that this cmdlet omits the Common Parameters section of the command display.</span></span> <span data-ttu-id="9309a-184">Por padrão, Parâmetros Comuns aparece em uma seção expansível na parte inferior da janela de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-184">By default, the Common Parameters appear in an expandable section at the bottom of the command window.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -238,9 +222,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="27341-189">-Largura</span><span class="sxs-lookup"><span data-stu-id="27341-189">-Width</span></span>
+### <span data-ttu-id="9309a-185">-PassThru</span><span class="sxs-lookup"><span data-stu-id="9309a-185">-PassThru</span></span>
 
-<span data-ttu-id="27341-190">Especifica a largura da `Show-Command` janela em pixels.</span><span class="sxs-lookup"><span data-stu-id="27341-190">Specifies the width of the `Show-Command` window in pixels.</span></span> <span data-ttu-id="27341-191">Insira um valor entre 300 e o número de pixels na resolução de tela.</span><span class="sxs-lookup"><span data-stu-id="27341-191">Enter a value between 300 and the number of pixels in the screen resolution.</span></span> <span data-ttu-id="27341-192">Se o valor for muito grande para exibir a janela de comando na tela, o `Show-Command` gerará um erro.</span><span class="sxs-lookup"><span data-stu-id="27341-192">If the value is too large to display the command window on the screen, `Show-Command` generates an error.</span></span> <span data-ttu-id="27341-193">A largura padrão é 300 pixels.</span><span class="sxs-lookup"><span data-stu-id="27341-193">The default width is 300 pixels.</span></span>
+<span data-ttu-id="9309a-186">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="9309a-186">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="9309a-187">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="9309a-187">By default, this cmdlet does not generate any output.</span></span> <span data-ttu-id="9309a-188">Para executar a cadeia de caracteres de comando, copie e cole-a no prompt de comando ou salve-a em uma variável e use o `Invoke-Expression` cmdlet para executar a cadeia de caracteres na variável.</span><span class="sxs-lookup"><span data-stu-id="9309a-188">To run the command string, copy and paste it at the command prompt or save it in a variable and use the `Invoke-Expression` cmdlet to run the string in the variable.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9309a-189">-Largura</span><span class="sxs-lookup"><span data-stu-id="9309a-189">-Width</span></span>
+
+<span data-ttu-id="9309a-190">Especifica a largura da `Show-Command` janela em pixels.</span><span class="sxs-lookup"><span data-stu-id="9309a-190">Specifies the width of the `Show-Command` window in pixels.</span></span> <span data-ttu-id="9309a-191">Insira um valor entre 300 e o número de pixels na resolução de tela.</span><span class="sxs-lookup"><span data-stu-id="9309a-191">Enter a value between 300 and the number of pixels in the screen resolution.</span></span> <span data-ttu-id="9309a-192">Se o valor for muito grande para exibir a janela de comando na tela, o `Show-Command` gerará um erro.</span><span class="sxs-lookup"><span data-stu-id="9309a-192">If the value is too large to display the command window on the screen, `Show-Command` generates an error.</span></span> <span data-ttu-id="9309a-193">A largura padrão é 300 pixels.</span><span class="sxs-lookup"><span data-stu-id="9309a-193">The default width is 300 pixels.</span></span>
 
 ```yaml
 Type: System.Double
@@ -254,24 +254,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="27341-194">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="27341-194">CommonParameters</span></span>
+### <span data-ttu-id="9309a-194">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9309a-194">CommonParameters</span></span>
 
-<span data-ttu-id="27341-195">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="27341-195">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="27341-196">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="27341-196">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="9309a-195">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9309a-195">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9309a-196">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="9309a-196">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="27341-197">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="27341-197">INPUTS</span></span>
+## <span data-ttu-id="9309a-197">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="9309a-197">INPUTS</span></span>
 
-### <span data-ttu-id="27341-198">Nenhum</span><span class="sxs-lookup"><span data-stu-id="27341-198">None</span></span>
+### <span data-ttu-id="9309a-198">Nenhum</span><span class="sxs-lookup"><span data-stu-id="9309a-198">None</span></span>
 
-<span data-ttu-id="27341-199">Não é possível canalizar a entrada para `Show-Command` .</span><span class="sxs-lookup"><span data-stu-id="27341-199">You cannot pipe input to `Show-Command`.</span></span>
+<span data-ttu-id="9309a-199">Não é possível canalizar a entrada para `Show-Command` .</span><span class="sxs-lookup"><span data-stu-id="9309a-199">You cannot pipe input to `Show-Command`.</span></span>
 
-## <span data-ttu-id="27341-200">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="27341-200">OUTPUTS</span></span>
+## <span data-ttu-id="9309a-200">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="9309a-200">OUTPUTS</span></span>
 
-### <span data-ttu-id="27341-201">Nenhum, System. String, System. Object</span><span class="sxs-lookup"><span data-stu-id="27341-201">None, System.String, System.Object</span></span>
+### <span data-ttu-id="9309a-201">Nenhum, System. String, System. Object</span><span class="sxs-lookup"><span data-stu-id="9309a-201">None, System.String, System.Object</span></span>
 
-<span data-ttu-id="27341-202">Quando você usa o parâmetro **PassThru** , `Show-Command` retorna uma cadeia de caracteres de comando.</span><span class="sxs-lookup"><span data-stu-id="27341-202">When you use the **PassThru** parameter, `Show-Command` returns a command string.</span></span> <span data-ttu-id="27341-203">Quando você usa o parâmetro **ErrorPopup** , `Show-Command` o retorna a saída do comando (qualquer objeto).</span><span class="sxs-lookup"><span data-stu-id="27341-203">When you use the **ErrorPopup** parameter, `Show-Command` returns the command output (any object).</span></span> <span data-ttu-id="27341-204">Caso contrário, `Show-Command` o não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="27341-204">Otherwise, `Show-Command` does not generate any output.</span></span>
+<span data-ttu-id="9309a-202">Quando você usa o parâmetro **PassThru** , `Show-Command` retorna uma cadeia de caracteres de comando.</span><span class="sxs-lookup"><span data-stu-id="9309a-202">When you use the **PassThru** parameter, `Show-Command` returns a command string.</span></span> <span data-ttu-id="9309a-203">Quando você usa o parâmetro **ErrorPopup** , `Show-Command` o retorna a saída do comando (qualquer objeto).</span><span class="sxs-lookup"><span data-stu-id="9309a-203">When you use the **ErrorPopup** parameter, `Show-Command` returns the command output (any object).</span></span> <span data-ttu-id="9309a-204">Caso contrário, `Show-Command` o não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="9309a-204">Otherwise, `Show-Command` does not generate any output.</span></span>
 
-## <span data-ttu-id="27341-205">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="27341-205">NOTES</span></span>
+## <span data-ttu-id="9309a-205">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="9309a-205">NOTES</span></span>
 
-<span data-ttu-id="27341-206">`Show-Command` Não funciona em sessões remotas.</span><span class="sxs-lookup"><span data-stu-id="27341-206">`Show-Command` does not work in remote sessions.</span></span>
+<span data-ttu-id="9309a-206">Esse cmdlet só está disponível em plataformas Windows.</span><span class="sxs-lookup"><span data-stu-id="9309a-206">This cmdlet is only available on Windows platforms.</span></span>
 
-## <span data-ttu-id="27341-207">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="27341-207">RELATED LINKS</span></span>
+<span data-ttu-id="9309a-207">`Show-Command` Não funciona em sessões remotas.</span><span class="sxs-lookup"><span data-stu-id="9309a-207">`Show-Command` does not work in remote sessions.</span></span>
+
+## <span data-ttu-id="9309a-208">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="9309a-208">RELATED LINKS</span></span>
