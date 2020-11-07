@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: b3ee9ce8f699e66a091a017eb8c1b0c49f1b7636
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: e4036924c45a5fd1b031fa33c8b9226aa5a66c30
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194962"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347390"
 ---
 # Disconnect-PSSession
 
@@ -58,7 +58,7 @@ O `Disconnect-PSSession` cmdlet desconecta apenas as PSSessions abertas que est�
 
 Para reconectar-se a uma PSSession desconectada, use os `Connect-PSSession` `Receive-PSSession` cmdlets ou.
 
-Quando uma PSSession é desconectada, os comandos na PSSession continuam em execução até que sejam concluídos, a menos que a PSSession expire ou os comandos na PSSession sejam bloqueados por um buffer de saída completo. Para alterar o tempo limite de inatividade, use o parâmetro **IdleTimeoutSec** . Para alterar o modo de buffer de saída, use o parâmetro **OutputBufferingMode** você também pode usar o parâmetro **InDisconnectedSession** do `Invoke-Command` cmdlet para executar um comando em uma sessão desconectada.
+Quando uma PSSession é desconectada, os comandos na PSSession continuam em execução até que sejam concluídos, a menos que a PSSession expire ou os comandos na PSSession sejam bloqueados por um buffer de saída completo. Para alterar o tempo limite de inatividade, use o parâmetro **IdleTimeoutSec**. Para alterar o modo de buffer de saída, use o parâmetro **OutputBufferingMode** você também pode usar o parâmetro **InDisconnectedSession** do `Invoke-Command` cmdlet para executar um comando em uma sessão desconectada.
 
 Para obter mais informações sobre o recurso de Sessões desconectadas, consulte [about_Remote_Disconnected_Sessions](./About/about_Remote_Disconnected_Sessions.md).
 
@@ -92,7 +92,7 @@ Id Name            ComputerName    State         ConfigurationName     Availabil
 1  ITTask          Server12        Disconnected  ITTasks               None
 ```
 
-O `Disconnect-PSSession` comando usa o parâmetro **OutputBufferingMode** para definir o modo de saída como **drop** . Essa configuração garante que o script em execução na sessão pode ser executado mesmo que o buffer de saída da sessão esteja cheio. Como o script grava a saída de um relatório em um compartilhamento de arquivos, outras saídas podem ser perdidas sem consequências.
+O `Disconnect-PSSession` comando usa o parâmetro **OutputBufferingMode** para definir o modo de saída como **drop**. Essa configuração garante que o script em execução na sessão pode ser executado mesmo que o buffer de saída da sessão esteja cheio. Como o script grava a saída de um relatório em um compartilhamento de arquivos, outras saídas podem ser perdidas sem consequências.
 
 O comando também usa o parâmetro **IdleTimeoutSec** para estender o tempo limite de inatividade da sessão para 24 horas. Essa configuração concede tempo para que esse e outros administradores reconectem-se à sessão para verificar se o script foi executado e solucionem os problemas necessários.
 
@@ -144,7 +144,7 @@ O Gerenciador usa a `MkDir` função para criar o diretório e, em seguida, ele 
 
 Este exemplo mostra como corrigir o valor da propriedade **IdleTimeout** de uma sessão para que ela possa ser desconectada.
 
-A propriedade do tempo limite de inatividade de uma sessão é crítica para sessões desconectadas, pois ela determina quanto tempo uma sessão desconectada é mantida antes de ser excluída. Você pode definir a opção de tempo limite de inatividade ao criar uma sessão e quando desconectar-se. Os valores padrão para o tempo limite de ociosidade de uma sessão são definidos na `$PSSessionOption` variável de preferência no computador local e na configuração de sessão no computador remoto. Valores definidos para a sessão têm precedência sobre valores definidos na configuração da sessão, porém os valores da sessão não podem exceder as cotas definidas na configuração da sessão, como o valor **MaxIdleTimeoutMs** .
+A propriedade do tempo limite de inatividade de uma sessão é crítica para sessões desconectadas, pois ela determina quanto tempo uma sessão desconectada é mantida antes de ser excluída. Você pode definir a opção de tempo limite de inatividade ao criar uma sessão e quando desconectar-se. Os valores padrão para o tempo limite de ociosidade de uma sessão são definidos na `$PSSessionOption` variável de preferência no computador local e na configuração de sessão no computador remoto. Valores definidos para a sessão têm precedência sobre valores definidos na configuração da sessão, porém os valores da sessão não podem exceder as cotas definidas na configuração da sessão, como o valor **MaxIdleTimeoutMs**.
 
 ```
 PS> $Timeout = New-PSSessionOption -IdleTimeout 172800000
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 
 ### -OutputBufferingMode
 
-Determina como a saída do comando é gerenciada na sessão desconectada quando o buffer de saída está cheio. O valor padrão é **Block** .
+Determina como a saída do comando é gerenciada na sessão desconectada quando o buffer de saída está cheio. O valor padrão é **Block**.
 
 Se o comando na sessão desconectada estiver retornando uma saída e o buffer de saída ficar cheio, o valor desse parâmetro efetivamente determina se o comando continuará a ser executado enquanto a sessão está desconectada. Um valor de **Block** suspende o comando até que a sessão seja reconectada. Um valor de **Drop** permite que o comando ser concluído, embora os dados possam ser perdidos. Ao usar o valor **Drop** , redirecione a saída do comando para um arquivo no disco.
 
@@ -444,12 +444,14 @@ Você pode canalizar uma sessão para `Disconnect-PSSession` .
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 - O `Disconnect-PSSession` cmdlet funciona somente quando os computadores locais e remotos estão executando o PowerShell 3,0 ou posterior.
 - Se você usar o `Disconnect-PSSession` cmdlet em uma sessão desconectada, o comando não terá nenhum efeito na sessão e não gerará erros.
 - Sessões de loopback desconectadas com tokens de segurança interativos (aqueles criados com o parâmetro **EnableNetworkAccess** ) podem ser reconectados somente por meio do computador no qual a sessão foi criada. Essa restrição protege o computador contra acessos mal-intencionados.
-- Quando você desconecta uma PSSession, o estado da sessão é **Disconnected** e a disponibilidade é **None** .
+- Quando você desconecta uma PSSession, o estado da sessão é **Disconnected** e a disponibilidade é **None**.
 
-  O valor da propriedade **State** é relativo a sessão atual. Portanto, um valor de **Disconnected** significa que a PSSession não está conectada à sessão atual. No entanto, isso não significa que a PSSession será desconectada de todas as sessões. Ela pode ser conectada a uma sessão diferente. Para determinar se é possível conectar-se ou reconectar-se à sessão, utilize a propriedade **Availability** .
+  O valor da propriedade **State** é relativo a sessão atual. Portanto, um valor de **Disconnected** significa que a PSSession não está conectada à sessão atual. No entanto, isso não significa que a PSSession será desconectada de todas as sessões. Ela pode ser conectada a uma sessão diferente. Para determinar se é possível conectar-se ou reconectar-se à sessão, utilize a propriedade **Availability**.
 
   Um valor **Availability** de **None** indica que é possível conectar-se à sessão. Um valor de **Busy** indica que não é possível se conectar à PSSession porque está conectada a outra sessão.
 

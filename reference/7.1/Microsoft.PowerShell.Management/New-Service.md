@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: c34c581b9af74f3199437b26971b902f6b39620f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 81920303d130a306674033b2b1ba57a3e71c949c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193214"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347424"
 ---
 # New-Service
 
@@ -186,8 +186,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica o nome do serviço.
-Este parâmetro é necessário.
+Especifica o nome do serviço. Este parâmetro é necessário.
 
 ```yaml
 Type: System.String
@@ -212,7 +211,7 @@ Define o tipo de inicialização do serviço. Os valores aceitáveis para esse p
 - **Inválidos** -esse valor não tem suporte. O uso desse valor resulta em um erro.
 - **Manual** -o serviço é iniciado apenas manualmente, por um usuário, usando o Gerenciador de controle de serviço ou por um aplicativo.
 
- O valor padrão é **automático** .
+ O valor padrão é **automático**.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ServiceStartupType
@@ -261,8 +260,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -294,7 +292,9 @@ Esse cmdlet retorna um objeto que representa o novo serviço.
 
 ## OBSERVAÇÕES
 
-Para executar esse cmdlet no Windows Vista e em versões posteriores do sistema operacional Windows, inicie o PowerShell usando a opção Executar como administrador.
+Esse cmdlet só está disponível em plataformas Windows.
+
+Para executar esse cmdlet, inicie o PowerShell usando a opção **Executar como administrador** .
 
 ## LINKS RELACIONADOS
 
@@ -313,4 +313,3 @@ Para executar esse cmdlet no Windows Vista e em versões posteriores do sistema 
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

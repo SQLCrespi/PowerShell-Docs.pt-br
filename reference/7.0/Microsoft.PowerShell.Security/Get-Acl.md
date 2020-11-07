@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: cb38b327920fc56817c5c8ec73f548ffba8bdd7a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: d9adce420ff8904fa40c7689a8b2ab5a3b5e945f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193183"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347203"
 ---
 # Get-Acl
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Omite os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
+Omite os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -137,7 +137,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Especifica um filtro no formato ou linguagem do provedor. O valor deste parâmetro qualifica o parâmetro **Path** . A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor. Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao obter os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
+Especifica um filtro no formato ou linguagem do provedor. O valor deste parâmetro qualifica o parâmetro **Path**. A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor. Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao obter os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
 
 ```yaml
 Type: System.String
@@ -153,7 +153,7 @@ Accept wildcard characters: True
 
 ### -Incluir
 
-Obtém somente os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
+Obtém somente os itens especificados. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -240,6 +240,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 `Get-Acl` Retorna um objeto que representa as ACLs que ele obtém. O tipo de objeto depende do tipo da ACL.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 Por padrão, `Get-Acl` o exibe o caminho do PowerShell para o recurso ( `<provider>::<resource-path>` ), o proprietário do recurso e "acesso", uma lista (matriz) das entradas de controle de acesso na DACL (lista de controle de acesso discricionário) do recurso. A lista de DACL é controlada pelo proprietário do recurso.
 

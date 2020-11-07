@@ -7,12 +7,12 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: d33961d9c0b1980d84d35a33c45d965e84231914
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 347ffa733068d4e7f4896eb18358c7a852c88d0a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194708"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347271"
 ---
 # Get-ExecutionPolicy
 
@@ -76,7 +76,7 @@ MachinePolicy       Undefined
  LocalMachine    RemoteSigned
 ```
 
-O `Set-ExecutionPolicy` cmdlet usa o parâmetro **ExecutionPolicy** para especificar a política **RemoteSigned** . O parâmetro **Scope** especifica o valor de escopo padrão, **LocalMachine** . Para exibir as configurações de política de execução, use o `Get-ExecutionPolicy` cmdlet com o parâmetro **list** .
+O `Set-ExecutionPolicy` cmdlet usa o parâmetro **ExecutionPolicy** para especificar a política **RemoteSigned** . O parâmetro **Scope** especifica o valor de escopo padrão, **LocalMachine**. Para exibir as configurações de política de execução, use o `Get-ExecutionPolicy` cmdlet com o parâmetro **list** .
 
 ### Exemplo 3: obter a política de execução efetiva
 
@@ -98,7 +98,7 @@ PS> Get-ExecutionPolicy
 AllSigned
 ```
 
-O `Get-ExecutionPolicy` cmdlet usa o parâmetro **list** para exibir a política de execução de cada escopo. O `Get-ExecutionPolicy` cmdlet é executado sem um parâmetro para exibir a política de execução efetiva, **AllSigned** .
+O `Get-ExecutionPolicy` cmdlet usa o parâmetro **list** para exibir a política de execução de cada escopo. O `Get-ExecutionPolicy` cmdlet é executado sem um parâmetro para exibir a política de execução efetiva, **AllSigned**.
 
 ### Exemplo 4: desbloquear um script para executá-lo sem alterar a política de execução
 
@@ -136,7 +136,7 @@ PS> .\Start-ActivityTracker.ps1
 Task 1:
 ```
 
-O `Set-ExecutionPolicy` usa o parâmetro **ExecutionPolicy** para especificar a política de **RemoteSigned** . A política é definida para o escopo padrão, **LocalMachine** .
+O `Set-ExecutionPolicy` usa o parâmetro **ExecutionPolicy** para especificar a política de **RemoteSigned** . A política é definida para o escopo padrão, **LocalMachine**.
 
 O `Get-ExecutionPolicy` cmdlet mostra que **RemoteSigned** é a política de execução efetiva para a sessão atual do PowerShell.
 
@@ -144,7 +144,7 @@ O script de **Start-ActivityTracker.ps1** é executado a partir do diretório at
 
 Neste exemplo, o código do script foi revisado e verificado como seguro para ser executado. O `Unblock-File` cmdlet usa o parâmetro **Path** para desbloquear o script.
 
-Para verificar se `Unblock-File` a política de execução não foi alterada, `Get-ExecutionPolicy` exibe a política de execução efetiva, **RemoteSigned** .
+Para verificar se `Unblock-File` a política de execução não foi alterada, `Get-ExecutionPolicy` exibe a política de execução efetiva, **RemoteSigned**.
 
 O script, **Start-ActivityTracker.ps1** é executado a partir do diretório atual. O script começa a ser executado porque foi desbloqueado pelo `Unblock-File` cmdlet.
 
@@ -172,11 +172,11 @@ Especifica o escopo que é afetado por uma política de execução.
 
 A política de execução efetiva é determinada pela ordem de precedência da seguinte maneira:
 
-- **MachinePolicy** . Definido por um Política de Grupo para todos os usuários do computador.
-- **UserPolicy** . Definido por um Política de Grupo para o usuário atual do computador.
-- **Processar** . Afeta apenas a sessão atual do PowerShell.
-- **CurrentUser** . Afeta somente o usuário atual.
-- **LocalMachine** . Escopo padrão que afeta todos os usuários do computador.
+- **MachinePolicy**. Definido por um Política de Grupo para todos os usuários do computador.
+- **UserPolicy**. Definido por um Política de Grupo para o usuário atual do computador.
+- **Processar**. Afeta apenas a sessão atual do PowerShell.
+- **CurrentUser**. Afeta somente o usuário atual.
+- **LocalMachine**. Escopo padrão que afeta todos os usuários do computador.
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicyScope
@@ -205,6 +205,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Microsoft.PowerShell.ExecutionPolicy
 
+O cmdlet sempre retorna **irrestrito** em plataformas Linux e MacOS.
+
 ## OBSERVAÇÕES
 
 Uma política de execução faz parte da estratégia de segurança do PowerShell. As políticas de execução determinam se você pode carregar arquivos de configuração, como seu perfil do PowerShell, ou executar scripts. E se os scripts devem ser assinados digitalmente antes de serem executados.
@@ -220,4 +222,3 @@ Uma política de execução faz parte da estratégia de segurança do PowerShell
 [Set-AuthenticodeSignature](Set-AuthenticodeSignature.md)
 
 [Set-ExecutionPolicy](Set-ExecutionPolicy.md)
-

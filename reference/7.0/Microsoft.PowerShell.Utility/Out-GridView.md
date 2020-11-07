@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-GridView
-ms.openlocfilehash: 73a2685947ac5980adab99a3f101a0c1f7f809d2
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 37b5349c8ed39ff70453b59fe6758c57880f0087
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192899"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346931"
 ---
 # Out-GridView
 
@@ -130,7 +130,7 @@ Este exemplo permite que você selecione vários processos na `Out-GridView` jan
 Get-Process | Out-GridView -PassThru | Export-Csv -Path .\ProcessLog.csv
 ```
 
-O parâmetro **PassThru** de `Out-GridView` permite que você envie vários itens por meio do pipeline. O parâmetro **PassThru** é equivalente a usar o valor **Multiple** do parâmetro **OutputMode** .
+O parâmetro **PassThru** de `Out-GridView` permite que você envie vários itens por meio do pipeline. O parâmetro **PassThru** é equivalente a usar o valor **Multiple** do parâmetro **OutputMode**.
 
 ### Exemplo 8: criar um atalho do Windows para `Out-GridView`
 
@@ -148,7 +148,7 @@ Essa linha de comando pode ser usada em um atalho do Windows. Sem o parâmetro *
 
 Especifica o objeto que o cmdlet aceita como entrada para `Out-GridView` .
 
-Quando você usa o parâmetro **InputObject** para enviar uma coleção de objetos ao `Out-GridView` , `Out-GridView` o trata a coleção como um objeto de coleção e exibe uma linha que representa a coleção. Para exibir cada objeto na coleção, use um operador de pipeline (|) para enviar objetos para o `Out-GridView` .
+Quando você usa o parâmetro **InputObject** para enviar uma coleção de objetos ao `Out-GridView` , `Out-GridView` o trata a coleção como um objeto de coleção e exibe uma linha que representa a coleção. Para exibir cada objeto na coleção, use um operador de pipeline ( `|` ) para enviar objetos para o `Out-GridView` .
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -169,9 +169,9 @@ Por padrão, este cmdlet não gera saída. Para enviar itens da janela interativ
 
 Os valores desse parâmetro determinam quantos itens você pode enviar pelo pipeline.
 
-- nenhuma.  Nenhum item. Este é o valor padrão.
+- Nenhum.  Nenhum item. Esse é o valor padrão.
 - Única. Zero itens ou um item. Use esse valor quando o próximo comando puder levar apenas um objeto de entrada.
-- Vários. Zero, um ou muitos itens. Use esse valor quando o próximo comando puder levar vários objetos de entrada. Esse valor é equivalente ao parâmetro **Passthru** .
+- Vários. Zero, um ou muitos itens. Use esse valor quando o próximo comando puder levar vários objetos de entrada. Esse valor é equivalente ao parâmetro **Passthru**.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.OutputModeOption
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Indica que o cmdlet envia itens da janela interativa para baixo no pipeline como entrada para outros comandos. Por padrão, este cmdlet não gera saída. Este parâmetro é equivalente a usar o valor **Multiple** do parâmetro **OutputMode** .
+Indica que o cmdlet envia itens da janela interativa para baixo no pipeline como entrada para outros comandos. Por padrão, este cmdlet não gera saída. Este parâmetro é equivalente a usar o valor **Multiple** do parâmetro **OutputMode**.
 
 Para enviar itens da janela interativa pelo pipeline, clique para selecionar os itens e, em seguida, clique em OK. Shift+clique e Ctrl+clique são suportados.
 
@@ -256,6 +256,8 @@ Normalmente, `Out-GridView` o não retorna nenhum objeto. Ao usar o parâmetro *
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 Você não pode usar um comando remoto para abrir uma janela de exibição em grade em outro computador.
 
 A saída do comando que você envia para `Out-GridView` não pode ser formatada usando os `Format` cmdlets, como `Format-Table` ou `Format-Wide` cmdlets. Para selecionar propriedades, use o `Select-Object` cmdlet.
@@ -278,14 +280,14 @@ Resultado desserializado de comandos remotos podem não ser formatados corretame
 
 **Para ocultar ou mostrar uma coluna:**
 
-1. Clique com o botão direito do mouse em qualquer cabeçalho de coluna e clique em **selecionar colunas** .
+1. Clique com o botão direito do mouse em qualquer cabeçalho de coluna e clique em **selecionar colunas**.
 2. Na caixa de diálogo **selecionar colunas** , use as teclas de direção para mover as colunas entre as colunas selecionadas para as caixas colunas disponíveis. Somente as colunas na caixa **selecionar colunas** aparecem na janela de exibição em grade.
 
 **Para reordenar colunas:**
 
 Você pode arrastar e soltar colunas no local desejado. Ou use as seguintes etapas:
 
-1. Clique com o botão direito do mouse em qualquer cabeçalho de coluna e clique em **selecionar colunas** .
+1. Clique com o botão direito do mouse em qualquer cabeçalho de coluna e clique em **selecionar colunas**.
 2. Na caixa de diálogo **selecionar colunas** , use os botões **mover para cima** e mover para **baixo** para reordenar as colunas. As colunas na parte superior da lista aparecem à esquerda das colunas na parte inferior da lista na janela de exibição em grade.
 
 **Como classificar dados de tabela**
@@ -336,7 +338,7 @@ Cada critério tem o seguinte formato:
 
 `<column> <operator> <value>`
 
-Os critérios para propriedades diferentes são conectados por **e** . Os critérios para a mesma propriedade são conectados por **ou** . Você não pode alterar os conectores lógicos.
+Os critérios para propriedades diferentes são conectados por **e**. Os critérios para a mesma propriedade são conectados por **ou**. Você não pode alterar os conectores lógicos.
 
 Os critérios afetam somente a exibição. Ele não exclui itens da tabela.
 
@@ -346,7 +348,7 @@ Os critérios afetam somente a exibição. Ele não exclui itens da tabela.
 2. Clique no botão de menu **Adicionar critérios** .
 3. Clique para selecionar colunas (propriedades). Você pode selecionar uma ou mais propriedades.
 4. Quando terminar de selecionar propriedades, clique no botão **Adicionar** .
-5. Para cancelar as adições, clique em **Cancelar** .
+5. Para cancelar as adições, clique em **Cancelar**.
 6. Para adicionar mais critérios, clique no botão **Adicionar critérios** novamente.
 
 **Como editar um critério**

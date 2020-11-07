@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-hotfix?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HotFix
-ms.openlocfilehash: 355257d0e403143d6983886de592d491241c6253
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 277dd2678b54c9e708d09f6ca27d82ab9afd4c1c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193435"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347611"
 ---
 # Get-HotFix
 
@@ -184,7 +184,9 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
-A **Win32_QuickFixEngineering** [classe WMI](/windows/desktop/WmiSdk/retrieving-a-class) Win32_QuickFixEngineering representa uma atualização pequena em todo o sistema, normalmente conhecida como atualização de QFE (Quick-Fix Engineering), aplicada ao sistema operacional atual. Essa classe retorna apenas as atualizações fornecidas pela CBS (serviço baseado em componente). Essas atualizações não estão listadas no registro. As atualizações fornecidas pelo Microsoft Windows Installer (MSI) ou pelo site do [Windows Update](https://update.microsoft.com) não são retornadas pelo **Win32_QuickFixEngineering** . Para obter mais informações, consulte [classe Win32_QuickFixEngineering](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).
+Esse cmdlet só está disponível em plataformas Windows.
+
+A **Win32_QuickFixEngineering** [classe WMI](/windows/desktop/WmiSdk/retrieving-a-class) Win32_QuickFixEngineering representa uma atualização pequena em todo o sistema, normalmente conhecida como atualização de QFE (Quick-Fix Engineering), aplicada ao sistema operacional atual. Essa classe retorna apenas as atualizações fornecidas pela CBS (serviço baseado em componente). Essas atualizações não estão listadas no registro. As atualizações fornecidas pelo Microsoft Windows Installer (MSI) ou pelo site do [Windows Update](https://update.microsoft.com) não são retornadas pelo **Win32_QuickFixEngineering**. Para obter mais informações, consulte [classe Win32_QuickFixEngineering](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).
 
 A `Get-HotFix` saída pode variar em sistemas operacionais diferentes.
 

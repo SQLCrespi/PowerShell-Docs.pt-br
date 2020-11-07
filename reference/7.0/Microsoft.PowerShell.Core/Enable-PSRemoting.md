@@ -7,12 +7,12 @@ ms.date: 07/16/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-PSRemoting
-ms.openlocfilehash: f74fe88cfb1d89e2f21d3f85e5c604d75f8ac55d
-ms.sourcegitcommit: 0e0f45d0d8deb8c9088a4f4a32218edde052b686
+ms.openlocfilehash: 4d00b875aab2e175465b262a320e7b16893c255c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "93194842"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347373"
 ---
 # Enable-PSRemoting
 
@@ -33,12 +33,12 @@ A comunicação remota do PowerShell é habilitada por padrão nas plataformas d
 
 Você precisa executar esse comando apenas uma vez em cada computador que receberá comandos. Você não precisa executá-lo em computadores que só enviam comandos. Como a configuração inicia os ouvintes para aceitar conexões remotas, é prudente executá-lo somente onde for necessário.
 
-Habilitar a comunicação remota do PowerShell em versões de cliente do Windows quando o computador está em uma rede pública normalmente não é permitido, mas você pode ignorar essa restrição usando o parâmetro **SkipNetworkProfileCheck** . Para obter mais informações, consulte a descrição do parâmetro **SkipNetworkProfileCheck** .
+Habilitar a comunicação remota do PowerShell em versões de cliente do Windows quando o computador está em uma rede pública normalmente não é permitido, mas você pode ignorar essa restrição usando o parâmetro **SkipNetworkProfileCheck** . Para obter mais informações, consulte a descrição do parâmetro **SkipNetworkProfileCheck**.
 
 Várias instalações do PowerShell podem existir lado a lado em um único computador. `Enable-PSRemoting`A execução irá configurar um ponto de extremidade de comunicação remota para a versão de instalação específica em que você está executando o cmdlet. Portanto, se você executar `Enable-PSRemoting` o powershell 6,2 em execução, um ponto de extremidade de comunicação remota será configurado para executar o powershell 6,2. Se você executar `Enable-PSRemoting` o PowerShell 7-Preview em execução, um ponto de extremidade de comunicação remota será configurado para executar o PowerShell 7-Preview.
 
-`Enable-PSRemoting` cria duas configurações de ponto de extremidade de comunicação remota conforme necessário. Se as configurações do ponto de extremidade já existirem, elas serão simplesmente habilitadas. As configurações criadas são idênticas, mas têm nomes diferentes. Uma terá um nome simples correspondente à versão do PowerShell que hospeda a sessão. O outro nome de configuração contém informações mais detalhadas sobre a versão do PowerShell que hospeda a sessão. Por exemplo, ao executar `Enable-PSRemoting` no PowerShell 6,2, você obterá dois pontos de extremidade configurados chamados **PowerShell. 6** , **PowerShell. 6.2.2** .
-Isso permite que você crie uma conexão com a versão mais recente do host do PowerShell 6 usando o nome simples **PowerShell. 6** . Ou você pode se conectar a uma versão específica do host do PowerShell usando o nome mais longo **PowerShell. 6.2.2** .
+`Enable-PSRemoting` cria duas configurações de ponto de extremidade de comunicação remota conforme necessário. Se as configurações do ponto de extremidade já existirem, elas serão simplesmente habilitadas. As configurações criadas são idênticas, mas têm nomes diferentes. Uma terá um nome simples correspondente à versão do PowerShell que hospeda a sessão. O outro nome de configuração contém informações mais detalhadas sobre a versão do PowerShell que hospeda a sessão. Por exemplo, ao executar `Enable-PSRemoting` no PowerShell 6,2, você obterá dois pontos de extremidade configurados chamados **PowerShell. 6** , **PowerShell. 6.2.2**.
+Isso permite que você crie uma conexão com a versão mais recente do host do PowerShell 6 usando o nome simples **PowerShell. 6**. Ou você pode se conectar a uma versão específica do host do PowerShell usando o nome mais longo **PowerShell. 6.2.2**.
 
 Para usar os pontos de extremidade de comunicação remota habilitados recentemente, você deve especificá-los pelo nome com o parâmetro **ConfigurationName** ao criar uma conexão remota usando os `Invoke-Command` `New-PSSession` `Enter-PSSession` cmdlets,,. Para obter mais informações, consulte o exemplo 4.
 
@@ -268,9 +268,11 @@ Esse cmdlet retorna cadeias de caracteres que descrevem seus resultados.
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 Em versões de servidor do sistema operacional Windows, o `Enable-PSRemoting` cria regras de firewall para redes privadas e de domínio que permitem acesso remoto e cria uma regra de firewall para redes públicas que permite o acesso remoto somente de computadores na mesma sub-rede local.
 
-Nas versões cliente do sistema operacional Windows, o `Enable-PSRemoting` cria regras de firewall para redes privadas e de domínio que permitem acesso remoto irrestrito. Para criar uma regra de firewall para redes públicas que permite acesso remoto por meio da mesma sub-rede local, use o parâmetro **SkipNetworkProfileCheck** .
+Nas versões cliente do sistema operacional Windows, o `Enable-PSRemoting` cria regras de firewall para redes privadas e de domínio que permitem acesso remoto irrestrito. Para criar uma regra de firewall para redes públicas que permite acesso remoto por meio da mesma sub-rede local, use o parâmetro **SkipNetworkProfileCheck**.
 
 Em versões de cliente ou servidor do sistema operacional Windows, para criar uma regra de firewall para redes públicas que remove a restrição de sub-rede local e permite o acesso remoto, use o `Set-NetFirewallRule` cmdlet no módulo NetSecurity para executar o seguinte comando: `Set-NetFirewallRule -Name "WINRM-HTTP-In-TCP-PUBLIC" -RemoteAddress Any`
 

@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-pssessionconfiguration?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSSessionConfiguration
-ms.openlocfilehash: ce8b77d9d3de16e16302fc7846ca8a45852511bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 71c5425d6377f8c4a2ee02354f6c34eed9afe28a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194775"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346965"
 ---
 # Disable-PSSessionConfiguration
 
@@ -207,6 +207,8 @@ Este cmdlet não retorna nenhum objeto.
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 Para executar este cmdlet, você deve iniciar o PowerShell usando a opção **Executar como administrador** .
 
 ## LINKS RELACIONADOS
@@ -230,4 +232,3 @@ Para executar este cmdlet, você deve iniciar o PowerShell usando a opção **Ex
 [about_Session_Configurations](About/about_Session_Configurations.md)
 
 [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md)
-

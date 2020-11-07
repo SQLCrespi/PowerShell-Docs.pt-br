@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: d58d26a93e9b785bcba425537ea570feeffa1606
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c6aa8a16bd5ccbeb00252b872e997018b1997181
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192972"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346693"
 ---
 # Set-Service
 
@@ -39,7 +39,7 @@ Set-Service [-InputObject] <ServiceController> [-DisplayName <String>] [-Credent
 
 ## DESCRIPTION
 
-O `Set-Service` cmdlet altera as propriedades de um serviço, como **status** , **Descrição** , **DisplayName** e **StartupType** . `Set-Service` pode iniciar, parar, suspender ou pausar um serviço. Para identificar um serviço, insira seu nome de serviço ou envie um objeto de serviço. Ou envie um nome de serviço ou objeto de serviço pelo pipeline para `Set-Service` .
+O `Set-Service` cmdlet altera as propriedades de um serviço, como **status** , **Descrição** , **DisplayName** e **StartupType**. `Set-Service` pode iniciar, parar, suspender ou pausar um serviço. Para identificar um serviço, insira seu nome de serviço ou envie um objeto de serviço. Ou envie um nome de serviço ou objeto de serviço pelo pipeline para `Set-Service` .
 
 ## EXEMPLOS
 
@@ -51,7 +51,7 @@ Neste exemplo, o nome de exibição de um serviço é alterado. Para exibir o no
 Set-Service -Name LanmanWorkstation -DisplayName "LanMan Workstation"
 ```
 
-`Set-Service` usa o parâmetro **Name** para especificar o nome do serviço, **LanmanWorkstation** . O parâmetro **DisplayName** especifica o novo nome de exibição, **estação de trabalho do LanMan** .
+`Set-Service` usa o parâmetro **Name** para especificar o nome do serviço, **LanmanWorkstation**. O parâmetro **DisplayName** especifica o novo nome de exibição, **estação de trabalho do LanMan**.
 
 ### Exemplo 2: alterar o tipo de inicialização dos serviços
 
@@ -68,7 +68,7 @@ Name  StartType   Status
 BITS  Automatic  Running
 ```
 
-`Set-Service` usa o parâmetro **Name** para especificar o nome do serviço, **bits** . O parâmetro **StartupType** define o serviço como **automático** .
+`Set-Service` usa o parâmetro **Name** para especificar o nome do serviço, **bits**. O parâmetro **StartupType** define o serviço como **automático**.
 
 `Get-Service` usa o parâmetro **Name** para especificar o serviço **bits** e envia o objeto para baixo do pipeline. `Select-Object` usa o parâmetro **Property** para exibir o status do serviço **bits** .
 
@@ -117,7 +117,7 @@ Status   Name               DisplayName
 Running  WinRM              Windows Remote Management (WS-Manag...
 ```
 
-`Set-Service` usa o parâmetro **Name** para especificar o serviço, **WinRM** . O parâmetro **status** usa o valor **em execução** para iniciar o serviço. O parâmetro **PassThru** gera um objeto **ServiceController** que exibe os resultados.
+`Set-Service` usa o parâmetro **Name** para especificar o serviço, **WinRM**. O parâmetro **status** usa o valor **em execução** para iniciar o serviço. O parâmetro **PassThru** gera um objeto **ServiceController** que exibe os resultados.
 
 ### Exemplo 5: suspender um serviço
 
@@ -127,7 +127,7 @@ Este exemplo usa o pipeline para pausar o serviço.
 Get-Service -Name Schedule | Set-Service -Status Paused
 ```
 
-`Get-Service` usa o parâmetro **Name** para especificar o serviço de **agendamento** e envia o objeto para baixo do pipeline. `Set-Service` usa o parâmetro **status** para definir o serviço em **pausa** .
+`Get-Service` usa o parâmetro **Name** para especificar o serviço de **agendamento** e envia o objeto para baixo do pipeline. `Set-Service` usa o parâmetro **status** para definir o serviço em **pausa**.
 
 ### Exemplo 6: parar um serviço
 
@@ -138,7 +138,7 @@ $S = Get-Service -Name Schedule
 Set-Service -InputObject $S -Status Stopped
 ```
 
-`Get-Service` usa o parâmetro **Name** para especificar o serviço, **agenda** . O objeto é armazenado na variável, `$S` . `Set-Service` usa o parâmetro **InputObject** e especifica o objeto armazenado `$S` . O parâmetro **status** define o serviço como **parado** .
+`Get-Service` usa o parâmetro **Name** para especificar o serviço, **agenda**. O objeto é armazenado na variável, `$S` . `Set-Service` usa o parâmetro **InputObject** e especifica o objeto armazenado `$S` . O parâmetro **status** define o serviço como **parado**.
 
 ### Exemplo 7: parar um serviço em um sistema remoto
 
@@ -155,7 +155,7 @@ Invoke-Command -ComputerName server01.contoso.com -Credential $Cred -ScriptBlock
 
 `Get-Credential` solicita um nome de usuário e uma senha e armazena as credenciais na `$Cred` variável. `Get-Service` usa o parâmetro **Name** para especificar o serviço de **agendamento** . O objeto é armazenado na variável, `$S` .
 
-`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto. O parâmetro **Credential** usa a `$Cred` variável para fazer logon no computador. O **scriptblock** chama `Set-Service` . O parâmetro **InputObject** especifica o objeto de serviço armazenado `$S` . O parâmetro **status** define o serviço como **parado** .
+`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto. O parâmetro **Credential** usa a `$Cred` variável para fazer logon no computador. O **scriptblock** chama `Set-Service` . O parâmetro **InputObject** especifica o objeto de serviço armazenado `$S` . O parâmetro **status** define o serviço como **parado**.
 
 ### Exemplo 8: alterar a credencial de um serviço
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 Especifica uma nova descrição para o serviço.
 
-A descrição do serviço aparece em **Gerenciamento do computador, serviços** . A **Descrição** não é uma propriedade do `Get-Service` objeto **ServiceController** . Para ver a descrição do serviço, use `Get-CimInstance` que retorna um objeto **Win32_Service** que representa o serviço.
+A descrição do serviço aparece em **Gerenciamento do computador, serviços**. A **Descrição** não é uma propriedade do `Get-Service` objeto **ServiceController** . Para ver a descrição do serviço, use `Get-CimInstance` que retorna um objeto **Win32_Service** que representa o serviço.
 
 ```yaml
 Type: System.String
@@ -352,9 +352,9 @@ Especifica o status do serviço.
 
 Os valores aceitáveis para esse parâmetro são os seguintes:
 
-- Em **pausa** . Suspende o serviço.
-- **Em execução** . Inicia o serviço.
-- **Parado** . Interrompe o serviço.
+- Em **pausa**. Suspende o serviço.
+- **Em execução**. Inicia o serviço.
+- **Parado**. Interrompe o serviço.
 
 ```yaml
 Type: System.String
@@ -418,6 +418,8 @@ Você pode usar o pipeline para enviar um objeto de serviço ou uma cadeia de ca
 Por padrão, o `Set-Service` não retorna nenhum objeto. Use o parâmetro **PassThru** para gerar um objeto **ServiceController** .
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 `Set-Service` requer permissões elevadas. Use a opção **Executar como administrador** .
 

@@ -7,12 +7,12 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 01b349ab76ee1d661edd0d30ac23202555575485
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 3219656c5c20372ac7fe999f4aafffa23b81be1a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193119"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347016"
 ---
 # Test-FileCatalog
 
@@ -30,10 +30,7 @@ Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <Strin
 
 ## DESCRIPTION
 
-`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco.
-Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed. Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed.
-Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo.
-Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.
+`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco. Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed. Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed. Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo. Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.
 
 Só há suporte para esse cmdlet no Windows.
 
@@ -153,8 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -170,7 +166,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` . Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
 
@@ -189,6 +185,8 @@ O tipo de retorno padrão que contém um valor de `Valid` ou `ValidationFailed` 
 Um objeto mais detalhado retornado ao usar `-Detailed` o que pode ser usado para analisar arquivos específicos que podem ou não ter aprovado a validação, quais hashes eram esperados versus encontrados e o algoritmo usado no catálogo.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 ## LINKS RELACIONADOS
 

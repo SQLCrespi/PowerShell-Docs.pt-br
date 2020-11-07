@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/stop-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Computer
-ms.openlocfilehash: 4791f447fbada43830c8e2d41d7f0f2364aecff9
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 9ba056a7c85b62ac02137959a5586fdd87d9ceb4
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194935"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346302"
 ---
 # Stop-Computer
 
@@ -175,11 +175,11 @@ Accept wildcard characters: False
 
 ### -WsmanAuthentication
 
-Especifica o mecanismo usado para autenticar as credenciais do usuário quando este cmdlet usa o protocolo WSMan. O valor padrão é **Default** .
+Especifica o mecanismo usado para autenticar as credenciais do usuário quando este cmdlet usa o protocolo WSMan. O valor padrão é **Default**.
 
 Os valores aceitáveis para esse parâmetro são:
 
-- Básico
+- Basic
 - CredSSP
 - Padrão
 - Digest
@@ -237,6 +237,8 @@ Não é possível canalizar a entrada para este cmdlet.
 ### Nenhum
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 Esse cmdlet só funciona no Windows e usa o método **Win32Shutdown** da classe WMI **Win32_OperatingSystem** . Esse método requer que o privilégio **SeShutdownPrivilege** seja habilitado para a conta de usuário usada para reiniciar o computador.
 

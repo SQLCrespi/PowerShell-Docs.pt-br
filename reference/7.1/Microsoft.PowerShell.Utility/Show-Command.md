@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 86253a8a0bd02a60980cc3655af7bb961acf88ac
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b5758fdb9fc3e8f604b24fb9c64cad3f95047ec3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193257"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347764"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Quando estiver pronto, você pode clicar em **Copy** para copiar o comando que c
 
 No ISE (ambiente de script integrado) do PowerShell, uma variação da `Show-Command` janela é exibida por padrão. Para obter informações sobre como usar essa janela de comando, consulte os tópicos de ajuda do ISE do PowerShell.
 
-Esse cmdlet foi reintroduzido no PowerShell 7. 
+Esse cmdlet foi reintroduzido no PowerShell 7.
 
 Como esse cmdlet requer uma interface do usuário, ele não funciona no Windows Server Core ou no Windows nano Server. Esse cmdlet só está disponível em sistemas Windows que dão suporte à área de trabalho do Windows.
 
@@ -272,7 +272,8 @@ Quando você usa o parâmetro **PassThru** , `Show-Command` retorna uma cadeia d
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 `Show-Command` Não funciona em sessões remotas.
 
 ## LINKS RELACIONADOS
-

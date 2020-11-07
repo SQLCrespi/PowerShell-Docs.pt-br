@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/remove-event?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Event
-ms.openlocfilehash: 2730e413a79b2af5355cd2ece7c1e8a6d219d708
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 0dd55280d2d010a151945065d0fcf4f032c980ad
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192889"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346744"
 ---
 # Remove-Event
 
@@ -34,10 +34,10 @@ Remove-Event [-EventIdentifier] <Int32> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-O cmdlet **Remove-Event** exclui eventos da fila de eventos na sessão atual.
 
-Este cmdlet exclui somente os eventos atualmente na fila.
-Para cancelar inscrições de evento ou cancelar a assinatura, use o cmdlet Unregister-Event.
+O `Remove-Event` cmdlet exclui eventos da fila de eventos na sessão atual.
+
+Este cmdlet exclui somente os eventos atualmente na fila. Para cancelar os registros de eventos ou cancelar a assinatura, use o `Unregister-Event` cmdlet.
 
 ## EXEMPLOS
 
@@ -68,8 +68,8 @@ Esse comando exclui todos os eventos da fila de eventos.
 ## PARAMETERS
 
 ### -EventIdentifier
-Especifica o identificador de evento para o qual o cmdlet exclui.
-Um parâmetro *EventIdentifier* ou *SourceIdentifier* é necessário em todos os comandos.
+
+Especifica o identificador de evento para o qual o cmdlet exclui. Um parâmetro **EventIdentifier** ou **SourceIdentifier** é necessário em todos os comandos.
 
 ```yaml
 Type: System.Int32
@@ -84,9 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-Especifica o identificador de origem para o qual este cmdlet exclui eventos.
-Caracteres curinga não são permitidos.
-Um parâmetro *EventIdentifier* ou *SourceIdentifier* é necessário em todos os comandos.
+
+Especifica o identificador de origem para o qual este cmdlet exclui eventos. Caracteres curinga não são permitidos. Um parâmetro **EventIdentifier** ou **SourceIdentifier** é necessário em todos os comandos.
 
 ```yaml
 Type: System.String
@@ -101,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Solicita sua confirmação antes de executar o cmdlet.
 
 ```yaml
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,23 +132,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
 
 ### System. Management. Automation. PSEventArgs
-É possível canalizar eventos de Get-Event para **Remove-Event** .
+
+Você pode canalizar eventos de `Get-Event` para `Remove-Event` .
 
 ## SAÍDAS
 
 ### Nenhum
+
 O cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 
-* Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
+Nenhuma fonte de eventos disponível nas plataformas Linux ou macOS.
 
-*
+Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
 
 ## LINKS RELACIONADOS
 

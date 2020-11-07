@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-PSSessionConfigurationFile
-ms.openlocfilehash: e64565cbc567ca42b190e143e065f9eddba2f311
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: cbd100b73aa40eb3d14366a3c0f845fc2837a783
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192771"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347475"
 ---
 # Test-PSSessionConfigurationFile
 
@@ -90,7 +90,7 @@ True
 
 A propriedade **ConfigFilePath** de uma configuração de sessão contém o caminho do arquivo de configuração de sessão que é usado na configuração da sessão, se houver.
 
-Se o valor da propriedade **ConfigFilePath** estiver preenchido (é verdadeiro), o comando obtém (imprime) o valor da propriedade **ConfigFilePath** . Em seguida, ele usa o `Test-PSSessionConfigurationFile` cmdlet para testar o arquivo no valor **ConfigFilePath** . O parâmetro **Verbose** retorna o erro de arquivo quando o arquivo falha no teste.
+Se o valor da propriedade **ConfigFilePath** estiver preenchido (é verdadeiro), o comando obtém (imprime) o valor da propriedade **ConfigFilePath**. Em seguida, ele usa o `Test-PSSessionConfigurationFile` cmdlet para testar o arquivo no valor **ConfigFilePath** . O parâmetro **Verbose** retorna o erro de arquivo quando o arquivo falha no teste.
 
 ## PARAMETERS
 
@@ -125,6 +125,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ### System.Boolean
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 ## LINKS RELACIONADOS
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Service
-ms.openlocfilehash: d5a7588022331aac6315b1e37159bdbd6994b64a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 02c0b7e699b386a36b962517901a381d45ccaeff
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192965"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346353"
 ---
 # Start-Service
 
@@ -79,7 +79,7 @@ Primeiro, usamos `Get-Service` para obter um objeto que representa o serviço WM
 
 ### Exemplo 4: iniciar um serviço desabilitado
 
-Este exemplo mostra como iniciar um serviço quando o tipo de início do serviço é **desabilitado** .
+Este exemplo mostra como iniciar um serviço quando o tipo de início do serviço é **desabilitado**.
 
 ```
 PS> Start-Service tlntsvr
@@ -99,7 +99,7 @@ PS> Set-Service tlntsvr -StartupType manual
 PS> Start-Service tlntsvr
 ```
 
-A primeira tentativa de iniciar o serviço Telnet (TlntSvr) falha. O `Get-CimInstance` comando mostra que a propriedade **startMode** do serviço TlntSvr está **desabilitada** . O `Set-Service` cmdlet altera o tipo de início para **manual** . Agora, podemos enviar o comando novamente `Start-Service` . Desta vez, o comando terá êxito. Para verificar se o comando foi bem-sucedido, execute `Get-Service` .
+A primeira tentativa de iniciar o serviço Telnet (TlntSvr) falha. O `Get-CimInstance` comando mostra que a propriedade **startMode** do serviço TlntSvr está **desabilitada**. O `Set-Service` cmdlet altera o tipo de início para **manual**. Agora, podemos enviar o comando novamente `Start-Service` . Desta vez, o comando terá êxito. Para verificar se o comando foi bem-sucedido, execute `Get-Service` .
 
 ## PARAMETERS
 
@@ -248,16 +248,18 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum, System. ServiceProcess. ServiceController
 
-Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço, se você especificar **PassThru** . Caso contrário, este cmdlet não gera nenhuma saída.
+Esse cmdlet gera um objeto **System. ServiceProcess. ServiceController** que representa o serviço, se você especificar **PassThru**. Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 
-* Você também pode consultar `Start-Service` por seu alias interno, `sasv` . Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
-* `Start-Service` pode controlar os serviços somente se o usuário atual tiver permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
-* Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` .
+Esse cmdlet só está disponível em plataformas Windows.
+
+- Você também pode consultar `Start-Service` por seu alias interno, `sasv` . Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
+- `Start-Service` pode controlar os serviços somente se o usuário atual tiver permissão para fazer isso. Se um comando não funcionar corretamente, pode ser que você não tenha as permissões necessárias.
+- Para localizar os nomes de serviço e exibir os nomes dos serviços no seu sistema, digite `Get-Service` .
   Os nomes de serviço aparecem na coluna **nome** e os nomes de exibição aparecem na coluna **DisplayName** .
-* Você pode iniciar somente os serviços que têm um tipo de início manual, automático ou automático (início atrasado). Você não pode iniciar os serviços que têm um tipo de início desabilitado. Se um `Start-Service` comando falhar com a mensagem `Cannot start service \<service-name\> on computer` , use `Get-CimInstance` para localizar o tipo de início do serviço e, se necessário, use o `Set-Service` cmdlet para alterar o tipo de início do serviço.
-* Alguns serviços, como Logs e Alertas de Desempenho (SysmonLog), serão interrompidos automaticamente se não tiverem nenhum trabalho a fazer. Quando o PowerShell inicia um serviço que se interrompe quase imediatamente, ele exibe a seguinte mensagem: `Service \<display-name\> start failed.`
+- Você pode iniciar somente os serviços que têm um tipo de início manual, automático ou automático (início atrasado). Você não pode iniciar os serviços que têm um tipo de início desabilitado. Se um `Start-Service` comando falhar com a mensagem `Cannot start service \<service-name\> on computer` , use `Get-CimInstance` para localizar o tipo de início do serviço e, se necessário, use o `Set-Service` cmdlet para alterar o tipo de início do serviço.
+- Alguns serviços, como Logs e Alertas de Desempenho (SysmonLog), serão interrompidos automaticamente se não tiverem nenhum trabalho a fazer. Quando o PowerShell inicia um serviço que se interrompe quase imediatamente, ele exibe a seguinte mensagem: `Service \<display-name\> start failed.`
 
 ## LINKS RELACIONADOS
 

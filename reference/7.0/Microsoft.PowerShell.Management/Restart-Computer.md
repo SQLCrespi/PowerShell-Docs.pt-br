@@ -7,12 +7,12 @@ ms.date: 6/17/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Computer
-ms.openlocfilehash: ce9e19140cb0bb8fd9172fa7ca7929fb696f9c65
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 623b7bb0084c7fe7822509081d141ddcccf0057a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194942"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347322"
 ---
 # Restart-Computer
 
@@ -63,7 +63,7 @@ Restart-Computer -ComputerName Server01, Server02, localhost
 Get-Content -Path C:\Domain01.txt | Restart-Computer
 ```
 
-`Get-Content` usa o parâmetro **path** para obter uma lista de nomes de computador de um arquivo de texto, **Domain01.txt** . Os nomes dos computadores são enviados pelo pipeline. `Restart-Computer` reinicia cada computador.
+`Get-Content` usa o parâmetro **path** para obter uma lista de nomes de computador de um arquivo de texto, **Domain01.txt**. Os nomes dos computadores são enviados pelo pipeline. `Restart-Computer` reinicia cada computador.
 
 ### Exemplo 4: forçar a reinicialização de computadores listados em um arquivo de texto
 
@@ -75,7 +75,7 @@ $Creds = Get-Credential
 Restart-Computer -ComputerName $Names -Credential $Creds -Force
 ```
 
-`Get-Content` usa o parâmetro **path** para obter uma lista de nomes de computador de um arquivo de texto, **Domain01.txt** . Os nomes dos computadores são armazenados na variável `$Names` . `Get-Credential` solicita um nome de usuário e uma senha e armazena os valores na variável `$Creds` . `Restart-Computer` usa os parâmetros **ComputerName** e **Credential** com suas variáveis. O parâmetro **Force** causa uma reinicialização imediata de cada computador.
+`Get-Content` usa o parâmetro **path** para obter uma lista de nomes de computador de um arquivo de texto, **Domain01.txt**. Os nomes dos computadores são armazenados na variável `$Names` . `Get-Credential` solicita um nome de usuário e uma senha e armazena os valores na variável `$Creds` . `Restart-Computer` usa os parâmetros **ComputerName** e **Credential** com suas variáveis. O parâmetro **Force** causa uma reinicialização imediata de cada computador.
 
 ### Exemplo 6: reiniciar um computador remoto e aguardar o PowerShell
 
@@ -85,7 +85,7 @@ Restart-Computer -ComputerName $Names -Credential $Creds -Force
 Restart-Computer -ComputerName Server01 -Wait -For PowerShell -Timeout 300 -Delay 2
 ```
 
-`Restart-Computer` usa o parâmetro **ComputerName** para especificar **Server01** . O parâmetro **Wait** aguarda a conclusão da reinicialização. O **para** especifica que o PowerShell pode executar comandos no computador remoto. O parâmetro **Timeout** especifica uma espera de cinco minutos. O parâmetro **Delay** consulta o computador remoto a cada dois segundos para determinar se ele foi reiniciado.
+`Restart-Computer` usa o parâmetro **ComputerName** para especificar **Server01**. O parâmetro **Wait** aguarda a conclusão da reinicialização. O **para** especifica que o PowerShell pode executar comandos no computador remoto. O parâmetro **Timeout** especifica uma espera de cinco minutos. O parâmetro **Delay** consulta o computador remoto a cada dois segundos para determinar se ele foi reiniciado.
 
 ### Exemplo 7: reiniciar um computador usando o WsmanAuthentication
 
@@ -96,8 +96,8 @@ A autenticação Kerberos determina se o usuário atual tem permissão para rein
 Restart-Computer -ComputerName Server01 -WsmanAuthentication Kerberos
 ```
 
-`Restart-Computer` usa o parâmetro **ComputerName** para especificar o computador remoto, **Server01** .
-O parâmetro **WsmanAuthentication** especifica o método de autenticação como **Kerberos** .
+`Restart-Computer` usa o parâmetro **ComputerName** para especificar o computador remoto, **Server01**.
+O parâmetro **WsmanAuthentication** especifica o método de autenticação como **Kerberos**.
 
 ## PARAMETERS
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 Especifica o mecanismo usado para autenticar as credenciais do usuário. Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
-Os valores aceitáveis para esse parâmetro são: **Basic** , **CredSSP** , **Default** , **Digest** , **Kerberos** e **Negotiate** .
+Os valores aceitáveis para esse parâmetro são: **Basic** , **CredSSP** , **Default** , **Digest** , **Kerberos** e **Negotiate**.
 
 Para obter mais informações, consulte [AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
@@ -325,6 +325,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 `Restart-Computer` não gera nenhuma saída.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 - `Restart-Computer` funciona apenas em computadores que executam o Windows e requer que o WinRM e o WMI desliguem um sistema, incluindo o sistema local.
 - `Restart-Computer` usa o [método Win32Shutdown](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem) da classe Instrumentação de gerenciamento do Windows (WMI) [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) . Esse método requer que o privilégio **SeShutdownPrivilege** seja habilitado para a conta de usuário usada para reiniciar o computador.
