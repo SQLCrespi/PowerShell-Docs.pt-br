@@ -7,47 +7,47 @@ ms.date: 09/18/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-TimeZone
-ms.openlocfilehash: 618f2ceca435e836a0c733f98533b62dfc86290b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4bade5a583533c3156fb923a5257ebb7a4453a2b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194800"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347526"
 ---
-# <span data-ttu-id="63b6a-103">Set-TimeZone</span><span class="sxs-lookup"><span data-stu-id="63b6a-103">Set-TimeZone</span></span>
+# <span data-ttu-id="6f5e0-103">Set-TimeZone</span><span class="sxs-lookup"><span data-stu-id="6f5e0-103">Set-TimeZone</span></span>
 
-## <span data-ttu-id="63b6a-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="63b6a-104">SYNOPSIS</span></span>
-<span data-ttu-id="63b6a-105">Define o fuso horário do sistema para um fuso horário especificado.</span><span class="sxs-lookup"><span data-stu-id="63b6a-105">Sets the system time zone to a specified time zone.</span></span>
+## <span data-ttu-id="6f5e0-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="6f5e0-104">SYNOPSIS</span></span>
+<span data-ttu-id="6f5e0-105">Define o fuso horário do sistema para um fuso horário especificado.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-105">Sets the system time zone to a specified time zone.</span></span>
 
-## <span data-ttu-id="63b6a-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="63b6a-106">SYNTAX</span></span>
+## <span data-ttu-id="6f5e0-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="6f5e0-106">SYNTAX</span></span>
 
-### <span data-ttu-id="63b6a-107">Nome (padrão)</span><span class="sxs-lookup"><span data-stu-id="63b6a-107">Name (Default)</span></span>
+### <span data-ttu-id="6f5e0-107">Nome (padrão)</span><span class="sxs-lookup"><span data-stu-id="6f5e0-107">Name (Default)</span></span>
 
 ```
 Set-TimeZone [-Name] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="63b6a-108">ID</span><span class="sxs-lookup"><span data-stu-id="63b6a-108">Id</span></span>
+### <span data-ttu-id="6f5e0-108">ID</span><span class="sxs-lookup"><span data-stu-id="6f5e0-108">Id</span></span>
 
 ```
 Set-TimeZone -Id <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="63b6a-109">InputObject</span><span class="sxs-lookup"><span data-stu-id="63b6a-109">InputObject</span></span>
+### <span data-ttu-id="6f5e0-109">InputObject</span><span class="sxs-lookup"><span data-stu-id="6f5e0-109">InputObject</span></span>
 
 ```
 Set-TimeZone [-InputObject] <TimeZoneInfo> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="63b6a-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="63b6a-110">DESCRIPTION</span></span>
+## <span data-ttu-id="6f5e0-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="6f5e0-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="63b6a-111">O `Set-TimeZone` cmdlet define o fuso horário do sistema para um fuso horário especificado.</span><span class="sxs-lookup"><span data-stu-id="63b6a-111">The `Set-TimeZone` cmdlet sets the system time zone to a specified time zone.</span></span>
+<span data-ttu-id="6f5e0-111">O `Set-TimeZone` cmdlet define o fuso horário do sistema para um fuso horário especificado.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-111">The `Set-TimeZone` cmdlet sets the system time zone to a specified time zone.</span></span>
 
-## <span data-ttu-id="63b6a-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="63b6a-112">EXAMPLES</span></span>
+## <span data-ttu-id="6f5e0-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="6f5e0-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="63b6a-113">Exemplo 1: definir o fuso horário por ID</span><span class="sxs-lookup"><span data-stu-id="63b6a-113">Example 1: Set the time zone by Id</span></span>
+### <span data-ttu-id="6f5e0-113">Exemplo 1: definir o fuso horário por ID</span><span class="sxs-lookup"><span data-stu-id="6f5e0-113">Example 1: Set the time zone by Id</span></span>
 
-<span data-ttu-id="63b6a-114">Este exemplo define o fuso horário no computador local como horário padrão russo.</span><span class="sxs-lookup"><span data-stu-id="63b6a-114">This example sets the time zone on the local computer to Russian Standard Time.</span></span>
+<span data-ttu-id="6f5e0-114">Este exemplo define o fuso horário no computador local como horário padrão russo.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-114">This example sets the time zone on the local computer to Russian Standard Time.</span></span>
 
 ```powershell
 Set-TimeZone -Id "Russian Standard Time" -PassThru
@@ -62,22 +62,22 @@ BaseUtcOffset              : 03:00:00
 SupportsDaylightSavingTime : True
 ```
 
-### <span data-ttu-id="63b6a-115">Exemplo 2: definir o fuso horário por nome</span><span class="sxs-lookup"><span data-stu-id="63b6a-115">Example 2: Set the time zone by name</span></span>
+### <span data-ttu-id="6f5e0-115">Exemplo 2: definir o fuso horário por nome</span><span class="sxs-lookup"><span data-stu-id="6f5e0-115">Example 2: Set the time zone by name</span></span>
 
-<span data-ttu-id="63b6a-116">Este exemplo define o fuso horário no computador local como horário padrão russo.</span><span class="sxs-lookup"><span data-stu-id="63b6a-116">This example sets the time zone on the local computer to Russian Standard Time.</span></span>
+<span data-ttu-id="6f5e0-116">Este exemplo define o fuso horário no computador local como horário padrão russo.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-116">This example sets the time zone on the local computer to Russian Standard Time.</span></span>
 
 ```powershell
 Set-TimeZone -Name "Russia TZ 2 Standard Time"
 ```
 
-<span data-ttu-id="63b6a-117">Como vimos no exemplo anterior, a **ID** e o **nome** do fuso horário nem sempre correspondem.</span><span class="sxs-lookup"><span data-stu-id="63b6a-117">As we saw in the previous example, the **Id** and the **Name** of the Time Zone do not always match.</span></span>
-<span data-ttu-id="63b6a-118">O parâmetro **Name** deve corresponder às propriedades **StandardName** ou **DaylightName** do objeto **TimeZoneInfo** .</span><span class="sxs-lookup"><span data-stu-id="63b6a-118">The **Name** parameter must match the **StandardName** or **DaylightName** properties of the **TimeZoneInfo** object.</span></span>
+<span data-ttu-id="6f5e0-117">Como vimos no exemplo anterior, a **ID** e o **nome** do fuso horário nem sempre correspondem.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-117">As we saw in the previous example, the **Id** and the **Name** of the Time Zone do not always match.</span></span>
+<span data-ttu-id="6f5e0-118">O parâmetro **Name** deve corresponder às propriedades **StandardName** ou **DaylightName** do objeto **TimeZoneInfo** .</span><span class="sxs-lookup"><span data-stu-id="6f5e0-118">The **Name** parameter must match the **StandardName** or **DaylightName** properties of the **TimeZoneInfo** object.</span></span>
 
-## <span data-ttu-id="63b6a-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="63b6a-119">PARAMETERS</span></span>
+## <span data-ttu-id="6f5e0-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="6f5e0-119">PARAMETERS</span></span>
 
-### <span data-ttu-id="63b6a-120">-Id</span><span class="sxs-lookup"><span data-stu-id="63b6a-120">-Id</span></span>
+### <span data-ttu-id="6f5e0-120">-Id</span><span class="sxs-lookup"><span data-stu-id="6f5e0-120">-Id</span></span>
 
-<span data-ttu-id="63b6a-121">Especifica a ID do fuso horário definido por esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="63b6a-121">Specifies the ID of the time zone that this cmdlet sets.</span></span> <span data-ttu-id="63b6a-122">Uma lista completa de IDs de fuso horário pode ser obtida executando o seguinte comando: `Get-TimeZone -ListAvailable` .</span><span class="sxs-lookup"><span data-stu-id="63b6a-122">A full list of Time Zone IDs can be obtained by running the following command: `Get-TimeZone -ListAvailable`.</span></span>
+<span data-ttu-id="6f5e0-121">Especifica a ID do fuso horário definido por esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-121">Specifies the ID of the time zone that this cmdlet sets.</span></span> <span data-ttu-id="6f5e0-122">Uma lista completa de IDs de fuso horário pode ser obtida executando o seguinte comando: `Get-TimeZone -ListAvailable` .</span><span class="sxs-lookup"><span data-stu-id="6f5e0-122">A full list of Time Zone IDs can be obtained by running the following command: `Get-TimeZone -ListAvailable`.</span></span>
 
 ```yaml
 Type: System.String
@@ -91,9 +91,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-123">-InputObject</span><span class="sxs-lookup"><span data-stu-id="63b6a-123">-InputObject</span></span>
+### <span data-ttu-id="6f5e0-123">-InputObject</span><span class="sxs-lookup"><span data-stu-id="6f5e0-123">-InputObject</span></span>
 
-<span data-ttu-id="63b6a-124">Especifica um objeto **TimeZoneInfo** a ser usado como entrada.</span><span class="sxs-lookup"><span data-stu-id="63b6a-124">Specifies a **TimeZoneInfo** object to use as input.</span></span>
+<span data-ttu-id="6f5e0-124">Especifica um objeto **TimeZoneInfo** a ser usado como entrada.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-124">Specifies a **TimeZoneInfo** object to use as input.</span></span>
 
 ```yaml
 Type: System.TimeZoneInfo
@@ -107,9 +107,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-125">-Name</span><span class="sxs-lookup"><span data-stu-id="63b6a-125">-Name</span></span>
+### <span data-ttu-id="6f5e0-125">-Name</span><span class="sxs-lookup"><span data-stu-id="6f5e0-125">-Name</span></span>
 
-<span data-ttu-id="63b6a-126">Especifica o nome do fuso horário definido por esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="63b6a-126">Specifies the name of the time zone that this cmdlet sets.</span></span> <span data-ttu-id="63b6a-127">É possível obter uma lista completa de nomes de fuso horário executando o seguinte comando: `Get-TimeZone -ListAvailable` .</span><span class="sxs-lookup"><span data-stu-id="63b6a-127">A full list of Time Zone names can be obtained by running the following command: `Get-TimeZone -ListAvailable`.</span></span>
+<span data-ttu-id="6f5e0-126">Especifica o nome do fuso horário definido por esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-126">Specifies the name of the time zone that this cmdlet sets.</span></span> <span data-ttu-id="6f5e0-127">É possível obter uma lista completa de nomes de fuso horário executando o seguinte comando: `Get-TimeZone -ListAvailable` .</span><span class="sxs-lookup"><span data-stu-id="6f5e0-127">A full list of Time Zone names can be obtained by running the following command: `Get-TimeZone -ListAvailable`.</span></span>
 
 ```yaml
 Type: System.String
@@ -123,9 +123,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="63b6a-128">-PassThru</span></span>
+### <span data-ttu-id="6f5e0-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="6f5e0-128">-PassThru</span></span>
 
-<span data-ttu-id="63b6a-129">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="63b6a-129">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="63b6a-130">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="63b6a-130">By default, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="6f5e0-129">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-129">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="6f5e0-130">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-130">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,9 +139,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-131">-Confirm</span><span class="sxs-lookup"><span data-stu-id="63b6a-131">-Confirm</span></span>
+### <span data-ttu-id="6f5e0-131">-Confirm</span><span class="sxs-lookup"><span data-stu-id="6f5e0-131">-Confirm</span></span>
 
-<span data-ttu-id="63b6a-132">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="63b6a-132">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="6f5e0-132">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-132">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,9 +155,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="63b6a-133">-WhatIf</span></span>
+### <span data-ttu-id="6f5e0-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="6f5e0-133">-WhatIf</span></span>
 
-<span data-ttu-id="63b6a-134">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="63b6a-134">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="63b6a-135">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="63b6a-135">The cmdlet is not run.</span></span>
+<span data-ttu-id="6f5e0-134">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-134">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="6f5e0-135">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-135">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -171,19 +171,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="63b6a-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="63b6a-136">CommonParameters</span></span>
+### <span data-ttu-id="6f5e0-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="6f5e0-136">CommonParameters</span></span>
 
-<span data-ttu-id="63b6a-137">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="63b6a-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="63b6a-138">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="63b6a-138">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="6f5e0-137">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="6f5e0-138">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="6f5e0-138">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="63b6a-139">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="63b6a-139">INPUTS</span></span>
+## <span data-ttu-id="6f5e0-139">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="6f5e0-139">INPUTS</span></span>
 
-### <span data-ttu-id="63b6a-140">System. String, System. TimeZoneInfo, System. String</span><span class="sxs-lookup"><span data-stu-id="63b6a-140">System.String, System.TimeZoneInfo, System.String</span></span>
+### <span data-ttu-id="6f5e0-140">System. String, System. TimeZoneInfo, System. String</span><span class="sxs-lookup"><span data-stu-id="6f5e0-140">System.String, System.TimeZoneInfo, System.String</span></span>
 
-## <span data-ttu-id="63b6a-141">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="63b6a-141">OUTPUTS</span></span>
+## <span data-ttu-id="6f5e0-141">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="6f5e0-141">OUTPUTS</span></span>
 
-## <span data-ttu-id="63b6a-142">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="63b6a-142">NOTES</span></span>
+## <span data-ttu-id="6f5e0-142">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="6f5e0-142">NOTES</span></span>
 
-## <span data-ttu-id="63b6a-143">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="63b6a-143">RELATED LINKS</span></span>
+<span data-ttu-id="6f5e0-143">Esse cmdlet só está disponível em plataformas Windows.</span><span class="sxs-lookup"><span data-stu-id="6f5e0-143">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="63b6a-144">Get-TimeZone</span><span class="sxs-lookup"><span data-stu-id="63b6a-144">Get-TimeZone</span></span>](Get-TimeZone.md)
+## <span data-ttu-id="6f5e0-144">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="6f5e0-144">RELATED LINKS</span></span>
 
+[<span data-ttu-id="6f5e0-145">Get-TimeZone</span><span class="sxs-lookup"><span data-stu-id="6f5e0-145">Get-TimeZone</span></span>](Get-TimeZone.md)

@@ -7,39 +7,36 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 7e2102963df66988d4d7bc2d67ac054d8b7414b8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4ea34f547e296567fc0ad728d9279392615836d3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194006"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346387"
 ---
-# <span data-ttu-id="364de-103">Test-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="364de-103">Test-FileCatalog</span></span>
+# <span data-ttu-id="38f98-103">Test-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="38f98-103">Test-FileCatalog</span></span>
 
-## <span data-ttu-id="364de-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="364de-104">SYNOPSIS</span></span>
-<span data-ttu-id="364de-105">`Test-FileCatalog` Valida se os hashes contidos em um arquivo de catálogo (. cat) correspondem aos hashes dos arquivos reais a fim de validar sua autenticidade.</span><span class="sxs-lookup"><span data-stu-id="364de-105">`Test-FileCatalog` validates whether the hashes contained in a catalog file (.cat) matches the hashes of the actual files in order to validate their authenticity.</span></span>
+## <span data-ttu-id="38f98-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="38f98-104">SYNOPSIS</span></span>
+<span data-ttu-id="38f98-105">`Test-FileCatalog` Valida se os hashes contidos em um arquivo de catálogo (. cat) correspondem aos hashes dos arquivos reais a fim de validar sua autenticidade.</span><span class="sxs-lookup"><span data-stu-id="38f98-105">`Test-FileCatalog` validates whether the hashes contained in a catalog file (.cat) matches the hashes of the actual files in order to validate their authenticity.</span></span>
 
-<span data-ttu-id="364de-106">Só há suporte para esse cmdlet no Windows.</span><span class="sxs-lookup"><span data-stu-id="364de-106">This cmdlet is only supported on Windows.</span></span>
+<span data-ttu-id="38f98-106">Só há suporte para esse cmdlet no Windows.</span><span class="sxs-lookup"><span data-stu-id="38f98-106">This cmdlet is only supported on Windows.</span></span>
 
-## <span data-ttu-id="364de-107">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="364de-107">SYNTAX</span></span>
+## <span data-ttu-id="38f98-107">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="38f98-107">SYNTAX</span></span>
 
 ```
 Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <String> [[-Path] <String[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="364de-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="364de-108">DESCRIPTION</span></span>
+## <span data-ttu-id="38f98-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="38f98-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="364de-109">`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco.</span><span class="sxs-lookup"><span data-stu-id="364de-109">`Test-FileCatalog` validates the authenticity of files by comparing the file hashes of a catalog file (.cat) with the hashes of actual files on disk.</span></span>
-<span data-ttu-id="364de-110">Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed.</span><span class="sxs-lookup"><span data-stu-id="364de-110">If it detects any mismatches, it returns the status as ValidationFailed.</span></span> <span data-ttu-id="364de-111">Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed.</span><span class="sxs-lookup"><span data-stu-id="364de-111">Users can retrieve all this information by using the -Detailed parameter.</span></span>
-<span data-ttu-id="364de-112">Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo.</span><span class="sxs-lookup"><span data-stu-id="364de-112">It also displays signing status of catalog in Signature property which is equivalent to calling `Get-AuthenticodeSignature` cmdlet on the catalog file.</span></span>
-<span data-ttu-id="364de-113">Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.</span><span class="sxs-lookup"><span data-stu-id="364de-113">Users can also skip any file during validation by using the -FilesToSkip parameter.</span></span>
+<span data-ttu-id="38f98-109">`Test-FileCatalog` valida a autenticidade dos arquivos comparando os hashes de arquivo de um arquivo de catálogo (. cat) com os hashes dos arquivos reais no disco.</span><span class="sxs-lookup"><span data-stu-id="38f98-109">`Test-FileCatalog` validates the authenticity of files by comparing the file hashes of a catalog file (.cat) with the hashes of actual files on disk.</span></span> <span data-ttu-id="38f98-110">Se detectar qualquer incompatibilidade, ele retornará o status como ValidationFailed.</span><span class="sxs-lookup"><span data-stu-id="38f98-110">If it detects any mismatches, it returns the status as ValidationFailed.</span></span> <span data-ttu-id="38f98-111">Os usuários podem recuperar todas essas informações usando o parâmetro -Detailed.</span><span class="sxs-lookup"><span data-stu-id="38f98-111">Users can retrieve all this information by using the -Detailed parameter.</span></span> <span data-ttu-id="38f98-112">Ele também exibe o status de assinatura do catálogo na Propriedade Signature, que é equivalente a chamar `Get-AuthenticodeSignature` o cmdlet no arquivo de catálogo.</span><span class="sxs-lookup"><span data-stu-id="38f98-112">It also displays signing status of catalog in Signature property which is equivalent to calling `Get-AuthenticodeSignature` cmdlet on the catalog file.</span></span> <span data-ttu-id="38f98-113">Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro -FilesToSkip.</span><span class="sxs-lookup"><span data-stu-id="38f98-113">Users can also skip any file during validation by using the -FilesToSkip parameter.</span></span>
 
-<span data-ttu-id="364de-114">Só há suporte para esse cmdlet no Windows.</span><span class="sxs-lookup"><span data-stu-id="364de-114">This cmdlet is only supported on Windows.</span></span>
+<span data-ttu-id="38f98-114">Só há suporte para esse cmdlet no Windows.</span><span class="sxs-lookup"><span data-stu-id="38f98-114">This cmdlet is only supported on Windows.</span></span>
 
-## <span data-ttu-id="364de-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="364de-115">EXAMPLES</span></span>
+## <span data-ttu-id="38f98-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="38f98-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="364de-116">Exemplo 1: criar e validar um catálogo de arquivos</span><span class="sxs-lookup"><span data-stu-id="364de-116">Example 1: Create and validate a file catalog</span></span>
+### <span data-ttu-id="38f98-116">Exemplo 1: criar e validar um catálogo de arquivos</span><span class="sxs-lookup"><span data-stu-id="38f98-116">Example 1: Create and validate a file catalog</span></span>
 
 ```powershell
 New-FileCatalog -Path $PSHOME\Modules\Microsoft.PowerShell.Utility -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -CatalogVersion 2.0
@@ -51,7 +48,7 @@ Test-FileCatalog -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "
 Valid
 ```
 
-### <span data-ttu-id="364de-117">Exemplo 2: validar um catálogo de arquivos com saída detalhada</span><span class="sxs-lookup"><span data-stu-id="364de-117">Example 2: Validate a file catalog with detailed output</span></span>
+### <span data-ttu-id="38f98-117">Exemplo 2: validar um catálogo de arquivos com saída detalhada</span><span class="sxs-lookup"><span data-stu-id="38f98-117">Example 2: Validate a file catalog with detailed output</span></span>
 
 ```powershell
 Test-FileCatalog -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "$PSHome\Modules\Microsoft.PowerShell.Utility\"
@@ -69,11 +66,11 @@ PathItems     : {[Microsoft.PowerShell.Utility.psd1,
 Signature     : System.Management.Automation.Signature
 ```
 
-## <span data-ttu-id="364de-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="364de-118">PARAMETERS</span></span>
+## <span data-ttu-id="38f98-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="38f98-118">PARAMETERS</span></span>
 
-### <span data-ttu-id="364de-119">-CatalogFilePath</span><span class="sxs-lookup"><span data-stu-id="364de-119">-CatalogFilePath</span></span>
+### <span data-ttu-id="38f98-119">-CatalogFilePath</span><span class="sxs-lookup"><span data-stu-id="38f98-119">-CatalogFilePath</span></span>
 
-<span data-ttu-id="364de-120">Um caminho para um arquivo de catálogo (. cat) que contém os hashes a serem usados para validação.</span><span class="sxs-lookup"><span data-stu-id="364de-120">A path to a catalog file (.cat) that contains the hashes to be used for validation.</span></span>
+<span data-ttu-id="38f98-120">Um caminho para um arquivo de catálogo (. cat) que contém os hashes a serem usados para validação.</span><span class="sxs-lookup"><span data-stu-id="38f98-120">A path to a catalog file (.cat) that contains the hashes to be used for validation.</span></span>
 
 ```yaml
 Type: System.String
@@ -87,9 +84,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="364de-121">-Confirm</span></span>
+### <span data-ttu-id="38f98-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="38f98-121">-Confirm</span></span>
 
-<span data-ttu-id="364de-122">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="364de-122">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="38f98-122">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="38f98-122">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -103,9 +100,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-123">-Detailed</span><span class="sxs-lookup"><span data-stu-id="364de-123">-Detailed</span></span>
+### <span data-ttu-id="38f98-123">-Detailed</span><span class="sxs-lookup"><span data-stu-id="38f98-123">-Detailed</span></span>
 
-<span data-ttu-id="364de-124">Retorna mais informações um objeto mais detalhado `CatalogInformation` que contém os arquivos testados, seus hashes esperados/reais e uma assinatura Authenticode do arquivo de catálogo se ele estiver assinado.</span><span class="sxs-lookup"><span data-stu-id="364de-124">Returns more information a more detailed `CatalogInformation` object that contains the files tested, their expected/actual hashes, and an Authenticode signature of the catalog file if it's signed.</span></span>
+<span data-ttu-id="38f98-124">Retorna mais informações um objeto mais detalhado `CatalogInformation` que contém os arquivos testados, seus hashes esperados/reais e uma assinatura Authenticode do arquivo de catálogo se ele estiver assinado.</span><span class="sxs-lookup"><span data-stu-id="38f98-124">Returns more information a more detailed `CatalogInformation` object that contains the files tested, their expected/actual hashes, and an Authenticode signature of the catalog file if it's signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,9 +116,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-125">-FilesToSkip</span><span class="sxs-lookup"><span data-stu-id="364de-125">-FilesToSkip</span></span>
+### <span data-ttu-id="38f98-125">-FilesToSkip</span><span class="sxs-lookup"><span data-stu-id="38f98-125">-FilesToSkip</span></span>
 
-<span data-ttu-id="364de-126">Uma matriz de caminhos que não devem ser testados como parte da validação.</span><span class="sxs-lookup"><span data-stu-id="364de-126">An array of paths that should not be tested as part of the validation.</span></span>
+<span data-ttu-id="38f98-126">Uma matriz de caminhos que não devem ser testados como parte da validação.</span><span class="sxs-lookup"><span data-stu-id="38f98-126">An array of paths that should not be tested as part of the validation.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -135,9 +132,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-127">-Path</span><span class="sxs-lookup"><span data-stu-id="364de-127">-Path</span></span>
+### <span data-ttu-id="38f98-127">-Path</span><span class="sxs-lookup"><span data-stu-id="38f98-127">-Path</span></span>
 
-<span data-ttu-id="364de-128">Uma pasta ou matriz de arquivos que devem ser validados em relação ao arquivo de catálogo.</span><span class="sxs-lookup"><span data-stu-id="364de-128">A folder or array of files that should be validated against the catalog file.</span></span>
+<span data-ttu-id="38f98-128">Uma pasta ou matriz de arquivos que devem ser validados em relação ao arquivo de catálogo.</span><span class="sxs-lookup"><span data-stu-id="38f98-128">A folder or array of files that should be validated against the catalog file.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -151,10 +148,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="364de-129">-WhatIf</span></span>
+### <span data-ttu-id="38f98-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="38f98-129">-WhatIf</span></span>
 
-<span data-ttu-id="364de-130">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="364de-130">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="364de-131">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="364de-131">The cmdlet is not run.</span></span>
+<span data-ttu-id="38f98-130">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="38f98-130">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="38f98-131">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="38f98-131">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,31 +164,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="364de-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="364de-132">CommonParameters</span></span>
+### <span data-ttu-id="38f98-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="38f98-132">CommonParameters</span></span>
 
-<span data-ttu-id="364de-133">Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` .</span><span class="sxs-lookup"><span data-stu-id="364de-133">This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`.</span></span> <span data-ttu-id="364de-134">Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="364de-134">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="38f98-133">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="38f98-133">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="38f98-134">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="38f98-134">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="364de-135">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="364de-135">INPUTS</span></span>
+## <span data-ttu-id="38f98-135">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="38f98-135">INPUTS</span></span>
 
-### <span data-ttu-id="364de-136">System. IO. DirectoryInfo [], System. String []</span><span class="sxs-lookup"><span data-stu-id="364de-136">System.IO.DirectoryInfo[], System.String[]</span></span>
+### <span data-ttu-id="38f98-136">System. IO. DirectoryInfo [], System. String []</span><span class="sxs-lookup"><span data-stu-id="38f98-136">System.IO.DirectoryInfo[], System.String[]</span></span>
 
-<span data-ttu-id="364de-137">O pipeline aceita uma matriz de cadeias de caracteres ou `DirectoryInfo` objetos que representam caminhos para os arquivos que precisam ser validados.</span><span class="sxs-lookup"><span data-stu-id="364de-137">The pipeline accepts an array of strings or `DirectoryInfo` objects that represent paths to the files that need to be validated.</span></span>
+<span data-ttu-id="38f98-137">O pipeline aceita uma matriz de cadeias de caracteres ou `DirectoryInfo` objetos que representam caminhos para os arquivos que precisam ser validados.</span><span class="sxs-lookup"><span data-stu-id="38f98-137">The pipeline accepts an array of strings or `DirectoryInfo` objects that represent paths to the files that need to be validated.</span></span>
 
-## <span data-ttu-id="364de-138">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="364de-138">OUTPUTS</span></span>
+## <span data-ttu-id="38f98-138">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="38f98-138">OUTPUTS</span></span>
 
-### <span data-ttu-id="364de-139">System. Management. Automation. CatalogValidationStatus</span><span class="sxs-lookup"><span data-stu-id="364de-139">System.Management.Automation.CatalogValidationStatus</span></span>
+### <span data-ttu-id="38f98-139">System. Management. Automation. CatalogValidationStatus</span><span class="sxs-lookup"><span data-stu-id="38f98-139">System.Management.Automation.CatalogValidationStatus</span></span>
 
-<span data-ttu-id="364de-140">O tipo de retorno padrão que contém um valor de `Valid` ou `ValidationFailed` .</span><span class="sxs-lookup"><span data-stu-id="364de-140">The default return type containing a value of either `Valid` or `ValidationFailed`.</span></span>
+<span data-ttu-id="38f98-140">O tipo de retorno padrão que contém um valor de `Valid` ou `ValidationFailed` .</span><span class="sxs-lookup"><span data-stu-id="38f98-140">The default return type containing a value of either `Valid` or `ValidationFailed`.</span></span>
 
-### <span data-ttu-id="364de-141">System. Management. Automation. CatalogInformation</span><span class="sxs-lookup"><span data-stu-id="364de-141">System.Management.Automation.CatalogInformation</span></span>
+### <span data-ttu-id="38f98-141">System. Management. Automation. CatalogInformation</span><span class="sxs-lookup"><span data-stu-id="38f98-141">System.Management.Automation.CatalogInformation</span></span>
 
-<span data-ttu-id="364de-142">Um objeto mais detalhado retornado ao usar `-Detailed` o que pode ser usado para analisar arquivos específicos que podem ou não ter aprovado a validação, quais hashes eram esperados versus encontrados e o algoritmo usado no catálogo.</span><span class="sxs-lookup"><span data-stu-id="364de-142">A more detailed object returned when using `-Detailed` which can be used to analyze specific files that may or may not have passed validation, which hashes were expected vs. found, and the algorithm used in the catalog.</span></span>
+<span data-ttu-id="38f98-142">Um objeto mais detalhado retornado ao usar `-Detailed` o que pode ser usado para analisar arquivos específicos que podem ou não ter aprovado a validação, quais hashes eram esperados versus encontrados e o algoritmo usado no catálogo.</span><span class="sxs-lookup"><span data-stu-id="38f98-142">A more detailed object returned when using `-Detailed` which can be used to analyze specific files that may or may not have passed validation, which hashes were expected vs. found, and the algorithm used in the catalog.</span></span>
 
-## <span data-ttu-id="364de-143">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="364de-143">NOTES</span></span>
+## <span data-ttu-id="38f98-143">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="38f98-143">NOTES</span></span>
 
-## <span data-ttu-id="364de-144">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="364de-144">RELATED LINKS</span></span>
+<span data-ttu-id="38f98-144">Esse cmdlet só está disponível em plataformas Windows.</span><span class="sxs-lookup"><span data-stu-id="38f98-144">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="364de-145">New-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="364de-145">New-FileCatalog</span></span>](New-FileCatalog.md)
+## <span data-ttu-id="38f98-145">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="38f98-145">RELATED LINKS</span></span>
 
-[<span data-ttu-id="364de-146">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="364de-146">PowerShellGet</span></span>](/powershell/module/PowerShellGet)
+[<span data-ttu-id="38f98-146">New-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="38f98-146">New-FileCatalog</span></span>](New-FileCatalog.md)
 
+[<span data-ttu-id="38f98-147">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="38f98-147">PowerShellGet</span></span>](/powershell/module/PowerShellGet)

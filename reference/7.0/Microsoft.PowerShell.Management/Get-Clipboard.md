@@ -7,36 +7,36 @@ ms.date: 09/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-clipboard?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Clipboard
-ms.openlocfilehash: 9da33bcf0bc1142859d547debedfb242819041aa
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: ed56dc5655f640dae1d80c66850581ff12dbb7ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239627"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347594"
 ---
-# <span data-ttu-id="74a8f-103">Get-Clipboard</span><span class="sxs-lookup"><span data-stu-id="74a8f-103">Get-Clipboard</span></span>
+# <span data-ttu-id="a3dd3-103">Get-Clipboard</span><span class="sxs-lookup"><span data-stu-id="a3dd3-103">Get-Clipboard</span></span>
 
-## <span data-ttu-id="74a8f-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="74a8f-104">SYNOPSIS</span></span>
-<span data-ttu-id="74a8f-105">Obtém o conteúdo da área de transferência.</span><span class="sxs-lookup"><span data-stu-id="74a8f-105">Gets the contents of the clipboard.</span></span>
+## <span data-ttu-id="a3dd3-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="a3dd3-104">SYNOPSIS</span></span>
+<span data-ttu-id="a3dd3-105">Obtém o conteúdo da área de transferência.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-105">Gets the contents of the clipboard.</span></span>
 
-## <span data-ttu-id="74a8f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="74a8f-106">SYNTAX</span></span>
+## <span data-ttu-id="a3dd3-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="a3dd3-106">SYNTAX</span></span>
 
 ```
 Get-Clipboard [-Raw] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="74a8f-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="74a8f-107">DESCRIPTION</span></span>
+## <span data-ttu-id="a3dd3-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="a3dd3-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="74a8f-108">O `Get-Clipboard` cmdlet obtém o conteúdo da área de transferência como texto.</span><span class="sxs-lookup"><span data-stu-id="74a8f-108">The `Get-Clipboard` cmdlet gets the contents of the clipboard as text.</span></span> <span data-ttu-id="74a8f-109">Várias linhas de texto são retornadas como uma matriz de cadeias de caracteres semelhantes a `Get-Content` .</span><span class="sxs-lookup"><span data-stu-id="74a8f-109">Multiple lines of text are returned as an array of strings similar to `Get-Content`.</span></span>
+<span data-ttu-id="a3dd3-108">O `Get-Clipboard` cmdlet obtém o conteúdo da área de transferência como texto.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-108">The `Get-Clipboard` cmdlet gets the contents of the clipboard as text.</span></span> <span data-ttu-id="a3dd3-109">Várias linhas de texto são retornadas como uma matriz de cadeias de caracteres semelhantes a `Get-Content` .</span><span class="sxs-lookup"><span data-stu-id="a3dd3-109">Multiple lines of text are returned as an array of strings similar to `Get-Content`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="74a8f-110">No Linux, esse cmdlet requer `xclip` que o utilitário esteja no caminho.</span><span class="sxs-lookup"><span data-stu-id="74a8f-110">On Linux, this cmdlet requires the `xclip` utility to be in the path.</span></span>
+> <span data-ttu-id="a3dd3-110">No Linux, esse cmdlet requer `xclip` que o utilitário esteja no caminho.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-110">On Linux, this cmdlet requires the `xclip` utility to be in the path.</span></span> <span data-ttu-id="a3dd3-111">Não há suporte para esse cmdlet no macOS.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-111">This cmdlet is not supported on macOS.</span></span>
 
-## <span data-ttu-id="74a8f-111">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="74a8f-111">EXAMPLES</span></span>
+## <span data-ttu-id="a3dd3-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="a3dd3-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="74a8f-112">Exemplo 1: obter o conteúdo da área de transferência e exibi-lo para a linha de comando</span><span class="sxs-lookup"><span data-stu-id="74a8f-112">Example 1: Get the content of the clipboard and display it to the command-line</span></span>
+### <span data-ttu-id="a3dd3-113">Exemplo 1: obter o conteúdo da área de transferência e exibi-lo para a linha de comando</span><span class="sxs-lookup"><span data-stu-id="a3dd3-113">Example 1: Get the content of the clipboard and display it to the command-line</span></span>
 
-<span data-ttu-id="74a8f-113">Neste exemplo, copiamos o texto "Olá" para a área de transferência.</span><span class="sxs-lookup"><span data-stu-id="74a8f-113">In this example we have copied the text "hello" into the clipboard.</span></span>
+<span data-ttu-id="a3dd3-114">Neste exemplo, copiamos o texto "Olá" para a área de transferência.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-114">In this example we have copied the text "hello" into the clipboard.</span></span>
 
 ```powershell
 Get-Clipboard
@@ -46,11 +46,11 @@ Get-Clipboard
 hello
 ```
 
-## <span data-ttu-id="74a8f-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="74a8f-114">PARAMETERS</span></span>
+## <span data-ttu-id="a3dd3-115">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="a3dd3-115">PARAMETERS</span></span>
 
-### <span data-ttu-id="74a8f-115">-RAW</span><span class="sxs-lookup"><span data-stu-id="74a8f-115">-Raw</span></span>
+### <span data-ttu-id="a3dd3-116">-RAW</span><span class="sxs-lookup"><span data-stu-id="a3dd3-116">-Raw</span></span>
 
-<span data-ttu-id="74a8f-116">Obtém todo o conteúdo da área de transferência.</span><span class="sxs-lookup"><span data-stu-id="74a8f-116">Gets the entire contents of the clipboard.</span></span> <span data-ttu-id="74a8f-117">O texto multilinha é retornado como uma única cadeia de caracteres de várias linhas em vez de uma matriz de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="74a8f-117">Multiline text is returned as a single multiline string rather than an array of strings.</span></span>
+<span data-ttu-id="a3dd3-117">Obtém todo o conteúdo da área de transferência.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-117">Gets the entire contents of the clipboard.</span></span> <span data-ttu-id="a3dd3-118">O texto multilinha é retornado como uma única cadeia de caracteres de várias linhas em vez de uma matriz de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-118">Multiline text is returned as a single multiline string rather than an array of strings.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -64,19 +64,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="74a8f-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="74a8f-118">CommonParameters</span></span>
+### <span data-ttu-id="a3dd3-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a3dd3-119">CommonParameters</span></span>
 
-<span data-ttu-id="74a8f-119">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="74a8f-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="74a8f-120">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="74a8f-120">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="a3dd3-120">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="a3dd3-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a3dd3-121">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="a3dd3-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="74a8f-121">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="74a8f-121">INPUTS</span></span>
+## <span data-ttu-id="a3dd3-122">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="a3dd3-122">INPUTS</span></span>
 
-## <span data-ttu-id="74a8f-122">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="74a8f-122">OUTPUTS</span></span>
+## <span data-ttu-id="a3dd3-123">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="a3dd3-123">OUTPUTS</span></span>
 
-### <span data-ttu-id="74a8f-123">System.String</span><span class="sxs-lookup"><span data-stu-id="74a8f-123">System.String</span></span>
+### <span data-ttu-id="a3dd3-124">System.String</span><span class="sxs-lookup"><span data-stu-id="a3dd3-124">System.String</span></span>
 
-## <span data-ttu-id="74a8f-124">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="74a8f-124">NOTES</span></span>
+## <span data-ttu-id="a3dd3-125">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="a3dd3-125">NOTES</span></span>
 
-## <span data-ttu-id="74a8f-125">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="74a8f-125">RELATED LINKS</span></span>
+## <span data-ttu-id="a3dd3-126">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="a3dd3-126">RELATED LINKS</span></span>
 
-[<span data-ttu-id="74a8f-126">Set-Clipboard</span><span class="sxs-lookup"><span data-stu-id="74a8f-126">Set-Clipboard</span></span>](Set-Clipboard.md)
-
+[<span data-ttu-id="a3dd3-127">Set-Clipboard</span><span class="sxs-lookup"><span data-stu-id="a3dd3-127">Set-Clipboard</span></span>](Set-Clipboard.md)
