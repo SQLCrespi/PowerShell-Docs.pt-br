@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: ce91313d1b581e3d666c131caaa1cf7ecad0c04f
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 15bfe1123ba005a7b326c234fad360d6d9d6cc4d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192954"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345724"
 ---
 # Get-Service
 
@@ -297,6 +297,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 Esse cmdlet retorna objetos que representam os serviços no computador.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 A partir do PowerShell 6,0, as seguintes propriedades são adicionadas aos objetos **ServiceController** : **username** , **Description** , **DelayedAutoStart** , **BinaryPathName** e **StartupType** .
 

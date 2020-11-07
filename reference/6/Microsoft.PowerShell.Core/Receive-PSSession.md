@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 266c12224ee579add22715f47a9047d400fab255
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: d40c6074c792ed8d5e094a3e9c1b3784a1c7670d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194939"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345452"
 ---
 # Receive-PSSession
 
@@ -207,7 +207,7 @@ O `Invoke-Command` cmdlet executa um script na sessão na `$s` variável. O scri
 
 Quando o computador é reiniciado, o usuário inicia o PowerShell e executa um `Get-PSSession` comando para obter sessões no computador Server01. A saída mostra que a sessão do **ad** ainda existe no computador Server01. O **estado** indica que a sessão do **ad** está desconectada. O valor de **disponibilidade** de nenhum, indica que a sessão não está conectada a todas as sessões de cliente.
 
-O `Receive-PSSession` cmdlet se reconecta à sessão do **ad** e obtém os resultados do script que foi executado na sessão. O comando usa o parâmetro **outtarget** para solicitar os resultados em um trabalho chamado **ADJob** . O comando retorna um objeto de trabalho e a saída indica que o script ainda está em execução.
+O `Receive-PSSession` cmdlet se reconecta à sessão do **ad** e obtém os resultados do script que foi executado na sessão. O comando usa o parâmetro **outtarget** para solicitar os resultados em um trabalho chamado **ADJob**. O comando retorna um objeto de trabalho e a saída indica que o script ainda está em execução.
 
 O `Get-PSSession` cmdlet é usado para verificar o estado do trabalho. A saída confirma que o `Receive-PSSession` cmdlet foi reconectado à sessão do **ad** , que agora está aberta e disponível para comandos. E o script retomou a execução e está obtendo os resultados do script.
 
@@ -331,7 +331,7 @@ Indica que esse cmdlet permite o redirecionamento dessa conexão para um Uniform
 
 Quando você usa o parâmetro **ConnectionURI** , o destino remoto pode retornar uma instrução para redirecionar para um URI diferente. Por padrão, o PowerShell não redireciona as conexões, mas você pode usar esse parâmetro para habilitá-la a redirecionar a conexão.
 
-É possível também limitar o número de vezes que a conexão é redirecionada alterando o valor da opção de sessão **MaximumConnectionRedirectionCount** . Use o parâmetro **MaximumRedirection** do `New-PSSessionOption` cmdlet ou defina a propriedade **MaximumConnectionRedirectionCount** da variável de `$PSSessionOption` preferência. O valor padrão é 5.
+É possível também limitar o número de vezes que a conexão é redirecionada alterando o valor da opção de sessão **MaximumConnectionRedirectionCount**. Use o parâmetro **MaximumRedirection** do `New-PSSessionOption` cmdlet ou defina a propriedade **MaximumConnectionRedirectionCount** da variável de `$PSSessionOption` preferência. O valor padrão é 5.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Especifica o mecanismo usado para autenticar as credenciais do usuário no comando para se reconectar a uma sessão desconectada. Os valores aceitáveis para esse parâmetro são:
 
 - Padrão
-- Básico
+- Basic
 - CredSSP
 - Digest
 - Kerberos
@@ -537,7 +537,7 @@ Accept wildcard characters: False
 
 ### -InstanceId
 
-Especifica a ID da instância da sessão desconectada. A ID da instância é um GUID que identifica exclusivamente uma **PSSession** em um computador local ou remoto. A ID da instância é armazenada na propriedade **InstanceId** da **PSSession** .
+Especifica a ID da instância da sessão desconectada. A ID da instância é um GUID que identifica exclusivamente uma **PSSession** em um computador local ou remoto. A ID da instância é armazenada na propriedade **InstanceId** da **PSSession**.
 
 ```yaml
 Type: System.Guid
@@ -595,8 +595,8 @@ Accept wildcard characters: False
 
 Determina como os resultados da sessão são retornados. Os valores aceitáveis para esse parâmetro são:
 
-- **Trabalho** . Retorna os resultados de forma assíncrona em um objeto de trabalho. Você pode usar o parâmetro **JobName** para especificar um nome ou novo nome para o trabalho.
-- **Host** . Retorna os resultados para a linha de comando (de forma síncrona). Se o comando estiver sendo retomado ou os resultados consistirem de um grande número de objetos, a resposta poderá demorar.
+- **Trabalho**. Retorna os resultados de forma assíncrona em um objeto de trabalho. Você pode usar o parâmetro **JobName** para especificar um nome ou novo nome para o trabalho.
+- **Host**. Retorna os resultados para a linha de comando (de forma síncrona). Se o comando estiver sendo retomado ou os resultados consistirem de um grande número de objetos, a resposta poderá demorar.
 
 O valor padrão do parâmetro **outtarget** é host. Se o comando que está sendo recebido em uma sessão desconectada foi iniciado na sessão atual, o valor padrão do parâmetro **outtarget** é o formulário no qual o comando foi iniciado. Se o comando foi iniciado como um trabalho, por padrão, ele é retornado como um trabalho. Caso contrário, ele será retornado ao programa host por padrão.
 
@@ -759,6 +759,8 @@ Esse cmdlet retorna os resultados dos comandos que foram executados na sessão d
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 `Receive-PSSession` Obtém resultados somente de sessões que foram desconectadas. Somente as sessões que estão conectadas ou terminam em, computadores que executam o PowerShell 3,0 ou versões posteriores podem ser desconectados e reconectados.
 
 Se os comandos que estavam em execução na sessão desconectada não geraram resultados ou se os resultados já tiverem sido retornados para outra sessão, o `Receive-PSSession` não gerará nenhuma saída.
@@ -767,7 +769,7 @@ O modo de buffer de saída de uma sessão determina como os comandos na sessão 
 
 Não é possível alterar o valor de tempo limite ocioso de uma **PSSession** quando você se conecta à **PSSession** ou recebe resultados. O parâmetro **SessionOption** de `Receive-PSSession` usa um objeto **SessionOption** que tem um valor **IdleTimeout** . No entanto, o valor de **IdleTimeout** do objeto **SessionOption** e o valor de **IdleTimeout** da `$PSSessionOption` variável são ignorados quando se conecta a uma **PSSession** ou recebe resultados.
 
-- Você pode definir e alterar o tempo limite de ociosidade de uma **PSSession** quando você cria a **PSSession** , usando os `New-PSSession` `Invoke-Command` cmdlets ou, e quando você se desconecta da **PSSession** .
+- Você pode definir e alterar o tempo limite de ociosidade de uma **PSSession** quando você cria a **PSSession** , usando os `New-PSSession` `Invoke-Command` cmdlets ou, e quando você se desconecta da **PSSession**.
 - A propriedade **IdleTimeout** de uma **PSSession** é crítica para sessões desconectadas porque determina por quanto tempo uma sessão desconectada é mantida no computador remoto. Sessões desconectadas são consideradas ociosas desde o momento em que são desconectadas, ainda que comandos estejam em execução na sessão desconectada.
 
 Se você iniciar uma tarefa iniciar um trabalho em uma sessão remota usando o parâmetro **AsJob** do `Invoke-Command` cmdlet, o objeto de trabalho será criado na sessão atual, mesmo que o trabalho seja executado na sessão remota. Se você desconectar a sessão remota, o objeto de trabalho na sessão atual será desconectado do trabalho. O objeto de trabalho contém todos os resultados que foram retornados a ele, mas não recebe novos resultados do trabalho na sessão desconectada.
@@ -785,7 +787,7 @@ Quando uma sessão que contém um trabalho em execução é desconectada e, em s
 Quando você desconecta uma **PSSession** , o estado da sessão é desconectado e a disponibilidade é nenhuma.
 
 - O valor da propriedade **State** é relativo a sessão atual. Um valor de desconectado significa que a **PSSession** não está conectada à sessão atual. No entanto, isso não significa que a **PSSession** seja desconectada de todas as sessões. Ela pode ser conectada a uma sessão diferente.
-  Para determinar se é possível conectar-se ou reconectar-se à sessão, utilize a propriedade **Availability** .
+  Para determinar se é possível conectar-se ou reconectar-se à sessão, utilize a propriedade **Availability**.
 - Um valor **Availability** de None indica que é possível conectar-se à sessão. Um valor de ocupado indica que você não pode se conectar à **PSSession** porque ela está conectada a outra sessão.
 - Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [RUNSPACESTATE](/dotnet/api/system.management.automation.runspaces.runspacestate) na biblioteca MSDN.
 - Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).

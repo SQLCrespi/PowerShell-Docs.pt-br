@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-sddlstring?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-SddlString
-ms.openlocfilehash: a63386356542f7753d3f1b840da9629fba13dc80
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 7ec2c3025f62a64cd24298c0749d40fa5eff4904
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "93195288"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346081"
 ---
 # ConvertFrom-SddlString
 
@@ -146,7 +146,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 ## LINKS RELACIONADOS
 
 [Linguagem de definição do descritor de segurança](/windows/win32/secauthz/security-descriptor-definition-language)
-

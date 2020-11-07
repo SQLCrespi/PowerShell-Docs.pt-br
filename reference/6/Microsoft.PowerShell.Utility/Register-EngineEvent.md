@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 005e495ff5f532cc947edf894a67c078e524a72c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 35218a3860db9746b99ec441e122fcd5e2370f72
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194329"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344755"
 ---
 # Register-EngineEvent
 
@@ -44,7 +44,9 @@ Este exemplo registra um evento do mecanismo do PowerShell em dois computadores 
 
 ```powershell
 $S = New-PSSession -ComputerName "Server01, Server02"
-Invoke-Command -Session $S { Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward }
+Invoke-Command -Session $S {
+Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward
+}
 ```
 
 `New-PSSession` Cria uma sessão gerenciada pelo usuário (PSSession) em cada um dos computadores remotos. O `Invoke-Command` cmdlet executa o `Register-EngineEvent` comando nas sessões remotas.
@@ -64,7 +66,7 @@ O parâmetro **SupportEvent** é adicionado para ocultar a assinatura do evento.
 
 ### Exemplo 3: criar e assinar um evento definido pelo usuário
 
-Este exemplo cria uma assinatura para eventos da fonte **Myeventname** . Essa é uma fonte arbitrária que vamos usar para monitorar o progresso de um trabalho. `Register-EngineEvent` é usado para criar a assinatura. O bloco de script para o parâmetro **Action** registra os dados de evento em um arquivo de texto.
+Este exemplo cria uma assinatura para eventos da fonte **Myeventname**. Essa é uma fonte arbitrária que vamos usar para monitorar o progresso de um trabalho. `Register-EngineEvent` é usado para criar a assinatura. O bloco de script para o parâmetro **Action** registra os dados de evento em um arquivo de texto.
 
 ```powershell
 Register-EngineEvent -SourceIdentifier MyEventSource -Action {
@@ -207,7 +209,7 @@ Especifica o identificador de origem do evento ao qual você está se inscrevend
 
 O valor desse parâmetro aparece no valor da propriedade **SourceIdentifier** do objeto assinante e de todos os objetos de evento associados a esta assinatura.
 
-O valor é específico para a origem do evento. Esse pode ser um valor arbitrário que você criou para usar com o `New-Event` cmdlet. O mecanismo do PowerShell dá suporte aos valores de **EngineEvent** **PowerShell. saindo** e **PowerShell. OnIdle** .
+O valor é específico para a origem do evento. Esse pode ser um valor arbitrário que você criou para usar com o `New-Event` cmdlet. O mecanismo do PowerShell dá suporte aos valores de **EngineEvent** **PowerShell. saindo** e **PowerShell. OnIdle**.
 
 ```yaml
 Type: System.String
@@ -256,6 +258,8 @@ Não é possível canalizar a entrada para `Register-EngineEvent` .
 Se você usar o parâmetro **Action** , `Register-EngineEvent` retornará um objeto **System. Management. Automation. PSEventJob** . Caso contrário, ele não gera nenhuma saída.
 
 ## OBSERVAÇÕES
+
+Nenhuma fonte de eventos disponível nas plataformas Linux ou macOS.
 
 Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
 

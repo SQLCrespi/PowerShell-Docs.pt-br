@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 976a9ba6047d79bc1ac6225896c7285702daf38a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e6995da1e9ff2a1678c5703b79223481533bc9a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192857"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346149"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Quando estiver pronto, você pode clicar em **Copy** para copiar o comando que c
 
 No ISE (ambiente de script integrado) do PowerShell, uma variação da `Show-Command` janela é exibida por padrão. Para obter informações sobre como usar essa janela de comando, consulte os tópicos de ajuda do ISE do PowerShell.
 
-Esse cmdlet foi reintroduzido no PowerShell 7. 
+Esse cmdlet foi reintroduzido no PowerShell 7.
 
 Como esse cmdlet requer uma interface do usuário, ele não funciona no Windows Server Core ou no Windows nano Server. Esse cmdlet só está disponível em sistemas Windows que dão suporte à área de trabalho do Windows.
 
@@ -271,6 +271,8 @@ Não é possível canalizar a entrada para `Show-Command` .
 Quando você usa o parâmetro **PassThru** , `Show-Command` retorna uma cadeia de caracteres de comando. Quando você usa o parâmetro **ErrorPopup** , `Show-Command` o retorna a saída do comando (qualquer objeto). Caso contrário, `Show-Command` o não gera nenhuma saída.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 `Show-Command` Não funciona em sessões remotas.
 

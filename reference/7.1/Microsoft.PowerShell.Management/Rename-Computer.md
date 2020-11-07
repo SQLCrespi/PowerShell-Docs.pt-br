@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: 1c8cde77d16452c9488ce3af62e8b5f761213c80
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0c0e95ff569f1729842e0d3bcb5af4c9ab71b51a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193197"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346013"
 ---
 # Rename-Computer
 
@@ -90,7 +90,7 @@ Digite um nome de usuário, como `User01` ou `Domain01\User01` , ou insira um ob
 
 Se você digitar um nome de usuário, esse cmdlet solicitará uma senha.
 
-Para especificar uma conta de usuário com permissão para se conectar ao computador especificado pelo parâmetro **ComputerName** , use o parâmetro **LocalCredential** .
+Para especificar uma conta de usuário com permissão para se conectar ao computador especificado pelo parâmetro **ComputerName** , use o parâmetro **LocalCredential**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -122,13 +122,13 @@ Accept wildcard characters: False
 
 ### -LocalCredential
 
-Especifica uma conta de usuário que tenha permissão para conectar-se ao computador especificado pelo parâmetro **ComputerName** . O padrão é o usuário atual.
+Especifica uma conta de usuário que tenha permissão para conectar-se ao computador especificado pelo parâmetro **ComputerName**. O padrão é o usuário atual.
 
 Digite um nome de usuário, como `User01` ou `Domain01\User01` , ou insira um objeto **PSCredential** , como um gerado pelo `Get-Credential` cmdlet.
 
 Se você digitar um nome de usuário, esse cmdlet solicitará uma senha.
 
-Para especificar uma conta de usuário que tenha permissão para se conectar ao domínio, use o parâmetro **DomainCredential** .
+Para especificar uma conta de usuário que tenha permissão para se conectar ao domínio, use o parâmetro **DomainCredential**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -206,7 +206,7 @@ Especifica o mecanismo usado para autenticar as credenciais do usuário quando e
 - **Kerberos**
 - **Inicia**
 
-O valor padrão é **Default** .
+O valor padrão é **Default**.
 
 Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
@@ -271,8 +271,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum
 
-Esse cmdlet não tem parâmetros que obtêm entradas por valor.
-No entanto, é possível redirecionar os valores das propriedades de objetos **ComputerName** e **NewName** para esse cmdlet.
+Esse cmdlet não tem parâmetros que obtêm entradas por valor. No entanto, é possível redirecionar os valores das propriedades de objetos **ComputerName** e **NewName** para esse cmdlet.
 
 ## SAÍDAS
 
@@ -283,9 +282,10 @@ Caso contrário, ele não retorna nenhuma saída.
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 ## LINKS RELACIONADOS
 
 [Restart-Computer](Restart-Computer.md)
 
 [Stop-Computer](Stop-Computer.md)
-

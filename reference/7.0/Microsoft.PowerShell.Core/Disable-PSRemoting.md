@@ -7,12 +7,12 @@ ms.date: 01/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-psremoting?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSRemoting
-ms.openlocfilehash: b51d5c2d21734a8db31a6e257579cca68809ebc5
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f4fe65ec687ca39c1356dd5c9a590899c8b3789c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193065"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345996"
 ---
 # Disable-PSRemoting
 
@@ -474,6 +474,8 @@ Não é possível canalizar nenhum objeto para este cmdlet.
 Este cmdlet não gera saída.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 - Desabilitar as configurações de sessão não desfaz todas as alterações feitas pelos `Enable-PSRemoting` `Enable-PSSessionConfiguration` cmdlets ou. Você talvez precise desfazer, manualmente, as alterações listadas a seguir.
 

@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: f7cad4b85a8501081152768c2e3bfdf7fb3e59fd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 939dc011307b4c98340bb376032b96289e1c1bc3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194695"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345945"
 ---
 # New-PSSessionConfigurationFile
 
@@ -85,7 +85,7 @@ The syntax is not supported by this runspace. This might be because it is in no-
     + PSComputerName        : localhost
 ```
 
-Neste exemplo, a `Invoke-Command` falha porque **languagemode** está definido como **nolanguage** .
+Neste exemplo, a `Invoke-Command` falha porque **languagemode** está definido como **nolanguage**.
 
 ### Exemplo 2: Criando e usando uma sessão RestrictedLanguage
 
@@ -113,7 +113,7 @@ Invoke-Command -Session $RestrictedSession -ScriptBlock {
 Before
 ```
 
-Neste exemplo, o é com `Invoke-Command` sucesso porque o **languagemode** está definido como **RestrictedLanguage** .
+Neste exemplo, o é com `Invoke-Command` sucesso porque o **languagemode** está definido como **RestrictedLanguage**.
 
 ### Exemplo 3: alterando um arquivo de configuração de sessão
 
@@ -304,7 +304,7 @@ Adiciona os aliases especificados às sessões que usam a configuração de sess
 - Nome-nome do alias. Essa chave é necessária.
 - Value-o comando que o alias representa. Essa chave é necessária.
 - Descrição-uma cadeia de texto que descreve o alias. Essa chave é opcional.
-- Opções-opções de alias. Essa chave é opcional. O valor padrão é **None** . Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
+- Opções-opções de alias. Essa chave é opcional. O valor padrão é **None**. Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
 
 Por exemplo: `@{Name='hlp';Value='Get-Help';Description='Gets help';Options='ReadOnly'}`
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -CompanyName
 
-Especifica a empresa que criou a configuração de sessão ou o arquivo de configuração. O valor padrão é **Desconhecido** . O valor desse parâmetro é visível no arquivo de configuração de sessão, mas não é uma propriedade do objeto de configuração da sessão.
+Especifica a empresa que criou a configuração de sessão ou o arquivo de configuração. O valor padrão é **Desconhecido**. O valor desse parâmetro é visível no arquivo de configuração de sessão, mas não é uma propriedade do objeto de configuração da sessão.
 
 ```yaml
 Type: System.String
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 
 ### -ExecutionPolicy
 
-Especifica a política de execução de sessões que usam a configuração de sessão. Se você omitir esse parâmetro, o valor da chave **ExecutionPolicy** no arquivo de configuração de sessão será **restrito** . Para obter informações sobre as políticas de execução no PowerShell, consulte [about_Execution_Policies](about/about_Execution_Policies.md).
+Especifica a política de execução de sessões que usam a configuração de sessão. Se você omitir esse parâmetro, o valor da chave **ExecutionPolicy** no arquivo de configuração de sessão será **restrito**. Para obter informações sobre as políticas de execução no PowerShell, consulte [about_Execution_Policies](about/about_Execution_Policies.md).
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicy
@@ -476,7 +476,7 @@ Adiciona as funções especificadas às sessões que usam a configuração de se
 
 - Nome-nome da função. Essa chave é necessária.
 - ScriptBlock-corpo da função. Insira um bloco de script. Essa chave é necessária.
-- Opções-opções de função. Essa chave é opcional. O valor padrão é **None** . Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
+- Opções-opções de função. Essa chave é opcional. O valor padrão é **None**. Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
 
 Por exemplo: `@{Name='Get-PowerShellProcess';ScriptBlock={Get-Process PowerShell};Options='AllScope'}`
 
@@ -535,7 +535,7 @@ Os valores aceitáveis para esse parâmetro são:
 - Nolanguage-os usuários podem executar cmdlets e funções, mas não têm permissão para usar nenhum elemento de linguagem, como blocos de script, variáveis ou operadores.
 - RestrictedLanguage-os usuários podem executar cmdlets e funções, mas não têm permissão para usar os blocos de script ou variáveis, exceto as seguintes variáveis permitidas:,,, `$PSCulture` `$PSUICulture` `$True` `$False` e `$Null` . Os usuários podem usar apenas os operadores de comparação básicos ( `-eq` , `-gt` , `-lt` ). Não são permitidas instruções de atribuição, referências de propriedade e chamadas de método.
 
-O valor padrão do parâmetro **LanguageMode** depende do valor do parâmetro **SessionType** .
+O valor padrão do parâmetro **LanguageMode** depende do valor do parâmetro **SessionType**.
 
 - Vazio – não idioma
 - RestrictedRemoteServer-nolanguage
@@ -797,7 +797,7 @@ Accept wildcard characters: False
 Especifica o tamanho máximo para unidades de usuário expostas em sessões que usam essa configuração de sessão.
 Quando omitido, o tamanho padrão de cada `User:` unidade raiz é 50 MB.
 
-Esse parâmetro deve ser usado com **MountUserDrive** .
+Esse parâmetro deve ser usado com **MountUserDrive**.
 
 ```yaml
 Type: System.Int64
@@ -817,7 +817,7 @@ Adiciona as variáveis especificadas às sessões que usam a configuração de s
 
 - Nome-nome da variável. Essa chave é necessária.
 - Valor-variável de valor. Essa chave é necessária.
-- Opções – opções de variáveis. Essa chave é opcional. O valor padrão é **None** . Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
+- Opções – opções de variáveis. Essa chave é opcional. O valor padrão é **None**. Os valores aceitáveis para esse parâmetro são: None, ReadOnly, Constant, Private ou alscope.
 
 Por exemplo: `@{Name='WarningPreference';Value='SilentlyContinue';Options='AllScope'}`
 
@@ -835,7 +835,7 @@ Accept wildcard characters: False
 
 ### -VisibleAliases
 
-Limita os aliases na sessão aos especificados no valor desse parâmetro, além de todos os aliases definidos no parâmetro **AliasDefinition** . Há suporte para caracteres curinga. Por padrão, todos os aliases que são definidos pelo mecanismo do PowerShell e todos os aliases que os módulos exportam são visíveis na sessão.
+Limita os aliases na sessão aos especificados no valor desse parâmetro, além de todos os aliases definidos no parâmetro **AliasDefinition**. Há suporte para caracteres curinga. Por padrão, todos os aliases que são definidos pelo mecanismo do PowerShell e todos os aliases que os módulos exportam são visíveis na sessão.
 
 Por exemplo: `VisibleAliases='gcm', 'gp'`
 
@@ -895,7 +895,7 @@ Accept wildcard characters: True
 
 ### -VisibleFunctions
 
-Limita as funções na sessão às especificadas no valor desse parâmetro, além de todas as funções que você define no parâmetro **FunctionDefinition** . Há suporte para caracteres curinga.
+Limita as funções na sessão às especificadas no valor desse parâmetro, além de todas as funções que você define no parâmetro **FunctionDefinition**. Há suporte para caracteres curinga.
 
 Por padrão, todos as funções que os módulos na sessão exportam são visíveis na sessão. Use os parâmetros **SessionType** e **ModulesToImport** para determinar quais módulos e snap-ins são importados para a sessão.
 
@@ -951,6 +951,8 @@ Não é possível canalizar nenhum objeto para este cmdlet.
 Este cmdlet não gera saída.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 - Os parâmetros, como **VisibleCmdlets** e **VisibleProviders** , não importam itens para a sessão. Em vez disso, eles selecionam entre os itens importados para a sessão. Por exemplo, se o valor do parâmetro **VisibleProviders** for o provedor de certificado, mas o parâmetro **ModulesToImport** não especificar o módulo **Microsoft. PowerShell. Security** que contém o provedor de certificado, o provedor de certificado não estará visível na sessão.
 - `New-PSSessionConfigurationFile` Cria um arquivo de configuração de sessão que tem uma extensão de nome de arquivo. PSSC no caminho que você especificar no parâmetro **path** . Quando você usa o arquivo de configuração de sessão para criar uma configuração de sessão, o `Register-PSSessionConfiguration` cmdlet copia o arquivo de configuração e salva uma cópia ativa do arquivo no subdiretório **SessionConfig** do `$PSHOME` diretório.

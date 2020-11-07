@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-pssessionconfiguration?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PSSessionConfiguration
-ms.openlocfilehash: e3b8a075b42d7d612aed1acd6c8c71452d842cb6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 028e28e071bf6e19f2d0aef72b4eec45da6c45b7
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194573"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345877"
 ---
 # Register-PSSessionConfiguration
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -ConfigurationTypeName
 
-Especifica o nome totalmente qualificado do tipo do Microsoft .NET Framework usado para esta configuração. O tipo especificado deve implementar a casse **System.Management.Automation.Remoting.PSSessionConfiguration** .
+Especifica o nome totalmente qualificado do tipo do Microsoft .NET Framework usado para esta configuração. O tipo especificado deve implementar a casse **System.Management.Automation.Remoting.PSSessionConfiguration**.
 
 Para especificar o arquivo de assembly ( \* . dll) que implementa o tipo de configuração, especifique os parâmetros **AssemblyName** e **ApplicationBase** .
 
@@ -521,7 +521,7 @@ Especifica como os threads são criados e usados quando um comando é executado 
 - UseCurrentThread
 - UseNewThread
 
-O valor padrão é **UseCurrentThread** .
+O valor padrão é **UseCurrentThread**.
 
 Para obter mais informações, consulte [Enumeração PSThreadOptions](/dotnet/api/system.management.automation.runspaces.psthreadoptions?view=powershellsdk-1.1.0).
 
@@ -610,7 +610,7 @@ Accept wildcard characters: False
 
 Especifica o estado de apartment do módulo de Threading a ser usado. Os valores aceitáveis são:
 
-- Unknown (desconhecido)
+- Desconhecido
 - MTA
 - STA
 
@@ -642,6 +642,8 @@ Não é possível redirecionar a entrada para este cmdlet.
 
 ## OBSERVAÇÕES
 
+Esse cmdlet só está disponível em plataformas Windows.
+
 Para executar este cmdlet, você deve iniciar o PowerShell usando a opção **Executar como administrador** .
 
 Esse cmdlet gera XML que representa uma configuração de plug-in de serviços Web para gerenciamento (WS-Management) e envia o XML para WS-Management, que registra o plug-in no computador local ( `New-Item wsman:\localhost\plugin` ).
@@ -669,4 +671,3 @@ As propriedades de um objeto de configuração de sessão variam de acordo com a
 [about_Session_Configurations](About/about_Session_Configurations.md)
 
 [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md)
-

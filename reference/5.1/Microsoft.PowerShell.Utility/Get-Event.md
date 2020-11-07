@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-event?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Event
-ms.openlocfilehash: f9f4edca0fce4633daeac9ac11a3ccfb09feb98a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e8f61d0c897c5ece7071ff982eb141079c8c88b9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193814"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344687"
 ---
 # Get-Event
 
@@ -34,15 +34,12 @@ Get-Event [-EventIdentifier] <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-O cmdlet **Get-Event** obtém eventos na fila de eventos do Windows PowerShell para a sessão atual.
-Você pode obter todos os eventos ou usar o parâmetro *EventIdentifier* ou *SourceIdentifier* para especificar os eventos.
 
-Quando ocorre um evento, ele é adicionado à fila de eventos.
-A fila de eventos inclui eventos para os quais você se registrou, eventos criados usando o cmdlet New-evento e o evento que é acionado quando o Windows PowerShell é encerrado.
-Você pode usar **Get-Event** ou Wait-Event para obter os eventos.
+O `Get-Event` cmdlet obtém eventos na fila de eventos do PowerShell para a sessão atual. Você pode obter todos os eventos ou usar o parâmetro **EventIdentifier** ou **SourceIdentifier** para especificar os eventos.
 
-Esse cmdlet não recebe eventos dos logs do Event Viewer.
-Para obter esses eventos, use Get-WinEvent ou Get-EventLog.
+Quando ocorre um evento, ele é adicionado à fila de eventos. A fila de eventos inclui eventos para os quais você registrou, eventos criados usando o `New-Event` cmdlet e o evento que é gerado quando o PowerShell é encerrado. Você pode usar `Get-Event` ou `Wait-Event` para obter os eventos.
+
+Esse cmdlet não recebe eventos dos logs do Event Viewer. Para obter esses eventos, use `Get-WinEvent` ou `Get-EventLog` .
 
 ## EXEMPLOS
 
@@ -89,13 +86,11 @@ MessageData      :
 
 Este exemplo mostra como obter eventos usando propriedades que não sejam SourceIdentifier.
 
-O primeiro comando obtém todos os eventos na fila de eventos e os salva na variável $Events.
+O primeiro comando obtém todos os eventos na fila de eventos e os salva na `$Events` variável.
 
-O segundo comando usa a notação de matriz para obter o primeiro evento (0-index) na matriz na variável $Events.
-O comando usa um operador de pipeline (|) para enviar o evento para o comando Format-List, que exibe todas as propriedades do evento em uma lista.
-Isso permite que você examine as propriedades do objeto de evento.
+O segundo comando usa a notação de matriz para obter o primeiro evento (0-index) na matriz na `$Events` variável. O comando usa um operador de pipeline ( `|` ) para enviar o evento para o `Format-List` comando, que exibe todas as propriedades do evento em uma lista. Isso permite que você examine as propriedades do objeto de evento.
 
-O terceiro comando mostra como usar o cmdlet Where-Object para obter um evento com base no horário em que foi gerado.
+O terceiro comando mostra como usar o `Where-Object` cmdlet para obter um evento com base no horário em que foi gerado.
 
 ### Exemplo 4: obter um evento por seu identificador
 
@@ -108,6 +103,7 @@ Esse comando obtém o evento com um identificador de evento de 2.
 ## PARAMETERS
 
 ### -EventIdentifier
+
 Especifica os identificadores de eventos para os quais esse cmdlet obtém eventos.
 
 ```yaml
@@ -123,9 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-Especifica identificadores de origem para os quais este cmdlet obtém eventos.
-O padrão é todos os eventos da fila de eventos.
-Caracteres curinga não são permitidos.
+
+Especifica identificadores de origem para os quais este cmdlet obtém eventos. O padrão é todos os eventos da fila de eventos. Caracteres curinga não são permitidos.
 
 ```yaml
 Type: System.String
@@ -140,64 +135,45 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
 
 ### Nenhum
+
 Não é possível redirecionar a entrada para este cmdlet.
 
 ## SAÍDAS
 
 ### System. Management. Automation. PSEventArgs
-O **Get-Event** retorna um objeto **PSEventArgs** para cada evento.
-Para ver uma descrição desse objeto, digite `Get-Help Get-Event -Full` e veja a seção observações do tópico da ajuda.
+
+`Get-Event` Retorna um objeto **PSEventArgs** para cada evento. Para ver uma descrição desse objeto, digite `Get-Help Get-Event -Full` e veja a seção observações do tópico da ajuda.
 
 ## OBSERVAÇÕES
 
-* Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
+Eventos, assinaturas de evento e a fila de eventos existem apenas na sessão atual. Se você fechar a sessão atual, a fila de eventos será descartada e a inscrição do evento será cancelada.
 
-  O cmdlet **Get-Event** retorna um objeto **PSEventArgs** ( **System. Management. Automation. PSEventArgs** ) com as seguintes propriedades:
+O `Get-Event` cmdlet retorna um objeto **PSEventArgs** ( **System. Management. Automation. PSEventArgs** ) com as seguintes propriedades:
 
-  - ComputerName.
-O nome do computador no qual o evento ocorreu.
-Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
+- ComputerName. O nome do computador no qual o evento ocorreu. Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
 
-  - RunspaceId.
-Um GUID que identifica exclusivamente a sessão na qual o evento ocorreu.
-Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
+- RunspaceId. Um GUID que identifica exclusivamente a sessão na qual o evento ocorreu. Esse valor de propriedade é preenchido somente quando o evento é encaminhado de um computador remoto.
 
-  - EventIdentifier.
-Um inteiro (Int32) que identifica exclusivamente a notificação de eventos na sessão atual.
+- EventIdentifier. Um inteiro (Int32) que identifica exclusivamente a notificação de eventos na sessão atual.
 
-  - Sender.
-O objeto que gerou o evento.
-No valor do parâmetro *Action* , a variável automática $Sender contém o objeto Sender.
+- Sender. O objeto que gerou o evento. No valor do parâmetro **Action** , a `$Sender` variável automática contém o objeto Sender.
 
-  - Origemeventargs.
-O primeiro parâmetro deriva de EventArgs, se ele existir.
-Por exemplo, em um evento decorrido de temporizador no qual a assinatura tem o formulário object sender, Timers. ElapsedEventArgs e, a propriedade SourceEventArgs conterá os timers. ElapsedEventArgs.
-No valor do parâmetro *Action* , a variável automática $EventArgs contém esse valor.
+- Origemeventargs. O primeiro parâmetro deriva de EventArgs, se ele existir. Por exemplo, em um evento decorrido de temporizador no qual a assinatura tem o formulário object sender, **Timers. ElapsedEventArgs** e, a propriedade **SourceEventArgs** conterá os **Timers. ElapsedEventArgs**. No valor do parâmetro **Action** , a `$EventArgs` variável automática contém esse valor.
 
-  - SourceArgs.
-Todos os parâmetros da assinatura do evento original.
-Para uma assinatura de evento padrão, $Args \[ 0 \] representa o remetente e $args \[ 1 \] representa a origemeventargs.
-No valor do parâmetro *Action* , a variável automática $args contém esse valor.
+- SourceArgs. Todos os parâmetros da assinatura do evento original. Para uma assinatura de evento padrão, `$Args[0]` representa o remetente e `$Args[1]` representa a **origemeventargs**. No valor do parâmetro **Action** , a `$Args` variável automática contém esse valor.
 
-  - SourceIdentifier.
-Uma cadeia de caracteres que identifica a inscrição do evento.
-No valor do parâmetro *Action* , a propriedade SourceIdentifier da variável automática $Event contém esse valor.
+- SourceIdentifier. Uma cadeia de caracteres que identifica a inscrição do evento. No valor do parâmetro **Action** , a propriedade **SourceIdentifier** da `$Event` variável Automatic contém esse valor.
 
-  - TimeGenerated.
-Um objeto **DateTime** que representa a hora em que o evento foi gerado.
-No valor do parâmetro *Action* , a Propriedade TimeGenerated da variável automática $Event contém esse valor.
+- TimeGenerated. Um objeto **DateTime** que representa a hora em que o evento foi gerado.
+  No valor do parâmetro **Action** , a propriedade **TimeGenerated** da `$Event` variável Automatic contém esse valor.
 
-  --MessageData.
-Dados associados a inscrição do evento.
-Os usuários especificam esses dados quando registram um evento.
-No valor do parâmetro *Action* , a propriedade MessageData da variável automática $Event contém esse valor.
-
-*
+- MessageData. Dados associados a inscrição do evento. Os usuários especificam esses dados quando registram um evento. No valor do parâmetro **Action** , a propriedade **MessageData** da `$Event` variável Automatic contém esse valor.
 
 ## LINKS RELACIONADOS
 

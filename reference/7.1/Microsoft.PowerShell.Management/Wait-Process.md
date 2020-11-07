@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/wait-process?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Process
-ms.openlocfilehash: bff2b77523613d526c7153cc970d5e188e759c18
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2d991ec8e992d98425cf72f7e63e0f7f6e2089c0
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193349"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345741"
 ---
 # Wait-Process
 
@@ -43,7 +43,7 @@ Wait-Process [[-Timeout] <Int32>] -InputObject <Process[]> [<CommonParameters>]
 
 O cmdlet **Wait-Process** aguarda que um ou mais processos em execução sejam interrompidos antes de aceitar a entrada.
 No console do PowerShell, esse cmdlet suprime o prompt de comando até que os processos sejam interrompidos.
-Você pode especificar um processo por nome do processo ou ID do processo (PID) ou canalizar um objeto de processo para **Wait-Process** .
+Você pode especificar um processo por nome do processo ou ID do processo (PID) ou canalizar um objeto de processo para **Wait-Process**.
 
 O **processo de espera** funciona apenas em processos em execução no computador local.
 
@@ -76,7 +76,7 @@ PS C:\> Wait-Process -Name "notepad"
 PS C:\> Wait-Process -InputObject $p
 ```
 
-Esses comandos mostram três métodos diferentes de especificar um processo de **espera-processo** .
+Esses comandos mostram três métodos diferentes de especificar um processo de **espera-processo**.
 O primeiro comando obtém o processo do bloco de notas e o armazena na variável $p.
 
 O segundo comando usa o parâmetro *ID* , o terceiro comando usa o parâmetro *Name* e o quarto comando usa o parâmetro *InputObject* .
@@ -183,9 +183,9 @@ Este cmdlet não gera saída.
 
 ## OBSERVAÇÕES
 
-* Esse cmdlet usa o método **WaitForExit** da classe System. Diagnostics. Process. Para obter mais informações sobre esse método, consulte o SDK do Microsoft .NET Framework.
+O cmdlet só tem suporte em plataformas Windows.
 
-*
+Esse cmdlet usa o método **WaitForExit** da classe **System. Diagnostics. Process** .
 
 ## LINKS RELACIONADOS
 
@@ -198,4 +198,3 @@ Este cmdlet não gera saída.
 [Stop-Process](Stop-Process.md)
 
 [Wait-Process](Wait-Process.md)
-

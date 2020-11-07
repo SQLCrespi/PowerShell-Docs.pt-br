@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/unregister-pssessionconfiguration?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-PSSessionConfiguration
-ms.openlocfilehash: c622642a572509e9069fceff2492baf0cc8ea911
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: f9cc2f83ec0fca1c957c670e13ac7b455c322adb
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194994"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345333"
 ---
 # Unregister-PSSessionConfiguration
 
@@ -106,7 +106,7 @@ Por fim, o `New-PSSession` cmdlet tenta criar uma sessão que usa a configuraç�
 
 Indica que o cmdlet não solicita confirmação e reinicia o serviço **WinRM** sem avisar. Reiniciar o serviço faz a com que a alteração da configuração entre em vigor.
 
-Para evitar uma reinicialização e suprimir o prompt de reinicialização, use o parâmetro **NoServiceRestart** .
+Para evitar uma reinicialização e suprimir o prompt de reinicialização, use o parâmetro **NoServiceRestart**.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -208,6 +208,8 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 Este cmdlet não retorna nenhum objeto.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só está disponível em plataformas Windows.
 
 Para executar este cmdlet, você deve iniciar o PowerShell usando a opção **Executar como administrador** .
 
