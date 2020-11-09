@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 4ff70be239197c7a4f64019d2aab42433f82f36c
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846908"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354653"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -19,16 +19,16 @@ Apesar de citarmos alguns nomes abaixo, obrigado a [todos os colaboradores da co
 
 ## <a name="net-core-21"></a>.NET Core 2.1
 
-O PowerShell Core 6.1 migrou para o .NET Core 2.1 depois de ter sido [liberado em maio](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/), resultando em muitas melhorias no PowerShell, incluindo:
+O PowerShell Core 6.1 migrou para o .NET Core 2.1 depois de ter sido [liberado em maio](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/), resultando em muitas melhorias no PowerShell, incluindo:
 
 - aprimoramentos de desempenho (veja [abaixo](#performance-improvements))
 - Suporte a Alpine Linux (versão prévia)
 - [Suporte à ferramenta global .NET](/dotnet/core/tools/global-tools) – em breve no PowerShell
-- [`Span<T>`](/dotnet/api/system.span-1?view=netcore-2.1)
+- [`Span<T>`](/dotnet/api/system.span-1)
 
 ## <a name="windows-compatibility-pack-for-net-core"></a>Pacote de compatibilidade do Windows para o .NET Core
 
-No Windows, a equipe do .NET enviou o [pacote de compatibilidade do Windows para o .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/), um conjunto de assemblies que devolve algumas APIs removidas ao .NET Core no Windows.
+No Windows, a equipe do .NET enviou o [pacote de compatibilidade do Windows para o .NET Core](https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/), um conjunto de assemblies que devolve algumas APIs removidas ao .NET Core no Windows.
 
 Adicionamos o pacote de compatibilidade do Windows à versão do PowerShell Core 6.1 para que os módulos ou scripts que usam essas APIs possam acreditar que estarão disponíveis.
 
@@ -36,7 +36,7 @@ O pacote de compatibilidade do Windows permite que o PowerShell Core use **mais 
 
 ## <a name="support-for-application-allow-lists"></a>Suporte para listas de permissões de Aplicativos
 
-O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). As listas de permissões de aplicativos permitem um controle granular de quais binários podem ser executados, usados com o [modo de linguagem restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) do PowerShell.
+O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control). As listas de permissões de aplicativos permitem um controle granular de quais binários podem ser executados, usados com o [modo de linguagem restrita](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/) do PowerShell.
 
 ## <a name="performance-improvements"></a>Melhorias de desempenho
 

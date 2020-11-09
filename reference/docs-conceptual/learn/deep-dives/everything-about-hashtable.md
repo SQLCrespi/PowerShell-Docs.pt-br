@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre as tabelas de hash
 description: As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
+ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85353814"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354415"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Tudo o que você queria saber sobre as tabelas de hash
 
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-O PowerShell 6.2 adicionou o parâmetro**Depth** a `ConvertFrom-Json`. O padrão **Depth** é 1024.
+O PowerShell 6.2 adicionou o parâmetro **Depth** a `ConvertFrom-Json`. O padrão **Depth** é 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Lendo diretamente de um arquivo
 
@@ -966,7 +966,7 @@ Abordei muitos aspectos de base rapidamente. Minha esperança é que, toda vez q
 [Se o desempenho for importante, teste-o]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [fracionamento]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
-[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8&preserve-view=true
 [PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [Padrões automáticos]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/

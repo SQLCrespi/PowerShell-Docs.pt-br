@@ -3,12 +3,12 @@ title: Tudo o que você sempre quis saber sobre a instrução switch
 description: A instrução switch no PowerShell oferece recursos que não são encontrados em outras linguagens.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469711"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355112"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Tudo o que você sempre quis saber sobre a instrução switch
 
@@ -657,9 +657,14 @@ A configuração de `$isEnabled` para `$true` nesse exemplo garante que `$isVisi
 
 Quando o `switch` estiver processando os valores, ele criará um enumerador e o chamará de `$switch`. Essa é uma variável automática criada pelo PowerShell, e você pode manipulá-la diretamente.
 
-Isso foi apontado para mim por [/u/frmadsen](https://www.reddit.com/user/frmadsen)
+```powershell
+$a = 1, 2, 3, 4
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">Comentário</a> da discussão <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">O que eu (aluno de TI) devo aprender para dominar o PowerShell?</a>.</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+switch($a) {
+    1 { [void]$switch.MoveNext(); $switch.Current }
+    3 { [void]$switch.MoveNext(); $switch.Current }
+}
+```
 
 Isso fornece os resultados de:
 
