@@ -7,75 +7,69 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/stop-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Job
-ms.openlocfilehash: 0c26103f47a39cb1dbd0a9f0374f7622389329a6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c581ae593e56716ba92b1be4082ddc994ec2e229
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193498"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388477"
 ---
-# <span data-ttu-id="4cae3-103">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-103">Stop-Job</span></span>
+# <span data-ttu-id="889ce-103">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-103">Stop-Job</span></span>
 
-## <span data-ttu-id="4cae3-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="4cae3-104">SYNOPSIS</span></span>
-<span data-ttu-id="4cae3-105">Interrompe um trabalho em segundo plano do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4cae3-105">Stops a PowerShell background job.</span></span>
+## <span data-ttu-id="889ce-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="889ce-104">SYNOPSIS</span></span>
+<span data-ttu-id="889ce-105">Interrompe um trabalho em segundo plano do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="889ce-105">Stops a PowerShell background job.</span></span>
 
-## <span data-ttu-id="4cae3-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="4cae3-106">SYNTAX</span></span>
+## <span data-ttu-id="889ce-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="889ce-106">SYNTAX</span></span>
 
-### <span data-ttu-id="4cae3-107">SessionIdParameterSet (padrão)</span><span class="sxs-lookup"><span data-stu-id="4cae3-107">SessionIdParameterSet (Default)</span></span>
+### <span data-ttu-id="889ce-107">SessionIdParameterSet (padrão)</span><span class="sxs-lookup"><span data-stu-id="889ce-107">SessionIdParameterSet (Default)</span></span>
 
 ```
 Stop-Job [-PassThru] [-Id] <Int32[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4cae3-108">JobParameterSet</span><span class="sxs-lookup"><span data-stu-id="4cae3-108">JobParameterSet</span></span>
+### <span data-ttu-id="889ce-108">JobParameterSet</span><span class="sxs-lookup"><span data-stu-id="889ce-108">JobParameterSet</span></span>
 
 ```
 Stop-Job [-Job] <Job[]> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4cae3-109">NameParameterSet</span><span class="sxs-lookup"><span data-stu-id="4cae3-109">NameParameterSet</span></span>
+### <span data-ttu-id="889ce-109">NameParameterSet</span><span class="sxs-lookup"><span data-stu-id="889ce-109">NameParameterSet</span></span>
 
 ```
 Stop-Job [-PassThru] [-Name] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4cae3-110">InstanceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="4cae3-110">InstanceIdParameterSet</span></span>
+### <span data-ttu-id="889ce-110">InstanceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="889ce-110">InstanceIdParameterSet</span></span>
 
 ```
 Stop-Job [-PassThru] [-InstanceId] <Guid[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4cae3-111">StateParameterSet</span><span class="sxs-lookup"><span data-stu-id="4cae3-111">StateParameterSet</span></span>
+### <span data-ttu-id="889ce-111">StateParameterSet</span><span class="sxs-lookup"><span data-stu-id="889ce-111">StateParameterSet</span></span>
 
 ```
 Stop-Job [-PassThru] [-State] <JobState> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4cae3-112">FilterParameterSet</span><span class="sxs-lookup"><span data-stu-id="4cae3-112">FilterParameterSet</span></span>
+### <span data-ttu-id="889ce-112">FilterParameterSet</span><span class="sxs-lookup"><span data-stu-id="889ce-112">FilterParameterSet</span></span>
 
 ```
 Stop-Job [-PassThru] [-Filter] <Hashtable> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="4cae3-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="4cae3-113">DESCRIPTION</span></span>
+## <span data-ttu-id="889ce-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="889ce-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="4cae3-114">O cmdlet **Stop-Job** interrompe os trabalhos em segundo plano do PowerShell que estão em andamento.</span><span class="sxs-lookup"><span data-stu-id="4cae3-114">The **Stop-Job** cmdlet stops PowerShell background jobs that are in progress.</span></span>
-<span data-ttu-id="4cae3-115">Você pode usar este cmdlet para interromper todos os trabalhos ou parar trabalhos selecionados com base em seu nome, ID, ID de instância ou estado ou passando um objeto de trabalho para **Stop-Job** .</span><span class="sxs-lookup"><span data-stu-id="4cae3-115">You can use this cmdlet to stop all jobs or stop selected jobs based on their name, ID, instance ID, or state, or by passing a job object to **Stop-Job** .</span></span>
+<span data-ttu-id="889ce-114">O `Stop-Job` cmdlet interrompe os trabalhos em segundo plano do PowerShell que estão em andamento.</span><span class="sxs-lookup"><span data-stu-id="889ce-114">The `Stop-Job` cmdlet stops PowerShell background jobs that are in progress.</span></span> <span data-ttu-id="889ce-115">Você pode usar este cmdlet para interromper todos os trabalhos ou parar trabalhos selecionados com base em seu nome, ID, ID de instância ou estado ou passando um objeto de trabalho para `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="889ce-115">You can use this cmdlet to stop all jobs or stop selected jobs based on their name, ID, instance ID, or state, or by passing a job object to `Stop-Job`.</span></span>
 
-<span data-ttu-id="4cae3-116">Você pode usar **Stop-Job** para interromper trabalhos em segundo plano, como aqueles que foram iniciados usando o cmdlet Start-Job ou o parâmetro *AsJob* de qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4cae3-116">You can use **Stop-Job** to stop background jobs, such as those that were started by using the Start-Job cmdlet or the *AsJob* parameter of any cmdlet.</span></span>
-<span data-ttu-id="4cae3-117">Quando você interrompe um trabalho em segundo plano, o PowerShell conclui todas as tarefas que estão pendentes na fila de trabalho e, em seguida, encerra o trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-117">When you stop a background job, PowerShell completes all tasks that are pending in that job queue and then ends the job.</span></span>
-<span data-ttu-id="4cae3-118">Nenhuma tarefa nova é adicionada à fila depois que esse comando é enviado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-118">No new tasks are added to the queue after this command is submitted.</span></span>
+<span data-ttu-id="889ce-116">Você pode usar `Stop-Job` para interromper trabalhos em segundo plano, como aqueles que foram iniciados usando `Start-Job` o cmdlet ou o parâmetro **AsJob** de qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-116">You can use `Stop-Job` to stop background jobs, such as those that were started by using the `Start-Job` cmdlet or the **AsJob** parameter of any cmdlet.</span></span> <span data-ttu-id="889ce-117">Quando você interrompe um trabalho em segundo plano, o PowerShell conclui todas as tarefas que estão pendentes na fila de trabalho e, em seguida, encerra o trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-117">When you stop a background job, PowerShell completes all tasks that are pending in that job queue and then ends the job.</span></span> <span data-ttu-id="889ce-118">Nenhuma tarefa nova é adicionada à fila depois que esse comando é enviado.</span><span class="sxs-lookup"><span data-stu-id="889ce-118">No new tasks are added to the queue after this command is submitted.</span></span>
 
-<span data-ttu-id="4cae3-119">Esse cmdlet não exclui os trabalhos em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="4cae3-119">This cmdlet does not delete background jobs.</span></span>
-<span data-ttu-id="4cae3-120">Para excluir um trabalho, use o cmdlet Remove-Job.</span><span class="sxs-lookup"><span data-stu-id="4cae3-120">To delete a job, use the Remove-Job cmdlet.</span></span>
+<span data-ttu-id="889ce-119">Esse cmdlet não exclui os trabalhos em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="889ce-119">This cmdlet does not delete background jobs.</span></span> <span data-ttu-id="889ce-120">Para excluir um trabalho, use o `Remove-Job` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-120">To delete a job, use the `Remove-Job` cmdlet.</span></span>
 
-<span data-ttu-id="4cae3-121">A partir do Windows PowerShell 3,0, o **Stop-Job** também interrompe os tipos de trabalho personalizados, como trabalhos de workflow e instâncias de trabalhos agendados.</span><span class="sxs-lookup"><span data-stu-id="4cae3-121">Starting in Windows PowerShell 3.0, **Stop-Job** also stops custom job types, such as workflow jobs and instances of scheduled jobs.</span></span>
-<span data-ttu-id="4cae3-122">Para habilitar **Stop-Job** para parar um trabalho com tipo de trabalho personalizado, importe o módulo que dá suporte ao tipo de trabalho personalizado na sessão antes de executar um comando **Stop-Job** , seja usando o cmdlet Import-Module ou usando ou obtendo um cmdlet no módulo.</span><span class="sxs-lookup"><span data-stu-id="4cae3-122">To enable **Stop-Job** to stop a job with custom job type, import the module that supports the custom job type into the session before you run a **Stop-Job** command, either by using the Import-Module cmdlet or by using or getting a cmdlet in the module.</span></span>
-<span data-ttu-id="4cae3-123">Para obter informações sobre um tipo específico de trabalho personalizado, consulte a documentação do recurso de tipo de trabalho personalizado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-123">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
+<span data-ttu-id="889ce-121">A partir do Windows PowerShell 3,0, `Stop-Job` o também interrompe os tipos de trabalho personalizados, como trabalhos de workflow e instâncias de trabalhos agendados.</span><span class="sxs-lookup"><span data-stu-id="889ce-121">Starting in Windows PowerShell 3.0, `Stop-Job` also stops custom job types, such as workflow jobs and instances of scheduled jobs.</span></span> <span data-ttu-id="889ce-122">Para habilitar o `Stop-Job` para parar um trabalho com o tipo de trabalho personalizado, importe o módulo que dá suporte ao tipo de trabalho personalizado na sessão antes de executar um `Stop-Job` comando, seja usando o `Import-Module` cmdlet ou obtendo um cmdlet no módulo.</span><span class="sxs-lookup"><span data-stu-id="889ce-122">To enable `Stop-Job` to stop a job with custom job type, import the module that supports the custom job type into the session before you run a `Stop-Job` command, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span> <span data-ttu-id="889ce-123">Para obter informações sobre um tipo específico de trabalho personalizado, consulte a documentação do recurso de tipo de trabalho personalizado.</span><span class="sxs-lookup"><span data-stu-id="889ce-123">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
 
-## <span data-ttu-id="4cae3-124">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="4cae3-124">EXAMPLES</span></span>
+## <span data-ttu-id="889ce-124">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="889ce-124">EXAMPLES</span></span>
 
-### <span data-ttu-id="4cae3-125">Exemplo 1: parar um trabalho em um computador remoto usando Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="4cae3-125">Example 1: Stop a job on a remote computer by using Invoke-Command</span></span>
+### <span data-ttu-id="889ce-125">Exemplo 1: parar um trabalho em um computador remoto usando Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="889ce-125">Example 1: Stop a job on a remote computer by using Invoke-Command</span></span>
 
 ```powershell
 $s = New-PSSession -ComputerName Server01 -Credential Domain01\Admin02
@@ -83,60 +77,53 @@ $j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-EventL
 Invoke-Command -Session $s -ScriptBlock { Stop-job -Job $Using:j }
 ```
 
-<span data-ttu-id="4cae3-126">Esse exemplo mostra como usar o cmdlet **Stop-Job** para interromper um trabalho que está sendo executado em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="4cae3-126">This example shows how to use the **Stop-Job** cmdlet to stop a job that is running on a remote computer.</span></span>
+<span data-ttu-id="889ce-126">Este exemplo mostra como usar o `Stop-Job` cmdlet para interromper um trabalho que está sendo executado em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="889ce-126">This example shows how to use the `Stop-Job` cmdlet to stop a job that is running on a remote computer.</span></span>
 
-<span data-ttu-id="4cae3-127">Como o trabalho foi iniciado usando o cmdlet Invoke-Command para executar um comando **Start-Job** remotamente, o objeto de trabalho é armazenado no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="4cae3-127">Because the job was started by using the Invoke-Command cmdlet to run a **Start-Job** command remotely, the job object is stored on the remote computer.</span></span>
-<span data-ttu-id="4cae3-128">Você deve usar outro comando **Invoke-Command** para executar um comando **Stop-Job** remotamente.</span><span class="sxs-lookup"><span data-stu-id="4cae3-128">You must use another **Invoke-Command** command to run a **Stop-Job** command remotely.</span></span>
-<span data-ttu-id="4cae3-129">Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.</span><span class="sxs-lookup"><span data-stu-id="4cae3-129">For more information about remote background jobs, see about_Remote_Jobs.</span></span>
+<span data-ttu-id="889ce-127">Como o trabalho foi iniciado usando o `Invoke-Command` cmdlet para executar um `Start-Job` comando remotamente, o objeto de trabalho é armazenado no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="889ce-127">Because the job was started by using the `Invoke-Command` cmdlet to run a `Start-Job` command remotely, the job object is stored on the remote computer.</span></span> <span data-ttu-id="889ce-128">Você deve usar outro `Invoke-Command` comando para executar um `Stop-Job` comando remotamente.</span><span class="sxs-lookup"><span data-stu-id="889ce-128">You must use another `Invoke-Command` command to run a `Stop-Job` command remotely.</span></span> <span data-ttu-id="889ce-129">Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.</span><span class="sxs-lookup"><span data-stu-id="889ce-129">For more information about remote background jobs, see about_Remote_Jobs.</span></span>
 
-<span data-ttu-id="4cae3-130">O primeiro comando cria uma sessão do PowerShell ( **PSSession** ) no computador Server01 e, em seguida, armazena o objeto de sessão na variável $s.</span><span class="sxs-lookup"><span data-stu-id="4cae3-130">The first command creates a PowerShell session ( **PSSession** ) on the Server01 computer, and then stores the session object in the $s variable.</span></span>
-<span data-ttu-id="4cae3-131">O comando usa as credenciais de um administrador de domínio.</span><span class="sxs-lookup"><span data-stu-id="4cae3-131">The command uses the credentials of a domain administrator.</span></span>
+<span data-ttu-id="889ce-130">O primeiro comando cria uma sessão do PowerShell ( **PSSession** ) no computador Server01 e, em seguida, armazena o objeto de sessão na `$s` variável.</span><span class="sxs-lookup"><span data-stu-id="889ce-130">The first command creates a PowerShell session ( **PSSession** ) on the Server01 computer, and then stores the session object in the `$s` variable.</span></span> <span data-ttu-id="889ce-131">O comando usa as credenciais de um administrador de domínio.</span><span class="sxs-lookup"><span data-stu-id="889ce-131">The command uses the credentials of a domain administrator.</span></span>
 
-<span data-ttu-id="4cae3-132">O segundo comando usa o cmdlet **Invoke-Command** para executar um comando **Start-Job** na sessão.</span><span class="sxs-lookup"><span data-stu-id="4cae3-132">The second command uses the **Invoke-Command** cmdlet to run a **Start-Job** command in the session.</span></span>
-<span data-ttu-id="4cae3-133">O comando no trabalho obtém todos os eventos no log de eventos do Sistema.</span><span class="sxs-lookup"><span data-stu-id="4cae3-133">The command in the job gets all of the events in the System event log.</span></span>
-<span data-ttu-id="4cae3-134">O objeto de trabalho resultante é armazenado na variável $j.</span><span class="sxs-lookup"><span data-stu-id="4cae3-134">The resulting job object is stored in the $j variable.</span></span>
+<span data-ttu-id="889ce-132">O segundo comando usa o `Invoke-Command` cmdlet para executar um `Start-Job` comando na sessão.</span><span class="sxs-lookup"><span data-stu-id="889ce-132">The second command uses the `Invoke-Command` cmdlet to run a `Start-Job` command in the session.</span></span> <span data-ttu-id="889ce-133">O comando no trabalho obtém todos os eventos no log de eventos do Sistema.</span><span class="sxs-lookup"><span data-stu-id="889ce-133">The command in the job gets all of the events in the System event log.</span></span> <span data-ttu-id="889ce-134">O objeto de trabalho resultante é armazenado na `$j` variável.</span><span class="sxs-lookup"><span data-stu-id="889ce-134">The resulting job object is stored in the `$j` variable.</span></span>
 
-<span data-ttu-id="4cae3-135">O terceiro comando interrompe o trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-135">The third command stops the job.</span></span>
-<span data-ttu-id="4cae3-136">Ele usa o cmdlet **Invoke-Command** para executar um comando **Stop-Job** em **PSSession** em Server01.</span><span class="sxs-lookup"><span data-stu-id="4cae3-136">It uses the **Invoke-Command** cmdlet to run a **Stop-Job** command in the **PSSession** on Server01.</span></span>
-<span data-ttu-id="4cae3-137">Como os objetos de trabalho são armazenados em $j, que é uma variável no computador local, o comando usa o modificador de escopo Using para identificar $j como uma variável local.</span><span class="sxs-lookup"><span data-stu-id="4cae3-137">Because the job objects are stored in $j, which is a variable on the local computer, the command uses the Using scope modifier to identify $j as a local variable.</span></span>
-<span data-ttu-id="4cae3-138">Para obter mais informações sobre o modificador de escopo de uso, consulte [about_Remote_Variables](about/about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="4cae3-138">For more information about the Using scope modifier, see [about_Remote_Variables](about/about_Remote_Variables.md).</span></span>
+<span data-ttu-id="889ce-135">O terceiro comando interrompe o trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-135">The third command stops the job.</span></span> <span data-ttu-id="889ce-136">Ele usa o `Invoke-Command` cmdlet para executar um `Stop-Job` comando em **PSSession** no Server01.</span><span class="sxs-lookup"><span data-stu-id="889ce-136">It uses the `Invoke-Command` cmdlet to run a `Stop-Job` command in the **PSSession** on Server01.</span></span> <span data-ttu-id="889ce-137">Como os objetos de trabalho são armazenados em `$j` , que é uma variável no computador local, o comando usa o modificador de escopo de uso para identificar `$j` como uma variável local.</span><span class="sxs-lookup"><span data-stu-id="889ce-137">Because the job objects are stored in `$j`, which is a variable on the local computer, the command uses the Using scope modifier to identify `$j` as a local variable.</span></span>
+<span data-ttu-id="889ce-138">Para obter mais informações sobre o modificador de escopo de uso, consulte [about_Remote_Variables](about/about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="889ce-138">For more information about the Using scope modifier, see [about_Remote_Variables](about/about_Remote_Variables.md).</span></span>
 
-<span data-ttu-id="4cae3-139">Quando o comando for concluído, o trabalho será interrompido e a **PSSession** em $s estará disponível para uso.</span><span class="sxs-lookup"><span data-stu-id="4cae3-139">When the command finishes, the job is stopped and the **PSSession** in $s is available for use.</span></span>
+<span data-ttu-id="889ce-139">Quando o comando for concluído, o trabalho será interrompido e a **PSSession** no `$s` estará disponível para uso.</span><span class="sxs-lookup"><span data-stu-id="889ce-139">When the command finishes, the job is stopped and the **PSSession** in `$s` is available for use.</span></span>
 
-### <span data-ttu-id="4cae3-140">Exemplo 2: parar um trabalho em segundo plano</span><span class="sxs-lookup"><span data-stu-id="4cae3-140">Example 2: Stop a background job</span></span>
+### <span data-ttu-id="889ce-140">Exemplo 2: parar um trabalho em segundo plano</span><span class="sxs-lookup"><span data-stu-id="889ce-140">Example 2: Stop a background job</span></span>
 
 ```powershell
 Stop-Job -Name "Job1"
 ```
 
-<span data-ttu-id="4cae3-141">Esse comando interrompe o trabalho de plano de fundo Job1.</span><span class="sxs-lookup"><span data-stu-id="4cae3-141">This command stops the Job1 background job.</span></span>
+<span data-ttu-id="889ce-141">Esse comando interrompe o trabalho de plano de fundo Job1.</span><span class="sxs-lookup"><span data-stu-id="889ce-141">This command stops the Job1 background job.</span></span>
 
-### <span data-ttu-id="4cae3-142">Exemplo 3: parar vários trabalhos em segundo plano</span><span class="sxs-lookup"><span data-stu-id="4cae3-142">Example 3: Stop several background jobs</span></span>
+### <span data-ttu-id="889ce-142">Exemplo 3: parar vários trabalhos em segundo plano</span><span class="sxs-lookup"><span data-stu-id="889ce-142">Example 3: Stop several background jobs</span></span>
 
 ```powershell
 Stop-Job -Id 1, 3, 4
 ```
 
-<span data-ttu-id="4cae3-143">Esse comando interrompe três trabalhos.</span><span class="sxs-lookup"><span data-stu-id="4cae3-143">This command stops three jobs.</span></span>
-<span data-ttu-id="4cae3-144">Ele os identifica por suas IDs.</span><span class="sxs-lookup"><span data-stu-id="4cae3-144">It identifies them by their IDs.</span></span>
+<span data-ttu-id="889ce-143">Esse comando interrompe três trabalhos.</span><span class="sxs-lookup"><span data-stu-id="889ce-143">This command stops three jobs.</span></span>
+<span data-ttu-id="889ce-144">Ele os identifica por suas IDs.</span><span class="sxs-lookup"><span data-stu-id="889ce-144">It identifies them by their IDs.</span></span>
 
-### <span data-ttu-id="4cae3-145">Exemplo 4: parar todos os trabalhos em segundo plano</span><span class="sxs-lookup"><span data-stu-id="4cae3-145">Example 4: Stop all background jobs</span></span>
+### <span data-ttu-id="889ce-145">Exemplo 4: parar todos os trabalhos em segundo plano</span><span class="sxs-lookup"><span data-stu-id="889ce-145">Example 4: Stop all background jobs</span></span>
 
 ```powershell
 Get-Job | Stop-Job
 ```
 
-<span data-ttu-id="4cae3-146">Esse comando interrompe todos os trabalhos de segundo plano na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-146">This command stops all of the background jobs in the current session.</span></span>
+<span data-ttu-id="889ce-146">Esse comando interrompe todos os trabalhos de segundo plano na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-146">This command stops all of the background jobs in the current session.</span></span>
 
-### <span data-ttu-id="4cae3-147">Exemplo 5: parar todos os trabalhos em segundo plano bloqueados</span><span class="sxs-lookup"><span data-stu-id="4cae3-147">Example 5: Stop all blocked background jobs</span></span>
+### <span data-ttu-id="889ce-147">Exemplo 5: parar todos os trabalhos em segundo plano bloqueados</span><span class="sxs-lookup"><span data-stu-id="889ce-147">Example 5: Stop all blocked background jobs</span></span>
 
 ```powershell
 Stop-Job -State Blocked
 ```
 
-<span data-ttu-id="4cae3-148">Esse comando interrompe todos os trabalhos que estão bloqueados.</span><span class="sxs-lookup"><span data-stu-id="4cae3-148">This command stops all the jobs that are blocked.</span></span>
+<span data-ttu-id="889ce-148">Esse comando interrompe todos os trabalhos que estão bloqueados.</span><span class="sxs-lookup"><span data-stu-id="889ce-148">This command stops all the jobs that are blocked.</span></span>
 
-### <span data-ttu-id="4cae3-149">Exemplo 6: parar um trabalho usando uma ID de instância</span><span class="sxs-lookup"><span data-stu-id="4cae3-149">Example 6: Stop a job by using an instance ID</span></span>
+### <span data-ttu-id="889ce-149">Exemplo 6: parar um trabalho usando uma ID de instância</span><span class="sxs-lookup"><span data-stu-id="889ce-149">Example 6: Stop a job by using an instance ID</span></span>
 
 ```powershell
 Get-Job | Format-Table ID, Name, Command, @{Label="State";Expression={$_.JobStateInfo.State}},
@@ -155,16 +142,13 @@ Id Name Command                 State  InstanceId
 Stop-Job -InstanceId e3bbfed1-9c53-401a-a2c3-a8db34336adf
 ```
 
-<span data-ttu-id="4cae3-150">Esses comandos mostram como interromper um trabalho com base em sua ID de instância.</span><span class="sxs-lookup"><span data-stu-id="4cae3-150">These commands show how to stop a job based on its instance ID.</span></span>
+<span data-ttu-id="889ce-150">Esses comandos mostram como interromper um trabalho com base em sua ID de instância.</span><span class="sxs-lookup"><span data-stu-id="889ce-150">These commands show how to stop a job based on its instance ID.</span></span>
 
-<span data-ttu-id="4cae3-151">O primeiro comando usa o cmdlet Get-Job para obter os trabalhos na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-151">The first command uses the Get-Job cmdlet to get the jobs in the current session.</span></span>
-<span data-ttu-id="4cae3-152">O comando usa um operador de pipeline (|) para enviar os trabalhos para um comando Format-Table, que exibe uma tabela das propriedades especificadas de cada trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-152">The command uses a pipeline operator (|) to send the jobs to a Format-Table command, which displays a table of the specified properties of each job.</span></span>
-<span data-ttu-id="4cae3-153">A tabela inclui a ID da instância de cada trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-153">The table includes the Instance ID of each job.</span></span>
-<span data-ttu-id="4cae3-154">Ele usa uma propriedade calculada para exibir o estado do trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-154">It uses a calculated property to display the job state.</span></span>
+<span data-ttu-id="889ce-151">O primeiro comando usa o `Get-Job` cmdlet para obter os trabalhos na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-151">The first command uses the `Get-Job` cmdlet to get the jobs in the current session.</span></span> <span data-ttu-id="889ce-152">O comando usa um operador de pipeline ( `|` ) para enviar os trabalhos para um `Format-Table` comando, que exibe uma tabela das propriedades especificadas de cada trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-152">The command uses a pipeline operator (`|`) to send the jobs to a `Format-Table` command, which displays a table of the specified properties of each job.</span></span> <span data-ttu-id="889ce-153">A tabela inclui a ID da instância de cada trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-153">The table includes the Instance ID of each job.</span></span> <span data-ttu-id="889ce-154">Ele usa uma propriedade calculada para exibir o estado do trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-154">It uses a calculated property to display the job state.</span></span>
 
-<span data-ttu-id="4cae3-155">O segundo comando usa um comando **Stop-Job** que tem o parâmetro *InstanceId* para interromper um trabalho selecionado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-155">The second command uses a **Stop-Job** command that has the *InstanceID* parameter to stop a selected job.</span></span>
+<span data-ttu-id="889ce-155">O segundo comando usa um `Stop-Job` comando que tem o parâmetro **InstanceId** para interromper um trabalho selecionado.</span><span class="sxs-lookup"><span data-stu-id="889ce-155">The second command uses a `Stop-Job` command that has the **InstanceID** parameter to stop a selected job.</span></span>
 
-### <span data-ttu-id="4cae3-156">Exemplo 7: parar um trabalho em um computador remoto</span><span class="sxs-lookup"><span data-stu-id="4cae3-156">Example 7: Stop a job on a remote computer</span></span>
+### <span data-ttu-id="889ce-156">Exemplo 7: parar um trabalho em um computador remoto</span><span class="sxs-lookup"><span data-stu-id="889ce-156">Example 7: Stop a job on a remote computer</span></span>
 
 ```powershell
 $j = Invoke-Command -ComputerName Server01 -ScriptBlock {Get-EventLog System} -AsJob
@@ -177,36 +161,29 @@ Id    Name    State      HasMoreData     Location         Command
 5     Job5    Stopped    True            user01-tablet    get-eventlog system
 ```
 
-<span data-ttu-id="4cae3-157">Esse exemplo mostra como usar o cmdlet **Stop-Job** para interromper um trabalho que está sendo executado em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="4cae3-157">This example shows how to use the **Stop-Job** cmdlet to stop a job that is running on a remote computer.</span></span>
+<span data-ttu-id="889ce-157">Este exemplo mostra como usar o `Stop-Job` cmdlet para interromper um trabalho que está sendo executado em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="889ce-157">This example shows how to use the `Stop-Job` cmdlet to stop a job that is running on a remote computer.</span></span>
 
-<span data-ttu-id="4cae3-158">Como o trabalho foi iniciado usando o parâmetro *AsJob* do cmdlet **Invoke-Command** , o objeto de trabalho está localizado no computador local, embora o trabalho seja executado no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="4cae3-158">Because the job was started by using the *AsJob* parameter of the **Invoke-Command** cmdlet, the job object is located on the local computer, even though the job runs on the remote computer.</span></span>
-<span data-ttu-id="4cae3-159">Portanto, você pode usar um comando local **Stop-Job** para interromper o trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-159">Therefore, you can use a local **Stop-Job** command to stop the job.</span></span>
+<span data-ttu-id="889ce-158">Como o trabalho foi iniciado usando o parâmetro **AsJob** do `Invoke-Command` cmdlet, o objeto de trabalho está localizado no computador local, embora o trabalho seja executado no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="889ce-158">Because the job was started by using the **AsJob** parameter of the `Invoke-Command` cmdlet, the job object is located on the local computer, even though the job runs on the remote computer.</span></span> <span data-ttu-id="889ce-159">Portanto, você pode usar um `Stop-Job` comando local para interromper o trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-159">Therefore, you can use a local `Stop-Job` command to stop the job.</span></span>
 
-<span data-ttu-id="4cae3-160">O primeiro comando usa o cmdlet **Invoke-Command** para iniciar um trabalho de segundo plano no computador Server01.</span><span class="sxs-lookup"><span data-stu-id="4cae3-160">The first command uses the **Invoke-Command** cmdlet to start a background job on the Server01 computer.</span></span>
-<span data-ttu-id="4cae3-161">O comando usa o parâmetro *AsJob* para executar o comando remoto como um trabalho em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="4cae3-161">The command uses the *AsJob* parameter to run the remote command as a background job.</span></span>
+<span data-ttu-id="889ce-160">O primeiro comando usa o `Invoke-Command` cmdlet para iniciar um trabalho em segundo plano no computador Server01.</span><span class="sxs-lookup"><span data-stu-id="889ce-160">The first command uses the `Invoke-Command` cmdlet to start a background job on the Server01 computer.</span></span> <span data-ttu-id="889ce-161">O comando usa o parâmetro **AsJob** para executar o comando remoto como um trabalho em segundo plano.</span><span class="sxs-lookup"><span data-stu-id="889ce-161">The command uses the **AsJob** parameter to run the remote command as a background job.</span></span>
 
-<span data-ttu-id="4cae3-162">Esse comando retorna um objeto de trabalho, que é o mesmo objeto de trabalho retornado pelo cmdlet **Start-Job** .</span><span class="sxs-lookup"><span data-stu-id="4cae3-162">This command returns a job object, which is the same job object that the **Start-Job** cmdlet returns.</span></span>
-<span data-ttu-id="4cae3-163">O comando salva o objeto de trabalho na variável $j.</span><span class="sxs-lookup"><span data-stu-id="4cae3-163">The command saves the job object in the $j variable.</span></span>
+<span data-ttu-id="889ce-162">Esse comando retorna um objeto de trabalho, que é o mesmo objeto de trabalho que o `Start-Job` cmdlet retorna.</span><span class="sxs-lookup"><span data-stu-id="889ce-162">This command returns a job object, which is the same job object that the `Start-Job` cmdlet returns.</span></span>
+<span data-ttu-id="889ce-163">O comando salva o objeto de trabalho na `$j` variável.</span><span class="sxs-lookup"><span data-stu-id="889ce-163">The command saves the job object in the `$j` variable.</span></span>
 
-<span data-ttu-id="4cae3-164">O segundo comando usa um operador de pipeline para enviar o trabalho na variável $j para Stop-Job.</span><span class="sxs-lookup"><span data-stu-id="4cae3-164">The second command uses a pipeline operator to send the job in the $j variable to Stop-Job.</span></span>
-<span data-ttu-id="4cae3-165">O comando usa o parâmetro *PassThru* para instruir **Stop-Job** a retornar um objeto de trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-165">The command uses the *PassThru* parameter to direct **Stop-Job** to return a job object.</span></span>
-<span data-ttu-id="4cae3-166">A exibição do objeto de trabalho confirma que o estado do trabalho foi interrompido.</span><span class="sxs-lookup"><span data-stu-id="4cae3-166">The job object display confirms that the state of the job is Stopped.</span></span>
+<span data-ttu-id="889ce-164">O segundo comando usa um operador de pipeline para enviar o trabalho na `$j` variável para `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="889ce-164">The second command uses a pipeline operator to send the job in the `$j` variable to `Stop-Job`.</span></span> <span data-ttu-id="889ce-165">O comando usa o parâmetro **PassThru** para direcionar `Stop-Job` para retornar um objeto de trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-165">The command uses the **PassThru** parameter to direct `Stop-Job` to return a job object.</span></span> <span data-ttu-id="889ce-166">A exibição do objeto de trabalho confirma que o estado do trabalho foi interrompido.</span><span class="sxs-lookup"><span data-stu-id="889ce-166">The job object display confirms that the state of the job is Stopped.</span></span>
 
-<span data-ttu-id="4cae3-167">Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.</span><span class="sxs-lookup"><span data-stu-id="4cae3-167">For more information about remote background jobs, see about_Remote_Jobs.</span></span>
+<span data-ttu-id="889ce-167">Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.</span><span class="sxs-lookup"><span data-stu-id="889ce-167">For more information about remote background jobs, see about_Remote_Jobs.</span></span>
 
-## <span data-ttu-id="4cae3-168">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="4cae3-168">PARAMETERS</span></span>
+## <span data-ttu-id="889ce-168">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="889ce-168">PARAMETERS</span></span>
 
-### <span data-ttu-id="4cae3-169">-Filter</span><span class="sxs-lookup"><span data-stu-id="4cae3-169">-Filter</span></span>
+### <span data-ttu-id="889ce-169">-Filter</span><span class="sxs-lookup"><span data-stu-id="889ce-169">-Filter</span></span>
 
-<span data-ttu-id="4cae3-170">Especifica uma tabela de hash de condições.</span><span class="sxs-lookup"><span data-stu-id="4cae3-170">Specifies a hash table of conditions.</span></span>
-<span data-ttu-id="4cae3-171">Esse cmdlet interrompe os trabalhos que atendem a todas as condições.</span><span class="sxs-lookup"><span data-stu-id="4cae3-171">This cmdlet stops jobs that satisfy all of the conditions.</span></span>
-<span data-ttu-id="4cae3-172">Insira uma tabela de hash na qual as chaves são propriedades do trabalho e os valores são valores de propriedade do trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-172">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
+<span data-ttu-id="889ce-170">Especifica uma tabela de hash de condições.</span><span class="sxs-lookup"><span data-stu-id="889ce-170">Specifies a hash table of conditions.</span></span> <span data-ttu-id="889ce-171">Esse cmdlet interrompe os trabalhos que atendem a todas as condições.</span><span class="sxs-lookup"><span data-stu-id="889ce-171">This cmdlet stops jobs that satisfy all of the conditions.</span></span>
+<span data-ttu-id="889ce-172">Insira uma tabela de hash na qual as chaves são propriedades do trabalho e os valores são valores de propriedade do trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-172">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
 
-<span data-ttu-id="4cae3-173">Este parâmetro funciona somente em tipos de trabalho personalizados, como os de fluxo de trabalho e os trabalhos agendados.</span><span class="sxs-lookup"><span data-stu-id="4cae3-173">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span>
-<span data-ttu-id="4cae3-174">Ele não funciona em trabalhos em segundo plano padrão, como aqueles criados usando o cmdlet **Start-Job** .</span><span class="sxs-lookup"><span data-stu-id="4cae3-174">It does not work on standard background jobs, such as those created by using the **Start-Job** cmdlet.</span></span>
-<span data-ttu-id="4cae3-175">Para obter informações sobre o suporte para este parâmetro, consulte o tópico da Ajuda para o tipo de trabalho em questão.</span><span class="sxs-lookup"><span data-stu-id="4cae3-175">For information about support for this parameter, see the help topic for the job type.</span></span>
+<span data-ttu-id="889ce-173">Este parâmetro funciona somente em tipos de trabalho personalizados, como os de fluxo de trabalho e os trabalhos agendados.</span><span class="sxs-lookup"><span data-stu-id="889ce-173">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span> <span data-ttu-id="889ce-174">Ele não funciona em trabalhos em segundo plano padrão, como aqueles criados usando o `Start-Job` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-174">It does not work on standard background jobs, such as those created by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="889ce-175">Para obter informações sobre o suporte para este parâmetro, consulte o tópico da Ajuda para o tipo de trabalho em questão.</span><span class="sxs-lookup"><span data-stu-id="889ce-175">For information about support for this parameter, see the help topic for the job type.</span></span>
 
-<span data-ttu-id="4cae3-176">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="4cae3-176">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="889ce-176">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="889ce-176">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -220,15 +197,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-177">-Id</span><span class="sxs-lookup"><span data-stu-id="4cae3-177">-Id</span></span>
+### <span data-ttu-id="889ce-177">-Id</span><span class="sxs-lookup"><span data-stu-id="889ce-177">-Id</span></span>
 
-<span data-ttu-id="4cae3-178">Especifica as IDs de trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="4cae3-178">Specifies the IDs of jobs that this cmdlet stops.</span></span>
-<span data-ttu-id="4cae3-179">O padrão é todos os trabalhos na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-179">The default is all jobs in the current session.</span></span>
+<span data-ttu-id="889ce-178">Especifica as IDs de trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="889ce-178">Specifies the IDs of jobs that this cmdlet stops.</span></span> <span data-ttu-id="889ce-179">O padrão é todos os trabalhos na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-179">The default is all jobs in the current session.</span></span>
 
-<span data-ttu-id="4cae3-180">A ID é um inteiro que identifica exclusivamente o trabalho na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-180">The ID is an integer that uniquely identifies the job in the current session.</span></span>
-<span data-ttu-id="4cae3-181">É mais fácil lembrar e digitar do que a ID da instância, mas só é exclusiva na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-181">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span>
-<span data-ttu-id="4cae3-182">Você pode digitar uma ou mais IDs, separadas por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="4cae3-182">You can type one or more IDs, separated by commas.</span></span>
-<span data-ttu-id="4cae3-183">Para localizar a ID de um trabalho, digite `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="4cae3-183">To find the ID of a job, type `Get-Job`.</span></span>
+<span data-ttu-id="889ce-180">A ID é um inteiro que identifica exclusivamente o trabalho na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-180">The ID is an integer that uniquely identifies the job in the current session.</span></span> <span data-ttu-id="889ce-181">É mais fácil lembrar e digitar do que a ID da instância, mas só é exclusiva na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-181">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="889ce-182">Você pode digitar uma ou mais IDs, separadas por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="889ce-182">You can type one or more IDs, separated by commas.</span></span> <span data-ttu-id="889ce-183">Para localizar a ID de um trabalho, digite `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="889ce-183">To find the ID of a job, type `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Int32[]
@@ -242,13 +215,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-184">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="4cae3-184">-InstanceId</span></span>
+### <span data-ttu-id="889ce-184">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="889ce-184">-InstanceId</span></span>
 
-<span data-ttu-id="4cae3-185">Especifica as IDs de instância dos trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="4cae3-185">Specifies the instance IDs of jobs that this cmdlet stops.</span></span>
-<span data-ttu-id="4cae3-186">O padrão é obter todos os trabalhos.</span><span class="sxs-lookup"><span data-stu-id="4cae3-186">The default is all jobs.</span></span>
+<span data-ttu-id="889ce-185">Especifica as IDs de instância dos trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="889ce-185">Specifies the instance IDs of jobs that this cmdlet stops.</span></span> <span data-ttu-id="889ce-186">O padrão é obter todos os trabalhos.</span><span class="sxs-lookup"><span data-stu-id="889ce-186">The default is all jobs.</span></span>
 
-<span data-ttu-id="4cae3-187">Uma ID de instância é um GUID que identifica exclusivamente o trabalho no computador.</span><span class="sxs-lookup"><span data-stu-id="4cae3-187">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span>
-<span data-ttu-id="4cae3-188">Para localizar a ID da instância de um trabalho, use Get-Job.</span><span class="sxs-lookup"><span data-stu-id="4cae3-188">To find the instance ID of a job, use Get-Job.</span></span>
+<span data-ttu-id="889ce-187">Uma ID de instância é um GUID que identifica exclusivamente o trabalho no computador.</span><span class="sxs-lookup"><span data-stu-id="889ce-187">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span> <span data-ttu-id="889ce-188">Para localizar a ID de instância de um trabalho, use `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="889ce-188">To find the instance ID of a job, use `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Guid[]
@@ -262,12 +233,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-189">-Trabalho</span><span class="sxs-lookup"><span data-stu-id="4cae3-189">-Job</span></span>
+### <span data-ttu-id="889ce-189">-Trabalho</span><span class="sxs-lookup"><span data-stu-id="889ce-189">-Job</span></span>
 
-<span data-ttu-id="4cae3-190">Especifica os trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="4cae3-190">Specifies the jobs that this cmdlet stops.</span></span>
-<span data-ttu-id="4cae3-191">Insira uma variável que contenha os trabalhos ou um comando que os obtenha.</span><span class="sxs-lookup"><span data-stu-id="4cae3-191">Enter a variable that contains the jobs or a command that gets the jobs.</span></span>
-<span data-ttu-id="4cae3-192">Você também pode usar um operador de pipeline para enviar trabalhos para o cmdlet **Stop-Job** .</span><span class="sxs-lookup"><span data-stu-id="4cae3-192">You can also use a pipeline operator to submit jobs to the **Stop-Job** cmdlet.</span></span>
-<span data-ttu-id="4cae3-193">Por padrão, **Stop-Job** exclui todos os trabalhos que foram iniciados na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-193">By default, **Stop-Job** deletes all jobs that were started in the current session.</span></span>
+<span data-ttu-id="889ce-190">Especifica os trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="889ce-190">Specifies the jobs that this cmdlet stops.</span></span> <span data-ttu-id="889ce-191">Insira uma variável que contenha os trabalhos ou um comando que os obtenha.</span><span class="sxs-lookup"><span data-stu-id="889ce-191">Enter a variable that contains the jobs or a command that gets the jobs.</span></span> <span data-ttu-id="889ce-192">Você também pode usar um operador de pipeline para enviar trabalhos para o `Stop-Job` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-192">You can also use a pipeline operator to submit jobs to the `Stop-Job` cmdlet.</span></span> <span data-ttu-id="889ce-193">Por padrão, o `Stop-Job` exclui todos os trabalhos que foram iniciados na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-193">By default, `Stop-Job` deletes all jobs that were started in the current session.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -281,13 +249,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-194">-Name</span><span class="sxs-lookup"><span data-stu-id="4cae3-194">-Name</span></span>
+### <span data-ttu-id="889ce-194">-Name</span><span class="sxs-lookup"><span data-stu-id="889ce-194">-Name</span></span>
 
-<span data-ttu-id="4cae3-195">Especifica nomes amigáveis de trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="4cae3-195">Specifies friendly names of jobs that this cmdlet stops.</span></span>
-<span data-ttu-id="4cae3-196">Digite os nomes de trabalho em uma lista separada por vírgulas ou use caracteres curinga (\*) para inserir um padrão de nome de trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-196">Enter the job names in a comma-separated list or use wildcard characters (\*) to enter a job name pattern.</span></span>
-<span data-ttu-id="4cae3-197">Por padrão, **Stop-Job** interrompe todos os trabalhos criados na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4cae3-197">By default, **Stop-Job** stops all jobs created in the current session.</span></span>
+<span data-ttu-id="889ce-195">Especifica nomes amigáveis de trabalhos que este cmdlet interrompe.</span><span class="sxs-lookup"><span data-stu-id="889ce-195">Specifies friendly names of jobs that this cmdlet stops.</span></span> <span data-ttu-id="889ce-196">Digite os nomes de trabalho em uma lista separada por vírgulas ou use caracteres curinga (\*) para inserir um padrão de nome de trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-196">Enter the job names in a comma-separated list or use wildcard characters (\*) to enter a job name pattern.</span></span> <span data-ttu-id="889ce-197">Por padrão, o `Stop-Job` interrompe todos os trabalhos criados na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="889ce-197">By default, `Stop-Job` stops all jobs created in the current session.</span></span>
 
-<span data-ttu-id="4cae3-198">Como não há garantia de que o nome amigável seja exclusivo, use os parâmetros *WhatIf* e *Confirm* ao parar trabalhos por nome.</span><span class="sxs-lookup"><span data-stu-id="4cae3-198">Because the friendly name is not guaranteed to be unique, use the *WhatIf* and *Confirm* parameters when stopping jobs by name.</span></span>
+<span data-ttu-id="889ce-198">Como não há garantia de que o nome amigável seja exclusivo, use os parâmetros **WhatIf** e **Confirm** ao parar trabalhos por nome.</span><span class="sxs-lookup"><span data-stu-id="889ce-198">Because the friendly name is not guaranteed to be unique, use the **WhatIf** and **Confirm** parameters when stopping jobs by name.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -301,10 +267,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="4cae3-199">-PassThru</span><span class="sxs-lookup"><span data-stu-id="4cae3-199">-PassThru</span></span>
+### <span data-ttu-id="889ce-199">-PassThru</span><span class="sxs-lookup"><span data-stu-id="889ce-199">-PassThru</span></span>
 
-<span data-ttu-id="4cae3-200">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="4cae3-200">Returns an object representing the item with which you are working.</span></span>
-<span data-ttu-id="4cae3-201">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="4cae3-201">By default, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="889ce-200">Retorna um objeto que representa o item com que você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="889ce-200">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="889ce-201">Por padrão, este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="889ce-201">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -318,24 +283,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-202">-Estado</span><span class="sxs-lookup"><span data-stu-id="4cae3-202">-State</span></span>
+### <span data-ttu-id="889ce-202">-Estado</span><span class="sxs-lookup"><span data-stu-id="889ce-202">-State</span></span>
 
-<span data-ttu-id="4cae3-203">Especifica um estado de trabalho.</span><span class="sxs-lookup"><span data-stu-id="4cae3-203">Specifies a job state.</span></span>
-<span data-ttu-id="4cae3-204">Este cmdlet interrompe apenas os trabalhos no estado especificado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-204">This cmdlet stops only jobs in the specified state.</span></span>
-<span data-ttu-id="4cae3-205">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="4cae3-205">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="889ce-203">Especifica um estado de trabalho.</span><span class="sxs-lookup"><span data-stu-id="889ce-203">Specifies a job state.</span></span> <span data-ttu-id="889ce-204">Este cmdlet interrompe apenas os trabalhos no estado especificado.</span><span class="sxs-lookup"><span data-stu-id="889ce-204">This cmdlet stops only jobs in the specified state.</span></span> <span data-ttu-id="889ce-205">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="889ce-205">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="4cae3-206">NotStarted</span><span class="sxs-lookup"><span data-stu-id="4cae3-206">NotStarted</span></span>
-- <span data-ttu-id="4cae3-207">Executando</span><span class="sxs-lookup"><span data-stu-id="4cae3-207">Running</span></span>
-- <span data-ttu-id="4cae3-208">Concluído</span><span class="sxs-lookup"><span data-stu-id="4cae3-208">Completed</span></span>
-- <span data-ttu-id="4cae3-209">Falhou</span><span class="sxs-lookup"><span data-stu-id="4cae3-209">Failed</span></span>
-- <span data-ttu-id="4cae3-210">Parado</span><span class="sxs-lookup"><span data-stu-id="4cae3-210">Stopped</span></span>
-- <span data-ttu-id="4cae3-211">Bloqueado</span><span class="sxs-lookup"><span data-stu-id="4cae3-211">Blocked</span></span>
-- <span data-ttu-id="4cae3-212">Suspenso</span><span class="sxs-lookup"><span data-stu-id="4cae3-212">Suspended</span></span>
-- <span data-ttu-id="4cae3-213">Desconectado</span><span class="sxs-lookup"><span data-stu-id="4cae3-213">Disconnected</span></span>
-- <span data-ttu-id="4cae3-214">Suspensão</span><span class="sxs-lookup"><span data-stu-id="4cae3-214">Suspending</span></span>
-- <span data-ttu-id="4cae3-215">Parando</span><span class="sxs-lookup"><span data-stu-id="4cae3-215">Stopping</span></span>
+- <span data-ttu-id="889ce-206">NotStarted</span><span class="sxs-lookup"><span data-stu-id="889ce-206">NotStarted</span></span>
+- <span data-ttu-id="889ce-207">Executando</span><span class="sxs-lookup"><span data-stu-id="889ce-207">Running</span></span>
+- <span data-ttu-id="889ce-208">Concluído</span><span class="sxs-lookup"><span data-stu-id="889ce-208">Completed</span></span>
+- <span data-ttu-id="889ce-209">Falhou</span><span class="sxs-lookup"><span data-stu-id="889ce-209">Failed</span></span>
+- <span data-ttu-id="889ce-210">Parado</span><span class="sxs-lookup"><span data-stu-id="889ce-210">Stopped</span></span>
+- <span data-ttu-id="889ce-211">Bloqueado</span><span class="sxs-lookup"><span data-stu-id="889ce-211">Blocked</span></span>
+- <span data-ttu-id="889ce-212">Suspenso</span><span class="sxs-lookup"><span data-stu-id="889ce-212">Suspended</span></span>
+- <span data-ttu-id="889ce-213">Desconectado</span><span class="sxs-lookup"><span data-stu-id="889ce-213">Disconnected</span></span>
+- <span data-ttu-id="889ce-214">Suspensão</span><span class="sxs-lookup"><span data-stu-id="889ce-214">Suspending</span></span>
+- <span data-ttu-id="889ce-215">Parando</span><span class="sxs-lookup"><span data-stu-id="889ce-215">Stopping</span></span>
 
-<span data-ttu-id="4cae3-216">Para obter mais informações sobre os Estados de trabalho, consulte [Enumeração JobState](https://msdn.microsoft.com/library/system.management.automation.jobstate) na biblioteca MSDN.</span><span class="sxs-lookup"><span data-stu-id="4cae3-216">For more information about job states, see [JobState Enumeration](https://msdn.microsoft.com/library/system.management.automation.jobstate) in the MSDN library.</span></span>
+<span data-ttu-id="889ce-216">Para obter mais informações sobre os Estados de trabalho, consulte [Enumeração JobState](/dotnet/api/system.management.automation.jobstate).</span><span class="sxs-lookup"><span data-stu-id="889ce-216">For more information about job states, see [JobState Enumeration](/dotnet/api/system.management.automation.jobstate).</span></span>
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -350,9 +313,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-217">-Confirm</span><span class="sxs-lookup"><span data-stu-id="4cae3-217">-Confirm</span></span>
+### <span data-ttu-id="889ce-217">-Confirm</span><span class="sxs-lookup"><span data-stu-id="889ce-217">-Confirm</span></span>
 
-<span data-ttu-id="4cae3-218">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4cae3-218">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="889ce-218">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-218">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -366,10 +329,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-219">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="4cae3-219">-WhatIf</span></span>
+### <span data-ttu-id="889ce-219">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="889ce-219">-WhatIf</span></span>
 
-<span data-ttu-id="4cae3-220">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-220">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="4cae3-221">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="4cae3-221">The cmdlet is not run.</span></span>
+<span data-ttu-id="889ce-220">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="889ce-220">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="889ce-221">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="889ce-221">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -383,49 +346,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4cae3-222">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4cae3-222">CommonParameters</span></span>
+### <span data-ttu-id="889ce-222">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="889ce-222">CommonParameters</span></span>
 
-<span data-ttu-id="4cae3-223">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="4cae3-223">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4cae3-224">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="4cae3-224">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="889ce-223">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="889ce-223">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="889ce-224">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="889ce-224">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="4cae3-225">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="4cae3-225">INPUTS</span></span>
+## <span data-ttu-id="889ce-225">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="889ce-225">INPUTS</span></span>
 
-### <span data-ttu-id="4cae3-226">System. Management. Automation. RemotingJob</span><span class="sxs-lookup"><span data-stu-id="4cae3-226">System.Management.Automation.RemotingJob</span></span>
+### <span data-ttu-id="889ce-226">System. Management. Automation. RemotingJob</span><span class="sxs-lookup"><span data-stu-id="889ce-226">System.Management.Automation.RemotingJob</span></span>
 
-<span data-ttu-id="4cae3-227">É possível canalizar um objeto de trabalho para esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4cae3-227">You can pipe a job object to this cmdlet.</span></span>
+<span data-ttu-id="889ce-227">É possível canalizar um objeto de trabalho para esse cmdlet.</span><span class="sxs-lookup"><span data-stu-id="889ce-227">You can pipe a job object to this cmdlet.</span></span>
 
-## <span data-ttu-id="4cae3-228">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="4cae3-228">OUTPUTS</span></span>
+## <span data-ttu-id="889ce-228">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="889ce-228">OUTPUTS</span></span>
 
-### <span data-ttu-id="4cae3-229">Nenhum, System. Management. Automation. PSRemotingJob</span><span class="sxs-lookup"><span data-stu-id="4cae3-229">None, System.Management.Automation.PSRemotingJob</span></span>
+### <span data-ttu-id="889ce-229">Nenhum, System. Management. Automation. PSRemotingJob</span><span class="sxs-lookup"><span data-stu-id="889ce-229">None, System.Management.Automation.PSRemotingJob</span></span>
 
-<span data-ttu-id="4cae3-230">Esse cmdlet retorna um objeto de trabalho, se você especificar o parâmetro *PassThru* .</span><span class="sxs-lookup"><span data-stu-id="4cae3-230">This cmdlet returns a job object, if you specify the *PassThru* parameter.</span></span>
-<span data-ttu-id="4cae3-231">Caso contrário, este cmdlet não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="4cae3-231">Otherwise, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="889ce-230">Esse cmdlet retorna um objeto de trabalho, se você especificar o parâmetro **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="889ce-230">This cmdlet returns a job object, if you specify the **PassThru** parameter.</span></span> <span data-ttu-id="889ce-231">Caso contrário, este cmdlet não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="889ce-231">Otherwise, this cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="4cae3-232">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="4cae3-232">NOTES</span></span>
+## <span data-ttu-id="889ce-232">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="889ce-232">NOTES</span></span>
 
-## <span data-ttu-id="4cae3-233">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="4cae3-233">RELATED LINKS</span></span>
+## <span data-ttu-id="889ce-233">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="889ce-233">RELATED LINKS</span></span>
 
-[<span data-ttu-id="4cae3-234">Get-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-234">Get-Job</span></span>](Get-Job.md)
+[<span data-ttu-id="889ce-234">Get-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-234">Get-Job</span></span>](Get-Job.md)
 
-[<span data-ttu-id="4cae3-235">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="4cae3-235">Invoke-Command</span></span>](Invoke-Command.md)
+[<span data-ttu-id="889ce-235">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="889ce-235">Invoke-Command</span></span>](Invoke-Command.md)
 
-[<span data-ttu-id="4cae3-236">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-236">Receive-Job</span></span>](Receive-Job.md)
+[<span data-ttu-id="889ce-236">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-236">Receive-Job</span></span>](Receive-Job.md)
 
-[<span data-ttu-id="4cae3-237">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-237">Remove-Job</span></span>](Remove-Job.md)
+[<span data-ttu-id="889ce-237">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-237">Remove-Job</span></span>](Remove-Job.md)
 
-[<span data-ttu-id="4cae3-238">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-238">Resume-Job</span></span>](Resume-Job.md)
+[<span data-ttu-id="889ce-238">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-238">Resume-Job</span></span>](Resume-Job.md)
 
-[<span data-ttu-id="4cae3-239">Start-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-239">Start-Job</span></span>](Start-Job.md)
+[<span data-ttu-id="889ce-239">Start-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-239">Start-Job</span></span>](Start-Job.md)
 
-[<span data-ttu-id="4cae3-240">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-240">Suspend-Job</span></span>](Suspend-Job.md)
+[<span data-ttu-id="889ce-240">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-240">Suspend-Job</span></span>](Suspend-Job.md)
 
-[<span data-ttu-id="4cae3-241">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="4cae3-241">Wait-Job</span></span>](Wait-Job.md)
+[<span data-ttu-id="889ce-241">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="889ce-241">Wait-Job</span></span>](Wait-Job.md)
 
-[<span data-ttu-id="4cae3-242">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="4cae3-242">about_Job_Details</span></span>](About/about_Job_Details.md)
+[<span data-ttu-id="889ce-242">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="889ce-242">about_Job_Details</span></span>](About/about_Job_Details.md)
 
-[<span data-ttu-id="4cae3-243">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="4cae3-243">about_Remote_Jobs</span></span>](About/about_Remote_Jobs.md)
+[<span data-ttu-id="889ce-243">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="889ce-243">about_Remote_Jobs</span></span>](About/about_Remote_Jobs.md)
 
-[<span data-ttu-id="4cae3-244">about_Remote_Variables</span><span class="sxs-lookup"><span data-stu-id="4cae3-244">about_Remote_Variables</span></span>](About/about_Remote_Variables.md)
+[<span data-ttu-id="889ce-244">about_Remote_Variables</span><span class="sxs-lookup"><span data-stu-id="889ce-244">about_Remote_Variables</span></span>](About/about_Remote_Variables.md)
 
-[<span data-ttu-id="4cae3-245">about_Jobs</span><span class="sxs-lookup"><span data-stu-id="4cae3-245">about_Jobs</span></span>](About/about_Jobs.md)
+[<span data-ttu-id="889ce-245">about_Jobs</span><span class="sxs-lookup"><span data-stu-id="889ce-245">about_Jobs</span></span>](About/about_Jobs.md)
 
-[<span data-ttu-id="4cae3-246">about_Scopes</span><span class="sxs-lookup"><span data-stu-id="4cae3-246">about_Scopes</span></span>](About/about_scopes.md)
+[<span data-ttu-id="889ce-246">about_Scopes</span><span class="sxs-lookup"><span data-stu-id="889ce-246">about_Scopes</span></span>](About/about_scopes.md)
