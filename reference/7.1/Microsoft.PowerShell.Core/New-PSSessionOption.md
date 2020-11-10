@@ -7,19 +7,19 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: c8d51054b2beb4da0e7d54280d85b9688928147e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 73bc543ff9525a51b1e776ec1c24e9baca4e4f71
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194694"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390704"
 ---
-# <span data-ttu-id="9cd8a-103">New-PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="9cd8a-103">New-PSSessionOption</span></span>
+# <span data-ttu-id="187bb-103">New-PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="187bb-103">New-PSSessionOption</span></span>
 
-## <span data-ttu-id="9cd8a-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="9cd8a-104">SYNOPSIS</span></span>
-<span data-ttu-id="9cd8a-105">Cria um objeto que contém opções avançadas para uma PSSession.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-105">Creates an object that contains advanced options for a PSSession.</span></span>
+## <span data-ttu-id="187bb-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="187bb-104">SYNOPSIS</span></span>
+<span data-ttu-id="187bb-105">Cria um objeto que contém opções avançadas para uma PSSession.</span><span class="sxs-lookup"><span data-stu-id="187bb-105">Creates an object that contains advanced options for a PSSession.</span></span>
 
-## <span data-ttu-id="9cd8a-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9cd8a-106">SYNTAX</span></span>
+## <span data-ttu-id="187bb-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="187bb-106">SYNTAX</span></span>
 
 ```
 New-PSSessionOption [-MaximumRedirection <Int32>] [-NoCompression] [-NoMachineProfile] [-Culture <CultureInfo>]
@@ -31,21 +31,21 @@ New-PSSessionOption [-MaximumRedirection <Int32>] [-NoCompression] [-NoMachinePr
  [-OperationTimeout <Int32>] [-NoEncryption] [-UseUTF16] [-IncludePortInSPN] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="9cd8a-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="9cd8a-107">DESCRIPTION</span></span>
+## <span data-ttu-id="187bb-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="187bb-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="9cd8a-108">O `New-PSSessionOption` cmdlet cria um objeto que contém opções avançadas para uma sessão gerenciada pelo usuário ( **PSSession** ).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-108">The `New-PSSessionOption` cmdlet creates an object that contains advanced options for a user-managed session ( **PSSession** ).</span></span> <span data-ttu-id="9cd8a-109">Você pode usar o objeto como o valor do parâmetro **SessionOption** de cmdlets que criam uma **PSSession** , como `New-PSSession` , `Enter-PSSession` e `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-109">You can use the object as the value of the **SessionOption** parameter of cmdlets that create a **PSSession** , such as `New-PSSession`, `Enter-PSSession`, and `Invoke-Command`.</span></span>
+<span data-ttu-id="187bb-108">O `New-PSSessionOption` cmdlet cria um objeto que contém opções avançadas para uma sessão gerenciada pelo usuário ( **PSSession** ).</span><span class="sxs-lookup"><span data-stu-id="187bb-108">The `New-PSSessionOption` cmdlet creates an object that contains advanced options for a user-managed session ( **PSSession** ).</span></span> <span data-ttu-id="187bb-109">Você pode usar o objeto como o valor do parâmetro **SessionOption** de cmdlets que criam uma **PSSession** , como `New-PSSession` , `Enter-PSSession` e `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="187bb-109">You can use the object as the value of the **SessionOption** parameter of cmdlets that create a **PSSession** , such as `New-PSSession`, `Enter-PSSession`, and `Invoke-Command`.</span></span>
 
-<span data-ttu-id="9cd8a-110">Sem parâmetros, `New-PSSessionOption` o gera um objeto que contém os valores padrão para todas as opções.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-110">Without parameters, `New-PSSessionOption` generates an object that contains the default values for all of the options.</span></span> <span data-ttu-id="9cd8a-111">Como todas as propriedades podem ser editadas, é possível usar o objeto resultante como um modelo e criar objetos de opção padrão para a sua empresa.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-111">Because all of the properties can be edited, you can use the resulting object as a template, and create standard option objects for your enterprise.</span></span>
+<span data-ttu-id="187bb-110">Sem parâmetros, `New-PSSessionOption` o gera um objeto que contém os valores padrão para todas as opções.</span><span class="sxs-lookup"><span data-stu-id="187bb-110">Without parameters, `New-PSSessionOption` generates an object that contains the default values for all of the options.</span></span> <span data-ttu-id="187bb-111">Como todas as propriedades podem ser editadas, é possível usar o objeto resultante como um modelo e criar objetos de opção padrão para a sua empresa.</span><span class="sxs-lookup"><span data-stu-id="187bb-111">Because all of the properties can be edited, you can use the resulting object as a template, and create standard option objects for your enterprise.</span></span>
 
-<span data-ttu-id="9cd8a-112">Você também pode salvar um objeto de opção de sessão na `$PSSessionOption` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-112">You can also save a session option object in the `$PSSessionOption` preference variable.</span></span> <span data-ttu-id="9cd8a-113">Os valores desta variável estabelecem novos valores padrão para as opções da sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-113">The values of this variable establish new default values for the session options.</span></span> <span data-ttu-id="9cd8a-114">Eles tornam-se efetivos quando nenhuma opção de sessão está definida e têm precedência sobre as opções definidas na configuração da sessão, mas você pode substituí-los especificando opções de sessão ou um objeto de opção de sessão em um cmdlet que cria uma sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-114">They effective when no session options are set for the session and they take precedence over options set in the session configuration, but you can override them by specifying session options or a session option object in a cmdlet that creates a session.</span></span> <span data-ttu-id="9cd8a-115">Para obter mais informações sobre a `$PSSessionOption` variável de preferência, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-115">For more information about the `$PSSessionOption` preference variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
+<span data-ttu-id="187bb-112">Você também pode salvar um objeto de opção de sessão na `$PSSessionOption` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="187bb-112">You can also save a session option object in the `$PSSessionOption` preference variable.</span></span> <span data-ttu-id="187bb-113">Os valores desta variável estabelecem novos valores padrão para as opções da sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-113">The values of this variable establish new default values for the session options.</span></span> <span data-ttu-id="187bb-114">Eles tornam-se efetivos quando nenhuma opção de sessão está definida e têm precedência sobre as opções definidas na configuração da sessão, mas você pode substituí-los especificando opções de sessão ou um objeto de opção de sessão em um cmdlet que cria uma sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-114">They effective when no session options are set for the session and they take precedence over options set in the session configuration, but you can override them by specifying session options or a session option object in a cmdlet that creates a session.</span></span> <span data-ttu-id="187bb-115">Para obter mais informações sobre a `$PSSessionOption` variável de preferência, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-115">For more information about the `$PSSessionOption` preference variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
 
-<span data-ttu-id="9cd8a-116">Quando você usa um objeto de opção de sessão em um cmdlet que cria uma sessão, os valores de opção de sessão têm precedência sobre valores padrão para sessões definidas na variável de preferência $PSSessionOption e na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-116">When you use a session option object in a cmdlet that creates a session, the session option values take precedence over default values for sessions set in the $PSSessionOption preference variable and in the session configuration.</span></span> <span data-ttu-id="9cd8a-117">No entanto, eles não têm precedência sobre valores máximos, cotas ou limites definidos na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-117">However, they do not take precedence over maximum values, quotas or limits set in the session configuration.</span></span> <span data-ttu-id="9cd8a-118">Para obter mais informações sobre configurações de sessão, consulte [about_Session_Configurations](About/about_Session_Configurations.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-118">For more information about session configurations, see [about_Session_Configurations](About/about_Session_Configurations.md).</span></span>
+<span data-ttu-id="187bb-116">Quando você usa um objeto de opção de sessão em um cmdlet que cria uma sessão, os valores de opção de sessão têm precedência sobre valores padrão para sessões definidas na variável de preferência $PSSessionOption e na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-116">When you use a session option object in a cmdlet that creates a session, the session option values take precedence over default values for sessions set in the $PSSessionOption preference variable and in the session configuration.</span></span> <span data-ttu-id="187bb-117">No entanto, eles não têm precedência sobre valores máximos, cotas ou limites definidos na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-117">However, they do not take precedence over maximum values, quotas or limits set in the session configuration.</span></span> <span data-ttu-id="187bb-118">Para obter mais informações sobre configurações de sessão, consulte [about_Session_Configurations](About/about_Session_Configurations.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-118">For more information about session configurations, see [about_Session_Configurations](About/about_Session_Configurations.md).</span></span>
 
-## <span data-ttu-id="9cd8a-119">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="9cd8a-119">EXAMPLES</span></span>
+## <span data-ttu-id="187bb-119">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="187bb-119">EXAMPLES</span></span>
 
-### <span data-ttu-id="9cd8a-120">Exemplo 1: criar uma opção de sessão padrão</span><span class="sxs-lookup"><span data-stu-id="9cd8a-120">Example 1: Create a default session option</span></span>
+### <span data-ttu-id="187bb-120">Exemplo 1: criar uma opção de sessão padrão</span><span class="sxs-lookup"><span data-stu-id="187bb-120">Example 1: Create a default session option</span></span>
 
-<span data-ttu-id="9cd8a-121">Este comando cria um objeto de opção de sessão que tem todos os valores padrão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-121">This command creates a session option object that has all of the default values.</span></span>
+<span data-ttu-id="187bb-121">Este comando cria um objeto de opção de sessão que tem todos os valores padrão.</span><span class="sxs-lookup"><span data-stu-id="187bb-121">This command creates a session option object that has all of the default values.</span></span>
 
 ```powershell
 New-PSSessionOption
@@ -74,32 +74,32 @@ CancelTimeout                     : 00:01:00
 IdleTimeout                       : 00:04:00
 ```
 
-### <span data-ttu-id="9cd8a-122">Exemplo 2: configurar uma sessão usando um objeto de opção de sessão</span><span class="sxs-lookup"><span data-stu-id="9cd8a-122">Example 2: Configure a session by using a session option object</span></span>
+### <span data-ttu-id="187bb-122">Exemplo 2: configurar uma sessão usando um objeto de opção de sessão</span><span class="sxs-lookup"><span data-stu-id="187bb-122">Example 2: Configure a session by using a session option object</span></span>
 
-<span data-ttu-id="9cd8a-123">Este exemplo mostra como usar um objeto de opção de sessão para configurar uma sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-123">This example shows how to use a session option object to configure a session.</span></span>
+<span data-ttu-id="187bb-123">Este exemplo mostra como usar um objeto de opção de sessão para configurar uma sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-123">This example shows how to use a session option object to configure a session.</span></span>
 
 ```powershell
 $pso = New-PSSessionOption -Culture "fr-fr" -MaximumReceivedObjectSize 10MB
 New-PSSession -ComputerName Server01 -SessionOption $pso
 ```
 
-<span data-ttu-id="9cd8a-124">O primeiro comando cria um novo objeto de opção de sessão e o salva no valor da `$pso` variável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-124">The first command creates a new session option object and saves it in the value of the `$pso` variable.</span></span> <span data-ttu-id="9cd8a-125">O segundo comando usa o `New-PSSession` cmdlet para criar uma sessão no computador remoto Server01.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-125">The second command uses the `New-PSSession` cmdlet to create a session on the Server01 remote computer.</span></span> <span data-ttu-id="9cd8a-126">O comando usa o objeto de opção de sessão no valor da `$pso` variável como o valor do parâmetro **SessionOption** do comando.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-126">The command uses the session option object in the value of the `$pso` variable as the value of the **SessionOption** parameter of the command.</span></span>
+<span data-ttu-id="187bb-124">O primeiro comando cria um novo objeto de opção de sessão e o salva no valor da `$pso` variável.</span><span class="sxs-lookup"><span data-stu-id="187bb-124">The first command creates a new session option object and saves it in the value of the `$pso` variable.</span></span> <span data-ttu-id="187bb-125">O segundo comando usa o `New-PSSession` cmdlet para criar uma sessão no computador remoto Server01.</span><span class="sxs-lookup"><span data-stu-id="187bb-125">The second command uses the `New-PSSession` cmdlet to create a session on the Server01 remote computer.</span></span> <span data-ttu-id="187bb-126">O comando usa o objeto de opção de sessão no valor da `$pso` variável como o valor do parâmetro **SessionOption** do comando.</span><span class="sxs-lookup"><span data-stu-id="187bb-126">The command uses the session option object in the value of the `$pso` variable as the value of the **SessionOption** parameter of the command.</span></span>
 
-### <span data-ttu-id="9cd8a-127">Exemplo 3: iniciar uma sessão interativa</span><span class="sxs-lookup"><span data-stu-id="9cd8a-127">Example 3: Start an interactive session</span></span>
+### <span data-ttu-id="187bb-127">Exemplo 3: iniciar uma sessão interativa</span><span class="sxs-lookup"><span data-stu-id="187bb-127">Example 3: Start an interactive session</span></span>
 
-<span data-ttu-id="9cd8a-128">Esse comando usa o `Enter-PSSession` cmdlet para iniciar uma sessão interativa com o computador Server01.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-128">This command uses the `Enter-PSSession` cmdlet to start an interactive session with the Server01 computer.</span></span>
+<span data-ttu-id="187bb-128">Esse comando usa o `Enter-PSSession` cmdlet para iniciar uma sessão interativa com o computador Server01.</span><span class="sxs-lookup"><span data-stu-id="187bb-128">This command uses the `Enter-PSSession` cmdlet to start an interactive session with the Server01 computer.</span></span>
 
 ```powershell
 Enter-PSSession -ComputerName Server01 -SessionOption (New-PSSessionOption -NoEncryption -NoCompression)
 ```
 
-<span data-ttu-id="9cd8a-129">O valor do parâmetro **SessionOption** é um `New-PSSessionOption` comando que tem os parâmetros **NoEncryption** e **NoCompression** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-129">The value of the **SessionOption** parameter is a `New-PSSessionOption` command that has the **NoEncryption** and **NoCompression** parameters.</span></span>
+<span data-ttu-id="187bb-129">O valor do parâmetro **SessionOption** é um `New-PSSessionOption` comando que tem os parâmetros **NoEncryption** e **NoCompression** .</span><span class="sxs-lookup"><span data-stu-id="187bb-129">The value of the **SessionOption** parameter is a `New-PSSessionOption` command that has the **NoEncryption** and **NoCompression** parameters.</span></span>
 
-<span data-ttu-id="9cd8a-130">O `New-PSSessionOption` comando é colocado entre parênteses para garantir que ele seja executado antes do `Enter-PSSession` comando.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-130">The `New-PSSessionOption` command is enclosed in parentheses to make sure that it runs before the `Enter-PSSession` command.</span></span>
+<span data-ttu-id="187bb-130">O `New-PSSessionOption` comando é colocado entre parênteses para garantir que ele seja executado antes do `Enter-PSSession` comando.</span><span class="sxs-lookup"><span data-stu-id="187bb-130">The `New-PSSessionOption` command is enclosed in parentheses to make sure that it runs before the `Enter-PSSession` command.</span></span>
 
-### <span data-ttu-id="9cd8a-131">Exemplo 4: modificar um objeto de opção de sessão</span><span class="sxs-lookup"><span data-stu-id="9cd8a-131">Example 4: Modify a session option object</span></span>
+### <span data-ttu-id="187bb-131">Exemplo 4: modificar um objeto de opção de sessão</span><span class="sxs-lookup"><span data-stu-id="187bb-131">Example 4: Modify a session option object</span></span>
 
-<span data-ttu-id="9cd8a-132">Este exemplo demonstra que você pode modificar o objeto de opção de sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-132">This example demonstrates that you can modify the session option object.</span></span> <span data-ttu-id="9cd8a-133">Todas as propriedades têm valores de leitura/gravação.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-133">All properties have read/write values.</span></span>
+<span data-ttu-id="187bb-132">Este exemplo demonstra que você pode modificar o objeto de opção de sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-132">This example demonstrates that you can modify the session option object.</span></span> <span data-ttu-id="187bb-133">Todas as propriedades têm valores de leitura/gravação.</span><span class="sxs-lookup"><span data-stu-id="187bb-133">All properties have read/write values.</span></span>
 
 ```powershell
 $a = New-PSSessionOption
@@ -150,41 +150,41 @@ CancelTimeout                     : 00:01:00
 IdleTimeout                       : 00:04:00
 ```
 
-<span data-ttu-id="9cd8a-134">Use esse método para criar um objeto de sessão padrão para sua empresa e, em seguida, criar versões personalizadas desse objeto para usos específicos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-134">Use this method to create a standard session object for your enterprise, and then create customized versions of it for particular uses.</span></span>
+<span data-ttu-id="187bb-134">Use esse método para criar um objeto de sessão padrão para sua empresa e, em seguida, criar versões personalizadas desse objeto para usos específicos.</span><span class="sxs-lookup"><span data-stu-id="187bb-134">Use this method to create a standard session object for your enterprise, and then create customized versions of it for particular uses.</span></span>
 
-### <span data-ttu-id="9cd8a-135">Exemplo 5: criar uma variável de preferência</span><span class="sxs-lookup"><span data-stu-id="9cd8a-135">Example 5: Create a preference variable</span></span>
+### <span data-ttu-id="187bb-135">Exemplo 5: criar uma variável de preferência</span><span class="sxs-lookup"><span data-stu-id="187bb-135">Example 5: Create a preference variable</span></span>
 
-<span data-ttu-id="9cd8a-136">Este comando cria uma `$PSSessionOption` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-136">This command creates a `$PSSessionOption` preference variable.</span></span>
+<span data-ttu-id="187bb-136">Este comando cria uma `$PSSessionOption` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="187bb-136">This command creates a `$PSSessionOption` preference variable.</span></span>
 
 ```powershell
 $PSSessionOption = New-PSSessionOption -OpenTimeOut 120000
 ```
 
-<span data-ttu-id="9cd8a-137">Quando a `$PSSessionOption` variável de preferência ocorre na sessão, ela estabelece valores padrão para as opções nas sessões criadas usando os `New-PSSession` `Enter-PSSession` `Invoke-Command` cmdlets, e.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-137">When the `$PSSessionOption` preference variable occurs in the session, it establishes default values for options in the sessions that are created by using the `New-PSSession`, `Enter-PSSession`, and `Invoke-Command` cmdlets.</span></span>
+<span data-ttu-id="187bb-137">Quando a `$PSSessionOption` variável de preferência ocorre na sessão, ela estabelece valores padrão para as opções nas sessões criadas usando os `New-PSSession` `Enter-PSSession` `Invoke-Command` cmdlets, e.</span><span class="sxs-lookup"><span data-stu-id="187bb-137">When the `$PSSessionOption` preference variable occurs in the session, it establishes default values for options in the sessions that are created by using the `New-PSSession`, `Enter-PSSession`, and `Invoke-Command` cmdlets.</span></span>
 
-<span data-ttu-id="9cd8a-138">Para disponibilizar a `$PSSessionOption` variável em todas as sessões, adicione-a à sua sessão do PowerShell e ao seu perfil do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-138">To make the `$PSSessionOption` variable available in all sessions, add it to your PowerShell session and to your PowerShell profile.</span></span>
+<span data-ttu-id="187bb-138">Para disponibilizar a `$PSSessionOption` variável em todas as sessões, adicione-a à sua sessão do PowerShell e ao seu perfil do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="187bb-138">To make the `$PSSessionOption` variable available in all sessions, add it to your PowerShell session and to your PowerShell profile.</span></span>
 
-<span data-ttu-id="9cd8a-139">Para obter mais informações sobre a `$PSSessionOption` variável de preferência, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-139">For more information about the `$PSSessionOption` preference variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
-<span data-ttu-id="9cd8a-140">Para obter mais informações sobre perfis, consulte [about_Profiles](About/about_Profiles.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-140">For more information about profiles, see [about_Profiles](About/about_Profiles.md).</span></span>
+<span data-ttu-id="187bb-139">Para obter mais informações sobre a `$PSSessionOption` variável de preferência, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-139">For more information about the `$PSSessionOption` preference variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
+<span data-ttu-id="187bb-140">Para obter mais informações sobre perfis, consulte [about_Profiles](About/about_Profiles.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-140">For more information about profiles, see [about_Profiles](About/about_Profiles.md).</span></span>
 
-### <span data-ttu-id="9cd8a-141">Exemplo 6: atender aos requisitos para uma configuração de sessão remota</span><span class="sxs-lookup"><span data-stu-id="9cd8a-141">Example 6: Fulfill the requirements for a remote session configuration</span></span>
+### <span data-ttu-id="187bb-141">Exemplo 6: atender aos requisitos para uma configuração de sessão remota</span><span class="sxs-lookup"><span data-stu-id="187bb-141">Example 6: Fulfill the requirements for a remote session configuration</span></span>
 
-<span data-ttu-id="9cd8a-142">Este exemplo mostra como usar um objeto **SessionOption** para atender os requisitos para a configuração de uma sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-142">This example shows how to use a **SessionOption** object to fulfill the requirements for a remote session configuration.</span></span>
+<span data-ttu-id="187bb-142">Este exemplo mostra como usar um objeto **SessionOption** para atender os requisitos para a configuração de uma sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-142">This example shows how to use a **SessionOption** object to fulfill the requirements for a remote session configuration.</span></span>
 
 ```powershell
 $skipCN = New-PSSessionOption -SkipCNCheck
 New-PSSession -ComputerName 171.09.21.207 -UseSSL -Credential Domain01\User01 -SessionOption $SkipCN
 ```
 
-<span data-ttu-id="9cd8a-143">O primeiro comando usa o `New-PSSessionOption` cmdlet para criar um objeto de opção de sessão que tem a propriedade **SkipCNCheck** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-143">The first command uses the `New-PSSessionOption` cmdlet to create a session option object that has the **SkipCNCheck** property.</span></span> <span data-ttu-id="9cd8a-144">O comando salva o objeto de sessão resultante na `$skipCN` variável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-144">The command saves the resulting session object in the `$skipCN` variable.</span></span>
+<span data-ttu-id="187bb-143">O primeiro comando usa o `New-PSSessionOption` cmdlet para criar um objeto de opção de sessão que tem a propriedade **SkipCNCheck** .</span><span class="sxs-lookup"><span data-stu-id="187bb-143">The first command uses the `New-PSSessionOption` cmdlet to create a session option object that has the **SkipCNCheck** property.</span></span> <span data-ttu-id="187bb-144">O comando salva o objeto de sessão resultante na `$skipCN` variável.</span><span class="sxs-lookup"><span data-stu-id="187bb-144">The command saves the resulting session object in the `$skipCN` variable.</span></span>
 
-<span data-ttu-id="9cd8a-145">O segundo comando usa o `New-PSSession` cmdlet para criar uma nova sessão em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-145">The second command uses the `New-PSSession` cmdlet to create a new session on a remote computer.</span></span> <span data-ttu-id="9cd8a-146">A `$skipCN` variável de verificação é usada no valor do parâmetro **SessionOption** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-146">The `$skipCN` check variable is used in the value of the **SessionOption** parameter.</span></span>
+<span data-ttu-id="187bb-145">O segundo comando usa o `New-PSSession` cmdlet para criar uma nova sessão em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="187bb-145">The second command uses the `New-PSSession` cmdlet to create a new session on a remote computer.</span></span> <span data-ttu-id="187bb-146">A `$skipCN` variável de verificação é usada no valor do parâmetro **SessionOption** .</span><span class="sxs-lookup"><span data-stu-id="187bb-146">The `$skipCN` check variable is used in the value of the **SessionOption** parameter.</span></span>
 
-<span data-ttu-id="9cd8a-147">Como o computador é identificado por seu endereço IP, o valor do parâmetro **ComputerName** não corresponde a nenhum dos nomes comuns no certificado usado para protocolo SSL (SSL).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-147">Because the computer is identified by its IP address, the value of the **ComputerName** parameter does not match any of the common names in the certificate that is used for Secure Sockets Layer (SSL).</span></span> <span data-ttu-id="9cd8a-148">Como resultado, a opção **SkipCNCheck** é obrigatória.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-148">As a result, the **SkipCNCheck** option is required.</span></span>
+<span data-ttu-id="187bb-147">Como o computador é identificado por seu endereço IP, o valor do parâmetro **ComputerName** não corresponde a nenhum dos nomes comuns no certificado usado para protocolo SSL (SSL).</span><span class="sxs-lookup"><span data-stu-id="187bb-147">Because the computer is identified by its IP address, the value of the **ComputerName** parameter does not match any of the common names in the certificate that is used for Secure Sockets Layer (SSL).</span></span> <span data-ttu-id="187bb-148">Como resultado, a opção **SkipCNCheck** é obrigatória.</span><span class="sxs-lookup"><span data-stu-id="187bb-148">As a result, the **SkipCNCheck** option is required.</span></span>
 
-### <span data-ttu-id="9cd8a-149">Exemplo 7: tornar argumentos disponíveis para uma sessão remota</span><span class="sxs-lookup"><span data-stu-id="9cd8a-149">Example 7: Make arguments available to a remote session</span></span>
+### <span data-ttu-id="187bb-149">Exemplo 7: tornar argumentos disponíveis para uma sessão remota</span><span class="sxs-lookup"><span data-stu-id="187bb-149">Example 7: Make arguments available to a remote session</span></span>
 
-<span data-ttu-id="9cd8a-150">Este exemplo mostra como usar o parâmetro **ApplicationArguments** do `New-PSSessionOption` cmdlet para disponibilizar dados adicionais para a sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-150">This example shows how to use the **ApplicationArguments** parameter of the `New-PSSessionOption` cmdlet to make additional data available to the remote session.</span></span>
+<span data-ttu-id="187bb-150">Este exemplo mostra como usar o parâmetro **ApplicationArguments** do `New-PSSessionOption` cmdlet para disponibilizar dados adicionais para a sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-150">This example shows how to use the **ApplicationArguments** parameter of the `New-PSSessionOption` cmdlet to make additional data available to the remote session.</span></span>
 
 ```powershell
 $team = @{Team="IT"; Use="Testing"}
@@ -216,23 +216,23 @@ Invoke-Command -Session $s {
 Just testing.
 ```
 
-<span data-ttu-id="9cd8a-151">O primeiro comando cria uma tabela de hash com duas chaves, **equipe** e **uso** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-151">The first command creates a hash table with two keys, **Team** and **Use** .</span></span> <span data-ttu-id="9cd8a-152">O comando salva a tabela de hash na `$team` variável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-152">The command saves the hash table in the `$team` variable.</span></span> <span data-ttu-id="9cd8a-153">Para obter informações sobre tabelas de hash, confira [about_Hash_Tables](about/about_Hash_Tables.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-153">For more information about hash tables, see [about_Hash_Tables](about/about_Hash_Tables.md).</span></span>
+<span data-ttu-id="187bb-151">O primeiro comando cria uma tabela de hash com duas chaves, **equipe** e **uso**.</span><span class="sxs-lookup"><span data-stu-id="187bb-151">The first command creates a hash table with two keys, **Team** and **Use**.</span></span> <span data-ttu-id="187bb-152">O comando salva a tabela de hash na `$team` variável.</span><span class="sxs-lookup"><span data-stu-id="187bb-152">The command saves the hash table in the `$team` variable.</span></span> <span data-ttu-id="187bb-153">Para obter informações sobre tabelas de hash, confira [about_Hash_Tables](about/about_Hash_Tables.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-153">For more information about hash tables, see [about_Hash_Tables](about/about_Hash_Tables.md).</span></span>
 
-<span data-ttu-id="9cd8a-154">Em seguida, o `New-PSSessionOption` cmdlet, usando o parâmetro **ApplicationArguments** , cria um objeto de opção de sessão salvo na `$team` variável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-154">Next, the `New-PSSessionOption` cmdlet, using the **ApplicationArguments** parameter, creates a session option object saved in the `$team` variable.</span></span> <span data-ttu-id="9cd8a-155">Quando `New-PSSessionOption` o cria o objeto de opção de sessão, ele converte automaticamente a tabela de hash no valor do parâmetro **ApplicationArguments** em um dicionário primitivo para que os dados possam ser transmitidos de forma confiável para a sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-155">When `New-PSSessionOption` creates the session option object, it automatically converts the hash table in the value of the **ApplicationArguments** parameter to a primitive dictionary so the data can be reliably transmitted to the remote session.</span></span>
+<span data-ttu-id="187bb-154">Em seguida, o `New-PSSessionOption` cmdlet, usando o parâmetro **ApplicationArguments** , cria um objeto de opção de sessão salvo na `$team` variável.</span><span class="sxs-lookup"><span data-stu-id="187bb-154">Next, the `New-PSSessionOption` cmdlet, using the **ApplicationArguments** parameter, creates a session option object saved in the `$team` variable.</span></span> <span data-ttu-id="187bb-155">Quando `New-PSSessionOption` o cria o objeto de opção de sessão, ele converte automaticamente a tabela de hash no valor do parâmetro **ApplicationArguments** em um dicionário primitivo para que os dados possam ser transmitidos de forma confiável para a sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-155">When `New-PSSessionOption` creates the session option object, it automatically converts the hash table in the value of the **ApplicationArguments** parameter to a primitive dictionary so the data can be reliably transmitted to the remote session.</span></span>
 
-<span data-ttu-id="9cd8a-156">O `New-PSSession` cmdlet inicia uma sessão no computador Server01.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-156">The `New-PSSession` cmdlet starts a session on the Server01 computer.</span></span> <span data-ttu-id="9cd8a-157">Ele usa o parâmetro **SessionOption** para incluir as opções na `$teamOption` variável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-157">It uses the **SessionOption** parameter to include the options in the `$teamOption` variable.</span></span>
+<span data-ttu-id="187bb-156">O `New-PSSession` cmdlet inicia uma sessão no computador Server01.</span><span class="sxs-lookup"><span data-stu-id="187bb-156">The `New-PSSession` cmdlet starts a session on the Server01 computer.</span></span> <span data-ttu-id="187bb-157">Ele usa o parâmetro **SessionOption** para incluir as opções na `$teamOption` variável.</span><span class="sxs-lookup"><span data-stu-id="187bb-157">It uses the **SessionOption** parameter to include the options in the `$teamOption` variable.</span></span>
 
-<span data-ttu-id="9cd8a-158">O `Invoke-Command` cmdlet demonstra que os dados na `$team` variável estão disponíveis para comandos na sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-158">The `Invoke-Command` cmdlet demonstrates that the data in the `$team` variable is available to commands in the remote session.</span></span> <span data-ttu-id="9cd8a-159">Os dados são exibidos na propriedade **ApplicationArguments** da `$PSSenderInfo` variável automática.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-159">The data appears in the **ApplicationArguments** property of the `$PSSenderInfo` automatic variable.</span></span>
+<span data-ttu-id="187bb-158">O `Invoke-Command` cmdlet demonstra que os dados na `$team` variável estão disponíveis para comandos na sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-158">The `Invoke-Command` cmdlet demonstrates that the data in the `$team` variable is available to commands in the remote session.</span></span> <span data-ttu-id="187bb-159">Os dados são exibidos na propriedade **ApplicationArguments** da `$PSSenderInfo` variável automática.</span><span class="sxs-lookup"><span data-stu-id="187bb-159">The data appears in the **ApplicationArguments** property of the `$PSSenderInfo` automatic variable.</span></span>
 
-<span data-ttu-id="9cd8a-160">O final `Invoke-Command` mostra como os dados podem ser usados.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-160">The final `Invoke-Command` shows how the data might be used.</span></span>
+<span data-ttu-id="187bb-160">O final `Invoke-Command` mostra como os dados podem ser usados.</span><span class="sxs-lookup"><span data-stu-id="187bb-160">The final `Invoke-Command` shows how the data might be used.</span></span>
 
-## <span data-ttu-id="9cd8a-161">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9cd8a-161">PARAMETERS</span></span>
+## <span data-ttu-id="187bb-161">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="187bb-161">PARAMETERS</span></span>
 
-### <span data-ttu-id="9cd8a-162">-ApplicationArguments</span><span class="sxs-lookup"><span data-stu-id="9cd8a-162">-ApplicationArguments</span></span>
+### <span data-ttu-id="187bb-162">-ApplicationArguments</span><span class="sxs-lookup"><span data-stu-id="187bb-162">-ApplicationArguments</span></span>
 
-<span data-ttu-id="9cd8a-163">Especifica um dicionário primitivo que é enviado à sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-163">Specifies a primitive dictionary that is sent to the remote session.</span></span> <span data-ttu-id="9cd8a-164">Os comandos e scripts na sessão remota, incluindo os scripts de inicialização na configuração da sessão, podem encontrar esse dicionário na propriedade **ApplicationArguments** da `$PSSenderInfo` variável automática.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-164">Commands and scripts in the remote session, including startup scripts in the session configuration, can find this dictionary in the **ApplicationArguments** property of the `$PSSenderInfo` automatic variable.</span></span> <span data-ttu-id="9cd8a-165">Você pode usar este parâmetro para enviar dados à sessão remota.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-165">You can use this parameter to send data to the remote session.</span></span>
+<span data-ttu-id="187bb-163">Especifica um dicionário primitivo que é enviado à sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-163">Specifies a primitive dictionary that is sent to the remote session.</span></span> <span data-ttu-id="187bb-164">Os comandos e scripts na sessão remota, incluindo os scripts de inicialização na configuração da sessão, podem encontrar esse dicionário na propriedade **ApplicationArguments** da `$PSSenderInfo` variável automática.</span><span class="sxs-lookup"><span data-stu-id="187bb-164">Commands and scripts in the remote session, including startup scripts in the session configuration, can find this dictionary in the **ApplicationArguments** property of the `$PSSenderInfo` automatic variable.</span></span> <span data-ttu-id="187bb-165">Você pode usar este parâmetro para enviar dados à sessão remota.</span><span class="sxs-lookup"><span data-stu-id="187bb-165">You can use this parameter to send data to the remote session.</span></span>
 
-<span data-ttu-id="9cd8a-166">Para obter mais informações, consulte [about_Hash_Tables](about/about_Hash_Tables.md), [about_Session_Configurations](About/about_Session_Configurations.md)e [about_Automatic_Variables](about/about_Automatic_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-166">For more information, see [about_Hash_Tables](about/about_Hash_Tables.md), [about_Session_Configurations](About/about_Session_Configurations.md), and [about_Automatic_Variables](about/about_Automatic_Variables.md).</span></span>
+<span data-ttu-id="187bb-166">Para obter mais informações, consulte [about_Hash_Tables](about/about_Hash_Tables.md), [about_Session_Configurations](About/about_Session_Configurations.md)e [about_Automatic_Variables](about/about_Automatic_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-166">For more information, see [about_Hash_Tables](about/about_Hash_Tables.md), [about_Session_Configurations](About/about_Session_Configurations.md), and [about_Automatic_Variables](about/about_Automatic_Variables.md).</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSPrimitiveDictionary
@@ -246,12 +246,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-167">-CancelTimeout</span><span class="sxs-lookup"><span data-stu-id="9cd8a-167">-CancelTimeout</span></span>
+### <span data-ttu-id="187bb-167">-CancelTimeout</span><span class="sxs-lookup"><span data-stu-id="187bb-167">-CancelTimeout</span></span>
 
-<span data-ttu-id="9cd8a-168">Determina por quanto tempo o PowerShell aguarda uma operação de cancelamento (CTRL + C) para concluir antes de terminá-la.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-168">Determines how long PowerShell waits for a cancel operation (CTRL+C) to finish before ending it.</span></span>
-<span data-ttu-id="9cd8a-169">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-169">Enter a value in milliseconds.</span></span>
+<span data-ttu-id="187bb-168">Determina por quanto tempo o PowerShell aguarda uma operação de cancelamento (CTRL + C) para concluir antes de terminá-la.</span><span class="sxs-lookup"><span data-stu-id="187bb-168">Determines how long PowerShell waits for a cancel operation (CTRL+C) to finish before ending it.</span></span>
+<span data-ttu-id="187bb-169">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="187bb-169">Enter a value in milliseconds.</span></span>
 
-<span data-ttu-id="9cd8a-170">O valor padrão é 60.000 (um minuto).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-170">The default value is 60000 (one minute).</span></span> <span data-ttu-id="9cd8a-171">Um valor de 0 (zero) significa que não há tempo limite; o comando continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-171">A value of 0 (zero) means no time-out; the command continues indefinitely.</span></span>
+<span data-ttu-id="187bb-170">O valor padrão é 60.000 (um minuto).</span><span class="sxs-lookup"><span data-stu-id="187bb-170">The default value is 60000 (one minute).</span></span> <span data-ttu-id="187bb-171">Um valor de 0 (zero) significa que não há tempo limite; o comando continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="187bb-171">A value of 0 (zero) means no time-out; the command continues indefinitely.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -265,11 +265,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-172">-Culture</span><span class="sxs-lookup"><span data-stu-id="9cd8a-172">-Culture</span></span>
+### <span data-ttu-id="187bb-172">-Culture</span><span class="sxs-lookup"><span data-stu-id="187bb-172">-Culture</span></span>
 
-<span data-ttu-id="9cd8a-173">Especifica a cultura a ser usada para a sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-173">Specifies the culture to use for the session.</span></span> <span data-ttu-id="9cd8a-174">Insira um nome de cultura no `<languagecode2>-<country/regioncode2>` formato (como `ja-JP` ), uma variável que contém um objeto **CultureInfo** ou um comando que obtém um objeto **CultureInfo** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-174">Enter a culture name in `<languagecode2>-<country/regioncode2>` format (like `ja-JP`), a variable that contains a **CultureInfo** object, or a command that gets a **CultureInfo** object.</span></span>
+<span data-ttu-id="187bb-173">Especifica a cultura a ser usada para a sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-173">Specifies the culture to use for the session.</span></span> <span data-ttu-id="187bb-174">Insira um nome de cultura no `<languagecode2>-<country/regioncode2>` formato (como `ja-JP` ), uma variável que contém um objeto **CultureInfo** ou um comando que obtém um objeto **CultureInfo** .</span><span class="sxs-lookup"><span data-stu-id="187bb-174">Enter a culture name in `<languagecode2>-<country/regioncode2>` format (like `ja-JP`), a variable that contains a **CultureInfo** object, or a command that gets a **CultureInfo** object.</span></span>
 
-<span data-ttu-id="9cd8a-175">O valor padrão é `$Null` , e a cultura definida no sistema operacional é usada na sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-175">The default value is `$Null`, and the culture that is set in the operating system is used in the session.</span></span>
+<span data-ttu-id="187bb-175">O valor padrão é `$Null` , e a cultura definida no sistema operacional é usada na sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-175">The default value is `$Null`, and the culture that is set in the operating system is used in the session.</span></span>
 
 ```yaml
 Type: System.Globalization.CultureInfo
@@ -283,23 +283,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-176">-IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="9cd8a-176">-IdleTimeout</span></span>
+### <span data-ttu-id="187bb-176">-IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="187bb-176">-IdleTimeout</span></span>
 
-<span data-ttu-id="9cd8a-177">Determina por quanto tempo a sessão permanecerá aberta se o computador remoto não receber nenhuma comunicação do computador local.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-177">Determines how long the session stays open if the remote computer does not receive any communication from the local computer.</span></span> <span data-ttu-id="9cd8a-178">Isso inclui o sinal de pulsação.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-178">This includes the heartbeat signal.</span></span> <span data-ttu-id="9cd8a-179">Quando o intervalo expira, a sessão é fechada.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-179">When the interval expires, the session closes.</span></span>
+<span data-ttu-id="187bb-177">Determina por quanto tempo a sessão permanecerá aberta se o computador remoto não receber nenhuma comunicação do computador local.</span><span class="sxs-lookup"><span data-stu-id="187bb-177">Determines how long the session stays open if the remote computer does not receive any communication from the local computer.</span></span> <span data-ttu-id="187bb-178">Isso inclui o sinal de pulsação.</span><span class="sxs-lookup"><span data-stu-id="187bb-178">This includes the heartbeat signal.</span></span> <span data-ttu-id="187bb-179">Quando o intervalo expira, a sessão é fechada.</span><span class="sxs-lookup"><span data-stu-id="187bb-179">When the interval expires, the session closes.</span></span>
 
-<span data-ttu-id="9cd8a-180">O valor de tempo limite ocioso é de importância significativa se você pretende desconectar e reconectar-se a uma sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-180">The idle time-out value is of significant importance if you intend to disconnect and reconnect to a session.</span></span> <span data-ttu-id="9cd8a-181">Você poderá reconectar-se somente se a sessão não tiver expirado.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-181">You can reconnect only if the session has not timed out.</span></span>
+<span data-ttu-id="187bb-180">O valor de tempo limite ocioso é de importância significativa se você pretende desconectar e reconectar-se a uma sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-180">The idle time-out value is of significant importance if you intend to disconnect and reconnect to a session.</span></span> <span data-ttu-id="187bb-181">Você poderá reconectar-se somente se a sessão não tiver expirado.</span><span class="sxs-lookup"><span data-stu-id="187bb-181">You can reconnect only if the session has not timed out.</span></span>
 
-<span data-ttu-id="9cd8a-182">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-182">Enter a value in milliseconds.</span></span> <span data-ttu-id="9cd8a-183">O valor mínimo é 60000 (1 minuto).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-183">The minimum value is 60000 (1 minute).</span></span> <span data-ttu-id="9cd8a-184">O máximo é o valor da propriedade **MaxIdleTimeoutms** da configuração de sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-184">The maximum is the value of the **MaxIdleTimeoutms** property of the session configuration.</span></span> <span data-ttu-id="9cd8a-185">O valor padrão,-1, não define um tempo limite ocioso.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-185">The default value, -1, does not set an idle time-out.</span></span>
+<span data-ttu-id="187bb-182">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="187bb-182">Enter a value in milliseconds.</span></span> <span data-ttu-id="187bb-183">O valor mínimo é 60000 (1 minuto).</span><span class="sxs-lookup"><span data-stu-id="187bb-183">The minimum value is 60000 (1 minute).</span></span> <span data-ttu-id="187bb-184">O máximo é o valor da propriedade **MaxIdleTimeoutms** da configuração de sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-184">The maximum is the value of the **MaxIdleTimeoutms** property of the session configuration.</span></span> <span data-ttu-id="187bb-185">O valor padrão,-1, não define um tempo limite ocioso.</span><span class="sxs-lookup"><span data-stu-id="187bb-185">The default value, -1, does not set an idle time-out.</span></span>
 
-<span data-ttu-id="9cd8a-186">A sessão usa o tempo limite ocioso definido nas opções de sessão, se houver.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-186">The session uses the idle time-out that is set in the session options, if any.</span></span> <span data-ttu-id="9cd8a-187">Se nenhum for definido (-1), a sessão usará o valor da propriedade **IdleTimeoutMs** da configuração de sessão ou o valor de tempo limite do shell do WSMan ( `WSMan:\<ComputerName>\Shell\IdleTimeout` ), o que for mais curto.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-187">If none is set (-1), the session uses the value of the **IdleTimeoutMs** property of the session configuration or the WSMan shell time-out value (`WSMan:\<ComputerName>\Shell\IdleTimeout`), whichever is shortest.</span></span>
+<span data-ttu-id="187bb-186">A sessão usa o tempo limite ocioso definido nas opções de sessão, se houver.</span><span class="sxs-lookup"><span data-stu-id="187bb-186">The session uses the idle time-out that is set in the session options, if any.</span></span> <span data-ttu-id="187bb-187">Se nenhum for definido (-1), a sessão usará o valor da propriedade **IdleTimeoutMs** da configuração de sessão ou o valor de tempo limite do shell do WSMan ( `WSMan:\<ComputerName>\Shell\IdleTimeout` ), o que for mais curto.</span><span class="sxs-lookup"><span data-stu-id="187bb-187">If none is set (-1), the session uses the value of the **IdleTimeoutMs** property of the session configuration or the WSMan shell time-out value (`WSMan:\<ComputerName>\Shell\IdleTimeout`), whichever is shortest.</span></span>
 
-<span data-ttu-id="9cd8a-188">Se o tempo limite de ociosidade definido nas opções da sessão excede o valor da propriedade **MaxIdleTimeoutMs** da configuração da sessão, o comando para criar uma sessão falha.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-188">If the idle timeout set in the session options exceeds the value of the **MaxIdleTimeoutMs** property of the session configuration, the command to create a session fails.</span></span>
+<span data-ttu-id="187bb-188">Se o tempo limite de ociosidade definido nas opções da sessão excede o valor da propriedade **MaxIdleTimeoutMs** da configuração da sessão, o comando para criar uma sessão falha.</span><span class="sxs-lookup"><span data-stu-id="187bb-188">If the idle timeout set in the session options exceeds the value of the **MaxIdleTimeoutMs** property of the session configuration, the command to create a session fails.</span></span>
 
-<span data-ttu-id="9cd8a-189">O valor de **IdleTimeoutMs** da configuração de sessão padrão do **Microsoft. PowerShell** é de 7,2 milhões milissegundos (2 horas).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-189">The **IdleTimeoutMs** value of the default **Microsoft.PowerShell** session configuration is 7200000 milliseconds (2 hours).</span></span> <span data-ttu-id="9cd8a-190">Seu valor de **MaxIdleTimeoutMs** é de 2147483647 milissegundos ( \> 24 dias).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-190">Its **MaxIdleTimeoutMs** value is 2147483647 milliseconds (\>24 days).</span></span> <span data-ttu-id="9cd8a-191">O valor padrão do tempo limite de ociosidade do shell do WSMan ( `WSMan:\<ComputerName>\Shell\IdleTimeout` ) é de 7,2 milhões milissegundos (2 horas).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-191">The default value of the WSMan shell idle time-out (`WSMan:\<ComputerName>\Shell\IdleTimeout`) is 7200000 milliseconds (2 hours).</span></span>
+<span data-ttu-id="187bb-189">O valor de **IdleTimeoutMs** da configuração de sessão padrão do **Microsoft. PowerShell** é de 7,2 milhões milissegundos (2 horas).</span><span class="sxs-lookup"><span data-stu-id="187bb-189">The **IdleTimeoutMs** value of the default **Microsoft.PowerShell** session configuration is 7200000 milliseconds (2 hours).</span></span> <span data-ttu-id="187bb-190">Seu valor de **MaxIdleTimeoutMs** é de 2147483647 milissegundos ( \> 24 dias).</span><span class="sxs-lookup"><span data-stu-id="187bb-190">Its **MaxIdleTimeoutMs** value is 2147483647 milliseconds (\>24 days).</span></span> <span data-ttu-id="187bb-191">O valor padrão do tempo limite de ociosidade do shell do WSMan ( `WSMan:\<ComputerName>\Shell\IdleTimeout` ) é de 7,2 milhões milissegundos (2 horas).</span><span class="sxs-lookup"><span data-stu-id="187bb-191">The default value of the WSMan shell idle time-out (`WSMan:\<ComputerName>\Shell\IdleTimeout`) is 7200000 milliseconds (2 hours).</span></span>
 
-<span data-ttu-id="9cd8a-192">O valor de tempo limite ocioso de uma sessão também pode ser alterado ao desconectar-se de uma sessão ou reconectar-se a uma sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-192">The idle time-out value of a session can also be changed when disconnecting from a session or reconnecting to a session.</span></span> <span data-ttu-id="9cd8a-193">Para obter mais informações, consulte `Disconnect-PSSession` e `Connect-PSSession`.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-193">For more information, see `Disconnect-PSSession` and `Connect-PSSession`.</span></span>
+<span data-ttu-id="187bb-192">O valor de tempo limite ocioso de uma sessão também pode ser alterado ao desconectar-se de uma sessão ou reconectar-se a uma sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-192">The idle time-out value of a session can also be changed when disconnecting from a session or reconnecting to a session.</span></span> <span data-ttu-id="187bb-193">Para obter mais informações, consulte `Disconnect-PSSession` e `Connect-PSSession`.</span><span class="sxs-lookup"><span data-stu-id="187bb-193">For more information, see `Disconnect-PSSession` and `Connect-PSSession`.</span></span>
 
-<span data-ttu-id="9cd8a-194">No Windows PowerShell 2.0, o valor padrão do parâmetro **IdleTimeout** é 240.000 milissegundos (4 minutos).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-194">In Windows PowerShell 2.0, the default value of the **IdleTimeout** parameter is 240000 (4 minutes).</span></span>
+<span data-ttu-id="187bb-194">No Windows PowerShell 2.0, o valor padrão do parâmetro **IdleTimeout** é 240.000 milissegundos (4 minutos).</span><span class="sxs-lookup"><span data-stu-id="187bb-194">In Windows PowerShell 2.0, the default value of the **IdleTimeout** parameter is 240000 (4 minutes).</span></span>
 
 ```yaml
 Type: System.Int32
@@ -313,15 +313,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-195">-IncludePortInSPN</span><span class="sxs-lookup"><span data-stu-id="9cd8a-195">-IncludePortInSPN</span></span>
+### <span data-ttu-id="187bb-195">-IncludePortInSPN</span><span class="sxs-lookup"><span data-stu-id="187bb-195">-IncludePortInSPN</span></span>
 
-<span data-ttu-id="9cd8a-196">Inclui o número da porta no nome da entidade de serviço (SPN) usado para autenticação Kerberos, por exemplo, `HTTP://<ComputerName>:5985` .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-196">Includes the port number in the Service Principal Name (SPN) used for Kerberos authentication, for example, `HTTP://<ComputerName>:5985`.</span></span> <span data-ttu-id="9cd8a-197">Esta opção permite que um cliente que usa um SPN não padrão faça a autenticação em um computador remoto que usa autenticação Kerberos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-197">This option allows a client that uses a non-default SPN to authenticate against a remote computer that uses Kerberos authentication.</span></span>
+<span data-ttu-id="187bb-196">Inclui o número da porta no nome da entidade de serviço (SPN) usado para autenticação Kerberos, por exemplo, `HTTP://<ComputerName>:5985` .</span><span class="sxs-lookup"><span data-stu-id="187bb-196">Includes the port number in the Service Principal Name (SPN) used for Kerberos authentication, for example, `HTTP://<ComputerName>:5985`.</span></span> <span data-ttu-id="187bb-197">Esta opção permite que um cliente que usa um SPN não padrão faça a autenticação em um computador remoto que usa autenticação Kerberos.</span><span class="sxs-lookup"><span data-stu-id="187bb-197">This option allows a client that uses a non-default SPN to authenticate against a remote computer that uses Kerberos authentication.</span></span>
 
-<span data-ttu-id="9cd8a-198">A opção é projetada para empresas nas quais vários serviços que oferecem suporte à autenticação Kerberos estão sendo executados em diferentes contas de usuário.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-198">The option is designed for enterprises where multiple services that support Kerberos authentication are running under different user accounts.</span></span> <span data-ttu-id="9cd8a-199">Por exemplo, um aplicativo IIS que permite a autenticação Kerberos pode exigir que o SPN padrão seja registrado para uma conta de usuário diferente da conta do computador.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-199">For example, an IIS application that allows for Kerberos authentication can require the default SPN to be registered to a user account that differs from the computer account.</span></span> <span data-ttu-id="9cd8a-200">Nesses casos, a comunicação remota do PowerShell não pode usar o Kerberos para autenticar porque requer um SPN registrado na conta do computador.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-200">In such cases, PowerShell remoting cannot use Kerberos to authenticate because it requires an SPN that is registered to the computer account.</span></span> <span data-ttu-id="9cd8a-201">Para resolver esse problema, os administradores podem criar diferentes SPNs, como usando **Setspn.exe** , que são registrados em contas de usuário diferentes e podem distinguir entre eles, incluindo o número da porta no SPN.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-201">To resolve this problem, administrators can create different SPNs, such as by using **Setspn.exe** , that are registered to different user accounts and can distinguish between them by including the port number in the SPN.</span></span>
+<span data-ttu-id="187bb-198">A opção é projetada para empresas nas quais vários serviços que oferecem suporte à autenticação Kerberos estão sendo executados em diferentes contas de usuário.</span><span class="sxs-lookup"><span data-stu-id="187bb-198">The option is designed for enterprises where multiple services that support Kerberos authentication are running under different user accounts.</span></span> <span data-ttu-id="187bb-199">Por exemplo, um aplicativo IIS que permite a autenticação Kerberos pode exigir que o SPN padrão seja registrado para uma conta de usuário diferente da conta do computador.</span><span class="sxs-lookup"><span data-stu-id="187bb-199">For example, an IIS application that allows for Kerberos authentication can require the default SPN to be registered to a user account that differs from the computer account.</span></span> <span data-ttu-id="187bb-200">Nesses casos, a comunicação remota do PowerShell não pode usar o Kerberos para autenticar porque requer um SPN registrado na conta do computador.</span><span class="sxs-lookup"><span data-stu-id="187bb-200">In such cases, PowerShell remoting cannot use Kerberos to authenticate because it requires an SPN that is registered to the computer account.</span></span> <span data-ttu-id="187bb-201">Para resolver esse problema, os administradores podem criar diferentes SPNs, como usando **Setspn.exe** , que são registrados em contas de usuário diferentes e podem distinguir entre eles, incluindo o número da porta no SPN.</span><span class="sxs-lookup"><span data-stu-id="187bb-201">To resolve this problem, administrators can create different SPNs, such as by using **Setspn.exe** , that are registered to different user accounts and can distinguish between them by including the port number in the SPN.</span></span>
 
-<span data-ttu-id="9cd8a-202">Para obter mais informações, consulte [visão geral do SetSPN](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-202">For more information, see [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)).</span></span>
+<span data-ttu-id="187bb-202">Para obter mais informações, consulte [visão geral do SetSPN](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)).</span><span class="sxs-lookup"><span data-stu-id="187bb-202">For more information, see [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)).</span></span>
 
-<span data-ttu-id="9cd8a-203">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-203">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="187bb-203">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="187bb-203">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -335,29 +335,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-204">-MaxConnectionRetryCount</span><span class="sxs-lookup"><span data-stu-id="9cd8a-204">-MaxConnectionRetryCount</span></span>
+### <span data-ttu-id="187bb-204">-MaxConnectionRetryCount</span><span class="sxs-lookup"><span data-stu-id="187bb-204">-MaxConnectionRetryCount</span></span>
 
-<span data-ttu-id="9cd8a-205">Especifica o número de vezes que o PowerShell tentará estabelecer uma conexão com um computador de destino se a tentativa atual falhar devido a problemas de rede.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-205">Specifies the number of times that PowerShell attempts to make a connection to a target machine if the current attempt fails due to network issues.</span></span> <span data-ttu-id="9cd8a-206">O valor padrão é 5.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-206">The default value is 5.</span></span>
+<span data-ttu-id="187bb-205">Especifica o número de vezes que o PowerShell tentará estabelecer uma conexão com um computador de destino se a tentativa atual falhar devido a problemas de rede.</span><span class="sxs-lookup"><span data-stu-id="187bb-205">Specifies the number of times that PowerShell attempts to make a connection to a target machine if the current attempt fails due to network issues.</span></span> <span data-ttu-id="187bb-206">O valor padrão é 5.</span><span class="sxs-lookup"><span data-stu-id="187bb-206">The default value is 5.</span></span>
 
-<span data-ttu-id="9cd8a-207">Esse parâmetro foi adicionado para o PowerShell versão 5,0.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-207">This parameter was added for PowerShell version 5.0.</span></span>
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="9cd8a-208">-MaximumReceivedDataSizePerCommand</span><span class="sxs-lookup"><span data-stu-id="9cd8a-208">-MaximumReceivedDataSizePerCommand</span></span>
-
-<span data-ttu-id="9cd8a-209">Especifica o número máximo de bytes que o computador local pode receber do computador remoto em um único comando.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-209">Specifies the maximum number of bytes that the local computer can receive from the remote computer in a single command.</span></span> <span data-ttu-id="9cd8a-210">Insira um valor em bytes.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-210">Enter a value in bytes.</span></span> <span data-ttu-id="9cd8a-211">Por padrão, não há limite de tamanho de dados.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-211">By default, there is no data size limit.</span></span>
-
-<span data-ttu-id="9cd8a-212">Esta opção foi criada para proteger os recursos no computador cliente.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-212">This option is designed to protect the resources on the client computer.</span></span>
+<span data-ttu-id="187bb-207">Esse parâmetro foi adicionado para o PowerShell versão 5,0.</span><span class="sxs-lookup"><span data-stu-id="187bb-207">This parameter was added for PowerShell version 5.0.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -371,11 +353,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-213">-MaximumReceivedObjectSize</span><span class="sxs-lookup"><span data-stu-id="9cd8a-213">-MaximumReceivedObjectSize</span></span>
+### <span data-ttu-id="187bb-208">-MaximumReceivedDataSizePerCommand</span><span class="sxs-lookup"><span data-stu-id="187bb-208">-MaximumReceivedDataSizePerCommand</span></span>
 
-<span data-ttu-id="9cd8a-214">Especifica o tamanho máximo de um objeto que o computador local pode receber do computador remoto.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-214">Specifies the maximum size of an object that the local computer can receive from the remote computer.</span></span> <span data-ttu-id="9cd8a-215">Esta opção foi criada para proteger os recursos no computador cliente.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-215">This option is designed to protect the resources on the client computer.</span></span> <span data-ttu-id="9cd8a-216">Insira um valor em bytes.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-216">Enter a value in bytes.</span></span>
+<span data-ttu-id="187bb-209">Especifica o número máximo de bytes que o computador local pode receber do computador remoto em um único comando.</span><span class="sxs-lookup"><span data-stu-id="187bb-209">Specifies the maximum number of bytes that the local computer can receive from the remote computer in a single command.</span></span> <span data-ttu-id="187bb-210">Insira um valor em bytes.</span><span class="sxs-lookup"><span data-stu-id="187bb-210">Enter a value in bytes.</span></span> <span data-ttu-id="187bb-211">Por padrão, não há limite de tamanho de dados.</span><span class="sxs-lookup"><span data-stu-id="187bb-211">By default, there is no data size limit.</span></span>
 
-<span data-ttu-id="9cd8a-217">No Windows PowerShell 2.0, se você omite esse parâmetro, não há limite para tamanho do objeto.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-217">In Windows PowerShell 2.0, if you omit this parameter, there is no object size limit.</span></span> <span data-ttu-id="9cd8a-218">A partir do Windows PowerShell 3.0, se você omite esse parâmetro, o valor padrão é 200 MB.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-218">Beginning in Windows PowerShell 3.0, if you omit this parameter, the default value is 200 MB.</span></span>
+<span data-ttu-id="187bb-212">Esta opção foi criada para proteger os recursos no computador cliente.</span><span class="sxs-lookup"><span data-stu-id="187bb-212">This option is designed to protect the resources on the client computer.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="187bb-213">-MaximumReceivedObjectSize</span><span class="sxs-lookup"><span data-stu-id="187bb-213">-MaximumReceivedObjectSize</span></span>
+
+<span data-ttu-id="187bb-214">Especifica o tamanho máximo de um objeto que o computador local pode receber do computador remoto.</span><span class="sxs-lookup"><span data-stu-id="187bb-214">Specifies the maximum size of an object that the local computer can receive from the remote computer.</span></span> <span data-ttu-id="187bb-215">Esta opção foi criada para proteger os recursos no computador cliente.</span><span class="sxs-lookup"><span data-stu-id="187bb-215">This option is designed to protect the resources on the client computer.</span></span> <span data-ttu-id="187bb-216">Insira um valor em bytes.</span><span class="sxs-lookup"><span data-stu-id="187bb-216">Enter a value in bytes.</span></span>
+
+<span data-ttu-id="187bb-217">No Windows PowerShell 2.0, se você omite esse parâmetro, não há limite para tamanho do objeto.</span><span class="sxs-lookup"><span data-stu-id="187bb-217">In Windows PowerShell 2.0, if you omit this parameter, there is no object size limit.</span></span> <span data-ttu-id="187bb-218">A partir do Windows PowerShell 3.0, se você omite esse parâmetro, o valor padrão é 200 MB.</span><span class="sxs-lookup"><span data-stu-id="187bb-218">Beginning in Windows PowerShell 3.0, if you omit this parameter, the default value is 200 MB.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -389,11 +389,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-219">-MaximumRedirection</span><span class="sxs-lookup"><span data-stu-id="9cd8a-219">-MaximumRedirection</span></span>
+### <span data-ttu-id="187bb-219">-MaximumRedirection</span><span class="sxs-lookup"><span data-stu-id="187bb-219">-MaximumRedirection</span></span>
 
-<span data-ttu-id="9cd8a-220">Determina quantas vezes o PowerShell redireciona uma conexão para um Uniform Resource Identifier alternativo (URI) antes de a conexão falhar.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-220">Determines how many times PowerShell redirects a connection to an alternate Uniform Resource Identifier (URI) before the connection fails.</span></span> <span data-ttu-id="9cd8a-221">O valor padrão é 5.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-221">The default value is 5.</span></span> <span data-ttu-id="9cd8a-222">Um valor de 0 (zero) impede qualquer redirecionamento.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-222">A value of 0 (zero) prevents all redirection.</span></span>
+<span data-ttu-id="187bb-220">Determina quantas vezes o PowerShell redireciona uma conexão para um Uniform Resource Identifier alternativo (URI) antes de a conexão falhar.</span><span class="sxs-lookup"><span data-stu-id="187bb-220">Determines how many times PowerShell redirects a connection to an alternate Uniform Resource Identifier (URI) before the connection fails.</span></span> <span data-ttu-id="187bb-221">O valor padrão é 5.</span><span class="sxs-lookup"><span data-stu-id="187bb-221">The default value is 5.</span></span> <span data-ttu-id="187bb-222">Um valor de 0 (zero) impede qualquer redirecionamento.</span><span class="sxs-lookup"><span data-stu-id="187bb-222">A value of 0 (zero) prevents all redirection.</span></span>
 
-<span data-ttu-id="9cd8a-223">Essa opção é usada na sessão somente quando o parâmetro **AllowRedirection** é usado no comando que cria a sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-223">This option is used in the session only when the **AllowRedirection** parameter is used in the command that creates the session.</span></span>
+<span data-ttu-id="187bb-223">Essa opção é usada na sessão somente quando o parâmetro **AllowRedirection** é usado no comando que cria a sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-223">This option is used in the session only when the **AllowRedirection** parameter is used in the command that creates the session.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -407,9 +407,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-224">-NoCompression</span><span class="sxs-lookup"><span data-stu-id="9cd8a-224">-NoCompression</span></span>
+### <span data-ttu-id="187bb-224">-NoCompression</span><span class="sxs-lookup"><span data-stu-id="187bb-224">-NoCompression</span></span>
 
-<span data-ttu-id="9cd8a-225">Desativa a compactação de pacotes na sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-225">Turns off packet compression in the session.</span></span> <span data-ttu-id="9cd8a-226">A compactação utiliza mais ciclos do processador, mas torna a transmissão mais rápida.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-226">Compression uses more processor cycles, but it makes transmission faster.</span></span>
+<span data-ttu-id="187bb-225">Desativa a compactação de pacotes na sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-225">Turns off packet compression in the session.</span></span> <span data-ttu-id="187bb-226">A compactação utiliza mais ciclos do processador, mas torna a transmissão mais rápida.</span><span class="sxs-lookup"><span data-stu-id="187bb-226">Compression uses more processor cycles, but it makes transmission faster.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -423,9 +423,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-227">-NoEncryption</span><span class="sxs-lookup"><span data-stu-id="9cd8a-227">-NoEncryption</span></span>
+### <span data-ttu-id="187bb-227">-NoEncryption</span><span class="sxs-lookup"><span data-stu-id="187bb-227">-NoEncryption</span></span>
 
-<span data-ttu-id="9cd8a-228">Desativa a criptografia de dados.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-228">Turns off data encryption.</span></span>
+<span data-ttu-id="187bb-228">Desativa a criptografia de dados.</span><span class="sxs-lookup"><span data-stu-id="187bb-228">Turns off data encryption.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -439,9 +439,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-229">-NoMachineProfile</span><span class="sxs-lookup"><span data-stu-id="9cd8a-229">-NoMachineProfile</span></span>
+### <span data-ttu-id="187bb-229">-NoMachineProfile</span><span class="sxs-lookup"><span data-stu-id="187bb-229">-NoMachineProfile</span></span>
 
-<span data-ttu-id="9cd8a-230">Impede o carregamento de perfil de usuário do Windows do usuário em questão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-230">Prevents loading the user's Windows user profile.</span></span> <span data-ttu-id="9cd8a-231">Como resultado a sessão pode ser criada mais rapidamente, mas as configurações de registro específicas do usuário, itens como variáveis de ambiente e certificados, não estarão disponíveis nessa sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-231">As a result, the session might be created faster, but user-specific registry settings, items such as environment variables, and certificates are not available in the session.</span></span>
+<span data-ttu-id="187bb-230">Impede o carregamento de perfil de usuário do Windows do usuário em questão.</span><span class="sxs-lookup"><span data-stu-id="187bb-230">Prevents loading the user's Windows user profile.</span></span> <span data-ttu-id="187bb-231">Como resultado a sessão pode ser criada mais rapidamente, mas as configurações de registro específicas do usuário, itens como variáveis de ambiente e certificados, não estarão disponíveis nessa sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-231">As a result, the session might be created faster, but user-specific registry settings, items such as environment variables, and certificates are not available in the session.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -455,11 +455,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-232">-OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="9cd8a-232">-OpenTimeout</span></span>
+### <span data-ttu-id="187bb-232">-OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="187bb-232">-OpenTimeout</span></span>
 
-<span data-ttu-id="9cd8a-233">Determina por quanto tempo o computador cliente aguarda para que a conexão da sessão seja estabelecida.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-233">Determines how long the client computer waits for the session connection to be established.</span></span> <span data-ttu-id="9cd8a-234">Quando o intervalo expira, o comando para estabelecer a conexão falha.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-234">When the interval expires, the command to establish the connection fails.</span></span> <span data-ttu-id="9cd8a-235">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-235">Enter a value in milliseconds.</span></span>
+<span data-ttu-id="187bb-233">Determina por quanto tempo o computador cliente aguarda para que a conexão da sessão seja estabelecida.</span><span class="sxs-lookup"><span data-stu-id="187bb-233">Determines how long the client computer waits for the session connection to be established.</span></span> <span data-ttu-id="187bb-234">Quando o intervalo expira, o comando para estabelecer a conexão falha.</span><span class="sxs-lookup"><span data-stu-id="187bb-234">When the interval expires, the command to establish the connection fails.</span></span> <span data-ttu-id="187bb-235">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="187bb-235">Enter a value in milliseconds.</span></span>
 
-<span data-ttu-id="9cd8a-236">O valor padrão é 180.000 (3 minutos).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-236">The default value is 180000 (3 minutes).</span></span> <span data-ttu-id="9cd8a-237">Um valor de 0 (zero) significa que não há tempo limite; o comando continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-237">A value of 0 (zero) means no time-out; the command continues indefinitely.</span></span>
+<span data-ttu-id="187bb-236">O valor padrão é 180.000 (3 minutos).</span><span class="sxs-lookup"><span data-stu-id="187bb-236">The default value is 180000 (3 minutes).</span></span> <span data-ttu-id="187bb-237">Um valor de 0 (zero) significa que não há tempo limite; o comando continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="187bb-237">A value of 0 (zero) means no time-out; the command continues indefinitely.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -473,11 +473,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-238">-OperationTimeout</span><span class="sxs-lookup"><span data-stu-id="9cd8a-238">-OperationTimeout</span></span>
+### <span data-ttu-id="187bb-238">-OperationTimeout</span><span class="sxs-lookup"><span data-stu-id="187bb-238">-OperationTimeout</span></span>
 
-<span data-ttu-id="9cd8a-239">Determina o tempo máximo pelo qual qualquer operação na sessão pode ser executada.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-239">Determines the maximum time that any operation in the session can run.</span></span> <span data-ttu-id="9cd8a-240">Quando o intervalo expira, a operação falha.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-240">When the interval expires, the operation fails.</span></span> <span data-ttu-id="9cd8a-241">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-241">Enter a value in milliseconds.</span></span>
+<span data-ttu-id="187bb-239">Determina o tempo máximo pelo qual qualquer operação na sessão pode ser executada.</span><span class="sxs-lookup"><span data-stu-id="187bb-239">Determines the maximum time that any operation in the session can run.</span></span> <span data-ttu-id="187bb-240">Quando o intervalo expira, a operação falha.</span><span class="sxs-lookup"><span data-stu-id="187bb-240">When the interval expires, the operation fails.</span></span> <span data-ttu-id="187bb-241">Insira um valor em milissegundos.</span><span class="sxs-lookup"><span data-stu-id="187bb-241">Enter a value in milliseconds.</span></span>
 
-<span data-ttu-id="9cd8a-242">O valor padrão é 180.000 (3 minutos).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-242">The default value is 180000 (3 minutes).</span></span> <span data-ttu-id="9cd8a-243">Um valor de 0 (zero) significa que não há tempo limite; a operação continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-243">A value of 0 (zero) means no time-out; the operation continues indefinitely.</span></span>
+<span data-ttu-id="187bb-242">O valor padrão é 180.000 (3 minutos).</span><span class="sxs-lookup"><span data-stu-id="187bb-242">The default value is 180000 (3 minutes).</span></span> <span data-ttu-id="187bb-243">Um valor de 0 (zero) significa que não há tempo limite; a operação continua indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="187bb-243">A value of 0 (zero) means no time-out; the operation continues indefinitely.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -491,21 +491,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-244">-OutputBufferingMode</span><span class="sxs-lookup"><span data-stu-id="9cd8a-244">-OutputBufferingMode</span></span>
+### <span data-ttu-id="187bb-244">-OutputBufferingMode</span><span class="sxs-lookup"><span data-stu-id="187bb-244">-OutputBufferingMode</span></span>
 
-<span data-ttu-id="9cd8a-245">Determina como a saída do comando é gerenciada em sessões desconectadas quando o buffer de saída fica cheio.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-245">Determines how command output is managed in disconnected sessions when the output buffer becomes full.</span></span>
+<span data-ttu-id="187bb-245">Determina como a saída do comando é gerenciada em sessões desconectadas quando o buffer de saída fica cheio.</span><span class="sxs-lookup"><span data-stu-id="187bb-245">Determines how command output is managed in disconnected sessions when the output buffer becomes full.</span></span>
 
-<span data-ttu-id="9cd8a-246">Se a o modo de buffering de saída não está definido na sessão ou na configuração da sessão, o valor padrão é **Block** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-246">If the output buffering mode is not set in the session or in the session configuration, the default value is **Block** .</span></span> <span data-ttu-id="9cd8a-247">Os usuários também podem alterar o modo de buffering de saída ao desconectarem-se da sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-247">Users can also change the output buffering mode when disconnecting the session.</span></span>
+<span data-ttu-id="187bb-246">Se a o modo de buffering de saída não está definido na sessão ou na configuração da sessão, o valor padrão é **Block**.</span><span class="sxs-lookup"><span data-stu-id="187bb-246">If the output buffering mode is not set in the session or in the session configuration, the default value is **Block**.</span></span> <span data-ttu-id="187bb-247">Os usuários também podem alterar o modo de buffering de saída ao desconectarem-se da sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-247">Users can also change the output buffering mode when disconnecting the session.</span></span>
 
-<span data-ttu-id="9cd8a-248">Se você omitir esse parâmetro, o valor de **OutputBufferingMode** do objeto de opção de sessão será None.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-248">If you omit this parameter, the value of the **OutputBufferingMode** of the session option object is None.</span></span> <span data-ttu-id="9cd8a-249">Um valor de **Block** ou **Drop** substitui a opção de transporte do modo de buffering de saída, definida na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-249">A value of **Block** or **Drop** overrides the output buffering mode transport option set in the session configuration.</span></span> <span data-ttu-id="9cd8a-250">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="9cd8a-250">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="187bb-248">Se você omitir esse parâmetro, o valor de **OutputBufferingMode** do objeto de opção de sessão será None.</span><span class="sxs-lookup"><span data-stu-id="187bb-248">If you omit this parameter, the value of the **OutputBufferingMode** of the session option object is None.</span></span> <span data-ttu-id="187bb-249">Um valor de **Block** ou **Drop** substitui a opção de transporte do modo de buffering de saída, definida na configuração da sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-249">A value of **Block** or **Drop** overrides the output buffering mode transport option set in the session configuration.</span></span> <span data-ttu-id="187bb-250">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="187bb-250">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="9cd8a-251">Bloquear.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-251">Block.</span></span> <span data-ttu-id="9cd8a-252">Quando o buffer de saída está cheio, a execução é suspensa até que o buffer esteja limpo.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-252">When the output buffer is full, execution is suspended until the buffer is clear.</span></span>
-- <span data-ttu-id="9cd8a-253">Drop.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-253">Drop.</span></span> <span data-ttu-id="9cd8a-254">Quando o buffer de saída está cheio, a execução continua.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-254">When the output buffer is full, execution continues.</span></span> <span data-ttu-id="9cd8a-255">Conforme uma nova saída é salva, a saída mais antiga é descartada.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-255">As new output is saved, the oldest output is discarded.</span></span>
-- <span data-ttu-id="9cd8a-256">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-256">None.</span></span> <span data-ttu-id="9cd8a-257">Nenhum modo de buffering de saída é especificado.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-257">No output buffering mode is specified.</span></span>
+- <span data-ttu-id="187bb-251">Bloquear.</span><span class="sxs-lookup"><span data-stu-id="187bb-251">Block.</span></span> <span data-ttu-id="187bb-252">Quando o buffer de saída está cheio, a execução é suspensa até que o buffer esteja limpo.</span><span class="sxs-lookup"><span data-stu-id="187bb-252">When the output buffer is full, execution is suspended until the buffer is clear.</span></span>
+- <span data-ttu-id="187bb-253">Drop.</span><span class="sxs-lookup"><span data-stu-id="187bb-253">Drop.</span></span> <span data-ttu-id="187bb-254">Quando o buffer de saída está cheio, a execução continua.</span><span class="sxs-lookup"><span data-stu-id="187bb-254">When the output buffer is full, execution continues.</span></span> <span data-ttu-id="187bb-255">Conforme uma nova saída é salva, a saída mais antiga é descartada.</span><span class="sxs-lookup"><span data-stu-id="187bb-255">As new output is saved, the oldest output is discarded.</span></span>
+- <span data-ttu-id="187bb-256">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="187bb-256">None.</span></span> <span data-ttu-id="187bb-257">Nenhum modo de buffering de saída é especificado.</span><span class="sxs-lookup"><span data-stu-id="187bb-257">No output buffering mode is specified.</span></span>
 
-<span data-ttu-id="9cd8a-258">Para obter mais informações sobre a opção de transporte do modo de buffer de saída, consulte `New-PSTransportOption` .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-258">For more information about the output buffering mode transport option, see `New-PSTransportOption`.</span></span>
+<span data-ttu-id="187bb-258">Para obter mais informações sobre a opção de transporte do modo de buffer de saída, consulte `New-PSTransportOption` .</span><span class="sxs-lookup"><span data-stu-id="187bb-258">For more information about the output buffering mode transport option, see `New-PSTransportOption`.</span></span>
 
-<span data-ttu-id="9cd8a-259">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-259">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="187bb-259">Este parâmetro foi introduzido no Windows PowerShell 3.0.</span><span class="sxs-lookup"><span data-stu-id="187bb-259">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Runspaces.OutputBufferingMode
@@ -520,19 +520,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-260">-ProxyAccessType</span><span class="sxs-lookup"><span data-stu-id="9cd8a-260">-ProxyAccessType</span></span>
+### <span data-ttu-id="187bb-260">-ProxyAccessType</span><span class="sxs-lookup"><span data-stu-id="187bb-260">-ProxyAccessType</span></span>
 
-<span data-ttu-id="9cd8a-261">Determina qual mecanismo é usado para resolver o nome do host.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-261">Determines which mechanism is used to resolve the host name.</span></span> <span data-ttu-id="9cd8a-262">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="9cd8a-262">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="187bb-261">Determina qual mecanismo é usado para resolver o nome do host.</span><span class="sxs-lookup"><span data-stu-id="187bb-261">Determines which mechanism is used to resolve the host name.</span></span> <span data-ttu-id="187bb-262">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="187bb-262">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="9cd8a-263">IEConfig</span><span class="sxs-lookup"><span data-stu-id="9cd8a-263">IEConfig</span></span>
-- <span data-ttu-id="9cd8a-264">WinHttpConfig</span><span class="sxs-lookup"><span data-stu-id="9cd8a-264">WinHttpConfig</span></span>
-- <span data-ttu-id="9cd8a-265">AutoDetect</span><span class="sxs-lookup"><span data-stu-id="9cd8a-265">AutoDetect</span></span>
-- <span data-ttu-id="9cd8a-266">NoProxyServer</span><span class="sxs-lookup"><span data-stu-id="9cd8a-266">NoProxyServer</span></span>
-- <span data-ttu-id="9cd8a-267">Nenhum</span><span class="sxs-lookup"><span data-stu-id="9cd8a-267">None</span></span>
+- <span data-ttu-id="187bb-263">IEConfig</span><span class="sxs-lookup"><span data-stu-id="187bb-263">IEConfig</span></span>
+- <span data-ttu-id="187bb-264">WinHttpConfig</span><span class="sxs-lookup"><span data-stu-id="187bb-264">WinHttpConfig</span></span>
+- <span data-ttu-id="187bb-265">AutoDetect</span><span class="sxs-lookup"><span data-stu-id="187bb-265">AutoDetect</span></span>
+- <span data-ttu-id="187bb-266">NoProxyServer</span><span class="sxs-lookup"><span data-stu-id="187bb-266">NoProxyServer</span></span>
+- <span data-ttu-id="187bb-267">Nenhum</span><span class="sxs-lookup"><span data-stu-id="187bb-267">None</span></span>
 
-<span data-ttu-id="9cd8a-268">O valor padrão é Nenhum.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-268">The default value is None.</span></span>
+<span data-ttu-id="187bb-268">O valor padrão é Nenhum.</span><span class="sxs-lookup"><span data-stu-id="187bb-268">The default value is None.</span></span>
 
-<span data-ttu-id="9cd8a-269">Para obter informações sobre os valores desse parâmetro, consulte [Enumeração ProxyAccessType](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-269">For information about the values of this parameter, see [ProxyAccessType Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).</span></span>
+<span data-ttu-id="187bb-269">Para obter informações sobre os valores desse parâmetro, consulte [Enumeração ProxyAccessType](/dotnet/api/system.management.automation.remoting.proxyaccesstype).</span><span class="sxs-lookup"><span data-stu-id="187bb-269">For information about the values of this parameter, see [ProxyAccessType Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype).</span></span>
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -547,11 +547,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-270">-ProxyAuthentication</span><span class="sxs-lookup"><span data-stu-id="9cd8a-270">-ProxyAuthentication</span></span>
+### <span data-ttu-id="187bb-270">-ProxyAuthentication</span><span class="sxs-lookup"><span data-stu-id="187bb-270">-ProxyAuthentication</span></span>
 
-<span data-ttu-id="9cd8a-271">Especifica o método de autenticação que é usado para resolução de proxy.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-271">Specifies the authentication method that is used for proxy resolution.</span></span> <span data-ttu-id="9cd8a-272">Os valores aceitáveis para esse parâmetro são: **Basic** , **Digest** e **Negotiate** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-272">The acceptable values for this parameter are: **Basic** , **Digest** , and **Negotiate** .</span></span> <span data-ttu-id="9cd8a-273">O valor padrão é **Negotiate** .</span><span class="sxs-lookup"><span data-stu-id="9cd8a-273">The default value is **Negotiate** .</span></span>
+<span data-ttu-id="187bb-271">Especifica o método de autenticação que é usado para resolução de proxy.</span><span class="sxs-lookup"><span data-stu-id="187bb-271">Specifies the authentication method that is used for proxy resolution.</span></span> <span data-ttu-id="187bb-272">Os valores aceitáveis para esse parâmetro são: **Basic** , **Digest** e **Negotiate**.</span><span class="sxs-lookup"><span data-stu-id="187bb-272">The acceptable values for this parameter are: **Basic** , **Digest** , and **Negotiate**.</span></span> <span data-ttu-id="187bb-273">O valor padrão é **Negotiate**.</span><span class="sxs-lookup"><span data-stu-id="187bb-273">The default value is **Negotiate**.</span></span>
 
-<span data-ttu-id="9cd8a-274">Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-274">For more information about the values of this parameter, see [AuthenticationMechanism Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).</span></span>
+<span data-ttu-id="187bb-274">Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span><span class="sxs-lookup"><span data-stu-id="187bb-274">For more information about the values of this parameter, see [AuthenticationMechanism Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span></span>
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism
@@ -566,9 +566,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-275">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="9cd8a-275">-ProxyCredential</span></span>
+### <span data-ttu-id="187bb-275">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="187bb-275">-ProxyCredential</span></span>
 
-<span data-ttu-id="9cd8a-276">Especifica as credenciais a usar para autenticação de proxy.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-276">Specifies the credentials to use for proxy authentication.</span></span> <span data-ttu-id="9cd8a-277">Insira uma variável que contém um objeto **PSCredential** ou um comando que obtém um objeto **PSCredential** , como um `Get-Credential` comando.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-277">Enter a variable that contains a **PSCredential** object or a command that gets a **PSCredential** object, such as a `Get-Credential` command.</span></span> <span data-ttu-id="9cd8a-278">Se esta opção não for definida, nenhuma credencial será especificada.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-278">If this option is not set, no credentials are specified.</span></span>
+<span data-ttu-id="187bb-276">Especifica as credenciais a usar para autenticação de proxy.</span><span class="sxs-lookup"><span data-stu-id="187bb-276">Specifies the credentials to use for proxy authentication.</span></span> <span data-ttu-id="187bb-277">Insira uma variável que contém um objeto **PSCredential** ou um comando que obtém um objeto **PSCredential** , como um `Get-Credential` comando.</span><span class="sxs-lookup"><span data-stu-id="187bb-277">Enter a variable that contains a **PSCredential** object or a command that gets a **PSCredential** object, such as a `Get-Credential` command.</span></span> <span data-ttu-id="187bb-278">Se esta opção não for definida, nenhuma credencial será especificada.</span><span class="sxs-lookup"><span data-stu-id="187bb-278">If this option is not set, no credentials are specified.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -582,29 +582,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-279">-SkipCACheck</span><span class="sxs-lookup"><span data-stu-id="9cd8a-279">-SkipCACheck</span></span>
+### <span data-ttu-id="187bb-279">-SkipCACheck</span><span class="sxs-lookup"><span data-stu-id="187bb-279">-SkipCACheck</span></span>
 
-<span data-ttu-id="9cd8a-280">Especifica que quando ele se conecta via HTTPS, o cliente não valida se o certificado do servidor está assinado por uma autoridade de certificação (CA) confiável.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-280">Specifies that when it connects over HTTPS, the client does not validate that the server certificate is signed by a trusted certification authority (CA).</span></span>
+<span data-ttu-id="187bb-280">Especifica que quando ele se conecta via HTTPS, o cliente não valida se o certificado do servidor está assinado por uma autoridade de certificação (CA) confiável.</span><span class="sxs-lookup"><span data-stu-id="187bb-280">Specifies that when it connects over HTTPS, the client does not validate that the server certificate is signed by a trusted certification authority (CA).</span></span>
 
-<span data-ttu-id="9cd8a-281">Use esta opção somente quando o computador remoto for considerado confiável pelo uso de outro mecanismo, como por exemplo quando o computador remoto é parte de uma rede fisicamente segura e isolada, ou quando o computador remoto está listado como um host confiável em uma configuração de WinRM.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-281">Use this option only when the remote computer is trusted by using another mechanism, such as when the remote computer is part of a network that is physically secure and isolated or when the remote computer is listed as a trusted host in a WinRM configuration.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="9cd8a-282">-SkipCNCheck</span><span class="sxs-lookup"><span data-stu-id="9cd8a-282">-SkipCNCheck</span></span>
-
-<span data-ttu-id="9cd8a-283">Especifica que o nome comum do certificado (CN) do servidor não precisa corresponder ao nome do host do servidor.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-283">Specifies that the certificate common name (CN) of the server does not have to match the host name of the server.</span></span> <span data-ttu-id="9cd8a-284">Esta opção é usada somente em operações remotas que usam o protocolo HTTPS.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-284">This option is used only in remote operations that use the HTTPS protocol.</span></span>
-
-<span data-ttu-id="9cd8a-285">Use esta opção somente para computadores confiáveis.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-285">Use this option only for trusted computers.</span></span>
+<span data-ttu-id="187bb-281">Use esta opção somente quando o computador remoto for considerado confiável pelo uso de outro mecanismo, como por exemplo quando o computador remoto é parte de uma rede fisicamente segura e isolada, ou quando o computador remoto está listado como um host confiável em uma configuração de WinRM.</span><span class="sxs-lookup"><span data-stu-id="187bb-281">Use this option only when the remote computer is trusted by using another mechanism, such as when the remote computer is part of a network that is physically secure and isolated or when the remote computer is listed as a trusted host in a WinRM configuration.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -618,9 +600,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-286">-SkipRevocationCheck</span><span class="sxs-lookup"><span data-stu-id="9cd8a-286">-SkipRevocationCheck</span></span>
+### <span data-ttu-id="187bb-282">-SkipCNCheck</span><span class="sxs-lookup"><span data-stu-id="187bb-282">-SkipCNCheck</span></span>
 
-<span data-ttu-id="9cd8a-287">Não valida o status de revogação do certificado do servidor.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-287">Does not validate the revocation status of the server certificate.</span></span>
+<span data-ttu-id="187bb-283">Especifica que o nome comum do certificado (CN) do servidor não precisa corresponder ao nome do host do servidor.</span><span class="sxs-lookup"><span data-stu-id="187bb-283">Specifies that the certificate common name (CN) of the server does not have to match the host name of the server.</span></span> <span data-ttu-id="187bb-284">Esta opção é usada somente em operações remotas que usam o protocolo HTTPS.</span><span class="sxs-lookup"><span data-stu-id="187bb-284">This option is used only in remote operations that use the HTTPS protocol.</span></span>
+
+<span data-ttu-id="187bb-285">Use esta opção somente para computadores confiáveis.</span><span class="sxs-lookup"><span data-stu-id="187bb-285">Use this option only for trusted computers.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -634,17 +618,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-288">-UICulture</span><span class="sxs-lookup"><span data-stu-id="9cd8a-288">-UICulture</span></span>
+### <span data-ttu-id="187bb-286">-SkipRevocationCheck</span><span class="sxs-lookup"><span data-stu-id="187bb-286">-SkipRevocationCheck</span></span>
 
-<span data-ttu-id="9cd8a-289">Especifica a cultura da interface de usuário a ser usada para a sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-289">Specifies the UI culture to use for the session.</span></span>
+<span data-ttu-id="187bb-287">Não valida o status de revogação do certificado do servidor.</span><span class="sxs-lookup"><span data-stu-id="187bb-287">Does not validate the revocation status of the server certificate.</span></span>
 
-<span data-ttu-id="9cd8a-290">Os valores válidos incluem:</span><span class="sxs-lookup"><span data-stu-id="9cd8a-290">Valid values include:</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-- <span data-ttu-id="9cd8a-291">Um nome de cultura no `<languagecode2>-<country/regioncode2>` formato, como `ja-JP`</span><span class="sxs-lookup"><span data-stu-id="9cd8a-291">A culture name in `<languagecode2>-<country/regioncode2>` format, such as `ja-JP`</span></span>
-- <span data-ttu-id="9cd8a-292">Uma variável que contém um objeto **CultureInfo**</span><span class="sxs-lookup"><span data-stu-id="9cd8a-292">A variable that contains a **CultureInfo** object</span></span>
-- <span data-ttu-id="9cd8a-293">Um comando que obtém um objeto **CultureInfo** , como `Get-Culture`</span><span class="sxs-lookup"><span data-stu-id="9cd8a-293">A command that gets a **CultureInfo** object, such as `Get-Culture`</span></span>
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-<span data-ttu-id="9cd8a-294">O valor padrão é `$null` , e a cultura da interface do usuário que é definida no sistema operacional quando a sessão é criada é usada na sessão.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-294">The default value is `$null`, and the UI culture that is set in the operating system when the session is created is used in the session.</span></span>
+### <span data-ttu-id="187bb-288">-UICulture</span><span class="sxs-lookup"><span data-stu-id="187bb-288">-UICulture</span></span>
+
+<span data-ttu-id="187bb-289">Especifica a cultura da interface de usuário a ser usada para a sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-289">Specifies the UI culture to use for the session.</span></span>
+
+<span data-ttu-id="187bb-290">Os valores válidos incluem:</span><span class="sxs-lookup"><span data-stu-id="187bb-290">Valid values include:</span></span>
+
+- <span data-ttu-id="187bb-291">Um nome de cultura no `<languagecode2>-<country/regioncode2>` formato, como `ja-JP`</span><span class="sxs-lookup"><span data-stu-id="187bb-291">A culture name in `<languagecode2>-<country/regioncode2>` format, such as `ja-JP`</span></span>
+- <span data-ttu-id="187bb-292">Uma variável que contém um objeto **CultureInfo**</span><span class="sxs-lookup"><span data-stu-id="187bb-292">A variable that contains a **CultureInfo** object</span></span>
+- <span data-ttu-id="187bb-293">Um comando que obtém um objeto **CultureInfo** , como `Get-Culture`</span><span class="sxs-lookup"><span data-stu-id="187bb-293">A command that gets a **CultureInfo** object, such as `Get-Culture`</span></span>
+
+<span data-ttu-id="187bb-294">O valor padrão é `$null` , e a cultura da interface do usuário que é definida no sistema operacional quando a sessão é criada é usada na sessão.</span><span class="sxs-lookup"><span data-stu-id="187bb-294">The default value is `$null`, and the UI culture that is set in the operating system when the session is created is used in the session.</span></span>
 
 ```yaml
 Type: System.Globalization.CultureInfo
@@ -658,9 +658,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-295">-UseUTF16</span><span class="sxs-lookup"><span data-stu-id="9cd8a-295">-UseUTF16</span></span>
+### <span data-ttu-id="187bb-295">-UseUTF16</span><span class="sxs-lookup"><span data-stu-id="187bb-295">-UseUTF16</span></span>
 
-<span data-ttu-id="9cd8a-296">Indica que esse cmdlet codifica a solicitação no formato UTF16 em vez do formato UTF8.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-296">Indicates that this cmdlet encodes the request in UTF16 format instead of UTF8 format.</span></span>
+<span data-ttu-id="187bb-296">Indica que esse cmdlet codifica a solicitação no formato UTF16 em vez do formato UTF8.</span><span class="sxs-lookup"><span data-stu-id="187bb-296">Indicates that this cmdlet encodes the request in UTF16 format instead of UTF8 format.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -674,31 +674,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd8a-297">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9cd8a-297">CommonParameters</span></span>
+### <span data-ttu-id="187bb-297">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="187bb-297">CommonParameters</span></span>
 
-<span data-ttu-id="9cd8a-298">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-298">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9cd8a-299">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-299">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="187bb-298">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="187bb-298">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="187bb-299">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="187bb-299">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="9cd8a-300">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="9cd8a-300">INPUTS</span></span>
+## <span data-ttu-id="187bb-300">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="187bb-300">INPUTS</span></span>
 
-### <span data-ttu-id="9cd8a-301">Nenhum</span><span class="sxs-lookup"><span data-stu-id="9cd8a-301">None</span></span>
+### <span data-ttu-id="187bb-301">Nenhum</span><span class="sxs-lookup"><span data-stu-id="187bb-301">None</span></span>
 
-<span data-ttu-id="9cd8a-302">Não é possível redirecionar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-302">You cannot pipe input to this cmdlet.</span></span>
+<span data-ttu-id="187bb-302">Não é possível redirecionar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="187bb-302">You cannot pipe input to this cmdlet.</span></span>
 
-## <span data-ttu-id="9cd8a-303">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="9cd8a-303">OUTPUTS</span></span>
+## <span data-ttu-id="187bb-303">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="187bb-303">OUTPUTS</span></span>
 
-### <span data-ttu-id="9cd8a-304">System. Management. Automation. Remoting. PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="9cd8a-304">System.Management.Automation.Remoting.PSSessionOption</span></span>
+### <span data-ttu-id="187bb-304">System. Management. Automation. Remoting. PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="187bb-304">System.Management.Automation.Remoting.PSSessionOption</span></span>
 
-## <span data-ttu-id="9cd8a-305">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="9cd8a-305">NOTES</span></span>
+## <span data-ttu-id="187bb-305">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="187bb-305">NOTES</span></span>
 
-<span data-ttu-id="9cd8a-306">Se o parâmetro **SessionOption** não for usado em um comando para criar uma **PSSession** , as opções de sessão serão determinadas pelos valores de propriedade da `$PSSessionOption` variável de preferência, se ela estiver definida.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-306">If the **SessionOption** parameter is not used in a command to create a **PSSession** , the session options are determined by the property values of the `$PSSessionOption` preference variable, if it is set.</span></span> <span data-ttu-id="9cd8a-307">Para obter mais informações sobre a `$PSSessionOption` variável, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="9cd8a-307">For more information about the `$PSSessionOption` variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
+<span data-ttu-id="187bb-306">Se o parâmetro **SessionOption** não for usado em um comando para criar uma **PSSession** , as opções de sessão serão determinadas pelos valores de propriedade da `$PSSessionOption` variável de preferência, se ela estiver definida.</span><span class="sxs-lookup"><span data-stu-id="187bb-306">If the **SessionOption** parameter is not used in a command to create a **PSSession** , the session options are determined by the property values of the `$PSSessionOption` preference variable, if it is set.</span></span> <span data-ttu-id="187bb-307">Para obter mais informações sobre a `$PSSessionOption` variável, consulte [about_Preference_Variables](About/about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="187bb-307">For more information about the `$PSSessionOption` variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
 
-<span data-ttu-id="9cd8a-308">As propriedades de um objeto de configuração de sessão variam de acordo com as opções definidas para a configuração da sessão e os valores dessas opções.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-308">The properties of a session configuration object vary with the options set for the session configuration and the values of those options.</span></span> <span data-ttu-id="9cd8a-309">Além disso, as configurações de sessão que usam um arquivo de configuração de sessão têm propriedades adicionais.</span><span class="sxs-lookup"><span data-stu-id="9cd8a-309">Also, session configurations that use a session configuration file have additional properties.</span></span>
+<span data-ttu-id="187bb-308">As propriedades de um objeto de configuração de sessão variam de acordo com as opções definidas para a configuração da sessão e os valores dessas opções.</span><span class="sxs-lookup"><span data-stu-id="187bb-308">The properties of a session configuration object vary with the options set for the session configuration and the values of those options.</span></span> <span data-ttu-id="187bb-309">Além disso, as configurações de sessão que usam um arquivo de configuração de sessão têm propriedades adicionais.</span><span class="sxs-lookup"><span data-stu-id="187bb-309">Also, session configurations that use a session configuration file have additional properties.</span></span>
 
-## <span data-ttu-id="9cd8a-310">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="9cd8a-310">RELATED LINKS</span></span>
+## <span data-ttu-id="187bb-310">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="187bb-310">RELATED LINKS</span></span>
 
-[<span data-ttu-id="9cd8a-311">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="9cd8a-311">Enter-PSSession</span></span>](Enter-PSSession.md)
+[<span data-ttu-id="187bb-311">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="187bb-311">Enter-PSSession</span></span>](Enter-PSSession.md)
 
-[<span data-ttu-id="9cd8a-312">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="9cd8a-312">Invoke-Command</span></span>](Invoke-Command.md)
+[<span data-ttu-id="187bb-312">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="187bb-312">Invoke-Command</span></span>](Invoke-Command.md)
 
-[<span data-ttu-id="9cd8a-313">New-PSSession</span><span class="sxs-lookup"><span data-stu-id="9cd8a-313">New-PSSession</span></span>](New-PSSession.md)
-
+[<span data-ttu-id="187bb-313">New-PSSession</span><span class="sxs-lookup"><span data-stu-id="187bb-313">New-PSSession</span></span>](New-PSSession.md)
