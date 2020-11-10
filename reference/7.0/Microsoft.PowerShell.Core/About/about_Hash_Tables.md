@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Hash_Tables
-ms.openlocfilehash: 2d7b886a8d36a72f789395650d1f2dd17123258c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aa56a29d3888f4283a5a9510970e53ea678d01f7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195902"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389310"
 ---
 # <a name="about-hash-tables"></a>Sobre tabelas de hash
 
@@ -32,7 +32,7 @@ As chaves e o valor em tabelas de hash também são objetos .NET. Eles são gera
 
 As tabelas de hash são frequentemente usadas porque são muito eficientes para localizar e recuperar dados. Você pode usar tabelas de hash para armazenar listas e criar propriedades calculadas no PowerShell. E o PowerShell tem um cmdlet, ConvertFrom-StringData, que converte cadeias de caracteres em uma tabela de hash.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Sintaxe
 
 A sintaxe de uma tabela de hash é a seguinte:
 
@@ -57,7 +57,7 @@ Para criar uma tabela de hash, siga estas diretrizes:
 - Insira um ou mais pares de chave/valor para o conteúdo da tabela de hash.
 - Use um sinal de igual (=) para separar cada chave de seu valor.
 - Use um ponto e vírgula (;) ou uma quebra de linha para separar os pares de chave/valor.
-- As chaves que contêm espaços devem ser colocadas entre aspas. Os valores devem ser expressões válidas do PowerShell. As cadeias de caracteres devem aparecer entre aspas, mesmo que não incluam espaços.
+- A chave que contém espaços deve ser colocada entre aspas. Os valores devem ser expressões válidas do PowerShell. As cadeias de caracteres devem aparecer entre aspas, mesmo que não incluam espaços.
 - Para gerenciar a tabela de hash, salve-a em uma variável.
 - Ao atribuir uma tabela de hash ordenada a uma variável, coloque o atributo [ordenado] antes do símbolo "@". Se você o posicionar antes do nome da variável, o comando falhará.
 
@@ -245,20 +245,20 @@ Por exemplo, para remover o par de chave/valor time = Now da tabela de hash no v
 $hash.Remove("Time")
 ```
 
-Você pode usar todas as propriedades e métodos de objetos de tabela de hash no PowerShell, incluindo contém, Clear, clone e CopyTo. Para obter mais informações sobre objetos de tabela de hash, consulte "System. Collections. Hashtable" no MSDN.
+Você pode usar todas as propriedades e métodos de objetos de tabela de hash no PowerShell, incluindo contém, Clear, clone e CopyTo. Para obter mais informações sobre objetos de tabela de hash, consulte [System. Collections. Hashtable](/dotnet/api/system.collections.hashtable).
 
 ### <a name="object-types-in-hashtables"></a>Tipos de objeto em HashTables
 
 As chaves e os valores em uma tabela de hash podem ter qualquer tipo de objeto .NET, e uma única tabela de hash pode ter chaves e valores de vários tipos.
 
-A instrução a seguir cria uma tabela de hash de cadeias de caracteres de nome do processo e valores de objeto de processo e salva-o na \$ variável p.
+A instrução a seguir cria uma tabela de hash de cadeias de caracteres de nome do processo e valores de objeto de processo e salva-o na `$p` variável.
 
 ```powershell
 $p = @{"PowerShell" = (Get-Process PowerShell);
 "Notepad" = (Get-Process notepad)}
 ```
 
-Você pode exibir a tabela de hash em \$ p e usar as propriedades de nome de chave para exibir os valores.
+Você pode exibir a tabela de hash no `$p` e usar as propriedades de nome de chave para exibir os valores.
 
 ```powershell
 C:\PS> $p
@@ -279,7 +279,7 @@ C:\PS> $p.keys | foreach {$p.$_.handles}
 251
 ```
 
-As chaves em uma tabela de hash também podem ser de qualquer tipo .NET. A instrução a seguir adiciona um par chave/valor à tabela de hash na \$ variável p. A chave é um objeto de serviço que representa o serviço WinRM e o valor é o status atual do serviço.
+As chaves em uma tabela de hash também podem ser de qualquer tipo .NET. A instrução a seguir adiciona um par chave/valor à tabela de hash na `$p` variável. A chave é um objeto de serviço que representa o serviço WinRM e o valor é o status atual do serviço.
 
 ```powershell
 C:\PS> $p = $p + @{(Get-Service WinRM) = ((Get-Service WinRM).Status)}
@@ -308,7 +308,7 @@ C:\PS> $p.keys | foreach {$_.name}
 winrm
 ```
 
-As chaves e os valores em uma tabela de hash também podem ser objetos de Hashtable. A instrução a seguir adiciona o par chave/valor à tabela de hash na \$ variável p na qual a chave é uma cadeia de caracteres, Hash2, e o valor é uma tabela de hash com três pares de chave/valor.
+As chaves e os valores em uma tabela de hash também podem ser objetos de Hashtable. A instrução a seguir adiciona o par chave/valor à tabela de hash na `$p` variável em que a chave é uma cadeia de caracteres, Hash2, e o valor é uma tabela de hash com três pares de chave/valor.
 
 ```powershell
 C:\PS> $p = $p + @{"Hash2"= @{a=1; b=2; c=3}}
@@ -344,7 +344,7 @@ Os itens em uma tabela de hash são intrinsecamente desordenados. Os pares de ch
 
 Embora não seja possível classificar uma tabela de hash, você pode usar o método GetEnumerator de tabelas de hash para enumerar as chaves e os valores e, em seguida, usar o cmdlet Sort-Object para classificar os valores enumerados para exibição.
 
-Por exemplo, os comandos a seguir enumeram as chaves e os valores na tabela de hash na \$ variável p e, em seguida, classificam as chaves em ordem alfabética.
+Por exemplo, os comandos a seguir enumeram as chaves e os valores na tabela de hash na `$p` variável e, em seguida, classificam as chaves em ordem alfabética.
 
 ```powershell
 C:\PS> $p.GetEnumerator() | Sort-Object -Property key

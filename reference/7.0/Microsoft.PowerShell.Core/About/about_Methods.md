@@ -6,12 +6,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Methods
-ms.openlocfilehash: 1de1d2f85a878d671669ba632a381f4c2b46f96c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 25056ff8b3c0bc8828be1426463b2d087e23a131
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195879"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390993"
 ---
 # <a name="about-methods"></a>Sobre métodos
 
@@ -81,7 +81,7 @@ A partir do PowerShell 4,0, a invocação de método usando nomes de métodos di
 
 ### <a name="learning-about-methods"></a>Aprendendo sobre métodos
 
-Para localizar definições dos métodos de um objeto, acesse o tópico da ajuda para o tipo de objeto no MSDN e procure sua página de métodos. Por exemplo, a página a seguir descreve os métodos de Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods).
+Para localizar definições dos métodos de um objeto, acesse o tópico da ajuda para o tipo de objeto e procure sua página de métodos. Por exemplo, a página a seguir descreve os métodos de Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods).
 
 Para determinar os argumentos de um método, examine a definição do método, que é como o diagrama de sintaxe de um cmdlet do PowerShell.
 

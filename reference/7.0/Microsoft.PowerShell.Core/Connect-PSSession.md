@@ -7,12 +7,12 @@ ms.date: 11/06/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Connect-PSSession
-ms.openlocfilehash: 3d38ac38fb06f3dd414e9549ea4f279e47b2aff8
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 568fee4f17f44e7bbafe17137ff125cadbd2dd96
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94347356"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391044"
 ---
 # Connect-PSSession
 
@@ -260,7 +260,7 @@ Especifica o mecanismo usado para autenticar credenciais de usuário no comando 
 
 O valor padrão é Default.
 
-Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) na biblioteca MSDN.
+Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 > [!CAUTION]
 > A autenticação CredSSP (Credencial Security Support Provider), na qual as credenciais do usuário são passadas a um computador remoto para autenticação, foi projetada para comandos que exijam autenticação em mais de um recurso, como acessar um compartilhamento de rede remota. Esse mecanismo aumenta o risco de segurança da operação remota. Se o computador remoto estiver comprometido, as credenciais que são passadas a ele podem ser usadas para controlar a sessão de rede.
@@ -610,9 +610,9 @@ Esse cmdlet retorna um objeto que representa a sessão à qual ele se reconecta.
 
   Um valor **Availability** de None indica que é possível conectar-se à sessão. Um valor de ocupado indica que você não pode se conectar à **PSSession** porque ela está conectada a outra sessão.
 
-  Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RUNSPACESTATE](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate) na biblioteca MSDN.
+  Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-  Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RUNSPACEAVAILABILITY](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability) na biblioteca MSDN.
+  Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 - Não é possível alterar o valor de tempo limite ocioso de uma **PSSession** quando você se conecta à **PSSession**. O parâmetro **SessionOption** de `Connect-PSSession` usa um objeto **SessionOption** que tem um valor **IdleTimeout** . No entanto, o valor **IdleTimeout** do objeto **SessionOption** e o valor **IdleTimeout** da `$PSSessionOption` variável são ignorados ao se conectar a uma **PSSession**.
 

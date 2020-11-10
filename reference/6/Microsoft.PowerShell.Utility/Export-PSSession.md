@@ -7,12 +7,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 9827c4e2ca56c90528726378290a9ca04fe54d00
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+ms.openlocfilehash: 5bc474883029f59eda199a5d93ef8a229c0f887e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "93194830"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389208"
 ---
 # Export-PSSession
 
@@ -22,7 +22,7 @@ Exporta comandos de outra sessão e salva-os em um módulo do PowerShell.
 
 ## SYNTAX
 
-### Tudo
+### Todos
 
 ```
 Export-PSSession [-OutputModule] <String> [-Force] [-Encoding <Encoding>]
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-Exporta somente os comandos com os nomes especificados ou padrões de nome. Caracteres curinga são permitidos. Use **CommandName** ou seu alias, **Name** .
+Exporta somente os comandos com os nomes especificados ou padrões de nome. Caracteres curinga são permitidos. Use **CommandName** ou seu alias, **Name**.
 
 Por padrão, `Export-PSSession` o exporta todos os comandos da PSSession, exceto os comandos que têm os mesmos nomes que os comandos na sessão atual. Isso impede que os comandos sejam ocultados ou substituídos por comandos na sessão atual. Para exportar todos os comandos, mesmo aqueles que ocultam ou substituem outros comandos, use o parâmetro **AllowClobber** .
 
@@ -201,7 +201,7 @@ Accept wildcard characters: True
 
 ### -CommandType
 
-Exporta somente os tipos especificados de objetos de comando. Use o **CommandType** ou seu alias, **Type** .
+Exporta somente os tipos especificados de objetos de comando. Use o **CommandType** ou seu alias, **Type**.
 
 Os valores aceitáveis para esse parâmetro são os seguintes:
 
@@ -213,7 +213,7 @@ Os valores aceitáveis para esse parâmetro são os seguintes:
 - ExternalScript. Todos os arquivos. ps1 nos caminhos listados na variável de ambiente Path ( `$env:path` ).
 - Filtro e função. Todas as funções do PowerShell.
 - Script. Blocos de script na sessão atual.
-- Modelo. Um fluxo de trabalho do PowerShell. Para obter mais informações, consulte [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1).
+- Modelo. Um fluxo de trabalho do PowerShell. Para obter mais informações, consulte [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows.md).
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -299,16 +299,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedModule
 
-Especifica os módulos com nomes que são especificados na forma de objetos **ModuleSpecification** .
-Consulte a seção comentários do [Construtor ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
+Especifica os módulos com nomes que são especificados na forma de objetos **ModuleSpecification** . Consulte a seção comentários do [Construtor ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Por exemplo, o parâmetro **FullyQualifiedModule** aceita um nome de módulo que é especificado em um destes formatos:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
-
-**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional. Você não pode especificar o parâmetro **FullyQualifiedModule** no mesmo comando que um parâmetro de **módulo** ; os dois parâmetros são mutuamente exclusivos.
+**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional. Você não pode especificar o parâmetro **FullyQualifiedModule** no mesmo comando que um parâmetro de **módulo** . os dois parâmetros são mutuamente exclusivos.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]

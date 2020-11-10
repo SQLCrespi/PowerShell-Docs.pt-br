@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PSSession
-ms.openlocfilehash: 2f233dad23a8dead5e6fe0d072d71f0e2528551d
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 5e7fdf1eeee1360777f801ae140d013bf9194977
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93195007"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388970"
 ---
 # Get-PSSession
 
@@ -182,7 +182,7 @@ Este exemplo mostra como salvar os resultados de um `Get-PSSession` comando em v
 
 O primeiro comando usa o `New-PSSession` cmdlet para criar **PSSessions** em três computadores remotos.
 
-O segundo comando usa um `Get-PSSession` cmdlet para obter as três **PSSessions** . Em seguida, ele salva cada uma das **PSSessions** em uma variável separada.
+O segundo comando usa um `Get-PSSession` cmdlet para obter as três **PSSessions**. Em seguida, ele salva cada uma das **PSSessions** em uma variável separada.
 
 Quando o PowerShell atribui uma matriz de objetos a uma matriz de variáveis, ele atribui o primeiro objeto à primeira variável, o segundo objeto à segunda variável e assim por diante. Se houver mais objetos que variáveis, ele atribui todos os objetos restantes à última variável da matriz. Se houver mais variáveis que objetos, as variáveis extra não são usadas.
 
@@ -194,11 +194,11 @@ $s = Get-PSSession -InstanceID a786be29-a6bb-40da-80fb-782c67f7db0f
 Remove-PSSession -Session $s
 ```
 
-Este exemplo mostra como obter uma **PSSession** usando sua ID de instância e, em seguida, excluir a **PSSession** .
+Este exemplo mostra como obter uma **PSSession** usando sua ID de instância e, em seguida, excluir a **PSSession**.
 
-O primeiro comando obtém todas as **PSSessions** que foram criadas na sessão atual. Ele envia as **PSSessions** para o cmdlet Format-Table, que exibe as propriedades **ComputerName** e **InstanceId** de cada **PSSession** .
+O primeiro comando obtém todas as **PSSessions** que foram criadas na sessão atual. Ele envia as **PSSessions** para o cmdlet Format-Table, que exibe as propriedades **ComputerName** e **InstanceId** de cada **PSSession**.
 
-O segundo comando usa o `Get-PSSession` cmdlet para obter uma **PSSession** específica e salvá-la na `$s` variável. O comando usa o parâmetro **InstanceId** para identificar a **PSSession** .
+O segundo comando usa o `Get-PSSession` cmdlet para obter uma **PSSession** específica e salvá-la na `$s` variável. O comando usa o parâmetro **InstanceId** para identificar a **PSSession**.
 
 O terceiro comando usa o cmdlet Remove-PSSession para excluir a **PSSession** na `$s` variável.
 
@@ -292,7 +292,7 @@ Esse parâmetro configura a conexão temporária que é criada para executar um 
 Os valores aceitáveis para esse parâmetro são:
 
 - Padrão
-- Básico
+- Basic
 - CredSSP
 - Digest
 - Kerberos
@@ -301,7 +301,7 @@ Os valores aceitáveis para esse parâmetro são:
 
 O valor padrão é Default.
 
-Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) na biblioteca MSDN.
+Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 Cuidado: a autenticação do Credential Security Support Provider (CredSSP), na qual as credenciais do usuário são passadas para um computador remoto a ser autenticado, foi projetada para comandos que exigem autenticação em mais de um recurso, como acessar um compartilhamento de rede remoto. Esse mecanismo aumenta o risco de segurança da operação remota. Se o computador remoto estiver comprometido, as credenciais que são passadas a ele podem ser usadas para controlar a sessão de rede.
 
@@ -691,9 +691,9 @@ Não é possível redirecionar a entrada para este cmdlet.
 
 Um valor **Availability** de **None** indica que é possível conectar-se à sessão. Um valor de **ocupado** indica que você não pode se conectar à **PSSession** porque ela está conectada a outra sessão.
 
-Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RunspaceState](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate).
+Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RunspaceAvailability](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability).
+Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## LINKS RELACIONADOS
 

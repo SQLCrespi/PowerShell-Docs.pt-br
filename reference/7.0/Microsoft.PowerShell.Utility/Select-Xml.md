@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: 85d5869650a95a011f705612927b55acf4901ed3
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: fdb6787c3c2e7497208a6d04fe05d7dcefb4a11a
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93194933"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391146"
 ---
 # Select-Xml
 
@@ -202,7 +202,7 @@ Você pode usar qualquer nome que não esteja reservado, mas não pode usar xmln
 ### -Conteúdo
 
 Especifica uma cadeia de caracteres que contém o XML a ser pesquisado.
-Você também pode canalizar cadeias de caracteres para **Select-XML** .
+Você também pode canalizar cadeias de caracteres para **Select-XML**.
 
 ```yaml
 Type: System.String[]
@@ -327,7 +327,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
-* O XPath é uma linguagem padrão que foi projetada para identificar partes de um documento XML. Para obter mais informações sobre a linguagem XPath, consulte [referência de XPath](https://msdn.microsoft.com/library/ms256115) e a seção filtros de seleção da seleção de [eventos](https://msdn.microsoft.com/library/aa385231) na biblioteca MSDN.
+O XPath é uma linguagem padrão que foi projetada para identificar partes de um documento XML. Para obter mais informações sobre a linguagem XPath, consulte [referência de XPath](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) e a seção filtros de seleção da seleção de [eventos](/previous-versions//aa385231(v=vs.85)).
 
 ## LINKS RELACIONADOS
 

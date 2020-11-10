@@ -7,12 +7,12 @@ ms.date: 4/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-member?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Member
-ms.openlocfilehash: cbac0c87ea58acc198fcf981edfd934679e4b3cf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ecf83a4dbf267fe105673e062740876156d18d49
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194534"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389769"
 ---
 # Add-Member
 
@@ -63,7 +63,7 @@ Você também pode usar o `Export-Clixml` cmdlet para salvar a instância do obj
 A partir do Windows PowerShell 3,0, `Add-Member` há novos recursos que facilitam a adição de propriedades de anotação a objetos.
 Você pode usar os parâmetros **NotePropertyName** e **NotePropertyValue** para definir uma propriedade de anotação ou usar o parâmetro **NotePropertyMembers** , que usa uma tabela de hash de valores e nomes de propriedades de anotação.
 
-Além disso, a partir do Windows PowerShell 3.0, o parâmetro **PassThru** , que gera um objeto de saída, é necessário com menos frequência. `Add-Member` Agora adiciona os novos membros diretamente ao objeto de entrada de mais tipos. Para obter mais informações, consulte a descrição do parâmetro **PassThru** .
+Além disso, a partir do Windows PowerShell 3.0, o parâmetro **PassThru** , que gera um objeto de saída, é necessário com menos frequência. `Add-Member` Agora adiciona os novos membros diretamente ao objeto de entrada de mais tipos. Para obter mais informações, consulte a descrição do parâmetro **PassThru**.
 
 ## EXEMPLOS
 
@@ -111,7 +111,7 @@ $A.Size
 Este exemplo adiciona a propriedade **StringUse** note a uma cadeia de caracteres.
 Como `Add-Member` o não pode adicionar tipos a objetos de entrada de **cadeia de caracteres** , você pode especificar o parâmetro **PassThru** para gerar um objeto de saída. O último comando no exemplo exibe a nova propriedade.
 
-Este exemplo usa o parâmetro **NotePropertyMembers** . O valor do parâmetro **NotePropertyMembers** é uma tabela de hash. A chave é o nome da propriedade de observação, **StringUse** , e o valor é o valor da propriedade Note, **Display** .
+Este exemplo usa o parâmetro **NotePropertyMembers** . O valor do parâmetro **NotePropertyMembers** é uma tabela de hash. A chave é o nome da propriedade de observação, **StringUse** , e o valor é o valor da propriedade Note, **Display**.
 
 ```powershell
 $A = "A string"
@@ -148,7 +148,7 @@ Esta função copia todas as propriedades de um objeto em outro objeto.
 
 O `foreach` loop usa o `Get-Member` cmdlet para obter cada uma das propriedades do objeto **from** . Os comandos dentro do `foreach` loop são executados em série em cada uma das propriedades.
 
-O `Add-Member` comando adiciona a propriedade do objeto **de** ao objeto **to** como uma **NoteProperty** . O valor é copiado usando o parâmetro **Value** . Ele usa o parâmetro **Force** para adicionar membros com o mesmo nome de membro.
+O `Add-Member` comando adiciona a propriedade do objeto **de** ao objeto **to** como uma **NoteProperty**. O valor é copiado usando o parâmetro **Value** . Ele usa o parâmetro **Force** para adicionar membros com o mesmo nome de membro.
 
 ```powershell
 function Copy-Property ($From, $To)
@@ -165,12 +165,12 @@ function Copy-Property ($From, $To)
 
 Este exemplo cria um objeto personalizado de **ativo** .
 
-O `New-Object` cmdlet cria um **PSObject** . O exemplo salva o **PSObject** na `$Asset` variável.
+O `New-Object` cmdlet cria um **PSObject**. O exemplo salva o **PSObject** na `$Asset` variável.
 
 O segundo comando usa o `[ordered]` acelerador de tipo para criar um dicionário ordenado de nomes e valores. O comando salva o resultado na `$D` variável.
 
-O terceiro comando usa o parâmetro **NotePropertyMembers** do `Add-Member` cmdlet para adicionar o dicionário na `$D` variável ao **PSObject** .
-A propriedade **TypeName** atribui um novo nome, **ativo** , ao **PSObject** .
+O terceiro comando usa o parâmetro **NotePropertyMembers** do `Add-Member` cmdlet para adicionar o dicionário na `$D` variável ao **PSObject**.
+A propriedade **TypeName** atribui um novo nome, **ativo** , ao **PSObject**.
 
 O último comando canaliza o novo objeto **Asset** para o `Get-Member` cmdlet. A saída mostra que o objeto tem um nome de tipo de **ativo** e as propriedades de observação que definimos no dicionário ordenado.
 
@@ -244,7 +244,7 @@ Os valores aceitáveis para esse parâmetro são:
 - ScriptMethod
 - CodeMethod
 
-Para obter informações sobre esses valores, consulte [Enumeração PSMemberTypes](/dotnet/api/system.management.automation.psmembertypes) na biblioteca MSDN.
+Para obter informações sobre esses valores, consulte [Enumeração PSMemberTypes](/dotnet/api/system.management.automation.psmembertypes) no SDK do PowerShell.
 
 Nem todos os objetos têm todos os tipos de membros.
 Se você especificar um tipo de membro que o objeto não tem, o PowerShell retornará um erro.
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 Especifica o nome da propriedade de observação.
 
-Use este parâmetro com o parâmetro **NotePropertyValue** .
+Use este parâmetro com o parâmetro **NotePropertyValue**.
 Esse parâmetro é opcional.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
@@ -367,10 +367,10 @@ Accept wildcard characters: False
 
 ### -Segundovalue
 
-Especifica informações opcionais adicionais sobre membros **AliasProperty** , **ScriptProperty** , **CodeProperty** ou **CodeMethod** .
+Especifica informações opcionais adicionais sobre membros **AliasProperty** , **ScriptProperty** , **CodeProperty** ou **CodeMethod**.
 
 Se usado ao adicionar um **AliasProperty** , esse parâmetro deve ser um tipo de dados.
-Uma conversão para o tipo de dados especificado é adicionada ao valor de **AliasProperty** .
+Uma conversão para o tipo de dados especificado é adicionada ao valor de **AliasProperty**.
 
 Por exemplo, se você adicionar um **AliasProperty** que forneça um nome alternativo para uma propriedade de cadeia de caracteres, você também poderá especificar um parâmetro de **segundovalue** de **System. Int32** para indicar que o valor dessa propriedade de cadeia de caracteres deve ser convertido em um inteiro quando acessado usando o **AliasProperty** correspondente.
 
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 Especifica um nome para o tipo.
 
 Quando o tipo é uma classe no namespace **System** ou um tipo que tem um acelerador de tipo, você pode inserir o nome curto do tipo. Caso contrário, é necessário o nome completo do tipo.
-Esse parâmetro é efetivo somente quando **InputObject** é um **PSObject** .
+Esse parâmetro é efetivo somente quando **InputObject** é um **PSObject**.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -450,7 +450,7 @@ Você pode adicionar membros somente a objetos **PSObject** . Para determinar se
 Por exemplo, para testar um objeto armazenado na `$obj` variável, digite `$obj -is [PSObject]` .
 
 Os nomes dos parâmetros **MemberType** , **Name** , **Value** e **SecondValue** são opcionais.
-Se você omitir os nomes de parâmetro, os valores de parâmetro não nomeados deverão aparecer nesta ordem: **MemberType** , **Name** , **Value** e **SecondValue** .
+Se você omitir os nomes de parâmetro, os valores de parâmetro não nomeados deverão aparecer nesta ordem: **MemberType** , **Name** , **Value** e **SecondValue**.
 
 Se você incluir os nomes dos parâmetros, os parâmetros podem aparecer em qualquer ordem.
 
