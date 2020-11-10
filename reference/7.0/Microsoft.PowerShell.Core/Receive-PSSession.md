@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: b0177a00bbbf93659775ee94f7d4898a99f570f3
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 5c7783cb6f865aead9aae7ae0df77d9ee2db7b16
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94345566"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391350"
 ---
 # Receive-PSSession
 
@@ -789,7 +789,7 @@ Quando você desconecta uma **PSSession** , o estado da sessão é desconectado 
 - O valor da propriedade **State** é relativo a sessão atual. Um valor de desconectado significa que a **PSSession** não está conectada à sessão atual. No entanto, isso não significa que a **PSSession** seja desconectada de todas as sessões. Ela pode ser conectada a uma sessão diferente.
   Para determinar se é possível conectar-se ou reconectar-se à sessão, utilize a propriedade **Availability**.
 - Um valor **Availability** de None indica que é possível conectar-se à sessão. Um valor de ocupado indica que você não pode se conectar à **PSSession** porque ela está conectada a outra sessão.
-- Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [RUNSPACESTATE](/dotnet/api/system.management.automation.runspaces.runspacestate) na biblioteca MSDN.
+- Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate).
 - Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## LINKS RELACIONADOS

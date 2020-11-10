@@ -6,12 +6,12 @@ ms.date: 2/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Functions
-ms.openlocfilehash: bef1f9f0b672f45c30626a1bbe4f2c6a7dfa540b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2e1a94659b3a0b8368b0b2611f470a0e676edd55
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196356"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391452"
 ---
 # <a name="about-functions"></a>Sobre o Functions
 
@@ -41,7 +41,7 @@ Um filtro é um tipo especial de função que usa a `Filter` palavra-chave.
 
 As funções também podem atuar como cmdlets. Você pode criar uma função que funciona exatamente como um cmdlet sem usar a `C#` programação. Para obter mais informações, consulte [about_Functions_Advanced](about_Functions_Advanced.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 Veja a seguir a sintaxe de uma função:
 
@@ -182,7 +182,7 @@ function Get-SmallFiles ($Size = 100) {
 
 Se você digitar `Get-SmallFiles` sem um valor, a função atribuirá 100 a `$size` . Se você fornecer um valor, a função usará esse valor.
 
-Opcionalmente, você pode fornecer uma breve cadeia de caracteres de ajuda que descreve o valor padrão do parâmetro, adicionando o atributo **PSDefaultValue** à descrição do parâmetro e especificando a propriedade da **ajuda** de **PSDefaultValue** . Para fornecer uma cadeia de caracteres de ajuda que descreva o valor padrão (100) do parâmetro de **tamanho** na `Get-SmallFiles` função, adicione o atributo **PSDefaultValue** , conforme mostrado no exemplo a seguir.
+Opcionalmente, você pode fornecer uma breve cadeia de caracteres de ajuda que descreve o valor padrão do parâmetro, adicionando o atributo **PSDefaultValue** à descrição do parâmetro e especificando a propriedade da **ajuda** de **PSDefaultValue**. Para fornecer uma cadeia de caracteres de ajuda que descreva o valor padrão (100) do parâmetro de **tamanho** na `Get-SmallFiles` função, adicione o atributo **PSDefaultValue** , conforme mostrado no exemplo a seguir.
 
 ```powershell
 function Get-SmallFiles {
@@ -486,7 +486,7 @@ Você pode escrever ajuda para uma função usando qualquer um dos dois métodos
 
   Para associar a função ao tópico de ajuda baseado em XML, use a `.ExternalHelp` palavra-chave de ajuda baseada em comentários. Sem essa palavra-chave, `Get-Help` não é possível localizar o tópico de ajuda da função e as chamadas para `Get-Help` para a função retornam apenas a ajuda gerada automaticamente.
 
-  Para obter mais informações sobre a `ExternalHelp` palavra-chave, consulte [about_Comment_Based_Help](about_Comment_Based_Help.md). Para obter mais informações sobre a ajuda baseada em XML, consulte [como gravar a ajuda de cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415) na biblioteca MSDN.
+  Para obter mais informações sobre a `ExternalHelp` palavra-chave, consulte [about_Comment_Based_Help](about_Comment_Based_Help.md). Para obter mais informações sobre a ajuda baseada em XML, consulte [como gravar a ajuda do cmdlet](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets).
 
 ## <a name="see-also"></a>Confira também
 
@@ -513,4 +513,3 @@ Você pode escrever ajuda para uma função usando qualquer um dos dois métodos
 [about_Script_Blocks](about_Script_Blocks.md)
 
 [about_Function_provider](about_Function_provider.md)
-
