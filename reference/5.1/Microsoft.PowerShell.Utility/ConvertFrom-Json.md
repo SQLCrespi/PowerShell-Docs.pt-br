@@ -7,12 +7,12 @@ ms.date: 10/10/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-Json
-ms.openlocfilehash: f2159a2de3432aec14fb395b93ed476f349616a8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e1bab9250269dadf0d899f9e172e8a4a8387271d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193852"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388120"
 ---
 # ConvertFrom-Json
 
@@ -27,7 +27,7 @@ ConvertFrom-Json [-InputObject] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-O `ConvertFrom-Json` cmdlet converte uma cadeia de caracteres formatada JavaScript Object Notation (JSON) em um objeto **PSCustomObject** personalizado que tem uma propriedade para cada campo na cadeia de caracteres JSON. JSON utilizado comumente por sites da web para fornecer uma representação textual de objetos. O padrão JSON não proíbe o uso que seja proibido com um **PSCustomObject** . Por exemplo, se a cadeia de caracteres JSON contiver chaves duplicadas, somente a última chave será usada por esse cmdlet. Consulte outros exemplos abaixo.
+O `ConvertFrom-Json` cmdlet converte uma cadeia de caracteres formatada JavaScript Object Notation (JSON) em um objeto **PSCustomObject** personalizado que tem uma propriedade para cada campo na cadeia de caracteres JSON. JSON utilizado comumente por sites da web para fornecer uma representação textual de objetos. O padrão JSON não proíbe o uso que seja proibido com um **PSCustomObject**. Por exemplo, se a cadeia de caracteres JSON contiver chaves duplicadas, somente a última chave será usada por esse cmdlet. Consulte outros exemplos abaixo.
 
 Para gerar uma cadeia de caracteres JSON de qualquer objeto, use o `ConvertTo-Json` cmdlet.
 
@@ -40,7 +40,7 @@ Esse cmdlet foi introduzido no PowerShell 3,0.
 
 ### Exemplo 1: converter um objeto DateTime em um objeto JSON
 
-Esse comando usa os `ConvertTo-Json` `ConvertFrom-Json` cmdlets e para converter um objeto **DateTime** do `Get-Date` cmdlet em um objeto JSON, em seguida, em um **PSCustomObject** .
+Esse comando usa os `ConvertTo-Json` `ConvertFrom-Json` cmdlets e para converter um objeto **DateTime** do `Get-Date` cmdlet em um objeto JSON, em seguida, em um **PSCustomObject**.
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json

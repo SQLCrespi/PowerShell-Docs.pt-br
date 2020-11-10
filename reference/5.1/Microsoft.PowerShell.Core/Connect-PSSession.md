@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Connect-PSSession
-ms.openlocfilehash: 8aff8a2b3962b3bf09d158247c06b36f99eaf527
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 3352055e9c77dd944ffd66fa5db9863166ad7e95
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342511"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388800"
 ---
 # Connect-PSSession
 
@@ -213,7 +213,6 @@ Indica que esse cmdlet permite o redirecionamento dessa conexão para um URI alt
 Quando você usa o parâmetro **ConnectionURI** , o destino remoto pode retornar uma instrução para redirecionar para um URI diferente. Por padrão, o PowerShell não redireciona conexões, mas você pode usar esse parâmetro para permitir que ele redirecione a conexão.
 
 É possível também limitar o número de vezes que a conexão é redirecionada alterando o valor da opção de sessão **MaximumConnectionRedirectionCount**. Use o parâmetro **MaximumRedirection** do `New-PSSessionOption` cmdlet ou defina a propriedade **MaximumConnectionRedirectionCount** da variável de preferência **$PSSessionOption** . O valor padrão é 5.
-O valor padrão é 5.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -261,7 +260,7 @@ Especifica o mecanismo usado para autenticar credenciais de usuário no comando 
 
 O valor padrão é Default.
 
-Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) na biblioteca MSDN.
+Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 > [!CAUTION]
 > A autenticação CredSSP (Credencial Security Support Provider), na qual as credenciais do usuário são passadas a um computador remoto para autenticação, foi projetada para comandos que exijam autenticação em mais de um recurso, como acessar um compartilhamento de rede remota. Esse mecanismo aumenta o risco de segurança da operação remota. Se o computador remoto estiver comprometido, as credenciais que são passadas a ele podem ser usadas para controlar a sessão de rede.
@@ -611,9 +610,9 @@ Esse cmdlet retorna um objeto que representa a sessão à qual ele se reconecta.
 
   Um valor **Availability** de None indica que é possível conectar-se à sessão. Um valor de ocupado indica que você não pode se conectar à **PSSession** porque ela está conectada a outra sessão.
 
-  Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RUNSPACESTATE](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate) na biblioteca MSDN.
+  Para obter mais informações sobre os valores da propriedade **State** de sessões, consulte [Enumeração RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-  Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RUNSPACEAVAILABILITY](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability) na biblioteca MSDN.
+  Para obter mais informações sobre os valores da propriedade de sessões de **disponibilidade** , consulte [Enumeração RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 - Não é possível alterar o valor de tempo limite ocioso de uma **PSSession** quando você se conecta à **PSSession**. O parâmetro **SessionOption** de `Connect-PSSession` usa um objeto **SessionOption** que tem um valor **IdleTimeout** . No entanto, o valor **IdleTimeout** do objeto **SessionOption** e o valor **IdleTimeout** da `$PSSessionOption` variável são ignorados ao se conectar a uma **PSSession**.
 

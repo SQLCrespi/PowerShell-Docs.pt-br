@@ -6,12 +6,12 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem Provider
-ms.openlocfilehash: 3b37f6e4eb53ef7291c30cbc9820caf83641a9bb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 204a90dc346e6d4ff483777b9adf7a70017ef093
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196207"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386885"
 ---
 # <a name="filesystem-provider"></a>FileSystem Provider
 
@@ -23,7 +23,7 @@ FileSystem
 
 `C:`, `D:` ...
 
-## <a name="capabilities"></a>Funcionalidades
+## <a name="capabilities"></a>Capacidades
 
 **Filtrar** , **ShouldProcess**
 
@@ -206,7 +206,7 @@ Esse comando retorna um objeto [System. Security. AccessControl. FileSecurity](/
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-Para obter mais informações sobre esse objeto, redirecione o comando para o cmdlet [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) . Ou então, consulte "classe[FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) " na biblioteca do MSDN (Microsoft Developer Network).
+Para obter mais informações sobre esse objeto, redirecione o comando para o cmdlet [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) . Ou, consulte classe [FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) .
 
 ### <a name="modify-the-acl-for-a-file"></a>Modificar a ACL de um arquivo
 
@@ -368,7 +368,7 @@ Você pode usar esse parâmetro para dividir um arquivo grande em arquivos menor
 
 > [!NOTE]
 > Atualmente, quando o valor do `-Delimiter` parâmetro é uma cadeia de caracteres vazia, [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) não retorna nada.
-> Este é um problema conhecido. Para forçar o [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) a retornar o arquivo inteiro como uma única cadeia de caracteres não delimitada, insira um valor que não existe no arquivo.
+> Esse é um problema conhecido. Para forçar o [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) a retornar o arquivo inteiro como uma única cadeia de caracteres não delimitada, insira um valor que não existe no arquivo.
 
 #### <a name="cmdlets-supported"></a>Cmdlets com suporte
 
@@ -517,10 +517,6 @@ Gerencia o fluxo de dados alternados. Insira o nome do fluxo. Curingas são perm
 ### <a name="raw-switchparameter"></a>Raw \<SwitchParameter\>
 
 Ignora os caracteres de nova linha. Retorna o conteúdo como um único item.
-
-#### <a name="cmdlets-supported"></a>Cmdlets com suporte
-
-- [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)
 
 #### <a name="cmdlets-supported"></a>Cmdlets com suporte
 

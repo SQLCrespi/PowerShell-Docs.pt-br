@@ -6,12 +6,12 @@ ms.date: 01/04/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_WS Management_Cmdlets
-ms.openlocfilehash: 242e9aef9015e3acef11a191a9f2fa83615a12db
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: afcc8ffe53f686cf77cf26374bbb68659e6883f5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93196550"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387933"
 ---
 # <a name="about-ws-management-cmdlets"></a>Sobre WS-Management cmdlets
 
@@ -90,7 +90,7 @@ Os cmdlets WS-Management a seguir estão disponíveis.
 
 ## <a name="additional-ws-management-information"></a>Informações adicionais de WS-Management
 
-Para obter mais informações sobre o WS-Management, consulte os tópicos a seguir na biblioteca do MSDN (Microsoft Developer Network).
+Para obter mais informações sobre o WS-Management, consulte os tópicos a seguir na documentação do Windows.
 
 [Gerenciamento Remoto do Windows](/windows/win32/winrm/portal)
 

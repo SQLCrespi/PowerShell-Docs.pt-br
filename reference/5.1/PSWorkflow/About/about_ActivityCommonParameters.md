@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_activitycommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_ActivityCommonParameters
-ms.openlocfilehash: b745bf17e4ae26156042ecdc25211830177bc692
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 93fdcdb9c5afe0b73e843baf2474ec7d3f96a6cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195813"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387797"
 ---
 # <a name="about-activitycommonparameters"></a>Sobre o ActivityCommonParameters
 
@@ -107,7 +107,7 @@ Valores válidos:
 
 - SilentlyContinue. Suprime a mensagem de erro e continua executando o comando.
 
-- Deixar. Exibe a mensagem de erro e para a execução do comando.
+- Parar. Exibe a mensagem de erro e para a execução do comando.
 
 #### <a name="input-object"></a>Entrada \<Object[]\>
 
@@ -150,7 +150,7 @@ O serviço WinRM usa o nome do aplicativo para selecionar um ouvinte para atende
 
 Especifica o mecanismo usado para autenticar as credenciais do usuário ao conectar-se aos computadores de destino. Os valores válidos são Default, Basic, Credssp, Digest, Kerberos, Negotiate e NegotiateWithImplicitCredential. O valor padrão é Default. Esse parâmetro comum de atividade também é um parâmetro comum de fluxo de trabalho.
 
-Para obter informações sobre os valores desse parâmetro, consulte a descrição da enumeração **System.Management.Automation.Runspaces.AuthenticationMechanism** no MSDN.
+Para obter informações sobre os valores desse parâmetro, consulte a descrição da enumeração **System. Management. Automation. Runspaces. AuthenticationMechanism** no SDK do PowerShell.
 
 > [!WARNING]
 > A autenticação CredSSP (Credencial Security Service Provider), na qual as credenciais do usuário são transmitidas a um computador remoto para autenticação, foi projetada para comandos que exigem autenticação em mais de um recurso, como acessar um compartilhamento de rede remota. Esse mecanismo aumenta o risco de segurança da operação remota. Se o computador remoto estiver comprometido, as credenciais que são passadas a ele podem ser usadas para controlar a sessão de rede.
@@ -341,7 +341,7 @@ Adiciona mensagens detalhadas da atividade à coleção de registros detalhados 
 
 Adiciona mensagens de aviso da atividade à coleção de registros de aviso especificada, em vez de gravar as mensagens de aviso no console ou no valor da propriedade de aviso do trabalho de fluxo. Você pode adicionar mensagens de aviso de várias atividades ao mesmo objeto de coleção de registros de aviso.
 
-#### <a name="result"></a>Resultado
+#### <a name="result"></a>Result
 
 Esse parâmetro só é válido em fluxos de trabalho XAML.
 
@@ -385,7 +385,7 @@ Valores válidos:
 
 - Inquire. Exibe a mensagem de aviso e solicita sua confirmação antes de continuar a execução. Esse valor raramente é usado.
 
-- Deixar. Exibe a mensagem de aviso e para a execução do comando.
+- Parar. Exibe a mensagem de aviso e para a execução do comando.
 
 > [!NOTE]
 > O parâmetro WarningAction não substitui o valor da variável de preferência $WarningAction quando o parâmetro é usado em um comando para executar um script ou uma função.

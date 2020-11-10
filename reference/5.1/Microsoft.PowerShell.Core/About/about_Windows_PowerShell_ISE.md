@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Windows_PowerShell_ISE
-ms.openlocfilehash: ec99dec9ea5012b41c10a56a688b23a6fa2c9dd8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ff543024d7c62c70217eeaf3ded192a5a24c4757
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196126"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388834"
 ---
 # <a name="about-windows-powershell-ise"></a>Sobre ISE do Windows PowerShell
 
@@ -121,7 +121,7 @@ ISE do Windows PowerShell é um recurso opcional do Windows ativado por padrão 
 Como ISE do Windows PowerShell requer uma interface do usuário, ela não funciona em instalações Server Core do Windows Server. No entanto, se você adicionar o recurso ISE do Windows PowerShell, a instalação será automaticamente convertida em servidor com uma GUI.
 
 O ISE do Windows PowerShell é compilado no WPF (Windows Presentation Foundation).
-Se os elementos gráficos de ISE do Windows PowerShell não forem renderizados corretamente no sistema, você poderá resolver o problema adicionando ou ajustando as configurações de renderização de gráficos "Desabilitar aceleração de hardware do WPF" em seu sistema. Para obter mais informações, consulte [configurações do registro de renderização de gráficos](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings) na biblioteca MSDN.
+Se os elementos gráficos de ISE do Windows PowerShell não forem renderizados corretamente no sistema, você poderá resolver o problema adicionando ou ajustando as configurações de renderização de gráficos "Desabilitar aceleração de hardware do WPF" em seu sistema. Para obter mais informações, consulte as [configurações de Registro de renderização de gráficos](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings).
 
 ## <a name="see-also"></a>CONSULTE TAMBÉM
 

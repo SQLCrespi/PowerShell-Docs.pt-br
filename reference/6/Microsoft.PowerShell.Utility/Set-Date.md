@@ -7,12 +7,12 @@ ms.date: 4/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-date?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Date
-ms.openlocfilehash: 4a7deaeb0570516c5d0cb1be704f0e1cb7bfe13c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 63742cf1cc7431668a769bec5d4798b23db8c2ae
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194385"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386880"
 ---
 # Set-Date
 
@@ -131,12 +131,9 @@ Accept wildcard characters: False
 
 Especifica quais elementos da data e hora são exibidos. Os valores aceitáveis para esse parâmetro são:
 
-- Data.
-  exibe somente a data.
-- Tempo.
-  exibe apenas a hora.
-- DateTime.
-  exibe a data e a hora.
+- **Data** – exibe apenas a data.
+- **Hora** -exibe apenas a hora.
+- **DateTime** – exibe a data e a hora.
 
 Este parâmetro afeta somente a exibição.
 Ele não afeta o objeto **DateTime** que o `Get-Date` recupera.
@@ -206,9 +203,9 @@ Você pode canalizar uma data para `Set-Date` .
 ## OBSERVAÇÕES
 
 - Use esse cmdlet com cuidado ao alterar a data e a hora do computador. A alteração pode impedir que o computador receba eventos de todo o sistema e atualizações que são disparadas por uma data ou hora. Use os parâmetros **WhatIf** e **Confirm** para evitar erros.
-- Você pode usar métodos padrão do .NET com os objetos **DateTime** e **TimeSpan** usados com o `Set-Date` , como **subdias** , **AddMonths** e **FromFileTime** . Para obter mais informações, consulte [métodos DateTime](/dotnet/api/system.datetime) e
+- Você pode usar métodos padrão do .NET com os objetos **DateTime** e **TimeSpan** usados com o `Set-Date` , como **subdias** , **AddMonths** e **FromFileTime**. Para obter mais informações, consulte [métodos DateTime](/dotnet/api/system.datetime) e
 
-  [Métodos TimeSpan](/dotnet/api/system.timespan) na biblioteca MSDN.
+  [Métodos TimeSpan](/dotnet/api/system.timespan) no SDK do .net.
 
 ## LINKS RELACIONADOS
 

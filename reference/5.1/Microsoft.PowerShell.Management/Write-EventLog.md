@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: cae34c4cf942d9aa4abb9a2d716ef9854f70de2e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193890"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388239"
 ---
 # Write-EventLog
 
@@ -27,12 +27,11 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## DESCRIPTION
-O cmdlet **Write-EventLog** grava um evento em um log de eventos.
+O `Write-EventLog` cmdlet grava um evento em um log de eventos.
 
 Para gravar um evento em um log de eventos, o log de eventos deve existir no computador, e a origem deve ser registrada para o log de eventos.
 
-Os cmdlets que contêm o substantivo **EventLog** (os cmdlets **EventLog** ) só funcionam em logs de eventos clássicos.
-Para obter eventos de logs que usam a tecnologia de log de eventos do Windows no Windows Vista e versões posteriores do sistema operacional Windows, use o cmdlet Get-WinEvent.
+Os cmdlets que contêm o substantivo **EventLog** (os cmdlets **EventLog** ) só funcionam em logs de eventos clássicos. Para obter eventos de logs que usam a tecnologia de log de eventos do Windows no Windows Vista e versões posteriores do sistema operacional Windows, use o `Get-WinEvent` cmdlet.
 
 ## EXEMPLOS
 
@@ -55,8 +54,8 @@ Este comando grava um evento da origem MyApp no log de eventos do aplicativo no 
 ## PARAMETERS
 
 ### -Categoria
-Especifica uma categoria de tarefa para o evento.
-Insira um número inteiro que está associado às cadeias de caracteres no arquivo de mensagem de categoria para o log de eventos.
+
+Especifica uma categoria de tarefa para o evento. Insira um número inteiro que está associado às cadeias de caracteres no arquivo de mensagem de categoria para o log de eventos.
 
 ```yaml
 Type: System.Int16
@@ -71,13 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Especifica um computador remoto.
-O padrão é o computador local.
+
+Especifica um computador remoto. O padrão é o computador local.
 
 Digite o nome NetBIOS, um endereço IP ou um nome de domínio totalmente qualificado de um computador remoto.
 
-Esse parâmetro não depende da comunicação remota do Windows PowerShell.
-Você pode usar o parâmetro *ComputerName* do cmdlet Get-EventLog mesmo se o computador não estiver configurado para executar comandos remotos.
+Esse parâmetro não depende da comunicação remota do Windows PowerShell. Você pode usar o parâmetro **ComputerName** do `Get-EventLog` cmdlet, mesmo se o computador não estiver configurado para executar comandos remotos.
 
 ```yaml
 Type: System.String
@@ -92,11 +90,10 @@ Accept wildcard characters: False
 ```
 
 ### -EntryType
-Especifica o tipo de entrada do evento.
-Os valores aceitáveis para esse parâmetro são: erro, aviso, informações, SuccessAudit e FailureAudit.
-O valor padrão é Information.
 
-Para obter uma descrição dos valores, consulte [Enumeração EventLogEntryType](https://go.microsoft.com/fwlink/?LinkId=143599) na biblioteca MSDN.
+Especifica o tipo de entrada do evento. Os valores aceitáveis para esse parâmetro são: erro, aviso, informações, SuccessAudit e FailureAudit. O valor padrão é Information.
+
+Para obter uma descrição dos valores, consulte [Enumeração EventLogEntryType](/dotnet/api/system.diagnostics.eventlogentrytype).
 
 ```yaml
 Type: System.Diagnostics.EventLogEntryType
@@ -112,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-Especifica o identificador do evento.
-Este parâmetro é necessário.
-O valor máximo para o parâmetro *EventID* é 65535.
+
+Especifica o identificador do evento. Este parâmetro é necessário. O valor máximo para o parâmetro **EventID** é 65535.
 
 ```yaml
 Type: System.Int32
@@ -129,10 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogName
-Especifica o nome do log no qual o evento será gravado.
-Insira o nome do log.
-O nome do log é o valor da propriedade **log** , não o **LogDisplayName** .
-Caracteres curinga não são permitidos.
+
+Especifica o nome do log no qual o evento será gravado. Insira o nome do log. O nome do log é o valor da propriedade **log** , não o **LogDisplayName**. Caracteres curinga não são permitidos.
 Este parâmetro é necessário.
 
 ```yaml
@@ -148,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Mensagem
-Especifica a mensagem do evento.
-Este parâmetro é necessário.
+
+Especifica a mensagem do evento. Este parâmetro é necessário.
 
 ```yaml
 Type: System.String
@@ -164,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawData
+
 Especifica os dados binários associados ao evento, em bytes.
 
 ```yaml
@@ -179,6 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+
 Especifica a origem do evento, que normalmente é o nome do aplicativo que está gravando o evento no log.
 
 ```yaml
@@ -194,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
@@ -208,9 +205,7 @@ Esse cmdlet retorna objetos que representam os eventos nos logs.
 
 ## OBSERVAÇÕES
 
-* Para usar **Write-EventLog** , inicie o Windows PowerShell usando a opção Executar como administrador.
-
-*
+Para usar `Write-EventLog` o, inicie o Windows PowerShell usando a opção Executar como administrador.
 
 ## LINKS RELACIONADOS
 

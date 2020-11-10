@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/stop-job?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Job
-ms.openlocfilehash: 5b023efa2c1545da574f447b8542bfbfe9b5d861
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 56dc7462e2625768db8b52370d3b7d38c8defafe
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194605"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387253"
 ---
 # Stop-Job
 
@@ -59,19 +59,13 @@ Stop-Job [-PassThru] [-Filter] <Hashtable> [-WhatIf] [-Confirm] [<CommonParamete
 
 ## DESCRIPTION
 
-O cmdlet **Stop-Job** interrompe os trabalhos em segundo plano do PowerShell que estão em andamento.
-Você pode usar este cmdlet para interromper todos os trabalhos ou parar trabalhos selecionados com base em seu nome, ID, ID de instância ou estado ou passando um objeto de trabalho para **Stop-Job** .
+O `Stop-Job` cmdlet interrompe os trabalhos em segundo plano do PowerShell que estão em andamento. Você pode usar este cmdlet para interromper todos os trabalhos ou parar trabalhos selecionados com base em seu nome, ID, ID de instância ou estado ou passando um objeto de trabalho para `Stop-Job` .
 
-Você pode usar **Stop-Job** para interromper trabalhos em segundo plano, como aqueles que foram iniciados usando o cmdlet Start-Job ou o parâmetro *AsJob* de qualquer cmdlet.
-Quando você interrompe um trabalho em segundo plano, o PowerShell conclui todas as tarefas que estão pendentes na fila de trabalho e, em seguida, encerra o trabalho.
-Nenhuma tarefa nova é adicionada à fila depois que esse comando é enviado.
+Você pode usar `Stop-Job` para interromper trabalhos em segundo plano, como aqueles que foram iniciados usando `Start-Job` o cmdlet ou o parâmetro **AsJob** de qualquer cmdlet. Quando você interrompe um trabalho em segundo plano, o PowerShell conclui todas as tarefas que estão pendentes na fila de trabalho e, em seguida, encerra o trabalho. Nenhuma tarefa nova é adicionada à fila depois que esse comando é enviado.
 
-Esse cmdlet não exclui os trabalhos em segundo plano.
-Para excluir um trabalho, use o cmdlet Remove-Job.
+Esse cmdlet não exclui os trabalhos em segundo plano. Para excluir um trabalho, use o `Remove-Job` cmdlet.
 
-A partir do Windows PowerShell 3,0, o **Stop-Job** também interrompe os tipos de trabalho personalizados, como trabalhos de workflow e instâncias de trabalhos agendados.
-Para habilitar **Stop-Job** para parar um trabalho com tipo de trabalho personalizado, importe o módulo que dá suporte ao tipo de trabalho personalizado na sessão antes de executar um comando **Stop-Job** , seja usando o cmdlet Import-Module ou usando ou obtendo um cmdlet no módulo.
-Para obter informações sobre um tipo específico de trabalho personalizado, consulte a documentação do recurso de tipo de trabalho personalizado.
+A partir do Windows PowerShell 3,0, `Stop-Job` o também interrompe os tipos de trabalho personalizados, como trabalhos de workflow e instâncias de trabalhos agendados. Para habilitar o `Stop-Job` para parar um trabalho com o tipo de trabalho personalizado, importe o módulo que dá suporte ao tipo de trabalho personalizado na sessão antes de executar um `Stop-Job` comando, seja usando o `Import-Module` cmdlet ou obtendo um cmdlet no módulo. Para obter informações sobre um tipo específico de trabalho personalizado, consulte a documentação do recurso de tipo de trabalho personalizado.
 
 ## EXEMPLOS
 
@@ -83,25 +77,18 @@ $j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-EventL
 Invoke-Command -Session $s -ScriptBlock { Stop-job -Job $Using:j }
 ```
 
-Esse exemplo mostra como usar o cmdlet **Stop-Job** para interromper um trabalho que está sendo executado em um computador remoto.
+Este exemplo mostra como usar o `Stop-Job` cmdlet para interromper um trabalho que está sendo executado em um computador remoto.
 
-Como o trabalho foi iniciado usando o cmdlet Invoke-Command para executar um comando **Start-Job** remotamente, o objeto de trabalho é armazenado no computador remoto.
-Você deve usar outro comando **Invoke-Command** para executar um comando **Stop-Job** remotamente.
-Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.
+Como o trabalho foi iniciado usando o `Invoke-Command` cmdlet para executar um `Start-Job` comando remotamente, o objeto de trabalho é armazenado no computador remoto. Você deve usar outro `Invoke-Command` comando para executar um `Stop-Job` comando remotamente. Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.
 
-O primeiro comando cria uma sessão do PowerShell ( **PSSession** ) no computador Server01 e, em seguida, armazena o objeto de sessão na variável $s.
-O comando usa as credenciais de um administrador de domínio.
+O primeiro comando cria uma sessão do PowerShell ( **PSSession** ) no computador Server01 e, em seguida, armazena o objeto de sessão na `$s` variável. O comando usa as credenciais de um administrador de domínio.
 
-O segundo comando usa o cmdlet **Invoke-Command** para executar um comando **Start-Job** na sessão.
-O comando no trabalho obtém todos os eventos no log de eventos do Sistema.
-O objeto de trabalho resultante é armazenado na variável $j.
+O segundo comando usa o `Invoke-Command` cmdlet para executar um `Start-Job` comando na sessão. O comando no trabalho obtém todos os eventos no log de eventos do Sistema. O objeto de trabalho resultante é armazenado na `$j` variável.
 
-O terceiro comando interrompe o trabalho.
-Ele usa o cmdlet **Invoke-Command** para executar um comando **Stop-Job** em **PSSession** em Server01.
-Como os objetos de trabalho são armazenados em $j, que é uma variável no computador local, o comando usa o modificador de escopo Using para identificar $j como uma variável local.
+O terceiro comando interrompe o trabalho. Ele usa o `Invoke-Command` cmdlet para executar um `Stop-Job` comando em **PSSession** no Server01. Como os objetos de trabalho são armazenados em `$j` , que é uma variável no computador local, o comando usa o modificador de escopo de uso para identificar `$j` como uma variável local.
 Para obter mais informações sobre o modificador de escopo de uso, consulte [about_Remote_Variables](about/about_Remote_Variables.md).
 
-Quando o comando for concluído, o trabalho será interrompido e a **PSSession** em $s estará disponível para uso.
+Quando o comando for concluído, o trabalho será interrompido e a **PSSession** no `$s` estará disponível para uso.
 
 ### Exemplo 2: parar um trabalho em segundo plano
 
@@ -157,12 +144,9 @@ Stop-Job -InstanceId e3bbfed1-9c53-401a-a2c3-a8db34336adf
 
 Esses comandos mostram como interromper um trabalho com base em sua ID de instância.
 
-O primeiro comando usa o cmdlet Get-Job para obter os trabalhos na sessão atual.
-O comando usa um operador de pipeline (|) para enviar os trabalhos para um comando Format-Table, que exibe uma tabela das propriedades especificadas de cada trabalho.
-A tabela inclui a ID da instância de cada trabalho.
-Ele usa uma propriedade calculada para exibir o estado do trabalho.
+O primeiro comando usa o `Get-Job` cmdlet para obter os trabalhos na sessão atual. O comando usa um operador de pipeline ( `|` ) para enviar os trabalhos para um `Format-Table` comando, que exibe uma tabela das propriedades especificadas de cada trabalho. A tabela inclui a ID da instância de cada trabalho. Ele usa uma propriedade calculada para exibir o estado do trabalho.
 
-O segundo comando usa um comando **Stop-Job** que tem o parâmetro *InstanceId* para interromper um trabalho selecionado.
+O segundo comando usa um `Stop-Job` comando que tem o parâmetro **InstanceId** para interromper um trabalho selecionado.
 
 ### Exemplo 7: parar um trabalho em um computador remoto
 
@@ -177,20 +161,16 @@ Id    Name    State      HasMoreData     Location         Command
 5     Job5    Stopped    True            user01-tablet    get-eventlog system
 ```
 
-Esse exemplo mostra como usar o cmdlet **Stop-Job** para interromper um trabalho que está sendo executado em um computador remoto.
+Este exemplo mostra como usar o `Stop-Job` cmdlet para interromper um trabalho que está sendo executado em um computador remoto.
 
-Como o trabalho foi iniciado usando o parâmetro *AsJob* do cmdlet **Invoke-Command** , o objeto de trabalho está localizado no computador local, embora o trabalho seja executado no computador remoto.
-Portanto, você pode usar um comando local **Stop-Job** para interromper o trabalho.
+Como o trabalho foi iniciado usando o parâmetro **AsJob** do `Invoke-Command` cmdlet, o objeto de trabalho está localizado no computador local, embora o trabalho seja executado no computador remoto. Portanto, você pode usar um `Stop-Job` comando local para interromper o trabalho.
 
-O primeiro comando usa o cmdlet **Invoke-Command** para iniciar um trabalho de segundo plano no computador Server01.
-O comando usa o parâmetro *AsJob* para executar o comando remoto como um trabalho em segundo plano.
+O primeiro comando usa o `Invoke-Command` cmdlet para iniciar um trabalho em segundo plano no computador Server01. O comando usa o parâmetro **AsJob** para executar o comando remoto como um trabalho em segundo plano.
 
-Esse comando retorna um objeto de trabalho, que é o mesmo objeto de trabalho retornado pelo cmdlet **Start-Job** .
-O comando salva o objeto de trabalho na variável $j.
+Esse comando retorna um objeto de trabalho, que é o mesmo objeto de trabalho que o `Start-Job` cmdlet retorna.
+O comando salva o objeto de trabalho na `$j` variável.
 
-O segundo comando usa um operador de pipeline para enviar o trabalho na variável $j para Stop-Job.
-O comando usa o parâmetro *PassThru* para instruir **Stop-Job** a retornar um objeto de trabalho.
-A exibição do objeto de trabalho confirma que o estado do trabalho foi interrompido.
+O segundo comando usa um operador de pipeline para enviar o trabalho na `$j` variável para `Stop-Job` . O comando usa o parâmetro **PassThru** para direcionar `Stop-Job` para retornar um objeto de trabalho. A exibição do objeto de trabalho confirma que o estado do trabalho foi interrompido.
 
 Para obter mais informações sobre trabalhos remotos em segundo plano, consulte about_Remote_Jobs.
 
@@ -198,13 +178,10 @@ Para obter mais informações sobre trabalhos remotos em segundo plano, consulte
 
 ### -Filter
 
-Especifica uma tabela de hash de condições.
-Esse cmdlet interrompe os trabalhos que atendem a todas as condições.
+Especifica uma tabela de hash de condições. Esse cmdlet interrompe os trabalhos que atendem a todas as condições.
 Insira uma tabela de hash na qual as chaves são propriedades do trabalho e os valores são valores de propriedade do trabalho.
 
-Este parâmetro funciona somente em tipos de trabalho personalizados, como os de fluxo de trabalho e os trabalhos agendados.
-Ele não funciona em trabalhos em segundo plano padrão, como aqueles criados usando o cmdlet **Start-Job** .
-Para obter informações sobre o suporte para este parâmetro, consulte o tópico da Ajuda para o tipo de trabalho em questão.
+Este parâmetro funciona somente em tipos de trabalho personalizados, como os de fluxo de trabalho e os trabalhos agendados. Ele não funciona em trabalhos em segundo plano padrão, como aqueles criados usando o `Start-Job` cmdlet. Para obter informações sobre o suporte para este parâmetro, consulte o tópico da Ajuda para o tipo de trabalho em questão.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -222,13 +199,9 @@ Accept wildcard characters: False
 
 ### -Id
 
-Especifica as IDs de trabalhos que este cmdlet interrompe.
-O padrão é todos os trabalhos na sessão atual.
+Especifica as IDs de trabalhos que este cmdlet interrompe. O padrão é todos os trabalhos na sessão atual.
 
-A ID é um inteiro que identifica exclusivamente o trabalho na sessão atual.
-É mais fácil lembrar e digitar do que a ID da instância, mas só é exclusiva na sessão atual.
-Você pode digitar uma ou mais IDs, separadas por vírgulas.
-Para localizar a ID de um trabalho, digite `Get-Job` .
+A ID é um inteiro que identifica exclusivamente o trabalho na sessão atual. É mais fácil lembrar e digitar do que a ID da instância, mas só é exclusiva na sessão atual. Você pode digitar uma ou mais IDs, separadas por vírgulas. Para localizar a ID de um trabalho, digite `Get-Job` .
 
 ```yaml
 Type: System.Int32[]
@@ -244,11 +217,9 @@ Accept wildcard characters: False
 
 ### -InstanceId
 
-Especifica as IDs de instância dos trabalhos que este cmdlet interrompe.
-O padrão é obter todos os trabalhos.
+Especifica as IDs de instância dos trabalhos que este cmdlet interrompe. O padrão é obter todos os trabalhos.
 
-Uma ID de instância é um GUID que identifica exclusivamente o trabalho no computador.
-Para localizar a ID da instância de um trabalho, use Get-Job.
+Uma ID de instância é um GUID que identifica exclusivamente o trabalho no computador. Para localizar a ID de instância de um trabalho, use `Get-Job` .
 
 ```yaml
 Type: System.Guid[]
@@ -264,10 +235,7 @@ Accept wildcard characters: False
 
 ### -Trabalho
 
-Especifica os trabalhos que este cmdlet interrompe.
-Insira uma variável que contenha os trabalhos ou um comando que os obtenha.
-Você também pode usar um operador de pipeline para enviar trabalhos para o cmdlet **Stop-Job** .
-Por padrão, **Stop-Job** exclui todos os trabalhos que foram iniciados na sessão atual.
+Especifica os trabalhos que este cmdlet interrompe. Insira uma variável que contenha os trabalhos ou um comando que os obtenha. Você também pode usar um operador de pipeline para enviar trabalhos para o `Stop-Job` cmdlet. Por padrão, o `Stop-Job` exclui todos os trabalhos que foram iniciados na sessão atual.
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -283,11 +251,9 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica nomes amigáveis de trabalhos que este cmdlet interrompe.
-Digite os nomes de trabalho em uma lista separada por vírgulas ou use caracteres curinga (*) para inserir um padrão de nome de trabalho.
-Por padrão, **Stop-Job** interrompe todos os trabalhos criados na sessão atual.
+Especifica nomes amigáveis de trabalhos que este cmdlet interrompe. Digite os nomes de trabalho em uma lista separada por vírgulas ou use caracteres curinga (*) para inserir um padrão de nome de trabalho. Por padrão, o `Stop-Job` interrompe todos os trabalhos criados na sessão atual.
 
-Como não há garantia de que o nome amigável seja exclusivo, use os parâmetros *WhatIf* e *Confirm* ao parar trabalhos por nome.
+Como não há garantia de que o nome amigável seja exclusivo, use os parâmetros **WhatIf** e **Confirm** ao parar trabalhos por nome.
 
 ```yaml
 Type: System.String[]
@@ -303,8 +269,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-Retorna um objeto que representa o item com que você está trabalhando.
-Por padrão, este cmdlet não gera saída.
+Retorna um objeto que representa o item com que você está trabalhando. Por padrão, este cmdlet não gera saída.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -320,9 +285,7 @@ Accept wildcard characters: False
 
 ### -Estado
 
-Especifica um estado de trabalho.
-Este cmdlet interrompe apenas os trabalhos no estado especificado.
-Os valores aceitáveis para esse parâmetro são:
+Especifica um estado de trabalho. Este cmdlet interrompe apenas os trabalhos no estado especificado. Os valores aceitáveis para esse parâmetro são:
 
 - NotStarted
 - Executando
@@ -335,7 +298,7 @@ Os valores aceitáveis para esse parâmetro são:
 - Suspensão
 - Parando
 
-Para obter mais informações sobre os Estados de trabalho, consulte [Enumeração JobState](https://msdn.microsoft.com/library/system.management.automation.jobstate) na biblioteca MSDN.
+Para obter mais informações sobre os Estados de trabalho, consulte [Enumeração JobState](/dotnet/api/system.management.automation.jobstate).
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -397,8 +360,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum, System. Management. Automation. PSRemotingJob
 
-Esse cmdlet retorna um objeto de trabalho, se você especificar o parâmetro *PassThru* .
-Caso contrário, este cmdlet não gera nenhuma saída.
+Esse cmdlet retorna um objeto de trabalho, se você especificar o parâmetro **PassThru** . Caso contrário, este cmdlet não gera nenhuma saída.
 
 ## OBSERVAÇÕES
 

@@ -7,12 +7,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 67501a78ba577f63c97e595f4bacd28160fea416
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 11533a9b127dc6d088258392c0e142bfbe5c070c
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193824"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388018"
 ---
 # Export-PSSession
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-Exporta somente os comandos com os nomes especificados ou padrões de nome. Caracteres curinga são permitidos. Use **CommandName** ou seu alias, **Name** .
+Exporta somente os comandos com os nomes especificados ou padrões de nome. Caracteres curinga são permitidos. Use **CommandName** ou seu alias, **Name**.
 
 Por padrão, `Export-PSSession` o exporta todos os comandos da PSSession, exceto os comandos que têm os mesmos nomes que os comandos na sessão atual. Isso impede que os comandos sejam ocultados ou substituídos por comandos na sessão atual. Para exportar todos os comandos, mesmo aqueles que ocultam ou substituem outros comandos, use o parâmetro **AllowClobber** .
 
@@ -199,7 +199,7 @@ Accept wildcard characters: True
 
 ### -CommandType
 
-Exporta somente os tipos especificados de objetos de comando. Use o **CommandType** ou seu alias, **Type** .
+Exporta somente os tipos especificados de objetos de comando. Use o **CommandType** ou seu alias, **Type**.
 
 Os valores aceitáveis para esse parâmetro são os seguintes:
 
@@ -294,16 +294,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedModule
 
-Especifica os módulos com nomes que são especificados na forma de objetos **ModuleSpecification** .
-Consulte a seção comentários do [Construtor ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+Especifica os módulos com nomes que são especificados na forma de objetos **ModuleSpecification** . Consulte a seção comentários do [Construtor ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Por exemplo, o parâmetro **FullyQualifiedModule** aceita um nome de módulo que é especificado em um destes formatos:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
-
-**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional. Você não pode especificar o parâmetro **FullyQualifiedModule** no mesmo comando que um parâmetro de **módulo** ; os dois parâmetros são mutuamente exclusivos.
+**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional. Você não pode especificar o parâmetro **FullyQualifiedModule** no mesmo comando que um parâmetro de **módulo** . os dois parâmetros são mutuamente exclusivos.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]

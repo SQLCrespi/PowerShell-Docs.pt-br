@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Json
-ms.openlocfilehash: b91d3b7cbf86c7ea827539903b2e8373cdfdac72
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 9831249a9f1ffcc65fc275e44da04fde9348ae71
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193840"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388052"
 ---
 # ConvertTo-Json
 
@@ -41,7 +41,7 @@ Este cmdlet foi introduzido no Windows PowerShell 3.0.
 ### Exemplo 1
 
 ```powershell
-PS C:\> (Get-UICulture).Calendar | ConvertTo-Json
+(Get-UICulture).Calendar | ConvertTo-Json
 ```
 
 ```Output
@@ -72,7 +72,7 @@ Esse comando usa o `ConvertTo-Json` cmdlet para converter um objeto GregorianCal
 
 Esse comando mostra o efeito de usar o parâmetro **compress** de `ConvertTo-Json` . A compactação afeta apenas a aparência da cadeia de caracteres, não sua validade.
 
-### Exemplo 3:
+### Exemplo 3
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json

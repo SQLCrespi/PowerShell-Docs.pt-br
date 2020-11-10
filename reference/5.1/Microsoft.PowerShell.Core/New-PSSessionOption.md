@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 4f46aec8b22814ca95280380433787c6b41953ac
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 566091a53941cd122a10aa2bcb45cddfb1f40cc4
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193305"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388613"
 ---
 # New-PSSessionOption
 
@@ -216,7 +216,7 @@ Invoke-Command -Session $s {
 Just testing.
 ```
 
-O primeiro comando cria uma tabela de hash com duas chaves, **equipe** e **uso** . O comando salva a tabela de hash na `$team` variável. Para obter informações sobre tabelas de hash, confira [about_Hash_Tables](about/about_Hash_Tables.md).
+O primeiro comando cria uma tabela de hash com duas chaves, **equipe** e **uso**. O comando salva a tabela de hash na `$team` variável. Para obter informações sobre tabelas de hash, confira [about_Hash_Tables](about/about_Hash_Tables.md).
 
 Em seguida, o `New-PSSessionOption` cmdlet, usando o parâmetro **ApplicationArguments** , cria um objeto de opção de sessão salvo na `$team` variável. Quando `New-PSSessionOption` o cria o objeto de opção de sessão, ele converte automaticamente a tabela de hash no valor do parâmetro **ApplicationArguments** em um dicionário primitivo para que os dados possam ser transmitidos de forma confiável para a sessão remota.
 
@@ -495,13 +495,13 @@ Accept wildcard characters: False
 
 Determina como a saída do comando é gerenciada em sessões desconectadas quando o buffer de saída fica cheio.
 
-Se a o modo de buffering de saída não está definido na sessão ou na configuração da sessão, o valor padrão é **Block** . Os usuários também podem alterar o modo de buffering de saída ao desconectarem-se da sessão.
+Se a o modo de buffering de saída não está definido na sessão ou na configuração da sessão, o valor padrão é **Block**. Os usuários também podem alterar o modo de buffering de saída ao desconectarem-se da sessão.
 
 Se você omitir esse parâmetro, o valor de **OutputBufferingMode** do objeto de opção de sessão será None. Um valor de **Block** ou **Drop** substitui a opção de transporte do modo de buffering de saída, definida na configuração da sessão. Os valores aceitáveis para esse parâmetro são:
 
 - Bloquear. Quando o buffer de saída está cheio, a execução é suspensa até que o buffer esteja limpo.
 - Drop. Quando o buffer de saída está cheio, a execução continua. Conforme uma nova saída é salva, a saída mais antiga é descartada.
-- nenhuma. Nenhum modo de buffering de saída é especificado.
+- Nenhum. Nenhum modo de buffering de saída é especificado.
 
 Para obter mais informações sobre a opção de transporte do modo de buffer de saída, consulte `New-PSTransportOption` .
 
@@ -532,7 +532,7 @@ Determina qual mecanismo é usado para resolver o nome do host. Os valores aceit
 
 O valor padrão é Nenhum.
 
-Para obter informações sobre os valores desse parâmetro, consulte [Enumeração ProxyAccessType](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Para obter informações sobre os valores desse parâmetro, consulte [Enumeração ProxyAccessType](/dotnet/api/system.management.automation.remoting.proxyaccesstype).
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -549,9 +549,9 @@ Accept wildcard characters: False
 
 ### -ProxyAuthentication
 
-Especifica o método de autenticação que é usado para resolução de proxy. Os valores aceitáveis para esse parâmetro são: **Basic** , **Digest** e **Negotiate** . O valor padrão é **Negotiate** .
+Especifica o método de autenticação que é usado para resolução de proxy. Os valores aceitáveis para esse parâmetro são: **Basic** , **Digest** e **Negotiate**. O valor padrão é **Negotiate**.
 
-Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism

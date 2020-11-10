@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psscheduledjob/set-scheduledjob?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ScheduledJob
-ms.openlocfilehash: 99dbdc84430c0a8b5cf505a22b139cd07236e160
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6144d9f19b86727bc09d07e94f4bcf158e3b7071
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193658"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387899"
 ---
 # Set-ScheduledJob
 
@@ -123,7 +123,7 @@ Os trabalhos agendados são canalizados para o cmdlet **set-ScheduledJob** , que
 ## PARAMETERS
 
 ### -ArgumentList
-Especifica valores para os parâmetros do script especificados pelo parâmetro *FilePath* ou para o comando especificado pelo parâmetro *ScriptBlock* .
+Especifica valores para os parâmetros do script especificados pelo parâmetro *FilePath* ou para o comando especificado pelo parâmetro *ScriptBlock*.
 
 ```yaml
 Type: System.Object[]
@@ -142,15 +142,14 @@ Especifica o mecanismo usado para autenticar as credenciais do usuário.
 Os valores aceitáveis para esse parâmetro são:
 
 - Padrão
-- Básico
+- Basic
 - CredSSP
 - Digest
 - Kerberos
 - Negotiate
 - NegotiateWithImplicitCredential
 
-O valor padrão é Default.
-Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) na biblioteca MSDN.
+O valor padrão é Default. Para obter mais informações sobre os valores desse parâmetro, consulte [Enumeração AuthenticationMechanism](/dotnet/api/system.management.automation.runspaces.authenticationmechanism) no SDK do PowerShell.
 
 Cuidado: a autenticação do Credential Security Support Provider (CredSSP), na qual as credenciais do usuário são passadas para um computador remoto a ser autenticado, foi projetada para comandos que exigem autenticação em mais de um recurso, como acessar um compartilhamento de rede remoto.
 Esse mecanismo aumenta o risco de segurança da operação remota.
@@ -177,7 +176,7 @@ Para ver o histórico de execução, use o cmdlet Get-Job.
 Para obter os resultados do trabalho, use o cmdlet Receive-Job.
 
 Esse parâmetro não afeta os eventos que o Agendador de tarefas grava nos logs de eventos do Windows e não impede que o Windows PowerShell salve os resultados do trabalho.
-Para gerenciar o número de resultados de trabalho que são salvos, use o parâmetro *MaxResultCount* .
+Para gerenciar o número de resultados de trabalho que são salvos, use o parâmetro *MaxResultCount*.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -213,8 +212,8 @@ Accept wildcard characters: False
 ### -FilePath
 Especifica um script que o trabalho agendado executa.
 Insira o caminho para um arquivo .ps1 no computador local.
-Para especificar valores padrão para os parâmetros de script, use o parâmetro *ArgumentList* .
-Cada trabalho agendado deve ter um valor *ScriptBlock* ou *FilePath* .
+Para especificar valores padrão para os parâmetros de script, use o parâmetro *ArgumentList*.
+Cada trabalho agendado deve ter um valor *ScriptBlock* ou *FilePath*.
 
 ```yaml
 Type: System.String
@@ -230,10 +229,10 @@ Accept wildcard characters: False
 
 ### -InitializationScript
 Especifica o caminho totalmente qualificado para um script do Windows PowerShell (.ps1).
-O script de inicialização é executado na sessão criada para o trabalho em segundo plano antes dos comandos especificados pelo parâmetro *ScriptBlock* ou pelo script especificado pelo parâmetro *FilePath* .
+O script de inicialização é executado na sessão criada para o trabalho em segundo plano antes dos comandos especificados pelo parâmetro *ScriptBlock* ou pelo script especificado pelo parâmetro *FilePath*.
 Você pode usar o script de inicialização para configurar a sessão, adicionando arquivos, funções ou aliases, criando diretórios ou verificando pré-requisitos.
 
-Para especificar um script que execute os comandos de trabalho principal, use o parâmetro *FilePath* .
+Para especificar um script que execute os comandos de trabalho principal, use o parâmetro *FilePath*.
 
 Se o script de inicialização gerar um erro, incluindo um erro de não finalização, a instância atual do trabalho agendado não será executada e seu status falhará.
 
@@ -252,7 +251,7 @@ Accept wildcard characters: False
 ### -InputObject
 Especifica o trabalho agendado a ser alterado.
 Insira uma variável que contenha objetos **ScheduledJobDefinition** ou digite um comando ou uma expressão que obtenha objetos **ScheduledJobDefinition** , como um comando Get-ScheduledJob.
-Você também pode canalizar um objeto **ScheduledJobDefinition** para **set-ScheduledJob** .
+Você também pode canalizar um objeto **ScheduledJobDefinition** para **set-ScheduledJob**.
 
 Se você especificar vários trabalhos agendados, o **Set-ScheduledJob** faz as mesmas alterações em todos os trabalhos.
 
@@ -282,7 +281,7 @@ Para obter os resultados do trabalho, use o cmdlet Receive-Job.
 
 O parâmetro *MaxResultCount* define o valor da propriedade ExecutionHistoryLength do trabalho agendado.
 
-Para excluir os resultados de trabalho e o histórico de execução atuais, use o parâmetro *ClearExecutionHistory* .
+Para excluir os resultados de trabalho e o histórico de execução atuais, use o parâmetro *ClearExecutionHistory*.
 
 ```yaml
 Type: System.Int32
@@ -300,7 +299,7 @@ Accept wildcard characters: False
 Especifica um novo nome para o trabalho agendado e instâncias do trabalho agendado.
 O nome deve ser exclusivo no computador local.
 
-Para identificar o trabalho agendado a ser alterado, use o parâmetro *InputObject* ou redirecione um trabalho agendado de Get-ScheduledJob para **set-ScheduledJob** .
+Para identificar o trabalho agendado a ser alterado, use o parâmetro *InputObject* ou redirecione um trabalho agendado de Get-ScheduledJob para **set-ScheduledJob**.
 
 Esse parâmetro não altera os nomes das instâncias de trabalho em disco.
 Ele afeta somente instâncias de trabalho que foram iniciadas após a conclusão do comando.
@@ -410,9 +409,9 @@ Accept wildcard characters: False
 ### -ScriptBlock
 Especifica os comandos que o trabalho agendado executa.
 Coloque os comandos entre chaves ({}) para criar um bloco de script.
-Para especificar valores padrão para os parâmetros de comando, use o parâmetro *ArgumentList* .
+Para especificar valores padrão para os parâmetros de comando, use o parâmetro *ArgumentList*.
 
-Cada comando Register-ScheduledJob deve usar o parâmetro *ScriptBlock* ou *FilePath* .
+Cada comando Register-ScheduledJob deve usar o parâmetro *ScriptBlock* ou *FilePath*.
 
 ```yaml
 Type: System.Management.Automation.ScriptBlock
@@ -460,7 +459,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ## ENTRADAS
 
 ### Microsoft. PowerShell. ScheduledJob. ScheduledJobDefinition
-Você pode direcionar trabalhos agendados para **Set-ScheduledJob** .
+Você pode direcionar trabalhos agendados para **Set-ScheduledJob**.
 
 ## SAÍDAS
 

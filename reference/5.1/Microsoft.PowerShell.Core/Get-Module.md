@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Module
-ms.openlocfilehash: 4098b40c01085b266fa279107e5795b1283705cd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d3a2aae9318da7235070b68dd379081467fa611a
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193323"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388698"
 ---
 # Get-Module
 
@@ -50,38 +50,24 @@ Get-Module [[-Name] <String[]>] [-FullyQualifiedName <ModuleSpecification[]>] [-
 
 ## DESCRIPTION
 
-O `Get-Module` cmdlet obtém os módulos do PowerShell que foram importados ou que podem ser importados em uma sessão do PowerShell.
-O objeto de módulo que `Get-Module` retorna contém informações valiosas sobre o módulo.
-Você também pode canalizar os objetos de módulo para outros cmdlets, como `Import-Module` os `Remove-Module` cmdlets e.
+O `Get-Module` cmdlet obtém os módulos do PowerShell que foram importados ou que podem ser importados em uma sessão do PowerShell. O objeto de módulo que `Get-Module` retorna contém informações valiosas sobre o módulo. Você também pode canalizar os objetos de módulo para outros cmdlets, como `Import-Module` os `Remove-Module` cmdlets e.
 
-Sem parâmetros, `Get-Module` Obtém os módulos que foram importados para a sessão atual.
-Para obter todos os módulos instalados, especifique o parâmetro **listAvailable** .
+Sem parâmetros, `Get-Module` Obtém os módulos que foram importados para a sessão atual. Para obter todos os módulos instalados, especifique o parâmetro **listAvailable** .
 
-`Get-Module` Obtém os módulos, mas não os importa.
-A partir do Windows PowerShell 3,0, os módulos são importados automaticamente quando você usa um comando no módulo, mas um `Get-Module` comando não dispara uma importação automática.
-Você também pode importar os módulos para a sessão usando o `Import-Module` cmdlet.
+`Get-Module` Obtém os módulos, mas não os importa. A partir do Windows PowerShell 3,0, os módulos são importados automaticamente quando você usa um comando no módulo, mas um `Get-Module` comando não dispara uma importação automática. Você também pode importar os módulos para a sessão usando o `Import-Module` cmdlet.
 
-A partir do Windows PowerShell 3,0, você pode obter e, em seguida, importar módulos de sessões remotas para a sessão local.
-Essa estratégia usa o recurso de comunicação remota implícita do PowerShell e é equivalente a usar o `Import-PSSession` cmdlet.
-Quando você usa comandos em módulos importados de outra sessão, os comandos são executados implicitamente na sessão remota. Esse recurso permite que você gerencie o computador remoto a partir da sessão local.
+A partir do Windows PowerShell 3,0, você pode obter e, em seguida, importar módulos de sessões remotas para a sessão local. Essa estratégia usa o recurso de comunicação remota implícita do PowerShell e é equivalente a usar o `Import-PSSession` cmdlet. Quando você usa comandos em módulos importados de outra sessão, os comandos são executados implicitamente na sessão remota. Esse recurso permite que você gerencie o computador remoto a partir da sessão local.
 
-Além disso, a partir do Windows PowerShell 3,0, você pode usar `Get-Module` e `Import-Module` para obter e importar módulos de modelo CIM (CIM), nos quais os cmdlets são definidos em arquivos de definição de cmdlet (CDXML).
-Esse recurso permite que você use cmdlets que são implementados em assemblies de código não gerenciado, como os escritos em C++.
+Além disso, a partir do Windows PowerShell 3,0, você pode usar `Get-Module` e `Import-Module` para obter e importar módulos de modelo CIM (CIM), nos quais os cmdlets são definidos em arquivos de definição de cmdlet (CDXML). Esse recurso permite que você use cmdlets que são implementados em assemblies de código não gerenciado, como os escritos em C++.
 
 Com esses novos recursos, os `Get-Module` `Import-Module` cmdlets e se tornam ferramentas principais para gerenciar empresas heterogêneas que incluem computadores que executam o sistema operacional Windows e computadores que executam outros sistemas operacionais.
 
-Para gerenciar computadores remotos que executam o sistema operacional Windows que tem o PowerShell e a comunicação remota do PowerShell habilitada, crie uma **PSSession** no computador remoto e, em seguida, use o parâmetro **PSSession** do `Get-Module` para obter os módulos do PowerShell na **PSSession** .
-Quando você importa os módulos e, em seguida, usa os comandos importados na sessão atual, os comandos são executados implicitamente na **PSSession** no computador remoto.
-Você pode usar essa estratégia para gerenciar o computador remoto.
+Para gerenciar computadores remotos que executam o sistema operacional Windows que tem o PowerShell e a comunicação remota do PowerShell habilitada, crie uma **PSSession** no computador remoto e, em seguida, use o parâmetro **PSSession** do `Get-Module` para obter os módulos do PowerShell na **PSSession**. Quando você importa os módulos e, em seguida, usa os comandos importados na sessão atual, os comandos são executados implicitamente na **PSSession** no computador remoto. Você pode usar essa estratégia para gerenciar o computador remoto.
 
 Você pode usar uma estratégia semelhante para gerenciar computadores que não têm a comunicação remota do PowerShell habilitada.
 Isso inclui computadores que não estão executando o sistema operacional Windows e computadores que têm o PowerShell, mas que não têm a comunicação remota do PowerShell habilitada.
 
-Comece criando uma sessão CIM no computador remoto.
-Uma sessão CIM é uma conexão com Instrumentação de Gerenciamento do Windows (WMI) no computador remoto.
-Em seguida, use o parâmetro **CIMSession** de `Get-Module` para obter módulos CIM da sessão CIM.
-Quando você importa um módulo CIM usando o `Import-Module` cmdlet e, em seguida, executa os comandos importados, os comandos são executados implicitamente no computador remoto.
-Você pode usar essa estratégia de WMI e CIM para gerenciar o computador remoto.
+Comece criando uma sessão CIM no computador remoto. Uma sessão CIM é uma conexão com Instrumentação de Gerenciamento do Windows (WMI) no computador remoto. Em seguida, use o parâmetro **CIMSession** de `Get-Module` para obter módulos CIM da sessão CIM. Quando você importa um módulo CIM usando o `Import-Module` cmdlet e, em seguida, executa os comandos importados, os comandos são executados implicitamente no computador remoto. Você pode usar essa estratégia de WMI e CIM para gerenciar o computador remoto.
 
 ## EXEMPLOS
 
@@ -101,8 +87,7 @@ Get-Module -ListAvailable
 
 Este comando obtém os módulos que estão instalados no computador e que podem ser importados para a sessão atual.
 
-`Get-Module` procura os módulos disponíveis no caminho especificado pelo **$env:P** variável de ambiente smodulepath.
-Para obter mais informações sobre o **PSModulePath** , consulte [about_Modules](About/about_Modules.md) e [about_Environment_Variables](About/about_Environment_Variables.md).
+`Get-Module` procura os módulos disponíveis no caminho especificado pelo **$env:P** variável de ambiente smodulepath. Para obter mais informações sobre o **PSModulePath** , consulte [about_Modules](About/about_Modules.md) e [about_Environment_Variables](About/about_Environment_Variables.md).
 
 ### Exemplo 3: obter todos os arquivos exportados
 
@@ -125,8 +110,7 @@ Name                             Version
 Microsoft.PowerShell.Management  3.1.0.0
 ```
 
-Esse comando obtém o módulo **Microsoft. PowerShell. Management** especificando o nome totalmente qualificado do módulo usando o parâmetro **FullyQualifiedName** .
-Em seguida, o comando canaliza os resultados para o `Format-Table` cmdlet para formatar os resultados como uma tabela com **nome** e **versão** como títulos de coluna.
+Esse comando obtém o módulo **Microsoft. PowerShell. Management** especificando o nome totalmente qualificado do módulo usando o parâmetro **FullyQualifiedName** . Em seguida, o comando canaliza os resultados para o `Format-Table` cmdlet para formatar os resultados como uma tabela com **nome** e **versão** como títulos de coluna.
 
 ### Exemplo 5: obter propriedades de um módulo
 
@@ -177,11 +161,9 @@ SessionState
 Version
 ```
 
-Esse comando obtém as propriedades do objeto **PSModuleInfo** que `Get-Module` retorna.
-Há um objeto para cada arquivo de módulo.
+Esse comando obtém as propriedades do objeto **PSModuleInfo** que `Get-Module` retorna. Há um objeto para cada arquivo de módulo.
 
-Você pode usar as propriedades para formatar e filtrar os objetos do módulo.
-Para obter mais informações sobre as propriedades, consulte [Propriedades de PSModuleInfo](/dotnet/api/system.management.automation.psmoduleinfo).
+Você pode usar as propriedades para formatar e filtrar os objetos do módulo. Para obter mais informações sobre as propriedades, consulte [Propriedades de PSModuleInfo](/dotnet/api/system.management.automation.psmoduleinfo).
 
 A saída inclui as novas propriedades, como **Author** e **CompanyName** , que foram introduzidas no Windows PowerShell 3,0.
 
@@ -228,9 +210,7 @@ Esse comando obtém todos os arquivos de módulo, importados e disponíveis e, e
 
 Esses comandos exibem o conteúdo do manifesto do módulo para o módulo **BitsTransfer** do Windows PowerShell.
 
-Os módulos não precisam ter arquivos de manifesto.
-Quando eles têm um arquivo de manifesto, o arquivo de manifesto é necessário apenas para incluir um número de versão.
-No entanto, os arquivos de manifesto muitas vezes fornecem informações úteis sobre um módulo, seus requisitos e seu conteúdo.
+Os módulos não precisam ter arquivos de manifesto. Quando eles têm um arquivo de manifesto, o arquivo de manifesto é necessário apenas para incluir um número de versão. No entanto, os arquivos de manifesto muitas vezes fornecem informações úteis sobre um módulo, seus requisitos e seu conteúdo.
 
 ```powershell
 # First command
@@ -276,9 +256,7 @@ d----        12/16/2008  12:36 PM            en-US
 -a---        12/16/2008  12:20 AM     108544 Microsoft.BackgroundIntelligentTransfer.Management.Interop.dll
 ```
 
-Esse comando lista os arquivos no diretório do módulo.
-Esta é outra maneira de determinar o que está em um módulo antes de importá-lo.
-Alguns módulos podem ter arquivos de ajuda ou Leia-me, que descrevem o módulo.
+Esse comando lista os arquivos no diretório do módulo. Esta é outra maneira de determinar o que está em um módulo antes de importá-lo. Alguns módulos podem ter arquivos de ajuda ou Leia-me, que descrevem o módulo.
 
 ### Exemplo 9: obter os módulos instalados em um computador
 
@@ -292,12 +270,9 @@ Estes comandos obtêm os módulos instalados no computador Servidor01.
 
 O primeiro comando usa o `New-PSSession` cmdlet para criar uma **PSSession** no computador Server01. O comando salva a **PSSession** na variável $s.
 
-O segundo comando usa os parâmetros **PSSession** e **listAvailable** de `Get-Module` para obter os módulos na **PSSession** na variável $s.
+O segundo comando usa os parâmetros **PSSession** e **listAvailable** de `Get-Module` para obter os módulos na **PSSession** na `$s` variável.
 
-Se você canaliza módulos de outras sessões para o `Import-Module` cmdlet, o `Import-Module` importa o módulo para a sessão atual usando o recurso de comunicação remota implícita.
-Isso é equivalente a usar o `Import-PSSession` cmdlet.
-Você pode usar os cmdlets do módulo na sessão atual, mas os comandos que usam esses cmdlets, na verdade, executam a sessão remota.
-Para obter mais informações, confira [`Import-Module`](Import-Module.md) e [`Import-PSSession`](../Microsoft.PowerShell.Utility/Import-PSSession.md).
+Se você canaliza módulos de outras sessões para o `Import-Module` cmdlet, o `Import-Module` importa o módulo para a sessão atual usando o recurso de comunicação remota implícita. Isso é equivalente a usar o `Import-PSSession` cmdlet. Você pode usar os cmdlets do módulo na sessão atual, mas os comandos que usam esses cmdlets, na verdade, executam a sessão remota. Para obter mais informações, confira [`Import-Module`](Import-Module.md) e [`Import-PSSession`](../Microsoft.PowerShell.Utility/Import-PSSession.md).
 
 ### Exemplo 10: gerenciar um computador que não executa o sistema operacional Windows
 
@@ -339,8 +314,7 @@ O quarto comando executa o `Get-Disk` comando. Embora o comando seja digitado na
 
 ### -All
 
-Indica que esse cmdlet obtém todos os módulos em cada pasta de módulo, incluindo módulos aninhados, arquivos de manifesto (. psd1), arquivos de módulo de script (. psm1) e arquivos de módulo binário (. dll).
-Sem esse parâmetro, `Get-Module` obtém apenas o módulo padrão em cada pasta de módulo.
+Indica que esse cmdlet obtém todos os módulos em cada pasta de módulo, incluindo módulos aninhados, arquivos de manifesto (. psd1), arquivos de módulo de script (. psm1) e arquivos de módulo binário (. dll). Sem esse parâmetro, `Get-Module` obtém apenas o módulo padrão em cada pasta de módulo.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -356,8 +330,7 @@ Accept wildcard characters: False
 
 ### -CimNamespace
 
-Especifica o namespace de um provedor CIM alternativo que expõe módulos CIM.
-O valor padrão é o namespace do provedor WMI de detecção de módulos.
+Especifica o namespace de um provedor CIM alternativo que expõe módulos CIM. O valor padrão é o namespace do provedor WMI de detecção de módulos.
 
 Use esse parâmetro para obter módulos CIM de computadores e dispositivos que não estão executando o sistema operacional Windows.
 
@@ -377,8 +350,7 @@ Accept wildcard characters: False
 
 ### -CimResourceUri
 
-Especifica um local alternativo para módulos CIM.
-O valor padrão é o URI de recurso do provedor WMI de descoberta de módulo no computador remoto.
+Especifica um local alternativo para módulos CIM. O valor padrão é o URI de recurso do provedor WMI de descoberta de módulo no computador remoto.
 
 Use esse parâmetro para obter módulos CIM de computadores e dispositivos que não estão executando o sistema operacional Windows.
 
@@ -398,16 +370,13 @@ Accept wildcard characters: False
 
 ### -CimSession
 
-Especifica uma sessão CIM no computador remoto.
-Insira uma variável que contém a sessão CIM ou um comando que obtém a sessão CIM, como um comando [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) .
+Especifica uma sessão CIM no computador remoto. Insira uma variável que contém a sessão CIM ou um comando que obtém a sessão CIM, como um comando [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) .
 
-`Get-Module` usa a conexão de sessão CIM para obter módulos do computador remoto.
-Quando você importa o módulo usando o `Import-Module` cmdlet e usa os comandos do módulo importado na sessão atual, os comandos realmente são executados no computador remoto.
+`Get-Module` usa a conexão de sessão CIM para obter módulos do computador remoto. Quando você importa o módulo usando o `Import-Module` cmdlet e usa os comandos do módulo importado na sessão atual, os comandos realmente são executados no computador remoto.
 
 Você pode usar esse parâmetro para obter módulos de computadores e dispositivos que não estão executando o sistema operacional Windows e computadores que têm o PowerShell, mas que não têm a comunicação remota do PowerShell habilitada.
 
-O parâmetro **CimSession** obtém todos os módulos em **CIMSession** .
-Porém, você pode importar somente módulos baseados em CIM e baseados em XML de definição de cmdlets (CDXML).
+O parâmetro **CimSession** obtém todos os módulos em **CIMSession**. Porém, você pode importar somente módulos baseados em CIM e baseados em XML de definição de cmdlets (CDXML).
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession
@@ -423,16 +392,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedName
 
-Especifica os nomes dos módulos na forma de objetos **ModuleSpecification** .
-Esses objetos são descritos na seção comentários do [Construtor ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290) na biblioteca MSDN.
-Por exemplo, o parâmetro **FullyQualifiedName** aceita um nome de módulo que é especificado nos seguintes formatos:
+Especifica os módulos com nomes que são especificados na forma de objetos **ModuleSpecification** . Consulte a seção comentários do [Construtor ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
-- @ {ModuleName = "móduloname"; ModuleVersion = "version_number"}
-- @ {ModuleName = "móduloname"; ModuleVersion = "version_number"; GUID = "GUID"}
+Por exemplo, o parâmetro **FullyQualifiedModule** aceita um nome de módulo que é especificado em um destes formatos:
 
-**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional.
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-Você não pode especificar o parâmetro **FullyQualifiedName** no mesmo comando que um parâmetro de **nome** .
+**ModuleName** e **ModuleVersion** são obrigatórios, mas **Guid** é opcional. Você não pode especificar o parâmetro **FullyQualifiedModule** no mesmo comando que um parâmetro de **módulo** . os dois parâmetros são mutuamente exclusivos.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]
@@ -448,10 +415,7 @@ Accept wildcard characters: False
 
 ### -ListAvailable
 
-Indica que este cmdlet obtém todos os módulos instalados.
-`Get-Module` Obtém os módulos nos caminhos listados na variável de ambiente **PSModulePath** .
-Sem esse parâmetro, `Get-Module` obtém somente os módulos listados na variável de ambiente **PSModulePath** e que são carregados na sessão atual.
-O **ListAvailable** não retorna informações sobre os módulos que não são encontrados na variável de ambiente **PSModulePath** , mesmo que esses módulos estejam carregados na sessão atual.
+Indica que este cmdlet obtém todos os módulos instalados. `Get-Module` Obtém os módulos nos caminhos listados na variável de ambiente **PSModulePath** . Sem esse parâmetro, `Get-Module` obtém somente os módulos listados na variável de ambiente **PSModulePath** e que são carregados na sessão atual. O **ListAvailable** não retorna informações sobre os módulos que não são encontrados na variável de ambiente **PSModulePath** , mesmo que esses módulos estejam carregados na sessão atual.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -467,10 +431,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Especifica nomes ou padrões de nome dos módulos que esse cmdlet obtém.
-Caracteres curinga são permitidos.
-Você também pode canalizar os nomes para `Get-Module` .
-Você não pode especificar o parâmetro **FullyQualifiedName** no mesmo comando que um parâmetro de **nome** .
+Especifica nomes ou padrões de nome dos módulos que esse cmdlet obtém. Caracteres curinga são permitidos. Você também pode canalizar os nomes para `Get-Module` . Você não pode especificar o parâmetro **FullyQualifiedName** no mesmo comando que um parâmetro de **nome** .
 
 O **nome** não pode aceitar um GUID de módulo como um valor.
 Para retornar módulos especificando um GUID, use **FullyQualifiedName** em vez disso.
@@ -517,12 +478,11 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-Obtém os módulos na sessão do PowerShell gerenciada pelo usuário especificada ( **PSSession** ).
-Insira uma variável que contenha a sessão, um comando que obtém a sessão, como um `Get-PSSession` comando, ou um comando que cria a sessão, como um `New-PSSession` comando.
+Obtém os módulos na sessão do PowerShell gerenciada pelo usuário especificada ( **PSSession** ). Insira uma variável que contenha a sessão, um comando que obtém a sessão, como um `Get-PSSession` comando, ou um comando que cria a sessão, como um `New-PSSession` comando.
 
 Quando a sessão estiver conectada a um computador remoto, você deverá especificar o parâmetro **listAvailable** .
 
-Um `Get-Module` comando que usa o parâmetro **PSSession** é equivalente a usar o `Invoke-Command` cmdlet para executar um `Get-Module -ListAvailable` comando em uma **PSSession** .
+Um `Get-Module` comando que usa o parâmetro **PSSession** é equivalente a usar o `Invoke-Command` cmdlet para executar um `Get-Module -ListAvailable` comando em uma **PSSession**.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -540,13 +500,11 @@ Accept wildcard characters: False
 
 ### -Atualizar
 
-Indica que esse cmdlet atualiza o cache de comandos instalados.
-O cache de comando é criado no início da sessão.
-Ele permite que o `Get-Command` cmdlet obtenha comandos de módulos que não são importados para a sessão.
+Indica que esse cmdlet atualiza o cache de comandos instalados. O cache de comando é criado no início da sessão. Ele permite que o `Get-Command` cmdlet obtenha comandos de módulos que não são importados para a sessão.
 
 Este parâmetro é projetado para cenários de desenvolvimento e testes, nos quais o conteúdo dos módulos foi alterado desde o início da sessão.
 
-Ao especificar o parâmetro de **atualização** em um comando, você deve especificar **listAvailable** .
+Ao especificar o parâmetro de **atualização** em um comando, você deve especificar **listAvailable**.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -585,7 +543,7 @@ Quando você especifica o parâmetro **listAvailable** , `Get-Module` retorna um
 Os módulos são importados automaticamente no primeiro uso e você pode usar o `Import-Module` cmdlet para importá-los.
 - A partir do Windows PowerShell 3,0, os comandos principais instalados com o PowerShell são empacotados em módulos. No Windows PowerShell 2,0 e em programas de host que criam sessões de estilo mais antigo em versões posteriores do PowerShell, os comandos principais são empacotados em snap-ins ( **PSSnapins** ). A exceção é **Microsoft. PowerShell. Core** , que sempre é um snap-in. Além disso, as sessões remotas, como as iniciadas pelo `New-PSSession` cmdlet, são sessões de estilo mais antigo que incluem snap-ins de núcleo.
 
-  Para obter informações sobre o método **CreateDefault2** que cria sessões de estilo mais recente com módulos principais, consulte o [método CREATEDEFAULT2](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2) na biblioteca MSDN.
+  Para obter informações sobre o método **CreateDefault2** que cria sessões de estilo mais recente com módulos principais, consulte [método CreateDefault2](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2).
 
 - `Get-Module` Obtém apenas módulos em locais que são armazenados no valor da variável de ambiente **PSModulePath** ($env:P smodulepath). Você pode usar o parâmetro **path** do `Import-Module` cmdlet para importar módulos em outros locais, mas não pode usar o `Get-Module` cmdlet para obtê-los.
 - Além disso, a partir do PowerShell 3,0, novas propriedades foram adicionadas ao objeto que `Get-Module` retorna para facilitar o aprendizado sobre os módulos, mesmo antes de serem importados. Todas as propriedades são preenchidas antes da importação. Isso inclui as propriedades **ExportedCommands** , **ExportedCmdlets** e **ExportedFunctions** que listam os comandos que o módulo exporta.

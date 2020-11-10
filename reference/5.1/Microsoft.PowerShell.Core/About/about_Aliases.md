@@ -6,17 +6,16 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: 41f39535b9b9dda91042847c1b5b8332ada27697
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 827fceb9169882bf082c46e25c690f8a56eb5cba
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196088"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386981"
 ---
 # <a name="about-aliases"></a>Sobre aliases
 
 ## <a name="short-description"></a>DESCRIÇÃO BREVE
-
 Descreve como usar nomes alternativos para cmdlets e comandos no PowerShell.
 
 ## <a name="long-description"></a>DESCRIÇÃO LONGA
@@ -172,7 +171,7 @@ Get-Help about_Functions
 
 ## <a name="alias-objects"></a>OBJETOS DE ALIAS
 
-Os aliases do PowerShell são representados por objetos que são instâncias da classe System. Management. Automation. AliasInfo. Para obter mais informações sobre esse tipo de objeto, consulte [classe AliasInfo][aliasinfo] na biblioteca do Microsoft Developer Network (MSDN).
+Os aliases do PowerShell são representados por objetos que são instâncias da classe System. Management. Automation. AliasInfo. Para obter mais informações sobre esse tipo de objeto, consulte [classe AliasInfo][aliasinfo] no SDK do PowerShell.
 
 Para exibir as propriedades e os métodos dos objetos de alias, obtenha os aliases.
 Em seguida, direcione-os para o cmdlet Get-Member. Por exemplo:

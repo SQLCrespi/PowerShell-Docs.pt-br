@@ -6,12 +6,12 @@ ms.date: 07/23/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_desiredstateconfiguration?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_DesiredStateConfiguration
-ms.openlocfilehash: 2f043104c67078b98355b3e54171a8993e534837
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 5d088934ffc953ad19be401bce72f6287f0fde07
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93196556"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387015"
 ---
 # <a name="about_desiredstateconfiguration"></a>about_DesiredStateConfiguration
 
@@ -27,12 +27,12 @@ A DSC fornece um conjunto de extensões de linguagem do PowerShell, novos cmdlet
 
 A DSC é introduzida no PowerShell 4,0.
 
-Para obter informações detalhadas sobre a DSC, consulte [visão geral da configuração de estado desejado do PowerShell](/powershell/scripting/dsc/overview/overview) na biblioteca do TechNet.
+Para obter informações detalhadas sobre a DSC, consulte [visão geral da configuração de estado desejado do PowerShell](/powershell/scripting/dsc/overview/overview).
 
 ## <a name="developing-dsc-resources-with-classes"></a>DESENVOLVENDO RECURSOS DE DSC COM CLASSES
 
 A partir do PowerShell 5,0, você pode desenvolver recursos de DSC usando classes.
-Para obter mais informações, consulte [about_Classes](about_Classes.md)e [escrevendo um recurso personalizado de DSC com classes do PowerShell](/previous-versions//dn948461(v=technet.10)) no Microsoft TechNet.
+Para obter mais informações, consulte [about_Classes](about_Classes.md)e [escrevendo um recurso personalizado de DSC com classes do PowerShell](/powershell/scripting/dsc/resources/authoringresourceclass).
 
 ## <a name="using-dsc"></a>USANDO O DSC
 
@@ -102,7 +102,7 @@ Test-DscConfiguration -CimSession $session
 
 Você pode usar os seguintes recursos internos em seus scripts de configuração:
 
-|Name                  |Propriedades                                         |
+|Nome                  |Propriedades                                         |
 |----------------------|---------------------------------------------------|
 |Arquivo                  |{DestinationPath, Attributes, checksum, Content...}|
 |Archive               |{Destino, caminho, soma de verificação, credencial...}       |
@@ -111,7 +111,7 @@ Você pode usar os seguintes recursos internos em seus scripts de configuração
 |Registro                   |{Mensagem, depende, PsDscRunAsCredential}         |
 |Pacote               |{Name, Path, ProductId, Arguments...}              |
 |Registro              |{Key, valueName, depende, verifique...}             |
-|script                |{GetScript, setscript, TestScript, credencial...}  |
+|Script                |{GetScript, setscript, TestScript, credencial...}  |
 |Serviço               |{Nome, BuiltInAccount, credencial, dependências...}|
 |Usuário                  |{Nome de usuário, depende, descrição, desabilitado...}    |
 |WaitForAll            |{NodeName, resourceName, dependo, PsDscRunAsC...}|

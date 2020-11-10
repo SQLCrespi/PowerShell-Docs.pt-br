@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/debug-process?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Debug-Process
-ms.openlocfilehash: 1cc0b0f51d84f3471bc3f54a91daba10f3528a8a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 98bd72901339d040748fc0d99b14bc1404ea1465
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194200"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388307"
 ---
 # Debug-Process
 
@@ -40,11 +40,11 @@ Debug-Process -InputObject <Process[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-O cmdlet **Debug-Process** anexa um depurador a um ou mais processos em execução em um computador local.
+
+O `Debug-Process` cmdlet anexa um depurador a um ou mais processos em execução em um computador local.
 Você pode especificar os processos por seu nome de processo ou ID de processo (PID) ou pode canalizar objetos de processo para esse cmdlet.
 
-Esse cmdlet anexa o depurador que está atualmente registrado para o processo.
-Antes de usar esse cmdlet, verifique se um depurador foi baixado e configurado corretamente.
+Esse cmdlet anexa o depurador que está atualmente registrado para o processo. Antes de usar esse cmdlet, verifique se um depurador foi baixado e configurado corretamente.
 
 ## EXEMPLOS
 
@@ -54,7 +54,7 @@ Antes de usar esse cmdlet, verifique se um depurador foi baixado e configurado c
 PS C:\> Debug-Process -Name "Windows Powershell"
 ```
 
-Esse comando anexa um depurador ao processo do Windows PowerShell no computador.
+Esse comando anexa um depurador ao processo do PowerShell no computador.
 
 ### Exemplo 2: anexar um depurador a todos os processos que começam com a cadeia de caracteres especificada
 
@@ -86,10 +86,9 @@ Esse comando anexa um depurador aos processos que têm as IDs de processo 1132 e
 PS C:\> Get-Process "Windows PowerShell" | Debug-Process
 ```
 
-Esse comando anexa um depurador aos processos do Windows PowerShell no computador.
-Ele usa o cmdlet **Get-Process** para obter os processos do Windows PowerShell no computador e usa um operador de pipeline (|) para enviar os processos para o cmdlet **Debug-Process** .
+Esse comando anexa um depurador aos processos do PowerShell no computador. Ele usa o `Get-Process` cmdlet para obter os processos do PowerShell no computador e usa um operador de pipeline ( `|` ) para enviar os processos para o `Debug-Process` cmdlet.
 
-Para especificar um processo específico do PowerShell, use o parâmetro ID de **Get-Process** .
+Para especificar um processo específico do PowerShell, use o parâmetro ID de `Get-Process` .
 
 ### Exemplo 6: anexar um depurador a um processo atual no computador local
 
@@ -97,12 +96,11 @@ Para especificar um processo específico do PowerShell, use o parâmetro ID de *
 PS C:\> $PID | Debug-Process
 ```
 
-Esse comando anexa um depurador aos processos atuais do Windows PowerShell no computador.
+Esse comando anexa um depurador aos processos atuais do PowerShell no computador.
 
-O comando usa a $PID variável automática, que contém a ID de processo do processo atual do Windows PowerShell.
-Em seguida, ele usa um operador de pipeline (|) para enviar a ID do processo para o cmdlet **Debug-Process** .
+O comando usa a `$PID` variável automática, que contém a ID de processo do processo atual do PowerShell. Em seguida, ele usa um operador de pipeline ( `|` ) para enviar a ID do processo para o `Debug-Process` cmdlet.
 
-Para obter mais informações sobre a $PID variável automática, consulte about_Automatic_Variables.
+Para obter mais informações sobre a `$PID` variável automática, consulte about_Automatic_Variables.
 
 ### Exemplo 7: anexar um depurador ao processo especificado em vários computadores
 
@@ -112,8 +110,7 @@ PS C:\> Get-Process -ComputerName "Server01", "Server02" -Name "MyApp" | Debug-P
 
 Esse comando anexa um depurador aos processos de MyApp nos computadores Server01 e Server02.
 
-O comando usa o cmdlet **Get-Process** para obter os processos MyApp nos computadores Server01 e Server02.
-Ele usa um operador de pipeline para enviar os processos ao cmdlet Debug-Process, que anexa os depuradores.
+O comando usa o `Get-Process` cmdlet para obter os processos MyApp nos computadores Server01 e Server02. Ele usa um operador de pipeline para enviar os processos ao `Debug-Process` cmdlet, que anexa os depuradores.
 
 ### Exemplo 8: anexar um depurador a um processo que usa o parâmetro InputObject
 
@@ -122,18 +119,17 @@ PS C:\> $P = Get-Process "Windows PowerShell"
 PS C:\> Debug-Process -InputObject $P
 ```
 
-Esse comando anexa um depurador aos processos do Windows PowerShell no computador local.
+Esse comando anexa um depurador aos processos do PowerShell no computador local.
 
-O primeiro comando usa o cmdlet **Get-Process** para obter os processos do Windows PowerShell no computador.
-Ele salva o objeto de processo resultante na variável chamada $P.
+O primeiro comando usa o `Get-Process` cmdlet para obter os processos do PowerShell no computador. Ele salva o objeto de processo resultante na variável chamada `$P` .
 
-O segundo comando usa o parâmetro *InputObject* do cmdlet **Debug-Process** para enviar o objeto de processo na variável $P.
+O segundo comando usa o parâmetro **InputObject** do `Debug-Process` cmdlet para enviar o objeto de processo na `$P` variável.
 
 ## PARAMETERS
 
 ### -Id
-Especifica os identificadores de processo dos processos a depurar.
-O nome do parâmetro de *ID* é opcional.
+
+Especifica os identificadores de processo dos processos a depurar. O nome do parâmetro de **ID** é opcional.
 
 Para localizar a ID de processo de um processo, digite `Get-Process` .
 
@@ -150,9 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Especifica os objetos de processo que representam os processos a serem depurados.
-Insira uma variável que contém os objetos de processo ou um comando que obtém os objetos de processo, como o cmdlet Get-Process.
-Você também pode canalizar objetos de processo para este cmdlet.
+
+Especifica os objetos de processo que representam os processos a serem depurados. Insira uma variável que contém os objetos de processo ou um comando que obtém os objetos de processo, como o `Get-Process` cmdlet. Você também pode canalizar objetos de processo para este cmdlet.
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -167,9 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Especifica os nomes dos processos a serem depurados.
-Se houver mais de um processo com o mesmo nome, esse cmdlet anexará um depurador a todos os processos com esse nome.
-O parâmetro *Name* é opcional.
+
+Especifica os nomes dos processos a serem depurados. Se houver mais de um processo com o mesmo nome, esse cmdlet anexará um depurador a todos os processos com esse nome. O parâmetro **Name** é opcional.
 
 ```yaml
 Type: System.String[]
@@ -184,6 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Solicita sua confirmação antes de executar o cmdlet.
 
 ```yaml
@@ -199,8 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,21 +210,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
 
 ### System. Int32, System. Diagnostics. Process, System. String
+
 É possível canalizar uma ID de processo (Int32), um objeto de processo (System. Diagnostics. Process) ou um nome de processo (cadeia de caracteres) para esse cmdlet.
 
 ## SAÍDAS
 
 ### Nenhum
+
 Este cmdlet não gera saída.
 
 ## OBSERVAÇÕES
 
-* Esse cmdlet usa o método AttachDebugger da classe Win32_Process da WMI (Instrumentação de Gerenciamento do Windows). Para obter mais informações sobre esse método, consulte o [método AttachDebugger](https://go.microsoft.com/fwlink/?LinkId=143640) na biblioteca MSDN.
+Esse cmdlet usa o método AttachDebugger da classe Win32_Process da WMI (Instrumentação de Gerenciamento do Windows). Para obter mais informações sobre esse método, consulte o [método AttachDebugger](https://go.microsoft.com/fwlink/?LinkId=143640) na biblioteca MSDN.
 
 ## LINKS RELACIONADOS
 
