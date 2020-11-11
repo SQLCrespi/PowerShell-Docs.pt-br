@@ -3,22 +3,23 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: Histórico de versões de módulos e cmdlets
 description: Este artigo lista os módulos e os cmdlets incluídos em várias versões do PowerShell.
-ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501653"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342851"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>Histórico de versões de módulos e cmdlets
 
 Este artigo lista os módulos e os cmdlets incluídos em várias versões do PowerShell. Este é um resumo das informações encontradas nessas notas sobre a versão. É possível encontrar informações mais detalhadas nas notas sobre a versão:
 
-- [Novidades do PowerShell Core 6.2](what-s-new-in-powershell-core-62.md)
-- [Novidades do PowerShell Core 6.1](what-s-new-in-powershell-core-61.md)
-- [Novidades do PowerShell Core 6.0](what-s-new-in-powershell-core-60.md)
-- [Alterações da falha no PowerShell Core 6.0](breaking-changes-ps6.md)
-- [Problemas conhecidos do PowerShell Core 6.0](known-issues-ps6.md)
+- [Novidades no PowerShell 7.0](what-s-new-in-powershell-70.md)
+- [Novidades no PowerShell 6.2](what-s-new-in-powershell-core-62.md)
+- [Novidades no PowerShell 6.1](what-s-new-in-powershell-core-61.md)
+- [Novidades no PowerShell 6.0](what-s-new-in-powershell-core-60.md)
+- [Alterações da falha no PowerShell 6.0](breaking-changes-ps6.md)
+- [Problemas conhecidos no PowerShell 6.0](known-issues-ps6.md)
 
 Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas informações atualizadas.
 
@@ -216,7 +217,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Enable-ComputerRestore        | &check; |         |         |         | Somente Windows                     |
 | Get-ChildItem                 | &check; | &check; | &check; | &check; |                                  |
 | Get-Clipboard                 | &check; |         | &check; | &check; | Não há suporte no macOS           |
-| Get-ComputerInfo              | &check; | &check; | &check; | &check; |                                  |
+| Get-ComputerInfo              | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Get-ComputerRestorePoint      | &check; |         |         |         | Somente Windows                     |
 | Get-Content                   | &check; | &check; | &check; | &check; |                                  |
 | Get-ControlPanelItem          | &check; |         |         |         | Somente Windows                     |
@@ -230,7 +231,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Get-PSDrive                   | &check; | &check; | &check; | &check; |                                  |
 | Get-PSProvider                | &check; | &check; | &check; | &check; |                                  |
 | Get-Service                   | &check; | &check; | &check; | &check; | Somente Windows                     |
-| Get-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Get-TimeZone                  | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Get-Transaction               | &check; |         |         |         | Somente Windows                     |
 | Get-WmiObject                 | &check; |         |         |         | Somente Windows                     |
 | Invoke-Item                   | &check; | &check; | &check; | &check; |                                  |
@@ -255,7 +256,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Remove-PSDrive                | &check; | &check; | &check; | &check; |                                  |
 | Remove-Service                |         | &check; | &check; | &check; | Somente Windows                     |
 | Remove-WmiObject              | &check; |         |         |         | Somente Windows                     |
-| Rename-Computer               | &check; | &check; | &check; | &check; |                                  |
+| Rename-Computer               | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Rename-Item                   | &check; | &check; | &check; | &check; |                                  |
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | Somente Windows                     |
@@ -270,7 +271,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Set-ItemProperty              | &check; | &check; | &check; | &check; |                                  |
 | Set-Location                  | &check; | &check; | &check; | &check; |                                  |
 | Set-Service                   | &check; | &check; | &check; | &check; | Somente Windows                     |
-| Set-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Set-TimeZone                  | &check; | &check; | &check; | &check; | Somente Windows                     |
 | Set-WmiInstance               | &check; |         |         |         | Somente Windows                     |
 | Show-ControlPanelItem         | &check; |         |         |         | Somente Windows                     |
 | Show-EventLog                 | &check; |         |         |         | Somente Windows                     |
@@ -334,7 +335,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | ConvertFrom-Csv           | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Json          | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Markdown      |         |   6.1   | &check; | &check; |                                           |
-| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; |                                           |
+| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; | Somente Windows                              |
 | ConvertFrom-String        | &check; |         |         |         |                                           |
 | ConvertFrom-StringData    | &check; | &check; | &check; | &check; |                                           |
 | Convert-String            | &check; |         |         |         |                                           |
@@ -379,7 +380,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Get-Unique                | &check; | &check; | &check; | &check; |                                           |
 | Get-Uptime                |         | &check; | &check; | &check; |                                           |
 | Get-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Get-Verb                  |         | &check; | &check; | &check; |                                           |
+| Get-Verb                  |         | &check; | &check; | &check; | Movido do Microsoft.PowerShelll.Core     |
 | Group-Object              | &check; | &check; | &check; | &check; |                                           |
 | Import-Alias              | &check; | &check; | &check; | &check; |                                           |
 | Import-Clixml             | &check; | &check; | &check; | &check; |                                           |
@@ -402,7 +403,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | New-Variable              | &check; | &check; | &check; | &check; |                                           |
 | Out-File                  | &check; | &check; | &check; | &check; |                                           |
 | Out-GridView              | &check; |         | &check; | &check; | Somente Windows                              |
-| Out-Printer               | &check; |         | &check; | &check; |                                           |
+| Out-Printer               | &check; |         | &check; | &check; | Somente Windows                              |
 | Out-String                | &check; | &check; | &check; | &check; |                                           |
 | Read-Host                 | &check; | &check; | &check; | &check; |                                           |
 | Register-EngineEvent      | &check; | &check; | &check; | &check; | Não há fontes de evento disponíveis no Linux/macOS |
@@ -422,7 +423,7 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | Set-PSBreakpoint          | &check; | &check; | &check; | &check; |                                           |
 | Set-TraceSource           | &check; | &check; | &check; | &check; |                                           |
 | Set-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Show-Command              | &check; |         | &check; | &check; |                                           |
+| Show-Command              | &check; |         | &check; | &check; | Somente Windows                              |
 | Show-Markdown             |         |   6.1   | &check; | &check; |                                           |
 | Sort-Object               | &check; | &check; | &check; | &check; |                                           |
 | Start-Sleep               | &check; | &check; | &check; | &check; |                                           |

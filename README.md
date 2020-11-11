@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899261"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239877"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta Aberto da Microsoft
+
+> Atualização: 02/11/2020
 
 Este projeto adotou o [Código de Conduta de Software Livre da Microsoft](https://opensource.microsoft.com/codeofconduct/). Para saber mais, confira as [Perguntas Frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate [opencode@microsoft.com](mailto:opencode@microsoft.com) com perguntas ou comentários adicionais.
 
