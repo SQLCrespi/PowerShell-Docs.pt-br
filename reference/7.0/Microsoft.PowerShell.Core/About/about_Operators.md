@@ -2,16 +2,16 @@
 description: Descreve os operadores com suporte do PowerShell.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 10/28/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: d442a64be77934cef4636e905c098d9630451b8f
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93196660"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483121"
 ---
 # <a name="about-operators"></a>Sobre operadores
 
@@ -117,6 +117,11 @@ Retorna o resultado de uma ou mais instruções como uma matriz. Se houver apena
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>Sintaxe literal da tabela de hash `@{}`
+
+Semelhante à subexpressão de matriz, essa sintaxe é usada para declarar uma tabela de hash.
+Para obter mais informações, consulte [about_Hash_Tables](about_Hash_Tables.md).
 
 #### <a name="call-operator-"></a>Operador de chamada `&`
 
@@ -393,7 +398,7 @@ Você também pode criar intervalos na ordem inversa.
 5..-5 | ForEach-Object {Write-Output $_}
 ```
 
-A partir do PowerShell 6, o operador Range funciona com **caracteres** , bem como **inteiros** .
+A partir do PowerShell 6, o operador Range funciona com **caracteres** , bem como **inteiros**.
 
 Para criar um intervalo de caracteres, coloque os caracteres de limite entre aspas.
 
@@ -498,8 +503,6 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 
 Um operador NULL-Conditional aplica um acesso de membro, `?.` , ou acesso de elemento, `?[]` , operação para seu operando somente se esse operando for avaliado como não nulo; caso contrário, retornará NULL.
 
-Como o PowerShell permite que `?` faça parte do nome da variável, é necessária uma especificação formal do nome da variável para usar esses operadores. Portanto, é necessário usar `{}` em torno dos nomes de variáveis, como `${a}` ou quando `?` faz parte do nome da variável `${a?}`.
-
 No exemplo a seguir, o valor de **propName** é retornado.
 
 ```powershell
@@ -511,7 +514,7 @@ ${a}?.PropName
 100
 ```
 
-O exemplo a seguir retornará NULL, sem tentar acessar o nome do membro **propName** .
+O exemplo a seguir retornará NULL, sem tentar acessar o nome do membro **propName**.
 
 ```powershell
 $a = $null
@@ -535,6 +538,11 @@ E quando o operando é nulo, o elemento não é acessado e nulo é retornado.
 $a = $null
 ${a}?[0]
 ```
+
+> [!NOTE]
+> Como o PowerShell permite que `?` faça parte do nome da variável, é necessária uma especificação formal do nome da variável para usar esses operadores. Portanto, é necessário usar `{}` em torno dos nomes de variáveis, como `${a}` ou quando `?` faz parte do nome da variável `${a?}`.
+>
+> A sintaxe de nome de variável de `${<name>}` não deve ser confundida com o `$()` operador de subexpressão. Para obter mais informações, consulte a seção nome da variável de [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
 
 ## <a name="see-also"></a>Confira também
 

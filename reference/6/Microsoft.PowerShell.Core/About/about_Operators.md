@@ -6,12 +6,12 @@ ms.date: 10/28/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: 9668e635b17f8cbe9f6639e8a13b95d4b9387fbb
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: a76aab20c8fc64f78f3208c42e212a3fbccc7c48
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93196661"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483138"
 ---
 # <a name="about-operators"></a>Sobre operadores
 
@@ -121,6 +121,11 @@ Retorna o resultado de uma ou mais instruções como uma matriz. Se houver apena
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>Sintaxe literal da tabela de hash `@{}`
+
+Semelhante à subexpressão de matriz, essa sintaxe é usada para declarar uma tabela de hash.
+Para obter mais informações, consulte [about_Hash_Tables](about_Hash_Tables.md).
 
 #### <a name="call-operator-"></a>Operador de chamada `&`
 
@@ -385,7 +390,7 @@ Você também pode criar intervalos na ordem inversa.
 5..-5 | ForEach-Object {Write-Output $_}
 ```
 
-A partir do PowerShell 6, o operador Range funciona com **caracteres** , bem como **inteiros** .
+A partir do PowerShell 6, o operador Range funciona com **caracteres** , bem como **inteiros**.
 
 Para criar um intervalo de caracteres, coloque os caracteres de limite entre aspas.
 

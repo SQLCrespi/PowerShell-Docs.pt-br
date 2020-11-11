@@ -2,16 +2,16 @@
 description: Descreve como as variáveis armazenam valores que podem ser usados no PowerShell.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 03/19/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 910d09d0606c10679df342092e8fbc3ecb068ecf
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e1eee80740d1f59ab9a96122c09ba81ef99d35cc
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195878"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483019"
 ---
 # <a name="about-variables"></a>Sobre variáveis
 
@@ -216,7 +216,7 @@ $PROFILE
 C:\Users\User01\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-Neste exemplo, são mostrados dois comandos que podem abrir o perfil do PowerShell no **notepad.exe** . O exemplo com marcas de aspas duplas ( `"` ) usa o valor da variável.
+Neste exemplo, são mostrados dois comandos que podem abrir o perfil do PowerShell no **notepad.exe**. O exemplo com marcas de aspas duplas ( `"` ) usa o valor da variável.
 
 ```powershell
 notepad $PROFILE
@@ -250,7 +250,7 @@ A prática recomendada é que os nomes de variáveis incluam apenas caracteres a
 
 Os nomes de variáveis alfanuméricas podem conter estes caracteres:
 
-- Caracteres Unicode destas categorias: **Lu** , **ll** , **lt** , **LM** , **lo** ou **ND** .
+- Caracteres Unicode destas categorias: **Lu** , **ll** , **lt** , **LM** , **lo** ou **ND**.
 - Caractere de sublinhado ( `_` ).
 - Caractere de ponto de interrogação ( `?` ).
 
@@ -332,7 +332,7 @@ Por exemplo, para alterar o valor da `$VerbosePreference` variável em cada sess
 $VerbosePreference = "Continue"
 ```
 
-Você pode adicionar esse comando ao seu perfil do PowerShell abrindo o `$PROFILE` arquivo em um editor de texto, como **notepad.exe** . Para obter mais informações sobre perfis do PowerShell, consulte [about_Profiles](about_Profiles.md).
+Você pode adicionar esse comando ao seu perfil do PowerShell abrindo o `$PROFILE` arquivo em um editor de texto, como **notepad.exe**. Para obter mais informações sobre perfis do PowerShell, consulte [about_Profiles](about_Profiles.md).
 
 ## <a name="the-variable-drive"></a>A unidade Variable:
 
