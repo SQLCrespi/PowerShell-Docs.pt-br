@@ -2,12 +2,12 @@
 title: Instalar o PowerShell no Windows
 description: Informações sobre a instalação do PowerShell no Windows
 ms.date: 10/30/2020
-ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93142779"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296372"
 ---
 # <a name="installing-powershell-on-windows"></a>Instalar o PowerShell no Windows
 
@@ -24,7 +24,7 @@ Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisit
 
 ## <a name="download-the-installer-package"></a>Baixar o pacote do instalador
 
-Para instalar o PowerShell no Windows, baixe o pacote de instalação na página de [lançamentos][releases] do GitHub. Role a tela para baixo até a seção **Ativos** na página de Lançamentos. A seção **Ativos** pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
+Para instalar o PowerShell no Windows, baixe o pacote de instalação [mais recente][] no GitHub. Você também pode encontrar a versão prévia mais recente na página de [versões][]. Role a tela para baixo até a seção **Ativos** na página de Lançamentos. A seção **Ativos** pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
 
@@ -83,7 +83,7 @@ Isso pode ser usado por administradores e desenvolvedores para encontrar o camin
 > [!NOTE]
 > No momento, o pacote MSIX não tem suporte oficial. Continuamos a criar o pacote apenas para fins de teste interno.
 
-Para instalar manualmente o pacote MSIX em um cliente Windows 10, baixe o pacote MSIX na nossa página de [versões][releases] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
+Para instalar manualmente o pacote MSIX em um cliente do Windows 10, baixe o pacote MSIX na nossa página de [versões] do GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
 O arquivo MSIX tem esta aparência – `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -95,7 +95,7 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />Instalando o pacote ZIP
 
-Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. Baixe um dos arquivos ZIP a seguir da página de [versões][releases].
+Arquivos binários de ZIP do PowerShell são fornecidos para habilitar cenários de implantação avançada. Baixe um dos seguintes arquivos ZIP da página de [versões].
 
 - PowerShell-7.0.3-win-x64.zip
 - PowerShell-7.0.3-win-x86.zip
@@ -267,7 +267,8 @@ A Microsoft dá suporte aos métodos de instalação neste documento. Pode haver
 
 <!-- link references -->
 
-[releases]: https://github.com/PowerShell/PowerShell/releases
+[versões]: https://github.com/PowerShell/PowerShell/releases
+[mais recente]: https://github.com/PowerShell/PowerShell/releases/latest
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
