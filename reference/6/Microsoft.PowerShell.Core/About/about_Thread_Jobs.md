@@ -2,120 +2,157 @@
 description: Fornece informações sobre os trabalhos baseados em thread do PowerShell. Um trabalho de thread é um tipo de trabalho em segundo plano que executa um comando ou expressão em um thread separado dentro do processo de sessão atual.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: 1.0.0
 schema: 2.0.0
 title: about_Thread_Jobs
-ms.openlocfilehash: 4951ac2c14c0685fbf2ead16bc52c64096231260
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: ba6251a195d3efdebd427b3f705386336b069211
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93196483"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524464"
 ---
-# <a name="about-thread-jobs"></a><span data-ttu-id="4725b-105">Sobre os trabalhos de thread</span><span class="sxs-lookup"><span data-stu-id="4725b-105">About Thread Jobs</span></span>
+# <a name="about-thread-jobs"></a><span data-ttu-id="10903-105">Sobre os trabalhos de thread</span><span class="sxs-lookup"><span data-stu-id="10903-105">About Thread Jobs</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="4725b-106">Descrição breve</span><span class="sxs-lookup"><span data-stu-id="4725b-106">Short description</span></span>
+## <a name="short-description"></a><span data-ttu-id="10903-106">Descrição breve</span><span class="sxs-lookup"><span data-stu-id="10903-106">Short description</span></span>
 
-<span data-ttu-id="4725b-107">Fornece informações sobre os trabalhos baseados em thread do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4725b-107">Provides information about PowerShell thread-based jobs.</span></span> <span data-ttu-id="4725b-108">Um trabalho de thread é um tipo de trabalho em segundo plano que executa um comando ou expressão em um thread separado dentro do processo de sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4725b-108">A thread job is a type of background job that runs a command or expression in a separate thread within the current session process.</span></span>
+<span data-ttu-id="10903-107">Fornece informações sobre os trabalhos baseados em thread do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="10903-107">Provides information about PowerShell thread-based jobs.</span></span> <span data-ttu-id="10903-108">Um trabalho de thread é um tipo de trabalho em segundo plano que executa um comando ou expressão em um thread separado dentro do processo de sessão atual.</span><span class="sxs-lookup"><span data-stu-id="10903-108">A thread job is a type of background job that runs a command or expression in a separate thread within the current session process.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="4725b-109">Descrição longa</span><span class="sxs-lookup"><span data-stu-id="4725b-109">Long description</span></span>
+## <a name="long-description"></a><span data-ttu-id="10903-109">Descrição longa</span><span class="sxs-lookup"><span data-stu-id="10903-109">Long description</span></span>
 
-<span data-ttu-id="4725b-110">Este artigo explica como executar trabalhos de thread no PowerShell em um computador local.</span><span class="sxs-lookup"><span data-stu-id="4725b-110">This article explains how to run thread jobs in PowerShell on a local computer.</span></span>
-<span data-ttu-id="4725b-111">Para obter informações sobre como executar trabalhos em segundo plano em um computador local, consulte [about_Jobs](about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="4725b-111">For information about running background jobs on a local computer, see [about_Jobs](about_Jobs.md).</span></span>
+<span data-ttu-id="10903-110">O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos.</span><span class="sxs-lookup"><span data-stu-id="10903-110">PowerShell concurrently runs commands and scripts through jobs.</span></span> <span data-ttu-id="10903-111">Há três tipos de trabalhos fornecidos pelo PowerShell para dar suporte à simultaneidade.</span><span class="sxs-lookup"><span data-stu-id="10903-111">There are three jobs types provided by PowerShell to support concurrency.</span></span>
 
-<span data-ttu-id="4725b-112">Inicie um trabalho de thread usando o `Start-ThreadJob` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4725b-112">Start a thread job by using the `Start-ThreadJob` cmdlet.</span></span> <span data-ttu-id="4725b-113">Esse cmdlet está disponível no módulo **ThreadJob** que acompanha o PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4725b-113">This cmdlet is available in the **ThreadJob** module that ships with PowerShell.</span></span>
-<span data-ttu-id="4725b-114">`Start-ThreadJob` Retorna um único objeto de trabalho que encapsula o comando ou script em execução e pode ser usado com todos os cmdlets de manipulação de trabalho do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4725b-114">`Start-ThreadJob` returns a single job object that encapsulates the running command or script, and can be used with all PowerShell job manipulating cmdlets.</span></span>
+- <span data-ttu-id="10903-112">`RemoteJob` -Comandos e scripts executados em uma sessão remota.</span><span class="sxs-lookup"><span data-stu-id="10903-112">`RemoteJob` - Commands and scripts run in a remote session.</span></span> <span data-ttu-id="10903-113">Para obter informações, consulte [about_Remote_Jobs](about_Remote_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="10903-113">For information, see [about_Remote_Jobs](about_Remote_Jobs.md).</span></span>
+- <span data-ttu-id="10903-114">`BackgroundJob` -Comandos e scripts são executados em um processo separado no computador local.</span><span class="sxs-lookup"><span data-stu-id="10903-114">`BackgroundJob` - Commands and scripts run in a separate process on the local machine.</span></span> <span data-ttu-id="10903-115">Para obter mais informações, consulte [about_Jobs](about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="10903-115">For more information, see [about_Jobs](about_Jobs.md).</span></span>
+- <span data-ttu-id="10903-116">`PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local.</span><span class="sxs-lookup"><span data-stu-id="10903-116">`PSTaskJob` or `ThreadJob` - Commands and scripts run in a separate thread within the same process on the local machine.</span></span>
 
-## <a name="the-job-cmdlets"></a><span data-ttu-id="4725b-115">Os cmdlets de trabalho</span><span class="sxs-lookup"><span data-stu-id="4725b-115">The job cmdlets</span></span>
+<span data-ttu-id="10903-117">Os trabalhos baseados em thread não são tão robustos quanto os trabalhos remotos e em segundo plano, pois eles são executados no mesmo processo em threads diferentes.</span><span class="sxs-lookup"><span data-stu-id="10903-117">Thread-based jobs are not as robust as remote and background jobs, because they run in the same process on different threads.</span></span> <span data-ttu-id="10903-118">Se um trabalho tiver um erro crítico que falha no processo, todos os outros trabalhos no processo serão encerrados.</span><span class="sxs-lookup"><span data-stu-id="10903-118">If one job has a critical error that crashes the process, then all other jobs in the process are terminated.</span></span>
 
-|<span data-ttu-id="4725b-116">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="4725b-116">Cmdlet</span></span>           |<span data-ttu-id="4725b-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="4725b-117">Description</span></span>                                            |
-|-----------------|-------------------------------------------------------|
-|`Start-ThreadJob`|<span data-ttu-id="4725b-118">Inicia um trabalho de thread em um computador local.</span><span class="sxs-lookup"><span data-stu-id="4725b-118">Starts a thread job on a local computer.</span></span>               |
-|`Get-Job`        |<span data-ttu-id="4725b-119">Obtém os trabalhos que foram iniciados na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="4725b-119">Gets the jobs that were started in the current session.</span></span>|
-|`Receive-Job`    |<span data-ttu-id="4725b-120">Obtém os resultados dos trabalhos.</span><span class="sxs-lookup"><span data-stu-id="4725b-120">Gets the results of jobs.</span></span>                              |
-|`Stop-Job`       |<span data-ttu-id="4725b-121">Interrompe um trabalho em execução.</span><span class="sxs-lookup"><span data-stu-id="4725b-121">Stops a running job.</span></span>                                   |
-|`Wait-Job`       |<span data-ttu-id="4725b-122">Suprime o prompt de comando até que um ou todos os trabalhos sejam</span><span class="sxs-lookup"><span data-stu-id="4725b-122">Suppresses the command prompt until one or all jobs are</span></span>|
-|                 |<span data-ttu-id="4725b-123">concluí.</span><span class="sxs-lookup"><span data-stu-id="4725b-123">complete.</span></span>                                              |
-|`Remove-Job`     |<span data-ttu-id="4725b-124">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-124">Deletes a job.</span></span>                                         |
+<span data-ttu-id="10903-119">No entanto, os trabalhos baseados em thread exigem menos sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="10903-119">However, thread-based jobs require less overhead.</span></span> <span data-ttu-id="10903-120">Eles não usam a camada ou serialização de comunicação remota.</span><span class="sxs-lookup"><span data-stu-id="10903-120">They don't use the remoting layer or serialization.</span></span> <span data-ttu-id="10903-121">Os objetos de resultado são retornados como referências a objetos dinâmicos na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="10903-121">The result objects are returned as references to live objects in the current session.</span></span> <span data-ttu-id="10903-122">Sem essa sobrecarga, os trabalhos baseados em threads são executados mais rapidamente e usam menos recursos do que os outros tipos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="10903-122">Without this overhead, thread-based jobs run faster and use fewer resources than the other job types.</span></span>
 
-## <a name="how-to-start-a-thread-job-on-the-local-computer"></a><span data-ttu-id="4725b-125">Como iniciar um trabalho de thread no computador local</span><span class="sxs-lookup"><span data-stu-id="4725b-125">How to start a thread job on the local computer</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="10903-123">A sessão pai que criou o trabalho também monitora o status do trabalho e coleta dados do pipeline.</span><span class="sxs-lookup"><span data-stu-id="10903-123">The parent session that created the job also monitors the job status and collects pipeline data.</span></span> <span data-ttu-id="10903-124">O processo filho do trabalho é encerrado pelo processo pai quando o trabalho atinge um estado concluído.</span><span class="sxs-lookup"><span data-stu-id="10903-124">The job child process is terminated by the parent process once the job reaches a finished state.</span></span> <span data-ttu-id="10903-125">Se a sessão pai for encerrada, todos os trabalhos filho em execução serão encerrados junto com seus processos filho.</span><span class="sxs-lookup"><span data-stu-id="10903-125">If the parent session is terminated, all running child jobs are terminated along with their child processes.</span></span>
 
-<span data-ttu-id="4725b-126">Para iniciar um trabalho de thread no computador local, use o `Start-ThreadJob` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4725b-126">To start a thread job on the local computer, use the `Start-ThreadJob` cmdlet.</span></span>
+<span data-ttu-id="10903-126">Há duas maneiras de solucionar essa situação:</span><span class="sxs-lookup"><span data-stu-id="10903-126">There are two ways work around this situation:</span></span>
 
-<span data-ttu-id="4725b-127">Para gravar um `Start-ThreadJob` comando, coloque o comando ou o script que o trabalho executa entre chaves ( `{ }` ).</span><span class="sxs-lookup"><span data-stu-id="4725b-127">To write a `Start-ThreadJob` command, enclose the command or script the job runs in curly braces (`{ }`).</span></span>
+1. <span data-ttu-id="10903-127">Use `Invoke-Command` para criar trabalhos que são executados em sessões desconectadas.</span><span class="sxs-lookup"><span data-stu-id="10903-127">Use `Invoke-Command` to create jobs that run in disconnected sessions.</span></span> <span data-ttu-id="10903-128">Para obter mais informações, consulte [about_Remote_Jobs](about_Remote_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="10903-128">For more information, see [about_Remote_Jobs](about_Remote_Jobs.md).</span></span>
+1. <span data-ttu-id="10903-129">Use `Start-Process` para criar um novo processo em vez de um trabalho.</span><span class="sxs-lookup"><span data-stu-id="10903-129">Use `Start-Process` to create a new process rather than a job.</span></span> <span data-ttu-id="10903-130">Para obter mais informações, consulte [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).</span><span class="sxs-lookup"><span data-stu-id="10903-130">For more information, see [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).</span></span>
 
-<span data-ttu-id="4725b-128">O comando a seguir inicia um trabalho de thread que executa um `Get-Process` comando no computador local.</span><span class="sxs-lookup"><span data-stu-id="4725b-128">The following command starts a thread job that runs a `Get-Process` command on the local computer.</span></span>
+## <a name="how-to-start-and-manage-thread-based-jobs"></a><span data-ttu-id="10903-131">Como iniciar e gerenciar trabalhos baseados em thread</span><span class="sxs-lookup"><span data-stu-id="10903-131">How to start and manage thread-based jobs</span></span>
+
+<span data-ttu-id="10903-132">Há duas maneiras de iniciar trabalhos baseados em thread:</span><span class="sxs-lookup"><span data-stu-id="10903-132">There are two ways to start thread-based jobs:</span></span>
+
+- <span data-ttu-id="10903-133">`Start-ThreadJob`-do módulo **ThreadJob**</span><span class="sxs-lookup"><span data-stu-id="10903-133">`Start-ThreadJob` - from the **ThreadJob** module</span></span>
+- <span data-ttu-id="10903-134">`ForEach-Object -Parallel -AsJob` -o recurso paralelo foi adicionado no PowerShell 7,0</span><span class="sxs-lookup"><span data-stu-id="10903-134">`ForEach-Object -Parallel -AsJob` - the parallel feature was added in PowerShell 7.0</span></span>
+
+<span data-ttu-id="10903-135">Use os mesmos cmdlets de **trabalho** descritos em [about_Jobs](about_Jobs.md) para gerenciar trabalhos baseados em thread.</span><span class="sxs-lookup"><span data-stu-id="10903-135">Use the same **Job** cmdlets described in [about_Jobs](about_Jobs.md) to manage thread-based jobs.</span></span>
+
+### <a name="using-start-threadjob"></a><span data-ttu-id="10903-136">Usando `Start-ThreadJob`</span><span class="sxs-lookup"><span data-stu-id="10903-136">Using `Start-ThreadJob`</span></span>
+
+<span data-ttu-id="10903-137">O módulo **ThreadJob** foi enviado pela primeira vez com o PowerShell 6.</span><span class="sxs-lookup"><span data-stu-id="10903-137">The **ThreadJob** module first shipped with PowerShell 6.</span></span> <span data-ttu-id="10903-138">Ele também pode ser instalado do Galeria do PowerShell para o Windows PowerShell 5,1.</span><span class="sxs-lookup"><span data-stu-id="10903-138">It can also be installed from the PowerShell Gallery for Windows PowerShell 5.1.</span></span>
+
+<span data-ttu-id="10903-139">Para iniciar um trabalho de thread no computador local, use o `Start-ThreadJob` cmdlet com um comando ou script entre chaves ( `{ }` ).</span><span class="sxs-lookup"><span data-stu-id="10903-139">To start a thread job on the local computer, use the `Start-ThreadJob` cmdlet with a command or script enclosed in curly braces (`{ }`).</span></span>
+
+<span data-ttu-id="10903-140">O exemplo a seguir inicia um trabalho de thread que executa um `Get-Process` comando no computador local.</span><span class="sxs-lookup"><span data-stu-id="10903-140">The following example starts a thread job that runs a `Get-Process` command on the local computer.</span></span>
 
 ```powershell
 Start-ThreadJob -ScriptBlock { Get-Process }
 ```
 
-<span data-ttu-id="4725b-129">O `Start-ThreadJob` comando retorna um `ThreadJob` objeto que representa o trabalho em execução.</span><span class="sxs-lookup"><span data-stu-id="4725b-129">The `Start-ThreadJob` command returns a `ThreadJob` object that represents the running job.</span></span> <span data-ttu-id="4725b-130">O objeto de trabalho contém informações úteis sobre o trabalho, incluindo seu status de execução atual.</span><span class="sxs-lookup"><span data-stu-id="4725b-130">The job object contains useful information about the job including its current running status.</span></span> <span data-ttu-id="4725b-131">Ele coleta os resultados do trabalho à medida que os resultados são gerados.</span><span class="sxs-lookup"><span data-stu-id="4725b-131">It collects the results of the job as the results are being generated.</span></span>
+<span data-ttu-id="10903-141">O `Start-ThreadJob` comando retorna um `ThreadJob` objeto que representa o trabalho em execução.</span><span class="sxs-lookup"><span data-stu-id="10903-141">The `Start-ThreadJob` command returns a `ThreadJob` object that represents the running job.</span></span> <span data-ttu-id="10903-142">O objeto de trabalho contém informações úteis sobre o trabalho, incluindo seu status de execução atual.</span><span class="sxs-lookup"><span data-stu-id="10903-142">The job object contains useful information about the job including its current running status.</span></span> <span data-ttu-id="10903-143">Ele coleta os resultados do trabalho à medida que os resultados são gerados.</span><span class="sxs-lookup"><span data-stu-id="10903-143">It collects the results of the job as the results are being generated.</span></span>
 
-## <a name="how-to-wait-for-a-job-to-complete-and-retrieve-job-results"></a><span data-ttu-id="4725b-132">Como aguardar a conclusão de um trabalho e recuperar os resultados do trabalho</span><span class="sxs-lookup"><span data-stu-id="4725b-132">How to wait for a job to complete and retrieve job results</span></span>
+### <a name="using-foreach-object--parallel--asjob"></a><span data-ttu-id="10903-144">Usando `ForEach-Object -Parallel -AsJob`</span><span class="sxs-lookup"><span data-stu-id="10903-144">Using `ForEach-Object -Parallel -AsJob`</span></span>
 
-<span data-ttu-id="4725b-133">Você pode usar os cmdlets de trabalho do PowerShell, como `Wait-Job` e `Receive-Job` para aguardar a conclusão de um trabalho e, em seguida, retornar todos os resultados gerados pelo trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-133">You can use PowerShell job cmdlets, such as `Wait-Job` and `Receive-Job` to wait for a job to complete and then return all results generated by the job.</span></span>
+<span data-ttu-id="10903-145">O PowerShell 7,0 adicionou um novo parâmetro definido para o `ForEach-Object` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="10903-145">PowerShell 7.0 added a new parameter set to the `ForEach-Object` cmdlet.</span></span> <span data-ttu-id="10903-146">Os novos parâmetros permitem executar blocos de script em threads paralelos como trabalhos do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="10903-146">The new parameters allow you to run script blocks in parallel threads as PowerShell jobs.</span></span>
 
-<span data-ttu-id="4725b-134">O comando a seguir inicia um trabalho de thread que executa um `Get-Process` comando, aguarda até que o comando seja concluído e, finalmente, retorna todos os resultados de dados gerados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="4725b-134">The following command starts a thread job that runs a `Get-Process` command, then waits for the command to complete, and finally returns all data results generated by the command.</span></span>
+<span data-ttu-id="10903-147">Você pode canalizar dados para o `ForEach-Object -Parallel` .</span><span class="sxs-lookup"><span data-stu-id="10903-147">You can pipe data to `ForEach-Object -Parallel`.</span></span> <span data-ttu-id="10903-148">Os dados são passados para o bloco de script que é executado em paralelo.</span><span class="sxs-lookup"><span data-stu-id="10903-148">The data is passed to the script block that is run in parallel.</span></span> <span data-ttu-id="10903-149">O `-AsJob` parâmetro cria objetos de trabalhos para cada um dos threads paralelos.</span><span class="sxs-lookup"><span data-stu-id="10903-149">The `-AsJob` parameter creates jobs objects for each of the parallel threads.</span></span>
+
+<span data-ttu-id="10903-150">O comando a seguir inicia um trabalho que contém trabalhos filho para cada valor de entrada canalizado para o comando.</span><span class="sxs-lookup"><span data-stu-id="10903-150">The following command starts a job that contains child jobs for each input value piped to the command.</span></span> <span data-ttu-id="10903-151">Cada trabalho filho executa o `Write-Output` comando com um valor de entrada canalizado como o argumento.</span><span class="sxs-lookup"><span data-stu-id="10903-151">Each child job runs the `Write-Output` command with a piped input value as the argument.</span></span>
+
+```powershell
+1..5 | ForEach-Object -Parallel { Write-Output $_ } -AsJob
+```
+
+<span data-ttu-id="10903-152">O `ForEach-Object -Parallel` comando retorna um `PSTaskJob` objeto que contém trabalhos filho para cada valor de entrada canalizado.</span><span class="sxs-lookup"><span data-stu-id="10903-152">The `ForEach-Object -Parallel` command returns a `PSTaskJob` object that contains child jobs for each piped input value.</span></span> <span data-ttu-id="10903-153">O objeto de trabalho contém informações úteis sobre o status de execução de trabalhos filho.</span><span class="sxs-lookup"><span data-stu-id="10903-153">The job object contains useful information about the child jobs running status.</span></span> <span data-ttu-id="10903-154">Ele coleta os resultados dos trabalhos filho à medida que os resultados são gerados.</span><span class="sxs-lookup"><span data-stu-id="10903-154">It collects the results of the child jobs as the results are being generated.</span></span>
+
+## <a name="how-to-wait-for-a-job-to-complete-and-retrieve-job-results"></a><span data-ttu-id="10903-155">Como aguardar a conclusão de um trabalho e recuperar os resultados do trabalho</span><span class="sxs-lookup"><span data-stu-id="10903-155">How to wait for a job to complete and retrieve job results</span></span>
+
+<span data-ttu-id="10903-156">Você pode usar os cmdlets de trabalho do PowerShell, como `Wait-Job` e `Receive-Job` para aguardar a conclusão de um trabalho e, em seguida, retornar todos os resultados gerados pelo trabalho.</span><span class="sxs-lookup"><span data-stu-id="10903-156">You can use PowerShell job cmdlets, such as `Wait-Job` and `Receive-Job` to wait for a job to complete and then return all results generated by the job.</span></span>
+
+<span data-ttu-id="10903-157">O comando a seguir inicia um trabalho de thread que executa um `Get-Process` comando, aguarda até que o comando seja concluído e, finalmente, retorna todos os resultados de dados gerados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="10903-157">The following command starts a thread job that runs a `Get-Process` command, then waits for the command to complete, and finally returns all data results generated by the command.</span></span>
 
 ```powershell
 Start-ThreadJob -ScriptBlock { Get-Process } | Wait-Job | Receive-Job
 ```
 
-## <a name="powershell-concurrency-and-jobs"></a><span data-ttu-id="4725b-135">Simultaneidade e trabalhos do PowerShell</span><span class="sxs-lookup"><span data-stu-id="4725b-135">PowerShell concurrency and jobs</span></span>
+<span data-ttu-id="10903-158">O comando a seguir inicia um trabalho que executa um `Write-Output` comando para cada entrada canalizada, aguarda que todos os trabalhos filho sejam concluídos e, finalmente, retorna todos os resultados de dados gerados pelos trabalhos filho.</span><span class="sxs-lookup"><span data-stu-id="10903-158">The following command starts a job that runs a `Write-Output` command for each piped input, then waits for all child jobs to complete, and finally returns all data results generated by the child jobs.</span></span>
 
-<span data-ttu-id="4725b-136">O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos.</span><span class="sxs-lookup"><span data-stu-id="4725b-136">PowerShell concurrently runs commands and script through jobs.</span></span> <span data-ttu-id="4725b-137">Há três soluções baseadas em trabalhos fornecidas pelo PowerShell para dar suporte à simultaneidade.</span><span class="sxs-lookup"><span data-stu-id="4725b-137">There are three jobs-based solutions provided by PowerShell to support concurrency.</span></span>
+```powershell
+1..5 | ForEach-Object -Parallel { Write-Output $_ } -AsJob | Wait-Job | Receive-Job
+```
 
-|<span data-ttu-id="4725b-138">Trabalho</span><span class="sxs-lookup"><span data-stu-id="4725b-138">Job</span></span>            |<span data-ttu-id="4725b-139">Descrição</span><span class="sxs-lookup"><span data-stu-id="4725b-139">Description</span></span>                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |<span data-ttu-id="4725b-140">O comando e o script são executados em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="4725b-140">Command and script run on a remote computer.</span></span>                 |
-|`BackgroundJob`|<span data-ttu-id="4725b-141">O comando e o script são executados em um processo separado no local</span><span class="sxs-lookup"><span data-stu-id="4725b-141">Command and script run in a separate process on the local</span></span>    |
-|               |<span data-ttu-id="4725b-142">Tradução.</span><span class="sxs-lookup"><span data-stu-id="4725b-142">machine.</span></span>                                                     |
-|`ThreadJob`    |<span data-ttu-id="4725b-143">O comando e o script são executados em um thread separado dentro do mesmo</span><span class="sxs-lookup"><span data-stu-id="4725b-143">Command and script run in a separate thread within the same</span></span>  |
-|               |<span data-ttu-id="4725b-144">processo no computador local.</span><span class="sxs-lookup"><span data-stu-id="4725b-144">process on the local machine.</span></span>                                |
+<span data-ttu-id="10903-159">O `Receive-Job` cmdlet retorna os resultados dos trabalhos filho.</span><span class="sxs-lookup"><span data-stu-id="10903-159">The `Receive-Job` cmdlet returns the results of the child jobs.</span></span>
 
-<span data-ttu-id="4725b-145">Cada tipo de trabalho tem benefícios e desvantagens.</span><span class="sxs-lookup"><span data-stu-id="4725b-145">Each type of job has benefits and drawbacks.</span></span> <span data-ttu-id="4725b-146">Executar o script remotamente em um computador separado ou em um processo separado tem grande isolamento.</span><span class="sxs-lookup"><span data-stu-id="4725b-146">Running script remotely on a separate machine or in a separate process has great isolation.</span></span> <span data-ttu-id="4725b-147">Quaisquer erros não afetarão outros trabalhos em execução ou o cliente que iniciou o trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-147">Any errors won't affect other running jobs or the client that started the job.</span></span> <span data-ttu-id="4725b-148">Mas a camada de comunicação remota adiciona sobrecarga, incluindo a serialização de objeto.</span><span class="sxs-lookup"><span data-stu-id="4725b-148">But the remoting layer adds overhead, including object serialization.</span></span> <span data-ttu-id="4725b-149">Todos os objetos passados para e da sessão remota devem ser serializados e, em seguida, desserializados conforme passam entre o cliente e a sessão de destino.</span><span class="sxs-lookup"><span data-stu-id="4725b-149">All objects passed to and from the remote session must be serialized and then deserialized as it passes between the client and the target session.</span></span> <span data-ttu-id="4725b-150">A operação de serialização pode usar muitos recursos de computação e memória para grandes objetos de dados complexos.</span><span class="sxs-lookup"><span data-stu-id="4725b-150">The serialization operation can use many compute and memory resources for large complex data objects.</span></span>
+```powershell
+1
+3
+2
+4
+5
+```
 
-## <a name="powershell-thread-based-jobs"></a><span data-ttu-id="4725b-151">Trabalhos baseados em thread do PowerShell</span><span class="sxs-lookup"><span data-stu-id="4725b-151">PowerShell thread based jobs</span></span>
+<span data-ttu-id="10903-160">Como cada trabalho filho é executado em paralelo, a ordem dos resultados gerados não é garantida.</span><span class="sxs-lookup"><span data-stu-id="10903-160">Because each child job runs parallel, the order of the generated results is not guaranteed.</span></span>
 
-<span data-ttu-id="4725b-152">Os trabalhos baseados em thread não são tão robustos quanto os trabalhos remotos e em segundo plano, pois eles são executados no mesmo processo em threads diferentes.</span><span class="sxs-lookup"><span data-stu-id="4725b-152">Thread based jobs are not as robust as Remote and Background jobs, because they run in the same process on different threads.</span></span> <span data-ttu-id="4725b-153">Se um trabalho tiver um erro crítico que falha no processo, todos os outros trabalhos no processo também falharão.</span><span class="sxs-lookup"><span data-stu-id="4725b-153">If one job has a critical error that crashes the process, then all other jobs in the process will also fail.</span></span>
+## <a name="thread-job-performance"></a><span data-ttu-id="10903-161">Desempenho do trabalho de thread</span><span class="sxs-lookup"><span data-stu-id="10903-161">Thread job performance</span></span>
 
-<span data-ttu-id="4725b-154">No entanto, os trabalhos baseados em thread têm muito menos sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="4725b-154">However, thread-based jobs have much less overhead.</span></span> <span data-ttu-id="4725b-155">Eles não precisam usar a camada ou a serialização de comunicação remota.</span><span class="sxs-lookup"><span data-stu-id="4725b-155">They don't need to use the remoting layer or serialization.</span></span> <span data-ttu-id="4725b-156">O resultado é que os trabalhos baseados em thread tendem a ser executados muito mais rapidamente e usam muito menos recursos do que os outros tipos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-156">The result is that thread-based jobs tend to run much faster and use far less resources than the other job types.</span></span>
+<span data-ttu-id="10903-162">Os trabalhos de thread são mais rápidos e mais leves do que outros tipos de trabalhos.</span><span class="sxs-lookup"><span data-stu-id="10903-162">Thread jobs are faster and lighter weight than other types of jobs.</span></span> <span data-ttu-id="10903-163">Mas ainda têm sobrecarga que pode ser grande quando comparada ao trabalho que o trabalho está fazendo.</span><span class="sxs-lookup"><span data-stu-id="10903-163">But they still have overhead that can be large when compared to work the job is doing.</span></span>
 
-## <a name="thread-job-performance"></a><span data-ttu-id="4725b-157">Desempenho do trabalho de thread</span><span class="sxs-lookup"><span data-stu-id="4725b-157">Thread job performance</span></span>
+<span data-ttu-id="10903-164">O PowerShell executa comandos e script em uma sessão.</span><span class="sxs-lookup"><span data-stu-id="10903-164">PowerShell runs commands and script in a session.</span></span> <span data-ttu-id="10903-165">Somente um comando ou script pode ser executado por vez em uma sessão.</span><span class="sxs-lookup"><span data-stu-id="10903-165">Only one command or script can run at a time in a session.</span></span> <span data-ttu-id="10903-166">Assim, ao executar vários trabalhos, cada trabalho é executado em uma sessão separada.</span><span class="sxs-lookup"><span data-stu-id="10903-166">So when running multiple jobs, each job runs in a separate session.</span></span> <span data-ttu-id="10903-167">Cada sessão contribui para a sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="10903-167">Each session contributes to the overhead.</span></span>
 
-<span data-ttu-id="4725b-158">Os trabalhos de thread são mais rápidos e mais leves do que outros tipos de trabalhos.</span><span class="sxs-lookup"><span data-stu-id="4725b-158">Thread jobs are faster and lighter weight than other types of jobs.</span></span> <span data-ttu-id="4725b-159">Mas ainda têm sobrecarga que pode ser grande quando comparada ao trabalho que o trabalho está fazendo.</span><span class="sxs-lookup"><span data-stu-id="4725b-159">But they still have overhead that can be large when compared to work the job is doing.</span></span>
+<span data-ttu-id="10903-168">Os trabalhos de thread fornecem o melhor desempenho quando o trabalho executado é maior do que a sobrecarga da sessão usada para executar o trabalho.</span><span class="sxs-lookup"><span data-stu-id="10903-168">Thread jobs provide the best performance when the work they perform is greater than the overhead of the session used to run the job.</span></span> <span data-ttu-id="10903-169">Há dois casos para atender a esses critérios.</span><span class="sxs-lookup"><span data-stu-id="10903-169">There are two cases for that meet this criteria.</span></span>
 
-<span data-ttu-id="4725b-160">O PowerShell executa comandos e script em uma sessão.</span><span class="sxs-lookup"><span data-stu-id="4725b-160">PowerShell runs commands and script in a session.</span></span> <span data-ttu-id="4725b-161">Somente um comando ou script pode ser executado por vez em uma sessão.</span><span class="sxs-lookup"><span data-stu-id="4725b-161">Only one command or script can run at a time in a session.</span></span> <span data-ttu-id="4725b-162">Assim, ao executar vários trabalhos, cada trabalho é executado em uma sessão separada.</span><span class="sxs-lookup"><span data-stu-id="4725b-162">So when running multiple jobs, each job runs in a separate session.</span></span> <span data-ttu-id="4725b-163">Cada sessão contribui para a sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="4725b-163">Each session contributes to the overhead.</span></span>
+- <span data-ttu-id="10903-170">O trabalho é de computação intensiva – executar um script em vários trabalhos de thread pode tirar proveito de vários núcleos de processador e ser concluído com mais rapidez.</span><span class="sxs-lookup"><span data-stu-id="10903-170">Work is compute intensive - Running a script on multiple thread jobs can take advantage of multiple processor cores and complete faster.</span></span>
 
-<span data-ttu-id="4725b-164">Os trabalhos de thread fornecem o melhor desempenho quando o trabalho executado é maior do que a sobrecarga da sessão usada para executar o trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-164">Thread jobs provide the best performance when the work they perform is greater than the overhead of the session used to run the job.</span></span> <span data-ttu-id="4725b-165">Há dois casos para atender a esses critérios.</span><span class="sxs-lookup"><span data-stu-id="4725b-165">There are two cases for that meet this criteria.</span></span>
-
-- <span data-ttu-id="4725b-166">O trabalho é de computação intensiva – executar um script em vários trabalhos de thread pode tirar proveito de vários núcleos de processador e ser concluído com mais rapidez.</span><span class="sxs-lookup"><span data-stu-id="4725b-166">Work is compute intensive - Running a script on multiple thread jobs can take advantage of multiple processor cores and complete faster.</span></span>
-
-- <span data-ttu-id="4725b-167">O trabalho consiste em uma espera significativa – um script que passa tempo aguardando os resultados de e/s ou de chamada remota.</span><span class="sxs-lookup"><span data-stu-id="4725b-167">Work consists of significant waiting - A script that spends time waiting for I/O or remote call results.</span></span> <span data-ttu-id="4725b-168">A execução em paralelo geralmente é concluída mais rapidamente do que se executado em sequência.</span><span class="sxs-lookup"><span data-stu-id="4725b-168">Running in parallel usually completes quicker than if run sequentially.</span></span>
+- <span data-ttu-id="10903-171">O trabalho consiste em uma espera significativa – um script que passa tempo aguardando os resultados de e/s ou de chamada remota.</span><span class="sxs-lookup"><span data-stu-id="10903-171">Work consists of significant waiting - A script that spends time waiting for I/O or remote call results.</span></span> <span data-ttu-id="10903-172">A execução em paralelo geralmente é concluída mais rapidamente do que se executado em sequência.</span><span class="sxs-lookup"><span data-stu-id="10903-172">Running in parallel usually completes quicker than if run sequentially.</span></span>
 
 ```powershell
 (Measure-Command {
     1..1000 | ForEach { Start-ThreadJob { Write-Output "Hello $using:_" } } | Receive-Job -Wait
 }).TotalMilliseconds
-10457.962
-
+36860.8226
 
 (Measure-Command {
     1..1000 | ForEach-Object { "Hello: $_" }
 }).TotalMilliseconds
-24.9277
+7.1975
 ```
 
-<span data-ttu-id="4725b-169">O primeiro exemplo acima mostra um loop foreach que cria trabalhos de thread de 1000 para fazer uma simples gravação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4725b-169">The first example above shows a foreach loop that creates 1000 thread jobs to do a simple string write.</span></span> <span data-ttu-id="4725b-170">Devido à sobrecarga do trabalho, levará mais de 33 segundos para ser concluído.</span><span class="sxs-lookup"><span data-stu-id="4725b-170">Due to job overhead, it takes over 33 seconds to complete.</span></span>
+<span data-ttu-id="10903-173">O primeiro exemplo acima mostra um loop foreach que cria trabalhos de thread de 1000 para fazer uma simples gravação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="10903-173">The first example above shows a foreach loop that creates 1000 thread jobs to do a simple string write.</span></span> <span data-ttu-id="10903-174">Devido à sobrecarga do trabalho, levará mais de 36 segundos para ser concluído.</span><span class="sxs-lookup"><span data-stu-id="10903-174">Due to job overhead, it takes over 36 seconds to complete.</span></span>
 
-<span data-ttu-id="4725b-171">O segundo exemplo executa o `ForEach` cmdlet para realizar as mesmas operações de 1000 e cada gravação de cadeia de caracteres é executada sequencialmente sem qualquer sobrecarga de trabalho.</span><span class="sxs-lookup"><span data-stu-id="4725b-171">The second example runs the `ForEach` cmdlet to do the same 1000 operations and each string write is executed sequentially without any job overhead.</span></span> <span data-ttu-id="4725b-172">Ele é concluído em um mero 25 milissegundos.</span><span class="sxs-lookup"><span data-stu-id="4725b-172">It completes in a mere 25 milliseconds.</span></span>
+<span data-ttu-id="10903-175">O segundo exemplo executa o `ForEach` cmdlet para realizar as mesmas operações de 1000.</span><span class="sxs-lookup"><span data-stu-id="10903-175">The second example runs the `ForEach` cmdlet to do the same 1000 operations.</span></span>
+<span data-ttu-id="10903-176">Desta vez, `ForEach-Object` é executado em sequência, em um único thread, sem nenhuma sobrecarga de trabalho.</span><span class="sxs-lookup"><span data-stu-id="10903-176">This time, `ForEach-Object` runs sequentially, on a single thread, without any job overhead.</span></span> <span data-ttu-id="10903-177">Ele é concluído em um mero 7 milissegundos.</span><span class="sxs-lookup"><span data-stu-id="10903-177">It completes in a mere 7 milliseconds.</span></span>
+
+<span data-ttu-id="10903-178">No exemplo a seguir, até 5000 entradas são coletadas para 10 logs de sistema separados.</span><span class="sxs-lookup"><span data-stu-id="10903-178">In the following example, up to 5000 entries are collected for 10 separate system logs.</span></span> <span data-ttu-id="10903-179">Como o script envolve a leitura de um número de logs, faz sentido fazer as operações em paralelo.</span><span class="sxs-lookup"><span data-stu-id="10903-179">Since the script involves reading a number of logs, it makes sense to do the operations in parallel.</span></span>
 
 ```powershell
 $logNames.count
 10
 
+Measure-Command {
+    $logs = $logNames | ForEach-Object {
+        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
+    }
+}
+
+TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
+$logs.Count
+50000
+```
+
+<span data-ttu-id="10903-180">O script é concluído na metade do tempo em que os trabalhos são executados em paralelo.</span><span class="sxs-lookup"><span data-stu-id="10903-180">The script completes in half the time when the jobs are run in parallel.</span></span>
+
+```powershell
 Measure-Command {
     $logs = $logNames | ForEach {
         Start-ThreadJob {
@@ -129,25 +166,11 @@ $logs.Count
 50000
 ```
 
-<span data-ttu-id="4725b-173">No exemplo acima, até 5000 entradas são coletadas para 10 logs de sistema separados.</span><span class="sxs-lookup"><span data-stu-id="4725b-173">In the above example, up to 5000 entries are collected for 10 separate system logs.</span></span> <span data-ttu-id="4725b-174">Como o script envolve a leitura de um número de logs, faz sentido fazer as operações em paralelo.</span><span class="sxs-lookup"><span data-stu-id="4725b-174">Since the script involves reading a number of logs, it makes sense to do the operations in parallel.</span></span> <span data-ttu-id="4725b-175">E o trabalho é concluído com duas vezes mais rápido quando o script é executado em sequência.</span><span class="sxs-lookup"><span data-stu-id="4725b-175">And the job completes over twice as fast as when the script is run sequentially.</span></span>
+## <a name="thread-jobs-and-variables"></a><span data-ttu-id="10903-181">Trabalhos de thread e variáveis</span><span class="sxs-lookup"><span data-stu-id="10903-181">Thread jobs and variables</span></span>
 
-```powershell
-Measure-Command {
-    $logs = $logNames | ForEach-Object {
-        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
-    }
-}
+<span data-ttu-id="10903-182">Há várias maneiras de passar valores para os trabalhos baseados em thread.</span><span class="sxs-lookup"><span data-stu-id="10903-182">There are multiple ways to pass values into the thread-based jobs.</span></span>
 
-TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
-$logs.Count
-50000
-```
-
-## <a name="thread-jobs-and-variables"></a><span data-ttu-id="4725b-176">Trabalhos de thread e variáveis</span><span class="sxs-lookup"><span data-stu-id="4725b-176">Thread jobs and variables</span></span>
-
-<span data-ttu-id="4725b-177">As variáveis são passadas para trabalhos de thread de várias maneiras.</span><span class="sxs-lookup"><span data-stu-id="4725b-177">Variables are passed into thread jobs in various ways.</span></span>
-
-<span data-ttu-id="4725b-178">`Start-ThreadJob` pode aceitar variáveis que são canalizadas para o cmdlet, transmitidas para o bloco de script por meio da `$using` palavra-chave, ou transmitidas por meio do parâmetro **ArgumentList** .</span><span class="sxs-lookup"><span data-stu-id="4725b-178">`Start-ThreadJob` can accept variables that are piped to the cmdlet, passed in to the script block via the `$using` keyword, or passed in via the **ArgumentList** parameter.</span></span>
+<span data-ttu-id="10903-183">`Start-ThreadJob` pode aceitar variáveis que são canalizadas para o cmdlet, transmitidas para o bloco de script por meio da `$using` palavra-chave, ou transmitidas por meio do parâmetro **ArgumentList** .</span><span class="sxs-lookup"><span data-stu-id="10903-183">`Start-ThreadJob` can accept variables that are piped to the cmdlet, passed in to the script block via the `$using` keyword, or passed in via the **ArgumentList** parameter.</span></span>
 
 ```powershell
 $msg = "Hello"
@@ -160,7 +183,19 @@ Start-ThreadJob { param ([string] $message) Write-Output $message } -ArgumentLis
   Wait-Job | Receive-Job
 ```
 
-<span data-ttu-id="4725b-179">Como os trabalhos de thread são executados no mesmo processo, qualquer tipo de referência de variável passado para o trabalho deve ser tratado com cuidado.</span><span class="sxs-lookup"><span data-stu-id="4725b-179">Since thread jobs run in the same process, any variable reference type passed into the job has to be treated carefully.</span></span> <span data-ttu-id="4725b-180">Se não for um objeto de thread seguro, ele nunca deve ser atribuído, e o método e as propriedades nunca devem ser invocados nele.</span><span class="sxs-lookup"><span data-stu-id="4725b-180">If it is not a thread safe object, then it should never be assigned to, and method and properties should never be invoked on it.</span></span>
+<span data-ttu-id="10903-184">`ForEach-Object -Parallel` aceita o piped em variáveis e variáveis passadas diretamente para o bloco de script por meio da `$using` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="10903-184">`ForEach-Object -Parallel` accepts piped in variables, and variables passed directly to the script block via the `$using` keyword.</span></span>
+
+```powershell
+$msg = "Hello"
+
+$msg | ForEach-Object -Parallel { Write-Output $_ } -AsJob | Wait-Job | Receive-Job
+
+1..1 | ForEach-Object -Parallel { Write-Output $using:msg } -AsJob | Wait-Job | Receive-Job
+```
+
+<span data-ttu-id="10903-185">Como os trabalhos de thread são executados no mesmo processo, qualquer tipo de referência de variável passado para o trabalho deve ser tratado com cuidado.</span><span class="sxs-lookup"><span data-stu-id="10903-185">Since thread jobs run in the same process, any variable reference type passed into the job has to be treated carefully.</span></span> <span data-ttu-id="10903-186">Se não for um objeto de thread seguro, ele nunca deve ser atribuído, e o método e as propriedades nunca devem ser invocados nele.</span><span class="sxs-lookup"><span data-stu-id="10903-186">If it is not a thread safe object, then it should never be assigned to, and method and properties should never be invoked on it.</span></span>
+
+<span data-ttu-id="10903-187">O exemplo a seguir passa um objeto .NET thread-safe `ConcurrentDictionary` para todos os trabalhos filho para coletar objetos de processo nomeados exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="10903-187">The following example passes a thread-safe .NET `ConcurrentDictionary` object to all child jobs to collect uniquely named process objects.</span></span> <span data-ttu-id="10903-188">Como se trata de um objeto de thread seguro, ele pode ser usado com segurança enquanto os trabalhos são executados simultaneamente no processo.</span><span class="sxs-lookup"><span data-stu-id="10903-188">Since it is a thread safe object, it can be safely used while the jobs run concurrently in the process.</span></span>
 
 ```powershell
 $threadSafeDictionary = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
@@ -183,18 +218,16 @@ NPM(K)  PM(M)   WS(M) CPU(s)    Id SI ProcessName
   112  108.25  124.43  69.75 16272  1 pwsh
 ```
 
-<span data-ttu-id="4725b-181">O exemplo acima passa um objeto dotNet seguro de thread `ConcurrentDictionary` para todos os trabalhos filho para coletar objetos de processo nomeados exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="4725b-181">The above example passes a thread safe dotNet `ConcurrentDictionary` object to all child jobs to collect uniquely named process objects.</span></span> <span data-ttu-id="4725b-182">Como se trata de um objeto de thread seguro, ele pode ser usado com segurança enquanto os trabalhos são executados simultaneamente no processo.</span><span class="sxs-lookup"><span data-stu-id="4725b-182">Since it is a thread safe object, it can be safely used while the jobs run concurrently in the process.</span></span>
+## <a name="see-also"></a><span data-ttu-id="10903-189">Confira também</span><span class="sxs-lookup"><span data-stu-id="10903-189">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4725b-183">Confira também</span><span class="sxs-lookup"><span data-stu-id="4725b-183">See also</span></span>
-
-- [<span data-ttu-id="4725b-184">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="4725b-184">about_Remote_Jobs</span></span>](about_Remote_Jobs.md)
-- [<span data-ttu-id="4725b-185">about_Thread_Jobs</span><span class="sxs-lookup"><span data-stu-id="4725b-185">about_Thread_Jobs</span></span>](about_Thread_Jobs.md)
-- [<span data-ttu-id="4725b-186">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="4725b-186">about_Job_Details</span></span>](about_Job_Details.md)
-- [<span data-ttu-id="4725b-187">about_Remote</span><span class="sxs-lookup"><span data-stu-id="4725b-187">about_Remote</span></span>](about_Remote.md)
-- [<span data-ttu-id="4725b-188">about_PSSessions</span><span class="sxs-lookup"><span data-stu-id="4725b-188">about_PSSessions</span></span>](about_PSSessions.md)
-- [<span data-ttu-id="4725b-189">Start-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-189">Start-Job</span></span>](xref:Microsoft.PowerShell.Core.Start-Job)
-- [<span data-ttu-id="4725b-190">Get-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-190">Get-Job</span></span>](xref:Microsoft.PowerShell.Core.Get-Job)
-- [<span data-ttu-id="4725b-191">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-191">Receive-Job</span></span>](xref:Microsoft.PowerShell.Core.Receive-Job)
-- [<span data-ttu-id="4725b-192">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-192">Stop-Job</span></span>](xref:Microsoft.PowerShell.Core.Stop-Job)
-- [<span data-ttu-id="4725b-193">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-193">Wait-Job</span></span>](xref:Microsoft.PowerShell.Core.Wait-Job)
-- [<span data-ttu-id="4725b-194">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="4725b-194">Remove-Job</span></span>](xref:Microsoft.PowerShell.Core.Remove-Job)
+- [<span data-ttu-id="10903-190">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="10903-190">about_Remote_Jobs</span></span>](about_Remote_Jobs.md)
+- [<span data-ttu-id="10903-191">about_Thread_Jobs</span><span class="sxs-lookup"><span data-stu-id="10903-191">about_Thread_Jobs</span></span>](about_Thread_Jobs.md)
+- [<span data-ttu-id="10903-192">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="10903-192">about_Job_Details</span></span>](about_Job_Details.md)
+- [<span data-ttu-id="10903-193">about_Remote</span><span class="sxs-lookup"><span data-stu-id="10903-193">about_Remote</span></span>](about_Remote.md)
+- [<span data-ttu-id="10903-194">about_PSSessions</span><span class="sxs-lookup"><span data-stu-id="10903-194">about_PSSessions</span></span>](about_PSSessions.md)
+- [<span data-ttu-id="10903-195">Start-Job</span><span class="sxs-lookup"><span data-stu-id="10903-195">Start-Job</span></span>](xref:Microsoft.PowerShell.Core.Start-Job)
+- [<span data-ttu-id="10903-196">Get-Job</span><span class="sxs-lookup"><span data-stu-id="10903-196">Get-Job</span></span>](xref:Microsoft.PowerShell.Core.Get-Job)
+- [<span data-ttu-id="10903-197">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="10903-197">Receive-Job</span></span>](xref:Microsoft.PowerShell.Core.Receive-Job)
+- [<span data-ttu-id="10903-198">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="10903-198">Stop-Job</span></span>](xref:Microsoft.PowerShell.Core.Stop-Job)
+- [<span data-ttu-id="10903-199">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="10903-199">Wait-Job</span></span>](xref:Microsoft.PowerShell.Core.Wait-Job)
+- [<span data-ttu-id="10903-200">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="10903-200">Remove-Job</span></span>](xref:Microsoft.PowerShell.Core.Remove-Job)
