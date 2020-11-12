@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/03/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-process?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Process
-ms.openlocfilehash: a221c6126bbbf22dffb493828f759bcbd4cfe759
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 53c06982abcf980897c049b6f6bd0c159f2eb4b5
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93195099"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524681"
 ---
 # Start-Process
 
@@ -111,12 +111,25 @@ O exemplo usa `New-Object` para criar um objeto **System. Diagnostics. ProcessSt
 ### Exemplo 7: especificando argumentos para o processo
 
 Ambos os comandos iniciam o interpretador de comandos do Windows, emitindo um `dir` comando na `Program Files` pasta. Como this FolderName contém um espaço, o valor precisa ser circundado com aspas de escape.
-Observe que o primeiro comando especifica uma cadeia de caracteres como **argumentolist** . O segundo comando é uma matriz de cadeia de caracteres.
+Observe que o primeiro comando especifica uma cadeia de caracteres como **argumentolist**. O segundo comando é uma matriz de cadeia de caracteres.
 
 ```powershell
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c dir `"%systemdrive%\program files`""
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c","dir","`"%systemdrive%\program files`""
 ```
+
+### Exemplo 8: criar um processo desanexado no Linux
+
+No Windows, `Start-Process` o cria um processo independente que permanece em execução independentemente do Shell de inicialização. Em plataformas não Windows, o processo recentemente iniciado é anexado ao shell que foi iniciado. Se o Shell de inicialização estiver fechado, o processo filho será encerrado.
+
+Para evitar o encerramento do processo filho em plataformas semelhantes ao Unix, você pode combinar `Start-Process` com `nohup` . O exemplo a seguir inicia uma instância em segundo plano do PowerShell no Linux que permanece ativa mesmo depois que você fecha a sessão de inicialização. O `nohup` comando coleta a saída no arquivo `nohup.out` no diretório atual.
+
+```powershell
+# Runs for 2 minutes and appends output to ./nohup.out
+Start-Process nohup 'pwsh -noprofile -c "1..120 | % { Write-Host . -NoNewline; sleep 1 }"'
+```
+
+Neste exemplo, `Start-Process` o executa o comando do Linux `nohup` , que é iniciado `pwsh` como um processo desanexado. Para obter mais informações, consulte a página do manual para [nohup](https://linux.die.net/man/1/nohup).
 
 ## PARAMETERS
 
@@ -346,7 +359,7 @@ Accept wildcard characters: False
 
 ### -WindowStyle
 
-Especifica o estado da janela que é usada para o novo processo. Os valores aceitáveis para esse parâmetro são: **normal** , **oculto** , **minimizado** e **maximizado** . O valor padrão é **normal** .
+Especifica o estado da janela que é usada para o novo processo. Os valores aceitáveis para esse parâmetro são: **normal** , **oculto** , **minimizado** e **maximizado**. O valor padrão é **normal**.
 
 Você não pode usar os parâmetros **WindowStyle** e **NoNewWindow** no mesmo comando.
 
@@ -435,7 +448,7 @@ Esse cmdlet gera um objeto **System. Diagnostics. Process** , se você especific
 
 - Esse cmdlet é implementado usando o método **Start** da classe **System. Diagnostics. Process** . Para obter mais informações sobre esse método, consulte o [método Process. Start](/dotnet/api/system.diagnostics.process.start#overloads).
 
-- No Windows, quando você usa o **UseNewEnvironment** , o novo processo inicia apenas com as variáveis de ambiente padrão definidas para o escopo da **máquina** . Isso tem o lado de afetar que o `$env:USERNAME` está definido como **System** . Nenhuma das variáveis do escopo do **usuário** está incluída.
+- No Windows, quando você usa o **UseNewEnvironment** , o novo processo inicia apenas com as variáveis de ambiente padrão definidas para o escopo da **máquina** . Isso tem o lado de afetar que o `$env:USERNAME` está definido como **System**. Nenhuma das variáveis do escopo do **usuário** está incluída.
 
 - No Windows, o caso de uso mais comum para o `Start-Process` é usar o parâmetro **Wait** para bloquear o progresso até que o novo processo saia. No sistema não Windows, raramente isso é necessário, pois o comportamento padrão para aplicativos de linha de comando é equivalente a `Start-Process -Wait` .
 

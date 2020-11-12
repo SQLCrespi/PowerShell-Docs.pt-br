@@ -2,16 +2,16 @@
 description: Fornece informações sobre os trabalhos baseados em thread do PowerShell. Um trabalho de thread é um tipo de trabalho em segundo plano que executa um comando ou expressão em um thread separado dentro do processo de sessão atual.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: 1.0.0
 schema: 2.0.0
 title: about_Thread_Jobs
-ms.openlocfilehash: 973d0ddf18b63cd7462817cf68f7c5d7466f4724
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: ba6251a195d3efdebd427b3f705386336b069211
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93196495"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524630"
 ---
 # <a name="about-thread-jobs"></a>Sobre os trabalhos de thread
 
@@ -21,31 +21,40 @@ Fornece informações sobre os trabalhos baseados em thread do PowerShell. Um tr
 
 ## <a name="long-description"></a>Descrição longa
 
-Este artigo explica como executar trabalhos de thread no PowerShell em um computador local.
-Para obter informações sobre como executar trabalhos em segundo plano em um computador local, consulte [about_Jobs](about_Jobs.md).
+O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos. Há três tipos de trabalhos fornecidos pelo PowerShell para dar suporte à simultaneidade.
 
-Inicie um trabalho de thread usando o `Start-ThreadJob` cmdlet. Esse cmdlet está disponível no módulo **ThreadJob** que acompanha o PowerShell.
-`Start-ThreadJob` Retorna um único objeto de trabalho que encapsula o comando ou script em execução e pode ser usado com todos os cmdlets de manipulação de trabalho do PowerShell.
+- `RemoteJob` -Comandos e scripts executados em uma sessão remota. Para obter informações, consulte [about_Remote_Jobs](about_Remote_Jobs.md).
+- `BackgroundJob` -Comandos e scripts são executados em um processo separado no computador local. Para obter mais informações, consulte [about_Jobs](about_Jobs.md).
+- `PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local.
 
-## <a name="the-job-cmdlets"></a>Os cmdlets de trabalho
+Os trabalhos baseados em thread não são tão robustos quanto os trabalhos remotos e em segundo plano, pois eles são executados no mesmo processo em threads diferentes. Se um trabalho tiver um erro crítico que falha no processo, todos os outros trabalhos no processo serão encerrados.
 
-|Cmdlet           |Descrição                                            |
-|-----------------|-------------------------------------------------------|
-|`Start-ThreadJob`|Inicia um trabalho de thread em um computador local.               |
-|`Get-Job`        |Obtém os trabalhos que foram iniciados na sessão atual.|
-|`Receive-Job`    |Obtém os resultados dos trabalhos.                              |
-|`Stop-Job`       |Interrompe um trabalho em execução.                                   |
-|`Wait-Job`       |Suprime o prompt de comando até que um ou todos os trabalhos sejam|
-|                 |concluí.                                              |
-|`Remove-Job`     |Exclui um trabalho.                                         |
+No entanto, os trabalhos baseados em thread exigem menos sobrecarga. Eles não usam a camada ou serialização de comunicação remota. Os objetos de resultado são retornados como referências a objetos dinâmicos na sessão atual. Sem essa sobrecarga, os trabalhos baseados em threads são executados mais rapidamente e usam menos recursos do que os outros tipos de trabalho.
 
-## <a name="how-to-start-a-thread-job-on-the-local-computer"></a>Como iniciar um trabalho de thread no computador local
+> [!IMPORTANT]
+> A sessão pai que criou o trabalho também monitora o status do trabalho e coleta dados do pipeline. O processo filho do trabalho é encerrado pelo processo pai quando o trabalho atinge um estado concluído. Se a sessão pai for encerrada, todos os trabalhos filho em execução serão encerrados junto com seus processos filho.
 
-Para iniciar um trabalho de thread no computador local, use o `Start-ThreadJob` cmdlet.
+Há duas maneiras de solucionar essa situação:
 
-Para gravar um `Start-ThreadJob` comando, coloque o comando ou o script que o trabalho executa entre chaves ( `{ }` ).
+1. Use `Invoke-Command` para criar trabalhos que são executados em sessões desconectadas. Para obter mais informações, consulte [about_Remote_Jobs](about_Remote_Jobs.md).
+1. Use `Start-Process` para criar um novo processo em vez de um trabalho. Para obter mais informações, consulte [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).
 
-O comando a seguir inicia um trabalho de thread que executa um `Get-Process` comando no computador local.
+## <a name="how-to-start-and-manage-thread-based-jobs"></a>Como iniciar e gerenciar trabalhos baseados em thread
+
+Há duas maneiras de iniciar trabalhos baseados em thread:
+
+- `Start-ThreadJob`-do módulo **ThreadJob**
+- `ForEach-Object -Parallel -AsJob` -o recurso paralelo foi adicionado no PowerShell 7,0
+
+Use os mesmos cmdlets de **trabalho** descritos em [about_Jobs](about_Jobs.md) para gerenciar trabalhos baseados em thread.
+
+### <a name="using-start-threadjob"></a>Usando `Start-ThreadJob`
+
+O módulo **ThreadJob** foi enviado pela primeira vez com o PowerShell 6. Ele também pode ser instalado do Galeria do PowerShell para o Windows PowerShell 5,1.
+
+Para iniciar um trabalho de thread no computador local, use o `Start-ThreadJob` cmdlet com um comando ou script entre chaves ( `{ }` ).
+
+O exemplo a seguir inicia um trabalho de thread que executa um `Get-Process` comando no computador local.
 
 ```powershell
 Start-ThreadJob -ScriptBlock { Get-Process }
@@ -53,7 +62,11 @@ Start-ThreadJob -ScriptBlock { Get-Process }
 
 O `Start-ThreadJob` comando retorna um `ThreadJob` objeto que representa o trabalho em execução. O objeto de trabalho contém informações úteis sobre o trabalho, incluindo seu status de execução atual. Ele coleta os resultados do trabalho à medida que os resultados são gerados.
 
-Para gravar um `ForEach-Object -Parallel` comando, redirecione os dados para o comando e coloque o comando ou o script que o trabalho executa entre chaves ( `{}` ). Use a `-AsJob` opção de parâmetro para que um objeto de trabalho seja retornado.
+### <a name="using-foreach-object--parallel--asjob"></a>Usando `ForEach-Object -Parallel -AsJob`
+
+O PowerShell 7,0 adicionou um novo parâmetro definido para o `ForEach-Object` cmdlet. Os novos parâmetros permitem executar blocos de script em threads paralelos como trabalhos do PowerShell.
+
+Você pode canalizar dados para o `ForEach-Object -Parallel` . Os dados são passados para o bloco de script que é executado em paralelo. O `-AsJob` parâmetro cria objetos de trabalhos para cada um dos threads paralelos.
 
 O comando a seguir inicia um trabalho que contém trabalhos filho para cada valor de entrada canalizado para o comando. Cada trabalho filho executa o `Write-Output` comando com um valor de entrada canalizado como o argumento.
 
@@ -91,26 +104,6 @@ O `Receive-Job` cmdlet retorna os resultados dos trabalhos filho.
 
 Como cada trabalho filho é executado em paralelo, a ordem dos resultados gerados não é garantida.
 
-## <a name="powershell-concurrency-and-jobs"></a>Simultaneidade e trabalhos do PowerShell
-
-O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos. Há três soluções baseadas em trabalhos fornecidas pelo PowerShell para dar suporte à simultaneidade.
-
-|Trabalho            |Descrição                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |O comando e o script são executados em um computador remoto.                 |
-|`BackgroundJob`|O comando e o script são executados em um processo separado no local    |
-|               |Tradução.                                                     |
-|`ThreadJob`    |O comando e o script são executados em um thread separado dentro do mesmo  |
-|               |processo no computador local.                                |
-
-Cada tipo de trabalho tem benefícios e desvantagens. Executar o script remotamente em um computador separado ou em um processo separado tem grande isolamento. Quaisquer erros não afetarão outros trabalhos em execução ou o cliente que iniciou o trabalho. Mas a camada de comunicação remota adiciona sobrecarga, incluindo a serialização de objeto. Todos os objetos passados para e da sessão remota devem ser serializados e, em seguida, desserializados conforme passam entre o cliente e a sessão de destino. A operação de serialização pode usar muitos recursos de computação e memória para grandes objetos de dados complexos.
-
-## <a name="powershell-thread-based-jobs"></a>Trabalhos baseados em thread do PowerShell
-
-Os trabalhos baseados em thread não são tão robustos quanto os trabalhos remotos e em segundo plano, pois eles são executados no mesmo processo em threads diferentes. Se um trabalho tiver um erro crítico que falha no processo, todos os outros trabalhos no processo também falharão.
-
-No entanto, os trabalhos baseados em thread têm muito menos sobrecarga. Eles não precisam usar a camada ou a serialização de comunicação remota. O resultado é que os trabalhos baseados em thread tendem a ser executados muito mais rapidamente e usam muito menos recursos do que os outros tipos de trabalho.
-
 ## <a name="thread-job-performance"></a>Desempenho do trabalho de thread
 
 Os trabalhos de thread são mais rápidos e mais leves do que outros tipos de trabalhos. Mas ainda têm sobrecarga que pode ser grande quando comparada ao trabalho que o trabalho está fazendo.
@@ -127,23 +120,39 @@ Os trabalhos de thread fornecem o melhor desempenho quando o trabalho executado 
 (Measure-Command {
     1..1000 | ForEach { Start-ThreadJob { Write-Output "Hello $using:_" } } | Receive-Job -Wait
 }).TotalMilliseconds
-10457.962
-
+36860.8226
 
 (Measure-Command {
     1..1000 | ForEach-Object { "Hello: $_" }
 }).TotalMilliseconds
-24.9277
+7.1975
 ```
 
-O primeiro exemplo acima mostra um loop foreach que cria trabalhos de thread de 1000 para fazer uma simples gravação de cadeia de caracteres. Devido à sobrecarga do trabalho, levará mais de 33 segundos para ser concluído.
+O primeiro exemplo acima mostra um loop foreach que cria trabalhos de thread de 1000 para fazer uma simples gravação de cadeia de caracteres. Devido à sobrecarga do trabalho, levará mais de 36 segundos para ser concluído.
 
-O segundo exemplo executa o `ForEach` cmdlet para realizar as mesmas operações de 1000 e cada gravação de cadeia de caracteres é executada sequencialmente sem qualquer sobrecarga de trabalho. Ele é concluído em um mero 25 milissegundos.
+O segundo exemplo executa o `ForEach` cmdlet para realizar as mesmas operações de 1000.
+Desta vez, `ForEach-Object` é executado em sequência, em um único thread, sem nenhuma sobrecarga de trabalho. Ele é concluído em um mero 7 milissegundos.
+
+No exemplo a seguir, até 5000 entradas são coletadas para 10 logs de sistema separados. Como o script envolve a leitura de um número de logs, faz sentido fazer as operações em paralelo.
 
 ```powershell
 $logNames.count
 10
 
+Measure-Command {
+    $logs = $logNames | ForEach-Object {
+        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
+    }
+}
+
+TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
+$logs.Count
+50000
+```
+
+O script é concluído na metade do tempo em que os trabalhos são executados em paralelo.
+
+```powershell
 Measure-Command {
     $logs = $logNames | ForEach {
         Start-ThreadJob {
@@ -157,23 +166,9 @@ $logs.Count
 50000
 ```
 
-No exemplo acima, até 5000 entradas são coletadas para 10 logs de sistema separados. Como o script envolve a leitura de um número de logs, faz sentido fazer as operações em paralelo. E o trabalho é concluído com duas vezes mais rápido quando o script é executado em sequência.
-
-```powershell
-Measure-Command {
-    $logs = $logNames | ForEach-Object {
-        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
-    }
-}
-
-TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
-$logs.Count
-50000
-```
-
 ## <a name="thread-jobs-and-variables"></a>Trabalhos de thread e variáveis
 
-As variáveis são passadas para trabalhos de thread de várias maneiras.
+Há várias maneiras de passar valores para os trabalhos baseados em thread.
 
 `Start-ThreadJob` pode aceitar variáveis que são canalizadas para o cmdlet, transmitidas para o bloco de script por meio da `$using` palavra-chave, ou transmitidas por meio do parâmetro **ArgumentList** .
 
@@ -186,9 +181,9 @@ Start-ThreadJob { Write-Output $using:msg } | Wait-Job | Receive-Job
 
 Start-ThreadJob { param ([string] $message) Write-Output $message } -ArgumentList @($msg) |
   Wait-Job | Receive-Job
+```
 
-`ForEach-Object -Parallel` accepts piped in variables, and variables passed
-directly to the script block via the `$using` keyword.
+`ForEach-Object -Parallel` aceita o piped em variáveis e variáveis passadas diretamente para o bloco de script por meio da `$using` palavra-chave.
 
 ```powershell
 $msg = "Hello"
@@ -199,6 +194,8 @@ $msg | ForEach-Object -Parallel { Write-Output $_ } -AsJob | Wait-Job | Receive-
 ```
 
 Como os trabalhos de thread são executados no mesmo processo, qualquer tipo de referência de variável passado para o trabalho deve ser tratado com cuidado. Se não for um objeto de thread seguro, ele nunca deve ser atribuído, e o método e as propriedades nunca devem ser invocados nele.
+
+O exemplo a seguir passa um objeto .NET thread-safe `ConcurrentDictionary` para todos os trabalhos filho para coletar objetos de processo nomeados exclusivamente. Como se trata de um objeto de thread seguro, ele pode ser usado com segurança enquanto os trabalhos são executados simultaneamente no processo.
 
 ```powershell
 $threadSafeDictionary = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
@@ -220,8 +217,6 @@ NPM(K)  PM(M)   WS(M) CPU(s)    Id SI ProcessName
 ------  -----   ----- ------    -- -- -----------
   112  108.25  124.43  69.75 16272  1 pwsh
 ```
-
-O exemplo acima passa um objeto dotNet seguro de thread `ConcurrentDictionary` para todos os trabalhos filho para coletar objetos de processo nomeados exclusivamente. Como se trata de um objeto de thread seguro, ele pode ser usado com segurança enquanto os trabalhos são executados simultaneamente no processo.
 
 ## <a name="see-also"></a>Confira também
 
