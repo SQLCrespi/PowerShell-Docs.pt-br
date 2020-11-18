@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ca48f3020fa306f8a24328bd18648d5954c48a94
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
+ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438197"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94589118"
 ---
 # <a name="chapter-9---functions"></a>Capítulo 9 – Funções
 
@@ -22,7 +22,7 @@ Não complique demais. Mantenha a simplicidade e use a maneira mais direta de re
 
 ## <a name="naming"></a>Nomenclatura
 
-Ao nomear suas funções no PowerShell, use um nome [Pascal case][] com um verbo aprovado e um substantivo singular. Também recomendo a prefixação do substantivo. Por exemplo: `<ApprovedVerb>-<Prefix><SingularNoun>`.
+Ao nomear suas funções no PowerShell, use um nome [Pascal Case][] com um verbo aprovado e um substantivo singular. Também recomendo a prefixação do substantivo. Por exemplo: `<ApprovedVerb>-<Prefix><SingularNoun>`.
 
 No PowerShell, há uma lista específica de verbos aprovados que podem ser obtidos executando `Get-Verb`.
 
@@ -793,4 +793,5 @@ Neste capítulo, você aprendeu as noções básicas de como escrever funções 
 [about_Functions_Advanced]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
 [about_Try_Catch_Finally]: /powershell/module/microsoft.powershell.core/about/about_try_catch_finally
 [about_Comment_Based_Help]: /powershell/module/microsoft.powershell.core/about/about_comment_based_help
-[Vídeo: Toolmaking do PowerShell com funções avançadas e módulos de script]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/) [Pascal case]: /dotnet/standard/design-guidelines/capitalization-conventionss
+[Vídeo: Toolmaking do PowerShell com funções avançadas e módulos de script]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/
+[Pascal Case]: /dotnet/standard/design-guidelines/capitalization-conventions
