@@ -1,12 +1,14 @@
 ---
-title: Exemplo de Host02 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ed95cdcdcf20de6687f463b9d560a69510638c79
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Host02
+description: Amostra Host02
+ms.openlocfilehash: 7bb07dec3fd6b7ac5844d247a7a06cbda67c619e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772240"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355452"
 ---
 # <a name="host02-sample"></a>Amostra Host02
 
@@ -14,11 +16,11 @@ Este exemplo mostra como gravar um aplicativo host que usa o tempo de execução
 
 ## <a name="requirements"></a>Requisitos
 
- Este exemplo requer o Windows PowerShell 2,0.
+Este exemplo requer o Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Demonstra
 
-- Criação de um host personalizado cujas classes derivam da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) e da classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
+- Criação de um host personalizado cujas classes derivam da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , da classe [System. Management. Automation. host. PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) e da classe [System. Management. Automation. host. PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
 - Criar um runspace que usa o host personalizado.
 
@@ -26,9 +28,9 @@ Este exemplo mostra como gravar um aplicativo host que usa o tempo de execução
 
 - Criar um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) que executa um script para recuperar e classificar os processos e, em seguida, recupera a data atual que é exibida em alemão.
 
-## <a name="example"></a>Exemplo
+## <a name="example-1"></a>Exemplo 1
 
- O código a seguir mostra uma implementação de um aplicativo host que usa o host personalizado.
+O código a seguir mostra uma implementação de um aplicativo host que usa o host personalizado.
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -125,9 +127,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-2"></a>Exemplo 2
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
+O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -307,9 +309,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-3"></a>Exemplo 3
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) usada por esse aplicativo host.
+O código a seguir é a implementação da classe [System. Management. Automation. host. PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) usada por esse aplicativo host.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -558,9 +560,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-4"></a>Exemplo 4
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
+O código a seguir é a implementação da classe [System. Management. Automation. host. PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

@@ -1,27 +1,26 @@
 ---
-title: Adicionando parâmetros que processam entrada de pipeline | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programmer's Guide], pipeline input
-ms.openlocfilehash: a678df30a13086b317d5680ee0fbc4d3c3391235
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Adicionar parâmetros que processam a entrada de pipeline
+description: Adicionar parâmetros que processam a entrada de pipeline
+ms.openlocfilehash: b150d5be93207d9c010a6d2d4de901b4526f1d79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784547"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668347"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Adicionar parâmetros que processam a entrada de pipeline
 
-Uma fonte de entrada para um cmdlet é um objeto no pipeline originado de um cmdlet upstream. Esta seção descreve como adicionar um parâmetro ao cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet possa processar objetos de pipeline.
+Uma fonte de entrada para um cmdlet é um objeto no pipeline originado de um cmdlet upstream. Esta seção descreve como adicionar um parâmetro ao cmdlet Get-Proc (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet possa processar objetos de pipeline.
 
-Esse cmdlet Get-proc usa um `Name` parâmetro que aceita entrada de um objeto de pipeline, recupera informações de processo do computador local com base nos nomes fornecidos e, em seguida, exibe informações sobre os processos na linha de comando.
+Esse cmdlet Get-Proc usa um `Name` parâmetro que aceita entrada de um objeto de pipeline, recupera informações de processo do computador local com base nos nomes fornecidos e, em seguida, exibe informações sobre os processos na linha de comando.
 
 ## <a name="defining-the-cmdlet-class"></a>Definindo a classe do cmdlet
 
 A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet. Esse cmdlet recupera informações de processo, portanto, o nome do verbo escolhido aqui é "Get". (Quase qualquer tipo de cmdlet capaz de recuperar informações pode processar a entrada de linha de comando.) Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-A seguir está a definição para esse cmdlet Get-proc. Detalhes dessa definição são fornecidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
+A seguir está a definição para este Get-Proc cmdlet. Detalhes dessa definição são fornecidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -36,12 +35,12 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Definindo a entrada do pipeline
 
-Esta seção descreve como definir a entrada do pipeline para um cmdlet. Esse cmdlet Get-proc define uma propriedade que representa o `Name` parâmetro, conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md).
+Esta seção descreve como definir a entrada do pipeline para um cmdlet. Esse cmdlet Get-Proc define uma propriedade que representa o `Name` parâmetro, conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md).
 (Consulte esse tópico para obter informações gerais sobre como declarar parâmetros.)
 
 No entanto, quando um cmdlet precisa processar a entrada do pipeline, ele deve ter seus parâmetros associados aos valores de entrada pelo tempo de execução do Windows PowerShell. Para fazer isso, você deve adicionar a `ValueFromPipeline` palavra-chave ou adicionar a `ValueFromPipelineByProperty` palavra-chave à declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Especifique a `ValueFromPipeline` palavra-chave se o cmdlet acessar o objeto de entrada completo. Especifique `ValueFromPipelineByProperty` se o cmdlet acessa apenas uma propriedade do objeto.
 
-Aqui está a declaração de parâmetro para o `Name` parâmetro desse cmdlet Get-proc que aceita a entrada do pipeline.
+Aqui está a declaração de parâmetro para o `Name` parâmetro desse Get-Proc cmdlet que aceita a entrada do pipeline.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
@@ -71,7 +70,7 @@ A declaração anterior define a `ValueFromPipeline` palavra-chave para para `tr
 
 Se o cmdlet for manipular a entrada de pipeline, ele precisará substituir os métodos de processamento de entrada apropriados. Os métodos básicos de processamento de entrada são introduzidos na [criação do seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md).
 
-Esse cmdlet Get-proc substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) para manipular a `Name` entrada de parâmetro fornecida pelo usuário ou um script. Esse método obterá os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Observe que em [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é o mecanismo de saída para enviar objetos de saída para o pipeline. O segundo parâmetro dessa chamada, `enumerateCollection` , é definido como `true` para informar ao tempo de execução do Windows PowerShell para enumerar a matriz de objetos de processo e gravar um processo por vez na linha de comando.
+Esse cmdlet Get-Proc substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) para manipular a `Name` entrada de parâmetro fornecida pelo usuário ou um script. Esse método obterá os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Observe que em [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) é o mecanismo de saída para enviar objetos de saída para o pipeline. O segundo parâmetro dessa chamada, `enumerateCollection` , é definido como `true` para informar ao tempo de execução do Windows PowerShell para enumerar a matriz de objetos de processo e gravar um processo por vez na linha de comando.
 
 ```csharp
 protected override void ProcessRecord()

@@ -1,12 +1,14 @@
 ---
-title: Visão geral do provedor do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Visão geral do provedor do Windows PowerShell
+description: Visão geral do provedor do Windows PowerShell
+ms.openlocfilehash: 2f1c5f5991a64fb2b85ece7feba915164ebd34ee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778225"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355503"
 ---
 # <a name="windows-powershell-provider-overview"></a>Visão geral do provedor do Windows PowerShell
 
@@ -20,7 +22,8 @@ Ao escrever um provedor, você pode especificar unidades-unidades padrão que s�
 
 ## <a name="type-of-providers"></a>Tipo de provedores
 
-Há vários tipos de provedores, cada um dos quais fornece um nível diferente de funcionalidade. Um provedor é implementado como uma classe que deriva de um dos descendentes da classe [System. Management. Automation. SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) do **cmdletprovider** . Para obter informações sobre os diferentes tipos de provedores, consulte [tipos de provedor](./provider-types.md).
+Há vários tipos de provedores, cada um dos quais fornece um nível diferente de funcionalidade. Um provedor é implementado como uma classe que deriva de um dos descendentes da classe [System. Management. Automation. SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory)do 
+ **cmdletprovider** . Para obter informações sobre os diferentes tipos de provedores, consulte [tipos de provedor](./provider-types.md).
 
 ## <a name="provider-cmdlets"></a>Cmdlets do provedor
 
@@ -56,7 +59,9 @@ Os provedores podem definir parâmetros dinâmicos que são adicionados a um cmd
 
 ## <a name="provider-capabilities"></a>Recursos do provedor
 
-A enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) define uma série de recursos aos quais os provedores podem dar suporte. Isso inclui a capacidade de usar curingas, filtrar itens e transações de suporte. Para especificar recursos para um provedor, adicione uma lista de valores da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) , combinada com uma operação lógica `OR` , como a propriedade [System. Management. Automation. Provider. Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (o segundo parâmetro do atributo) do atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) para sua classe de provedor. Por exemplo, o atributo a seguir especifica que o provedor dá suporte aos recursos de **Transações** [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** e [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) .
+A enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) define uma série de recursos aos quais os provedores podem dar suporte. Isso inclui a capacidade de usar curingas, filtrar itens e transações de suporte. Para especificar recursos para um provedor, adicione uma lista de valores da enumeração [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) , combinada com uma operação lógica `OR` , como a propriedade [System. Management. Automation. Provider. Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) (o segundo parâmetro do atributo) do atributo [System. Management. Automation. Provider. Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) para sua classe de provedor. Por exemplo, o atributo a seguir especifica que o provedor dá suporte aos recursos de transações [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 
+ **ShouldProcess** e [System. Management. Automation. Provider. Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 
+  .
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -65,9 +70,11 @@ A enumeração [System. Management. Automation. Provider. Providercapabilities](
 
 ## <a name="provider-cmdlet-help"></a>Ajuda do cmdlet do provedor
 
-Ao escrever um provedor, você pode implementar sua própria ajuda para os cmdlets do provedor aos quais você dá suporte. Isso inclui um único tópico de ajuda para cada cmdlet de provedor ou várias versões de um tópico da ajuda para casos em que o cmdlet do provedor atua de forma diferente com base no uso de parâmetros dinâmicos. Para dar suporte à ajuda específica do cmdlet do provedor, seu provedor deve implementar a interface [System. Management. Automation. Provider. Icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) .
+Ao escrever um provedor, você pode implementar sua própria ajuda para os cmdlets do provedor aos quais você dá suporte.
+Isso inclui um único tópico de ajuda para cada cmdlet de provedor ou várias versões de um tópico da ajuda para casos em que o cmdlet do provedor atua de forma diferente com base no uso de parâmetros dinâmicos. Para dar suporte à ajuda específica do cmdlet do provedor, seu provedor deve implementar a interface [System. Management. Automation. Provider. Icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) .
 
-O mecanismo do Windows PowerShell chama o método [System. Management. Automation. Provider. Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) para exibir o tópico da ajuda para seus cmdlets do provedor. O mecanismo fornece o nome do cmdlet que o usuário especificou ao executar o `Get-Help` cmdlet e o caminho atual do usuário. O caminho atual será necessário se o provedor implementar versões diferentes do mesmo cmdlet do provedor para unidades diferentes. O método deve retornar uma cadeia de caracteres que contém o XML para a ajuda do cmdlet.
+O mecanismo do Windows PowerShell chama o método [System. Management. Automation. Provider. Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) para exibir o tópico da ajuda para seus cmdlets do provedor. O mecanismo fornece o nome do cmdlet que o usuário especificou ao executar o `Get-Help` cmdlet e o caminho atual do usuário.
+O caminho atual será necessário se o provedor implementar versões diferentes do mesmo cmdlet do provedor para unidades diferentes. O método deve retornar uma cadeia de caracteres que contém o XML para a ajuda do cmdlet.
 
 O conteúdo do arquivo de ajuda é escrito usando PSMAML XML. Esse é o mesmo esquema XML usado para gravar o conteúdo da ajuda para cmdlets autônomos. Adicione o conteúdo para a ajuda do cmdlet personalizado ao arquivo de ajuda para o seu provedor no `CmdletHelpPaths` elemento. O exemplo a seguir mostra o `command` elemento para um cmdlet de provedor único e mostra como você especifica o nome do cmdlet do provedor que seu provedor. dá suporte
 

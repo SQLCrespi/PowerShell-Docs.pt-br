@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo de alias | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Alias attribute
-- attributes, Alias
-- Alias attribute, described
-ms.openlocfilehash: 4c1ff34a244611173ca919a44d6598189b19dc98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo de alias
+description: Declaração de atributo de alias
+ms.openlocfilehash: f2fe49578da2c795643b1f80fa44deefe1dbff09
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782405"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668296"
 ---
 # <a name="alias-attribute-declaration"></a>Declaração de atributo de alias
 
@@ -24,7 +22,7 @@ O atributo alias permite que o usuário especifique nomes diferentes para um par
 
 #### <a name="parameters"></a>Parâmetros
 
-`aliasName`(Cadeia de caracteres []) Necessário. Especifica um conjunto de nomes de alias separados por vírgula para o parâmetro de cmdlet.
+`aliasName` (Cadeia de caracteres []) Necessário. Especifica um conjunto de nomes de alias separados por vírgula para o parâmetro de cmdlet.
 
 ## <a name="remarks"></a>Comentários
 
@@ -40,4 +38,4 @@ O atributo alias permite que o usuário especifique nomes diferentes para um par
 
 [Aliases de parâmetro](./parameter-aliases.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

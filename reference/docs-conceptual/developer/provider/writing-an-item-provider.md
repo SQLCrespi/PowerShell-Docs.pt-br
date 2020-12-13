@@ -1,12 +1,14 @@
 ---
-title: Gravando um provedor de itens | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Escrever um provedor de itens
+description: Escrever um provedor de itens
+ms.openlocfilehash: f70c6ee50277988c4e3b7c255dc4548bc30319dd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786757"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355197"
 ---
 # <a name="writing-an-item-provider"></a>Escrever um provedor de itens
 
@@ -18,7 +20,13 @@ Para obter mais informações sobre provedores do Windows PowerShell, consulte [
 
 ## <a name="implementing-item-methods"></a>Implementando métodos de item
 
-A classe [System. Management. Automation. Provider. createcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) expõe vários métodos que podem ser usados para acessar e manipular os itens em um armazenamento de dados. Para obter uma lista completa desses métodos, consulte [métodos do cmdletprovider](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods). Neste exemplo, implementaremos quatro desses métodos. [System. Management. Automation. Provider. createcmdletprovider. GetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) Obtém um item em um caminho especificado. [System. Management. Automation. Provider. createcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) define o valor do item especificado. [System. Management. Automation. Provider. @ cmdletprovider. itens existentes *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) verifica se um item existe no caminho especificado. [System. Management. Automation. Provider. createcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) verifica um caminho para ver se ele é mapeado para um local no armazenamento de dados.
+A classe [System. Management. Automation. Provider. createcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) expõe vários métodos que podem ser usados para acessar e manipular os itens em um armazenamento de dados.
+Para obter uma lista completa desses métodos, consulte [métodos do cmdletprovider](/dotnet/api/system.management.automation.provider.itemcmdletprovider#methods).
+Neste exemplo, implementaremos quatro desses métodos.
+[System. Management. Automation. Provider. createcmdletprovider. GetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) Obtém um item em um caminho especificado.
+[System. Management. Automation. Provider. createcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) define o valor do item especificado.
+[System. Management. Automation. Provider. @ cmdletprovider. itens existentes *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) verifica se um item existe no caminho especificado.
+[System. Management. Automation. Provider. createcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) verifica um caminho para ver se ele é mapeado para um local no armazenamento de dados.
 
 > [!NOTE]
 > Este tópico se baseia nas informações no guia de [início rápido do provedor do Windows PowerShell](./windows-powershell-provider-quickstart.md). Este tópico não aborda as noções básicas de como configurar um projeto de provedor ou como implementar os métodos herdados da classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) que criam e removem unidades.
@@ -80,7 +88,7 @@ protected override void GetItem(string path)
 
 O método [System. Management. Automation. Provider. docmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) é chamado pelas chamadas do mecanismo do PowerShell quando um usuário chama o cmdlet [Microsoft. PowerShell. Commands. setitemcommand](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) . Ele define o valor do item no caminho especificado.
 
-No exemplo de banco de dados do Access, faz sentido definir o valor de um item somente se esse item for uma linha, portanto, o método gera [NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) quando o item não é uma linha.
+No exemplo de banco de dados do Access, faz sentido definir o valor de um item somente se esse item for uma linha, portanto, o método gera [NotSupportedException](/dotnet/api/system.notsupportedexception) quando o item não é uma linha.
 
 ```csharp
 protected override void SetItem(string path, object values)

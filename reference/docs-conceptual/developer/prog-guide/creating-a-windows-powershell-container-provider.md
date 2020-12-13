@@ -1,12 +1,14 @@
 ---
-title: Criar um provedor de contêineres do Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: a5bcba425909eb98c010a1ea010cb02b995771f3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de contêineres do Windows PowerShell
+description: Criar um provedor de contêineres do Windows PowerShell
+ms.openlocfilehash: 999bd69e3c16bfc0a74519986654ec15bbc0da6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787199"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645365"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Criar um provedor de contêineres do Windows PowerShell
 

@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: Este documento fornece as melhores práticas para auxiliar os engenheiros que estão implantando o Servidor de Pull DSC.
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6c754e6d035cc714a86da86ec916ba2c7f833268
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664325"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389378"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
 Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O Servidor de Recepção (Recurso do Windows *Serviço DSC* ) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
+> O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Resumo: este documento destina-se a incluir processo e extensibilidade para ajudar os engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
 
@@ -72,7 +72,7 @@ O Windows Server 2012 R2 inclui um recurso chamado de serviço DSC. O recurso de
 
 ### <a name="dsc-resource"></a>Recurso DSC
 
-Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration** , que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
+Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://github.com/dsccommunity/xPSDesiredStateConfiguration).
 
 Use o cmdlet `Install-Module` do módulo **PowerShellGet**.
 

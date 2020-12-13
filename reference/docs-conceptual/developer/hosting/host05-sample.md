@@ -1,12 +1,14 @@
 ---
-title: Exemplo de Host05 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 043d359fe6db6ebfa68d97002bdb8e5842e4aca5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Host05
+description: Amostra Host05
+ms.openlocfilehash: 87769fc3b3c4991cd4f94e97415ac5ab0b81f6da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783255"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355401"
 ---
 # <a name="host05-sample"></a>Amostra Host05
 
@@ -27,20 +29,17 @@ Este exemplo mostra como criar um aplicativo de host baseado em console interati
 - Criando uma `$profile` variável e carregando os perfis a seguir.
 
   - usuário atual, host atual
-
   - usuário atual, todos os hosts
-
   - todos os usuários, host atual
-
   - todos os usuários, todos os hosts
 
-- Implemente a interface [System. Management. Automation. host. Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .
+- Implemente a interface [System. Management. Automation. host. IHostUISupportsMultipleChoiceSelection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) .
 
-- Implemente a interface [System. Management. Automation. host. Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) para dar suporte à comunicação remota interativa usando os cmdlets [Enter-PSSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [Exit-PSSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) .
+- Implemente a interface [System. Management. Automation. host. IHostSupportsInteractiveSession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) para dar suporte à comunicação remota interativa usando os cmdlets [Enter-PSSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [Exit-PSSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) .
 
-## <a name="example"></a>Exemplo
+## <a name="example-1"></a>Exemplo 1
 
- Este exemplo permite que o usuário insira comandos em uma linha de comando, processa esses comandos e, em seguida, imprime os resultados.
+Este exemplo permite que o usuário insira comandos em uma linha de comando, processa esses comandos e, em seguida, imprime os resultados.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -394,9 +393,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-2"></a>Exemplo 2
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
+O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +626,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-3"></a>Exemplo 3
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) usada por esse aplicativo host.
+O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) usada por esse aplicativo host.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1146,9 +1145,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-4"></a>Exemplo 4
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
+O código a seguir é a implementação da classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

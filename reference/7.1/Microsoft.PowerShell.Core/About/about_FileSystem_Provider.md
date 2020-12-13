@@ -2,16 +2,16 @@
 description: FileSystem
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 06/18/2019
+ms.date: 11/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem Provider
-ms.openlocfilehash: fb4135663d368867661e87327aa52a9213757d08
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: a1ea71d8ce402c71ae872260e8a38b03de89cf1d
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391469"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661402"
 ---
 # <a name="filesystem-provider"></a>FileSystem Provider
 
@@ -23,9 +23,9 @@ FileSystem
 
 `C:`, `D:` ...
 
-## <a name="capabilities"></a>Capacidades
+## <a name="capabilities"></a>Funcionalidades
 
-**Filtrar** , **ShouldProcess**
+**Filtrar**, **ShouldProcess**
 
 ## <a name="short-description"></a>Descrição breve
 
@@ -35,12 +35,12 @@ Fornece acesso a arquivos e diretórios.
 
 O provedor do **sistema de arquivos** do PowerShell permite que você obtenha, adicione, altere, apague e exclua arquivos e diretórios no PowerShell.
 
-As unidades do **sistema de arquivos** são um namespace hierárquico que contém os diretórios e arquivos em seu computador. Uma unidade de **sistema de arquivos** pode ser uma unidade lógica ou físicos, um diretório ou um compartilhamento de rede mapeado.
+As unidades do **sistema de arquivos** são um namespace hierárquico que contém os diretórios e arquivos em seu computador. Uma unidade de **sistema de arquivos** pode ser uma unidade lógica ou física, um diretório ou um compartilhamento de rede mapeado.
 
 Uma unidade chamada `TEMP:` será mapeada para o caminho do diretório temporário do usuário.
 
 >[!NOTE]
-> O conteúdo na unidade TEMP: não é removido automaticamente pelo PowerShell e cabe ao usuário ou sistema operacional gerenciar.
+> O conteúdo na unidade TEMP: não é removido automaticamente pelo PowerShell e cabe ao usuário ou sistema operacional gerenciar. Este recurso foi movido para fora dos recursos experimentais no PowerShell versão 7,0
 
 O provedor **FileSystem** oferece suporte aos seguintes cmdlets, que são abordados neste artigo.
 
@@ -65,11 +65,11 @@ O provedor **FileSystem** oferece suporte aos seguintes cmdlets, que são aborda
 
 ## <a name="types-exposed-by-this-provider"></a>Tipos expostos por este provedor
 
-Os arquivos são instâncias da classe [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) .  Os diretórios são instâncias da classe [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) .
+Os arquivos são instâncias da classe [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) . Os diretórios são instâncias da classe [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) .
 
 ## <a name="navigating-the-filesystem-drives"></a>Navegando pelas unidades do sistema de arquivos
 
-O provedor **FileSystem** expõe seus armazenamentos de dados mapeando quaisquer unidades lógicas no computador como unidades do PowerShell. Para trabalhar com uma unidade de **sistema de arquivos** , você pode alterar seu local para uma unidade utoridades o nome da unidade seguido por dois-pontos ( `:` ).
+O provedor **FileSystem** expõe seus armazenamentos de dados mapeando quaisquer unidades lógicas no computador como unidades do PowerShell. Para trabalhar com uma unidade de **sistema de arquivos** , você pode alterar seu local para uma unidade usando o nome da unidade seguido por dois-pontos ( `:` ).
 
 ```powershell
 Set-Location C:
@@ -340,18 +340,18 @@ Parâmetros dinâmicos são parâmetros de cmdlet que são adicionados por um pr
 
 Especifica a codificação do arquivo. O padrão é ASCII.
 
-- **ASCII** : usa a codificação para o conjunto de caracteres ASCII (7 bits).
-- **BigEndianUnicode** : codifica em formato UTF-16 usando a ordem de bytes big-endian.
-- **String** : usa o tipo de codificação para uma cadeia de caracteres.
-- **Unicode** : codifica no formato UTF-16 usando a ordem de byte little-endian.
-- **UTF7** : codifica em formato UTF-7.
-- **UTF8** : codifica no formato UTF-8.
-- **UTF8BOM** : codifica em formato UTF-8 com marca de ordem de byte (bom)
-- **UF8NOBOM** : codifica em formato UTF-8 sem marca de ordem de byte (bom)
-- **UTF32** : codifica no formato UTF-32.
-- **Padrão** : codifica na página de código padrão instalada.
-- **OEM** : usa a codificação padrão para MS-dos e programas de console.
-- **Desconhecido** : o tipo de codificação é desconhecido ou inválido. Os dados podem ser tratados como binários.
+- **ASCII**: usa a codificação para o conjunto de caracteres ASCII (7 bits).
+- **BigEndianUnicode**: codifica em formato UTF-16 usando a ordem de bytes big-endian.
+- **String**: usa o tipo de codificação para uma cadeia de caracteres.
+- **Unicode**: codifica no formato UTF-16 usando a ordem de byte little-endian.
+- **UTF7**: codifica em formato UTF-7.
+- **UTF8**: codifica no formato UTF-8.
+- **UTF8BOM**: codifica em formato UTF-8 com marca de ordem de byte (bom)
+- **UF8NOBOM**: codifica em formato UTF-8 sem marca de ordem de byte (bom)
+- **UTF32**: codifica no formato UTF-32.
+- **Padrão**: codifica na página de código padrão instalada.
+- **OEM**: usa a codificação padrão para MS-dos e programas de console.
+- **Desconhecido**: o tipo de codificação é desconhecido ou inválido. Os dados podem ser tratados como binários.
 
 #### <a name="cmdlets-supported"></a>Cmdlets com suporte
 
@@ -373,7 +373,7 @@ Você pode usar esse parâmetro para dividir um arquivo grande em arquivos menor
 
 > [!NOTE]
 > Atualmente, quando o valor do `-Delimiter` parâmetro é uma cadeia de caracteres vazia, [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) não retorna nada.
-> Esse é um problema conhecido. Para forçar o [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) a retornar o arquivo inteiro como uma única cadeia de caracteres não delimitada, insira um valor que não existe no arquivo.
+> Este é um problema conhecido. Para forçar o [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) a retornar o arquivo inteiro como uma única cadeia de caracteres não delimitada, insira um valor que não existe no arquivo.
 
 #### <a name="cmdlets-supported"></a>Cmdlets com suporte
 
@@ -405,11 +405,11 @@ O `-Attributes` parâmetro oferece suporte aos seguintes atributos:
 - **Oculto**
 - **Normal**
 - **NotContentIndexed**
-- **Está**
+- **Offline**
 - **ReadOnly (somente-leitura)**
 - **ReparsePoint**
 - **Escassfile**
-- **Sistema**
+- **System**
 - **Temporário**
 
 Para obter uma descrição desses atributos, consulte a enumeração [FileAttributes](/dotnet/api/system.io.fileattributes) .
@@ -488,7 +488,7 @@ Para obter apenas arquivos e pastas do sistema, use o `-System` parâmetro, seu 
 
 ### <a name="newerthan-systemdatetime"></a>NewerThan \<System.DateTime\>
 
-Retorna `$True` quando o `LastWriteTime` valor de um arquivo é maior que a data especificada. Caso contrário, retornará `$False`.
+Retorna `$True` quando o `LastWriteTime` valor de um arquivo é maior que a data especificada. Caso contrário, ele retornará `$False`.
 
 Insira um objeto [DateTime](/dotnet/api/system.datetime) , como um que o cmdlet [Get-Date](xref:Microsoft.PowerShell.Utility.Get-Date) retorna ou uma cadeia de caracteres que pode ser convertida em um objeto [DateTime](/dotnet/api/system.datetime) , como `"August 10, 2011 2:00 PM"` .
 
@@ -498,7 +498,7 @@ Insira um objeto [DateTime](/dotnet/api/system.datetime) , como um que o cmdlet 
 
 ### <a name="olderthan-systemdatetime"></a>OlderThan \<System.DateTime\>
 
-Retorna `$True` quando o `LastWriteTime` valor de um arquivo é menor que a data especificada. Caso contrário, retornará `$False`.
+Retorna `$True` quando o `LastWriteTime` valor de um arquivo é menor que a data especificada. Caso contrário, ele retornará `$False`.
 
 Insira um objeto [DateTime](/dotnet/api/system.datetime) , como um que o cmdlet [Get-Date](xref:Microsoft.PowerShell.Utility.Get-Date) retorna ou uma cadeia de caracteres que pode ser convertida em um objeto [DateTime](/dotnet/api/system.datetime) , como `"August 10, 2011 2:00 PM"` .
 
@@ -564,6 +564,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [about_Providers](../About/about_Providers.md)

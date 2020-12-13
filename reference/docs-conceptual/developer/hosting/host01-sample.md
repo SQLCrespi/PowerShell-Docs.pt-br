@@ -1,22 +1,24 @@
 ---
-title: Exemplo de Host01 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Host01
+description: Amostra Host01
+ms.openlocfilehash: b4f1a81044a51855ad7decc25e1f5b1215ab0d62
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355469"
 ---
 # <a name="host01-sample"></a>Amostra Host01
 
 Este exemplo mostra como implementar um aplicativo host que usa um host personalizado. Neste exemplo, um runspace é criado que usa o host personalizado e, em seguida, a API [System. Management. Automation. PowerShell](/dotnet/api/System.Management.Automation.PowerShell) é usada para executar um script que chama "Exit". O aplicativo host analisa a saída do script e imprime os resultados.
 
- Este exemplo usa os recursos de interface do usuário padrão fornecidos pelo Windows PowerShell. Para obter mais informações sobre como implementar os recursos de interface do usuário de um host personalizado, consulte [Host02 Sample](./host02-sample.md).
+Este exemplo usa os recursos de interface do usuário padrão fornecidos pelo Windows PowerShell. Para obter mais informações sobre como implementar os recursos de interface do usuário de um host personalizado, consulte [Host02 Sample](./host02-sample.md).
 
 ## <a name="requirements"></a>Requisitos
 
- Este exemplo requer o Windows PowerShell 2,0.
+Este exemplo requer o Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Demonstra
 
@@ -28,9 +30,9 @@ Este exemplo mostra como implementar um aplicativo host que usa um host personal
 
 - Verificando se o código de saída correto foi usado no processo de saída.
 
-## <a name="example"></a>Exemplo
+## <a name="example-1"></a>Exemplo 1
 
- O código a seguir mostra uma implementação de um aplicativo host que usa uma interface de host personalizada simples.
+O código a seguir mostra uma implementação de um aplicativo host que usa uma interface de host personalizada simples.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -130,9 +132,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-2"></a>Exemplo 2
 
- O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
+O código a seguir é a implementação da classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) usada por esse aplicativo host. Os elementos que não são implementados geram uma exceção ou não retornam nada.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

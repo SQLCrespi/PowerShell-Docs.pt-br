@@ -3,12 +3,12 @@ ms.date: 07/17/2020
 ms.topic: reference
 title: Recurso nxFile de DSC para Linux
 description: Recurso nxFile de DSC para Linux
-ms.openlocfilehash: 6ec2d8201f3594879b781fe04e32a28cc87ba934
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 14a8174a92f1bbde9b1f16cf814ef7c83309c737
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92644744"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389021"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Recurso nxFile de DSC para Linux
 
@@ -40,15 +40,15 @@ nxFile <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DestinationPath |Especifica o local onde você deseja garantir o estado de um arquivo ou diretório. |
-|SourcePath |Especifica o caminho do qual o recurso de arquivo ou pasta deve ser copiado. Esse caminho poderá ser um caminho local ou uma URL `http/https/ftp`. As URLs `http/https/ftp` remotas só são compatíveis quando o valor da propriedade **Type** é **file** . |
-|Type |Especifica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como **directory** para indicar que o recurso é um diretório. Defina-a como **file** para indicar que o recurso é um arquivo. O valor padrão é **file** . |
+|SourcePath |Especifica o caminho do qual o recurso de arquivo ou pasta deve ser copiado. Esse caminho poderá ser um caminho local ou uma URL `http/https/ftp`. As URLs `http/https/ftp` remotas só são compatíveis quando o valor da propriedade **Type** é **file**. |
+|Type |Especifica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como **directory** para indicar que o recurso é um diretório. Defina-a como **file** para indicar que o recurso é um arquivo. O valor padrão é **file**. |
 |Conteúdo |Especifica o conteúdo de um arquivo, como uma cadeia de caracteres específica. |
-|Checksum (soma de verificação) |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores são: **ctime** , **mtime** ou **md5** . |
-|Recurse |Indica se subdiretórios são incluídos. Defina essa propriedade como `$true` para indicar que você deseja que subdiretórios sejam incluídos. O padrão é `$false`. Essa propriedade é válida somente quando a propriedade **Type** está definida como **directory** . |
+|Checksum (soma de verificação) |Define o tipo que deve ser usado para determinar se dois arquivos são iguais. Se **Checksum** não for especificado, somente o nome de arquivo ou diretório será usado para comparação. Os valores são: **ctime**, **mtime** ou **md5**. |
+|Recurse |Indica se subdiretórios são incluídos. Defina essa propriedade como `$true` para indicar que você deseja que subdiretórios sejam incluídos. O padrão é `$false`. Essa propriedade é válida somente quando a propriedade **Type** está definida como **directory**. |
 |Force |Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é `$false`. |
 |Links |Especifica o comportamento desejado para links simbólicos. Defina essa propriedade como **follow** para seguir links simbólicos e agir sobre o destino de links. Por exemplo, copiar o arquivo em vez do link. Defina essa propriedade como **manage** para agir sobre o link. Por exemplo, copiar o próprio link. Defina essa propriedade como **ignore** para ignorar links simbólicos. |
 |Agrupar |O nome do **Grupo** que terá permissões para o arquivo ou diretório. |
-|Mode |Especifica as permissões desejadas para o recurso, na notação octal ou simbólica. Por exemplo, **777** ou **rwxrwxrwx** . Se usar notação simbólica, não forneça o primeiro caractere que indica o diretório ou arquivo. |
+|Mode |Especifica as permissões desejadas para o recurso, na notação octal ou simbólica. Por exemplo, **777** ou **rwxrwxrwx**. Se usar notação simbólica, não forneça o primeiro caractere que indica o diretório ou arquivo. |
 |Proprietário |O nome do grupo que será proprietário do arquivo ou diretório. |
 
 ## <a name="common-properties"></a>Propriedades comuns
@@ -56,11 +56,11 @@ nxFile <string> #ResourceName
 |Propriedade |DESCRIÇÃO |
 |---|---|
 |DependsOn |Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for ResourceName e seu tipo for ResourceType, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Determina se é necessário verificar se o arquivo existe. Defina essa propriedade como **Present** para garantir que o arquivo exista. Defina-a como **Absent** para garantir que o arquivo não exista. O valor padrão é **Present** . |
+|Ensure |Determina se é necessário verificar se o arquivo existe. Defina essa propriedade como **Present** para garantir que o arquivo exista. Defina-a como **Absent** para garantir que o arquivo não exista. O valor padrão é **Present**. |
 
 ## <a name="additional-information"></a>Informações adicionais
 
-Linux e Windows usam diferentes caracteres de quebra de linha em arquivos de texto por padrão; isso pode causar resultados inesperados ao configurar alguns arquivos em um computador Linux com **nxFile** . Há várias maneiras de gerenciar o conteúdo de um arquivo do Linux e, ao mesmo tempo, evitar problemas causados por caracteres de quebra de linha inesperada:
+Linux e Windows usam diferentes caracteres de quebra de linha em arquivos de texto por padrão; isso pode causar resultados inesperados ao configurar alguns arquivos em um computador Linux com **nxFile**. Há várias maneiras de gerenciar o conteúdo de um arquivo do Linux e, ao mesmo tempo, evitar problemas causados por caracteres de quebra de linha inesperada:
 
 1. Copiar o arquivo de uma origem remota (http, https ou ftp)
 
@@ -81,7 +81,7 @@ Linux e Windows usam diferentes caracteres de quebra de linha em arquivos de tex
    }
    ```
 
-1. Leia o conteúdo do arquivo no script do PowerShell com [Get-Content](https://technet.microsoft.com/library/hh849787.aspx) depois de definir a propriedade **$OFS** para usar o caractere de quebra de linha do Linux.
+1. Leia o conteúdo do arquivo no script do PowerShell com [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content) depois de definir a propriedade **$OFS** para usar o caractere de quebra de linha do Linux.
 
    ```powershell
    Import-DSCResource -Module nx

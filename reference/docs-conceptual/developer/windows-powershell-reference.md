@@ -1,14 +1,14 @@
 ---
-title: Referência do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Windows PowerShell SDK
-ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Referência do Windows PowerShell
+description: Referência do Windows PowerShell
+ms.openlocfilehash: 9c1547ac5ec5134c99aa9213e6aaca1af8d5b3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786672"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390228"
 ---
 # <a name="windows-powershell-reference"></a>Referência do Windows PowerShell
 
@@ -30,7 +30,7 @@ Além do SDK do Windows PowerShell, os recursos a seguir fornecem mais informaç
 
 [Escrevendo um cmdlet do Windows PowerShell](./cmdlet/writing-a-windows-powershell-cmdlet.md) Fornece informações e exemplos de código para gerentes de programa que estão criando cmdlets e para desenvolvedores que estão implementando código de cmdlet.
 
-[Blog da equipe do Windows PowerShell](https://blogs.msdn.microsoft.com/PowerShell/) O melhor recurso para aprender e colaborar com outros usuários do Windows PowerShell. Leia o blog da equipe do Windows PowerShell e ingresse no fórum de usuário do Windows PowerShell (Microsoft. Public. Windows. PowerShell).
+[Blog da equipe do Windows PowerShell](https://devblogs.microsoft.com/powershell/) O melhor recurso para aprender e colaborar com outros usuários do Windows PowerShell. Leia o blog da equipe do Windows PowerShell e ingresse no fórum de usuário do Windows PowerShell (Microsoft. Public. Windows. PowerShell).
 Use o Windows Live Search para encontrar outros Blogs e recursos do Windows PowerShell. Em seguida, ao desenvolver sua experiência, colabore livremente suas ideias.
 
 [Navegador de módulo do PowerShell](/powershell/module/) Fornece as versões mais recentes dos tópicos de ajuda da linha de comando.

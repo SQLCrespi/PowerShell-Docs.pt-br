@@ -1,12 +1,14 @@
 ---
-title: Diretrizes de desenvolvimento de consultoria | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Diretrizes para desenvolvimento de consultoria
+description: Diretrizes para desenvolvimento de consultoria
+ms.openlocfilehash: 1ac18925bbc2506e6a03810d24f58c2f3113fd55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782422"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668313"
 ---
 # <a name="advisory-development-guidelines"></a>Diretrizes para desenvolvimento de consultoria
 
@@ -18,7 +20,7 @@ As diretrizes a seguir devem ser consideradas ao criar cmdlets. Quando encontrar
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Suporte a um parâmetro InputObject (AD01)
 
-Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject`é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um `InputObject` parâmetro do tipo Process que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
+Como o Windows PowerShell funciona diretamente com os objetos do Microsoft .NET Framework, um objeto .NET Framework geralmente está disponível e corresponde exatamente ao tipo que o usuário precisa para executar uma operação específica. `InputObject` é o nome padrão para um parâmetro que usa tal objeto como entrada. Por exemplo, o cmdlet **Stop-proc** de exemplo no [tutorial StopProc](./stopproc-tutorial.md) define um `InputObject` parâmetro do tipo Process que dá suporte à entrada do pipeline. O usuário pode obter um conjunto de objetos de processo, manipulá-los para selecionar os objetos exatos a serem interrompidos e, em seguida, passá-los para o cmdlet **Stop-proc** diretamente.
 
 ### <a name="support-the-force-parameter-ad02"></a>Suporte ao parâmetro Force (AD02)
 
@@ -66,7 +68,7 @@ Substitua o método [System. Management. Automation. cmdlet. StopProcessing](/do
 
 Se o cmdlet tiver objetos que não são descartados (gravados no pipeline) pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , seu cmdlet poderá exigir descarte de objeto adicional. Por exemplo, se o cmdlet abrir um identificador de arquivo em seu método [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e mantiver o identificador aberto para uso pelo método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , esse identificador terá que ser fechado no final do processamento.
 
-O tempo de execução do Windows PowerShell nem sempre chama o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) pode não ser chamado se o cmdlet for cancelado ao meio de sua operação ou se ocorrer um erro de encerramento em qualquer parte do cmdlet. Portanto, a classe .NET Framework para um cmdlet que requer a limpeza de objeto deve implementar o padrão de interface [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar os métodos [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
+O tempo de execução do Windows PowerShell nem sempre chama o método  [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Por exemplo, o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) pode não ser chamado se o cmdlet for cancelado ao meio de sua operação ou se ocorrer um erro de encerramento em qualquer parte do cmdlet. Portanto, a classe .NET Framework para um cmdlet que requer a limpeza de objeto deve implementar o padrão de interface  [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar os métodos [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Usar tipos de parâmetro amigável de serialização (AC05)
 
@@ -114,4 +116,4 @@ Ao lidar com dados confidenciais, sempre use o tipo de dados [System. Security. 
 
 [Diretrizes de desenvolvimento altamente recomendadas](./strongly-encouraged-development-guidelines.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

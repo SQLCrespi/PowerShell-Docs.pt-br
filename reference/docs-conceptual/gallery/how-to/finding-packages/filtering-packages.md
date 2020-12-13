@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Filtrando resultados da pesquisa
 description: Este artigo descreve a interface do usuário usada para filtrar conteúdo na Galeria do PowerShell.
-ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a769daae903e614b96be1056e3ff14eca41970bd
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661407"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389820"
 ---
 # <a name="filtering-search-results"></a>Filtrando resultados da pesquisa
 
@@ -22,7 +22,7 @@ O menu suspenso em "Filtrar Por" permite aos usuários filtrar os resultados por
 - Incluir pré-lançamento
 - Apenas estável
 
-Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artigo [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Controle de versão de pré-lançamento adicionado ao PowerShellGet e à Galeria do PowerShell), no blog da equipe do PowerShell.
+Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artigo [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://devblogs.microsoft.com/powershell/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Controle de versão de pré-lançamento adicionado ao PowerShellGet e à Galeria do PowerShell), no blog da equipe do PowerShell.
 
 Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resultados por:
 

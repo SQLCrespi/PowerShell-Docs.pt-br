@@ -1,12 +1,14 @@
 ---
-title: Gravando um provedor de contêiner | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Escrever um provedor de contêineres
+description: Escrever um provedor de contêineres
+ms.openlocfilehash: 17ec3e11258ee77a8e569df1af3a0e9bcd9798b6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786791"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354925"
 ---
 # <a name="writing-a-container-provider"></a>Escrever um provedor de contêineres
 
@@ -18,7 +20,7 @@ Para obter mais informações sobre provedores do Windows PowerShell, consulte [
 
 ## <a name="implementing-container-methods"></a>Implementando métodos de contêiner
 
-A classe [System. Management. Automation. Provider. Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) implementa métodos que dão suporte a contêineres e criam, copiam e removem itens. Para obter uma lista completa desses métodos, consulte [System. Management. Automation. Provider. ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
+A classe [System. Management. Automation. Provider. Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) implementa métodos que dão suporte a contêineres e criam, copiam e removem itens. Para obter uma lista completa desses métodos, consulte [System. Management. Automation. Provider. ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider#methods).
 
 > [!NOTE]
 > Este tópico se baseia nas informações no guia de [início rápido do provedor do Windows PowerShell](./windows-powershell-provider-quickstart.md). Este tópico não aborda as noções básicas de como configurar um projeto de provedor ou como implementar os métodos herdados da classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) que criam e removem unidades. Este tópico também não aborda como implementar métodos expostos pela classe [System. Management. Automation. Provider. createcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Para obter um exemplo que mostra como implementar cmdlets de item, consulte [escrevendo um provedor de item](./writing-an-item-provider.md).
@@ -531,7 +533,8 @@ protected override void RemoveItem(string path, bool recurse)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Um provedor típico do mundo real é capaz de mover itens de um caminho para outro dentro da unidade. Para obter um exemplo de um provedor que dá suporte à movimentação de itens, consulte [escrevendo um provedor de navegação](./writing-a-navigation-provider.md).
+Um provedor típico do mundo real é capaz de mover itens de um caminho para outro dentro da unidade.
+Para obter um exemplo de um provedor que dá suporte à movimentação de itens, consulte [escrevendo um provedor de navegação](./writing-a-navigation-provider.md).
 
 ## <a name="see-also"></a>Consulte Também
 

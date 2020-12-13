@@ -1,20 +1,14 @@
 ---
-title: Parâmetros de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- optional parameters [PowerShell SDK]
-- aliases [PowerShell SDK]
-- parameter sets [PowerShell SDK]
-- parameters [PowerShell SDK]
-- mandatory parameters [PowerShell SDK]
-- positional parameters [PowerShell SDK]
-- cmdlets [PowerShell SDK], parameters
-ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros de cmdlets
+description: Parâmetros de cmdlets
+ms.openlocfilehash: 1ab495cb674f6b2cd769c3f64d899aec67704216
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774755"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668262"
 ---
 # <a name="cmdlet-parameters"></a>Parâmetros de cmdlets
 

@@ -1,12 +1,14 @@
 ---
-title: Diretrizes de desenvolvimento altamente incentivadas | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 02488fea557b42ed30ea5cfde177b3efe0b3f559
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Diretrizes de desenvolvimento altamente recomendadas
+description: Diretrizes de desenvolvimento altamente recomendadas
+ms.openlocfilehash: e12fa0d1adc0d7a0dad938457bdcd289736df97c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787811"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355231"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>Diretrizes de desenvolvimento altamente recomendadas
 
@@ -14,33 +16,12 @@ Esta seção descreve as diretrizes que você deve seguir ao escrever seus cmdle
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
-- [Usar um substantivo específico para um nome de cmdlet (SD01)](./strongly-encouraged-development-guidelines.md#use-a-specific-noun-for-a-cmdlet-name-sd01)
-
-- [Usar caso de Pascal para nomes de cmdlet (SD02)](./strongly-encouraged-development-guidelines.md#use-pascal-case-for-cmdlet-names-sd02)
-
-- [Diretrizes de design de parâmetro (SD03)](./strongly-encouraged-development-guidelines.md#parameter-design-guidelines-sd03)
-
-- [Fornecer comentários para o usuário (SD04)](./strongly-encouraged-development-guidelines.md#provide-feedback-to-the-user-sd04)
-
-- [Criar um arquivo de ajuda de cmdlet (SD05)](./strongly-encouraged-development-guidelines.md#create-a-cmdlet-help-file-sd05)
-
-## <a name="code-guidelines"></a>Diretrizes de código
-
-- [Parâmetros de codificação (SC01)](./strongly-encouraged-development-guidelines.md#coding-parameters-sc01)
-
-- [Suporte à entrada de pipeline bem definida (SC02)](./strongly-encouraged-development-guidelines.md#support-well-defined-pipeline-input-sc02)
-
-- [Gravar registros únicos no pipeline (SC03)](./strongly-encouraged-development-guidelines.md#write-single-records-to-the-pipeline-sc03)
-
-- [Tornar cmdlets não diferencia maiúsculas de minúsculas e SC04 (preservação de maiúsculas e minúsculas)](./strongly-encouraged-development-guidelines.md#make-cmdlets-case-insensitive-and-case-preserving-sc04)
-
-## <a name="design-guidelines"></a>Diretrizes de design
-
 As diretrizes a seguir devem ser seguidas durante a criação de cmdlets para garantir uma experiência de usuário consistente entre usar seus cmdlets e outros cmdlets. Quando encontrar uma diretriz de design que se aplique à sua situação, certifique-se de examinar as diretrizes de código para obter diretrizes semelhantes.
 
 ### <a name="use-a-specific-noun-for-a-cmdlet-name-sd01"></a>Usar um substantivo específico para um nome de cmdlet (SD01)
 
-Os substantivos usados na nomenclatura de cmdlets precisam ser muito específicos para que o usuário possa descobrir seus cmdlets. Prefixe os substantivos genéricos, como "servidor", por uma versão reduzida do nome do produto. Por exemplo, se um substantivo se referir a um servidor que está executando uma instância do Microsoft SQL Server, use um substantivo como "SQLServer". A combinação de substantivos específicos e a lista curta de verbos aprovados permite que o usuário descubra e antecipe rapidamente a funcionalidade e, ao mesmo tempo, evita a duplicação entre nomes de cmdlets.
+Os substantivos usados na nomenclatura de cmdlets precisam ser muito específicos para que o usuário possa descobrir seus cmdlets.
+Prefixe os substantivos genéricos, como "servidor", por uma versão reduzida do nome do produto. Por exemplo, se um substantivo se referir a um servidor que está executando uma instância do Microsoft SQL Server, use um substantivo como "SQLServer". A combinação de substantivos específicos e a lista curta de verbos aprovados permite que o usuário descubra e antecipe rapidamente a funcionalidade e, ao mesmo tempo, evita a duplicação entre nomes de cmdlets.
 
 Para aprimorar a experiência do usuário, o substantivo que você escolher para um nome de cmdlet deve ser singular. Por exemplo, use o nome `Get-Process` em vez de **Get-Processes**. É melhor seguir essa regra para todos os nomes de cmdlet, mesmo quando é provável que um cmdlet atue em mais de um item.
 
@@ -69,14 +50,14 @@ Os nomes de parâmetro plural devem ser usados somente nesses casos em que o val
 Use o caso do Pascal para nomes de parâmetro. Em outras palavras, coloque em maiúscula a primeira letra de cada palavra no nome do parâmetro, incluindo a primeira letra do nome. Por exemplo, o nome do parâmetro `ErrorAction` usa a capitalização correta. Os seguintes nomes de parâmetro usam capitalização incorreta:
 
 - `errorAction`
-
 - `erroraction`
 
 #### <a name="parameters-that-take-a-list-of-options"></a>Parâmetros que usam uma lista de opções
 
 Há duas maneiras de criar um parâmetro cujo valor pode ser selecionado em um conjunto de opções.
 
-- Defina um tipo de enumeração (ou use um tipo de enumeração existente) que especifique os valores válidos. Em seguida, use o tipo de enumeração para criar um parâmetro desse tipo.
+- Defina um tipo de enumeração (ou use um tipo de enumeração existente) que especifique os valores válidos.
+  Em seguida, use o tipo de enumeração para criar um parâmetro desse tipo.
 
 - Adicione o atributo **ValidateSet** à declaração de parâmetro. Para obter mais informações sobre esse atributo, consulte [declaração de atributo ValidateSet](./validateset-attribute-declaration.md).
 
@@ -84,19 +65,20 @@ Há duas maneiras de criar um parâmetro cujo valor pode ser selecionado em um c
 
 Para garantir a consistência com outros cmdlets, use tipos padrão para parâmetros onde for possível. Para obter mais informações sobre os tipos que devem ser usados para parâmetros diferentes, consulte [tipos e nomes de parâmetro de cmdlet padrão](./standard-cmdlet-parameter-names-and-types.md). Este tópico fornece links para vários tópicos que descrevem os nomes e os tipos de .NET Framework para grupos de parâmetros padrão, como "parâmetros de atividade".
 
-#### <a name="use-strongly-typed-net-framework-types"></a>Usar tipos de .NET Framework fortemente tipados
+#### <a name="use-strongly-typed-net-framework-types"></a>Usar tipos de .NET Framework de Strongly-Typed
 
 Os parâmetros devem ser definidos como tipos de .NET Framework para fornecer melhor validação de parâmetro. Por exemplo, parâmetros que são restritos a um valor de um conjunto de valores devem ser definidos como um tipo de enumeração. Para dar suporte a um valor de Uniform Resource Identifier (URI), defina o parâmetro como um tipo [System. URI](/dotnet/api/System.Uri) . Evite parâmetros de cadeia de caracteres básicos para todas as propriedades de texto de forma livre.
 
 #### <a name="use-consistent-parameter-types"></a>Usar tipos de parâmetro consistentes
 
-Quando o mesmo parâmetro é usado por vários cmdlets, sempre use o mesmo tipo de parâmetro.  Por exemplo, se o `Process` parâmetro for um tipo [System. Int16](/dotnet/api/System.Int16) para um cmdlet, não torne o `Process` parâmetro para outro cmdlet um tipo [System. UInt16](/dotnet/api/System.UInt16) .
+Quando o mesmo parâmetro é usado por vários cmdlets, sempre use o mesmo tipo de parâmetro. Por exemplo, se o `Process` parâmetro for um tipo [System. Int16](/dotnet/api/System.Int16) para um cmdlet, não torne o `Process` parâmetro para outro cmdlet um tipo [System. UInt16](/dotnet/api/System.UInt16) .
 
 #### <a name="parameters-that-take-true-and-false"></a>Parâmetros que assumem true e false
 
-Se o parâmetro apenas usar `true` e `false` , defina o parâmetro como [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Um parâmetro de opção é tratado como `true` quando é especificado em um comando. Se o parâmetro não for incluído em um comando, o Windows PowerShell considerará o valor do parâmetro como `false` . Não defina parâmetros boolianos.
+Se o parâmetro apenas usar `true` e `false` , defina o parâmetro como [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter).
+Um parâmetro de opção é tratado como `true` quando é especificado em um comando. Se o parâmetro não for incluído em um comando, o Windows PowerShell considerará o valor do parâmetro como `false` . Não defina parâmetros boolianos.
 
-Se o parâmetro precisar diferenciar entre 3 valores: $true, $false e "não especificado", defina um parâmetro do tipo Nullable \<bool> .  A necessidade de um terceiro, o valor "não especificado", normalmente ocorre quando o cmdlet pode modificar uma propriedade booliana de um objeto. Nesse caso, "não especificado" significa não alterar o valor atual da propriedade.
+Se o parâmetro precisar diferenciar entre 3 valores: $true, $false e "não especificado", defina um parâmetro do tipo Nullable \<bool> . A necessidade de um terceiro, o valor "não especificado", normalmente ocorre quando o cmdlet pode modificar uma propriedade booliana de um objeto. Nesse caso, "não especificado" significa não alterar o valor atual da propriedade.
 
 #### <a name="support-arrays-for-parameters"></a>Suporte a matrizes para parâmetros
 
@@ -163,16 +145,14 @@ Defina um parâmetro declarando uma propriedade pública da classe cmdlet que é
 
 O caminho do Windows PowerShell é o mecanismo para normalizar o acesso a namespaces. Quando você atribui um caminho do Windows PowerShell a um parâmetro no cmdlet, o usuário pode definir uma "unidade" personalizada que atue como um atalho para um caminho específico. Quando um usuário designa tal unidade, os dados armazenados, como os dados no registro, podem ser usados de forma consistente.
 
-Se o cmdlet permitir que o usuário especifique um arquivo ou uma fonte de dados, ele deverá definir um parâmetro do tipo [System. String](/dotnet/api/System.String). Se houver suporte para mais de uma unidade, o tipo deverá ser uma matriz. O nome do parâmetro deve ser `Path` , com um alias de `PSPath` . Além disso, o `Path` parâmetro deve dar suporte a caracteres curinga. Se o suporte para caracteres curinga não for necessário, defina um `LiteralPath` parâmetro.
+Se o cmdlet permitir que o usuário especifique um arquivo ou uma fonte de dados, ele deverá definir um parâmetro do tipo [System. String](/dotnet/api/System.String). Se houver suporte para mais de uma unidade, o tipo deverá ser uma matriz. O nome do parâmetro deve ser `Path` , com um alias de `PSPath` .
+Além disso, o `Path` parâmetro deve dar suporte a caracteres curinga. Se o suporte para caracteres curinga não for necessário, defina um `LiteralPath` parâmetro.
 
 Se os dados que o cmdlet ler ou gravar tiverem que ser um arquivo, o cmdlet deverá aceitar a entrada de caminho do Windows PowerShell e o cmdlet deverá usar a propriedade [System. Management. Automation. SessionState. path](/dotnet/api/System.Management.Automation.SessionState.Path) para converter os caminhos do Windows PowerShell em caminhos que o sistema de arquivos reconhece. Os mecanismos específicos incluem os seguintes métodos:
 
 - [System. Management. Automation. PSCmdlet. GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
-
 - [System. Management. Automation. PSCmdlet. GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath)
-
 - [System. Management. Automation. PathIntrinsics. GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath)
-
 - [System. Management. Automation. PathIntrinsics. GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
 Se os dados que o cmdlet lê ou grava são apenas um conjunto de cadeias de caracteres em vez de um arquivo, o cmdlet deve usar as informações de conteúdo do provedor ( `Content` membro) para ler e gravar. Essas informações são obtidas da propriedade [System. Management. Automation. Provider. cmdletprovider. invokeprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) . Esses mecanismos permitem que outros armazenamentos de dados participem da leitura e gravação de dados.
@@ -181,7 +161,8 @@ Se os dados que o cmdlet lê ou grava são apenas um conjunto de cadeias de cara
 
 Um cmdlet deve dar suporte A caracteres curinga, se possível. O suporte para caracteres curinga ocorre em muitos lugares em um cmdlet (especialmente quando um parâmetro usa uma cadeia de caracteres para identificar um objeto de um conjunto de objetos). Por exemplo, o cmdlet **Stop-proc** de exemplo do [tutorial StopProc](./stopproc-tutorial.md) define um `Name` parâmetro para manipular cadeias de caracteres que representam nomes de processo. Esse parâmetro dá suporte a caracteres curinga para que o usuário possa especificar facilmente os processos a serem interrompidos.
 
-Quando o suporte para caracteres curinga está disponível, uma operação de cmdlet geralmente produz uma matriz. Ocasionalmente, não faz sentido dar suporte a uma matriz porque o usuário pode usar apenas um único item por vez. Por exemplo, o cmdlet [Set-Location](/powershell/module/Microsoft.PowerShell.Management/Set-Location) não precisa dar suporte a uma matriz porque o usuário está definindo apenas um único local. Nessa instância, o cmdlet ainda dá suporte a caracteres curinga, mas força a resolução para um único local.
+Quando o suporte para caracteres curinga está disponível, uma operação de cmdlet geralmente produz uma matriz.
+Ocasionalmente, não faz sentido dar suporte a uma matriz porque o usuário pode usar apenas um único item por vez. Por exemplo, o cmdlet [Set-Location](/powershell/module/Microsoft.PowerShell.Management/Set-Location) não precisa dar suporte a uma matriz porque o usuário está definindo apenas um único local. Nessa instância, o cmdlet ainda dá suporte a caracteres curinga, mas força a resolução para um único local.
 
 Para obter mais informações sobre padrões de caracteres curinga, consulte [suporte a caracteres curinga em parâmetros de cmdlet](./supporting-wildcard-characters-in-cmdlet-parameters.md).
 
@@ -203,7 +184,8 @@ Por exemplo, você pode adicionar uma `Mode` propriedade de script ao tipo [Syst
 
 ##### <a name="implement-the-icomparable-interface"></a>Implementar a interface IComparable
 
-Implemente uma interface [System. IComparable](/dotnet/api/System.IComparable) em todos os objetos de saída. Isso permite que os objetos de saída sejam facilmente canalizados para vários cmdlets de classificação e de análise.
+Implemente uma interface [System. IComparable](/dotnet/api/System.IComparable) em todos os objetos de saída.
+Isso permite que os objetos de saída sejam facilmente canalizados para vários cmdlets de classificação e de análise.
 
 ##### <a name="update-display-information"></a>Atualizar informações de exibição
 
@@ -213,7 +195,8 @@ Se a exibição de um objeto não fornecer os resultados esperados, crie um *\<Y
 
 #### <a name="implement-for-the-middle-of-a-pipeline"></a>Implementar para o meio de um pipeline
 
-Implemente um cmdlet supondo que ele será chamado do meio de um pipeline (ou seja, outros cmdlets produzirão sua entrada ou consumirão sua saída). Por exemplo, você pode pressupor que o `Get-Process` cmdlet, porque ele gera dados, é usado somente como o primeiro cmdlet em um pipeline. No entanto, como esse cmdlet é projetado para o meio de um pipeline, esse cmdlet permite que os cmdlets ou dados anteriores no pipeline especifiquem os processos a serem recuperados.
+Implemente um cmdlet supondo que ele será chamado do meio de um pipeline (ou seja, outros cmdlets produzirão sua entrada ou consumirão sua saída). Por exemplo, você pode pressupor que o `Get-Process` cmdlet, porque ele gera dados, é usado somente como o primeiro cmdlet em um pipeline.
+No entanto, como esse cmdlet é projetado para o meio de um pipeline, esse cmdlet permite que os cmdlets ou dados anteriores no pipeline especifiquem os processos a serem recuperados.
 
 #### <a name="support-input-from-the-pipeline"></a>Suporte à entrada do pipeline
 
@@ -229,9 +212,10 @@ Para aceitar todos os registros do cmdlet anterior no pipeline, o cmdlet deve im
 
 Quando um cmdlet retorna objetos, o cmdlet deve gravar os objetos imediatamente conforme eles são gerados. O cmdlet não deve contê-los para armazená-los em uma matriz combinada. Os cmdlets que recebem os objetos como entrada serão capazes de processar, exibir ou processar e exibir os objetos de saída sem atraso. Um cmdlet que gera objetos de saída um de cada vez deve chamar o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) . Um cmdlet que gera objetos de saída em lotes (por exemplo, porque uma API subjacente retorna uma matriz de objetos de saída) deve chamar o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) com seu segundo parâmetro definido como `true` .
 
-### <a name="make-cmdlets-case-insensitive-and-case-preserving-sc04"></a>Tornar cmdlets não diferencia maiúsculas de minúsculas e SC04 (preservação de maiúsculas e minúsculas)
+### <a name="make-cmdlets-case-insensitive-and-case-preserving-sc04"></a>Tornar cmdlets Case-Insensitive e Case-Preserving (SC04)
 
-Por padrão, o próprio Windows PowerShell não diferencia maiúsculas de minúsculas. No entanto, como ele lida com muitos sistemas preexistentes, o Windows PowerShell preserva o caso para facilitar a operação e a compatibilidade. Em outras palavras, se um caractere for fornecido em letras maiúsculas, o Windows PowerShell o manterá em letras maiúsculas. Para que os sistemas funcionem bem, um cmdlet precisa seguir essa convenção. Se possível, ele deve operar de forma não diferencia maiúsculas de minúsculas. No entanto, ele deve preservar o caso original para cmdlets que ocorrem posteriormente em um comando ou no pipeline.
+Por padrão, o próprio Windows PowerShell não diferencia maiúsculas de minúsculas. No entanto, como ele lida com muitos sistemas preexistentes, o Windows PowerShell preserva o caso para facilitar a operação e a compatibilidade.
+Em outras palavras, se um caractere for fornecido em letras maiúsculas, o Windows PowerShell o manterá em letras maiúsculas. Para que os sistemas funcionem bem, um cmdlet precisa seguir essa convenção. Se possível, ele deve operar de forma não diferencia maiúsculas de minúsculas. No entanto, ele deve preservar o caso original para cmdlets que ocorrem posteriormente em um comando ou no pipeline.
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -239,4 +223,4 @@ Por padrão, o próprio Windows PowerShell não diferencia maiúsculas de minús
 
 [Diretrizes para desenvolvimento de consultoria](./advisory-development-guidelines.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

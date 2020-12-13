@@ -1,12 +1,14 @@
 ---
-title: Escrevendo um provedor de navegação | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Escrever um provedor de navegação
+description: Escrever um provedor de navegação
+ms.openlocfilehash: 3123672d3365c97714557bd0e72a6e444ac228a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786774"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355214"
 ---
 # <a name="writing-a-navigation-provider"></a>Escrever um provedor de navegação
 
@@ -18,7 +20,7 @@ Para obter mais informações sobre provedores do Windows PowerShell, consulte [
 
 ## <a name="implementing-navigation-methods"></a>Implementando métodos de navegação
 
-A classe [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) implementa métodos que dão suporte a Contêineres aninhados, caminhos relativos e movimentação de itens. Para obter uma lista completa desses métodos, consulte [métodos NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods).
+A classe [System. Management. Automation. Provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) implementa métodos que dão suporte a Contêineres aninhados, caminhos relativos e movimentação de itens. Para obter uma lista completa desses métodos, consulte [métodos NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider#methods).
 
 > [!NOTE]
 > Este tópico se baseia nas informações no guia de [início rápido do provedor do Windows PowerShell](./windows-powershell-provider-quickstart.md). Este tópico não aborda as noções básicas de como configurar um projeto de provedor ou como implementar os métodos herdados da classe [System. Management. Automation. Provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) que criam e removem unidades. Este tópico também não aborda como implementar métodos expostos pelas classes [System. Management. Automation. Provider. docmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) ou [System. Management. Automation. Provider. Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Para obter um exemplo que mostra como implementar cmdlets de item, consulte [escrevendo um provedor de item](./writing-an-item-provider.md). Para obter um exemplo que mostra como implementar cmdlets de contêiner, consulte [escrevendo um provedor de contêiner](./writing-a-container-provider.md).

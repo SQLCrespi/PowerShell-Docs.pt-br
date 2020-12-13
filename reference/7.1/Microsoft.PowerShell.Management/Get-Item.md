@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: 25d07028430d6ad6719136bd484d39e116d81516
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d9c8d13f992e6631ff5982b4a33542c661991562
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194434"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661351"
 ---
 # Get-Item
 
@@ -130,9 +130,9 @@ No PowerShell 6,2, uma exibição alternativa foi adicionada para obter informa�
 Get-Item -Path C:\PathWhichIsAHardLink | Format-Table -View childrenWithHardlink
 ```
 
-### Exemplo 9: saída para o recurso experimental PSUnixFileStat
+### Exemplo 9: saída para sistemas operacionais que não são do Windows
 
-No PowerShell 7 em sistemas UNIX, o recurso experimental **PSUnixFileStat** fornece saída do tipo UNIX:
+No PowerShell 7,1 em sistemas UNIX, o `Get-Item` cmdlet fornece saída semelhante ao Unix:
 
 ```powershell
 PS> Get-Item /Users
@@ -152,6 +152,9 @@ As novas propriedades que agora fazem parte da saída são:
 - O **usuário** é o proprietário do arquivo
 - O **grupo** é o proprietário do grupo
 - **Tamanho** é o tamanho do arquivo ou diretório, conforme representado em um sistema UNIX
+
+> [!NOTE]
+> Esse recurso foi movido do experimental para o básico no PowerShell 7,1.
 
 ## PARAMETERS
 
@@ -194,7 +197,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -243,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -315,7 +318,7 @@ Esse cmdlet não tem um parâmetro **recurse** , pois ele obtém apenas um item,
 Para obter o conteúdo de um item recursivamente, use `Get-ChildItem` .
 
 Para navegar pelo registro, use este cmdlet para obter chaves do registro e `Get-ItemProperty` para obter valores e dados do registro. Os valores do registro são considerados propriedade da chave do registro.
-  
+
 Esse cmdlet foi projetado para trabalhar com os dados expostos por qualquer provedor. Para listar os provedores disponíveis em sua sessão, digite `Get-PsProvider` . Para obter mais informações, consulte [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).
 
 ## LINKS RELACIONADOS

@@ -1,29 +1,26 @@
 ---
-title: Exemplo de Events01 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7b0f759ca6f3c078649a462eac1713e8214a237
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Events01
+description: Amostra Events01
+ms.openlocfilehash: ed8b7903537504609602e27693351847d322f904
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774450"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390398"
 ---
 # <a name="events01-sample"></a>Amostra Events01
 
-Este exemplo mostra como criar um cmdlet que permite ao usuário se registrar para eventos que são gerados por [System. IO. FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
-Com esse cmdlet, os usuários podem registrar uma ação a ser executada quando um arquivo é criado em um diretório específico.
-Este exemplo deriva da classe base [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) .
+Este exemplo mostra como criar um cmdlet que permite ao usuário se registrar para eventos que são gerados por [System. IO. FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher). Com esse cmdlet, os usuários podem registrar uma ação a ser executada quando um arquivo é criado em um diretório específico. Este exemplo deriva da classe base [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) .
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 
-1. Com o SDK do Windows PowerShell 2,0 instalado, navegue até a pasta Events01.
-   O local padrão é `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
+1. Com o SDK do Windows PowerShell 2,0 instalado, navegue até a pasta Events01. O local padrão é `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
 
-2. Clique duas vezes no ícone do arquivo da solução (. sln).
-   Isso abre o projeto de exemplo no Microsoft Visual Studio.
+2. Clique duas vezes no ícone do arquivo da solução (. sln). Isso abre o projeto de exemplo no Microsoft Visual Studio.
 
-3. No menu **Compilar**, selecione **Compilar Solução**.
-   A biblioteca do exemplo será criada no padrão `\bin` ou `\bin\debug` nas pastas.
+3. No menu **Compilar**, selecione **Compilar Solução**. A biblioteca do exemplo será criada no padrão `\bin` ou `\bin\debug` nas pastas.
 
 ### <a name="how-to-run-the-sample"></a>Como executar a amostra
 
@@ -76,8 +73,7 @@ Este exemplo demonstra o seguinte.
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Como escrever um cmdlet para o registro de eventos
 
-O cmdlet deriva da classe [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , que fornece suporte para parâmetros comuns aos `Register-*Event` cmdlets.
-Os cmdlets que são derivados de [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) precisam apenas definir seus parâmetros específicos e substituir `GetSourceObject` os `GetSourceObjectEventName` métodos e abstract.
+O cmdlet deriva da classe [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) , que fornece suporte para parâmetros comuns aos `Register-*Event` cmdlets. Os cmdlets que são derivados de [Microsoft. PowerShell. Commands. ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) precisam apenas definir seus parâmetros específicos e substituir `GetSourceObject` os `GetSourceObjectEventName` métodos e abstract.
 
 ## <a name="example"></a>Exemplo
 
@@ -122,7 +118,7 @@ namespace Sample
         /// Gets or sets the name of the event to which the cmdlet registers.
         /// <para>
         /// Currently System.IO.FileSystemWatcher exposes 6 events: Changed, Created,
-        /// Deleted, Disposed, Error, and Renamed. Check the MSDN documentation of
+        /// Deleted, Disposed, Error, and Renamed. Check the documentation of
         /// FileSystemWatcher for details on each event.
         /// </para>
         /// </summary>

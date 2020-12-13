@@ -1,12 +1,14 @@
 ---
-title: Conceitos do Windows PowerShell | Microsoft Docs
-ms.date: 6/12/2019
-ms.openlocfilehash: a31c1df784b7b5f872c4647aece8fafa535db66b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.date: 06/12/2019
+ms.topic: reference
+title: Conceitos do Windows PowerShell
+description: Conceitos do Windows PowerShell
+ms.openlocfilehash: a9b88a2e575b7ff7c036ce0fcbc035f0b55d0f5f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786944"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355351"
 ---
 # <a name="windows-powershell-concepts"></a>Conceitos do Windows PowerShell
 
@@ -22,13 +24,13 @@ Esta seção contém informações conceituais que ajudarão você a entender o 
 |[Classe RuntimeDefinedParameter](/dotnet/api/system.management.automation.runtimedefinedparameter)|Declarações de parâmetro de tempo de execução.|
 |[Namespace System. Management. Automation](/dotnet/api/System.Management.Automation)|Visão geral dos namespaces da API do PowerShell.|
 |[Visão geral do provedor do Windows PowerShell](../provider/windows-powershell-provider-overview.md)|Visão geral sobre provedores do PowerShell que são usados para acessar armazenamentos de dados.|
-|[Gravando ajuda para cmdlets do PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Como escrever a ajuda do cmdlet do PowerShell.|
+|[Escrever tópicos de ajuda para cmdlets do PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Como escrever a ajuda do cmdlet do PowerShell.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Classe do PowerShell](/dotnet/api/system.management.automation.powershell)
 
-[Referência da API do PowerShell Core](/dotnet/api/?view=pscore-6.2.0)
+[Referência da API do PowerShell Core](/dotnet/api/?view=pscore-6.2.0&preserve-view=true)
 
 [Guia do programador do Windows PowerShell](windows-powershell-programmer-s-guide.md)
 
@@ -36,6 +38,6 @@ Esta seção contém informações conceituais que ajudarão você a entender o 
 
 [Escrevendo um provedor do Windows PowerShell](../provider/writing-a-windows-powershell-provider.md)
 
-[Referência da API do Windows PowerShell](/dotnet/api/?view=powershellsdk-1.1.0)
+[Referência da API do Windows PowerShell](/dotnet/api/?view=powershellsdk-1.1.0&preserve-view=true)
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)

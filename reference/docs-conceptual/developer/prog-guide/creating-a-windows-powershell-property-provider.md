@@ -1,15 +1,14 @@
 ---
-title: Criando um provedor de propriedades do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- property providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], property provider
-ms.openlocfilehash: e8ef92629fe036154cdd2f0facbe0cbe8add7533
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de propriedade do Windows PowerShell
+description: Criar um provedor de propriedade do Windows PowerShell
+ms.openlocfilehash: 5370624afa784598ca784b201f7e7345eb958ff9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778940"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390908"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Criar um provedor de propriedade do Windows PowerShell
 
@@ -121,7 +120,7 @@ Aqui está a implementação padrão de [System. Management. Automation. Provide
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Consulte [como registrar cmdlets, provedores e aplicativos de host](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -129,6 +128,6 @@ Consulte [como registrar cmdlets, provedores e aplicativos de host](https://msdn
 
 [Criar seu provedor do Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85))
 
-[Como registrar cmdlets, provedores e aplicativos host](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registrar cmdlets, provedores e aplicativos host](/previous-versions//ms714644(v=vs.85))
