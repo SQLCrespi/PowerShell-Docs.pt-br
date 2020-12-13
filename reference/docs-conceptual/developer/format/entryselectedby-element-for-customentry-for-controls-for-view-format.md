@@ -1,12 +1,14 @@
 ---
-title: Elemento EntrySelectedBy para CustomEntry para controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5c82e02d23b1694d05f7a32578ccc5d33686f13f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EntrySelectedBy para CustomEntry para Controls para View (formato)
+description: Elemento EntrySelectedBy para CustomEntry para Controls para View (formato)
+ms.openlocfilehash: 29b0574a95d81962fb3f72a526f89273baeea647
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774245"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660260"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-view-format"></a>Elemento EntrySelectedBy para CustomEntry para Controls para View (formato)
 
@@ -30,7 +32,7 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Ent
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

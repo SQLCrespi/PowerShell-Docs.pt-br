@@ -1,12 +1,14 @@
 ---
-title: Exemplo de GetProcessSample03 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra GetProcessSample03
+description: Amostra GetProcessSample03
+ms.openlocfilehash: 7827247238f3dad2018b55e396b73d1fa434eb97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784207"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660716"
 ---
 # <a name="getprocesssample03-sample"></a>Amostra GetProcessSample03
 
@@ -60,7 +62,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra uma implementação do cmdlet Get-proc que inclui um `Name` parâmetro que aceita entrada do pipeline.
+Este exemplo mostra uma implementação do cmdlet Get-Proc que inclui um `Name` parâmetro que aceita entrada do pipeline.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

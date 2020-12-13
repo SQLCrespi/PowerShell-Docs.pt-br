@@ -1,12 +1,14 @@
 ---
-title: Como adicionar informações de parâmetro
 ms.date: 09/12/2016
-ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Como adicionar informações de parâmetro
+description: Como adicionar informações de parâmetro
+ms.openlocfilehash: 8f4fc46ef256a77b058df4ba506124f80732cb39
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893383"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663050"
 ---
 # <a name="how-to-add-parameter-information"></a>Como adicionar informações de parâmetro
 
@@ -165,7 +167,7 @@ Aqui estão algumas coisas a serem lembradas ao adicionar parâmetros.
 
 O valor padrão do parâmetro é o valor que será usado se o parâmetro não for especificado na linha de comando. Observe que o valor padrão é opcional e não é necessário para alguns parâmetros, como os parâmetros necessários. No entanto, você deve especificar um valor padrão para a maioria dos parâmetros opcionais.
 
-O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do PowerShell ( `$PSHOME` )" para um caminho opcional. Você também pode escrever uma frase que descreva o padrão, como a seguinte frase usada para o parâmetro **PassThru** : "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline". Além disso, como o valor é exibido em oposto ao **valor padrão**do nome do campo, não é necessário incluir o termo "valor padrão" na entrada.
+O valor padrão ajuda o usuário a entender o efeito de não usar o parâmetro. Descreva o valor padrão muito especificamente, como o "diretório atual" ou o "diretório de instalação do PowerShell ( `$PSHOME` )" para um caminho opcional. Você também pode escrever uma frase que descreva o padrão, como a seguinte frase usada para o parâmetro **PassThru** : "Se PassThru não for especificado, o cmdlet não passa objetos pelo pipeline". Além disso, como o valor é exibido em oposto ao **valor padrão** do nome do campo, não é necessário incluir o termo "valor padrão" na entrada.
 
 O valor padrão do parâmetro não é exibido em todas as exibições do tópico de ajuda do cmdlet. No entanto, ele é exibido em uma tabela (juntamente com os atributos de parâmetro) após a descrição do parâmetro quando o usuário solicita a exibição **completa** ( `Get-Help <cmdletname> -full` ) ou **parâmetro** ( `Get-Help
 <cmdletname> -parameter` ) do tópico.

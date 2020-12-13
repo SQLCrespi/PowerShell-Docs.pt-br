@@ -1,12 +1,14 @@
 ---
-title: Módulos e snap-ins | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Módulos e snap-ins
+description: Módulos e snap-ins
+ms.openlocfilehash: de4ff1de9a29b78d7783fe7ed0265f5516db1fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787301"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658681"
 ---
 # <a name="modules-and-snap-ins"></a>Módulos e snap-ins
 
@@ -22,6 +24,6 @@ Recomendamos que você use módulos como o método de entrega para adicionar cmd
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do Windows PowerShell](writing-a-windows-powershell-module.md)
+[Escrever um módulo do Windows PowerShell](writing-a-windows-powershell-module.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](../cmdlet/cmdlet-overview.md)
+[Writing a Windows PowerShell Cmdlet](../cmdlet/cmdlet-overview.md) (Escrevendo um Cmdlet do Windows PowerShell)

@@ -1,14 +1,16 @@
 ---
-title: Gravando ajuda para cmdlets do PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e1070e90cf3ed83c1d97a3b620e00f65d09989e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Escrever tópicos de ajuda para cmdlets do PowerShell
+description: Escrever tópicos de ajuda para cmdlets do PowerShell
+ms.openlocfilehash: b1deaa5998dbc54add93764db785d57afcc0a779
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893077"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658103"
 ---
-# <a name="writing-help-for-powershell-cmdlets"></a>Gravando ajuda para cmdlets do PowerShell
+# <a name="writing-help-for-powershell-cmdlets"></a>Escrever tópicos de ajuda para cmdlets do PowerShell
 
 Os cmdlets do PowerShell podem ser úteis, mas a menos que os tópicos da ajuda expliquem claramente o que o cmdlet faz e como usá-lo, o cmdlet pode não ser usado ou, ainda pior, pode frustrar os usuários. O formato de arquivo de ajuda do cmdlet baseado em XML aprimora a consistência, mas a grande ajuda requer muito mais.
 
@@ -42,7 +44,7 @@ Liste rapidamente tudo o que o cmdlet pode fazer na descrição detalhada. Se a 
 
 ### <a name="use-conventional-syntax"></a>Usar sintaxe convencional
 
-Use o formato padrão Backus-Naur, que é comum para a ajuda de linha de comando do UNIX e do Windows.
+Use o formato de Backus-Naur padrão, que é comum para a ajuda de linha de comando do UNIX e do Windows.
 
 ### <a name="use-microsoft-net-types-for-parameter-values"></a>Usar tipos de Microsoft .NET para valores de parâmetro
 

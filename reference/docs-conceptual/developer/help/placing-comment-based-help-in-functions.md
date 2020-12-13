@@ -1,18 +1,20 @@
 ---
-title: Colocar a ajuda baseada em comentários em funções
 ms.date: 09/12/2016
-ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Colocar a ajuda baseada em comentários em funções
+description: Colocar a ajuda baseada em comentários em funções
+ms.openlocfilehash: 3bd72f0c71d8f6ad54c43c99f044423c072fdeeb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893196"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658205"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>Colocar a ajuda baseada em comentários em funções
 
 Este tópico explica onde posicionar a ajuda baseada em comentários para uma função, de modo que o `Get-Help` cmdlet associe o tópico de ajuda baseado em comentário com a função correta.
 
-## <a name="where-to-place-comment-based-help-for-a-function"></a>Onde posicionar a ajuda baseada em comentários para uma função
+## <a name="where-to-place-comment-based-help-for-a-function"></a>Onde posicionar Comment-Based ajuda para uma função
 
 - No início do corpo da função.
 

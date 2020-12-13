@@ -1,24 +1,26 @@
 ---
-title: Adicionando aliases, expansão de curinga e ajuda para parâmetros de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 244c50c73972c2760e0029c7fa4f4b5764b066da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
+description: Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
+ms.openlocfilehash: f0f07796370b4613b1ca0ad17b16c6598bfa438d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774959"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660635"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Adicionar aliases, expansão de curinga e ajuda a parâmetros de cmdlet
 
-Esta seção descreve como adicionar aliases, expansão de curinga e mensagens de ajuda aos parâmetros do cmdlet Stop-proc (descrito em [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)).
+Esta seção descreve como adicionar aliases, expansão de curinga e mensagens de ajuda aos parâmetros do cmdlet Stop-Proc (descrito em [criando um cmdlet que modifica o sistema](./creating-a-cmdlet-that-modifies-the-system.md)).
 
-Esse cmdlet Stop-proc tenta parar os processos recuperados usando o cmdlet Get-proc (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)).
+Esse Stop-Proc cmdlet tenta parar os processos recuperados usando o cmdlet Get-Proc (descrito em [criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)).
 
 ## <a name="defining-the-cmdlet"></a>Definindo o cmdlet
 
 A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a classe .NET que implementa o cmdlet. Como você está escrevendo um cmdlet para alterar o sistema, ele deve ser nomeado de acordo. Como esse cmdlet interrompe os processos do sistema, ele usa o verbo "Stop", definido pela classe [System. Management. Automation. Verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) , com o substantivo "proc" para indicar o processo. Para obter mais informações sobre verbos de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-O código a seguir é a definição de classe para esse cmdlet Stop-proc.
+O código a seguir é a definição de classe para este Stop-Proc cmdlet.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -63,7 +65,7 @@ Além de usar o atributo [System. Management. Automation. AliasAttribute](/dotne
 
 O Windows PowerShell permite que você crie ajuda para parâmetros de cmdlet. Faça isso para qualquer parâmetro usado para modificação do sistema e comentários do usuário. Para cada parâmetro para dar suporte à ajuda, você pode definir a `HelpMessage` palavra-chave Attribute na declaração de atributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Essa palavra-chave define o texto a ser exibido para o usuário para obter assistência no uso do parâmetro. Você também pode definir a `HelpMessageBaseName` palavra-chave para identificar o nome de base de um recurso a ser usado para a mensagem. Se você definir essa palavra-chave, também deverá definir a `HelpMessageResourceId` palavra-chave para especificar o identificador de recurso.
 
-O código a seguir desse cmdlet Stop-proc define a `HelpMessage` palavra-chave Attribute para o `Name` parâmetro.
+O seguinte código desse cmdlet Stop-Proc define a `HelpMessage` palavra-chave Attribute para o `Name` parâmetro.
 
 ```csharp
 /// <summary>
@@ -135,9 +137,9 @@ Depois de implementar um cmdlet, ele deve ser registrado com o Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Stop-proc de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Stop-Proc de exemplo. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Inicie o Windows PowerShell e use Stop-proc para interromper um processo usando o alias ProcessName para o `Name` parâmetro.
+- Inicie o Windows PowerShell e use Stop-Proc para interromper um processo usando o alias ProcessName para o `Name` parâmetro.
 
     ```powershell
     PS> stop-proc -ProcessName notepad

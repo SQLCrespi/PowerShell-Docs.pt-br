@@ -1,12 +1,14 @@
 ---
-title: Exemplos de API do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d7232bb16851f1d568cbdfc4374e287d0875adc8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostras de API do Windows PowerShell
+description: Amostras de API do Windows PowerShell
+ms.openlocfilehash: b6336ae7a2abb98cbbaa69bf6c9455f893db2d94
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780161"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657542"
 ---
 # <a name="windows-powershell-api-samples"></a>Amostras de API do Windows PowerShell
 

@@ -1,14 +1,14 @@
 ---
-title: Escrevendo um snap-in do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], PSSnapin example
-ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Escrever um snap-in do Windows PowerShell
+description: Escrever um snap-in do Windows PowerShell
+ms.openlocfilehash: f658c2fa1211bfb77d2e8edd3999ce7f92df13bb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779097"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659453"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Escrever um snap-in do Windows PowerShell
 
@@ -24,7 +24,7 @@ Com esse tipo de snap-in, você não seleciona quais cmdlets e provedores você 
 
     Neste exemplo, o nome da classe é "GetProcPSSnapIn01".
 
-3. Adicione uma propriedade pública para o nome do snap-in (obrigatório). Ao nomear snap-ins, não use nenhum dos seguintes caracteres:,,,,,,,, `#` `.` `,` `(` `)` `{` `}` `[` `]` , `&` , `-` ,,, `/` `\` `$` , `;` ,,,,, `:` `"` `'` `<` `>` , `|` , `?` `@` `` ` `` ,,,`*`
+3. Adicione uma propriedade pública para o nome do snap-in (obrigatório). Ao nomear snap-ins, não use nenhum dos seguintes caracteres:,,,,,,,, `#` `.` `,` `(` `)` `{` `}` `[` `]` , `&` , `-` ,,, `/` `\` `$` , `;` ,,,,, `:` `"` `'` `<` `>` , `|` , `?` `@` `` ` `` ,,, `*`
 
     Neste exemplo, o nome do snap-in é "GetProcPSSnapIn01".
 
@@ -46,7 +46,7 @@ Com esse tipo de snap-in, você não seleciona quais cmdlets e provedores você 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como escrever um snap-in do Windows PowerShell que pode ser usado para registrar o cmdlet Get-proc no Shell do Windows PowerShell. Lembre-se de que, neste exemplo, o assembly completo conteria apenas a classe de snap-in GetProcPSSnapIn01 e a `Get-Proc` classe cmdlet.
+Este exemplo mostra como escrever um snap-in do Windows PowerShell que pode ser usado para registrar o cmdlet Get-Proc no Shell do Windows PowerShell. Lembre-se de que, neste exemplo, o assembly completo conteria apenas a classe de snap-in GetProcPSSnapIn01 e a `Get-Proc` classe cmdlet.
 
 ```csharp
 [RunInstaller(true)]
@@ -123,4 +123,4 @@ public class GetProcPSSnapIn01 : PSSnapIn
 
 [Como registrar cmdlets, provedores e aplicativos host](/previous-versions/ms714644(v=vs.85))
 
-[SDK do shell do Windows PowerShell](../windows-powershell-reference.md)
+[SDK do Shell do Windows PowerShell](../windows-powershell-reference.md)

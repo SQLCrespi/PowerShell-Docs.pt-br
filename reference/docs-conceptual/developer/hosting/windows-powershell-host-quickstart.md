@@ -1,12 +1,14 @@
 ---
-title: Início rápido do host do Windows PowerShell | Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: fea6bd5ae49ecf552c583271ee9d869b1ccebae8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Início rápido do Windows PowerShell Host
+description: Início rápido do Windows PowerShell Host
+ms.openlocfilehash: 4cb7dae60342abb40bd7a989a27a692826b360e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657417"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Início rápido do Windows PowerShell Host
 

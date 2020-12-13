@@ -1,12 +1,14 @@
 ---
-title: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
 ms.date: 09/13/2016
-ms.openlocfilehash: 399defcb596ff9e9a596f4cd25ebcb6bcb7c34d2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
+description: Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
+ms.openlocfilehash: aeeb0cdd1d6d17b88067928ff952dc57a9441917
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892873"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659051"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>Como adicionar a sinopse e o nome do cmdlet a um tópico de ajuda do cmdlet
 

@@ -1,16 +1,14 @@
 ---
-title: Criando um provedor de unidade do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- drive providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], drive provider
-- drives [PowerShell Programmer's Guide]
-ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de unidade do Windows PowerShell
+description: Criar um provedor de unidade do Windows PowerShell
+ms.openlocfilehash: 639518fce27d941b7529b091364c5905c91a5c0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787182"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663040"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Criar um provedor de unidade do Windows PowerShell
 
@@ -99,7 +97,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
 
 1. Execute o `Get-PSProvider` cmdlet para recuperar a lista de provedores para garantir que o provedor da unidade AccessDB esteja presente:
 
-   **> PS`Get-PSProvider`**
+   **> PS `Get-PSProvider`**
 
    O seguinte resultado é exibido:
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento FirstLineIndent para frame para controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d3927be2cdce24b65b4d94dfb17ae57a1b47270c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento FirstLineIndent para Frame para Controls para View (formato)
+description: Elemento FirstLineIndent para Frame para Controls para View (formato)
+ms.openlocfilehash: 425cd9ccafb2cbe36f238177fc73923da048f924
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773514"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660150"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-view-format"></a>Elemento FirstLineIndent para Frame para Controls para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Fir
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

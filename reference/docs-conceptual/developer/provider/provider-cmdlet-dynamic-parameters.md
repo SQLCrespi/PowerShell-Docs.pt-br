@@ -1,12 +1,14 @@
 ---
-title: Parâmetros dinâmicos do cmdlet do provedor | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4aaa5ee39e98de9a9925fc65cac3cc6c32d9c2bc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros dinâmicos de cmdlet do provedor
+description: Parâmetros dinâmicos de cmdlet do provedor
+ms.openlocfilehash: ac05a847afb0729c34d733fa4ba8da11f46746fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786808"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662975"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>Parâmetros dinâmicos de cmdlet do provedor
 
@@ -58,47 +60,47 @@ internal sealed class CertificateProviderDynamicParameters
 
 Aqui está uma lista dos parâmetros estáticos que podem ser usados para adicionar parâmetros dinâmicos.
 
-`Clear-Content`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do cmdlet Clear-Clear implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Clearcontentdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) .
+`Clear-Content` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do cmdlet Clear-Clear implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Clearcontentdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) .
 
-`Clear-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Clear-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Clearitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) .
+`Clear-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Clear-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Clearitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) .
 
-`Clear-ItemProperty`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Clear-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) .
+`Clear-ItemProperty` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Clear-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) .
 
-`Copy-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Destination` parâmetros, e `Recurse` do `Copy-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Copyitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) .
+`Copy-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Destination` parâmetros, e `Recurse` do `Copy-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Copyitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) .
 
-Cmdlet Get-ChildItems você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Recurse` parâmetros e do `Get-ChildItem` cmdlet implementando os métodos [System. Management. Automation. Provider. Containercmdletprovider. Getchilditemsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System. Management. Automation. Provider. Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) .
+Get-ChildItems cmdlet, você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Recurse` parâmetros e do `Get-ChildItem` cmdlet implementando os métodos [System. Management. Automation. Provider. Containercmdletprovider. Getchilditemsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System. Management. Automation. Provider. Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) .
 
-`Get-Content`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Get-Content` cmdlet implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Getcontentreaderdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) .
+`Get-Content` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Get-Content` cmdlet implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Getcontentreaderdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) .
 
-`Get-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Get-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Getitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) .
+`Get-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Get-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Getitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) .
 
-`Get-ItemProperty`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros e do `Get-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Getpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) .
+`Get-ItemProperty` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros e do `Get-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Getpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) .
 
-`Invoke-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Invoke-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) .
+`Invoke-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Invoke-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) .
 
-`Move-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Destination` parâmetros e do `Move-Item` cmdlet implementando o método [System. Management. Automation. Provider. Navigationcmdletprovider. Moveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) .
+`Move-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Destination` parâmetros e do `Move-Item` cmdlet implementando o método [System. Management. Automation. Provider. Navigationcmdletprovider. Moveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) .
 
-`New-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `ItemType` parâmetros, e `Value` do `New-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Newitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) .
+`New-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `ItemType` parâmetros, e `Value` do `New-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Newitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) .
 
-`New-ItemProperty`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros,, `PropertyType` e `Value` do `New-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Newpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) .
+`New-ItemProperty` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros,, `PropertyType` e `Value` do `New-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Newpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) .
 
-`New-PSDrive`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo objeto [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) retornado pelo `New-PSDrive` cmdlet implementando o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) .
+`New-PSDrive` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo objeto [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) retornado pelo `New-PSDrive` cmdlet implementando o método [System. Management. Automation. Provider. Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) .
 
-`Remove-Item`Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Recurse` parâmetros e do `Remove-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Removeitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) .
+`Remove-Item` Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Recurse` parâmetros e do `Remove-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Removeitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) .
 
-`Remove-ItemProperty`Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros e do `Remove-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Removepropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters) .
+`Remove-ItemProperty` Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros e do `Remove-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Removepropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters) .
 
-`Rename-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `NewName` parâmetros e do `Rename-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) .
+`Rename-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `NewName` parâmetros e do `Rename-Item` cmdlet implementando o método [System. Management. Automation. Provider. Containercmdletprovider. Renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) .
 
-`Rename-ItemProperty`Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros, e `NewName` do `Rename-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Renamepropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) .
+`Rename-ItemProperty` Você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Name` parâmetros, e `NewName` do `Rename-ItemProperty` cmdlet implementando o método [System. Management. Automation. Provider. Idynamicpropertycmdletprovider. Renamepropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) .
 
-`Set-Content`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Set-Content` cmdlet implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Getcontentwriterdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) .
+`Set-Content` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Set-Content` cmdlet implementando o método [System. Management. Automation. Provider. Icontentcmdletprovider. Getcontentwriterdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) .
 
-`Set-Item`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Value` parâmetros e do `Set-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Setitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) .
+`Set-Item` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Value` parâmetros e do `Set-Item` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Setitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) .
 
-`Set-ItemProperty`cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Value` parâmetros e do `Set-Item` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Setpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) .
+`Set-ItemProperty` cmdlet você pode definir parâmetros dinâmicos que são disparados pelos `Path` `Value` parâmetros e do `Set-Item` cmdlet implementando o método [System. Management. Automation. Provider. Ipropertycmdletprovider. Setpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) .
 
-`Test-Path`cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Test-Path` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) .
+`Test-Path` cmdlet você pode definir parâmetros dinâmicos que são disparados pelo `Path` parâmetro do `Test-Path` cmdlet implementando o método [System. Management. Automation. Provider. docmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) .
 
 ## <a name="see-also"></a>Consulte Também
 

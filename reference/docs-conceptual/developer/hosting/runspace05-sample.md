@@ -1,16 +1,18 @@
 ---
-title: Exemplo de Runspace05 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d274028d2357a26cd75cf70a033abbf907f5c4d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Runspace05
+description: Amostra Runspace05
+ms.openlocfilehash: 67a372eecba30452587471328412e8a2bdd9ec5a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772154"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657722"
 ---
 # <a name="runspace05-sample"></a>Amostra Runspace05
 
-Este exemplo mostra como adicionar um snap-in a um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o cmdlet do snap-in esteja disponível quando o runspace é aberto. O snap-in fornece um cmdlet Get-proc (definido pelo [exemplo GetProcessSample01](../cmdlet/getprocesssample01-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+Este exemplo mostra como adicionar um snap-in a um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para que o cmdlet do snap-in esteja disponível quando o runspace é aberto. O snap-in fornece um cmdlet Get-Proc (definido pelo [exemplo GetProcessSample01](../cmdlet/getprocesssample01-sample.md)) que é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,7 +38,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto. Neste exemplo, um snap-in que define um cmdlet Get-proc é adicionado ao estado de sessão inicial.
+Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto. Neste exemplo, um snap-in que define um cmdlet Get-Proc é adicionado ao estado de sessão inicial.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

@@ -1,12 +1,14 @@
 ---
-title: Modificando o caminho de instalação do PSModulePath | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 795f2bd52aeceddd3c0ca092d0c0cf2ef44bcf23
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Modificar o caminho de instalação PSModulePath
+description: Modificar o caminho de instalação PSModulePath
+ms.openlocfilehash: b802492bf9b49e8165e296817e3f80b9ae8265a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784836"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661952"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Modificar o caminho de instalação PSModulePath
 
@@ -51,6 +53,6 @@ Você pode remover caminhos da variável usando métodos semelhantes: por exempl
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+[Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
 
 [about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)

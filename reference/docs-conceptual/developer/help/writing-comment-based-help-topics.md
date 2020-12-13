@@ -1,12 +1,14 @@
 ---
-title: Escrever tópicos da ajuda baseados em comentário
 ms.date: 09/13/2016
-ms.openlocfilehash: f29a30d27eba2b84883c4c2bd3cee68349c94e19
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Escrever tópicos da ajuda baseados em comentário
+description: Escrever tópicos da ajuda baseados em comentário
+ms.openlocfilehash: 11bbadfde27a74bde29d336b91516939e7265b3b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893094"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658796"
 ---
 # <a name="writing-comment-based-help-topics"></a>Escrever tópicos da ajuda baseados em comentário
 
@@ -18,10 +20,10 @@ Você pode escrever tópicos de ajuda baseados em comentários para funções e 
 
 ## <a name="in-this-section"></a>Nesta seção
 
- [Sintaxe da ajuda baseada em comentários](./syntax-of-comment-based-help.md) Descreve a sintaxe da ajuda baseada em comentários.
+ [Sintaxe da ajuda do Comment-Based](./syntax-of-comment-based-help.md) Descreve a sintaxe da ajuda baseada em comentários.
 
  [Palavras-chave de ajuda com base em comentários](./comment-based-help-keywords.md) Lista as palavras-chave na Ajuda baseada em comentários.
 
- [Colocando a ajuda baseada em comentários em funções](./placing-comment-based-help-in-functions.md) Mostra onde posicionar a ajuda baseada em comentários para uma função.
+ [Colocando Comment-Based ajuda em funções](./placing-comment-based-help-in-functions.md) Mostra onde posicionar a ajuda baseada em comentários para uma função.
 
- [Colocando a ajuda baseada em comentários em scripts](./placing-comment-based-help-in-scripts.md) Mostra onde posicionar a ajuda baseada em comentários para um script.
+ [Colocando Comment-Based ajuda em scripts](./placing-comment-based-help-in-scripts.md) Mostra onde posicionar a ajuda baseada em comentários para um script.

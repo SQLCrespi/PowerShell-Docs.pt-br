@@ -1,12 +1,14 @@
 ---
-title: Início rápido do provedor do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Início rápido do provedor do Windows PowerShell
+description: Início rápido do provedor do Windows PowerShell
+ms.openlocfilehash: f0fe0ad60e9d10efd505cda60af995c597226b92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783119"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664345"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Início rápido do provedor do Windows PowerShell
 
@@ -28,9 +30,9 @@ No Visual Studio, crie um projeto de biblioteca de classes chamado AccessDBProvi
 
 1. Adicione o assembly System. Management. Automation como uma referência ao seu projeto.
 
-2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo**e navegue até o executável do Windows PowerShell (normalmente c:\Windows\system32\WindowsPowerShell\v1.0 \\.powershell.exe).
+2. Clique em **projeto > Propriedades de AccessDBProviderSample > depurar**. Em **Iniciar projeto**, clique em **Iniciar programa externo** e navegue até o executável do Windows PowerShell (normalmente c:\Windows\system32\WindowsPowerShell\v1.0 \\.powershell.exe).
 
-3. Em **Opções de início**, insira o seguinte na caixa **argumentos de linha de comando** :`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
+3. Em **Opções de início**, insira o seguinte na caixa **argumentos de linha de comando** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>Declarando a classe do provedor
 

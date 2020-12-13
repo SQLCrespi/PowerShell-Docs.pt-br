@@ -1,12 +1,14 @@
 ---
-title: Exemplo de Runspace10 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Runspace10
+description: Amostra Runspace10
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784938"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657583"
 ---
 # <a name="runspace10-sample"></a>Amostra Runspace10
 
@@ -34,7 +36,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto. Neste exemplo, o cmdlet Get-proc (definido pelo aplicativo host) é adicionado ao estado de sessão inicial e o cmdlet é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto. Neste exemplo, o cmdlet Get-Proc (definido pelo aplicativo host) é adicionado ao estado de sessão inicial e o cmdlet é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

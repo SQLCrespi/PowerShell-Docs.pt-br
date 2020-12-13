@@ -1,12 +1,14 @@
 ---
-title: Exemplo de Runspace08 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4fcf58eceb415f9f02391c22d2719e9140c77ea9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Runspace08
+description: Amostra Runspace08
+ms.openlocfilehash: ce60e85919a78143f26ff695a9c9104c86cd4f6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783153"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657651"
 ---
 # <a name="runspace08-sample"></a>Amostra Runspace08
 

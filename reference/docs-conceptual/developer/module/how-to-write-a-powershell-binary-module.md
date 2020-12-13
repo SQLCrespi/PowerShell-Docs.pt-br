@@ -1,12 +1,14 @@
 ---
-title: Como escrever um módulo binário do PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 92395bd6b8be1bd3741888eb3716d62f0253e213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como escrever um módulo binário do Windows PowerShell
+description: Como escrever um módulo binário do Windows PowerShell
+ms.openlocfilehash: 1d5cea474ac418f78cc782360b7c23b7614d6669
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779260"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663069"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Como escrever um módulo binário do Windows PowerShell
 
@@ -84,4 +86,4 @@ Consulte [como escrever um manifesto de módulo do PowerShell](how-to-write-a-po
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+[Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

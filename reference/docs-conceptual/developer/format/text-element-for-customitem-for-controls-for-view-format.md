@@ -1,12 +1,14 @@
 ---
-title: Elemento Text para CustomItem para controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e611800c0d1e22ac427e9915f18536c995131809
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Text para CustomItem para Controls para View (formato)
+description: Elemento Text para CustomItem para Controls para View (formato)
+ms.openlocfilehash: 2fa79353059aa6e63201c5d5ab1cfa1f20038145
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787352"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659786"
 ---
 # <a name="text-element-for-customitem-for-controls-for-view-format"></a>Elemento Text para CustomItem para Controls para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

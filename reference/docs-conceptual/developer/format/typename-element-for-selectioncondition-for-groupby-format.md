@@ -1,12 +1,14 @@
 ---
-title: Elemento TypeName para SelectionCondition para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ea1e0cb50c3a749f6c26d13fff4b001240ce6b95
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TypeName para SelectionCondition para GroupBy (formato)
+description: Elemento TypeName para SelectionCondition para GroupBy (formato)
+ms.openlocfilehash: 096d2355e113a7e44cc6ae31ea23efc3f01080a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772545"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664631"
 ---
 # <a name="typename-element-for-selectioncondition-for-groupby-format"></a>Elemento TypeName para SelectionCondition para GroupBy (formato)
 
@@ -27,11 +29,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

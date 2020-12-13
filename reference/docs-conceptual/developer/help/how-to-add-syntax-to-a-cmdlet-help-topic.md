@@ -1,12 +1,14 @@
 ---
-title: Como adicionar sintaxe a um tópico de ajuda do cmdlet
 ms.date: 09/12/2016
-ms.openlocfilehash: 3457341a577b283bf3da5dc010de9bbbb36b78d2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Como adicionar sintaxe a um tópico de ajuda do cmdlet
+description: Como adicionar sintaxe a um tópico de ajuda do cmdlet
+ms.openlocfilehash: bcc037d22051c162cd0f70702da17afe7ed9c01a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893043"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659079"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Como adicionar sintaxe a um tópico de ajuda do cmdlet
 

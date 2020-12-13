@@ -1,12 +1,14 @@
 ---
-title: Elemento LeftIndent para frame para CustomControl para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c11002f92a35ca34a7d2c6aa26924d846076b001
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento LeftIndent para Frame para CustomControl para View (formato)
+description: Elemento LeftIndent para Frame para CustomControl para View (formato)
+ms.openlocfilehash: d3253544c3b4c7f9214222010bfab519564b64fd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783561"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660041"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>Elemento LeftIndent para Frame para CustomControl para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Lef
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

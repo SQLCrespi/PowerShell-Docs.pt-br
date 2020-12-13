@@ -1,12 +1,14 @@
 ---
-title: Elemento ViewDefinitions (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a108c4f8b03e3dec3905181b390aee2c82ab0028
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ViewDefinitions (formato)
+description: Elemento ViewDefinitions (formato)
+ms.openlocfilehash: fceef0e5ec91e8c59a7b2b90fd31ca422ff0c94d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772477"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664579"
 ---
 # <a name="viewdefinitions-element-format"></a>Elemento ViewDefinitions (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

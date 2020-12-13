@@ -1,19 +1,21 @@
 ---
-title: Importando um módulo do PowerShell | Microsoft Docs
 ms.date: 02/03/2020
-ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Importar um módulo do PowerShell
+description: Importar um módulo do PowerShell
+ms.openlocfilehash: 688509c0943a9a0289e75b80543f278e16cfedfe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784870"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658776"
 ---
 # <a name="importing-a-powershell-module"></a>Importar um módulo do PowerShell
 
 Depois de instalar um módulo em um sistema, você provavelmente vai querer importar o módulo. A importação é o processo que carrega o módulo na memória ativa, para que um usuário possa acessar esse módulo na sessão do PowerShell. No PowerShell 2,0, você pode importar um módulo do PowerShell instalado recentemente com uma chamada para o cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) . No PowerShell 3,0, o PowerShell é capaz de importar implicitamente um módulo quando uma das funções ou cmdlets no módulo é chamado por um usuário. Observe que ambas as versões pressupõem que você instale o módulo em um local onde o PowerShell possa encontrá-lo; para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md).
 Você pode usar um manifesto de módulo para restringir quais partes do módulo são exportadas e pode usar parâmetros da `Import-Module` chamada para restringir quais partes são importadas.
 
-## <a name="importing-a-snap-in-powershell-10"></a>Importando um snap-in (PowerShell 1,0)
+## <a name="importing-a-snap-in-powershell-10"></a>Importando um Snap-In (PowerShell 1,0)
 
 Os módulos não existiam no PowerShell 1,0: em vez disso, era necessário registrar e usar snap-ins. No entanto, não é recomendável que você use essa tecnologia neste ponto, pois os módulos são geralmente mais fáceis de instalar e importar. Para obter mais informações, consulte [como criar um snap-in do Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md).
 
@@ -74,4 +76,4 @@ Para restringir os membros que são importados, use os parâmetros a seguir do `
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+[Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

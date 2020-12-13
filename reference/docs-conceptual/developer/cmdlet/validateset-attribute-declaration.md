@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo ValidateSet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateSet
-- ValidateSet attribute, described
-- ValidateSet attribute
-ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo ValidateSet
+description: Declaração de atributo ValidateSet
+ms.openlocfilehash: 7894d00561366ada492911e8147acbd8d3454a55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787760"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660474"
 ---
 # <a name="validateset-attribute-declaration"></a>Declaração de atributo ValidateSet
 
@@ -27,14 +25,14 @@ Quando esse atributo é especificado, o tempo de execução do Windows PowerShel
 
 #### <a name="parameters"></a>Parâmetros
 
-`ValidValues`([System. String](/dotnet/api/System.String)) necessário. Especifica os valores de elemento de parâmetro válidos. O exemplo a seguir mostra como especificar um elemento ou vários elementos.
+`ValidValues` ([System. String](/dotnet/api/System.String)) necessário. Especifica os valores de elemento de parâmetro válidos. O exemplo a seguir mostra como especificar um elemento ou vários elementos.
 
 ```csharp
 [ValidateSetAttribute("Steve")]
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase`([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. O valor padrão de `true` indica que o caso é ignorado. Um valor `false` torna o cmdlet diferencia maiúsculas de minúsculas.
+`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. O valor padrão de `true` indica que o caso é ignorado. Um valor `false` torna o cmdlet diferencia maiúsculas de minúsculas.
 
 ## <a name="remarks"></a>Comentários
 
@@ -48,4 +46,4 @@ Quando esse atributo é especificado, o tempo de execução do Windows PowerShel
 
 [System. Management. Automation. Validatesetattribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

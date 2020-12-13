@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para EntrySelectedBy para controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5c762a626fff746266919d1f7fcb991a8cdbcdf2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para EntrySelectedBy para Controls para View (formato)
+description: Elemento SelectionSetName para EntrySelectedBy para Controls para View (formato)
+ms.openlocfilehash: 3211b7cacd7e57770b48b03f4aade33da506f180
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787539"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664732"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-view-format"></a>Elemento SelectionSetName para EntrySelectedBy para Controls para View (formato)
 
@@ -31,7 +33,7 @@ Nenhum
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

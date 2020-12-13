@@ -1,12 +1,14 @@
 ---
-title: Elemento EnumerableExpansions (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2b536b1ab9b34b0089d0a38d3c5dc7a937176443
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EnumerableExpansions (formato)
+description: Elemento EnumerableExpansions (formato)
+ms.openlocfilehash: 789599e6ff368b4685c7937d5b6eb38618752f9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774007"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660180"
 ---
 # <a name="enumerableexpansions-element-format"></a>Elemento EnumerableExpansions (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -44,7 +46,7 @@ Nenhum.
 
 ## <a name="remarks"></a>Comentários
 
-Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface **System. Collections. ICollection** .
+Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface  **System. Collections. ICollection** .
 
 ## <a name="see-also"></a>Consulte Também
 

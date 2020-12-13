@@ -1,12 +1,14 @@
 ---
-title: Amostras de runspace remoto
 ms.date: 09/13/2016
-ms.openlocfilehash: 68248f0ba9e816865b6b92dbf6e7686e2d871370
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostras de runspace remoto
+description: Amostras de runspace remoto
+ms.openlocfilehash: ba8f89d0369147a96a4f9f518b0784b4ebe7e80e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783221"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658030"
 ---
 # <a name="remote-runspace-samples"></a>Amostras de runspace remoto
 

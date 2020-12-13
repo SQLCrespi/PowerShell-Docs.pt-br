@@ -1,12 +1,14 @@
 ---
-title: Elemento TableHeaders (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TableHeaders (formato)
+description: Elemento TableHeaders (formato)
+ms.openlocfilehash: 5ac4dccae746c167ebf95add9f3d18030a2b3a99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787420"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659826"
 ---
 # <a name="tableheaders-element-format"></a>Elemento TableHeaders (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem os atributos, os elementos filho e os elementos p
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

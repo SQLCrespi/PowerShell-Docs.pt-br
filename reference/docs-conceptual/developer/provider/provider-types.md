@@ -1,12 +1,14 @@
 ---
-title: Tipos de provedor | Microsoft Docs
 ms.date: 08/21/2019
-ms.openlocfilehash: 03b6b2d02d603632399ea455c2832742e0964d62
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Tipos de provedor
+description: Tipos de provedor
+ms.openlocfilehash: 9d3b458d7647a297fcda086db3540a0c15c576db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778244"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661762"
 ---
 # <a name="provider-types"></a>Tipos de provedor
 
@@ -134,7 +136,7 @@ A interface **System. Management. Automation. Provider. IPropertyCmdletProvider*
 
 - Os métodos [System. Management. Automation. Provider. IDynamicPropertyCmdletProvider. renameproperty](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty) e [System. Management. Automation. Provider. IDynamicPropertyCmdletProvider. RenamePropertyDynamicParameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) definem como o provedor oferece suporte ao `Rename-ItemProperty` cmdlet. Esse cmdlet permite que o usuário altere o nome de uma propriedade.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)
 

@@ -1,14 +1,14 @@
 ---
-title: Como criar um snap-in do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], examples
-ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como criar um snap-in do Windows PowerShell
+description: Como criar um snap-in do Windows PowerShell
+ms.openlocfilehash: 29394ebcd2f7c4a547aabcb88685ff494b2c381d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787318"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657266"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Como criar um snap-in do Windows PowerShell
 
@@ -34,4 +34,4 @@ Todas as classes de snap-in do Windows PowerShell derivam das classes [System. M
 
 [Registrar cmdlets](./registering-cmdlets.md)
 
-[SDK do shell do Windows PowerShell](../windows-powershell-reference.md)
+[SDK do Shell do Windows PowerShell](../windows-powershell-reference.md)

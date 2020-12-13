@@ -1,12 +1,14 @@
 ---
-title: Elemento Width para TableColumnHeader para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Width para TableColumnHeader para TableControl (formato)
+description: Elemento Width para TableColumnHeader para TableControl (formato)
+ms.openlocfilehash: bde84f1d33b3d6b3b8c4462f870f978611cb434b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779906"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658251"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Elemento Width para TableColumnHeader para TableControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

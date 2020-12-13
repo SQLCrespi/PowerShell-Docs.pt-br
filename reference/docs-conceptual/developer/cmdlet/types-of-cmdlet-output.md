@@ -1,14 +1,14 @@
 ---
-title: Tipos de saída de cmdlet | Microsoft Docs
 ms.date: 01/18/2019
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], output
-ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Tipos de saída de cmdlet
+description: Tipos de saída de cmdlet
+ms.openlocfilehash: 591b7699e951db9016e48d5ef623265e23791e11
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786349"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660498"
 ---
 # <a name="types-of-cmdlet-output"></a>Tipos de saída de cmdlet
 
@@ -57,10 +57,10 @@ Para todas as chamadas de método de gravação, a exibição de conteúdo é de
 
 Você também pode criar um cmdlet para acessar diretamente a funcionalidade de saída de um aplicativo host por meio do tempo de execução do PowerShell. Usar as APIs de host fornecidas pelo PowerShell em vez de [System. console](/dotnet/api/System.Console) ou [System. Windows. Forms](/dotnet/api/System.Windows.Forms) garante que o cmdlet funcionará com uma variedade de hosts. Por exemplo: o host do console do **powershell.exe** , o host de **powershell_ise.exe** gráfico, o host de comunicação remota do PowerShell e hosts de terceiros.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Conceitos de relatórios de erro](./error-reporting-concepts.md)
 
 [Visão geral do cmdlet](./cmdlet-overview.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

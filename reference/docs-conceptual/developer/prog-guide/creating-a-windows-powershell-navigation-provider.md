@@ -1,12 +1,14 @@
 ---
-title: Criar um provedor de navegação do Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c9714c396a023516cd1c409e598d61bb6cda3ce
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de navegação do Windows PowerShell
+description: Criar um provedor de navegação do Windows PowerShell
+ms.openlocfilehash: 73d4971fb91acaef9e1f20226e7b9b883730e394
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778986"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658663"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
 

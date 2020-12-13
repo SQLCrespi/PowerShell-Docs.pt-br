@@ -1,12 +1,14 @@
 ---
-title: Criando uma exibição de tabela | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar uma exibição de tabela
+description: Criar uma exibição de tabela
+ms.openlocfilehash: 035d42f7968a9e8babec692a7a5873e24b36cd97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786145"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660294"
 ---
 # <a name="creating-a-table-view"></a>Criar uma exibição de tabela
 

@@ -1,12 +1,14 @@
 ---
-title: Exemplo de RemoteRunspace01 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f9ae846d70412858b32bfe32ba5bfbf2063d9eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra RemoteRunspace01
+description: Amostra RemoteRunspace01
+ms.openlocfilehash: 13c6213089700e779eb185fe48a67c1616fad437
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783204"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658017"
 ---
 # <a name="remoterunspace01-sample"></a>Amostra RemoteRunspace01
 

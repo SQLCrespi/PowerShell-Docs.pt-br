@@ -1,12 +1,14 @@
 ---
-title: Elemento TypeName para tipos (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TypeName para Types (formato)
+description: Elemento TypeName para Types (formato)
+ms.openlocfilehash: c656b8e7e5877b72ff2164e5b417857273cada61
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772528"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664611"
 ---
 # <a name="typename-element-for-types-format"></a>Elemento TypeName para Types (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

@@ -1,12 +1,14 @@
 ---
-title: Instalar o SDK do Windows PowerShell
 ms.date: 03/30/2020
-ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Instalar o SDK do Windows PowerShell
+description: Instalar o SDK do Windows PowerShell
+ms.openlocfilehash: 07108ede640b8c6c02bea6d9e2b63116b5b8f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771967"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657308"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Instalar o SDK do Windows PowerShell
 
@@ -74,8 +76,8 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. As seções a seguir forn
 - Runspace02-mostra como usar a classe PowerShell para executar os `Get-Process` cmdlets e de forma `Sort-Object` síncrona. O `Get-Process` cmdlet retorna objetos de processo para cada processo em execução no computador local e o `Sort-Object` classifica os objetos com base em sua propriedade de ID. Os resultados desses comandos são exibidos com o uso de um controle DataGridView.
 - Runspace03-mostra como usar a classe PowerShell para executar um script de forma síncrona e como lidar com erros de não finalização. O script recebe uma lista de nomes de processo e, em seguida, recupera tais processos. Os resultados do script, incluindo quaisquer erros de não encerramento gerados durante a execução do script, são exibidos em uma janela do console.
 - Runspace04-mostra como usar a classe PowerShell para executar comandos e como detectar erros de encerramento que são lançados durante a execução dos comandos. Dois comandos são executados e o último comando é passado um argumento de parâmetro que não é válido. Como resultado, nenhum objeto é retornado e um erro de encerramento é gerado.
-- Runspace05-mostra como adicionar um snap-in a um objeto InitialSessionState para que o cmdlet do snap-in esteja disponível quando o runspace for aberto. O snap-in fornece um cmdlet Get-proc (definido pelo exemplo GetProcessSample01) que é executado de forma síncrona usando um objeto do PowerShell.
-- Runspace06-mostra como adicionar um módulo a um objeto InitialSessionState para que o módulo seja carregado quando o runspace for aberto. O módulo fornece um cmdlet Get-proc (definido pelo exemplo GetProcessSample02) que é executado de forma síncrona usando um objeto do PowerShell.
+- Runspace05-mostra como adicionar um snap-in a um objeto InitialSessionState para que o cmdlet do snap-in esteja disponível quando o runspace for aberto. O snap-in fornece um cmdlet Get-Proc (definido pelo exemplo GetProcessSample01) que é executado de forma síncrona usando um objeto do PowerShell.
+- Runspace06-mostra como adicionar um módulo a um objeto InitialSessionState para que o módulo seja carregado quando o runspace for aberto. O módulo fornece um cmdlet Get-Proc (definido pelo exemplo GetProcessSample02) que é executado de forma síncrona usando um objeto do PowerShell.
 - Runspace07-mostra como criar um runspace e, em seguida, usar esse runspace para executar dois cmdlets de forma síncrona usando um objeto do PowerShell.
 - Runspace08-mostra como adicionar comandos e argumentos ao pipeline de um objeto do PowerShell e como executar os comandos de forma síncrona.
 - Runspace09-mostra como adicionar um script ao pipeline de um objeto do PowerShell e como executar o script de forma assíncrona. Eventos são usados para tratar a saída do script.

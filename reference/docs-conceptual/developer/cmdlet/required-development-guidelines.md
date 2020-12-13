@@ -1,12 +1,14 @@
 ---
-title: Diretrizes de desenvolvimento necessárias | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Diretrizes para desenvolvimento necessárias
+description: Diretrizes para desenvolvimento necessárias
+ms.openlocfilehash: 98db075b314eb7f54f2deb56022799d9f830f9ef
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781691"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655764"
 ---
 # <a name="required-development-guidelines"></a>Diretrizes para desenvolvimento necessárias
 
@@ -52,19 +54,19 @@ As diretrizes a seguir devem ser seguidas durante a criação de cmdlets para ga
 
 O verbo especificado no atributo cmdlet deve vir do conjunto reconhecido de verbos fornecidos pelo Windows PowerShell. Ele não deve ser um dos sinônimos proibidos. Use as cadeias de caracteres constantes que são definidas pelas seguintes enumerações para especificar verbos de cmdlet:
 
-- [System. Management. Automation. VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
 
-- [System. Management. Automation. VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
 
-- [System. Management. Automation. VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
+- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
 
-- [System. Management. Automation. VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
 
-- [System. Management. Automation. VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
 
-- [System. Management. Automation. VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
 
-- [System. Management. Automation. VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
+- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
 
 Para obter mais informações sobre os nomes de verbo aprovados, consulte [verbos de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
@@ -74,7 +76,7 @@ Os usuários precisam de um conjunto de nomes de cmdlet detectáveis e esperados
 
 Ao nomear cmdlets, não use nenhum dos caracteres especiais a seguir.
 
-|Caractere|Nome|
+|Caractere|Name|
 |---------------|----------|
 |#|sinal de número|
 |,|vírgula|
@@ -82,7 +84,7 @@ Ao nomear cmdlets, não use nenhum dos caracteres especiais a seguir.
 |{}|chaves|
 |[]|colchetes|
 |&|'|
-|-|Observação de hífen **:** o hífen pode ser usado para separar o verbo do substantivo, mas ele não pode ser usado dentro do substantivo ou dentro do verbo.|
+|-|Observação de hífen **:**  o hífen pode ser usado para separar o verbo do substantivo, mas ele não pode ser usado dentro do substantivo ou dentro do verbo.|
 |/|barra de marcas|
 |\\| barra invertida|
 |$|cifrão|
@@ -209,4 +211,4 @@ Crie um módulo do Windows PowerShell para empacotar e implantar seus cmdlets. O
 
 [Diretrizes para desenvolvimento de consultoria](./advisory-development-guidelines.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

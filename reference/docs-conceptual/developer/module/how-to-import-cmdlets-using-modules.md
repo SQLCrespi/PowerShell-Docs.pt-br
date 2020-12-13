@@ -1,12 +1,14 @@
 ---
-title: Como importar cmdlets usando módulos | Microsoft Docs
 ms.date: 08/28/2019
-ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como importar cmdlets por meio de módulos
+description: Como importar cmdlets por meio de módulos
+ms.openlocfilehash: 485a4be4d2accaf050a6536e7f92a0673f62a30b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779362"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657282"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Como importar cmdlets por meio de módulos
 
@@ -33,7 +35,7 @@ Este artigo descreve como importar cmdlets para uma sessão do PowerShell usando
 
    Esse procedimento pode ser usado para testar seus cmdlets. Ele adiciona todos os cmdlets no assembly à sessão. Para obter mais informações sobre módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Como escrever um manifesto de módulo do Windows PowerShell](../module/how-to-write-a-powershell-module-manifest.md)
 
@@ -45,4 +47,4 @@ Este artigo descreve como importar cmdlets para uma sessão do PowerShell usando
 
 [Modificar o caminho de instalação PSModulePath](../module/modifying-the-psmodulepath-installation-path.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](../cmdlet/cmdlet-overview.md)
+[Writing a Windows PowerShell Cmdlet](../cmdlet/cmdlet-overview.md) (Escrevendo um Cmdlet do Windows PowerShell)

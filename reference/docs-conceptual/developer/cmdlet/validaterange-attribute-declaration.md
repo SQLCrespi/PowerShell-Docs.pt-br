@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo ValidateRange | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange, described
-- ValidateRange attribute
-- attributes, ValidateRange
-ms.openlocfilehash: 9aeaa6f03c170389ff61a058b505dbcf74df6958
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo ValidateRange
+description: Declaração de atributo ValidateRange
+ms.openlocfilehash: 1fec9d1bd36cd21b7f0f23bf6d72338d276dce91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787777"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660605"
 ---
 # <a name="validaterange-attribute-declaration"></a>Declaração de atributo ValidateRange
 
@@ -24,9 +22,9 @@ O atributo ValidateRange especifica os valores mínimo e máximo (o intervalo) p
 
 #### <a name="parameters"></a>Parâmetros
 
-`MinRange`([System. Object](/dotnet/api/system.object)) necessário. Especifica o valor mínimo permitido.
+`MinRange` ([System. Object](/dotnet/api/system.object)) necessário. Especifica o valor mínimo permitido.
 
-`MaxRange`([System. Object](/dotnet/api/system.object)) necessário. Especifica o valor máximo permitido.
+`MaxRange` ([System. Object](/dotnet/api/system.object)) necessário. Especifica o valor máximo permitido.
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,4 +42,4 @@ O atributo ValidateRange especifica os valores mínimo e máximo (o intervalo) p
 
 [System. Management. Automation. Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
