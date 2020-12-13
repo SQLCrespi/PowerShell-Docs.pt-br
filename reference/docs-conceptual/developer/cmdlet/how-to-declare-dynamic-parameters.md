@@ -1,26 +1,28 @@
 ---
-title: Como declarar parâmetros dinâmicos | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c8839aa8841bf94a9b7f8f930ca315fe0ccedb30
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como declarar parâmetros dinâmicos
+description: Como declarar parâmetros dinâmicos
+ms.openlocfilehash: 0f5a8f249b414663aa9702a908ea5c8ca24755ff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784173"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667072"
 ---
-# <a name="how-to-declare-dynamic-parameters"></a><span data-ttu-id="9ba18-102">Como declarar parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="9ba18-102">How to Declare Dynamic Parameters</span></span>
+# <a name="how-to-declare-dynamic-parameters"></a><span data-ttu-id="073bd-103">Como declarar parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="073bd-103">How to Declare Dynamic Parameters</span></span>
 
-<span data-ttu-id="9ba18-103">Este exemplo mostra como definir parâmetros dinâmicos que são adicionados ao cmdlet em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9ba18-103">This example shows how to define dynamic parameters that are added to the cmdlet at runtime.</span></span> <span data-ttu-id="9ba18-104">Neste exemplo, o `Department` parâmetro é adicionado ao cmdlet sempre que o usuário especifica o `Employee` parâmetro de opção.</span><span class="sxs-lookup"><span data-stu-id="9ba18-104">In this example, the `Department` parameter is added to the cmdlet whenever the user specifies the `Employee` switch parameter.</span></span> <span data-ttu-id="9ba18-105">Para obter mais informações sobre parâmetros dinâmicos, consulte [parâmetros dinâmicos de cmdlet](./cmdlet-dynamic-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="9ba18-105">For more information about dynamic parameters, see [Cmdlet Dynamic Parameters](./cmdlet-dynamic-parameters.md).</span></span>
+<span data-ttu-id="073bd-104">Este exemplo mostra como definir parâmetros dinâmicos que são adicionados ao cmdlet em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="073bd-104">This example shows how to define dynamic parameters that are added to the cmdlet at runtime.</span></span> <span data-ttu-id="073bd-105">Neste exemplo, o `Department` parâmetro é adicionado ao cmdlet sempre que o usuário especifica o `Employee` parâmetro de opção.</span><span class="sxs-lookup"><span data-stu-id="073bd-105">In this example, the `Department` parameter is added to the cmdlet whenever the user specifies the `Employee` switch parameter.</span></span> <span data-ttu-id="073bd-106">Para obter mais informações sobre parâmetros dinâmicos, consulte [parâmetros dinâmicos de cmdlet](./cmdlet-dynamic-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="073bd-106">For more information about dynamic parameters, see [Cmdlet Dynamic Parameters](./cmdlet-dynamic-parameters.md).</span></span>
 
-## <a name="to-define-dynamic-parameters"></a><span data-ttu-id="9ba18-106">Para definir parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="9ba18-106">To define dynamic parameters</span></span>
+## <a name="to-define-dynamic-parameters"></a><span data-ttu-id="073bd-107">Para definir parâmetros dinâmicos</span><span class="sxs-lookup"><span data-stu-id="073bd-107">To define dynamic parameters</span></span>
 
-1. <span data-ttu-id="9ba18-107">Na declaração de classe de cmdlet, adicione a interface [System. Management. Automation. Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) , conforme mostrado.</span><span class="sxs-lookup"><span data-stu-id="9ba18-107">In the cmdlet class declaration, add the [System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) interface as shown.</span></span>
+1. <span data-ttu-id="073bd-108">Na declaração de classe de cmdlet, adicione a interface [System. Management. Automation. Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) , conforme mostrado.</span><span class="sxs-lookup"><span data-stu-id="073bd-108">In the cmdlet class declaration, add the [System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) interface as shown.</span></span>
 
    ```csharp
    public class SendGreetingCommand : Cmdlet, IDynamicParameters
    ```
 
-2. <span data-ttu-id="9ba18-108">Chame o método [System. Management. Automation. Idynamicparameters. getdynamicparameters \*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) , que retorna o objeto no qual os parâmetros dinâmicos são definidos.</span><span class="sxs-lookup"><span data-stu-id="9ba18-108">Call the [System.Management.Automation.Idynamicparameters.Getdynamicparameters\*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) method, which returns the object in which the dynamic parameters are defined.</span></span> <span data-ttu-id="9ba18-109">Neste exemplo, o método é chamado quando o `Employee` parâmetro é especificado.</span><span class="sxs-lookup"><span data-stu-id="9ba18-109">In this example, the method is called when the `Employee` parameter is specified.</span></span>
+2. <span data-ttu-id="073bd-109">Chame o método [System. Management. Automation. Idynamicparameters. getdynamicparameters \*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) , que retorna o objeto no qual os parâmetros dinâmicos são definidos.</span><span class="sxs-lookup"><span data-stu-id="073bd-109">Call the [System.Management.Automation.Idynamicparameters.Getdynamicparameters\*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) method, which returns the object in which the dynamic parameters are defined.</span></span> <span data-ttu-id="073bd-110">Neste exemplo, o método é chamado quando o `Employee` parâmetro é especificado.</span><span class="sxs-lookup"><span data-stu-id="073bd-110">In this example, the method is called when the `Employee` parameter is specified.</span></span>
 
    ```csharp
    public object GetDynamicParameters()
@@ -35,7 +37,7 @@ ms.locfileid: "87784173"
    private SendGreetingCommandDynamicParameters context;
    ```
 
-3. <span data-ttu-id="9ba18-110">Declare uma classe que define os parâmetros dinâmicos a serem adicionados.</span><span class="sxs-lookup"><span data-stu-id="9ba18-110">Declare a class that defines the dynamic parameters to be added.</span></span> <span data-ttu-id="9ba18-111">Você pode usar os atributos que usou para declarar os parâmetros de cmdlet estáticos para declarar os parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="9ba18-111">You can use the attributes that you used to declare the static cmdlet parameters to declare the dynamic parameters.</span></span>
+3. <span data-ttu-id="073bd-111">Declare uma classe que define os parâmetros dinâmicos a serem adicionados.</span><span class="sxs-lookup"><span data-stu-id="073bd-111">Declare a class that defines the dynamic parameters to be added.</span></span> <span data-ttu-id="073bd-112">Você pode usar os atributos que usou para declarar os parâmetros de cmdlet estáticos para declarar os parâmetros dinâmicos.</span><span class="sxs-lookup"><span data-stu-id="073bd-112">You can use the attributes that you used to declare the static cmdlet parameters to declare the dynamic parameters.</span></span>
 
    ```csharp
    public class SendGreetingCommandDynamicParameters
@@ -51,9 +53,9 @@ ms.locfileid: "87784173"
    }
    ```
 
-## <a name="example"></a><span data-ttu-id="9ba18-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9ba18-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="073bd-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="073bd-113">Example</span></span>
 
-<span data-ttu-id="9ba18-113">Neste exemplo, o `Department` parâmetro é adicionado sempre que o usuário especifica o `Employee` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="9ba18-113">In this example, the `Department` parameter is added whenever the user specifies the `Employee` parameter.</span></span> <span data-ttu-id="9ba18-114">O `Department` parâmetro é um parâmetro opcional, e o atributo ValidateSet é usado para especificar os argumentos permitidos.</span><span class="sxs-lookup"><span data-stu-id="9ba18-114">The `Department` parameter is an optional parameter, and the ValidateSet attribute is used to specify the allowed arguments.</span></span>
+<span data-ttu-id="073bd-114">Neste exemplo, o `Department` parâmetro é adicionado sempre que o usuário especifica o `Employee` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="073bd-114">In this example, the `Department` parameter is added whenever the user specifies the `Employee` parameter.</span></span> <span data-ttu-id="073bd-115">O `Department` parâmetro é um parâmetro opcional, e o atributo ValidateSet é usado para especificar os argumentos permitidos.</span><span class="sxs-lookup"><span data-stu-id="073bd-115">The `Department` parameter is an optional parameter, and the ValidateSet attribute is used to specify the allowed arguments.</span></span>
 
 ```csharp
 using System;
@@ -128,12 +130,12 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9ba18-115">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="9ba18-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="073bd-116">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="073bd-116">See Also</span></span>
 
-[<span data-ttu-id="9ba18-116">System. Management. Automation. Runtimedefinedparameterdictionary</span><span class="sxs-lookup"><span data-stu-id="9ba18-116">System.Management.Automation.Runtimedefinedparameterdictionary</span></span>](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)
+[<span data-ttu-id="073bd-117">System. Management. Automation. Runtimedefinedparameterdictionary</span><span class="sxs-lookup"><span data-stu-id="073bd-117">System.Management.Automation.Runtimedefinedparameterdictionary</span></span>](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)
 
-[<span data-ttu-id="9ba18-117">System. Management. Automation. Idynamicparameters. getdynamicparameters \*</span><span class="sxs-lookup"><span data-stu-id="9ba18-117">System.Management.Automation.Idynamicparameters.Getdynamicparameters\*</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+[<span data-ttu-id="073bd-118">System. Management. Automation. Idynamicparameters. getdynamicparameters \*</span><span class="sxs-lookup"><span data-stu-id="073bd-118">System.Management.Automation.Idynamicparameters.Getdynamicparameters\*</span></span>](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
-[<span data-ttu-id="9ba18-118">Parâmetros dinâmicos de cmdlet</span><span class="sxs-lookup"><span data-stu-id="9ba18-118">Cmdlet Dynamic Parameters</span></span>](./cmdlet-dynamic-parameters.md)
+[<span data-ttu-id="073bd-119">Parâmetros dinâmicos de cmdlet</span><span class="sxs-lookup"><span data-stu-id="073bd-119">Cmdlet Dynamic Parameters</span></span>](./cmdlet-dynamic-parameters.md)
 
-[<span data-ttu-id="9ba18-119">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="9ba18-119">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="073bd-120">SDK do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="073bd-120">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

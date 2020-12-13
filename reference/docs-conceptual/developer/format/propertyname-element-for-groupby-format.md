@@ -1,56 +1,58 @@
 ---
-title: Elemento PropertyName para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para GroupBy (formato)
+description: Elemento PropertyName para GroupBy (formato)
+ms.openlocfilehash: 44351c46ff2386f967644fef4f423b3858dc1619
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785601"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666137"
 ---
-# <a name="propertyname-element-for-groupby-format"></a><span data-ttu-id="155b1-102">Elemento PropertyName para GroupBy (formato)</span><span class="sxs-lookup"><span data-stu-id="155b1-102">PropertyName Element for GroupBy (Format)</span></span>
+# <a name="propertyname-element-for-groupby-format"></a><span data-ttu-id="32b29-103">Elemento PropertyName para GroupBy (formato)</span><span class="sxs-lookup"><span data-stu-id="32b29-103">PropertyName Element for GroupBy (Format)</span></span>
 
-<span data-ttu-id="155b1-103">Especifica a propriedade .NET que inicia um novo grupo sempre que seu valor é alterado.</span><span class="sxs-lookup"><span data-stu-id="155b1-103">Specifies the .NET property that starts a new group whenever its value changes.</span></span>
+<span data-ttu-id="32b29-104">Especifica a propriedade .NET que inicia um novo grupo sempre que seu valor é alterado.</span><span class="sxs-lookup"><span data-stu-id="32b29-104">Specifies the .NET property that starts a new group whenever its value changes.</span></span>
 
-<span data-ttu-id="155b1-104">Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) elemento GroupBy para o elemento View (Format) PropertyName para GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="155b1-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) PropertyName Element for GroupBy (Format)</span></span>
+<span data-ttu-id="32b29-105">Elemento de configuração (Format) elemento ViewDefinitions (Format) exibir elemento (Format) elemento GroupBy para o elemento View (Format) PropertyName para GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="32b29-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) PropertyName Element for GroupBy (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="155b1-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="155b1-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="32b29-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="32b29-106">Syntax</span></span>
 
 ```xml
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="155b1-106">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="155b1-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="32b29-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="32b29-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="155b1-107">As seções a seguir descrevem atributos, elementos filho e o elemento pai do `PropertyName` elemento.</span><span class="sxs-lookup"><span data-stu-id="155b1-107">The following sections describe attributes, child elements, and the parent element of the `PropertyName` element.</span></span>
+<span data-ttu-id="32b29-108">As seções a seguir descrevem atributos, elementos filho e o elemento pai do `PropertyName` elemento.</span><span class="sxs-lookup"><span data-stu-id="32b29-108">The following sections describe attributes, child elements, and the parent element of the `PropertyName` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="155b1-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="155b1-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="32b29-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="32b29-109">Attributes</span></span>
 
-<span data-ttu-id="155b1-109">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="155b1-109">None.</span></span>
+<span data-ttu-id="32b29-110">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="32b29-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="155b1-110">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="155b1-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="32b29-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="32b29-111">Child Elements</span></span>
 
-<span data-ttu-id="155b1-111">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="155b1-111">None.</span></span>
+<span data-ttu-id="32b29-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="32b29-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="155b1-112">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="155b1-112">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="32b29-113">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="32b29-113">Parent Elements</span></span>
 
-|<span data-ttu-id="155b1-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="155b1-113">Element</span></span>|<span data-ttu-id="155b1-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="155b1-114">Description</span></span>|
+|<span data-ttu-id="32b29-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="32b29-114">Element</span></span>|<span data-ttu-id="32b29-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="32b29-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="155b1-115">Elemento GroupBy para View (formato)</span><span class="sxs-lookup"><span data-stu-id="155b1-115">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)|<span data-ttu-id="155b1-116">Define como um grupo de objetos .NET é exibido.</span><span class="sxs-lookup"><span data-stu-id="155b1-116">Defines how a group of .NET objects is displayed.</span></span>|
+|[<span data-ttu-id="32b29-116">Elemento GroupBy para View (formato)</span><span class="sxs-lookup"><span data-stu-id="32b29-116">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)|<span data-ttu-id="32b29-117">Define como um grupo de objetos .NET é exibido.</span><span class="sxs-lookup"><span data-stu-id="32b29-117">Defines how a group of .NET objects is displayed.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="155b1-117">Valor de texto</span><span class="sxs-lookup"><span data-stu-id="155b1-117">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="32b29-118">Valor de texto</span><span class="sxs-lookup"><span data-stu-id="32b29-118">Text Value</span></span>
 
-<span data-ttu-id="155b1-118">Especifique o nome da propriedade .NET.</span><span class="sxs-lookup"><span data-stu-id="155b1-118">Specify the .NET property name.</span></span>
+<span data-ttu-id="32b29-119">Especifique o nome da propriedade .NET.</span><span class="sxs-lookup"><span data-stu-id="32b29-119">Specify the .NET property name.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="155b1-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="155b1-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="32b29-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="32b29-120">Remarks</span></span>
 
-<span data-ttu-id="155b1-120">O Windows PowerShell inicia um novo grupo sempre que o valor dessa propriedade é alterado.</span><span class="sxs-lookup"><span data-stu-id="155b1-120">Windows PowerShell starts a new group whenever the value of this property changes.</span></span>
+<span data-ttu-id="32b29-121">O Windows PowerShell inicia um novo grupo sempre que o valor dessa propriedade é alterado.</span><span class="sxs-lookup"><span data-stu-id="32b29-121">Windows PowerShell starts a new group whenever the value of this property changes.</span></span>
 
-<span data-ttu-id="155b1-121">Quando esse elemento é especificado, você não pode especificar o elemento [scriptblock](./scriptblock-element-for-groupby-format.md) para iniciar um novo grupo.</span><span class="sxs-lookup"><span data-stu-id="155b1-121">When this element is specified, you cannot specify the [ScriptBlock](./scriptblock-element-for-groupby-format.md) element to start a new group.</span></span>
+<span data-ttu-id="32b29-122">Quando esse elemento é especificado, você não pode especificar o elemento [scriptblock](./scriptblock-element-for-groupby-format.md) para iniciar um novo grupo.</span><span class="sxs-lookup"><span data-stu-id="32b29-122">When this element is specified, you cannot specify the [ScriptBlock](./scriptblock-element-for-groupby-format.md) element to start a new group.</span></span>
 
-## <a name="example"></a><span data-ttu-id="155b1-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="155b1-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="32b29-123">Exemplo</span><span class="sxs-lookup"><span data-stu-id="32b29-123">Example</span></span>
 
-<span data-ttu-id="155b1-123">O exemplo a seguir mostra como iniciar um novo grupo quando o valor de uma propriedade é alterado.</span><span class="sxs-lookup"><span data-stu-id="155b1-123">The following example shows how to start a new group when the value of a property changes.</span></span>
+<span data-ttu-id="32b29-124">O exemplo a seguir mostra como iniciar um novo grupo quando o valor de uma propriedade é alterado.</span><span class="sxs-lookup"><span data-stu-id="32b29-124">The following example shows how to start a new group when the value of a property changes.</span></span>
 
 ```xml
 <GroupBy>
@@ -60,12 +62,12 @@ ms.locfileid: "87785601"
 
 ```
 
-<span data-ttu-id="155b1-124">Para obter um exemplo de um arquivo de formatação completo que inclui esse elemento, consulte [Wide View (GroupBy)](./wide-view-groupby.md).</span><span class="sxs-lookup"><span data-stu-id="155b1-124">For an example of a complete formatting file that includes this element, see [Wide View (GroupBy)](./wide-view-groupby.md).</span></span>
+<span data-ttu-id="32b29-125">Para obter um exemplo de um arquivo de formatação completo que inclui esse elemento, consulte [Wide View (GroupBy)](./wide-view-groupby.md).</span><span class="sxs-lookup"><span data-stu-id="32b29-125">For an example of a complete formatting file that includes this element, see [Wide View (GroupBy)](./wide-view-groupby.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="155b1-125">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="155b1-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32b29-126">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="32b29-126">See Also</span></span>
 
-[<span data-ttu-id="155b1-126">Elemento GroupBy para View (formato)</span><span class="sxs-lookup"><span data-stu-id="155b1-126">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)
+[<span data-ttu-id="32b29-127">Elemento GroupBy para View (formato)</span><span class="sxs-lookup"><span data-stu-id="32b29-127">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)
 
-[<span data-ttu-id="155b1-127">Elemento ScriptBlock para GroupBy (formato)</span><span class="sxs-lookup"><span data-stu-id="155b1-127">ScriptBlock Element for GroupBy (Format)</span></span>](./scriptblock-element-for-groupby-format.md)
+[<span data-ttu-id="32b29-128">Elemento ScriptBlock para GroupBy (formato)</span><span class="sxs-lookup"><span data-stu-id="32b29-128">ScriptBlock Element for GroupBy (Format)</span></span>](./scriptblock-element-for-groupby-format.md)
 
-[<span data-ttu-id="155b1-128">Escrever um arquivo de formatação do PowerShell</span><span class="sxs-lookup"><span data-stu-id="155b1-128">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="32b29-129">Escrever um arquivo de formatação do PowerShell</span><span class="sxs-lookup"><span data-stu-id="32b29-129">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
