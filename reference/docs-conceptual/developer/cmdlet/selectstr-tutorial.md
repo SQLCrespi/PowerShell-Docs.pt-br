@@ -1,12 +1,14 @@
 ---
-title: Tutorial de SelectStr
 ms.date: 09/13/2016
-ms.openlocfilehash: 500cf055afe1ccc04f6a4a28f92abb80886dfa43
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Tutorial de SelectStr
+description: Tutorial de SelectStr
+ms.openlocfilehash: 06c74dfceeb93d75c139d2782c1e40bcaf986992
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786485"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652558"
 ---
 # <a name="selectstr-tutorial"></a>Tutorial de SelectStr
 

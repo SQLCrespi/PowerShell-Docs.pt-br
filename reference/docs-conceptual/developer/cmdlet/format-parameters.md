@@ -1,12 +1,14 @@
 ---
-title: Parâmetros de formato | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c8e031f62aa8bcb0e9d5b900b2eace7187b1f3dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros de formato
+description: Parâmetros de formato
+ms.openlocfilehash: 5f970683fedc71b208ff6becad761d94611a91a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784275"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652816"
 ---
 # <a name="format-parameters"></a>Parâmetros de formato
 
@@ -25,6 +27,6 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 
 [Parâmetros de cmdlets](./cmdlet-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

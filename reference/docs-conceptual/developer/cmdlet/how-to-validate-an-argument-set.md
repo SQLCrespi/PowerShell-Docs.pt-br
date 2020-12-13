@@ -1,14 +1,14 @@
 ---
-title: Como validar um conjunto de argumentos | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateSet attribute, example
-ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como validar um conjunto de argumentos
+description: Como validar um conjunto de argumentos
+ms.openlocfilehash: 50ec0a48277893584d896e14ad6aa843682a28cc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781997"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650376"
 ---
 # <a name="how-to-validate-an-argument-set"></a>Como validar um conjunto de argumentos
 
@@ -41,4 +41,4 @@ Para obter mais informações sobre como declarar esse atributo, consulte [decla
 
 [Declaração de atributo ValidateSet](./validateset-attribute-declaration.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

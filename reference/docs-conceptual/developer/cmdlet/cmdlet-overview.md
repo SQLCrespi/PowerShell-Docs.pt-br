@@ -1,12 +1,14 @@
 ---
-title: Visão geral do cmdlet
 ms.date: 06/11/2020
-ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Visão geral do cmdlet
+description: Visão geral do cmdlet
+ms.openlocfilehash: ed3082e1a821bb9643ea2eef13b7348eb48488e4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784394"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653222"
 ---
 # <a name="cmdlet-overview"></a>Visão geral do cmdlet
 
@@ -117,6 +119,6 @@ Para obter mais informações sobre as diretrizes para escrever cmdlets, consult
 
 [Conceitos de cmdlet do PowerShell](./windows-powershell-cmdlet-concepts.md)
 
-[Escrevendo um cmdlet do PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Gravar um cmdlet do PowerShell](./writing-a-windows-powershell-cmdlet.md)
 
 [SDK do PowerShell](../windows-powershell-reference.md)

@@ -1,15 +1,14 @@
 ---
-title: Atributos de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes [PowerShell SDK]
-- attributes [PowerShell SDK], described
-ms.openlocfilehash: f22c2882fbe5b2f51ca5ea218b921192b0a7d41f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Atributos de cmdlet
+description: Atributos de cmdlet
+ms.openlocfilehash: 6a106f33cb34c6c33b88a981815543bc9af4e4ba
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784513"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653510"
 ---
 # <a name="cmdlet-attributes"></a>Atributos de cmdlet
 
@@ -43,4 +42,4 @@ O Windows PowerShell define vários atributos que você pode usar para adicionar
 
 ## <a name="reference"></a>Referência
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

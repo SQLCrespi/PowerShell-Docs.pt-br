@@ -1,18 +1,14 @@
 ---
-title: Relatório de erros do cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- error records [PowerShell], terminating
-- non-terminating errors [PowerShell]
-- error records [PowerShell]
-- terminating errors [PowerShell]
-- error records [PowerShell], non-terminating
-ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Relatório de erros do cmdlet
+description: Relatório de erros do cmdlet
+ms.openlocfilehash: f06cf98183d56249080623895bd1f5a3e070cefd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784462"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653417"
 ---
 # <a name="cmdlet-error-reporting"></a>Relatório de erros do cmdlet
 
@@ -73,11 +69,11 @@ As diretrizes a seguir devem ser seguidas ao especificar identificadores de erro
 
 As categorias de erro são usadas para agrupar erros para o usuário. O PowerShell define essas categorias e cmdlets, e os provedores do PowerShell devem escolher entre eles ao gerar o registro de erro.
 
-Para obter uma descrição das categorias de erro disponíveis, consulte a enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Em geral, você deve evitar o uso de **NOERROR**, **UndefinedError**e **erro genérico** sempre que possível.
+Para obter uma descrição das categorias de erro disponíveis, consulte a enumeração [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . Em geral, você deve evitar o uso de **NOERROR**, **UndefinedError** e **erro genérico** sempre que possível.
 
 Os usuários podem exibir erros com base na categoria quando configurados `$ErrorView` como **CategoryView**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Visão geral do cmdlet](./cmdlet-overview.md)
 

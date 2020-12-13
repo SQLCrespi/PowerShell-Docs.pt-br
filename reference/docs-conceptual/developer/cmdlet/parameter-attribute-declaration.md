@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo de parâmetro | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, Parameter
-- Parameter attribute, described
-- Parameter attribute
-ms.openlocfilehash: 55b157b93c3a42324d63e16ddfa8db1f0d38f82b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo de parâmetro
+description: Declaração de atributo de parâmetro
+ms.openlocfilehash: bab48a94cb4b1e8501fb79c2f3ef71393fa2ee68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781844"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650344"
 ---
 # <a name="parameter-attribute-declaration"></a>Declaração de atributo de parâmetro
 
@@ -25,23 +23,23 @@ O atributo Parameter identifica uma propriedade pública da classe cmdlet como u
 
 #### <a name="parameters"></a>Parâmetros
 
-`Mandatory`([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True`indica que o parâmetro de cmdlet é necessário. Se um parâmetro necessário não for fornecido quando o cmdlet for invocado, o Windows PowerShell solicitará ao usuário um valor de parâmetro. O padrão é `false`.
+`Mandatory` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o parâmetro de cmdlet é necessário. Se um parâmetro necessário não for fornecido quando o cmdlet for invocado, o Windows PowerShell solicitará ao usuário um valor de parâmetro. O padrão é `false`.
 
-`ParameterSetName`([System. String](/dotnet/api/System.String)) parâmetro nomeado opcional. Especifica o conjunto de parâmetros ao qual este parâmetro de cmdlet pertence. Se nenhum conjunto de parâmetros for especificado, o parâmetro pertencerá a todos os conjuntos de parâmetros.
+`ParameterSetName` ([System. String](/dotnet/api/System.String)) parâmetro nomeado opcional. Especifica o conjunto de parâmetros ao qual este parâmetro de cmdlet pertence. Se nenhum conjunto de parâmetros for especificado, o parâmetro pertencerá a todos os conjuntos de parâmetros.
 
-`Position`([System. Int32](/dotnet/api/System.Int32)) parâmetro nomeado opcional. Especifica a posição do parâmetro em um comando do Windows PowerShell.
+`Position` ([System. Int32](/dotnet/api/System.Int32)) parâmetro nomeado opcional. Especifica a posição do parâmetro em um comando do Windows PowerShell.
 
-`ValueFromPipeline`([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True`indica que o parâmetro de cmdlet obtém seu valor de um objeto de pipeline. Especifique essa palavra-chave se o cmdlet acessar o objeto completo, não apenas uma propriedade do objeto. O padrão é `false`.
+`ValueFromPipeline` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o parâmetro de cmdlet obtém seu valor de um objeto de pipeline. Especifique essa palavra-chave se o cmdlet acessar o objeto completo, não apenas uma propriedade do objeto. O padrão é `false`.
 
-`ValueFromPipelineByPropertyName`([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True`indica que o parâmetro de cmdlet obtém seu valor de uma propriedade de um objeto de pipeline que tem o mesmo nome ou o mesmo alias que esse parâmetro. Por exemplo, se o cmdlet tiver um `Name` parâmetro e o objeto de pipeline também tiver uma `Name` propriedade, o valor da `Name` propriedade será atribuído ao `Name` parâmetro do cmdlet. O padrão é `false`.
+`ValueFromPipelineByPropertyName` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o parâmetro de cmdlet obtém seu valor de uma propriedade de um objeto de pipeline que tem o mesmo nome ou o mesmo alias que esse parâmetro. Por exemplo, se o cmdlet tiver um `Name` parâmetro e o objeto de pipeline também tiver uma `Name` propriedade, o valor da `Name` propriedade será atribuído ao `Name` parâmetro do cmdlet. O padrão é `false`.
 
-`ValueFromRemainingArguments`([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True`indica que o parâmetro de cmdlet aceita todos os argumentos restantes que são passados para o cmdlet. O padrão é `false`.
+`ValueFromRemainingArguments` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o parâmetro de cmdlet aceita todos os argumentos restantes que são passados para o cmdlet. O padrão é `false`.
 
-`HelpMessage`Parâmetro nomeado opcional. Especifica uma breve descrição do parâmetro. O Windows PowerShell exibe essa mensagem quando um cmdlet é executado e um parâmetro obrigatório não é especificado.
+`HelpMessage` Parâmetro nomeado opcional. Especifica uma breve descrição do parâmetro. O Windows PowerShell exibe essa mensagem quando um cmdlet é executado e um parâmetro obrigatório não é especificado.
 
-`HelpMessageBaseName`Parâmetro nomeado opcional. Especifica o local onde os identificadores de recursos residem. Por exemplo, esse parâmetro pode especificar um assembly de recurso que contém mensagens de ajuda que você deseja localizar.
+`HelpMessageBaseName` Parâmetro nomeado opcional. Especifica o local onde os identificadores de recursos residem. Por exemplo, esse parâmetro pode especificar um assembly de recurso que contém mensagens de ajuda que você deseja localizar.
 
-`HelpMessageResourceId`Parâmetro nomeado opcional. Especifica o identificador de recurso para uma mensagem de ajuda.
+`HelpMessageResourceId` Parâmetro nomeado opcional. Especifica o identificador de recurso para uma mensagem de ajuda.
 
 ## <a name="remarks"></a>Comentários
 
@@ -75,4 +73,4 @@ O atributo Parameter identifica uma propriedade pública da classe cmdlet como u
 
 [Nomes de parâmetro de cmdlet](standard-cmdlet-parameter-names-and-types.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

@@ -1,12 +1,14 @@
 ---
-title: Elemento CustomEntries para CustomControl para controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b1f494cf1a254d71362830ba9eb0f4905a2a484d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento CustomEntries para CustomControl para Controls para Configuration (formato)
+description: Elemento CustomEntries para CustomControl para Controls para Configuration (formato)
+ms.openlocfilehash: 86c2b517d0d7075a355a3190a14e25d9dd4fe374
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785975"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655397"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-configuration-format"></a>Elemento CustomEntries para CustomControl para Controls para Configuration (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

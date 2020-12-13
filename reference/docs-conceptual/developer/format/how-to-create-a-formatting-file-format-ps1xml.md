@@ -1,12 +1,14 @@
 ---
-title: Como criar um arquivo de formatação (.format.ps1XML) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como criar um arquivo de formatação (.format.ps1xml)
+description: Como criar um arquivo de formatação (.format.ps1xml)
+ms.openlocfilehash: 5bbc1ba40bfccf13636abc0f0751938aa724b761
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781249"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651999"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Como criar um arquivo de formatação (.format.ps1xml)
 
@@ -33,7 +35,7 @@ Este tópico descreve como criar um arquivo de formatação (.format.ps1XML).
 
    - As `<ViewDefinitions></ViewDefinitions>` marcas definem o `ViewDefinitions` nó. Todas as exibições são definidas neste nó.
 
-3. Salve o arquivo na pasta de instalação do Windows PowerShell, na pasta do módulo ou em uma subpasta da pasta do módulo. Use o seguinte formato de nome ao salvar o arquivo: `MyFile.format.ps1xml` . Os arquivos de formatação devem usar a `.format.ps1xml` extensão.
+3. Salve o arquivo na pasta de instalação do Windows PowerShell, na pasta do módulo ou em uma subpasta da pasta do módulo. Use o seguinte formato de nome ao salvar o arquivo:  `MyFile.format.ps1xml` . Os arquivos de formatação devem usar a `.format.ps1xml` extensão.
 
    Agora você está pronto para adicionar exibições ao arquivo de formatação. Não há nenhum limite para o número de exibições que podem ser definidas em um arquivo de formatação. Você pode adicionar uma única exibição para cada objeto, várias exibições para o mesmo objeto ou uma única exibição usada por vários objetos.
 

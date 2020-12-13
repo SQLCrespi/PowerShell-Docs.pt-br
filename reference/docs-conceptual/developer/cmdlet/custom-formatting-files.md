@@ -1,12 +1,14 @@
 ---
-title: Arquivos de formatação personalizados | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a9633e2ee18e1817459645b4a5950ea8a622850b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Arquivos de formatação personalizada
+description: Arquivos de formatação personalizada
+ms.openlocfilehash: 16e1c1046e25b35ff346585a5fd930c449c04bf8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784343"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653246"
 ---
 # <a name="custom-formatting-files"></a>Arquivos de formatação personalizada
 
@@ -80,4 +82,4 @@ ViewDefinitions
 
 [Exibição personalizada](../format/creating-custom-controls.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

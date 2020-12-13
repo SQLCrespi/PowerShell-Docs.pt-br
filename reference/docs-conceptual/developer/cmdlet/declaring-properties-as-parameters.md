@@ -1,12 +1,14 @@
 ---
-title: Declarando propriedades como parâmetros | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declarar propriedades como parâmetros
+description: Declarar propriedades como parâmetros
+ms.openlocfilehash: ade7928e2ca277da8bbd1a5e04997bd1d05f1e5d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774636"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653149"
 ---
 # <a name="declaring-properties-as-parameters"></a>Declarar propriedades como parâmetros
 
@@ -44,4 +46,4 @@ O Windows PowerShell também fornece um conjunto de parâmetros comuns que estã
 
 [Tipos de parâmetro de cmdlet](./types-of-cmdlet-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

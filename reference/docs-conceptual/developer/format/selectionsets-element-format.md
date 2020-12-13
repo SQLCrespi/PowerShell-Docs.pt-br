@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSets (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 718b08e02220f285ef215fdca727492fd4407466
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSets (formato)
+description: Elemento SelectionSets (formato)
+ms.openlocfilehash: e5c928dfb82bc6963b4a87aef9ec06d34cacfdcb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785193"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654930"
 ---
 # <a name="selectionsets-element-format"></a>Elemento SelectionSets (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

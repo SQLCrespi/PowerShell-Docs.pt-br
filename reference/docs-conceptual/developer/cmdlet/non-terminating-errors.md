@@ -1,12 +1,14 @@
 ---
-title: Erros de não encerramento | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erros de não encerramento
+description: Erros de não encerramento
+ms.openlocfilehash: d23642103e005c6d3a6168b317b11f40001b6bbe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786553"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655733"
 ---
 # <a name="non-terminating-errors"></a>Erros de não encerramento
 
@@ -28,4 +30,4 @@ Os cmdlets podem chamar [System. Management. Automation. cmdlet. WriteError](/do
 
 [Registros de erros do Windows PowerShell](./windows-powershell-error-records.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

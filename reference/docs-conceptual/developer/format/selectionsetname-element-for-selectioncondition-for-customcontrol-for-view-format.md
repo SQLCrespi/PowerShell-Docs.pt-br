@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para SelectionCondition para CustomControl para exibição (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7fdd92475ba24d27e61371d1c6b54fa1a55647c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para SelectionCondition para CustomControl para View (formato)
+description: Elemento SelectionSetName para SelectionCondition para CustomControl para View (formato)
+ms.openlocfilehash: 839032048739e529057d7066fb3bc6aa2fbc5037
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787505"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651616"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Elemento SelectionSetName para SelectionCondition para CustomControl para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

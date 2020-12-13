@@ -1,14 +1,16 @@
 ---
-title: Gravando ajuda para módulos do PowerShell
 ms.date: 04/10/2020
-ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Escrever tópicos de ajuda para módulos do PowerShell
+description: Escrever tópicos de ajuda para módulos do PowerShell
+ms.openlocfilehash: 3bef45c0dd8a7e63bc419bb3e5a7a1783810105b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893060"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654648"
 ---
-# <a name="writing-help-for-powershell-modules"></a>Gravando ajuda para módulos do PowerShell
+# <a name="writing-help-for-powershell-modules"></a>Escrever tópicos de ajuda para módulos do PowerShell
 
 Os módulos do PowerShell podem incluir tópicos de ajuda sobre o módulo e sobre os membros do módulo, como cmdlets, provedores, funções e scripts. O `Get-Help` cmdlet exibe os tópicos de ajuda do módulo no mesmo formato que exibe a ajuda para outros itens do PowerShell, e os usuários usam `Get-Help` comandos padrão para obter os tópicos da ajuda.
 
@@ -109,7 +111,7 @@ Para obter mais informações, consulte [suporte à ajuda online](./supporting-o
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do PowerShell](../module/writing-a-windows-powershell-module.md)
+[Como escrever um módulo do PowerShell](../module/writing-a-windows-powershell-module.md)
 
 [Suporte à ajuda atualizável](./supporting-updatable-help.md)
 

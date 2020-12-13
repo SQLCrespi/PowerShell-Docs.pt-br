@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para SelectionCondition para controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 62f186be9e4b1dd5a297add0ce82011bc1ccdcd1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para SelectionCondition para Controls para Configuration (formato)
+description: Elemento SelectionSetName para SelectionCondition para Controls para Configuration (formato)
+ms.openlocfilehash: 4177aace5a6a9374900e7339167c69b531c1e2e7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785227"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651667"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format"></a>Elemento SelectionSetName para SelectionCondition para Controls para Configuration (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

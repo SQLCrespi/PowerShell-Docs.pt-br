@@ -1,12 +1,14 @@
 ---
-title: Escrevendo ajuda para funções e scripts do PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 381c501d87b7381075f89412f654c6121493856e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Escrevendo ajuda para funções e scripts do PowerShell
+description: Escrevendo ajuda para funções e scripts do PowerShell
+ms.openlocfilehash: f72742e2a131f41ba8ffdcec4901c7c3ea1da1ad
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892907"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654635"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Escrevendo ajuda para funções e scripts do PowerShell
 
@@ -23,7 +25,7 @@ Este documento explica o formato e o posicionamento correto dos tópicos da ajud
 
 O tópico da ajuda que descreve um script ou uma função pode ser implementado como um conjunto de comentários dentro do script ou da função. Ao escrever ajuda baseada em comentários para um script e para funções em um script, preste atenção às regras para colocar a ajuda baseada em comentários. O posicionamento determina se o `Get-Help` cmdlet associa o tópico da ajuda ao script ou a uma função. Para obter mais informações sobre como escrever tópicos de ajuda baseados em comentários, consulte [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
-### <a name="xml-based-command-help"></a>Ajuda de comando baseada em XML
+### <a name="xml-based-command-help"></a>Ajuda do comando XML-Based
 
 O tópico da ajuda que descreve um script ou uma função pode ser implementado em um arquivo XML que usa o esquema de ajuda de comando. Para associar o script ou a função ao arquivo XML, use a `ExternalHelp` palavra-chave comment seguida pelo caminho e o nome do arquivo XML.
 
@@ -42,10 +44,10 @@ No entanto, você pode postar tópicos conceituais na Internet listar os tópico
 
 - Em todas as descrições, consulte o comando como um script ou uma função. Essas informações ajudam o usuário a entender e gerenciar o comando.
 
-  Por exemplo, a descrição detalhada a seguir informa que o comando New-topic é um script.
+  Por exemplo, a descrição detalhada a seguir declara que o comando New-Topic é um script.
   Isso lembra os usuários de que eles precisam para especificar o caminho e o nome completo quando eles o executam.
 
-  > "O script New-topic cria um tópico conceitual em branco para cada nome de tópico no arquivo de entrada..."
+  > "O script de New-Topic cria um tópico conceitual em branco para cada nome de tópico no arquivo de entrada..."
 
   A descrição detalhada a seguir declara que `Disable-PSRemoting` é uma função. Essas informações são particularmente úteis para os usuários quando a sessão inclui vários comandos com o mesmo nome, alguns dos quais podem estar ocultos por um comando com precedência mais alta.
 
@@ -58,7 +60,7 @@ No entanto, você pode postar tópicos conceituais na Internet listar os tópico
 
 - Em um tópico da ajuda da função, lembre os usuários de que a função existe somente na sessão atual e, para usá-la em outras sessões, eles precisam adicioná-la ou adicioná-la a um perfil do PowerShell.
 
-- `Get-Help`exibe o tópico da ajuda para um script ou função somente quando os arquivos de tópico do arquivo de script e da ajuda são salvos nos locais corretos. Portanto, não é útil incluir instruções para instalar o PowerShell ou salvar ou instalar o script ou a função em um tópico de ajuda de script ou função. Em vez disso, inclua as instruções de instalação no documento que você usa para distribuir o script ou a função.
+- `Get-Help` exibe o tópico da ajuda para um script ou função somente quando os arquivos de tópico do arquivo de script e da ajuda são salvos nos locais corretos. Portanto, não é útil incluir instruções para instalar o PowerShell ou salvar ou instalar o script ou a função em um tópico de ajuda de script ou função. Em vez disso, inclua as instruções de instalação no documento que você usa para distribuir o script ou a função.
 
 ## <a name="see-also"></a>Consulte Também
 

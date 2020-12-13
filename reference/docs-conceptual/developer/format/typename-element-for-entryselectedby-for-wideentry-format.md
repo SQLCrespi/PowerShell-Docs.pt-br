@@ -1,12 +1,14 @@
 ---
-title: Elemento TypeName para EntrySelectedBy para WideEntry (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TypeName para EntrySelectedBy para WideEntry (formato)
+description: Elemento TypeName para EntrySelectedBy para WideEntry (formato)
+ms.openlocfilehash: 2e0facd6ff7c6fec96dabf488449a8502429bcff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780178"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654788"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>Elemento TypeName para EntrySelectedBy para WideEntry (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

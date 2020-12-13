@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para SelectionCondition para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6d0263aa335287f20be5b94a8eb65696d06d82a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para SelectionCondition para GroupBy (formato)
+description: Elemento SelectionSetName para SelectionCondition para GroupBy (formato)
+ms.openlocfilehash: a4f28c1caba3790718b99f63659cb0cbed8def16
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772613"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654999"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-groupby-format"></a>Elemento SelectionSetName para SelectionCondition para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

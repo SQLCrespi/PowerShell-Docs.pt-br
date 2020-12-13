@@ -1,12 +1,14 @@
 ---
-title: Elemento EntrySelectedBy para EnumerableExpansion (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 031bf10cfb1aed2c737fdd53fa4f20f025351d40
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EntrySelectedBy para EnumerableExpansion (formato)
+description: Elemento EntrySelectedBy para EnumerableExpansion (formato)
+ms.openlocfilehash: 8b2fff2d0b14d0622d0be2c5af3a95194c733a73
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783663"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652326"
 ---
 # <a name="entryselectedby-element-for-enumerableexpansion-format"></a>Elemento EntrySelectedBy para EnumerableExpansion (formato)
 
@@ -30,7 +32,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

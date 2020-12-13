@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionCondition para EntrySelectedBy para WideControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4115ad1ee8729ea4fc16bc19698018d2f4ed9be1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionCondition para EntrySelectedBy para WideControl (formato)
+description: Elemento SelectionCondition para EntrySelectedBy para WideControl (formato)
+ms.openlocfilehash: 8c51ca72edc6ad174dc289c61a8987e8f9495d19
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772698"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655106"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>Elemento SelectionCondition para EntrySelectedBy para WideControl (formato)
 
@@ -31,7 +33,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

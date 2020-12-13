@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para EntrySelectedBy para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4315d81da4ceeb7a5b171087434ae15fb09e6592
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para EntrySelectedBy para ListControl (formato)
+description: Elemento SelectionSetName para EntrySelectedBy para ListControl (formato)
+ms.openlocfilehash: 413a77f7ba06fe952e574061e58d0b5d80c5b3c4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785261"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651823"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-listcontrol-format"></a>Elemento SelectionSetName para EntrySelectedBy para ListControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Sel
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

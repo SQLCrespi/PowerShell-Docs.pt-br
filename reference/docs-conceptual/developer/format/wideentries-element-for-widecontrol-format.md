@@ -1,12 +1,14 @@
 ---
-title: Elemento WideEntries para WideControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74383b288c945008c1d7b5119363a166c04802ae
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento WideEntries para WideControl (formato)
+description: Elemento WideEntries para WideControl (formato)
+ms.openlocfilehash: 567b8acdd0d2e8d5daaef2c31b4fe4ce38c23a47
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785040"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651235"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>Elemento WideEntries para WideControl (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

@@ -1,12 +1,14 @@
 ---
-title: Exemplo de código RunSpace05 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 31a73f965a6e38dceec740a2f7d4adead3e2a3f9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Exemplo de código RunSpace05
+description: Exemplo de código RunSpace05
+ms.openlocfilehash: f128e09522bdb05cba2c160bce4944c829a5c108
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784734"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654212"
 ---
 # <a name="runspace05-code-sample"></a>Exemplo de código RunSpace05
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento ItemSelectionCondition para ExpressionBinding para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a9b74f1882efc578f7d9ab27b8cd2f8a52833ab8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ItemSelectionCondition para ExpressionBinding para GroupBy (formato)
+description: Elemento ItemSelectionCondition para ExpressionBinding para GroupBy (formato)
+ms.openlocfilehash: 92120ace5ed316fbfbf1d51422071c27d5a604cf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773429"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651983"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-groupby-format"></a>Elemento ItemSelectionCondition para ExpressionBinding para GroupBy (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `I
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

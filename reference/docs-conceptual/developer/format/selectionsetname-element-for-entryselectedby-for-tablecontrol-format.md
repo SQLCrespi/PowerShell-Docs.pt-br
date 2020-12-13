@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para EntrySelectedBy para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para EntrySelectedBy para TableControl (formato)
+description: Elemento SelectionSetName para EntrySelectedBy para TableControl (formato)
+ms.openlocfilehash: a5a395f718d0e1a2d7f33d120ce4fd2ff787cc34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772681"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651775"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>Elemento SelectionSetName para EntrySelectedBy para TableControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

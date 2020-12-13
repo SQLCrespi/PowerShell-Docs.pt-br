@@ -1,17 +1,14 @@
 ---
-title: Conceitos de relatório de erros | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- non-terminating errors [PowerShell SDK]
-- errors [PowerShell SDK], described
-- terminating errors [PowerShell SDK]
-- errors [PowerShell SDK]
-ms.openlocfilehash: ff010bbe1a87daa351ec13ed249ffc899781a8c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Conceitos de relatórios de erro
+description: Conceitos de relatórios de erro
+ms.openlocfilehash: 353e628c63667a2db010556b2ed9169809b742f4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774500"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653034"
 ---
 # <a name="error-reporting-concepts"></a>Conceitos de relatórios de erro
 
@@ -39,4 +36,4 @@ Use as diretrizes a seguir para determinar se um erro é um erro de encerramento
 
 [Registros de erros do Windows PowerShell](./windows-powershell-error-records.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

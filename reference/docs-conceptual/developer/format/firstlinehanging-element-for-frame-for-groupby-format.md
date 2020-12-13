@@ -1,12 +1,14 @@
 ---
-title: Elemento FirstLineHanging para frame para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3def56e918810d9e201d7a9ae73776d90646d8b3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento FirstLineHanging para Frame para GroupBy (formato)
+description: Elemento FirstLineHanging para Frame para GroupBy (formato)
+ms.openlocfilehash: 6a4ded9cced484440636aee694cd8381b2889ba8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773599"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652271"
 ---
 # <a name="firstlinehanging-element-for-frame-for-groupby-format"></a>Elemento FirstLineHanging para Frame para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Fir
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

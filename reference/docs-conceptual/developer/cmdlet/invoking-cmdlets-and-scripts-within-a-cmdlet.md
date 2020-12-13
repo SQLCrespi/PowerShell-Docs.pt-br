@@ -1,12 +1,14 @@
 ---
-title: Invocando cmdlets e scripts dentro de um cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3d5f76242c02763c41b81215bbb031e19869066a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Invocar cmdlets e scripts dentro de um cmdlet
+description: Invocar cmdlets e scripts dentro de um cmdlet
+ms.openlocfilehash: 246c61661f2d290e7e7ac62a8ad303b05bdc7582
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786570"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652649"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Invocar cmdlets e scripts dentro de um cmdlet
 

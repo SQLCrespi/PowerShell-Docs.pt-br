@@ -1,14 +1,14 @@
 ---
-title: Criando seu provedor do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], designing
-ms.openlocfilehash: dec6c71a2d7bbe5636f96dc140e701213d6f6487
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Projetar seu provedor do Windows PowerShell
+description: Projetar seu provedor do Windows PowerShell
+ms.openlocfilehash: 89e1fa9cfc0a2e5928a358aad4244c8e9152fe1a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778930"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654532"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Projetar seu provedor do Windows PowerShell
 
@@ -20,19 +20,19 @@ O tempo de execução do Windows PowerShell usa caminhos do Windows PowerShell p
 
 Para obter mais informações sobre os caminhos do Windows PowerShell, consulte como o Windows PowerShell funciona.
 
-### <a name="defining-a-drive-qualified-path"></a>Definindo um caminho qualificado da unidade
+### <a name="defining-a-drive-qualified-path"></a>Definindo um caminho de Drive-Qualified
 
 Para permitir que o usuário acesse os dados localizados em uma unidade física, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para unidade. Esse caminho começa com o nome da unidade seguido por dois-pontos (:), por exemplo, myDrive: \ abc\bar.
 
-### <a name="defining-a-provider-qualified-path"></a>Definindo um caminho qualificado pelo provedor
+### <a name="defining-a-provider-qualified-path"></a>Definindo um caminho de Provider-Qualified
 
 Para permitir que o tempo de execução do Windows PowerShell inicialize e desinicialize o provedor, seu provedor do Windows PowerShell deve dar suporte a um caminho qualificado para provedor. Por exemplo, FileSystem:: \\ \uncshare\abc\bar é o caminho qualificado do provedor para o provedor FileSystem fornecido pelo Windows PowerShell.
 
-### <a name="defining-a-provider-direct-path"></a>Definindo um caminho direto do provedor
+### <a name="defining-a-provider-direct-path"></a>Definindo um caminho de Provider-Direct
 
 Para permitir o acesso remoto ao seu provedor do Windows PowerShell, ele deve dar suporte a um caminho direto do provedor para passar diretamente para o provedor do Windows PowerShell para o local atual. Por exemplo, o provedor do Windows PowerShell do registro pode usar \\ \server\regkeypath como um caminho direto do provedor.
 
-### <a name="defining-a-provider-internal-path"></a>Definindo um caminho interno do provedor
+### <a name="defining-a-provider-internal-path"></a>Definindo um caminho de Provider-Internal
 
 Para permitir que o cmdlet do provedor acesse dados usando interfaces de programação de aplicativo (APIs) não Windows PowerShell, seu provedor do Windows PowerShell deve dar suporte a um caminho interno do provedor. Esse caminho é indicado após "::" no caminho qualificado do provedor. Por exemplo, o caminho interno do provedor para o sistema de arquivos provedor do Windows PowerShell é \\ \uncshare\abc\bar.
 
@@ -101,10 +101,10 @@ A classe [System. Management. Automation. Provider. Navigationcmdletprovider](/d
 
 |    Cmdlet    |                                                                      Definição                                                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Combinação-caminho | Combina dois caminhos em um único caminho, usando um delimitador específico de provedor entre caminhos. Esse cmdlet transmite cadeias de caracteres.                               |
+| Combine-Path | Combina dois caminhos em um único caminho, usando um delimitador específico de provedor entre caminhos. Esse cmdlet transmite cadeias de caracteres.                               |
 | `Move-Item`  | Move itens para o local especificado. Esse cmdlet não passa um objeto de saída por meio do pipeline, a menos que seu `PassThru` parâmetro seja especificado. |
 
-Um cmdlet relacionado é o cmdlet de análise-caminho básico fornecido pelo Windows PowerShell. Esse cmdlet pode ser usado para analisar um caminho do Windows PowerShell para dar suporte ao `Parent` parâmetro. Ele transmite a cadeia de caracteres do caminho pai.
+Um cmdlet relacionado é o cmdlet Parse-Path básico fornecido pelo Windows PowerShell. Esse cmdlet pode ser usado para analisar um caminho do Windows PowerShell para dar suporte ao `Parent` parâmetro. Ele transmite a cadeia de caracteres do caminho pai.
 
 ## <a name="select-provider-interfaces-to-support"></a>Selecionar interfaces de provedor para dar suporte
 

@@ -1,12 +1,14 @@
 ---
-title: Atributos no código do cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1f92e329d304754d5596cef0c95dc597aca3a538
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Atributos no código do cmdlet
+description: Atributos no código do cmdlet
+ms.openlocfilehash: 296bb8bcb06ef660e97dc792d1ecf596cc7c2930
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774908"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653648"
 ---
 # <a name="attributes-in-cmdlet-code"></a>Atributos no código do cmdlet
 
@@ -27,4 +29,4 @@ Para obter mais informações sobre os diferentes atributos que podem ser declar
 
 [Tipos de atributo](./attribute-types.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

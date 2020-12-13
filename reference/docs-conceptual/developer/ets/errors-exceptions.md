@@ -1,12 +1,14 @@
 ---
-title: Erros e exceções no sistema de tipo estendido
 ms.date: 07/09/2020
-ms.openlocfilehash: f60c53e33c031168eda53726e0d296bf91139fda
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erros e exceções no sistema de tipo estendido
+description: Erros e exceções no sistema de tipo estendido
+ms.openlocfilehash: 295c16ad9abb67b0c4967bf32125bfc7ee0a35da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786281"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652483"
 ---
 # <a name="errors-and-exceptions-in-the-extended-type-system"></a>Erros e exceções no sistema de tipo estendido
 
@@ -31,7 +33,7 @@ Todos os erros que ocorrem ao invocar um método ETS causam a geração de uma e
 
 ## <a name="casting-errors"></a>Erros de conversão
 
-Quando uma conversão inválida é tentada, um **PSInvalidCastException** é gerado. Como essa exceção deriva de **System. InvalidCastException**, não é possível interceptar diretamente do script. Lembre-se de que a entidade que tenta a conversão precisaria encapsular **PSInvalidCastException** em um **PSRuntimeException** para que isso pudesse ser interceptável pelos scripts. Se for feita uma tentativa de definir o valor de um **PSPropertySet**, **PSMemberSet**, **PSMethodInfo**ou um membro de **ReadOnlyPSMemberInfoCollection ' 1**, um **NotSupportedException** será gerado.
+Quando uma conversão inválida é tentada, um **PSInvalidCastException** é gerado. Como essa exceção deriva de **System. InvalidCastException**, não é possível interceptar diretamente do script. Lembre-se de que a entidade que tenta a conversão precisaria encapsular **PSInvalidCastException** em um **PSRuntimeException** para que isso pudesse ser interceptável pelos scripts. Se for feita uma tentativa de definir o valor de um **PSPropertySet**, **PSMemberSet**, **PSMethodInfo** ou um membro de **ReadOnlyPSMemberInfoCollection ' 1**, um **NotSupportedException** será gerado.
 
 ## <a name="common-runtime-errors"></a>Erros comuns de tempo de execução
 

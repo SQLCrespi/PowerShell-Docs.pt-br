@@ -1,12 +1,14 @@
 ---
-title: Elemento TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 34e20006a7501650f2a22f71a3d7e999fb8b2337
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TableControl (formato)
+description: Elemento TableControl (formato)
+ms.openlocfilehash: 93e05e22d61504d7781b6f3c07f9a3fd0b3c9e8a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785125"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651456"
 ---
 # <a name="tablecontrol-element-format"></a>Elemento TableControl (formato)
 
@@ -32,7 +34,7 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Tab
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

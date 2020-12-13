@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para WideEntry (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 44c88ce75ae485e1c48ceb08bfd12f739a632996
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para WideEntry (formato)
+description: Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para WideEntry (formato)
+ms.openlocfilehash: c6466e3ac6e1f194df9172468d26448f9630da6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787437"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655015"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>Elemento SelectionSetName para SelectionCondition para EntrySelectedBy para WideEntry (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `S
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

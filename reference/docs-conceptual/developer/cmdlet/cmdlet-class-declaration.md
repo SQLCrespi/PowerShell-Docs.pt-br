@@ -1,15 +1,14 @@
 ---
-title: Declaração de classe de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], declaring
-- declaring cmdlets [PowerShell SDK]
-ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de classe do cmdlet
+description: Declaração de classe do cmdlet
+ms.openlocfilehash: 854b0a4ca9f6c87c4fad3b71ee726beade585e02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784496"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653503"
 ---
 # <a name="cmdlet-class-declaration"></a>Declaração de classe do cmdlet
 
@@ -57,6 +56,6 @@ Quando você nomear cmdlets, use a embalagem do Pascal. Por exemplo, os `Get-Ite
 
 [Nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

@@ -1,16 +1,18 @@
 ---
-title: Exemplo de GetProcessSample04 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra GetProcessSample04
+description: Amostra GetProcessSample04
+ms.openlocfilehash: 4b2b7f7ed5fd87711d0d7872caaf75d453de4832
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774415"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652738"
 ---
 # <a name="getprocesssample04-sample"></a>Amostra GetProcessSample04
 
-Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele gera um erro de não encerramento se ocorrer um erro durante a recuperação de um processo. Este cmdlet é uma versão simplificada do `Get-Process` cmdlet fornecida pelo Windows PowerShell 2,0.
+Este exemplo mostra como implementar um cmdlet que recupera os processos no computador local. Ele gerará um erro sem encerramento se ocorrer um erro durante a recuperação de um processo. Este cmdlet é uma versão simplificada do `Get-Process` cmdlet fornecida pelo Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Como criar o exemplo usando o Visual Studio.
 

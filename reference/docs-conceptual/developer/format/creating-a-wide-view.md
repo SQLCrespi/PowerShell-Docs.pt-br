@@ -1,12 +1,14 @@
 ---
-title: Criando uma exibição ampla | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0cf6a35201c47e4b12dd160191570eccec3427ef
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar uma exibição ampla
+description: Criar uma exibição ampla
+ms.openlocfilehash: 4230ef91a3612e962b2773b12e8016df6f760eae
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786128"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655601"
 ---
 # <a name="creating-a-wide-view"></a>Criar uma exibição ampla
 

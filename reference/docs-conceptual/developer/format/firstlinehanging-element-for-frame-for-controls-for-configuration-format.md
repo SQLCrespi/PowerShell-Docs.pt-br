@@ -1,12 +1,14 @@
 ---
-title: Elemento FirstLineHanging para frame para controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6c0429a5caa5d20370acff72fa5707ed8cf7ad01
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento FirstLineHanging para Frame para Controls para Configuration (formato)
+description: Elemento FirstLineHanging para Frame para Controls para Configuration (formato)
+ms.openlocfilehash: 94d59ef7b54e036f76e38a3b06b769700443b9fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773735"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655237"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>Elemento FirstLineHanging para Frame para Controls para Configuration (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Fir
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

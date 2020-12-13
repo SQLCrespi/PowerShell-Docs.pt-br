@@ -1,12 +1,14 @@
 ---
-title: Código de exemplo do GetProc05 (VB.NET) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ef16e6f8090f049131792132e693b2019fa3e41
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Código de exemplo GetProc05 (VB.NET)
+description: Código de exemplo GetProc05 (VB.NET)
+ms.openlocfilehash: 6860a8276fd691562ae7e2cbbd95d199ee93fd71
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771627"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653873"
 ---
 # <a name="getproc05-vbnet-sample-code"></a>Código de exemplo GetProc05 (VB.NET)
 

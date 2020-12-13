@@ -1,12 +1,14 @@
 ---
-title: Definindo conjuntos de membros padrão para objetos | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 80e1f54890d3aac1702414699ead16fcf38271e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Definir os conjuntos de membro padrão para objetos
+description: Definir os conjuntos de membro padrão para objetos
+ms.openlocfilehash: 919f7ba65322c6a56a27e046fb211bde151abf7d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774619"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653119"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>Definir os conjuntos de membro padrão para objetos
 

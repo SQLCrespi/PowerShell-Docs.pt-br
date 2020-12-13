@@ -1,12 +1,14 @@
 ---
-title: Parâmetros dinâmicos de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros dinâmicos de cmdlet
+description: Parâmetros dinâmicos de cmdlet
+ms.openlocfilehash: b44dda2354e8b689e419c7bf4deefadfc4edcb07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782354"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653434"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Parâmetros dinâmicos de cmdlet
 
@@ -102,7 +104,7 @@ public class SendGreetingCommandDynamicParameters
 
 Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâmicos, consulte [como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [System. Management. Automation. IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
@@ -110,4 +112,4 @@ Para obter um exemplo completo de um cmdlet que dá suporte a parâmetros dinâm
 
 [Como declarar parâmetros dinâmicos](./how-to-declare-dynamic-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

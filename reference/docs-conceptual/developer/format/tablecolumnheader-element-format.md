@@ -1,12 +1,14 @@
 ---
-title: Elemento TableColumnHeader (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TableColumnHeader (formato)
+description: Elemento TableColumnHeader (formato)
+ms.openlocfilehash: 30368512875b7c5c4cf3c686f3d09540dea1bd26
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785176"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651525"
 ---
 # <a name="tablecolumnheader-element-format"></a>Elemento TableColumnHeader (formato)
 
@@ -30,7 +32,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `T
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

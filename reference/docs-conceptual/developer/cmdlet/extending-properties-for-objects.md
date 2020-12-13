@@ -1,12 +1,14 @@
 ---
-title: Estendendo propriedades para objetos | Microsoft Docs
 ms.date: 08/21/2019
-ms.openlocfilehash: acd20c7e2b6ef84a9c932538eb8e167d68c8a660
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Estender as propriedades para objetos
+description: Estender as propriedades para objetos
+ms.openlocfilehash: 37803d9fd87319204565c2abde62f269744481b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784292"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652881"
 ---
 # <a name="extending-properties-for-objects"></a>Estender as propriedades para objetos
 
@@ -96,9 +98,9 @@ No exemplo a seguir, a propriedade **VERSIONINFO** é adicionada ao tipo [System
 
 Um conjunto de propriedades define um grupo de propriedades estendidas que podem ser referenciadas pelo nome do conjunto.
 Por exemplo, o parâmetro de propriedade [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) 
- **Property** pode especificar um conjunto de propriedades específico a ser exibido. Quando um conjunto de propriedades é especificado, somente as propriedades que pertencem ao conjunto são exibidas.
+  pode especificar um conjunto de propriedades específico a ser exibido. Quando um conjunto de propriedades é especificado, somente as propriedades que pertencem ao conjunto são exibidas.
 
-Não há restrição quanto ao número de conjuntos de propriedades que podem ser definidos para um objeto. No entanto, os conjuntos de propriedades usados para definir as propriedades de exibição padrão de um objeto devem ser especificados dentro do conjunto de membros **PSStandardMembers** . No `Types.ps1xml` arquivo Types, os nomes do conjunto de propriedades padrão incluem **DefaultDisplayProperty**, **DefaultDisplayPropertySet**e **DefaultKeyPropertySet**. Todos os conjuntos de propriedades adicionais que você adicionar ao conjunto de membros **PSStandardMembers** serão ignorados.
+Não há restrição quanto ao número de conjuntos de propriedades que podem ser definidos para um objeto. No entanto, os conjuntos de propriedades usados para definir as propriedades de exibição padrão de um objeto devem ser especificados dentro do conjunto de membros **PSStandardMembers** . No `Types.ps1xml` arquivo Types, os nomes do conjunto de propriedades padrão incluem **DefaultDisplayProperty**, **DefaultDisplayPropertySet** e **DefaultKeyPropertySet**. Todos os conjuntos de propriedades adicionais que você adicionar ao conjunto de membros **PSStandardMembers** serão ignorados.
 
 No exemplo a seguir, o conjunto de propriedades **DefaultDisplayPropertySet** é adicionado ao conjunto de membros **PSStandardMembers** do tipo [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . O elemento [PropertySet](/dotnet/api/system.management.automation.pspropertyset) define o grupo de propriedades. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name) especifica o nome do conjunto de propriedades. E, o elemento [referenciaproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) especifica as propriedades do conjunto. Você também pode adicionar o `PropertySet` elemento aos membros do elemento [Type](/dotnet/api/system.management.automation.pstypename) .
 
@@ -123,10 +125,10 @@ No exemplo a seguir, o conjunto de propriedades **DefaultDisplayPropertySet** é
 </Type>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Sobre o Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 
-[System. Management. Automation](/dotnet/api/System.Management.Automation)
+[System.Management.Automation](/dotnet/api/System.Management.Automation)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

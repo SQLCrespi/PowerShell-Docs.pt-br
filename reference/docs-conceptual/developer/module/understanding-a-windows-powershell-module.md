@@ -1,12 +1,14 @@
 ---
-title: Compreendendo um módulo do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Noções básicas sobre um módulo do Windows PowerShell
+description: Noções básicas sobre um módulo do Windows PowerShell
+ms.openlocfilehash: 882e9db59dc1bc8570676d1da7ce84c808d076e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779226"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651157"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Noções básicas sobre um módulo do Windows PowerShell
 
@@ -84,7 +86,7 @@ Independentemente, o caminho da pasta é chamado de *base* do módulo (ModuleBas
 
 - Módulos dinâmicos criados pelo `New-Module` cmdlet podem ser nomeados usando o `Name` parâmetro do cmdlet.
 
-- Os módulos importados de objetos de assembly pelo comando ** `Import-Module` -assembly** são nomeados de acordo com a seguinte sintaxe: `"dynamic_code_module_" + assembly.GetName()` .
+- Os módulos importados de objetos de assembly pelo comando **`Import-Module` -assembly** são nomeados de acordo com a seguinte sintaxe: `"dynamic_code_module_" + assembly.GetName()` .
 
   Para obter mais informações, consulte [instalando um módulo do PowerShell](./installing-a-powershell-module.md) e [modificando o caminho de instalação do PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
@@ -112,4 +114,4 @@ $env:P SModulePath essa variável de ambiente contém uma lista dos diretórios 
 
 ## <a name="see-also"></a>Consulte Também
 
-[Escrevendo um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)
+[Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

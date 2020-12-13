@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para ViewSelectedBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para ViewSelectedBy (formato)
+description: Elemento SelectionSetName para ViewSelectedBy (formato)
+ms.openlocfilehash: a1a1816761715a138bcb3c2bd4cb9dbbb2f9cb92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772596"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654902"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>Elemento SelectionSetName para ViewSelectedBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 
