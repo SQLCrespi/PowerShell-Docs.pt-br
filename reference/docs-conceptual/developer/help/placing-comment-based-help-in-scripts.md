@@ -1,18 +1,20 @@
 ---
-title: Colocar a ajuda baseada em comentários em scripts
 ms.date: 09/12/2016
-ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Colocar a ajuda baseada em comentários em scripts
+description: Colocar a ajuda baseada em comentários em scripts
+ms.openlocfilehash: b0d32b7ab063269085899a643b0c3a17da2073fc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893179"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645445"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>Colocar a ajuda baseada em comentários em scripts
 
 Este tópico explica onde posicionar a ajuda baseada em comentários para um script para que o `Get-Help` cmdlet associe o tópico de ajuda baseado em comentário a scripts e não a nenhuma função que possa estar no script.
 
-## <a name="where-to-place-comment-based-help-for-a-script"></a>Onde posicionar a ajuda baseada em comentários para um script
+## <a name="where-to-place-comment-based-help-for-a-script"></a>Onde posicionar Comment-Based ajuda para um script
 
 - No início do arquivo de script.
 

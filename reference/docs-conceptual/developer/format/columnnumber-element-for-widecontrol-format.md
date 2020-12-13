@@ -1,12 +1,14 @@
 ---
-title: Elemento ColumnNumber para WideControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ColumnNumber para WideControl (formato)
+description: Elemento ColumnNumber para WideControl (formato)
+ms.openlocfilehash: 1ddbbfbd5b53065afcc6c1326d6abf1fadedc67b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783850"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648394"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>Elemento ColumnNumber para WideControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

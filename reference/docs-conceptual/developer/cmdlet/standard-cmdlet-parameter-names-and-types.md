@@ -1,12 +1,14 @@
 ---
-title: Tipos e nomes de parâmetro de cmdlet padrão | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 16a8eb101a37865874463859fb55926fc6e84a9d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Tipos e nomes de parâmetros de cmdlet padrão
+description: Tipos e nomes de parâmetros de cmdlet padrão
+ms.openlocfilehash: 87491d76a827af077decaf933884a06579806e9b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784020"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650180"
 ---
 # <a name="standard-cmdlet-parameter-names-and-types"></a>Tipos e nomes de parâmetros de cmdlet padrão
 
@@ -24,6 +26,6 @@ Os nomes de parâmetro de cmdlet devem ser consistentes entre os cmdlets que voc
 
 [Parâmetros de quantidade](./quantity-parameters.md)
 
-[Parâmetros do recurso](./resource-parameters.md)
+[Parâmetros de recurso](./resource-parameters.md)
 
 [Parâmetros de segurança](./security-parameters.md)

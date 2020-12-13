@@ -1,12 +1,14 @@
 ---
-title: Como escrever um cmdlet simples | Microsoft Docs
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ff0b47454804c9becd6f03ac521946b9596bb8b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como gravar um cmdlet simples
+description: Como gravar um cmdlet simples
+ms.openlocfilehash: 59dce5d797f80647e0b70a1f80faf67198652082
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784054"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646485"
 ---
 # <a name="how-to-write-a-cmdlet"></a>Como escrever um cmdlet
 
@@ -85,4 +87,4 @@ namespace SendGreeting
 
 [Declaração de ParameterAttribute](parameter-attribute-declaration.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

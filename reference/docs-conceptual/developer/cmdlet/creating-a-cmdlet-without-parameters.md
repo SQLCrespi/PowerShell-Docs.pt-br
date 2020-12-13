@@ -1,26 +1,25 @@
 ---
-title: Criando um cmdlet sem parâmetros | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmers Guide], creating
-- cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um cmdlet sem parâmetros
+description: Criar um cmdlet sem parâmetros
+ms.openlocfilehash: 5df27ac4c1f6dfcc3e7596d93f8db0f97aae71c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784377"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646542"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Criar um cmdlet sem parâmetros
 
-Esta seção descreve como criar um cmdlet que recupera informações do computador local sem o uso de parâmetros e, em seguida, grava as informações no pipeline. O cmdlet descrito aqui é um cmdlet Get-proc que recupera informações sobre os processos do computador local e, em seguida, exibe essas informações na linha de comando.
+Esta seção descreve como criar um cmdlet que recupera informações do computador local sem o uso de parâmetros e, em seguida, grava as informações no pipeline. O cmdlet descrito aqui é um cmdlet Get-Proc que recupera informações sobre os processos do computador local e, em seguida, exibe essas informações na linha de comando.
 
 > [!NOTE]
 > Lembre-se de que, ao escrever cmdlets, os assemblies de referência do Windows PowerShell® são baixados no disco (por padrão, em C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0). Eles não são instalados no GAC (cache de assembly global).
 
 ## <a name="naming-the-cmdlet"></a>Nomeando o cmdlet
 
-Um nome de cmdlet consiste em um verbo que indica a ação que o cmdlet usa e um substantivo que indica os itens que o cmdlet atua. Como esse cmdlet Get-proc de exemplo recupera objetos de processo, ele usa o verbo "Get", definido pela enumeração [System. Management. Automation. Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) e o substantivo "proc" para indicar que o cmdlet funciona em itens de processo.
+Um nome de cmdlet consiste em um verbo que indica a ação que o cmdlet usa e um substantivo que indica os itens que o cmdlet atua. Como esse cmdlet de Get-Proc de exemplo recupera objetos de processo, ele usa o verbo "Get", definido pela enumeração [System. Management. Automation. Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) e o substantivo "proc" para indicar que o cmdlet funciona em itens de processo.
 
 Ao nomear cmdlets, não use nenhum dos seguintes caracteres: #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
@@ -34,7 +33,7 @@ Você deve usar um verbo do conjunto de nomes de verbo de cmdlet aprovados. Para
 
 ## <a name="defining-the-cmdlet-class"></a>Definindo a classe do cmdlet
 
-Depois de escolher um nome de cmdlet, defina uma classe .NET para implementar o cmdlet. Aqui está a definição de classe para este cmdlet Get-proc de exemplo:
+Depois de escolher um nome de cmdlet, defina uma classe .NET para implementar o cmdlet. Aqui está a definição de classe para este exemplo de Get-Proc cmdlet:
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "Proc")]
@@ -47,12 +46,12 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Observe que, antes da definição de classe, o atributo [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , com a sintaxe `[Cmdlet(verb, noun, ...)]` , é usado para identificar essa classe como um cmdlet. Esse é o único atributo necessário para todos os cmdlets e permite que o tempo de execução do Windows PowerShell os chame corretamente. Você pode definir palavras-chave de atributo para declarar ainda mais a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe GetProcCommand de exemplo declara apenas os nomes de substantivo e verbo para o cmdlet Get-proc.
+Observe que, antes da definição de classe, o atributo [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) , com a sintaxe `[Cmdlet(verb, noun, ...)]` , é usado para identificar essa classe como um cmdlet. Esse é o único atributo necessário para todos os cmdlets e permite que o tempo de execução do Windows PowerShell os chame corretamente. Você pode definir palavras-chave de atributo para declarar ainda mais a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe GetProcCommand de exemplo declara apenas os nomes de substantivo e verbo para o cmdlet Get-Proc.
 
 > [!NOTE]
 > Para todas as classes de atributo do Windows PowerShell, as palavras-chave que você pode definir correspondem às propriedades da classe de atributo.
 
-Ao nomear a classe do cmdlet, é uma prática recomendada refletir o nome do cmdlet no nome da classe. Para fazer isso, use o formato "VerbNounCommand" e substitua "verbo" e "substantivo" pelo verbo e pelo substantivo usados no nome do cmdlet. Como é mostrado na definição de classe anterior, o cmdlet Get-proc de exemplo define uma classe chamada GetProcCommand, que deriva da classe base [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) .
+Ao nomear a classe do cmdlet, é uma prática recomendada refletir o nome do cmdlet no nome da classe. Para fazer isso, use o formato "VerbNounCommand" e substitua "verbo" e "substantivo" pelo verbo e pelo substantivo usados no nome do cmdlet. Como é mostrado na definição de classe anterior, o cmdlet de Get-Proc de exemplo define uma classe chamada GetProcCommand, que deriva da classe base [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) .
 
 > [!IMPORTANT]
 > Se você quiser definir um cmdlet que acesse o tempo de execução do Windows PowerShell diretamente, sua classe do .NET deverá derivar da classe base [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . Para obter mais informações sobre essa classe, consulte [criando um cmdlet que define conjuntos de parâmetros](./adding-parameter-sets-to-a-cmdlet.md).
@@ -75,7 +74,7 @@ Se o cmdlet aceitar a entrada do pipeline, ele deverá substituir o método [Sys
 
 Se o cmdlet não receber a entrada do pipeline, ele deverá substituir o método [System. Management. Automation. cmdlet. Endprocessor](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Lembre-se de que esse método é usado frequentemente no lugar de [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) quando o cmdlet não pode operar em um elemento por vez, como é o caso de um cmdlet de classificação.
 
-Como este cmdlet Get-proc de exemplo deve receber a entrada do pipeline, ele substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e usa as implementações padrão para [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). A substituição [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) recupera os processos e os grava na linha de comando usando o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) .
+Como este cmdlet de Get-Proc de exemplo deve receber a entrada do pipeline, ele substitui o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e usa as implementações padrão para [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e [System. Management. Automation. cmdlet. noprocessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). A substituição [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) recupera os processos e os grava na linha de comando usando o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) .
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,7 +135,7 @@ Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. O código para nosso cmdlet Get-proc de exemplo é pequeno, mas ainda usa o tempo de execução do Windows PowerShell e um objeto .NET existente, o que é suficiente para torná-lo útil. Vamos testá-lo para entender melhor o que o Get-proc pode fazer e como sua saída pode ser usada. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. O código para nosso cmdlet de Get-Proc de exemplo é pequeno, mas ele ainda usa o tempo de execução do Windows PowerShell e um objeto .NET existente, o que é suficiente para torná-lo útil. Vamos testá-lo para entender melhor o que Get-Proc pode fazer e como sua saída pode ser usada. Para obter mais informações sobre como usar cmdlets na linha de comando, consulte o [introdução com o Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
 1. Inicie o Windows PowerShell e obtenha os processos atuais em execução no computador.
 

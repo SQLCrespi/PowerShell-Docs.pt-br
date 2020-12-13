@@ -3,10 +3,10 @@ title: Migrando do Windows PowerShell 5.1 para o PowerShell 7
 description: Atualize do PowerShell 5.1 para o PowerShell 7 em suas plataformas Windows.
 ms.date: 03/25/2020
 ms.openlocfilehash: cb14a4f159b6dc33f31386da4264c0ebb640aef8
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "83809202"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Migrando do Windows PowerShell 5.1 para o PowerShell 7

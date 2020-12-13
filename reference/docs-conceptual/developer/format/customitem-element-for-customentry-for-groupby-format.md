@@ -1,12 +1,14 @@
 ---
-title: Elemento CustomItem para CustomEntry para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e8086c5330b6644f83316ad4ae33c33ba40d9eee
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento CustomItem para CustomEntry para GroupBy (formato)
+description: Elemento CustomItem para CustomEntry para GroupBy (formato)
+ms.openlocfilehash: 5db23ad4dad5bd66ea64b9c6e91b8224a4aa4eca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783714"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645980"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>Elemento CustomItem para CustomEntry para GroupBy (formato)
 
@@ -31,7 +33,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

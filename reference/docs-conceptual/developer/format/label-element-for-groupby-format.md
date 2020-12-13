@@ -1,12 +1,14 @@
 ---
-title: Elemento Label para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 07b4d037472a9dd2329e94576ec10f5b82f46b34
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Label para GroupBy (formato)
+description: Elemento Label para GroupBy (formato)
+ms.openlocfilehash: ff4b0dec01bb5b472b1813540661791b91568eed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785771"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649795"
 ---
 # <a name="label-element-for-groupby-format"></a>Elemento Label para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -48,7 +50,7 @@ Além do texto especificado por esse elemento, o Windows PowerShell exibe o novo
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra o rótulo de um novo grupo. O rótulo exibido seria semelhante a este:`Service Type: NewValueofProperty`
+O exemplo a seguir mostra o rótulo de um novo grupo. O rótulo exibido seria semelhante a este: `Service Type: NewValueofProperty`
 
 ```xml
 <GroupBy>

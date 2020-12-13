@@ -1,12 +1,14 @@
 ---
-title: Parâmetros de segurança | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 290905b04547af932182005869b18dc1bc210ca4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros de segurança
+description: Parâmetros de segurança
+ms.openlocfilehash: 2c73a3372fa719ea436d4a3ae1223d4cbaaf9108
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786502"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650249"
 ---
 # <a name="security-parameters"></a>Parâmetros de segurança
 
@@ -36,7 +38,7 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 |**Função**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um conjunto de operações que podem ser executadas por uma entidade.|
 |**SaveCred**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro de forma que as credenciais que foram salvas anteriormente pelo usuário serão usadas quando o parâmetro for especificado.|
 |**Escopo**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar o grupo de objetos protegidos para o cmdlet.|
-|**SIDs**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
+|**SID**<br>Tipo de dados: cadeia de caracteres|Implemente esse parâmetro para que o usuário possa especificar um identificador exclusivo que representa uma entidade de segurança.|
 |**Confiável**<br>Tipo de dados: SwitchParameter|Implemente esse parâmetro para que os níveis de confiança tenham suporte quando o parâmetro for especificado.|
 |**TrustLevel**<br>Tipo de dados: palavra-chave|Implemente esse parâmetro para que o usuário possa especificar o nível de confiança que tem suporte. Por exemplo, os valores possíveis incluem Internet, intranet e FullTrust.|
 
@@ -44,6 +46,6 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 
 [Parâmetros de cmdlets](./cmdlet-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

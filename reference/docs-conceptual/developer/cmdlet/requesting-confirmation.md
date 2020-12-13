@@ -1,12 +1,14 @@
 ---
-title: Solicitando confirmação | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 42ab001e3e8894f2ca17332634214af108fc5918
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Solicitar confirmação
+description: Solicitar confirmação
+ms.openlocfilehash: fd7b9eb9f697e15577d1836b8d8b689f231d33a1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781776"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648477"
 ---
 # <a name="requesting-confirmation"></a>Solicitar confirmação
 

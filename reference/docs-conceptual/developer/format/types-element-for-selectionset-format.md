@@ -1,12 +1,14 @@
 ---
-title: Elemento types para SelectionSet (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Types para SelectionSet (formato)
+description: Elemento Types para SelectionSet (formato)
+ms.openlocfilehash: ff3c24e7f52f862dc416b88d50983196ce907012
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772511"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645459"
 ---
 # <a name="types-element-for-selectionset-format"></a>Elemento Types para SelectionSet (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

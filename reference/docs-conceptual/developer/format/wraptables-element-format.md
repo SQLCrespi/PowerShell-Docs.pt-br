@@ -1,12 +1,14 @@
 ---
-title: Elemento WrapTables (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bb0bf4785eed0c2d271e01968cf2ccbc862d94c7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento WrapTables (formato)
+description: Elemento WrapTables (formato)
+ms.openlocfilehash: 005aea73126b7187645c3aa34cc318b142c56666
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772307"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647792"
 ---
 # <a name="wraptables-element-format"></a>Elemento WrapTables (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `W
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

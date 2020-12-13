@@ -1,15 +1,14 @@
 ---
-title: Criando um provedor básico do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- base provider [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], base provider
-ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor básico do Windows PowerShell
+description: Criar um provedor básico do Windows PowerShell
+ms.openlocfilehash: 03b5784fd063b5457fc64d92a32e286e3bf9cce4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787216"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647508"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Criar um provedor básico do Windows PowerShell
 
@@ -40,7 +39,7 @@ Você pode definir palavras-chave de atributo para declarar ainda mais a classe,
 > [!NOTE]
 > O nome totalmente qualificado do provedor do Windows PowerShell inclui o nome do assembly e outros atributos determinados pelo Windows PowerShell após o registro do provedor.
 
-## <a name="defining-provider-specific-state-information"></a>Definindo informações de estado específicas do provedor
+## <a name="defining-provider-specific-state-information"></a>Definindo informações de estado de Provider-Specific
 
 A classe base [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) e todas as classes derivadas são consideradas sem estado porque o tempo de execução do Windows PowerShell cria instâncias de provedor somente conforme necessário. Portanto, se seu provedor exigir controle total e manutenção de estado para dados específicos do provedor, ele deverá derivar uma classe da classe [System. Management. Automation. providerInfo](/dotnet/api/System.Management.Automation.ProviderInfo) . Sua classe derivada deve definir os membros necessários para manter o estado de forma que os dados específicos do provedor possam ser acessados quando o tempo de execução do Windows PowerShell chama o método [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) para inicializar o provedor.
 

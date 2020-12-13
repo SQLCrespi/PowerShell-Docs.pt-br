@@ -1,12 +1,14 @@
 ---
-title: Referência do Windows PowerShell-novidades
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e87fce34f74e0fcbfe25939e1555df308a7f7d0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Referência do Windows PowerShell-novidades
+description: Referência do Windows PowerShell-novidades
+ms.openlocfilehash: b6fa97eacd476f055dd0c69eed2e547c450b85e1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786689"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647120"
 ---
 # <a name="whats-new"></a>What's New
 

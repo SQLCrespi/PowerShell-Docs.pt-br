@@ -1,16 +1,18 @@
 ---
-title: Criando espaços de Tróia remotos | Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: 2b3c76eeae70de9ef116851313953bba1a1d890f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar runspaces remotos
+description: Criar runspaces remotos
+ms.openlocfilehash: 4a2af4094ff2503fc12ee460d49565f035f0e4fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779583"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649359"
 ---
 # <a name="creating-remote-runspaces"></a>Criar runspaces remotos
 
-Comandos do PowerShell que usam um parâmetro **ComputerName** podem ser executados em qualquer computador que executa o PowerShell. Para executar comandos que não usam um parâmetro **ComputerName** , você pode usar o WS-Management para configurar um runspace que se conecta a um computador especificado e executar comandos nesse computador.
+Comandos do PowerShell que usam um parâmetro **ComputerName** podem ser executados em qualquer computador que executa o PowerShell. Para executar comandos que não usam um parâmetro **ComputerName** , você pode usar WS-Management para configurar um runspace que se conecta a um computador especificado e executar comandos nesse computador.
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>Usando um WSManConnection para criar um runspace remoto
 

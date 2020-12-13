@@ -1,12 +1,14 @@
 ---
-title: Conjuntos de membros do sistema de tipos estendidos
 ms.date: 07/09/2020
-ms.openlocfilehash: 3f4e44ed7b498bb7c4a71f7b131270ed4f2ef981
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Conjuntos de membros do sistema de tipos estendidos
+description: Conjuntos de membros do sistema de tipos estendidos
+ms.openlocfilehash: b04d2618dc4bcf302d2e683d50c351ad3aa076ac
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786247"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650082"
 ---
 # <a name="ets-member-sets"></a>Conjuntos de membros do ETS
 
@@ -22,12 +24,12 @@ Os conjuntos de propriedades podem incluir qualquer número de propriedades de u
 - Propriedade **ReferencedPropertyNames** : Obtém os nomes das propriedades no conjunto de propriedades.
 - Propriedade **TypeNameOfValue** : Obtém uma constante de enumeração **PropertySet** que define esse conjunto como um conjunto de propriedades.
 - Propriedade **Value** : Obtém ou define o objeto **PSPropertySet** .
-- `PSPropertySet.Copy`método: faz uma cópia exata do objeto **PSPropertySet** .
-- `PSMemberSet.ToString`método: converte o objeto **PSPropertySet** em uma cadeia de caracteres.
+- `PSPropertySet.Copy` método: faz uma cópia exata do objeto **PSPropertySet** .
+- `PSMemberSet.ToString` método: converte o objeto **PSPropertySet** em uma cadeia de caracteres.
 
 ## <a name="member-sets"></a>Conjuntos de membros
 
-Os conjuntos de membros podem incluir qualquer número de membros estendidos de qualquer tipo. O conjunto de membros é criado chamando o`PSMemberSet(System.String,System.Collections.Generic.IEnumerable{System.Management.Automation.PSMemberInfo})`
+Os conjuntos de membros podem incluir qualquer número de membros estendidos de qualquer tipo. O conjunto de membros é criado chamando o `PSMemberSet(System.String,System.Collections.Generic.IEnumerable{System.Management.Automation.PSMemberInfo})`
 Construtor com o nome do conjunto de membros e os nomes dos membros referenciados. O objeto **PSPropertySet** criado pode ser usado como um alias que aponta para os membros no conjunto. A classe [PSMemberSet](/dotnet/api/system.management.automation.psmemberset) tem as propriedades e os métodos a seguir.
 
 - Propriedade **IsInstance** : Obtém um valor **booliano** que indica a origem do membro.
@@ -37,5 +39,5 @@ Construtor com o nome do conjunto de membros e os nomes dos membros referenciado
 - Propriedade **Properties** : Obtém as propriedades incluídas no conjunto de membros.
 - Propriedade **TypeNameOfValue** : Obtém uma constante de enumeração **MemberSet** que define esse conjunto como um conjunto de membros.
 - Propriedade **Value** : Obtém o objeto **PSMemberSet** .
-- `PSMemberSet.Copy`método: faz uma cópia exata do objeto **PSMemberSet** .
-- `PSMemberSet.ToString`método: converte o objeto **PSMemberSet** em uma cadeia de caracteres.
+- `PSMemberSet.Copy` método: faz uma cópia exata do objeto **PSMemberSet** .
+- `PSMemberSet.ToString` método: converte o objeto **PSMemberSet** em uma cadeia de caracteres.

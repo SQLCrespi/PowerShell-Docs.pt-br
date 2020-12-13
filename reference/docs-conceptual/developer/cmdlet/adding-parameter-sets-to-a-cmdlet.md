@@ -1,14 +1,14 @@
 ---
-title: Adicionando conjuntos de parâmetros a um cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- parameter sets [PowerShell Programmer's Guide]
-ms.openlocfilehash: b1e808694b02676d81101a2678cbea341c7bd52c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Adicionar conjuntos de parâmetros como um cmdlet
+description: Adicionar conjuntos de parâmetros como um cmdlet
+ms.openlocfilehash: dd5ee2a880a4d516ea82e5afe0ced12369197243
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774976"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648658"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Adicionar conjuntos de parâmetros como um cmdlet
 
@@ -20,7 +20,7 @@ Um exemplo de um cmdlet que usa dois conjuntos de parâmetros para definir funci
 
 Duas coisas importantes a serem lembradas sobre conjuntos de parâmetros é que o tempo de execução do Windows PowerShell usa apenas um conjunto de parâmetros para uma entrada específica e que cada conjunto de parâmetros deve ter pelo menos um parâmetro exclusivo para esse conjunto de parâmetros.
 
-Para ilustrar esse último ponto, esse cmdlet Stop-proc usa três conjuntos de parâmetros: `ProcessName` , `ProcessId` e `InputObject` . Cada um desses conjuntos de parâmetros tem um parâmetro que não está nos outros conjuntos de parâmetros. Os conjuntos de parâmetros podem compartilhar outros parâmetros, mas o cmdlet usa os parâmetros exclusivos `ProcessName` , `ProcessId` e `InputObject` para identificar qual conjunto de parâmetros o tempo de execução do Windows PowerShell deve usar.
+Para ilustrar esse último ponto, esse cmdlet Stop-Proc usa três conjuntos de parâmetros: `ProcessName` , `ProcessId` e `InputObject` . Cada um desses conjuntos de parâmetros tem um parâmetro que não está nos outros conjuntos de parâmetros. Os conjuntos de parâmetros podem compartilhar outros parâmetros, mas o cmdlet usa os parâmetros exclusivos `ProcessName` , `ProcessId` e `InputObject` para identificar qual conjunto de parâmetros o tempo de execução do Windows PowerShell deve usar.
 
 ## <a name="declaring-the-cmdlet-class"></a>Declarando a classe cmdlet
 
@@ -29,7 +29,7 @@ A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a c
 > [!NOTE]
 > Para obter mais informações sobre nomes de verbo de cmdlet aprovados, consulte [nomes de verbo de cmdlet](./approved-verbs-for-windows-powershell-commands.md).
 
-O código a seguir é a definição de classe para esse cmdlet Stop-proc.
+O código a seguir é a definição de classe para este Stop-Proc cmdlet.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "Proc",
@@ -220,7 +220,7 @@ Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShel
 
 Quando o cmdlet tiver sido registrado com o Windows PowerShell, teste-o executando-o na linha de comando. Aqui estão alguns testes que mostram como os `ProcessId` `InputObject` parâmetros e podem ser usados para testar seus conjuntos de parâmetros para interromper um processo.
 
-- Com o Windows PowerShell iniciado, execute o cmdlet Stop-proc com o `ProcessId` parâmetro definido para interromper um processo com base em seu identificador. Nesse caso, o cmdlet está usando o `ProcessId` conjunto de parâmetros para parar o processo.
+- Com o Windows PowerShell iniciado, execute o cmdlet Stop-Proc com o `ProcessId` parâmetro definido para interromper um processo com base em seu identificador. Nesse caso, o cmdlet está usando o `ProcessId` conjunto de parâmetros para parar o processo.
 
   ```
   PS> stop-proc -Id 444
@@ -230,7 +230,7 @@ Quando o cmdlet tiver sido registrado com o Windows PowerShell, teste-o executan
   [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
   ```
 
-- Com o Windows PowerShell iniciado, execute o cmdlet Stop-proc com o `InputObject` parâmetro definido para parar os processos no objeto do bloco de notas recuperado pelo `Get-Process` comando.
+- Com o Windows PowerShell iniciado, execute o cmdlet Stop-Proc com o `InputObject` parâmetro definido para parar os processos no objeto do bloco de notas recuperado pelo `Get-Process` comando.
 
   ```
   PS> get-process notepad | stop-proc

@@ -1,12 +1,14 @@
 ---
-title: Exemplo de StopProcessSample04 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a256d29b9e0be878d805a82ddf5a538461d283d6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra StopProcessSample04
+description: Amostra StopProcessSample04
+ms.openlocfilehash: 65588b4d60034d1e6a1e17441a4a640caaacdce8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786417"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650137"
 ---
 # <a name="stopprocesssample04-sample"></a>Amostra StopProcessSample04
 
@@ -60,7 +62,7 @@ Este exemplo demonstra o seguinte.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra uma implementação do cmdlet Stop-proc que declara conjuntos de parâmetros, especifica o conjunto de parâmetros padrão e pode aceitar um objeto de entrada.
+O código a seguir mostra uma implementação do cmdlet Stop-Proc que declara conjuntos de parâmetros, especifica o conjunto de parâmetros padrão e pode aceitar um objeto de entrada.
 
 Este exemplo mostra o objeto de entrada, como declarar conjuntos de parâmetros e como especificar o conjunto de parâmetros padrão a ser usado.
 

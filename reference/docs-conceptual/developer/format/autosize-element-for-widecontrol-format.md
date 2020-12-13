@@ -1,12 +1,14 @@
 ---
-title: Elemento AutoSize para WideControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 64e62142738916978b37eb1cd3a73536b0447099
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento AutoSize para WideControl (formato)
+description: Elemento AutoSize para WideControl (formato)
+ms.openlocfilehash: 42dfae337ba8805e1ddcff4269401afdb3e281f6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783867"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650005"
 ---
 # <a name="autosize-element-for-widecontrol-format"></a>Elemento AutoSize para WideControl (formato)
 
@@ -26,7 +28,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `A
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento DisplayError (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5d46c2fbd48f592db5ba1b33eb6cead8dc1c4698
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento DisplayError (formato)
+description: Elemento DisplayError (formato)
+ms.openlocfilehash: fb54df86a3558263687a8c417870495b7066f563
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774279"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649922"
 ---
 # <a name="displayerror-element-format"></a>Elemento DisplayError (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `D
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

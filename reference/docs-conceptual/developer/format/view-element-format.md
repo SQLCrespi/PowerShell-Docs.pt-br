@@ -1,12 +1,14 @@
 ---
-title: Elemento View (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c0c6fa373cfca3a55a62f201e1eabc6a1e308ef7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento View (formato)
+description: Elemento View (formato)
+ms.openlocfilehash: 6fed1304d94339cc90b6ae53e06483c08d937c12
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785023"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649737"
 ---
 # <a name="view-element-format"></a>Elemento View (formato)
 
@@ -35,7 +37,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

@@ -1,12 +1,14 @@
 ---
-title: Aliases de parâmetro | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Aliases de parâmetro
+description: Aliases de parâmetro
+ms.openlocfilehash: 0895e2c4df3a149ae75a9741fb65134a8e1122c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781980"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648509"
 ---
 # <a name="parameter-aliases"></a>Aliases de parâmetro
 
@@ -47,4 +49,4 @@ private string userName;
 
 [Como declarar parâmetros de cmdlet](./how-to-declare-cmdlet-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

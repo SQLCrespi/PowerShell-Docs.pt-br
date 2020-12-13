@@ -1,16 +1,18 @@
 ---
-title: Trabalhos em segundo plano | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Trabalhos em segundo plano
+description: Trabalhos em segundo plano
+ms.openlocfilehash: 5478789a2ee1f2eabc71a46673e3a707643cdba8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774840"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648610"
 ---
 # <a name="background-jobs"></a>Trabalhos em segundo plano
 
-Os cmdlets podem executar suas ações internamente ou como um*trabalho em segundo plano*do Windows PowerShell. Quando um cmdlet é executado como um trabalho em segundo plano, o trabalho é feito de forma assíncrona em seu próprio thread separado do thread de pipeline que o cmdlet está usando. Da perspectiva do usuário, quando um cmdlet é executado como um trabalho em segundo plano, o prompt de comando retorna imediatamente, mesmo se o trabalho demorar um longo período de tempo para ser concluído, e o usuário poderá continuar sem interrupções enquanto o trabalho for executado.
+Os cmdlets podem executar suas ações internamente ou como um *trabalho em segundo plano* do Windows PowerShell. Quando um cmdlet é executado como um trabalho em segundo plano, o trabalho é feito de forma assíncrona em seu próprio thread separado do thread de pipeline que o cmdlet está usando. Da perspectiva do usuário, quando um cmdlet é executado como um trabalho em segundo plano, o prompt de comando retorna imediatamente, mesmo se o trabalho demorar um longo período de tempo para ser concluído, e o usuário poderá continuar sem interrupções enquanto o trabalho for executado.
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>Trabalhos em segundo plano, trabalhos filho e o repositório de trabalhos
 
@@ -40,7 +42,7 @@ Para gravar um cmdlet que pode ser executado como um trabalho em segundo plano, 
 
 Para obter um exemplo de código, consulte [como dar suporte a trabalhos](./how-to-support-jobs.md).
 
-## <a name="background-job-related-apis"></a>APIs relacionadas a trabalho em segundo plano
+## <a name="background-job-related-apis"></a>APIs de Job-Related em segundo plano
 
 As APIs a seguir são fornecidas pelo Windows PowerShell para gerenciar trabalhos em segundo plano.
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento Alignment para TableColumnItem para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: baa858b7c15b5afcc7f6087e8a9eace8d8fb67bb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Alignment para TableColumnItem para TableControl (formato)
+description: Elemento Alignment para TableColumnItem para TableControl (formato)
+ms.openlocfilehash: d2bb81ff894cad44e16212891faffd22ee627383
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783901"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646122"
 ---
 # <a name="alignment-element-for-tablecolumnitem-for-tablecontrol-format"></a>Elemento Alignment para TableColumnItem para TableControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

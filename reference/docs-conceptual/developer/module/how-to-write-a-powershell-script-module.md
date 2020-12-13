@@ -1,12 +1,14 @@
 ---
-title: Como escrever um módulo de script do PowerShell | Microsoft Docs
 ms.date: 11/21/2019
-ms.openlocfilehash: dc387909a9e55df9f1846b02755e284c408f7dc6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como escrever um módulo de script do Windows PowerShell
+description: Como escrever um módulo de script do Windows PowerShell
+ms.openlocfilehash: c44b09a915501fb10773ab11cf13136d5035ba69
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784887"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649152"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>Como escrever um módulo de script do Windows PowerShell
 
@@ -80,9 +82,9 @@ As etapas a seguir descrevem como criar um módulo do PowerShell.
 7. Para remover um módulo do serviço ativo na sessão atual do PowerShell, use [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module).
 
    > [!NOTE]
-   > `Remove-Module`Remove um módulo da sessão atual do PowerShell, mas não desinstala o módulo nem exclui os arquivos do módulo.
+   > `Remove-Module` Remove um módulo da sessão atual do PowerShell, mas não desinstala o módulo nem exclui os arquivos do módulo.
 
-## <a name="show-calendar-code-example"></a>Mostrar-exemplo de código do calendário
+## <a name="show-calendar-code-example"></a>Exemplo de código de Show-Calendar
 
 O exemplo a seguir é um módulo de script que contém uma única função denominada `Show-Calendar` . Essa função exibe uma representação visual de um calendário. O exemplo contém as cadeias de caracteres de ajuda do PowerShell para Sinopse, descrição, valores de parâmetro e código. Quando o módulo é importado, o `Export-ModuleMember` comando garante que a `Show-Calendar` função seja exportada como um membro do módulo.
 

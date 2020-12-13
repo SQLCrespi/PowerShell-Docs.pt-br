@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo ValidateCount | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateCount
-- ValidateCount attribute, described
-- ValidateCount attribute
-ms.openlocfilehash: c013a354ee339bd14508fe30549673bc79d5c616
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo ValidateCount
+description: Declaração de atributo ValidateCount
+ms.openlocfilehash: 6acdd02a10ecc1bc2be0e6be88cf2f42a3673eb8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786315"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646278"
 ---
 # <a name="validatecount-attribute-declaration"></a>Declaração de atributo ValidateCount
 
@@ -24,7 +22,7 @@ O atributo ValidateCount especifica o número mínimo e máximo de argumentos pe
 
 #### <a name="parameters"></a>Parâmetros
 
-`MinLength`([System. Int32][]) necessário. Especifica o número mínimo de argumentos.
+`MinLength` ([System. Int32][]) necessário. Especifica o número mínimo de argumentos.
 
 `MaxLength`([System. Int32][]) necessário. Especifica o número máximo de argumentos.
 
@@ -48,10 +46,10 @@ O atributo ValidateCount especifica o número mínimo e máximo de argumentos pe
 
 [Como validar uma contagem de argumentos][]
 
-[Escrevendo um Cmdlet do Windows PowerShell][]
+[Writing a Windows PowerShell Cmdlet][] (Escrevendo um Cmdlet do Windows PowerShell)
 
 [Como validar uma contagem de argumentos]: how-to-validate-an-argument-count.md
-[Escrevendo um Cmdlet do Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
+[Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md (Escrevendo um Cmdlet do Windows PowerShell)
 
-[System. Int32]: /dotnet/api/System.Int32
+[System.Int32]: /dotnet/api/System.Int32
 [System. Management. Automation. ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute

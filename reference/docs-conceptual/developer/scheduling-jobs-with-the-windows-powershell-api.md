@@ -1,12 +1,14 @@
 ---
-title: Agendar trabalhos com a API do Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Agendar trabalhos com a API do Windows PowerShell
+description: Agendar trabalhos com a API do Windows PowerShell
+ms.openlocfilehash: c42b3ea311a5db4dcb6e11bb587f01f3deefe49b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786723"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647137"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Agendar trabalhos com a API do Windows PowerShell
 
@@ -32,7 +34,7 @@ Você define um trabalho do Windows PowerShell criando um dicionário de parâme
 
 |Nome do Parâmetro|Descrição|
 |---|---|
-|Nome|O nome do trabalho.|
+|Name|O nome do trabalho.|
 |ScriptBock|Um bloco de script do Windows PowerShell que especifica o que o trabalho faz.|
 |FilePath|Um caminho para um arquivo que contém o bloco de script do Windows PowerShell que especifica o que o trabalho faz.|
 |InitializationScript|Um bloco de script do Windows PowerShell que inicializa o trabalho.|

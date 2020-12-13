@@ -1,16 +1,14 @@
 ---
-title: Declaração de atributo ValidatePattern | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidatePattern
-- ValidatePattern attribute, described
-- ValidatePattern attribute
-ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo ValidatePattern
+description: Declaração de atributo ValidatePattern
+ms.openlocfilehash: 364f63d2c52563eaefe64bcbb2bbae511bccb074
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787794"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646176"
 ---
 # <a name="validatepattern-attribute-declaration"></a>Declaração de atributo ValidatePattern
 
@@ -27,7 +25,7 @@ Quando ValidatePattern é invocado em um cmdlet, o tempo de execução do Window
 
 #### <a name="parameters"></a>Parâmetros
 
-`RegexString`([System. String](/dotnet/api/System.String)) necessário. Especifica uma expressão regular que valida o argumento do parâmetro.
+`RegexString` ([System. String](/dotnet/api/System.String)) necessário. Especifica uma expressão regular que valida o argumento do parâmetro.
 
 Opções ([System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) parâmetro nomeado opcional. Especifica uma combinação de bits-bit que indica os sinalizadores [System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) que especificam opções de expressão regular.
 
@@ -45,4 +43,4 @@ Opções ([System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Te
 
 [System. Management. Automation. Validatepatternattribute](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

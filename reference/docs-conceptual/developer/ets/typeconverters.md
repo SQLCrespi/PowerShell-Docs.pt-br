@@ -1,12 +1,14 @@
 ---
-title: Conversores de tipo de sistema de tipo estendido
 ms.date: 07/09/2020
-ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Conversores de tipo de sistema de tipo estendido
+description: Conversores de tipo de sistema de tipo estendido
+ms.openlocfilehash: 0774e9eaae1187162b3d55cc45b902f7411a1f18
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786179"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648434"
 ---
 # <a name="ets-type-converters"></a>Conversores de tipo do ETS
 
@@ -18,25 +20,25 @@ Essas conversões padrão são verificadas antes de qualquer conversões persona
 
 | De (valueToConvert) |  Para (ResultType)  |                                                                               Retornos                                                                               |
 | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nulo                  | String            | ""                                                                                                                                                                  |
+| Nulo                  | Cadeia de caracteres            | ""                                                                                                                                                                  |
 | Nulo                  | Char              | '\0'                                                                                                                                                                |
-| Nulo                  | Numérico           | `0`do tipo especificado no parâmetro **ResultType** .                                                                                                          |
-| Nulo                  | Boolean           | Resultados da chamada para o `IsTrue(System.Object)(Null)` método.                                                                                                        |
+| Nulo                  | Numérico           | `0` do tipo especificado no parâmetro **ResultType** .                                                                                                          |
+| Nulo                  | Booliano           | Resultados da chamada para o `IsTrue(System.Object)(Null)` método.                                                                                                        |
 | Nulo                  | PSObject          | Novo objeto do tipo **PSObject**.                                                                                                                                    |
 | Nulo                  | Tipo sem valor    | Nulo.                                                                                                                                                               |
 | Nulo                  | &lt;T anulável&gt; | Nulo.                                                                                                                                                               |
 | Classe derivada         | Classe base        | **valueToConvert**                                                                                                                                                  |
 | Dado              | Void              | **AutomationNull. Value**                                                                                                                                            |
-| Dado              | String            | Chama o `ToString` mecanismo.                                                                                                                                         |
-| Dado              | Boolean           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
+| Dado              | Cadeia de caracteres            | Chama o `ToString` mecanismo.                                                                                                                                         |
+| Dado              | Booliano           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
 | Dado              | PSObject          | Resultados da chamada para o `AsPSObject(System.Object) (valueToConvert)` método.                                                                                         |
 | Dado              | Documento XML      | Converte **valueToConvert** em String e, em seguida, chama o construtor **XmlDocument** .                                                                                      |
 | Array                 | Array             | Tenta converter cada elemento da matriz.                                                                                                                      |
-| Singleton             | Array             | `Array[0]`é igual a **valueToConvert** que é convertido para o tipo de elemento da matriz.                                                                            |
+| Singleton             | Array             | `Array[0]` é igual a **valueToConvert** que é convertido para o tipo de elemento da matriz.                                                                            |
 | IDictionary           | Tabela de hash        | Resultados da chamada para Hashtable (valueToConvert).                                                                                                                       |
 | String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
-| String                | RegEx             | Resultados da chamada para `Regx(valueToConvert)` .                                                                                                                          |
-| String                | Digite              | Retorna o tipo apropriado usando o parâmetro **valueToConvert** para pesquisar **RunspaceConfiguration. assemblies**.                                                 |
+| Cadeia de caracteres                | RegEx             | Resultados da chamada para `Regx(valueToConvert)` .                                                                                                                          |
+| Cadeia de caracteres                | Tipo              | Retorna o tipo apropriado usando o parâmetro **valueToConvert** para pesquisar **RunspaceConfiguration. assemblies**.                                                 |
 | String                | Numérico           | Se **valueToConvert** for "", retornará `0` o **ResultType**. Caso contrário, a cultura "cultura invariável" é usada para produzir um valor numérico.                       |
 | Integer               | System.Enum       | Converte o inteiro para a constante se o inteiro for definido pela enumeração. Se o inteiro não for definido, uma exceção **PSInvalidCastException** será lançada. |
 
@@ -51,8 +53,8 @@ Os conversores de tipo do PowerShell são usados para converter um único tipo o
 - Por meio do arquivo de configuração de tipo
 - Aplicando o atributo **TypeConverterAttribute** à classe de destino
 
-Conversores de tipo do PowerShell, derivados da classe abstrata [PSTypeConverter](/dotnet/api/system.management.automation.pstypeconverter) , fornecem métodos para converter um objeto para um tipo específico ou de um tipo específico. Se o parâmetro **valueToConvert** contiver um objeto que tenha um conversor de tipo do PowerShell associado a ele, o PowerShell chamará o`PSTypeConverter.ConvertTo(System.Object, System.Type,System.IFormatProvider, System.Boolean)`
-método do conversor associado para converter o objeto para o tipo especificado pelo parâmetro **ResultType** . Se o parâmetro **ResultType** fizer referência a um tipo que tenha um conversor de tipo do PowerShell associado a ele, o PowerShell chamará o`PSTypeConverter.ConvertFrom(System.Object,System.Type, System.IFormatProvider, System.Boolean)`
+Conversores de tipo do PowerShell, derivados da classe abstrata [PSTypeConverter](/dotnet/api/system.management.automation.pstypeconverter) , fornecem métodos para converter um objeto para um tipo específico ou de um tipo específico. Se o parâmetro **valueToConvert** contiver um objeto que tenha um conversor de tipo do PowerShell associado a ele, o PowerShell chamará o `PSTypeConverter.ConvertTo(System.Object, System.Type,System.IFormatProvider, System.Boolean)`
+método do conversor associado para converter o objeto para o tipo especificado pelo parâmetro **ResultType** . Se o parâmetro **ResultType** fizer referência a um tipo que tenha um conversor de tipo do PowerShell associado a ele, o PowerShell chamará o `PSTypeConverter.ConvertFrom(System.Object,System.Type, System.IFormatProvider, System.Boolean)`
 método do conversor associado para converter o objeto do tipo especificado pelo parâmetro **ResultType** .
 
 ## <a name="system-type-converter"></a>Conversor de tipo de sistema

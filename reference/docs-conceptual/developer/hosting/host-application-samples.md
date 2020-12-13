@@ -1,18 +1,20 @@
 ---
-title: Exemplos de aplicativo host | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 260f813c8c8c8f699c6af209d64ad71f18c91c7a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostras de aplicativos host
+description: Amostras de aplicativos host
+ms.openlocfilehash: eee5fd2952cfbd1e577b9d0d79cbc956efc602d8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649273"
 ---
 # <a name="host-application-samples"></a>Amostras de aplicativos host
 
 Esta seção inclui um código de exemplo que é fornecido no SDK do Windows PowerShell 2,0.
 
- Você pode copiar o código de exemplo completo dos tópicos nesta seção ou usar os arquivos de origem instalados com o SDK. O [SDK (Software Development Kit) do Windows PowerShell 2,0](https://www.microsoft.com/download/details.aspx?id=2560) fornece arquivos leiame, arquivos de origem e arquivos de projeto do Visual Studio para cada exemplo.
+ Você pode copiar o código de exemplo completo dos tópicos nesta seção ou usar os arquivos de origem instalados com o SDK. O [SDK (Software Development Kit) do Windows PowerShell 2.0](https://www.microsoft.com/download/details.aspx?id=2560) fornece arquivos Leiame, arquivos de origem e arquivos de projeto do Visual Studio para cada exemplo.
 
 ## <a name="in-this-section"></a>Nesta seção
 

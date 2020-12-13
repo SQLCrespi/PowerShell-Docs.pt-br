@@ -1,12 +1,14 @@
 ---
-title: Adicionando relatórios de erros não conclusivos ao cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Adicionar relatórios de erros de não encerramento ao seu cmdlet
+description: Adicionar relatórios de erros de não encerramento ao seu cmdlet
+ms.openlocfilehash: 883ff2d522266495e409fb0d45f29713baa6f047
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784581"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648668"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Adicionar relatórios de erros de não encerramento ao seu cmdlet
 
@@ -35,9 +37,9 @@ Public Class GetProcCommand
 
 ## <a name="defining-parameters"></a>Definindo parâmetros
 
-Se necessário, o cmdlet deve definir parâmetros para processar a entrada. Esse cmdlet Get-proc define um parâmetro de **nome** conforme descrito em [adicionando parâmetros que processam a entrada de linha de comando](adding-parameters-that-process-command-line-input.md).
+Se necessário, o cmdlet deve definir parâmetros para processar a entrada. Este cmdlet Get-Proc define um parâmetro de **nome** , conforme descrito em [adicionando parâmetros que processam Command-Line entrada](adding-parameters-that-process-command-line-input.md).
 
-Aqui está a declaração de parâmetro para o parâmetro **Name** deste cmdlet Get-proc.
+Aqui está a declaração de parâmetro para o parâmetro **Name** deste Get-Proc cmdlet.
 
 ```csharp
 [Parameter(
@@ -76,7 +78,7 @@ Todos os cmdlets devem substituir pelo menos um dos métodos de processamento de
 > [!NOTE]
 > Seu cmdlet deve tratar cada registro da maneira mais independente possível.
 
-Esse cmdlet Get-proc substitui o método [System. Management. Automation. cmdlet. ProcessRecord][] para manipular o parâmetro **Name** para a entrada fornecida pelo usuário ou um script. Esse método obterá os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Os detalhes dessa substituição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
+Esse cmdlet Get-Proc substitui o método [System. Management. Automation. cmdlet. ProcessRecord][] para manipular o parâmetro **Name** para a entrada fornecida pelo usuário ou um script. Esse método obterá os processos para cada nome de processo solicitado ou todos os processos, se nenhum nome for fornecido. Os detalhes dessa substituição são fornecidos na [criação do seu primeiro cmdlet](creating-a-cmdlet-without-parameters.md).
 
 ### <a name="things-to-remember-when-reporting-errors"></a>Itens a serem lembrados ao relatar erros
 
@@ -110,7 +112,7 @@ As exceções sem tratamento não são detectadas pelo PowerShell nas seguintes 
 
 Qualquer um dos métodos de processamento de entrada pode relatar um erro de não encerramento para o fluxo de saída usando o método [System. Management. Automation. cmdlet. WriteError][] .
 
-Aqui está um exemplo de código desse cmdlet Get-proc que ilustra a chamada para [System. Management. Automation. cmdlet. WriteError][] de dentro da substituição do método [System. Management. Automation. cmdlet. ProcessRecord][] . Nesse caso, a chamada será feita se o cmdlet não encontrar um processo para um identificador de processo especificado.
+Aqui está um exemplo de código desse Get-Proc cmdlet que ilustra a chamada para [System. Management. Automation. cmdlet. WriteError][] de dentro da substituição do método [System. Management. Automation. cmdlet. ProcessRecord][] . Nesse caso, a chamada será feita se o cmdlet não encontrar um processo para um identificador de processo especificado.
 
 ```csharp
 protected override void ProcessRecord()
@@ -172,9 +174,9 @@ Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Get-proc de exemplo para ver se ele relata um erro:
+Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo executando-o na linha de comando. Vamos testar o cmdlet Get-Proc de exemplo para ver se ele relata um erro:
 
-- Inicie o PowerShell e use o cmdlet Get-proc para recuperar os processos chamados "TEST".
+- Inicie o PowerShell e use o cmdlet Get-Proc para recuperar os processos chamados "TEST".
 
   ```powershell
   get-proc -name test
@@ -192,7 +194,7 @@ Quando o cmdlet tiver sido registrado com o PowerShell, você poderá testá-lo 
 
 [Adicionar parâmetros que processam a entrada de pipeline](./adding-parameters-that-process-pipeline-input.md)
 
-[Adicionando parâmetros que processam a entrada de linha de comando](./adding-parameters-that-process-command-line-input.md)
+[Adicionando parâmetros que processam Command-Line entrada](./adding-parameters-that-process-command-line-input.md)
 
 [Criando seu primeiro cmdlet](./creating-a-cmdlet-without-parameters.md)
 

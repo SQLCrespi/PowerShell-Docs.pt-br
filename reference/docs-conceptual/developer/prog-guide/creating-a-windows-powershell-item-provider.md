@@ -1,15 +1,14 @@
 ---
-title: Criando um provedor de itens do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- item providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], item provider
-ms.openlocfilehash: b00af7d6fbb75b08027dc18ee6647472d23b83b7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de itens do Windows PowerShell
+description: Criar um provedor de itens do Windows PowerShell
+ms.openlocfilehash: f98ea90bf9ce7222076a91fb26dc42977c70bff2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779046"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645180"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Criar um provedor de itens do Windows PowerShell
 
@@ -99,7 +98,7 @@ Este provedor não implementa esse método. No entanto, o código a seguir é a 
 
 Para definir um item, o provedor de item do Windows PowerShell deve substituir o método [System. Management. Automation. Provider. docmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) para dar suporte a chamadas do `Set-Item` cmdlet. Esse método define o valor do item no caminho especificado.
 
-Este provedor não fornece uma substituição para o método [System. Management. Automation. Provider. createcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) . No entanto, a implementação padrão desse método é a seguinte:
+Este provedor não fornece uma substituição para o método  [System. Management. Automation. Provider. createcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) . No entanto, a implementação padrão desse método é a seguinte:
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitem](Msh_samplestestcmdlets#testprovidersetitem)]  -->
 

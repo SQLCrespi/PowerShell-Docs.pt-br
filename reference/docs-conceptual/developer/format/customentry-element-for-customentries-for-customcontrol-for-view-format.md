@@ -1,12 +1,14 @@
 ---
-title: Elemento CustomEntry para CustomEntries para CustomControl para exibição (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a13e83ec941bed80eaab02e40131054432fcce00
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento CustomEntry para CustomEntries para CustomControl para View (formato)
+description: Elemento CustomEntry para CustomEntries para CustomControl para View (formato)
+ms.openlocfilehash: ff481f13e6f16267bdda4c3053faebc96d9a6d3a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785873"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646050"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>Elemento CustomEntry para CustomEntries para CustomControl para View (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

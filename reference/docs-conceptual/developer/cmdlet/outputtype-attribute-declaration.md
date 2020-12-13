@@ -1,12 +1,14 @@
 ---
-title: Declaração de atributo OutputType | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a4cc874031bba092cfef6041bef0e19e6af3f09c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Declaração de atributo OutputType
+description: Declaração de atributo OutputType
+ms.openlocfilehash: b5e33346e9ac29c13323781d62daffab892573a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786536"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646458"
 ---
 # <a name="outputtype-attribute-declaration"></a>Declaração de atributo OutputType
 

@@ -1,12 +1,14 @@
 ---
-title: Parâmetros de filtro de entrada | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ccaf6c4859d2a4f14866ec1252b999e90e1a830f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros de filtro de entrada
+description: Parâmetros de filtro de entrada
+ms.openlocfilehash: 419ffea2afb4aa534a3e19ecdfce6d6af1da46a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784037"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648540"
 ---
 # <a name="input-filter-parameters"></a>Parâmetros de filtro de entrada
 

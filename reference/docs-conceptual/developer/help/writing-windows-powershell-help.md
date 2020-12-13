@@ -1,12 +1,14 @@
 ---
-title: Gravando a ajuda do Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: 8807fe48c6354022900738de0b912c55dec9febb
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Gravando a ajuda do Windows PowerShell
+description: Gravando a ajuda do Windows PowerShell
+ms.openlocfilehash: 3e34d76b61ed50ae47e8bfa7e6fe5e990e36dd68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892890"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649500"
 ---
 # <a name="writing-windows-powershell-help"></a>Gravando a ajuda do Windows PowerShell
 

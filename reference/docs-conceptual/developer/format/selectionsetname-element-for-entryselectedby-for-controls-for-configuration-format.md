@@ -1,12 +1,14 @@
 ---
-title: Elemento SelectionSetName para EntrySelectedBy para controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 72072d8d13e6ca22afdb9bca2e0237d29ba0594f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento SelectionSetName para EntrySelectedBy para Controls para Configuration (formato)
+description: Elemento SelectionSetName para EntrySelectedBy para Controls para Configuration (formato)
+ms.openlocfilehash: b775aa8a3184aa3ebcbda17a8e3191c69d67a700
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787556"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645732"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>Elemento SelectionSetName para EntrySelectedBy para Controls para Configuration (formato)
 
@@ -31,7 +33,7 @@ Nenhum
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

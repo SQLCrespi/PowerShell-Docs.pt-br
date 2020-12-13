@@ -1,12 +1,14 @@
 ---
-title: Visão geral da ajuda atualizável
 ms.date: 03/22/2012
-ms.openlocfilehash: 142bac764c93728d302707504d6d3fb2d50a3a7b
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Visão geral da ajuda atualizável
+description: Visão geral da ajuda atualizável
+ms.openlocfilehash: b8008b7c28d94ebaac135934606042e6a6053591
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892312"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649575"
 ---
 # <a name="updatable-help-overview"></a>Visão geral da ajuda atualizável
 

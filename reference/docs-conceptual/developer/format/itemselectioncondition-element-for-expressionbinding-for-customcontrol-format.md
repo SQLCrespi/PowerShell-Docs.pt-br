@@ -1,12 +1,14 @@
 ---
-title: Elemento ItemSelectionCondition para ExpressionBinding para CustomControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6a5c66a63c02980b16c2d2d9dd689410c8aec51c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ItemSelectionCondition para ExpressionBinding para CustomControl (formato)
+description: Elemento ItemSelectionCondition para ExpressionBinding para CustomControl (formato)
+ms.openlocfilehash: 38c88ad47e57cd20902c6b8aabdb0b8e8b682ba4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781181"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648042"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-customcontrol-format"></a>Elemento ItemSelectionCondition para ExpressionBinding para CustomControl (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `I
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
