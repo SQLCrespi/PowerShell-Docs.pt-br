@@ -1,34 +1,36 @@
 ---
-title: Exemplo de Runspace01 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Runspace01
+description: Amostra Runspace01
+ms.openlocfilehash: f47f79dd507db258119016353dc5a72d110d9252
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772188"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657921"
 ---
-# <a name="runspace01-sample"></a><span data-ttu-id="a2ab5-102">Amostra Runspace01</span><span class="sxs-lookup"><span data-stu-id="a2ab5-102">Runspace01 Sample</span></span>
+# <a name="runspace01-sample"></a><span data-ttu-id="0aa79-103">Amostra Runspace01</span><span class="sxs-lookup"><span data-stu-id="0aa79-103">Runspace01 Sample</span></span>
 
-<span data-ttu-id="a2ab5-103">Este exemplo mostra como usar a classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) de forma síncrona.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="a2ab5-104">O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna objetos [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) para cada processo em execução no computador local.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="a2ab5-105">Os valores das propriedades [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) e [System. Diagnostics. Process. HandleCount \*](/dotnet/api/System.Diagnostics.Process.Handlecount) são extraídos dos objetos retornados e exibidos em uma janela de console.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-105">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
+<span data-ttu-id="0aa79-104">Este exemplo mostra como usar a classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) de forma síncrona.</span><span class="sxs-lookup"><span data-stu-id="0aa79-104">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="0aa79-105">O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna objetos [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) para cada processo em execução no computador local.</span><span class="sxs-lookup"><span data-stu-id="0aa79-105">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="0aa79-106">Os valores das propriedades [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) e [System. Diagnostics. Process. HandleCount \*](/dotnet/api/System.Diagnostics.Process.Handlecount) são extraídos dos objetos retornados e exibidos em uma janela de console.</span><span class="sxs-lookup"><span data-stu-id="0aa79-106">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a2ab5-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a2ab5-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0aa79-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0aa79-107">Requirements</span></span>
 
- <span data-ttu-id="a2ab5-107">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-107">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="0aa79-108">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="0aa79-108">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="a2ab5-108">Demonstra</span><span class="sxs-lookup"><span data-stu-id="a2ab5-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="0aa79-109">Demonstra</span><span class="sxs-lookup"><span data-stu-id="0aa79-109">Demonstrates</span></span>
 
-- <span data-ttu-id="a2ab5-109">Criando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar um comando.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
+- <span data-ttu-id="0aa79-110">Criando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) para executar um comando.</span><span class="sxs-lookup"><span data-stu-id="0aa79-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
 
-- <span data-ttu-id="a2ab5-110">Adicionar um comando ao pipeline do objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="a2ab5-110">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="0aa79-111">Adicionar um comando ao pipeline do objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="0aa79-111">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="a2ab5-111">Executando o comando de forma síncrona.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-111">Running the command synchronously.</span></span>
+- <span data-ttu-id="0aa79-112">Executando o comando de forma síncrona.</span><span class="sxs-lookup"><span data-stu-id="0aa79-112">Running the command synchronously.</span></span>
 
-- <span data-ttu-id="a2ab5-112">Usando objetos [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) para extrair propriedades dos objetos retornados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-112">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
+- <span data-ttu-id="0aa79-113">Usando objetos [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) para extrair propriedades dos objetos retornados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="0aa79-113">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a2ab5-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a2ab5-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0aa79-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0aa79-114">Example</span></span>
 
- <span data-ttu-id="a2ab5-114">Este exemplo executa o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) de forma síncrona no runspace padrão fornecido pelo Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a2ab5-114">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
+ <span data-ttu-id="0aa79-115">Este exemplo executa o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) de forma síncrona no runspace padrão fornecido pelo Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0aa79-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -85,4 +87,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a2ab5-115">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="a2ab5-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0aa79-116">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="0aa79-116">See Also</span></span>

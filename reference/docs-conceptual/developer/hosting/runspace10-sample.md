@@ -1,40 +1,42 @@
 ---
-title: Exemplo de Runspace10 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Amostra Runspace10
+description: Amostra Runspace10
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784938"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657583"
 ---
-# <a name="runspace10-sample"></a><span data-ttu-id="5161f-102">Amostra Runspace10</span><span class="sxs-lookup"><span data-stu-id="5161f-102">Runspace10 Sample</span></span>
+# <a name="runspace10-sample"></a><span data-ttu-id="02d37-103">Amostra Runspace10</span><span class="sxs-lookup"><span data-stu-id="02d37-103">Runspace10 Sample</span></span>
 
-<span data-ttu-id="5161f-103">Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="5161f-103">This sample shows how to create a default initial session state, how to add a cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), how to create a runspace that uses the initial session state, and how to run the command by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="02d37-104">Este exemplo mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="02d37-104">This sample shows how to create a default initial session state, how to add a cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), how to create a runspace that uses the initial session state, and how to run the command by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5161f-104">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5161f-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="02d37-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02d37-105">Requirements</span></span>
 
-<span data-ttu-id="5161f-105">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="5161f-105">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="02d37-106">Este exemplo requer o Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="02d37-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="5161f-106">Demonstra</span><span class="sxs-lookup"><span data-stu-id="5161f-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="02d37-107">Demonstra</span><span class="sxs-lookup"><span data-stu-id="02d37-107">Demonstrates</span></span>
 
-<span data-ttu-id="5161f-107">Este exemplo demonstra o seguinte.</span><span class="sxs-lookup"><span data-stu-id="5161f-107">This sample demonstrates the following.</span></span>
+<span data-ttu-id="02d37-108">Este exemplo demonstra o seguinte.</span><span class="sxs-lookup"><span data-stu-id="02d37-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="5161f-108">Criando um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="5161f-108">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="02d37-109">Criando um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="02d37-109">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="5161f-109">Adicionar um cmdlet (definido pelo aplicativo host) ao objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="5161f-109">Adding a cmdlet (defined by the Host application) to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="02d37-110">Adicionar um cmdlet (definido pelo aplicativo host) ao objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .</span><span class="sxs-lookup"><span data-stu-id="02d37-110">Adding a cmdlet (defined by the Host application) to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="5161f-110">Criando um objeto [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) que usa o objeto.</span><span class="sxs-lookup"><span data-stu-id="5161f-110">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object that uses the object.</span></span>
+- <span data-ttu-id="02d37-111">Criando um objeto [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) que usa o objeto.</span><span class="sxs-lookup"><span data-stu-id="02d37-111">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object that uses the object.</span></span>
 
-- <span data-ttu-id="5161f-111">Criação de um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) que usa o objeto [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) .</span><span class="sxs-lookup"><span data-stu-id="5161f-111">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
+- <span data-ttu-id="02d37-112">Criação de um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) que usa o objeto [System. Management. Automation. Runspaces. runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) .</span><span class="sxs-lookup"><span data-stu-id="02d37-112">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
 
-- <span data-ttu-id="5161f-112">Adicionar o comando ao pipeline do objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="5161f-112">Adding the command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="02d37-113">Adicionar o comando ao pipeline do objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="02d37-113">Adding the command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="5161f-113">Extraindo propriedades dos objetos [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) retornados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="5161f-113">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
+- <span data-ttu-id="02d37-114">Extraindo propriedades dos objetos [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) retornados pelo comando.</span><span class="sxs-lookup"><span data-stu-id="02d37-114">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5161f-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5161f-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="02d37-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="02d37-115">Example</span></span>
 
-<span data-ttu-id="5161f-115">Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto.</span><span class="sxs-lookup"><span data-stu-id="5161f-115">This sample creates a runspace that uses an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to define the elements that are available when the runspace is opened.</span></span> <span data-ttu-id="5161f-116">Neste exemplo, o cmdlet Get-proc (definido pelo aplicativo host) é adicionado ao estado de sessão inicial e o cmdlet é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="5161f-116">In this sample, the Get-Proc cmdlet (defined by the Host application) is added to the initial session state, and the cmdlet is run synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="02d37-116">Este exemplo cria um runspace que usa um objeto [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) para definir os elementos que estão disponíveis quando o runspace é aberto.</span><span class="sxs-lookup"><span data-stu-id="02d37-116">This sample creates a runspace that uses an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to define the elements that are available when the runspace is opened.</span></span> <span data-ttu-id="02d37-117">Neste exemplo, o cmdlet Get-Proc (definido pelo aplicativo host) é adicionado ao estado de sessão inicial e o cmdlet é executado de forma síncrona usando um objeto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="02d37-117">In this sample, the Get-Proc cmdlet (defined by the Host application) is added to the initial session state, and the cmdlet is run synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -148,6 +150,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5161f-117">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="5161f-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02d37-118">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="02d37-118">See Also</span></span>
 
-[<span data-ttu-id="5161f-118">Escrever um aplicativo host do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5161f-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="02d37-119">Escrever um aplicativo host do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="02d37-119">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
