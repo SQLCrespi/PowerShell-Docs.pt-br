@@ -1,12 +1,14 @@
 ---
-title: Como declarar conjuntos de parâmetros | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e6d06a9a78356693fe7a338dc5c9207044b23441
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como declarar conjuntos de parâmetros
+description: Como declarar conjuntos de parâmetros
+ms.openlocfilehash: bd4d504a9fe6c7f7626901c49bc08851244f0995
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784156"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667055"
 ---
 # <a name="how-to-declare-parameter-sets"></a>Como declarar conjuntos de parâmetros
 
@@ -60,4 +62,4 @@ Este exemplo mostra como definir dois conjuntos de parâmetros quando você decl
 
 [Conjuntos de parâmetros do cmdlet](./cmdlet-parameter-sets.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

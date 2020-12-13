@@ -1,12 +1,14 @@
 ---
-title: Carregando e exportando dados de formatação | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Carregar e exportar dados de formatação
+description: Carregar e exportar dados de formatação
+ms.openlocfilehash: 38857526801051bf6d31d300d5be1a3fd2c80391
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781113"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666511"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Carregar e exportar dados de formatação
 
@@ -28,7 +30,7 @@ Quando um arquivo de formatação é carregado, ele é adicionado a uma lista in
 
 ## <a name="storing-your-formatting-file"></a>Armazenando o arquivo de formatação
 
-Não há nenhum requisito para o local em que os arquivos de formatação são armazenados no disco. No entanto, é altamente recomendável que você os armazene na seguinte pasta:`user\documents\windowspowershell\`
+Não há nenhum requisito para o local em que os arquivos de formatação são armazenados no disco. No entanto, é altamente recomendável que você os armazene na seguinte pasta: `user\documents\windowspowershell\`
 
 #### <a name="loading-a-format-file-using-import-formatdata"></a>Carregando um arquivo de formato usando Import-FormatData
 

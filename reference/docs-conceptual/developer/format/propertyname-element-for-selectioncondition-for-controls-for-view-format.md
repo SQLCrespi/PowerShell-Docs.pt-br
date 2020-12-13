@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para SelectionCondition para controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 251fc129896cfa4a6255330e23854b014675ac5f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para SelectionCondition para Controls para View (formato)
+description: Elemento PropertyName para SelectionCondition para Controls para View (formato)
+ms.openlocfilehash: 7783e5a9b7f8ec3d3077d87778e9f77ffe858a7f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780807"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665865"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-view-format"></a>Elemento PropertyName para SelectionCondition para Controls para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `P
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

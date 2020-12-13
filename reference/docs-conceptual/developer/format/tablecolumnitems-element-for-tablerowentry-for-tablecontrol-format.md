@@ -1,12 +1,14 @@
 ---
-title: Elemento TableColumnItems para TableRowEntry para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 661b938e8db0e68e10dc05f552e4f3a14608bc55
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento TableColumnItems para TableRowEntry para TableControl (formato)
+description: Elemento TableColumnItems para TableRowEntry para TableControl (formato)
+ms.openlocfilehash: 4d600a366d2be1c453f05b301bdf575351dd51c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785142"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667752"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>Elemento TableColumnItems para TableRowEntry para TableControl (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

@@ -1,14 +1,14 @@
 ---
-title: Como validar uma contagem de argumentos | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateCount attribute, example
-ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como validar uma contagem de argumentos
+description: Como validar uma contagem de argumentos
+ms.openlocfilehash: 46a32d61138fb50bceea98171f76749c9d96734d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782116"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666936"
 ---
 # <a name="how-to-validate-an-argument-count"></a>Como validar uma contagem de argumentos
 
@@ -39,4 +39,4 @@ Para obter mais informações sobre como declarar esse atributo, consulte [decla
 
 [Declaração de atributo ValidateCount](./validatecount-attribute-declaration.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

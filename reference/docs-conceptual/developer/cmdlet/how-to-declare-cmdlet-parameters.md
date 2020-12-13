@@ -1,12 +1,14 @@
 ---
-title: Como declarar parâmetros de cmdlet | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como declarar parâmetros de cmdlet
+description: Como declarar parâmetros de cmdlet
+ms.openlocfilehash: ed53f9788c9afb142b137e08966dff33551b9d0f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774381"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667089"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Como declarar parâmetros de cmdlet
 
@@ -115,4 +117,4 @@ Para obter mais informações sobre o atributo Alias, consulte [declaração de 
 
 [Declaração de atributo de alias](./alias-attribute-declaration.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

@@ -1,12 +1,14 @@
 ---
-title: Elemento enumeracollection para ExpressionBinding para CustomControl para exibição (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 91505ca2661c6bfd0dcb2bbdb26a645d237a7fb9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EnumerateCollection para ExpressionBinding para CustomControl para View (formato)
+description: Elemento EnumerateCollection para ExpressionBinding para CustomControl para View (formato)
+ms.openlocfilehash: e1df19460afbe813d6a53b88664629662d4abb74
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773922"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667973"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Elemento EnumerateCollection para ExpressionBinding para CustomControl para View (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

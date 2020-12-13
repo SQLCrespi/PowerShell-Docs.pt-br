@@ -1,12 +1,14 @@
 ---
-title: Conjuntos de cmdlets | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Conjuntos de cmdlets
+description: Conjuntos de cmdlets
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774806"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668228"
 ---
 # <a name="cmdlet-sets"></a>Conjuntos de cmdlets
 
@@ -26,7 +28,7 @@ Lembre-se das seguintes coisas ao implementar uma classe base.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra a implementação de uma classe base que é usada pelo cmdlet Get-proc e Stop-proc que deriva da mesma classe base.
+O exemplo a seguir mostra a implementação de uma classe base que é usada por Get-Proc e Stop-Proc cmdlet que deriva da mesma classe base.
 
 ```csharp
 using System;

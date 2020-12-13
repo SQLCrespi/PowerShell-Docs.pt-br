@@ -1,12 +1,14 @@
 ---
-title: Como validar a entrada de parâmetro | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f3e43ae4cd421e2beea9ef8419c87e818ed65b6b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como validar a entrada de parâmetro
+description: Como validar a entrada de parâmetro
+ms.openlocfilehash: d39f3f61513cbcf2358446c57f403dc7cce4e0c9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781929"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668160"
 ---
 # <a name="how-to-validate-parameter-input"></a>Como validar a entrada de parâmetro
 

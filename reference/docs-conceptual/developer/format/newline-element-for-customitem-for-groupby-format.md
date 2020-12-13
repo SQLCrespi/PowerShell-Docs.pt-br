@@ -1,12 +1,14 @@
 ---
-title: Elemento de nova linha para CustomItem para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c998c9a85238feaa8bc48fd3eb4f66b4f7f8d66
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento NewLine para CustomItem para GroupBy (formato)
+description: Elemento NewLine para CustomItem para GroupBy (formato)
+ms.openlocfilehash: 7068288e40bf4b7539290ab5deb5f8fe086c4c9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783510"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666392"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>Elemento NewLine para CustomItem para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `N
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento ScriptBlock para ItemSelectionCondition para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 38dc952bfadd6aed24bae8cbef05adcd22e61dd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ScriptBlock para ItemSelectionCondition para ListControl (formato)
+description: Elemento ScriptBlock para ItemSelectionCondition para ListControl (formato)
+ms.openlocfilehash: 1e518f898e0e1e62ca64f9897b1323cc6dd89ae9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787624"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665063"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-listcontrol-format"></a>Elemento ScriptBlock para ItemSelectionCondition para ListControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e os elementos pai do 
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

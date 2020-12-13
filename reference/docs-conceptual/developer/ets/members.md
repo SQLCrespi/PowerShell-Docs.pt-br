@@ -1,12 +1,14 @@
 ---
-title: Membros da classe do sistema de tipo estendido
 ms.date: 07/09/2020
-ms.openlocfilehash: 24a57b7fd0b3db47d0d7138859aa0502ca9016f0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Membros da classe do sistema de tipo estendido
+description: Membros da classe do sistema de tipo estendido
+ms.openlocfilehash: 06488ce423f363a285ab53b21ab45989654346dc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786264"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666834"
 ---
 # <a name="extended-type-system-class-members"></a>Membros da classe do sistema de tipo estendido
 
@@ -22,7 +24,7 @@ A classe **PSMemberInfo** serve como uma classe base para todos os tipos de memb
 
 ## <a name="accessing-members"></a>Acessando membros
 
-As coleções de membros podem ser acessadas por meio das propriedades **Members**, **Methods**e **Properties** do objeto **PSObject** .
+As coleções de membros podem ser acessadas por meio das propriedades **Members**, **Methods** e **Properties** do objeto **PSObject** .
 
 ## <a name="ets-properties"></a>Propriedades do ETS
 

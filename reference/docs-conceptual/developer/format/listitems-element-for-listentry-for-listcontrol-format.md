@@ -1,12 +1,14 @@
 ---
-title: Elemento ListItems para ListEntry para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ListItems para ListEntry para ListControl (formato)
+description: Elemento ListItems para ListEntry para ListControl (formato)
+ms.openlocfilehash: 1553c81bc559020223a3c1fea10336baf017c9a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666528"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>Elemento ListItems para ListEntry para ListControl (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

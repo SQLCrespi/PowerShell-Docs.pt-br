@@ -1,12 +1,14 @@
 ---
-title: Exibição de lista (básica) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74ff8f6eee0a9358c123455aa00736a11e7f085d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Exibição de lista (Básica)
+description: Exibição de lista (Básica)
+ms.openlocfilehash: d80ac9c6143b976d8bc13e2b184e4f5a2f8a37ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783544"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666630"
 ---
 # <a name="list-view-basic"></a>Exibição de lista (Básica)
 

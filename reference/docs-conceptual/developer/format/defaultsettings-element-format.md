@@ -1,12 +1,14 @@
 ---
-title: Elemento DefaultSettings (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento DefaultSettings (formato)
+description: Elemento DefaultSettings (formato)
+ms.openlocfilehash: 1c2055b38a416fe2d75fa20c6c87e92d9eed4285
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787726"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666715"
 ---
 # <a name="defaultsettings-element-format"></a>Elemento DefaultSettings (formato)
 
@@ -32,7 +34,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `D
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

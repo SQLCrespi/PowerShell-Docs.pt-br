@@ -1,12 +1,14 @@
 ---
-title: Elemento Name para controle de controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3d45ba98b909ebee18e01d2b6985a48906ce39d9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Name para Control para Controls para Configuration (formato)
+description: Elemento Name para Control para Controls para Configuration (formato)
+ms.openlocfilehash: 0c1c83f827482886ca742f2c0174e8383f87fb52
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783527"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666494"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Elemento Name para Control para Controls para Configuration (formato)
 
@@ -27,11 +29,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `N
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

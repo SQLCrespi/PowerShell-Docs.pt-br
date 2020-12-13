@@ -1,15 +1,14 @@
 ---
-title: Estado de sessão do Windows PowerShell | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Cmdlets [PowerShell], session state
-- session state [PowerShell]
-ms.openlocfilehash: 7436e3ebd0e099ead81f9fea01a0a2994b982213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Estado de sessão do Windows PowerShell
+description: Estado de sessão do Windows PowerShell
+ms.openlocfilehash: 51de92f1f392f708cf49c7ccb4a6808fd628076c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783935"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668126"
 ---
 # <a name="windows-powershell-session-state"></a>Estado de sessão do Windows PowerShell
 
@@ -21,7 +20,7 @@ Da perspectiva do desenvolvedor, uma sessão do Windows PowerShell refere-se ao 
 
 Os Estados de sessão de módulo são criados sempre que o módulo ou um de seus módulos aninhados é importado para a sessão. Quando um módulo exporta um elemento, como um cmdlet, uma função ou um script, uma referência a esse elemento é adicionada ao estado de sessão global da sessão. No entanto, quando o elemento é executado, ele é executado dentro do estado de sessão do módulo.
 
-## <a name="session-state-data"></a>Dados de estado da sessão
+## <a name="session-state-data"></a>Session-State dados
 
 Os dados de estado da sessão podem ser públicos ou privados. Os dados públicos estão disponíveis para chamadas de fora do estado da sessão enquanto dados privados estão disponíveis somente para chamadas de dentro do estado da sessão. Por exemplo, um módulo pode ter uma função particular que pode ser chamada somente pelo módulo ou apenas internamente por um elemento público que tenha sido exportado. Isso é semelhante aos membros públicos e privados de um tipo de .NET Framework.
 
@@ -37,7 +36,7 @@ Os dados de estado da sessão são armazenados pela instância atual do mecanism
 
 - Informações da variável de estado da sessão
 
-## <a name="accessing-session-state-data-within-cmdlets"></a>Acessando dados de estado da sessão em cmdlets
+## <a name="accessing-session-state-data-within-cmdlets"></a>Acessando dados Session-State dentro de cmdlets
 
 Os cmdlets podem acessar dados de estado de sessão indiretamente por meio da propriedade [System. Management. Automation. PSCmdlet. SessionState *](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) da classe cmdlet ou diretamente por meio da classe [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) . A classe [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) fornece propriedades que podem ser usadas para investigar diferentes tipos de dados de estado de sessão.
 
@@ -49,6 +48,6 @@ Os cmdlets podem acessar dados de estado de sessão indiretamente por meio da pr
 
 [Cmdlets do Windows PowerShell](./cmdlet-overview.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
-[SDK do shell do Windows PowerShell](../windows-powershell-reference.md)
+[SDK do Shell do Windows PowerShell](../windows-powershell-reference.md)

@@ -1,12 +1,14 @@
 ---
-title: Elemento Expand (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: deee832254bb8a774ee2c1f5bd451d3ced1bd47a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Expand (formato)
+description: Elemento Expand (formato)
+ms.openlocfilehash: 518e132e3e74b921d4e51966fc60088a22ef63f1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783646"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667939"
 ---
 # <a name="expand-element-format"></a>Elemento Expand (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 
@@ -50,7 +52,7 @@ Especifique um dos seguintes valores:
 
 ## <a name="remarks"></a>Comentários
 
-Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface **System. Collections. ICollection** .
+Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface  **System. Collections. ICollection** .
 
 O comportamento padrão é exibir apenas as propriedades dos objetos na coleção.
 

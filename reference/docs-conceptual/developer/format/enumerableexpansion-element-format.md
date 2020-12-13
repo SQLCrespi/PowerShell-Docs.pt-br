@@ -1,12 +1,14 @@
 ---
-title: Elemento EnumerableExpansion (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 81a8959c19502a2e56f4cfa48a1e480509d84b6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EnumerableExpansion (formato)
+description: Elemento EnumerableExpansion (formato)
+ms.openlocfilehash: 207ad99d5335e99701660159ab77279b55b0b6b5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774041"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668007"
 ---
 # <a name="enumerableexpansion-element-format"></a>Elemento EnumerableExpansion (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -46,7 +48,7 @@ Nenhum.
 
 ## <a name="remarks"></a>Comentários
 
-Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface **System. Collections. ICollection** .
+Esse elemento é usado para definir como os objetos de coleção e os objetos na coleção são exibidos. Nesse caso, um objeto de coleção refere-se a qualquer objeto que ofereça suporte à interface  **System. Collections. ICollection** .
 
 O comportamento padrão é exibir apenas as propriedades dos objetos na coleção.
 

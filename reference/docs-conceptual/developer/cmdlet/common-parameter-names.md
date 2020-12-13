@@ -1,12 +1,14 @@
 ---
-title: Nomes de parâmetro comuns | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Nomes de parâmetro comuns
+description: Nomes de parâmetro comuns
+ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782218"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668211"
 ---
 # <a name="common-parameter-names"></a>Nomes de parâmetro comuns
 
@@ -67,7 +69,7 @@ Tipo de dados: cadeia de caracteres
 
 Esse parâmetro especifica a variável na qual as mensagens de aviso podem ser salvas. Para acrescentar a essa variável, use +*VarName* em vez de limpar e definir a variável.
 
-## <a name="risk-mitigation-parameters"></a>Parâmetros de mitigação de risco
+## <a name="risk-mitigation-parameters"></a>Risk-Mitigation parâmetros
 
 Os parâmetros a seguir são adicionados aos cmdlets que solicitam confirmação antes de executarem suas ações. Para obter mais informações sobre solicitações de confirmação, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md). Esses parâmetros são definidos pela classe [System. Management. Automation. Internal. Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) .
 
@@ -101,6 +103,6 @@ Esse parâmetro especifica se o cmdlet usará a transação atual para executar 
 
 [System. Management. Automation. Internal. transactionparameters](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

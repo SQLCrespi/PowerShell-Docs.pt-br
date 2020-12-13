@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para ExpressionBinding para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 021cfec8418ec278b2c25a5ec6f3236aeb4ad0ce
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para ExpressionBinding para GroupBy (formato)
+description: Elemento PropertyName para ExpressionBinding para GroupBy (formato)
+ms.openlocfilehash: af617b146574ffa051eb1592413b12a268009763
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785618"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666171"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-groupby-format"></a>Elemento PropertyName para ExpressionBinding para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `P
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

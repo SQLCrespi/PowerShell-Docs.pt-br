@@ -1,12 +1,14 @@
 ---
-title: Elemento FormatString para TableColumnItem para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 848583e697d0ab7bd5b017c14c47aba3c51a3c17
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento FormatString para TableColumnItem para TableControl (formato)
+description: Elemento FormatString para TableColumnItem para TableControl (formato)
+ms.openlocfilehash: 3d386e61ac321c05e0b298019c2298f76b391b21
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781538"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667888"
 ---
 # <a name="formatstring-element-for-tablecolumnitem-for-tablecontrol-format"></a>Elemento FormatString para TableColumnItem para TableControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `F
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

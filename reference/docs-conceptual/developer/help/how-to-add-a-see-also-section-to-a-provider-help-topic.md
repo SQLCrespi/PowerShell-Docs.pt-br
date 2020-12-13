@@ -1,12 +1,14 @@
 ---
-title: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
 ms.date: 09/12/2016
-ms.openlocfilehash: 54adf4bb941888583eb749b7b5322b27d84c7af7
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
+description: Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
+ms.openlocfilehash: df0b14ba84e04baf404081944ef62ef6745d74b2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893468"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667650"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>Como adicionar uma seção “veja também” a um tópico de ajuda do provedor
 

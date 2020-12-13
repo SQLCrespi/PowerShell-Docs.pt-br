@@ -1,12 +1,14 @@
 ---
-title: Elemento Controls para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 26b7e73afd465b1be9632cd71a75e4be6cc4aeca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Controls para View (formato)
+description: Elemento Controls para View (formato)
+ms.openlocfilehash: 0e41f9ad35a0c45b615251417198a47bc7feb760
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786162"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668058"
 ---
 # <a name="controls-element-for-view-format"></a>Elemento Controls para View (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem os atributos, os elementos filho e os elementos p
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

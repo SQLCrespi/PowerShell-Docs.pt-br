@@ -1,12 +1,14 @@
 ---
-title: Elemento ListItem para ListItems para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ListItem para ListItems para ListControl (formato)
+description: Elemento ListItem para ListItems para ListControl (formato)
+ms.openlocfilehash: 999491b7851aa4fa21667ad376d7e9853500ca08
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785669"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666545"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>Elemento ListItem para ListItems para ListControl (formato)
 

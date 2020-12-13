@@ -1,12 +1,14 @@
 ---
-title: Nomear arquivos de ajuda
 ms.date: 09/12/2016
-ms.openlocfilehash: ea95e6d6c87e553ed11fe6e3f058fc9a1b3d03f8
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Nomear arquivos de ajuda
+description: Nomear arquivos de ajuda
+ms.openlocfilehash: b77af8f9b9510785a4198fed9da1263184a27b99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893264"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667582"
 ---
 # <a name="naming-help-files"></a>Nomear arquivos de ajuda
 
@@ -59,6 +61,6 @@ Os fluxos de trabalho de script incluídos em módulos podem ser documentados em
 
 `<ScriptModule>.psm1-help.xml`
 
-Ao contrário de outros comandos com script, os fluxos de trabalho de script não exigem uma `.ExternalHelp` palavra-chave de comentário para associá-los a um arquivo de ajuda. Em vez disso, o PowerShell pesquisa os subdiretórios específicos da cultura da interface do diretório do módulo para arquivos de ajuda baseados em XML e procura ajuda para o fluxo de trabalho do script em todos os arquivos. `.ExternalHelp`a palavra-chave Comment é ignorada.
+Ao contrário de outros comandos com script, os fluxos de trabalho de script não exigem uma `.ExternalHelp` palavra-chave de comentário para associá-los a um arquivo de ajuda. Em vez disso, o PowerShell pesquisa os subdiretórios específicos da cultura da interface do diretório do módulo para arquivos de ajuda baseados em XML e procura ajuda para o fluxo de trabalho do script em todos os arquivos. `.ExternalHelp` a palavra-chave Comment é ignorada.
 
 Como a `.ExternalHelp` palavra-chave Comment é ignorada, o `Get-Help` cmdlet pode encontrar ajuda para fluxos de trabalho de script somente quando eles são incluídos em módulos.

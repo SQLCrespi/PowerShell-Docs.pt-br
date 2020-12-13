@@ -1,18 +1,20 @@
 ---
-title: Exemplos de ajuda baseada em comentários
 ms.date: 09/12/2016
-ms.openlocfilehash: fe5d054c84952367a4e7c2d5d9e32551a4e5c3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Exemplos de ajuda baseada em comentários
+description: Exemplos de ajuda baseada em comentários
+ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772290"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667633"
 ---
 # <a name="examples-of-comment-based-help"></a>Exemplos de ajuda baseada em comentários
 
 Este tópico inclui um exemplo que demonstra como usar a ajuda baseada em comentários para scripts e funções.
 
-## <a name="example-1-comment-based-help-for-a-function"></a>Exemplo 1: Ajuda baseada em comentários para uma função
+## <a name="example-1-comment-based-help-for-a-function"></a>Exemplo 1: Comment-Based ajuda para uma função
 
  A função de exemplo a seguir inclui ajuda baseada em comentários.
 
@@ -134,7 +136,7 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a>Exemplo 2: Ajuda baseada em comentários para um script
+## <a name="example-2-comment-based-help-for-a-script"></a>Exemplo 2: Comment-Based ajuda para um script
 
 A função de exemplo a seguir inclui ajuda baseada em comentários.
 
@@ -275,7 +277,7 @@ function Add-Extension
     #>
 ```
 
-Os resultados são os mesmos dos resultados, por exemplo 1. `Get-Help`interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela `.Parameter` palavra-chave.
+Os resultados são os mesmos dos resultados, por exemplo 1. `Get-Help` interpreta as descrições de parâmetro como se elas estivessem acompanhadas pela `.Parameter` palavra-chave.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Exemplo 4: redirecionando para um arquivo XML
 

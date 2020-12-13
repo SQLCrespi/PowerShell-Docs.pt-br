@@ -1,12 +1,14 @@
 ---
-title: Elemento RightIndent para frame para controles para configuração (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: edd299f4a39a8f2f55385b750b530de50ffff203
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento RightIndent para Frame para Controls para Configuration (formato)
+description: Elemento RightIndent para Frame para Controls para Configuration (formato)
+ms.openlocfilehash: 99a3653fb744df9b17bbc60b75d4d3932c672106
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772987"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665542"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>Elemento RightIndent para Frame para Controls para Configuration (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Rig
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

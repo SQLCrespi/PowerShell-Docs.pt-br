@@ -1,12 +1,14 @@
 ---
-title: Elemento enumeracollection para ExpressionBinding para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 414626dcd54ebeff608fe0908b9a45a1ad2d943f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento EnumerateCollection para ExpressionBinding para GroupBy (formato)
+description: Elemento EnumerateCollection para ExpressionBinding para GroupBy (formato)
+ms.openlocfilehash: 7c8258df879a5386b1eae4b5ad4b6bd7f7d17b8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774211"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667956"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-groupby-format"></a>Elemento EnumerateCollection para ExpressionBinding para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `E
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

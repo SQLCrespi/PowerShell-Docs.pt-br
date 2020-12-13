@@ -1,14 +1,14 @@
 ---
-title: Como validar um padrão de argumento | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidatePattern attribute, example
-ms.openlocfilehash: 35104e786d4b809a711d97fea52ae0e348dd5ca3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Como validar um padrão de argumentos
+description: Como validar um padrão de argumentos
+ms.openlocfilehash: ab5777c918a53c0a3900f87c52e7f14f9cb9b726
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782082"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666902"
 ---
 # <a name="how-to-validate-an-argument-pattern"></a>Como validar um padrão de argumentos
 
@@ -39,4 +39,4 @@ Para obter mais informações sobre como declarar esse atributo, consulte [decla
 
 [Declaração de atributo ValidatePattern](./validatepattern-attribute-declaration.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)

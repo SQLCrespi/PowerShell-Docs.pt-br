@@ -1,12 +1,14 @@
 ---
-title: Exemplo de código AccessDbProviderSample03 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6eddbec6369fd861a3a67bbbebe3d6f98c4bc164
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Exemplo de código AccessDbProviderSample03
+description: Exemplo de código AccessDbProviderSample03
+ms.openlocfilehash: 2a8ae91a96fc9d2f123709480234296c2d75392b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787284"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667548"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Exemplo de código AccessDbProviderSample03
 

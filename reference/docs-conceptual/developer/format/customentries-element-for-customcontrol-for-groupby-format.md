@@ -1,12 +1,14 @@
 ---
-title: Elemento CustomEntries para CustomControl para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2221d1bb94159697ff10466e4606d6d54e117e30
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento CustomEntries para CustomControl para GroupBy (formato)
+description: Elemento CustomEntries para CustomControl para GroupBy (formato)
+ms.openlocfilehash: cde59d38b83930cb64a3a0040891783e4ab96723
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785941"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666783"
 ---
 # <a name="customentries-element-for-customcontrol-for-groupby-format"></a>Elemento CustomEntries para CustomControl para GroupBy (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai do `Cu
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

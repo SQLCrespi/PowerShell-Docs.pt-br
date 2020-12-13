@@ -1,12 +1,14 @@
 ---
-title: Parâmetros de recurso | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e618951d57ff1cf303b38f0278858144df31afaf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Parâmetros do recurso
+description: Parâmetros do recurso
+ms.openlocfilehash: 7533f91b6d5858bcefca289eabc7854d6d5d1f2b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786519"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668143"
 ---
 # <a name="resource-parameters"></a>Parâmetros do recurso
 
@@ -42,6 +44,6 @@ A tabela a seguir lista os nomes recomendados e a funcionalidade para parâmetro
 
 [Parâmetros de cmdlets](./cmdlet-parameters.md)
 
-[Escrevendo um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md) (Escrevendo um Cmdlet do Windows PowerShell)
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

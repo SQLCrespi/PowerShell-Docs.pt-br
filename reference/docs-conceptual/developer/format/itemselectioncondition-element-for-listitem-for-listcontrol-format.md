@@ -1,12 +1,14 @@
 ---
-title: Elemento ItemSelectionCondition para ListItem para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f5c388928668e03b96923130fb5849f637548f12
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento ItemSelectionCondition para ListItem para ListControl (formato)
+description: Elemento ItemSelectionCondition para ListItem para ListControl (formato)
+ms.openlocfilehash: 13d925da10c2386123983d52b109c03a0c3c63ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783612"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667803"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>Elemento ItemSelectionCondition para ListItem para ListControl (formato)
 
@@ -29,7 +31,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `I
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

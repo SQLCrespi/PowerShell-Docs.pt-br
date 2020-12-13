@@ -1,12 +1,14 @@
 ---
-title: Elemento CustomControl para controle de controles para View (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2020725bf6afb086901e14a976abbdc04366869c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento CustomControl para Control para Controls para View (formato)
+description: Elemento CustomControl para Control para Controls para View (formato)
+ms.openlocfilehash: 141e44d80ab27861baac39d5a5ae1ff1f673e99b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786094"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668024"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-view-format"></a>Elemento CustomControl para Control para Controls para View (formato)
 
@@ -28,7 +30,7 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `C
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 

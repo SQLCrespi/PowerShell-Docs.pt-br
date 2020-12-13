@@ -1,12 +1,14 @@
 ---
-title: Elemento Label para ListItem para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ad80cc0478e7567b12d264ab661d843248ba48e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento Label para ListItem para ListControl (formato)
+description: Elemento Label para ListItem para ListControl (formato)
+ms.openlocfilehash: 01ff34c4129abe2c76a0a21794e756b77bff12bf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783629"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666647"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>Elemento Label para ListItem para ListControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

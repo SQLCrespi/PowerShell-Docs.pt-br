@@ -1,12 +1,14 @@
 ---
-title: Criar um cmdlet para acessar um armazenamento de dados
 ms.date: 09/13/2016
-ms.openlocfilehash: a595805a820c355937e581f0e00fa2a9a9fc3df0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um cmdlet para acessar um armazenamento de dados
+description: Criar um cmdlet para acessar um armazenamento de dados
+ms.openlocfilehash: d6ae4779a96b0789f11952a1d66bb96a394c3211
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782133"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668177"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Criar um cmdlet para acessar um armazenamento de dados
 
@@ -22,7 +24,7 @@ A primeira etapa na criação de cmdlet é sempre nomear o cmdlet e declarar a c
 
 A classe .NET para esse cmdlet deve derivar da classe base [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) , pois ela fornece o suporte necessário ao tempo de execução do Windows PowerShell para expor a infraestrutura do provedor do Windows PowerShell. Observe que esse cmdlet também usa a .NET Framework classes de expressões regulares, como [System. Text. RegularExpressions. Regex](/dotnet/api/System.Text.RegularExpressions.Regex).
 
-O código a seguir é a definição de classe para esse cmdlet Select-Str.
+O código a seguir é a definição de classe para este Select-Str cmdlet.
 
 ```csharp
 [Cmdlet(VerbsCommon.Select, "Str", DefaultParameterSetName="PatternParameterSet")]
@@ -170,7 +172,7 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>Declarando conjuntos de parâmetros
 
-Esse cmdlet usa dois conjuntos de parâmetros ( `ScriptParameterSet` e `PatternParameterSet` , que é o padrão) como os nomes de dois conjuntos de parâmetros usados no acesso a dados. `PatternParameterSet`é o conjunto de parâmetros padrão e é usado quando o `Pattern` parâmetro é especificado. `ScriptParameterSet`é usado quando o usuário especifica um mecanismo de pesquisa alternativo por meio do `Script` parâmetro. Para obter mais informações sobre conjuntos de parâmetros, consulte [Adicionando conjuntos de parâmetros a um cmdlet](./adding-parameter-sets-to-a-cmdlet.md).
+Esse cmdlet usa dois conjuntos de parâmetros ( `ScriptParameterSet` e `PatternParameterSet` , que é o padrão) como os nomes de dois conjuntos de parâmetros usados no acesso a dados. `PatternParameterSet` é o conjunto de parâmetros padrão e é usado quando o `Pattern` parâmetro é especificado. `ScriptParameterSet` é usado quando o usuário especifica um mecanismo de pesquisa alternativo por meio do `Script` parâmetro. Para obter mais informações sobre conjuntos de parâmetros, consulte [Adicionando conjuntos de parâmetros a um cmdlet](./adding-parameter-sets-to-a-cmdlet.md).
 
 ## <a name="overriding-input-processing-methods"></a>Substituindo métodos de processamento de entrada
 
@@ -368,11 +370,11 @@ protected override void ProcessRecord()
 
 O cmdlet deve abrir o provedor indicado pelo caminho do Windows PowerShell para que ele possa acessar os dados. O objeto [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) para o runspace é usado para acessar o provedor, enquanto a propriedade [System. Management. Automation. PSCmdlet. invokeprovider *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) do cmdlet é usada para abrir o provedor. O acesso ao conteúdo é fornecido pela recuperação do objeto [System. Management. Automation. Providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) para o provedor aberto.
 
-Este cmdlet Select-Str de exemplo usa a propriedade [System. Management. Automation. Providerintrinsics. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) para expor o conteúdo a ser verificado. Em seguida, ele pode chamar o método [System. Management. Automation. Contentcmdletproviderintrinsics. GetReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , passando o caminho necessário do Windows PowerShell.
+Este cmdlet de Select-Str de exemplo usa a propriedade [System. Management. Automation. Providerintrinsics. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) para expor o conteúdo a ser verificado. Em seguida, ele pode chamar o método [System. Management. Automation. Contentcmdletproviderintrinsics. GetReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) , passando o caminho necessário do Windows PowerShell.
 
 ## <a name="code-sample"></a>Exemplo de código
 
-O código a seguir mostra a implementação desta versão deste cmdlet Select-Str. Observe que esse código inclui a classe cmdlet, os métodos privados usados pelo cmdlet e o código do snap-in do Windows PowerShell usado para registrar o cmdlet. Para obter mais informações sobre como registrar o cmdlet, consulte [criando o cmdlet](#defining-the-cmdlet-class).
+O código a seguir mostra a implementação desta versão deste Select-Str cmdlet. Observe que esse código inclui a classe cmdlet, os métodos privados usados pelo cmdlet e o código do snap-in do Windows PowerShell usado para registrar o cmdlet. Para obter mais informações sobre como registrar o cmdlet, consulte [criando o cmdlet](#defining-the-cmdlet-class).
 
 ```csharp
 //
@@ -1087,7 +1089,7 @@ Depois de implementar um cmdlet, você deve registrá-lo com o Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Testando o cmdlet
 
-Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. O procedimento a seguir pode ser usado para testar o cmdlet Select-Str de exemplo.
+Quando o cmdlet tiver sido registrado com o Windows PowerShell, você poderá testá-lo executando-o na linha de comando. O procedimento a seguir pode ser usado para testar o cmdlet de Select-Str de exemplo.
 
 1. Inicie o Windows PowerShell e pesquise o arquivo Notes em busca de ocorrências de linhas com a expressão ".NET". Observe que as aspas em volta do nome do caminho serão necessárias apenas se o caminho consistir em mais de uma palavra.
 

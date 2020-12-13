@@ -1,12 +1,14 @@
 ---
-title: Elemento RightIndent para frame para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e1d451c2a6f0e3e0a122589efc32f2b55b430e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento RightIndent para Frame para GroupBy (formato)
+description: Elemento RightIndent para Frame para GroupBy (formato)
+ms.openlocfilehash: 9a2734eee3d4c3c27fa6fa7db7ce47fa126304a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785516"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665525"
 ---
 # <a name="rightindent-element-for-frame-for-groupby-format"></a>Elemento RightIndent para Frame para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Rig
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

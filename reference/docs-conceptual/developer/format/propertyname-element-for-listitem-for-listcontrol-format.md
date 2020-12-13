@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName de ListItem para ListControl (formato) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ee466d7f73e53b129f8d46f49a21549683bb32c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para ListItem para ListControl (formato)
+description: Elemento PropertyName para ListItem para ListControl (formato)
+ms.openlocfilehash: 30cd48f9549e1a091776cd5f8395e1a71314ea1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780824"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665967"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>Elemento PropertyName para ListItem para ListControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem os atributos, os elementos filho e o elemento pai
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 
