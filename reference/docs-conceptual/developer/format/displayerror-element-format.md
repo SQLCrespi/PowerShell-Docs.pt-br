@@ -1,49 +1,51 @@
 ---
-title: Elemento DisplayError (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5d46c2fbd48f592db5ba1b33eb6cead8dc1c4698
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento DisplayError (formato)
+description: Elemento DisplayError (formato)
+ms.openlocfilehash: fb54df86a3558263687a8c417870495b7066f563
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774279"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649922"
 ---
-# <a name="displayerror-element-format"></a><span data-ttu-id="2c384-102">Elemento DisplayError (formato)</span><span class="sxs-lookup"><span data-stu-id="2c384-102">DisplayError Element (Format)</span></span>
+# <a name="displayerror-element-format"></a><span data-ttu-id="90fc8-103">Elemento DisplayError (formato)</span><span class="sxs-lookup"><span data-stu-id="90fc8-103">DisplayError Element (Format)</span></span>
 
-<span data-ttu-id="2c384-103">Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro exibindo uma parte dos dados.</span><span class="sxs-lookup"><span data-stu-id="2c384-103">Specifies that the string #ERR is displayed when an error occurs displaying a piece of data.</span></span>
+<span data-ttu-id="90fc8-104">Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro exibindo uma parte dos dados.</span><span class="sxs-lookup"><span data-stu-id="90fc8-104">Specifies that the string #ERR is displayed when an error occurs displaying a piece of data.</span></span>
 
-<span data-ttu-id="2c384-104">Elemento de configuração (Format) DefaultSettings Element (Format) elemento DisplayError (Format)</span><span class="sxs-lookup"><span data-stu-id="2c384-104">Configuration Element (Format) DefaultSettings Element (Format) DisplayError Element (Format)</span></span>
+<span data-ttu-id="90fc8-105">Elemento de configuração (Format) DefaultSettings Element (Format) elemento DisplayError (Format)</span><span class="sxs-lookup"><span data-stu-id="90fc8-105">Configuration Element (Format) DefaultSettings Element (Format) DisplayError Element (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2c384-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2c384-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="90fc8-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="90fc8-106">Syntax</span></span>
 
 ```xml
 <DisplayError/>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="2c384-106">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="2c384-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="90fc8-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="90fc8-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="2c384-107">As seções a seguir descrevem atributos, elementos filho e o elemento pai do `DisplayError` elemento.</span><span class="sxs-lookup"><span data-stu-id="2c384-107">The following sections describe attributes, child elements, and the parent element of the `DisplayError` element.</span></span>
+<span data-ttu-id="90fc8-108">As seções a seguir descrevem atributos, elementos filho e o elemento pai do `DisplayError` elemento.</span><span class="sxs-lookup"><span data-stu-id="90fc8-108">The following sections describe attributes, child elements, and the parent element of the `DisplayError` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="2c384-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="2c384-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="90fc8-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="90fc8-109">Attributes</span></span>
 
-<span data-ttu-id="2c384-109">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="2c384-109">None.</span></span>
+<span data-ttu-id="90fc8-110">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="90fc8-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="2c384-110">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="2c384-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="90fc8-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="90fc8-111">Child Elements</span></span>
 
-<span data-ttu-id="2c384-111">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="2c384-111">None.</span></span>
+<span data-ttu-id="90fc8-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="90fc8-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="2c384-112">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="2c384-112">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="90fc8-113">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="90fc8-113">Parent Elements</span></span>
 
-|<span data-ttu-id="2c384-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="2c384-113">Element</span></span>|<span data-ttu-id="2c384-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="2c384-114">Description</span></span>|
+|<span data-ttu-id="90fc8-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="90fc8-114">Element</span></span>|<span data-ttu-id="90fc8-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="90fc8-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="2c384-115">Elemento DefaultSettings (formato)</span><span class="sxs-lookup"><span data-stu-id="2c384-115">DefaultSettings Element (Format)</span></span>](./defaultsettings-element-format.md)|<span data-ttu-id="2c384-116">Define as configurações comuns que se aplicam a todas as exibições do arquivo de formatação.</span><span class="sxs-lookup"><span data-stu-id="2c384-116">Defines common settings that apply to all the views of the formatting file.</span></span>|
+|[<span data-ttu-id="90fc8-116">Elemento DefaultSettings (formato)</span><span class="sxs-lookup"><span data-stu-id="90fc8-116">DefaultSettings Element (Format)</span></span>](./defaultsettings-element-format.md)|<span data-ttu-id="90fc8-117">Define as configurações comuns que se aplicam a todas as exibições do arquivo de formatação.</span><span class="sxs-lookup"><span data-stu-id="90fc8-117">Defines common settings that apply to all the views of the formatting file.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="2c384-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="2c384-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="90fc8-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="90fc8-118">Remarks</span></span>
 
-<span data-ttu-id="2c384-118">Por padrão, quando ocorre um erro durante a tentativa de exibir um dado, o local dos dados é deixado em branco.</span><span class="sxs-lookup"><span data-stu-id="2c384-118">By default, when an error occurs while trying to display a piece of data, the location of the data is left blank.</span></span> <span data-ttu-id="2c384-119">Quando esse elemento é definido como true, a cadeia de caracteres #ERR será exibida.</span><span class="sxs-lookup"><span data-stu-id="2c384-119">When this element is set to true, the #ERR string will be displayed.</span></span>
+<span data-ttu-id="90fc8-119">Por padrão, quando ocorre um erro durante a tentativa de exibir um dado, o local dos dados é deixado em branco.</span><span class="sxs-lookup"><span data-stu-id="90fc8-119">By default, when an error occurs while trying to display a piece of data, the location of the data is left blank.</span></span> <span data-ttu-id="90fc8-120">Quando esse elemento é definido como true, a cadeia de caracteres #ERR será exibida.</span><span class="sxs-lookup"><span data-stu-id="90fc8-120">When this element is set to true, the #ERR string will be displayed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2c384-120">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="2c384-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90fc8-121">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="90fc8-121">See Also</span></span>
 
-[<span data-ttu-id="2c384-121">Elemento DefaultSettings (formato)</span><span class="sxs-lookup"><span data-stu-id="2c384-121">DefaultSettings Element (Format)</span></span>](./defaultsettings-element-format.md)
+[<span data-ttu-id="90fc8-122">Elemento DefaultSettings (formato)</span><span class="sxs-lookup"><span data-stu-id="90fc8-122">DefaultSettings Element (Format)</span></span>](./defaultsettings-element-format.md)
 
-[<span data-ttu-id="2c384-122">Escrever um arquivo de formatação do PowerShell</span><span class="sxs-lookup"><span data-stu-id="2c384-122">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="90fc8-123">Escrever um arquivo de formatação do PowerShell</span><span class="sxs-lookup"><span data-stu-id="90fc8-123">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
