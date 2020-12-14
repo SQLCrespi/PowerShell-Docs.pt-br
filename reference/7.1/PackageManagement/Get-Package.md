@@ -7,21 +7,21 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: 89525867f9c3377cc0129daefd3f54f2a10d5d82
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d635a1f037194380c143190e48d654e828f88bc8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193536"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890157"
 ---
-# <span data-ttu-id="aff64-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="aff64-103">Get-Package</span></span>
+# <span data-ttu-id="6f075-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="6f075-103">Get-Package</span></span>
 
-## <span data-ttu-id="aff64-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="aff64-104">SYNOPSIS</span></span>
-<span data-ttu-id="aff64-105">Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="aff64-105">Returns a list of all software packages that were installed with **PackageManagement** .</span></span>
+## <span data-ttu-id="6f075-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="6f075-104">SYNOPSIS</span></span>
+<span data-ttu-id="6f075-105">Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement**.</span><span class="sxs-lookup"><span data-stu-id="6f075-105">Returns a list of all software packages that were installed with **PackageManagement**.</span></span>
 
-## <span data-ttu-id="aff64-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="aff64-106">SYNTAX</span></span>
+## <span data-ttu-id="6f075-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="6f075-106">SYNTAX</span></span>
 
-### <span data-ttu-id="aff64-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="aff64-107">NuGet</span></span>
+### <span data-ttu-id="6f075-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="6f075-107">NuGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="aff64-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="aff64-108">PowerShellGet</span></span>
+### <span data-ttu-id="6f075-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="6f075-108">PowerShellGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -40,15 +40,15 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="aff64-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="aff64-109">DESCRIPTION</span></span>
+## <span data-ttu-id="6f075-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="6f075-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="aff64-110">O `Get-Package` cmdlet retorna uma lista de todos os pacotes de software no computador local que foram instalados com o **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="aff64-110">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement** .</span></span> <span data-ttu-id="aff64-111">Você pode executar `Get-Package` em computadores remotos executando-o como parte de `Invoke-Command` um `Enter-PSSession` comando ou script.</span><span class="sxs-lookup"><span data-stu-id="aff64-111">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
+<span data-ttu-id="6f075-110">O `Get-Package` cmdlet retorna uma lista de todos os pacotes de software no computador local que foram instalados com o **PackageManagement**.</span><span class="sxs-lookup"><span data-stu-id="6f075-110">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement**.</span></span> <span data-ttu-id="6f075-111">Você pode executar `Get-Package` em computadores remotos executando-o como parte de `Invoke-Command` um `Enter-PSSession` comando ou script.</span><span class="sxs-lookup"><span data-stu-id="6f075-111">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
 
-## <span data-ttu-id="aff64-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="aff64-112">EXAMPLES</span></span>
+## <span data-ttu-id="6f075-112">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="6f075-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="aff64-113">Exemplo 1: obter todos os pacotes instalados</span><span class="sxs-lookup"><span data-stu-id="aff64-113">Example 1: Get all installed packages</span></span>
+### <span data-ttu-id="6f075-113">Exemplo 1: obter todos os pacotes instalados</span><span class="sxs-lookup"><span data-stu-id="6f075-113">Example 1: Get all installed packages</span></span>
 
-<span data-ttu-id="aff64-114">O `Get-Package` cmdlet obtém todos os pacotes que estão instalados no computador local.</span><span class="sxs-lookup"><span data-stu-id="aff64-114">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
+<span data-ttu-id="6f075-114">O `Get-Package` cmdlet obtém todos os pacotes que estão instalados no computador local.</span><span class="sxs-lookup"><span data-stu-id="6f075-114">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
 
 ```powershell
 Get-Package
@@ -60,19 +60,19 @@ Name           Version      Source                                     ProviderN
 posh-git       0.7.3        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-### <span data-ttu-id="aff64-115">Exemplo 2: obter pacotes que estão instalados em um computador remoto</span><span class="sxs-lookup"><span data-stu-id="aff64-115">Example 2: Get packages that are installed on a remote computer</span></span>
+### <span data-ttu-id="6f075-115">Exemplo 2: obter pacotes que estão instalados em um computador remoto</span><span class="sxs-lookup"><span data-stu-id="6f075-115">Example 2: Get packages that are installed on a remote computer</span></span>
 
-<span data-ttu-id="aff64-116">Esse comando obtém uma lista de pacotes que foram instalados pelo **PackageManagement** em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="aff64-116">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="aff64-117">Esse comando solicita que você forneça a senha do usuário especificado.</span><span class="sxs-lookup"><span data-stu-id="aff64-117">This command prompts you to provide the specified user's password.</span></span>
+<span data-ttu-id="6f075-116">Esse comando obtém uma lista de pacotes que foram instalados pelo **PackageManagement** em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="6f075-116">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="6f075-117">Esse comando solicita que você forneça a senha do usuário especificado.</span><span class="sxs-lookup"><span data-stu-id="6f075-117">This command prompts you to provide the specified user's password.</span></span>
 
 ```
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-<span data-ttu-id="aff64-118">`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto, **Server01** .</span><span class="sxs-lookup"><span data-stu-id="aff64-118">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01** .</span></span> <span data-ttu-id="aff64-119">O parâmetro **Credential** especifica um domínio e um nome de usuário com permissões para executar comandos no computador.</span><span class="sxs-lookup"><span data-stu-id="aff64-119">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="aff64-120">O parâmetro **scriptblock** executa o `Get-Package` cmdlet no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="aff64-120">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
+<span data-ttu-id="6f075-118">`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto, **Server01**.</span><span class="sxs-lookup"><span data-stu-id="6f075-118">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01**.</span></span> <span data-ttu-id="6f075-119">O parâmetro **Credential** especifica um domínio e um nome de usuário com permissões para executar comandos no computador.</span><span class="sxs-lookup"><span data-stu-id="6f075-119">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="6f075-120">O parâmetro **scriptblock** executa o `Get-Package` cmdlet no computador remoto.</span><span class="sxs-lookup"><span data-stu-id="6f075-120">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
 
-### <span data-ttu-id="aff64-121">Exemplo 3: obter pacotes para um provedor especificado</span><span class="sxs-lookup"><span data-stu-id="aff64-121">Example 3: Get packages for a specified provider</span></span>
+### <span data-ttu-id="6f075-121">Exemplo 3: obter pacotes para um provedor especificado</span><span class="sxs-lookup"><span data-stu-id="6f075-121">Example 3: Get packages for a specified provider</span></span>
 
-<span data-ttu-id="aff64-122">Esse comando obtém os pacotes de software instalados no computador local a partir de um provedor específico.</span><span class="sxs-lookup"><span data-stu-id="aff64-122">This command gets software packages installed on the local computer from a specific provider.</span></span>
+<span data-ttu-id="6f075-122">Esse comando obtém os pacotes de software instalados no computador local a partir de um provedor específico.</span><span class="sxs-lookup"><span data-stu-id="6f075-122">This command gets software packages installed on the local computer from a specific provider.</span></span>
 
 ```powershell
 Get-Package -ProviderName PowerShellGet -AllVersions
@@ -87,12 +87,12 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="aff64-123">`Get-Package` usa o parâmetro **ProviderName** para especificar um provedor específico, **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="aff64-123">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet** .</span></span>
-<span data-ttu-id="aff64-124">O parâmetro **todas as versões** exibe cada versão instalada.</span><span class="sxs-lookup"><span data-stu-id="aff64-124">The **All-Versions** parameter displays each version that is installed.</span></span>
+<span data-ttu-id="6f075-123">`Get-Package` usa o parâmetro **ProviderName** para especificar um provedor específico, **PowerShellGet**.</span><span class="sxs-lookup"><span data-stu-id="6f075-123">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet**.</span></span>
+<span data-ttu-id="6f075-124">O parâmetro **todas as versões** exibe cada versão instalada.</span><span class="sxs-lookup"><span data-stu-id="6f075-124">The **All-Versions** parameter displays each version that is installed.</span></span>
 
-### <span data-ttu-id="aff64-125">Exemplo 4: obter uma versão exata de um pacote específico</span><span class="sxs-lookup"><span data-stu-id="aff64-125">Example 4: Get an exact version of a specific package</span></span>
+### <span data-ttu-id="6f075-125">Exemplo 4: obter uma versão exata de um pacote específico</span><span class="sxs-lookup"><span data-stu-id="6f075-125">Example 4: Get an exact version of a specific package</span></span>
 
-<span data-ttu-id="aff64-126">Esse comando obtém uma versão específica de um pacote instalado.</span><span class="sxs-lookup"><span data-stu-id="aff64-126">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="aff64-127">Mais de uma versão de um pacote pode ser instalada.</span><span class="sxs-lookup"><span data-stu-id="aff64-127">More than one version of a package can be installed.</span></span>
+<span data-ttu-id="6f075-126">Esse comando obtém uma versão específica de um pacote instalado.</span><span class="sxs-lookup"><span data-stu-id="6f075-126">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="6f075-127">Mais de uma versão de um pacote pode ser instalada.</span><span class="sxs-lookup"><span data-stu-id="6f075-127">More than one version of a package can be installed.</span></span>
 
 ```powershell
 Get-Package -Name PackageManagement -ProviderName PowerShellGet -RequiredVersion 1.3.1
@@ -104,39 +104,23 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="aff64-128">`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="aff64-128">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement** .</span></span> <span data-ttu-id="aff64-129">O parâmetro **ProviderName** especifica o provedor, **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="aff64-129">The **ProviderName** parameter specifies the provider, **PowerShellGet** .</span></span> <span data-ttu-id="aff64-130">O parâmetro **-version obrigatório** especifica uma versão instalada.</span><span class="sxs-lookup"><span data-stu-id="aff64-130">The **Required-Version** parameter specifies an installed version.</span></span>
+<span data-ttu-id="6f075-128">`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **PackageManagement**.</span><span class="sxs-lookup"><span data-stu-id="6f075-128">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement**.</span></span> <span data-ttu-id="6f075-129">O parâmetro **ProviderName** especifica o provedor, **PowerShellGet**.</span><span class="sxs-lookup"><span data-stu-id="6f075-129">The **ProviderName** parameter specifies the provider, **PowerShellGet**.</span></span> <span data-ttu-id="6f075-130">O parâmetro **-version obrigatório** especifica uma versão instalada.</span><span class="sxs-lookup"><span data-stu-id="6f075-130">The **Required-Version** parameter specifies an installed version.</span></span>
 
-### <span data-ttu-id="aff64-131">Exemplo 5: desinstalar um pacote</span><span class="sxs-lookup"><span data-stu-id="aff64-131">Example 5: Uninstall a package</span></span>
+### <span data-ttu-id="6f075-131">Exemplo 5: desinstalar um pacote</span><span class="sxs-lookup"><span data-stu-id="6f075-131">Example 5: Uninstall a package</span></span>
 
-<span data-ttu-id="aff64-132">Este exemplo obtém informações do pacote e, em seguida, desinstala o pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-132">This example gets package information and then uninstalls the package.</span></span>
+<span data-ttu-id="6f075-132">Este exemplo obtém informações do pacote e, em seguida, desinstala o pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-132">This example gets package information and then uninstalls the package.</span></span>
 
 ```powershell
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-<span data-ttu-id="aff64-133">`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **Posh-git** .</span><span class="sxs-lookup"><span data-stu-id="aff64-133">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git** .</span></span> <span data-ttu-id="aff64-134">O parâmetro **RequiredVersion** é uma versão específica do pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-134">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="aff64-135">O objeto é enviado ao pipeline para o `Uninstall-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="aff64-135">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="aff64-136">`Uninstall-Package` Remove o pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-136">`Uninstall-Package` removes the package.</span></span>
+<span data-ttu-id="6f075-133">`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **Posh-git**.</span><span class="sxs-lookup"><span data-stu-id="6f075-133">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git**.</span></span> <span data-ttu-id="6f075-134">O parâmetro **RequiredVersion** é uma versão específica do pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-134">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="6f075-135">O objeto é enviado ao pipeline para o `Uninstall-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f075-135">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="6f075-136">`Uninstall-Package` Remove o pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-136">`Uninstall-Package` removes the package.</span></span>
 
-## <span data-ttu-id="aff64-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="aff64-137">PARAMETERS</span></span>
+## <span data-ttu-id="6f075-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="6f075-137">PARAMETERS</span></span>
 
-### <span data-ttu-id="aff64-138">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="aff64-138">-AllowClobber</span></span>
+### <span data-ttu-id="6f075-138">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="6f075-138">-AllowClobber</span></span>
 
-<span data-ttu-id="aff64-139">Substitui mensagens de aviso sobre conflitos com comandos existentes.</span><span class="sxs-lookup"><span data-stu-id="aff64-139">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="aff64-140">Substitui os comandos existentes que têm o mesmo nome que os comandos que estão sendo instalados por um módulo.</span><span class="sxs-lookup"><span data-stu-id="aff64-140">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="aff64-141">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="aff64-141">-AllowPrereleaseVersions</span></span>
-
-<span data-ttu-id="aff64-142">Inclui pacotes marcados como um pré-lançamento nos resultados.</span><span class="sxs-lookup"><span data-stu-id="aff64-142">Includes packages marked as a prerelease in the results.</span></span>
+<span data-ttu-id="6f075-139">Substitui mensagens de aviso sobre conflitos com comandos existentes.</span><span class="sxs-lookup"><span data-stu-id="6f075-139">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="6f075-140">Substitui os comandos existentes que têm o mesmo nome que os comandos que estão sendo instalados por um módulo.</span><span class="sxs-lookup"><span data-stu-id="6f075-140">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -150,9 +134,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-143">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="aff64-143">-AllVersions</span></span>
+### <span data-ttu-id="6f075-141">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="6f075-141">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="aff64-144">Indica que o `Get-Package` retorna todas as versões disponíveis do pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-144">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="aff64-145">Por padrão, `Get-Package` o retorna apenas a versão mais recente disponível.</span><span class="sxs-lookup"><span data-stu-id="aff64-145">By default, `Get-Package` only returns the newest available version.</span></span>
+<span data-ttu-id="6f075-142">Inclui pacotes marcados como um pré-lançamento nos resultados.</span><span class="sxs-lookup"><span data-stu-id="6f075-142">Includes packages marked as a prerelease in the results.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6f075-143">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="6f075-143">-AllVersions</span></span>
+
+<span data-ttu-id="6f075-144">Indica que o `Get-Package` retorna todas as versões disponíveis do pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-144">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="6f075-145">Por padrão, `Get-Package` o retorna apenas a versão mais recente disponível.</span><span class="sxs-lookup"><span data-stu-id="6f075-145">By default, `Get-Package` only returns the newest available version.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,9 +166,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-146">-Destino</span><span class="sxs-lookup"><span data-stu-id="aff64-146">-Destination</span></span>
+### <span data-ttu-id="6f075-146">-Destino</span><span class="sxs-lookup"><span data-stu-id="6f075-146">-Destination</span></span>
 
-<span data-ttu-id="aff64-147">Especifica o caminho para um diretório que contém arquivos de pacote extraídos.</span><span class="sxs-lookup"><span data-stu-id="aff64-147">Specifies the path to a directory that contains extracted package files.</span></span>
+<span data-ttu-id="6f075-147">Especifica o caminho para um diretório que contém arquivos de pacote extraídos.</span><span class="sxs-lookup"><span data-stu-id="6f075-147">Specifies the path to a directory that contains extracted package files.</span></span>
 
 ```yaml
 Type: System.String
@@ -182,9 +182,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-148">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="aff64-148">-ExcludeVersion</span></span>
+### <span data-ttu-id="6f075-148">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="6f075-148">-ExcludeVersion</span></span>
 
-<span data-ttu-id="aff64-149">Alterne para excluir o número de versão no caminho da pasta.</span><span class="sxs-lookup"><span data-stu-id="aff64-149">Switch to exclude the version number in the folder path.</span></span>
+<span data-ttu-id="6f075-149">Alterne para excluir o número de versão no caminho da pasta.</span><span class="sxs-lookup"><span data-stu-id="6f075-149">Switch to exclude the version number in the folder path.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -198,25 +198,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-150">-Force</span><span class="sxs-lookup"><span data-stu-id="aff64-150">-Force</span></span>
+### <span data-ttu-id="6f075-150">-Force</span><span class="sxs-lookup"><span data-stu-id="6f075-150">-Force</span></span>
 
-<span data-ttu-id="aff64-151">Força o comando a ser executado sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="aff64-151">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="aff64-152">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="aff64-152">-ForceBootstrap</span></span>
-
-<span data-ttu-id="aff64-153">Indica que `Get-Package` o **PackageManagement** é forçado a instalar automaticamente o provedor de pacotes.</span><span class="sxs-lookup"><span data-stu-id="aff64-153">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+<span data-ttu-id="6f075-151">Força o comando a ser executado sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="6f075-151">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,9 +214,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-154">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="aff64-154">-InstallUpdate</span></span>
+### <span data-ttu-id="6f075-152">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="6f075-152">-ForceBootstrap</span></span>
 
-<span data-ttu-id="aff64-155">Indica que esse cmdlet instala atualizações.</span><span class="sxs-lookup"><span data-stu-id="aff64-155">Indicates that this cmdlet installs updates.</span></span>
+<span data-ttu-id="6f075-153">Indica que `Get-Package` o **PackageManagement** é forçado a instalar automaticamente o provedor de pacotes.</span><span class="sxs-lookup"><span data-stu-id="6f075-153">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6f075-154">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="6f075-154">-InstallUpdate</span></span>
+
+<span data-ttu-id="6f075-155">Indica que esse cmdlet instala atualizações.</span><span class="sxs-lookup"><span data-stu-id="6f075-155">Indicates that this cmdlet installs updates.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,25 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-156">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="aff64-156">-MaximumVersion</span></span>
+### <span data-ttu-id="6f075-156">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="6f075-156">-MaximumVersion</span></span>
 
-<span data-ttu-id="aff64-157">Especifica a versão máxima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="aff64-157">Specifies the maximum package version that you want to find.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="aff64-158">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="aff64-158">-MinimumVersion</span></span>
-
-<span data-ttu-id="aff64-159">Especifica a versão mínima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="aff64-159">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="aff64-160">Se uma versão superior estiver disponível, essa versão será retornada.</span><span class="sxs-lookup"><span data-stu-id="aff64-160">If a higher version is available, that version is returned.</span></span>
+<span data-ttu-id="6f075-157">Especifica a versão máxima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="6f075-157">Specifies the maximum package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -278,9 +262,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-161">-Name</span><span class="sxs-lookup"><span data-stu-id="aff64-161">-Name</span></span>
+### <span data-ttu-id="6f075-158">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="6f075-158">-MinimumVersion</span></span>
 
-<span data-ttu-id="aff64-162">Especifica um ou mais nomes de pacote ou nomes de pacote com caracteres curinga.</span><span class="sxs-lookup"><span data-stu-id="aff64-162">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="aff64-163">Separe vários nomes de pacote com vírgulas.</span><span class="sxs-lookup"><span data-stu-id="aff64-163">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="6f075-159">Especifica a versão mínima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="6f075-159">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="6f075-160">Se uma versão superior estiver disponível, essa versão será retornada.</span><span class="sxs-lookup"><span data-stu-id="6f075-160">If a higher version is available, that version is returned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6f075-161">-Name</span><span class="sxs-lookup"><span data-stu-id="6f075-161">-Name</span></span>
+
+<span data-ttu-id="6f075-162">Especifica um ou mais nomes de pacote ou nomes de pacote com caracteres curinga.</span><span class="sxs-lookup"><span data-stu-id="6f075-162">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="6f075-163">Separe vários nomes de pacote com vírgulas.</span><span class="sxs-lookup"><span data-stu-id="6f075-163">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -294,9 +294,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="aff64-164">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="aff64-164">-NoPathUpdate</span></span>
+### <span data-ttu-id="6f075-164">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="6f075-164">-NoPathUpdate</span></span>
 
-<span data-ttu-id="aff64-165">**NoPathUpdate** se aplica somente ao `Install-Script` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="aff64-165">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="aff64-166">**NoPathUpdate** é um parâmetro dinâmico adicionado pelo provedor e não é suportado pelo `Get-Package` .</span><span class="sxs-lookup"><span data-stu-id="aff64-166">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
+<span data-ttu-id="6f075-165">**NoPathUpdate** se aplica somente ao `Install-Script` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f075-165">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="6f075-166">**NoPathUpdate** é um parâmetro dinâmico adicionado pelo provedor e não é suportado pelo `Get-Package` .</span><span class="sxs-lookup"><span data-stu-id="6f075-166">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,9 +310,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-167">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="aff64-167">-PackageManagementProvider</span></span>
+### <span data-ttu-id="6f075-167">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="6f075-167">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="aff64-168">Especifica o nome de um provedor de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="aff64-168">Specifies the name of a package management provider.</span></span>
+<span data-ttu-id="6f075-168">Especifica o nome de um provedor de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="6f075-168">Specifies the name of a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -326,10 +326,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-169">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="aff64-169">-ProviderName</span></span>
+### <span data-ttu-id="6f075-169">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="6f075-169">-ProviderName</span></span>
 
-<span data-ttu-id="aff64-170">Especifica um ou mais nomes de provedor de pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-170">Specifies one or more package provider names.</span></span> <span data-ttu-id="aff64-171">Separe vários nomes de provedor de pacote com vírgulas.</span><span class="sxs-lookup"><span data-stu-id="aff64-171">Separate multiple package provider names with commas.</span></span>
-<span data-ttu-id="aff64-172">Use `Get-PackageProvider` para obter uma lista de provedores de pacotes disponíveis.</span><span class="sxs-lookup"><span data-stu-id="aff64-172">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+<span data-ttu-id="6f075-170">Especifica um ou mais nomes de provedor de pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-170">Specifies one or more package provider names.</span></span> <span data-ttu-id="6f075-171">Separe vários nomes de provedor de pacote com vírgulas.</span><span class="sxs-lookup"><span data-stu-id="6f075-171">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="6f075-172">Use `Get-PackageProvider` para obter uma lista de provedores de pacotes disponíveis.</span><span class="sxs-lookup"><span data-stu-id="6f075-172">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -344,9 +344,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-173">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="aff64-173">-RequiredVersion</span></span>
+### <span data-ttu-id="6f075-173">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="6f075-173">-RequiredVersion</span></span>
 
-<span data-ttu-id="aff64-174">Especifica a versão exata do pacote a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="aff64-174">Specifies the exact version of the package to find.</span></span>
+<span data-ttu-id="6f075-174">Especifica a versão exata do pacote a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="6f075-174">Specifies the exact version of the package to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -360,9 +360,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-175">-Escopo</span><span class="sxs-lookup"><span data-stu-id="aff64-175">-Scope</span></span>
+### <span data-ttu-id="6f075-175">-Escopo</span><span class="sxs-lookup"><span data-stu-id="6f075-175">-Scope</span></span>
 
-<span data-ttu-id="aff64-176">Especifica o escopo de pesquisa para o pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-176">Specifies the search scope for the package.</span></span>
+<span data-ttu-id="6f075-176">Especifica o escopo de pesquisa para o pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-176">Specifies the search scope for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -377,9 +377,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-177">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="aff64-177">-SkipDependencies</span></span>
+### <span data-ttu-id="6f075-177">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="6f075-177">-SkipDependencies</span></span>
 
-<span data-ttu-id="aff64-178">Opção que especifica para ignorar a localização de qualquer dependência de pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-178">Switch that specifies to skip finding any package dependencies.</span></span>
+<span data-ttu-id="6f075-178">Opção que especifica para ignorar a localização de qualquer dependência de pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-178">Switch that specifies to skip finding any package dependencies.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -393,9 +393,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-179">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="aff64-179">-SkipPublisherCheck</span></span>
+### <span data-ttu-id="6f075-179">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="6f075-179">-SkipPublisherCheck</span></span>
 
-<span data-ttu-id="aff64-180">Permite obter uma versão de pacote mais nova do que a versão instalada.</span><span class="sxs-lookup"><span data-stu-id="aff64-180">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="aff64-181">Por exemplo, um pacote instalado que é assinado digitalmente por um fornecedor confiável, mas uma nova versão não é assinada digitalmente.</span><span class="sxs-lookup"><span data-stu-id="aff64-181">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
+<span data-ttu-id="6f075-180">Permite obter uma versão de pacote mais nova do que a versão instalada.</span><span class="sxs-lookup"><span data-stu-id="6f075-180">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="6f075-181">Por exemplo, um pacote instalado que é assinado digitalmente por um fornecedor confiável, mas uma nova versão não é assinada digitalmente.</span><span class="sxs-lookup"><span data-stu-id="6f075-181">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -409,9 +409,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-182">-Type</span><span class="sxs-lookup"><span data-stu-id="aff64-182">-Type</span></span>
+### <span data-ttu-id="6f075-182">-Type</span><span class="sxs-lookup"><span data-stu-id="6f075-182">-Type</span></span>
 
-<span data-ttu-id="aff64-183">Especifica se os pacotes devem ser pesquisados com um módulo, um script ou um.</span><span class="sxs-lookup"><span data-stu-id="aff64-183">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="6f075-183">Especifica se os pacotes devem ser pesquisados com um módulo, um script ou um.</span><span class="sxs-lookup"><span data-stu-id="6f075-183">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -426,39 +426,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aff64-184">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="aff64-184">CommonParameters</span></span>
+### <span data-ttu-id="6f075-184">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="6f075-184">CommonParameters</span></span>
 
-<span data-ttu-id="aff64-185">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="aff64-185">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="aff64-186">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="aff64-186">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="6f075-185">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="6f075-185">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="6f075-186">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="6f075-186">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="aff64-187">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="aff64-187">INPUTS</span></span>
+## <span data-ttu-id="6f075-187">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="6f075-187">INPUTS</span></span>
 
-## <span data-ttu-id="aff64-188">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="aff64-188">OUTPUTS</span></span>
+## <span data-ttu-id="6f075-188">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="6f075-188">OUTPUTS</span></span>
 
-### <span data-ttu-id="aff64-189">SoftwareIdentity[]</span><span class="sxs-lookup"><span data-stu-id="aff64-189">SoftwareIdentity[]</span></span>
+### <span data-ttu-id="6f075-189">SoftwareIdentity[]</span><span class="sxs-lookup"><span data-stu-id="6f075-189">SoftwareIdentity[]</span></span>
 
-## <span data-ttu-id="aff64-190">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="aff64-190">NOTES</span></span>
+## <span data-ttu-id="6f075-190">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="6f075-190">NOTES</span></span>
 
-<span data-ttu-id="aff64-191">A inclusão de um provedor de pacote em um comando pode tornar os parâmetros dinâmicos disponíveis para um cmdlet.</span><span class="sxs-lookup"><span data-stu-id="aff64-191">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="aff64-192">Parâmetros dinâmicos são específicos para um provedor de pacote.</span><span class="sxs-lookup"><span data-stu-id="aff64-192">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="aff64-193">O `Get-Help` cmdlet lista os conjuntos de parâmetros de um cmdlet e inclui o conjunto de parâmetros do provedor.</span><span class="sxs-lookup"><span data-stu-id="aff64-193">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="aff64-194">Por exemplo, `Get-Package` tem o conjunto de parâmetros **PowerShellGet** que inclui `-NoPathUpdate` , `AllowClobber` e `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="aff64-194">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
+<span data-ttu-id="6f075-191">A inclusão de um provedor de pacote em um comando pode tornar os parâmetros dinâmicos disponíveis para um cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6f075-191">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="6f075-192">Parâmetros dinâmicos são específicos para um provedor de pacote.</span><span class="sxs-lookup"><span data-stu-id="6f075-192">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="6f075-193">O `Get-Help` cmdlet lista os conjuntos de parâmetros de um cmdlet e inclui o conjunto de parâmetros do provedor.</span><span class="sxs-lookup"><span data-stu-id="6f075-193">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="6f075-194">Por exemplo, `Get-Package` tem o conjunto de parâmetros **PowerShellGet** que inclui `-NoPathUpdate` , `AllowClobber` e `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="6f075-194">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
 
-## <span data-ttu-id="aff64-195">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="aff64-195">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="6f075-195">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="6f075-195">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="6f075-196">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6f075-196">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="6f075-197">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="6f075-197">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="6f075-198">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6f075-198">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="aff64-196">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="aff64-196">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="6f075-199">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="6f075-199">RELATED LINKS</span></span>
 
-[<span data-ttu-id="aff64-197">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="aff64-197">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
+[<span data-ttu-id="6f075-200">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="6f075-200">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="aff64-198">Find-Package</span><span class="sxs-lookup"><span data-stu-id="aff64-198">Find-Package</span></span>](Find-Package.md)
+[<span data-ttu-id="6f075-201">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="6f075-201">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
 
-[<span data-ttu-id="aff64-199">Get-Help</span><span class="sxs-lookup"><span data-stu-id="aff64-199">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
+[<span data-ttu-id="6f075-202">Find-Package</span><span class="sxs-lookup"><span data-stu-id="6f075-202">Find-Package</span></span>](Find-Package.md)
 
-[<span data-ttu-id="aff64-200">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="aff64-200">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+[<span data-ttu-id="6f075-203">Get-Help</span><span class="sxs-lookup"><span data-stu-id="6f075-203">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
 
-[<span data-ttu-id="aff64-201">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="aff64-201">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="6f075-204">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="6f075-204">Get-PackageProvider</span></span>](Get-PackageProvider.md)
 
-[<span data-ttu-id="aff64-202">Install-Package</span><span class="sxs-lookup"><span data-stu-id="aff64-202">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="6f075-205">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="6f075-205">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="aff64-203">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="aff64-203">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
+[<span data-ttu-id="6f075-206">Install-Package</span><span class="sxs-lookup"><span data-stu-id="6f075-206">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="aff64-204">Save-Package</span><span class="sxs-lookup"><span data-stu-id="aff64-204">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="6f075-207">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="6f075-207">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
 
-[<span data-ttu-id="aff64-205">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="aff64-205">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="6f075-208">Save-Package</span><span class="sxs-lookup"><span data-stu-id="6f075-208">Save-Package</span></span>](Save-Package.md)
 
+[<span data-ttu-id="6f075-209">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="6f075-209">Uninstall-Package</span></span>](Uninstall-Package.md)

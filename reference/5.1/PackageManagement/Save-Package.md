@@ -7,21 +7,21 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: c8d6015edebdc649b80e7a48080aa8b96d97fd8d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1b780ad8c28c6c7095012fd75ed4dfa31d761b08
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193635"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889987"
 ---
-# <span data-ttu-id="ca0eb-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="ca0eb-103">Save-Package</span></span>
+# <span data-ttu-id="1ddff-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="1ddff-103">Save-Package</span></span>
 
-## <span data-ttu-id="ca0eb-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="ca0eb-104">SYNOPSIS</span></span>
-<span data-ttu-id="ca0eb-105">Salva pacotes no computador local sem instalá-los.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-105">Saves packages to the local computer without installing them.</span></span>
+## <span data-ttu-id="1ddff-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="1ddff-104">SYNOPSIS</span></span>
+<span data-ttu-id="1ddff-105">Salva pacotes no computador local sem instalá-los.</span><span class="sxs-lookup"><span data-stu-id="1ddff-105">Saves packages to the local computer without installing them.</span></span>
 
-## <span data-ttu-id="ca0eb-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="ca0eb-106">SYNTAX</span></span>
+## <span data-ttu-id="1ddff-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="1ddff-106">SYNTAX</span></span>
 
-### <span data-ttu-id="ca0eb-107">PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="ca0eb-107">PackageBySearch</span></span>
+### <span data-ttu-id="1ddff-107">PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="1ddff-107">PackageBySearch</span></span>
 
 ```
 Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <St
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [-ProviderName <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ca0eb-108">PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="ca0eb-108">PackageByInputObject</span></span>
+### <span data-ttu-id="1ddff-108">PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="1ddff-108">PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIdentity>
@@ -38,7 +38,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIden
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ca0eb-109">NuGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="ca0eb-109">NuGet:PackageByInputObject</span></span>
+### <span data-ttu-id="1ddff-109">NuGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="1ddff-109">NuGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -47,7 +47,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ca0eb-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="ca0eb-110">NuGet</span></span>
+### <span data-ttu-id="1ddff-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="1ddff-110">NuGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -56,7 +56,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ca0eb-111">PowerShellGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="ca0eb-111">PowerShellGet:PackageByInputObject</span></span>
+### <span data-ttu-id="1ddff-111">PowerShellGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="1ddff-111">PowerShellGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -67,7 +67,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ca0eb-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="ca0eb-112">PowerShellGet</span></span>
+### <span data-ttu-id="1ddff-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="1ddff-112">PowerShellGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -78,16 +78,16 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="ca0eb-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="ca0eb-113">DESCRIPTION</span></span>
+## <span data-ttu-id="1ddff-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="1ddff-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="ca0eb-114">O `Save-Package` cmdlet salva pacotes no computador local, mas não instala os pacotes.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
-<span data-ttu-id="ca0eb-115">Esse cmdlet salva a versão mais recente de um pacote, a menos que você especifique um **RequiredVerion** .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion** .</span></span> <span data-ttu-id="ca0eb-116">Os parâmetros **Path** e **LiteralPath** são mutuamente exclusivos e não podem ser adicionados ao mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
+<span data-ttu-id="1ddff-114">O `Save-Package` cmdlet salva pacotes no computador local, mas não instala os pacotes.</span><span class="sxs-lookup"><span data-stu-id="1ddff-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
+<span data-ttu-id="1ddff-115">Esse cmdlet salva a versão mais recente de um pacote, a menos que você especifique um **RequiredVerion**.</span><span class="sxs-lookup"><span data-stu-id="1ddff-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion**.</span></span> <span data-ttu-id="1ddff-116">Os parâmetros **Path** e **LiteralPath** são mutuamente exclusivos e não podem ser adicionados ao mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="1ddff-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
 
-## <span data-ttu-id="ca0eb-117">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="ca0eb-117">EXAMPLES</span></span>
+## <span data-ttu-id="1ddff-117">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="1ddff-117">EXAMPLES</span></span>
 
-### <span data-ttu-id="ca0eb-118">Exemplo 1: salvar um pacote no computador local</span><span class="sxs-lookup"><span data-stu-id="ca0eb-118">Example 1: Save a package to the local computer</span></span>
+### <span data-ttu-id="1ddff-118">Exemplo 1: salvar um pacote no computador local</span><span class="sxs-lookup"><span data-stu-id="1ddff-118">Example 1: Save a package to the local computer</span></span>
 
-<span data-ttu-id="ca0eb-119">Este exemplo salva a versão mais recente do pacote em um diretório no computador local.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="ca0eb-120">As dependências do pacote são baixadas com o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-120">The package's dependencies are download with the package.</span></span>
+<span data-ttu-id="1ddff-119">Este exemplo salva a versão mais recente do pacote em um diretório no computador local.</span><span class="sxs-lookup"><span data-stu-id="1ddff-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="1ddff-120">As dependências do pacote são baixadas com o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-120">The package's dependencies are download with the package.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
@@ -100,11 +100,11 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.14.0     Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="ca0eb-121">`Save-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="ca0eb-122">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="ca0eb-123">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-123">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="1ddff-121">`Save-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="1ddff-122">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="1ddff-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="1ddff-123">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="1ddff-123">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="ca0eb-124">Exemplo 2: salvar uma versão de pacote específica</span><span class="sxs-lookup"><span data-stu-id="ca0eb-124">Example 2: Save a specific package version</span></span>
+### <span data-ttu-id="1ddff-124">Exemplo 2: salvar uma versão de pacote específica</span><span class="sxs-lookup"><span data-stu-id="1ddff-124">Example 2: Save a specific package version</span></span>
 
-<span data-ttu-id="ca0eb-125">Este exemplo especifica a versão do pacote e salva-o em um diretório no computador local.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
+<span data-ttu-id="1ddff-125">Este exemplo especifica a versão do pacote e salva-o em um diretório no computador local.</span><span class="sxs-lookup"><span data-stu-id="1ddff-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -RequiredVersion 2.9.0 -ProviderName NuGet -Path C:\LocalPkg
@@ -117,35 +117,35 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.9.0      Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="ca0eb-126">`Save-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="ca0eb-127">**RequiredVersion** indica uma versão de pacote específica.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="ca0eb-128">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="ca0eb-129">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-129">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="1ddff-126">`Save-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="1ddff-127">**RequiredVersion** indica uma versão de pacote específica.</span><span class="sxs-lookup"><span data-stu-id="1ddff-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="1ddff-128">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="1ddff-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="1ddff-129">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="1ddff-129">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="ca0eb-130">Exemplo 3: usar Find-Package para salvar um pacote</span><span class="sxs-lookup"><span data-stu-id="ca0eb-130">Example 3: Use Find-Package to save a package</span></span>
+### <span data-ttu-id="1ddff-130">Exemplo 3: usar Find-Package para salvar um pacote</span><span class="sxs-lookup"><span data-stu-id="1ddff-130">Example 3: Use Find-Package to save a package</span></span>
 
-<span data-ttu-id="ca0eb-131">Esse comando usa `Find-Package` para localizar a versão mais recente do pacote e envia o objeto para `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
+<span data-ttu-id="1ddff-131">Esse comando usa `Find-Package` para localizar a versão mais recente do pacote e envia o objeto para `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="1ddff-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
 
 ```
 PS> Find-Package -Name NuGet.Core -ProviderName NuGet | Save-Package -Path C:\LocalPkg
 ```
 
-<span data-ttu-id="ca0eb-132">`Find-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="ca0eb-133">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="ca0eb-134">O objeto é enviado ao pipeline para `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="ca0eb-135">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-135">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="1ddff-132">`Find-Package` usa o parâmetro **Name** para especificar o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="1ddff-133">O pacote é baixado do repositório especificado pelo parâmetro **ProviderName** .</span><span class="sxs-lookup"><span data-stu-id="1ddff-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="1ddff-134">O objeto é enviado ao pipeline para `Save-Package` .</span><span class="sxs-lookup"><span data-stu-id="1ddff-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="1ddff-135">O parâmetro **path** determina onde o pacote é salvo.</span><span class="sxs-lookup"><span data-stu-id="1ddff-135">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="ca0eb-136">Exemplo 4: salvar e instalar o pacote</span><span class="sxs-lookup"><span data-stu-id="ca0eb-136">Example 4: Save and install the package</span></span>
+### <span data-ttu-id="1ddff-136">Exemplo 4: salvar e instalar o pacote</span><span class="sxs-lookup"><span data-stu-id="1ddff-136">Example 4: Save and install the package</span></span>
 
-<span data-ttu-id="ca0eb-137">A versão mais recente do pacote e suas dependências são baixadas e instaladas no computador local.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
+<span data-ttu-id="1ddff-137">A versão mais recente do pacote e suas dependências são baixadas e instaladas no computador local.</span><span class="sxs-lookup"><span data-stu-id="1ddff-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
 PS> Install-Package C:\LocalPkg\NuGet.Core.2.14.0.nupkg
 ```
 
-<span data-ttu-id="ca0eb-138">`Save-Package` Baixa o arquivo de pacote e suas dependências no computador local.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
-<span data-ttu-id="ca0eb-139">`Install-Package` instala o pacote e as dependências do diretório especificado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
+<span data-ttu-id="1ddff-138">`Save-Package` Baixa o arquivo de pacote e suas dependências no computador local.</span><span class="sxs-lookup"><span data-stu-id="1ddff-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
+<span data-ttu-id="1ddff-139">`Install-Package` instala o pacote e as dependências do diretório especificado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
 
-## <span data-ttu-id="ca0eb-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ca0eb-140">PARAMETERS</span></span>
+## <span data-ttu-id="1ddff-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="1ddff-140">PARAMETERS</span></span>
 
-### <span data-ttu-id="ca0eb-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="ca0eb-141">-AcceptLicense</span></span>
+### <span data-ttu-id="1ddff-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="1ddff-141">-AcceptLicense</span></span>
 
-<span data-ttu-id="ca0eb-142">Aceite automaticamente o contrato de licença durante a instalação se o pacote exigir.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
+<span data-ttu-id="1ddff-142">Aceite automaticamente o contrato de licença durante a instalação se o pacote exigir.</span><span class="sxs-lookup"><span data-stu-id="1ddff-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -159,9 +159,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="ca0eb-143">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="1ddff-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="1ddff-143">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="ca0eb-144">Permite que os pacotes marcados como pré-lançamento sejam salvos.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-144">Allows packages marked as Prerelease to be saved.</span></span>
+<span data-ttu-id="1ddff-144">Permite que os pacotes marcados como pré-lançamento sejam salvos.</span><span class="sxs-lookup"><span data-stu-id="1ddff-144">Allows packages marked as Prerelease to be saved.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,9 +175,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-145">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="ca0eb-145">-AllVersions</span></span>
+### <span data-ttu-id="1ddff-145">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="1ddff-145">-AllVersions</span></span>
 
-<span data-ttu-id="ca0eb-146">Indica que esse cmdlet salva todas as versões disponíveis do pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
+<span data-ttu-id="1ddff-146">Indica que esse cmdlet salva todas as versões disponíveis do pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -191,9 +191,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-147">-Command</span><span class="sxs-lookup"><span data-stu-id="ca0eb-147">-Command</span></span>
+### <span data-ttu-id="1ddff-147">-Command</span><span class="sxs-lookup"><span data-stu-id="1ddff-147">-Command</span></span>
 
-<span data-ttu-id="ca0eb-148">Especifica um ou mais comandos incluídos no pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-148">Specifies one or more commands included in the package.</span></span>
+<span data-ttu-id="1ddff-148">Especifica um ou mais comandos incluídos no pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-148">Specifies one or more commands included in the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -207,25 +207,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-149">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="ca0eb-149">-ConfigFile</span></span>
+### <span data-ttu-id="1ddff-149">-ConfigFile</span><span class="sxs-lookup"><span data-stu-id="1ddff-149">-ConfigFile</span></span>
 
-<span data-ttu-id="ca0eb-150">Especifica um arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-150">Specifies a configuration File.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-151">-Contém</span><span class="sxs-lookup"><span data-stu-id="ca0eb-151">-Contains</span></span>
-
-<span data-ttu-id="ca0eb-152">`Save-Package` Obtém os objetos se qualquer item nos valores de Propriedade do objeto for uma correspondência exata para o valor especificado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+<span data-ttu-id="1ddff-150">Especifica um arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="1ddff-150">Specifies a configuration File.</span></span>
 
 ```yaml
 Type: System.String
@@ -239,9 +223,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="ca0eb-153">-Credential</span></span>
+### <span data-ttu-id="1ddff-151">-Contém</span><span class="sxs-lookup"><span data-stu-id="1ddff-151">-Contains</span></span>
 
-<span data-ttu-id="ca0eb-154">Especifica uma conta de usuário que tem permissão para salvar um pacote de um provedor de pacote ou origem especificado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
+<span data-ttu-id="1ddff-152">`Save-Package` Obtém os objetos se qualquer item nos valores de Propriedade do objeto for uma correspondência exata para o valor especificado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="1ddff-153">-Credential</span></span>
+
+<span data-ttu-id="1ddff-154">Especifica uma conta de usuário que tem permissão para salvar um pacote de um provedor de pacote ou origem especificado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -255,9 +255,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="ca0eb-155">-DscResource</span></span>
+### <span data-ttu-id="1ddff-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="1ddff-155">-DscResource</span></span>
 
-<span data-ttu-id="ca0eb-156">Especifica um ou mais recursos de DSC (configuração de estado desejado) para o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
+<span data-ttu-id="1ddff-156">Especifica um ou mais recursos de DSC (configuração de estado desejado) para o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -271,9 +271,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="ca0eb-157">-Filter</span></span>
+### <span data-ttu-id="1ddff-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="1ddff-157">-Filter</span></span>
 
-<span data-ttu-id="ca0eb-158">Especifica um filtro para o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-158">Specifies a filter for the package.</span></span>
+<span data-ttu-id="1ddff-158">Especifica um filtro para o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-158">Specifies a filter for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -287,57 +287,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-159">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="ca0eb-159">-FilterOnTag</span></span>
+### <span data-ttu-id="1ddff-159">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="1ddff-159">-FilterOnTag</span></span>
 
-<span data-ttu-id="ca0eb-160">Especifica a marca que filtra os resultados.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="ca0eb-161">Os resultados que não contêm a marca especificada são excluídos.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-161">Results that don't contain the specified tag are excluded.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-162">-Force</span><span class="sxs-lookup"><span data-stu-id="ca0eb-162">-Force</span></span>
-
-<span data-ttu-id="ca0eb-163">Força o comando a ser executado sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-163">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="ca0eb-164">-ForceBootstrap</span></span>
-
-<span data-ttu-id="ca0eb-165">Indica que `Save-Package` o **PackageManagement** é forçado a instalar automaticamente o provedor de pacote para o pacote especificado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-166">-Cabeçalhos</span><span class="sxs-lookup"><span data-stu-id="ca0eb-166">-Headers</span></span>
-
-<span data-ttu-id="ca0eb-167">Especifica os cabeçalhos do pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-167">Specifies the headers for the package.</span></span>
+<span data-ttu-id="1ddff-160">Especifica a marca que filtra os resultados.</span><span class="sxs-lookup"><span data-stu-id="1ddff-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="1ddff-161">Os resultados que não contêm a marca especificada são excluídos.</span><span class="sxs-lookup"><span data-stu-id="1ddff-161">Results that don't contain the specified tag are excluded.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -351,9 +303,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-168">-Inclui</span><span class="sxs-lookup"><span data-stu-id="ca0eb-168">-Includes</span></span>
+### <span data-ttu-id="1ddff-162">-Force</span><span class="sxs-lookup"><span data-stu-id="1ddff-162">-Force</span></span>
 
-<span data-ttu-id="ca0eb-169">Indica os recursos que o pacote inclui.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-169">Indicates the resources that the package includes.</span></span>
+<span data-ttu-id="1ddff-163">Força o comando a ser executado sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="1ddff-163">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="1ddff-164">-ForceBootstrap</span></span>
+
+<span data-ttu-id="1ddff-165">Indica que `Save-Package` o **PackageManagement** é forçado a instalar automaticamente o provedor de pacote para o pacote especificado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-166">-Cabeçalhos</span><span class="sxs-lookup"><span data-stu-id="1ddff-166">-Headers</span></span>
+
+<span data-ttu-id="1ddff-167">Especifica os cabeçalhos do pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-167">Specifies the headers for the package.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-168">-Inclui</span><span class="sxs-lookup"><span data-stu-id="1ddff-168">-Includes</span></span>
+
+<span data-ttu-id="1ddff-169">Indica os recursos que o pacote inclui.</span><span class="sxs-lookup"><span data-stu-id="1ddff-169">Indicates the resources that the package includes.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -368,9 +368,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="ca0eb-170">-InputObject</span></span>
+### <span data-ttu-id="1ddff-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="1ddff-170">-InputObject</span></span>
 
-<span data-ttu-id="ca0eb-171">Um objeto de ID de software que representa o pacote que você deseja salvar.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="ca0eb-172">As IDs de software fazem parte dos resultados do `Find-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
+<span data-ttu-id="1ddff-171">Um objeto de ID de software que representa o pacote que você deseja salvar.</span><span class="sxs-lookup"><span data-stu-id="1ddff-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="1ddff-172">As IDs de software fazem parte dos resultados do `Find-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="1ddff-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
 
 ```yaml
 Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity
@@ -384,9 +384,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="ca0eb-173">-LiteralPath</span></span>
+### <span data-ttu-id="1ddff-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="1ddff-173">-LiteralPath</span></span>
 
-<span data-ttu-id="ca0eb-174">Especifica o caminho literal para o qual você deseja salvar o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="ca0eb-175">Você não pode adicionar esse parâmetro e o parâmetro **path** ao mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
+<span data-ttu-id="1ddff-174">Especifica o caminho literal para o qual você deseja salvar o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="1ddff-175">Você não pode adicionar esse parâmetro e o parâmetro **path** ao mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="1ddff-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -400,25 +400,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="ca0eb-176">-MaximumVersion</span></span>
+### <span data-ttu-id="1ddff-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="1ddff-176">-MaximumVersion</span></span>
 
-<span data-ttu-id="ca0eb-177">Especifica a versão máxima do pacote que você deseja salvar.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-177">Specifies the maximum version of the package that you want to save.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PackageBySearch
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="ca0eb-178">-MinimumVersion</span></span>
-
-<span data-ttu-id="ca0eb-179">Especifica a versão mínima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-179">Specifies the minimum version of the package that you want to find.</span></span>
+<span data-ttu-id="1ddff-177">Especifica a versão máxima do pacote que você deseja salvar.</span><span class="sxs-lookup"><span data-stu-id="1ddff-177">Specifies the maximum version of the package that you want to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -432,9 +416,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-180">-Name</span><span class="sxs-lookup"><span data-stu-id="ca0eb-180">-Name</span></span>
+### <span data-ttu-id="1ddff-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="1ddff-178">-MinimumVersion</span></span>
 
-<span data-ttu-id="ca0eb-181">Especifica um ou mais nomes de pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-181">Specifies one or more package names.</span></span>
+<span data-ttu-id="1ddff-179">Especifica a versão mínima do pacote que você deseja localizar.</span><span class="sxs-lookup"><span data-stu-id="1ddff-179">Specifies the minimum version of the package that you want to find.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-180">-Name</span><span class="sxs-lookup"><span data-stu-id="1ddff-180">-Name</span></span>
+
+<span data-ttu-id="1ddff-181">Especifica um ou mais nomes de pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-181">Specifies one or more package names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -448,9 +448,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="ca0eb-182">-PackageManagementProvider</span></span>
+### <span data-ttu-id="1ddff-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="1ddff-182">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="ca0eb-183">Especifica um provedor de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-183">Specifies a package management provider.</span></span>
+<span data-ttu-id="1ddff-183">Especifica um provedor de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="1ddff-183">Specifies a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -464,9 +464,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-184">-Path</span><span class="sxs-lookup"><span data-stu-id="ca0eb-184">-Path</span></span>
+### <span data-ttu-id="1ddff-184">-Path</span><span class="sxs-lookup"><span data-stu-id="1ddff-184">-Path</span></span>
 
-<span data-ttu-id="ca0eb-185">Especifica o local no computador local para armazenar o pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-185">Specifies the location on the local computer to store the package.</span></span>
+<span data-ttu-id="1ddff-185">Especifica o local no computador local para armazenar o pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-185">Specifies the location on the local computer to store the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -480,9 +480,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="ca0eb-186">-ProviderName</span></span>
+### <span data-ttu-id="1ddff-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="1ddff-186">-ProviderName</span></span>
 
-<span data-ttu-id="ca0eb-187">Especifica um ou mais nomes de provedor.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-187">Specifies one or more provider names.</span></span>
+<span data-ttu-id="1ddff-187">Especifica um ou mais nomes de provedor.</span><span class="sxs-lookup"><span data-stu-id="1ddff-187">Specifies one or more provider names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -497,9 +497,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-188">-Proxy</span><span class="sxs-lookup"><span data-stu-id="ca0eb-188">-Proxy</span></span>
+### <span data-ttu-id="1ddff-188">-Proxy</span><span class="sxs-lookup"><span data-stu-id="1ddff-188">-Proxy</span></span>
 
-<span data-ttu-id="ca0eb-189">Especifica um servidor proxy para a solicitação, em vez de uma conexão direta com o recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="1ddff-189">Especifica um servidor proxy para a solicitação, em vez de uma conexão direta com o recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="1ddff-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -513,9 +513,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="ca0eb-190">-ProxyCredential</span></span>
+### <span data-ttu-id="1ddff-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="1ddff-190">-ProxyCredential</span></span>
 
-<span data-ttu-id="ca0eb-191">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .</span><span class="sxs-lookup"><span data-stu-id="ca0eb-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="1ddff-191">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="1ddff-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -529,9 +529,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="ca0eb-192">-PublishLocation</span></span>
+### <span data-ttu-id="1ddff-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="1ddff-192">-PublishLocation</span></span>
 
-<span data-ttu-id="ca0eb-193">Especifica o local de publicação.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-193">Specifies the publish location.</span></span>
+<span data-ttu-id="1ddff-193">Especifica o local de publicação.</span><span class="sxs-lookup"><span data-stu-id="1ddff-193">Specifies the publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -545,9 +545,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="ca0eb-194">-RequiredVersion</span></span>
+### <span data-ttu-id="1ddff-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="1ddff-194">-RequiredVersion</span></span>
 
-<span data-ttu-id="ca0eb-195">Especifica a versão exata do pacote a ser salvo.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-195">Specifies the exact version of the package to save.</span></span>
+<span data-ttu-id="1ddff-195">Especifica a versão exata do pacote a ser salvo.</span><span class="sxs-lookup"><span data-stu-id="1ddff-195">Specifies the exact version of the package to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -561,9 +561,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-196">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="ca0eb-196">-RoleCapability</span></span>
+### <span data-ttu-id="1ddff-196">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="1ddff-196">-RoleCapability</span></span>
 
-<span data-ttu-id="ca0eb-197">Especifica uma matriz de recursos de função.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-197">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="1ddff-197">Especifica uma matriz de recursos de função.</span><span class="sxs-lookup"><span data-stu-id="1ddff-197">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -577,25 +577,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="ca0eb-198">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="1ddff-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="1ddff-198">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="ca0eb-199">Especifica o local de publicação do script.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-199">Specifies the script publish location.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="ca0eb-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="ca0eb-200">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="ca0eb-201">Especifica o local de origem do script.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-201">Specifies the script source location.</span></span>
+<span data-ttu-id="1ddff-199">Especifica o local de publicação do script.</span><span class="sxs-lookup"><span data-stu-id="1ddff-199">Specifies the script publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -609,9 +593,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-202">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="ca0eb-202">-SkipValidate</span></span>
+### <span data-ttu-id="1ddff-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="1ddff-200">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="ca0eb-203">Opção que ignora a validação das credenciais de um pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-203">Switch that skips validating the credentials of a package.</span></span>
+<span data-ttu-id="1ddff-201">Especifica o local de origem do script.</span><span class="sxs-lookup"><span data-stu-id="1ddff-201">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1ddff-202">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="1ddff-202">-SkipValidate</span></span>
+
+<span data-ttu-id="1ddff-203">Opção que ignora a validação das credenciais de um pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-203">Switch that skips validating the credentials of a package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -625,9 +625,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-204">-Source</span><span class="sxs-lookup"><span data-stu-id="ca0eb-204">-Source</span></span>
+### <span data-ttu-id="1ddff-204">-Source</span><span class="sxs-lookup"><span data-stu-id="1ddff-204">-Source</span></span>
 
-<span data-ttu-id="ca0eb-205">Especifica uma ou mais origens de pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-205">Specifies one or more package sources.</span></span>
+<span data-ttu-id="1ddff-205">Especifica uma ou mais origens de pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-205">Specifies one or more package sources.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -641,9 +641,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="ca0eb-206">-Tag</span></span>
+### <span data-ttu-id="1ddff-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="1ddff-206">-Tag</span></span>
 
-<span data-ttu-id="ca0eb-207">Especifica uma marca a ser pesquisada nos metadados do pacote.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-207">Specifies a tag to search for within the package metadata.</span></span>
+<span data-ttu-id="1ddff-207">Especifica uma marca a ser pesquisada nos metadados do pacote.</span><span class="sxs-lookup"><span data-stu-id="1ddff-207">Specifies a tag to search for within the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -657,9 +657,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-208">-Type</span><span class="sxs-lookup"><span data-stu-id="ca0eb-208">-Type</span></span>
+### <span data-ttu-id="1ddff-208">-Type</span><span class="sxs-lookup"><span data-stu-id="1ddff-208">-Type</span></span>
 
-<span data-ttu-id="ca0eb-209">Especifica se os pacotes devem ser pesquisados com um módulo, um script ou um.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="1ddff-209">Especifica se os pacotes devem ser pesquisados com um módulo, um script ou um.</span><span class="sxs-lookup"><span data-stu-id="1ddff-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -674,9 +674,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="ca0eb-210">-Confirm</span></span>
+### <span data-ttu-id="1ddff-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="1ddff-210">-Confirm</span></span>
 
-<span data-ttu-id="ca0eb-211">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-211">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="1ddff-211">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="1ddff-211">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -690,9 +690,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="ca0eb-212">-WhatIf</span></span>
+### <span data-ttu-id="1ddff-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="1ddff-212">-WhatIf</span></span>
 
-<span data-ttu-id="ca0eb-213">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="ca0eb-214">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-214">The cmdlet is not run.</span></span>
+<span data-ttu-id="1ddff-213">Mostra o que aconteceria se o cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="1ddff-214">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="1ddff-214">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -706,28 +706,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ca0eb-215">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ca0eb-215">CommonParameters</span></span>
+### <span data-ttu-id="1ddff-215">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1ddff-215">CommonParameters</span></span>
 
-<span data-ttu-id="ca0eb-216">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ca0eb-217">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="ca0eb-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="1ddff-216">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1ddff-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1ddff-217">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="1ddff-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="ca0eb-218">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="ca0eb-218">INPUTS</span></span>
+## <span data-ttu-id="1ddff-218">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="1ddff-218">INPUTS</span></span>
 
-### <span data-ttu-id="ca0eb-219">`Save-Package` aceita objetos do pipeline.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-219">`Save-Package` accepts objects from the pipeline.</span></span>
+### <span data-ttu-id="1ddff-219">`Save-Package` aceita objetos do pipeline.</span><span class="sxs-lookup"><span data-stu-id="1ddff-219">`Save-Package` accepts objects from the pipeline.</span></span>
 
-## <span data-ttu-id="ca0eb-220">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="ca0eb-220">OUTPUTS</span></span>
+## <span data-ttu-id="1ddff-220">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="1ddff-220">OUTPUTS</span></span>
 
-### <span data-ttu-id="ca0eb-221">Este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="ca0eb-221">This cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="1ddff-221">Este cmdlet não gera saída.</span><span class="sxs-lookup"><span data-stu-id="1ddff-221">This cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="ca0eb-222">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="ca0eb-222">NOTES</span></span>
+## <span data-ttu-id="1ddff-222">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="1ddff-222">NOTES</span></span>
 
-## <span data-ttu-id="ca0eb-223">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="ca0eb-223">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="1ddff-223">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="1ddff-223">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="1ddff-224">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1ddff-224">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="1ddff-225">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="1ddff-225">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="1ddff-226">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1ddff-226">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="ca0eb-224">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="ca0eb-224">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="1ddff-227">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="1ddff-227">RELATED LINKS</span></span>
 
-[<span data-ttu-id="ca0eb-225">Get-Package</span><span class="sxs-lookup"><span data-stu-id="ca0eb-225">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="1ddff-228">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="1ddff-228">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="ca0eb-226">Install-Package</span><span class="sxs-lookup"><span data-stu-id="ca0eb-226">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="1ddff-229">Get-Package</span><span class="sxs-lookup"><span data-stu-id="1ddff-229">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="ca0eb-227">Save-Package</span><span class="sxs-lookup"><span data-stu-id="ca0eb-227">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="1ddff-230">Install-Package</span><span class="sxs-lookup"><span data-stu-id="1ddff-230">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="ca0eb-228">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="ca0eb-228">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="1ddff-231">Save-Package</span><span class="sxs-lookup"><span data-stu-id="1ddff-231">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="1ddff-232">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="1ddff-232">Uninstall-Package</span></span>](Uninstall-Package.md)

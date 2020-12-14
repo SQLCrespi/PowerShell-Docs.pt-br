@@ -7,21 +7,21 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 1b5bba73a55f92b515113c8b895dcb8af3c52eb6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e058bff552b4460d068909f8bf4ab31b976ef978
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194122"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889718"
 ---
-# <span data-ttu-id="863f0-103">Save-Module</span><span class="sxs-lookup"><span data-stu-id="863f0-103">Save-Module</span></span>
+# <span data-ttu-id="f9f0d-103">Save-Module</span><span class="sxs-lookup"><span data-stu-id="f9f0d-103">Save-Module</span></span>
 
-## <span data-ttu-id="863f0-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="863f0-104">SYNOPSIS</span></span>
-<span data-ttu-id="863f0-105">Salva um módulo e suas dependências no computador local, mas não instala o módulo.</span><span class="sxs-lookup"><span data-stu-id="863f0-105">Saves a module and its dependencies on the local computer but doesn't install the module.</span></span>
+## <span data-ttu-id="f9f0d-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="f9f0d-104">SYNOPSIS</span></span>
+<span data-ttu-id="f9f0d-105">Salva um módulo e suas dependências no computador local, mas não instala o módulo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-105">Saves a module and its dependencies on the local computer but doesn't install the module.</span></span>
 
-## <span data-ttu-id="863f0-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="863f0-106">SYNTAX</span></span>
+## <span data-ttu-id="f9f0d-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="f9f0d-106">SYNTAX</span></span>
 
-### <span data-ttu-id="863f0-107">NameAndPathParameterSet (padrão)</span><span class="sxs-lookup"><span data-stu-id="863f0-107">NameAndPathParameterSet (Default)</span></span>
+### <span data-ttu-id="f9f0d-107">NameAndPathParameterSet (padrão)</span><span class="sxs-lookup"><span data-stu-id="f9f0d-107">NameAndPathParameterSet (Default)</span></span>
 
 ```
 Save-Module [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <String>]
@@ -30,7 +30,7 @@ Save-Module [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <Stri
  [-AcceptLicense]  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="863f0-108">NameAndLiteralPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="863f0-108">NameAndLiteralPathParameterSet</span></span>
+### <span data-ttu-id="f9f0d-108">NameAndLiteralPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="f9f0d-108">NameAndLiteralPathParameterSet</span></span>
 
 ```
 Save-Module [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <String>]
@@ -39,7 +39,7 @@ Save-Module [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <Stri
  [-AcceptLicense]  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="863f0-109">InputObjectAndLiteralPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="863f0-109">InputObjectAndLiteralPathParameterSet</span></span>
+### <span data-ttu-id="f9f0d-109">InputObjectAndLiteralPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="f9f0d-109">InputObjectAndLiteralPathParameterSet</span></span>
 
 ```
 Save-Module [-InputObject] <PSObject[]> -LiteralPath <String> [-Proxy <Uri>]
@@ -47,7 +47,7 @@ Save-Module [-InputObject] <PSObject[]> -LiteralPath <String> [-Proxy <Uri>]
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="863f0-110">InputObjectAndPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="863f0-110">InputObjectAndPathParameterSet</span></span>
+### <span data-ttu-id="f9f0d-110">InputObjectAndPathParameterSet</span><span class="sxs-lookup"><span data-stu-id="f9f0d-110">InputObjectAndPathParameterSet</span></span>
 
 ```
 Save-Module [-InputObject] <PSObject[]> [-Path] <String> [-Proxy <Uri>]
@@ -55,18 +55,18 @@ Save-Module [-InputObject] <PSObject[]> [-Path] <String> [-Proxy <Uri>]
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="863f0-111">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="863f0-111">DESCRIPTION</span></span>
+## <span data-ttu-id="f9f0d-111">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="f9f0d-111">DESCRIPTION</span></span>
 
-<span data-ttu-id="863f0-112">O `Save-Module` cmdlet baixa um módulo e quaisquer dependências de um repositório registrado.</span><span class="sxs-lookup"><span data-stu-id="863f0-112">The `Save-Module` cmdlet downloads a module and any dependencies from a registered repository.</span></span>
-<span data-ttu-id="863f0-113">`Save-Module` baixa e salva a versão mais atual de um módulo.</span><span class="sxs-lookup"><span data-stu-id="863f0-113">`Save-Module` downloads and saves the most current version of a module.</span></span> <span data-ttu-id="863f0-114">Os arquivos são salvos em um caminho especificado no computador local.</span><span class="sxs-lookup"><span data-stu-id="863f0-114">The files are saved to a specified path on the local computer.</span></span> <span data-ttu-id="863f0-115">O módulo não está instalado, mas o conteúdo está disponível para inspeção por um administrador.</span><span class="sxs-lookup"><span data-stu-id="863f0-115">The module isn't installed, but the contents are available for inspection by an administrator.</span></span> <span data-ttu-id="863f0-116">O módulo salvo pode então ser copiado para o `$env:PSModulePath` local apropriado do computador offline.</span><span class="sxs-lookup"><span data-stu-id="863f0-116">The saved module can then be copied into the appropriate `$env:PSModulePath` location of the offline machine.</span></span>
+<span data-ttu-id="f9f0d-112">O `Save-Module` cmdlet baixa um módulo e quaisquer dependências de um repositório registrado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-112">The `Save-Module` cmdlet downloads a module and any dependencies from a registered repository.</span></span>
+<span data-ttu-id="f9f0d-113">`Save-Module` baixa e salva a versão mais atual de um módulo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-113">`Save-Module` downloads and saves the most current version of a module.</span></span> <span data-ttu-id="f9f0d-114">Os arquivos são salvos em um caminho especificado no computador local.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-114">The files are saved to a specified path on the local computer.</span></span> <span data-ttu-id="f9f0d-115">O módulo não está instalado, mas o conteúdo está disponível para inspeção por um administrador.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-115">The module isn't installed, but the contents are available for inspection by an administrator.</span></span> <span data-ttu-id="f9f0d-116">O módulo salvo pode então ser copiado para o `$env:PSModulePath` local apropriado do computador offline.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-116">The saved module can then be copied into the appropriate `$env:PSModulePath` location of the offline machine.</span></span>
 
-<span data-ttu-id="863f0-117">`Get-PSRepository` exibe os repositórios registrados do computador local.</span><span class="sxs-lookup"><span data-stu-id="863f0-117">`Get-PSRepository` displays the local computer's registered repositories.</span></span> <span data-ttu-id="863f0-118">Você pode usar o `Find-Module` cmdlet para pesquisar repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="863f0-118">You can use the `Find-Module` cmdlet to search registered repositories.</span></span>
+<span data-ttu-id="f9f0d-117">`Get-PSRepository` exibe os repositórios registrados do computador local.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-117">`Get-PSRepository` displays the local computer's registered repositories.</span></span> <span data-ttu-id="f9f0d-118">Você pode usar o `Find-Module` cmdlet para pesquisar repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-118">You can use the `Find-Module` cmdlet to search registered repositories.</span></span>
 
-## <span data-ttu-id="863f0-119">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="863f0-119">EXAMPLES</span></span>
+## <span data-ttu-id="f9f0d-119">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="f9f0d-119">EXAMPLES</span></span>
 
-### <span data-ttu-id="863f0-120">Exemplo 1: salvar um módulo</span><span class="sxs-lookup"><span data-stu-id="863f0-120">Example 1: Save a module</span></span>
+### <span data-ttu-id="f9f0d-120">Exemplo 1: salvar um módulo</span><span class="sxs-lookup"><span data-stu-id="f9f0d-120">Example 1: Save a module</span></span>
 
-<span data-ttu-id="863f0-121">Neste exemplo, um módulo e suas dependências são salvos no computador local.</span><span class="sxs-lookup"><span data-stu-id="863f0-121">In this example, a module and its dependencies are saved to the local computer.</span></span>
+<span data-ttu-id="f9f0d-121">Neste exemplo, um módulo e suas dependências são salvos no computador local.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-121">In this example, a module and its dependencies are saved to the local computer.</span></span>
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery
@@ -82,11 +82,11 @@ d-----         7/1/2019     13:31                PackageManagement
 d-----         7/1/2019     13:31                PowerShellGet
 ```
 
-<span data-ttu-id="863f0-122">`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="863f0-122">`Save-Module` uses the **Name** parameter to specify the module, **PowerShellGet** .</span></span> <span data-ttu-id="863f0-123">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="863f0-123">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="863f0-124">O parâmetro **Repository** especifica um repositório registrado, **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="863f0-124">The **Repository** parameter specifies a registered repository, **PSGallery** .</span></span> <span data-ttu-id="863f0-125">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="863f0-125">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
+<span data-ttu-id="f9f0d-122">`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-122">`Save-Module` uses the **Name** parameter to specify the module, **PowerShellGet**.</span></span> <span data-ttu-id="f9f0d-123">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-123">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="f9f0d-124">O parâmetro **Repository** especifica um repositório registrado, **PSGallery**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-124">The **Repository** parameter specifies a registered repository, **PSGallery**.</span></span> <span data-ttu-id="f9f0d-125">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-125">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
 
-### <span data-ttu-id="863f0-126">Exemplo 2: salvar uma versão específica de um módulo</span><span class="sxs-lookup"><span data-stu-id="863f0-126">Example 2: Save a specific version of a module</span></span>
+### <span data-ttu-id="f9f0d-126">Exemplo 2: salvar uma versão específica de um módulo</span><span class="sxs-lookup"><span data-stu-id="f9f0d-126">Example 2: Save a specific version of a module</span></span>
 
-<span data-ttu-id="863f0-127">Este exemplo mostra como usar um parâmetro como **MaximumVersion** , ou **RequiredVersion** para especificar uma versão de módulo.</span><span class="sxs-lookup"><span data-stu-id="863f0-127">This example shows how to use a parameter such as **MaximumVersion** , or **RequiredVersion** to specify a module version.</span></span>
+<span data-ttu-id="f9f0d-127">Este exemplo mostra como usar um parâmetro como **MaximumVersion**, ou **RequiredVersion** para especificar uma versão de módulo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-127">This example shows how to use a parameter such as **MaximumVersion**, or **RequiredVersion** to specify a module version.</span></span>
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery -MaximumVersion 2.1.0
@@ -101,11 +101,11 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     13:40                2.1.0
 ```
 
-<span data-ttu-id="863f0-128">`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="863f0-128">`Save-Module` uses the **Name** parameter to specify the module, **PowerShellGet** .</span></span> <span data-ttu-id="863f0-129">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="863f0-129">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="863f0-130">O parâmetro **Repository** especifica um repositório registrado, **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="863f0-130">The **Repository** parameter specifies a registered repository, **PSGallery** .</span></span> <span data-ttu-id="863f0-131">**MaximumVersion** especifica que a versão **2.1.0** é baixada e salva.</span><span class="sxs-lookup"><span data-stu-id="863f0-131">**MaximumVersion** specifies that version **2.1.0** is downloaded and saved.</span></span> <span data-ttu-id="863f0-132">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="863f0-132">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
+<span data-ttu-id="f9f0d-128">`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-128">`Save-Module` uses the **Name** parameter to specify the module, **PowerShellGet**.</span></span> <span data-ttu-id="f9f0d-129">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-129">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="f9f0d-130">O parâmetro **Repository** especifica um repositório registrado, **PSGallery**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-130">The **Repository** parameter specifies a registered repository, **PSGallery**.</span></span> <span data-ttu-id="f9f0d-131">**MaximumVersion** especifica que a versão **2.1.0** é baixada e salva.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-131">**MaximumVersion** specifies that version **2.1.0** is downloaded and saved.</span></span> <span data-ttu-id="f9f0d-132">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-132">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
 
-### <span data-ttu-id="863f0-133">Exemplo 3: localizar e salvar uma versão específica de um módulo</span><span class="sxs-lookup"><span data-stu-id="863f0-133">Example 3: Find and save a specific version of a module</span></span>
+### <span data-ttu-id="f9f0d-133">Exemplo 3: localizar e salvar uma versão específica de um módulo</span><span class="sxs-lookup"><span data-stu-id="f9f0d-133">Example 3: Find and save a specific version of a module</span></span>
 
-<span data-ttu-id="863f0-134">Neste exemplo, uma versão de módulo necessária é encontrada no repositório e salva no computador local.</span><span class="sxs-lookup"><span data-stu-id="863f0-134">In this example, a required module version is found in the repository and saved to the local computer.</span></span>
+<span data-ttu-id="f9f0d-134">Neste exemplo, uma versão de módulo necessária é encontrada no repositório e salva no computador local.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-134">In this example, a required module version is found in the repository and saved to the local computer.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -Repository PSGallery -RequiredVersion 1.6.5 |
@@ -121,15 +121,15 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     14:04                1.6.5
 ```
 
-<span data-ttu-id="863f0-135">`Find-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="863f0-135">`Find-Module` uses the **Name** parameter to specify the module, **PowerShellGet** .</span></span> <span data-ttu-id="863f0-136">O parâmetro **Repository** especifica um repositório registrado, **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="863f0-136">The **Repository** parameter specifies a registered repository, **PSGallery** .</span></span> <span data-ttu-id="863f0-137">**RequiredVersion** especifica a versão **1.6.5** .</span><span class="sxs-lookup"><span data-stu-id="863f0-137">**RequiredVersion** specifies version **1.6.5** .</span></span>
+<span data-ttu-id="f9f0d-135">`Find-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-135">`Find-Module` uses the **Name** parameter to specify the module, **PowerShellGet**.</span></span> <span data-ttu-id="f9f0d-136">O parâmetro **Repository** especifica um repositório registrado, **PSGallery**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-136">The **Repository** parameter specifies a registered repository, **PSGallery**.</span></span> <span data-ttu-id="f9f0d-137">**RequiredVersion** especifica a versão **1.6.5**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-137">**RequiredVersion** specifies version **1.6.5**.</span></span>
 
-<span data-ttu-id="863f0-138">O objeto é enviado ao pipeline para `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="863f0-138">The object is sent down the pipeline to `Save-Module`.</span></span> <span data-ttu-id="863f0-139">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="863f0-139">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="863f0-140">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="863f0-140">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
+<span data-ttu-id="f9f0d-138">O objeto é enviado ao pipeline para `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="f9f0d-138">The object is sent down the pipeline to `Save-Module`.</span></span> <span data-ttu-id="f9f0d-139">O parâmetro **path** especifica onde armazenar o módulo baixado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-139">The **Path** parameter specifies where to store the downloaded module.</span></span> <span data-ttu-id="f9f0d-140">Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-140">After the download is finished, `Get-ChildItem` displays the contents of **Path** where the files are stored.</span></span>
 
-## <span data-ttu-id="863f0-141">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="863f0-141">PARAMETERS</span></span>
+## <span data-ttu-id="f9f0d-141">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f9f0d-141">PARAMETERS</span></span>
 
-### <span data-ttu-id="863f0-142">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="863f0-142">-AcceptLicense</span></span>
+### <span data-ttu-id="f9f0d-142">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="f9f0d-142">-AcceptLicense</span></span>
 
-<span data-ttu-id="863f0-143">Aceite automaticamente o contrato de licença se o pacote exigir.</span><span class="sxs-lookup"><span data-stu-id="863f0-143">Automatically accept the license agreement if the package requires it.</span></span>
+<span data-ttu-id="f9f0d-143">Aceite automaticamente o contrato de licença se o pacote exigir.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-143">Automatically accept the license agreement if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -143,9 +143,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-144">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="863f0-144">-AllowPrerelease</span></span>
+### <span data-ttu-id="f9f0d-144">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="f9f0d-144">-AllowPrerelease</span></span>
 
-<span data-ttu-id="863f0-145">Permite salvar um módulo marcado como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="863f0-145">Allows you to save a module marked as a prerelease.</span></span>
+<span data-ttu-id="f9f0d-145">Permite salvar um módulo marcado como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-145">Allows you to save a module marked as a prerelease.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -159,9 +159,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-146">-Confirm</span><span class="sxs-lookup"><span data-stu-id="863f0-146">-Confirm</span></span>
+### <span data-ttu-id="f9f0d-146">-Confirm</span><span class="sxs-lookup"><span data-stu-id="f9f0d-146">-Confirm</span></span>
 
-<span data-ttu-id="863f0-147">Solicita a confirmação antes de executar o `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="863f0-147">Prompts you for confirmation before running the `Save-Module`.</span></span>
+<span data-ttu-id="f9f0d-147">Solicita a confirmação antes de executar o `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="f9f0d-147">Prompts you for confirmation before running the `Save-Module`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,9 +175,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-148">-Credential</span><span class="sxs-lookup"><span data-stu-id="863f0-148">-Credential</span></span>
+### <span data-ttu-id="f9f0d-148">-Credential</span><span class="sxs-lookup"><span data-stu-id="f9f0d-148">-Credential</span></span>
 
-<span data-ttu-id="863f0-149">Especifica uma conta de usuário que tem direitos para salvar um módulo.</span><span class="sxs-lookup"><span data-stu-id="863f0-149">Specifies a user account that has rights to save a module.</span></span>
+<span data-ttu-id="f9f0d-149">Especifica uma conta de usuário que tem direitos para salvar um módulo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-149">Specifies a user account that has rights to save a module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -191,9 +191,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-150">-Force</span><span class="sxs-lookup"><span data-stu-id="863f0-150">-Force</span></span>
+### <span data-ttu-id="f9f0d-150">-Force</span><span class="sxs-lookup"><span data-stu-id="f9f0d-150">-Force</span></span>
 
-<span data-ttu-id="863f0-151">Forças `Save-Module` a serem executadas sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="863f0-151">Forces `Save-Module` to run without asking for user confirmation.</span></span>
+<span data-ttu-id="f9f0d-151">Forças `Save-Module` a serem executadas sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-151">Forces `Save-Module` to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -207,9 +207,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-152">-InputObject</span><span class="sxs-lookup"><span data-stu-id="863f0-152">-InputObject</span></span>
+### <span data-ttu-id="f9f0d-152">-InputObject</span><span class="sxs-lookup"><span data-stu-id="f9f0d-152">-InputObject</span></span>
 
-<span data-ttu-id="863f0-153">Aceita um objeto **PSRepositoryItemInfo** .</span><span class="sxs-lookup"><span data-stu-id="863f0-153">Accepts a **PSRepositoryItemInfo** object.</span></span> <span data-ttu-id="863f0-154">Por exemplo, saída `Find-Module` para uma variável e use essa variável como o argumento **InputObject** .</span><span class="sxs-lookup"><span data-stu-id="863f0-154">For example, output `Find-Module` to a variable and use that variable as the **InputObject** argument.</span></span>
+<span data-ttu-id="f9f0d-153">Aceita um objeto **PSRepositoryItemInfo** .</span><span class="sxs-lookup"><span data-stu-id="f9f0d-153">Accepts a **PSRepositoryItemInfo** object.</span></span> <span data-ttu-id="f9f0d-154">Por exemplo, saída `Find-Module` para uma variável e use essa variável como o argumento **InputObject** .</span><span class="sxs-lookup"><span data-stu-id="f9f0d-154">For example, output `Find-Module` to a variable and use that variable as the **InputObject** argument.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject[]
@@ -223,9 +223,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-155">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="863f0-155">-LiteralPath</span></span>
+### <span data-ttu-id="f9f0d-155">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="f9f0d-155">-LiteralPath</span></span>
 
-<span data-ttu-id="863f0-156">Especifica um caminho para um ou mais locais.</span><span class="sxs-lookup"><span data-stu-id="863f0-156">Specifies a path to one or more locations.</span></span> <span data-ttu-id="863f0-157">O valor do parâmetro **LiteralPath** é usado exatamente como inserido.</span><span class="sxs-lookup"><span data-stu-id="863f0-157">The value of the **LiteralPath** parameter is used exactly as entered.</span></span> <span data-ttu-id="863f0-158">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="863f0-158">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="863f0-159">Se o caminho incluir caracteres de escape, coloque-os entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="863f0-159">If the path includes escape characters, enclose them in single quotation marks.</span></span> <span data-ttu-id="863f0-160">O PowerShell não interpreta nenhum caractere entre aspas simples como sequências de escape.</span><span class="sxs-lookup"><span data-stu-id="863f0-160">PowerShell does not interpret any characters enclosed in single quotation marks as escape sequences.</span></span>
+<span data-ttu-id="f9f0d-156">Especifica um caminho para um ou mais locais.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-156">Specifies a path to one or more locations.</span></span> <span data-ttu-id="f9f0d-157">O valor do parâmetro **LiteralPath** é usado exatamente como inserido.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-157">The value of the **LiteralPath** parameter is used exactly as entered.</span></span> <span data-ttu-id="f9f0d-158">Nenhum caractere é interpretado como caractere curinga.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-158">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="f9f0d-159">Se o caminho incluir caracteres de escape, coloque-os entre aspas simples.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-159">If the path includes escape characters, enclose them in single quotation marks.</span></span> <span data-ttu-id="f9f0d-160">O PowerShell não interpreta nenhum caractere entre aspas simples como sequências de escape.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-160">PowerShell does not interpret any characters enclosed in single quotation marks as escape sequences.</span></span>
 
 ```yaml
 Type: System.String
@@ -239,25 +239,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-161">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="863f0-161">-MaximumVersion</span></span>
+### <span data-ttu-id="f9f0d-161">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="f9f0d-161">-MaximumVersion</span></span>
 
-<span data-ttu-id="863f0-162">Especifica a versão máxima ou mais recente do módulo a ser salva.</span><span class="sxs-lookup"><span data-stu-id="863f0-162">Specifies the maximum, or newest, version of the module to save.</span></span> <span data-ttu-id="863f0-163">Os parâmetros **MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="863f0-163">The **MaximumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NameAndPathParameterSet, NameAndLiteralPathParameterSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="863f0-164">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="863f0-164">-MinimumVersion</span></span>
-
-<span data-ttu-id="863f0-165">Especifica a versão mínima de um único módulo para salvar.</span><span class="sxs-lookup"><span data-stu-id="863f0-165">Specifies the minimum version of a single module to save.</span></span> <span data-ttu-id="863f0-166">Você não poderá adicionar esse parâmetro se estiver tentando instalar vários módulos.</span><span class="sxs-lookup"><span data-stu-id="863f0-166">You cannot add this parameter if you are attempting to install multiple modules.</span></span> <span data-ttu-id="863f0-167">Os parâmetros **MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="863f0-167">The **MinimumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
+<span data-ttu-id="f9f0d-162">Especifica a versão máxima ou mais recente do módulo a ser salva.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-162">Specifies the maximum, or newest, version of the module to save.</span></span> <span data-ttu-id="f9f0d-163">Os parâmetros **MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-163">The **MaximumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -271,9 +255,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-168">-Name</span><span class="sxs-lookup"><span data-stu-id="863f0-168">-Name</span></span>
+### <span data-ttu-id="f9f0d-164">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="f9f0d-164">-MinimumVersion</span></span>
 
-<span data-ttu-id="863f0-169">Especifica uma matriz de nomes de módulos a serem salvos.</span><span class="sxs-lookup"><span data-stu-id="863f0-169">Specifies an array of names of modules to save.</span></span>
+<span data-ttu-id="f9f0d-165">Especifica a versão mínima de um único módulo para salvar.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-165">Specifies the minimum version of a single module to save.</span></span> <span data-ttu-id="f9f0d-166">Você não poderá adicionar esse parâmetro se estiver tentando instalar vários módulos.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-166">You cannot add this parameter if you are attempting to install multiple modules.</span></span> <span data-ttu-id="f9f0d-167">Os parâmetros **MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-167">The **MinimumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NameAndPathParameterSet, NameAndLiteralPathParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="f9f0d-168">-Name</span><span class="sxs-lookup"><span data-stu-id="f9f0d-168">-Name</span></span>
+
+<span data-ttu-id="f9f0d-169">Especifica uma matriz de nomes de módulos a serem salvos.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-169">Specifies an array of names of modules to save.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -287,9 +287,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-170">-Path</span><span class="sxs-lookup"><span data-stu-id="863f0-170">-Path</span></span>
+### <span data-ttu-id="f9f0d-170">-Path</span><span class="sxs-lookup"><span data-stu-id="f9f0d-170">-Path</span></span>
 
-<span data-ttu-id="863f0-171">Especifica o local no computador local para armazenar um módulo salvo.</span><span class="sxs-lookup"><span data-stu-id="863f0-171">Specifies the location on the local computer to store a saved module.</span></span> <span data-ttu-id="863f0-172">Aceita caracteres curinga.</span><span class="sxs-lookup"><span data-stu-id="863f0-172">Accepts wildcard characters.</span></span>
+<span data-ttu-id="f9f0d-171">Especifica o local no computador local para armazenar um módulo salvo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-171">Specifies the location on the local computer to store a saved module.</span></span> <span data-ttu-id="f9f0d-172">Aceita caracteres curinga.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-172">Accepts wildcard characters.</span></span>
 
 ```yaml
 Type: System.String
@@ -303,9 +303,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="863f0-173">-Proxy</span><span class="sxs-lookup"><span data-stu-id="863f0-173">-Proxy</span></span>
+### <span data-ttu-id="f9f0d-173">-Proxy</span><span class="sxs-lookup"><span data-stu-id="f9f0d-173">-Proxy</span></span>
 
-<span data-ttu-id="863f0-174">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="863f0-174">Specifies a proxy server for the request, rather than connecting directly to the internet resource.</span></span>
+<span data-ttu-id="f9f0d-174">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-174">Specifies a proxy server for the request, rather than connecting directly to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -319,9 +319,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-175">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="863f0-175">-ProxyCredential</span></span>
+### <span data-ttu-id="f9f0d-175">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="f9f0d-175">-ProxyCredential</span></span>
 
-<span data-ttu-id="863f0-176">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .</span><span class="sxs-lookup"><span data-stu-id="863f0-176">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="f9f0d-176">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-176">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -335,9 +335,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-177">-Repositório</span><span class="sxs-lookup"><span data-stu-id="863f0-177">-Repository</span></span>
+### <span data-ttu-id="f9f0d-177">-Repositório</span><span class="sxs-lookup"><span data-stu-id="f9f0d-177">-Repository</span></span>
 
-<span data-ttu-id="863f0-178">Especifica o nome amigável de um repositório que foi registrado pela execução `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="863f0-178">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span> <span data-ttu-id="863f0-179">Use `Get-PSRepository` para exibir repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="863f0-179">Use `Get-PSRepository` to display registered repositories.</span></span>
+<span data-ttu-id="f9f0d-178">Especifica o nome amigável de um repositório que foi registrado pela execução `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="f9f0d-178">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span> <span data-ttu-id="f9f0d-179">Use `Get-PSRepository` para exibir repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-179">Use `Get-PSRepository` to display registered repositories.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -351,9 +351,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-180">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="863f0-180">-RequiredVersion</span></span>
+### <span data-ttu-id="f9f0d-180">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="f9f0d-180">-RequiredVersion</span></span>
 
-<span data-ttu-id="863f0-181">Especifica o número de versão exato do módulo a ser salvo.</span><span class="sxs-lookup"><span data-stu-id="863f0-181">Specifies the exact version number of the module to save.</span></span>
+<span data-ttu-id="f9f0d-181">Especifica o número de versão exato do módulo a ser salvo.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-181">Specifies the exact version number of the module to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -367,9 +367,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-182">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="863f0-182">-WhatIf</span></span>
+### <span data-ttu-id="f9f0d-182">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="f9f0d-182">-WhatIf</span></span>
 
-<span data-ttu-id="863f0-183">Mostra o que aconteceria se o `Save-Module` for executado.</span><span class="sxs-lookup"><span data-stu-id="863f0-183">Shows what would happen if the `Save-Module` runs.</span></span> <span data-ttu-id="863f0-184">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="863f0-184">The cmdlet isn't run.</span></span>
+<span data-ttu-id="f9f0d-183">Mostra o que aconteceria se o `Save-Module` for executado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-183">Shows what would happen if the `Save-Module` runs.</span></span> <span data-ttu-id="f9f0d-184">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-184">The cmdlet isn't run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -383,14 +383,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="863f0-185">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="863f0-185">CommonParameters</span></span>
+### <span data-ttu-id="f9f0d-185">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f9f0d-185">CommonParameters</span></span>
 
-<span data-ttu-id="863f0-186">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="863f0-186">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="863f0-187">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="863f0-187">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="f9f0d-186">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-186">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f9f0d-187">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="f9f0d-187">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="863f0-188">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="863f0-188">INPUTS</span></span>
+## <span data-ttu-id="f9f0d-188">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="f9f0d-188">INPUTS</span></span>
 
-## <span data-ttu-id="863f0-189">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="863f0-189">OUTPUTS</span></span>
+## <span data-ttu-id="f9f0d-189">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="f9f0d-189">OUTPUTS</span></span>
 
-## <span data-ttu-id="863f0-190">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="863f0-190">NOTES</span></span>
+## <span data-ttu-id="f9f0d-190">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="f9f0d-190">NOTES</span></span>
 
-## <span data-ttu-id="863f0-191">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="863f0-191">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="f9f0d-191">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="f9f0d-191">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="f9f0d-192">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-192">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="f9f0d-193">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="f9f0d-193">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="f9f0d-194">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f9f0d-194">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
+
+## <span data-ttu-id="f9f0d-195">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="f9f0d-195">RELATED LINKS</span></span>

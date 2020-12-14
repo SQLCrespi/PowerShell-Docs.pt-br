@@ -7,21 +7,21 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 8b17019932df5b2cad68a9ea382387451d1b22e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b30e233eb9c4f4f9191ac6470f2821536dda6dc3
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193618"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889820"
 ---
-# <span data-ttu-id="04ecf-103">Find-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-103">Find-Module</span></span>
+# <span data-ttu-id="0ff48-103">Find-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-103">Find-Module</span></span>
 
-## <span data-ttu-id="04ecf-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="04ecf-104">SYNOPSIS</span></span>
-<span data-ttu-id="04ecf-105">Localiza módulos em um repositório que corresponde aos critérios especificados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-105">Finds modules in a repository that match specified criteria.</span></span>
+## <span data-ttu-id="0ff48-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="0ff48-104">SYNOPSIS</span></span>
+<span data-ttu-id="0ff48-105">Localiza módulos em um repositório que corresponde aos critérios especificados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-105">Finds modules in a repository that match specified criteria.</span></span>
 
-## <span data-ttu-id="04ecf-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="04ecf-106">SYNTAX</span></span>
+## <span data-ttu-id="0ff48-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0ff48-106">SYNTAX</span></span>
 
-### <span data-ttu-id="04ecf-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="04ecf-107">All</span></span>
+### <span data-ttu-id="0ff48-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="0ff48-107">All</span></span>
 
 ```
 Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <string>]
@@ -31,29 +31,29 @@ Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <st
  [-Credential <pscredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="04ecf-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="04ecf-108">DESCRIPTION</span></span>
+## <span data-ttu-id="0ff48-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="0ff48-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="04ecf-109">O `Find-Module` cmdlet localiza módulos em um repositório que corresponde aos critérios especificados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-109">The `Find-Module` cmdlet finds modules in a repository that match the specified criteria.</span></span>
-<span data-ttu-id="04ecf-110">`Find-Module` Retorna um objeto **PSRepositoryItemInfo** para cada módulo que encontrar.</span><span class="sxs-lookup"><span data-stu-id="04ecf-110">`Find-Module` returns a **PSRepositoryItemInfo** object for each module it finds.</span></span> <span data-ttu-id="04ecf-111">Os objetos podem ser enviados ao pipeline para cmdlets como `Install-Module` .</span><span class="sxs-lookup"><span data-stu-id="04ecf-111">The objects can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
+<span data-ttu-id="0ff48-109">O `Find-Module` cmdlet localiza módulos em um repositório que corresponde aos critérios especificados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-109">The `Find-Module` cmdlet finds modules in a repository that match the specified criteria.</span></span>
+<span data-ttu-id="0ff48-110">`Find-Module` Retorna um objeto **PSRepositoryItemInfo** para cada módulo que encontrar.</span><span class="sxs-lookup"><span data-stu-id="0ff48-110">`Find-Module` returns a **PSRepositoryItemInfo** object for each module it finds.</span></span> <span data-ttu-id="0ff48-111">Os objetos podem ser enviados ao pipeline para cmdlets como `Install-Module` .</span><span class="sxs-lookup"><span data-stu-id="0ff48-111">The objects can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
 
-<span data-ttu-id="04ecf-112">Na primeira vez que o `Find-Module` tentar usar um repositório, você poderá ser solicitado a instalar atualizações.</span><span class="sxs-lookup"><span data-stu-id="04ecf-112">The first time `Find-Module` attempts to use a repository, you might be prompted to install updates.</span></span>
-<span data-ttu-id="04ecf-113">Se a origem do repositório não estiver registrada com o `Register-PSRepository` cmdlet, um erro será retornado.</span><span class="sxs-lookup"><span data-stu-id="04ecf-113">If the repository source is not registered with `Register-PSRepository` cmdlet, an error is returned.</span></span>
+<span data-ttu-id="0ff48-112">Na primeira vez que o `Find-Module` tentar usar um repositório, você poderá ser solicitado a instalar atualizações.</span><span class="sxs-lookup"><span data-stu-id="0ff48-112">The first time `Find-Module` attempts to use a repository, you might be prompted to install updates.</span></span>
+<span data-ttu-id="0ff48-113">Se a origem do repositório não estiver registrada com o `Register-PSRepository` cmdlet, um erro será retornado.</span><span class="sxs-lookup"><span data-stu-id="0ff48-113">If the repository source is not registered with `Register-PSRepository` cmdlet, an error is returned.</span></span>
 
-<span data-ttu-id="04ecf-114">`Find-Module` Retorna a versão mais recente de um módulo se nenhum parâmetro for usado para limitar a versão.</span><span class="sxs-lookup"><span data-stu-id="04ecf-114">`Find-Module` returns the newest version of a module if no parameters are used that limit the version.</span></span> <span data-ttu-id="04ecf-115">Para obter uma lista de um repositório de versões de um módulo, use o **parâmetro AllModules** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-115">To get a repository's list of a module's versions, use the parameter **AllVersions** .</span></span>
+<span data-ttu-id="0ff48-114">`Find-Module` Retorna a versão mais recente de um módulo se nenhum parâmetro for usado para limitar a versão.</span><span class="sxs-lookup"><span data-stu-id="0ff48-114">`Find-Module` returns the newest version of a module if no parameters are used that limit the version.</span></span> <span data-ttu-id="0ff48-115">Para obter uma lista de um repositório de versões de um módulo, use o **parâmetro AllModules**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-115">To get a repository's list of a module's versions, use the parameter **AllVersions**.</span></span>
 
-<span data-ttu-id="04ecf-116">Se o parâmetro **MinimumVersion** for especificado, `Find-Module` retornará a versão do módulo que é igual ou maior que o mínimo.</span><span class="sxs-lookup"><span data-stu-id="04ecf-116">If the **MinimumVersion** parameter is specified, `Find-Module` returns the module's version that is equal to or greater than the minimum.</span></span> <span data-ttu-id="04ecf-117">Se houver uma versão mais recente disponível no repositório, a versão mais recente será retornada.</span><span class="sxs-lookup"><span data-stu-id="04ecf-117">If there is a newer version available in the repository, the newer version is returned.</span></span>
+<span data-ttu-id="0ff48-116">Se o parâmetro **MinimumVersion** for especificado, `Find-Module` retornará a versão do módulo que é igual ou maior que o mínimo.</span><span class="sxs-lookup"><span data-stu-id="0ff48-116">If the **MinimumVersion** parameter is specified, `Find-Module` returns the module's version that is equal to or greater than the minimum.</span></span> <span data-ttu-id="0ff48-117">Se houver uma versão mais recente disponível no repositório, a versão mais recente será retornada.</span><span class="sxs-lookup"><span data-stu-id="0ff48-117">If there is a newer version available in the repository, the newer version is returned.</span></span>
 
-<span data-ttu-id="04ecf-118">Se o parâmetro **MaximumVersion** for especificado, `Find-Module` retornará a versão mais recente do módulo que não exceda a versão especificada.</span><span class="sxs-lookup"><span data-stu-id="04ecf-118">If the **MaximumVersion** parameter is specified, `Find-Module` returns the newest version of the module that does not exceed the version specified.</span></span>
+<span data-ttu-id="0ff48-118">Se o parâmetro **MaximumVersion** for especificado, `Find-Module` retornará a versão mais recente do módulo que não exceda a versão especificada.</span><span class="sxs-lookup"><span data-stu-id="0ff48-118">If the **MaximumVersion** parameter is specified, `Find-Module` returns the newest version of the module that does not exceed the version specified.</span></span>
 
-<span data-ttu-id="04ecf-119">Se o parâmetro **RequiredVersion** for especificado, `Find-Module` retornará apenas a versão do módulo que é uma correspondência exata com a versão especificada.</span><span class="sxs-lookup"><span data-stu-id="04ecf-119">If the **RequiredVersion** parameter is specified, `Find-Module` only returns the module version that is an exact match to the specified version.</span></span> <span data-ttu-id="04ecf-120">`Find-Module` pesquisa todos os módulos disponíveis, pois podem ocorrer conflitos de nome entre origens.</span><span class="sxs-lookup"><span data-stu-id="04ecf-120">`Find-Module` searches through all available modules, because name conflicts between sources can occur.</span></span>
+<span data-ttu-id="0ff48-119">Se o parâmetro **RequiredVersion** for especificado, `Find-Module` retornará apenas a versão do módulo que é uma correspondência exata com a versão especificada.</span><span class="sxs-lookup"><span data-stu-id="0ff48-119">If the **RequiredVersion** parameter is specified, `Find-Module` only returns the module version that is an exact match to the specified version.</span></span> <span data-ttu-id="0ff48-120">`Find-Module` pesquisa todos os módulos disponíveis, pois podem ocorrer conflitos de nome entre origens.</span><span class="sxs-lookup"><span data-stu-id="0ff48-120">`Find-Module` searches through all available modules, because name conflicts between sources can occur.</span></span>
 
-<span data-ttu-id="04ecf-121">Os exemplos a seguir usam o [Galeria do PowerShell](https://www.powershellgallery.com/) como o único repositório registrado.</span><span class="sxs-lookup"><span data-stu-id="04ecf-121">The following examples use the [PowerShell Gallery](https://www.powershellgallery.com/) as the only registered repository.</span></span> <span data-ttu-id="04ecf-122">`Get-PSRepository` exibe os repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-122">`Get-PSRepository` displays the registered repositories.</span></span> <span data-ttu-id="04ecf-123">Se você tiver vários repositórios registrados, use o `-Repository` parâmetro para especificar o nome do repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-123">If you have multiple registered repositories, use the `-Repository` parameter to specify the repository's name.</span></span>
+<span data-ttu-id="0ff48-121">Os exemplos a seguir usam o [Galeria do PowerShell](https://www.powershellgallery.com/) como o único repositório registrado.</span><span class="sxs-lookup"><span data-stu-id="0ff48-121">The following examples use the [PowerShell Gallery](https://www.powershellgallery.com/) as the only registered repository.</span></span> <span data-ttu-id="0ff48-122">`Get-PSRepository` exibe os repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-122">`Get-PSRepository` displays the registered repositories.</span></span> <span data-ttu-id="0ff48-123">Se você tiver vários repositórios registrados, use o `-Repository` parâmetro para especificar o nome do repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-123">If you have multiple registered repositories, use the `-Repository` parameter to specify the repository's name.</span></span>
 
-## <span data-ttu-id="04ecf-124">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="04ecf-124">EXAMPLES</span></span>
+## <span data-ttu-id="0ff48-124">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="0ff48-124">EXAMPLES</span></span>
 
-### <span data-ttu-id="04ecf-125">Exemplo 1: localizar um módulo por nome</span><span class="sxs-lookup"><span data-stu-id="04ecf-125">Example 1: Find a module by name</span></span>
+### <span data-ttu-id="0ff48-125">Exemplo 1: localizar um módulo por nome</span><span class="sxs-lookup"><span data-stu-id="0ff48-125">Example 1: Find a module by name</span></span>
 
-<span data-ttu-id="04ecf-126">Este exemplo localiza um módulo no repositório padrão.</span><span class="sxs-lookup"><span data-stu-id="04ecf-126">This example finds a module in the default repository.</span></span>
+<span data-ttu-id="0ff48-126">Este exemplo localiza um módulo no repositório padrão.</span><span class="sxs-lookup"><span data-stu-id="0ff48-126">This example finds a module in the default repository.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet
@@ -65,11 +65,11 @@ Version   Name              Repository           Description
 2.1.0     PowerShellGet     PSGallery            PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="04ecf-127">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-127">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span>
+<span data-ttu-id="0ff48-127">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-127">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span>
 
-### <span data-ttu-id="04ecf-128">Exemplo 2: localizar módulos com nomes semelhantes</span><span class="sxs-lookup"><span data-stu-id="04ecf-128">Example 2: Find modules with similar names</span></span>
+### <span data-ttu-id="0ff48-128">Exemplo 2: localizar módulos com nomes semelhantes</span><span class="sxs-lookup"><span data-stu-id="0ff48-128">Example 2: Find modules with similar names</span></span>
 
-<span data-ttu-id="04ecf-129">Este exemplo usa o curinga asterisco ( `*` ) para localizar módulos com nomes semelhantes.</span><span class="sxs-lookup"><span data-stu-id="04ecf-129">This example uses the asterisk (`*`) wildcard to find modules with similar names.</span></span>
+<span data-ttu-id="0ff48-129">Este exemplo usa o curinga asterisco ( `*` ) para localizar módulos com nomes semelhantes.</span><span class="sxs-lookup"><span data-stu-id="0ff48-129">This example uses the asterisk (`*`) wildcard to find modules with similar names.</span></span>
 
 ```powershell
 Find-Module -Name PowerShell*
@@ -85,11 +85,11 @@ Version   Name                            Repository    Description
 4.0       PowerShellISEModule             PSGallery     a module that adds capability to the ISE
 ```
 
-<span data-ttu-id="04ecf-130">O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para localizar todos os módulos que contêm o **PowerShell** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-130">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to find all modules that contain **PowerShell** .</span></span>
+<span data-ttu-id="0ff48-130">O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para localizar todos os módulos que contêm o **PowerShell**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-130">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to find all modules that contain **PowerShell**.</span></span>
 
-### <span data-ttu-id="04ecf-131">Exemplo 3: localizar um módulo por versão mínima</span><span class="sxs-lookup"><span data-stu-id="04ecf-131">Example 3: Find a module by minimum version</span></span>
+### <span data-ttu-id="0ff48-131">Exemplo 3: localizar um módulo por versão mínima</span><span class="sxs-lookup"><span data-stu-id="0ff48-131">Example 3: Find a module by minimum version</span></span>
 
-<span data-ttu-id="04ecf-132">Este exemplo pesquisa a versão mínima de um módulo.</span><span class="sxs-lookup"><span data-stu-id="04ecf-132">This example searches for a module's minimum version.</span></span> <span data-ttu-id="04ecf-133">Se o repositório contiver uma versão mais recente do módulo, a versão mais recente será retornada.</span><span class="sxs-lookup"><span data-stu-id="04ecf-133">If the repository contains a newer version of the module, the newer version is returned.</span></span>
+<span data-ttu-id="0ff48-132">Este exemplo pesquisa a versão mínima de um módulo.</span><span class="sxs-lookup"><span data-stu-id="0ff48-132">This example searches for a module's minimum version.</span></span> <span data-ttu-id="0ff48-133">Se o repositório contiver uma versão mais recente do módulo, a versão mais recente será retornada.</span><span class="sxs-lookup"><span data-stu-id="0ff48-133">If the repository contains a newer version of the module, the newer version is returned.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -MinimumVersion 1.6.5
@@ -101,11 +101,11 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="04ecf-134">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-134">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="04ecf-135">**MinimumVersion** especifica a versão **1.6.5** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-135">The **MinimumVersion** specifies version **1.6.5** .</span></span> <span data-ttu-id="04ecf-136">`Find-Module` Retorna o PowerShellGet versão **2.1.0** porque ele excede a versão mínima e é a versão mais atual.</span><span class="sxs-lookup"><span data-stu-id="04ecf-136">`Find-Module` returns PowerShellGet version **2.1.0** because it exceeds the minimum version and is the most current version.</span></span>
+<span data-ttu-id="0ff48-134">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-134">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="0ff48-135">**MinimumVersion** especifica a versão **1.6.5**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-135">The **MinimumVersion** specifies version **1.6.5**.</span></span> <span data-ttu-id="0ff48-136">`Find-Module` Retorna o PowerShellGet versão **2.1.0** porque ele excede a versão mínima e é a versão mais atual.</span><span class="sxs-lookup"><span data-stu-id="0ff48-136">`Find-Module` returns PowerShellGet version **2.1.0** because it exceeds the minimum version and is the most current version.</span></span>
 
-### <span data-ttu-id="04ecf-137">Exemplo 4: localizar um módulo por versão específica</span><span class="sxs-lookup"><span data-stu-id="04ecf-137">Example 4: Find a module by specific version</span></span>
+### <span data-ttu-id="0ff48-137">Exemplo 4: localizar um módulo por versão específica</span><span class="sxs-lookup"><span data-stu-id="0ff48-137">Example 4: Find a module by specific version</span></span>
 
-<span data-ttu-id="04ecf-138">Este exemplo retorna um objeto que representa a versão específica de um módulo.</span><span class="sxs-lookup"><span data-stu-id="04ecf-138">This example returns an object that represents a module's specific version.</span></span> <span data-ttu-id="04ecf-139">Se a versão especificada não for encontrada, um erro será retornado.</span><span class="sxs-lookup"><span data-stu-id="04ecf-139">If the specified version is not found, an error is returned.</span></span>
+<span data-ttu-id="0ff48-138">Este exemplo retorna um objeto que representa a versão específica de um módulo.</span><span class="sxs-lookup"><span data-stu-id="0ff48-138">This example returns an object that represents a module's specific version.</span></span> <span data-ttu-id="0ff48-139">Se a versão especificada não for encontrada, um erro será retornado.</span><span class="sxs-lookup"><span data-stu-id="0ff48-139">If the specified version is not found, an error is returned.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -RequiredVersion 1.6.5
@@ -117,11 +117,11 @@ Version   Name             Repository     Description
 1.6.5     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="04ecf-140">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-140">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="04ecf-141">O parâmetro **RequiredVersion** especifica a versão **1.6.5** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-141">The **RequiredVersion** parameter specifies version **1.6.5** .</span></span>
+<span data-ttu-id="0ff48-140">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-140">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="0ff48-141">O parâmetro **RequiredVersion** especifica a versão **1.6.5**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-141">The **RequiredVersion** parameter specifies version **1.6.5**.</span></span>
 
-### <span data-ttu-id="04ecf-142">Exemplo 5: localizar um módulo em um repositório específico</span><span class="sxs-lookup"><span data-stu-id="04ecf-142">Example 5: Find a module in a specific repository</span></span>
+### <span data-ttu-id="0ff48-142">Exemplo 5: localizar um módulo em um repositório específico</span><span class="sxs-lookup"><span data-stu-id="0ff48-142">Example 5: Find a module in a specific repository</span></span>
 
-<span data-ttu-id="04ecf-143">Este exemplo usa o parâmetro **Repository** para localizar um módulo em um repositório específico.</span><span class="sxs-lookup"><span data-stu-id="04ecf-143">This example uses the **Repository** parameter to find a module in a specific repository.</span></span>
+<span data-ttu-id="0ff48-143">Este exemplo usa o parâmetro **Repository** para localizar um módulo em um repositório específico.</span><span class="sxs-lookup"><span data-stu-id="0ff48-143">This example uses the **Repository** parameter to find a module in a specific repository.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -Repository PSGallery
@@ -133,11 +133,11 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="04ecf-144">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-144">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="04ecf-145">O parâmetro **Repository** especifica a pesquisa no repositório **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-145">The **Repository** parameter specifies to search the **PSGallery** repository.</span></span>
+<span data-ttu-id="0ff48-144">O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-144">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="0ff48-145">O parâmetro **Repository** especifica a pesquisa no repositório **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-145">The **Repository** parameter specifies to search the **PSGallery** repository.</span></span>
 
-### <span data-ttu-id="04ecf-146">Exemplo 6: localizar um módulo em vários repositórios</span><span class="sxs-lookup"><span data-stu-id="04ecf-146">Example 6: Find a module in multiple repositories</span></span>
+### <span data-ttu-id="0ff48-146">Exemplo 6: localizar um módulo em vários repositórios</span><span class="sxs-lookup"><span data-stu-id="0ff48-146">Example 6: Find a module in multiple repositories</span></span>
 
-<span data-ttu-id="04ecf-147">Este exemplo usa o `Register-PSRepository` para especificar um repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-147">This example uses the `Register-PSRepository` to specify a repository.</span></span> <span data-ttu-id="04ecf-148">`Find-Module` usa o repositório para pesquisar um módulo.</span><span class="sxs-lookup"><span data-stu-id="04ecf-148">`Find-Module` uses the repository to search for a module.</span></span>
+<span data-ttu-id="0ff48-147">Este exemplo usa o `Register-PSRepository` para especificar um repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-147">This example uses the `Register-PSRepository` to specify a repository.</span></span> <span data-ttu-id="0ff48-148">`Find-Module` usa o repositório para pesquisar um módulo.</span><span class="sxs-lookup"><span data-stu-id="0ff48-148">`Find-Module` uses the repository to search for a module.</span></span>
 
 ```powershell
 Register-PSRepository -Name MySource -SourceLocation https://www.myget.org/F/powershellgetdemo/
@@ -151,13 +151,13 @@ PSGallery     2.0.0.0   ContosoServer    Cmdlets and DSC resources for managing 
 MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing Contoso Client...
 ```
 
-<span data-ttu-id="04ecf-149">O `Register-PSRepository` cmdlet registra um novo repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-149">The `Register-PSRepository` cmdlet registers a new repository.</span></span> <span data-ttu-id="04ecf-150">O parâmetro **Name** atribui o nome **MySource** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-150">The **Name** parameter assigns the name **MySource** .</span></span> <span data-ttu-id="04ecf-151">O parâmetro **SourceLocation** especifica o endereço do repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-151">The **SourceLocation** parameter specifies the repository's address.</span></span>
+<span data-ttu-id="0ff48-149">O `Register-PSRepository` cmdlet registra um novo repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-149">The `Register-PSRepository` cmdlet registers a new repository.</span></span> <span data-ttu-id="0ff48-150">O parâmetro **Name** atribui o nome **MySource**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-150">The **Name** parameter assigns the name **MySource**.</span></span> <span data-ttu-id="0ff48-151">O parâmetro **SourceLocation** especifica o endereço do repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-151">The **SourceLocation** parameter specifies the repository's address.</span></span>
 
-<span data-ttu-id="04ecf-152">O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para especificar o módulo **contoso** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-152">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to specify the **Contoso** module.</span></span> <span data-ttu-id="04ecf-153">O parâmetro **Repository** especifica a pesquisa de dois repositórios, **PSGallery** e **MySource** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-153">The **Repository** parameter specifies to search two repositories, **PSGallery** and **MySource** .</span></span>
+<span data-ttu-id="0ff48-152">O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para especificar o módulo **contoso** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-152">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to specify the **Contoso** module.</span></span> <span data-ttu-id="0ff48-153">O parâmetro **Repository** especifica a pesquisa de dois repositórios, **PSGallery** e **MySource**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-153">The **Repository** parameter specifies to search two repositories, **PSGallery** and **MySource**.</span></span>
 
-### <span data-ttu-id="04ecf-154">Exemplo 7: localizar um módulo que contém um recurso de DSC</span><span class="sxs-lookup"><span data-stu-id="04ecf-154">Example 7: Find a module that contains a DSC resource</span></span>
+### <span data-ttu-id="0ff48-154">Exemplo 7: localizar um módulo que contém um recurso de DSC</span><span class="sxs-lookup"><span data-stu-id="0ff48-154">Example 7: Find a module that contains a DSC resource</span></span>
 
-<span data-ttu-id="04ecf-155">Esse comando retorna módulos que contêm recursos de DSC.</span><span class="sxs-lookup"><span data-stu-id="04ecf-155">This command returns modules that contain DSC resources.</span></span> <span data-ttu-id="04ecf-156">O parâmetro **includes** tem quatro funcionalidades predefinidas que são usadas para pesquisar o repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-156">The **Includes** parameter has four predefined functionalities that are used to search the repository.</span></span> <span data-ttu-id="04ecf-157">Use Tab-Complete para exibir as quatro funcionalidades com suporte no parâmetro **includes** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-157">Use tab-complete to display the four functionalities supported by the **Includes** parameter.</span></span>
+<span data-ttu-id="0ff48-155">Esse comando retorna módulos que contêm recursos de DSC.</span><span class="sxs-lookup"><span data-stu-id="0ff48-155">This command returns modules that contain DSC resources.</span></span> <span data-ttu-id="0ff48-156">O parâmetro **includes** tem quatro funcionalidades predefinidas que são usadas para pesquisar o repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-156">The **Includes** parameter has four predefined functionalities that are used to search the repository.</span></span> <span data-ttu-id="0ff48-157">Use Tab-Complete para exibir as quatro funcionalidades com suporte no parâmetro **includes** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-157">Use tab-complete to display the four functionalities supported by the **Includes** parameter.</span></span>
 
 ```powershell
 Find-Module -Repository PSGallery -Includes DscResource
@@ -174,14 +174,14 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-<span data-ttu-id="04ecf-158">O `Find-Module` cmdlet usa o parâmetro **Repository** para pesquisar o repositório, **PSGallery** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-158">The `Find-Module` cmdlet uses the **Repository** parameter to search the repository, **PSGallery** .</span></span>
-<span data-ttu-id="04ecf-159">O parâmetro **includes** especifica **DscResource** , que é uma funcionalidade que o parâmetro pode pesquisar no repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-159">The **Includes** parameter specifies **DscResource** , which is a functionality that the parameter can search for in the repository.</span></span>
+<span data-ttu-id="0ff48-158">O `Find-Module` cmdlet usa o parâmetro **Repository** para pesquisar o repositório, **PSGallery**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-158">The `Find-Module` cmdlet uses the **Repository** parameter to search the repository, **PSGallery**.</span></span>
+<span data-ttu-id="0ff48-159">O parâmetro **includes** especifica **DscResource**, que é uma funcionalidade que o parâmetro pode pesquisar no repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-159">The **Includes** parameter specifies **DscResource**, which is a functionality that the parameter can search for in the repository.</span></span>
 
-### <span data-ttu-id="04ecf-160">Exemplo 8: localizar um módulo com um filtro</span><span class="sxs-lookup"><span data-stu-id="04ecf-160">Example 8: Find a module with a filter</span></span>
+### <span data-ttu-id="0ff48-160">Exemplo 8: localizar um módulo com um filtro</span><span class="sxs-lookup"><span data-stu-id="0ff48-160">Example 8: Find a module with a filter</span></span>
 
-<span data-ttu-id="04ecf-161">Neste exemplo, para localizar módulos, um filtro é usado para pesquisar o repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-161">In this example, to find modules, a filter is used to search the repository.</span></span>
+<span data-ttu-id="0ff48-161">Neste exemplo, para localizar módulos, um filtro é usado para pesquisar o repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-161">In this example, to find modules, a filter is used to search the repository.</span></span>
 
-<span data-ttu-id="04ecf-162">Para um repositório baseado em NuGet, o parâmetro de **filtro** pesquisa o nome, a descrição e as marcas do argumento.</span><span class="sxs-lookup"><span data-stu-id="04ecf-162">For a NuGet-based repository, the **Filter** parameter searches through the name, description, and tags for the argument.</span></span>
+<span data-ttu-id="0ff48-162">Para um repositório baseado em NuGet, o parâmetro de **filtro** pesquisa o nome, a descrição e as marcas do argumento.</span><span class="sxs-lookup"><span data-stu-id="0ff48-162">For a NuGet-based repository, the **Filter** parameter searches through the name, description, and tags for the argument.</span></span>
 
 ```powershell
 Find-Module -Filter AppDomain
@@ -194,29 +194,13 @@ Version    Name              Repository           Description
 1.1.0    ClassExplorer       PSGallery            Quickly search the AppDomain for classes...
 ```
 
-<span data-ttu-id="04ecf-163">O `Find-Module` cmdlet usa o parâmetro **Filter** para pesquisar no repositório o **AppDomain** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-163">The `Find-Module` cmdlet uses the **Filter** parameter to search the repository for **AppDomain** .</span></span>
+<span data-ttu-id="0ff48-163">O `Find-Module` cmdlet usa o parâmetro **Filter** para pesquisar no repositório o **AppDomain**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-163">The `Find-Module` cmdlet uses the **Filter** parameter to search the repository for **AppDomain**.</span></span>
 
-## <span data-ttu-id="04ecf-164">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="04ecf-164">PARAMETERS</span></span>
+## <span data-ttu-id="0ff48-164">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0ff48-164">PARAMETERS</span></span>
 
-### <span data-ttu-id="04ecf-165">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="04ecf-165">-AllowPrerelease</span></span>
+### <span data-ttu-id="0ff48-165">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="0ff48-165">-AllowPrerelease</span></span>
 
-<span data-ttu-id="04ecf-166">Inclui nos módulos de resultados marcados como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="04ecf-166">Includes in the results modules marked as a pre-release.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="04ecf-167">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="04ecf-167">-AllVersions</span></span>
-
-<span data-ttu-id="04ecf-168">Especifica para incluir todas as versões de um módulo nos resultados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-168">Specifies to include all versions of a module in the results.</span></span> <span data-ttu-id="04ecf-169">Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion** , **MaximumVersion** ou **RequiredVersion** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-169">You cannot use the **AllVersions** parameter with the **MinimumVersion** , **MaximumVersion** , or **RequiredVersion** parameters.</span></span>
+<span data-ttu-id="0ff48-166">Inclui nos módulos de resultados marcados como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="0ff48-166">Includes in the results modules marked as a pre-release.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,9 +214,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-170">-Command</span><span class="sxs-lookup"><span data-stu-id="04ecf-170">-Command</span></span>
+### <span data-ttu-id="0ff48-167">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="0ff48-167">-AllVersions</span></span>
 
-<span data-ttu-id="04ecf-171">Especifica uma matriz de comandos para localizar em módulos.</span><span class="sxs-lookup"><span data-stu-id="04ecf-171">Specifies an array of commands to find in modules.</span></span> <span data-ttu-id="04ecf-172">Um comando pode ser uma função ou um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="04ecf-172">A command can be a function or workflow.</span></span>
+<span data-ttu-id="0ff48-168">Especifica para incluir todas as versões de um módulo nos resultados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-168">Specifies to include all versions of a module in the results.</span></span> <span data-ttu-id="0ff48-169">Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion**, **MaximumVersion** ou **RequiredVersion** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-169">You cannot use the **AllVersions** parameter with the **MinimumVersion**, **MaximumVersion**, or **RequiredVersion** parameters.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff48-170">-Command</span><span class="sxs-lookup"><span data-stu-id="0ff48-170">-Command</span></span>
+
+<span data-ttu-id="0ff48-171">Especifica uma matriz de comandos para localizar em módulos.</span><span class="sxs-lookup"><span data-stu-id="0ff48-171">Specifies an array of commands to find in modules.</span></span> <span data-ttu-id="0ff48-172">Um comando pode ser uma função ou um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="0ff48-172">A command can be a function or workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -246,9 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-173">-Credential</span><span class="sxs-lookup"><span data-stu-id="04ecf-173">-Credential</span></span>
+### <span data-ttu-id="0ff48-173">-Credential</span><span class="sxs-lookup"><span data-stu-id="0ff48-173">-Credential</span></span>
 
-<span data-ttu-id="04ecf-174">Especifica uma conta de usuário que tem direitos para instalar um módulo para um provedor de pacote ou origem especificado.</span><span class="sxs-lookup"><span data-stu-id="04ecf-174">Specifies a user account that has rights to install a module for a specified package provider or source.</span></span>
+<span data-ttu-id="0ff48-174">Especifica uma conta de usuário que tem direitos para instalar um módulo para um provedor de pacote ou origem especificado.</span><span class="sxs-lookup"><span data-stu-id="0ff48-174">Specifies a user account that has rights to install a module for a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -262,9 +262,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-175">-DscResource</span><span class="sxs-lookup"><span data-stu-id="04ecf-175">-DscResource</span></span>
+### <span data-ttu-id="0ff48-175">-DscResource</span><span class="sxs-lookup"><span data-stu-id="0ff48-175">-DscResource</span></span>
 
-<span data-ttu-id="04ecf-176">Especifica o nome, ou parte do nome, dos módulos que contêm recursos de DSC.</span><span class="sxs-lookup"><span data-stu-id="04ecf-176">Specifies the name, or part of the name, of modules that contain DSC resources.</span></span> <span data-ttu-id="04ecf-177">Por convenções do PowerShell, o executa uma pesquisa **ou** quando você fornece vários argumentos.</span><span class="sxs-lookup"><span data-stu-id="04ecf-177">Per PowerShell conventions, performs an **OR** search when you provide multiple arguments.</span></span>
+<span data-ttu-id="0ff48-176">Especifica o nome, ou parte do nome, dos módulos que contêm recursos de DSC.</span><span class="sxs-lookup"><span data-stu-id="0ff48-176">Specifies the name, or part of the name, of modules that contain DSC resources.</span></span> <span data-ttu-id="0ff48-177">Por convenções do PowerShell, o executa uma pesquisa **ou** quando você fornece vários argumentos.</span><span class="sxs-lookup"><span data-stu-id="0ff48-177">Per PowerShell conventions, performs an **OR** search when you provide multiple arguments.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -278,9 +278,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-178">-Filter</span><span class="sxs-lookup"><span data-stu-id="04ecf-178">-Filter</span></span>
+### <span data-ttu-id="0ff48-178">-Filter</span><span class="sxs-lookup"><span data-stu-id="0ff48-178">-Filter</span></span>
 
-<span data-ttu-id="04ecf-179">Especifica um filtro com base na sintaxe de pesquisa específica do provedor **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-179">Specifies a filter based on the **PackageManagement** provider-specific search syntax.</span></span> <span data-ttu-id="04ecf-180">Para módulos NuGet, esse parâmetro é o equivalente de Pesquisar usando a barra de pesquisa no site [Galeria do PowerShell](https://www.powershellgallery.com/) .</span><span class="sxs-lookup"><span data-stu-id="04ecf-180">For NuGet modules, this parameter is the equivalent of searching by using the Search bar on the [PowerShell Gallery](https://www.powershellgallery.com/) website.</span></span>
+<span data-ttu-id="0ff48-179">Especifica um filtro com base na sintaxe de pesquisa específica do provedor **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-179">Specifies a filter based on the **PackageManagement** provider-specific search syntax.</span></span> <span data-ttu-id="0ff48-180">Para módulos NuGet, esse parâmetro é o equivalente de Pesquisar usando a barra de pesquisa no site [Galeria do PowerShell](https://www.powershellgallery.com/) .</span><span class="sxs-lookup"><span data-stu-id="0ff48-180">For NuGet modules, this parameter is the equivalent of searching by using the Search bar on the [PowerShell Gallery](https://www.powershellgallery.com/) website.</span></span>
 
 ```yaml
 Type: System.String
@@ -294,9 +294,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-181">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="04ecf-181">-IncludeDependencies</span></span>
+### <span data-ttu-id="0ff48-181">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="0ff48-181">-IncludeDependencies</span></span>
 
-<span data-ttu-id="04ecf-182">Indica que essa operação inclui todos os módulos que dependem do módulo especificado no parâmetro **Name** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-182">Indicates that this operation includes all modules that are dependent upon the module specified in the **Name** parameter.</span></span>
+<span data-ttu-id="0ff48-182">Indica que essa operação inclui todos os módulos que dependem do módulo especificado no parâmetro **Name** .</span><span class="sxs-lookup"><span data-stu-id="0ff48-182">Indicates that this operation includes all modules that are dependent upon the module specified in the **Name** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,14 +310,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-183">-Inclui</span><span class="sxs-lookup"><span data-stu-id="04ecf-183">-Includes</span></span>
+### <span data-ttu-id="0ff48-183">-Inclui</span><span class="sxs-lookup"><span data-stu-id="0ff48-183">-Includes</span></span>
 
-<span data-ttu-id="04ecf-184">Retorna somente os módulos que incluem tipos específicos de funcionalidade do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="04ecf-184">Returns only those modules that include specific kinds of PowerShell functionality.</span></span> <span data-ttu-id="04ecf-185">Por exemplo, talvez você queira apenas localizar módulos que incluem **DSCResource** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-185">For example, you might only want to find modules that include **DSCResource** .</span></span> <span data-ttu-id="04ecf-186">Os valores aceitáveis para esse parâmetro são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="04ecf-186">The acceptable values for this parameter are as follows:</span></span>
+<span data-ttu-id="0ff48-184">Retorna somente os módulos que incluem tipos específicos de funcionalidade do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0ff48-184">Returns only those modules that include specific kinds of PowerShell functionality.</span></span> <span data-ttu-id="0ff48-185">Por exemplo, talvez você queira apenas localizar módulos que incluem **DSCResource**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-185">For example, you might only want to find modules that include **DSCResource**.</span></span> <span data-ttu-id="0ff48-186">Os valores aceitáveis para esse parâmetro são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="0ff48-186">The acceptable values for this parameter are as follows:</span></span>
 
-- <span data-ttu-id="04ecf-187">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="04ecf-187">Cmdlet</span></span>
-- <span data-ttu-id="04ecf-188">DscResource</span><span class="sxs-lookup"><span data-stu-id="04ecf-188">DscResource</span></span>
-- <span data-ttu-id="04ecf-189">Função</span><span class="sxs-lookup"><span data-stu-id="04ecf-189">Function</span></span>
-- <span data-ttu-id="04ecf-190">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="04ecf-190">RoleCapability</span></span>
+- <span data-ttu-id="0ff48-187">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="0ff48-187">Cmdlet</span></span>
+- <span data-ttu-id="0ff48-188">DscResource</span><span class="sxs-lookup"><span data-stu-id="0ff48-188">DscResource</span></span>
+- <span data-ttu-id="0ff48-189">Função</span><span class="sxs-lookup"><span data-stu-id="0ff48-189">Function</span></span>
+- <span data-ttu-id="0ff48-190">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="0ff48-190">RoleCapability</span></span>
 
 ```yaml
 Type: System.String[]
@@ -332,26 +332,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-191">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="04ecf-191">-MaximumVersion</span></span>
+### <span data-ttu-id="0ff48-191">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="0ff48-191">-MaximumVersion</span></span>
 
-<span data-ttu-id="04ecf-192">Especifica a versão máxima ou mais recente do módulo a ser incluída nos resultados da pesquisa.</span><span class="sxs-lookup"><span data-stu-id="04ecf-192">Specifies the maximum, or latest, version of the module to include in the search results.</span></span>
-<span data-ttu-id="04ecf-193">**MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="04ecf-193">**MaximumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="04ecf-194">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="04ecf-194">-MinimumVersion</span></span>
-
-<span data-ttu-id="04ecf-195">Especifica a versão mínima do módulo a ser incluída nos resultados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-195">Specifies the minimum version of the module to include in results.</span></span> <span data-ttu-id="04ecf-196">**MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="04ecf-196">**MinimumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
+<span data-ttu-id="0ff48-192">Especifica a versão máxima ou mais recente do módulo a ser incluída nos resultados da pesquisa.</span><span class="sxs-lookup"><span data-stu-id="0ff48-192">Specifies the maximum, or latest, version of the module to include in the search results.</span></span>
+<span data-ttu-id="0ff48-193">**MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="0ff48-193">**MaximumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -365,9 +349,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-197">-Name</span><span class="sxs-lookup"><span data-stu-id="04ecf-197">-Name</span></span>
+### <span data-ttu-id="0ff48-194">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="0ff48-194">-MinimumVersion</span></span>
 
-<span data-ttu-id="04ecf-198">Especifica os nomes dos módulos a serem pesquisados no repositório.</span><span class="sxs-lookup"><span data-stu-id="04ecf-198">Specifies the names of modules to search for in the repository.</span></span> <span data-ttu-id="04ecf-199">Uma lista separada por vírgulas de nomes de módulo é aceita.</span><span class="sxs-lookup"><span data-stu-id="04ecf-199">A comma-separated list of module names is accepted.</span></span> <span data-ttu-id="04ecf-200">Caracteres curinga são aceitos.</span><span class="sxs-lookup"><span data-stu-id="04ecf-200">Wildcards are accepted.</span></span>
+<span data-ttu-id="0ff48-195">Especifica a versão mínima do módulo a ser incluída nos resultados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-195">Specifies the minimum version of the module to include in results.</span></span> <span data-ttu-id="0ff48-196">**MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="0ff48-196">**MinimumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff48-197">-Name</span><span class="sxs-lookup"><span data-stu-id="0ff48-197">-Name</span></span>
+
+<span data-ttu-id="0ff48-198">Especifica os nomes dos módulos a serem pesquisados no repositório.</span><span class="sxs-lookup"><span data-stu-id="0ff48-198">Specifies the names of modules to search for in the repository.</span></span> <span data-ttu-id="0ff48-199">Uma lista separada por vírgulas de nomes de módulo é aceita.</span><span class="sxs-lookup"><span data-stu-id="0ff48-199">A comma-separated list of module names is accepted.</span></span> <span data-ttu-id="0ff48-200">Caracteres curinga são aceitos.</span><span class="sxs-lookup"><span data-stu-id="0ff48-200">Wildcards are accepted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -381,9 +381,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="04ecf-201">-Proxy</span><span class="sxs-lookup"><span data-stu-id="04ecf-201">-Proxy</span></span>
+### <span data-ttu-id="0ff48-201">-Proxy</span><span class="sxs-lookup"><span data-stu-id="0ff48-201">-Proxy</span></span>
 
-<span data-ttu-id="04ecf-202">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="04ecf-202">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="0ff48-202">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="0ff48-202">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -397,9 +397,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-203">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="04ecf-203">-ProxyCredential</span></span>
+### <span data-ttu-id="0ff48-203">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="0ff48-203">-ProxyCredential</span></span>
 
-<span data-ttu-id="04ecf-204">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-204">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="0ff48-204">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-204">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -413,9 +413,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-205">-Repositório</span><span class="sxs-lookup"><span data-stu-id="04ecf-205">-Repository</span></span>
+### <span data-ttu-id="0ff48-205">-Repositório</span><span class="sxs-lookup"><span data-stu-id="0ff48-205">-Repository</span></span>
 
-<span data-ttu-id="04ecf-206">Use o parâmetro **Repository** para especificar qual repositório procurar um módulo.</span><span class="sxs-lookup"><span data-stu-id="04ecf-206">Use the **Repository** parameter to specify which repository to search for a module.</span></span> <span data-ttu-id="04ecf-207">Usado quando vários repositórios são registrados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-207">Used when multiple repositories are registered.</span></span> <span data-ttu-id="04ecf-208">Aceita uma lista separada por vírgulas de repositórios.</span><span class="sxs-lookup"><span data-stu-id="04ecf-208">Accepts a comma-separated list of repositories.</span></span> <span data-ttu-id="04ecf-209">Para registrar um repositório, use `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="04ecf-209">To register a repository, use `Register-PSRepository`.</span></span> <span data-ttu-id="04ecf-210">Para exibir repositórios registrados, use `Get-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="04ecf-210">To display registered repositories, use `Get-PSRepository`.</span></span>
+<span data-ttu-id="0ff48-206">Use o parâmetro **Repository** para especificar qual repositório procurar um módulo.</span><span class="sxs-lookup"><span data-stu-id="0ff48-206">Use the **Repository** parameter to specify which repository to search for a module.</span></span> <span data-ttu-id="0ff48-207">Usado quando vários repositórios são registrados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-207">Used when multiple repositories are registered.</span></span> <span data-ttu-id="0ff48-208">Aceita uma lista separada por vírgulas de repositórios.</span><span class="sxs-lookup"><span data-stu-id="0ff48-208">Accepts a comma-separated list of repositories.</span></span> <span data-ttu-id="0ff48-209">Para registrar um repositório, use `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="0ff48-209">To register a repository, use `Register-PSRepository`.</span></span> <span data-ttu-id="0ff48-210">Para exibir repositórios registrados, use `Get-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="0ff48-210">To display registered repositories, use `Get-PSRepository`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -429,9 +429,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-211">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="04ecf-211">-RequiredVersion</span></span>
+### <span data-ttu-id="0ff48-211">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="0ff48-211">-RequiredVersion</span></span>
 
-<span data-ttu-id="04ecf-212">Especifica o número de versão exato do módulo a ser incluído nos resultados.</span><span class="sxs-lookup"><span data-stu-id="04ecf-212">Specifies the exact version number of the module to include in the results.</span></span> <span data-ttu-id="04ecf-213">**RequiredVersion** não pode ser usado no mesmo comando que **MinimumVersion** ou **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-213">**RequiredVersion** cannot be used in the same command as **MinimumVersion** or **MaximumVersion** .</span></span>
+<span data-ttu-id="0ff48-212">Especifica o número de versão exato do módulo a ser incluído nos resultados.</span><span class="sxs-lookup"><span data-stu-id="0ff48-212">Specifies the exact version number of the module to include in the results.</span></span> <span data-ttu-id="0ff48-213">**RequiredVersion** não pode ser usado no mesmo comando que **MinimumVersion** ou **MaximumVersion**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-213">**RequiredVersion** cannot be used in the same command as **MinimumVersion** or **MaximumVersion**.</span></span>
 
 ```yaml
 Type: System.String
@@ -445,25 +445,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-214">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="04ecf-214">-RoleCapability</span></span>
+### <span data-ttu-id="0ff48-214">-RoleCapability</span><span class="sxs-lookup"><span data-stu-id="0ff48-214">-RoleCapability</span></span>
 
-<span data-ttu-id="04ecf-215">Especifica uma matriz de recursos de função.</span><span class="sxs-lookup"><span data-stu-id="04ecf-215">Specifies an array of role capabilities.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="04ecf-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="04ecf-216">-Tag</span></span>
-
-<span data-ttu-id="04ecf-217">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="04ecf-217">Specifies an array of tags.</span></span> <span data-ttu-id="04ecf-218">As marcas de exemplo incluem **DesiredStateConfiguration** , **DSC** , **DSCResourceKit** ou **PSModule** .</span><span class="sxs-lookup"><span data-stu-id="04ecf-218">Example tags include **DesiredStateConfiguration** , **DSC** , **DSCResourceKit** , or **PSModule** .</span></span>
+<span data-ttu-id="0ff48-215">Especifica uma matriz de recursos de função.</span><span class="sxs-lookup"><span data-stu-id="0ff48-215">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -477,34 +461,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04ecf-219">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="04ecf-219">CommonParameters</span></span>
+### <span data-ttu-id="0ff48-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="0ff48-216">-Tag</span></span>
 
-<span data-ttu-id="04ecf-220">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="04ecf-220">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="04ecf-221">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="04ecf-221">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="0ff48-217">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="0ff48-217">Specifies an array of tags.</span></span> <span data-ttu-id="0ff48-218">As marcas de exemplo incluem **DesiredStateConfiguration**, **DSC**, **DSCResourceKit** ou **PSModule**.</span><span class="sxs-lookup"><span data-stu-id="0ff48-218">Example tags include **DesiredStateConfiguration**, **DSC**, **DSCResourceKit**, or **PSModule**.</span></span>
 
-## <span data-ttu-id="04ecf-222">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="04ecf-222">INPUTS</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
 
-## <span data-ttu-id="04ecf-223">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="04ecf-223">OUTPUTS</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-### <span data-ttu-id="04ecf-224">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="04ecf-224">PSRepositoryItemInfo</span></span>
+### <span data-ttu-id="0ff48-219">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0ff48-219">CommonParameters</span></span>
 
-<span data-ttu-id="04ecf-225">`Find-Module` cria objetos **PSRepositoryItemInfo** que podem ser enviados ao pipeline para cmdlets como `Install-Module` .</span><span class="sxs-lookup"><span data-stu-id="04ecf-225">`Find-Module` creates **PSRepositoryItemInfo** objects that can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
+<span data-ttu-id="0ff48-220">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0ff48-220">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0ff48-221">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="0ff48-221">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="04ecf-226">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="04ecf-226">NOTES</span></span>
+## <span data-ttu-id="0ff48-222">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="0ff48-222">INPUTS</span></span>
 
-<span data-ttu-id="04ecf-227">Esse cmdlet é executado no PowerShell 5,0 ou versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e versões posteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="04ecf-227">This cmdlet runs on PowerShell 5.0 or later releases of Windows PowerShell, on Windows 7, or Windows 2008 R2 and later releases of Windows.</span></span>
+## <span data-ttu-id="0ff48-223">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="0ff48-223">OUTPUTS</span></span>
 
-## <span data-ttu-id="04ecf-228">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="04ecf-228">RELATED LINKS</span></span>
+### <span data-ttu-id="0ff48-224">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="0ff48-224">PSRepositoryItemInfo</span></span>
 
-[<span data-ttu-id="04ecf-229">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="04ecf-229">Get-PSRepository</span></span>](Get-PSRepository.md)
+<span data-ttu-id="0ff48-225">`Find-Module` cria objetos **PSRepositoryItemInfo** que podem ser enviados ao pipeline para cmdlets como `Install-Module` .</span><span class="sxs-lookup"><span data-stu-id="0ff48-225">`Find-Module` creates **PSRepositoryItemInfo** objects that can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
 
-[<span data-ttu-id="04ecf-230">Install-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-230">Install-Module</span></span>](Install-Module.md)
+## <span data-ttu-id="0ff48-226">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="0ff48-226">NOTES</span></span>
 
-[<span data-ttu-id="04ecf-231">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-231">Publish-Module</span></span>](Publish-Module.md)
+> [!IMPORTANT]
+> <span data-ttu-id="0ff48-227">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="0ff48-227">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="0ff48-228">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0ff48-228">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="0ff48-229">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="0ff48-229">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="0ff48-230">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0ff48-230">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="04ecf-232">Save-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-232">Save-Module</span></span>](Save-Module.md)
+## <span data-ttu-id="0ff48-231">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="0ff48-231">RELATED LINKS</span></span>
 
-[<span data-ttu-id="04ecf-233">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-233">Uninstall-Module</span></span>](Uninstall-Module.md)
+[<span data-ttu-id="0ff48-232">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="0ff48-232">Get-PSRepository</span></span>](Get-PSRepository.md)
 
-[<span data-ttu-id="04ecf-234">Update-Module</span><span class="sxs-lookup"><span data-stu-id="04ecf-234">Update-Module</span></span>](Update-Module.md)
+[<span data-ttu-id="0ff48-233">Install-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-233">Install-Module</span></span>](Install-Module.md)
 
-[<span data-ttu-id="04ecf-235">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="04ecf-235">Register-PSRepository</span></span>](Register-PSRepository.md)
+[<span data-ttu-id="0ff48-234">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-234">Publish-Module</span></span>](Publish-Module.md)
+
+[<span data-ttu-id="0ff48-235">Save-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-235">Save-Module</span></span>](Save-Module.md)
+
+[<span data-ttu-id="0ff48-236">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-236">Uninstall-Module</span></span>](Uninstall-Module.md)
+
+[<span data-ttu-id="0ff48-237">Update-Module</span><span class="sxs-lookup"><span data-stu-id="0ff48-237">Update-Module</span></span>](Update-Module.md)
+
+[<span data-ttu-id="0ff48-238">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="0ff48-238">Register-PSRepository</span></span>](Register-PSRepository.md)
