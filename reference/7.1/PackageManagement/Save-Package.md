@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: c381de5b3c3d9aab701ed1ff9a78b3c9e0f65b3b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f756c294c9a40170a94f9a35b8909cf164616bea
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194260"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891727"
 ---
 # Save-Package
 
@@ -81,7 +81,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
 ## DESCRIPTION
 
 O `Save-Package` cmdlet salva pacotes no computador local, mas não instala os pacotes.
-Esse cmdlet salva a versão mais recente de um pacote, a menos que você especifique um **RequiredVerion** . Os parâmetros **Path** e **LiteralPath** são mutuamente exclusivos e não podem ser adicionados ao mesmo comando.
+Esse cmdlet salva a versão mais recente de um pacote, a menos que você especifique um **RequiredVerion**. Os parâmetros **Path** e **LiteralPath** são mutuamente exclusivos e não podem ser adicionados ao mesmo comando.
 
 ## EXEMPLOS
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -720,6 +720,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -731,4 +738,3 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 [Save-Package](Save-Package.md)
 
 [Uninstall-Package](Uninstall-Package.md)
-

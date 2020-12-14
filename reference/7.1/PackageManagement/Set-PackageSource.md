@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/set-packagesource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PackageSource
-ms.openlocfilehash: ad5384f7d708cc708991d4150bf883139007ae1b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a9a80767a4ccc16caf0e71f92134c9fdeec9443c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194259"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891710"
 ---
 # Set-PackageSource
 
@@ -79,7 +79,7 @@ O `Set-PackageSource` substitui uma origem de pacote para um provedor de pacote 
 
 ### Exemplo 1: alterar a origem de um pacote
 
-Esse comando altera o nome existente de uma origem de pacote. A origem é definida como **confiável** , o que elimina as solicitações para verificar a origem quando os pacotes são instalados.
+Esse comando altera o nome existente de uma origem de pacote. A origem é definida como **confiável**, o que elimina as solicitações para verificar a origem quando os pacotes são instalados.
 
 ```
 PS C:\> Set-PackageSource -Name MyNuget -NewName NewNuGet -Trusted -ProviderName NuGet
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -422,6 +422,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -431,4 +438,3 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 [Register-PackageSource](Register-PackageSource.md)
 
 [Unregister-PackageSource](Unregister-PackageSource.md)
-

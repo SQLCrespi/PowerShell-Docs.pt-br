@@ -8,18 +8,25 @@ Module Name: PackageManagement
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PackageManagement
-ms.openlocfilehash: 7285f37020807b12c03b38a48cc2b72637940898
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 208545677771270ad8f2e9d76ba01046b07e86e2
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93195392"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892773"
 ---
 # Módulo PackageManagement
 
 ## Descrição
 
 Este tópico exibe tópicos de ajuda para os cmdlets Gerenciamento de Pacotes.
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## Cmdlets do PackageManagement
 
@@ -30,7 +37,7 @@ Localiza pacotes de software em fontes de pacote disponíveis.
 Retorna uma lista de provedores de pacote Gerenciamento de Pacotes disponíveis para instalação.
 
 ### [Get-Package](Get-Package.md)
-Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement** .
+Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement**.
 
 ### [Get-PackageProvider](Get-PackageProvider.md)
 Retorna uma lista de provedores de pacote que estão conectados a Gerenciamento de Pacotes.

@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 33b7861f4e776b992d3483b9b0776c32a88599fc
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c6468d2f8226cb26ec5385c7d5a8a895155ad673
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192846"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892647"
 ---
 # Find-Module
 
@@ -39,7 +39,7 @@ O `Find-Module` cmdlet localiza módulos em um repositório que corresponde aos 
 Na primeira vez que o `Find-Module` tentar usar um repositório, você poderá ser solicitado a instalar atualizações.
 Se a origem do repositório não estiver registrada com o `Register-PSRepository` cmdlet, um erro será retornado.
 
-`Find-Module` Retorna a versão mais recente de um módulo se nenhum parâmetro for usado para limitar a versão. Para obter uma lista de um repositório de versões de um módulo, use o **parâmetro AllModules** .
+`Find-Module` Retorna a versão mais recente de um módulo se nenhum parâmetro for usado para limitar a versão. Para obter uma lista de um repositório de versões de um módulo, use o **parâmetro AllModules**.
 
 Se o parâmetro **MinimumVersion** for especificado, `Find-Module` retornará a versão do módulo que é igual ou maior que o mínimo. Se houver uma versão mais recente disponível no repositório, a versão mais recente será retornada.
 
@@ -85,7 +85,7 @@ Version   Name                            Repository    Description
 4.0       PowerShellISEModule             PSGallery     a module that adds capability to the ISE
 ```
 
-O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para localizar todos os módulos que contêm o **PowerShell** .
+O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para localizar todos os módulos que contêm o **PowerShell**.
 
 ### Exemplo 3: localizar um módulo por versão mínima
 
@@ -101,7 +101,7 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** . **MinimumVersion** especifica a versão **1.6.5** . `Find-Module` Retorna o PowerShellGet versão **2.1.0** porque ele excede a versão mínima e é a versão mais atual.
+O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** . **MinimumVersion** especifica a versão **1.6.5**. `Find-Module` Retorna o PowerShellGet versão **2.1.0** porque ele excede a versão mínima e é a versão mais atual.
 
 ### Exemplo 4: localizar um módulo por versão específica
 
@@ -117,7 +117,7 @@ Version   Name             Repository     Description
 1.6.5     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** . O parâmetro **RequiredVersion** especifica a versão **1.6.5** .
+O `Find-Module` cmdlet usa o parâmetro **Name** para especificar o módulo **PowerShellGet** . O parâmetro **RequiredVersion** especifica a versão **1.6.5**.
 
 ### Exemplo 5: localizar um módulo em um repositório específico
 
@@ -151,9 +151,9 @@ PSGallery     2.0.0.0   ContosoServer    Cmdlets and DSC resources for managing 
 MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing Contoso Client...
 ```
 
-O `Register-PSRepository` cmdlet registra um novo repositório. O parâmetro **Name** atribui o nome **MySource** . O parâmetro **SourceLocation** especifica o endereço do repositório.
+O `Register-PSRepository` cmdlet registra um novo repositório. O parâmetro **Name** atribui o nome **MySource**. O parâmetro **SourceLocation** especifica o endereço do repositório.
 
-O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para especificar o módulo **contoso** . O parâmetro **Repository** especifica a pesquisa de dois repositórios, **PSGallery** e **MySource** .
+O `Find-Module` cmdlet usa o parâmetro **Name** com o curinga asterisco ( `*` ) para especificar o módulo **contoso** . O parâmetro **Repository** especifica a pesquisa de dois repositórios, **PSGallery** e **MySource**.
 
 ### Exemplo 7: localizar um módulo que contém um recurso de DSC
 
@@ -174,8 +174,8 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-O `Find-Module` cmdlet usa o parâmetro **Repository** para pesquisar o repositório, **PSGallery** .
-O parâmetro **includes** especifica **DscResource** , que é uma funcionalidade que o parâmetro pode pesquisar no repositório.
+O `Find-Module` cmdlet usa o parâmetro **Repository** para pesquisar o repositório, **PSGallery**.
+O parâmetro **includes** especifica **DscResource**, que é uma funcionalidade que o parâmetro pode pesquisar no repositório.
 
 ### Exemplo 8: localizar um módulo com um filtro
 
@@ -194,7 +194,7 @@ Version    Name              Repository           Description
 1.1.0    ClassExplorer       PSGallery            Quickly search the AppDomain for classes...
 ```
 
-O `Find-Module` cmdlet usa o parâmetro **Filter** para pesquisar no repositório o **AppDomain** .
+O `Find-Module` cmdlet usa o parâmetro **Filter** para pesquisar no repositório o **AppDomain**.
 
 ## PARAMETERS
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Próprias versões
 
-Especifica para incluir todas as versões de um módulo nos resultados. Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion** , **MaximumVersion** ou **RequiredVersion** .
+Especifica para incluir todas as versões de um módulo nos resultados. Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion**, **MaximumVersion** ou **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -Inclui
 
-Retorna somente os módulos que incluem tipos específicos de funcionalidade do PowerShell. Por exemplo, talvez você queira apenas localizar módulos que incluem **DSCResource** . Os valores aceitáveis para esse parâmetro são os seguintes:
+Retorna somente os módulos que incluem tipos específicos de funcionalidade do PowerShell. Por exemplo, talvez você queira apenas localizar módulos que incluem **DSCResource**. Os valores aceitáveis para esse parâmetro são os seguintes:
 
 - Cmdlet
 - DscResource
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-Especifica o número de versão exato do módulo a ser incluído nos resultados. **RequiredVersion** não pode ser usado no mesmo comando que **MinimumVersion** ou **MaximumVersion** .
+Especifica o número de versão exato do módulo a ser incluído nos resultados. **RequiredVersion** não pode ser usado no mesmo comando que **MinimumVersion** ou **MaximumVersion**.
 
 ```yaml
 Type: System.String
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-Especifica uma matriz de marcas. As marcas de exemplo incluem **DesiredStateConfiguration** , **DSC** , **DSCResourceKit** ou **PSModule** .
+Especifica uma matriz de marcas. As marcas de exemplo incluem **DesiredStateConfiguration**, **DSC**, **DSCResourceKit** ou **PSModule**.
 
 ```yaml
 Type: System.String[]
@@ -499,7 +499,12 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
-Esse cmdlet é executado no PowerShell 5,0 ou versões posteriores do PowerShell, no Windows 7 ou no Windows 2008 R2 e versões posteriores do Windows.
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 

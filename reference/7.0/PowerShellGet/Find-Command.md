@@ -7,12 +7,12 @@ ms.date: 06/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Command
-ms.openlocfilehash: d872f53c504874f69f1e39c506a72bfefa072aa6
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 824e5b0012f8cf8394252704d0e16e49b3f7fa39
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192850"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892681"
 ---
 # Find-Command
 
@@ -66,7 +66,7 @@ Connect-AzureRmAccount              5.8.3      AzureRM.profile     PSGallery
 
 ### Exemplo 2: localizar um comando por nome
 
-`Find-Command` pode usar o nome de um comando para localizar o módulo em um repositório. É possível que exista um nome de comando em vários **modulenames** .
+`Find-Command` pode usar o nome de um comando para localizar o módulo em um repositório. É possível que exista um nome de comando em vários **modulenames**.
 
 ```powershell
 Find-Command -Repository PSGallery -Name Get-TargetResource
@@ -80,7 +80,7 @@ Get-TargetResource    1.0.0      xInternetExplorerHomePage       PSGallery
 Get-TargetResource    1.2.0.0    SystemLocaleDsc                 PSGallery
 ```
 
-`Find-Command` usa o parâmetro **Repository** para pesquisar o **PSGallery** . O parâmetro **Name** especifica o comando **Get-TargetResource** .
+`Find-Command` usa o parâmetro **Repository** para pesquisar o **PSGallery**. O parâmetro **Name** especifica o comando **Get-TargetResource**.
 
 ### Exemplo 3: localizar comandos por nome e instalar o módulo
 
@@ -98,7 +98,7 @@ Version   Name               Repository   Description
 1.2.0.0   SystemLocaleDsc    PSGallery    This DSC Resource allows configuration of the Windows...
 ```
 
-`Find-Command` usa o parâmetro **Name** para especificar o comando **Get-TargetResource** . O parâmetro **Repository** pesquisa o **PSGallery** . O parâmetro **ModuleName** especifica o módulo que você deseja instalar, **SystemLocaleDsc** . O objeto é enviado ao pipeline para o `Install-Module` e o módulo é instalado. Após a conclusão da instalação, você pode usar `Get-InstalledModule` o para exibir os resultados.
+`Find-Command` usa o parâmetro **Name** para especificar o comando **Get-TargetResource**. O parâmetro **Repository** pesquisa o **PSGallery**. O parâmetro **ModuleName** especifica o módulo que você deseja instalar, **SystemLocaleDsc**. O objeto é enviado ao pipeline para o `Install-Module` e o módulo é instalado. Após a conclusão da instalação, você pode usar `Get-InstalledModule` o para exibir os resultados.
 
 ### Exemplo 4: localizar um comando e salvar seu módulo
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -321,6 +321,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -331,4 +338,4 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Desinstalar-módulo](Uninstall-Module.md)

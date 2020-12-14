@@ -7,12 +7,12 @@ ms.date: 06/04/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-dscresource?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-DscResource
-ms.openlocfilehash: 170be8eb8e5f9f158b69c5505505e587e10c7e78
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 4312ac522bf0b04a9a95414774bad9624737ce45
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192848"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892664"
 ---
 # Find-DscResource
 
@@ -93,7 +93,7 @@ Vários recursos do mesmo módulo podem ser enviados para o pipeline para o `Ins
 Find-DscResource -Name xWebsite | Install-Module
 ```
 
-`Find-DscResource` usa o parâmetro **Name** para localizar o recurso chamado **xWebsite** . O objeto é enviado ao pipeline para o `Install-Module` cmdlet. `Install-Module` instala o módulo **xWebAdministration** para o recurso.
+`Find-DscResource` usa o parâmetro **Name** para localizar o recurso chamado **xWebsite**. O objeto é enviado ao pipeline para o `Install-Module` cmdlet. `Install-Module` instala o módulo **xWebAdministration** para o recurso.
 
 ### Exemplo 4: localizar todos os recursos de DSC em um módulo
 
@@ -116,7 +116,7 @@ xIisLogging                         2.6.0.0    xWebAdministration      PSGallery
 
 ### Exemplo 5: localizar um recurso de DSC por marca e versão necessária
 
-Os recursos de DSC podem ser localizados usando a **marca** de parâmetros e **RequiredVersion** . **Marca** exibe a versão atual de cada recurso que contém a marca especificada no repositório.
+Os recursos de DSC podem ser localizados usando a **marca** de parâmetros e **RequiredVersion**. **Marca** exibe a versão atual de cada recurso que contém a marca especificada no repositório.
 **RequiredVersion** precisa do parâmetro **ModuleName** e o parâmetro **Name** é opcional. Os parâmetros **Name** e **ModuleName** limitam a saída. Use o parâmetro **Perversions** para exibir as versões disponíveis de um recurso de DSC.
 
 ```powershell
@@ -134,7 +134,7 @@ xIisMimeTypeMapping     1.20.0.0   xWebAdministration     PSGallery
 
 ### Exemplo 6: localizar um recurso usando um filtro
 
-`Find-DscResource` localiza todos os recursos e usa o parâmetro de **filtro** para especificar os resultados por **domínio** . O parâmetro **Filter** localiza o valor do filtro na descrição do objeto ou no nome do módulo. Use o `Select-Object` cmdlet para exibir as propriedades de um objeto.
+`Find-DscResource` localiza todos os recursos e usa o parâmetro de **filtro** para especificar os resultados por **domínio**. O parâmetro **Filter** localiza o valor do filtro na descrição do objeto ou no nome do módulo. Use o `Select-Object` cmdlet para exibir as propriedades de um objeto.
 
 ```powershell
 Find-DscResource -Filter Domain
@@ -158,7 +158,7 @@ dmAwsTagInstance        1.0.1      domainAwsDSCResources      PSGallery
 Inclui recursos marcados como um pré-lançamento nos resultados.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Próprias versões
 
-O parâmetro **Perversions** exibe cada uma das versões disponíveis de um recurso de DSC. Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion** , **MaximumVersion** ou **RequiredVersion** .
+O parâmetro **Perversions** exibe cada uma das versões disponíveis de um recurso de DSC. Você não pode usar o parâmetro de todas as **versões** com os parâmetros **MinimumVersion**, **MaximumVersion** ou **RequiredVersion** .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -359,6 +359,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -369,4 +376,4 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Desinstalar-módulo](Uninstall-Module.md)

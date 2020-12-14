@@ -7,12 +7,12 @@ ms.date: 06/05/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-rolecapability?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-RoleCapability
-ms.openlocfilehash: ca6a3845920793e7825727bef455c1001c13f0f0
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ad3262cbe6e77ffbd638fd8ef77efeece63c3295
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194244"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892429"
 ---
 # Find-RoleCapability
 
@@ -332,6 +332,13 @@ O `Find-RoleCapability` cmdlet retorna um objeto **PSGetRoleCapabilityInfo** .
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md)
@@ -343,4 +350,3 @@ O `Find-RoleCapability` cmdlet retorna um objeto **PSGetRoleCapabilityInfo** .
 [New-PSRoleCapabilityFile](../Microsoft.PowerShell.Core/New-PSRoleCapabilityFile.md)
 
 [Save-Module](Save-Module.md)
-

@@ -7,12 +7,12 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 88ce556a366e67a911bf32eb5c13161a543f103f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 9aff0ff794bea42da7690a77357c1d76f747a004
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194226"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892150"
 ---
 # Save-Module
 
@@ -82,11 +82,11 @@ d-----         7/1/2019     13:31                PackageManagement
 d-----         7/1/2019     13:31                PowerShellGet
 ```
 
-`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** . O parâmetro **path** especifica onde armazenar o módulo baixado. O parâmetro **Repository** especifica um repositório registrado, **PSGallery** . Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.
+`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**. O parâmetro **path** especifica onde armazenar o módulo baixado. O parâmetro **Repository** especifica um repositório registrado, **PSGallery**. Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.
 
 ### Exemplo 2: salvar uma versão específica de um módulo
 
-Este exemplo mostra como usar um parâmetro como **MaximumVersion** , ou **RequiredVersion** para especificar uma versão de módulo.
+Este exemplo mostra como usar um parâmetro como **MaximumVersion**, ou **RequiredVersion** para especificar uma versão de módulo.
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery -MaximumVersion 2.1.0
@@ -101,7 +101,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     13:40                2.1.0
 ```
 
-`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** . O parâmetro **path** especifica onde armazenar o módulo baixado. O parâmetro **Repository** especifica um repositório registrado, **PSGallery** . **MaximumVersion** especifica que a versão **2.1.0** é baixada e salva. Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.
+`Save-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**. O parâmetro **path** especifica onde armazenar o módulo baixado. O parâmetro **Repository** especifica um repositório registrado, **PSGallery**. **MaximumVersion** especifica que a versão **2.1.0** é baixada e salva. Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.
 
 ### Exemplo 3: localizar e salvar uma versão específica de um módulo
 
@@ -121,7 +121,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     14:04                1.6.5
 ```
 
-`Find-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet** . O parâmetro **Repository** especifica um repositório registrado, **PSGallery** . **RequiredVersion** especifica a versão **1.6.5** .
+`Find-Module` usa o parâmetro **Name** para especificar o módulo, **PowerShellGet**. O parâmetro **Repository** especifica um repositório registrado, **PSGallery**. **RequiredVersion** especifica a versão **1.6.5**.
 
 O objeto é enviado ao pipeline para `Save-Module` . O parâmetro **path** especifica onde armazenar o módulo baixado. Depois que o download for concluído, o `Get-ChildItem` exibirá o conteúdo do **caminho** onde os arquivos são armazenados.
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -405,5 +405,11 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
-## LINKS RELACIONADOS
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
+## LINKS RELACIONADOS

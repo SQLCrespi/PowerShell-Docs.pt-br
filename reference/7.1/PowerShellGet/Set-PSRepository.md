@@ -7,12 +7,12 @@ ms.date: 04/22/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/set-psrepository?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSRepository
-ms.openlocfilehash: 5b9addd42ca655436ad12d624afd39fa6747dadf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 74eb0b105674c4e007cfade8d8a16799b5c366f2
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193472"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892082"
 ---
 # Set-PSRepository
 
@@ -40,7 +40,7 @@ O `Set-PSRepository` cmdlet define valores para um repositório de módulo regis
 Set-PSRepository -Name "myInternalSource" -InstallationPolicy Trusted
 ```
 
-Esse comando define a política de instalação para o repositório **Myinternalname** como **confiável** , para que você não seja solicitado antes de instalar os módulos dessa fonte.
+Esse comando define a política de instalação para o repositório **Myinternalname** como **confiável**, para que você não seja solicitado antes de instalar os módulos dessa fonte.
 
 ### Exemplo 2: definir a origem e os locais de publicação para um repositório
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -InstallationPolicy
 
-Especifica a política de instalação. Os valores válidos são: **confiável** , **não confiável** .
+Especifica a política de instalação. Os valores válidos são: **confiável**, **não confiável**.
 
 ```yaml
 Type: System.String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -229,6 +229,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [Get-PSRepository](Get-PSRepository.md)
@@ -236,4 +243,3 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 [Register-PSRepository](Register-PSRepository.md)
 
 [Unregister-PSRepository](Unregister-PSRepository.md)
-

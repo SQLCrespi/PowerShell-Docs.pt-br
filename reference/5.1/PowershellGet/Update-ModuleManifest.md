@@ -7,12 +7,12 @@ ms.date: 07/08/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-modulemanifest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ModuleManifest
-ms.openlocfilehash: 47070823d18f2fd07339d503444e532a0c521e0e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0924366eac2e6ee0e8a250db916d354ee6993cb7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194357"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892031"
 ---
 # Update-ModuleManifest
 
@@ -61,7 +61,7 @@ $Parms = @{
 Update-ModuleManifest @Parms
 ```
 
-`$Parms` é um fragmentação que armazena os valores de parâmetro para **caminho** , **autor** , **CompanyName** e **direitos autorais** . `Update-ModuleManifest` Obtém os valores de parâmetro de `@Parms` e atualiza o manifesto do módulo, **TestManifest.psd1** .
+`$Parms` é um fragmentação que armazena os valores de parâmetro para **caminho**, **autor**, **CompanyName** e **direitos autorais**. `Update-ModuleManifest` Obtém os valores de parâmetro de `@Parms` e atualiza o manifesto do módulo, **TestManifest.psd1**.
 
 ## PARAMETERS
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -CompatiblePSEditions
 
-Especifica o **PSEditions** compatível do módulo. Para obter informações sobre **PSEdition** , consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).
+Especifica o **PSEditions** compatível do módulo. Para obter informações sobre **PSEdition**, consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).
 
 ```yaml
 Type: System.String[]
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -HelpInfoUri
 
-Especifica o endereço da Internet do arquivo **XML HelpInfo** do módulo. Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https** .
+Especifica o endereço da Internet do arquivo **XML HelpInfo** do módulo. Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https**.
 
 O arquivo **XML HelpInfo** dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell versão 3,0. Ele contém informações sobre o local dos arquivos de ajuda baixáveis do módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.
 
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 Especifica uma matriz de módulos que são incluídos no módulo.
 
-Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** . A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
+Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**. A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
 
 Essa chave foi projetada para atuar como um inventário de módulo. Os módulos listados no valor dessa chave não são processados automaticamente.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo. Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.
 
-Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** . A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
+Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**. A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
 
 ```yaml
 Type: System.Object[]
@@ -707,7 +707,7 @@ Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido esp
 
 Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto. Caso contrário, seus membros não serão exportados.
 
-No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess** .
+No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess**.
 
 ```yaml
 Type: System.String
@@ -726,7 +726,7 @@ Accept wildcard characters: False
 Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.
 Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.
 
-Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules** .
+Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules**.
 
 ```yaml
 Type: System.String[]
@@ -822,5 +822,12 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ### System.Object
 
 ## OBSERVAÇÕES
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS

@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Module
-ms.openlocfilehash: e2e4dc34fb84a54fb92cc4c809c84d67beafe576
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 463853778b6f2892ae36d55dcd4d886727b1dd51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93195107"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892480"
 ---
 # Install-Module
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -MaximumVersion
 
-Especifica a versão máxima de um único módulo a ser instalado. A versão instalada deve ser menor ou igual a **MaximumVersion** . Se você quiser instalar vários módulos, não poderá usar **MaximumVersion** . **MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo `Install-Module` comando.
+Especifica a versão máxima de um único módulo a ser instalado. A versão instalada deve ser menor ou igual a **MaximumVersion**. Se você quiser instalar vários módulos, não poderá usar **MaximumVersion**. **MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo `Install-Module` comando.
 
 ```yaml
 Type: System.String
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -MinimumVersion
 
-Especifica a versão mínima de um único módulo a ser instalado. A versão instalada deve ser maior ou igual a **MinimumVersion** . Se houver uma versão mais recente do módulo disponível, a versão mais recente será instalada. Se você quiser instalar vários módulos, não poderá usar **MinimumVersion** .
+Especifica a versão mínima de um único módulo a ser instalado. A versão instalada deve ser maior ou igual a **MinimumVersion**. Se houver uma versão mais recente do módulo disponível, a versão mais recente será instalada. Se você quiser instalar vários módulos, não poderá usar **MinimumVersion**.
 **MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo `Install-Module` comando.
 
 ```yaml
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-Especifica a versão exata de um único módulo a ser instalado. Se não houver nenhuma correspondência no repositório para a versão especificada, será exibido um erro. Se você quiser instalar vários módulos, não poderá usar **RequiredVersion** . **RequiredVersion** não pode ser usado no mesmo `Install-Module` comando que **MinimumVersion** ou **MaximumVersion** .
+Especifica a versão exata de um único módulo a ser instalado. Se não houver nenhuma correspondência no repositório para a versão especificada, será exibido um erro. Se você quiser instalar vários módulos, não poderá usar **RequiredVersion**. **RequiredVersion** não pode ser usado no mesmo `Install-Module` comando que **MinimumVersion** ou **MaximumVersion**.
 
 ```yaml
 Type: System.String
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 
 ### -Escopo
 
-Especifica o escopo de instalação do módulo. Os valores aceitáveis para esse parâmetro são **AllUsers** e **CurrentUser** .
+Especifica o escopo de instalação do módulo. Os valores aceitáveis para esse parâmetro são **AllUsers** e **CurrentUser**.
 
 O escopo **AllUsers** instala módulos em um local que pode ser acessado por todos os usuários do computador:
 
@@ -358,8 +358,8 @@ O **CurrentUser** instala módulos em um local que é acessível somente para o 
 
 Quando nenhum **escopo** é definido, o padrão é definido com base na versão do PowerShellGet.
 
-- No PowerShellGet versões 2.0.0 e superiores, o padrão é **CurrentUser** , que não requer elevação para a instalação.
-- Nas versões do PowerShellGet 1. x, o padrão é **AllUsers** , o que requer elevação para a instalação.
+- No PowerShellGet versões 2.0.0 e superiores, o padrão é **CurrentUser**, que não requer elevação para a instalação.
+- Nas versões do PowerShellGet 1. x, o padrão é **AllUsers**, o que requer elevação para a instalação.
 
 ```yaml
 Type: System.String
@@ -436,11 +436,18 @@ Ao usar o parâmetro **PassThru** , o `Install-Module` gera um objeto **PSReposi
 
 `Install-Module` é executado no PowerShell 5,0 ou versões posteriores, no Windows 7 ou Windows 2008 R2 e versões posteriores do Windows.
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 Como prática recomendada de segurança, avalie o código de um módulo antes de executar quaisquer cmdlets ou funções pela primeira vez. Para evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente após a instalação.
 
 Se o nome do módulo especificado pelo parâmetro **Name** não existir no repositório, o `Install-Module` retornará um erro.
 
-Para instalar vários módulos, use o parâmetro **Name** e especifique uma matriz separada por vírgulas de nomes de módulo. Se você especificar vários nomes de módulo, não poderá usar **MinimumVersion** , **MaximumVersion** ou **RequiredVersion** . `Find-Module` cria objetos **PSRepositoryItemInfo** que podem ser enviados ao pipeline para o `Install-Module` . O pipeline é outra maneira de especificar vários módulos a serem instalados em um único comando.
+Para instalar vários módulos, use o parâmetro **Name** e especifique uma matriz separada por vírgulas de nomes de módulo. Se você especificar vários nomes de módulo, não poderá usar **MinimumVersion**, **MaximumVersion** ou **RequiredVersion**. `Find-Module` cria objetos **PSRepositoryItemInfo** que podem ser enviados ao pipeline para o `Install-Module` . O pipeline é outra maneira de especificar vários módulos a serem instalados em um único comando.
 
 Por padrão, os módulos para o escopo do **AllUsers** são instalados no `$env:ProgramFiles\PowerShell\Modules` . O padrão evita confusão quando você instala recursos de DSC (configuração de estado desejado) do PowerShell.
 

@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: a299b04c8e041819ef2870abe263fae381b1d5dc
-ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
+ms.openlocfilehash: 34b0d7833d858a8b71c28d0f872ddb9e4948b76d
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93195266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514976"
 ---
 # Get-Date
 
@@ -75,7 +75,7 @@ Tuesday, June 25, 2019 14:53:32
 
 ### Exemplo 2: obter elementos da data e hora atuais
 
-Este exemplo mostra como usar `Get-Date` para obter o elemento Date ou time. O parâmetro usa os argumentos **Date** , **time** ou **DateTime** .
+Este exemplo mostra como usar `Get-Date` para obter o elemento Date ou time. O parâmetro usa os argumentos **Date**, **time** ou **DateTime**.
 
 ```powershell
 Get-Date -DisplayHint Date
@@ -156,7 +156,7 @@ O calendário gregoriano tem 365 dias, exceto os anos bissextos que têm 366 dia
 366
 ```
 
-`Get-Date` usa três parâmetros para especificar a data: **ano** , **mês** e **dia** . O comando é encapsulado com parênteses para que o resultado seja avaliado pela propriedade **DayofYear** .
+`Get-Date` usa três parâmetros para especificar a data: **ano**, **mês** e **dia**. O comando é encapsulado com parênteses para que o resultado seja avaliado pela propriedade **DayofYear** .
 
 ### Exemplo 6: verificar se uma data está ajustada para o horário de verão
 
@@ -189,7 +189,7 @@ Wednesday June/26/2019 10:45:26 -07
 Wednesday, June 26, 2019 17:45:26
 ```
 
-`Get-Date` usa o parâmetro **uFormat** com especificadores de formato para exibir a data e a hora atuais do sistema. O especificador de formato **% Z** representa o deslocamento UTC de **-07** .
+`Get-Date` usa o parâmetro **uFormat** com especificadores de formato para exibir a data e a hora atuais do sistema. O especificador de formato **% Z** representa o deslocamento UTC de **-07**.
 
 A `$Time` variável armazena a data e a hora atuais do sistema. `$Time` usa o método **ToUniversalTime ()** para converter a hora com base no deslocamento UTC do computador.
 
@@ -228,7 +228,7 @@ Wednesday, January 01, 2020 12:00:00 AM
 
 ### Exemplo 10: retornar um valor de data interpretado como UTC
 
-Este exemplo mostra como interpretar um valor de data como seu equivalente UTC. Para o exemplo, essa máquina é definida como **hora padrão do Pacífico** . Por padrão, `Get-Date` retorna valores para esse fuso horário. Use o parâmetro **AsUTC** para converter o valor para a hora equivalente UTC.
+Este exemplo mostra como interpretar um valor de data como seu equivalente UTC. Para o exemplo, essa máquina é definida como **hora padrão do Pacífico**. Por padrão, `Get-Date` retorna valores para esse fuso horário. Use o parâmetro **AsUTC** para converter o valor para a hora equivalente UTC.
 
 ```powershell
 PS> Get-TimeZone
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 Especifica o dia do mês que é exibido. Insira um valor de 1 a 31.
 
-Se o valor especificado for maior que o número de dias em um mês, o PowerShell adicionará o número de dias ao mês. Por exemplo, `Get-Date -Month 2 -Day 31` exibe **3 de março** , não **31 de fevereiro** .
+Se o valor especificado for maior que o número de dias em um mês, o PowerShell adicionará o número de dias ao mês. Por exemplo, `Get-Date -Month 2 -Day 31` exibe **3 de março**, não **31 de fevereiro**.
 
 ```yaml
 Type: System.Int32
@@ -321,9 +321,9 @@ Determina quais elementos de data e hora são exibidos.
 
 Os valores aceitos são os seguintes:
 
-- **Data** : exibe somente a data
-- **Hora** : exibe apenas a hora
-- **DateTime** : exibe a data e a hora
+- **Data**: exibe somente a data
+- **Hora**: exibe apenas a hora
+- **DateTime**: exibe a data e a hora
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.DisplayHintType
@@ -349,14 +349,14 @@ Quando o parâmetro **Format** é usado, `Get-Date` obtém apenas as propriedade
 
 A partir do PowerShell 5,0, você pode usar os seguintes formatos adicionais como valores para o parâmetro de **formato** .
 
-- **Data de início** . Uma representação amigável de arquivo ou caminho da data atual na hora local. O formato é `yyyyMMdd` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos e um dia de 2 dígitos). Por exemplo:
+- **Data de início**. Uma representação amigável de arquivo ou caminho da data atual na hora local. O formato é `yyyyMMdd` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos e um dia de 2 dígitos). Por exemplo:
   20190627.
 
-- **FileDateUniversal** . Uma representação amigável de arquivo ou caminho da data atual em tempo universal (UTC). O formato é `yyyyMMddZ` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos e a letra `Z` como o indicador UTC). Por exemplo: 20190627Z.
+- **FileDateUniversal**. Uma representação amigável de arquivo ou caminho da data atual em tempo universal (UTC). O formato é `yyyyMMddZ` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos e a letra `Z` como o indicador UTC). Por exemplo: 20190627Z.
 
-- **FileDateTime** . Uma representação de arquivo ou de caminho amigável da data e hora atuais na hora local, no formato de 24 horas. O formato é `yyyyMMddTHHmmssffff` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos, a letra `T` como um separador de hora, hora de 2 dígitos, minuto de 2 dígitos, segundo de 2 dígitos e milissegundo de 4 dígitos). Por exemplo: 20190627T0840107271.
+- **FileDateTime**. Uma representação de arquivo ou de caminho amigável da data e hora atuais na hora local, no formato de 24 horas. O formato é `yyyyMMddTHHmmssffff` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos, a letra `T` como um separador de hora, hora de 2 dígitos, minuto de 2 dígitos, segundo de 2 dígitos e milissegundo de 4 dígitos). Por exemplo: 20190627T0840107271.
 
-- **FileDateTimeUniversal** . Uma representação amigável de arquivo ou caminho da data e hora atuais em UTC (hora universal), no formato de 24 horas. O formato é `yyyyMMddTHHmmssffffZ` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos, a letra `T` como um separador de hora, hora de 2 dígitos, minuto de 2 dígitos, segundo de 2 dígitos, milissegundo de 4 dígitos e a letra `Z` como o indicador UTC). Por exemplo: 20190627T1540500718Z.
+- **FileDateTimeUniversal**. Uma representação amigável de arquivo ou caminho da data e hora atuais em UTC (hora universal), no formato de 24 horas. O formato é `yyyyMMddTHHmmssffffZ` (diferencia maiúsculas de minúsculas, usando um ano de 4 dígitos, um mês de 2 dígitos, um dia de 2 dígitos, a letra `T` como um separador de hora, hora de 2 dígitos, minuto de 2 dígitos, segundo de 2 dígitos, milissegundo de 4 dígitos e a letra `Z` como o indicador UTC). Por exemplo: 20190627T1540500718Z.
 
 ```yaml
 Type: System.String
@@ -545,7 +545,7 @@ Os **especificadores uFormat** válidos são exibidos na tabela a seguir:
 | `%c` | Data e hora abreviadas                                             | Quinta-feira-Jun 27 08:44:18 2019 |
 | `%D` | Data no formato mm/dd/aa                                                 | 06/27/19                 |
 | `%d` | Dia do mês-2 dígitos                                             | 05                       |
-| `%e` | Dia do mês-dígito precedido por um espaço                            | \<space\>05               |
+| `%e` | Dia do mês-precedido por um espaço se houver apenas um único dígito           | \<space\>05               |
 | `%F` | Data no formato aaaa-mm-dd, igual a% Y-% m-% d (o formato de data ISO 8601) | 2019-06-27               |
 | `%G` | O mesmo que ' Y '                                                             |                          |
 | `%g` | O mesmo que ' y '                                                             |                          |
