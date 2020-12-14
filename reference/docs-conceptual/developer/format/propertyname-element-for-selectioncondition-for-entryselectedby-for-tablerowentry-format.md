@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bec8377fb13b8f288196a809e7aa4e7f46c66e31
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (formato)
+description: Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (formato)
+ms.openlocfilehash: dcb59fc438ae217870566f09204fb16b8f031614
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785533"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665780"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format"></a>Elemento PropertyName para SelectionCondition para EntrySelectedBy para TableRowEntry (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `P
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

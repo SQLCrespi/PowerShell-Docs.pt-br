@@ -2,26 +2,26 @@
 description: O PSReadLine fornece uma experiência de edição de linha de comando aprimorada no console do PowerShell.
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sobre o PSReadLine
-ms.openlocfilehash: ad6e85a30f866cb332c89a4c36f42231f511f5ae
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 25fc3a9a814728057b1ebc7e721d3fba84ae72c2
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93196564"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692302"
 ---
 # <a name="psreadline"></a>PSReadLine
 
 ## <a name="about_psreadline"></a>about_PSReadLine
 
-## <a name="short-description"></a>DESCRIÇÃO BREVE
+## <a name="short-description"></a>Descrição breve
 
 O PSReadLine fornece uma experiência de edição de linha de comando aprimorada no console do PowerShell.
 
-## <a name="long-description"></a>DESCRIÇÃO LONGA
+## <a name="long-description"></a>Descrição longa
 
 O PSReadLine 2,0 fornece uma poderosa experiência de edição de linha de comando para o console do PowerShell. Ele fornece:
 
@@ -35,7 +35,9 @@ O PSReadLine 2,0 fornece uma poderosa experiência de edição de linha de coman
 - Emacs Yank/Kill-Ring
 - "Word" com base no token do PowerShell movimentação e eliminação
 
-As funções a seguir estão disponíveis na classe **[Microsoft. PowerShell. PSConsoleReadLine]** .
+O PSReadLine requer o PowerShell 3,0 ou mais recente e o host do console. Ele não funciona no ISE do PowerShell. Ele funciona no console do Visual Studio Code.
+
+As funções a seguir estão disponíveis na classe **[Microsoft. PowerShell. PSConsoleReadLine]**.
 
 ## <a name="basic-editing-functions"></a>Funções de edição básicas
 
@@ -253,7 +255,7 @@ Preceda um ' # ' e aceite a linha.
 
 - Modo de comando vi: `<#>`
 
-### <a name="redo"></a>Refazer
+### <a name="redo"></a>Refaz
 
 Desfazer um desfazer.
 
@@ -1284,22 +1286,18 @@ Esse método auxiliar é usado para associações personalizadas que respeitam D
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>OBSERVAÇÃO
+## <a name="note"></a>Observação
 
-### <a name="powershell-compatibility"></a>COMPATIBILIDADE DO POWERSHELL
-
-O PSReadLine requer o PowerShell 3,0 ou mais recente e o host do console. Ele não funciona no ISE do PowerShell. Ele funciona no console do Visual Studio Code.
-
-### <a name="command-history"></a>HISTÓRICO DE COMANDOS
+### <a name="command-history"></a>Histórico de comandos
 
 PSReadLine mantém um arquivo de histórico contendo todos os comandos e dados que você inseriu na linha de comando. Isso pode conter dados confidenciais, incluindo senhas. Por exemplo, se você usar o `ConvertTo-SecureString` cmdlet, a senha será registrada no arquivo de histórico como texto sem formatação. Os arquivos de histórico são um arquivo chamado `$($host.Name)_history.txt` . Em sistemas Windows, o arquivo de histórico é armazenado em `$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine` .
 
-### <a name="feedback--contributing-to-psreadline"></a>Comentários & CONTRIBUIndo para o PSReadLine
+### <a name="feedback--contributing-to-psreadline"></a>Comentários & contribuindo para o PSReadLine
 
 [PSReadLine no GitHub](https://github.com/PowerShell/PSReadLine)
 
 Sinta-se à vontade para enviar uma solicitação de pull ou enviar comentários na página do GitHub.
 
-## <a name="see-also"></a>CONSULTE TAMBÉM
+## <a name="see-also"></a>Consulte Também
 
 O PSReadLine é bastante influenciado pela biblioteca do GNU [ReadLine](https://tiswww.case.edu/php/chet/readline/rltop.html) .

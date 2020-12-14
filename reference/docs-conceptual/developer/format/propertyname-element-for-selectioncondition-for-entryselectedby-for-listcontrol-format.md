@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3f0a6b6b381f39492da36dab271503fc7cf6e7fc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListControl (formato)
+description: Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListControl (formato)
+ms.openlocfilehash: 1e318e3a29f07b157b9ae7343ba08759db8efbb5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785550"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665814"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `P
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

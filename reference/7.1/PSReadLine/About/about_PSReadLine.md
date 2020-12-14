@@ -2,28 +2,28 @@
 description: O PSReadLine fornece uma experiência de edição de linha de comando aprimorada no console do PowerShell.
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sobre o PSReadLine
-ms.openlocfilehash: 1188b8dc0b4099a7c1dcc472e3b02c2d4fa908bc
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6d52bb04118914a9ccca5d3442a9d1915c1c2818
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195536"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692268"
 ---
 # <a name="psreadline"></a>PSReadLine
 
 ## <a name="about_psreadline"></a>about_PSReadLine
 
-## <a name="short-description"></a>DESCRIÇÃO BREVE
+## <a name="short-description"></a>Descrição breve
 
 O PSReadLine fornece uma experiência de edição de linha de comando aprimorada no console do PowerShell.
 
-## <a name="long-description"></a>DESCRIÇÃO LONGA
+## <a name="long-description"></a>Descrição longa
 
-O PSReadLine 2,0 fornece uma poderosa experiência de edição de linha de comando para o console do PowerShell. Ele fornece:
+O PSReadLine 2,1 fornece uma poderosa experiência de edição de linha de comando para o console do PowerShell. Ele fornece:
 
 - Cor da sintaxe da linha de comando
 - Uma indicação visual de erros de sintaxe
@@ -34,11 +34,41 @@ O PSReadLine 2,0 fornece uma poderosa experiência de edição de linha de coman
 - Conclusão de estilo bash (opcional no modo cmd, padrão no modo Emacs)
 - Emacs Yank/Kill-Ring
 - "Word" com base no token do PowerShell movimentação e eliminação
+- IntelliSense preditiva
 
-As funções a seguir estão disponíveis na classe **[Microsoft. PowerShell. PSConsoleReadLine]** .
+O PSReadLine requer o PowerShell 3,0 ou mais recente e o host do console. Ele não funciona no ISE do PowerShell. Ele funciona no console do Visual Studio Code.
+
+O PSReadLine 2.1.0 é fornecido com o PowerShell 7,1 e tem suporte em todas as versões com suporte do PowerShell. Ele está disponível para instalação do Galeria do PowerShell.
+Para instalar o PSReadLine 2.1.0 em uma versão com suporte do PowerShell, execute o comando a seguir.
+
+```powershell
+Install-Module -Name PSReadLine -RequiredVersion 2.1.0
+```
 
 > [!NOTE]
 > A partir do PowerShell 7,0, o PowerShell ignora o carregamento automático de PSReadLine no Windows se um programa de leitor de tela for detectado. Atualmente, o PSReadLine não funciona bem com os leitores de tela. A renderização e a formatação padrão do PowerShell 7,0 no Windows funcionam corretamente. Você pode carregar o módulo manualmente, se necessário.
+
+## <a name="predictive-intellisense"></a>IntelliSense preditiva
+
+O IntelliSense preditiva é uma adição ao conceito de preenchimento com Tab que ajuda o usuário a concluir comandos com êxito. Ele permite que os usuários descubram, editem e executem comandos completos com base em previsões correspondentes do histórico do usuário e de plugins específicos de domínio adicionais.
+
+### <a name="enable-predictive-intellisense"></a>Habilitar IntelliSense Preditivo
+
+O IntelliSense preditiva é desabilitado por padrão. Para habilitar previsões, basta executar o seguinte comando:
+
+```powershell
+Set-PSReadLineOption -PredictionSource History
+```
+
+O parâmetro **PredictionSource** também pode aceitar plug-ins para requisitos personalizados e específicos de domínio.
+
+Para desabilitar o IntelliSense preditiva, basta executar:
+
+```powershell
+Set-PSReadLineOption -PredictionSource None
+```
+
+As funções a seguir estão disponíveis na classe **[Microsoft. PowerShell. PSConsoleReadLine]**.
 
 ## <a name="basic-editing-functions"></a>Funções de edição básicas
 
@@ -285,7 +315,7 @@ Preceda um ' # ' e aceite a linha.
 
 - Modo de comando vi: `<#>`
 
-### <a name="redo"></a>Refazer
+### <a name="redo"></a>Refaz
 
 Desfazer um desfazer.
 
@@ -1104,6 +1134,24 @@ Marque o local atual do cursor para uso em um comando de edição subsequente.
 
 - Emacs `<Ctrl+@>`
 
+## <a name="predictive-intellisense-functions"></a>Funções IntelliSense preditivas
+
+> [!NOTE]
+> O IntelliSense preditiva precisa ser habilitado para usar essas funções.
+
+### <a name="acceptnextwordsuggestion"></a>AcceptNextWordSuggestion
+
+Aceita a próxima palavra da sugestão embutida do IntelliSense preditiva.
+Essa função pode ser associada com <kbd>Ctrl</kbd> + <kbd>F</kbd> executando o comando a seguir.
+
+```powershell
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
+```
+
+### <a name="acceptsuggestion"></a>AcceptSuggestion
+
+Aceita a sugestão embutida atual do IntelliSense preditiva pressionando <kbd>RIGHTARROW</kbd> quando o cursor está no final da linha atual.
+
 ## <a name="search-functions"></a>Funções de pesquisa
 
 ### <a name="charactersearch"></a>CharacterSearch
@@ -1340,23 +1388,18 @@ Esse método auxiliar é usado para associações personalizadas que respeitam D
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>OBSERVAÇÃO
+## <a name="note"></a>Observação
 
-### <a name="powershell-compatibility"></a>COMPATIBILIDADE DO POWERSHELL
-
-O PSReadLine requer o PowerShell 3,0 ou mais recente e o host do console. Ele não funciona no ISE do PowerShell. Ele funciona no console do Visual Studio Code.
-
-### <a name="command-history"></a>HISTÓRICO DE COMANDOS
+### <a name="command-history"></a>Histórico de comandos
 
 PSReadLine mantém um arquivo de histórico contendo todos os comandos e dados que você inseriu na linha de comando. Isso pode conter dados confidenciais, incluindo senhas. Por exemplo, se você usar o `ConvertTo-SecureString` cmdlet, a senha será registrada no arquivo de histórico como texto sem formatação. Os arquivos de histórico são um arquivo chamado `$($host.Name)_history.txt` . Em sistemas Windows, o arquivo de histórico é armazenado em `$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine` . Em sistemas não Windows, os arquivos de histórico são armazenados em `$env:XDG_DATA_HOME/powershell/PSReadLine` ou `$env:HOME/.local/share/powershell/PSReadLine` .
 
-### <a name="feedback--contributing-to-psreadline"></a>Comentários & CONTRIBUIndo para o PSReadLine
+### <a name="feedback--contributing-to-psreadline"></a>Comentários & contribuindo para o PSReadLine
 
 [PSReadLine no GitHub](https://github.com/PowerShell/PSReadLine)
 
 Sinta-se à vontade para enviar uma solicitação de pull ou enviar comentários na página do GitHub.
 
-## <a name="see-also"></a>CONSULTE TAMBÉM
+## <a name="see-also"></a>Consulte Também
 
 O PSReadLine é bastante influenciado pela biblioteca do GNU [ReadLine](https://tiswww.case.edu/php/chet/readline/rltop.html) .
-

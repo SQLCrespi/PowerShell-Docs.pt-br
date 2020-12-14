@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para SelectionCondition para GroupBy (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8ada9a8ca7fbfdba5b2fea1881b2670c56a71d4f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para SelectionCondition para GroupBy (formato)
+description: Elemento PropertyName para SelectionCondition para GroupBy (formato)
+ms.openlocfilehash: b89fead6185c88ca03956dc265135833696b91d7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773072"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665661"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-groupby-format"></a>Elemento PropertyName para SelectionCondition para GroupBy (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e o elemento pai do `P
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

@@ -1,12 +1,14 @@
 ---
-title: Elemento PropertyName para TableColumnItem para TableControl (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bf267eeb83aef59abea2d945af12e849252309c8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Elemento PropertyName para TableColumnItem para TableControl (formato)
+description: Elemento PropertyName para TableColumnItem para TableControl (formato)
+ms.openlocfilehash: e83bbdb96d2755013cb9fe065cb98731ba44917f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772970"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665576"
 ---
 # <a name="propertyname-element-for-tablecolumnitem-for-tablecontrol-format"></a>Elemento PropertyName para TableColumnItem para TableControl (formato)
 
@@ -26,11 +28,11 @@ As seções a seguir descrevem atributos, elementos filho e elemento pai do `Pro
 
 ### <a name="attributes"></a>Atributos
 
-Nenhum.
+nenhuma.
 
 ### <a name="child-elements"></a>Elementos filho
 
-Nenhum.
+nenhuma.
 
 ### <a name="parent-elements"></a>Elementos pai
 

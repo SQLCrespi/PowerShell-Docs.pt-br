@@ -1,12 +1,14 @@
 ---
-title: Suporte à ajuda online
 ms.date: 09/13/2016
-ms.openlocfilehash: b2d8eae2137e0e564a9baf271962b8669dd5eac5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Suporte à ajuda online
+description: Suporte à ajuda online
+ms.openlocfilehash: 0164b5e6c6c8d66a6ab2467a8adfb7efffe0fe17
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892856"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645428"
 ---
 # <a name="supporting-online-help"></a>Suporte à ajuda online
 
@@ -34,7 +36,7 @@ Para implementar `Get-Help -Online` , o `Get-Help` cmdlet procura um Uniform Res
 
 - A propriedade **HelpUri** de qualquer comando. A propriedade **HelpUri** é acessível mesmo quando o tópico da ajuda do comando não está instalado no computador do usuário. Esse recurso foi introduzido no PowerShell 3,0.
 
-  `Get-Help`procura um URI na primeira entrada da seção **links relacionados** antes de obter o valor da propriedade **HelpUri** . Se o valor da propriedade estiver incorreto ou alterado, você poderá substituí-lo inserindo um valor diferente no primeiro link relacionado. No entanto, o primeiro link relacionado funciona somente quando os tópicos da ajuda são instalados no computador do usuário.
+  `Get-Help` procura um URI na primeira entrada da seção **links relacionados** antes de obter o valor da propriedade **HelpUri** . Se o valor da propriedade estiver incorreto ou alterado, você poderá substituí-lo inserindo um valor diferente no primeiro link relacionado. No entanto, o primeiro link relacionado funciona somente quando os tópicos da ajuda são instalados no computador do usuário.
 
 ## <a name="adding-a-uri-to-the-first-related-link-of-a-command-help-topic"></a>Adicionando um URI ao primeiro link relacionado de um tópico de ajuda de comando
 

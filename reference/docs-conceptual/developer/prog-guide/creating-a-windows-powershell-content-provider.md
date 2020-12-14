@@ -1,12 +1,14 @@
 ---
-title: Criar um provedor de conteúdo do Windows PowerShell
 ms.date: 09/13/2016
-ms.openlocfilehash: b4bc0c8d1f8ef9f85bd711fdc2770b54418bbf4a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Criar um provedor de conteúdo do Windows PowerShell
+description: Criar um provedor de conteúdo do Windows PowerShell
+ms.openlocfilehash: 7890f0ab8d1cc7f29bdc077b342bae950cfa7827
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779059"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645366"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Criar um provedor de conteúdo do Windows PowerShell
 
