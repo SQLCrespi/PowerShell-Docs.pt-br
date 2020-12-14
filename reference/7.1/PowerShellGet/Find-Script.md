@@ -7,19 +7,19 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-script?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Script
-ms.openlocfilehash: dcbe4efc6c351ff404405ee469c91769f86fd0e6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 443795160fcf5b11ffdc2d7d4e6f5d265b160002
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194243"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892412"
 ---
-# <span data-ttu-id="abb04-103">Find-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-103">Find-Script</span></span>
+# <span data-ttu-id="77e30-103">Find-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-103">Find-Script</span></span>
 
-## <span data-ttu-id="abb04-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="abb04-104">SYNOPSIS</span></span>
-<span data-ttu-id="abb04-105">Localiza um script.</span><span class="sxs-lookup"><span data-stu-id="abb04-105">Finds a script.</span></span>
+## <span data-ttu-id="77e30-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="77e30-104">SYNOPSIS</span></span>
+<span data-ttu-id="77e30-105">Localiza um script.</span><span class="sxs-lookup"><span data-stu-id="77e30-105">Finds a script.</span></span>
 
-## <span data-ttu-id="abb04-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="abb04-106">SYNTAX</span></span>
+## <span data-ttu-id="77e30-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="77e30-106">SYNTAX</span></span>
 
 ```
 Find-Script [[-Name] <String[]>] [-MinimumVersion <String>] [-MaximumVersion <String>]
@@ -28,13 +28,13 @@ Find-Script [[-Name] <String[]>] [-MinimumVersion <String>] [-MaximumVersion <St
  [-Repository <String[]>] [-Credential <PSCredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="abb04-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="abb04-107">DESCRIPTION</span></span>
+## <span data-ttu-id="77e30-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="77e30-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="abb04-108">O cmdlet **Find-script** localiza um script especificado em repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="abb04-108">The **Find-Script** cmdlet finds a specified script in registered repositories.</span></span>
+<span data-ttu-id="77e30-108">O cmdlet **Find-script** localiza um script especificado em repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="77e30-108">The **Find-Script** cmdlet finds a specified script in registered repositories.</span></span>
 
-## <span data-ttu-id="abb04-109">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="abb04-109">EXAMPLES</span></span>
+## <span data-ttu-id="77e30-109">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="77e30-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="abb04-110">Exemplo 1: localizar todos os scripts disponíveis</span><span class="sxs-lookup"><span data-stu-id="abb04-110">Example 1: Find all available scripts</span></span>
+### <span data-ttu-id="77e30-110">Exemplo 1: localizar todos os scripts disponíveis</span><span class="sxs-lookup"><span data-stu-id="77e30-110">Example 1: Find all available scripts</span></span>
 
 ```
 PS C:\> Find-Script
@@ -54,9 +54,9 @@ Version    Name                                Type       Repository           D
 1.0        TestRunbook                         Script     LocalRepo1           Contoso Script example
 ```
 
-<span data-ttu-id="abb04-111">Esse comando localiza todos os scripts disponíveis.</span><span class="sxs-lookup"><span data-stu-id="abb04-111">This command finds all available scripts.</span></span>
+<span data-ttu-id="77e30-111">Esse comando localiza todos os scripts disponíveis.</span><span class="sxs-lookup"><span data-stu-id="77e30-111">This command finds all available scripts.</span></span>
 
-### <span data-ttu-id="abb04-112">Exemplo 2: localizar um script por nome</span><span class="sxs-lookup"><span data-stu-id="abb04-112">Example 2: Find a script by name</span></span>
+### <span data-ttu-id="77e30-112">Exemplo 2: localizar um script por nome</span><span class="sxs-lookup"><span data-stu-id="77e30-112">Example 2: Find a script by name</span></span>
 
 ```
 PS C:\> Find-Script -Name "Start-WFContosoServer"
@@ -65,17 +65,17 @@ Version    Name                                Type       Repository           D
 2.0        Start-WFContosoServer               Script     LocalRepo1           Start-WFContosoServer Script example
 ```
 
-<span data-ttu-id="abb04-113">Esse comando localiza o script chamado start-WFContosoServer.</span><span class="sxs-lookup"><span data-stu-id="abb04-113">This command find the script named Start-WFContosoServer.</span></span>
+<span data-ttu-id="77e30-113">Esse comando localiza o script chamado start-WFContosoServer.</span><span class="sxs-lookup"><span data-stu-id="77e30-113">This command find the script named Start-WFContosoServer.</span></span>
 
-### <span data-ttu-id="abb04-114">Exemplo 3: localizar um script por nome, versão necessária e de um repositório especificado</span><span class="sxs-lookup"><span data-stu-id="abb04-114">Example 3: Find a script by name, required version, and from a specified repository</span></span>
+### <span data-ttu-id="77e30-114">Exemplo 3: localizar um script por nome, versão necessária e de um repositório especificado</span><span class="sxs-lookup"><span data-stu-id="77e30-114">Example 3: Find a script by name, required version, and from a specified repository</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -RequiredVersion 2.0 -Repository "LocalRepo01"
 ```
 
-<span data-ttu-id="abb04-115">Esse comando localiza um script por nome e a versão necessária no repositório LocalRepo01.</span><span class="sxs-lookup"><span data-stu-id="abb04-115">This command finds a script by name and required version in the LocalRepo01 repository.</span></span>
+<span data-ttu-id="77e30-115">Esse comando localiza um script por nome e a versão necessária no repositório LocalRepo01.</span><span class="sxs-lookup"><span data-stu-id="77e30-115">This command finds a script by name and required version in the LocalRepo01 repository.</span></span>
 
-### <span data-ttu-id="abb04-116">Exemplo 4: localizar um script e formatar a saída como uma lista</span><span class="sxs-lookup"><span data-stu-id="abb04-116">Example 4: Find a script and format the output as a list</span></span>
+### <span data-ttu-id="77e30-116">Exemplo 4: localizar um script e formatar a saída como uma lista</span><span class="sxs-lookup"><span data-stu-id="77e30-116">Example 4: Find a script and format the output as a list</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -RequiredVersion 2.0 -Repository "LocalRepo1" | Format-List * -Force
@@ -100,9 +100,9 @@ Repository                 : LocalRepo01
 PackageManagementProvider  : NuGet
 ```
 
-<span data-ttu-id="abb04-117">Esse comando localiza Required-Script2 no repositório LocalRepo1 e, em seguida, passa o objeto **PSRepositoryItemInfo** resultante para o cmdlet Format-List.</span><span class="sxs-lookup"><span data-stu-id="abb04-117">This command finds Required-Script2 in the LocalRepo1 repository, and then passes the resulting **PSRepositoryItemInfo** object to the Format-List cmdlet.</span></span>
+<span data-ttu-id="77e30-117">Esse comando localiza Required-Script2 no repositório LocalRepo1 e, em seguida, passa o objeto **PSRepositoryItemInfo** resultante para o cmdlet Format-List.</span><span class="sxs-lookup"><span data-stu-id="77e30-117">This command finds Required-Script2 in the LocalRepo1 repository, and then passes the resulting **PSRepositoryItemInfo** object to the Format-List cmdlet.</span></span>
 
-### <span data-ttu-id="abb04-118">Exemplo 5: localizar um script no intervalo de versão especificado</span><span class="sxs-lookup"><span data-stu-id="abb04-118">Example 5: Find a script in the specified version range</span></span>
+### <span data-ttu-id="77e30-118">Exemplo 5: localizar um script no intervalo de versão especificado</span><span class="sxs-lookup"><span data-stu-id="77e30-118">Example 5: Find a script in the specified version range</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -MinimumVersion 2.1 -MaximumVersion 2.5 -Repository "LocalRepo1"
@@ -111,9 +111,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="abb04-119">Esse comando localiza todas as versões de RequiredScript2 entre as versões 2,1 e 2,5 no repositório LocalRepo1.</span><span class="sxs-lookup"><span data-stu-id="abb04-119">This command finds all versions of RequiredScript2 between versions 2.1 and 2.5 in the LocalRepo1 respository.</span></span>
+<span data-ttu-id="77e30-119">Esse comando localiza todas as versões de RequiredScript2 entre as versões 2,1 e 2,5 no repositório LocalRepo1.</span><span class="sxs-lookup"><span data-stu-id="77e30-119">This command finds all versions of RequiredScript2 between versions 2.1 and 2.5 in the LocalRepo1 respository.</span></span>
 
-### <span data-ttu-id="abb04-120">Exemplo 6: localizar todas as versões de um script</span><span class="sxs-lookup"><span data-stu-id="abb04-120">Example 6: Find all versions of a script</span></span>
+### <span data-ttu-id="77e30-120">Exemplo 6: localizar todas as versões de um script</span><span class="sxs-lookup"><span data-stu-id="77e30-120">Example 6: Find all versions of a script</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script02" -AllVersions
@@ -125,9 +125,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="abb04-121">Esse comando localiza todas as versões de Required-Script02.</span><span class="sxs-lookup"><span data-stu-id="abb04-121">This command finds all versions of Required-Script02.</span></span>
+<span data-ttu-id="77e30-121">Esse comando localiza todas as versões de Required-Script02.</span><span class="sxs-lookup"><span data-stu-id="77e30-121">This command finds all versions of Required-Script02.</span></span>
 
-### <span data-ttu-id="abb04-122">Exemplo 7: localizar um script e suas dependências</span><span class="sxs-lookup"><span data-stu-id="abb04-122">Example 7: Find a script and its dependencies</span></span>
+### <span data-ttu-id="77e30-122">Exemplo 7: localizar um script e suas dependências</span><span class="sxs-lookup"><span data-stu-id="77e30-122">Example 7: Find a script and its dependencies</span></span>
 
 ```
 PS C:\> Find-Script -Name "Script-WithDependencies1" -IncludeDependencies -Repository "LocalRepo1"
@@ -139,9 +139,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="abb04-123">Esse comando localiza um script e suas dependências.</span><span class="sxs-lookup"><span data-stu-id="abb04-123">This command finds a script and its dependencies.</span></span>
+<span data-ttu-id="77e30-123">Esse comando localiza um script e suas dependências.</span><span class="sxs-lookup"><span data-stu-id="77e30-123">This command finds a script and its dependencies.</span></span>
 
-### <span data-ttu-id="abb04-124">Exemplo 8: localizar scripts com a marca especificada</span><span class="sxs-lookup"><span data-stu-id="abb04-124">Example 8: Find scripts with the specified tag</span></span>
+### <span data-ttu-id="77e30-124">Exemplo 8: localizar scripts com a marca especificada</span><span class="sxs-lookup"><span data-stu-id="77e30-124">Example 8: Find scripts with the specified tag</span></span>
 
 ```
 PS C:\> Find-Script -Tag "Tag1" -Repository "LocalRepo1"
@@ -150,9 +150,9 @@ Version    Name                                Type       Repository           D
 1.0        Fabrikam-ClientScript               Script     LocalRepo1           Description for the Fabrikam-ClientScript script
 ```
 
-<span data-ttu-id="abb04-125">Esse comando localiza scripts que têm a marca da tag1 no repositório LocalRepo1</span><span class="sxs-lookup"><span data-stu-id="abb04-125">This command finds scripts that have the tag Tag1 in the LocalRepo1 repository</span></span>
+<span data-ttu-id="77e30-125">Esse comando localiza scripts que têm a marca da tag1 no repositório LocalRepo1</span><span class="sxs-lookup"><span data-stu-id="77e30-125">This command finds scripts that have the tag Tag1 in the LocalRepo1 repository</span></span>
 
-### <span data-ttu-id="abb04-126">Exemplo 9: localizar scripts com o nome de comando especificado</span><span class="sxs-lookup"><span data-stu-id="abb04-126">Example 9: Find scripts with specified command name</span></span>
+### <span data-ttu-id="77e30-126">Exemplo 9: localizar scripts com o nome de comando especificado</span><span class="sxs-lookup"><span data-stu-id="77e30-126">Example 9: Find scripts with specified command name</span></span>
 
 ```
 PS C:\> Find-Script -Command Test-FunctionFromScript_Required-Script3 -Repository "LocalRepo1"
@@ -161,9 +161,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script3                    Script     LocalRepo1           Description for the Required-Script3 script
 ```
 
-<span data-ttu-id="abb04-127">Esse comando localiza um script que contém o nome do comando especificado.</span><span class="sxs-lookup"><span data-stu-id="abb04-127">This command finds a script that contains the specified command name.</span></span>
+<span data-ttu-id="77e30-127">Esse comando localiza um script que contém o nome do comando especificado.</span><span class="sxs-lookup"><span data-stu-id="77e30-127">This command finds a script that contains the specified command name.</span></span>
 
-### <span data-ttu-id="abb04-128">Exemplo 10: localizar scripts com fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="abb04-128">Example 10: Find scripts with workflows</span></span>
+### <span data-ttu-id="77e30-128">Exemplo 10: localizar scripts com fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="77e30-128">Example 10: Find scripts with workflows</span></span>
 
 ```
 PS C:\> Find-Script -Includes "Workflow" -Repository "LocalRepo1"
@@ -173,9 +173,9 @@ Version    Name                                Type       Repository           D
 1.0        Fabrikam-Script                     Script     LocalRepo1           Description for the Fabrikam-Script script
 ```
 
-<span data-ttu-id="abb04-129">Esse comando localiza scripts de fluxo de trabalho no repositório LocalRepo1.</span><span class="sxs-lookup"><span data-stu-id="abb04-129">This command finds workflow scripts in the LocalRepo1 repository.</span></span>
+<span data-ttu-id="77e30-129">Esse comando localiza scripts de fluxo de trabalho no repositório LocalRepo1.</span><span class="sxs-lookup"><span data-stu-id="77e30-129">This command finds workflow scripts in the LocalRepo1 repository.</span></span>
 
-### <span data-ttu-id="abb04-130">Exemplo 11: localizar scripts usando curingas</span><span class="sxs-lookup"><span data-stu-id="abb04-130">Example 11: Find scripts using wildcards</span></span>
+### <span data-ttu-id="77e30-130">Exemplo 11: localizar scripts usando curingas</span><span class="sxs-lookup"><span data-stu-id="77e30-130">Example 11: Find scripts using wildcards</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script*" -Repository "LocalRepo1"
@@ -186,29 +186,13 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script3                    Script     local1               Description for the Required-Script3 script
 ```
 
-<span data-ttu-id="abb04-131">Esse comando usa o caractere curinga (\*) para localizar scripts que começam com o script obrigatório.</span><span class="sxs-lookup"><span data-stu-id="abb04-131">This command uses the wildcard character (\*) to find scripts that begin with Required-Script.</span></span>
+<span data-ttu-id="77e30-131">Esse comando usa o caractere curinga (\*) para localizar scripts que começam com o script obrigatório.</span><span class="sxs-lookup"><span data-stu-id="77e30-131">This command uses the wildcard character (\*) to find scripts that begin with Required-Script.</span></span>
 
-## <span data-ttu-id="abb04-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="abb04-132">PARAMETERS</span></span>
+## <span data-ttu-id="77e30-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="77e30-132">PARAMETERS</span></span>
 
-### <span data-ttu-id="abb04-133">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="abb04-133">-AllowPrerelease</span></span>
+### <span data-ttu-id="77e30-133">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="77e30-133">-AllowPrerelease</span></span>
 
-<span data-ttu-id="abb04-134">Inclui nos scripts de resultados marcados como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="abb04-134">Includes in the results scripts marked as a prerelease.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="abb04-135">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="abb04-135">-AllVersions</span></span>
-
-<span data-ttu-id="abb04-136">Indica que esta operação localiza todas as versões de script.</span><span class="sxs-lookup"><span data-stu-id="abb04-136">Indicates that this operation finds all script versions.</span></span>
+<span data-ttu-id="77e30-134">Inclui nos scripts de resultados marcados como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="77e30-134">Includes in the results scripts marked as a prerelease.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -222,10 +206,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-137">-Command</span><span class="sxs-lookup"><span data-stu-id="abb04-137">-Command</span></span>
+### <span data-ttu-id="77e30-135">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="77e30-135">-AllVersions</span></span>
 
-<span data-ttu-id="abb04-138">Especifica uma matriz de comandos para localizar em scripts.</span><span class="sxs-lookup"><span data-stu-id="abb04-138">Specifies an array of commands to find in scripts.</span></span>
-<span data-ttu-id="abb04-139">Um comando pode ser uma função ou um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="abb04-139">A command can be a function or workflow.</span></span>
+<span data-ttu-id="77e30-136">Indica que esta operação localiza todas as versões de script.</span><span class="sxs-lookup"><span data-stu-id="77e30-136">Indicates that this operation finds all script versions.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="77e30-137">-Command</span><span class="sxs-lookup"><span data-stu-id="77e30-137">-Command</span></span>
+
+<span data-ttu-id="77e30-138">Especifica uma matriz de comandos para localizar em scripts.</span><span class="sxs-lookup"><span data-stu-id="77e30-138">Specifies an array of commands to find in scripts.</span></span>
+<span data-ttu-id="77e30-139">Um comando pode ser uma função ou um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="77e30-139">A command can be a function or workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -239,7 +239,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="abb04-140">-Credential</span></span>
+### <span data-ttu-id="77e30-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="77e30-140">-Credential</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -253,9 +253,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-141">-Filter</span><span class="sxs-lookup"><span data-stu-id="abb04-141">-Filter</span></span>
+### <span data-ttu-id="77e30-141">-Filter</span><span class="sxs-lookup"><span data-stu-id="77e30-141">-Filter</span></span>
 
-<span data-ttu-id="abb04-142">Localiza scripts com base na sintaxe de pesquisa específica do provedor PackageManagement.</span><span class="sxs-lookup"><span data-stu-id="abb04-142">Finds scripts based on the PackageManagement provider-specific search syntax.</span></span>
+<span data-ttu-id="77e30-142">Localiza scripts com base na sintaxe de pesquisa específica do provedor PackageManagement.</span><span class="sxs-lookup"><span data-stu-id="77e30-142">Finds scripts based on the PackageManagement provider-specific search syntax.</span></span>
 
 ```yaml
 Type: System.String
@@ -269,9 +269,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-143">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="abb04-143">-IncludeDependencies</span></span>
+### <span data-ttu-id="77e30-143">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="77e30-143">-IncludeDependencies</span></span>
 
-<span data-ttu-id="abb04-144">Indica que esta operação obtém todos os scripts que dependem do script especificado no parâmetro *Name* .</span><span class="sxs-lookup"><span data-stu-id="abb04-144">Indicates that this operation gets all scripts that are dependent upon the script specified in the *Name* parameter.</span></span>
+<span data-ttu-id="77e30-144">Indica que esta operação obtém todos os scripts que dependem do script especificado no parâmetro *Name* .</span><span class="sxs-lookup"><span data-stu-id="77e30-144">Indicates that this operation gets all scripts that are dependent upon the script specified in the *Name* parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -285,10 +285,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-145">-Inclui</span><span class="sxs-lookup"><span data-stu-id="abb04-145">-Includes</span></span>
+### <span data-ttu-id="77e30-145">-Inclui</span><span class="sxs-lookup"><span data-stu-id="77e30-145">-Includes</span></span>
 
-<span data-ttu-id="abb04-146">Especifica o tipo de script a ser obtido.</span><span class="sxs-lookup"><span data-stu-id="abb04-146">Specifies type of script to get.</span></span>
-<span data-ttu-id="abb04-147">Os valores aceitáveis para esse parâmetro são: função, fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="abb04-147">The acceptable values for this parameter are: Function, Workflow.</span></span>
+<span data-ttu-id="77e30-146">Especifica o tipo de script a ser obtido.</span><span class="sxs-lookup"><span data-stu-id="77e30-146">Specifies type of script to get.</span></span>
+<span data-ttu-id="77e30-147">Os valores aceitáveis para esse parâmetro são: função, fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="77e30-147">The acceptable values for this parameter are: Function, Workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -303,27 +303,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-148">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="abb04-148">-MaximumVersion</span></span>
+### <span data-ttu-id="77e30-148">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="77e30-148">-MaximumVersion</span></span>
 
-<span data-ttu-id="abb04-149">Especifica a versão máxima ou mais recente do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="abb04-149">Specifies the maximum, or newest, version of the script to find.</span></span>
-<span data-ttu-id="abb04-150">Os parâmetros *MaximumVersion* e *RequiredVersion* são mutuamente exclusivos; Você não pode usar ambos os parâmetros no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="abb04-150">The *MaximumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="abb04-151">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="abb04-151">-MinimumVersion</span></span>
-
-<span data-ttu-id="abb04-152">Especifica a versão mínima do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="abb04-152">Specifies the minimum version of the script to find.</span></span>
-<span data-ttu-id="abb04-153">Os parâmetros *MinimumVersion* e *RequiredVersion* são mutuamente exclusivos; Você não pode usar ambos os parâmetros no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="abb04-153">The *MinimumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+<span data-ttu-id="77e30-149">Especifica a versão máxima ou mais recente do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="77e30-149">Specifies the maximum, or newest, version of the script to find.</span></span>
+<span data-ttu-id="77e30-150">Os parâmetros *MaximumVersion* e *RequiredVersion* são mutuamente exclusivos; Você não pode usar ambos os parâmetros no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="77e30-150">The *MaximumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -337,9 +320,26 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-154">-Name</span><span class="sxs-lookup"><span data-stu-id="abb04-154">-Name</span></span>
+### <span data-ttu-id="77e30-151">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="77e30-151">-MinimumVersion</span></span>
 
-<span data-ttu-id="abb04-155">Especifica uma matriz de nomes de scripts a serem localizados.</span><span class="sxs-lookup"><span data-stu-id="abb04-155">Specifies an array of names of scripts to find.</span></span>
+<span data-ttu-id="77e30-152">Especifica a versão mínima do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="77e30-152">Specifies the minimum version of the script to find.</span></span>
+<span data-ttu-id="77e30-153">Os parâmetros *MinimumVersion* e *RequiredVersion* são mutuamente exclusivos; Você não pode usar ambos os parâmetros no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="77e30-153">The *MinimumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="77e30-154">-Name</span><span class="sxs-lookup"><span data-stu-id="77e30-154">-Name</span></span>
+
+<span data-ttu-id="77e30-155">Especifica uma matriz de nomes de scripts a serem localizados.</span><span class="sxs-lookup"><span data-stu-id="77e30-155">Specifies an array of names of scripts to find.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -353,9 +353,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="abb04-156">-Proxy</span><span class="sxs-lookup"><span data-stu-id="abb04-156">-Proxy</span></span>
+### <span data-ttu-id="77e30-156">-Proxy</span><span class="sxs-lookup"><span data-stu-id="77e30-156">-Proxy</span></span>
 
-<span data-ttu-id="abb04-157">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="abb04-157">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="77e30-157">Especifica um servidor proxy para a solicitação, em vez de conectar-se diretamente ao recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="77e30-157">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -369,9 +369,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-158">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="abb04-158">-ProxyCredential</span></span>
+### <span data-ttu-id="77e30-158">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="77e30-158">-ProxyCredential</span></span>
 
-<span data-ttu-id="abb04-159">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .</span><span class="sxs-lookup"><span data-stu-id="abb04-159">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="77e30-159">Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.</span><span class="sxs-lookup"><span data-stu-id="77e30-159">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -385,9 +385,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-160">-Repositório</span><span class="sxs-lookup"><span data-stu-id="abb04-160">-Repository</span></span>
+### <span data-ttu-id="77e30-160">-Repositório</span><span class="sxs-lookup"><span data-stu-id="77e30-160">-Repository</span></span>
 
-<span data-ttu-id="abb04-161">Especifica o nome amigável de um repositório que foi registrado executando Register-PSRepository.</span><span class="sxs-lookup"><span data-stu-id="abb04-161">Specifies the friendly name of a repository that has been registered by running Register-PSRepository.</span></span>
+<span data-ttu-id="77e30-161">Especifica o nome amigável de um repositório que foi registrado executando Register-PSRepository.</span><span class="sxs-lookup"><span data-stu-id="77e30-161">Specifies the friendly name of a repository that has been registered by running Register-PSRepository.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -401,9 +401,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-162">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="abb04-162">-RequiredVersion</span></span>
+### <span data-ttu-id="77e30-162">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="77e30-162">-RequiredVersion</span></span>
 
-<span data-ttu-id="abb04-163">Especifica o número de versão exato do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="abb04-163">Specifies the exact version number of the script to find.</span></span>
+<span data-ttu-id="77e30-163">Especifica o número de versão exato do script a ser localizado.</span><span class="sxs-lookup"><span data-stu-id="77e30-163">Specifies the exact version number of the script to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -417,9 +417,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-164">-Tag</span><span class="sxs-lookup"><span data-stu-id="abb04-164">-Tag</span></span>
+### <span data-ttu-id="77e30-164">-Tag</span><span class="sxs-lookup"><span data-stu-id="77e30-164">-Tag</span></span>
 
-<span data-ttu-id="abb04-165">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="abb04-165">Specifies an array of tags.</span></span>
+<span data-ttu-id="77e30-165">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="77e30-165">Specifies an array of tags.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -433,35 +433,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abb04-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="abb04-166">CommonParameters</span></span>
+### <span data-ttu-id="77e30-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="77e30-166">CommonParameters</span></span>
 
-<span data-ttu-id="abb04-167">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="abb04-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="abb04-168">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="abb04-168">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="77e30-167">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="77e30-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="77e30-168">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="77e30-168">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="abb04-169">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="abb04-169">INPUTS</span></span>
+## <span data-ttu-id="77e30-169">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="77e30-169">INPUTS</span></span>
 
-### <span data-ttu-id="abb04-170">System.String[]</span><span class="sxs-lookup"><span data-stu-id="abb04-170">System.String[]</span></span>
+### <span data-ttu-id="77e30-170">System.String[]</span><span class="sxs-lookup"><span data-stu-id="77e30-170">System.String[]</span></span>
 
-### <span data-ttu-id="abb04-171">System.String</span><span class="sxs-lookup"><span data-stu-id="abb04-171">System.String</span></span>
+### <span data-ttu-id="77e30-171">System.String</span><span class="sxs-lookup"><span data-stu-id="77e30-171">System.String</span></span>
 
-### <span data-ttu-id="abb04-172">System.Uri</span><span class="sxs-lookup"><span data-stu-id="abb04-172">System.Uri</span></span>
+### <span data-ttu-id="77e30-172">System.Uri</span><span class="sxs-lookup"><span data-stu-id="77e30-172">System.Uri</span></span>
 
-### <span data-ttu-id="abb04-173">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="abb04-173">System.Management.Automation.PSCredential</span></span>
+### <span data-ttu-id="77e30-173">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="77e30-173">System.Management.Automation.PSCredential</span></span>
 
-## <span data-ttu-id="abb04-174">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="abb04-174">OUTPUTS</span></span>
+## <span data-ttu-id="77e30-174">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="77e30-174">OUTPUTS</span></span>
 
-### <span data-ttu-id="abb04-175">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="abb04-175">PSRepositoryItemInfo</span></span>
+### <span data-ttu-id="77e30-175">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="77e30-175">PSRepositoryItemInfo</span></span>
 
-## <span data-ttu-id="abb04-176">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="abb04-176">NOTES</span></span>
+## <span data-ttu-id="77e30-176">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="77e30-176">NOTES</span></span>
 
-## <span data-ttu-id="abb04-177">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="abb04-177">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="77e30-177">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="77e30-177">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="77e30-178">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="77e30-178">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="77e30-179">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="77e30-179">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="77e30-180">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="77e30-180">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="abb04-178">Install-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-178">Install-Script</span></span>](Install-Script.md)
+## <span data-ttu-id="77e30-181">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="77e30-181">RELATED LINKS</span></span>
 
-[<span data-ttu-id="abb04-179">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-179">Publish-Script</span></span>](Publish-Script.md)
+[<span data-ttu-id="77e30-182">Install-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-182">Install-Script</span></span>](Install-Script.md)
 
-[<span data-ttu-id="abb04-180">Save-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-180">Save-Script</span></span>](Save-Script.md)
+[<span data-ttu-id="77e30-183">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-183">Publish-Script</span></span>](Publish-Script.md)
 
-[<span data-ttu-id="abb04-181">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-181">Uninstall-Script</span></span>](Uninstall-Script.md)
+[<span data-ttu-id="77e30-184">Save-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-184">Save-Script</span></span>](Save-Script.md)
 
-[<span data-ttu-id="abb04-182">Update-Script</span><span class="sxs-lookup"><span data-stu-id="abb04-182">Update-Script</span></span>](Update-Script.md)
+[<span data-ttu-id="77e30-185">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-185">Uninstall-Script</span></span>](Uninstall-Script.md)
 
+[<span data-ttu-id="77e30-186">Update-Script</span><span class="sxs-lookup"><span data-stu-id="77e30-186">Update-Script</span></span>](Update-Script.md)

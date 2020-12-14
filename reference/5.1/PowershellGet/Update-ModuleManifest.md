@@ -7,21 +7,21 @@ ms.date: 07/08/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-modulemanifest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ModuleManifest
-ms.openlocfilehash: 47070823d18f2fd07339d503444e532a0c521e0e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0924366eac2e6ee0e8a250db916d354ee6993cb7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194357"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892031"
 ---
-# <span data-ttu-id="d130c-103">Update-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="d130c-103">Update-ModuleManifest</span></span>
+# <span data-ttu-id="7c3d9-103">Update-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="7c3d9-103">Update-ModuleManifest</span></span>
 
-## <span data-ttu-id="d130c-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="d130c-104">SYNOPSIS</span></span>
-<span data-ttu-id="d130c-105">Atualiza um arquivo de manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-105">Updates a module manifest file.</span></span>
+## <span data-ttu-id="7c3d9-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="7c3d9-104">SYNOPSIS</span></span>
+<span data-ttu-id="7c3d9-105">Atualiza um arquivo de manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-105">Updates a module manifest file.</span></span>
 
-## <span data-ttu-id="d130c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d130c-106">SYNTAX</span></span>
+## <span data-ttu-id="7c3d9-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7c3d9-106">SYNTAX</span></span>
 
-### <span data-ttu-id="d130c-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="d130c-107">All</span></span>
+### <span data-ttu-id="7c3d9-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="7c3d9-107">All</span></span>
 
 ```
 Update-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>] [-Author <String>]
@@ -40,15 +40,15 @@ Update-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>
  [-RequireLicenseAcceptance] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d130c-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="d130c-108">DESCRIPTION</span></span>
+## <span data-ttu-id="7c3d9-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7c3d9-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="d130c-109">O `Update-ModuleManifest` cmdlet atualiza um arquivo de manifesto de módulo ( `.psd1` ).</span><span class="sxs-lookup"><span data-stu-id="d130c-109">The `Update-ModuleManifest` cmdlet updates a module manifest (`.psd1`) file.</span></span>
+<span data-ttu-id="7c3d9-109">O `Update-ModuleManifest` cmdlet atualiza um arquivo de manifesto de módulo ( `.psd1` ).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-109">The `Update-ModuleManifest` cmdlet updates a module manifest (`.psd1`) file.</span></span>
 
-## <span data-ttu-id="d130c-110">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="d130c-110">EXAMPLES</span></span>
+## <span data-ttu-id="7c3d9-110">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="7c3d9-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="d130c-111">Exemplo 1: atualizar um manifesto de módulo</span><span class="sxs-lookup"><span data-stu-id="d130c-111">Example 1: Update a module manifest</span></span>
+### <span data-ttu-id="7c3d9-111">Exemplo 1: atualizar um manifesto de módulo</span><span class="sxs-lookup"><span data-stu-id="7c3d9-111">Example 1: Update a module manifest</span></span>
 
-<span data-ttu-id="d130c-112">Este exemplo atualiza um arquivo de manifesto de módulo existente.</span><span class="sxs-lookup"><span data-stu-id="d130c-112">This example updates an existing module manifest file.</span></span> <span data-ttu-id="d130c-113">Nivelamento é usado para passar valores de parâmetro para `Update-ModuleManifest` .</span><span class="sxs-lookup"><span data-stu-id="d130c-113">Splatting is used to pass parameter values to `Update-ModuleManifest`.</span></span> <span data-ttu-id="d130c-114">Para obter mais informações, consulte [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span><span class="sxs-lookup"><span data-stu-id="d130c-114">For more information, see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span></span>
+<span data-ttu-id="7c3d9-112">Este exemplo atualiza um arquivo de manifesto de módulo existente.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-112">This example updates an existing module manifest file.</span></span> <span data-ttu-id="7c3d9-113">Nivelamento é usado para passar valores de parâmetro para `Update-ModuleManifest` .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-113">Splatting is used to pass parameter values to `Update-ModuleManifest`.</span></span> <span data-ttu-id="7c3d9-114">Para obter mais informações, consulte [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-114">For more information, see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span></span>
 
 ```powershell
 $Parms = @{
@@ -61,15 +61,15 @@ $Parms = @{
 Update-ModuleManifest @Parms
 ```
 
-<span data-ttu-id="d130c-115">`$Parms` é um fragmentação que armazena os valores de parâmetro para **caminho** , **autor** , **CompanyName** e **direitos autorais** .</span><span class="sxs-lookup"><span data-stu-id="d130c-115">`$Parms` is a splat that stores the parameter values for **Path** , **Author** , **CompanyName** , and **Copyright** .</span></span> <span data-ttu-id="d130c-116">`Update-ModuleManifest` Obtém os valores de parâmetro de `@Parms` e atualiza o manifesto do módulo, **TestManifest.psd1** .</span><span class="sxs-lookup"><span data-stu-id="d130c-116">`Update-ModuleManifest` gets the parameter values from `@Parms` and updates the module manifest, **TestManifest.psd1** .</span></span>
+<span data-ttu-id="7c3d9-115">`$Parms` é um fragmentação que armazena os valores de parâmetro para **caminho**, **autor**, **CompanyName** e **direitos autorais**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-115">`$Parms` is a splat that stores the parameter values for **Path**, **Author**, **CompanyName**, and **Copyright**.</span></span> <span data-ttu-id="7c3d9-116">`Update-ModuleManifest` Obtém os valores de parâmetro de `@Parms` e atualiza o manifesto do módulo, **TestManifest.psd1**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-116">`Update-ModuleManifest` gets the parameter values from `@Parms` and updates the module manifest, **TestManifest.psd1**.</span></span>
 
-## <span data-ttu-id="d130c-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d130c-117">PARAMETERS</span></span>
+## <span data-ttu-id="7c3d9-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7c3d9-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="d130c-118">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="d130c-118">-AliasesToExport</span></span>
+### <span data-ttu-id="7c3d9-118">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="7c3d9-118">-AliasesToExport</span></span>
 
-<span data-ttu-id="d130c-119">Especifica os aliases que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="d130c-119">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="d130c-120">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-120">Wildcards are permitted.</span></span>
+<span data-ttu-id="7c3d9-119">Especifica os aliases que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-119">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="7c3d9-120">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-120">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="d130c-121">Use esse parâmetro para restringir os aliases exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-121">Use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="d130c-122">**AliasesToExport** pode remover aliases da lista de aliases exportados, mas não pode adicionar aliases à lista.</span><span class="sxs-lookup"><span data-stu-id="d130c-122">**AliasesToExport** can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
+<span data-ttu-id="7c3d9-121">Use esse parâmetro para restringir os aliases exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-121">Use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="7c3d9-122">**AliasesToExport** pode remover aliases da lista de aliases exportados, mas não pode adicionar aliases à lista.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-122">**AliasesToExport** can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -83,9 +83,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="d130c-123">-Autor</span><span class="sxs-lookup"><span data-stu-id="d130c-123">-Author</span></span>
+### <span data-ttu-id="7c3d9-123">-Autor</span><span class="sxs-lookup"><span data-stu-id="7c3d9-123">-Author</span></span>
 
-<span data-ttu-id="d130c-124">Especifica o autor do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-124">Specifies the module author.</span></span>
+<span data-ttu-id="7c3d9-124">Especifica o autor do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-124">Specifies the module author.</span></span>
 
 ```yaml
 Type: System.String
@@ -99,9 +99,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-125">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="d130c-125">-ClrVersion</span></span>
+### <span data-ttu-id="7c3d9-125">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="7c3d9-125">-ClrVersion</span></span>
 
-<span data-ttu-id="d130c-126">Especifica a versão mínima do CLR (Common Language Runtime) do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="d130c-126">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="7c3d9-126">Especifica a versão mínima do CLR (Common Language Runtime) do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-126">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -115,11 +115,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-127">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="d130c-127">-CmdletsToExport</span></span>
+### <span data-ttu-id="7c3d9-127">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="7c3d9-127">-CmdletsToExport</span></span>
 
-<span data-ttu-id="d130c-128">Especifica os cmdlets que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="d130c-128">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="d130c-129">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-129">Wildcards are permitted.</span></span>
+<span data-ttu-id="7c3d9-128">Especifica os cmdlets que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-128">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="7c3d9-129">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-129">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="d130c-130">Use esse parâmetro para restringir os cmdlets que são exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-130">Use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="d130c-131">**CmdletsToExport** pode remover cmdlets da lista de cmdlets exportados, mas não pode adicionar cmdlets à lista.</span><span class="sxs-lookup"><span data-stu-id="d130c-131">**CmdletsToExport** can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
+<span data-ttu-id="7c3d9-130">Use esse parâmetro para restringir os cmdlets que são exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-130">Use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="7c3d9-131">**CmdletsToExport** pode remover cmdlets da lista de cmdlets exportados, mas não pode adicionar cmdlets à lista.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-131">**CmdletsToExport** can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -133,9 +133,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="d130c-132">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="d130c-132">-CompanyName</span></span>
+### <span data-ttu-id="7c3d9-132">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="7c3d9-132">-CompanyName</span></span>
 
-<span data-ttu-id="d130c-133">Especifica a empresa ou o fornecedor que criou o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-133">Specifies the company or vendor who created the module.</span></span>
+<span data-ttu-id="7c3d9-133">Especifica a empresa ou o fornecedor que criou o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-133">Specifies the company or vendor who created the module.</span></span>
 
 ```yaml
 Type: System.String
@@ -149,9 +149,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-134">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="d130c-134">-CompatiblePSEditions</span></span>
+### <span data-ttu-id="7c3d9-134">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="7c3d9-134">-CompatiblePSEditions</span></span>
 
-<span data-ttu-id="d130c-135">Especifica o **PSEditions** compatível do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-135">Specifies the compatible **PSEditions** of the module.</span></span> <span data-ttu-id="d130c-136">Para obter informações sobre **PSEdition** , consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).</span><span class="sxs-lookup"><span data-stu-id="d130c-136">For information about **PSEdition** , see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
+<span data-ttu-id="7c3d9-135">Especifica o **PSEditions** compatível do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-135">Specifies the compatible **PSEditions** of the module.</span></span> <span data-ttu-id="7c3d9-136">Para obter informações sobre **PSEdition**, consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-136">For information about **PSEdition**, see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
 
 ```yaml
 Type: System.String[]
@@ -166,9 +166,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="d130c-137">-Confirm</span></span>
+### <span data-ttu-id="7c3d9-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="7c3d9-137">-Confirm</span></span>
 
-<span data-ttu-id="d130c-138">Solicita a confirmação antes de executar `Update-ModuleManifest` .</span><span class="sxs-lookup"><span data-stu-id="d130c-138">Prompts you for confirmation before running `Update-ModuleManifest`.</span></span>
+<span data-ttu-id="7c3d9-138">Solicita a confirmação antes de executar `Update-ModuleManifest` .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-138">Prompts you for confirmation before running `Update-ModuleManifest`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -182,25 +182,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-139">-Direitos autorais</span><span class="sxs-lookup"><span data-stu-id="d130c-139">-Copyright</span></span>
+### <span data-ttu-id="7c3d9-139">-Direitos autorais</span><span class="sxs-lookup"><span data-stu-id="7c3d9-139">-Copyright</span></span>
 
-<span data-ttu-id="d130c-140">Especifica uma declaração de direitos autorais do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-140">Specifies a copyright statement for the module.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-141">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="d130c-141">-DefaultCommandPrefix</span></span>
-
-<span data-ttu-id="d130c-142">Especifica o prefixo de comando padrão.</span><span class="sxs-lookup"><span data-stu-id="d130c-142">Specifies the default command prefix.</span></span>
+<span data-ttu-id="7c3d9-140">Especifica uma declaração de direitos autorais do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-140">Specifies a copyright statement for the module.</span></span>
 
 ```yaml
 Type: System.String
@@ -214,9 +198,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-143">-Description</span><span class="sxs-lookup"><span data-stu-id="d130c-143">-Description</span></span>
+### <span data-ttu-id="7c3d9-141">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="7c3d9-141">-DefaultCommandPrefix</span></span>
 
-<span data-ttu-id="d130c-144">Especifica uma descrição do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-144">Specifies a description of the module.</span></span>
+<span data-ttu-id="7c3d9-142">Especifica o prefixo de comando padrão.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-142">Specifies the default command prefix.</span></span>
 
 ```yaml
 Type: System.String
@@ -230,9 +214,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-145">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="d130c-145">-DotNetFrameworkVersion</span></span>
+### <span data-ttu-id="7c3d9-143">-Description</span><span class="sxs-lookup"><span data-stu-id="7c3d9-143">-Description</span></span>
 
-<span data-ttu-id="d130c-146">Especifica a versão mínima do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="d130c-146">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="7c3d9-144">Especifica uma descrição do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-144">Specifies a description of the module.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-145">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="7c3d9-145">-DotNetFrameworkVersion</span></span>
+
+<span data-ttu-id="7c3d9-146">Especifica a versão mínima do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-146">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -246,25 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-147">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="d130c-147">-DscResourcesToExport</span></span>
+### <span data-ttu-id="7c3d9-147">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="7c3d9-147">-DscResourcesToExport</span></span>
 
-<span data-ttu-id="d130c-148">Especifica os recursos de DSC (configuração de estado desejado) que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="d130c-148">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="d130c-149">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-149">Wildcards are permitted.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-150">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="d130c-150">-ExternalModuleDependencies</span></span>
-
-<span data-ttu-id="d130c-151">Especifica uma matriz de dependências de módulo externas.</span><span class="sxs-lookup"><span data-stu-id="d130c-151">Specifies an array of external module dependencies.</span></span>
+<span data-ttu-id="7c3d9-148">Especifica os recursos de DSC (configuração de estado desejado) que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-148">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="7c3d9-149">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-149">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -278,28 +262,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-152">-FileList</span><span class="sxs-lookup"><span data-stu-id="d130c-152">-FileList</span></span>
+### <span data-ttu-id="7c3d9-150">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="7c3d9-150">-ExternalModuleDependencies</span></span>
 
-<span data-ttu-id="d130c-153">Especifica todos os itens incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-153">Specifies all items that are included in the module.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-154">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="d130c-154">-FormatsToProcess</span></span>
-
-<span data-ttu-id="d130c-155">Especifica os arquivos de formatação ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="d130c-155">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
-
-<span data-ttu-id="d130c-156">Quando você importa um módulo, o PowerShell executa o `Update-FormatData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="d130c-156">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="d130c-157">Como os arquivos de formatação não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="d130c-157">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="7c3d9-151">Especifica uma matriz de dependências de módulo externas.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-151">Specifies an array of external module dependencies.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -313,11 +278,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-158">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="d130c-158">-FunctionsToExport</span></span>
+### <span data-ttu-id="7c3d9-152">-FileList</span><span class="sxs-lookup"><span data-stu-id="7c3d9-152">-FileList</span></span>
 
-<span data-ttu-id="d130c-159">Especifica as funções que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="d130c-159">Specifies the functions that the module exports.</span></span> <span data-ttu-id="d130c-160">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-160">Wildcards are permitted.</span></span>
+<span data-ttu-id="7c3d9-153">Especifica todos os itens incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-153">Specifies all items that are included in the module.</span></span>
 
-<span data-ttu-id="d130c-161">Use esse parâmetro para restringir as funções exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-161">Use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="d130c-162">**FunctionsToExport** pode remover funções da lista de aliases exportados, mas não pode adicionar funções à lista.</span><span class="sxs-lookup"><span data-stu-id="d130c-162">**FunctionsToExport** can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-154">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="7c3d9-154">-FormatsToProcess</span></span>
+
+<span data-ttu-id="7c3d9-155">Especifica os arquivos de formatação ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-155">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
+
+<span data-ttu-id="7c3d9-156">Quando você importa um módulo, o PowerShell executa o `Update-FormatData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-156">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="7c3d9-157">Como os arquivos de formatação não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-157">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-158">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="7c3d9-158">-FunctionsToExport</span></span>
+
+<span data-ttu-id="7c3d9-159">Especifica as funções que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-159">Specifies the functions that the module exports.</span></span> <span data-ttu-id="7c3d9-160">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-160">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="7c3d9-161">Use esse parâmetro para restringir as funções exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-161">Use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="7c3d9-162">**FunctionsToExport** pode remover funções da lista de aliases exportados, mas não pode adicionar funções à lista.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-162">**FunctionsToExport** can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -331,9 +331,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="d130c-163">-GUID</span><span class="sxs-lookup"><span data-stu-id="d130c-163">-Guid</span></span>
+### <span data-ttu-id="7c3d9-163">-GUID</span><span class="sxs-lookup"><span data-stu-id="7c3d9-163">-Guid</span></span>
 
-<span data-ttu-id="d130c-164">Especifica um identificador exclusivo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-164">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="d130c-165">O GUID pode ser usado para distinguir entre módulos com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="d130c-165">The GUID can be used to distinguish among modules with the same name.</span></span>
+<span data-ttu-id="7c3d9-164">Especifica um identificador exclusivo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-164">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="7c3d9-165">O GUID pode ser usado para distinguir entre módulos com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-165">The GUID can be used to distinguish among modules with the same name.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -347,30 +347,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-166">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="d130c-166">-HelpInfoUri</span></span>
+### <span data-ttu-id="7c3d9-166">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="7c3d9-166">-HelpInfoUri</span></span>
 
-<span data-ttu-id="d130c-167">Especifica o endereço da Internet do arquivo **XML HelpInfo** do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-167">Specifies the internet address of the module's **HelpInfo XML** file.</span></span> <span data-ttu-id="d130c-168">Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https** .</span><span class="sxs-lookup"><span data-stu-id="d130c-168">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https** .</span></span>
+<span data-ttu-id="7c3d9-167">Especifica o endereço da Internet do arquivo **XML HelpInfo** do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-167">Specifies the internet address of the module's **HelpInfo XML** file.</span></span> <span data-ttu-id="7c3d9-168">Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-168">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https**.</span></span>
 
-<span data-ttu-id="d130c-169">O arquivo **XML HelpInfo** dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell versão 3,0.</span><span class="sxs-lookup"><span data-stu-id="d130c-169">The **HelpInfo XML** file supports the Updatable Help feature that was introduced in PowerShell version 3.0.</span></span> <span data-ttu-id="d130c-170">Ele contém informações sobre o local dos arquivos de ajuda baixáveis do módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.</span><span class="sxs-lookup"><span data-stu-id="d130c-170">It contains information about the location of the module's downloadable help files and the version numbers of the newest help files for each supported locale.</span></span>
+<span data-ttu-id="7c3d9-169">O arquivo **XML HelpInfo** dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell versão 3,0.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-169">The **HelpInfo XML** file supports the Updatable Help feature that was introduced in PowerShell version 3.0.</span></span> <span data-ttu-id="7c3d9-170">Ele contém informações sobre o local dos arquivos de ajuda baixáveis do módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-170">It contains information about the location of the module's downloadable help files and the version numbers of the newest help files for each supported locale.</span></span>
 
-<span data-ttu-id="d130c-171">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="d130c-171">For information about Updatable Help, see [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span></span>
-<span data-ttu-id="d130c-172">Para obter informações sobre o arquivo **XML HelpInfo** , consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="d130c-172">For information about the **HelpInfo XML** file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
-
-```yaml
-Type: System.Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-173">-IconUri</span><span class="sxs-lookup"><span data-stu-id="d130c-173">-IconUri</span></span>
-
-<span data-ttu-id="d130c-174">Especifica a URL de um ícone para o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-174">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="d130c-175">O ícone especificado é exibido na página da Galeria da Web para o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-175">The specified icon is displayed on the gallery web page for the module.</span></span>
+<span data-ttu-id="7c3d9-171">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-171">For information about Updatable Help, see [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span></span>
+<span data-ttu-id="7c3d9-172">Para obter informações sobre o arquivo **XML HelpInfo** , consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-172">For information about the **HelpInfo XML** file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
 
 ```yaml
 Type: System.Uri
@@ -384,9 +368,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-176">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="d130c-176">-LicenseUri</span></span>
+### <span data-ttu-id="7c3d9-173">-IconUri</span><span class="sxs-lookup"><span data-stu-id="7c3d9-173">-IconUri</span></span>
 
-<span data-ttu-id="d130c-177">Especifica a URL dos termos de licenciamento do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-177">Specifies the URL of licensing terms for the module.</span></span>
+<span data-ttu-id="7c3d9-174">Especifica a URL de um ícone para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-174">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="7c3d9-175">O ícone especificado é exibido na página da Galeria da Web para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-175">The specified icon is displayed on the gallery web page for the module.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -400,13 +384,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-178">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="d130c-178">-ModuleList</span></span>
+### <span data-ttu-id="7c3d9-176">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="7c3d9-176">-LicenseUri</span></span>
 
-<span data-ttu-id="d130c-179">Especifica uma matriz de módulos que são incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-179">Specifies an array of modules that are included in the module.</span></span>
+<span data-ttu-id="7c3d9-177">Especifica a URL dos termos de licenciamento do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-177">Specifies the URL of licensing terms for the module.</span></span>
 
-<span data-ttu-id="d130c-180">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** .</span><span class="sxs-lookup"><span data-stu-id="d130c-180">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="d130c-181">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="d130c-181">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="d130c-182">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="d130c-182">You can combine strings and hash tables in the parameter value.</span></span>
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
 
-<span data-ttu-id="d130c-183">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-183">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="d130c-184">Os módulos listados no valor dessa chave não são processados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="d130c-184">The modules that are listed in the value of this key aren't automatically processed.</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-178">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="7c3d9-178">-ModuleList</span></span>
+
+<span data-ttu-id="7c3d9-179">Especifica uma matriz de módulos que são incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-179">Specifies an array of modules that are included in the module.</span></span>
+
+<span data-ttu-id="7c3d9-180">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-180">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="7c3d9-181">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-181">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="7c3d9-182">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-182">You can combine strings and hash tables in the parameter value.</span></span>
+
+<span data-ttu-id="7c3d9-183">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-183">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="7c3d9-184">Os módulos listados no valor dessa chave não são processados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-184">The modules that are listed in the value of this key aren't automatically processed.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -420,9 +420,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-185">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="d130c-185">-ModuleVersion</span></span>
+### <span data-ttu-id="7c3d9-185">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="7c3d9-185">-ModuleVersion</span></span>
 
-<span data-ttu-id="d130c-186">Especifica a versão do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-186">Specifies the version of the module.</span></span>
+<span data-ttu-id="7c3d9-186">Especifica a versão do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-186">Specifies the version of the module.</span></span>
 
 ```yaml
 Type: System.Version
@@ -436,11 +436,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-187">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="d130c-187">-NestedModules</span></span>
+### <span data-ttu-id="7c3d9-187">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="7c3d9-187">-NestedModules</span></span>
 
-<span data-ttu-id="d130c-188">Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-188">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="d130c-189">Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.</span><span class="sxs-lookup"><span data-stu-id="d130c-189">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
+<span data-ttu-id="7c3d9-188">Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-188">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="7c3d9-189">Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-189">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
 
-<span data-ttu-id="d130c-190">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** .</span><span class="sxs-lookup"><span data-stu-id="d130c-190">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="d130c-191">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="d130c-191">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="d130c-192">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="d130c-192">You can combine strings and hash tables in the parameter value.</span></span>
+<span data-ttu-id="7c3d9-190">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-190">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="7c3d9-191">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-191">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="7c3d9-192">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-192">You can combine strings and hash tables in the parameter value.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -454,9 +454,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-193">-PackageManagementProviders</span><span class="sxs-lookup"><span data-stu-id="d130c-193">-PackageManagementProviders</span></span>
+### <span data-ttu-id="7c3d9-193">-PackageManagementProviders</span><span class="sxs-lookup"><span data-stu-id="7c3d9-193">-PackageManagementProviders</span></span>
 
-<span data-ttu-id="d130c-194">Especifica uma matriz de provedores de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="d130c-194">Specifies an array of package management providers.</span></span>
+<span data-ttu-id="7c3d9-194">Especifica uma matriz de provedores de gerenciamento de pacotes.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-194">Specifies an array of package management providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -470,9 +470,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-195">-PassThru</span><span class="sxs-lookup"><span data-stu-id="d130c-195">-PassThru</span></span>
+### <span data-ttu-id="7c3d9-195">-PassThru</span><span class="sxs-lookup"><span data-stu-id="7c3d9-195">-PassThru</span></span>
 
-<span data-ttu-id="d130c-196">Retorna um objeto que representa o item com o qual você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="d130c-196">Returns an object representing the item with which you're working.</span></span> <span data-ttu-id="d130c-197">Por padrão, o `Update-ModuleManifest` não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="d130c-197">By default, `Update-ModuleManifest` doesn't generate any output.</span></span>
+<span data-ttu-id="7c3d9-196">Retorna um objeto que representa o item com o qual você está trabalhando.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-196">Returns an object representing the item with which you're working.</span></span> <span data-ttu-id="7c3d9-197">Por padrão, o `Update-ModuleManifest` não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-197">By default, `Update-ModuleManifest` doesn't generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -486,15 +486,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-198">-Path</span><span class="sxs-lookup"><span data-stu-id="d130c-198">-Path</span></span>
+### <span data-ttu-id="7c3d9-198">-Path</span><span class="sxs-lookup"><span data-stu-id="7c3d9-198">-Path</span></span>
 
-<span data-ttu-id="d130c-199">Especifica o caminho e o nome do arquivo do manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-199">Specifies the path and file name of the module manifest.</span></span> <span data-ttu-id="d130c-200">Insira um caminho e um nome de arquivo com uma `.psd1` extensão de nome de arquivo, como `$PSHOME\Modules\MyModule\MyModule.psd1` .</span><span class="sxs-lookup"><span data-stu-id="d130c-200">Enter a path and file name with a `.psd1` file name extension, such as `$PSHOME\Modules\MyModule\MyModule.psd1`.</span></span>
+<span data-ttu-id="7c3d9-199">Especifica o caminho e o nome do arquivo do manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-199">Specifies the path and file name of the module manifest.</span></span> <span data-ttu-id="7c3d9-200">Insira um caminho e um nome de arquivo com uma `.psd1` extensão de nome de arquivo, como `$PSHOME\Modules\MyModule\MyModule.psd1` .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-200">Enter a path and file name with a `.psd1` file name extension, such as `$PSHOME\Modules\MyModule\MyModule.psd1`.</span></span>
 
-<span data-ttu-id="d130c-201">Se você especificar o caminho para um arquivo existente, `Update-ModuleManifest` o substituirá o arquivo sem aviso, a menos que o arquivo tenha o atributo somente leitura.</span><span class="sxs-lookup"><span data-stu-id="d130c-201">If you specify the path to an existing file, `Update-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
+<span data-ttu-id="7c3d9-201">Se você especificar o caminho para um arquivo existente, `Update-ModuleManifest` o substituirá o arquivo sem aviso, a menos que o arquivo tenha o atributo somente leitura.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-201">If you specify the path to an existing file, `Update-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
 
-<span data-ttu-id="d130c-202">O manifesto deve estar localizado no diretório do módulo e o nome do arquivo de manifesto deve ser o mesmo que o nome do diretório do módulo, mas com uma `.psd1` extensão.</span><span class="sxs-lookup"><span data-stu-id="d130c-202">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` extension.</span></span>
+<span data-ttu-id="7c3d9-202">O manifesto deve estar localizado no diretório do módulo e o nome do arquivo de manifesto deve ser o mesmo que o nome do diretório do módulo, mas com uma `.psd1` extensão.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-202">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` extension.</span></span>
 
-<span data-ttu-id="d130c-203">Você não pode usar variáveis, como `$PSHOME` ou `$HOME` , em resposta a um prompt para um valor de parâmetro de **caminho** .</span><span class="sxs-lookup"><span data-stu-id="d130c-203">You can't use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="d130c-204">Para usar uma variável, inclua o parâmetro **Path** no comando.</span><span class="sxs-lookup"><span data-stu-id="d130c-204">To use a variable, include the **Path** parameter in the command.</span></span>
+<span data-ttu-id="7c3d9-203">Você não pode usar variáveis, como `$PSHOME` ou `$HOME` , em resposta a um prompt para um valor de parâmetro de **caminho** .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-203">You can't use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="7c3d9-204">Para usar uma variável, inclua o parâmetro **Path** no comando.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-204">To use a variable, include the **Path** parameter in the command.</span></span>
 
 ```yaml
 Type: System.String
@@ -508,59 +508,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-205">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="d130c-205">-PowerShellHostName</span></span>
+### <span data-ttu-id="7c3d9-205">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="7c3d9-205">-PowerShellHostName</span></span>
 
-<span data-ttu-id="d130c-206">Especifica o nome do programa de host do PowerShell que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="d130c-206">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="d130c-207">Insira o nome do programa host, como o host do ISE do PowerShell ou ConsoleHost.</span><span class="sxs-lookup"><span data-stu-id="d130c-207">Enter the name of the host program, such as PowerShell ISE Host or ConsoleHost.</span></span> <span data-ttu-id="d130c-208">Caracteres curinga não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-208">Wildcards aren't permitted.</span></span>
+<span data-ttu-id="7c3d9-206">Especifica o nome do programa de host do PowerShell que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-206">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="7c3d9-207">Insira o nome do programa host, como o host do ISE do PowerShell ou ConsoleHost.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-207">Enter the name of the host program, such as PowerShell ISE Host or ConsoleHost.</span></span> <span data-ttu-id="7c3d9-208">Caracteres curinga não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-208">Wildcards aren't permitted.</span></span>
 
-<span data-ttu-id="d130c-209">Para localizar o nome de um programa de host, no programa, digite `$Host.Name` .</span><span class="sxs-lookup"><span data-stu-id="d130c-209">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-210">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="d130c-210">-PowerShellHostVersion</span></span>
-
-<span data-ttu-id="d130c-211">Especifica a versão mínima do programa de host do PowerShell que funciona com o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-211">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="d130c-212">Insira um número de versão, como 1.1.</span><span class="sxs-lookup"><span data-stu-id="d130c-212">Enter a version number, such as 1.1.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-213">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="d130c-213">-PowerShellVersion</span></span>
-
-<span data-ttu-id="d130c-214">Especifica a versão mínima do PowerShell que funcionará com este módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-214">Specifies the minimum version of PowerShell that will work with this module.</span></span> <span data-ttu-id="d130c-215">Por exemplo, você pode especificar 3,0, 4,0 ou 5,0 como o valor desse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="d130c-215">For example, you can specify 3.0, 4.0, or 5.0 as the value of this parameter.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-216">-Pré-lançamento</span><span class="sxs-lookup"><span data-stu-id="d130c-216">-Prerelease</span></span>
-
-<span data-ttu-id="d130c-217">Indica que o módulo é de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="d130c-217">Indicates the module is prerelease.</span></span>
+<span data-ttu-id="7c3d9-209">Para localizar o nome de um programa de host, no programa, digite `$Host.Name` .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-209">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
 
 ```yaml
 Type: System.String
@@ -574,9 +526,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-218">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="d130c-218">-PrivateData</span></span>
+### <span data-ttu-id="7c3d9-210">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="7c3d9-210">-PowerShellHostVersion</span></span>
 
-<span data-ttu-id="d130c-219">Especifica os dados que são passados para o módulo quando ele é importado.</span><span class="sxs-lookup"><span data-stu-id="d130c-219">Specifies data that is passed to the module when it's imported.</span></span>
+<span data-ttu-id="7c3d9-211">Especifica a versão mínima do programa de host do PowerShell que funciona com o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-211">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="7c3d9-212">Insira um número de versão, como 1.1.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-212">Enter a version number, such as 1.1.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-213">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="7c3d9-213">-PowerShellVersion</span></span>
+
+<span data-ttu-id="7c3d9-214">Especifica a versão mínima do PowerShell que funcionará com este módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-214">Specifies the minimum version of PowerShell that will work with this module.</span></span> <span data-ttu-id="7c3d9-215">Por exemplo, você pode especificar 3,0, 4,0 ou 5,0 como o valor desse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-215">For example, you can specify 3.0, 4.0, or 5.0 as the value of this parameter.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-216">-Pré-lançamento</span><span class="sxs-lookup"><span data-stu-id="7c3d9-216">-Prerelease</span></span>
+
+<span data-ttu-id="7c3d9-217">Indica que o módulo é de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-217">Indicates the module is prerelease.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-218">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="7c3d9-218">-PrivateData</span></span>
+
+<span data-ttu-id="7c3d9-219">Especifica os dados que são passados para o módulo quando ele é importado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-219">Specifies data that is passed to the module when it's imported.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -590,18 +590,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-220">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="d130c-220">-ProcessorArchitecture</span></span>
+### <span data-ttu-id="7c3d9-220">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="7c3d9-220">-ProcessorArchitecture</span></span>
 
-<span data-ttu-id="d130c-221">Especifica a arquitetura do processador que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="d130c-221">Specifies the processor architecture that the module requires.</span></span>
+<span data-ttu-id="7c3d9-221">Especifica a arquitetura do processador que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-221">Specifies the processor architecture that the module requires.</span></span>
 
-<span data-ttu-id="d130c-222">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="d130c-222">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="7c3d9-222">Os valores aceitáveis para esse parâmetro são:</span><span class="sxs-lookup"><span data-stu-id="7c3d9-222">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="d130c-223">AMD64</span><span class="sxs-lookup"><span data-stu-id="d130c-223">Amd64</span></span>
-- <span data-ttu-id="d130c-224">Arm</span><span class="sxs-lookup"><span data-stu-id="d130c-224">Arm</span></span>
-- <span data-ttu-id="d130c-225">IA64</span><span class="sxs-lookup"><span data-stu-id="d130c-225">IA64</span></span>
-- <span data-ttu-id="d130c-226">MSIL</span><span class="sxs-lookup"><span data-stu-id="d130c-226">MSIL</span></span>
-- <span data-ttu-id="d130c-227">Nenhum (desconhecido ou não especificado)</span><span class="sxs-lookup"><span data-stu-id="d130c-227">None (unknown or unspecified)</span></span>
-- <span data-ttu-id="d130c-228">X86</span><span class="sxs-lookup"><span data-stu-id="d130c-228">X86</span></span>
+- <span data-ttu-id="7c3d9-223">AMD64</span><span class="sxs-lookup"><span data-stu-id="7c3d9-223">Amd64</span></span>
+- <span data-ttu-id="7c3d9-224">Arm</span><span class="sxs-lookup"><span data-stu-id="7c3d9-224">Arm</span></span>
+- <span data-ttu-id="7c3d9-225">IA64</span><span class="sxs-lookup"><span data-stu-id="7c3d9-225">IA64</span></span>
+- <span data-ttu-id="7c3d9-226">MSIL</span><span class="sxs-lookup"><span data-stu-id="7c3d9-226">MSIL</span></span>
+- <span data-ttu-id="7c3d9-227">Nenhum (desconhecido ou não especificado)</span><span class="sxs-lookup"><span data-stu-id="7c3d9-227">None (unknown or unspecified)</span></span>
+- <span data-ttu-id="7c3d9-228">X86</span><span class="sxs-lookup"><span data-stu-id="7c3d9-228">X86</span></span>
 
 ```yaml
 Type: System.Reflection.ProcessorArchitecture
@@ -616,9 +616,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-229">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="d130c-229">-ProjectUri</span></span>
+### <span data-ttu-id="7c3d9-229">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="7c3d9-229">-ProjectUri</span></span>
 
-<span data-ttu-id="d130c-230">Especifica a URL de uma página da Web sobre este projeto.</span><span class="sxs-lookup"><span data-stu-id="d130c-230">Specifies the URL of a web page about this project.</span></span>
+<span data-ttu-id="7c3d9-230">Especifica a URL de uma página da Web sobre este projeto.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-230">Specifies the URL of a web page about this project.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -632,28 +632,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-231">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="d130c-231">-ReleaseNotes</span></span>
+### <span data-ttu-id="7c3d9-231">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="7c3d9-231">-ReleaseNotes</span></span>
 
-<span data-ttu-id="d130c-232">Especifica uma matriz de cadeia de caracteres que contém notas de versão ou comentários que você deseja disponibilizar para esta versão do script.</span><span class="sxs-lookup"><span data-stu-id="d130c-232">Specifies a string array that contains release notes or comments that you want available for this version of the script.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-233">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="d130c-233">-RequiredAssemblies</span></span>
-
-<span data-ttu-id="d130c-234">Especifica os arquivos de assembly ( `.dll` ) que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="d130c-234">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="d130c-235">Digite os nomes de arquivo de assembly.</span><span class="sxs-lookup"><span data-stu-id="d130c-235">Enter the assembly file names.</span></span>
-<span data-ttu-id="d130c-236">O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .</span><span class="sxs-lookup"><span data-stu-id="d130c-236">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
-
-<span data-ttu-id="d130c-237">Use esse parâmetro para especificar todos os assemblies que o módulo requer, incluindo assemblies que devem ser carregados para atualizar qualquer formatação ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess** , mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules** .</span><span class="sxs-lookup"><span data-stu-id="d130c-237">Use this parameter to specify all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
+<span data-ttu-id="7c3d9-232">Especifica uma matriz de cadeia de caracteres que contém notas de versão ou comentários que você deseja disponibilizar para esta versão do script.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-232">Specifies a string array that contains release notes or comments that you want available for this version of the script.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -667,9 +648,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-238">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="d130c-238">-RequiredModules</span></span>
+### <span data-ttu-id="7c3d9-233">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="7c3d9-233">-RequiredAssemblies</span></span>
 
-<span data-ttu-id="d130c-239">Especifica os módulos que devem estar no estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="d130c-239">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="d130c-240">Se os módulos necessários não estiverem no estado de sessão global, o PowerShell os importará.</span><span class="sxs-lookup"><span data-stu-id="d130c-240">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="d130c-241">Se os módulos necessários não estiverem disponíveis, o `Import-Module` comando falhará.</span><span class="sxs-lookup"><span data-stu-id="d130c-241">If the required modules aren't available, the `Import-Module` command fails.</span></span>
+<span data-ttu-id="7c3d9-234">Especifica os arquivos de assembly ( `.dll` ) que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-234">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="7c3d9-235">Digite os nomes de arquivo de assembly.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-235">Enter the assembly file names.</span></span>
+<span data-ttu-id="7c3d9-236">O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-236">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
+
+<span data-ttu-id="7c3d9-237">Use esse parâmetro para especificar todos os assemblies que o módulo requer, incluindo assemblies que devem ser carregados para atualizar qualquer formatação ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess** , mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules** .</span><span class="sxs-lookup"><span data-stu-id="7c3d9-237">Use this parameter to specify all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-238">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="7c3d9-238">-RequiredModules</span></span>
+
+<span data-ttu-id="7c3d9-239">Especifica os módulos que devem estar no estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-239">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="7c3d9-240">Se os módulos necessários não estiverem no estado de sessão global, o PowerShell os importará.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-240">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="7c3d9-241">Se os módulos necessários não estiverem disponíveis, o `Import-Module` comando falhará.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-241">If the required modules aren't available, the `Import-Module` command fails.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -683,9 +683,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-242">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="d130c-242">-RequireLicenseAcceptance</span></span>
+### <span data-ttu-id="7c3d9-242">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="7c3d9-242">-RequireLicenseAcceptance</span></span>
 
-<span data-ttu-id="d130c-243">Especifica que uma aceitação de licença é necessária para o módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-243">Specifies that a license acceptance is required for the module.</span></span>
+<span data-ttu-id="7c3d9-243">Especifica que uma aceitação de licença é necessária para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-243">Specifies that a license acceptance is required for the module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -699,15 +699,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-244">-RootModule</span><span class="sxs-lookup"><span data-stu-id="d130c-244">-RootModule</span></span>
+### <span data-ttu-id="7c3d9-244">-RootModule</span><span class="sxs-lookup"><span data-stu-id="7c3d9-244">-RootModule</span></span>
 
-<span data-ttu-id="d130c-245">Especifica o arquivo primário ou raiz do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-245">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="d130c-246">Insira o nome de arquivo de um script ( `.ps1` ), um módulo de script ( `.psm1` ), um manifesto de módulo ( `.psd1` ), um assembly ( `.dll` ), um arquivo XML de definição de cmdlet ( `.cdxml` ) ou um fluxo de trabalho ( `.xaml` ).</span><span class="sxs-lookup"><span data-stu-id="d130c-246">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest (`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="d130c-247">Quando o módulo é importado, os membros que são exportados do arquivo do módulo raiz são importados para o estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="d130c-247">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
+<span data-ttu-id="7c3d9-245">Especifica o arquivo primário ou raiz do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-245">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="7c3d9-246">Insira o nome de arquivo de um script ( `.ps1` ), um módulo de script ( `.psm1` ), um manifesto de módulo ( `.psd1` ), um assembly ( `.dll` ), um arquivo XML de definição de cmdlet ( `.cdxml` ) ou um fluxo de trabalho ( `.xaml` ).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-246">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest (`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="7c3d9-247">Quando o módulo é importado, os membros que são exportados do arquivo do módulo raiz são importados para o estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-247">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
 
-<span data-ttu-id="d130c-248">Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido especificado na chave **RootModule** , o manifesto se tornará o arquivo primário do módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-248">If a module has a manifest file and no root file has been specified in the **RootModule** key, the manifest becomes the primary file for the module.</span></span> <span data-ttu-id="d130c-249">E, o módulo torna-se um módulo de manifesto (Módulotype = manifesto).</span><span class="sxs-lookup"><span data-stu-id="d130c-249">And, the module becomes a manifest module (ModuleType = Manifest).</span></span>
+<span data-ttu-id="7c3d9-248">Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido especificado na chave **RootModule** , o manifesto se tornará o arquivo primário do módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-248">If a module has a manifest file and no root file has been specified in the **RootModule** key, the manifest becomes the primary file for the module.</span></span> <span data-ttu-id="7c3d9-249">E, o módulo torna-se um módulo de manifesto (Módulotype = manifesto).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-249">And, the module becomes a manifest module (ModuleType = Manifest).</span></span>
 
-<span data-ttu-id="d130c-250">Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto.</span><span class="sxs-lookup"><span data-stu-id="d130c-250">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="d130c-251">Caso contrário, seus membros não serão exportados.</span><span class="sxs-lookup"><span data-stu-id="d130c-251">Otherwise, their members aren't exported.</span></span>
+<span data-ttu-id="7c3d9-250">Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-250">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="7c3d9-251">Caso contrário, seus membros não serão exportados.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-251">Otherwise, their members aren't exported.</span></span>
 
-<span data-ttu-id="d130c-252">No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess** .</span><span class="sxs-lookup"><span data-stu-id="d130c-252">In PowerShell 2.0, this key was called **ModuleToProcess** .</span></span>
+<span data-ttu-id="7c3d9-252">No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-252">In PowerShell 2.0, this key was called **ModuleToProcess**.</span></span>
 
 ```yaml
 Type: System.String
@@ -721,28 +721,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-253">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="d130c-253">-ScriptsToProcess</span></span>
+### <span data-ttu-id="7c3d9-253">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="7c3d9-253">-ScriptsToProcess</span></span>
 
-<span data-ttu-id="d130c-254">Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="d130c-254">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
-<span data-ttu-id="d130c-255">Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.</span><span class="sxs-lookup"><span data-stu-id="d130c-255">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
+<span data-ttu-id="7c3d9-254">Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-254">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
+<span data-ttu-id="7c3d9-255">Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-255">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
 
-<span data-ttu-id="d130c-256">Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules** .</span><span class="sxs-lookup"><span data-stu-id="d130c-256">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d130c-257">-Marcas</span><span class="sxs-lookup"><span data-stu-id="d130c-257">-Tags</span></span>
-
-<span data-ttu-id="d130c-258">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="d130c-258">Specifies an array of tags.</span></span>
+<span data-ttu-id="7c3d9-256">Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules**.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-256">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -756,12 +740,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-259">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="d130c-259">-TypesToProcess</span></span>
+### <span data-ttu-id="7c3d9-257">-Marcas</span><span class="sxs-lookup"><span data-stu-id="7c3d9-257">-Tags</span></span>
 
-<span data-ttu-id="d130c-260">Especifica os arquivos de tipo ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="d130c-260">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
-
-<span data-ttu-id="d130c-261">Quando você importa o módulo, o PowerShell executa o `Update-TypeData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="d130c-261">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="d130c-262">Como os arquivos de tipo não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="d130c-262">Because type files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="7c3d9-258">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-258">Specifies an array of tags.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -775,11 +756,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-263">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="d130c-263">-VariablesToExport</span></span>
+### <span data-ttu-id="7c3d9-259">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="7c3d9-259">-TypesToProcess</span></span>
 
-<span data-ttu-id="d130c-264">Especifica as variáveis que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="d130c-264">Specifies the variables that the module exports.</span></span> <span data-ttu-id="d130c-265">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="d130c-265">Wildcards are permitted.</span></span>
+<span data-ttu-id="7c3d9-260">Especifica os arquivos de tipo ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-260">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
 
-<span data-ttu-id="d130c-266">Use esse parâmetro para restringir as variáveis exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="d130c-266">Use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="d130c-267">**VariablesToExport** pode remover variáveis da lista de variáveis exportadas, mas não pode adicionar variáveis à lista.</span><span class="sxs-lookup"><span data-stu-id="d130c-267">**VariablesToExport** can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
+<span data-ttu-id="7c3d9-261">Quando você importa o módulo, o PowerShell executa o `Update-TypeData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-261">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="7c3d9-262">Como os arquivos de tipo não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-262">Because type files aren't scoped, they affect all session states in the session.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -793,9 +775,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-268">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d130c-268">-WhatIf</span></span>
+### <span data-ttu-id="7c3d9-263">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="7c3d9-263">-VariablesToExport</span></span>
 
-<span data-ttu-id="d130c-269">Mostra o que aconteceria se `Update-ModuleManifest` for executado.</span><span class="sxs-lookup"><span data-stu-id="d130c-269">Shows what would happen if `Update-ModuleManifest` runs.</span></span> <span data-ttu-id="d130c-270">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="d130c-270">The cmdlet isn't run.</span></span>
+<span data-ttu-id="7c3d9-264">Especifica as variáveis que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-264">Specifies the variables that the module exports.</span></span> <span data-ttu-id="7c3d9-265">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-265">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="7c3d9-266">Use esse parâmetro para restringir as variáveis exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-266">Use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="7c3d9-267">**VariablesToExport** pode remover variáveis da lista de variáveis exportadas, mas não pode adicionar variáveis à lista.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-267">**VariablesToExport** can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7c3d9-268">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7c3d9-268">-WhatIf</span></span>
+
+<span data-ttu-id="7c3d9-269">Mostra o que aconteceria se `Update-ModuleManifest` for executado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-269">Shows what would happen if `Update-ModuleManifest` runs.</span></span> <span data-ttu-id="7c3d9-270">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-270">The cmdlet isn't run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -809,18 +809,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d130c-271">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d130c-271">CommonParameters</span></span>
+### <span data-ttu-id="7c3d9-271">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7c3d9-271">CommonParameters</span></span>
 
-<span data-ttu-id="d130c-272">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d130c-272">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d130c-273">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="d130c-273">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="7c3d9-272">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-272">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7c3d9-273">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-273">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="d130c-274">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="d130c-274">INPUTS</span></span>
+## <span data-ttu-id="7c3d9-274">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="7c3d9-274">INPUTS</span></span>
 
-### <span data-ttu-id="d130c-275">System.String</span><span class="sxs-lookup"><span data-stu-id="d130c-275">System.String</span></span>
+### <span data-ttu-id="7c3d9-275">System.String</span><span class="sxs-lookup"><span data-stu-id="7c3d9-275">System.String</span></span>
 
-## <span data-ttu-id="d130c-276">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="d130c-276">OUTPUTS</span></span>
+## <span data-ttu-id="7c3d9-276">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="7c3d9-276">OUTPUTS</span></span>
 
-### <span data-ttu-id="d130c-277">System.Object</span><span class="sxs-lookup"><span data-stu-id="d130c-277">System.Object</span></span>
+### <span data-ttu-id="7c3d9-277">System.Object</span><span class="sxs-lookup"><span data-stu-id="7c3d9-277">System.Object</span></span>
 
-## <span data-ttu-id="d130c-278">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="d130c-278">NOTES</span></span>
+## <span data-ttu-id="7c3d9-278">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="7c3d9-278">NOTES</span></span>
 
-## <span data-ttu-id="d130c-279">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="d130c-279">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="7c3d9-279">A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS).</span><span class="sxs-lookup"><span data-stu-id="7c3d9-279">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="7c3d9-280">Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-280">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="7c3d9-281">Use o comando a seguir para garantir que você esteja usando o TLS 1,2:</span><span class="sxs-lookup"><span data-stu-id="7c3d9-281">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="7c3d9-282">Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7c3d9-282">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
+
+## <span data-ttu-id="7c3d9-283">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="7c3d9-283">RELATED LINKS</span></span>
