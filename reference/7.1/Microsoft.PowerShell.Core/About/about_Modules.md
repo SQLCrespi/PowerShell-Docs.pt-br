@@ -1,17 +1,16 @@
 ---
 description: Explica como instalar, importar e usar módulos do PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 09/15/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Modules
-ms.openlocfilehash: 8e7f91ca54c0d464e50432a958f006943f4c6caa
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aebebc3f41a091151fbbecd9925a4ebc063e678e
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196363"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564595"
 ---
 # <a name="about-modules"></a>Sobre os módulos
 
@@ -20,7 +19,7 @@ Explica como instalar, importar e usar módulos do PowerShell.
 
 ## <a name="long-description"></a>Descrição longa
 
-Um módulo é um pacote que contém comandos do PowerShell, como cmdlets, provedores, funções, fluxos de trabalho, variáveis e aliases.
+Um módulo é um pacote que contém membros do PowerShell, como cmdlets, provedores, funções, fluxos de trabalho, variáveis e aliases.
 
 As pessoas que escrevem comandos podem usar módulos para organizar seus comandos e compartilhá-los com outras pessoas. As pessoas que recebem módulos podem adicionar os comandos nos módulos às suas sessões do PowerShell e usá-los exatamente como os comandos internos.
 
@@ -28,13 +27,13 @@ Este tópico explica como usar os módulos do PowerShell. Para obter informaçõ
 
 ## <a name="what-is-a-module"></a>O que é um módulo?
 
-Um módulo é um pacote de comandos. Todos os cmdlets e provedores em sua sessão são adicionados por um módulo ou um snap-in.
+Um módulo é um pacote que contém membros do PowerShell, como cmdlets, provedores, funções, fluxos de trabalho, variáveis e aliases. Os membros desse pacote podem ser implementados em um script do PowerShell, uma DLL compilada ou uma combinação de ambos. Esses arquivos geralmente são agrupados em um único diretório. Para obter mais informações, consulte [noções básicas sobre um módulo do Windows PowerShell](/powershell/scripting/developer/module/understanding-a-windows-powershell-module) na documentação do SDK do.
 
 ## <a name="module-auto-loading"></a>Módulo de carregamento automático
 
 A partir do PowerShell 3,0, o PowerShell importa módulos automaticamente na primeira vez que você executa qualquer comando em um módulo instalado. Agora você pode usar os comandos em um módulo sem qualquer configuração de instalação ou perfil; portanto, não é necessário gerenciar módulos depois de instalá-los em seu computador.
 
-Os comandos em um módulo também são mais fáceis de localizar. O `Get-Command` cmdlet agora Obtém todos os comandos em todos os módulos instalados, mesmo que ainda não estejam na sessão, para que você possa encontrar um comando e usá-lo sem importar.
+Os comandos em um módulo também são mais fáceis de localizar. O `Get-Command` cmdlet agora Obtém todos os comandos em todos os módulos instalados, mesmo que eles ainda não estejam na sessão. Você pode encontrar um comando e usá-lo sem importar a necessidade de importar o módulo primeiro.
 
 Cada um dos exemplos a seguir faz com que o módulo CimCmdlets, que contém `Get-CimInstance` , seja importado para sua sessão.
 
@@ -307,10 +306,10 @@ Para detectar conflitos de nome, use o parâmetro **All** do `Get-Command` cmdle
 
 Para evitar conflitos de nome, use os parâmetros **NoClobber** ou **prefix** do `Import-Module` cmdlet. O parâmetro **prefix** adiciona um prefixo aos nomes dos comandos importados para que eles sejam exclusivos na sessão. O parâmetro **NoClobber** não importa nenhum comando que oculte ou substitua os comandos existentes na sessão.
 
-Você também pode usar o **alias** , o **cmdlet** , a **função** e os parâmetros **variáveis** do `Import-Module` para selecionar apenas os comandos que deseja importar e pode excluir comandos que causam conflitos de nome em sua sessão.
+Você também pode usar o **alias**, o **cmdlet**, a **função** e os parâmetros **variáveis** do `Import-Module` para selecionar apenas os comandos que deseja importar e pode excluir comandos que causam conflitos de nome em sua sessão.
 
 Os autores de módulo podem evitar conflitos de nome usando a propriedade **DefaultCommandPrefix** do manifesto do módulo para adicionar um prefixo padrão a todos os nomes de comando.
-O valor do parâmetro **prefix** tem precedência sobre o valor de **DefaultCommandPrefix** .
+O valor do parâmetro **prefix** tem precedência sobre o valor de **DefaultCommandPrefix**.
 
 Mesmo se um comando estiver oculto, você poderá executá-lo qualificando o nome de comando com o nome do módulo ou snap-in no qual ele foi originado.
 

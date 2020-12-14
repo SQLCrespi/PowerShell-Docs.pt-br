@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: 5a76f8ec454ad8144f193d8927f913b89a429fec
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 17c3ef3046ba8f0cca9a85cf41aaf683212a58e9
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193826"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913334"
 ---
 # Export-Csv
 
@@ -271,7 +270,7 @@ Windows PowerShell
 
 Uma expressão cria o **PSCustomObject** com propriedades **Name** e **version** . Os valores são armazenados na `$Content` variável. A `$Content` variável é enviada ao pipeline para o `Export-Csv` cmdlet. `Export-Csv` usa o parâmetro **path** e salva o arquivo ParmFile.csv no diretório atual. O parâmetro **NoTypeInformation** remove o cabeçalho de informações **#TYPE** da saída CSV e não é necessário no PowerShell 6.
 
-Outra expressão cria um **PSCustomObject** com as propriedades **Name** e **Edition** . Os valores são armazenados na `$AdditionalContent` variável. A `$AdditionalContent` variável é enviada ao pipeline para o `Export-Csv` cmdlet. O parâmetro **Append** é usado para adicionar os dados ao arquivo. O acréscimo falha porque há uma incompatibilidade de nome de propriedade entre a **versão** e a **edição** .
+Outra expressão cria um **PSCustomObject** com as propriedades **Name** e **Edition** . Os valores são armazenados na `$AdditionalContent` variável. A `$AdditionalContent` variável é enviada ao pipeline para o `Export-Csv` cmdlet. O parâmetro **Append** é usado para adicionar os dados ao arquivo. O acréscimo falha porque há uma incompatibilidade de nome de propriedade entre a **versão** e a **edição**.
 
 O `Export-Csv` parâmetro **Force** do cmdlet é usado para forçar a exportação a gravar no arquivo. A propriedade de **edição** é descartada. O `Import-Csv` cmdlet usa o parâmetro **Path** para exibir o arquivo localizado no diretório atual.
 
@@ -375,7 +374,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-Especifica o caminho para o arquivo de saída CSV. Ao contrário de **Path** , o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, use aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.
+Especifica o caminho para o arquivo de saída CSV. Ao contrário de **Path**, o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, use aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.
 
 ```yaml
 Type: System.String
@@ -509,7 +508,7 @@ No arquivo CSV, cada objeto é representado por uma lista separada por vírgulas
 
 As cadeias de caracteres CSV são saídas da seguinte maneira:
 
-- Por padrão, a primeira cadeia de caracteres contém o cabeçalho de informações **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process** .
+- Por padrão, a primeira cadeia de caracteres contém o cabeçalho de informações **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process**.
 - Se **NoTypeInformation** for usado, a primeira cadeia de caracteres incluirá os cabeçalhos de coluna. Os cabeçalhos contêm os nomes de Propriedade do primeiro objeto como uma lista separada por vírgulas.
 - As cadeias de caracteres restantes contêm listas separadas por vírgulas dos valores de propriedade de cada objeto.
 

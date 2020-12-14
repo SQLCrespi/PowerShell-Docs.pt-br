@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: e4cc40e7a9a5fdcd12b6a787607e4979ddbb3273
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 7ad8dc837bd843c2df48587ad809d9f65a4cf8a7
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194292"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913212"
 ---
 # ConvertTo-Csv
 
@@ -21,7 +20,7 @@ Converte objetos .NET em uma série de cadeias de caracteres CSV (valores separa
 
 ## SYNTAX
 
-### Delimitador
+### Delimitador (padrão)
 
 ```
 ConvertTo-Csv [-InputObject] <PSObject> [[-Delimiter] <Char>] [-IncludeTypeInformation]
@@ -139,7 +138,7 @@ Accept wildcard characters: False
 
 ### -IncludeTypeInformation
 
-Quando esse parâmetro é usado, a primeira linha da saída contém **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process** .
+Quando esse parâmetro é usado, a primeira linha da saída contém **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process**.
 
 Esse parâmetro foi introduzido no PowerShell 6,0.
 
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -QuoteFields
 
-Especifica os nomes das colunas que devem ser entre aspas. Quando esse parâmetro é usado, somente as colunas especificadas são citadas.
+Especifica os nomes das colunas que devem ser entre aspas. Quando esse parâmetro é usado, somente as colunas especificadas são citadas. Esse parâmetro foi adicionado no PowerShell 7,0.
 
 ```yaml
 Type: System.String[]
@@ -226,6 +225,8 @@ Especifica quando as aspas são usadas nos arquivos CSV. Os valores possíveis s
 - Nunca-não citar nada
 - Sempre-cotação de tudo (comportamento padrão)
 - Apenas campos de cotação necessários que contêm um caractere delimitador
+
+Esse parâmetro foi adicionado no PowerShell 7,0.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -261,7 +262,7 @@ No formato CSV, cada objeto é representado por uma lista separada por vírgulas
 
 As cadeias de caracteres CSV são saídas da seguinte maneira:
 
-- Se **IncludeTypeInformation** for usado, a primeira cadeia de caracteres consiste em **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process** .
+- Se **IncludeTypeInformation** for usado, a primeira cadeia de caracteres consiste em **#TYPE** seguido pelo nome totalmente qualificado do tipo de objeto. Por exemplo, **#TYPE System. Diagnostics. Process**.
 - Se **IncludeTypeInformation** não for usado, a primeira cadeia de caracteres incluirá os cabeçalhos de coluna. Os cabeçalhos contêm os nomes de Propriedade do primeiro objeto como uma lista separada por vírgulas.
 - As cadeias de caracteres restantes contêm listas separadas por vírgulas dos valores de propriedade de cada objeto.
 
@@ -273,7 +274,6 @@ Quando você envia vários objetos ao `ConvertTo-CSV` , `ConvertTo-CSV` o ordena
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[Export-CSV](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)
-

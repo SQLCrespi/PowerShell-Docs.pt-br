@@ -1,18 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/08/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-Module
-ms.openlocfilehash: 78806f9fcfcdd0effa1599c46bfeecddb507722a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6b87074f6053189b20b5cc0983f978324420c99b
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193317"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564383"
 ---
 # Import-Module
 
@@ -95,13 +94,13 @@ Você pode desabilitar a importação automática de módulos usando a `$PSModul
 
 Um módulo é um pacote que contém membros que podem ser usados no PowerShell. Os membros incluem cmdlets, provedores, scripts, funções, variáveis e outras ferramentas e arquivos. Após um módulo ser importado, você pode usar os membros do módulo em sua sessão. Para obter mais informações sobre módulos, consulte [about_Modules](About/about_Modules.md).
 
-Por padrão, `Import-Module` o importa todos os membros que o módulo exporta, mas você pode usar os parâmetros **alias** , **função** , **cmdlet** e **variável** para restringir quais membros são importados. O parâmetro **NoClobber** impede a `Import-Module` importação de membros que têm os mesmos nomes que os membros na sessão atual.
+Por padrão, `Import-Module` o importa todos os membros que o módulo exporta, mas você pode usar os parâmetros **alias**, **função**, **cmdlet** e **variável** para restringir quais membros são importados. O parâmetro **NoClobber** impede a `Import-Module` importação de membros que têm os mesmos nomes que os membros na sessão atual.
 
 `Import-Module` importa um módulo somente para a sessão atual. Para importar o módulo para cada nova sessão, adicione um `Import-Module` comando ao seu perfil do PowerShell. Para obter mais informações sobre perfis, consulte [about_Profiles](About/about_Profiles.md).
 
-Você pode gerenciar computadores remotos com Windows que têm a comunicação remota do PowerShell habilitada criando uma **PSSession** no computador remoto. Em seguida, use o parâmetro **PSSession** do `Import-Module` para importar os módulos que estão instalados no computador remoto. Agora você pode usar os comandos importados na sessão atual. Os comandos são executados implicitamente no computador remoto.
+Você pode gerenciar computadores remotos com Windows que têm a comunicação remota do PowerShell habilitada criando uma **PSSession** no computador remoto. Em seguida, use o parâmetro **PSSession** do `Import-Module` para importar os módulos que estão instalados no computador remoto. Quando você usa os comandos importados na sessão atual, os comandos são executados implicitamente no computador remoto.
 
-A partir do Windows PowerShell 3,0, você pode usar `Import-Module` para importar módulos de modelo CIM (CIM), nos quais os cmdlets são definidos em arquivos de definição de cmdlet (CDXML). Este recurso permite que você use cmdlets que são implementados em assemblies de código não gerenciado, como aqueles escritos em C++.
+A partir do Windows PowerShell 3,0, você pode usar `Import-Module` para importar módulos de modelo CIM (CIM). Módulos CIM definem cmdlets em arquivos CDXML (cmdlet Definition XML). Esse recurso permite que você use cmdlets que são implementados em assemblies de código não gerenciado, como os escritos em C++.
 
 Para computadores remotos que não têm a comunicação remota do PowerShell habilitada, incluindo computadores que não estão executando o sistema operacional Windows, você pode usar o parâmetro **CIMSession** do `Import-Module` para importar módulos CIM do computador remoto. Os comandos importados são executados implicitamente no computador remoto. Um **CIMSession** é uma conexão com instrumentação de gerenciamento do Windows (WMI) no computador remoto.
 
@@ -153,11 +152,11 @@ VERBOSE: Exporting function 'Get-SpecDetails'.
 ```
 
 O uso do parâmetro **Verbose** faz com que o `Import-Module` relate o progresso à medida que ele carrega o módulo.
-Sem o parâmetro **Verbose** , **PassThru** ou **AsCustomObject** , o não `Import-Module` gera nenhuma saída quando importa um módulo.
+Sem o parâmetro **Verbose**, **PassThru** ou **AsCustomObject** , o não `Import-Module` gera nenhuma saída quando importa um módulo.
 
 ### Exemplo 5: restringir os membros do módulo importados em uma sessão
 
-Este exemplo mostra como restringir quais membros de módulo são importados para a sessão e o efeito desse comando na sessão. O parâmetro de **função** limita os membros que são importados do módulo. Você também pode usar os parâmetros **alias** , **variável** e **cmdlet** para restringir outros membros que um módulo importa.
+Este exemplo mostra como restringir quais membros de módulo são importados para a sessão e o efeito desse comando na sessão. O parâmetro de **função** limita os membros que são importados do módulo. Você também pode usar os parâmetros **alias**, **variável** e **cmdlet** para restringir outros membros que um módulo importa.
 
 O `Get-Module` cmdlet obtém o objeto que representa o módulo **PSDiagnostics** . A propriedade **ExportedCmdlets** lista todos os cmdlets exportados pelo módulo, mesmo que eles não tenham sido importados.
 
@@ -231,7 +230,7 @@ Function        Stop-xTrace                            6.1.0.0    PSDiagnostics
 
 ### Exemplo 7: obter e usar um objeto personalizado
 
-Este exemplo demonstra como obter e usar o objeto personalizado retornado por **Import-Module** .
+Este exemplo demonstra como obter e usar o objeto personalizado retornado por `Import-Module` .
 
 Objetos personalizados incluem membros sintéticos que representam cada um dos membros de módulos importados. Por exemplo, os cmdlets e funções em um módulo são convertidos para os métodos de script do objeto personalizado.
 
@@ -273,11 +272,11 @@ Show-Calendar ScriptMethod System.Object Show-Calendar();
 $a."Show-Calendar"()
 ```
 
-O módulo de script **show-Calendar** é importado usando o parâmetro **AsCustomObject** para solicitar um objeto personalizado e o parâmetro **PassThru** para retornar o objeto. O objeto personalizado resultante é salvo na `$a` variável.
+O `Show-Calendar` módulo de script é importado usando o parâmetro **AsCustomObject** para solicitar um objeto personalizado e o parâmetro **PassThru** para retornar o objeto. O objeto personalizado resultante é salvo na `$a` variável.
 
-A `$a` variável é canalizada para o `Get-Member` cmdlet para mostrar as propriedades e os métodos do objeto salvo. A saída mostra um método de script **show-Calendar** .
+A `$a` variável é canalizada para o `Get-Member` cmdlet para mostrar as propriedades e os métodos do objeto salvo. A saída mostra um `Show-Calendar` método de script.
 
-Para chamar o método de script **show-Calendar** , o nome do método deve ser colocado entre aspas porque o nome inclui um hífen.
+Para chamar o `Show-Calendar` método de script, o nome do método deve ser colocado entre aspas porque o nome inclui um hífen.
 
 ### Exemplo 8: reimportar um módulo para a mesma sessão
 
@@ -288,7 +287,7 @@ Import-Module PSDiagnostics
 Import-Module PSDiagnostics -Force -Prefix PS
 ```
 
-O primeiro comando importa o módulo **PSDiagnostics** . O segundo comando importa o módulo novamente, dessa vez usando o parâmetro **Prefix** .
+O primeiro comando importa o módulo **PSDiagnostics** . O segundo comando importa o módulo novamente, dessa vez usando o parâmetro **Prefix**.
 
 Sem o parâmetro **Force** , a sessão incluiria duas cópias de cada cmdlet **PSDiagnostics** , uma com o nome padrão e outra com o nome prefixado.
 
@@ -436,7 +435,7 @@ Windows Remote Management (HTTP-In)                      WINRM-HTTP-In-TCP-PUBLI
 Windows Remote Management - Compatibility Mode (HTTP-In) WINRM-HTTP-Compat-In-TCP
 ```
 
-`New-PSSession` Cria uma sessão remota ( **PSSession** ) para o computador Server01. A **PSSession** é salva na `$s` variável.
+`New-PSSession` Cria uma sessão remota (**PSSession**) para o computador Server01. A **PSSession** é salva na `$s` variável.
 
 A execução `Get-Module` com o parâmetro **PSSession** mostra que o módulo **NetSecurity** está instalado e disponível no computador remoto. Esse comando é equivalente a usar o `Invoke-Command` cmdlet para executar o `Get-Module` comando na sessão remota. Por exemplo: (`Invoke-Command $s {Get-Module -ListAvailable -Name NetSecurity`
 
@@ -505,7 +504,7 @@ Accept wildcard characters: True
 
 Especifica uma matriz de argumentos ou valores de parâmetro que são passados para um módulo de script durante o `Import-Module` comando. Esse parâmetro é válido somente quando você está importando um módulo de script.
 
-Você também pode se referir ao parâmetro **ArgumentList** por seu alias, **args** . Para obter mais informações sobre o comportamento de **ArgumentList** , consulte [about_Splatting](about/about_Splatting.md#splatting-with-arrays).
+Você também pode se referir ao parâmetro **ArgumentList** por seu alias, **args**. Para obter mais informações sobre o comportamento de **ArgumentList**, consulte [about_Splatting](about/about_Splatting.md#splatting-with-arrays).
 
 ```yaml
 Type: System.Object[]
@@ -726,7 +725,7 @@ Quando invocado de outro módulo, `Import-Module` o cmdlet importa os comandos e
 > [!TIP]
 > Você deve evitar `Import-Module` a chamada de dentro de um módulo. Em vez disso, declare o módulo de destino como um módulo aninhado no manifesto do módulo pai. A declaração de módulos aninhados melhora a descoberta de dependências.
 
-O parâmetro **Global** é equivalente ao parâmetro **Scope** com um valor de **Global** .
+O parâmetro **Global** é equivalente ao parâmetro **Scope** com um valor de **Global**.
 
 Para restringir os comandos exportados por um módulo, use um `Export-ModuleMember` comando no módulo de script.
 
@@ -760,9 +759,9 @@ Accept wildcard characters: False
 
 ### -MinimumVersion
 
-Especifica uma versão mínima. Esse cmdlet importa apenas uma versão do módulo que seja maior ou igual ao valor especificado. Use o nome de parâmetro **MinimumVersion** ou seu alias, **Version** . Se nenhuma versão for qualificada, `Import-Module` o gerará um erro.
+Especifica uma versão mínima. Esse cmdlet importa apenas uma versão do módulo que seja maior ou igual ao valor especificado. Use o nome de parâmetro **MinimumVersion** ou seu alias, **Version**. Se nenhuma versão for qualificada, `Import-Module` o gerará um erro.
 
-Para especificar uma versão exata, use o parâmetro **RequiredVersion** . Você também pode usar os parâmetros de **módulo** e **versão** da palavra-chave **#Requires** para exigir uma versão específica de um módulo em um script.
+Para especificar uma versão exata, use o parâmetro **RequiredVersion**. Você também pode usar os parâmetros de **módulo** e **versão** da palavra-chave **#Requires** para exigir uma versão específica de um módulo em um script.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -802,6 +801,9 @@ Se você omitir um caminho, `Import-Module` o procurará o módulo nos caminhos 
 
 Especifique somente o nome de módulo sempre que possível. Quando você especifica um nome de arquivo, somente os membros que são implementados nesse arquivo são importados. Se o módulo contiver outros arquivos, eles não serão importados e você poderá estar faltando membros importantes do módulo.
 
+> [!NOTE]
+> Embora seja possível importar um arquivo de script ( `.ps1` ) como um módulo, os arquivos de script normalmente não são estruturados como arquivo de módulos de script ( `.psm1` ). A importação de um arquivo de script não garante que ele seja utilizável como um módulo. Para obter mais informações, consulte [about_Modules](about/about_Modules.md).
+
 ```yaml
 Type: System.String[]
 Parameter Sets: Name, PSSession, CimSession
@@ -818,7 +820,7 @@ Accept wildcard characters: True
 
 Impede a importação de comandos que têm os mesmos nomes que os comandos existentes na sessão atual. Por padrão, o `Import-Module` importa todos os comandos de módulo exportados.
 
-Comandos que têm os mesmos nomes podem ocultar ou substituir comandos na sessão. Para evitar conflitos de nome de comando em uma sessão, use os parâmetros **Prefix** ou **NoClobber** . Para obter mais informações sobre conflitos de nome e sobre a precedência dos comandos, consulte "Módulos e Conflitos de Nome" em [about_Modules](about/about_Modules.md) e [about_Command_Precedence](about/about_Command_Precedence.md).
+Comandos que têm os mesmos nomes podem ocultar ou substituir comandos na sessão. Para evitar conflitos de nome de comando em uma sessão, use os parâmetros **Prefix** ou **NoClobber**. Para obter mais informações sobre conflitos de nome e sobre a precedência dos comandos, consulte "Módulos e Conflitos de Nome" em [about_Modules](about/about_Modules.md) e [about_Command_Precedence](about/about_Command_Precedence.md).
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -874,7 +876,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-Especifica uma sessão gerenciada pelo usuário do PowerShell ( **PSSession** ) da qual este cmdlet importa módulos para a sessão atual. Insira uma variável que contenha uma **PSSession** ou um comando que obtenha uma **PSSession** , como um `Get-PSSession` comando.
+Especifica uma sessão gerenciada pelo usuário do PowerShell (**PSSession**) da qual este cmdlet importa módulos para a sessão atual. Insira uma variável que contenha uma **PSSession** ou um comando que obtenha uma **PSSession**, como um `Get-PSSession` comando.
 
 Quando importa um módulo de uma sessão diferente para a sessão atual, você pode usar os cmdlets do módulo na sessão atual, assim como você usaria cmdlets de um módulo local. Os comandos que usam os cmdlets remotos são executados na sessão remota, mas os detalhes de comunicação remota são gerenciados em segundo plano pelo PowerShell.
 
@@ -902,7 +904,7 @@ Especifica uma versão do módulo que este cmdlet importa. Se a versão não est
 
 Por padrão, `Import-Module` o importa o módulo sem verificar o número de versão.
 
-Para especificar uma versão mínima, use o parâmetro **MinimumVersion** . Você também pode usar os parâmetros de **módulo** e **versão** da palavra-chave **#Requires** para exigir uma versão específica de um módulo em um script.
+Para especificar uma versão mínima, use o parâmetro **MinimumVersion**. Você também pode usar os parâmetros de **módulo** e **versão** da palavra-chave **#Requires** para exigir uma versão específica de um módulo em um script.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -926,14 +928,14 @@ Especifica um escopo no qual esse cmdlet importa o módulo.
 
 Os valores aceitáveis para esse parâmetro são:
 
-- **Global** . Disponível para todos os comandos da sessão. Equivalente ao parâmetro **Global** .
-- **Local** . Disponível somente no escopo atual.
+- **Global**. Disponível para todos os comandos da sessão. Equivalente ao parâmetro **Global**.
+- **Local**. Disponível somente no escopo atual.
 
-Por padrão, quando `Import-Module` o cmdlet é chamado no prompt de comando, arquivo de script ou scriptblock, todos os comandos são importados para o estado de sessão global. Você pode usar o parâmetro **-Scope** com o valor de **local** para importar o conteúdo do módulo para o escopo do script ou scriptblock.
+Por padrão, quando `Import-Module` o cmdlet é chamado no prompt de comando, arquivo de script ou scriptblock, todos os comandos são importados para o estado de sessão global. Você pode usar o `-Scope Local` parâmetro para importar o conteúdo do módulo para o escopo do script ou scriptblock.
 
 Quando invocado de outro módulo, `Import-Module` o cmdlet importa os comandos em um módulo, incluindo comandos de módulos aninhados, para o estado de sessão do chamador. Especificar `-Scope Global` ou `-Global` indicar que este cmdlet importa módulos para o estado de sessão global para que fiquem disponíveis para todos os comandos na sessão.
 
-O parâmetro **global** é equivalente ao parâmetro de **escopo** com um valor de global.
+O parâmetro **Global** é equivalente ao parâmetro **Scope** com um valor de **Global**.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -995,19 +997,17 @@ Por padrão, `Import-Module` o não gera nenhuma saída. Se você especificar o 
 
 - Para atualizar os dados de formatação para comandos que foram importados de um módulo, use o `Update-FormatData` cmdlet. `Update-FormatData` também atualiza os dados de formatação para comandos na sessão que foram importados dos módulos. Se o arquivo de formatação de um módulo for alterado, você poderá executar um `Update-FormatData` comando para atualizar os dados de formatação para comandos importados. Você não precisa importar o módulo novamente.
 
-- A partir do Windows PowerShell 3,0, os comandos principais instalados com o PowerShell são empacotados em módulos. No Windows PowerShell 2,0 e em programas de host que criam sessões de estilo mais antigo em versões posteriores do PowerShell, os comandos principais são empacotados em snap-ins ( **PSSnapins** ). A exceção é **Microsoft. PowerShell. Core** , que sempre é um snap-in. Além disso, as sessões remotas, como as iniciadas pelo `New-PSSession` cmdlet, são sessões de estilo mais antigo que incluem snap-ins de núcleo.
+- A partir do Windows PowerShell 3,0, os comandos principais instalados com o PowerShell são empacotados em módulos. No Windows PowerShell 2,0 e em programas de host que criam sessões de estilo mais antigo em versões posteriores do PowerShell, os comandos principais são empacotados em snap-ins (**PSSnapins**). A exceção é **Microsoft. PowerShell. Core**, que sempre é um snap-in. Além disso, as sessões remotas, como as iniciadas pelo `New-PSSession` cmdlet, são sessões de estilo mais antigo que incluem snap-ins de núcleo.
 
   Para obter informações sobre o método **CreateDefault2** que cria sessões de estilo mais recente com módulos de núcleo, consulte o [método CreateDefault2](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2).
 
-- `Import-Module` Não é possível importar módulos do PowerShell Core de outra sessão. Os módulos do PowerShell Core têm nomes que começam com `Microsoft.PowerShell` .
+- No Windows PowerShell 2,0, alguns dos valores de Propriedade do objeto de módulo, como os valores de propriedade **ExportedCmdlets** e **NestedModules** , não foram populados até que o módulo tenha sido importado.
 
-- No Windows PowerShell 2,0, alguns dos valores de Propriedade do objeto de módulo, como os valores de propriedade **ExportedCmdlets** e **NestedModules** , não foram populados até que o módulo foi importado e não estivesse disponível no objeto de módulo que o parâmetro **PassThru** retorna. No Windows PowerShell 3,0, todos os valores de Propriedade do módulo são populados.
-
-- Se você tentar importar um módulo que contém assemblies de modo misto que não são compatíveis com o Windows PowerShell 3,0, `Import-Module` o retornará uma mensagem de erro semelhante à seguinte.
+- Se você tentar importar um módulo que contém assemblies de modo misto que não são compatíveis com o Windows PowerShell 3.0 +, `Import-Module` o retornará uma mensagem de erro semelhante à seguinte.
 
   > Import-Module: o assembly de modo misto é compilado em relação à versão ' v 2.0.50727 ' do tempo de execução e não pode ser carregado no tempo de execução 4,0 sem informações de configuração adicionais.
 
-  Esse erro ocorre quando um módulo projetado para o Windows PowerShell 2,0 contém pelo menos um assembly de módulo misto, ou seja, um assembly que inclui código gerenciado e não gerenciado, como C++ e C#.
+  Esse erro ocorre quando um módulo projetado para o Windows PowerShell 2,0 contém pelo menos um assembly de módulo misto. Um assembly de módulo misto que inclui código gerenciado e não gerenciado, como C++ e C#.
 
   Para importar um módulo que contém assemblies de modo misto, inicie o Windows PowerShell 2,0 usando o comando a seguir e tente o `Import-Module` comando novamente.
 
@@ -1026,9 +1026,11 @@ Por padrão, `Import-Module` o não gera nenhuma saída. Se você especificar o 
   > [!NOTE]
   > `Get-Module` mostra todos os módulos carregados na sessão atual. Isso inclui módulos carregados localmente em um escopo descendente. Use `Get-Command -Module modulename` para ver quais membros são carregados no escopo atual.
 
-  Se o módulo incluir definições de classe e enumeração, use `using module` no início do script. Isso importa os scripts, incluindo as definições de classe e enumeração. Para obter mais informações, consulte [about_Using](About/about_Using.md).
+  `Import-Module` Não carrega definições de classe e enumeração no módulo. Use a `using module` instrução no início do script. Isso importa o módulo, incluindo as definições de classe e enumeração. Para obter mais informações, consulte [about_Using](About/about_Using.md).
 
 ## LINKS RELACIONADOS
+
+[about_Modules](about/about_Modules.md)
 
 [Export-ModuleMember](Export-ModuleMember.md)
 

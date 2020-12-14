@@ -1,17 +1,17 @@
 ---
-external help file: ThreadJob.dll-Help.xml
+external help file: Microsoft.PowerShell.ThreadJob.dll-Help.xml
 Locale: en-US
 Module Name: ThreadJob
-ms.date: 01/28/2020
+ms.date: 12/05/2020
 online version: https://docs.microsoft.com/powershell/module/threadjob/start-threadjob?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ThreadJob
-ms.openlocfilehash: 13c78786b3dd506af9c6efa45eef4b5be20537cd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b5c09c9483250930f35eea5f480f2ca0a203445b
+ms.sourcegitcommit: f9d855dd73b916559a22e337672dea3fbb11c634
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194797"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96777699"
 ---
 # Start-ThreadJob
 
@@ -24,14 +24,16 @@ Cria trabalhos em segundo plano semelhantes ao `Start-Job` cmdlet.
 
 ```
 Start-ThreadJob [-ScriptBlock] <ScriptBlock> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
 ### FilePath
 
 ```
 Start-ThreadJob [-FilePath] <String> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +107,29 @@ $j | Wait-Job | Receive-Job
      94   145.80     159.02      18.31   18276   1 pwsh
     101   163.30     222.05      29.00   35928   1 pwsh
 ```
+
+### Exemplo 4-fluxo de saída de trabalho para o host pai
+
+Usando o parâmetro **StreamingHost** , você pode dizer a um trabalho para direcionar toda a saída do host para um host específico. Sem esse parâmetro, a saída vai para a coleção de fluxo de dados de trabalho e não aparece em um console de host até que você receba a saída do trabalho.
+
+Para este exemplo, o host atual é passado para `Start-ThreadJob` usando a `$Host` variável automática.
+
+```powershell
+PS> Start-ThreadJob -ScriptBlock { Read-Host 'Say hello'; Write-Warning 'Warning output' } -StreamingHost $Host
+
+Id   Name   PSJobTypeName   State         HasMoreData     Location      Command
+--   ----   -------------   -----         -----------     --------      -------
+7    Job7   ThreadJob       NotStarted    False           PowerShell    Read-Host 'Say hello'; …
+
+PS> Say hello: Hello
+WARNING: Warning output
+PS> Receive-Job -Id 7
+Hello
+WARNING: Warning output
+PS>
+```
+
+Observe que o prompt de `Read-Host` é exibido e você pode digitar a entrada. Em seguida, a mensagem de `Write-Warning` é exibida. O `Receive-Job` cmdlet retorna toda a saída do trabalho.
 
 ## PARAMETERS
 

@@ -1,17 +1,16 @@
 ---
 description: Descreve os operadores que comparam valores no PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 01/16/2020
+ms.date: 12/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: b6076e20ad3ecbe9f2def157bb20bdb3bee5b7ad
-ms.sourcegitcommit: c9e56ec489522c706b8d6b8733f3f015d6d7e893
+ms.openlocfilehash: ba671ae51d458a2e0074a85d4de859795c20a3d5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93196467"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97069896"
 ---
 # <a name="about-comparison-operators"></a>Sobre operadores de comparação
 
@@ -26,7 +25,7 @@ O PowerShell inclui os seguintes operadores de comparação:
 
 | Tipo        | Operadores    | Descrição                                 |
 | ----------- | ------------ | --------------------------------------------|
-| Igualitário    | -eq          | igual a                                      |
+| Igualitário    | -eq          | equals                                      |
 |             | -ne          | Não é igual a                                  |
 |             | -gt          | maior que                                |
 |             | -ge          | maior ou igual                       |
@@ -80,13 +79,13 @@ As exceções são os operadores de confinamento, os operadores in e os operador
 > hello
 > ```
 
-### <a name="equality-operators"></a>Operadores de igualdade
+## <a name="equality-operators"></a>Operadores de igualdade
 
 Os operadores de igualdade ( `-eq` , `-ne` ) retornam um valor de true ou as correspondências quando um ou mais valores de entrada são idênticos ao padrão especificado. O padrão inteiro deve corresponder a um valor inteiro.
 
 Exemplo:
 
-#### <a name="-eq"></a>-eq
+### <a name="-eq"></a>-eq
 
 Descrição: igual a. Inclui um valor idêntico.
 
@@ -111,7 +110,7 @@ PS> "abc", "def" -eq "abc"
 abc
 ```
 
-#### <a name="-ne"></a>-ne
+### <a name="-ne"></a>-ne
 
 Descrição: diferente de. Inclui um valor diferente.
 
@@ -131,7 +130,7 @@ PS> "abc", "def" -ne "abc"
 def
 ```
 
-#### <a name="-gt"></a>-gt
+### <a name="-gt"></a>-gt
 
 Descrição: maior que.
 
@@ -148,7 +147,7 @@ PS> 7, 8, 9 -gt 8
 > [!NOTE]
 > Isso não deve ser confundido com `>` o operador maior que em muitas outras linguagens de programação. No PowerShell, `>` é usado para redirecionamento. Para obter mais informações, consulte [About_redirection](about_Redirection.md#potential-confusion-with-comparison-operators).
 
-#### <a name="-ge"></a>-ge
+### <a name="-ge"></a>-ge
 
 Descrição: maior que ou igual a.
 
@@ -163,7 +162,7 @@ PS> 7, 8, 9 -ge 8
 9
 ```
 
-#### <a name="-lt"></a>-lt
+### <a name="-lt"></a>-lt
 
 Descrição: menor que.
 
@@ -178,7 +177,7 @@ PS> 7, 8, 9 -lt 8
 7
 ```
 
-#### <a name="-le"></a>-le
+### <a name="-le"></a>-le
 
 Descrição: menor que ou igual a.
 
@@ -193,7 +192,7 @@ PS> 7, 8, 9 -le 8
 8
 ```
 
-### <a name="matching-operators"></a>Operadores correspondentes
+## <a name="matching-operators"></a>Operadores correspondentes
 
 Os operadores like ( `-like` e `-notlike` ) localizam elementos que correspondem ou não correspondem a um padrão especificado usando expressões curinga.
 
@@ -215,7 +214,7 @@ A sintaxe do é:
 <string[]> -notmatch <regular-expression>
 ```
 
-#### <a name="-like"></a>-like
+### <a name="-like"></a>-like
 
 Descrição: correspondência usando o caractere curinga ( \* ).
 
@@ -229,7 +228,7 @@ PS> "PowerShell", "Server" -like "*shell"
 PowerShell
 ```
 
-#### <a name="-notlike"></a>-notlike
+### <a name="-notlike"></a>-notlike
 
 Descrição: não corresponde usando o caractere curinga ( \* ).
 
@@ -259,7 +258,7 @@ PS> $Matches
 PS>
 ```
 
-Por outro lado, o comando a seguir envia uma única cadeia de caracteres para o `-match` operador. O `-match` operador retorna um valor booliano e popula a `$Matches` variável automática. A `$Matches` variável automática é uma **tabela de hash** . Se nenhum agrupamento ou captura for usado, apenas uma chave será populada.
+Por outro lado, o comando a seguir envia uma única cadeia de caracteres para o `-match` operador. O `-match` operador retorna um valor booliano e popula a `$Matches` variável automática. A `$Matches` variável automática é uma **tabela de hash**. Se nenhum agrupamento ou captura for usado, apenas uma chave será populada.
 A `0` chave representa todo o texto que foi correspondido. Para obter mais informações sobre agrupamento e captura usando expressões regulares, consulte [about_Regular_Expressions](about_Regular_Expressions.md).
 
 ```powershell
@@ -287,7 +286,7 @@ Name                           Value
 ```
 
 > [!IMPORTANT]
-> A `0` chave é um **número inteiro** . Você pode usar qualquer método de **Hashtable** para acessar o valor armazenado.
+> A `0` chave é um **número inteiro**. Você pode usar qualquer método de **Hashtable** para acessar o valor armazenado.
 >
 > ```powershell
 > PS> "Good Dog" -match "Dog"
@@ -322,7 +321,7 @@ Name                           Value
 0                              day
 ```
 
-#### <a name="-notmatch"></a>-Não correspondente
+### <a name="-notmatch"></a>-Não correspondente
 
 Descrição: não corresponde a uma cadeia de caracteres. Usa expressões regulares. Quando a entrada é escalar, ela popula a `$Matches` variável automática.
 
@@ -341,13 +340,13 @@ PS> "Sunday", "Monday" -notmatch "sun"
 Monday
 ```
 
-### <a name="containment-operators"></a>Operadores de confinamento
+## <a name="containment-operators"></a>Operadores de confinamento
 
 Os operadores de confinamento ( `-contains` e `-notcontains` ) são semelhantes aos operadores de igualdade. No entanto, os operadores de confinamento sempre retornam um valor booliano, mesmo quando a entrada é uma coleção.
 
 Além disso, ao contrário dos operadores de igualdade, os operadores de confinamento retornam um valor assim que detectam a primeira correspondência. Os operadores de igualdade avaliam todas as entradas e retornam todas as correspondências na coleção.
 
-#### <a name="-contains"></a>-contains
+### <a name="-contains"></a>-contains
 
 Descrição: operador de contenção. Informa se uma coleção de valores de referência inclui um único valor de teste. Sempre retorna um valor booliano. Retorna TRUE somente quando o valor de teste corresponde exatamente a pelo menos um dos valores de referência.
 
@@ -382,7 +381,7 @@ PS> $a, "ghi" -contains $a
 True
 ```
 
-#### <a name="-notcontains"></a>-notcontains
+### <a name="-notcontains"></a>-notcontains
 
 Descrição: operador de contenção. Informa se uma coleção de valores de referência inclui um único valor de teste. Sempre retorna um valor booliano. Retorna TRUE quando o valor de teste não é uma correspondência exata para pelo menos um dos valores de referência.
 
@@ -421,7 +420,7 @@ Tee
 Where
 ```
 
-#### <a name="-in"></a>-in
+### <a name="-in"></a>-in
 
 Descrição: no operador. Informa se um valor de teste aparece em uma coleção de valores de referência. Sempre retornar como valor booliano. Retorna TRUE somente quando o valor de teste corresponde exatamente a pelo menos um dos valores de referência.
 
@@ -458,7 +457,7 @@ PS> $thisComputer -in  $domainServers
 True
 ```
 
-#### <a name="-notin"></a>-notin
+### <a name="-notin"></a>-notin
 
 Descrição: informa se um valor de teste aparece em uma coleção de valores de referência. Sempre retorna um valor booliano. Retorna TRUE quando o valor de teste não é uma correspondência exata para pelo menos um dos valores de referência.
 
@@ -497,105 +496,96 @@ Tee
 Where
 ```
 
-### <a name="replacement-operator"></a>Operador de substituição
+## <a name="replacement-operator"></a>Operador de substituição
 
-O `-replace` operador substitui todo ou parte de um valor pelo valor especificado usando expressões regulares. Você pode usar o `-replace` operador para muitas tarefas administrativas, como renomear arquivos. Por exemplo, o comando a seguir altera as extensões de nome de arquivo de todos os arquivos. txt para. log:
+O `-replace` operador tem a seguinte sintaxe:
+
+`<input> -replace <original>, <substitute>`
+
+O `<original>` espaço reservado é uma expressão regular que corresponde aos caracteres a serem substituídos. O `<substitute>` espaço reservado é uma cadeia de caracteres literal que os substitui.
+
+O operador substitui todo ou parte de um valor pelo valor especificado usando expressões regulares. Você pode usar o operador para muitas tarefas administrativas, como renomear arquivos. Por exemplo, o comando a seguir altera as extensões de nome de arquivo de todos os `.txt` arquivos para `.log` :
 
 ```powershell
 Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 ```
 
-A sintaxe do `-replace` operador é a seguinte, em que o `<original>` espaço reservado representa os caracteres a serem substituídos e o `<substitute>` espaço reservado representa os caracteres que os substituirão:
-
-`<input> <operator> <original>, <substitute>`
+### <a name="case-sensitive-matches"></a>Correspondências diferenciando maiúsculas de minúsculas
 
 Por padrão, o `-replace` operador não diferencia maiúsculas de minúsculas. Para torná-lo sensível a maiúsculas e minúsculas, use `-creplace` . Para torná-lo explicitamente não diferencia maiúsculas de minúsculas, use `-ireplace` .
 
-Considere os seguintes exemplos:
+Considere os exemplos a seguir:
 
 ```powershell
 PS> "book" -replace "B", "C"
-```
-
-```Output
 Cook
 ```
 
 ```powershell
-"book" -ireplace "B", "C"
-```
-
-```Output
+PS> "book" -ireplace "B", "C"
 Cook
 ```
 
 ```powershell
-"book" -creplace "B", "C"
-```
-
-```Output
+PS> "book" -creplace "B", "C"
 book
 ```
 
-Também é possível usar expressões regulares para substituir texto dinamicamente usando grupos de captura e substituições. Para obter mais informações, consulte [about_Regular_Expressions](about_Regular_Expressions.md).
+### <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 
-#### <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
+Também é possível usar expressões regulares para substituir texto dinamicamente usando grupos de captura e substituições. Os grupos de captura podem ser referenciados na `<substitute>` cadeia de caracteres usando o caractere de cifrão ( `$` ) antes do identificador de grupo.
 
-Além disso, os grupos de captura podem ser referenciados na \<substitute\> cadeia de caracteres.
-Isso é feito usando o `$` caractere antes do identificador de grupo.
+Os grupos de captura podem ser referenciados por **número** ou **nome**
 
-Duas das maneiras de fazer referência a grupos de captura é por **número** e por **nome**
-
-- Por **número** , os -
-   grupos de captura são numerados da esquerda para a direita.
+- Por grupos de captura de **número** , são numerados da esquerda para a direita.
 
   ```powershell
-  "John D. Smith" -replace "(\w+) (\w+)\. (\w+)", '$1.$2.$3@contoso.com'
-  ```
-
-  ```Output
+  PS> "John D. Smith" -replace "(\w+) (\w+)\. (\w+)", '$1.$2.$3@contoso.com'
   John.D.Smith@contoso.com
   ```
 
-- Os grupos de captura de **nomes** -
-   também podem ser referenciados pelo nome.
+- Os grupos de captura de **nomes** também podem ser referenciados pelo nome.
 
   ```powershell
-  "CONTOSO\Administrator" -replace '\w+\\(?<user>\w+)', 'FABRIKAM\${user}'
-  ```
-
-  ```Output
-  FABRIKOM\Administrator
+  PS> "CONTOSO\Administrator" -replace '\w+\\(?<user>\w+)', 'FABRIKAM\${user}'
+  FABRIKAM\Administrator
   ```
 
 > [!WARNING]
-> Como o `$` caractere é usado na expansão da cadeia de caracteres, você precisará usar cadeias literais com substituição ou escapar o `$` caractere.
+> Como o `$` caractere é usado na expansão da cadeia de caracteres, você deve usar as cadeias de caracteres literais ou escapar o `$` caractere.
 >
 > ```powershell
-> 'Hello World' -replace '(\w+) \w+', "`$1 Universe"
-> ```
->
-> ```Output
+> PS> 'Hello World' -replace '(\w+) \w+', "`$1 Universe"
 > Hello Universe
 > ```
 >
-> Além disso, como o `$` caractere é usado na substituição, você precisará escapar de qualquer instância na cadeia de caracteres.
+> Além disso, como o `$` caractere é usado na substituição, você deve escapar de qualquer instância na cadeia de caracteres.
 >
 > ```powershell
-> '5.72' -replace '(.+)', '$$$1'
-> ```
->
-> ```Output
+> PS> '5.72' -replace '(.+)', '$$$1'
 > $5.72
 > ```
 
 Para saber mais, veja [about_Regular_Expressions](about_Regular_Expressions.md) e [substituições em expressões regulares](/dotnet/standard/base-types/substitutions-in-regular-expressions)
 
-### <a name="type-comparison"></a>Comparação de tipos
+### <a name="substituting-in-a-collection"></a>Substituindo em uma coleção
+
+Quando o `<input>` para o `-replace` operador é uma coleção, o PowerShell aplica a substituição a todos os valores na coleção. Por exemplo:
+
+```powershell
+"B1","B2","B3","B4","B5" -replace "B", 'a'
+a1
+a2
+a3
+a4
+a5
+```
+
+## <a name="type-comparison"></a>Comparação de tipos
 
 Os operadores de comparação de tipo ( `-is` e `-isnot` ) são usados para determinar se um objeto é um tipo específico.
 
-#### <a name="-is"></a>-é
+### <a name="-is"></a>-é
 
 Sintaxe:
 
@@ -612,7 +602,7 @@ PS> $a -is $b.GetType()
 False
 ```
 
-#### <a name="-isnot"></a>-IsNot
+### <a name="-isnot"></a>-IsNot
 
 Sintaxe:
 
@@ -629,7 +619,7 @@ PS> $b -isnot [int]
 True
 ```
 
-## <a name="see-also"></a>CONSULTE TAMBÉM
+## <a name="see-also"></a>Veja também
 
 - [about_Operators](about_Operators.md)
 - [about_Regular_Expressions](about_Regular_Expressions.md)
