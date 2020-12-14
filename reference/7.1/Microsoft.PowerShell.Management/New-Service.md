@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/25/2019
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 81920303d130a306674033b2b1ba57a3e71c949c
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 39c03ec53056c5ec8e2d68f9b71a17a6f4a8ea8a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94347424"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890409"
 ---
 # New-Service
 
@@ -38,7 +38,7 @@ Os parâmetros desse cmdlet permitem definir o nome de exibição, a descrição
 ### Exemplo 1: criar um serviço
 
 ```powershell
-New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+New-Service -Name "TestService" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
 ```
 
 Este comando cria um serviço chamado TestService.
@@ -48,7 +48,7 @@ Este comando cria um serviço chamado TestService.
 ```powershell
 $params = @{
   Name = "TestService"
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName = "Test Service"
   StartupType = "Manual"
@@ -83,7 +83,7 @@ Este exemplo adiciona o **SecurityDescriptor** do serviço que está sendo criad
 ```powershell
 $SDDL = "D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;SU)"
 $params = @{
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName "Test Service"
   StartupType = "Manual"
@@ -101,6 +101,12 @@ O **SecurityDescriptor** é armazenado na `$SDDLToSet` variável. O parâmetro *
 
 Especifica o caminho do arquivo executável para o serviço. Este parâmetro é necessário.
 
+O caminho totalmente qualificado para o arquivo binário do serviço. Se o caminho contiver um espaço, ele deverá estar entre aspas para que seja interpretado corretamente. Por exemplo, `d:\my share\myservice.exe` deve ser especificado como `'"d:\my share\myservice.exe"'` .
+
+O caminho também pode incluir argumentos para um serviço de início automático. Por exemplo, `'"d:\myshare\myservice.exe arg1 arg2"'`. Esses argumentos são passados para o ponto de entrada de serviço.
+
+Para obter mais informações, consulte o parâmetro **lpBinaryPathName** da API [CreateServiceW](/windows/win32/api/winsvc/nf-winsvc-createservicew) .
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -117,7 +123,7 @@ Accept wildcard characters: False
 
 Especifica a conta usada pelo serviço como a [conta de logon de serviço](/windows/desktop/ad/about-service-logon-accounts).
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , ou insira um objeto **PSCredential** , como um gerado pelo `Get-Credential` cmdlet. Se você digitar um nome de usuário, esse cmdlet solicitará uma senha.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, ou insira um objeto **PSCredential** , como um gerado pelo `Get-Credential` cmdlet. Se você digitar um nome de usuário, esse cmdlet solicitará uma senha.
 
 As credenciais são armazenadas em um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential) e a senha é armazenada como uma [SecureString](/dotnet/api/system.security.securestring).
 

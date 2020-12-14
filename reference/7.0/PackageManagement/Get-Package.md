@@ -7,17 +7,17 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: c6604b06f8ff971bc18d9811bd23b6932b9f414c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: bac0fe878a8dd370bda159d785740a4692ae6479
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192933"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890569"
 ---
 # Get-Package
 
 ## SINOPSE
-Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement** .
+Retorna uma lista de todos os pacotes de software que foram instalados com o **PackageManagement**.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
 
 ## DESCRIPTION
 
-O `Get-Package` cmdlet retorna uma lista de todos os pacotes de software no computador local que foram instalados com o **PackageManagement** . Você pode executar `Get-Package` em computadores remotos executando-o como parte de `Invoke-Command` um `Enter-PSSession` comando ou script.
+O `Get-Package` cmdlet retorna uma lista de todos os pacotes de software no computador local que foram instalados com o **PackageManagement**. Você pode executar `Get-Package` em computadores remotos executando-o como parte de `Invoke-Command` um `Enter-PSSession` comando ou script.
 
 ## EXEMPLOS
 
@@ -68,7 +68,7 @@ Esse comando obtém uma lista de pacotes que foram instalados pelo **PackageMana
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto, **Server01** . O parâmetro **Credential** especifica um domínio e um nome de usuário com permissões para executar comandos no computador. O parâmetro **scriptblock** executa o `Get-Package` cmdlet no computador remoto.
+`Invoke-Command` usa o parâmetro **ComputerName** para especificar um computador remoto, **Server01**. O parâmetro **Credential** especifica um domínio e um nome de usuário com permissões para executar comandos no computador. O parâmetro **scriptblock** executa o `Get-Package` cmdlet no computador remoto.
 
 ### Exemplo 3: obter pacotes para um provedor especificado
 
@@ -87,7 +87,7 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` usa o parâmetro **ProviderName** para especificar um provedor específico, **PowerShellGet** .
+`Get-Package` usa o parâmetro **ProviderName** para especificar um provedor específico, **PowerShellGet**.
 O parâmetro **todas as versões** exibe cada versão instalada.
 
 ### Exemplo 4: obter uma versão exata de um pacote específico
@@ -104,7 +104,7 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **PackageManagement** . O parâmetro **ProviderName** especifica o provedor, **PowerShellGet** . O parâmetro **-version obrigatório** especifica uma versão instalada.
+`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **PackageManagement**. O parâmetro **ProviderName** especifica o provedor, **PowerShellGet**. O parâmetro **-version obrigatório** especifica uma versão instalada.
 
 ### Exemplo 5: desinstalar um pacote
 
@@ -114,7 +114,7 @@ Este exemplo obtém informações do pacote e, em seguida, desinstala o pacote.
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **Posh-git** . O parâmetro **RequiredVersion** é uma versão específica do pacote. O objeto é enviado ao pipeline para o `Uninstall-Package` cmdlet. `Uninstall-Package` Remove o pacote.
+`Get-Package` usa o parâmetro **Name** para especificar o nome do pacote, **Posh-git**. O parâmetro **RequiredVersion** é uma versão específica do pacote. O objeto é enviado ao pipeline para o `Uninstall-Package` cmdlet. `Uninstall-Package` Remove o pacote.
 
 ## PARAMETERS
 
@@ -439,6 +439,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ## OBSERVAÇÕES
 
 A inclusão de um provedor de pacote em um comando pode tornar os parâmetros dinâmicos disponíveis para um cmdlet. Parâmetros dinâmicos são específicos para um provedor de pacote. O `Get-Help` cmdlet lista os conjuntos de parâmetros de um cmdlet e inclui o conjunto de parâmetros do provedor. Por exemplo, `Get-Package` tem o conjunto de parâmetros **PowerShellGet** que inclui `-NoPathUpdate` , `AllowClobber` e `SkipPublisherCheck` .
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 

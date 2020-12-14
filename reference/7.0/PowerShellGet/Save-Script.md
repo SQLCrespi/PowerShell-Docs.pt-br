@@ -7,12 +7,12 @@ ms.date: 07/02/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Script
-ms.openlocfilehash: 72c27ddbcdce935bdad3e424ebdf834b9a82a69c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 240bd1be4cd4a54fc667fade257e07d29434274d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192806"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891449"
 ---
 # Save-Script
 
@@ -357,6 +357,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ### System.Object
 
 ## OBSERVAÇÕES
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 

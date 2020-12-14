@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 99e065ccdc8b450fa770e4d5f35fb04c747da063
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f7c963b59a31b1b5edbf227e30415d6865cc14d7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193989"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891059"
 ---
 # Find-Package
 
@@ -85,7 +85,7 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core** . O parâmetro de **origem** especifica a pesquisa do pacote em **MyNuGet** .
+`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core**. O parâmetro de **origem** especifica a pesquisa do pacote em **MyNuGet**.
 
 ### Exemplo 3: localizar todas as versões de um pacote
 
@@ -106,7 +106,7 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` usa o parâmetro **Name** para especificar o pacote **NuGet. Core** . O parâmetro **ProviderName** especifica a pesquisa do pacote em **MyNuGet** . O **Subversion** especifica que todas as versões disponíveis são retornadas.
+`Find-Package` usa o parâmetro **Name** para especificar o pacote **NuGet. Core**. O parâmetro **ProviderName** especifica a pesquisa do pacote em **MyNuGet**. O **Subversion** especifica que todas as versões disponíveis são retornadas.
 
 ### Exemplo 4: localizar um pacote com um nome e uma versão específicos
 
@@ -122,7 +122,7 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core** . O parâmetro **ProviderName** especifica a pesquisa do pacote no **NuGet** . **RequiredVersion** especifica que somente a versão **2.9.0** é retornada.
+`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core**. O parâmetro **ProviderName** especifica a pesquisa do pacote no **NuGet**. **RequiredVersion** especifica que somente a versão **2.9.0** é retornada.
 
 ### Exemplo 5: localizar pacotes em um intervalo de versões
 
@@ -141,13 +141,13 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core** . O parâmetro **ProviderName** especifica a pesquisa do pacote no **NuGet** . **MinimumVersion** especifica a versão mais baixa **2.7.0** . **MaximumVersion** especifica a versão mais recente **2.9.0** .
+`Find-Package` usa o parâmetro **Name** para especificar o nome do pacote **NuGet. Core**. O parâmetro **ProviderName** especifica a pesquisa do pacote no **NuGet**. **MinimumVersion** especifica a versão mais baixa **2.7.0**. **MaximumVersion** especifica a versão mais recente **2.9.0**.
 As próprias **versões** determinam que o intervalo é retornado conforme especificado pelo mínimo e máximo.
 
 ### Exemplo 6: localizar um pacote de um sistema de arquivos
 
 Esse comando localiza pacotes com a extensão de arquivo `.nupkg` armazenada no computador local.
-Os arquivos são pacotes baixados de uma galeria, como o **NuGet** .
+Os arquivos são pacotes baixados de uma galeria, como o **NuGet**.
 
 ```
 PS> Find-Package -Source C:\LocalPkg
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -688,6 +688,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -703,4 +710,3 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 [Save-Package](Save-Package.md)
 
 [Uninstall-Package](Uninstall-Package.md)
-

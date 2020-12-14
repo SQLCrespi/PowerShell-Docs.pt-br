@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packageprovider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageProvider
-ms.openlocfilehash: b3414b9f34787cc5285475d9de784fd779bd1431
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 19a7020059f0a647d8460cfc9fb7f27a22605760
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193533"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890123"
 ---
 # Get-PackageProvider
 
@@ -62,7 +62,7 @@ Esse comando instala automaticamente o provedor de Chocolatey se o seu computado
 ### -Force
 
 Indica que esse cmdlet força todas as outras ações com esse cmdlet que podem ser forçadas.
-Em **Get-packageprovider** , isso significa que o parâmetro *Force* age da mesma forma que o parâmetro *ForceBootstrap* .
+Em **Get-packageprovider**, isso significa que o parâmetro *Force* age da mesma forma que o parâmetro *ForceBootstrap* .
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -142,6 +142,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ### Packageprovider []
 
 ## OBSERVAÇÕES
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 

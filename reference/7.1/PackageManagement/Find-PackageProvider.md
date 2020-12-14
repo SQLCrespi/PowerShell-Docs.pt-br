@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-packageprovider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-PackageProvider
-ms.openlocfilehash: 664e6064580f9212c25632a1146d1ac67f2308bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1a31fa29d9baa17f5bc1c2f48b9179c2ce071310
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193546"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890174"
 ---
 # Find-PackageProvider
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** .
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -275,9 +275,16 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ### Microsoft. PackageManagement. Packaging. SoftwareIdentity
 
 Esse cmdlet retorna um objeto **SoftwareIdentity** .
-Um objeto **SoftwareIdentity** pode ser canalizado para **install-packageprovider** para instalar os resultados de **Find-packageprovider** .
+Um objeto **SoftwareIdentity** pode ser canalizado para **install-packageprovider** para instalar os resultados de **Find-packageprovider**.
 
 ## OBSERVAÇÕES
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 
@@ -290,4 +297,3 @@ Um objeto **SoftwareIdentity** pode ser canalizado para **install-packageprovide
 [Register-PackageSource](Register-PackageSource.md)
 
 [Install-PackageProvider](Install-PackageProvider.md)
-

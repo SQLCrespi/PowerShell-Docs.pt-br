@@ -7,12 +7,12 @@ ms.date: 03/29/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packagesource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageSource
-ms.openlocfilehash: 81b6f94be6293733ec75d48b1f9dd7ac4f4f8d96
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8428f51c27cf52a7e0910a7b6c759e1f75b89339
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193532"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890106"
 ---
 # Get-PackageSource
 
@@ -38,7 +38,7 @@ Get-PackageSource [[-Name] <String>] [-Location <String>] [-Force] [-ForceBootst
 
 ## DESCRIPTION
 
-O `Get-PackageSource` cmdlet obtém uma lista de origens de pacote registradas com **PackageManagement** no computador local. Se você especificar um provedor de pacote, o `Get-PackageSource` obterá somente as fontes associadas ao provedor especificado. Caso contrário, o comando retorna todas as origens de pacote registradas com **PackageManagement** .
+O `Get-PackageSource` cmdlet obtém uma lista de origens de pacote registradas com **PackageManagement** no computador local. Se você especificar um provedor de pacote, o `Get-PackageSource` obterá somente as fontes associadas ao provedor especificado. Caso contrário, o comando retorna todas as origens de pacote registradas com **PackageManagement**.
 
 ## EXEMPLOS
 
@@ -90,7 +90,7 @@ LocalPackages        NuGet            False      C:\LocalPkg\
 MyNuget              NuGet            False      https://www.nuget.org/api/v2
 ```
 
-`Get-PackageProvider` usa o parâmetro **Name** para especificar o nome do provedor, **NuGet** . O objeto é enviado ao pipeline para `Get-PackageSource` .
+`Get-PackageProvider` usa o parâmetro **Name** para especificar o nome do provedor, **NuGet**. O objeto é enviado ao pipeline para `Get-PackageSource` .
 
 ## PARAMETERS
 
@@ -286,6 +286,13 @@ Especifica uma ou mais origens de pacote.
 
 ## OBSERVAÇÕES
 
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
 ## LINKS RELACIONADOS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -301,4 +308,3 @@ Especifica uma ou mais origens de pacote.
 [Set-PackageSource](Set-PackageSource.md)
 
 [Unregister-PackageSource](Unregister-PackageSource.md)
-

@@ -1,17 +1,16 @@
 ---
 description: Permite que você indique quais namespaces são usados na sessão.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: ff6b43c3af1deddb5cb1b4c2e2c86a2cc2cac5d4
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: b48cd85e200f44cdf9fdf278de78e07a918386c8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93196570"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891339"
 ---
 # <a name="about-using"></a>Sobre como usar o
 
@@ -26,7 +25,7 @@ As `using` instruções devem vir antes de qualquer outra instrução em um scri
 
 A `using` instrução não deve ser confundida com o `using:` modificador de escopo para variáveis. Para obter mais informações, consulte [about_Remote_Variables](about_Remote_Variables.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="namespace-syntax"></a>Sintaxe do namespace
 
 Para especificar os namespaces do .NET dos quais os tipos são resolvidos:
 
@@ -34,11 +33,32 @@ Para especificar os namespaces do .NET dos quais os tipos são resolvidos:
 using namespace <.NET-namespace>
 ```
 
+A especificação de um namespace torna mais fácil a referência de tipos por seus nomes curtos.
+
+## <a name="module-syntax"></a>Sintaxe do módulo
+
 Para carregar classes de um módulo do PowerShell:
 
 ```
 using module <module-name>
 ```
+
+O valor de `<module-name>` pode ser um nome de módulo, uma especificação de módulo completa ou um caminho para um arquivo de módulo.
+
+Quando `<module-name>` é um caminho, o caminho pode ser totalmente qualificado ou relativo. Um caminho relativo é resolvido em relação ao script que contém a instrução using.
+
+Quando `<module-name>` é uma especificação de nome ou módulo, o PowerShell pesquisa o **PSModulePath** para o módulo especificado.
+
+Uma especificação de módulo é uma tabela de hash que tem as seguintes chaves.
+
+- `ModuleName` - **Necessário** Especifica o nome do módulo.
+- `GUID` - **Opcional** Especifica o GUID do módulo.
+- Também é **necessário** especificar uma das três chaves abaixo. Essas chaves não podem ser usadas juntas.
+  - `ModuleVersion` -Especifica uma versão mínima aceitável do módulo.
+  - `RequiredVersion` -Especifica uma versão exata e necessária do módulo.
+  - `MaximumVersion` -Especifica a versão máxima aceitável do módulo.
+
+## <a name="assembly-syntax"></a>Sintaxe do assembly
 
 Para pré-carregar tipos de um assembly .NET:
 
@@ -46,8 +66,6 @@ Para pré-carregar tipos de um assembly .NET:
 using assembly <.NET-assembly-path>
 using assembly <.NET-namespace>
 ```
-
-A especificação de um namespace torna mais fácil a referência de tipos por seus nomes curtos.
 
 Carregar um assembly sobrecarrega os tipos .NET desse assembly em um script no momento da análise. Isso permite que você crie novas classes do PowerShell que usam tipos do assembly pré-carregado.
 

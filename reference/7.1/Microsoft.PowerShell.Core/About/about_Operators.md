@@ -6,12 +6,12 @@ ms.date: 10/28/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: a9c589aacfc64495ece2d461687d97f95d885353
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 6f1c87ff7d15190b88d46338b60100057b576f3f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483189"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889752"
 ---
 # <a name="about-operators"></a>Sobre operadores
 
@@ -96,7 +96,7 @@ No entanto, no PowerShell, há comportamentos adicionais.
   True
   ```
 
-- Quando usado como o primeiro segmento de um pipeline, o encapsulamento de um comando ou uma expressão em parênteses invariavelmente causa a _Enumeração_ do resultado da expressão. Se os parênteses encapsularem um _comando_ , ele será executado para conclusão com todas as saídas _coletadas na memória_ antes que os resultados sejam enviados por meio do pipeline.
+- Quando usado como o primeiro segmento de um pipeline, o encapsulamento de um comando ou uma expressão em parênteses invariavelmente causa a _Enumeração_ do resultado da expressão. Se os parênteses encapsularem um _comando_, ele será executado para conclusão com todas as saídas _coletadas na memória_ antes que os resultados sejam enviados por meio do pipeline.
 
 #### <a name="subexpression-operator--"></a>Operador de subexpressão `$( )`
 
@@ -544,9 +544,9 @@ ${a}?[0]
 > [!NOTE]
 > Como o PowerShell permite que `?` faça parte do nome da variável, é necessária uma especificação formal do nome da variável para usar esses operadores. Portanto, é necessário usar `{}` em torno dos nomes de variáveis, como `${a}` ou quando `?` faz parte do nome da variável `${a?}`.
 >
-> A sintaxe de nome de variável de `${<name>}` não deve ser confundida com o `$()` operador de subexpressão. Para obter mais informações, consulte a seção nome da variável de [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
+> A sintaxe de nome de variável de `${<name>}` não deve ser confundida com o `$()` operador de subexpressão. Para obter mais informações, consulte a seção nome da variável de [about_Variables](about_Variables.md#variable-names-that-include-special-characters).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [about_Arithmetic_Operators](about_Arithmetic_Operators.md)
 

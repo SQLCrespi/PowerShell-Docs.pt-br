@@ -7,12 +7,12 @@ ms.date: 10/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Module
-ms.openlocfilehash: 50f873e6691ead7c220b6250458f4fdf8a90af22
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 602d160a4cc7fd4e8a806d2c3d2772ee5053535d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194125"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889684"
 ---
 # Publish-Module
 
@@ -46,7 +46,7 @@ O `Publish-Module` cmdlet publica um módulo em uma galeria online baseada em Nu
 
 Quando você especifica um módulo por nome, `Publish-Module` o publica o primeiro módulo que seria encontrado executando `Get-Module -ListAvailable <Name>` . Se você especificar uma versão mínima de um módulo a ser publicado, `Publish-Module` o publicará o primeiro módulo com uma versão maior ou igual à versão mínima que você especificou.
 
-A publicação de um módulo requer metadados que são exibidos na página da galeria para o módulo. Os metadados necessários incluem o nome, a versão, a descrição e o autor do módulo. Embora a maioria dos metadados seja obtida do manifesto do módulo, alguns metadados devem ser especificados em `Publish-Module` parâmetros, como **tag** , **ReleaseNote** , **IconUri** , **ProjectUri** e **LicenseUri** , porque esses parâmetros correspondem aos campos em uma galeria baseada em NuGet.
+A publicação de um módulo requer metadados que são exibidos na página da galeria para o módulo. Os metadados necessários incluem o nome, a versão, a descrição e o autor do módulo. Embora a maioria dos metadados seja obtida do manifesto do módulo, alguns metadados devem ser especificados em `Publish-Module` parâmetros, como **tag**, **ReleaseNote**, **IconUri**, **ProjectUri** e **LicenseUri**, porque esses parâmetros correspondem aos campos em uma galeria baseada em NuGet.
 
 ## EXEMPLOS
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -Repositório
 
-Especifica o nome amigável de um repositório que foi registrado pela execução `Register-PSRepository` . O repositório deve ter um **PublishLocation** , que é um URI NuGet válido.
+Especifica o nome amigável de um repositório que foi registrado pela execução `Register-PSRepository` . O repositório deve ter um **PublishLocation**, que é um URI NuGet válido.
 O **PublishLocation** pode ser definido executando `Set-PSRepository` .
 
 ```yaml
@@ -378,7 +378,14 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 `Publish-Module` é executado no PowerShell 3,0 ou versões posteriores do PowerShell, no Windows 7 ou Windows 2008 R2 e versões posteriores do Windows.
 
-A publicação de um módulo requer metadados que são exibidos na página da galeria para o módulo. Os metadados necessários incluem o nome, a versão, a descrição e o autor do módulo. A maioria dos metadados é obtida do manifesto do módulo, mas alguns metadados podem ser especificados em `Publish-Module` parâmetros, como **tag** , **ReleaseNote** , **IconUri** , **ProjectUri** e **LicenseUri** . Para obter mais informações, veja [valores de manifesto de pacote que afetam a interface do usuário do Galeria do PowerShell](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui).
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
+
+A publicação de um módulo requer metadados que são exibidos na página da galeria para o módulo. Os metadados necessários incluem o nome, a versão, a descrição e o autor do módulo. A maioria dos metadados é obtida do manifesto do módulo, mas alguns metadados podem ser especificados em `Publish-Module` parâmetros, como **tag**, **ReleaseNote**, **IconUri**, **ProjectUri** e **LicenseUri**. Para obter mais informações, veja [valores de manifesto de pacote que afetam a interface do usuário do Galeria do PowerShell](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui).
 
 ## LINKS RELACIONADOS
 

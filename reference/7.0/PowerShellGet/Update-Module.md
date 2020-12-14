@@ -7,12 +7,12 @@ ms.date: 07/16/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Module
-ms.openlocfilehash: 29ba3907a349257f63e127739786ab6e210c0f82
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: dee60b0beae3f39642cbc1c388ffb79e687626b8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192868"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891117"
 ---
 # Update-Module
 
@@ -57,7 +57,7 @@ Este exemplo atualiza um módulo específico para a versão mais recente em uma 
 Update-Module -Name SpeculationControl
 ```
 
-`Update-Module` usa o parâmetro **Name** para atualizar um módulo específico, **SpeculationControl** .
+`Update-Module` usa o parâmetro **Name** para atualizar um módulo específico, **SpeculationControl**.
 
 ### Exemplo 3: exibir as execuções de Update-Module de hipóteses
 
@@ -84,7 +84,7 @@ Neste exemplo, um módulo é atualizado para uma versão específica. A versão 
 Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 ```
 
-`Update-Module` usa o parâmetro **Name** para especificar o módulo, **SpeculationControl** . O parâmetro **RequiredVersion** especifica a versão, **1.0.14** .
+`Update-Module` usa o parâmetro **Name** para especificar o módulo, **SpeculationControl**. O parâmetro **RequiredVersion** especifica a versão, **1.0.14**.
 
 ### Exemplo 5: atualizar um módulo sem confirmação
 
@@ -94,7 +94,7 @@ Este exemplo não solicita confirmação para atualizar o módulo para a versão
 Update-Module -Name SpeculationControl -Force
 ```
 
-`Update-Module` usa o parâmetro **Name** para especificar o módulo, **SpeculationControl** . O parâmetro **Force** atualiza o módulo sem solicitar a confirmação do usuário.
+`Update-Module` usa o parâmetro **Name** para especificar o módulo, **SpeculationControl**. O parâmetro **Force** atualiza o módulo sem solicitar a confirmação do usuário.
 
 ## PARAMETERS
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-Especifica a versão exata para a qual o módulo instalado existente será atualizado. A versão especificada por **RequiredVersion** deve existir na galeria online ou um erro é exibido. Se mais de um módulo for atualizado em um único comando, você não poderá usar **RequiredVersion** .
+Especifica a versão exata para a qual o módulo instalado existente será atualizado. A versão especificada por **RequiredVersion** deve existir na galeria online ou um erro é exibido. Se mais de um módulo for atualizado em um único comando, você não poderá usar **RequiredVersion**.
 
 ```yaml
 Type: System.String
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -Escopo
 
-Especifica o escopo de instalação do módulo. Os valores aceitáveis para esse parâmetro são **AllUsers** e **CurrentUser** . Se o **escopo** não for especificado, a atualização será instalada no escopo **CurrentUser** .
+Especifica o escopo de instalação do módulo. Os valores aceitáveis para esse parâmetro são **AllUsers** e **CurrentUser**. Se o **escopo** não for especificado, a atualização será instalada no escopo **CurrentUser** .
 
 O escopo **AllUsers** requer permissões elevadas e instala módulos em um local que pode ser acessado por todos os usuários do computador:
 
@@ -290,8 +290,8 @@ O **CurrentUser** não requer permissões elevadas e instala módulos em um loca
 
 Quando nenhum **escopo** é definido, o padrão é definido com base na versão do PowerShellGet.
 
-- No PowerShellGet versões 2.1.0 e superiores, o padrão é **CurrentUser** , que não requer elevação para a instalação.
-- Nas versões do PowerShellGet 1. x-2.0. x, o parâmetro de **escopo** não está disponível e o padrão é **AllUsers** , o que requer elevação para a instalação.
+- No PowerShellGet versões 2.1.0 e superiores, o padrão é **CurrentUser**, que não requer elevação para a instalação.
+- Nas versões do PowerShellGet 1. x-2.0. x, o parâmetro de **escopo** não está disponível e o padrão é **AllUsers**, o que requer elevação para a instalação.
 
 ```yaml
 Type: System.String
@@ -342,8 +342,15 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## OBSERVAÇÕES
 
-Para o PowerShell versão 6,0 e superior, o escopo de instalação padrão é sempre **CurrentUser** .
-Atualizações de módulo para **CurrentUser** , `$home\Documents\PowerShell\Modules` , não precisam de permissões elevadas. As atualizações de módulo para **AllUsers** , `$env:ProgramFiles\PowerShell\Modules` , precisam de permissões elevadas.
+Para o PowerShell versão 6,0 e superior, o escopo de instalação padrão é sempre **CurrentUser**.
+Atualizações de módulo para **CurrentUser**, `$home\Documents\PowerShell\Modules` , não precisam de permissões elevadas. As atualizações de módulo para **AllUsers**, `$env:ProgramFiles\PowerShell\Modules` , precisam de permissões elevadas.
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 `Update-Module` é executado no PowerShell 3,0 ou versões posteriores do PowerShell, no Windows 7 ou Windows 2008 R2 e versões posteriores do Windows.
 
@@ -363,4 +370,4 @@ Se `Update-Module` as tentativas de atualizar os binários que estão em uso, `U
 
 [Publish-Module](Publish-Module.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Desinstalar-módulo](Uninstall-Module.md)

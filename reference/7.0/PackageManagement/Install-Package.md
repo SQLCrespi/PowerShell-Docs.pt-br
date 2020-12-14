@@ -7,12 +7,12 @@ ms.date: 05/23/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/install-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Package
-ms.openlocfilehash: 506775bf4ef58244a04cb13c1cab926d112111bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 9778263a0a9d5db6924579c863419e87bb27ef71
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194656"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890259"
 ---
 # Install-Package
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Especifica uma conta de usuário que tem permissão para acessar o computador e executar comandos. Digite um nome de usuário, como **User01** , **Domínio01 \ Usuário01** ou insira um objeto **PSCredential** , gerado pelo `Get-Credential` cmdlet. Se você digitar um nome de usuário, você será solicitado a fornecer uma senha.
+Especifica uma conta de usuário que tem permissão para acessar o computador e executar comandos. Digite um nome de usuário, como **User01**, **Domínio01 \ Usuário01** ou insira um objeto **PSCredential** , gerado pelo `Get-Credential` cmdlet. Se você digitar um nome de usuário, você será solicitado a fornecer uma senha.
 
 Quando o parâmetro **Credential** não for especificado, `Install-Package` o usará o usuário atual.
 
@@ -812,6 +812,13 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ## OBSERVAÇÕES
 
 A inclusão de um provedor de pacote em um comando pode tornar os parâmetros dinâmicos disponíveis para um cmdlet. Parâmetros dinâmicos são específicos para um provedor de pacote. O `Get-Help` cmdlet lista os conjuntos de parâmetros de um cmdlet e inclui o conjunto de parâmetros do provedor. Por exemplo, `Install-Package` tem o conjunto de parâmetros **PowerShellGet** que inclui `-NoPathUpdate` , `AllowClobber` e `SkipPublisherCheck` .
+
+> [!IMPORTANT]
+> A partir de abril de 2020, o Galeria do PowerShell não dá mais suporte às versões 1,0 e 1,1 da segurança da camada de transporte (TLS). Se você não estiver usando o TLS 1,2 ou superior, receberá um erro ao tentar acessar o Galeria do PowerShell. Use o comando a seguir para garantir que você esteja usando o TLS 1,2:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Para obter mais informações, consulte o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.
 
 ## LINKS RELACIONADOS
 
