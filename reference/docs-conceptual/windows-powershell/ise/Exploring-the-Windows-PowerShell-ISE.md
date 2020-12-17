@@ -2,14 +2,14 @@
 ms.date: 01/02/2020
 title: Explorando o ISE do Windows PowerShell
 description: Este artigo é uma visão geral dos recursos do ISE do Windows PowerShell
-ms.topic: landing-page
+ms.topic: conceptual
 ms.custom: ISE-F1-page
-ms.openlocfilehash: 4ef3f471f11c2f1de818491a193fcf34201cb04a
-ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
+ms.openlocfilehash: 91161763c817972a62b4da1558a7ca119d8c8616
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93296362"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090439"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorando o ISE do Windows PowerShell
 
@@ -17,7 +17,7 @@ Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell para 
 
 ## <a name="menu-bar"></a>Barra de menu
 
-A barra de menus contém os menus **Arquivo** , **Editar** , **Exibir** , **Ferramentas** , **Depurar** , **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](object-model/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
+A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à escrita e execução de scripts e execução de comandos no ISE do Windows PowerShell. Além disso, é possível colocar uma [ferramenta complementar](object-model/The-ISEAddOnTool-Object.md) na barra de menus executando os scripts que usam a [hierarquia de modelo de objeto do ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
 
 ## <a name="windows-powershell-tabs"></a>Guias do Windows PowerShell
 
@@ -79,7 +79,8 @@ Aumenta ou diminui o tamanho do texto na tela.
 
 ## <a name="help"></a>Ajuda
 
-A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla <kbd>F1</kbd> em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console. No menu **Ajuda** , você também pode executar o cmdlet `Update-Help` e exibir a janela Comando, que auxilia na construção de comandos mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
+A Ajuda para o ISE do Windows PowerShell está disponível em docs.microsoft.com. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla <kbd>F1</kbd> em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console.
+No menu **Ajuda**, você também pode executar o cmdlet `Update-Help` e exibir a janela Comando, que auxilia na construção de comandos mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
 
 ## <a name="see-also"></a>Consulte Também
 

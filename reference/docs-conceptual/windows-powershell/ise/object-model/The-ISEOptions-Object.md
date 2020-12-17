@@ -2,16 +2,16 @@
 ms.date: 12/31/2019
 title: O objeto ISEOptions
 description: O objeto ISEOptions representa várias configurações para o ISE do Windows PowerShell.
-ms.openlocfilehash: 4f790550796f40c7a2d4882cc0444fa7a55eeee9
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 9823a4a0ea32420d830735a0a61a6c03a6458fb7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661020"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391503"
 ---
 # <a name="the-iseoptions-object"></a>O objeto ISEOptions
 
-O objeto **ISEOptions** representa várias configurações para o ISE do Windows PowerShell. Ele é uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEOptions** .
+O objeto **ISEOptions** representa várias configurações para o ISE do Windows PowerShell. Ele é uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEOptions**.
 
 O objeto **ISEOptions** fornece os seguintes métodos e propriedades.
 
@@ -82,7 +82,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 
 Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE. Para versões posteriores, consulte [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
-Especifica a cor da tela de fundo para o painel de comando. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo para o painel de comando. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Command pane to orange.
@@ -104,7 +104,7 @@ $psISE.Options.CommandPaneUp  = $true
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-Especifica a cor da tela de fundo do painel de Console. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo do painel de Console. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Console pane to red.
@@ -152,7 +152,7 @@ $psISE.Options.ConsoleTokenColors["Keyword"] = 'magenta'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor da tela de fundo para o texto de depuração que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo para o texto de depuração que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for the debug text that appears in the Console pane to blue.
@@ -163,7 +163,7 @@ $psISE.Options.DebugBackgroundColor = '#0000FF'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor de primeiro plano para o texto de depuração que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor de primeiro plano para o texto de depuração que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for the debug text that appears in the Console pane to yellow.
@@ -223,7 +223,7 @@ IntellisenseTimeoutInSeconds              : 3
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor da tela de fundo para o texto de erro que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo para o texto de erro que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for the error text that appears in the Console pane to black.
@@ -234,7 +234,7 @@ $psISE.Options.ErrorBackgroundColor = 'black'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor de primeiro plano para o texto de erro que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color** .
+Especifica a cor de primeiro plano para o texto de erro que aparece no painel de Console. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for the error text that appears in the console pane to green.
@@ -279,7 +279,7 @@ $psISE.Options.IntellisenseTimeoutInSeconds = 5
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-Especifica o número de arquivos abertos recentemente que o ISE do Windows PowerShell acompanha e exibe na parte inferior do menu **Abrir Arquivo** . O valor padrão é 10. O valor é um inteiro.
+Especifica o número de arquivos abertos recentemente que o ISE do Windows PowerShell acompanha e exibe na parte inferior do menu **Abrir Arquivo**. O valor padrão é 10. O valor é um inteiro.
 
 ```powershell
 # Changes the number of recently used files that appear at the bottom of the File Open menu to 5.
@@ -290,7 +290,7 @@ $psISE.Options.MruCount = 5
 
 Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE. Para versões posteriores, consulte [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
-A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo para o Painel de saída em si. É uma instância da classe **System.Windows.Media.Color** .
+A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo para o Painel de saída em si. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color of the Output pane to gold.
@@ -323,7 +323,7 @@ $psISE.Options.OutputPaneTextBackgroundColor = 'pink'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo dos arquivos. É uma instância da classe **System.Windows.Media.Color** .
+A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo dos arquivos. É uma instância da classe **System.Windows.Media.Color**.
 
 ```powershell
 # Sets the color of the script pane background to yellow.
@@ -492,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
-Especifica se a Ajuda instalada localmente ou a Ajuda da biblioteca do TechNet online aparece quando você pressiona <kbd>F1</kbd> com o cursor posicionado em uma palavra-chave. Se definida como `$true`, uma janela pop-up mostra o conteúdo da Ajuda instalada localmente. Você pode instalar os arquivos de Ajuda, executando o comando `Update-Help`. Se definida como `$false`, seu navegador abrirá uma página na biblioteca do TechNet.
+Especifica se a Ajuda instalada localmente ou a Ajuda online aparece quando você pressiona <kbd>F1</kbd> com o cursor posicionado em uma palavra-chave. Se definida como `$true`, uma janela pop-up mostra o conteúdo da Ajuda instalada localmente. Você pode instalar os arquivos de Ajuda, executando o comando `Update-Help`. Se definida como `$false`, seu navegador abrirá uma página em docs.microsoft.com.
 
 ```powershell
 # Sets the option for the online help to be displayed.
@@ -505,7 +505,7 @@ $psISE.Options.UseLocalHelp = $true
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor da tela de fundo para o texto detalhado que aparece no painel de Console. É um objeto **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo para o texto detalhado que aparece no painel de Console. É um objeto **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for verbose text to blue.
@@ -516,7 +516,7 @@ $psISE.Options.VerboseBackgroundColor ='#0000FF'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor de primeiro plano para o texto detalhado que aparece no painel de Console. É um objeto **System.Windows.Media.Color** .
+Especifica a cor de primeiro plano para o texto detalhado que aparece no painel de Console. É um objeto **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for verbose text to yellow.
@@ -527,7 +527,7 @@ $psISE.Options.VerboseForegroundColor = 'yellow'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor da tela de fundo para o texto de aviso que aparece no painel de Console. É um objeto **System.Windows.Media.Color** .
+Especifica a cor da tela de fundo para o texto de aviso que aparece no painel de Console. É um objeto **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the background color for warning text to blue.
@@ -538,7 +538,7 @@ $psISE.Options.WarningBackgroundColor = '#0000FF'
 
 Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
-Especifica a cor de primeiro plano para o texto detalhado que aparece no painel de Saída. É um objeto **System.Windows.Media.Color** .
+Especifica a cor de primeiro plano para o texto detalhado que aparece no painel de Saída. É um objeto **System.Windows.Media.Color**.
 
 ```powershell
 # Changes the foreground color for warning text to yellow.

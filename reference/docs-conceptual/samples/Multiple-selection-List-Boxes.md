@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Caixas de listagem de seleção múltipla
 description: Este artigo mostra como criar um controle de caixa de listagem de seleção múltipla usando os recursos de criação de formulário do .NET Framework no Windows PowerShell.
-ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 2724188695f054d1115b385987cda8a578c102de
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500276"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391520"
 ---
 # <a name="multiple-selection-list-boxes"></a>Caixas de listagem de seleção múltipla
 
@@ -74,7 +74,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms** . Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form** , que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
+O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**. Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -86,7 +86,8 @@ Depois de criar uma instância da classe Form, atribua valores a três proprieda
 
 - **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário de 300 pixels de largura por 200 pixels de altura.
 
-- **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente. Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen** , você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
+- **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente.
+  Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -94,7 +95,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK** . Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
+Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK**. Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -128,7 +129,7 @@ $label.Text = 'Please make a selection from the list below:'
 $form.Controls.Add($label)
 ```
 
-Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo. Há muitos outros controles que você pode aplicar além de caixas de texto. Para ver mais controles, consulte [Namespace System.Windows.Forms](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) no MSDN.
+Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo. Há muitos outros controles que você pode aplicar além de caixas de texto. Para ver mais controles, confira [Namespace System.Windows.Forms](/dotnet/api/system.windows.forms).
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.Listbox
@@ -171,7 +172,7 @@ Adicione a seguinte linha de código para exibir o formulário do Windows.
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter** .
+Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter**.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -183,6 +184,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Gerador de script de fim de semana:  exemplos de como corrigir a GUI do PowerShell](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [Gerador de script de fim de semana: exemplos de como corrigir a GUI do PowerShell](https://devblogs.microsoft.com/scripting/weekend-scripter-fixing-powershell-gui-examples/)
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla – E muito mais!](https://technet.microsoft.com/library/ff730950.aspx)
+- [Dica da semana para o Windows PowerShell: caixas de listagem de seleção múltipla e muito mais!](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730950(v=technet.10))

@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/20/2020
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
 description: Este tópico explica como começar a usar a Configuração de Estado Desejado (DSC) do PowerShell para Linux.
-ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92651119"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514993"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
@@ -24,7 +24,7 @@ Há suporte para as seguintes versões de sistema operacional do Linux no DSC pa
 - Oracle Linux 5, 6 e 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 e 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 e 12 (x86/x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS (x86/x64)
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS, 18.04 (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Instalando a DSC para Linux
 
@@ -45,7 +45,7 @@ Execute o seguinte comando para instalar a OMI em um sistema CentOS 7 x64.
 
 ### <a name="installing-dsc"></a>Instalando a DSC
 
-A DSC para Linux está disponível para download no repositório [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) do repositório.
+A DSC para Linux está disponível para download no repositório [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-926) do repositório.
 
 Para instalar a DSC, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 

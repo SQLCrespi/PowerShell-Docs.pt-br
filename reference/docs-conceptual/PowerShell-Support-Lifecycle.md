@@ -1,13 +1,13 @@
 ---
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte para o PowerShell
-ms.date: 03/09/2020
-ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.date: 11/11/2020
+ms.openlocfilehash: f2a1df0fabdfb624db666d240172930dc60f1bfe
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501738"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810378"
 ---
 # <a name="powershell-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell
 
@@ -29,24 +29,6 @@ Uma versão atual é uma versão que ocorre entre as versões de LTS. As versõe
 > [!IMPORTANT]
 > Você deve ter a atualização de patch mais recente instalada para se qualificar para o suporte. Por exemplo, se você estiver executando o PowerShell 7.0 e o 7.0.1 foi lançado, será necessário atualizar para o 7.0.1 para se qualificar para suporte.
 
-## <a name="lifecycle-of-powershell-core-6x"></a>Ciclo de vida do PowerShell Core 6.x
-
-O PowerShell Core usado na [Política de ciclo de vida moderna da Microsoft][modern]. Esse ciclo de vida do suporte destina-se a manter os clientes atualizados com as versões mais recentes.
-
-O branch da versão 6.x do PowerShell Core foi atualizado aproximadamente a cada seis meses (por exemplo: 6.0, 6.1, 6.2 etc.). No entanto, com o lançamento do PowerShell 7, não haverá mais versões secundárias da 6.x. O PowerShell 6.2.x continuará recebendo atualizações de serviço e ainda terá suporte.
-
-> [!IMPORTANT]
-> Você deve atualizar em seis meses após cada novo lançamento de versão secundária para continuar a receber suporte.
-
-Por exemplo, se o PowerShell Core 6.1 for liberado em 1º de julho de 2018, espera-se que você atualize para o PowerShell Core 6.1 até 1º de janeiro de 2019 para manter o suporte.
-
-> [!IMPORTANT]
-> Você deve atualizar em 30 dias após cada novo lançamento de versão de patch para continuar a receber suporte.
-
-Por exemplo, se você está executando o PowerShell Core 6.1 e o 6.1.3 foi lançado em 19 de fevereiro de 2019, é esperado que você atualize para o PowerShell Core 6.1.3 até 21 de março de 2019, que é 30 dias após o lançamento, para manter o suporte. Se qualquer correção for considerada necessária, ela será lançada na nossa próxima atualização cumulativa.
-
-A política de ciclo de vida moderna também requer que a Microsoft forneça aos clientes um aviso 12 meses antes de interromper o suporte para um produto (ou seja, o PowerShell Core).
-
 ## <a name="supported-platforms"></a>Plataformas compatíveis
 
 Para confirmar se a plataforma e a versão do PowerShell Core têm suporte oficial, confira a tabela a seguir.
@@ -55,55 +37,58 @@ Nossa comunidade também contribuiu com pacotes para algumas plataformas, mas el
 
 As plataformas listadas como `Experimental` não têm suporte oficial, mas estão disponíveis para experimentação e comentários.
 
-| Plataforma                                          |      6.2      |    7.0    |
-| ------------------------------------------------- | :-----------: | :-------: |
-| Windows 8.1 e 10                               |   Com suporte   | Com suporte |
-| Windows Server 2012 R2 e 2016                      |   Com suporte   | Com suporte |
-| [Canal Semestral do Windows Server][semi-annual] |   Com suporte   | Com suporte |
-| Ubuntu 16.04 e 18.04                            |   Com suporte   | Com suporte |
-| Ubuntu 19.10 (via pacote Snap)                   |   Comunidade   | Comunidade |
-| Ubuntu 20.04 (via pacote Snap)                   |   Comunidade   | Comunidade |
-| Debian 9                                          |   Com suporte   | Com suporte |
-| Debian 10                                         | Sem suporte | Com suporte |
-| CentOS 7                                          |   Com suporte   | Com suporte |
-| CentOS 8                                          | Sem suporte | Com suporte |
-| Red Hat Enterprise Linux 7                        |   Com suporte   | Com suporte |
-| Red Hat Enterprise Linux 8                        | Sem suporte | Com suporte |
-| Fedora 30                                         | Sem suporte | Com suporte |
-| Alpine 3.8                                        |   Veja a observação    | Veja a observação  |
-| Alpine 3.9 e 3.10                               | Sem suporte | Veja a observação  |
-| macOS 10.12+                                      |   Com suporte   | Com suporte |
-| Arch                                              |   Comunidade   | Comunidade |
-| Raspbian                                          |   Comunidade   | Comunidade |
-| Kali                                              |   Comunidade   | Comunidade |
-| AppImage (funciona em várias plataformas Linux)      |   Comunidade   | Comunidade |
-| [Pacote Snap](https://snapcraft.io/powershell)   |   Consultar a observação    | Consultar a observação  |
+<!-- TODO: update OS list -->
+
+|                     Plataforma                      |      7.0      |      7.1      |
+| ------------------------------------------------- | :-----------: | :-----------: |
+| Windows 8.1 e 10                               |   Com suporte   |   Com suporte   |
+| Windows Server 2012 R2, 2016, 2019                |   Com suporte   |   Com suporte   |
+| [Canal Semestral do Windows Server][semi-annual] |   Com suporte   |   Com suporte   |
+| Ubuntu 16.04, 18.04                               |   Com suporte   |   Com suporte   |
+| Ubuntu 20.04                                      | Sem suporte |   Com suporte   |
+| Ubuntu 19.10, 20.10 (via pacote Snap)            |   Comunidade   |   Com suporte   |
+| Debian 9                                          |   Com suporte   |   Com suporte   |
+| Debian 10                                         |   Com suporte   |   Com suporte   |
+| CentOS 7                                          |   Com suporte   |   Com suporte   |
+| CentOS 8                                          |   Com suporte   |   Com suporte   |
+| Red Hat Enterprise Linux 7                        |   Com suporte   |   Com suporte   |
+| Red Hat Enterprise Linux 8                        |   Com suporte   |   Com suporte   |
+| Fedora 31+                                        |   Com suporte   | Sem suporte |
+| Alpine 3.10                                       |   Confira a observação 1  | Sem suporte |
+| Alpine 3.11+                                      |   Confira a observação 1  |   Confira a observação 1  |
+| macOS 10.13 ou posterior                                      |   Com suporte   |   Com suporte   |
+| Arch                                              |   Comunidade   |   Comunidade   |
+| Raspbian                                          |   Comunidade   |   Comunidade   |
+| Kali                                              |   Comunidade   |   Comunidade   |
+| AppImage (funciona em várias plataformas Linux)      |   Comunidade   |   Comunidade   |
+| [Pacote Snap](https://snapcraft.io/powershell)   |   Confira a observação 2  |   Consultar a observação    |
 
 > [!NOTE]
-> Os pacotes Snap têm suporte da mesma forma que a distribuição na qual você está executando o pacote.
-
-> [!NOTE]
-> O modelo CIM, a comunicação remota do PowerShell e a DSC não são compatíveis com o Alpine.
+> - 1 - O modelo CIM, a comunicação remota do PowerShell e a DSC não são compatíveis com o Alpine.
+> - 2 - Os pacotes Snap têm suporte da mesma forma que a distribuição na qual você está executando o pacote.
 
 ## <a name="powershell-releases-end-of-life"></a>Fim da vida útil das versões do PowerShell
 
 Com base no [Ciclo de vida do PowerShell](#lifecycle-of-powershell-7), a tabela a seguir lista as datas em que várias versões não receberão mais suporte.
 
-| Versão |    Fim da vida útil     |
-| :-----: | ------------------ |
-|   7.0   | 3 de dezembro de 2022   |
-|   6.2   | 4 de setembro de 2020  |
-|   6.1   | 28 de setembro de 2019 |
-|   6,0   | 13 de fevereiro de 2019  |
+| Versão |          Fim da vida útil           |
+| :-----: | ------------------------------ |
+|   7.1   | Meados de fevereiro de 2022 (projeção) |
+|   7.0   | 3 de dezembro de 2022               |
+|   6.2   | 4 de setembro de 2020              |
+|   6.1   | 28 de setembro de 2019             |
+|   6,0   | 13 de fevereiro de 2019              |
 
 > [!NOTE]
-> Este documento trata do suporte para o PowerShell Core 6 e o PowerShell 7. O Windows PowerShell (1.0 – 5.1) é um componente do sistema operacional Windows. Os componentes recebem o mesmo suporte que seu produto ou plataforma pai. Para saber mais, confira [Informações do ciclo de vida de produtos e serviços](/lifecycle/products/).
+> Este documento trata do suporte para o PowerShell Core. O Windows PowerShell (1.0 – 5.1) é um componente do sistema operacional Windows. Os componentes recebem o mesmo suporte que seu produto ou plataforma pai. Para saber mais, confira [Informações do ciclo de vida de produtos e serviços](/lifecycle/products/).
 
 ## <a name="unsupported-platforms"></a>Plataformas sem suporte
 
 Quando uma versão de plataforma atingir o final da vida, conforme definido pelo proprietário da plataforma, o PowerShell Core também encerrará o suporte dessa versão de plataforma. Os pacotes liberados anteriormente continuarão disponíveis para clientes que precisam de acesso, mas suporte formal e atualizações de qualquer tipo não serão fornecidos.
 
 Portanto, os proprietários de distribuição encerraram o suporte para as versões a seguir, que não têm mais suporte.
+
+<!-- TODO: Update this table Jason-->
 
 |    Plataforma    | Versão |                                                         Fim de vida                                                          |
 | -------------- | :-----: | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -156,16 +141,17 @@ A tabela a seguir descreve os recursos que atendem aos critérios de manutençã
 
 A tabela a seguir contém uma linha do tempo das principais versões do PowerShell. Esta tabela é fornecida para referência histórica. Ela não se destina ao uso para determinar o ciclo de vida do suporte.
 
-|       Versão        | Data de lançamento |                                                                     Observação                                                                      |
-| -------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| PowerShell 7.0 (LTS) |   Março de 2020   | Criado no .NET Core 3.1 (LTS)                                                                                                                  |
-| PowerShell 6.0       |   Janeiro de 2018   | Primeira versão, criada no .NET Core 2.1. Instalável no Windows, Linux e macOS.                                                              |
-| PowerShell 5.1       |   Agosto de 2016   | Lançado na Atualização de Aniversário do Windows 10 e no Windows Server 2016                                                                             |
-| PowerShell 5.0       |   Fevereiro de 2016   | Lançado no WMF (Windows Management Framework) 5.0                                                                                            |
-| PowerShell 4.0       |   Outubro de 2013   | Integrado no Windows 8.1 e no Windows Server 2012 R2. Instalável no Windows 7 SP1, Windows Server 2008 R2 SP1 e Windows Server 2012. |
-| PowerShell 3.0       |   Outubro de 2012   | Integrado no Windows 8 e no Windows Server 2012. Instalável no Windows 7 SP1, Windows Server 2008 SP1 e Windows Server 2008 R2 SP1.  |
-| PowerShell 2.0       |   Julho de 2009   | Integrado no Windows 7 e no Windows Server 2008 R2. Instalável no Windows XP SP3, Windows Server 2003 SP2 e Windows Vista SP1.            |
-| PowerShell 1.0       |   Novembro de 2006   | Instalável no Windows XP SP2, Windows Server 2003 SP1 e Windows Vista. Componente opcional do Windows Server 2008.                          |
+|         Versão          | Data de lançamento |                                                                     Observação                                                                      |
+| ------------------------ | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| PowerShell 7.1 (atual) |   Novembro de 2020   | Criado no .NET Core 5.0 (atual)                                                                                                              |
+| PowerShell 7.0 (LTS)     |   Março de 2020   | Criado no .NET Core 3.1 (LTS)                                                                                                                  |
+| PowerShell 6.0           |   Janeiro de 2018   | Primeira versão, criada no .NET Core 2.1. Instalável no Windows, Linux e macOS.                                                              |
+| PowerShell 5.1           |   Agosto de 2016   | Lançado na Atualização de Aniversário do Windows 10 e no Windows Server 2016                                                                             |
+| PowerShell 5.0           |   Fevereiro de 2016   | Lançado no WMF (Windows Management Framework) 5.0                                                                                            |
+| PowerShell 4.0           |   Outubro de 2013   | Integrado no Windows 8.1 e no Windows Server 2012 R2. Instalável no Windows 7 SP1, Windows Server 2008 R2 SP1 e Windows Server 2012. |
+| PowerShell 3.0           |   Outubro de 2012   | Integrado no Windows 8 e no Windows Server 2012. Instalável no Windows 7 SP1, Windows Server 2008 SP1 e Windows Server 2008 R2 SP1.  |
+| PowerShell 2.0           |   Julho de 2009   | Integrado no Windows 7 e no Windows Server 2008 R2. Instalável no Windows XP SP3, Windows Server 2003 SP2 e Windows Vista SP1.            |
+| PowerShell 1.0           |   Novembro de 2006   | Instalável no Windows XP SP2, Windows Server 2003 SP1 e Windows Vista. Componente opcional do Windows Server 2008.                          |
 
 <!-- hyperlink references -->
 [suporte pago]: https://support.microsoft.com/hub/4343728/support-for-business

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Introdução à Galeria do PowerShell
 description: Este artigo explica como começar a usar a Galeria do PowerShell e os cmdles PowerShellGet
-ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a5045e4ecee2eb8bc9aa373a6b8ec3a940b4de33
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661411"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913264"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
@@ -89,11 +89,15 @@ De forma semelhante, para descobrir quais scripts você instalou da Galeria do P
 
 O Galeria do PowerShell usa os nomes do host a seguir.
 
-- `psg-prod-eastus.azureedge.net` – o nome do host CDN
-- `devopsgallerystorage.blob.core.windows.net` – o nome do host da conta de armazenamento
-- `*.powershellgallery.com` – o site
+- `psg-prod-eastus.azureedge.net` – nome do host CDN
+- `az818661.vo.msecnd.net` – nome do host CDN
+- `devopsgallerystorage.blob.core.windows.net` – nome do host da conta de armazenamento
+- `*.powershellgallery.com` – site
+- `go.microsoft.com` – serviço de redirecionamento
 
 Esses nomes do host devem ser adicionados às listas de permissões que controlam o acesso da sua rede.
+
+[!INCLUDE [TLS 1.2 Requirement](../../includes/tls-gallery.md)]
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

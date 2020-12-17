@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Perguntas frequentes sobre a Galeria do PowerShell
 description: Perguntas frequentes sobre a Galeria do PowerShell
-ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 52c89d570041e1fce3466f574af7de25f05ec4c5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92654158"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389885"
 ---
 # <a name="frequently-asked-questions-about-the-powershell-gallery"></a>Perguntas frequentes sobre a Galeria do PowerShell
 
@@ -17,14 +17,14 @@ Um módulo do PowerShell é um pacote reutilizável que contém algumas funciona
 
 ## <a name="what-is-a-powershell-script"></a>O que é um script do PowerShell?
 
-Um script do PowerShell é uma série de comandos que são armazenados em um arquivo .ps1 para habilitar o compartilhamento e a reutilização. Fluxos de trabalho do PowerShell também são scripts do PowerShell, que descrevem um conjunto de tarefas e fornecem o sequenciamento dessas tarefas. Para obter mais informações, visite [Introdução ao fluxo de trabalho do PowerShell](https://technet.microsoft.com/library/jj134242.aspx).
+Um script do PowerShell é uma série de comandos que são armazenados em um arquivo .ps1 para habilitar o compartilhamento e a reutilização. Fluxos de trabalho do PowerShell também são scripts do PowerShell, que descrevem um conjunto de tarefas e fornecem o sequenciamento dessas tarefas. Para obter mais informações, visite [Introdução ao fluxo de trabalho do PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11)).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>Qual é a diferença entre os scripts e os módulos do PowerShell?
 
 Normalmente, os módulos são melhores para compartilhamento, mas nós estamos habilitando o compartilhamento de scripts para facilitar que você contribua com fluxos de trabalho e scripts para a comunidade. Para obter mais informações, consulte os blogs a seguir:
 
-- [Don't Write Scripts, Write PowerShell Modules (Não escreva scripts, escreva módulos do PowerShell)](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [Understanding PowerShell Modules (Entendendo os módulos do PowerShell)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [Don't Write Scripts, Write PowerShell Modules (Não escreva scripts, escreva módulos do PowerShell)](https://devblogs.microsoft.com/scripting/dont-write-scripts-write-powershell-modules/)
+- [Understanding PowerShell Modules (Entendendo os módulos do PowerShell)](https://devblogs.microsoft.com/scripting/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>How can I publish to the PowerShell Gallery? (Como publicar na Galeria do PowerShell?)
 
@@ -64,7 +64,7 @@ Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários o
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Como posso criar um manifesto de módulo formatado corretamente?
 
-A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [New-ModuleManifest][]. No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri** , **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [New-ModuleManifest][]. No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
 
 Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ModuleManifest][].
 
@@ -93,7 +93,7 @@ Portanto, por exemplo, quando você pesquisa PowerShellVersion: "2.0", apenas os
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Como posso criar um arquivo de script formatado corretamente?
 
-A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [New-ScriptFileInfo][]. No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri** , **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [New-ScriptFileInfo][]. No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
 
 Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ScriptFileInfo][].
 
@@ -156,7 +156,7 @@ Portanto, **PowerShellGet** exige um dos seguintes sistemas operacionais:
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-O **PowerShellGet** também requer o .NET Framework 4.5 ou posterior. Você pode instalar o .NET Framework 4.5 ou acima acessando [aqui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+O **PowerShellGet** também requer o .NET Framework 4.5 ou posterior. Para obter mais informações, confira [Instalar o .NET Framework para desenvolvedores](/dotnet/framework/install/guide-for-developers).
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>É possível reservar nomes para pacotes que serão publicados no futuro?
 

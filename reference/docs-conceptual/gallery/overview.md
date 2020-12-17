@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: A Galeria do PowerShell
 description: A Galeria do PowerShell é o repositório central de módulos do PowerShell, scripts e recursos de DSC.
-ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: f1ce6a8e2d5d72ac14cf3e4854626ef612d27891
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662113"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470308"
 ---
 # <a name="the-powershell-gallery"></a>A Galeria do PowerShell
 
@@ -28,13 +28,17 @@ Confira a página [Introdução](getting-started.md) para obter mais informaçõ
 
 O módulo **PowerShellGet** exige o **PowerShell 3.0 ou mais recente**.
 
-O **PowerShellGet** requer o .NET Framework 4.5 ou posterior. Você pode instalar o .NET Framework 4.5 ou acima acessando [aqui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+O **PowerShellGet** requer o .NET Framework 4.5 ou posterior. Para obter mais informações, confira [Instalar o .NET Framework para desenvolvedores](/dotnet/framework/install/guide-for-developers).
 
-Como **PowerShell Core** é uma plataforma cruzada, o que significa que funciona no Windows, Linux e MacOS, ele também deixa **PowerShellGet** disponível nesses sistemas. Para obter uma lista completa de sistemas compatíveis com **PowerShell Core** , consulte [Instalação do PowerShell](/powershell/scripting/install/installing-powershell).
+Como **PowerShell Core** é uma plataforma cruzada, o que significa que funciona no Windows, Linux e MacOS, ele também deixa **PowerShellGet** disponível nesses sistemas. Para obter uma lista completa de sistemas compatíveis com **PowerShell Core**, consulte [Instalação do PowerShell](/powershell/scripting/install/installing-powershell).
 
 Muitos módulos hospedados na galeria darão suporte a sistemas operacionais diferentes e têm outros requisitos.
 Consulte a documentação dos módulos para saber mais.
 
 ## <a name="got-a-question-have-feedback"></a>Tem alguma pergunta? Tem comentários?
 
-Encontre mais informações sobre a Galeria do PowerShell e o PowerShellGet na página [Introdução](getting-started.md). Forneça comentários e relate problemas usando o [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
+Encontre mais informações sobre a Galeria do PowerShell e o PowerShellGet na página [Introdução](getting-started.md).
+
+Para ver o status atual dos serviços da Galeria do PowerShell, confira a página [Status da Galeria do PowerShell](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) no GitHub.
+
+Forneça comentários e relate problemas usando o [repositório GitHub](https://github.com/PowerShell/PowerShellGallery/issues).

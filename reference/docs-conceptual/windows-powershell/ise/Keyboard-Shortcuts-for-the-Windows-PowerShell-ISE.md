@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Atalhos do teclado para o ISE do Windows PowerShell
 description: Este artigo é uma lista dos atalhos de teclado usados no ISE do PowerShell.
-ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: d4e78c5e8e8e172ef3cdd30b0099d56ce6b6b01e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92663465"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391197"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
@@ -19,7 +19,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 
 |              Ação              |       Atalhos do teclado       |                                                                                                                                                 Usar em                                                                                                                                                 |
 | -------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Ajuda**                         | <kbd>F1</kbd>                  | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha da Biblioteca do TechNet na Web ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas** , **Opções** e, na guia **Configurações Gerais** , defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
+| **Ajuda**                         | <kbd>F1</kbd>                  | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha de docs.microsoft.com ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
 | **Copy**                         | <kbd>CTRL</kbd>+<kbd>C</kbd>   | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                                 |
 | **Recortar**                          | <kbd>CTRL</kbd>+<kbd>X</kbd>   | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                              |
 | **Expandir ou Recolher a Estrutura de Tópicos** | <kbd>CTRL</kbd>+<kbd>M</kbd>   | Painel de Script                                                                                                                                                                                                                                                                                            |
@@ -115,7 +115,7 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 |                        Ação                        |               Atalho do Teclado               |
 | ---------------------------------------------------- | --------------------------------------------- |
 | **Sair**                                             | <kbd>ALT</kbd>+<kbd>F4</kbd>                  |
-| **Iniciar o PowerShell.exe** (console do Windows PowerShell) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
+| **Iniciar o PowerShell.exe**(console do Windows PowerShell) | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
 
 ## <a name="see-also"></a>Consulte Também
 

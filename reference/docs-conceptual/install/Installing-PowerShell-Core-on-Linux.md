@@ -1,13 +1,13 @@
 ---
 title: Instalar o PowerShell no Linux
 description: Informações sobre como instalar o PowerShell em várias distribuições do Linux
-ms.date: 07/30/2020
-ms.openlocfilehash: f35366b5b1a0f54ce2c90d0e3cba59be7b9ce82c
-ms.sourcegitcommit: 2ca12827dc64198b4263e8873a45b9466f22a67c
+ms.date: 12/10/2020
+ms.openlocfilehash: 1bf96bc6bfb3f6544d8a4fd5b287dd6d659691ec
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92079788"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97069862"
 ---
 # <a name="installing-powershell-on-linux"></a>Instalar o PowerShell no Linux
 
@@ -25,10 +25,21 @@ Para distribuições Linux sem suporte oficial, você pode tentar instalar o Pow
 [snap]: #snap-package
 [tar]: #binary-archives
 
-Versões com suporte oficial
+<!-- TODO: Update for supported releases v7.0 & v7.1 -->
+
+Versões de plataforma com suporte oficial para o PowerShell 7.1
+
+- Ubuntu 16.04/18.04/20.04 (incluindo ARM64)
+- Ubuntu 19.10 (via pacote Snap)
+- Debian 9/10
+- CentOS e RHEL 7/8
+- Fedora 30
+- Alpine 3.11+ (incluindo ARM64)
+
+Versões de plataforma com suporte oficial para o PowerShell 7.0
 
 - Ubuntu 16.04
-- Ubuntu 18.04
+- Ubuntu 18.04 e 20.04
 - Debian 8
 - Debian 9
 - Debian 10
@@ -44,7 +55,7 @@ Versões com suporte oficial
 Versões com suporte da comunidade
 
 - Ubuntu 18.10
-- Ubuntu 19.04
+- Ubuntu 19.10 e 20.10
 - Arch Linux
 - Kali
 - Raspbian (experimental)
@@ -54,13 +65,6 @@ Métodos de instalação alternativos
 - Pacote Snap
 - Arquivos binários
 - Ferramenta .NET Global
-
-Sem suporte no momento
-
-- Ubuntu 20.04
-
-> [!NOTE]
-> O PowerShell pode somente dar suporte às distribuições com suporte do .NET. Confira as [notas sobre a versão do .NET Core][distros] para obter uma lista de distribuições com suporte. Caso haja uma distribuição com suporte do .NET não listada aqui, solicite a inclusão dela. Registre uma solicitação usando o modelo de [Solicitação de Suporte à Distribuição][].
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -74,7 +78,7 @@ O método preferencial é o seguinte:
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -91,12 +95,12 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Instalação por meio de download direto – Ubuntu 16.04
 
-Baixe o pacote Debian `powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb` da página [versões][] no computador Ubuntu.
+Baixe o pacote Debian `powershell_7.1.0-1.ubuntu.16.04_amd64.deb` da página [versões][] no computador Ubuntu.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -121,7 +125,7 @@ O método preferencial é o seguinte:
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -140,12 +144,12 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Instalação por meio de download direto – Ubuntu 18.04
 
-Baixe o pacote Debian `powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb` da página [versões][] no computador Ubuntu.
+Baixe o pacote Debian `powershell_7.1.0-1.ubuntu.18.04_amd64.deb` da página [versões][] no computador Ubuntu.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -158,6 +162,55 @@ sudo apt-get install -f
 sudo apt-get remove powershell
 ```
 
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+### <a name="installation-via-package-repository---ubuntu-2004"></a>Instalação por meio do repositório de pacotes – Ubuntu 20.04
+
+O PowerShell para Linux é publicado nos repositórios de pacote para facilitar a instalação e as atualizações.
+
+O método preferencial é o seguinte:
+
+```sh
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of products
+sudo apt-get update
+# Enable the "universe" repositories
+sudo add-apt-repository universe
+# Install PowerShell
+sudo apt-get install -y powershell
+# Start PowerShell
+pwsh
+```
+
+Como superusuário, registre o repositório da Microsoft uma vez. Após o registro, você pode atualizar o PowerShell com o `sudo apt-get install powershell`.
+
+### <a name="installation-via-direct-download---ubuntu-2004"></a>Instalação por meio de download direto – Ubuntu 20.04
+
+Baixe o pacote Debian `powershell_7.1.0-1.ubuntu.20.04_amd64.deb` da página [versões][] no computador Ubuntu.
+
+Em seguida, execute os seguintes comandos no terminal:
+
+```sh
+sudo dpkg -i powershell_7.1.0-1.ubuntu.20.04_amd64.deb
+sudo apt-get install -f
+```
+
+> [!NOTE]
+> O comando `dpkg -i` falha com dependências não atendidas. O próximo comando, `apt-get install -f`, resolve esses problemas e, em seguida, conclui a configuração do pacote do PowerShell.
+
+### <a name="uninstallation---ubuntu-2004"></a>Desinstalação – Ubuntu 20.04
+
+```sh
+sudo apt-get remove powershell
+```
+
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 Só há suporte para instalações via `snapd`. Para obter instruções, confira [Pacotes Snap][snap].
@@ -165,16 +218,12 @@ Só há suporte para instalações via `snapd`. Para obter instruções, confira
 > [!NOTE]
 > O Ubuntu 18.10 é uma [versão provisória](https://www.ubuntu.com/about/release-cycle) e tem apenas [suporte da comunidade](../powershell-support-lifecycle.md).
 
-## <a name="ubuntu-1904"></a>Ubuntu 19.04
+## <a name="ubuntu-1910-and-2010"></a>Ubuntu 19.10 e 20.10
 
 Só há suporte para instalações via `snapd`. Para obter instruções, confira [Pacotes Snap][snap].
 
 > [!NOTE]
-> O Ubuntu 19.04 é uma [versão provisória](https://www.ubuntu.com/about/release-cycle) e tem apenas [suporte da comunidade](../powershell-support-lifecycle.md).
-
-## <a name="ubuntu-2004"></a>Ubuntu 20.04
-
-O Ubuntu 20.04 é uma versão LTS. Atualmente, o PowerShell não dá suporte a essa versão. O suporte para essa versão do Ubuntu está sendo considerado para a versão 7.1 do PowerShell. Se você gostaria de suporte para o Ubuntu 20.04, vote a favor nesta [solicitação](https://github.com/PowerShell/PowerShell/issues/12626).
+> O Ubuntu 19.10 é uma [versão provisória](https://www.ubuntu.com/about/release-cycle) que tem [suporte da comunidade](../powershell-support-lifecycle.md).
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -240,12 +289,12 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-direct-download---debian-9"></a>Instalação por meio de download direto – Debian 9
 
-Baixe o pacote Debian `powershell-lts_7.0.3-1.debian.9_amd64.deb` da página [versões][] no computador Debian.
+Baixe o pacote Debian `powershell_7.1.0-1.debian.9_amd64.deb` da página [versões][] no computador Debian.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.debian.9_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -285,7 +334,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>Instalação por meio de download direto – Debian 10
 
-Baixe o pacote tar.gz `powershell-7.0.3-linux-x64.tar.gz` da página [versões][] no computador Debian.
+Baixe o pacote tar.gz `powershell-7.1.0-linux-x64.tar.gz` da página [versões][] no computador Debian.
 
 Em seguida, execute os seguintes comandos no terminal:
 
@@ -307,7 +356,7 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -332,7 +381,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>Instalação por meio de download direto – Alpine 3.9 e 3.10
 
-Baixe o pacote tar.gz `powershell-7.0.3-linux-alpine-x64.tar.gz` da página [versões][] no computador Alpine.
+Baixe o pacote tar.gz `powershell-7.1.0-linux-alpine-x64.tar.gz` da página [versões][] no computador Alpine.
 
 Em seguida, execute os seguintes comandos no terminal:
 
@@ -357,7 +406,7 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -399,18 +448,18 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-direct-download---centos-7"></a>Instalação por meio de download direto – CentOS 7
 
-Usando o [CentOS 7][], baixe o pacote RPM `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` da página [versões][] no computador CentOS.
+Usando o [CentOS 7][], baixe o pacote RPM `powershell-7.1.0-1.rhel.7.x86_64.rpm` da página [versões][] no computador CentOS.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 Você pode instalar o RPM sem a etapa intermediária de baixá-lo:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>Desinstalação – CentOS 7
@@ -442,18 +491,18 @@ Como superusuário, registre o repositório da Microsoft uma vez. Após o regist
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Instalação por meio de download direto – Red Hat Enterprise Linux (RHEL) 7
 
-Baixe o pacote RPM `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` da página [versões][] no computador Red Hat Enterprise Linux.
+Baixe o pacote RPM `powershell-7.1.0-1.rhel.7.x86_64.rpm` da página [versões][] no computador Red Hat Enterprise Linux.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 Você pode instalar o RPM sem a etapa intermediária de baixá-lo:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>Desinstalação – Red Hat Enterprise Linux (RHEL) 7
@@ -471,7 +520,7 @@ sudo yum remove powershell
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -496,7 +545,7 @@ pwsh
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -554,20 +603,20 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>Instalação por meio de download direto – Fedora 28, 29 e 30
 
-Baixe o pacote RPM `powershell-7.0.3-1.rhel.7.x86_64.rpm` da página [versões][] no computador Fedora.
+Baixe o pacote RPM `powershell-7.1.0-1.rhel.7.x86_64.rpm` da página [versões][] no computador Fedora.
 
 Em seguida, execute os seguintes comandos no terminal:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 Você pode instalar o RPM sem a etapa intermediária de baixá-lo:
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-28-29-and-30"></a>Desinstalação – Fedora 28, 29 e 30
@@ -690,13 +739,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.0.3-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.1.0-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -776,7 +825,7 @@ Para implantar binários do PowerShell em distribuições Linux sem suporte ofic
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -819,4 +868,4 @@ A Microsoft dá suporte aos métodos de instalação neste documento. Pode haver
 [versões]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 [distros]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md#linux
-[Solicitação de suporte à distribuição]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request
+[Distribution Support Request]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request

@@ -3,23 +3,18 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: Histórico de versões de módulos e cmdlets
 description: Este artigo lista os módulos e os cmdlets incluídos em várias versões do PowerShell.
-ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: e79735e516c9aaa485c6513fb80de623014f06f5
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342851"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810344"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>Histórico de versões de módulos e cmdlets
 
 Este artigo lista os módulos e os cmdlets incluídos em várias versões do PowerShell. Este é um resumo das informações encontradas nessas notas sobre a versão. É possível encontrar informações mais detalhadas nas notas sobre a versão:
 
 - [Novidades no PowerShell 7.0](what-s-new-in-powershell-70.md)
-- [Novidades no PowerShell 6.2](what-s-new-in-powershell-core-62.md)
-- [Novidades no PowerShell 6.1](what-s-new-in-powershell-core-61.md)
-- [Novidades no PowerShell 6.0](what-s-new-in-powershell-core-60.md)
-- [Alterações da falha no PowerShell 6.0](breaking-changes-ps6.md)
-- [Problemas conhecidos no PowerShell 6.0](known-issues-ps6.md)
 
 Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas informações atualizadas.
 
@@ -45,7 +40,8 @@ Este é um trabalho em andamento. Precisamos da sua ajuda para manter estas info
 | PSDesiredStateConfiguration               | &check; | &check; | &check; | &check; |              |
 | PSDiagnostics                             | &check; | &check; | &check; | &check; | Somente Windows |
 | PSReadline 1.x                            | &check; |         |         |         | Somente Windows |
-| PSReadline 2.x                            |         | &check; | &check; | &check; |              |
+| PSReadline 2.0                            |         | &check; | &check; |         |              |
+| PSReadline 2.1                            |         |         |         | &check; |              |
 | PSScheduledJob                            | &check; |         |         |         | Somente Windows |
 | PSWorkflow                                | &check; |         |         |         | Somente Windows |
 | PSWorkflowUtility                         | &check; |         |         |         | Somente Windows |

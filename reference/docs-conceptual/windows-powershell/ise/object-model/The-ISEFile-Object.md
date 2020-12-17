@@ -2,16 +2,16 @@
 ms.date: 12/31/2019
 title: O objeto ISEFile
 description: Um objeto ISEFile representa um arquivo no Windows PowerShell ISE.
-ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: b5ea70219787f254fe85d728518cbc4746c00250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662127"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391486"
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile
 
-Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell&reg;. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
+Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell. É uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Este tópico lista os métodos e as propriedades do membro. O `$psISE.CurrentFile` e os arquivos da coleção de arquivos em uma guia do PowerShell são instâncias da classe \*\***Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Métodos
 
@@ -21,11 +21,11 @@ Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 Salva o arquivo no disco.
 
-**\[saveEncoding\]** – [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx) opcional Um parâmetro opcional de codificação de caracteres a ser usado para o arquivo salvo. O valor padrão é **UTF8**.
+`[saveEncoding]` – [System.Text.Encoding](/dotnet/api/system.text.encoding) opcional Um parâmetro de codificação de caracteres opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
 
 ### <a name="exceptions"></a>Exceções
 
-- **System.IO.IOException** : não foi possível salvar o arquivo.
+- **System.IO.IOException**: não foi possível salvar o arquivo.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -47,13 +47,13 @@ Salva o arquivo com o nome de arquivo e codificação especificados.
 
 **filename** – cadeia de caracteres, o nome a ser usado para salvar o arquivo.
 
-**\[saveEncoding\]** – [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx) opcional Um parâmetro opcional de codificação de caracteres a ser usado para o arquivo salvo. O valor padrão é **UTF8**.
+`[saveEncoding]` – [System.Text.Encoding](/dotnet/api/system.text.encoding) opcional Um parâmetro de codificação de caracteres opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
 
 ### <a name="exceptions"></a>Exceções
 
-- **System.ArgumentNullException** : o parâmetro **filename** é nulo.
-- **System.ArgumentException** : o parâmetro **filename** está vazio.
-- **System.IO.IOException** : não foi possível salvar o arquivo.
+- **System.ArgumentNullException**: o parâmetro **filename** é nulo.
+- **System.ArgumentException**: o parâmetro **filename** está vazio.
+- **System.IO.IOException**: não foi possível salvar o arquivo.
 
 ```powershell
 # Save the file with a full path and name.

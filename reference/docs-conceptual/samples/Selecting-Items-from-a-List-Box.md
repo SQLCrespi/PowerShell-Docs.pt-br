@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Selecionando itens de uma caixa de listagem
 description: Este artigo mostra como criar um controle de caixa de listagem usando os recursos de criação de formulário do .NET Framework no Windows PowerShell.
-ms.openlocfilehash: cfd6110a9cfcc3cea891d68d8ce7be5b332a949a
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: d6f881f0b92f294da105ae7df5e25e8c20ce5094
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501041"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391231"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Selecionando itens de uma caixa de listagem
 
@@ -75,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms** . Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form** , que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
+O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**. Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -89,7 +89,7 @@ Depois de criar uma instância da classe Form, atribua valores a três proprieda
 - **Size.** Esse é o tamanho do formulário, em pixels. O script anterior cria um formulário de 300 pixels de largura por 200 pixels de altura.
 
 - **StartingPosition.** Esta propriedade opcional é definida para **CenterScreen** no script precedente.
-  Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen** , você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
+  Se você não adicionar essa propriedade, o Windows selecionará um local quando o formulário for aberto. Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.
 
 ```powershell
 $form.Text = 'Select a Computer'
@@ -97,7 +97,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK** . Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
+Em seguida, crie um botão **OK** para seu formulário. Especifique o tamanho e comportamento do botão **OK**. Neste exemplo, a posição do botão é de 120 pixels da borda superior do formulário e 75 pixels da borda esquerda. A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels. O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.
 
 ```powershell
 $okButton = New-Object System.Windows.Forms.Button
@@ -131,7 +131,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo. Há muitos outros controles que você pode aplicar além de caixas de listagem. Para ver mais controles, consulte [Namespace System.Windows.Forms](/dotnet/api/system.windows.forms) no MSDN.
+Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo. Há muitos outros controles que você pode aplicar além de caixas de listagem. Para ver mais controles, confira [Namespace System.Windows.Forms](/dotnet/api/system.windows.forms).
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -143,7 +143,7 @@ $listBox.Height = 80
 Na próxima seção, você deve especificar os valores que você deseja que a caixa de listagem mostre para os usuários.
 
 > [!NOTE]
-> A caixa de listagem criada por esse script permite somente uma seleção. Para criar um controle de caixa de listagem que permita várias seleções, especifique um valor para a propriedade **SelectionMode** , de forma semelhante à seguinte: `$listBox.SelectionMode = 'MultiExtended'`. Para obter mais informações, consulte [Caixas de listagem de seleção múltipla](Multiple-selection-List-Boxes.md).
+> A caixa de listagem criada por esse script permite somente uma seleção. Para criar um controle de caixa de listagem que permita várias seleções, especifique um valor para a propriedade **SelectionMode**, de forma semelhante à seguinte: `$listBox.SelectionMode = 'MultiExtended'`. Para obter mais informações, consulte [Caixas de listagem de seleção múltipla](Multiple-selection-List-Boxes.md).
 
 ```powershell
 [void] $listBox.Items.Add('atl-dc-001')
@@ -168,7 +168,7 @@ Adicione a seguinte linha de código para exibir o formulário do Windows.
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter** .
+Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter**.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -181,4 +181,4 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>Consulte Também
 
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))
+- [Dica da semana para o Windows PowerShell: selecionar itens em uma caixa de listagem](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

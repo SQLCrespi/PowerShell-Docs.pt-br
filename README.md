@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 61a70db9ae7a38d6731f1cefb011072c12d1e39a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239877"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514911"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta Aberto da Microsoft
 
@@ -34,9 +34,9 @@ A lista a seguir descreve as pastas principais neste repositório.
 - `assets` – Contém arquivos para download vinculados na documentação
 - `reference` – Contém a documentação publicada em [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/). Isso inclui o conteúdo conceitual e de referência.
   - `5.1` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 5.1
-  - `6` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 6
   - `7.0` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 7.0
   - `7.1` – Contém a referência de cmdlet e sobre os tópicos para o PowerShell 7.1
+  - `7.2` – contém a referência de cmdlet e tópicos sobre o PowerShell 7.2 (versão prévia)
   - `bread` – Contém o Sumário usado para a navegação estrutural
   - `docs-conceptual` – Contém os artigos conceituais publicados no site do Docs. Em geral, a estrutura de pastas espelha o Sumário.
   - `mapping` – Contém a configuração de mapeamento de versão usada pelo sistema de build
