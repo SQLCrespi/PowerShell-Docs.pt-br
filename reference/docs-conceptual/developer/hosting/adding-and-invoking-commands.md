@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: Adicionar e invocar comandos
 description: Adicionar e invocar comandos
-ms.openlocfilehash: c30cb15d473c344e40b96938c355d77c059fe2d5
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: f539172eaf119fe5774e158c77a00276c8ba9e0a
+ms.sourcegitcommit: 880b00218708724a76503000c9eca181f4e00891
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96616022"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049418"
 ---
 # <a name="adding-and-invoking-commands"></a>Adicionar e invocar comandos
 
@@ -89,14 +89,14 @@ Você pode executar um script existente chamando o método [System. Management. 
 
 ```csharp
 PowerShell ps = PowerShell.Create();
-ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
+ps.AddScript(File.ReadAllText(@"D:\PSScripts\MyScript.ps1")).Invoke();
 ```
 
 Também há uma versão do método [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) que usa um parâmetro booliano denominado `useLocalScope` . Se esse parâmetro for definido como `true` , o script será executado no escopo local. O código a seguir executará o script no escopo local.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
-ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
+ps.AddScript(File.ReadAllText(@"D:\PSScripts\MyScript.ps1"), true).Invoke();
 ```
 
 ### <a name="invoking-a-pipeline-synchronously"></a>Invocar um pipeline de forma síncrona
@@ -160,11 +160,11 @@ namespace HostPS3
       // Create an IAsyncResult object and call the
       // BeginInvoke method to start running the
       // command pipeline asynchronously.
-      IAsyncResult async = ps.BeginInvoke();
+      IAsyncResult asyncpl = ps.BeginInvoke();
 
       // Using the PowerShell.Invoke method, run the command
       // pipeline using the default runspace.
-      foreach (PSObject result in ps.EndInvoke(async))
+      foreach (PSObject result in ps.EndInvoke(asyncpl))
       {
         Console.WriteLine("{0,-20}{1}",
                 result.Members["ProcessName"].Value,

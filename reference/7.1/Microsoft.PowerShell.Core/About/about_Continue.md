@@ -5,12 +5,12 @@ ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 5a33451da91fa0d837b51ded6bae51ce66eb07e4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2b299726b3fe75e5d13e91bbde7564705d3e2112
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195866"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97614108"
 ---
 # <a name="about-continue"></a>Sobre o Continue
 
@@ -105,9 +105,9 @@ Se a instrução final executada no corpo de uma `trap` instrução for `continu
 
 Quando `continue` é usado fora de um Construct que dá suporte diretamente a ele (loops, `switch` , `trap` ), _o PowerShell pesquisa a pilha de chamadas_ para uma construção delimitadora. Se não for possível localizar uma construção delimitadora, o runspace atual será encerrado silenciosamente.
 
-Isso significa que as funções e os scripts que usam inadvertidamente `continue` fora de uma construção delimitadora que dá suporte a ela podem encerrar inadvertidamente seus _chamadores_ .
+Isso significa que as funções e os scripts que usam inadvertidamente `continue` fora de uma construção delimitadora que dá suporte a ela podem encerrar inadvertidamente seus _chamadores_.
 
-Usar `continue` dentro de um pipeline, como um `ForEach-Object` bloco de script, não apenas sai do pipeline, TT potencialmente encerra todo o runspace.
+Usar `continue` dentro de um pipeline, como um `ForEach-Object` bloco de script, não apenas sai do pipeline, ele potencialmente encerra todo o runspace.
 
 ## <a name="see-also"></a>Confira também
 
