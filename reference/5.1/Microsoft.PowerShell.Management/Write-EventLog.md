@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 051f02b00144805569d5130686a51a0f42b64b00
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388239"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584624"
 ---
 # Write-EventLog
 
@@ -27,6 +27,7 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## DESCRIPTION
+
 O `Write-EventLog` cmdlet grava um evento em um log de eventos.
 
 Para gravar um evento em um log de eventos, o log de eventos deve existir no computador, e a origem deve ser registrada para o log de eventos.
@@ -196,16 +197,18 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 ## ENTRADAS
 
 ### Nenhum
+
 Não é possível redirecionar a entrada para este cmdlet.
 
 ## SAÍDAS
 
 ### System. Diagnostics. EventLogEntry
+
 Esse cmdlet retorna objetos que representam os eventos nos logs.
 
 ## OBSERVAÇÕES
 
-Para usar `Write-EventLog` o, inicie o Windows PowerShell usando a opção Executar como administrador.
+Para alguns logs de eventos do Windows, a gravação de eventos requer direitos de administrador. Você deve iniciar o PowerShell usando a opção **Executar como administrador** .
 
 ## LINKS RELACIONADOS
 

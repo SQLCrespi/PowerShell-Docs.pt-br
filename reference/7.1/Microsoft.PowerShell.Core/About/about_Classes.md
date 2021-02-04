@@ -1,17 +1,16 @@
 ---
 description: Descreve como você pode usar classes para criar seus próprios tipos personalizados.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 09/16/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Classes
-ms.openlocfilehash: 99b72762469032cc24f21d957600b67d0a0db292
-ms.sourcegitcommit: 16d62a98449e3ddaf8d7c65bc1848ede1fd8a3e7
+ms.openlocfilehash: 0f4eb5c67b09cb3ce21f818582fbce3a8c629eec
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "93195328"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620207"
 ---
 # <a name="about-classes"></a>Sobre classes
 
@@ -22,7 +21,7 @@ Descreve como você pode usar classes para criar seus próprios tipos personaliz
 
 O PowerShell 5,0 adiciona uma sintaxe formal para definir classes e outros tipos definidos pelo usuário. A adição de classes permite que desenvolvedores e profissionais de ti adotem o PowerShell para uma variedade maior de casos de uso. Ele simplifica o desenvolvimento de artefatos do PowerShell e acelera a cobertura de superfícies de gerenciamento.
 
-Uma declaração de classe é um plano gráfico usado para criar instâncias de objetos em tempo de execução. Quando você define uma classe, o nome da classe é o nome do tipo. Por exemplo, se você declarar uma classe chamada **dispositivo** e inicializar uma variável `$dev` para uma nova instância do **dispositivo** , `$dev` será um objeto ou instância do tipo **dispositivo** . Cada instância do **dispositivo** pode ter valores diferentes em suas propriedades.
+Uma declaração de classe é um plano gráfico usado para criar instâncias de objetos em tempo de execução. Quando você define uma classe, o nome da classe é o nome do tipo. Por exemplo, se você declarar uma classe chamada **dispositivo** e inicializar uma variável `$dev` para uma nova instância do **dispositivo**, `$dev` será um objeto ou instância do tipo **dispositivo**. Cada instância do **dispositivo** pode ter valores diferentes em suas propriedades.
 
 ## <a name="supported-scenarios"></a>Cenários com suporte
 
@@ -31,7 +30,7 @@ Uma declaração de classe é um plano gráfico usado para criar instâncias de 
 - Gere e manipule exceções usando mecanismos formais.
 - Defina os recursos de DSC e seus tipos associados usando a linguagem do PowerShell.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 As classes são declaradas usando a seguinte sintaxe:
 
@@ -768,9 +767,19 @@ class MyComparableBar : bar, System.IComparable
 
 `Import-Module` e a `#requires` instrução só importa as funções de módulo, aliases e variáveis, conforme definido pelo módulo. As classes não são importadas. A `using module` instrução importa as classes definidas no módulo. Se o módulo não estiver carregado na sessão atual, a `using` instrução falhará. Para obter mais informações sobre a `using` instrução, consulte [about_Using](about_Using.md).
 
+A `using module` instrução importa classes do módulo raiz ( `ModuleToProcess` ) de um módulo de script ou de um módulo binário. Ele não importa consistentemente classes definidas em módulos aninhados ou classes definidas em scripts que são originados no módulo. As classes que você deseja disponibilizar para usuários fora do módulo devem ser definidas no módulo raiz.
+
+## <a name="loading-newly-changed-code-during-development"></a>Carregando código alterado recentemente durante o desenvolvimento
+
+Durante o desenvolvimento de um módulo de script, é comum fazer alterações no código e, em seguida, carregar a nova versão do módulo usando `Import-Module` com o parâmetro **Force** . Isso funciona apenas para alterações nas funções no módulo raiz. `Import-Module` não recarrega nenhum módulo aninhado. Além disso, não há como carregar nenhuma classe atualizada.
+
+Para garantir que você esteja executando a versão mais recente, você deve descarregar o módulo usando o `Remove-Module` cmdlet. `Remove-Module` Remove o módulo raiz, todos os módulos aninhados e todas as classes definidas nos módulos. Em seguida, você pode recarregar o módulo e as classes usando `Import-Module` e a `using module` instrução.
+
+Outra prática de desenvolvimento comum é separar o código em arquivos diferentes. Se você tiver uma função em um arquivo que usa classes definidas em outro módulo, deverá usar a `using module` instrução para garantir que as funções tenham as definições de classe necessárias.
+
 ## <a name="the-psreference-type-is-not-supported-with-class-members"></a>Não há suporte para o tipo PSReference com membros de classe
 
-O uso da `[ref]` conversão de tipo com um membro de classe falha silenciosamente. As APIs que usam `[ref]` parâmetros não podem ser usadas com membros de classe. O **PSReference** foi projetado para dar suporte a objetos com. Objetos COM têm casos em que você precisa passar um valor por referência.
+O uso da `[ref]` conversão de tipo com um membro de classe falha silenciosamente. As APIs que usam `[ref]` parâmetros não podem ser usadas com membros de classe. A classe **PSReference** foi projetada para dar suporte a objetos com. Objetos COM têm casos em que você precisa passar um valor por referência.
 
 Para obter mais informações sobre o `[ref]` tipo, consulte [classe PSReference](/dotnet/api/system.management.automation.psreference).
 

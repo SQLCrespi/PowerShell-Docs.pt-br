@@ -6,12 +6,12 @@ ms.date: 09/22/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Environment_Variables
-ms.openlocfilehash: c954ee6e783b7926dbcd05a3e08b6b9b5cf9bc25
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 4b5894822f4436f127ed4789fd8008a0e7f2f2df
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195852"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584654"
 ---
 # <a name="about-environment-variables"></a>Sobre variáveis de ambiente
 
@@ -68,7 +68,7 @@ Por exemplo, para acrescentar `;c:\temp` ao valor da variável de `Path` ambient
 $Env:Path += ";c:\temp"
 ```
 
-No Linux ou MacOS, os dois-pontos ( `:` ) no comando separam o novo caminho do caminho que o precede na lista.
+No Linux ou macOS, os dois-pontos ( `:` ) no comando separam o novo caminho do caminho que o precede na lista.
 
 ```powershell
 $Env:PATH += ":/usr/local/temp"
@@ -232,7 +232,7 @@ PS Env:\> Get-ChildItem ComputerName
 
 ### <a name="saving-changes-to-environment-variables"></a>Salvando alterações em variáveis de ambiente
 
-Para fazer uma alteração persistente em uma variável de ambiente no Windows, use o painel de controle do sistema. Selecione **Configurações avançadas do sistema** . Na guia **avançado** , clique em **variável de ambiente...** . Você pode adicionar ou editar variáveis de ambiente existentes nos escopos de **usuário** e **sistema** (computador). O Windows grava esses valores no registro para que eles persistam entre as sessões e reinicializações do sistema.
+Para fazer uma alteração persistente em uma variável de ambiente no Windows, use o painel de controle do sistema. Selecione **Configurações avançadas do sistema**. Na guia **avançado** , clique em **variável de ambiente...**. Você pode adicionar ou editar variáveis de ambiente existentes nos escopos de **usuário** e **sistema** (computador). O Windows grava esses valores no registro para que eles persistam entre as sessões e reinicializações do sistema.
 
 Como alternativa, você pode adicionar ou alterar variáveis de ambiente no seu perfil do PowerShell. Esse método funciona para qualquer versão do PowerShell em qualquer plataforma com suporte.
 

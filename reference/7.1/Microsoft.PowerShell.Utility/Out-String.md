@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/29/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-string?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-String
-ms.openlocfilehash: 16dc25e3468eaf3126b3286cfd71bfea9627c015
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: 09995397e33bf3fa1facc4137f4517390d69b78e
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "93195366"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620166"
 ---
 # Out-String
 
-## SINOPSE
+## Sinopse
 Gera objetos de entrada como cadeias de caracteres.
 
-## SYNTAX
+## Sintaxe
 
 ### NoNewLineFormatting (padrão)
 
@@ -33,11 +33,11 @@ Out-String [-Width <Int32>] [-NoNewline] [-InputObject <PSObject>] [<CommonParam
 Out-String [-Stream] [-Width <Int32>] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Out-String` cmdlet converte objetos de entrada em cadeias de caracteres. Por padrão, `Out-String` o acumula as cadeias de caracteres e as retorna como uma única cadeia de caracteres, mas você pode usar o parâmetro **Stream** para direcionar `Out-String` para retornar uma linha de cada vez ou criar e matriz de cadeias de caracteres. Esse cmdlet permite pesquisar e manipular a saída da cadeia de caracteres como faria em shells tradicionais quando a manipulação de objetos for menos conveniente.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: obter a cultura atual e converter os dados em cadeias de caracteres
 
@@ -84,7 +84,7 @@ A `$C` variável armazena um **Selected.System. Objeto Globalization. CultureInf
 
 ### Exemplo 2: trabalhando com objetos
 
-Este exemplo demonstra a diferença entre trabalhar com objetos e trabalhar com cadeias de caracteres. O comando exibe um alias que inclui o texto **GCM** , o alias para `Get-Command` .
+Este exemplo demonstra a diferença entre trabalhar com objetos e trabalhar com cadeias de caracteres. O comando exibe um alias que inclui o texto **GCM**, o alias para `Get-Command` .
 
 ```powershell
 Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
@@ -94,7 +94,7 @@ Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
 Alias           gcm -> Get-Command
 ```
 
-`Get-Alias` Obtém os objetos **System. Management. Automation. AliasInfo** , um para cada alias e envia os objetos por meio do pipeline. `Out-String` usa o parâmetro **Stream** para converter cada objeto em uma cadeia de caracteres, em vez de concatenar todos os objetos em uma única cadeia de caracteres. Os objetos **System. String** são enviados pelo pipeline e `Select-String` usam o parâmetro **Pattern** para localizar correspondências para o texto **GCM** .
+`Get-Alias` Obtém os objetos **System. Management. Automation. AliasInfo** , um para cada alias e envia os objetos por meio do pipeline. `Out-String` usa o parâmetro **Stream** para converter cada objeto em uma cadeia de caracteres, em vez de concatenar todos os objetos em uma única cadeia de caracteres. Os objetos **System. String** são enviados pelo pipeline e `Select-String` usam o parâmetro **Pattern** para localizar correspondências para o texto **GCM**.
 
 > [!NOTE]
 > Se você omitir o parâmetro de **fluxo** , o comando exibirá todos os aliases, pois `Select-String` localiza o texto **GCM** na cadeia de caracteres única que `Out-String` retorna.
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Fluxo
 
-Indica que o cmdlet envia uma cadeia de caracteres separada para cada linha de um objeto de entrada. Por padrão, as cadeias de caracteres para cada objeto são acumuladas e enviadas como uma única cadeia de caracteres.
+Por padrão, `Out-String` o gera uma única cadeia de caracteres formatada como você a veria no console, incluindo todos os cabeçalhos em branco ou novas linhas à direita. O parâmetro de **fluxo** permite `Out-String` a saída de cada linha uma a uma. A única exceção a isso são as cadeias de caracteres multilinha. Nesse caso, `Out-String` o ainda produzirá a cadeia de caracteres como uma única cadeia de caracteres de várias linhas.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,4 +221,3 @@ Os cmdlets que contêm o `Out` verbo não formatam objetos. Os `Out` cmdlets env
 [Out-GridView](Out-GridView.md)
 
 [Out-Printer](Out-Printer.md)
-

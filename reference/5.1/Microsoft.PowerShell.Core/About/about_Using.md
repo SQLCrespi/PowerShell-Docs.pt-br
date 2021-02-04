@@ -1,16 +1,16 @@
 ---
 description: Permite que você indique quais namespaces são usados na sessão.
 Locale: en-US
-ms.date: 11/18/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: b48cd85e200f44cdf9fdf278de78e07a918386c8
-ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.openlocfilehash: 2a02ff32b110d369c080dde695a8fc2369b1a5e2
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94891339"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619883"
 ---
 # <a name="about-using"></a>Sobre como usar o
 
@@ -21,7 +21,9 @@ Permite que você indique quais namespaces são usados na sessão.
 
 A `using` instrução permite que você especifique quais namespaces serão usados na sessão. A adição de namespaces simplifica o uso de classes e membros do .NET e permite que você importe classes de módulos de script e assemblies.
 
-As `using` instruções devem vir antes de qualquer outra instrução em um script.
+As `using` instruções devem vir antes de qualquer outra instrução em um script ou módulo. Nenhuma instrução sem marca de comentário pode precedê-la, incluindo parâmetros.
+
+A `using` instrução não deve conter nenhuma variável.
 
 A `using` instrução não deve ser confundida com o `using:` modificador de escopo para variáveis. Para obter mais informações, consulte [about_Remote_Variables](about_Remote_Variables.md).
 
@@ -57,6 +59,12 @@ Uma especificação de módulo é uma tabela de hash que tem as seguintes chaves
   - `ModuleVersion` -Especifica uma versão mínima aceitável do módulo.
   - `RequiredVersion` -Especifica uma versão exata e necessária do módulo.
   - `MaximumVersion` -Especifica a versão máxima aceitável do módulo.
+
+A `using module` instrução importa classes do módulo raiz ( `ModuleToProcess` ) de um módulo de script ou de um módulo binário. Ele não importa consistentemente classes definidas em módulos aninhados ou classes definidas em scripts que são originados no módulo. As classes que você deseja disponibilizar para usuários fora do módulo devem ser definidas no módulo raiz.
+
+Durante o desenvolvimento de um módulo de script, é comum fazer alterações no código e, em seguida, carregar a nova versão do módulo usando `Import-Module` com o parâmetro **Force** . Isso funciona apenas para alterações nas funções no módulo raiz. `Import-Module` não recarrega nenhum módulo aninhado. Além disso, não há como carregar nenhuma classe atualizada.
+
+Para garantir que você esteja executando a versão mais recente, você deve descarregar o módulo usando o `Remove-Module` cmdlet. `Remove-Module` Remove o módulo raiz, todos os módulos aninhados e todas as classes definidas nos módulos. Em seguida, você pode recarregar o módulo e as classes usando `Import-Module` e a `using module` instrução.
 
 ## <a name="assembly-syntax"></a>Sintaxe do assembly
 
