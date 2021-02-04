@@ -2,75 +2,75 @@
 description: Descreve os parâmetros que podem ser usados com qualquer cmdlet.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 11/26/2019
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_CommonParameters
-ms.openlocfilehash: 949fabca6052a75d2cc4f8cf71e0a88b170a3b36
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 0b303590aab756aaa7dd55683e114a20c2b2a12c
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195914"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860803"
 ---
-# <a name="about-commonparameters"></a><span data-ttu-id="81801-104">Sobre CommonParameters</span><span class="sxs-lookup"><span data-stu-id="81801-104">About CommonParameters</span></span>
+# <a name="about-commonparameters"></a><span data-ttu-id="cf569-104">Sobre CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cf569-104">About CommonParameters</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="81801-105">DESCRIÇÃO BREVE</span><span class="sxs-lookup"><span data-stu-id="81801-105">SHORT DESCRIPTION</span></span>
+## <a name="short-description"></a><span data-ttu-id="cf569-105">DESCRIÇÃO BREVE</span><span class="sxs-lookup"><span data-stu-id="cf569-105">SHORT DESCRIPTION</span></span>
 
-<span data-ttu-id="81801-106">Descreve os parâmetros que podem ser usados com qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-106">Describes the parameters that can be used with any cmdlet.</span></span>
+<span data-ttu-id="cf569-106">Descreve os parâmetros que podem ser usados com qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-106">Describes the parameters that can be used with any cmdlet.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="81801-107">DESCRIÇÃO LONGA</span><span class="sxs-lookup"><span data-stu-id="81801-107">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="cf569-107">DESCRIÇÃO LONGA</span><span class="sxs-lookup"><span data-stu-id="cf569-107">LONG DESCRIPTION</span></span>
 
-<span data-ttu-id="81801-108">Os parâmetros comuns são um conjunto de parâmetros de cmdlet que você pode usar com qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-108">The common parameters are a set of cmdlet parameters that you can use with any cmdlet.</span></span> <span data-ttu-id="81801-109">Eles são implementados pelo PowerShell, não pelo desenvolvedor de cmdlets e estão automaticamente disponíveis para qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-109">They're implemented by PowerShell, not by the cmdlet developer, and they're automatically available to any cmdlet.</span></span>
+<span data-ttu-id="cf569-108">Os parâmetros comuns são um conjunto de parâmetros de cmdlet que você pode usar com qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-108">The common parameters are a set of cmdlet parameters that you can use with any cmdlet.</span></span> <span data-ttu-id="cf569-109">Eles são implementados pelo PowerShell, não pelo desenvolvedor de cmdlets e estão automaticamente disponíveis para qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-109">They're implemented by PowerShell, not by the cmdlet developer, and they're automatically available to any cmdlet.</span></span>
 
-<span data-ttu-id="81801-110">Você pode usar os parâmetros comuns com qualquer cmdlet, mas eles podem não ter um efeito sobre todos os cmdlets.</span><span class="sxs-lookup"><span data-stu-id="81801-110">You can use the common parameters with any cmdlet, but they might not have an effect on all cmdlets.</span></span> <span data-ttu-id="81801-111">Por exemplo, se um cmdlet não gerar nenhuma saída detalhada, o uso do parâmetro comum **Verbose** não terá nenhum efeito.</span><span class="sxs-lookup"><span data-stu-id="81801-111">For example, if a cmdlet doesn't generate any verbose output, using the **Verbose** common parameter has no effect.</span></span>
+<span data-ttu-id="cf569-110">Você pode usar os parâmetros comuns com qualquer cmdlet, mas eles podem não ter um efeito sobre todos os cmdlets.</span><span class="sxs-lookup"><span data-stu-id="cf569-110">You can use the common parameters with any cmdlet, but they might not have an effect on all cmdlets.</span></span> <span data-ttu-id="cf569-111">Por exemplo, se um cmdlet não gerar nenhuma saída detalhada, o uso do parâmetro comum **Verbose** não terá nenhum efeito.</span><span class="sxs-lookup"><span data-stu-id="cf569-111">For example, if a cmdlet doesn't generate any verbose output, using the **Verbose** common parameter has no effect.</span></span>
 
-<span data-ttu-id="81801-112">Os parâmetros comuns também estão disponíveis em funções avançadas que usam o atributo **CmdletBinding** ou o atributo de **parâmetro** .</span><span class="sxs-lookup"><span data-stu-id="81801-112">The common parameters are also available on advanced functions that use the **CmdletBinding** attribute or the **Parameter** attribute.</span></span>
+<span data-ttu-id="cf569-112">Os parâmetros comuns também estão disponíveis em funções avançadas que usam o atributo **CmdletBinding** ou o atributo de **parâmetro** .</span><span class="sxs-lookup"><span data-stu-id="cf569-112">The common parameters are also available on advanced functions that use the **CmdletBinding** attribute or the **Parameter** attribute.</span></span>
 
-<span data-ttu-id="81801-113">Vários parâmetros comuns substituem os padrões ou as preferências do sistema que você define usando as variáveis de preferência do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="81801-113">Several common parameters override system defaults or preferences that you set by using the PowerShell preference variables.</span></span> <span data-ttu-id="81801-114">Ao contrário das variáveis de preferência, os parâmetros comuns afetam apenas os comandos nos quais eles são usados.</span><span class="sxs-lookup"><span data-stu-id="81801-114">Unlike the preference variables, the common parameters affect only the commands in which they're used.</span></span>
+<span data-ttu-id="cf569-113">Vários parâmetros comuns substituem os padrões ou as preferências do sistema que você define usando as variáveis de preferência do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cf569-113">Several common parameters override system defaults or preferences that you set by using the PowerShell preference variables.</span></span> <span data-ttu-id="cf569-114">Ao contrário das variáveis de preferência, os parâmetros comuns afetam apenas os comandos nos quais eles são usados.</span><span class="sxs-lookup"><span data-stu-id="cf569-114">Unlike the preference variables, the common parameters affect only the commands in which they're used.</span></span>
 
-<span data-ttu-id="81801-115">Para obter mais informações, consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="81801-115">For more information, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
+<span data-ttu-id="cf569-115">Para obter mais informações, consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="cf569-115">For more information, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
 
-<span data-ttu-id="81801-116">A lista a seguir exibe os parâmetros comuns.</span><span class="sxs-lookup"><span data-stu-id="81801-116">The following list displays the common parameters.</span></span> <span data-ttu-id="81801-117">Seus aliases são listados entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="81801-117">Their aliases are listed in parentheses.</span></span>
+<span data-ttu-id="cf569-116">A lista a seguir exibe os parâmetros comuns.</span><span class="sxs-lookup"><span data-stu-id="cf569-116">The following list displays the common parameters.</span></span> <span data-ttu-id="cf569-117">Seus aliases são listados entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="cf569-117">Their aliases are listed in parentheses.</span></span>
 
-- <span data-ttu-id="81801-118">**Debug** (db)</span><span class="sxs-lookup"><span data-stu-id="81801-118">**Debug** (db)</span></span>
-- <span data-ttu-id="81801-119">**Erroaction** (ea)</span><span class="sxs-lookup"><span data-stu-id="81801-119">**ErrorAction** (ea)</span></span>
-- <span data-ttu-id="81801-120">**ErrorVariable** (EV)</span><span class="sxs-lookup"><span data-stu-id="81801-120">**ErrorVariable** (ev)</span></span>
-- <span data-ttu-id="81801-121">**Informationaction** (infa)</span><span class="sxs-lookup"><span data-stu-id="81801-121">**InformationAction** (infa)</span></span>
-- <span data-ttu-id="81801-122">**InformationVariable** (IV)</span><span class="sxs-lookup"><span data-stu-id="81801-122">**InformationVariable** (iv)</span></span>
-- <span data-ttu-id="81801-123">**Outvariance** (OV)</span><span class="sxs-lookup"><span data-stu-id="81801-123">**OutVariable** (ov)</span></span>
-- <span data-ttu-id="81801-124">**OutBuffer** (OB)</span><span class="sxs-lookup"><span data-stu-id="81801-124">**OutBuffer** (ob)</span></span>
-- <span data-ttu-id="81801-125">**PipelineVariable** (PV)</span><span class="sxs-lookup"><span data-stu-id="81801-125">**PipelineVariable** (pv)</span></span>
-- <span data-ttu-id="81801-126">**Detalhado** (VB)</span><span class="sxs-lookup"><span data-stu-id="81801-126">**Verbose** (vb)</span></span>
-- <span data-ttu-id="81801-127">**Avisoaction** (WA)</span><span class="sxs-lookup"><span data-stu-id="81801-127">**WarningAction** (wa)</span></span>
-- <span data-ttu-id="81801-128">**WarningVariable** (WV)</span><span class="sxs-lookup"><span data-stu-id="81801-128">**WarningVariable** (wv)</span></span>
+- <span data-ttu-id="cf569-118">**Debug** (db)</span><span class="sxs-lookup"><span data-stu-id="cf569-118">**Debug** (db)</span></span>
+- <span data-ttu-id="cf569-119">**Erroaction** (ea)</span><span class="sxs-lookup"><span data-stu-id="cf569-119">**ErrorAction** (ea)</span></span>
+- <span data-ttu-id="cf569-120">**ErrorVariable** (EV)</span><span class="sxs-lookup"><span data-stu-id="cf569-120">**ErrorVariable** (ev)</span></span>
+- <span data-ttu-id="cf569-121">**Informationaction** (infa)</span><span class="sxs-lookup"><span data-stu-id="cf569-121">**InformationAction** (infa)</span></span>
+- <span data-ttu-id="cf569-122">**InformationVariable** (IV)</span><span class="sxs-lookup"><span data-stu-id="cf569-122">**InformationVariable** (iv)</span></span>
+- <span data-ttu-id="cf569-123">**Outvariance** (OV)</span><span class="sxs-lookup"><span data-stu-id="cf569-123">**OutVariable** (ov)</span></span>
+- <span data-ttu-id="cf569-124">**OutBuffer** (OB)</span><span class="sxs-lookup"><span data-stu-id="cf569-124">**OutBuffer** (ob)</span></span>
+- <span data-ttu-id="cf569-125">**PipelineVariable** (PV)</span><span class="sxs-lookup"><span data-stu-id="cf569-125">**PipelineVariable** (pv)</span></span>
+- <span data-ttu-id="cf569-126">**Detalhado** (VB)</span><span class="sxs-lookup"><span data-stu-id="cf569-126">**Verbose** (vb)</span></span>
+- <span data-ttu-id="cf569-127">**Avisoaction** (WA)</span><span class="sxs-lookup"><span data-stu-id="cf569-127">**WarningAction** (wa)</span></span>
+- <span data-ttu-id="cf569-128">**WarningVariable** (WV)</span><span class="sxs-lookup"><span data-stu-id="cf569-128">**WarningVariable** (wv)</span></span>
 
-<span data-ttu-id="81801-129">Os parâmetros de **ação** são valores de tipo **preferência** .</span><span class="sxs-lookup"><span data-stu-id="81801-129">The **Action** parameters are **ActionPreference** type values.</span></span>
-<span data-ttu-id="81801-130">**Preferência** é uma enumeração com os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="81801-130">**ActionPreference** is an enumeration with the following values:</span></span>
+<span data-ttu-id="cf569-129">Os parâmetros de **ação** são valores de tipo **preferência** .</span><span class="sxs-lookup"><span data-stu-id="cf569-129">The **Action** parameters are **ActionPreference** type values.</span></span>
+<span data-ttu-id="cf569-130">**Preferência** é uma enumeração com os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="cf569-130">**ActionPreference** is an enumeration with the following values:</span></span>
 
-| <span data-ttu-id="81801-131">Name</span><span class="sxs-lookup"><span data-stu-id="81801-131">Name</span></span>             | <span data-ttu-id="81801-132">Valor</span><span class="sxs-lookup"><span data-stu-id="81801-132">Value</span></span> |
+| <span data-ttu-id="cf569-131">Nome</span><span class="sxs-lookup"><span data-stu-id="cf569-131">Name</span></span>             | <span data-ttu-id="cf569-132">Valor</span><span class="sxs-lookup"><span data-stu-id="cf569-132">Value</span></span> |
 |------------------|-------|
-| <span data-ttu-id="81801-133">Suspend</span><span class="sxs-lookup"><span data-stu-id="81801-133">Suspend</span></span>          | <span data-ttu-id="81801-134">5</span><span class="sxs-lookup"><span data-stu-id="81801-134">5</span></span>     |
-| <span data-ttu-id="81801-135">Ignorar</span><span class="sxs-lookup"><span data-stu-id="81801-135">Ignore</span></span>           | <span data-ttu-id="81801-136">4</span><span class="sxs-lookup"><span data-stu-id="81801-136">4</span></span>     |
-| <span data-ttu-id="81801-137">Consultar</span><span class="sxs-lookup"><span data-stu-id="81801-137">Inquire</span></span>          | <span data-ttu-id="81801-138">3</span><span class="sxs-lookup"><span data-stu-id="81801-138">3</span></span>     |
-| <span data-ttu-id="81801-139">Continuar</span><span class="sxs-lookup"><span data-stu-id="81801-139">Continue</span></span>         | <span data-ttu-id="81801-140">2</span><span class="sxs-lookup"><span data-stu-id="81801-140">2</span></span>     |
-| <span data-ttu-id="81801-141">Parar</span><span class="sxs-lookup"><span data-stu-id="81801-141">Stop</span></span>             | <span data-ttu-id="81801-142">1</span><span class="sxs-lookup"><span data-stu-id="81801-142">1</span></span>     |
-| <span data-ttu-id="81801-143">SilentlyContinue</span><span class="sxs-lookup"><span data-stu-id="81801-143">SilentlyContinue</span></span> | <span data-ttu-id="81801-144">0</span><span class="sxs-lookup"><span data-stu-id="81801-144">0</span></span>     |
+| <span data-ttu-id="cf569-133">Suspend</span><span class="sxs-lookup"><span data-stu-id="cf569-133">Suspend</span></span>          | <span data-ttu-id="cf569-134">5</span><span class="sxs-lookup"><span data-stu-id="cf569-134">5</span></span>     |
+| <span data-ttu-id="cf569-135">Ignorar</span><span class="sxs-lookup"><span data-stu-id="cf569-135">Ignore</span></span>           | <span data-ttu-id="cf569-136">4</span><span class="sxs-lookup"><span data-stu-id="cf569-136">4</span></span>     |
+| <span data-ttu-id="cf569-137">Consultar</span><span class="sxs-lookup"><span data-stu-id="cf569-137">Inquire</span></span>          | <span data-ttu-id="cf569-138">3</span><span class="sxs-lookup"><span data-stu-id="cf569-138">3</span></span>     |
+| <span data-ttu-id="cf569-139">Continuar</span><span class="sxs-lookup"><span data-stu-id="cf569-139">Continue</span></span>         | <span data-ttu-id="cf569-140">2</span><span class="sxs-lookup"><span data-stu-id="cf569-140">2</span></span>     |
+| <span data-ttu-id="cf569-141">Parar</span><span class="sxs-lookup"><span data-stu-id="cf569-141">Stop</span></span>             | <span data-ttu-id="cf569-142">1</span><span class="sxs-lookup"><span data-stu-id="cf569-142">1</span></span>     |
+| <span data-ttu-id="cf569-143">SilentlyContinue</span><span class="sxs-lookup"><span data-stu-id="cf569-143">SilentlyContinue</span></span> | <span data-ttu-id="cf569-144">0</span><span class="sxs-lookup"><span data-stu-id="cf569-144">0</span></span>     |
 
-<span data-ttu-id="81801-145">Você pode usar o nome ou o valor com o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="81801-145">You may use the name or the value with the parameter.</span></span>
+<span data-ttu-id="cf569-145">Você pode usar o nome ou o valor com o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="cf569-145">You may use the name or the value with the parameter.</span></span>
 
-<span data-ttu-id="81801-146">Além dos parâmetros comuns, muitos cmdlets oferecem parâmetros de mitigação de risco.</span><span class="sxs-lookup"><span data-stu-id="81801-146">In addition to the common parameters, many cmdlets offer risk mitigation parameters.</span></span> <span data-ttu-id="81801-147">Os cmdlets que envolvem o risco para o sistema ou para os dados do usuário geralmente oferecem esses parâmetros.</span><span class="sxs-lookup"><span data-stu-id="81801-147">Cmdlets that involve risk to the system or to user data usually offer these parameters.</span></span>
+<span data-ttu-id="cf569-146">Além dos parâmetros comuns, muitos cmdlets oferecem parâmetros de mitigação de risco.</span><span class="sxs-lookup"><span data-stu-id="cf569-146">In addition to the common parameters, many cmdlets offer risk mitigation parameters.</span></span> <span data-ttu-id="cf569-147">Os cmdlets que envolvem o risco para o sistema ou para os dados do usuário geralmente oferecem esses parâmetros.</span><span class="sxs-lookup"><span data-stu-id="cf569-147">Cmdlets that involve risk to the system or to user data usually offer these parameters.</span></span>
 
-<span data-ttu-id="81801-148">Os parâmetros de mitigação de risco são:</span><span class="sxs-lookup"><span data-stu-id="81801-148">The risk mitigation parameters are:</span></span>
+<span data-ttu-id="cf569-148">Os parâmetros de mitigação de risco são:</span><span class="sxs-lookup"><span data-stu-id="cf569-148">The risk mitigation parameters are:</span></span>
 
-- <span data-ttu-id="81801-149">**WhatIf** (Wi)</span><span class="sxs-lookup"><span data-stu-id="81801-149">**WhatIf** (wi)</span></span>
-- <span data-ttu-id="81801-150">**Confirmar** (CF)</span><span class="sxs-lookup"><span data-stu-id="81801-150">**Confirm** (cf)</span></span>
+- <span data-ttu-id="cf569-149">**WhatIf** (Wi)</span><span class="sxs-lookup"><span data-stu-id="cf569-149">**WhatIf** (wi)</span></span>
+- <span data-ttu-id="cf569-150">**Confirmar** (CF)</span><span class="sxs-lookup"><span data-stu-id="cf569-150">**Confirm** (cf)</span></span>
 
-### <a name="common-parameter-descriptions"></a><span data-ttu-id="81801-151">DESCRIÇÕES DE PARÂMETROS COMUNS</span><span class="sxs-lookup"><span data-stu-id="81801-151">COMMON PARAMETER DESCRIPTIONS</span></span>
+### <a name="common-parameter-descriptions"></a><span data-ttu-id="cf569-151">DESCRIÇÕES DE PARÂMETROS COMUNS</span><span class="sxs-lookup"><span data-stu-id="cf569-151">COMMON PARAMETER DESCRIPTIONS</span></span>
 
-#### <a name="debug"></a><span data-ttu-id="81801-152">Depurar</span><span class="sxs-lookup"><span data-stu-id="81801-152">Debug</span></span>
+#### <a name="debug"></a><span data-ttu-id="cf569-152">Depurar</span><span class="sxs-lookup"><span data-stu-id="cf569-152">Debug</span></span>
 
-<span data-ttu-id="81801-153">Exibe detalhes no nível do programador sobre a operação feita pelo comando.</span><span class="sxs-lookup"><span data-stu-id="81801-153">Displays programmer-level detail about the operation done by the command.</span></span> <span data-ttu-id="81801-154">Esse parâmetro funciona somente quando o comando gera uma mensagem de depuração.</span><span class="sxs-lookup"><span data-stu-id="81801-154">This parameter works only when the command generates a debugging message.</span></span> <span data-ttu-id="81801-155">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Debug` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-155">For example, this parameter works when a command contains the `Write-Debug` cmdlet.</span></span>
+<span data-ttu-id="cf569-153">Exibe detalhes no nível do programador sobre a operação feita pelo comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-153">Displays programmer-level detail about the operation done by the command.</span></span> <span data-ttu-id="cf569-154">Esse parâmetro funciona somente quando o comando gera uma mensagem de depuração.</span><span class="sxs-lookup"><span data-stu-id="cf569-154">This parameter works only when the command generates a debugging message.</span></span> <span data-ttu-id="cf569-155">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Debug` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-155">For example, this parameter works when a command contains the `Write-Debug` cmdlet.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -83,18 +83,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-156">Por padrão, as mensagens de depuração não são exibidas porque o valor da `$DebugPreference` variável é **SilentlyContinue** .</span><span class="sxs-lookup"><span data-stu-id="81801-156">By default, debugging messages aren't displayed because the value of the `$DebugPreference` variable is **SilentlyContinue** .</span></span>
+<span data-ttu-id="cf569-156">Por padrão, as mensagens de depuração não são exibidas porque o valor da `$DebugPreference` variável é **SilentlyContinue**.</span><span class="sxs-lookup"><span data-stu-id="cf569-156">By default, debugging messages aren't displayed because the value of the `$DebugPreference` variable is **SilentlyContinue**.</span></span>
 
-<span data-ttu-id="81801-157">No modo interativo, o parâmetro **debug** substitui o valor da `$DebugPreference` variável para o comando atual, definindo o valor de `$DebugPreference` para **inquire** .</span><span class="sxs-lookup"><span data-stu-id="81801-157">In interactive mode, the **Debug** parameter overrides the value of the `$DebugPreference` variable for the current command, setting the value of `$DebugPreference` to **Inquire** .</span></span>
+<span data-ttu-id="cf569-157">No modo interativo, o parâmetro **debug** substitui o valor da `$DebugPreference` variável para o comando atual, definindo o valor de `$DebugPreference` para **inquire**.</span><span class="sxs-lookup"><span data-stu-id="cf569-157">In interactive mode, the **Debug** parameter overrides the value of the `$DebugPreference` variable for the current command, setting the value of `$DebugPreference` to **Inquire**.</span></span>
 
-<span data-ttu-id="81801-158">No modo não interativo, o parâmetro de **depuração** substitui o valor da `$DebugPreference` variável para o comando atual, definindo o valor de `$DebugPreference` para **continuar** .</span><span class="sxs-lookup"><span data-stu-id="81801-158">In non-interactive mode, the **Debug** parameter overrides the value of the `$DebugPreference` variable for the current command, setting the value of `$DebugPreference` to **Continue** .</span></span>
+<span data-ttu-id="cf569-158">No modo não interativo, o parâmetro de **depuração** substitui o valor da `$DebugPreference` variável para o comando atual, definindo o valor de `$DebugPreference` para **continuar**.</span><span class="sxs-lookup"><span data-stu-id="cf569-158">In non-interactive mode, the **Debug** parameter overrides the value of the `$DebugPreference` variable for the current command, setting the value of `$DebugPreference` to **Continue**.</span></span>
 
-<span data-ttu-id="81801-159">`-Debug:$true` tem o mesmo efeito que `-Debug` .</span><span class="sxs-lookup"><span data-stu-id="81801-159">`-Debug:$true` has the same effect as `-Debug`.</span></span> <span data-ttu-id="81801-160">Use `-Debug:$false` para suprimir a exibição de mensagens de depuração quando `$DebugPreference` não for **SilentlyContinue** , que é o padrão.</span><span class="sxs-lookup"><span data-stu-id="81801-160">Use `-Debug:$false` to suppress the display of debugging messages when `$DebugPreference` isn't **SilentlyContinue** , which is the default.</span></span>
+<span data-ttu-id="cf569-159">`-Debug:$true` tem o mesmo efeito que `-Debug` .</span><span class="sxs-lookup"><span data-stu-id="cf569-159">`-Debug:$true` has the same effect as `-Debug`.</span></span> <span data-ttu-id="cf569-160">Use `-Debug:$false` para suprimir a exibição de mensagens de depuração quando `$DebugPreference` não for **SilentlyContinue**, que é o padrão.</span><span class="sxs-lookup"><span data-stu-id="cf569-160">Use `-Debug:$false` to suppress the display of debugging messages when `$DebugPreference` isn't **SilentlyContinue**, which is the default.</span></span>
 
-#### <a name="erroraction"></a><span data-ttu-id="81801-161">ErrorAction</span><span class="sxs-lookup"><span data-stu-id="81801-161">ErrorAction</span></span>
+#### <a name="erroraction"></a><span data-ttu-id="cf569-161">ErrorAction</span><span class="sxs-lookup"><span data-stu-id="cf569-161">ErrorAction</span></span>
 
-<span data-ttu-id="81801-162">Determina como o cmdlet responde a um erro de não finalização do comando.</span><span class="sxs-lookup"><span data-stu-id="81801-162">Determines how the cmdlet responds to a non-terminating error from the command.</span></span>
-<span data-ttu-id="81801-163">Esse parâmetro funciona somente quando o comando gera um erro de não finalização, como os do `Write-Error` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-163">This parameter works only when the command generates a non-terminating error, such as those from the `Write-Error` cmdlet.</span></span>
+<span data-ttu-id="cf569-162">Determina como o cmdlet responde a um erro de não finalização do comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-162">Determines how the cmdlet responds to a non-terminating error from the command.</span></span>
+<span data-ttu-id="cf569-163">Esse parâmetro funciona somente quando o comando gera um erro de não finalização, como os do `Write-Error` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-163">This parameter works only when the command generates a non-terminating error, such as those from the `Write-Error` cmdlet.</span></span>
 
 ```yaml
 Type: ActionPreference
@@ -108,28 +108,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-164">O parâmetro **ErrorAction** substitui o valor da `$ErrorActionPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="81801-164">The **ErrorAction** parameter overrides the value of the `$ErrorActionPreference` variable for the current command.</span></span> <span data-ttu-id="81801-165">Como o valor padrão da `$ErrorActionPreference` variável é **continue** , as mensagens de erro são exibidas e a execução continua, a menos que você use o parâmetro **ErrorAction** .</span><span class="sxs-lookup"><span data-stu-id="81801-165">Because the default value of the `$ErrorActionPreference` variable is **Continue** , error messages are displayed and execution continues unless you use the **ErrorAction** parameter.</span></span>
+<span data-ttu-id="cf569-164">O parâmetro **ErrorAction** substitui o valor da `$ErrorActionPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="cf569-164">The **ErrorAction** parameter overrides the value of the `$ErrorActionPreference` variable for the current command.</span></span> <span data-ttu-id="cf569-165">Como o valor padrão da `$ErrorActionPreference` variável é **continue**, as mensagens de erro são exibidas e a execução continua, a menos que você use o parâmetro **ErrorAction** .</span><span class="sxs-lookup"><span data-stu-id="cf569-165">Because the default value of the `$ErrorActionPreference` variable is **Continue**, error messages are displayed and execution continues unless you use the **ErrorAction** parameter.</span></span>
 
-<span data-ttu-id="81801-166">O parâmetro **ErrorAction** não tem nenhum efeito sobre erros de encerramento (como dados ausentes, parâmetros que não são válidos ou permissões insuficientes) que impedem que um comando seja concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="81801-166">The **ErrorAction** parameter has no effect on terminating errors (such as missing data, parameters that aren't valid, or insufficient permissions) that prevent a command from completing successfully.</span></span>
+<span data-ttu-id="cf569-166">O parâmetro **ErrorAction** não tem nenhum efeito sobre erros de encerramento (como dados ausentes, parâmetros que não são válidos ou permissões insuficientes) que impedem que um comando seja concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="cf569-166">The **ErrorAction** parameter has no effect on terminating errors (such as missing data, parameters that aren't valid, or insufficient permissions) that prevent a command from completing successfully.</span></span>
 
-<span data-ttu-id="81801-167">`-ErrorAction:Continue` Exiba a mensagem de erro e continue executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-167">`-ErrorAction:Continue` display the error message and continues executing the command.</span></span> <span data-ttu-id="81801-168">`Continue` é o padrão.</span><span class="sxs-lookup"><span data-stu-id="81801-168">`Continue` is the default.</span></span>
+<span data-ttu-id="cf569-167">`-ErrorAction:Continue` Exiba a mensagem de erro e continue executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-167">`-ErrorAction:Continue` display the error message and continues executing the command.</span></span> <span data-ttu-id="cf569-168">`Continue` é o padrão.</span><span class="sxs-lookup"><span data-stu-id="cf569-168">`Continue` is the default.</span></span>
 
-<span data-ttu-id="81801-169">`-ErrorAction:Ignore` suprime a mensagem de erro e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-169">`-ErrorAction:Ignore` suppresses the error message and continues executing the command.</span></span> <span data-ttu-id="81801-170">Ao contrário de **SilentlyContinue** , **ignorar** não adiciona a mensagem de erro à `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="81801-170">Unlike **SilentlyContinue** , **Ignore** doesn't add the error message to the `$Error` automatic variable.</span></span> <span data-ttu-id="81801-171">O valor de **ignorar** é introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="81801-171">The **Ignore** value is introduced in PowerShell 3.0.</span></span>
+<span data-ttu-id="cf569-169">`-ErrorAction:Ignore` suprime a mensagem de erro e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-169">`-ErrorAction:Ignore` suppresses the error message and continues executing the command.</span></span> <span data-ttu-id="cf569-170">Ao contrário de **SilentlyContinue**, **ignorar** não adiciona a mensagem de erro à `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="cf569-170">Unlike **SilentlyContinue**, **Ignore** doesn't add the error message to the `$Error` automatic variable.</span></span> <span data-ttu-id="cf569-171">O valor de **ignorar** é introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="cf569-171">The **Ignore** value is introduced in PowerShell 3.0.</span></span>
 
-<span data-ttu-id="81801-172">`-ErrorAction:Inquire` exibe a mensagem de erro e solicita a confirmação antes de continuar a execução.</span><span class="sxs-lookup"><span data-stu-id="81801-172">`-ErrorAction:Inquire` displays the error message and prompts you for confirmation before continuing execution.</span></span> <span data-ttu-id="81801-173">Esse valor raramente é usado.</span><span class="sxs-lookup"><span data-stu-id="81801-173">This value is rarely used.</span></span>
+<span data-ttu-id="cf569-172">`-ErrorAction:Inquire` exibe a mensagem de erro e solicita a confirmação antes de continuar a execução.</span><span class="sxs-lookup"><span data-stu-id="cf569-172">`-ErrorAction:Inquire` displays the error message and prompts you for confirmation before continuing execution.</span></span> <span data-ttu-id="cf569-173">Esse valor raramente é usado.</span><span class="sxs-lookup"><span data-stu-id="cf569-173">This value is rarely used.</span></span>
 
-<span data-ttu-id="81801-174">`-ErrorAction:SilentlyContinue` suprime a mensagem de erro e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-174">`-ErrorAction:SilentlyContinue` suppresses the error message and continues executing the command.</span></span>
+<span data-ttu-id="cf569-174">`-ErrorAction:SilentlyContinue` suprime a mensagem de erro e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-174">`-ErrorAction:SilentlyContinue` suppresses the error message and continues executing the command.</span></span>
 
-<span data-ttu-id="81801-175">`-ErrorAction:Stop` exibe a mensagem de erro e para a execução do comando.</span><span class="sxs-lookup"><span data-stu-id="81801-175">`-ErrorAction:Stop` displays the error message and stops executing the command.</span></span>
+<span data-ttu-id="cf569-175">`-ErrorAction:Stop` exibe a mensagem de erro e para a execução do comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-175">`-ErrorAction:Stop` displays the error message and stops executing the command.</span></span>
 
-<span data-ttu-id="81801-176">`-ErrorAction:Suspend` Só está disponível para fluxos de trabalho que não têm suporte no PowerShell 6 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="81801-176">`-ErrorAction:Suspend` is only available for workflows which aren't supported in PowerShell 6 and beyond.</span></span>
+<span data-ttu-id="cf569-176">`-ErrorAction:Suspend` Só está disponível para fluxos de trabalho que não têm suporte no PowerShell 6 e posteriores.</span><span class="sxs-lookup"><span data-stu-id="cf569-176">`-ErrorAction:Suspend` is only available for workflows which aren't supported in PowerShell 6 and beyond.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81801-177">O parâmetro **ErrorAction** substitui, mas não substitui o valor da variável de `$ErrorAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="81801-177">The **ErrorAction** parameter overrides, but does not replace the value of the `$ErrorAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
+> <span data-ttu-id="cf569-177">O parâmetro **ErrorAction** substitui, mas não substitui o valor da variável de `$ErrorAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="cf569-177">The **ErrorAction** parameter overrides, but does not replace the value of the `$ErrorAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
 
-#### <a name="errorvariable"></a><span data-ttu-id="81801-178">ErrorVariable</span><span class="sxs-lookup"><span data-stu-id="81801-178">ErrorVariable</span></span>
+#### <a name="errorvariable"></a><span data-ttu-id="cf569-178">ErrorVariable</span><span class="sxs-lookup"><span data-stu-id="cf569-178">ErrorVariable</span></span>
 
-<span data-ttu-id="81801-179">O **ErrorVariable** armazena mensagens de erro sobre o comando na variável especificada e na `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="81801-179">**ErrorVariable** stores error messages about the command in the specified variable and in the `$Error` automatic variable.</span></span> <span data-ttu-id="81801-180">Para obter mais informações, consulte [about_Automatic_Variables](about_Automatic_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="81801-180">For more information, see [about_Automatic_Variables](about_Automatic_Variables.md)</span></span>
+<span data-ttu-id="cf569-179">O **ErrorVariable** armazena mensagens de erro sobre o comando na variável especificada e na `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="cf569-179">**ErrorVariable** stores error messages about the command in the specified variable and in the `$Error` automatic variable.</span></span> <span data-ttu-id="cf569-180">Para obter mais informações, consulte [about_Automatic_Variables](about_Automatic_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="cf569-180">For more information, see [about_Automatic_Variables](about_Automatic_Variables.md)</span></span>
 
 ```yaml
 Type: String
@@ -142,34 +142,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-181">Por padrão, novas mensagens de erro substituem mensagens de erro que já estão armazenadas na variável.</span><span class="sxs-lookup"><span data-stu-id="81801-181">By default, new error messages overwrite error messages that are already stored in the variable.</span></span> <span data-ttu-id="81801-182">Para acrescentar a mensagem de erro ao conteúdo da variável, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="81801-182">To append the error message to the variable content, type a plus sign (`+`) before the variable name.</span></span>
+<span data-ttu-id="cf569-181">Por padrão, novas mensagens de erro substituem mensagens de erro que já estão armazenadas na variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-181">By default, new error messages overwrite error messages that are already stored in the variable.</span></span> <span data-ttu-id="cf569-182">Para acrescentar a mensagem de erro ao conteúdo da variável, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-182">To append the error message to the variable content, type a plus sign (`+`) before the variable name.</span></span>
 
-<span data-ttu-id="81801-183">Por exemplo, o comando a seguir cria a `$a` variável e, em seguida, armazena todos os erros nela:</span><span class="sxs-lookup"><span data-stu-id="81801-183">For example, the following command creates the `$a` variable and then stores any errors in it:</span></span>
+<span data-ttu-id="cf569-183">Por exemplo, o comando a seguir cria a `$a` variável e, em seguida, armazena todos os erros nela:</span><span class="sxs-lookup"><span data-stu-id="cf569-183">For example, the following command creates the `$a` variable and then stores any errors in it:</span></span>
 
 ```powershell
 Get-Process -Id 6 -ErrorVariable a
 ```
 
-<span data-ttu-id="81801-184">O comando a seguir adiciona todas as mensagens de erro à `$a` variável:</span><span class="sxs-lookup"><span data-stu-id="81801-184">The following command adds any error messages to the `$a` variable:</span></span>
+<span data-ttu-id="cf569-184">O comando a seguir adiciona todas as mensagens de erro à `$a` variável:</span><span class="sxs-lookup"><span data-stu-id="cf569-184">The following command adds any error messages to the `$a` variable:</span></span>
 
 ```powershell
 Get-Process -Id 2 -ErrorVariable +a
 ```
 
-<span data-ttu-id="81801-185">O comando a seguir exibe o conteúdo de `$a` :</span><span class="sxs-lookup"><span data-stu-id="81801-185">The following command displays the contents of `$a`:</span></span>
+<span data-ttu-id="cf569-185">O comando a seguir exibe o conteúdo de `$a` :</span><span class="sxs-lookup"><span data-stu-id="cf569-185">The following command displays the contents of `$a`:</span></span>
 
 ```powershell
 $a
 ```
 
-<span data-ttu-id="81801-186">Você pode usar esse parâmetro para criar uma variável que contém apenas mensagens de erro de comandos específicos e não afeta o comportamento da `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="81801-186">You can use this parameter to create a variable that contains only error messages from specific commands and does not affect the behavior of the `$Error` automatic variable.</span></span> <span data-ttu-id="81801-187">A `$Error` variável automática contém mensagens de erro de todos os comandos na sessão.</span><span class="sxs-lookup"><span data-stu-id="81801-187">The `$Error` automatic variable contains error messages from all the commands in the session.</span></span> <span data-ttu-id="81801-188">Você pode usar a notação de matriz, como `$a[0]` ou `$error[1,2]` para se referir a erros específicos armazenados nas variáveis.</span><span class="sxs-lookup"><span data-stu-id="81801-188">You can use array notation, such as `$a[0]` or `$error[1,2]` to refer to specific errors stored in the variables.</span></span>
+<span data-ttu-id="cf569-186">Você pode usar esse parâmetro para criar uma variável que contém apenas mensagens de erro de comandos específicos e não afeta o comportamento da `$Error` variável automática.</span><span class="sxs-lookup"><span data-stu-id="cf569-186">You can use this parameter to create a variable that contains only error messages from specific commands and does not affect the behavior of the `$Error` automatic variable.</span></span> <span data-ttu-id="cf569-187">A `$Error` variável automática contém mensagens de erro de todos os comandos na sessão.</span><span class="sxs-lookup"><span data-stu-id="cf569-187">The `$Error` automatic variable contains error messages from all the commands in the session.</span></span> <span data-ttu-id="cf569-188">Você pode usar a notação de matriz, como `$a[0]` ou `$error[1,2]` para se referir a erros específicos armazenados nas variáveis.</span><span class="sxs-lookup"><span data-stu-id="cf569-188">You can use array notation, such as `$a[0]` or `$error[1,2]` to refer to specific errors stored in the variables.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81801-189">A variável de erro personalizada contém todos os erros gerados pelo comando, incluindo erros de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="81801-189">The custom error variable contains all errors generated by the command, including errors from calls to nested functions or scripts.</span></span>
+> <span data-ttu-id="cf569-189">A variável de erro personalizada contém todos os erros gerados pelo comando, incluindo erros de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="cf569-189">The custom error variable contains all errors generated by the command, including errors from calls to nested functions or scripts.</span></span>
 
-#### <a name="informationaction"></a><span data-ttu-id="81801-190">InformationAction</span><span class="sxs-lookup"><span data-stu-id="81801-190">InformationAction</span></span>
+#### <a name="informationaction"></a><span data-ttu-id="cf569-190">InformationAction</span><span class="sxs-lookup"><span data-stu-id="cf569-190">InformationAction</span></span>
 
-<span data-ttu-id="81801-191">Introduzido no PowerShell 5,0.</span><span class="sxs-lookup"><span data-stu-id="81801-191">Introduced in PowerShell 5.0.</span></span> <span data-ttu-id="81801-192">No comando ou script em que é usado, o parâmetro Common **informationaction** substitui o valor da `$InformationPreference` variável de preferência, que por padrão é definido como **SilentlyContinue** .</span><span class="sxs-lookup"><span data-stu-id="81801-192">Within the command or script in which it's used, the **InformationAction** common parameter overrides the value of the `$InformationPreference` preference variable, which by default is set to **SilentlyContinue** .</span></span> <span data-ttu-id="81801-193">Quando você usa o `Write-Information` em um script com **informationaction** , `Write-Information` os valores são mostrados dependendo do valor do parâmetro **informationaction** .</span><span class="sxs-lookup"><span data-stu-id="81801-193">When you use `Write-Information` in a script with **InformationAction** , `Write-Information` values are shown depending on the value of the **InformationAction** parameter.</span></span> <span data-ttu-id="81801-194">Para obter mais informações sobre o `$InformationPreference` , consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="81801-194">For more information about `$InformationPreference`, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
+<span data-ttu-id="cf569-191">Introduzido no PowerShell 5,0.</span><span class="sxs-lookup"><span data-stu-id="cf569-191">Introduced in PowerShell 5.0.</span></span> <span data-ttu-id="cf569-192">No comando ou script em que é usado, o parâmetro Common **informationaction** substitui o valor da `$InformationPreference` variável de preferência, que por padrão é definido como **SilentlyContinue**.</span><span class="sxs-lookup"><span data-stu-id="cf569-192">Within the command or script in which it's used, the **InformationAction** common parameter overrides the value of the `$InformationPreference` preference variable, which by default is set to **SilentlyContinue**.</span></span> <span data-ttu-id="cf569-193">Quando você usa o `Write-Information` em um script com **informationaction**, `Write-Information` os valores são mostrados dependendo do valor do parâmetro **informationaction** .</span><span class="sxs-lookup"><span data-stu-id="cf569-193">When you use `Write-Information` in a script with **InformationAction**, `Write-Information` values are shown depending on the value of the **InformationAction** parameter.</span></span> <span data-ttu-id="cf569-194">Para obter mais informações sobre o `$InformationPreference` , consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="cf569-194">For more information about `$InformationPreference`, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
 
 ```yaml
 Type: ActionPreference
@@ -183,27 +183,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-195">`-InformationAction:Stop` interrompe um comando ou script em uma ocorrência do `Write-Information` comando.</span><span class="sxs-lookup"><span data-stu-id="81801-195">`-InformationAction:Stop` stops a command or script at an occurrence of the `Write-Information` command.</span></span>
+<span data-ttu-id="cf569-195">`-InformationAction:Stop` interrompe um comando ou script em uma ocorrência do `Write-Information` comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-195">`-InformationAction:Stop` stops a command or script at an occurrence of the `Write-Information` command.</span></span>
 
-<span data-ttu-id="81801-196">`-InformationAction:Ignore` suprime a mensagem informativa e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-196">`-InformationAction:Ignore` suppresses the informational message and continues running the command.</span></span> <span data-ttu-id="81801-197">Ao contrário de **SilentlyContinue** , **ignorar** se esquece completamente da mensagem informativa; Ele não adiciona a mensagem informativa ao fluxo de informações.</span><span class="sxs-lookup"><span data-stu-id="81801-197">Unlike **SilentlyContinue** , **Ignore** completely forgets the informational message; it doesn't add the informational message to the information stream.</span></span>
+<span data-ttu-id="cf569-196">`-InformationAction:Ignore` suprime a mensagem informativa e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-196">`-InformationAction:Ignore` suppresses the informational message and continues running the command.</span></span> <span data-ttu-id="cf569-197">Ao contrário de **SilentlyContinue**, **ignorar** se esquece completamente da mensagem informativa; Ele não adiciona a mensagem informativa ao fluxo de informações.</span><span class="sxs-lookup"><span data-stu-id="cf569-197">Unlike **SilentlyContinue**, **Ignore** completely forgets the informational message; it doesn't add the informational message to the information stream.</span></span>
 
-<span data-ttu-id="81801-198">`-InformationAction:Inquire` exibe a mensagem informativa que você especifica em um `Write-Information` comando e pergunta se deseja continuar.</span><span class="sxs-lookup"><span data-stu-id="81801-198">`-InformationAction:Inquire` displays the informational message that you specify in a `Write-Information` command, then asks whether you want to continue.</span></span>
+<span data-ttu-id="cf569-198">`-InformationAction:Inquire` exibe a mensagem informativa que você especifica em um `Write-Information` comando e pergunta se deseja continuar.</span><span class="sxs-lookup"><span data-stu-id="cf569-198">`-InformationAction:Inquire` displays the informational message that you specify in a `Write-Information` command, then asks whether you want to continue.</span></span>
 
-<span data-ttu-id="81801-199">`-InformationAction:Continue` exibe a mensagem informativa e continua em execução.</span><span class="sxs-lookup"><span data-stu-id="81801-199">`-InformationAction:Continue` displays the informational message, and continues running.</span></span>
+<span data-ttu-id="cf569-199">`-InformationAction:Continue` exibe a mensagem informativa e continua em execução.</span><span class="sxs-lookup"><span data-stu-id="cf569-199">`-InformationAction:Continue` displays the informational message, and continues running.</span></span>
 
-<span data-ttu-id="81801-200">`-InformationAction:Suspend` Não tem suporte no PowerShell Core porque ele só está disponível para fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="81801-200">`-InformationAction:Suspend` isn't supported on PowerShell Core as it is only available for workflows.</span></span>
+<span data-ttu-id="cf569-200">`-InformationAction:Suspend` Não tem suporte no PowerShell Core porque ele só está disponível para fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="cf569-200">`-InformationAction:Suspend` isn't supported on PowerShell Core as it is only available for workflows.</span></span>
 
-<span data-ttu-id="81801-201">`-InformationAction:SilentlyContinue` nenhum efeito, pois a mensagem informativa não é exibida (padrão) e o script continua sem interrupção.</span><span class="sxs-lookup"><span data-stu-id="81801-201">`-InformationAction:SilentlyContinue` no effect as the informational message aren't (Default) displayed, and the script continues without interruption.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="81801-202">O parâmetro **informationaction** substitui, mas não substitui o valor da variável de `$InformationAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="81801-202">The **InformationAction** parameter overrides, but does not replace the value of the `$InformationAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
-
-#### <a name="informationvariable"></a><span data-ttu-id="81801-203">InformationVariable</span><span class="sxs-lookup"><span data-stu-id="81801-203">InformationVariable</span></span>
-
-<span data-ttu-id="81801-204">Introduzido no PowerShell 5,0.</span><span class="sxs-lookup"><span data-stu-id="81801-204">Introduced in PowerShell 5.0.</span></span> <span data-ttu-id="81801-205">No comando ou script em que é usado, o parâmetro comum **InformationVariable** armazena em uma variável uma cadeia de caracteres que você especifica adicionando o `Write-Information` comando.</span><span class="sxs-lookup"><span data-stu-id="81801-205">Within the command or script in which it's used, the **InformationVariable** common parameter stores in a variable a string that you specify by adding the `Write-Information` command.</span></span> <span data-ttu-id="81801-206">`Write-Information` os valores são mostrados dependendo do valor do parâmetro de **informationaction** comum; Se você não adicionar o parâmetro Common **Reinformationaction** , as `Write-Information` cadeias de caracteres serão mostradas dependendo do valor da `$InformationPreference` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="81801-206">`Write-Information` values are shown depending on the value of the **InformationAction** common parameter; if you don't add the **InformationAction** common parameter, `Write-Information` strings are shown depending on the value of the `$InformationPreference` preference variable.</span></span> <span data-ttu-id="81801-207">Para obter mais informações sobre o `$InformationPreference` , consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="81801-207">For more information about `$InformationPreference`, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
+<span data-ttu-id="cf569-201">`-InformationAction:SilentlyContinue` nenhum efeito, pois a mensagem informativa não é exibida (padrão) e o script continua sem interrupção.</span><span class="sxs-lookup"><span data-stu-id="cf569-201">`-InformationAction:SilentlyContinue` no effect as the informational message aren't (Default) displayed, and the script continues without interruption.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81801-208">A variável Information contém todas as mensagens de informações geradas pelo comando, incluindo mensagens de informações de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="81801-208">The information variable contains all information messages generated by the command, including information messages from calls to nested functions or scripts.</span></span>
+> <span data-ttu-id="cf569-202">O parâmetro **informationaction** substitui, mas não substitui o valor da variável de `$InformationAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="cf569-202">The **InformationAction** parameter overrides, but does not replace the value of the `$InformationAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
+
+#### <a name="informationvariable"></a><span data-ttu-id="cf569-203">InformationVariable</span><span class="sxs-lookup"><span data-stu-id="cf569-203">InformationVariable</span></span>
+
+<span data-ttu-id="cf569-204">Introduzido no PowerShell 5,0.</span><span class="sxs-lookup"><span data-stu-id="cf569-204">Introduced in PowerShell 5.0.</span></span> <span data-ttu-id="cf569-205">No comando ou script em que é usado, o parâmetro comum **InformationVariable** armazena em uma variável uma cadeia de caracteres que você especifica adicionando o `Write-Information` comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-205">Within the command or script in which it's used, the **InformationVariable** common parameter stores in a variable a string that you specify by adding the `Write-Information` command.</span></span> <span data-ttu-id="cf569-206">`Write-Information` os valores são mostrados dependendo do valor do parâmetro de **informationaction** comum; Se você não adicionar o parâmetro Common **Reinformationaction** , as `Write-Information` cadeias de caracteres serão mostradas dependendo do valor da `$InformationPreference` variável de preferência.</span><span class="sxs-lookup"><span data-stu-id="cf569-206">`Write-Information` values are shown depending on the value of the **InformationAction** common parameter; if you don't add the **InformationAction** common parameter, `Write-Information` strings are shown depending on the value of the `$InformationPreference` preference variable.</span></span> <span data-ttu-id="cf569-207">Para obter mais informações sobre o `$InformationPreference` , consulte [about_Preference_Variables](./about_Preference_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="cf569-207">For more information about `$InformationPreference`, see [about_Preference_Variables](./about_Preference_Variables.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="cf569-208">A variável Information contém todas as mensagens de informações geradas pelo comando, incluindo mensagens de informações de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="cf569-208">The information variable contains all information messages generated by the command, including information messages from calls to nested functions or scripts.</span></span>
 
 ```yaml
 Type: String
@@ -216,9 +216,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-#### <a name="outbuffer"></a><span data-ttu-id="81801-209">OutBuffer</span><span class="sxs-lookup"><span data-stu-id="81801-209">OutBuffer</span></span>
+#### <a name="outbuffer"></a><span data-ttu-id="cf569-209">OutBuffer</span><span class="sxs-lookup"><span data-stu-id="cf569-209">OutBuffer</span></span>
 
-<span data-ttu-id="81801-210">Determina o número de objetos a serem acumulados em um buffer antes que qualquer objeto seja enviado por meio do pipeline.</span><span class="sxs-lookup"><span data-stu-id="81801-210">Determines the number of objects to accumulate in a buffer before any objects are sent through the pipeline.</span></span> <span data-ttu-id="81801-211">Se você omitir esse parâmetro, os objetos serão enviados conforme eles forem gerados.</span><span class="sxs-lookup"><span data-stu-id="81801-211">If you omit this parameter, objects are sent as they're generated.</span></span>
+<span data-ttu-id="cf569-210">Determina o número de objetos a serem acumulados em um buffer antes que qualquer objeto seja enviado por meio do pipeline.</span><span class="sxs-lookup"><span data-stu-id="cf569-210">Determines the number of objects to accumulate in a buffer before any objects are sent through the pipeline.</span></span> <span data-ttu-id="cf569-211">Se você omitir esse parâmetro, os objetos serão enviados conforme eles forem gerados.</span><span class="sxs-lookup"><span data-stu-id="cf569-211">If you omit this parameter, objects are sent as they're generated.</span></span>
 
 ```yaml
 Type: Int32
@@ -231,9 +231,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-212">Esse parâmetro de gerenciamento de recursos foi projetado para usuários avançados.</span><span class="sxs-lookup"><span data-stu-id="81801-212">This resource management parameter is designed for advanced users.</span></span> <span data-ttu-id="81801-213">Quando você usa esse parâmetro, o PowerShell envia dados para o próximo cmdlet em lotes de `OutBuffer + 1` .</span><span class="sxs-lookup"><span data-stu-id="81801-213">When you use this parameter, PowerShell sends data to the next cmdlet in batches of `OutBuffer + 1`.</span></span>
+<span data-ttu-id="cf569-212">Esse parâmetro de gerenciamento de recursos foi projetado para usuários avançados.</span><span class="sxs-lookup"><span data-stu-id="cf569-212">This resource management parameter is designed for advanced users.</span></span> <span data-ttu-id="cf569-213">Quando você usa esse parâmetro, o PowerShell envia dados para o próximo cmdlet em lotes de `OutBuffer + 1` .</span><span class="sxs-lookup"><span data-stu-id="cf569-213">When you use this parameter, PowerShell sends data to the next cmdlet in batches of `OutBuffer + 1`.</span></span>
 
-<span data-ttu-id="81801-214">As alternativas de exemplo a seguir são exibidas entre `ForEach-Object` os blocos de processo que usam o `Write-Host` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-214">The following example alternates displays between to `ForEach-Object` process blocks that use the `Write-Host` cmdlet.</span></span> <span data-ttu-id="81801-215">As alternativas de exibição em lotes de 2 ou `OutBuffer + 1` .</span><span class="sxs-lookup"><span data-stu-id="81801-215">The display alternates in batches of 2 or `OutBuffer + 1`.</span></span>
+<span data-ttu-id="cf569-214">As alternativas de exemplo a seguir são exibidas entre `ForEach-Object` os blocos de processo que usam o `Write-Host` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-214">The following example alternates displays between to `ForEach-Object` process blocks that use the `Write-Host` cmdlet.</span></span> <span data-ttu-id="cf569-215">As alternativas de exibição em lotes de 2 ou `OutBuffer + 1` .</span><span class="sxs-lookup"><span data-stu-id="cf569-215">The display alternates in batches of 2 or `OutBuffer + 1`.</span></span>
 
 ```powershell
 1..4 | ForEach-Object {
@@ -253,9 +253,9 @@ Accept wildcard characters: False
 4: Second
 ```
 
-#### <a name="outvariable"></a><span data-ttu-id="81801-216">OutVariable</span><span class="sxs-lookup"><span data-stu-id="81801-216">OutVariable</span></span>
+#### <a name="outvariable"></a><span data-ttu-id="cf569-216">OutVariable</span><span class="sxs-lookup"><span data-stu-id="cf569-216">OutVariable</span></span>
 
-<span data-ttu-id="81801-217">Armazena objetos de saída do comando na variável especificada, além de enviar a saída ao longo do pipeline.</span><span class="sxs-lookup"><span data-stu-id="81801-217">Stores output objects from the command in the specified variable in addition to sending the output along the pipeline.</span></span>
+<span data-ttu-id="cf569-217">Armazena objetos de saída do comando na variável especificada, além de enviar a saída ao longo do pipeline.</span><span class="sxs-lookup"><span data-stu-id="cf569-217">Stores output objects from the command in the specified variable in addition to sending the output along the pipeline.</span></span>
 
 ```yaml
 Type: String
@@ -268,32 +268,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-218">Para adicionar a saída à variável, em vez de substituir qualquer saída que já possa estar armazenada lá, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="81801-218">To add the output to the variable, instead of replacing any output that might already be stored there, type a plus sign (`+`) before the variable name.</span></span>
+<span data-ttu-id="cf569-218">Para adicionar a saída à variável, em vez de substituir qualquer saída que já possa estar armazenada lá, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-218">To add the output to the variable, instead of replacing any output that might already be stored there, type a plus sign (`+`) before the variable name.</span></span>
 
-<span data-ttu-id="81801-219">Por exemplo, o comando a seguir cria a `$out` variável e armazena o objeto de processo nele:</span><span class="sxs-lookup"><span data-stu-id="81801-219">For example, the following command creates the `$out` variable and stores the process object in it:</span></span>
+<span data-ttu-id="cf569-219">Por exemplo, o comando a seguir cria a `$out` variável e armazena o objeto de processo nele:</span><span class="sxs-lookup"><span data-stu-id="cf569-219">For example, the following command creates the `$out` variable and stores the process object in it:</span></span>
 
 ```powershell
 Get-Process PowerShell -OutVariable out
 ```
 
-<span data-ttu-id="81801-220">O comando a seguir adiciona o objeto de processo à `$out` variável:</span><span class="sxs-lookup"><span data-stu-id="81801-220">The following command adds the process object to the `$out` variable:</span></span>
+<span data-ttu-id="cf569-220">O comando a seguir adiciona o objeto de processo à `$out` variável:</span><span class="sxs-lookup"><span data-stu-id="cf569-220">The following command adds the process object to the `$out` variable:</span></span>
 
 ```powershell
 Get-Process iexplore -OutVariable +out
 ```
 
-<span data-ttu-id="81801-221">O comando a seguir exibe o conteúdo da `$out` variável:</span><span class="sxs-lookup"><span data-stu-id="81801-221">The following command displays the contents of the `$out` variable:</span></span>
+<span data-ttu-id="cf569-221">O comando a seguir exibe o conteúdo da `$out` variável:</span><span class="sxs-lookup"><span data-stu-id="cf569-221">The following command displays the contents of the `$out` variable:</span></span>
 
 ```powershell
 $out
 ```
 
 > [!NOTE]
-> <span data-ttu-id="81801-222">A variável criada pelo parâmetro **Outvariance** é um `[System.Collections.ArrayList]` .</span><span class="sxs-lookup"><span data-stu-id="81801-222">The variable created by the **OutVariable** parameter is a `[System.Collections.ArrayList]`.</span></span>
+> <span data-ttu-id="cf569-222">A variável criada pelo parâmetro **Outvariance** é um `[System.Collections.ArrayList]` .</span><span class="sxs-lookup"><span data-stu-id="cf569-222">The variable created by the **OutVariable** parameter is a `[System.Collections.ArrayList]`.</span></span>
 
-#### <a name="pipelinevariable"></a><span data-ttu-id="81801-223">PipelineVariable</span><span class="sxs-lookup"><span data-stu-id="81801-223">PipelineVariable</span></span>
+#### <a name="pipelinevariable"></a><span data-ttu-id="cf569-223">PipelineVariable</span><span class="sxs-lookup"><span data-stu-id="cf569-223">PipelineVariable</span></span>
 
-<span data-ttu-id="81801-224">**PipelineVariable** armazena o valor do elemento de pipeline atual como uma variável, para qualquer comando nomeado conforme ele flui pelo pipeline.</span><span class="sxs-lookup"><span data-stu-id="81801-224">**PipelineVariable** stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.</span></span>
+<span data-ttu-id="cf569-224">**PipelineVariable** armazena o valor do elemento de pipeline atual como uma variável, para qualquer comando nomeado conforme ele flui pelo pipeline.</span><span class="sxs-lookup"><span data-stu-id="cf569-224">**PipelineVariable** stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.</span></span>
+
+>[!NOTE]
+> <span data-ttu-id="cf569-225">As funções avançadas podem ter até três blocos de script: `begin` , `process` e `end` .</span><span class="sxs-lookup"><span data-stu-id="cf569-225">Advanced functions can have up to three script blocks: `begin`, `process`, and `end`.</span></span> <span data-ttu-id="cf569-226">Ao usar o parâmetro **PipelineVariable** com funções avançadas, somente os valores do primeiro bloco de script definido são atribuídos à variável à medida que a função é executada.</span><span class="sxs-lookup"><span data-stu-id="cf569-226">When using the **PipelineVariable** parameter with advanced functions, only values from the first defined script block are assigned to the variable as the function runs.</span></span> <span data-ttu-id="cf569-227">Para obter mais informações, consulte [Advanced Functions](./about_functions_advanced.md).</span><span class="sxs-lookup"><span data-stu-id="cf569-227">For more information, see [Advanced functions](./about_functions_advanced.md).</span></span>
+> <span data-ttu-id="cf569-228">O PowerShell 7,2 corrige esse comportamento.</span><span class="sxs-lookup"><span data-stu-id="cf569-228">PowerShell 7.2 corrects this behavior.</span></span>
 
 ```yaml
 Type: String
@@ -306,13 +310,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-225">Os valores válidos são cadeias de caracteres, o mesmo que para qualquer nome de variável.</span><span class="sxs-lookup"><span data-stu-id="81801-225">Valid values are strings, the same as for any variable names.</span></span>
+<span data-ttu-id="cf569-229">Os valores válidos são cadeias de caracteres, o mesmo que para qualquer nome de variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-229">Valid values are strings, the same as for any variable names.</span></span>
 
-<span data-ttu-id="81801-226">Veja a seguir um exemplo de como o **PipelineVariable** funciona.</span><span class="sxs-lookup"><span data-stu-id="81801-226">The following is an example of how **PipelineVariable** works.</span></span> <span data-ttu-id="81801-227">Neste exemplo, o parâmetro **PipelineVariable** é adicionado a um `Foreach-Object` comando para armazenar os resultados do comando em variáveis.</span><span class="sxs-lookup"><span data-stu-id="81801-227">In this example, the **PipelineVariable** parameter is added to a `Foreach-Object` command to store the results of the command in variables.</span></span> <span data-ttu-id="81801-228">Um intervalo de números, de 1 a 10, são canalizados para o primeiro `Foreach-Object` comando, os resultados dos quais são armazenados em uma variável chamada **Left** .</span><span class="sxs-lookup"><span data-stu-id="81801-228">A range of numbers, 1 to 10, are piped into the first `Foreach-Object` command, the results of which are stored in a variable named **Left** .</span></span>
+<span data-ttu-id="cf569-230">Veja a seguir um exemplo de como o **PipelineVariable** funciona.</span><span class="sxs-lookup"><span data-stu-id="cf569-230">The following is an example of how **PipelineVariable** works.</span></span> <span data-ttu-id="cf569-231">Neste exemplo, o parâmetro **PipelineVariable** é adicionado a um `Foreach-Object` comando para armazenar os resultados do comando em variáveis.</span><span class="sxs-lookup"><span data-stu-id="cf569-231">In this example, the **PipelineVariable** parameter is added to a `Foreach-Object` command to store the results of the command in variables.</span></span> <span data-ttu-id="cf569-232">Um intervalo de números, de 1 a 10, são canalizados para o primeiro `Foreach-Object` comando, os resultados dos quais são armazenados em uma variável chamada **Left**.</span><span class="sxs-lookup"><span data-stu-id="cf569-232">A range of numbers, 1 to 10, are piped into the first `Foreach-Object` command, the results of which are stored in a variable named **Left**.</span></span>
 
-<span data-ttu-id="81801-229">Os resultados do primeiro `Foreach-Object` comando são canalizados para um segundo `Foreach-Object` comando, que filtra os objetos retornados pelo primeiro `Foreach-Object` comando.</span><span class="sxs-lookup"><span data-stu-id="81801-229">The results of the first `Foreach-Object` command are piped into a second `Foreach-Object` command, which filters the objects returned by the first `Foreach-Object` command.</span></span> <span data-ttu-id="81801-230">Os resultados do segundo comando são armazenados em uma variável chamada **Right** .</span><span class="sxs-lookup"><span data-stu-id="81801-230">The results of the second command are stored in a variable named **Right** .</span></span>
+<span data-ttu-id="cf569-233">Os resultados do primeiro `Foreach-Object` comando são canalizados para um segundo `Foreach-Object` comando, que filtra os objetos retornados pelo primeiro `Foreach-Object` comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-233">The results of the first `Foreach-Object` command are piped into a second `Foreach-Object` command, which filters the objects returned by the first `Foreach-Object` command.</span></span> <span data-ttu-id="cf569-234">Os resultados do segundo comando são armazenados em uma variável chamada **Right**.</span><span class="sxs-lookup"><span data-stu-id="cf569-234">The results of the second command are stored in a variable named **Right**.</span></span>
 
-<span data-ttu-id="81801-231">No terceiro `Foreach-Object` comando, os resultados dos dois primeiros `Foreach-Object` comandos canalizados, representados pelas variáveis **Left** e **Right** , são processados usando um operador de multiplicação.</span><span class="sxs-lookup"><span data-stu-id="81801-231">In the third `Foreach-Object` command, the results of the first two `Foreach-Object` piped commands, represented by the variables **Left** and **Right** , are processed by using a multiplication operator.</span></span> <span data-ttu-id="81801-232">O comando instrui os objetos armazenados nas variáveis **esquerda** e **direita** a serem multiplicados e especifica que os resultados devem ser exibidos como "membro do intervalo esquerdo \* membro do intervalo direito = produto".</span><span class="sxs-lookup"><span data-stu-id="81801-232">The command instructs objects stored in the **Left** and **Right** variables to be multiplied, and specifies that the results should be displayed as "Left range member \* Right range member = product".</span></span>
+<span data-ttu-id="cf569-235">No terceiro `Foreach-Object` comando, os resultados dos dois primeiros `Foreach-Object` comandos canalizados, representados pelas variáveis **Left** e **Right**, são processados usando um operador de multiplicação.</span><span class="sxs-lookup"><span data-stu-id="cf569-235">In the third `Foreach-Object` command, the results of the first two `Foreach-Object` piped commands, represented by the variables **Left** and **Right**, are processed by using a multiplication operator.</span></span> <span data-ttu-id="cf569-236">O comando instrui os objetos armazenados nas variáveis **esquerda** e **direita** a serem multiplicados e especifica que os resultados devem ser exibidos como "membro do intervalo esquerdo \* membro do intervalo direito = produto".</span><span class="sxs-lookup"><span data-stu-id="cf569-236">The command instructs objects stored in the **Left** and **Right** variables to be multiplied, and specifies that the results should be displayed as "Left range member \* Right range member = product".</span></span>
 
 ```powershell
 1..10 | Foreach-Object -PipelineVariable Left -Process { $_ } |
@@ -329,9 +333,9 @@ Accept wildcard characters: False
 ...
 ```
 
-#### <a name="verbose"></a><span data-ttu-id="81801-233">Detalhado</span><span class="sxs-lookup"><span data-stu-id="81801-233">Verbose</span></span>
+#### <a name="verbose"></a><span data-ttu-id="cf569-237">Detalhado</span><span class="sxs-lookup"><span data-stu-id="cf569-237">Verbose</span></span>
 
-<span data-ttu-id="81801-234">Exibe informações detalhadas sobre a operação feita pelo comando.</span><span class="sxs-lookup"><span data-stu-id="81801-234">Displays detailed information about the operation done by the command.</span></span> <span data-ttu-id="81801-235">Essas informações se assemelham às informações em um rastreamento ou em um log de transações.</span><span class="sxs-lookup"><span data-stu-id="81801-235">This information resembles the information in a trace or in a transaction log.</span></span> <span data-ttu-id="81801-236">Esse parâmetro funciona somente quando o comando gera uma mensagem detalhada.</span><span class="sxs-lookup"><span data-stu-id="81801-236">This parameter works only when the command generates a verbose message.</span></span> <span data-ttu-id="81801-237">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Verbose` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-237">For example, this parameter works when a command contains the `Write-Verbose` cmdlet.</span></span>
+<span data-ttu-id="cf569-238">Exibe informações detalhadas sobre a operação feita pelo comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-238">Displays detailed information about the operation done by the command.</span></span> <span data-ttu-id="cf569-239">Essas informações se assemelham às informações em um rastreamento ou em um log de transações.</span><span class="sxs-lookup"><span data-stu-id="cf569-239">This information resembles the information in a trace or in a transaction log.</span></span> <span data-ttu-id="cf569-240">Esse parâmetro funciona somente quando o comando gera uma mensagem detalhada.</span><span class="sxs-lookup"><span data-stu-id="cf569-240">This parameter works only when the command generates a verbose message.</span></span> <span data-ttu-id="cf569-241">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Verbose` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-241">For example, this parameter works when a command contains the `Write-Verbose` cmdlet.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -344,15 +348,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-238">O parâmetro **Verbose** substitui o valor da `$VerbosePreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="81801-238">The **Verbose** parameter overrides the value of the `$VerbosePreference` variable for the current command.</span></span> <span data-ttu-id="81801-239">Como o valor padrão da `$VerbosePreference` variável é **SilentlyContinue** , as mensagens detalhadas não são exibidas por padrão.</span><span class="sxs-lookup"><span data-stu-id="81801-239">Because the default value of the `$VerbosePreference` variable is **SilentlyContinue** , verbose messages aren't displayed by default.</span></span>
+<span data-ttu-id="cf569-242">O parâmetro **Verbose** substitui o valor da `$VerbosePreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="cf569-242">The **Verbose** parameter overrides the value of the `$VerbosePreference` variable for the current command.</span></span> <span data-ttu-id="cf569-243">Como o valor padrão da `$VerbosePreference` variável é **SilentlyContinue**, as mensagens detalhadas não são exibidas por padrão.</span><span class="sxs-lookup"><span data-stu-id="cf569-243">Because the default value of the `$VerbosePreference` variable is **SilentlyContinue**, verbose messages aren't displayed by default.</span></span>
 
-<span data-ttu-id="81801-240">`-Verbose:$true` tem o mesmo efeito que `-Verbose`</span><span class="sxs-lookup"><span data-stu-id="81801-240">`-Verbose:$true` has the same effect as `-Verbose`</span></span>
+<span data-ttu-id="cf569-244">`-Verbose:$true` tem o mesmo efeito que `-Verbose`</span><span class="sxs-lookup"><span data-stu-id="cf569-244">`-Verbose:$true` has the same effect as `-Verbose`</span></span>
 
-<span data-ttu-id="81801-241">`-Verbose:$false` suprime a exibição de mensagens detalhadas.</span><span class="sxs-lookup"><span data-stu-id="81801-241">`-Verbose:$false` suppresses the display of verbose messages.</span></span> <span data-ttu-id="81801-242">Use esse parâmetro quando o valor de `$VerbosePreference` não for **SilentlyContinue** (o padrão).</span><span class="sxs-lookup"><span data-stu-id="81801-242">Use this parameter when the value of `$VerbosePreference` isn't **SilentlyContinue** (the default).</span></span>
+<span data-ttu-id="cf569-245">`-Verbose:$false` suprime a exibição de mensagens detalhadas.</span><span class="sxs-lookup"><span data-stu-id="cf569-245">`-Verbose:$false` suppresses the display of verbose messages.</span></span> <span data-ttu-id="cf569-246">Use esse parâmetro quando o valor de `$VerbosePreference` não for **SilentlyContinue** (o padrão).</span><span class="sxs-lookup"><span data-stu-id="cf569-246">Use this parameter when the value of `$VerbosePreference` isn't **SilentlyContinue** (the default).</span></span>
 
-#### <a name="warningaction"></a><span data-ttu-id="81801-243">WarningAction</span><span class="sxs-lookup"><span data-stu-id="81801-243">WarningAction</span></span>
+#### <a name="warningaction"></a><span data-ttu-id="cf569-247">WarningAction</span><span class="sxs-lookup"><span data-stu-id="cf569-247">WarningAction</span></span>
 
-<span data-ttu-id="81801-244">Determina como o cmdlet responde a um aviso do comando.</span><span class="sxs-lookup"><span data-stu-id="81801-244">Determines how the cmdlet responds to a warning from the command.</span></span> <span data-ttu-id="81801-245">**Continue** é o valor padrão.</span><span class="sxs-lookup"><span data-stu-id="81801-245">**Continue** is the default value.</span></span> <span data-ttu-id="81801-246">Esse parâmetro funciona somente quando o comando gera uma mensagem de aviso.</span><span class="sxs-lookup"><span data-stu-id="81801-246">This parameter works only when the command generates a warning message.</span></span> <span data-ttu-id="81801-247">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Warning` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-247">For example, this parameter works when a command contains the `Write-Warning` cmdlet.</span></span>
+<span data-ttu-id="cf569-248">Determina como o cmdlet responde a um aviso do comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-248">Determines how the cmdlet responds to a warning from the command.</span></span> <span data-ttu-id="cf569-249">**Continue** é o valor padrão.</span><span class="sxs-lookup"><span data-stu-id="cf569-249">**Continue** is the default value.</span></span> <span data-ttu-id="cf569-250">Esse parâmetro funciona somente quando o comando gera uma mensagem de aviso.</span><span class="sxs-lookup"><span data-stu-id="cf569-250">This parameter works only when the command generates a warning message.</span></span> <span data-ttu-id="cf569-251">Por exemplo, esse parâmetro funciona quando um comando contém o `Write-Warning` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-251">For example, this parameter works when a command contains the `Write-Warning` cmdlet.</span></span>
 
 ```yaml
 Type: ActionPreference
@@ -366,22 +370,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-248">O parâmetro **WarningAction** substitui o valor da `$WarningPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="81801-248">The **WarningAction** parameter overrides the value of the `$WarningPreference` variable for the current command.</span></span> <span data-ttu-id="81801-249">Como o valor padrão da `$WarningPreference` variável é **continue** , os avisos são exibidos e a execução continua, a menos que você use o parâmetro **WarningAction** .</span><span class="sxs-lookup"><span data-stu-id="81801-249">Because the default value of the `$WarningPreference` variable is **Continue** , warnings are displayed and execution continues unless you use the **WarningAction** parameter.</span></span>
+<span data-ttu-id="cf569-252">O parâmetro **WarningAction** substitui o valor da `$WarningPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="cf569-252">The **WarningAction** parameter overrides the value of the `$WarningPreference` variable for the current command.</span></span> <span data-ttu-id="cf569-253">Como o valor padrão da `$WarningPreference` variável é **continue**, os avisos são exibidos e a execução continua, a menos que você use o parâmetro **WarningAction** .</span><span class="sxs-lookup"><span data-stu-id="cf569-253">Because the default value of the `$WarningPreference` variable is **Continue**, warnings are displayed and execution continues unless you use the **WarningAction** parameter.</span></span>
 
-<span data-ttu-id="81801-250">`-WarningAction:Continue` exibe as mensagens de aviso e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-250">`-WarningAction:Continue` displays the warning messages and continues executing the command.</span></span> <span data-ttu-id="81801-251">`Continue` é o padrão.</span><span class="sxs-lookup"><span data-stu-id="81801-251">`Continue` is the default.</span></span>
+<span data-ttu-id="cf569-254">`-WarningAction:Continue` exibe as mensagens de aviso e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-254">`-WarningAction:Continue` displays the warning messages and continues executing the command.</span></span> <span data-ttu-id="cf569-255">`Continue` é o padrão.</span><span class="sxs-lookup"><span data-stu-id="cf569-255">`Continue` is the default.</span></span>
 
-<span data-ttu-id="81801-252">`-WarningAction:Inquire` exibe a mensagem de aviso e solicita sua confirmação antes de continuar a execução.</span><span class="sxs-lookup"><span data-stu-id="81801-252">`-WarningAction:Inquire` displays the warning message and prompts you for confirmation before continuing execution.</span></span> <span data-ttu-id="81801-253">Esse valor raramente é usado.</span><span class="sxs-lookup"><span data-stu-id="81801-253">This value is rarely used.</span></span>
+<span data-ttu-id="cf569-256">`-WarningAction:Inquire` exibe a mensagem de aviso e solicita sua confirmação antes de continuar a execução.</span><span class="sxs-lookup"><span data-stu-id="cf569-256">`-WarningAction:Inquire` displays the warning message and prompts you for confirmation before continuing execution.</span></span> <span data-ttu-id="cf569-257">Esse valor raramente é usado.</span><span class="sxs-lookup"><span data-stu-id="cf569-257">This value is rarely used.</span></span>
 
-<span data-ttu-id="81801-254">`-WarningAction:SilentlyContinue` suprime a mensagem de aviso e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-254">`-WarningAction:SilentlyContinue` suppresses the warning message and continues executing the command.</span></span>
+<span data-ttu-id="cf569-258">`-WarningAction:SilentlyContinue` suprime a mensagem de aviso e continua executando o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-258">`-WarningAction:SilentlyContinue` suppresses the warning message and continues executing the command.</span></span>
 
-<span data-ttu-id="81801-255">`-WarningAction:Stop` exibe a mensagem de aviso e para a execução do comando.</span><span class="sxs-lookup"><span data-stu-id="81801-255">`-WarningAction:Stop` displays the warning message and stops executing the command.</span></span>
+<span data-ttu-id="cf569-259">`-WarningAction:Stop` exibe a mensagem de aviso e para a execução do comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-259">`-WarningAction:Stop` displays the warning message and stops executing the command.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81801-256">O parâmetro **WarningAction** substitui, mas não substitui o valor da variável de `$WarningAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="81801-256">The **WarningAction** parameter overrides, but does not replace the value of the `$WarningAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
+> <span data-ttu-id="cf569-260">O parâmetro **WarningAction** substitui, mas não substitui o valor da variável de `$WarningAction` preferência quando o parâmetro é usado em um comando para executar um script ou uma função.</span><span class="sxs-lookup"><span data-stu-id="cf569-260">The **WarningAction** parameter overrides, but does not replace the value of the `$WarningAction` preference variable when the parameter is used in a command to run a script or function.</span></span>
 
-#### <a name="warningvariable"></a><span data-ttu-id="81801-257">WarningVariable</span><span class="sxs-lookup"><span data-stu-id="81801-257">WarningVariable</span></span>
+#### <a name="warningvariable"></a><span data-ttu-id="cf569-261">WarningVariable</span><span class="sxs-lookup"><span data-stu-id="cf569-261">WarningVariable</span></span>
 
-<span data-ttu-id="81801-258">Armazena avisos sobre o comando na variável especificada.</span><span class="sxs-lookup"><span data-stu-id="81801-258">Stores warnings about the command in the specified variable.</span></span>
+<span data-ttu-id="cf569-262">Armazena avisos sobre o comando na variável especificada.</span><span class="sxs-lookup"><span data-stu-id="cf569-262">Stores warnings about the command in the specified variable.</span></span>
 
 ```yaml
 Type: String
@@ -394,38 +398,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-259">Todos os avisos gerados são salvos na variável, mesmo se os avisos não forem exibidos para o usuário.</span><span class="sxs-lookup"><span data-stu-id="81801-259">All generated warnings are saved in the variable even if the warnings aren't displayed to the user.</span></span>
+<span data-ttu-id="cf569-263">Todos os avisos gerados são salvos na variável, mesmo se os avisos não forem exibidos para o usuário.</span><span class="sxs-lookup"><span data-stu-id="cf569-263">All generated warnings are saved in the variable even if the warnings aren't displayed to the user.</span></span>
 
-<span data-ttu-id="81801-260">Para acrescentar os avisos ao conteúdo da variável, em vez de substituir os avisos que já podem estar armazenados lá, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="81801-260">To append the warnings to the variable content, instead of replacing any warnings that might already be stored there, type a plus sign (`+`) before the variable name.</span></span>
+<span data-ttu-id="cf569-264">Para acrescentar os avisos ao conteúdo da variável, em vez de substituir os avisos que já podem estar armazenados lá, digite um sinal de adição ( `+` ) antes do nome da variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-264">To append the warnings to the variable content, instead of replacing any warnings that might already be stored there, type a plus sign (`+`) before the variable name.</span></span>
 
-<span data-ttu-id="81801-261">Por exemplo, o comando a seguir cria a `$a` variável e, em seguida, armazena todos os avisos nela:</span><span class="sxs-lookup"><span data-stu-id="81801-261">For example, the following command creates the `$a` variable and then stores any warnings in it:</span></span>
+<span data-ttu-id="cf569-265">Por exemplo, o comando a seguir cria a `$a` variável e, em seguida, armazena todos os avisos nela:</span><span class="sxs-lookup"><span data-stu-id="cf569-265">For example, the following command creates the `$a` variable and then stores any warnings in it:</span></span>
 
 ```powershell
 Get-Process -Id 6 -WarningVariable a
 ```
 
-<span data-ttu-id="81801-262">O comando a seguir adiciona quaisquer avisos à `$a` variável:</span><span class="sxs-lookup"><span data-stu-id="81801-262">The following command adds any warnings to the `$a` variable:</span></span>
+<span data-ttu-id="cf569-266">O comando a seguir adiciona quaisquer avisos à `$a` variável:</span><span class="sxs-lookup"><span data-stu-id="cf569-266">The following command adds any warnings to the `$a` variable:</span></span>
 
 ```powershell
 Get-Process -Id 2 -WarningVariable +a
 ```
 
-<span data-ttu-id="81801-263">O comando a seguir exibe o conteúdo de `$a` :</span><span class="sxs-lookup"><span data-stu-id="81801-263">The following command displays the contents of `$a`:</span></span>
+<span data-ttu-id="cf569-267">O comando a seguir exibe o conteúdo de `$a` :</span><span class="sxs-lookup"><span data-stu-id="cf569-267">The following command displays the contents of `$a`:</span></span>
 
 ```powershell
 $a
 ```
 
-<span data-ttu-id="81801-264">Você pode usar esse parâmetro para criar uma variável que contém apenas avisos de comandos específicos.</span><span class="sxs-lookup"><span data-stu-id="81801-264">You can use this parameter to create a variable that contains only warnings from specific commands.</span></span> <span data-ttu-id="81801-265">Você pode usar a notação de matriz, como `$a[0]` ou `$warning[1,2]` para se referir a avisos específicos armazenados na variável.</span><span class="sxs-lookup"><span data-stu-id="81801-265">You can use array notation, such as `$a[0]` or `$warning[1,2]` to refer to specific warnings stored in the variable.</span></span>
+<span data-ttu-id="cf569-268">Você pode usar esse parâmetro para criar uma variável que contém apenas avisos de comandos específicos.</span><span class="sxs-lookup"><span data-stu-id="cf569-268">You can use this parameter to create a variable that contains only warnings from specific commands.</span></span> <span data-ttu-id="cf569-269">Você pode usar a notação de matriz, como `$a[0]` ou `$warning[1,2]` para se referir a avisos específicos armazenados na variável.</span><span class="sxs-lookup"><span data-stu-id="cf569-269">You can use array notation, such as `$a[0]` or `$warning[1,2]` to refer to specific warnings stored in the variable.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81801-266">A variável de aviso contém todos os avisos gerados pelo comando, incluindo avisos de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="81801-266">The warning variable contains all warnings generated by the command, including warnings from calls to nested functions or scripts.</span></span>
+> <span data-ttu-id="cf569-270">A variável de aviso contém todos os avisos gerados pelo comando, incluindo avisos de chamadas para funções aninhadas ou scripts.</span><span class="sxs-lookup"><span data-stu-id="cf569-270">The warning variable contains all warnings generated by the command, including warnings from calls to nested functions or scripts.</span></span>
 
-### <a name="risk-management-parameter-descriptions"></a><span data-ttu-id="81801-267">Descrições de parâmetros de gerenciamento de riscos</span><span class="sxs-lookup"><span data-stu-id="81801-267">Risk Management Parameter Descriptions</span></span>
+### <a name="risk-management-parameter-descriptions"></a><span data-ttu-id="cf569-271">Descrições de parâmetros de gerenciamento de riscos</span><span class="sxs-lookup"><span data-stu-id="cf569-271">Risk Management Parameter Descriptions</span></span>
 
-#### <a name="whatif"></a><span data-ttu-id="81801-268">WhatIf</span><span class="sxs-lookup"><span data-stu-id="81801-268">WhatIf</span></span>
+#### <a name="whatif"></a><span data-ttu-id="cf569-272">WhatIf</span><span class="sxs-lookup"><span data-stu-id="cf569-272">WhatIf</span></span>
 
-<span data-ttu-id="81801-269">Exibe uma mensagem que descreve o efeito do comando, em vez de executar o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-269">Displays a message that describes the effect of the command, instead of executing the command.</span></span>
+<span data-ttu-id="cf569-273">Exibe uma mensagem que descreve o efeito do comando, em vez de executar o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-273">Displays a message that describes the effect of the command, instead of executing the command.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -438,28 +442,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-270">O parâmetro **WhatIf** substitui o valor da `$WhatIfPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="81801-270">The **WhatIf** parameter overrides the value of the `$WhatIfPreference` variable for the current command.</span></span> <span data-ttu-id="81801-271">Como o valor padrão da `$WhatIfPreference` variável é 0 (desabilitado), o comportamento de **WhatIf** não é feito sem o parâmetro **WhatIf** .</span><span class="sxs-lookup"><span data-stu-id="81801-271">Because the default value of the `$WhatIfPreference` variable is 0 (disabled), **WhatIf** behavior isn't done without the **WhatIf** parameter.</span></span> <span data-ttu-id="81801-272">Para obter mais informações, consulte [about_Preference_Variables](about_Preference_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="81801-272">For more information, see [about_Preference_Variables](about_Preference_Variables.md)</span></span>
+<span data-ttu-id="cf569-274">O parâmetro **WhatIf** substitui o valor da `$WhatIfPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="cf569-274">The **WhatIf** parameter overrides the value of the `$WhatIfPreference` variable for the current command.</span></span> <span data-ttu-id="cf569-275">Como o valor padrão da `$WhatIfPreference` variável é 0 (desabilitado), o comportamento de **WhatIf** não é feito sem o parâmetro **WhatIf** .</span><span class="sxs-lookup"><span data-stu-id="cf569-275">Because the default value of the `$WhatIfPreference` variable is 0 (disabled), **WhatIf** behavior isn't done without the **WhatIf** parameter.</span></span> <span data-ttu-id="cf569-276">Para obter mais informações, consulte [about_Preference_Variables](about_Preference_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="cf569-276">For more information, see [about_Preference_Variables](about_Preference_Variables.md)</span></span>
 
-<span data-ttu-id="81801-273">`-WhatIf:$true` tem o mesmo efeito que `-WhatIf` .</span><span class="sxs-lookup"><span data-stu-id="81801-273">`-WhatIf:$true` has the same effect as `-WhatIf`.</span></span>
+<span data-ttu-id="cf569-277">`-WhatIf:$true` tem o mesmo efeito que `-WhatIf` .</span><span class="sxs-lookup"><span data-stu-id="cf569-277">`-WhatIf:$true` has the same effect as `-WhatIf`.</span></span>
 
-<span data-ttu-id="81801-274">`-WhatIf:$false` suprime o comportamento de WhatIf automático que resulta quando o valor da `$WhatIfPreference` variável é 1.</span><span class="sxs-lookup"><span data-stu-id="81801-274">`-WhatIf:$false` suppresses the automatic WhatIf behavior that results when the value of the `$WhatIfPreference` variable is 1.</span></span>
+<span data-ttu-id="cf569-278">`-WhatIf:$false` suprime o comportamento de WhatIf automático que resulta quando o valor da `$WhatIfPreference` variável é 1.</span><span class="sxs-lookup"><span data-stu-id="cf569-278">`-WhatIf:$false` suppresses the automatic WhatIf behavior that results when the value of the `$WhatIfPreference` variable is 1.</span></span>
 
-<span data-ttu-id="81801-275">Por exemplo, o comando a seguir usa o `-WhatIf` parâmetro em um `Remove-Item` comando:</span><span class="sxs-lookup"><span data-stu-id="81801-275">For example, the following command uses the `-WhatIf` parameter in a `Remove-Item` command:</span></span>
+<span data-ttu-id="cf569-279">Por exemplo, o comando a seguir usa o `-WhatIf` parâmetro em um `Remove-Item` comando:</span><span class="sxs-lookup"><span data-stu-id="cf569-279">For example, the following command uses the `-WhatIf` parameter in a `Remove-Item` command:</span></span>
 
 ```powershell
 Remove-Item Date.csv -WhatIf
 ```
 
-<span data-ttu-id="81801-276">Em vez de remover o item, o PowerShell lista as operações que ele faria e os itens que seriam afetados.</span><span class="sxs-lookup"><span data-stu-id="81801-276">Instead of removing the item, PowerShell lists the operations it would do and the items that would be affected.</span></span> <span data-ttu-id="81801-277">Esse comando gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="81801-277">This command produces the following output:</span></span>
+<span data-ttu-id="cf569-280">Em vez de remover o item, o PowerShell lista as operações que ele faria e os itens que seriam afetados.</span><span class="sxs-lookup"><span data-stu-id="cf569-280">Instead of removing the item, PowerShell lists the operations it would do and the items that would be affected.</span></span> <span data-ttu-id="cf569-281">Esse comando gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="cf569-281">This command produces the following output:</span></span>
 
 ```output
 What if: Performing operation "Remove File" on
 Target "C:\ps-test\date.csv".
 ```
 
-#### <a name="confirm"></a><span data-ttu-id="81801-278">Confirmar</span><span class="sxs-lookup"><span data-stu-id="81801-278">Confirm</span></span>
+#### <a name="confirm"></a><span data-ttu-id="cf569-282">Confirmar</span><span class="sxs-lookup"><span data-stu-id="cf569-282">Confirm</span></span>
 
-<span data-ttu-id="81801-279">Solicita sua confirmação antes de executar o comando.</span><span class="sxs-lookup"><span data-stu-id="81801-279">Prompts you for confirmation before executing the command.</span></span>
+<span data-ttu-id="cf569-283">Solicita sua confirmação antes de executar o comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-283">Prompts you for confirmation before executing the command.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -472,13 +476,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<span data-ttu-id="81801-280">O parâmetro **Confirm** substitui o valor da `$ConfirmPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="81801-280">The **Confirm** parameter overrides the value of the `$ConfirmPreference` variable for the current command.</span></span> <span data-ttu-id="81801-281">O valor padrão é true.</span><span class="sxs-lookup"><span data-stu-id="81801-281">The default value is true.</span></span> <span data-ttu-id="81801-282">Para obter mais informações, consulte [about_Preference_Variables](about_Preference_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="81801-282">For more information, see [about_Preference_Variables](about_Preference_Variables.md)</span></span>
+<span data-ttu-id="cf569-284">O parâmetro **Confirm** substitui o valor da `$ConfirmPreference` variável para o comando atual.</span><span class="sxs-lookup"><span data-stu-id="cf569-284">The **Confirm** parameter overrides the value of the `$ConfirmPreference` variable for the current command.</span></span> <span data-ttu-id="cf569-285">O valor padrão é true.</span><span class="sxs-lookup"><span data-stu-id="cf569-285">The default value is true.</span></span> <span data-ttu-id="cf569-286">Para obter mais informações, consulte [about_Preference_Variables](about_Preference_Variables.md)</span><span class="sxs-lookup"><span data-stu-id="cf569-286">For more information, see [about_Preference_Variables](about_Preference_Variables.md)</span></span>
 
-<span data-ttu-id="81801-283">`-Confirm:$true` tem o mesmo efeito que `-Confirm` .</span><span class="sxs-lookup"><span data-stu-id="81801-283">`-Confirm:$true` has the same effect as `-Confirm`.</span></span>
+<span data-ttu-id="cf569-287">`-Confirm:$true` tem o mesmo efeito que `-Confirm` .</span><span class="sxs-lookup"><span data-stu-id="cf569-287">`-Confirm:$true` has the same effect as `-Confirm`.</span></span>
 
-<span data-ttu-id="81801-284">`-Confirm:$false` suprime a confirmação automática, que ocorre quando o valor de `$ConfirmPreference` é menor ou igual ao risco estimado do cmdlet.</span><span class="sxs-lookup"><span data-stu-id="81801-284">`-Confirm:$false` suppresses automatic confirmation, which occurs when the value of `$ConfirmPreference` is less than or equal to the estimated risk of the cmdlet.</span></span>
+<span data-ttu-id="cf569-288">`-Confirm:$false` suprime a confirmação automática, que ocorre quando o valor de `$ConfirmPreference` é menor ou igual ao risco estimado do cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cf569-288">`-Confirm:$false` suppresses automatic confirmation, which occurs when the value of `$ConfirmPreference` is less than or equal to the estimated risk of the cmdlet.</span></span>
 
-<span data-ttu-id="81801-285">Por exemplo, o comando a seguir usa o parâmetro **Confirm** com um `Remove-Item` comando.</span><span class="sxs-lookup"><span data-stu-id="81801-285">For example, the following command uses the **Confirm** parameter with a `Remove-Item` command.</span></span> <span data-ttu-id="81801-286">Antes de remover o item, o PowerShell lista as operações que ele faria e os itens que seriam afetados e solicita aprovação.</span><span class="sxs-lookup"><span data-stu-id="81801-286">Before removing the item, PowerShell lists the operations it would do and the items that would be affected, and asks for approval.</span></span>
+<span data-ttu-id="cf569-289">Por exemplo, o comando a seguir usa o parâmetro **Confirm** com um `Remove-Item` comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-289">For example, the following command uses the **Confirm** parameter with a `Remove-Item` command.</span></span> <span data-ttu-id="cf569-290">Antes de remover o item, o PowerShell lista as operações que ele faria e os itens que seriam afetados e solicita aprovação.</span><span class="sxs-lookup"><span data-stu-id="cf569-290">Before removing the item, PowerShell lists the operations it would do and the items that would be affected, and asks for approval.</span></span>
 
 ```
 PS C:\ps-test> Remove-Item tmp*.txt -Confirm
@@ -490,22 +494,22 @@ Performing operation "Remove File" on Target " C:\ps-test\tmp1.txt
 [?] Help (default is "Y"):
 ```
 
-<span data-ttu-id="81801-287">As opções de confirmação de resposta são as seguintes:</span><span class="sxs-lookup"><span data-stu-id="81801-287">The Confirm response options are as follows:</span></span>
+<span data-ttu-id="cf569-291">As opções de confirmação de resposta são as seguintes:</span><span class="sxs-lookup"><span data-stu-id="cf569-291">The Confirm response options are as follows:</span></span>
 
-|<span data-ttu-id="81801-288">Resposta</span><span class="sxs-lookup"><span data-stu-id="81801-288">Response</span></span>       |<span data-ttu-id="81801-289">Resultado</span><span class="sxs-lookup"><span data-stu-id="81801-289">Result</span></span>                                                     |
+|<span data-ttu-id="cf569-292">Resposta</span><span class="sxs-lookup"><span data-stu-id="cf569-292">Response</span></span>       |<span data-ttu-id="cf569-293">Result</span><span class="sxs-lookup"><span data-stu-id="cf569-293">Result</span></span>                                                     |
 |---------------|-----------------------------------------------------------|
-|<span data-ttu-id="81801-290">Sim (Y)</span><span class="sxs-lookup"><span data-stu-id="81801-290">Yes (Y)</span></span>        |<span data-ttu-id="81801-291">Execute a ação.</span><span class="sxs-lookup"><span data-stu-id="81801-291">Perform the action.</span></span>                                        |
-|<span data-ttu-id="81801-292">Sim para todos (A)</span><span class="sxs-lookup"><span data-stu-id="81801-292">Yes to All (A)</span></span> |<span data-ttu-id="81801-293">Executar todas as ações e suprimir consultas de confirmação subsequentes</span><span class="sxs-lookup"><span data-stu-id="81801-293">Perform all actions and suppress subsequent Confirm queries</span></span>|
-|               |<span data-ttu-id="81801-294">para este comando.</span><span class="sxs-lookup"><span data-stu-id="81801-294">for this command.</span></span>                                          |
-|<span data-ttu-id="81801-295">Não (N):</span><span class="sxs-lookup"><span data-stu-id="81801-295">No (N):</span></span>        |<span data-ttu-id="81801-296">Não execute a ação.</span><span class="sxs-lookup"><span data-stu-id="81801-296">Do not perform the action.</span></span>                                 |
-|<span data-ttu-id="81801-297">Não para todos (L):</span><span class="sxs-lookup"><span data-stu-id="81801-297">No to All (L):</span></span> |<span data-ttu-id="81801-298">Não executar nenhuma ação e suprimir a confirmação subsequente</span><span class="sxs-lookup"><span data-stu-id="81801-298">Do not perform any actions and suppress subsequent Confirm</span></span> |
-|               |<span data-ttu-id="81801-299">consultas para este comando.</span><span class="sxs-lookup"><span data-stu-id="81801-299">queries for this command.</span></span>                                  |
-|<span data-ttu-id="81801-300">Suspender (S):</span><span class="sxs-lookup"><span data-stu-id="81801-300">Suspend (S):</span></span>   |<span data-ttu-id="81801-301">Pause o comando e crie uma sessão temporária.</span><span class="sxs-lookup"><span data-stu-id="81801-301">Pause the command and create a temporary session.</span></span>          |
-|<span data-ttu-id="81801-302">Ajuda (?)</span><span class="sxs-lookup"><span data-stu-id="81801-302">Help (?)</span></span>       |<span data-ttu-id="81801-303">Exibir a ajuda para essas opções.</span><span class="sxs-lookup"><span data-stu-id="81801-303">Display help for these options.</span></span>                            |
+|<span data-ttu-id="cf569-294">Sim (Y)</span><span class="sxs-lookup"><span data-stu-id="cf569-294">Yes (Y)</span></span>        |<span data-ttu-id="cf569-295">Execute a ação.</span><span class="sxs-lookup"><span data-stu-id="cf569-295">Perform the action.</span></span>                                        |
+|<span data-ttu-id="cf569-296">Sim para todos (A)</span><span class="sxs-lookup"><span data-stu-id="cf569-296">Yes to All (A)</span></span> |<span data-ttu-id="cf569-297">Executar todas as ações e suprimir consultas de confirmação subsequentes</span><span class="sxs-lookup"><span data-stu-id="cf569-297">Perform all actions and suppress subsequent Confirm queries</span></span>|
+|               |<span data-ttu-id="cf569-298">para este comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-298">for this command.</span></span>                                          |
+|<span data-ttu-id="cf569-299">Não (N):</span><span class="sxs-lookup"><span data-stu-id="cf569-299">No (N):</span></span>        |<span data-ttu-id="cf569-300">Não execute a ação.</span><span class="sxs-lookup"><span data-stu-id="cf569-300">Do not perform the action.</span></span>                                 |
+|<span data-ttu-id="cf569-301">Não para todos (L):</span><span class="sxs-lookup"><span data-stu-id="cf569-301">No to All (L):</span></span> |<span data-ttu-id="cf569-302">Não executar nenhuma ação e suprimir a confirmação subsequente</span><span class="sxs-lookup"><span data-stu-id="cf569-302">Do not perform any actions and suppress subsequent Confirm</span></span> |
+|               |<span data-ttu-id="cf569-303">consultas para este comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-303">queries for this command.</span></span>                                  |
+|<span data-ttu-id="cf569-304">Suspender (S):</span><span class="sxs-lookup"><span data-stu-id="cf569-304">Suspend (S):</span></span>   |<span data-ttu-id="cf569-305">Pause o comando e crie uma sessão temporária.</span><span class="sxs-lookup"><span data-stu-id="cf569-305">Pause the command and create a temporary session.</span></span>          |
+|<span data-ttu-id="cf569-306">Ajuda (?)</span><span class="sxs-lookup"><span data-stu-id="cf569-306">Help (?)</span></span>       |<span data-ttu-id="cf569-307">Exibir a ajuda para essas opções.</span><span class="sxs-lookup"><span data-stu-id="cf569-307">Display help for these options.</span></span>                            |
 
-<span data-ttu-id="81801-304">A opção **suspender** coloca o comando em espera e cria uma sessão aninhada temporária na qual você pode trabalhar até que você esteja pronto para escolher uma opção de **confirmação** .</span><span class="sxs-lookup"><span data-stu-id="81801-304">The **Suspend** option places the command on hold and creates a temporary nested session in which you can work until you're ready to choose a **Confirm** option.</span></span> <span data-ttu-id="81801-305">O prompt de comando para a sessão aninhada tem dois acentos extras (>>) para indicar que é uma operação filho do comando pai original.</span><span class="sxs-lookup"><span data-stu-id="81801-305">The command prompt for the nested session has two extra carets (>>) to indicate that it's a child operation of the original parent command.</span></span> <span data-ttu-id="81801-306">Você pode executar comandos e scripts na sessão aninhada.</span><span class="sxs-lookup"><span data-stu-id="81801-306">You can run commands and scripts in the nested session.</span></span> <span data-ttu-id="81801-307">Para encerrar a sessão aninhada e retornar às opções de confirmação do comando original, digite "Exit".</span><span class="sxs-lookup"><span data-stu-id="81801-307">To end the nested session and return to the Confirm options for the original command, type "exit".</span></span>
+<span data-ttu-id="cf569-308">A opção **suspender** coloca o comando em espera e cria uma sessão aninhada temporária na qual você pode trabalhar até que você esteja pronto para escolher uma opção de **confirmação** .</span><span class="sxs-lookup"><span data-stu-id="cf569-308">The **Suspend** option places the command on hold and creates a temporary nested session in which you can work until you're ready to choose a **Confirm** option.</span></span> <span data-ttu-id="cf569-309">O prompt de comando para a sessão aninhada tem dois acentos extras (>>) para indicar que é uma operação filho do comando pai original.</span><span class="sxs-lookup"><span data-stu-id="cf569-309">The command prompt for the nested session has two extra carets (>>) to indicate that it's a child operation of the original parent command.</span></span> <span data-ttu-id="cf569-310">Você pode executar comandos e scripts na sessão aninhada.</span><span class="sxs-lookup"><span data-stu-id="cf569-310">You can run commands and scripts in the nested session.</span></span> <span data-ttu-id="cf569-311">Para encerrar a sessão aninhada e retornar às opções de confirmação do comando original, digite "Exit".</span><span class="sxs-lookup"><span data-stu-id="cf569-311">To end the nested session and return to the Confirm options for the original command, type "exit".</span></span>
 
-<span data-ttu-id="81801-308">No exemplo a seguir, as opções de **suspensão** são usadas para interromper um comando temporariamente enquanto o usuário verifica a ajuda de um parâmetro de comando.</span><span class="sxs-lookup"><span data-stu-id="81801-308">In the following example, the **Suspend** option (S) is used to halt a command temporarily while the user checks the help for a command parameter.</span></span> <span data-ttu-id="81801-309">Depois de obter as informações necessárias, o usuário digita "Exit" para finalizar o prompt aninhado e, em seguida, seleciona a resposta Sim (y) à consulta confirmar.</span><span class="sxs-lookup"><span data-stu-id="81801-309">After obtaining the needed information, the user types "exit" to end the nested prompt and then selects the Yes (y) response to the Confirm query.</span></span>
+<span data-ttu-id="cf569-312">No exemplo a seguir, as opções de **suspensão** são usadas para interromper um comando temporariamente enquanto o usuário verifica a ajuda de um parâmetro de comando.</span><span class="sxs-lookup"><span data-stu-id="cf569-312">In the following example, the **Suspend** option (S) is used to halt a command temporarily while the user checks the help for a command parameter.</span></span> <span data-ttu-id="cf569-313">Depois de obter as informações necessárias, o usuário digita "Exit" para finalizar o prompt aninhado e, em seguida, seleciona a resposta Sim (y) à consulta confirmar.</span><span class="sxs-lookup"><span data-stu-id="cf569-313">After obtaining the needed information, the user types "exit" to end the nested prompt and then selects the Yes (y) response to the Confirm query.</span></span>
 
 ```
 PS C:\ps-test> New-Item -ItemType File -Name Test.txt -Confirm
@@ -545,18 +549,18 @@ Mode                LastWriteTime     Length Name
 -a---         8/27/2010   2:41 PM          0 test.txt
 ```
 
-## <a name="keywords"></a><span data-ttu-id="81801-310">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="81801-310">KEYWORDS</span></span>
+## <a name="keywords"></a><span data-ttu-id="cf569-314">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="cf569-314">KEYWORDS</span></span>
 
-<span data-ttu-id="81801-311">about_Common_Parameters</span><span class="sxs-lookup"><span data-stu-id="81801-311">about_Common_Parameters</span></span>
+<span data-ttu-id="cf569-315">about_Common_Parameters</span><span class="sxs-lookup"><span data-stu-id="cf569-315">about_Common_Parameters</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="81801-312">CONSULTE TAMBÉM</span><span class="sxs-lookup"><span data-stu-id="81801-312">SEE ALSO</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf569-316">CONSULTE TAMBÉM</span><span class="sxs-lookup"><span data-stu-id="cf569-316">SEE ALSO</span></span>
 
-[<span data-ttu-id="81801-313">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="81801-313">about_Preference_Variables</span></span>](about_Preference_Variables.md)
+[<span data-ttu-id="cf569-317">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="cf569-317">about_Preference_Variables</span></span>](about_Preference_Variables.md)
 
-[<span data-ttu-id="81801-314">Write-Debug</span><span class="sxs-lookup"><span data-stu-id="81801-314">Write-Debug</span></span>](xref:Microsoft.PowerShell.Utility.Write-Debug)
+[<span data-ttu-id="cf569-318">Write-Debug</span><span class="sxs-lookup"><span data-stu-id="cf569-318">Write-Debug</span></span>](xref:Microsoft.PowerShell.Utility.Write-Debug)
 
-[<span data-ttu-id="81801-315">Write-Warning</span><span class="sxs-lookup"><span data-stu-id="81801-315">Write-Warning</span></span>](xref:Microsoft.PowerShell.Utility.Write-Warning)
+[<span data-ttu-id="cf569-319">Write-Warning</span><span class="sxs-lookup"><span data-stu-id="cf569-319">Write-Warning</span></span>](xref:Microsoft.PowerShell.Utility.Write-Warning)
 
-[<span data-ttu-id="81801-316">Erro de gravação</span><span class="sxs-lookup"><span data-stu-id="81801-316">Write-Error</span></span>](xref:Microsoft.PowerShell.Utility.Write-Error)
+[<span data-ttu-id="cf569-320">Write-Error</span><span class="sxs-lookup"><span data-stu-id="cf569-320">Write-Error</span></span>](xref:Microsoft.PowerShell.Utility.Write-Error)
 
-[<span data-ttu-id="81801-317">Write-Verbose</span><span class="sxs-lookup"><span data-stu-id="81801-317">Write-Verbose</span></span>](xref:Microsoft.PowerShell.Utility.Write-Verbose)
+[<span data-ttu-id="cf569-321">Write-Verbose</span><span class="sxs-lookup"><span data-stu-id="cf569-321">Write-Verbose</span></span>](xref:Microsoft.PowerShell.Utility.Write-Verbose)
