@@ -1,17 +1,16 @@
 ---
 description: Descreve as variáveis que armazenam informações de estado do PowerShell. Essas variáveis são criadas e mantidas pelo PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 08/14/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: d56e844bd10dfffabb1d2cfd75bcfe113724a334
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 82fc08a49b58b9518cfa50be916cf2889b5007d2
+ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196039"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577217"
 ---
 # <a name="about-automatic-variables"></a>Sobre variáveis automáticas
 
@@ -33,7 +32,7 @@ Contém o último token na última linha recebida pela sessão.
 
 Contém o status de execução do último comando. Ele conterá **true** se o último comando tiver êxito e **false** se ele tiver falhado.
 
-Para cmdlets e funções avançadas que são executadas em vários estágios em um pipeline, por exemplo, em `process` `end` blocos and, chamando `this.WriteError()` ou `$PSCmdlet.WriteError()` respectivamente em qualquer ponto, serão definidos como `$?` **false** , como `this.ThrowTerminatingError()` e `$PSCmdlet.ThrowTerminatingError()` .
+Para cmdlets e funções avançadas que são executadas em vários estágios em um pipeline, por exemplo, em `process` `end` blocos and, chamando `this.WriteError()` ou `$PSCmdlet.WriteError()` respectivamente em qualquer ponto, serão definidos como `$?` **false**, como `this.ThrowTerminatingError()` e `$PSCmdlet.ThrowTerminatingError()` .
 
 O `Write-Error` cmdlet sempre define `$?` como **false** imediatamente após ser executado, mas não será definido `$?` como **false** para uma função que a chama:
 
@@ -53,7 +52,7 @@ Para a última finalidade, `$PSCmdlet.WriteError()` deve ser usado em vez disso.
 Para comandos nativos (executáveis), `$?` é definido como **true** quando `$LASTEXITCODE` é 0 e definido como **false** quando `$LASTEXITCODE` é qualquer outro valor.
 
 > [!NOTE]
-> Até o PowerShell 7, que contém uma instrução entre parênteses `(...)` , sintaxe `$(...)` de subexpressão ou expressão `@(...)` de matriz sempre redefinida como `$?` **true** , para que seja `(Write-Error)` exibida `$?` como **verdadeira** .
+> Até o PowerShell 7, que contém uma instrução entre parênteses `(...)` , sintaxe `$(...)` de subexpressão ou expressão `@(...)` de matriz sempre redefinida como `$?` **true**, para que seja `(Write-Error)` exibida `$?` como **verdadeira**.
 > Isso foi alterado no PowerShell 7, de modo que `$?` sempre refletirá o êxito real da execução do último comando nessas expressões.
 
 ### <a name=""></a>$^
@@ -82,7 +81,7 @@ Quando você usa o `Export-Console` cmdlet sem parâmetros, ele atualiza automat
 Contém uma matriz de objetos de erro que representam os erros mais recentes.
 O erro mais recente é o primeiro objeto de erro na matriz `$Error[0]` .
 
-Para impedir que um erro seja adicionado à `$Error` matriz, use o parâmetro comum **ErrorAction** com um valor de **ignorar** . Para obter mais informações, confira [about_CommonParameters](about_CommonParameters.md).
+Para impedir que um erro seja adicionado à `$Error` matriz, use o parâmetro comum **ErrorAction** com um valor de **ignorar**. Para obter mais informações, confira [about_CommonParameters](about_CommonParameters.md).
 
 ### <a name="event"></a>$Event
 
@@ -103,7 +102,7 @@ Contém um objeto **EngineIntrinsics** que representa o contexto de execução d
 
 ### <a name="false"></a>$false
 
-Contém **false** . Você pode usar essa variável para representar **falso** em comandos e scripts em vez de usar a cadeia de caracteres "false". A cadeia de caracteres poderá ser interpretada como **true** se for convertida em uma cadeia de caracteres não vazia ou em um inteiro diferente de zero.
+Contém **false**. Você pode usar essa variável para representar **falso** em comandos e scripts em vez de usar a cadeia de caracteres "false". A cadeia de caracteres poderá ser interpretada como **true** se for convertida em uma cadeia de caracteres não vazia ou em um inteiro diferente de zero.
 
 ### <a name="foreach"></a>$foreach
 
@@ -138,6 +137,11 @@ Como `$input` é um enumerador, o acesso a qualquer uma das suas propriedades fa
 
 Enumeradores contêm propriedades e métodos que você pode usar para recuperar valores de loop e alterar a iteração do loop atual. Para obter mais informações, consulte [usando enumeradores](#using-enumerators).
 
+A `$input` variável também está disponível para o comando especificado pelo `-Command` parâmetro de `pwsh` quando invocado na linha de comando. O exemplo a seguir é executado no Shell de comando do Windows.
+
+```CMD
+echo Hello | powershell -Command """$input World!"""
+```
 
 ### <a name="lastexitcode"></a>$LastExitCode
 
@@ -209,7 +213,7 @@ Hello
 Hello three
 ```
 
-Como resultado, você não pode usar `$null` para significar **nenhum valor de parâmetro** . Um valor de parâmetro de `$null` substitui o valor de parâmetro padrão.
+Como resultado, você não pode usar `$null` para significar **nenhum valor de parâmetro**. Um valor de parâmetro de `$null` substitui o valor de parâmetro padrão.
 
 No entanto, como o PowerShell trata a `$null` variável como um espaço reservado, você pode usá-la em scripts como o seguinte, o que não funcionaria se `$null` fosse ignorado.
 
@@ -252,7 +256,7 @@ Ou você pode usá-lo em um comando para criar um perfil:
 New-Item -ItemType file -Path $PROFILE -Force
 ```
 
-Você pode usá-lo em um comando para abrir o perfil no **notepad.exe** :
+Você pode usá-lo em um comando para abrir o perfil no **notepad.exe**:
 
 ```powershell
 notepad.exe $PROFILE
@@ -262,7 +266,7 @@ notepad.exe $PROFILE
 
 Contém um dicionário dos parâmetros que são passados para um script ou função e seus valores atuais. Essa variável tem um valor somente em um escopo em que os parâmetros são declarados, como um script ou uma função. Você pode usá-lo para exibir ou alterar os valores atuais dos parâmetros ou para passar valores de parâmetro para outro script ou função.
 
-Neste exemplo, a função **test2** passa o `$PSBoundParameters` para a função **Test1** . Os `$PSBoundParameters` são exibidos no formato de **chave** e **valor** .
+Neste exemplo, a função **test2** passa o `$PSBoundParameters` para a função **Test1** . Os `$PSBoundParameters` são exibidos no formato de **chave** e **valor**.
 
 ```powershell
 function Test1 {
@@ -334,7 +338,7 @@ A partir do PowerShell 3,0, ele é válido em todos os scripts.
 
 Contém informações sobre o usuário que iniciou a PSSession, incluindo a identidade do usuário e o fuso horário do computador de origem. Essa variável está disponível somente em PSSessions.
 
-A `$PSSenderInfo` variável inclui uma propriedade configurável pelo usuário, **ApplicationArguments** , que, por padrão, contém apenas o `$PSVersionTable` da sessão de origem. Para adicionar dados à propriedade **ApplicationArguments** , use o parâmetro **ApplicationArguments** do `New-PSSessionOption` cmdlet.
+A `$PSSenderInfo` variável inclui uma propriedade configurável pelo usuário, **ApplicationArguments**, que, por padrão, contém apenas o `$PSVersionTable` da sessão de origem. Para adicionar dados à propriedade **ApplicationArguments** , use o parâmetro **ApplicationArguments** do `New-PSSessionOption` cmdlet.
 
 ### <a name="psuiculture"></a>$PSUICulture
 
@@ -392,7 +396,7 @@ Em uma classe personalizada, a `$this` variável refere-se ao próprio objeto de
 
 ### <a name="true"></a>$true
 
-Contém **true** . Você pode usar essa variável para representar **true** em comandos e scripts.
+Contém **true**. Você pode usar essa variável para representar **true** em comandos e scripts.
 
 ## <a name="using-enumerators"></a>Usando enumeradores
 
@@ -542,7 +546,7 @@ After MoveNext:
 
 Usando a propriedade **Current** , o valor do pipeline atual pode ser acessado várias vezes sem usar o método **Reset** . O bloco de processo não chama automaticamente o método **MoveNext** .
 
-A propriedade **atual** nunca será preenchida a menos que você chame explicitamente **MoveNext** . A propriedade **Current** pode ser acessada várias vezes dentro do bloco Process sem limpar seu valor.
+A propriedade **atual** nunca será preenchida a menos que você chame explicitamente **MoveNext**. A propriedade **Current** pode ser acessada várias vezes dentro do bloco Process sem limpar seu valor.
 
 ```powershell
 function Current

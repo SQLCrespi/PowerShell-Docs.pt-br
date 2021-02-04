@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Content
-ms.openlocfilehash: 3ae91d03e6882eeaf6743d11cfeed5d0ed1aae0c
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: ef44fefe68ef9674eb14ce494341bf04f477d55a
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93195251"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97693009"
 ---
 # Add-Content
 
@@ -117,7 +116,7 @@ Get-Content -Path .\NewFile.txt
 
 ### Exemplo 6: adicionar conteúdo a um arquivo somente leitura
 
-Esse comando adiciona um valor ao arquivo, mesmo que o atributo de arquivo **IsReadOnly** esteja definido como **true** .
+Esse comando adiciona um valor ao arquivo, mesmo que o atributo de arquivo **IsReadOnly** esteja definido como **true**.
 As etapas para criar um arquivo somente leitura são incluídas no exemplo.
 
 ```powershell
@@ -212,7 +211,7 @@ Os valores aceitáveis para esse parâmetro são os seguintes:
 A partir do PowerShell 6,2, o parâmetro de **codificação** também permite IDs numéricas de páginas de código registradas (como `-Encoding 1251` ) ou nomes de cadeia de caracteres de páginas de código registradas (como `-Encoding "windows-1251"` ). Para obter mais informações, consulte a documentação do .NET para [Encoding. CodePage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
 > [!NOTE]
-> O **UTF-7** * não é mais recomendado para uso. No PowerShell 7,1, um aviso será gravado se você especificar `utf7` para o parâmetro de **codificação** .
+> O **UTF-7** _ não é mais recomendado para uso. No PowerShell 7,1, um aviso será gravado se você especificar `utf7` para o parâmetro _ *Encoding**.
 
 ```yaml
 Type: System.Text.Encoding
@@ -229,7 +228,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -278,7 +277,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -366,11 +365,14 @@ Accept wildcard characters: True
 
 ### -Fluxo
 
+> [!NOTE]
+> Esse parâmetro só está disponível no Windows.
+
 Especifica um fluxo de dados alternativo para o conteúdo. Se o fluxo não existir, esse cmdlet o criará. Não há suporte para caracteres curinga.
 
 **Stream** é um parâmetro dinâmico que o provedor FileSystem adiciona `Add-Content` . Esse parâmetro funciona somente em unidades de sistema de arquivos.
 
-Você pode usar o `Add-Content` cmdlet para alterar o conteúdo do fluxo de dados de **zona. identificador** alternativo. No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
+Você pode usar o `Add-Content` cmdlet para alterar o conteúdo de qualquer fluxo de dados alternativo, como `Zone.Identifier` . No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
 
 Esse parâmetro foi introduzido no PowerShell 3,0.
 
@@ -438,6 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
@@ -473,4 +476,3 @@ Quando você usa o parâmetro **PassThru** , o `Add-Content` gera um objeto **Sy
 [New-Item](New-Item.md)
 
 [Set-Content](Set-Content.md)
-

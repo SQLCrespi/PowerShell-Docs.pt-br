@@ -7,12 +7,12 @@ ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 8177b1ed45f6d6cdabf13670e36be4fcbb55a77b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 9bb687aa7f497dbf2c07633abddf4e1a17a9622e
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239947"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879194"
 ---
 # New-ModuleManifest
 
@@ -47,7 +47,7 @@ Autores de módulo podem usar este cmdlet para criar um manifesto para seu módu
 
 `New-ModuleManifest` Cria um manifesto que inclui todas as chaves de manifesto usadas com frequência, para que você possa usar a saída padrão como um modelo de manifesto. Para adicionar ou alterar valores, ou para adicionar chaves de módulo que esse cmdlet não adiciona, abra o arquivo resultante em um editor de texto.
 
-Cada parâmetro, exceto **Path** e **PassThru** , cria uma chave de manifesto de módulo e seu valor.
+Cada parâmetro, exceto **Path** e **PassThru**, cria uma chave de manifesto de módulo e seu valor.
 Em um manifesto de módulo, somente a chave **ModuleVersion** é necessária. A menos que especificado na descrição do parâmetro, se você omitir um parâmetro do comando, `New-ModuleManifest` o criará uma cadeia de caracteres de comentário para o valor associado que não tem efeito.
 
 No PowerShell 2,0, `New-ModuleManifest` o solicita os valores de parâmetros comumente usados que não são especificados no comando, além dos valores de parâmetro necessários. A partir do PowerShell 3,0, o `New-ModuleManifest` solicita somente quando os valores de parâmetro necessários não são especificados.
@@ -225,7 +225,7 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList** , **RequiredModules** e **NestedModules** . Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.
+Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList**, **RequiredModules** e **NestedModules** . Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.
 
 ### Exemplo 4-criar um manifesto que ofereça suporte à ajuda atualizável
 
@@ -780,7 +780,7 @@ Accept wildcard characters: False
 
 ### -PowerShellVersion
 
-Especifica a versão mínima do PowerShell que funciona com este módulo. Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro.
+Especifica a versão mínima do PowerShell que funciona com este módulo. Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro. Ele deve estar em um formato X. X. Por exemplo, se você enviar `5` , o PowerShell gerará um erro.
 
 ```yaml
 Type: System.Version
@@ -880,7 +880,7 @@ Accept wildcard characters: False
 Especifica os arquivos de assembly ( `.dll` ) que o módulo requer. Digite os nomes de arquivo de assembly.
 O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .
 
-Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess** , mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules**.
+Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess**, mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules**.
 
 ```yaml
 Type: System.String[]

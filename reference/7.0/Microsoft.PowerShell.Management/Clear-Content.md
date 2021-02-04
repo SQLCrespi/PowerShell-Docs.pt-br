@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/18/2018
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Content
-ms.openlocfilehash: 5a38fd45ff1f645df7004452b5a3c16c6f5cb74a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9ffe7510745e92c6863cf08d143f89e214ae9133
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93193104"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692982"
 ---
 # Clear-Content
 
@@ -58,16 +57,13 @@ Os arquivos não serão excluídos, mas ficam vazios.
 Clear-Content -Path "*" -Filter "*.log" -Force
 ```
 
-Esse comando exclui o conteúdo de todos os arquivos no diretório atual com a extensão de nome de arquivo ".log", incluindo arquivos com o atributo somente leitura.
-O asterisco ( \* ) no caminho representa todos os itens no diretório atual.
-O parâmetro **Force** torna o comando efetivo em arquivos somente leitura.
-Usando um filtro para restringir o comando a arquivos com a extensão de nome de arquivo. log em vez de especificar \* . log no caminho torna a operação mais rápida.
+Esse comando exclui o conteúdo de todos os arquivos no diretório atual com a extensão de nome de arquivo ".log", incluindo arquivos com o atributo somente leitura. O asterisco ( \* ) no caminho representa todos os itens no diretório atual. O parâmetro **Force** torna o comando efetivo em arquivos somente leitura. Usando um filtro para restringir o comando a arquivos com a extensão de nome de arquivo. log em vez de especificar \* . log no caminho torna a operação mais rápida.
 
 ### Exemplo 3: limpar todos os dados de um fluxo
 
 Este exemplo mostra como o `Clear-Content` cmdlet limpa o conteúdo de um fluxo de dados alternativo, deixando o fluxo intacto.
 
-O primeiro comando usa o `Get-Content` cmdlet para obter o conteúdo do fluxo de zona. identificador no arquivo de Copy-Script.ps1, que foi baixado da Internet.
+O primeiro comando usa o `Get-Content` cmdlet para obter o conteúdo do `Zone.Identifier` fluxo no arquivo de Copy-Script.ps1, que foi baixado da Internet.
 
 O segundo comando usa o `Clear-Content` cmdlet para limpar o conteúdo.
 
@@ -91,16 +87,15 @@ PS C:\>
 
 ### -Fluxo
 
-Especifica um fluxo de dados alternativo para o conteúdo.
-Se o fluxo não existir, esse cmdlet o criará.
-Não há suporte para caracteres curinga.
+> [!NOTE]
+> Esse parâmetro só está disponível no Windows.
+
+Especifica um fluxo de dados alternativo para o conteúdo. Se o fluxo não existir, esse cmdlet o criará. Não há suporte para caracteres curinga.
 
 Stream é um parâmetro dinâmico que o provedor FileSystem adiciona `Clear-Content` .
 Esse parâmetro funciona somente em unidades de sistema de arquivos.
 
-Você pode usar o `Clear-Content` cmdlet para alterar o conteúdo do fluxo de dados de zona. identificador alternativo.
-No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet.
-Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
+Você pode usar o `Clear-Content` cmdlet para alterar o conteúdo do fluxo de dados alternativo Amy, como `Zone.Identifier` . No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
 
 ```yaml
 Type: System.String
@@ -133,10 +128,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica, como uma matriz de cadeia de caracteres, que esse cmdlet omite do caminho para o conteúdo.
-O valor deste parâmetro qualifica o parâmetro **Path** .
-Insira um padrão ou elemento de caminho, como "*.txt".
-Caracteres curinga são permitidos.
+Especifica, como uma matriz de cadeia de caracteres, que esse cmdlet omite do caminho para o conteúdo. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um padrão ou elemento de caminho, como "*.txt". Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -152,10 +144,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Especifica um filtro no formato ou linguagem do provedor.
-O valor deste parâmetro qualifica o parâmetro **Path** .
-A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor.
-Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao recuperar os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
+Especifica um filtro no formato ou linguagem do provedor. O valor deste parâmetro qualifica o parâmetro **Path**. A sintaxe do filtro, incluindo o uso de caracteres curingas, depende do provedor. Os filtros são mais eficientes do que outros parâmetros, pois o provedor os aplica ao recuperar os objetos, em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
 
 ```yaml
 Type: System.String
@@ -187,10 +176,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, o conteúdo que esse cmdlet limpa.
-O valor deste parâmetro qualifica o parâmetro **Path** .
-Insira um padrão ou elemento de caminho, como "*.txt".
-Caracteres curinga são permitidos.
+Especifica, como uma matriz de cadeia de caracteres, o conteúdo que esse cmdlet limpa. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um padrão ou elemento de caminho, como "*.txt". Caracteres curinga são permitidos.
 
 ```yaml
 Type: System.String[]
@@ -206,11 +192,8 @@ Accept wildcard characters: True
 
 ### -LiteralPath
 
-Especifica os caminhos para os itens dos quais o conteúdo é excluído.
-Ao contrário do parâmetro **Path** , o valor de **LiteralPath** é usado exatamente como digitado.
-Nenhum caractere é interpretado como caractere curinga.
-Se o caminho incluir caracteres de escape, coloque-o entre aspas simples.
-Aspas simples dizem que o PowerShell não interpreta nenhum caractere como sequências de escape.
+Especifica os caminhos para os itens dos quais o conteúdo é excluído. Ao contrário do parâmetro **Path**, o valor de **LiteralPath** é usado exatamente como digitado. Nenhum caractere é interpretado como caractere curinga.
+Se o caminho incluir caracteres de escape, coloque-o entre aspas simples. Aspas simples dizem que o PowerShell não interpreta nenhum caractere como sequências de escape.
 
 ```yaml
 Type: System.String[]
@@ -226,12 +209,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-Especifica os caminhos para os itens dos quais o conteúdo é excluído.
-Caracteres curinga são permitidos.
-Os caminhos devem ser caminhos para itens, não para contêineres.
-Por exemplo, você deve especificar um caminho para um ou mais arquivos, não um caminho para um diretório.
-Caracteres curinga são permitidos.
-Este parâmetro é obrigatório, mas o nome do parâmetro ("Path") é opcional.
+Especifica os caminhos para os itens dos quais o conteúdo é excluído. Caracteres curinga são permitidos. Os caminhos devem ser caminhos para itens, não para contêineres. Por exemplo, você deve especificar um caminho para um ou mais arquivos, não um caminho para um diretório. Caracteres curinga são permitidos. Este parâmetro é obrigatório, mas o nome do parâmetro ("Path") é opcional.
 
 ```yaml
 Type: System.String[]
@@ -263,8 +241,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Mostra o que aconteceria se o cmdlet fosse executado.
-O cmdlet não é executado.
+Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -280,7 +257,8 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` . Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## ENTRADAS
 
@@ -296,8 +274,7 @@ Este cmdlet não retorna nenhum objeto.
 
 ## OBSERVAÇÕES
 
-Você pode usar `Clear-Content` o com o provedor de sistema de arquivos do PowerShell e outros provedores que manipulam conteúdo.
-Para limpar os itens que não são considerados conteúdo, como itens gerenciados pelo certificado do PowerShell ou pelos provedores de registro, use `Clear-Item` .
+Você pode usar `Clear-Content` o com o provedor de sistema de arquivos do PowerShell e outros provedores que manipulam conteúdo. Para limpar os itens que não são considerados conteúdo, como itens gerenciados pelo certificado do PowerShell ou pelos provedores de registro, use `Clear-Item` .
 
 O `Clear-Content` cmdlet é projetado para trabalhar com os dados expostos por qualquer provedor.
 Para listar os provedores disponíveis em sua sessão, digite `Get-PsProvider` .

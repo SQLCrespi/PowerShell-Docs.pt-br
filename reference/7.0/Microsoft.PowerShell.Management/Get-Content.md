@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 5/14/2019
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 1409522cffc2dde2cc5002049126bcfaa30ce846
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 48f15f9d7018c2e58584bff80f81132fe08fea1e
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192908"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692740"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 O parâmetro **Stream** é um parâmetro dinâmico do [provedor FileSystem](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring).
-Por padrão `Get-Content` , o só recupera dados do fluxo principal ou do `$DATA` Stream. Os **fluxos** podem ser usados para armazenar dados ocultos, como atributos, configurações de segurança ou outros dados.
+Por padrão `Get-Content` , o só recupera dados do padrão ou do `:$DATA` fluxo. Os **fluxos** podem ser usados para armazenar dados ocultos, como atributos, configurações de segurança ou outros dados. Eles também podem ser armazenados em diretórios sem serem itens filho.
 
 ### Exemplo 6: obter conteúdo bruto
 
@@ -219,7 +218,7 @@ Get-Member -InputObject $bytearray
 ```
 
 ```Output
-TypeName: System.Byte[]
+   TypeName: System.Byte[]
 
 Name           MemberType            Definition
 ----           ----------            ----------
@@ -289,7 +288,7 @@ Accept wildcard characters: False
 
 Especifica o número de linhas desde o início de um arquivo ou outro item. O padrão é -1 (todas as linhas).
 
-Você pode usar o nome do parâmetro **TotalCount** ou seus aliases, **primeiro** ou o **cabeçalho** .
+Você pode usar o nome do parâmetro **TotalCount** ou seus aliases, **primeiro** ou o **cabeçalho**.
 
 ```yaml
 Type: System.Int64
@@ -305,7 +304,7 @@ Accept wildcard characters: False
 
 ### -Parte final
 
-Especifica o número de linhas do final de um arquivo ou outro item. Você pode usar o nome do parâmetro de **cauda** ou seu alias, **por fim** . Esse parâmetro foi introduzido no PowerShell 3,0.
+Especifica o número de linhas do final de um arquivo ou outro item. Você pode usar o nome do parâmetro de **cauda** ou seu alias, **por fim**. Esse parâmetro foi introduzido no PowerShell 3,0.
 
 ```yaml
 Type: System.Int32
@@ -338,7 +337,7 @@ Accept wildcard characters: True
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -355,7 +354,7 @@ Accept wildcard characters: True
 ### -Excluir
 
 Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação.
-O valor deste parâmetro qualifica o parâmetro **Path** .
+O valor deste parâmetro qualifica o parâmetro **Path**.
 
 Insira um elemento ou padrão de caminho, como `*.txt` .
 Caracteres curinga são permitidos.
@@ -433,9 +432,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Mantém o arquivo aberto após a saída de todas as linhas existentes. Enquanto aguarda, `Get-Content` o verifica o arquivo uma vez por segundo e gera novas linhas, se houver. Você pode interromper a **espera** pressionando **Ctrl + C** . A espera também termina se o arquivo é excluído, caso em que um erro de não finalização é relatado.
+Mantém o arquivo aberto após a saída de todas as linhas existentes. Enquanto aguarda, `Get-Content` o verifica o arquivo uma vez por segundo e gera novas linhas, se houver. Você pode interromper a **espera** pressionando **Ctrl + C**. A espera também termina se o arquivo é excluído, caso em que um erro de não finalização é relatado.
 
-**Wait** é um parâmetro dinâmico que o provedor FileSystem adiciona ao `Get-Content` cmdlet. Esse parâmetro funciona somente em unidades de sistema de arquivos. **Wait** não pode ser combinado com **RAW** .
+**Wait** é um parâmetro dinâmico que o provedor FileSystem adiciona ao `Get-Content` cmdlet. Esse parâmetro funciona somente em unidades de sistema de arquivos. **Wait** não pode ser combinado com **RAW**.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -504,6 +503,9 @@ Accept wildcard characters: False
 ```
 
 ### -Fluxo
+
+> [!NOTE]
+> Esse parâmetro só está disponível no Windows.
 
 Obtém o fluxo de arquivos NTFS alternativo especificado do conteúdo do arquivo. Insira o nome do fluxo.
 Não há suporte para caracteres curinga.

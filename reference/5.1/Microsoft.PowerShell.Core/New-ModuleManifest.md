@@ -7,12 +7,12 @@ ms.date: 04/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 50a3d85b3d598653a03bc6bf8e82c249bba42759
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ea0ebc0f742a9d815fbd76ea62e97fd92c4f9da8
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193309"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879279"
 ---
 # New-ModuleManifest
 
@@ -46,7 +46,7 @@ Autores de módulo podem usar este cmdlet para criar um manifesto para seu módu
 
 `New-ModuleManifest` Cria um manifesto que inclui todas as chaves de manifesto usadas com frequência, para que você possa usar a saída padrão como um modelo de manifesto. Para adicionar ou alterar valores, ou para adicionar chaves de módulo que esse cmdlet não adiciona, abra o arquivo resultante em um editor de texto.
 
-Cada parâmetro, exceto **Path** e **PassThru** , cria uma chave de manifesto de módulo e seu valor.
+Cada parâmetro, exceto **Path** e **PassThru**, cria uma chave de manifesto de módulo e seu valor.
 Em um manifesto de módulo, somente a chave **ModuleVersion** é necessária. A menos que especificado na descrição do parâmetro, se você omitir um parâmetro do comando, `New-ModuleManifest` o criará uma cadeia de caracteres de comentário para o valor associado que não tem efeito.
 
 No PowerShell 2,0, `New-ModuleManifest` o solicita os valores de parâmetros comumente usados que não são especificados no comando, além dos valores de parâmetro necessários. A partir do PowerShell 3,0, o `New-ModuleManifest` solicita somente quando os valores de parâmetro necessários não são especificados.
@@ -215,11 +215,11 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList** , **RequiredModules** e **NestedModules** . Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.
+Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList**, **RequiredModules** e **NestedModules** . Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.
 
 ### Exemplo 4-criar um manifesto que ofereça suporte à ajuda atualizável
 
-Este exemplo usa o parâmetro **HelpInfoUri** para criar uma chave **HelpInfoUri** no manifesto do módulo. O valor do parâmetro e a chave devem começar com **http** ou **https** . Esse valor informa o sistema do Updatable Help onde encontrar o arquivo XML de informações de ajuda atualizável HelpInfo para o módulo.
+Este exemplo usa o parâmetro **HelpInfoUri** para criar uma chave **HelpInfoUri** no manifesto do módulo. O valor do parâmetro e a chave devem começar com **http** ou **https**. Esse valor informa o sistema do Updatable Help onde encontrar o arquivo XML de informações de ajuda atualizável HelpInfo para o módulo.
 
 ```powershell
 $moduleSettings = @{
@@ -559,7 +559,7 @@ Accept wildcard characters: False
 
 ### -HelpInfoUri
 
-Especifica o endereço da Internet do arquivo XML HelpInfo para o módulo. Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https** .
+Especifica o endereço da Internet do arquivo XML HelpInfo para o módulo. Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https**.
 
 O arquivo XML HelpInfo dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell 3,0. Ele contém informações sobre o local dos arquivos de ajuda que podem ser baixados para o módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.
 
@@ -616,7 +616,7 @@ Accept wildcard characters: False
 
 Lista todos os módulos incluídos neste módulo.
 
-Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** . A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
+Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**. A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
 
 Essa chave foi projetada para atuar como um inventário de módulo. Os módulos listados no valor dessa chave não são processados automaticamente.
 
@@ -654,7 +654,7 @@ Accept wildcard characters: False
 
 Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo. Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.
 
-Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** . A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
+Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**. A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
 
 Normalmente, módulos aninhados contêm comandos que o módulo raiz precisa para seu processamento interno.
 Por padrão, os comandos em módulos aninhados são exportados do estado de sessão do módulo para o estado de sessão do chamador, mas o módulo raiz pode restringir os comandos que ele exporta. Por exemplo, usando um `Export-ModuleMember` comando.
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -PowerShellHostName
 
-Especifica o nome do programa de host do PowerShell que o módulo requer. Insira o nome do programa host, como **ISE do Windows PowerShell host** ou **ConsoleHost** . Caracteres curinga não são permitidos.
+Especifica o nome do programa de host do PowerShell que o módulo requer. Insira o nome do programa host, como **ISE do Windows PowerShell host** ou **ConsoleHost**. Caracteres curinga não são permitidos.
 
 Para localizar o nome de um programa de host, no programa, digite `$Host.Name` .
 
@@ -750,7 +750,7 @@ Accept wildcard characters: False
 
 ### -PowerShellVersion
 
-Especifica a versão mínima do PowerShell que funciona com este módulo. Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro.
+Especifica a versão mínima do PowerShell que funciona com este módulo. Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro. Ele deve estar em um formato X. X. Por exemplo, se você enviar `5` , o PowerShell gerará um erro.
 
 ```yaml
 Type: System.Version
@@ -834,7 +834,7 @@ Accept wildcard characters: False
 Especifica os arquivos de assembly ( `.dll` ) que o módulo requer. Digite os nomes de arquivo de assembly.
 O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .
 
-Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess** , mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules** .
+Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess**, mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules**.
 
 ```yaml
 Type: System.String[]
@@ -852,7 +852,7 @@ Accept wildcard characters: False
 
 Especifica os módulos que devem estar no estado de sessão global. Se os módulos necessários não estiverem no estado de sessão global, o PowerShell os importará. Se os módulos necessários não estiverem disponíveis, o `Import-Module` comando falhará.
 
-Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion** . A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
+Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**. A tabela de hash também pode ter uma chave **GUID** opcional. Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.
 
 No PowerShell 2,0, o `Import-Module` não importa os módulos necessários automaticamente. Ele apenas verifica se os módulos necessários estão no estado da sessão global.
 
@@ -873,7 +873,7 @@ Accept wildcard characters: False
 Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.
 Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.
 
-Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules** .
+Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules**.
 
 ```yaml
 Type: System.String[]
@@ -971,7 +971,7 @@ Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido des
 Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto. Caso contrário, seus membros não serão exportados.
 
 > [!NOTE]
-> No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess** . Você pode usar o nome do parâmetro **RootModule** ou seu alias **ModuleToProcess** .
+> No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess**. Você pode usar o nome do parâmetro **RootModule** ou seu alias **ModuleToProcess** .
 
 ```yaml
 Type: System.String
@@ -1007,7 +1007,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ## ENTRADAS
 
-### Nenhum
+### Nenhuma
 
 Não é possível canalizar a entrada para este cmdlet.
 
@@ -1019,7 +1019,7 @@ Por padrão, o `New-ModuleManifest` não gera nenhuma saída. No entanto, se voc
 
 ## OBSERVAÇÕES
 
-`New-ModuleManifest` cria arquivos de manifesto de módulo ( `.psd1` ) codificados como **UTF16** .
+`New-ModuleManifest` cria arquivos de manifesto de módulo ( `.psd1` ) codificados como **UTF16**.
 
 Manifestos de módulo são geralmente opcionais. No entanto, um manifesto de módulo é necessária para exportar um assembly instalado no cache de assembly global.
 

@@ -7,12 +7,12 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-itemproperty?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ItemProperty
-ms.openlocfilehash: 969cb181758dc1ac40b9d8fca2c22fa97f87c693
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cbd1229721650823d9780517934c40a2287f4227
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193930"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692663"
 ---
 # Set-ItemProperty
 
@@ -64,7 +64,7 @@ Por exemplo, você pode adicionar uma nova entrada de registro a uma chave e est
 
 ### Exemplo 1: definir uma propriedade de um arquivo
 
-Esse comando define o valor da propriedade **IsReadOnly** do arquivo "final.doc" como "true". Ele usa o **caminho** para especificar o arquivo, o **nome** para especificar o nome da propriedade e o **valor** pazrameter para especificar o novo valor.
+Esse comando define o valor da propriedade **IsReadOnly** do arquivo "final.doc" como "true". Ele usa o **caminho** para especificar o arquivo, o **nome** para especificar o nome da propriedade e o parâmetro de **valor** para especificar o novo valor.
 
 O arquivo é um objeto **System. IO. FileInfo** e **IsReadOnly** é apenas uma de suas propriedades.
 Para ver todas as propriedades, digite `Get-Item C:\GroupFiles\final.doc | Get-Member -MemberType Property` .
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -Excluir
 
 Especifica os itens sobre os quais o cmdlet não funciona e inclui todos os outros.
-O valor deste parâmetro qualifica o parâmetro **Path** .
+O valor deste parâmetro qualifica o parâmetro **Path**.
 Insira um padrão ou elemento de caminho, como "*.txt".
 Caracteres curinga são permitidos.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ### -Filter
 
 Especifica um filtro no formato ou idioma do provedor.
-O valor deste parâmetro qualifica o parâmetro **Path** .
+O valor deste parâmetro qualifica o parâmetro **Path**.
 
 A sintaxe do filtro, incluindo o uso de caracteres curinga, depende do provedor.
 Os filtros são mais eficientes do que outros parâmetros, porque o provedor os aplica quando o cmdlet obtém os objetos em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ### -Incluir
 
 Especifica somente os itens sobre os quais o cmdlet atua, o que exclui todos os outros.
-O valor deste parâmetro qualifica o parâmetro **Path** .
+O valor deste parâmetro qualifica o parâmetro **Path**.
 Insira um padrão ou elemento de caminho, como "*.txt".
 Caracteres curinga são permitidos.
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ### -LiteralPath
 
 Especifica um caminho da propriedade item.
-Ao contrário do parâmetro **Path** , o valor de **LiteralPath** é usado exatamente como digitado.
+Ao contrário do parâmetro **Path**, o valor de **LiteralPath** é usado exatamente como digitado.
 Nenhum caractere é interpretado como caractere curinga.
 Se o caminho incluir caracteres de escape, coloque-o entre aspas simples.
 Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.
@@ -336,14 +336,14 @@ Esse parâmetro só funciona nas unidades do registro.
 Especifica o tipo de propriedade que este cmdlet adiciona.
 Os valores aceitáveis para esse parâmetro são:
 
-- **Cadeia de caracteres** : especifica uma cadeia de caracteres terminada em nulo. Equivalente a **REG_SZ** .
-- **ExpandString** : especifica uma cadeia de caracteres terminada em nulo que contém referências não expandidas a variáveis de ambiente que são expandidas quando o valor é recuperado. Equivalente a **REG_EXPAND_SZ** .
-- **Binary** : especifica dados binários em qualquer formulário. Equivalente a **REG_BINARY** .
-- **DWORD** : especifica um número binário de 32 bits. Equivalente a **REG_DWORD** .
-- **Multistring** : especifica uma matriz de cadeias de caracteres terminadas em nulo terminadas por dois caracteres nulos.
-  Equivalente a **REG_MULTI_SZ** .
-- **QWORD** : especifica um número binário de 64 bits. Equivalente a **REG_QWORD** .
-- **Desconhecido** : indica um tipo de dados de registro sem suporte, como **REG_RESOURCE_LIST** .
+- **Cadeia de caracteres**: especifica uma cadeia de caracteres terminada em nulo. Equivalente a **REG_SZ**.
+- **ExpandString**: especifica uma cadeia de caracteres terminada em nulo que contém referências não expandidas a variáveis de ambiente que são expandidas quando o valor é recuperado. Equivalente a **REG_EXPAND_SZ**.
+- **Binary**: especifica dados binários em qualquer formulário. Equivalente a **REG_BINARY**.
+- **DWORD**: especifica um número binário de 32 bits. Equivalente a **REG_DWORD**.
+- **Multistring**: especifica uma matriz de cadeias de caracteres terminadas em nulo terminadas por dois caracteres nulos.
+  Equivalente a **REG_MULTI_SZ**.
+- **QWORD**: especifica um número binário de 64 bits. Equivalente a **REG_QWORD**.
+- **Desconhecido**: indica um tipo de dados de registro sem suporte, como **REG_RESOURCE_LIST**.
 
 ```yaml
 Type: RegistryValueKind

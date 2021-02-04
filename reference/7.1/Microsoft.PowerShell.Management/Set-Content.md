@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Content
-ms.openlocfilehash: bb9345470aa58dac7c14e1443c0fe4c12e7563a6
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: d21765541fb849aed8dc37895c167c0ea34486a3
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93195260"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692832"
 ---
 # Set-Content
 
@@ -120,7 +119,7 @@ The word Caution was replaced.
 O `Get-Content` cmdlet usa o parâmetro **Path** para especificar o arquivo de **Notice.txt** no diretório atual. O `Get-Content` comando é encapsulado com parênteses para que o comando seja concluído antes de ser enviado ao pipeline.
 
 O conteúdo do arquivo de **Notice.txt** é enviado ao pipeline para o `ForEach-Object` cmdlet.
-`ForEach-Object` usa a variável automática `$_` e substitui cada ocorrência de **Warning** por **cuidado** . Os objetos são enviados para o pipeline para o `Set-Content` cmdlet. `Set-Content` usa o parâmetro **path** para especificar o arquivo de **Notice.txt** e grava o conteúdo atualizado no arquivo.
+`ForEach-Object` usa a variável automática `$_` e substitui cada ocorrência de **Warning** por **cuidado**. Os objetos são enviados para o pipeline para o `Set-Content` cmdlet. `Set-Content` usa o parâmetro **path** para especificar o arquivo de **Notice.txt** e grava o conteúdo atualizado no arquivo.
 
 O último `Get-Content` cmdlet exibe o conteúdo do arquivo atualizado no console do PowerShell.
 
@@ -194,7 +193,7 @@ Os valores aceitáveis para esse parâmetro são os seguintes:
 A partir do PowerShell 6,2, o parâmetro de **codificação** também permite IDs numéricas de páginas de código registradas (como `-Encoding 1251` ) ou nomes de cadeia de caracteres de páginas de código registradas (como `-Encoding "windows-1251"` ). Para obter mais informações, consulte a documentação do .NET para [Encoding. CodePage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
 > [!NOTE]
-> O **UTF-7** * não é mais recomendado para uso. No PowerShell 7,1, um aviso será gravado se você especificar `utf7` para o parâmetro de **codificação** .
+> O **UTF-7** _ não é mais recomendado para uso. No PowerShell 7,1, um aviso será gravado se você especificar `utf7` para o parâmetro _ *Encoding**.
 
 ```yaml
 Type: System.Text.Encoding
@@ -211,7 +210,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -261,7 +260,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -344,11 +343,14 @@ Accept wildcard characters: True
 
 ### -Fluxo
 
+> [!NOTE]
+> Esse parâmetro só está disponível no Windows.
+
 Especifica um fluxo de dados alternativo para o conteúdo. Se o fluxo não existir, esse cmdlet o criará. Não há suporte para caracteres curinga.
 
 **Stream** é um parâmetro dinâmico que o provedor **FileSystem** adiciona `Set-Content` . Esse parâmetro funciona somente em unidades de sistema de arquivos.
 
-Você pode usar o `Set-Content` cmdlet para alterar o conteúdo do fluxo de dados de **zona. identificador** alternativo. No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
+Você pode usar o `Set-Content` cmdlet para criar ou atualizar o conteúdo de qualquer fluxo de dados alternativo, como `Zone.Identifier` . No entanto, não recomendamos isso como uma maneira de eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
 
 Esse parâmetro foi introduzido no PowerShell 3,0.
 
@@ -414,8 +416,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` .
-Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## ENTRADAS
 
@@ -455,4 +456,3 @@ Quando você usa o parâmetro **PassThru** , o `Set-Content` gera um objeto **Sy
 [ForEach-Object](../Microsoft.PowerShell.Core/ForEach-Object.md)
 
 [New-Item](New-Item.md)
-

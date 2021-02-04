@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 1b13abbea7f10280fa74bd6aa2061b2ba91da75c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 202af7ea491b8fa020ab2ff7ae6b1cc697829b6b
+ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195485"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804122"
 ---
 # <a name="about-signing"></a>Sobre a assinatura
 
@@ -38,7 +38,7 @@ Para localizar a política de execução efetiva em seu computador, digite:
 Get-ExecutionPolicy
 ```
 
-Para executar scripts não assinados que você escreve no computador local e os scripts assinados de outros usuários, inicie o PowerShell com a opção Executar como administrador e use o seguinte comando para alterar a política de execução no computador para **RemoteSigned** :
+Para executar scripts não assinados que você escreve no computador local e os scripts assinados de outros usuários, inicie o PowerShell com a opção Executar como administrador e use o seguinte comando para alterar a política de execução no computador para **RemoteSigned**:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -48,7 +48,7 @@ Para obter mais informações, consulte o tópico da ajuda para o `Set-Execution
 
 ## <a name="running-unsigned-scripts-using-the-remotesigned-execution-policy"></a>Executando scripts não assinados usando a política de execução RemoteSigned
 
-Se a sua política de execução do PowerShell for **RemoteSigned** , o PowerShell não executará scripts não assinados que são baixados da Internet, incluindo scripts não assinados recebidos por email e programas de mensagens instantâneas.
+Se a sua política de execução do PowerShell for **RemoteSigned**, o PowerShell não executará scripts não assinados que são baixados da Internet, incluindo scripts não assinados recebidos por email e programas de mensagens instantâneas.
 
 Se você tentar executar um script baixado, o PowerShell exibirá a seguinte mensagem de erro:
 
@@ -104,7 +104,7 @@ Se você criar um certificado autoassinado, certifique-se de habilitar a proteç
 
 ## <a name="create-a-self-signed-certificate"></a>Criará um certificado autoassinado
 
-Para criar um certificado autoassinado no, use o `New-SelfSignedCertificate` cmdlet no módulo PKI. Esse módulo é introduzido no PowerShell 3,0 e está incluído no Windows 8 e no Windows Server 2012. Para obter mais informações, consulte o tópico da ajuda para o `New-SelfSignedCertificate` cmdlet.
+Para criar um certificado autoassinado, use o `New-SelfSignedCertificate` cmdlet no módulo PKI. Esse módulo é introduzido no PowerShell 3,0 e está incluído no Windows 8 e no Windows Server 2012. Para obter mais informações, consulte o tópico da ajuda para o `New-SelfSignedCertificate` cmdlet.
 
 Para criar um certificado autoassinado em versões anteriores do Windows, use a ferramenta de criação de certificado `MakeCert.exe` . Essa ferramenta está incluída no SDK do Microsoft .NET (versões 1,1 e posteriores) e no SDK do Microsoft Windows.
 

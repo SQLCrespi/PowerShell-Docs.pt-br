@@ -7,12 +7,12 @@ ms.date: 05/20/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Command
-ms.openlocfilehash: 60b6d2e380685650a86f74056a992afb4051ddc1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5f2752f53fb5f74b6436548c3bd4fa731d2b02d5
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194766"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879228"
 ---
 # Get-Command
 
@@ -42,7 +42,7 @@ Get-Command [[-Name] <String[]>] [-Module <String[]>]
 
 ## DESCRIPTION
 
-O `Get-Command` cmdlet obtém todos os comandos que estão instalados no computador, incluindo cmdlets, aliases, funções, filtros, scripts e aplicativos. `Get-Command` Obtém os comandos de módulos e comandos do PowerShell que foram importados de outras sessões. Para obter somente comandos que foram importados para a sessão atual, use o parâmetro **ListImported** .
+O `Get-Command` cmdlet obtém todos os comandos que estão instalados no computador, incluindo cmdlets, aliases, funções, filtros, scripts e aplicativos. `Get-Command` Obtém os comandos de módulos e comandos do PowerShell que foram importados de outras sessões. Para obter somente comandos que foram importados para a sessão atual, use o parâmetro **ListImported**.
 
 Sem parâmetros, `Get-Command` Obtém todos os cmdlets, funções e aliases instalados no computador. `Get-Command *` Obtém todos os tipos de comandos, incluindo todos os arquivos que não são do PowerShell na variável de ambiente Path ( `$env:Path` ), que é listada no tipo de comando Application.
 
@@ -88,7 +88,7 @@ Get-Command -Module Microsoft.PowerShell.Security, Microsoft.PowerShell.Utility
 
 ### Exemplo 5: obter informações sobre um cmdlet
 
-Esse comando obtém informações sobre o `Get-AppLockerPolicy` cmdlet. Ele também importa o módulo **AppLocker** , que adiciona todos os comandos no módulo **AppLocker** à sessão atual.
+Esse comando obtém informações sobre o `Get-AppLockerPolicy` cmdlet. Ele também importa o módulo **AppLocker**, que adiciona todos os comandos no módulo **AppLocker** à sessão atual.
 
 ```powershell
 Get-Command Get-AppLockerPolicy
@@ -105,7 +105,7 @@ Esse comando usa os parâmetros **ArgumentList** e **Syntax** para obter a sinta
 Get-Command  -Name Get-Childitem -Args Cert: -Syntax
 ```
 
-Ao comparar a sintaxe exibida na saída com a sintaxe que é exibida quando você omite o parâmetro **args** ( **ArgumentList** ), você verá que o **provedor de certificado** adiciona um parâmetro dinâmico, **CodeSigningCert** , ao `Get-ChildItem` cmdlet.
+Ao comparar a sintaxe exibida na saída com a sintaxe que é exibida quando você omite o parâmetro **args** (**ArgumentList**), você verá que o **provedor de certificado** adiciona um parâmetro dinâmico, **CodeSigningCert**, ao `Get-ChildItem` cmdlet.
 
 Para obter mais informações sobre o provedor de certificados, consulte [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).
 
@@ -142,7 +142,7 @@ Ele retorna um objeto **ApplicationInfo** (System.Management.Automation.Applicat
 
 ### Exemplo 9: obter cmdlets usando um nome de parâmetro e tipo
 
-Esse comando obtém os cmdlets que têm um parâmetro cujo nome inclui autenticação e cujo tipo é **AuthenticationMechanism** .
+Esse comando obtém os cmdlets que têm um parâmetro cujo nome inclui autenticação e cujo tipo é **AuthenticationMechanism**.
 
 ```powershell
 Get-Command -ParameterName *Auth* -ParameterType AuthenticationMechanism
@@ -150,14 +150,14 @@ Get-Command -ParameterName *Auth* -ParameterType AuthenticationMechanism
 
 É possível usar um comando como este para localizar cmdlets que permitem que você especifique o método usado para autenticar o usuário.
 
-O parâmetro **ParameterType** distingue parâmetros que usam um valor **AuthenticationMechanism** dos que usam um parâmetro **AuthenticationLevel** , mesmo quando tiverem nomes semelhantes.
+O parâmetro **ParameterType** distingue parâmetros que usam um valor **AuthenticationMechanism** dos que usam um parâmetro **AuthenticationLevel**, mesmo quando tiverem nomes semelhantes.
 
 ### Exemplo 10: obter um alias
 
 Este exemplo mostra como usar o `Get-Command` cmdlet com um alias.
 
 ```powershell
-Get-Command Name dir
+Get-Command -Name dir
 ```
 
 ```Output
@@ -300,11 +300,11 @@ Accept wildcard characters: False
 
 ### -ArgumentList
 
-Especifica uma matriz de argumentos. Esse cmdlet obtém informações sobre um cmdlet ou uma função quando ele é usado com os parâmetros especificados ("Arguments"). O alias para **ArgumentList** é **Args** .
+Especifica uma matriz de argumentos. Esse cmdlet obtém informações sobre um cmdlet ou uma função quando ele é usado com os parâmetros especificados ("Arguments"). O alias para **ArgumentList** é **Args**.
 
 Para detectar parâmetros dinâmicos que estão disponíveis somente quando determinados outros parâmetros são usados, defina o valor de **ArgumentList** para os parâmetros que disparam os parâmetros dinâmicos.
 
-Para detectar os parâmetros dinâmicos que um provedor adiciona a um cmdlet, defina o valor do parâmetro **ArgumentList** como um caminho na unidade do provedor, como WSMan:, HKLM: ou CERT:. Quando o comando for um cmdlet do provedor do PowerShell, digite apenas um caminho em cada comando. Os cmdlets do provedor retornam apenas os parâmetros dinâmicos do primeiro caminho para o valor de **ArgumentList** . Para obter informações sobre os cmdlets do provedor, consulte [about_Providers](About/about_Providers.md).
+Para detectar os parâmetros dinâmicos que um provedor adiciona a um cmdlet, defina o valor do parâmetro **ArgumentList** como um caminho na unidade do provedor, como WSMan:, HKLM: ou CERT:. Quando o comando for um cmdlet do provedor do PowerShell, digite apenas um caminho em cada comando. Os cmdlets do provedor retornam apenas os parâmetros dinâmicos do primeiro caminho para o valor de **ArgumentList**. Para obter informações sobre os cmdlets do provedor, consulte [about_Providers](About/about_Providers.md).
 
 ```yaml
 Type: System.Object[]
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -CommandType
 
-Especifica os tipos de comandos que esse cmdlet obtém. Insira um ou mais tipos de comando. Use o **CommandType** ou seu alias, **Type** . Por padrão, o `Get-Command` Obtém todos os cmdlets, funções e aliases.
+Especifica os tipos de comandos que esse cmdlet obtém. Insira um ou mais tipos de comando. Use o **CommandType** ou seu alias, **Type**. Por padrão, o `Get-Command` Obtém todos os cmdlets, funções e aliases.
 
 Os valores aceitáveis para esse parâmetro são:
 
@@ -412,7 +412,7 @@ Accept wildcard characters: True
 
 Especifica uma matriz de nomes. Esse cmdlet obtém apenas os comandos que têm o nome especificado. Digite um nome ou padrão de nome. Caracteres curinga são permitidos.
 
-Para obter comandos com o mesmo nome, use o parâmetro **All** . Quando dois comandos têm o mesmo nome, por padrão, `Get-Command` Obtém o comando que é executado quando você digita o nome do comando.
+Para obter comandos com o mesmo nome, use o parâmetro **All**. Quando dois comandos têm o mesmo nome, por padrão, `Get-Command` Obtém o comando que é executado quando você digita o nome do comando.
 
 ```yaml
 Type: System.String[]

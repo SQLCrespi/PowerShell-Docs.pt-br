@@ -1,16 +1,15 @@
 ---
 description: Explica como usar a `pwsh` interface de linha de comando. Exibe os parâmetros de linha de comando e descreve a sintaxe.
-keywords: powershell, cmdlet
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: c71848e327822f7cbc659310d3fa47a5a46a37a2
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6f6e7ea66aa04eaeea2b9da7c07864180210131c
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196065"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692986"
 ---
 # <a name="about-pwsh"></a>Sobre o pwsh
 
@@ -69,7 +68,7 @@ Os parâmetros passados para o script são passados como cadeias de caracteres l
 
 Por outro lado, `pwsh -File .\test.ps1 -TestParam $env:windir` a execução nos `cmd.exe` resultados no script recebe a cadeia de caracteres literal `$env:windir` porque não tem significado especial para o `cmd.exe` shell atual. O `$env:windir` estilo da referência de variável de ambiente _pode_ ser usado dentro de um parâmetro de **comando** , já que ele é interpretado como código do PowerShell.
 
-Da mesma forma, se você quiser executar o mesmo comando de um _script em lotes_ , você usaria `%~dp0` em vez de `.\` ou `$PSScriptRoot` para representar o diretório de execução atual: `pwsh -File %~dp0test.ps1 -TestParam %windir%` . Se você, em vez disso `.\test.ps1` , o PowerShell geraria um erro porque ele não consegue encontrar o caminho literal `.\test.ps1`
+Da mesma forma, se você quiser executar o mesmo comando de um _script em lotes_, você usaria `%~dp0` em vez de `.\` ou `$PSScriptRoot` para representar o diretório de execução atual: `pwsh -File %~dp0test.ps1 -TestParam %windir%` . Se você, em vez disso `.\test.ps1` , o PowerShell geraria um erro porque ele não consegue encontrar o caminho literal `.\test.ps1`
 
 Quando o arquivo de script termina com um `exit` comando, o código de saída do processo é definido como o argumento numérico usado com o `exit` comando. Com o encerramento normal, o código de saída é sempre `0` .
 
@@ -147,7 +146,7 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 ### <a name="-encodedcommand---e---ec"></a>-EncodedCommand | -e | -EC
 
-Aceita uma versão de cadeia de caracteres codificada em Base64 de um comando. Use esse parâmetro para enviar comandos ao PowerShell que exigem cotas aninhadas complexas. A representação Base64 deve ser uma cadeia de caracteres codificada em UTF-16.
+Aceita uma versão de cadeia de caracteres codificada em Base64 de um comando. Use esse parâmetro para enviar comandos ao PowerShell que exigem cotas aninhadas complexas. A representação Base64 deve ser uma cadeia de caracteres codificada em UTF-16LE.
 
 Por exemplo:
 
@@ -240,7 +239,7 @@ Usado em sshd_config para executar o PowerShell como um subsistema SSH. Ela não
 
 ### <a name="-sta"></a>-STA
 
-Inicie o PowerShell usando um apartamento de thread único. Esse é o padrão. Essa opção só está disponível no Windows.
+Inicie o PowerShell usando um apartamento de thread único. Este é o padrão. Essa opção só está disponível no Windows.
 
 ### <a name="-version---v"></a>-Versão | -v
 

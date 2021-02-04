@@ -1,17 +1,16 @@
 ---
 description: Impede que um script seja executado sem os elementos necessários.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 07/01/2019
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Requires
-ms.openlocfilehash: d499499c58f22bff10d712d33fc3a021e4fa6bbb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f8ff922fcf8deb710008bbd9bab619f137d6c831
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195979"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490696"
 ---
 # <a name="about-requires"></a>Sobre o requer
 
@@ -22,10 +21,9 @@ Impede que um script seja executado sem os elementos necessários.
 
 A `#Requires` instrução impede que um script seja executado, a menos que a versão do PowerShell, os módulos (e a versão) ou snap-ins (e a versão) e os pré-requisitos de edição sejam atendidos. Se os pré-requisitos não forem atendidos, o PowerShell não executará o script.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Sintaxe
 
 ```
-#Requires -Assembly { <Path to .dll> | <.NET assembly specification> }
 #Requires -Version <N>[.<n>]
 #Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
 #Requires -Modules { <Module-Name> | <Hashtable> }
@@ -57,6 +55,9 @@ Você pode imaginar que o código acima não deve ser executado porque o módulo
 ### <a name="parameters"></a>Parâmetros
 
 #### <a name="-assembly-assembly-path--net-assembly-specification"></a>-Assembly \<Assembly path> |\<.NET assembly specification>
+
+> [!IMPORTANT]
+> A `-Assembly` sintaxe foi preterida. Ele não serve nenhuma função. A sintaxe foi adicionada no PowerShell 5,1, mas o código de suporte nunca foi implementado. A sintaxe ainda é aceita para compatibilidade com versões anteriores.
 
 Especifica o caminho para o arquivo DLL do assembly ou um nome de assembly .NET. O parâmetro **assembly** foi introduzido no PowerShell 5,0. Para obter mais informações sobre assemblies .NET, consulte [nomes de assembly](/dotnet/standard/assembly/names).
 
@@ -119,7 +120,7 @@ Exigir que `Hyper-V` (versão `1.1` ou superior) esteja instalado.
 #Requires -Modules @{ ModuleName="Hyper-V"; ModuleVersion="1.1" }
 ```
 
-Requer que `Hyper-V` ( **apenas** a versão `1.1` ) esteja instalado.
+Requer que `Hyper-V` (**apenas** a versão `1.1` ) esteja instalado.
 
 ```powershell
 #Requires -Modules @{ ModuleName="Hyper-V"; RequiredVersion="1.1" }
@@ -149,7 +150,7 @@ ModuleType Version    Name     ExportedCommands
 Binary     2.0.0.0    hyper-v  {Add-VMAssignableDevice, ...}
 ```
 
-O exemplo a seguir falha porque **2.0.0** não corresponde exatamente a **2.0.0.0** .
+O exemplo a seguir falha porque **2.0.0** não corresponde exatamente a **2.0.0.0**.
 
 ```powershell
 #Requires -Modules @{ ModuleName="Hyper-V"; RequiredVersion="2.0.0" }

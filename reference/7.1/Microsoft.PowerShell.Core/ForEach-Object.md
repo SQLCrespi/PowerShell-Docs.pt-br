@@ -7,19 +7,19 @@ ms.date: 09/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: e05c9b5e44d26b1e16c82f734ec60ca4cc73ab4d
-ms.sourcegitcommit: e0f9fe6335be1e0f94bedaa0e8baec2acaeaa076
+ms.openlocfilehash: 1b1824db5c5c20698d551a6277890ce6c82c4e11
+ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "93195309"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725180"
 ---
 # ForEach-Object
 
 ## Sinopse
 Executa uma operação em cada item de uma coleção de objetos de entrada.
 
-## Syntax
+## Sintaxe
 
 ### ScriptBlockset (padrão)
 
@@ -48,7 +48,7 @@ O `ForEach-Object` cmdlet executa uma operação em cada item em uma coleção d
 
 A partir do Windows PowerShell 3,0, há duas maneiras diferentes de construir um `ForEach-Object` comando.
 
-- **Bloco de script** . Você pode usar um bloco de script para especificar a operação. No bloco de script, use a `$_` variável para representar o objeto atual. O bloco de script é o valor do parâmetro **Process** . O bloco de script pode conter qualquer script do PowerShell.
+- **Bloco de script**. Você pode usar um bloco de script para especificar a operação. No bloco de script, use a `$_` variável para representar o objeto atual. O bloco de script é o valor do parâmetro **Process**. O bloco de script pode conter qualquer script do PowerShell.
 
   Por exemplo, o comando a seguir obtém o valor da propriedade **ProcessName** de cada processo no computador.
 
@@ -59,13 +59,13 @@ A partir do Windows PowerShell 3,0, há duas maneiras diferentes de construir um
   > [!NOTE]
   > Os blocos de script são executados no escopo do chamador. Portanto, os blocos têm acesso a variáveis nesse escopo e podem criar novas variáveis que persistem nesse escopo após a conclusão do cmdlet.
 
-- **Instrução de operação** . Você também pode escrever uma instrução de operação, que é muito mais parecida com a linguagem natural. Você pode usar a instrução de operação para especificar um valor de propriedade ou chamar um método. Instruções de operação foram introduzidas no Windows PowerShell 3.0.
+- **Instrução de operação**. Você também pode escrever uma instrução de operação, que é muito mais parecida com a linguagem natural. Você pode usar a instrução de operação para especificar um valor de propriedade ou chamar um método. Instruções de operação foram introduzidas no Windows PowerShell 3.0.
 
   Por exemplo, o comando a seguir também obtém o valor da propriedade **ProcessName** de cada processo no computador.
 
   `Get-Process | ForEach-Object ProcessName`
 
-- **Bloco de script em execução paralela** . A partir do PowerShell 7,0, um terceiro conjunto de parâmetros está disponível e executa cada bloco de script em paralelo. O parâmetro **ThrottleLimit** limita o número de scripts paralelos em execução por vez. Como antes, use a `$_` variável para representar o objeto de entrada atual no bloco de script. Use a `$using:` palavra-chave para passar referências de variáveis para o script em execução.
+- **Bloco de script em execução paralela**. A partir do PowerShell 7,0, um terceiro conjunto de parâmetros está disponível e executa cada bloco de script em paralelo. O parâmetro **ThrottleLimit** limita o número de scripts paralelos em execução por vez. Como antes, use a `$_` variável para representar o objeto de entrada atual no bloco de script. Use a `$using:` palavra-chave para passar referências de variáveis para o script em execução.
 
   No PowerShell 7, um novo runspace é criado para cada iteração de loop a fim de garantir o isolamento máximo.
   Isso pode ser um grande desempenho e um maior impacto de recursos se o trabalho que você está fazendo for pequeno em comparação com a criação de novos Runspaces ou se houver muitas iterações executando um trabalho significativo. A partir do PowerShell 7,1, os Runspaces de um pool de runspace são reutilizados por padrão. O tamanho do pool de runspace é especificado pelo parâmetro **ThrottleLimit** . O tamanho do pool de runspace padrão é 5. Você ainda pode criar um novo runspace para cada iteração usando a opção **UseNewRunspace**
@@ -182,7 +182,7 @@ PowerShell
 Host
 ```
 
-Os comandos chamam o método de cadeias de caracteres **Split** . Os três comandos usam uma sintaxe diferente, mas são equivalentes e intercambiáveis.
+Os comandos chamam o método de cadeias de caracteres **Split**. Os três comandos usam uma sintaxe diferente, mas são equivalentes e intercambiáveis.
 
 O primeiro comando usa a sintaxe tradicional, que inclui um bloco de script e o operador de objeto atual `$_` . Ele usa a sintaxe de ponto para especificar o método e parênteses para incluir o argumento delimitador.
 
@@ -206,7 +206,7 @@ process
 
 ### Exemplo 9: usando ForEach-Object com mais de dois blocos de script
 
-Neste exemplo, passamos dois blocos de script de posição. Todos os blocos de script são associados ao parâmetro de **processo** . No entanto, eles são tratados como se tivessem sido passados para os parâmetros **begin** , **process** e **end** .
+Neste exemplo, passamos dois blocos de script de posição. Todos os blocos de script são associados ao parâmetro de **processo** . No entanto, eles são tratados como se tivessem sido passados para os parâmetros **begin**, **process** e **end** .
 
 ```powershell
 1..2 | ForEach-Object { 'begin' } { 'process A' }  { 'process B' }  { 'end' }
@@ -315,7 +315,7 @@ Output: 10
 ```
 
 a `$job` variável recebe o objeto de trabalho que coleta dados de saída e monitora o estado de execução.
-O objeto de trabalho é canalizado para `Receive-Job` com o parâmetro de opção **Wait** . E isso transmite a saída para o console, assim como se `ForEach-Object -Parallel` fosse executado sem **AsJob** .
+O objeto de trabalho é canalizado para `Receive-Job` com o parâmetro de opção **Wait** . E isso transmite a saída para o console, assim como se `ForEach-Object -Parallel` fosse executado sem **AsJob**.
 
 ### Exemplo 14: usando referências de variável de thread seguro
 
@@ -337,7 +337,7 @@ $threadSafeDictionary["pwsh"]
      82    82.87     130.85      15.55    2808   2 pwsh
 ```
 
-Uma única instância de um objeto **ConcurrentDictionary** é passada para cada bloco de script para coletar os objetos. Como o **ConcurrentDictionary** é thread-safe, é seguro ser modificado por cada script paralelo. Um objeto sem thread-safe, como **System. Collections. Generic. Dictionary** , não seria seguro para uso aqui.
+Uma única instância de um objeto **ConcurrentDictionary** é passada para cada bloco de script para coletar os objetos. Como o **ConcurrentDictionary** é thread-safe, é seguro ser modificado por cada script paralelo. Um objeto sem thread-safe, como **System. Collections. Generic. Dictionary**, não seria seguro para uso aqui.
 
 > [!NOTE]
 > Este exemplo é um uso muito ineficiente do parâmetro **paralelo** . O script simplesmente adiciona o objeto de entrada a um objeto de dicionário simultâneo. É trivial e não vale a pena a sobrecarga de invocar cada script em um thread separado. Executar `ForEach-Object` normalmente sem o comutador **paralelo** é muito mais eficiente e mais rápido. Este exemplo destina-se apenas a demonstrar como usar variáveis de thread seguro.
@@ -387,7 +387,7 @@ Output: 5
 
 ### -ArgumentList
 
-Especifica uma matriz de argumentos para uma chamada de método. Para obter mais informações sobre o comportamento de **ArgumentList** , consulte [about_Splatting](about/about_Splatting.md#splatting-with-arrays).
+Especifica uma matriz de argumentos para uma chamada de método. Para obter mais informações sobre o comportamento de **ArgumentList**, consulte [about_Splatting](about/about_Splatting.md#splatting-with-arrays).
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -531,7 +531,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 
-Especifica o número de blocos de script em paralelo. Os objetos de entrada são bloqueados até que a contagem de blocos de script em execução fique abaixo do **ThrottleLimit** . O valor padrão é `5`.
+Especifica o número de blocos de script em paralelo. Os objetos de entrada são bloqueados até que a contagem de blocos de script em execução fique abaixo do **ThrottleLimit**. O valor padrão é `5`.
 
 Esse parâmetro foi introduzido no PowerShell 7,0.
 
@@ -542,7 +542,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 5
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

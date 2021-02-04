@@ -1,34 +1,33 @@
 ---
 description: Descreve regras para usar aspas simples e duplas no PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 10/05/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Quoting_Rules
-ms.openlocfilehash: 8d09171a1459a8ad03b54f2a4ef7a81c5983f6b8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: d8cc6bb875f6d0ec29ae79eb6350edabe493c8f5
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196062"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490536"
 ---
 # <a name="about-quoting-rules"></a>Sobre regras de cotação
 
-## <a name="short-description"></a>DESCRIÇÃO BREVE
+## <a name="short-description"></a>Descrição breve
 Descreve regras para usar aspas simples e duplas no PowerShell.
 
-## <a name="long-description"></a>DESCRIÇÃO LONGA
+## <a name="long-description"></a>Descrição longa
 
 Aspas são usadas para especificar uma cadeia de caracteres literal. Você pode colocar uma cadeia de caracteres entre aspas simples ( `'` ) ou aspas duplas ( `"` ).
 
-Aspas também são usadas para criar uma cadeia de caracteres aqui. Uma cadeia de caracteres aqui é uma cadeia de caracteres entre aspas simples ou com aspas duplas em que as aspas são interpretadas literalmente. Uma cadeia de caracteres aqui pode abranger várias linhas. Todas as linhas em uma cadeia de caracteres aqui são interpretadas como cadeias de caracteres, mesmo que não sejam colocadas entre aspas.
+Aspas também são usadas para criar uma _cadeia de caracteres aqui_. Uma cadeia de caracteres aqui é uma cadeia de caracteres entre aspas simples ou com aspas duplas em que as aspas são interpretadas literalmente. Uma cadeia de caracteres aqui pode abranger várias linhas. Todas as linhas em uma cadeia de caracteres aqui são interpretadas como cadeias de caracteres, mesmo que não sejam colocadas entre aspas.
 
 Em comandos para computadores remotos, aspas definem as partes do comando que são executadas no computador remoto. Em uma sessão remota, as aspas também determinam se as variáveis em um comando são interpretadas primeiro no computador local ou no computador remoto.
 
-### <a name="single-and-double-quoted-strings"></a>CADEIAS DE CARACTERES DE ASPAS SIMPLES E DUPLAS
+## <a name="single-and-double-quoted-strings"></a>Cadeias de caracteres de aspas simples e duplas
 
-Quando você coloca uma cadeia de caracteres entre aspas duplas (uma cadeia de caracteres entre aspas duplas), os nomes de variáveis precedidos por um cifrão ( `$` ) são substituídos pelo valor da variável antes que a cadeia de caracteres seja passada para o comando para processamento.
+Uma cadeia de caracteres entre aspas duplas é uma cadeia de caracteres _expansível_ . Os nomes de variáveis precedidos por um cifrão ( `$` ) são substituídos pelo valor da variável antes que a cadeia de caracteres seja passada para o comando para processamento.
 
 Por exemplo:
 
@@ -55,7 +54,8 @@ A saída desse comando é:
 The value of 5 is 5.
 ```
 
-Quando você coloca uma cadeia de caracteres entre aspas simples (uma cadeia de caracteres entre aspas simples), a cadeia de caracteres é passada para o comando exatamente conforme você o digita. Nenhuma substituição é executada. Por exemplo:
+Uma cadeia de caracteres entre aspas simples é uma cadeia de caracteres _textual_ . A cadeia de caracteres é passada para o comando exatamente conforme você o digita. Nenhuma substituição é executada.
+Por exemplo:
 
 ```powershell
 $i = 5
@@ -82,7 +82,7 @@ The value of $(2+3) is 5.
 
 Para evitar a substituição de um valor de variável em uma cadeia de caracteres com aspas duplas, use o caractere de acento grave ( `` ` `` ) (ASCII 96), que é o caractere de escape do PowerShell.
 
-No exemplo a seguir, o caractere de acento grave que precede a primeira variável $i impede que o PowerShell substitua o nome da variável pelo seu valor.
+No exemplo a seguir, o caractere de acento grave que precede a primeira `$i` variável impede que o PowerShell substitua o nome da variável por seu valor.
 Por exemplo:
 
 ```powershell
@@ -155,7 +155,7 @@ Use a quotation mark (`") to begin a string.
 
 Como o conteúdo das cadeias de caracteres entre aspas simples é interpretado literalmente, o caractere de acento grave é tratado como um caractere literal e exibido na saída.
 
-### <a name="here-strings"></a>AQUI-CADEIAS DE CARACTERES
+## <a name="here-strings"></a>Aqui-cadeias de caracteres
 
 As regras de cotação para as cadeias de caracteres aqui são um pouco diferentes.
 
@@ -277,7 +277,7 @@ xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
 Aqui-as cadeias de caracteres também são um formato conveniente para entrada para o `ConvertFrom-StringData` cmdlet, que converte as cadeias de caracteres aqui em tabelas de hash.
 Para obter mais informações, consulte `ConvertFrom-StringData`.
 
-## <a name="see-also"></a>CONSULTE TAMBÉM
+## <a name="see-also"></a>Confira também
 
 [about_Special_Characters](about_Special_Characters.md)
 

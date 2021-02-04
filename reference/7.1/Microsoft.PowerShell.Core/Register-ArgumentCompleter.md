@@ -7,12 +7,12 @@ ms.date: 5/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-argumentcompleter?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-ArgumentCompleter
-ms.openlocfilehash: 6ada7bd821632054649c3ccf377fea844d2ae0c8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5dc681e39a6d4991c4137d106879df8778d3c1fe
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194574"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490628"
 ---
 # Register-ArgumentCompleter
 
@@ -61,9 +61,9 @@ Register-ArgumentCompleter -CommandName Set-TimeZone -ParameterName Id -ScriptBl
 
 O primeiro comando cria um bloco de script que usa os parâmetros necessários que são passados quando o usuário pressiona a tecla <kbd>Tab</kbd>. Para obter mais informações, consulte a descrição do parâmetro **scriptblock** .
 
-No bloco de script, os valores disponíveis para **ID** são recuperados usando o `Get-TimeZone` cmdlet. A propriedade **ID** para cada fuso horário é canalizada para o `Where-Object` cmdlet. O `Where-Object` cmdlet filtra todas as IDs que não começam com o valor fornecido pelo `$wordToComplete` , que representa o texto que o usuário digitou antes de pressionar a <kbd>tecla Tab</kbd>. As IDs filtradas são canalizadas para o `For-EachObject` cmdlet que inclui cada valor entre aspas, caso o valor contenha espaços.
+No bloco de script, os valores disponíveis para **ID** são recuperados usando o `Get-TimeZone` cmdlet. A propriedade **ID** para cada fuso horário é canalizada para o `Where-Object` cmdlet. O `Where-Object` cmdlet filtra todas as IDs que não começam com o valor fornecido pelo `$wordToComplete` , que representa o texto que o usuário digitou antes de pressionar a <kbd>tecla Tab</kbd>. As IDs filtradas são canalizadas para o `ForEach-Object` cmdlet que inclui cada valor entre aspas, caso o valor contenha espaços.
 
-O segundo comando registra o argumento Complete, passando o scriptblock, a ID **ParameterName** **Id** e o **CommandName** `Set-TimeZone` .
+O segundo comando registra o argumento Complete, passando o scriptblock, a ID **ParameterName**  e o **CommandName** `Set-TimeZone` .
 
 ### Exemplo 2: adicionar detalhes aos valores de preenchimento de guia
 
@@ -90,8 +90,8 @@ No bloco de script, o primeiro comando recupera todos os serviços em execução
 O objeto **CompletionResult** permite que você forneça detalhes adicionais para cada valor retornado:
 
 - **completionText** (cadeia de caracteres)-o texto a ser usado como o resultado da conclusão automática. Esse é o valor enviado para o comando.
-- **listItemText** (cadeia de caracteres)-o texto a ser exibido em uma lista, como quando o usuário pressiona <kbd>Ctrl</kbd>o + <kbd>espaço</kbd>Ctrl. Isso é usado somente para exibição e não é passado para o comando quando selecionado.
-- **ResultType** ( [CompletionResultType](/dotnet/api/system.management.automation.completionresulttype)) – o tipo de resultado de conclusão.
+- **listItemText** (cadeia de caracteres)-o texto a ser exibido em uma lista, como quando o usuário pressiona <kbd></kbd>o + <kbd>espaço</kbd>Ctrl. Isso é usado somente para exibição e não é passado para o comando quando selecionado.
+- **ResultType** ([CompletionResultType](/dotnet/api/system.management.automation.completionresulttype)) – o tipo de resultado de conclusão.
 - **dica de ferramenta** (cadeia de caracteres)-o texto da dica de ferramenta com detalhes a serem exibidos sobre o objeto.
   Isso fica visível quando o usuário seleciona um item depois de pressionar <kbd>Ctrl</kbd> + <kbd>espaço</kbd>.
 

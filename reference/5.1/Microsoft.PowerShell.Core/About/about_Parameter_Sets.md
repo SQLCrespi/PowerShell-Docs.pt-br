@@ -1,13 +1,13 @@
 ---
 description: Descreve como definir e usar conjuntos de parâmetros em funções avançadas.
 title: about_Parameter_Sets
-ms.date: 02/11/2020
-ms.openlocfilehash: e4cfbc13f981bcc93c8a0a3c799851e83df7746c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.date: 01/05/2021
+ms.openlocfilehash: 8f3a33345a8e2fa19810c8ebd527d9a7dca7dec5
+ms.sourcegitcommit: eb7ad1850550032880f5529b4e4281514cba1673
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196180"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917853"
 ---
 # <a name="about-parameter-sets"></a>Sobre conjuntos de parâmetros
 
@@ -22,7 +22,7 @@ O PowerShell usa conjuntos de parâmetros para permitir que você escreva uma ú
 
 Os requisitos a seguir se aplicam a todos os conjuntos de parâmetros.
 
-- Cada conjunto de parâmetros deve ter pelo menos um parâmetro exclusivo. Se possível, torne esse parâmetro um parâmetro obrigatório.
+- Cada conjunto de parâmetros deve ter uma combinação exclusiva de parâmetros. Se possível, pelo menos um dos parâmetros exclusivos deve ser um parâmetro obrigatório.
 
 - Um conjunto de parâmetros que contém vários parâmetros posicionais deve definir posições exclusivas para cada parâmetro. Dois parâmetros posicionais não podem especificar a mesma posição.
 

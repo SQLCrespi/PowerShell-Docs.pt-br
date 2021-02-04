@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 04/07/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Item
-ms.openlocfilehash: ddb3f8d1889887e01db8663e21cdb0323e6d4084
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9b8d81c84a5dab8fa5f5e216c8c4eb5b5f6022b7
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192767"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692849"
 ---
 # Remove-Item
 
@@ -63,13 +62,13 @@ Ele usa o caractere curinga ( `*` ) para especificar o conteúdo da pasta atual.
 
 ### Exemplo 3: excluir arquivos ocultos e somente leitura
 
-Esse comando exclui um arquivo que está *oculto* e *somente leitura* .
+Esse comando exclui um arquivo que está *oculto* e *somente leitura*.
 
 ```powershell
 Remove-Item -Path C:\Test\hidden-RO-file.txt -Force
 ```
 
-Ele usa o parâmetro **path** para especificar o arquivo. Ele usa o parâmetro **Force** para excluí-lo. Sem **forçar** , você não pode excluir arquivos _somente leitura_ ou _ocultos_ .
+Ele usa o parâmetro **path** para especificar o arquivo. Ele usa o parâmetro **Force** para excluí-lo. Sem **forçar**, você não pode excluir arquivos _somente leitura_ ou _ocultos_ .
 
 ### Exemplo 4: excluir arquivos em subpastas de forma recursiva
 
@@ -85,7 +84,7 @@ No `Get-ChildItem` comando, **Path** tem um valor de ( `*` ), que representa o c
 
 ### Exemplo 5: excluir subchaves recursivamente
 
-Esse comando exclui a chave do registro "OldApp" e todas as suas subchaves e valores. Ele usa `Remove-Item` para remover a chave. O caminho é especificado, mas o nome de parâmetro opcional ( **caminho** ) é omitido.
+Esse comando exclui a chave do registro "OldApp" e todas as suas subchaves e valores. Ele usa `Remove-Item` para remover a chave. O caminho é especificado, mas o nome de parâmetro opcional (**caminho**) é omitido.
 
 O parâmetro **recurse** exclui todo o conteúdo da chave "OldApp" recursivamente. Se a chave contiver subchaves e você omitir o parâmetro **recurse** , será solicitado que você confirme se deseja excluir o conteúdo da chave.
 
@@ -174,7 +173,7 @@ At line:1 char:1
 
 ```
 
-O parâmetro de **fluxo** `Get-Item` Obtém o fluxo de **Zone. identificador** do `Copy-Script.ps1` arquivo. `Remove-Item` usa o parâmetro de **fluxo** para remover o fluxo de **zona. identificador** do arquivo. Por fim, o `Get-Item` cmdlet mostra que o fluxo de **Zone. identificador** foi excluído.
+O  parâmetro Stream `Get-Item` Obtém o `Zone.Identifier` fluxo do `Copy-Script.ps1` arquivo. `Remove-Item` usa o parâmetro **Stream** para remover o `Zone.Identifier` fluxo do arquivo. Por fim, o `Get-Item` cmdlet mostra que o `Zone.Identifier` fluxo foi excluído.
 
 ## PARAMETERS
 
@@ -198,7 +197,7 @@ Accept wildcard characters: False
 
 ### -Excluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet exclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` . Caracteres curinga são permitidos. O parâmetro **Exclude** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -214,8 +213,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Especifica um filtro para qualificar o parâmetro **path** . O provedor [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) é o único provedor do PowerShell instalado que dá suporte ao uso de filtros. Você pode encontrar a sintaxe para o idioma do filtro do **sistema de arquivos** em [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md).
-Os filtros são mais eficientes do que outros parâmetros, porque o provedor os aplica quando o cmdlet obtém os objetos em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
+Especifica um filtro para qualificar o parâmetro **path** . O provedor [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) é o único provedor do PowerShell instalado que dá suporte ao uso de filtros. Você pode encontrar a sintaxe para o idioma do filtro do **sistema de arquivos** em [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md). Os filtros são mais eficientes do que outros parâmetros, porque o provedor os aplica quando o cmdlet obtém os objetos em vez de fazer com que o PowerShell filtre os objetos depois que eles são recuperados.
 
 ```yaml
 Type: System.String
@@ -248,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -317,10 +315,14 @@ Accept wildcard characters: False
 
 ### -Fluxo
 
+> [!NOTE]
+> Esse parâmetro só está disponível no Windows.
+
 O parâmetro de **fluxo** é um parâmetro dinâmico que o provedor FileSystem adiciona `Remove-Item` .
 Esse parâmetro funciona somente em unidades de sistema de arquivos.
 
-Você pode usar `Remove-Item` para excluir um fluxo de dados alternativo. No entanto, não é a maneira recomendada para eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
+Você pode usar `Remove-Item` para excluir um fluxo de dados alternativo, como `Zone.Identifier` .
+No entanto, não é a maneira recomendada para eliminar verificações de segurança que bloqueiam arquivos baixados da Internet. Se você verificar se um arquivo baixado é seguro, use o `Unblock-File` cmdlet.
 
 Este parâmetro foi introduzido no Windows PowerShell 3.0.
 
@@ -373,7 +375,8 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` . Para obter mais informações, confira [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## ENTRADAS
 

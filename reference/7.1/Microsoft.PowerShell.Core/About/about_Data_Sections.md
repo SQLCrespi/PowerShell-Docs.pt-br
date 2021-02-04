@@ -6,12 +6,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_data_sections?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Data_Sections
-ms.openlocfilehash: a5eed0056fe572760415f62537b5a69942d819ae
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bf86d8aeec1094205ace1a64fdf584f5be000313
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195864"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879211"
 ---
 # <a name="about-data-sections"></a>Sobre seções de dados
 
@@ -29,7 +29,7 @@ Você pode usar seções de dados para facilitar a tarefa de isolar, localizar e
 
 A seção de dados é um recurso do PowerShell 2,0. Scripts com seções de dados não serão executados no PowerShell 1,0 sem revisão.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Sintaxe
 
 A sintaxe de uma seção de dados é a seguinte:
 
@@ -72,7 +72,7 @@ O `-SupportedCommand` parâmetro permite que você indique que um cmdlet ou fun�
 
 O valor de `-SupportedCommand` é uma lista separada por vírgulas de um ou mais nomes de cmdlet ou de função.
 
-Por exemplo, a seção de dados a seguir inclui um cmdlet escrito pelo usuário, `Format-XML` , que formata dados em um arquivo XML:
+Por exemplo, a seção de dados a seguir inclui um cmdlet escrito pelo usuário, `Format-Xml` , que formata dados em um arquivo XML:
 
 ```powershell
 DATA -supportedCommand Format-Xml
