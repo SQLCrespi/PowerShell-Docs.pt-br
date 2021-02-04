@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/10/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 25da6262e93be3e3749aabaf4950e2fbcd91ff5c
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: f3545065d4879830a5051ef687f210c7fbd1251e
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93195141"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860653"
 ---
 # Invoke-WebRequest
 
@@ -122,7 +121,7 @@ Quando `Invoke-WebRequest` o encontra uma mensagem http sem êxito (404, 500, et
 ```powershell
 try
 {
-    $response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost"
     # This will only execute if the Invoke-WebRequest is successful.
     $StatusCode = $Response.StatusCode
 }
@@ -137,7 +136,7 @@ $StatusCode
 404
 ```
 
-O primeiro comando chama `Invoke-WebRequest` **ErrorAction** de **Stop** , que força `Invoke-WebRequest` a gerar um erro de encerramento em todas as solicitações com falha. O erro de encerramento é capturado pelo `catch` bloco que recupera o **StatusCode** do objeto de **exceção** .
+O erro de encerramento é capturado pelo `catch` bloco, que recupera o **StatusCode** do objeto de **exceção** .
 
 ## PARAMETERS
 
@@ -233,7 +232,7 @@ Accept wildcard characters: False
 
 Especifica uma conta de usuário com permissão para enviar a solicitação. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
 
 As credenciais são armazenadas em um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential) e a senha é armazenada como uma [SecureString](/dotnet/api/system.security.securestring).
 
@@ -254,7 +253,7 @@ Accept wildcard characters: False
 
 ### -DisableKeepAlive
 
-Indica que o cmdlet define o valor **KeepAlive** no cabeçalho HTTP como **false** . Por padrão, **KeepAlive** é **true** . **KeepAlive** estabelece uma conexão persistente com o servidor para facilitar as solicitações posteriores.
+Indica que o cmdlet define o valor **KeepAlive** no cabeçalho HTTP como **false**. Por padrão, **KeepAlive** é **true**. **KeepAlive** estabelece uma conexão persistente com o servidor para facilitar as solicitações posteriores.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -353,7 +352,7 @@ Accept wildcard characters: False
 Especifica o arquivo de saída para o qual esse cmdlet salva o corpo da resposta. Digite um caminho e nome de arquivo.
 Se você omitir o caminho, o padrão será o local atual.
 
-Por padrão, `Invoke-WebRequest` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru** .
+Por padrão, `Invoke-WebRequest` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru**.
 
 ```yaml
 Type: System.String
@@ -402,7 +401,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** . O padrão é o usuário atual.
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**. O padrão é o usuário atual.
 
 Digite um nome de usuário, como `User01` ou `Domain01\User01` , ou insira um objeto **PSCredential** , como um gerado pelo `Get-Credential` cmdlet.
 
@@ -447,7 +446,7 @@ Quando você especifica uma variável de sessão, `Invoke-WebRequest` o cria um 
 
 Diferente de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor máximo de redirecionamento e a cadeia de caracteres de agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession** . O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession**. O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -576,11 +575,11 @@ Accept wildcard characters: False
 
 Especifica uma sessão de solicitação da Web. Insira o nome da variável, incluindo o cifrão ( `$` ).
 
-Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Diferente de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor máximo de redirecionamento e a cadeia de caracteres de agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para criar uma sessão de solicitação da Web, insira um nome de variável (sem um cifrão) no valor do parâmetro **SessionVariable** de um `Invoke-WebRequest` comando. `Invoke-WebRequest` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession** .
+Para criar uma sessão de solicitação da Web, insira um nome de variável (sem um cifrão) no valor do parâmetro **SessionVariable** de um `Invoke-WebRequest` comando. `Invoke-WebRequest` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession**.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/03/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: bb23f2ed01573a3f67c19f45db495cd86ecefe0c
-ms.sourcegitcommit: 69b08b28ee2ef3168065672a23b9b6f0c578c95b
+ms.openlocfilehash: 036f5aef42b9413747f4e738bf748fda8bb2d2d2
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "93195301"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860779"
 ---
 # Invoke-WebRequest
 
@@ -227,7 +226,7 @@ Quando `Invoke-WebRequest` o encontra uma mensagem http sem êxito (404, 500, et
 ```powershell
 try
 {
-    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost"
     # This will only execute if the Invoke-WebRequest is successful.
     $StatusCode = $Response.StatusCode
 }
@@ -242,7 +241,7 @@ $StatusCode
 404
 ```
 
-O comando chama `Invoke-WebRequest` com **ErrorAction** de **Stop** , que força `Invoke-WebRequest` a gerar um erro de encerramento em todas as solicitações com falha. O erro de encerramento é capturado pelo `catch` bloco que recupera o **StatusCode** do objeto de **exceção** .
+O erro de encerramento é capturado pelo `catch` bloco, que recupera o **StatusCode** do objeto de **exceção** .
 
 ## PARAMETERS
 
@@ -269,17 +268,17 @@ Accept wildcard characters: False
 
 ### -Autenticação
 
-Especifica o tipo de autenticação explícito a ser usado para a solicitação. O padrão é **Nenhum** .
-A **autenticação** não pode ser usada com **UseDefaultCredentials** .
+Especifica o tipo de autenticação explícito a ser usado para a solicitação. O padrão é **Nenhum**.
+A **autenticação** não pode ser usada com **UseDefaultCredentials**.
 
 Opções de autenticação disponíveis:
 
-- **Nenhum** : essa é a opção padrão quando a **autenticação** não é fornecida; nenhuma autenticação explícita é usada.
-- **Básico** : requer **credencial** . As credenciais são enviadas em um cabeçalho de autenticação básica do RFC 7617 no formato de `base64(user:password)` .
-- **Portador** : requer **token** . Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **OAuth**
-- **OAuth** : requer **token** . Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
+- **Nenhum**: essa é a opção padrão quando a **autenticação** não é fornecida; nenhuma autenticação explícita é usada.
+- **Básico**: requer **credencial**. As credenciais são enviadas em um cabeçalho de autenticação básica do RFC 7617 no formato de `base64(user:password)` .
+- **Portador**: requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **OAuth**
+- **OAuth**: requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
 
-O fornecimento de **autenticação** substitui todos os `Authorization` cabeçalhos fornecidos aos **cabeçalhos** ou incluídos na sessão da **websession** .
+O fornecimento de **autenticação** substitui todos os `Authorization` cabeçalhos fornecidos aos **cabeçalhos** ou incluídos na sessão da **websession**.
 
 Esse recurso foi adicionado no PowerShell 6.0.0.
 
@@ -305,7 +304,7 @@ O parâmetro **Body** pode ser usado para especificar uma lista de parâmetros d
 
 Quando a entrada é uma solicitação GET e o corpo é um `IDictionary` (normalmente, uma tabela de hash), o corpo é adicionado ao URI como parâmetros de consulta. Para outros tipos de solicitação (como POST), o corpo é definido como o valor do corpo da solicitação no formato padrão `name=value` .
 
-O parâmetro **Body** também pode aceitar um `System.Net.Http.MultipartFormDataContent` objeto. Isso facilita `multipart/form-data` as solicitações. Quando um objeto **MultipartFormDataContent** é fornecido para **o corpo** , todos os cabeçalhos relacionados ao conteúdo fornecidos aos parâmetros **ContentType** , **Headers** ou **websession** são substituídos pelos cabeçalhos de conteúdo do objeto **MultipartFormDataContent** . Esse recurso foi adicionado no PowerShell 6.0.0.
+O parâmetro **Body** também pode aceitar um `System.Net.Http.MultipartFormDataContent` objeto. Isso facilita `multipart/form-data` as solicitações. Quando um objeto **MultipartFormDataContent** é fornecido para **o corpo**, todos os cabeçalhos relacionados ao conteúdo fornecidos aos parâmetros **ContentType**, **Headers** ou **websession** são substituídos pelos cabeçalhos de conteúdo do objeto **MultipartFormDataContent** . Esse recurso foi adicionado no PowerShell 6.0.0.
 
 ```yaml
 Type: System.Object
@@ -366,7 +365,7 @@ Especifica o tipo de conteúdo da solicitação da Web.
 
 Se esse parâmetro for omitido e o método de solicitação for POST, `Invoke-WebRequest` o definirá o tipo de conteúdo como `application/x-www-form-urlencoded` . Caso contrário, o tipo de conteúdo não será especificado na chamada.
 
-**ContentType** é substituído quando um objeto **MultipartFormDataContent** é fornecido para o **corpo** .
+**ContentType** é substituído quando um objeto **MultipartFormDataContent** é fornecido para o **corpo**.
 
 ```yaml
 Type: System.String
@@ -384,7 +383,7 @@ Accept wildcard characters: False
 
 Especifica uma conta de usuário com permissão para enviar a solicitação. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
 
 A **credencial** pode ser usada sozinha ou em conjunto com determinadas opções de parâmetro de **autenticação** . Quando usado sozinho, ele fornece apenas as credenciais para o servidor remoto se o servidor remoto enviar uma solicitação de desafio de autenticação. Quando usado com as opções de **autenticação** , as credenciais são enviadas explicitamente.
 
@@ -407,7 +406,7 @@ Accept wildcard characters: False
 
 ### -CustomMethod
 
-Especifica um método personalizado usado para a solicitação da Web. Isso pode ser usado se o método de solicitação exigido pelo ponto de extremidade não for uma opção disponível no **método** . O **método** e o **CustomMethod** não podem ser usados juntos.
+Especifica um método personalizado usado para a solicitação da Web. Isso pode ser usado se o método de solicitação exigido pelo ponto de extremidade não for uma opção disponível no **método**. O **método** e o **CustomMethod** não podem ser usados juntos.
 
 Este exemplo faz uma `TEST` solicitação HTTP para a API:
 
@@ -429,7 +428,7 @@ Accept wildcard characters: False
 
 ### -DisableKeepAlive
 
-Indica que o cmdlet define o valor **KeepAlive** no cabeçalho HTTP como **false** . Por padrão, **KeepAlive** é **true** . **KeepAlive** estabelece uma conexão persistente com o servidor para facilitar as solicitações posteriores.
+Indica que o cmdlet define o valor **KeepAlive** no cabeçalho HTTP como **false**. Por padrão, **KeepAlive** é **true**. **KeepAlive** estabelece uma conexão persistente com o servidor para facilitar as solicitações posteriores.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -445,7 +444,7 @@ Accept wildcard characters: False
 
 ### -Formulário
 
-Converte um dicionário em um `multipart/form-data` envio. O **formulário** não pode ser usado com o **corpo** .
+Converte um dicionário em um `multipart/form-data` envio. O **formulário** não pode ser usado com o **corpo**.
 Se **ContentType** for usado, ele será ignorado.
 
 As chaves do dicionário são usadas como os nomes de campo de formulário. Por padrão, os valores de formulário são convertidos em valores de cadeia de caracteres.
@@ -488,9 +487,9 @@ Accept wildcard characters: False
 
 Especifica os cabeçalhos da solicitação da Web. Insira uma tabela de hash ou dicionário.
 
-Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent** . Você não pode usar esse parâmetro para especificar cabeçalhos de **usuário** ou de cookie.
+Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent**. Você não pode usar esse parâmetro para especificar cabeçalhos de **usuário** ou de cookie.
 
-Cabeçalhos relacionados ao conteúdo, como `Content-Type` é substituído quando um objeto **MultipartFormDataContent** é fornecido para o **corpo** .
+Cabeçalhos relacionados ao conteúdo, como `Content-Type` é substituído quando um objeto **MultipartFormDataContent** é fornecido para o **corpo**.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -604,7 +603,7 @@ Especifica o arquivo de saída para o qual esse cmdlet salva o corpo da resposta
 Se você omitir o caminho, o padrão será o local atual. O nome é tratado como um caminho literal.
 Os nomes que contêm colchetes ( `[]` ) devem ser colocados entre aspas simples ( `'` ).
 
-Por padrão, `Invoke-WebRequest` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru** .
+Por padrão, `Invoke-WebRequest` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru**.
 
 ```yaml
 Type: System.String
@@ -673,9 +672,9 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** . O padrão é o usuário atual.
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , **User@Domain.Com** ou insira um `PSCredential` objeto, como um gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, **User@Domain.Com** ou insira um `PSCredential` objeto, como um gerado pelo `Get-Credential` cmdlet.
 
 Esse parâmetro é válido somente quando o parâmetro de **proxy** também é usado no comando. Você não pode usar os parâmetros **ProxyCredential** e **ProxyUseDefaultCredentials** no mesmo comando.
 
@@ -711,7 +710,7 @@ Accept wildcard characters: False
 
 ### -Retomar
 
-Executa uma tentativa de melhor esforço para retomar o download de um arquivo parcial. **Retomar** requer **outfile** .
+Executa uma tentativa de melhor esforço para retomar o download de um arquivo parcial. **Retomar** requer **outfile**.
 
 **Retomar** opera apenas no tamanho do arquivo local e no arquivo remoto e não executa nenhuma outra validação que o arquivo local e o arquivo remoto sejam os mesmos.
 
@@ -719,11 +718,11 @@ Se o tamanho do arquivo local for menor do que o tamanho do arquivo remoto, o cm
 
 Se o tamanho do arquivo local for igual ao tamanho do arquivo remoto, nenhuma ação será executada e o cmdlet assumirá que o download já foi concluído.
 
-Se o tamanho do arquivo local for maior que o tamanho do arquivo remoto, o arquivo local será substituído e todo o arquivo remoto será baixado novamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o tamanho do arquivo local for maior que o tamanho do arquivo remoto, o arquivo local será substituído e todo o arquivo remoto será baixado novamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
-Se o servidor remoto não oferecer suporte a retomada de download, o arquivo local será substituído e todo o arquivo remoto será baixado novamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o servidor remoto não oferecer suporte a retomada de download, o arquivo local será substituído e todo o arquivo remoto será baixado novamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
-Se o arquivo local não existir, o arquivo local será criado e todo o arquivo remoto será baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o arquivo local não existir, o arquivo local será criado e todo o arquivo remoto será baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
 Esse recurso foi adicionado no PowerShell 6.1.0.
 
@@ -764,7 +763,7 @@ Quando você especifica uma variável de sessão, `Invoke-WebRequest` o cria um 
 
 Diferente de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor de redirecionamento máximo e a cadeia de caracteres do agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession** . O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession**. O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -808,7 +807,7 @@ Indica que o cmdlet deve adicionar cabeçalhos à solicitação sem validação.
 Essa opção deve ser usada para sites que exigem valores de cabeçalho que não estão em conformidade com os padrões.
 A especificação dessa opção desabilita a validação para permitir que o valor seja passado desmarcado. Quando especificado, todos os cabeçalhos são adicionados sem validação.
 
-Essa opção desabilita a validação de valores passados para os parâmetros **ContentType** , **Headers** e **UserAgent** .
+Essa opção desabilita a validação de valores passados para os parâmetros **ContentType**, **Headers** e **UserAgent** .
 
 Esse recurso foi adicionado no PowerShell 6.0.0.
 
@@ -847,7 +846,7 @@ Accept wildcard characters: False
 
 Define os protocolos SSL/TLS que são permitidos para a solicitação da Web. Por padrão, todos os protocolos SSL/TLS com suporte do sistema são permitidos. O **SslProtocol** permite limitar a protocolos específicos para fins de conformidade.
 
-**SslProtocol** usa a enumeração de sinalizador **WebSslProtocol** . É possível fornecer mais de um protocolo usando a notação de sinalizador ou combinando várias opções **WebSslProtocol** com **Bor** , no entanto, não há suporte para o fornecimento de vários protocolos em todas as plataformas.
+**SslProtocol** usa a enumeração de sinalizador **WebSslProtocol** . É possível fornecer mais de um protocolo usando a notação de sinalizador ou combinando várias opções **WebSslProtocol** com **Bor**, no entanto, não há suporte para o fornecimento de vários protocolos em todas as plataformas.
 
 > [!NOTE]
 > Em plataformas não Windows, talvez não seja possível fornecer `Tls` ou `Tls12` como uma opção. O suporte para o `Tls13` não está disponível em todos os sistemas operacionais e precisará ser verificado por sistema operacional.
@@ -1010,11 +1009,11 @@ Accept wildcard characters: False
 
 Especifica uma sessão de solicitação da Web. Insira o nome da variável, incluindo o cifrão ( `$` ).
 
-Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web. Cabeçalhos relacionados ao conteúdo, como `Content-Type` , também são substituídos quando um objeto **MultipartFormDataContent** é fornecido para o **corpo** .
+Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web. Cabeçalhos relacionados ao conteúdo, como `Content-Type` , também são substituídos quando um objeto **MultipartFormDataContent** é fornecido para o **corpo**.
 
 Ao contrário de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor de redirecionamento máximo e a cadeia de caracteres do agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para criar uma sessão de solicitação da Web, insira um nome de variável, sem um sinal de cifrão, no valor do parâmetro **SessionVariable** de um `Invoke-WebRequest` comando. `Invoke-WebRequest` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession** .
+Para criar uma sessão de solicitação da Web, insira um nome de variável, sem um sinal de cifrão, no valor do parâmetro **SessionVariable** de um `Invoke-WebRequest` comando. `Invoke-WebRequest` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession**.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -1054,9 +1053,9 @@ Devido às alterações no .NET Core 3,1, o PowerShell 7,0 e superior usam a pro
 
 O valor dessa propriedade é determinado pela sua plataforma:
 
-- **Para o Windows** : lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade será derivada das configurações de proxy do usuário.
-- **Para MacOS** : lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade será derivada das configurações de proxy do sistema.
-- **Para Linux** : lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade inicializará uma instância não configurada que ignora todos os endereços.
+- **Para o Windows**: lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade será derivada das configurações de proxy do usuário.
+- **Para MacOS**: lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade será derivada das configurações de proxy do sistema.
+- **Para Linux**: lê a configuração de proxy de variáveis de ambiente. Se essas variáveis não forem definidas, a propriedade inicializará uma instância não configurada que ignora todos os endereços.
 
 As variáveis de ambiente usadas para `DefaultProxy` inicialização em plataformas baseadas no Windows e no Unix são:
 

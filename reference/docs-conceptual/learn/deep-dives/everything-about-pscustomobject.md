@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre o PSCustomObject
 description: O PSCustomObject é um jeito simples de criar dados estruturados.
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8086541bf93b4d3f878c9a3f7ca4300dc452a80b
+ms.sourcegitcommit: 08c63095f54916013634d6703f2523779815f4b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91772313"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99424467"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Tudo o que você queria saber sobre o PSCustomObject
 
@@ -74,7 +74,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 Na minha opinião, a melhor maneira de salvar uma tabela de hash em um arquivo é salvá-la como JSON. Assim, será possível importá-la de volta para um `[PSCustomObject]`
 
 ```powershell
-$myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
+$myObject | ConvertTo-Json -depth 1 | Set-Content -Path $Path
 $myObject = Get-Content -Path $Path | ConvertFrom-Json
 ```
 
@@ -87,7 +87,7 @@ Eu abordei mais maneiras de salvar objetos em um arquivo em meu artigo sobre [As
 Você ainda pode adicionar novas propriedades ao `PSCustomObject` com `Add-Member`.
 
 ```powershell
-$myObject | Add-Member -MemberType NoteProperty -Name `ID` -Value 'KevinMarquette'
+$myObject | Add-Member -MemberType NoteProperty -Name 'ID' -Value 'KevinMarquette'
 
 $myObject.ID
 ```

@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.ConsoleHost.dll-help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Host
-ms.date: 04/22/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Transcript
-ms.openlocfilehash: c7e95988c385a32802c93f92216710746d268e5e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4f90dd8e3080d393e50fb8f48133c74909ec2b80
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193301"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860738"
 ---
 # Start-Transcript
 
-## SINOPSE
+## Sinopse
 Cria um registro de toda ou parte de uma sessão do PowerShell para um arquivo de texto.
 
-## SYNTAX
+## Sintaxe
 
 ### ByPath (padrão)
 
@@ -42,7 +42,7 @@ Start-Transcript [[-OutputDirectory] <String>] [-Append] [-Force] [-NoClobber] [
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Start-Transcript` cmdlet cria um registro de toda ou parte de uma sessão do PowerShell para um arquivo de texto. A transcrição inclui todo comando que o usuário digita e todos os valores de saída que aparecem no console.
 
@@ -50,7 +50,9 @@ A partir do Windows PowerShell 5,0, `Start-Transcript` inclui o nome do host no 
 Os arquivos criados pelo `Start-Transcript` cmdlet incluem caracteres aleatórios em nomes para evitar possíveis substituições ou duplicação quando duas ou mais transcrições são iniciadas simultaneamente.
 Isso também impede a descoberta não autorizada de transcrições armazenadas em um compartilhamento de arquivos centralizado.
 
-## EXEMPLOS
+Ao usar o parâmetro **Append** , se o arquivo de destino não tiver um padrão de marca de ordem de byte (bom) `Start-Transcript` para `ASCII` codificar no arquivo de destino. Esse comportamento pode resultar na codificação imprópria de caracteres mulitbyte na transcrição.
+
+## Exemplos
 
 ### Exemplo 1: iniciar um arquivo de transcrição com as configurações padrão
 
@@ -68,7 +70,7 @@ Start-Transcript -Path "C:\transcripts\transcript0.txt" -NoClobber
 
 Esse comando inicia uma transcrição no `Transcript0.txt` arquivo em `C:\transcripts` . Como o parâmetro **NoClobber** é usado, o comando impede que todos os arquivos existentes sejam substituídos. Se o `Transcript0.txt` arquivo já existir, o comando falhará.
 
-## PARAMETERS
+## Parâmetros
 
 ### -Acrescentar
 
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-Especifica um local para o arquivo de transcrição. Ao contrário do parâmetro **Path** , o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, coloque-o entre aspas simples. As aspas simples informam o PowerShell para não interpretar nenhum caractere como sequências de escape.
+Especifica um local para o arquivo de transcrição. Ao contrário do parâmetro **Path**, o valor do parâmetro **LiteralPath** é usado exatamente como foi digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, coloque-o entre aspas simples. As aspas simples informam o PowerShell para não interpretar nenhum caractere como sequências de escape.
 
 ```yaml
 Type: System.String
@@ -223,24 +225,24 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### Nenhum
 
 Não é possível transferir objetos para esse cmdlet.
 
-## SAÍDAS
+## Saídas
 
 ### System.String
 
 Esse cmdlet retorna uma cadeia de caracteres que contém uma mensagem de confirmação e o caminho para o arquivo de saída.
 
-## OBSERVAÇÕES
+## Anotações
 
 Para interromper uma transcrição, use o `Stop-Transcript` cmdlet.
 
 Para registrar uma sessão inteira, adicione o `Start-Transcript` comando ao seu perfil. Para obter mais informações, consulte [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md).
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Stop-Transcript](Stop-Transcript.md)
