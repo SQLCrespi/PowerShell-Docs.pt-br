@@ -6,32 +6,32 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_data_sections?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Data_Sections
-ms.openlocfilehash: a5eed0056fe572760415f62537b5a69942d819ae
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bf86d8aeec1094205ace1a64fdf584f5be000313
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195864"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879211"
 ---
-# <a name="about-data-sections"></a><span data-ttu-id="7813c-104">Sobre seções de dados</span><span class="sxs-lookup"><span data-stu-id="7813c-104">About Data Sections</span></span>
+# <a name="about-data-sections"></a><span data-ttu-id="2f3ec-104">Sobre seções de dados</span><span class="sxs-lookup"><span data-stu-id="2f3ec-104">About Data Sections</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="7813c-105">Descrição breve</span><span class="sxs-lookup"><span data-stu-id="7813c-105">Short Description</span></span>
-<span data-ttu-id="7813c-106">Explica as seções de dados, que isolam cadeias de caracteres de texto e outros dados somente leitura da lógica de script.</span><span class="sxs-lookup"><span data-stu-id="7813c-106">Explains Data sections, which isolate text strings and other read-only data from script logic.</span></span>
+## <a name="short-description"></a><span data-ttu-id="2f3ec-105">Descrição breve</span><span class="sxs-lookup"><span data-stu-id="2f3ec-105">Short Description</span></span>
+<span data-ttu-id="2f3ec-106">Explica as seções de dados, que isolam cadeias de caracteres de texto e outros dados somente leitura da lógica de script.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-106">Explains Data sections, which isolate text strings and other read-only data from script logic.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="7813c-107">Descrição longa</span><span class="sxs-lookup"><span data-stu-id="7813c-107">Long Description</span></span>
+## <a name="long-description"></a><span data-ttu-id="2f3ec-107">Descrição longa</span><span class="sxs-lookup"><span data-stu-id="2f3ec-107">Long Description</span></span>
 
-<span data-ttu-id="7813c-108">Os scripts projetados para o PowerShell podem ter uma ou mais seções de dados que contêm apenas dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-108">Scripts that are designed for PowerShell can have one or more Data sections that contain only data.</span></span> <span data-ttu-id="7813c-109">Você pode incluir uma ou mais seções de dados em qualquer script, função ou função avançada.</span><span class="sxs-lookup"><span data-stu-id="7813c-109">You can include one or more Data sections in any script, function, or advanced function.</span></span> <span data-ttu-id="7813c-110">O conteúdo da seção de dados é restrito a um subconjunto especificado da linguagem de script do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7813c-110">The content of the Data section is restricted to a specified subset of the PowerShell scripting language.</span></span>
+<span data-ttu-id="2f3ec-108">Os scripts projetados para o PowerShell podem ter uma ou mais seções de dados que contêm apenas dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-108">Scripts that are designed for PowerShell can have one or more Data sections that contain only data.</span></span> <span data-ttu-id="2f3ec-109">Você pode incluir uma ou mais seções de dados em qualquer script, função ou função avançada.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-109">You can include one or more Data sections in any script, function, or advanced function.</span></span> <span data-ttu-id="2f3ec-110">O conteúdo da seção de dados é restrito a um subconjunto especificado da linguagem de script do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-110">The content of the Data section is restricted to a specified subset of the PowerShell scripting language.</span></span>
 
-<span data-ttu-id="7813c-111">Separar dados da lógica de código torna mais fácil identificar e gerenciar a lógica e os dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-111">Separating data from code logic makes it easier to identify and manage both logic and data.</span></span> <span data-ttu-id="7813c-112">Ele permite que você tenha arquivos de recurso de cadeia de caracteres separados para texto, como mensagens de erro e cadeias de caracteres de ajuda.</span><span class="sxs-lookup"><span data-stu-id="7813c-112">It lets you have separate string resource files for text, such as error messages and Help strings.</span></span> <span data-ttu-id="7813c-113">Ele também isola a lógica de código, que facilita os testes de segurança e validação.</span><span class="sxs-lookup"><span data-stu-id="7813c-113">It also isolates the code logic, which facilitates security and validation tests.</span></span>
+<span data-ttu-id="2f3ec-111">Separar dados da lógica de código torna mais fácil identificar e gerenciar a lógica e os dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-111">Separating data from code logic makes it easier to identify and manage both logic and data.</span></span> <span data-ttu-id="2f3ec-112">Ele permite que você tenha arquivos de recurso de cadeia de caracteres separados para texto, como mensagens de erro e cadeias de caracteres de ajuda.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-112">It lets you have separate string resource files for text, such as error messages and Help strings.</span></span> <span data-ttu-id="2f3ec-113">Ele também isola a lógica de código, que facilita os testes de segurança e validação.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-113">It also isolates the code logic, which facilitates security and validation tests.</span></span>
 
-<span data-ttu-id="7813c-114">No PowerShell, a seção de dados é usada para dar suporte à internacionalização de script.</span><span class="sxs-lookup"><span data-stu-id="7813c-114">In PowerShell, the Data section is used to support script internationalization.</span></span>
-<span data-ttu-id="7813c-115">Você pode usar seções de dados para facilitar a tarefa de isolar, localizar e processar cadeias de caracteres que serão convertidas em muitas linguagens de interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="7813c-115">You can use Data sections to make it easier to isolate, locate, and process strings that will be translated into many user interface (UI) languages.</span></span>
+<span data-ttu-id="2f3ec-114">No PowerShell, a seção de dados é usada para dar suporte à internacionalização de script.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-114">In PowerShell, the Data section is used to support script internationalization.</span></span>
+<span data-ttu-id="2f3ec-115">Você pode usar seções de dados para facilitar a tarefa de isolar, localizar e processar cadeias de caracteres que serão convertidas em muitas linguagens de interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-115">You can use Data sections to make it easier to isolate, locate, and process strings that will be translated into many user interface (UI) languages.</span></span>
 
-<span data-ttu-id="7813c-116">A seção de dados é um recurso do PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="7813c-116">The Data section is a PowerShell 2.0 feature.</span></span> <span data-ttu-id="7813c-117">Scripts com seções de dados não serão executados no PowerShell 1,0 sem revisão.</span><span class="sxs-lookup"><span data-stu-id="7813c-117">Scripts with Data sections will not run in PowerShell 1.0 without revision.</span></span>
+<span data-ttu-id="2f3ec-116">A seção de dados é um recurso do PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-116">The Data section is a PowerShell 2.0 feature.</span></span> <span data-ttu-id="2f3ec-117">Scripts com seções de dados não serão executados no PowerShell 1,0 sem revisão.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-117">Scripts with Data sections will not run in PowerShell 1.0 without revision.</span></span>
 
-### <a name="syntax"></a><span data-ttu-id="7813c-118">Syntax</span><span class="sxs-lookup"><span data-stu-id="7813c-118">Syntax</span></span>
+### <a name="syntax"></a><span data-ttu-id="2f3ec-118">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2f3ec-118">Syntax</span></span>
 
-<span data-ttu-id="7813c-119">A sintaxe de uma seção de dados é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="7813c-119">The syntax for a Data section is as follows:</span></span>
+<span data-ttu-id="2f3ec-119">A sintaxe de uma seção de dados é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-119">The syntax for a Data section is as follows:</span></span>
 
 ```
 DATA [<variable-name>] [-supportedCommand <cmdlet-name>] {
@@ -39,15 +39,15 @@ DATA [<variable-name>] [-supportedCommand <cmdlet-name>] {
 }
 ```
 
-<span data-ttu-id="7813c-120">A palavra-chave data é necessária.</span><span class="sxs-lookup"><span data-stu-id="7813c-120">The Data keyword is required.</span></span> <span data-ttu-id="7813c-121">Não diferencia maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="7813c-121">It is not case-sensitive.</span></span> <span data-ttu-id="7813c-122">O conteúdo permitido é limitado aos seguintes elementos:</span><span class="sxs-lookup"><span data-stu-id="7813c-122">The permitted content is limited to the following elements:</span></span>
+<span data-ttu-id="2f3ec-120">A palavra-chave data é necessária.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-120">The Data keyword is required.</span></span> <span data-ttu-id="2f3ec-121">Não diferencia maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-121">It is not case-sensitive.</span></span> <span data-ttu-id="2f3ec-122">O conteúdo permitido é limitado aos seguintes elementos:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-122">The permitted content is limited to the following elements:</span></span>
 
-- <span data-ttu-id="7813c-123">Todos os operadores do PowerShell, exceto `-match`</span><span class="sxs-lookup"><span data-stu-id="7813c-123">All PowerShell operators, except `-match`</span></span>
-- <span data-ttu-id="7813c-124">`If``Else`instruções, e `ElseIf`</span><span class="sxs-lookup"><span data-stu-id="7813c-124">`If`, `Else`, and `ElseIf` statements</span></span>
-- <span data-ttu-id="7813c-125">As seguintes variáveis automáticas:,,, `$PsCulture` `$PsUICulture` `$True` `$False` e `$Null`</span><span class="sxs-lookup"><span data-stu-id="7813c-125">The following automatic variables: `$PsCulture`, `$PsUICulture`, `$True`, `$False`, and `$Null`</span></span>
-- <span data-ttu-id="7813c-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="7813c-126">Comments</span></span>
-- <span data-ttu-id="7813c-127">Pipelines</span><span class="sxs-lookup"><span data-stu-id="7813c-127">Pipelines</span></span>
-- <span data-ttu-id="7813c-128">Instruções separadas por ponto e vírgula ( `;` )</span><span class="sxs-lookup"><span data-stu-id="7813c-128">Statements separated by semicolons (`;`)</span></span>
-- <span data-ttu-id="7813c-129">Literais, como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="7813c-129">Literals, such as the following:</span></span>
+- <span data-ttu-id="2f3ec-123">Todos os operadores do PowerShell, exceto `-match`</span><span class="sxs-lookup"><span data-stu-id="2f3ec-123">All PowerShell operators, except `-match`</span></span>
+- <span data-ttu-id="2f3ec-124">`If``Else`instruções, e `ElseIf`</span><span class="sxs-lookup"><span data-stu-id="2f3ec-124">`If`, `Else`, and `ElseIf` statements</span></span>
+- <span data-ttu-id="2f3ec-125">As seguintes variáveis automáticas:,,, `$PsCulture` `$PsUICulture` `$True` `$False` e `$Null`</span><span class="sxs-lookup"><span data-stu-id="2f3ec-125">The following automatic variables: `$PsCulture`, `$PsUICulture`, `$True`, `$False`, and `$Null`</span></span>
+- <span data-ttu-id="2f3ec-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="2f3ec-126">Comments</span></span>
+- <span data-ttu-id="2f3ec-127">Pipelines</span><span class="sxs-lookup"><span data-stu-id="2f3ec-127">Pipelines</span></span>
+- <span data-ttu-id="2f3ec-128">Instruções separadas por ponto e vírgula ( `;` )</span><span class="sxs-lookup"><span data-stu-id="2f3ec-128">Statements separated by semicolons (`;`)</span></span>
+- <span data-ttu-id="2f3ec-129">Literais, como o seguinte:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-129">Literals, such as the following:</span></span>
 
   ```powershell
   a
@@ -61,18 +61,18 @@ DATA [<variable-name>] [-supportedCommand <cmdlet-name>] {
   '@
   ```
 
-- <span data-ttu-id="7813c-130">Cmdlets que são permitidos em uma seção de dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-130">Cmdlets that are permitted in a Data section.</span></span> <span data-ttu-id="7813c-131">Por padrão, somente o `ConvertFrom-StringData` cmdlet é permitido.</span><span class="sxs-lookup"><span data-stu-id="7813c-131">By default, only the `ConvertFrom-StringData` cmdlet is permitted.</span></span>
-- <span data-ttu-id="7813c-132">Cmdlets que você permite em uma seção de dados usando o `-SupportedCommand` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7813c-132">Cmdlets that you permit in a Data section by using the `-SupportedCommand` parameter.</span></span>
+- <span data-ttu-id="2f3ec-130">Cmdlets que são permitidos em uma seção de dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-130">Cmdlets that are permitted in a Data section.</span></span> <span data-ttu-id="2f3ec-131">Por padrão, somente o `ConvertFrom-StringData` cmdlet é permitido.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-131">By default, only the `ConvertFrom-StringData` cmdlet is permitted.</span></span>
+- <span data-ttu-id="2f3ec-132">Cmdlets que você permite em uma seção de dados usando o `-SupportedCommand` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-132">Cmdlets that you permit in a Data section by using the `-SupportedCommand` parameter.</span></span>
 
-<span data-ttu-id="7813c-133">Ao usar o `ConvertFrom-StringData` cmdlet em uma seção de dados, você pode colocar os pares de chave-valor em cadeias de caracteres entre aspas simples ou com aspas duplas ou em cadeias de caracteres de aspas simples ou com aspas duplas.</span><span class="sxs-lookup"><span data-stu-id="7813c-133">When you use the `ConvertFrom-StringData` cmdlet in a Data section, you can enclose the key-value pairs in single-quoted or double-quoted strings or in single-quoted or double-quoted here-strings.</span></span> <span data-ttu-id="7813c-134">No entanto, as cadeias de caracteres que contêm variáveis e subexpressões devem ser colocadas entre cadeias de caracteres entre aspas simples ou em cadeias de caracteres entre aspas simples para que as variáveis não sejam expandidas e as subexpressãos não sejam executáveis.</span><span class="sxs-lookup"><span data-stu-id="7813c-134">However, strings that contain variables and subexpressions must be enclosed in single-quoted strings or in single-quoted here-strings so that the variables are not expanded and the subexpressions are not executable.</span></span>
+<span data-ttu-id="2f3ec-133">Ao usar o `ConvertFrom-StringData` cmdlet em uma seção de dados, você pode colocar os pares de chave-valor em cadeias de caracteres entre aspas simples ou com aspas duplas ou em cadeias de caracteres de aspas simples ou com aspas duplas.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-133">When you use the `ConvertFrom-StringData` cmdlet in a Data section, you can enclose the key-value pairs in single-quoted or double-quoted strings or in single-quoted or double-quoted here-strings.</span></span> <span data-ttu-id="2f3ec-134">No entanto, as cadeias de caracteres que contêm variáveis e subexpressões devem ser colocadas entre cadeias de caracteres entre aspas simples ou em cadeias de caracteres entre aspas simples para que as variáveis não sejam expandidas e as subexpressãos não sejam executáveis.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-134">However, strings that contain variables and subexpressions must be enclosed in single-quoted strings or in single-quoted here-strings so that the variables are not expanded and the subexpressions are not executable.</span></span>
 
-### <a name="-supportedcommand"></a><span data-ttu-id="7813c-135">-SupportedCommand</span><span class="sxs-lookup"><span data-stu-id="7813c-135">-SupportedCommand</span></span>
+### <a name="-supportedcommand"></a><span data-ttu-id="2f3ec-135">-SupportedCommand</span><span class="sxs-lookup"><span data-stu-id="2f3ec-135">-SupportedCommand</span></span>
 
-<span data-ttu-id="7813c-136">O `-SupportedCommand` parâmetro permite que você indique que um cmdlet ou função gera apenas dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-136">The `-SupportedCommand` parameter allows you to indicate that a cmdlet or function generates only data.</span></span> <span data-ttu-id="7813c-137">Ele foi projetado para permitir que os usuários incluam cmdlets e funções em uma seção de dados que foram escritos ou testados.</span><span class="sxs-lookup"><span data-stu-id="7813c-137">It is designed to allow users to include cmdlets and functions in a data section that they have written or tested.</span></span>
+<span data-ttu-id="2f3ec-136">O `-SupportedCommand` parâmetro permite que você indique que um cmdlet ou função gera apenas dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-136">The `-SupportedCommand` parameter allows you to indicate that a cmdlet or function generates only data.</span></span> <span data-ttu-id="2f3ec-137">Ele foi projetado para permitir que os usuários incluam cmdlets e funções em uma seção de dados que foram escritos ou testados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-137">It is designed to allow users to include cmdlets and functions in a data section that they have written or tested.</span></span>
 
-<span data-ttu-id="7813c-138">O valor de `-SupportedCommand` é uma lista separada por vírgulas de um ou mais nomes de cmdlet ou de função.</span><span class="sxs-lookup"><span data-stu-id="7813c-138">The value of `-SupportedCommand` is a comma-separated list of one or more cmdlet or function names.</span></span>
+<span data-ttu-id="2f3ec-138">O valor de `-SupportedCommand` é uma lista separada por vírgulas de um ou mais nomes de cmdlet ou de função.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-138">The value of `-SupportedCommand` is a comma-separated list of one or more cmdlet or function names.</span></span>
 
-<span data-ttu-id="7813c-139">Por exemplo, a seção de dados a seguir inclui um cmdlet escrito pelo usuário, `Format-XML` , que formata dados em um arquivo XML:</span><span class="sxs-lookup"><span data-stu-id="7813c-139">For example, the following data section includes a user-written cmdlet, `Format-XML`, that formats data in an XML file:</span></span>
+<span data-ttu-id="2f3ec-139">Por exemplo, a seção de dados a seguir inclui um cmdlet escrito pelo usuário, `Format-Xml` , que formata dados em um arquivo XML:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-139">For example, the following data section includes a user-written cmdlet, `Format-Xml`, that formats data in an XML file:</span></span>
 
 ```powershell
 DATA -supportedCommand Format-Xml
@@ -81,13 +81,13 @@ DATA -supportedCommand Format-Xml
 }
 ```
 
-### <a name="using-a-data-section"></a><span data-ttu-id="7813c-140">Usando uma seção de dados</span><span class="sxs-lookup"><span data-stu-id="7813c-140">Using a Data Section</span></span>
+### <a name="using-a-data-section"></a><span data-ttu-id="2f3ec-140">Usando uma seção de dados</span><span class="sxs-lookup"><span data-stu-id="2f3ec-140">Using a Data Section</span></span>
 
-<span data-ttu-id="7813c-141">Para usar o conteúdo de uma seção de dados, atribua-a a uma variável e use a notação variável para acessar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="7813c-141">To use the content of a Data section, assign it to a variable and use variable notation to access the content.</span></span>
+<span data-ttu-id="2f3ec-141">Para usar o conteúdo de uma seção de dados, atribua-a a uma variável e use a notação variável para acessar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-141">To use the content of a Data section, assign it to a variable and use variable notation to access the content.</span></span>
 
-<span data-ttu-id="7813c-142">Por exemplo, a seção de dados a seguir contém um `ConvertFrom-StringData` comando que converte a cadeia de caracteres here em uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="7813c-142">For example, the following data section contains a `ConvertFrom-StringData` command that converts the here-string into a hash table.</span></span> <span data-ttu-id="7813c-143">A tabela de hash é atribuída à `$TextMsgs` variável.</span><span class="sxs-lookup"><span data-stu-id="7813c-143">The hash table is assigned to the `$TextMsgs` variable.</span></span>
+<span data-ttu-id="2f3ec-142">Por exemplo, a seção de dados a seguir contém um `ConvertFrom-StringData` comando que converte a cadeia de caracteres here em uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-142">For example, the following data section contains a `ConvertFrom-StringData` command that converts the here-string into a hash table.</span></span> <span data-ttu-id="2f3ec-143">A tabela de hash é atribuída à `$TextMsgs` variável.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-143">The hash table is assigned to the `$TextMsgs` variable.</span></span>
 
-<span data-ttu-id="7813c-144">A `$TextMsgs` variável não faz parte da seção de dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-144">The `$TextMsgs` variable is not part of the data section.</span></span>
+<span data-ttu-id="2f3ec-144">A `$TextMsgs` variável não faz parte da seção de dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-144">The `$TextMsgs` variable is not part of the data section.</span></span>
 
 ```powershell
 $TextMsgs = DATA {
@@ -98,14 +98,14 @@ Text002 = Windows Server 2008 R2
 }
 ```
 
-<span data-ttu-id="7813c-145">Para acessar as chaves e os valores na tabela de hash no `$TextMsgs` , use os comandos a seguir.</span><span class="sxs-lookup"><span data-stu-id="7813c-145">To access the keys and values in hash table in `$TextMsgs`, use the following commands.</span></span>
+<span data-ttu-id="2f3ec-145">Para acessar as chaves e os valores na tabela de hash no `$TextMsgs` , use os comandos a seguir.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-145">To access the keys and values in hash table in `$TextMsgs`, use the following commands.</span></span>
 
 ```powershell
 $TextMsgs.Text001
 $TextMsgs.Text002
 ```
 
-<span data-ttu-id="7813c-146">Como alternativa, você pode colocar o nome da variável na definição da seção de dados.</span><span class="sxs-lookup"><span data-stu-id="7813c-146">Alternately, you can put the variable name in the definition of the Data section.</span></span> <span data-ttu-id="7813c-147">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="7813c-147">For example:</span></span>
+<span data-ttu-id="2f3ec-146">Como alternativa, você pode colocar o nome da variável na definição da seção de dados.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-146">Alternately, you can put the variable name in the definition of the Data section.</span></span> <span data-ttu-id="2f3ec-147">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-147">For example:</span></span>
 
 ```powershell
 DATA TextMsgs {
@@ -118,7 +118,7 @@ Text002 = Windows Server 2008 R2
 $TextMsgs
 ```
 
-<span data-ttu-id="7813c-148">O resultado é o mesmo que o exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="7813c-148">The result is the same as the previous example.</span></span>
+<span data-ttu-id="2f3ec-148">O resultado é o mesmo que o exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-148">The result is the same as the previous example.</span></span>
 
 ```Output
 Name                           Value
@@ -127,9 +127,9 @@ Text001                        Windows 7
 Text002                        Windows Server 2008 R2
 ```
 
-### <a name="examples"></a><span data-ttu-id="7813c-149">Exemplos</span><span class="sxs-lookup"><span data-stu-id="7813c-149">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2f3ec-149">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2f3ec-149">Examples</span></span>
 
-<span data-ttu-id="7813c-150">Cadeias de dados simples.</span><span class="sxs-lookup"><span data-stu-id="7813c-150">Simple data strings.</span></span>
+<span data-ttu-id="2f3ec-150">Cadeias de dados simples.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-150">Simple data strings.</span></span>
 
 ```powershell
 DATA {
@@ -139,7 +139,7 @@ DATA {
 }
 ```
 
-<span data-ttu-id="7813c-151">Cadeias de caracteres que incluem variáveis permitidas.</span><span class="sxs-lookup"><span data-stu-id="7813c-151">Strings that include permitted variables.</span></span>
+<span data-ttu-id="2f3ec-151">Cadeias de caracteres que incluem variáveis permitidas.</span><span class="sxs-lookup"><span data-stu-id="2f3ec-151">Strings that include permitted variables.</span></span>
 
 ```powershell
 DATA {
@@ -149,7 +149,7 @@ DATA {
 }
 ```
 
-<span data-ttu-id="7813c-152">Uma cadeia de caracteres aqui entre aspas simples que usa o `ConvertFrom-StringData` cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7813c-152">A single-quoted here-string that uses the `ConvertFrom-StringData` cmdlet:</span></span>
+<span data-ttu-id="2f3ec-152">Uma cadeia de caracteres aqui entre aspas simples que usa o `ConvertFrom-StringData` cmdlet:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-152">A single-quoted here-string that uses the `ConvertFrom-StringData` cmdlet:</span></span>
 
 ```powershell
 DATA {
@@ -160,7 +160,7 @@ Text002 = Windows Server 2008 R2
 }
 ```
 
-<span data-ttu-id="7813c-153">Uma cadeia de caracteres aqui com aspas duplas que usa o `ConvertFrom-StringData` cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7813c-153">A double-quoted here-string that uses the `ConvertFrom-StringData` cmdlet:</span></span>
+<span data-ttu-id="2f3ec-153">Uma cadeia de caracteres aqui com aspas duplas que usa o `ConvertFrom-StringData` cmdlet:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-153">A double-quoted here-string that uses the `ConvertFrom-StringData` cmdlet:</span></span>
 
 ```powershell
 DATA  {
@@ -171,7 +171,7 @@ Msg2 = To exit, type "quit".
 }
 ```
 
-<span data-ttu-id="7813c-154">Uma seção de dados que inclui um cmdlet escrito pelo usuário que gera dados:</span><span class="sxs-lookup"><span data-stu-id="7813c-154">A data section that includes a user-written cmdlet that generates data:</span></span>
+<span data-ttu-id="2f3ec-154">Uma seção de dados que inclui um cmdlet escrito pelo usuário que gera dados:</span><span class="sxs-lookup"><span data-stu-id="2f3ec-154">A data section that includes a user-written cmdlet that generates data:</span></span>
 
 ```powershell
 DATA -supportedCommand Format-XML {
@@ -179,23 +179,23 @@ DATA -supportedCommand Format-XML {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7813c-155">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="7813c-155">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f3ec-155">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="2f3ec-155">See Also</span></span>
 
-[<span data-ttu-id="7813c-156">about_Automatic_Variables</span><span class="sxs-lookup"><span data-stu-id="7813c-156">about_Automatic_Variables</span></span>](about_Automatic_Variables.md)
+[<span data-ttu-id="2f3ec-156">about_Automatic_Variables</span><span class="sxs-lookup"><span data-stu-id="2f3ec-156">about_Automatic_Variables</span></span>](about_Automatic_Variables.md)
 
-[<span data-ttu-id="7813c-157">about_Comparison_Operators</span><span class="sxs-lookup"><span data-stu-id="7813c-157">about_Comparison_Operators</span></span>](about_Comparison_Operators.md)
+[<span data-ttu-id="2f3ec-157">about_Comparison_Operators</span><span class="sxs-lookup"><span data-stu-id="2f3ec-157">about_Comparison_Operators</span></span>](about_Comparison_Operators.md)
 
-[<span data-ttu-id="7813c-158">about_Hash_Tables</span><span class="sxs-lookup"><span data-stu-id="7813c-158">about_Hash_Tables</span></span>](about_Hash_Tables.md)
+[<span data-ttu-id="2f3ec-158">about_Hash_Tables</span><span class="sxs-lookup"><span data-stu-id="2f3ec-158">about_Hash_Tables</span></span>](about_Hash_Tables.md)
 
-[<span data-ttu-id="7813c-159">about_If</span><span class="sxs-lookup"><span data-stu-id="7813c-159">about_If</span></span>](about_If.md)
+[<span data-ttu-id="2f3ec-159">about_If</span><span class="sxs-lookup"><span data-stu-id="2f3ec-159">about_If</span></span>](about_If.md)
 
-[<span data-ttu-id="7813c-160">about_Operators</span><span class="sxs-lookup"><span data-stu-id="7813c-160">about_Operators</span></span>](about_Operators.md)
+[<span data-ttu-id="2f3ec-160">about_Operators</span><span class="sxs-lookup"><span data-stu-id="2f3ec-160">about_Operators</span></span>](about_Operators.md)
 
-[<span data-ttu-id="7813c-161">about_Quoting_Rules</span><span class="sxs-lookup"><span data-stu-id="7813c-161">about_Quoting_Rules</span></span>](about_Quoting_Rules.md)
+[<span data-ttu-id="2f3ec-161">about_Quoting_Rules</span><span class="sxs-lookup"><span data-stu-id="2f3ec-161">about_Quoting_Rules</span></span>](about_Quoting_Rules.md)
 
-[<span data-ttu-id="7813c-162">about_Script_Internationalization</span><span class="sxs-lookup"><span data-stu-id="7813c-162">about_Script_Internationalization</span></span>](about_Script_Internationalization.md)
+[<span data-ttu-id="2f3ec-162">about_Script_Internationalization</span><span class="sxs-lookup"><span data-stu-id="2f3ec-162">about_Script_Internationalization</span></span>](about_Script_Internationalization.md)
 
-[<span data-ttu-id="7813c-163">ConvertFrom-StringData</span><span class="sxs-lookup"><span data-stu-id="7813c-163">ConvertFrom-StringData</span></span>](xref:Microsoft.PowerShell.Utility.ConvertFrom-StringData)
+[<span data-ttu-id="2f3ec-163">ConvertFrom-StringData</span><span class="sxs-lookup"><span data-stu-id="2f3ec-163">ConvertFrom-StringData</span></span>](xref:Microsoft.PowerShell.Utility.ConvertFrom-StringData)
 
-[<span data-ttu-id="7813c-164">Import-LocalizedData</span><span class="sxs-lookup"><span data-stu-id="7813c-164">Import-LocalizedData</span></span>](xref:Microsoft.PowerShell.Utility.Import-LocalizedData)
+[<span data-ttu-id="2f3ec-164">Import-LocalizedData</span><span class="sxs-lookup"><span data-stu-id="2f3ec-164">Import-LocalizedData</span></span>](xref:Microsoft.PowerShell.Utility.Import-LocalizedData)
 

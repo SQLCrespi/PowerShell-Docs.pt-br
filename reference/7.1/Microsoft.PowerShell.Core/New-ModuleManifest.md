@@ -7,21 +7,21 @@ ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 5fbd197f6c22de0ca50b4d2b6b76a914b85f7120
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 21d9f21414eec761fbab77ffcc35a9f57706263a
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239767"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879262"
 ---
-# <span data-ttu-id="affda-103">New-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="affda-103">New-ModuleManifest</span></span>
+# <span data-ttu-id="7a0be-103">New-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="7a0be-103">New-ModuleManifest</span></span>
 
-## <span data-ttu-id="affda-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="affda-104">SYNOPSIS</span></span>
-<span data-ttu-id="affda-105">Cria um novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-105">Creates a new module manifest.</span></span>
+## <span data-ttu-id="7a0be-104">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="7a0be-104">SYNOPSIS</span></span>
+<span data-ttu-id="7a0be-105">Cria um novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-105">Creates a new module manifest.</span></span>
 
-## <span data-ttu-id="affda-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="affda-106">SYNTAX</span></span>
+## <span data-ttu-id="7a0be-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7a0be-106">SYNTAX</span></span>
 
-### <span data-ttu-id="affda-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="affda-107">All</span></span>
+### <span data-ttu-id="7a0be-107">Tudo</span><span class="sxs-lookup"><span data-stu-id="7a0be-107">All</span></span>
 
 ```
 New-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>] [-Author <String>]
@@ -39,29 +39,29 @@ New-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>] [
  [-DefaultCommandPrefix <String>] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="affda-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="affda-108">DESCRIPTION</span></span>
+## <span data-ttu-id="7a0be-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7a0be-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="affda-109">O `New-ModuleManifest` cmdlet cria um novo arquivo de manifesto de módulo ( `.psd1` ), popula seus valores e salva o arquivo de manifesto no caminho especificado.</span><span class="sxs-lookup"><span data-stu-id="affda-109">The `New-ModuleManifest` cmdlet creates a new module manifest (`.psd1`) file, populates its values, and saves the manifest file in the specified path.</span></span>
+<span data-ttu-id="7a0be-109">O `New-ModuleManifest` cmdlet cria um novo arquivo de manifesto de módulo ( `.psd1` ), popula seus valores e salva o arquivo de manifesto no caminho especificado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-109">The `New-ModuleManifest` cmdlet creates a new module manifest (`.psd1`) file, populates its values, and saves the manifest file in the specified path.</span></span>
 
-<span data-ttu-id="affda-110">Autores de módulo podem usar este cmdlet para criar um manifesto para seu módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-110">Module authors can use this cmdlet to create a manifest for their module.</span></span> <span data-ttu-id="affda-111">Um manifesto de módulo é um `.psd1` arquivo que contém uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="affda-111">A module manifest is a `.psd1` file that contains a hash table.</span></span> <span data-ttu-id="affda-112">As chaves e os valores na tabela de hash descrevem o conteúdo e os atributos do módulo, definem os pré-requisitos e determinam como os componentes são processados.</span><span class="sxs-lookup"><span data-stu-id="affda-112">The keys and values in the hash table describe the contents and attributes of the module, define the prerequisites, and determine how the components are processed.</span></span> <span data-ttu-id="affda-113">Os manifestos não são necessários para um módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-113">Manifests aren't required for a module.</span></span>
+<span data-ttu-id="7a0be-110">Autores de módulo podem usar este cmdlet para criar um manifesto para seu módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-110">Module authors can use this cmdlet to create a manifest for their module.</span></span> <span data-ttu-id="7a0be-111">Um manifesto de módulo é um `.psd1` arquivo que contém uma tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="7a0be-111">A module manifest is a `.psd1` file that contains a hash table.</span></span> <span data-ttu-id="7a0be-112">As chaves e os valores na tabela de hash descrevem o conteúdo e os atributos do módulo, definem os pré-requisitos e determinam como os componentes são processados.</span><span class="sxs-lookup"><span data-stu-id="7a0be-112">The keys and values in the hash table describe the contents and attributes of the module, define the prerequisites, and determine how the components are processed.</span></span> <span data-ttu-id="7a0be-113">Os manifestos não são necessários para um módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-113">Manifests aren't required for a module.</span></span>
 
-<span data-ttu-id="affda-114">`New-ModuleManifest` Cria um manifesto que inclui todas as chaves de manifesto usadas com frequência, para que você possa usar a saída padrão como um modelo de manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-114">`New-ModuleManifest` creates a manifest that includes all the commonly used manifest keys, so you can use the default output as a manifest template.</span></span> <span data-ttu-id="affda-115">Para adicionar ou alterar valores, ou para adicionar chaves de módulo que esse cmdlet não adiciona, abra o arquivo resultante em um editor de texto.</span><span class="sxs-lookup"><span data-stu-id="affda-115">To add or change values, or to add module keys that this cmdlet doesn't add, open the resulting file in a text editor.</span></span>
+<span data-ttu-id="7a0be-114">`New-ModuleManifest` Cria um manifesto que inclui todas as chaves de manifesto usadas com frequência, para que você possa usar a saída padrão como um modelo de manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-114">`New-ModuleManifest` creates a manifest that includes all the commonly used manifest keys, so you can use the default output as a manifest template.</span></span> <span data-ttu-id="7a0be-115">Para adicionar ou alterar valores, ou para adicionar chaves de módulo que esse cmdlet não adiciona, abra o arquivo resultante em um editor de texto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-115">To add or change values, or to add module keys that this cmdlet doesn't add, open the resulting file in a text editor.</span></span>
 
-<span data-ttu-id="affda-116">Cada parâmetro, exceto **Path** e **PassThru** , cria uma chave de manifesto de módulo e seu valor.</span><span class="sxs-lookup"><span data-stu-id="affda-116">Each parameter, except for **Path** and **PassThru** , creates a module manifest key and its value.</span></span>
-<span data-ttu-id="affda-117">Em um manifesto de módulo, somente a chave **ModuleVersion** é necessária.</span><span class="sxs-lookup"><span data-stu-id="affda-117">In a module manifest, only the **ModuleVersion** key is required.</span></span> <span data-ttu-id="affda-118">A menos que especificado na descrição do parâmetro, se você omitir um parâmetro do comando, `New-ModuleManifest` o criará uma cadeia de caracteres de comentário para o valor associado que não tem efeito.</span><span class="sxs-lookup"><span data-stu-id="affda-118">Unless specified in the parameter description, if you omit a parameter from the command, `New-ModuleManifest` creates a comment string for the associated value that has no effect.</span></span>
+<span data-ttu-id="7a0be-116">Cada parâmetro, exceto **Path** e **PassThru**, cria uma chave de manifesto de módulo e seu valor.</span><span class="sxs-lookup"><span data-stu-id="7a0be-116">Each parameter, except for **Path** and **PassThru**, creates a module manifest key and its value.</span></span>
+<span data-ttu-id="7a0be-117">Em um manifesto de módulo, somente a chave **ModuleVersion** é necessária.</span><span class="sxs-lookup"><span data-stu-id="7a0be-117">In a module manifest, only the **ModuleVersion** key is required.</span></span> <span data-ttu-id="7a0be-118">A menos que especificado na descrição do parâmetro, se você omitir um parâmetro do comando, `New-ModuleManifest` o criará uma cadeia de caracteres de comentário para o valor associado que não tem efeito.</span><span class="sxs-lookup"><span data-stu-id="7a0be-118">Unless specified in the parameter description, if you omit a parameter from the command, `New-ModuleManifest` creates a comment string for the associated value that has no effect.</span></span>
 
-<span data-ttu-id="affda-119">No PowerShell 2,0, `New-ModuleManifest` o solicita os valores de parâmetros comumente usados que não são especificados no comando, além dos valores de parâmetro necessários.</span><span class="sxs-lookup"><span data-stu-id="affda-119">In PowerShell 2.0, `New-ModuleManifest` prompts you for the values of commonly used parameters that aren't specified in the command, in addition to required parameter values.</span></span> <span data-ttu-id="affda-120">A partir do PowerShell 3,0, o `New-ModuleManifest` solicita somente quando os valores de parâmetro necessários não são especificados.</span><span class="sxs-lookup"><span data-stu-id="affda-120">Beginning in PowerShell 3.0, `New-ModuleManifest` prompts only when required parameter values aren't specified.</span></span>
+<span data-ttu-id="7a0be-119">No PowerShell 2,0, `New-ModuleManifest` o solicita os valores de parâmetros comumente usados que não são especificados no comando, além dos valores de parâmetro necessários.</span><span class="sxs-lookup"><span data-stu-id="7a0be-119">In PowerShell 2.0, `New-ModuleManifest` prompts you for the values of commonly used parameters that aren't specified in the command, in addition to required parameter values.</span></span> <span data-ttu-id="7a0be-120">A partir do PowerShell 3,0, o `New-ModuleManifest` solicita somente quando os valores de parâmetro necessários não são especificados.</span><span class="sxs-lookup"><span data-stu-id="7a0be-120">Beginning in PowerShell 3.0, `New-ModuleManifest` prompts only when required parameter values aren't specified.</span></span>
 
-<span data-ttu-id="affda-121">Se você estiver planejando publicar seu módulo no Galeria do PowerShell, o manifesto deverá conter valores para determinadas propriedades.</span><span class="sxs-lookup"><span data-stu-id="affda-121">If you are planning to publish your module in the PowerShell Gallery, the manifest must contain values for certain properties.</span></span> <span data-ttu-id="affda-122">Para obter mais informações, consulte [metadados necessários para itens publicados no Galeria do PowerShell](/powershell/scripting/gallery/how-to/publishing-packages/publishing-a-package#required-metadata-for-items-published-to-the-powershell-gallery) na documentação da galeria.</span><span class="sxs-lookup"><span data-stu-id="affda-122">For more information, see [Required metadata for items published to the PowerShell Gallery](/powershell/scripting/gallery/how-to/publishing-packages/publishing-a-package#required-metadata-for-items-published-to-the-powershell-gallery) in the Gallery documentation.</span></span>
+<span data-ttu-id="7a0be-121">Se você estiver planejando publicar seu módulo no Galeria do PowerShell, o manifesto deverá conter valores para determinadas propriedades.</span><span class="sxs-lookup"><span data-stu-id="7a0be-121">If you are planning to publish your module in the PowerShell Gallery, the manifest must contain values for certain properties.</span></span> <span data-ttu-id="7a0be-122">Para obter mais informações, consulte [metadados necessários para itens publicados no Galeria do PowerShell](/powershell/scripting/gallery/how-to/publishing-packages/publishing-a-package#required-metadata-for-items-published-to-the-powershell-gallery) na documentação da galeria.</span><span class="sxs-lookup"><span data-stu-id="7a0be-122">For more information, see [Required metadata for items published to the PowerShell Gallery](/powershell/scripting/gallery/how-to/publishing-packages/publishing-a-package#required-metadata-for-items-published-to-the-powershell-gallery) in the Gallery documentation.</span></span>
 
-## <span data-ttu-id="affda-123">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="affda-123">EXAMPLES</span></span>
+## <span data-ttu-id="7a0be-123">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="7a0be-123">EXAMPLES</span></span>
 
-### <span data-ttu-id="affda-124">Exemplo 1-criar um novo manifesto de módulo</span><span class="sxs-lookup"><span data-stu-id="affda-124">Example 1 - Create a new module manifest</span></span>
+### <span data-ttu-id="7a0be-124">Exemplo 1-criar um novo manifesto de módulo</span><span class="sxs-lookup"><span data-stu-id="7a0be-124">Example 1 - Create a new module manifest</span></span>
 
-<span data-ttu-id="affda-125">Este exemplo cria um novo manifesto de módulo no arquivo que é especificado pelo parâmetro **path** .</span><span class="sxs-lookup"><span data-stu-id="affda-125">This example creates a new module manifest in the file that is specified by the **Path** parameter.</span></span>
-<span data-ttu-id="affda-126">O parâmetro **PassThru** envia a saída para o pipeline e para o arquivo.</span><span class="sxs-lookup"><span data-stu-id="affda-126">The **PassThru** parameter sends the output to the pipeline and to the file.</span></span>
+<span data-ttu-id="7a0be-125">Este exemplo cria um novo manifesto de módulo no arquivo que é especificado pelo parâmetro **path** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-125">This example creates a new module manifest in the file that is specified by the **Path** parameter.</span></span>
+<span data-ttu-id="7a0be-126">O parâmetro **PassThru** envia a saída para o pipeline e para o arquivo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-126">The **PassThru** parameter sends the output to the pipeline and to the file.</span></span>
 
-<span data-ttu-id="affda-127">A saída mostra os valores padrão de todas as chaves do manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-127">The output shows the default values of all keys in the manifest.</span></span>
+<span data-ttu-id="7a0be-127">A saída mostra os valores padrão de todas as chaves do manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-127">The output shows the default values of all keys in the manifest.</span></span>
 
 ```powershell
 New-ModuleManifest -Path C:\ps-test\Test-Module\Test-Module.psd1 -PassThru
@@ -201,17 +201,17 @@ PrivateData = @{
 }
 ```
 
-### <span data-ttu-id="affda-128">Exemplo 2-criar um novo manifesto com algumas configurações preenchidas previamente</span><span class="sxs-lookup"><span data-stu-id="affda-128">Example 2 - Create a new manifest with some prepopulated settings</span></span>
+### <span data-ttu-id="7a0be-128">Exemplo 2-criar um novo manifesto com algumas configurações preenchidas previamente</span><span class="sxs-lookup"><span data-stu-id="7a0be-128">Example 2 - Create a new manifest with some prepopulated settings</span></span>
 
-<span data-ttu-id="affda-129">Este exemplo cria um novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-129">This example creates a new module manifest.</span></span> <span data-ttu-id="affda-130">Ele usa os parâmetros **PowerShellVersion** e **AliasesToExport** para adicionar valores às chaves de manifesto correspondentes.</span><span class="sxs-lookup"><span data-stu-id="affda-130">It uses the **PowerShellVersion** and **AliasesToExport** parameters to add values to the corresponding manifest keys.</span></span>
+<span data-ttu-id="7a0be-129">Este exemplo cria um novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-129">This example creates a new module manifest.</span></span> <span data-ttu-id="7a0be-130">Ele usa os parâmetros **PowerShellVersion** e **AliasesToExport** para adicionar valores às chaves de manifesto correspondentes.</span><span class="sxs-lookup"><span data-stu-id="7a0be-130">It uses the **PowerShellVersion** and **AliasesToExport** parameters to add values to the corresponding manifest keys.</span></span>
 
 ```powershell
 New-ModuleManifest -PowerShellVersion 1.0 -AliasesToExport JKBC, DRC, TAC -Path C:\ps-test\ManifestTest.psd1
 ```
 
-### <span data-ttu-id="affda-131">Exemplo 3-criar um manifesto que requer outros módulos</span><span class="sxs-lookup"><span data-stu-id="affda-131">Example 3 - Create a manifest that requires other modules</span></span>
+### <span data-ttu-id="7a0be-131">Exemplo 3-criar um manifesto que requer outros módulos</span><span class="sxs-lookup"><span data-stu-id="7a0be-131">Example 3 - Create a manifest that requires other modules</span></span>
 
-<span data-ttu-id="affda-132">Este exemplo usa um formato de cadeia de caracteres para especificar o nome do módulo **BitsTransfer** e o formato da tabela de hash para especificar o nome, um **GUID** e uma versão do módulo **PSScheduledJob** .</span><span class="sxs-lookup"><span data-stu-id="affda-132">This example uses a string format to specify the name of the **BitsTransfer** module and the hash table format to specify the name, a **GUID** , and a version of the **PSScheduledJob** module.</span></span>
+<span data-ttu-id="7a0be-132">Este exemplo usa um formato de cadeia de caracteres para especificar o nome do módulo **BitsTransfer** e o formato da tabela de hash para especificar o nome, um **GUID** e uma versão do módulo **PSScheduledJob** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-132">This example uses a string format to specify the name of the **BitsTransfer** module and the hash table format to specify the name, a **GUID**, and a version of the **PSScheduledJob** module.</span></span>
 
 ```powershell
 $moduleSettings = @{
@@ -225,11 +225,11 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-<span data-ttu-id="affda-133">Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList** , **RequiredModules** e **NestedModules** .</span><span class="sxs-lookup"><span data-stu-id="affda-133">This example shows how to use the string and hash table formats of the **ModuleList** , **RequiredModules** , and **NestedModules** parameter.</span></span> <span data-ttu-id="affda-134">Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="affda-134">You can combine strings and hash tables in the same parameter value.</span></span>
+<span data-ttu-id="7a0be-133">Este exemplo mostra como usar a cadeia de caracteres e os formatos de tabela de hash do parâmetro **ModuleList**, **RequiredModules** e **NestedModules** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-133">This example shows how to use the string and hash table formats of the **ModuleList**, **RequiredModules**, and **NestedModules** parameter.</span></span> <span data-ttu-id="7a0be-134">Você pode combinar cadeias de caracteres e tabelas de hash no mesmo valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-134">You can combine strings and hash tables in the same parameter value.</span></span>
 
-### <span data-ttu-id="affda-135">Exemplo 4-criar um manifesto que ofereça suporte à ajuda atualizável</span><span class="sxs-lookup"><span data-stu-id="affda-135">Example 4 - Create a manifest that supports updateable help</span></span>
+### <span data-ttu-id="7a0be-135">Exemplo 4-criar um manifesto que ofereça suporte à ajuda atualizável</span><span class="sxs-lookup"><span data-stu-id="7a0be-135">Example 4 - Create a manifest that supports updateable help</span></span>
 
-<span data-ttu-id="affda-136">Este exemplo usa o parâmetro **HelpInfoUri** para criar uma chave **HelpInfoUri** no manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-136">This example uses the **HelpInfoUri** parameter to create a **HelpInfoUri** key in the module manifest.</span></span> <span data-ttu-id="affda-137">O valor do parâmetro e a chave devem começar com **http** ou **https**.</span><span class="sxs-lookup"><span data-stu-id="affda-137">The value of the parameter and the key must begin with **http** or **https**.</span></span> <span data-ttu-id="affda-138">Esse valor informa o sistema do Updatable Help onde encontrar o arquivo XML de informações de ajuda atualizável HelpInfo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-138">This value tells the Updatable Help system where to find the HelpInfo XML updatable help information file for the module.</span></span>
+<span data-ttu-id="7a0be-136">Este exemplo usa o parâmetro **HelpInfoUri** para criar uma chave **HelpInfoUri** no manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-136">This example uses the **HelpInfoUri** parameter to create a **HelpInfoUri** key in the module manifest.</span></span> <span data-ttu-id="7a0be-137">O valor do parâmetro e a chave devem começar com **http** ou **https**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-137">The value of the parameter and the key must begin with **http** or **https**.</span></span> <span data-ttu-id="7a0be-138">Esse valor informa o sistema do Updatable Help onde encontrar o arquivo XML de informações de ajuda atualizável HelpInfo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-138">This value tells the Updatable Help system where to find the HelpInfo XML updatable help information file for the module.</span></span>
 
 ```powershell
 $moduleSettings = @{
@@ -239,14 +239,14 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-<span data-ttu-id="affda-139">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](./About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="affda-139">For information about Updatable Help, see [about_Updatable_Help](./About/about_Updatable_Help.md).</span></span>
-<span data-ttu-id="affda-140">Para obter informações sobre o arquivo XML HelpInfo, consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="affda-140">For information about the HelpInfo XML file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
+<span data-ttu-id="7a0be-139">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](./About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="7a0be-139">For information about Updatable Help, see [about_Updatable_Help](./About/about_Updatable_Help.md).</span></span>
+<span data-ttu-id="7a0be-140">Para obter informações sobre o arquivo XML HelpInfo, consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="7a0be-140">For information about the HelpInfo XML file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
 
-### <span data-ttu-id="affda-141">Exemplo 5-obtendo informações de módulo</span><span class="sxs-lookup"><span data-stu-id="affda-141">Example 5 - Getting module information</span></span>
+### <span data-ttu-id="7a0be-141">Exemplo 5-obtendo informações de módulo</span><span class="sxs-lookup"><span data-stu-id="7a0be-141">Example 5 - Getting module information</span></span>
 
-<span data-ttu-id="affda-142">Este exemplo mostra como obter os valores de configuração de um módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-142">This example shows how to get the configuration values of a module.</span></span> <span data-ttu-id="affda-143">Os valores no manifesto do módulo são refletidos nos valores das propriedades do objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-143">The values in the module manifest are reflected in the values of properties of the module object.</span></span>
+<span data-ttu-id="7a0be-142">Este exemplo mostra como obter os valores de configuração de um módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-142">This example shows how to get the configuration values of a module.</span></span> <span data-ttu-id="7a0be-143">Os valores no manifesto do módulo são refletidos nos valores das propriedades do objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-143">The values in the module manifest are reflected in the values of properties of the module object.</span></span>
 
-<span data-ttu-id="affda-144">O `Get-Module` cmdlet é usado para obter o módulo **Microsoft. PowerShell. Diagnostics** usando o parâmetro **list** .</span><span class="sxs-lookup"><span data-stu-id="affda-144">The `Get-Module` cmdlet is used to get the **Microsoft.PowerShell.Diagnostics** module using the **List** parameter.</span></span> <span data-ttu-id="affda-145">O comando envia o módulo para o `Format-List` cmdlet para exibir todas as propriedades e valores do objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-145">The command sends the module to the `Format-List` cmdlet to display all properties and values of the module object.</span></span>
+<span data-ttu-id="7a0be-144">O `Get-Module` cmdlet é usado para obter o módulo **Microsoft. PowerShell. Diagnostics** usando o parâmetro **list** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-144">The `Get-Module` cmdlet is used to get the **Microsoft.PowerShell.Diagnostics** module using the **List** parameter.</span></span> <span data-ttu-id="7a0be-145">O comando envia o módulo para o `Format-List` cmdlet para exibir todas as propriedades e valores do objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-145">The command sends the module to the `Format-List` cmdlet to display all properties and values of the module object.</span></span>
 
 ```powershell
 Get-Module Microsoft.PowerShell.Diagnostics -List | Format-List -Property *
@@ -297,15 +297,15 @@ ExportedFormatFiles         : {C:\Windows\system32\WindowsPowerShell\v1.0\Event.
 ExportedTypeFiles           : {C:\Windows\system32\WindowsPowerShell\v1.0\GetEvent.types.ps1xml}
 ```
 
-## <span data-ttu-id="affda-146">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="affda-146">PARAMETERS</span></span>
+## <span data-ttu-id="7a0be-146">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7a0be-146">PARAMETERS</span></span>
 
-### <span data-ttu-id="affda-147">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="affda-147">-AliasesToExport</span></span>
+### <span data-ttu-id="7a0be-147">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="7a0be-147">-AliasesToExport</span></span>
 
-<span data-ttu-id="affda-148">Especifica os aliases que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-148">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="affda-149">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-149">Wildcards are permitted.</span></span>
+<span data-ttu-id="7a0be-148">Especifica os aliases que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-148">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="7a0be-149">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-149">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="affda-150">Você pode usar esse parâmetro para restringir os aliases exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-150">You can use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="affda-151">Ele pode remover aliases da lista de aliases exportados, mas não pode adicionar aliases à lista.</span><span class="sxs-lookup"><span data-stu-id="affda-151">It can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
+<span data-ttu-id="7a0be-150">Você pode usar esse parâmetro para restringir os aliases exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-150">You can use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="7a0be-151">Ele pode remover aliases da lista de aliases exportados, mas não pode adicionar aliases à lista.</span><span class="sxs-lookup"><span data-stu-id="7a0be-151">It can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
 
-<span data-ttu-id="affda-152">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **AliasesToExport** com um valor de `*` (All), o que significa que todos os aliases definidos no módulo serão exportados pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-152">If you omit this parameter, `New-ModuleManifest` creates an **AliasesToExport** key with a value of `*` (all), meaning that all aliases defined in the module are exported by the manifest.</span></span>
+<span data-ttu-id="7a0be-152">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **AliasesToExport** com um valor de `*` (All), o que significa que todos os aliases definidos no módulo serão exportados pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-152">If you omit this parameter, `New-ModuleManifest` creates an **AliasesToExport** key with a value of `*` (all), meaning that all aliases defined in the module are exported by the manifest.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -319,11 +319,11 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="affda-153">-Autor</span><span class="sxs-lookup"><span data-stu-id="affda-153">-Author</span></span>
+### <span data-ttu-id="7a0be-153">-Autor</span><span class="sxs-lookup"><span data-stu-id="7a0be-153">-Author</span></span>
 
-<span data-ttu-id="affda-154">Especifica o autor do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-154">Specifies the module author.</span></span>
+<span data-ttu-id="7a0be-154">Especifica o autor do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-154">Specifies the module author.</span></span>
 
-<span data-ttu-id="affda-155">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave de **autor** com o nome do usuário atual.</span><span class="sxs-lookup"><span data-stu-id="affda-155">If you omit this parameter, `New-ModuleManifest` creates an **Author** key with the name of the current user.</span></span>
+<span data-ttu-id="7a0be-155">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave de **autor** com o nome do usuário atual.</span><span class="sxs-lookup"><span data-stu-id="7a0be-155">If you omit this parameter, `New-ModuleManifest` creates an **Author** key with the name of the current user.</span></span>
 
 ```yaml
 Type: System.String
@@ -337,13 +337,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-156">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="affda-156">-CmdletsToExport</span></span>
+### <span data-ttu-id="7a0be-156">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="7a0be-156">-CmdletsToExport</span></span>
 
-<span data-ttu-id="affda-157">Especifica os cmdlets que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-157">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="affda-158">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-158">Wildcards are permitted.</span></span>
+<span data-ttu-id="7a0be-157">Especifica os cmdlets que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-157">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="7a0be-158">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-158">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="affda-159">Você pode usar esse parâmetro para restringir os cmdlets exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-159">You can use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="affda-160">Ele pode remover cmdlets da lista de cmdlets exportados, mas não pode adicionar cmdlets à lista.</span><span class="sxs-lookup"><span data-stu-id="affda-160">It can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
+<span data-ttu-id="7a0be-159">Você pode usar esse parâmetro para restringir os cmdlets exportados pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-159">You can use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="7a0be-160">Ele pode remover cmdlets da lista de cmdlets exportados, mas não pode adicionar cmdlets à lista.</span><span class="sxs-lookup"><span data-stu-id="7a0be-160">It can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
 
-<span data-ttu-id="affda-161">Se você omitir esse parâmetro, `New-ModuleManifest` o criará uma chave **CmdletsToExport** com um valor de `*` (All), o que significa que todos os cmdlets definidos no módulo serão exportados pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-161">If you omit this parameter, `New-ModuleManifest` creates a **CmdletsToExport** key with a value of `*` (all), meaning that all cmdlets defined in the module are exported by the manifest.</span></span>
+<span data-ttu-id="7a0be-161">Se você omitir esse parâmetro, `New-ModuleManifest` o criará uma chave **CmdletsToExport** com um valor de `*` (All), o que significa que todos os cmdlets definidos no módulo serão exportados pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-161">If you omit this parameter, `New-ModuleManifest` creates a **CmdletsToExport** key with a value of `*` (all), meaning that all cmdlets defined in the module are exported by the manifest.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -357,11 +357,11 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="affda-162">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="affda-162">-CompanyName</span></span>
+### <span data-ttu-id="7a0be-162">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="7a0be-162">-CompanyName</span></span>
 
-<span data-ttu-id="affda-163">Identifica a empresa ou fornecedor que o módulo criou.</span><span class="sxs-lookup"><span data-stu-id="affda-163">Identifies the company or vendor who created the module.</span></span>
+<span data-ttu-id="7a0be-163">Identifica a empresa ou fornecedor que o módulo criou.</span><span class="sxs-lookup"><span data-stu-id="7a0be-163">Identifies the company or vendor who created the module.</span></span>
 
-<span data-ttu-id="affda-164">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **CompanyName** com um valor de "Unknown".</span><span class="sxs-lookup"><span data-stu-id="affda-164">If you omit this parameter, `New-ModuleManifest` creates a **CompanyName** key with a value of "Unknown".</span></span>
+<span data-ttu-id="7a0be-164">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **CompanyName** com um valor de "Unknown".</span><span class="sxs-lookup"><span data-stu-id="7a0be-164">If you omit this parameter, `New-ModuleManifest` creates a **CompanyName** key with a value of "Unknown".</span></span>
 
 ```yaml
 Type: System.String
@@ -375,9 +375,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-165">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="affda-165">-CompatiblePSEditions</span></span>
+### <span data-ttu-id="7a0be-165">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="7a0be-165">-CompatiblePSEditions</span></span>
 
-<span data-ttu-id="affda-166">Especifica o PSEditions compatível do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-166">Specifies the module's compatible PSEditions.</span></span> <span data-ttu-id="affda-167">Para obter informações sobre PSEdition, consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).</span><span class="sxs-lookup"><span data-stu-id="affda-167">For information about PSEdition, see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
+<span data-ttu-id="7a0be-166">Especifica o PSEditions compatível do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-166">Specifies the module's compatible PSEditions.</span></span> <span data-ttu-id="7a0be-167">Para obter informações sobre PSEdition, consulte [módulos com as edições compatíveis do PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support).</span><span class="sxs-lookup"><span data-stu-id="7a0be-167">For information about PSEdition, see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
 
 ```yaml
 Type: System.String[]
@@ -392,11 +392,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-168">-Direitos autorais</span><span class="sxs-lookup"><span data-stu-id="affda-168">-Copyright</span></span>
+### <span data-ttu-id="7a0be-168">-Direitos autorais</span><span class="sxs-lookup"><span data-stu-id="7a0be-168">-Copyright</span></span>
 
-<span data-ttu-id="affda-169">Especifica uma declaração de direitos autorais do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-169">Specifies a copyright statement for the module.</span></span>
+<span data-ttu-id="7a0be-169">Especifica uma declaração de direitos autorais do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-169">Specifies a copyright statement for the module.</span></span>
 
-<span data-ttu-id="affda-170">Se você omitir esse parâmetro, o `New-ModuleManifest` cria uma chave de **direitos autorais** com um valor de `(c) <year> <username>. All rights reserved.` onde `<year>` é o ano atual e `<username>` é o valor da chave de **autor** .</span><span class="sxs-lookup"><span data-stu-id="affda-170">If you omit this parameter, `New-ModuleManifest` creates a **Copyright** key with a value of `(c) <year> <username>. All rights reserved.` where `<year>` is the current year and `<username>` is the value of the **Author** key.</span></span>
+<span data-ttu-id="7a0be-170">Se você omitir esse parâmetro, o `New-ModuleManifest` cria uma chave de **direitos autorais** com um valor de `(c) <year> <username>. All rights reserved.` onde `<year>` é o ano atual e `<username>` é o valor da chave de **autor** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-170">If you omit this parameter, `New-ModuleManifest` creates a **Copyright** key with a value of `(c) <year> <username>. All rights reserved.` where `<year>` is the current year and `<username>` is the value of the **Author** key.</span></span>
 
 ```yaml
 Type: System.String
@@ -410,29 +410,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-171">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="affda-171">-DefaultCommandPrefix</span></span>
+### <span data-ttu-id="7a0be-171">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="7a0be-171">-DefaultCommandPrefix</span></span>
 
-<span data-ttu-id="affda-172">Especifica um prefixo que é anexado aos substantivos de todos os comandos no módulo quando eles são importados para uma sessão.</span><span class="sxs-lookup"><span data-stu-id="affda-172">Specifies a prefix that is prepended to the nouns of all commands in the module when they're imported into a session.</span></span> <span data-ttu-id="affda-173">Insira uma cadeia de caracteres de prefixo.</span><span class="sxs-lookup"><span data-stu-id="affda-173">Enter a prefix string.</span></span> <span data-ttu-id="affda-174">Prefixos evitam conflitos de nomes de comando em uma sessão de usuário.</span><span class="sxs-lookup"><span data-stu-id="affda-174">Prefixes prevent command name conflicts in a user's session.</span></span>
+<span data-ttu-id="7a0be-172">Especifica um prefixo que é anexado aos substantivos de todos os comandos no módulo quando eles são importados para uma sessão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-172">Specifies a prefix that is prepended to the nouns of all commands in the module when they're imported into a session.</span></span> <span data-ttu-id="7a0be-173">Insira uma cadeia de caracteres de prefixo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-173">Enter a prefix string.</span></span> <span data-ttu-id="7a0be-174">Prefixos evitam conflitos de nomes de comando em uma sessão de usuário.</span><span class="sxs-lookup"><span data-stu-id="7a0be-174">Prefixes prevent command name conflicts in a user's session.</span></span>
 
-<span data-ttu-id="affda-175">Os usuários do módulo podem substituir esse prefixo especificando o parâmetro de **prefixo** do `Import-Module` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="affda-175">Module users can override this prefix by specifying the **Prefix** parameter of the `Import-Module` cmdlet.</span></span>
+<span data-ttu-id="7a0be-175">Os usuários do módulo podem substituir esse prefixo especificando o parâmetro de **prefixo** do `Import-Module` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="7a0be-175">Module users can override this prefix by specifying the **Prefix** parameter of the `Import-Module` cmdlet.</span></span>
 
-<span data-ttu-id="affda-176">Esse parâmetro foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="affda-176">This parameter was introduced in PowerShell 3.0.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-177">-Description</span><span class="sxs-lookup"><span data-stu-id="affda-177">-Description</span></span>
-
-<span data-ttu-id="affda-178">Descreve o conteúdo do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-178">Describes the contents of the module.</span></span>
+<span data-ttu-id="7a0be-176">Esse parâmetro foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="7a0be-176">This parameter was introduced in PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.String
@@ -446,9 +430,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-179">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="affda-179">-DotNetFrameworkVersion</span></span>
+### <span data-ttu-id="7a0be-177">-Description</span><span class="sxs-lookup"><span data-stu-id="7a0be-177">-Description</span></span>
 
-<span data-ttu-id="affda-180">Especifica a versão mínima do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="affda-180">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="7a0be-178">Descreve o conteúdo do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-178">Describes the contents of the module.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-179">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="7a0be-179">-DotNetFrameworkVersion</span></span>
+
+<span data-ttu-id="7a0be-180">Especifica a versão mínima do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="7a0be-180">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -462,9 +462,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-181">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="affda-181">-DscResourcesToExport</span></span>
+### <span data-ttu-id="7a0be-181">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="7a0be-181">-DscResourcesToExport</span></span>
 
-<span data-ttu-id="affda-182">Especifica os recursos de DSC (configuração de estado desejado) que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-182">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="affda-183">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-183">Wildcards are permitted.</span></span>
+<span data-ttu-id="7a0be-182">Especifica os recursos de DSC (configuração de estado desejado) que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-182">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="7a0be-183">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-183">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -478,27 +478,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="affda-184">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="affda-184">-ExternalModuleDependencies</span></span>
+### <span data-ttu-id="7a0be-184">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="7a0be-184">-ExternalModuleDependencies</span></span>
 
-<span data-ttu-id="affda-185">Uma lista de módulos externos da qual este módulo depende.</span><span class="sxs-lookup"><span data-stu-id="affda-185">A list of external modules that this module is depends on.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-186">-FileList</span><span class="sxs-lookup"><span data-stu-id="affda-186">-FileList</span></span>
-
-<span data-ttu-id="affda-187">Especifica todos os itens incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-187">Specifies all items that are included in the module.</span></span>
-
-<span data-ttu-id="affda-188">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-188">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="affda-189">Os arquivos listados na chave são incluídos quando o módulo é publicado, mas todas as funções não são exportadas automaticamente.</span><span class="sxs-lookup"><span data-stu-id="affda-189">The files listed in the key are included when the module is published, but any functions aren't automatically exported.</span></span>
+<span data-ttu-id="7a0be-185">Uma lista de módulos externos da qual este módulo depende.</span><span class="sxs-lookup"><span data-stu-id="7a0be-185">A list of external modules that this module is depends on.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -512,12 +494,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-190">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="affda-190">-FormatsToProcess</span></span>
+### <span data-ttu-id="7a0be-186">-FileList</span><span class="sxs-lookup"><span data-stu-id="7a0be-186">-FileList</span></span>
 
-<span data-ttu-id="affda-191">Especifica os arquivos de formatação ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="affda-191">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
+<span data-ttu-id="7a0be-187">Especifica todos os itens incluídos no módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-187">Specifies all items that are included in the module.</span></span>
 
-<span data-ttu-id="affda-192">Quando você importa um módulo, o PowerShell executa o `Update-FormatData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="affda-192">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="affda-193">Como os arquivos de formatação não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="affda-193">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="7a0be-188">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-188">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="7a0be-189">Os arquivos listados na chave são incluídos quando o módulo é publicado, mas todas as funções não são exportadas automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7a0be-189">The files listed in the key are included when the module is published, but any functions aren't automatically exported.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -531,13 +512,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-194">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="affda-194">-FunctionsToExport</span></span>
+### <span data-ttu-id="7a0be-190">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="7a0be-190">-FormatsToProcess</span></span>
 
-<span data-ttu-id="affda-195">Especifica as funções que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-195">Specifies the functions that the module exports.</span></span> <span data-ttu-id="affda-196">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-196">Wildcards are permitted.</span></span>
+<span data-ttu-id="7a0be-191">Especifica os arquivos de formatação ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-191">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
 
-<span data-ttu-id="affda-197">Você pode usar esse parâmetro para restringir as funções exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-197">You can use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="affda-198">Ele pode remover funções da lista de aliases exportados, mas não pode adicionar funções à lista.</span><span class="sxs-lookup"><span data-stu-id="affda-198">It can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
+<span data-ttu-id="7a0be-192">Quando você importa um módulo, o PowerShell executa o `Update-FormatData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="7a0be-192">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="7a0be-193">Como os arquivos de formatação não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-193">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
 
-<span data-ttu-id="affda-199">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **FunctionsToExport** com um valor de `*` (All), o que significa que todas as funções definidas no módulo serão exportadas pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-199">If you omit this parameter, `New-ModuleManifest` creates an **FunctionsToExport** key with a value of `*` (all), meaning that all functions defined in the module are exported by the manifest.</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-194">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="7a0be-194">-FunctionsToExport</span></span>
+
+<span data-ttu-id="7a0be-195">Especifica as funções que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-195">Specifies the functions that the module exports.</span></span> <span data-ttu-id="7a0be-196">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-196">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="7a0be-197">Você pode usar esse parâmetro para restringir as funções exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-197">You can use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="7a0be-198">Ele pode remover funções da lista de aliases exportados, mas não pode adicionar funções à lista.</span><span class="sxs-lookup"><span data-stu-id="7a0be-198">It can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
+
+<span data-ttu-id="7a0be-199">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **FunctionsToExport** com um valor de `*` (All), o que significa que todas as funções definidas no módulo serão exportadas pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-199">If you omit this parameter, `New-ModuleManifest` creates an **FunctionsToExport** key with a value of `*` (all), meaning that all functions defined in the module are exported by the manifest.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -551,13 +551,13 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="affda-200">-GUID</span><span class="sxs-lookup"><span data-stu-id="affda-200">-Guid</span></span>
+### <span data-ttu-id="7a0be-200">-GUID</span><span class="sxs-lookup"><span data-stu-id="7a0be-200">-Guid</span></span>
 
-<span data-ttu-id="affda-201">Especifica um identificador exclusivo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-201">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="affda-202">O **GUID** pode ser usado para distinguir entre módulos com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="affda-202">The **GUID** can be used to distinguish among modules with the same name.</span></span>
+<span data-ttu-id="7a0be-201">Especifica um identificador exclusivo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-201">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="7a0be-202">O **GUID** pode ser usado para distinguir entre módulos com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="7a0be-202">The **GUID** can be used to distinguish among modules with the same name.</span></span>
 
-<span data-ttu-id="affda-203">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **GUID** no manifesto e gerará um **GUID** para o valor.</span><span class="sxs-lookup"><span data-stu-id="affda-203">If you omit this parameter, `New-ModuleManifest` creates a **GUID** key in the manifest and generates a **GUID** for the value.</span></span>
+<span data-ttu-id="7a0be-203">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **GUID** no manifesto e gerará um **GUID** para o valor.</span><span class="sxs-lookup"><span data-stu-id="7a0be-203">If you omit this parameter, `New-ModuleManifest` creates a **GUID** key in the manifest and generates a **GUID** for the value.</span></span>
 
-<span data-ttu-id="affda-204">Para criar um novo **GUID** no PowerShell, digite `[guid]::NewGuid()` .</span><span class="sxs-lookup"><span data-stu-id="affda-204">To create a new **GUID** in PowerShell, type `[guid]::NewGuid()`.</span></span>
+<span data-ttu-id="7a0be-204">Para criar um novo **GUID** no PowerShell, digite `[guid]::NewGuid()` .</span><span class="sxs-lookup"><span data-stu-id="7a0be-204">To create a new **GUID** in PowerShell, type `[guid]::NewGuid()`.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -571,16 +571,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-205">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="affda-205">-HelpInfoUri</span></span>
+### <span data-ttu-id="7a0be-205">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="7a0be-205">-HelpInfoUri</span></span>
 
-<span data-ttu-id="affda-206">Especifica o endereço da Internet do arquivo XML HelpInfo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-206">Specifies the internet address of the HelpInfo XML file for the module.</span></span> <span data-ttu-id="affda-207">Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https**.</span><span class="sxs-lookup"><span data-stu-id="affda-207">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https**.</span></span>
+<span data-ttu-id="7a0be-206">Especifica o endereço da Internet do arquivo XML HelpInfo para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-206">Specifies the internet address of the HelpInfo XML file for the module.</span></span> <span data-ttu-id="7a0be-207">Insira um Uniform Resource Identifier (URI) que comece com **http** ou **https**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-207">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https**.</span></span>
 
-<span data-ttu-id="affda-208">O arquivo XML HelpInfo dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="affda-208">The HelpInfo XML file supports the Updatable Help feature that was introduced in PowerShell 3.0.</span></span> <span data-ttu-id="affda-209">Ele contém informações sobre o local dos arquivos de ajuda que podem ser baixados para o módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.</span><span class="sxs-lookup"><span data-stu-id="affda-209">It contains information about the location of downloadable help files for the module and the version numbers of the newest help files for each supported locale.</span></span>
+<span data-ttu-id="7a0be-208">O arquivo XML HelpInfo dá suporte ao recurso de ajuda atualizável que foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="7a0be-208">The HelpInfo XML file supports the Updatable Help feature that was introduced in PowerShell 3.0.</span></span> <span data-ttu-id="7a0be-209">Ele contém informações sobre o local dos arquivos de ajuda que podem ser baixados para o módulo e os números de versão dos arquivos de ajuda mais recentes para cada localidade com suporte.</span><span class="sxs-lookup"><span data-stu-id="7a0be-209">It contains information about the location of downloadable help files for the module and the version numbers of the newest help files for each supported locale.</span></span>
 
-<span data-ttu-id="affda-210">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](./About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="affda-210">For information about Updatable Help, see [about_Updatable_Help](./About/about_Updatable_Help.md).</span></span>
-<span data-ttu-id="affda-211">Para obter informações sobre o arquivo XML HelpInfo, consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="affda-211">For information about the HelpInfo XML file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
+<span data-ttu-id="7a0be-210">Para obter informações sobre a ajuda atualizável, consulte [about_Updatable_Help](./About/about_Updatable_Help.md).</span><span class="sxs-lookup"><span data-stu-id="7a0be-210">For information about Updatable Help, see [about_Updatable_Help](./About/about_Updatable_Help.md).</span></span>
+<span data-ttu-id="7a0be-211">Para obter informações sobre o arquivo XML HelpInfo, consulte [suporte à ajuda atualizável](/powershell/scripting/developer/module/supporting-updatable-help).</span><span class="sxs-lookup"><span data-stu-id="7a0be-211">For information about the HelpInfo XML file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
 
-<span data-ttu-id="affda-212">Esse parâmetro foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="affda-212">This parameter was introduced in PowerShell 3.0.</span></span>
+<span data-ttu-id="7a0be-212">Esse parâmetro foi introduzido no PowerShell 3,0.</span><span class="sxs-lookup"><span data-stu-id="7a0be-212">This parameter was introduced in PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.String
@@ -594,25 +594,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-213">-IconUri</span><span class="sxs-lookup"><span data-stu-id="affda-213">-IconUri</span></span>
+### <span data-ttu-id="7a0be-213">-IconUri</span><span class="sxs-lookup"><span data-stu-id="7a0be-213">-IconUri</span></span>
 
-<span data-ttu-id="affda-214">Especifica a URL de um ícone para o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-214">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="affda-215">O ícone especificado é exibido na página da Galeria da Web para o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-215">The specified icon is displayed on the gallery web page for the module.</span></span>
-
-```yaml
-Type: System.Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-216">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="affda-216">-LicenseUri</span></span>
-
-<span data-ttu-id="affda-217">Especifica a URL dos termos de licenciamento do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-217">Specifies the URL of licensing terms for the module.</span></span>
+<span data-ttu-id="7a0be-214">Especifica a URL de um ícone para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-214">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="7a0be-215">O ícone especificado é exibido na página da Galeria da Web para o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-215">The specified icon is displayed on the gallery web page for the module.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -626,13 +610,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-218">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="affda-218">-ModuleList</span></span>
+### <span data-ttu-id="7a0be-216">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="7a0be-216">-LicenseUri</span></span>
 
-<span data-ttu-id="affda-219">Lista todos os módulos incluídos neste módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-219">Lists all modules that are included in this module.</span></span>
+<span data-ttu-id="7a0be-217">Especifica a URL dos termos de licenciamento do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-217">Specifies the URL of licensing terms for the module.</span></span>
 
-<span data-ttu-id="affda-220">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="affda-220">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="affda-221">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="affda-221">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="affda-222">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="affda-222">You can combine strings and hash tables in the parameter value.</span></span>
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
 
-<span data-ttu-id="affda-223">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-223">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="affda-224">Os módulos listados no valor dessa chave não são processados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="affda-224">The modules that are listed in the value of this key aren't automatically processed.</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-218">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="7a0be-218">-ModuleList</span></span>
+
+<span data-ttu-id="7a0be-219">Lista todos os módulos incluídos neste módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-219">Lists all modules that are included in this module.</span></span>
+
+<span data-ttu-id="7a0be-220">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-220">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="7a0be-221">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="7a0be-221">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="7a0be-222">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-222">You can combine strings and hash tables in the parameter value.</span></span>
+
+<span data-ttu-id="7a0be-223">Essa chave foi projetada para atuar como um inventário de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-223">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="7a0be-224">Os módulos listados no valor dessa chave não são processados automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7a0be-224">The modules that are listed in the value of this key aren't automatically processed.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -646,11 +646,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-225">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="affda-225">-ModuleVersion</span></span>
+### <span data-ttu-id="7a0be-225">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="7a0be-225">-ModuleVersion</span></span>
 
-<span data-ttu-id="affda-226">Especifica a versão do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-226">Specifies the module's version.</span></span>
+<span data-ttu-id="7a0be-226">Especifica a versão do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-226">Specifies the module's version.</span></span>
 
-<span data-ttu-id="affda-227">Esse parâmetro não é necessário, mas uma chave **ModuleVersion** é necessária no manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-227">This parameter isn't required, but a **ModuleVersion** key is required in the manifest.</span></span> <span data-ttu-id="affda-228">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **ModuleVersion** com um valor de 1,0.</span><span class="sxs-lookup"><span data-stu-id="affda-228">If you omit this parameter, `New-ModuleManifest` creates a **ModuleVersion** key with a value of 1.0.</span></span>
+<span data-ttu-id="7a0be-227">Esse parâmetro não é necessário, mas uma chave **ModuleVersion** é necessária no manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-227">This parameter isn't required, but a **ModuleVersion** key is required in the manifest.</span></span> <span data-ttu-id="7a0be-228">Se você omitir esse parâmetro, o `New-ModuleManifest` criará uma chave **ModuleVersion** com um valor de 1,0.</span><span class="sxs-lookup"><span data-stu-id="7a0be-228">If you omit this parameter, `New-ModuleManifest` creates a **ModuleVersion** key with a value of 1.0.</span></span>
 
 ```yaml
 Type: System.Version
@@ -664,18 +664,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-229">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="affda-229">-NestedModules</span></span>
+### <span data-ttu-id="7a0be-229">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="7a0be-229">-NestedModules</span></span>
 
-<span data-ttu-id="affda-230">Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-230">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="affda-231">Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.</span><span class="sxs-lookup"><span data-stu-id="affda-231">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
+<span data-ttu-id="7a0be-230">Especifica módulos de script ( `.psm1` ) e módulos binários ( `.dll` ) que são importados para o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-230">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="7a0be-231">Os arquivos na chave **NestedModules** são executados na ordem em que estão listados no valor.</span><span class="sxs-lookup"><span data-stu-id="7a0be-231">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
 
-<span data-ttu-id="affda-232">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="affda-232">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="affda-233">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="affda-233">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="affda-234">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="affda-234">You can combine strings and hash tables in the parameter value.</span></span>
+<span data-ttu-id="7a0be-232">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-232">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="7a0be-233">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="7a0be-233">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="7a0be-234">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-234">You can combine strings and hash tables in the parameter value.</span></span>
 
-<span data-ttu-id="affda-235">Normalmente, módulos aninhados contêm comandos que o módulo raiz precisa para seu processamento interno.</span><span class="sxs-lookup"><span data-stu-id="affda-235">Typically, nested modules contain commands that the root module needs for its internal processing.</span></span>
-<span data-ttu-id="affda-236">Por padrão, os comandos em módulos aninhados são exportados do estado de sessão do módulo para o estado de sessão do chamador, mas o módulo raiz pode restringir os comandos que ele exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-236">By default, the commands in nested modules are exported from the module's session state into the caller's session state, but the root module can restrict the commands that it exports.</span></span> <span data-ttu-id="affda-237">Por exemplo, usando um `Export-ModuleMember` comando.</span><span class="sxs-lookup"><span data-stu-id="affda-237">For example, by using an `Export-ModuleMember` command.</span></span>
+<span data-ttu-id="7a0be-235">Normalmente, módulos aninhados contêm comandos que o módulo raiz precisa para seu processamento interno.</span><span class="sxs-lookup"><span data-stu-id="7a0be-235">Typically, nested modules contain commands that the root module needs for its internal processing.</span></span>
+<span data-ttu-id="7a0be-236">Por padrão, os comandos em módulos aninhados são exportados do estado de sessão do módulo para o estado de sessão do chamador, mas o módulo raiz pode restringir os comandos que ele exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-236">By default, the commands in nested modules are exported from the module's session state into the caller's session state, but the root module can restrict the commands that it exports.</span></span> <span data-ttu-id="7a0be-237">Por exemplo, usando um `Export-ModuleMember` comando.</span><span class="sxs-lookup"><span data-stu-id="7a0be-237">For example, by using an `Export-ModuleMember` command.</span></span>
 
-<span data-ttu-id="affda-238">Os módulos aninhados no estado de sessão do módulo estão disponíveis para o módulo raiz, mas não são retornados por um `Get-Module` comando no estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="affda-238">Nested modules in the module session state are available to the root module, but they aren't returned by a `Get-Module` command in the caller's session state.</span></span>
+<span data-ttu-id="7a0be-238">Os módulos aninhados no estado de sessão do módulo estão disponíveis para o módulo raiz, mas não são retornados por um `Get-Module` comando no estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="7a0be-238">Nested modules in the module session state are available to the root module, but they aren't returned by a `Get-Module` command in the caller's session state.</span></span>
 
-<span data-ttu-id="affda-239">Os scripts ( `.ps1` ) listados na chave **NestedModules** são executados no estado de sessão do módulo, não no estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="affda-239">Scripts (`.ps1`) that are listed in the **NestedModules** key are run in the module's session state, not in the caller's session state.</span></span> <span data-ttu-id="affda-240">Para executar um script no estado de sessão do chamador, liste o nome do arquivo de script no valor da chave **ScriptsToProcess** do manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-240">To run a script in the caller's session state, list the script file name in the value of the **ScriptsToProcess** key in the manifest.</span></span>
+<span data-ttu-id="7a0be-239">Os scripts ( `.ps1` ) listados na chave **NestedModules** são executados no estado de sessão do módulo, não no estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="7a0be-239">Scripts (`.ps1`) that are listed in the **NestedModules** key are run in the module's session state, not in the caller's session state.</span></span> <span data-ttu-id="7a0be-240">Para executar um script no estado de sessão do chamador, liste o nome do arquivo de script no valor da chave **ScriptsToProcess** do manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-240">To run a script in the caller's session state, list the script file name in the value of the **ScriptsToProcess** key in the manifest.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -689,9 +689,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-241">-PassThru</span><span class="sxs-lookup"><span data-stu-id="affda-241">-PassThru</span></span>
+### <span data-ttu-id="7a0be-241">-PassThru</span><span class="sxs-lookup"><span data-stu-id="7a0be-241">-PassThru</span></span>
 
-<span data-ttu-id="affda-242">Grava o manifesto do módulo resultante no console e cria um `.psd1` arquivo.</span><span class="sxs-lookup"><span data-stu-id="affda-242">Writes the resulting module manifest to the console and creates a `.psd1` file.</span></span> <span data-ttu-id="affda-243">Por padrão, esse cmdlet não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="affda-243">By default, this cmdlet doesn't generate any output.</span></span>
+<span data-ttu-id="7a0be-242">Grava o manifesto do módulo resultante no console e cria um `.psd1` arquivo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-242">Writes the resulting module manifest to the console and creates a `.psd1` file.</span></span> <span data-ttu-id="7a0be-243">Por padrão, esse cmdlet não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="7a0be-243">By default, this cmdlet doesn't generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -705,16 +705,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-244">-Path</span><span class="sxs-lookup"><span data-stu-id="affda-244">-Path</span></span>
+### <span data-ttu-id="7a0be-244">-Path</span><span class="sxs-lookup"><span data-stu-id="7a0be-244">-Path</span></span>
 
-<span data-ttu-id="affda-245">Especifica o caminho e o nome de arquivo do novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-245">Specifies the path and file name of the new module manifest.</span></span> <span data-ttu-id="affda-246">Insira um caminho e um nome de arquivo com uma `.psd1` extensão de nome de arquivo, como `$pshome\Modules\MyModule\MyModule.psd1` .</span><span class="sxs-lookup"><span data-stu-id="affda-246">Enter a path and file name with a `.psd1` file name extension, such as `$pshome\Modules\MyModule\MyModule.psd1`.</span></span> <span data-ttu-id="affda-247">O parâmetro **path** é obrigatório.</span><span class="sxs-lookup"><span data-stu-id="affda-247">The **Path** parameter is required.</span></span>
+<span data-ttu-id="7a0be-245">Especifica o caminho e o nome de arquivo do novo manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-245">Specifies the path and file name of the new module manifest.</span></span> <span data-ttu-id="7a0be-246">Insira um caminho e um nome de arquivo com uma `.psd1` extensão de nome de arquivo, como `$pshome\Modules\MyModule\MyModule.psd1` .</span><span class="sxs-lookup"><span data-stu-id="7a0be-246">Enter a path and file name with a `.psd1` file name extension, such as `$pshome\Modules\MyModule\MyModule.psd1`.</span></span> <span data-ttu-id="7a0be-247">O parâmetro **path** é obrigatório.</span><span class="sxs-lookup"><span data-stu-id="7a0be-247">The **Path** parameter is required.</span></span>
 
-<span data-ttu-id="affda-248">Se você especificar o caminho para um arquivo existente, `New-ModuleManifest` o substituirá o arquivo sem aviso, a menos que o arquivo tenha o atributo somente leitura.</span><span class="sxs-lookup"><span data-stu-id="affda-248">If you specify the path to an existing file, `New-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
+<span data-ttu-id="7a0be-248">Se você especificar o caminho para um arquivo existente, `New-ModuleManifest` o substituirá o arquivo sem aviso, a menos que o arquivo tenha o atributo somente leitura.</span><span class="sxs-lookup"><span data-stu-id="7a0be-248">If you specify the path to an existing file, `New-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
 
-<span data-ttu-id="affda-249">O manifesto deve estar localizado no diretório do módulo e o nome do arquivo de manifesto deve ser o mesmo que o nome do diretório do módulo, mas com uma `.psd1` extensão de nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="affda-249">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` file name extension.</span></span>
+<span data-ttu-id="7a0be-249">O manifesto deve estar localizado no diretório do módulo e o nome do arquivo de manifesto deve ser o mesmo que o nome do diretório do módulo, mas com uma `.psd1` extensão de nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-249">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` file name extension.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="affda-250">Você não pode usar variáveis, como `$PSHOME` ou `$HOME` , em resposta a um prompt para um valor de parâmetro de **caminho** .</span><span class="sxs-lookup"><span data-stu-id="affda-250">You cannot use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="affda-251">Para usar uma variável, inclua o parâmetro **Path** no comando.</span><span class="sxs-lookup"><span data-stu-id="affda-251">To use a variable, include the **Path** parameter in the command.</span></span>
+> <span data-ttu-id="7a0be-250">Você não pode usar variáveis, como `$PSHOME` ou `$HOME` , em resposta a um prompt para um valor de parâmetro de **caminho** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-250">You cannot use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="7a0be-251">Para usar uma variável, inclua o parâmetro **Path** no comando.</span><span class="sxs-lookup"><span data-stu-id="7a0be-251">To use a variable, include the **Path** parameter in the command.</span></span>
 
 ```yaml
 Type: System.String
@@ -728,59 +728,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-252">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="affda-252">-PowerShellHostName</span></span>
+### <span data-ttu-id="7a0be-252">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="7a0be-252">-PowerShellHostName</span></span>
 
-<span data-ttu-id="affda-253">Especifica o nome do programa de host do PowerShell que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="affda-253">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="affda-254">Insira o nome do programa host, como **ISE do Windows PowerShell host** ou **ConsoleHost**.</span><span class="sxs-lookup"><span data-stu-id="affda-254">Enter the name of the host program, such as **Windows PowerShell ISE Host** or **ConsoleHost**.</span></span> <span data-ttu-id="affda-255">Caracteres curinga não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-255">Wildcards aren't permitted.</span></span>
+<span data-ttu-id="7a0be-253">Especifica o nome do programa de host do PowerShell que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7a0be-253">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="7a0be-254">Insira o nome do programa host, como **ISE do Windows PowerShell host** ou **ConsoleHost**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-254">Enter the name of the host program, such as **Windows PowerShell ISE Host** or **ConsoleHost**.</span></span> <span data-ttu-id="7a0be-255">Caracteres curinga não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-255">Wildcards aren't permitted.</span></span>
 
-<span data-ttu-id="affda-256">Para localizar o nome de um programa de host, no programa, digite `$Host.Name` .</span><span class="sxs-lookup"><span data-stu-id="affda-256">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-257">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="affda-257">-PowerShellHostVersion</span></span>
-
-<span data-ttu-id="affda-258">Especifica a versão mínima do programa de host do PowerShell que funciona com o módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-258">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="affda-259">Insira um número de versão, como 1.1.</span><span class="sxs-lookup"><span data-stu-id="affda-259">Enter a version number, such as 1.1.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-260">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="affda-260">-PowerShellVersion</span></span>
-
-<span data-ttu-id="affda-261">Especifica a versão mínima do PowerShell que funciona com este módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-261">Specifies the minimum version of PowerShell that works with this module.</span></span> <span data-ttu-id="affda-262">Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="affda-262">For example, you can enter 1.0, 2.0, or 3.0 as the parameter's value.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-263">-Pré-lançamento</span><span class="sxs-lookup"><span data-stu-id="affda-263">-Prerelease</span></span>
-
-<span data-ttu-id="affda-264">Cadeia de caracteres de pré-lançamento deste módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-264">Prerelease string of this module.</span></span> <span data-ttu-id="affda-265">Adicionar uma cadeia de caracteres de pré-lançamento identifica o módulo como uma versão de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="affda-265">Adding a Prerelease string identifies the module as a prerelease version.</span></span> <span data-ttu-id="affda-266">Quando o módulo é publicado no Galeria do PowerShell, esses dados são usados para identificar pacotes de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="affda-266">When the module is published to the PowerShell Gallery, this data is used to identify prerelease packages.</span></span> <span data-ttu-id="affda-267">Para adquirir pacotes de pré-lançamento da galeria, você deve usar o parâmetro **AllowPrerelease** com os comandos PowerShellGet `Find-Module` , `Install-Module` , `Update-Module` e `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="affda-267">To acquire prerelease packages from the Gallery, you must use the **AllowPrerelease** parameter with the PowerShellGet commands `Find-Module`, `Install-Module`, `Update-Module`, and `Save-Module`.</span></span>
+<span data-ttu-id="7a0be-256">Para localizar o nome de um programa de host, no programa, digite `$Host.Name` .</span><span class="sxs-lookup"><span data-stu-id="7a0be-256">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
 
 ```yaml
 Type: System.String
@@ -794,9 +746,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-268">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="affda-268">-PrivateData</span></span>
+### <span data-ttu-id="7a0be-257">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="7a0be-257">-PowerShellHostVersion</span></span>
 
-<span data-ttu-id="affda-269">Especifica os dados que são passados para o módulo quando ele é importado.</span><span class="sxs-lookup"><span data-stu-id="affda-269">Specifies data that is passed to the module when it's imported.</span></span>
+<span data-ttu-id="7a0be-258">Especifica a versão mínima do programa de host do PowerShell que funciona com o módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-258">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="7a0be-259">Insira um número de versão, como 1.1.</span><span class="sxs-lookup"><span data-stu-id="7a0be-259">Enter a version number, such as 1.1.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-260">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="7a0be-260">-PowerShellVersion</span></span>
+
+<span data-ttu-id="7a0be-261">Especifica a versão mínima do PowerShell que funciona com este módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-261">Specifies the minimum version of PowerShell that works with this module.</span></span> <span data-ttu-id="7a0be-262">Por exemplo, você pode inserir 1,0, 2,0 ou 3,0 como o valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-262">For example, you can enter 1.0, 2.0, or 3.0 as the parameter's value.</span></span> <span data-ttu-id="7a0be-263">Ele deve estar em um formato X. X.</span><span class="sxs-lookup"><span data-stu-id="7a0be-263">It must be in an X.X format.</span></span> <span data-ttu-id="7a0be-264">Por exemplo, se você enviar `5` , o PowerShell gerará um erro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-264">For example, if you submit `5`, PowerShell will throw an error.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-265">-Pré-lançamento</span><span class="sxs-lookup"><span data-stu-id="7a0be-265">-Prerelease</span></span>
+
+<span data-ttu-id="7a0be-266">Cadeia de caracteres de pré-lançamento deste módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-266">Prerelease string of this module.</span></span> <span data-ttu-id="7a0be-267">Adicionar uma cadeia de caracteres de pré-lançamento identifica o módulo como uma versão de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="7a0be-267">Adding a Prerelease string identifies the module as a prerelease version.</span></span> <span data-ttu-id="7a0be-268">Quando o módulo é publicado no Galeria do PowerShell, esses dados são usados para identificar pacotes de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="7a0be-268">When the module is published to the PowerShell Gallery, this data is used to identify prerelease packages.</span></span> <span data-ttu-id="7a0be-269">Para adquirir pacotes de pré-lançamento da galeria, você deve usar o parâmetro **AllowPrerelease** com os comandos PowerShellGet `Find-Module` , `Install-Module` , `Update-Module` e `Save-Module` .</span><span class="sxs-lookup"><span data-stu-id="7a0be-269">To acquire prerelease packages from the Gallery, you must use the **AllowPrerelease** parameter with the PowerShellGet commands `Find-Module`, `Install-Module`, `Update-Module`, and `Save-Module`.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-270">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="7a0be-270">-PrivateData</span></span>
+
+<span data-ttu-id="7a0be-271">Especifica os dados que são passados para o módulo quando ele é importado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-271">Specifies data that is passed to the module when it's imported.</span></span>
 
 ```yaml
 Type: System.Object
@@ -810,9 +810,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-270">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="affda-270">-ProcessorArchitecture</span></span>
+### <span data-ttu-id="7a0be-272">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="7a0be-272">-ProcessorArchitecture</span></span>
 
-<span data-ttu-id="affda-271">Especifica a arquitetura do processador que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="affda-271">Specifies the processor architecture that the module requires.</span></span> <span data-ttu-id="affda-272">Os valores válidos são x86, AMD64, IA64, MSIL e nenhum (desconhecido ou não especificado).</span><span class="sxs-lookup"><span data-stu-id="affda-272">Valid values are x86, AMD64, IA64, MSIL, and None (unknown or unspecified).</span></span>
+<span data-ttu-id="7a0be-273">Especifica a arquitetura do processador que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7a0be-273">Specifies the processor architecture that the module requires.</span></span> <span data-ttu-id="7a0be-274">Os valores válidos são x86, AMD64, IA64, MSIL e nenhum (desconhecido ou não especificado).</span><span class="sxs-lookup"><span data-stu-id="7a0be-274">Valid values are x86, AMD64, IA64, MSIL, and None (unknown or unspecified).</span></span>
 
 ```yaml
 Type: System.Reflection.ProcessorArchitecture
@@ -827,9 +827,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-273">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="affda-273">-ProjectUri</span></span>
+### <span data-ttu-id="7a0be-275">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="7a0be-275">-ProjectUri</span></span>
 
-<span data-ttu-id="affda-274">Especifica a URL de uma página da Web sobre este projeto.</span><span class="sxs-lookup"><span data-stu-id="affda-274">Specifies the URL of a web page about this project.</span></span>
+<span data-ttu-id="7a0be-276">Especifica a URL de uma página da Web sobre este projeto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-276">Specifies the URL of a web page about this project.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -843,9 +843,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-275">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="affda-275">-ReleaseNotes</span></span>
+### <span data-ttu-id="7a0be-277">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="7a0be-277">-ReleaseNotes</span></span>
 
-<span data-ttu-id="affda-276">Especifica notas de versão.</span><span class="sxs-lookup"><span data-stu-id="affda-276">Specifies release notes.</span></span>
+<span data-ttu-id="7a0be-278">Especifica notas de versão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-278">Specifies release notes.</span></span>
 
 ```yaml
 Type: System.String
@@ -859,12 +859,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-277">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="affda-277">-RequiredAssemblies</span></span>
+### <span data-ttu-id="7a0be-279">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="7a0be-279">-RequiredAssemblies</span></span>
 
-<span data-ttu-id="affda-278">Especifica os arquivos de assembly ( `.dll` ) que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="affda-278">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="affda-279">Digite os nomes de arquivo de assembly.</span><span class="sxs-lookup"><span data-stu-id="affda-279">Enter the assembly file names.</span></span>
-<span data-ttu-id="affda-280">O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .</span><span class="sxs-lookup"><span data-stu-id="affda-280">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
+<span data-ttu-id="7a0be-280">Especifica os arquivos de assembly ( `.dll` ) que o módulo requer.</span><span class="sxs-lookup"><span data-stu-id="7a0be-280">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="7a0be-281">Digite os nomes de arquivo de assembly.</span><span class="sxs-lookup"><span data-stu-id="7a0be-281">Enter the assembly file names.</span></span>
+<span data-ttu-id="7a0be-282">O PowerShell carrega os assemblies especificados antes de atualizar os tipos ou formatos, importando módulos aninhados ou importando o arquivo de módulo especificado no valor da chave **RootModule** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-282">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
 
-<span data-ttu-id="affda-281">Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess** , mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules**.</span><span class="sxs-lookup"><span data-stu-id="affda-281">Use this parameter to list all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
+<span data-ttu-id="7a0be-283">Use esse parâmetro para listar todos os assemblies exigidos pelo módulo, incluindo assemblies que devem ser carregados para atualizar quaisquer formatações ou arquivos de tipo listados nas chaves **FormatsToProcess** ou **TypesToProcess**, mesmo se esses assemblies também estiverem listados como módulos binários na chave **NestedModules**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-283">Use this parameter to list all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -878,13 +878,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-282">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="affda-282">-RequiredModules</span></span>
+### <span data-ttu-id="7a0be-284">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="7a0be-284">-RequiredModules</span></span>
 
-<span data-ttu-id="affda-283">Especifica os módulos que devem estar no estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="affda-283">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="affda-284">Se os módulos necessários não estiverem no estado de sessão global, o PowerShell os importará.</span><span class="sxs-lookup"><span data-stu-id="affda-284">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="affda-285">Se os módulos necessários não estiverem disponíveis, o `Import-Module` comando falhará.</span><span class="sxs-lookup"><span data-stu-id="affda-285">If the required modules aren't available, the `Import-Module` command fails.</span></span>
+<span data-ttu-id="7a0be-285">Especifica os módulos que devem estar no estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="7a0be-285">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="7a0be-286">Se os módulos necessários não estiverem no estado de sessão global, o PowerShell os importará.</span><span class="sxs-lookup"><span data-stu-id="7a0be-286">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="7a0be-287">Se os módulos necessários não estiverem disponíveis, o `Import-Module` comando falhará.</span><span class="sxs-lookup"><span data-stu-id="7a0be-287">If the required modules aren't available, the `Import-Module` command fails.</span></span>
 
-<span data-ttu-id="affda-286">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="affda-286">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="affda-287">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="affda-287">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="affda-288">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="affda-288">You can combine strings and hash tables in the parameter value.</span></span>
+<span data-ttu-id="7a0be-288">Insira o nome de cada módulo como uma cadeia de caracteres ou uma tabela de hash com as chaves **ModuleName** e **ModuleVersion**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-288">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="7a0be-289">A tabela de hash também pode ter uma chave **GUID** opcional.</span><span class="sxs-lookup"><span data-stu-id="7a0be-289">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="7a0be-290">Você pode combinar cadeias de caracteres e tabelas de hash no valor do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7a0be-290">You can combine strings and hash tables in the parameter value.</span></span>
 
-<span data-ttu-id="affda-289">No PowerShell 2,0, o `Import-Module` não importa os módulos necessários automaticamente.</span><span class="sxs-lookup"><span data-stu-id="affda-289">In PowerShell 2.0, `Import-Module` doesn't import required modules automatically.</span></span> <span data-ttu-id="affda-290">Ele apenas verifica se os módulos necessários estão no estado da sessão global.</span><span class="sxs-lookup"><span data-stu-id="affda-290">It just verifies that the required modules are in the global session state.</span></span>
+<span data-ttu-id="7a0be-291">No PowerShell 2,0, o `Import-Module` não importa os módulos necessários automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7a0be-291">In PowerShell 2.0, `Import-Module` doesn't import required modules automatically.</span></span> <span data-ttu-id="7a0be-292">Ele apenas verifica se os módulos necessários estão no estado da sessão global.</span><span class="sxs-lookup"><span data-stu-id="7a0be-292">It just verifies that the required modules are in the global session state.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -898,9 +898,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-291">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="affda-291">-RequireLicenseAcceptance</span></span>
+### <span data-ttu-id="7a0be-293">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="7a0be-293">-RequireLicenseAcceptance</span></span>
 
-<span data-ttu-id="affda-292">Sinalizador para indicar se o módulo requer aceitação explícita do usuário para Install, Update, orsave.</span><span class="sxs-lookup"><span data-stu-id="affda-292">Flag to indicate whether the module requires explicit user acceptance for install, update, orsave.</span></span>
+<span data-ttu-id="7a0be-294">Sinalizador para indicar se o módulo requer aceitação explícita do usuário para Install, Update, orsave.</span><span class="sxs-lookup"><span data-stu-id="7a0be-294">Flag to indicate whether the module requires explicit user acceptance for install, update, orsave.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -914,16 +914,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-293">-RootModule</span><span class="sxs-lookup"><span data-stu-id="affda-293">-RootModule</span></span>
+### <span data-ttu-id="7a0be-295">-RootModule</span><span class="sxs-lookup"><span data-stu-id="7a0be-295">-RootModule</span></span>
 
-<span data-ttu-id="affda-294">Especifica o arquivo primário ou raiz do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-294">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="affda-295">Insira o nome de arquivo de um script ( `.ps1` ), um módulo de script ( `.psm1` ), um manifesto de módulo ( `.psd1` ), um assembly ( `.dll` ), um arquivo XML de definição de cmdlet ( `.cdxml` ) ou um fluxo de trabalho ( `.xaml` ).</span><span class="sxs-lookup"><span data-stu-id="affda-295">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest(`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="affda-296">Quando o módulo é importado, os membros que são exportados do arquivo do módulo raiz são importados para o estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="affda-296">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
+<span data-ttu-id="7a0be-296">Especifica o arquivo primário ou raiz do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-296">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="7a0be-297">Insira o nome de arquivo de um script ( `.ps1` ), um módulo de script ( `.psm1` ), um manifesto de módulo ( `.psd1` ), um assembly ( `.dll` ), um arquivo XML de definição de cmdlet ( `.cdxml` ) ou um fluxo de trabalho ( `.xaml` ).</span><span class="sxs-lookup"><span data-stu-id="7a0be-297">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest(`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="7a0be-298">Quando o módulo é importado, os membros que são exportados do arquivo do módulo raiz são importados para o estado de sessão do chamador.</span><span class="sxs-lookup"><span data-stu-id="7a0be-298">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
 
-<span data-ttu-id="affda-297">Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido designado na chave **RootModule** , o manifesto se tornará o arquivo primário do módulo e o módulo se tornará um módulo de manifesto (módulotype = manifesto).</span><span class="sxs-lookup"><span data-stu-id="affda-297">If a module has a manifest file and no root file was designated in the **RootModule** key, the manifest becomes the primary file for the module, and the module becomes a manifest module (ModuleType = Manifest).</span></span>
+<span data-ttu-id="7a0be-299">Se um módulo tiver um arquivo de manifesto e nenhum arquivo raiz tiver sido designado na chave **RootModule** , o manifesto se tornará o arquivo primário do módulo e o módulo se tornará um módulo de manifesto (módulotype = manifesto).</span><span class="sxs-lookup"><span data-stu-id="7a0be-299">If a module has a manifest file and no root file was designated in the **RootModule** key, the manifest becomes the primary file for the module, and the module becomes a manifest module (ModuleType = Manifest).</span></span>
 
-<span data-ttu-id="affda-298">Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-298">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="affda-299">Caso contrário, seus membros não serão exportados.</span><span class="sxs-lookup"><span data-stu-id="affda-299">Otherwise, their members aren't exported.</span></span>
+<span data-ttu-id="7a0be-300">Para exportar membros de `.psm1` ou `.dll` arquivos em um módulo que tenha um manifesto, os nomes desses arquivos devem ser especificados nos valores das chaves **RootModule** ou **NestedModules** no manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-300">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="7a0be-301">Caso contrário, seus membros não serão exportados.</span><span class="sxs-lookup"><span data-stu-id="7a0be-301">Otherwise, their members aren't exported.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="affda-300">No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess**.</span><span class="sxs-lookup"><span data-stu-id="affda-300">In PowerShell 2.0, this key was called **ModuleToProcess**.</span></span> <span data-ttu-id="affda-301">Você pode usar o nome do parâmetro **RootModule** ou seu alias **ModuleToProcess** .</span><span class="sxs-lookup"><span data-stu-id="affda-301">You can use the **RootModule** parameter name or its **ModuleToProcess** alias.</span></span>
+> <span data-ttu-id="7a0be-302">No PowerShell 2,0, essa chave foi chamada de **ModuleToProcess**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-302">In PowerShell 2.0, this key was called **ModuleToProcess**.</span></span> <span data-ttu-id="7a0be-303">Você pode usar o nome do parâmetro **RootModule** ou seu alias **ModuleToProcess** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-303">You can use the **RootModule** parameter name or its **ModuleToProcess** alias.</span></span>
 
 ```yaml
 Type: System.String
@@ -937,28 +937,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-302">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="affda-302">-ScriptsToProcess</span></span>
+### <span data-ttu-id="7a0be-304">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="7a0be-304">-ScriptsToProcess</span></span>
 
-<span data-ttu-id="affda-303">Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="affda-303">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
-<span data-ttu-id="affda-304">Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.</span><span class="sxs-lookup"><span data-stu-id="affda-304">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
+<span data-ttu-id="7a0be-305">Especifica os arquivos de script ( `.ps1` ) que são executados no estado de sessão do chamador quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-305">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
+<span data-ttu-id="7a0be-306">Você pode usar esses scripts para preparar um ambiente, assim como você pode usar um script de logon.</span><span class="sxs-lookup"><span data-stu-id="7a0be-306">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
 
-<span data-ttu-id="affda-305">Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules**.</span><span class="sxs-lookup"><span data-stu-id="affda-305">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="affda-306">-Marcas</span><span class="sxs-lookup"><span data-stu-id="affda-306">-Tags</span></span>
-
-<span data-ttu-id="affda-307">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="affda-307">Specifies an array of tags.</span></span>
+<span data-ttu-id="7a0be-307">Para especificar scripts que são executados no estado de sessão do módulo, use a chave **NestedModules**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-307">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -972,12 +956,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-308">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="affda-308">-TypesToProcess</span></span>
+### <span data-ttu-id="7a0be-308">-Marcas</span><span class="sxs-lookup"><span data-stu-id="7a0be-308">-Tags</span></span>
 
-<span data-ttu-id="affda-309">Especifica os arquivos de tipo ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="affda-309">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
-
-<span data-ttu-id="affda-310">Quando você importa o módulo, o PowerShell executa o `Update-TypeData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="affda-310">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="affda-311">Como os arquivos de tipo não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="affda-311">Because type files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="7a0be-309">Especifica uma matriz de marcas.</span><span class="sxs-lookup"><span data-stu-id="7a0be-309">Specifies an array of tags.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -991,13 +972,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-312">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="affda-312">-VariablesToExport</span></span>
+### <span data-ttu-id="7a0be-310">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="7a0be-310">-TypesToProcess</span></span>
 
-<span data-ttu-id="affda-313">Especifica as variáveis que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="affda-313">Specifies the variables that the module exports.</span></span> <span data-ttu-id="affda-314">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="affda-314">Wildcards are permitted.</span></span>
+<span data-ttu-id="7a0be-311">Especifica os arquivos de tipo ( `.ps1xml` ) que são executados quando o módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-311">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
 
-<span data-ttu-id="affda-315">Você pode usar esse parâmetro para restringir as variáveis exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-315">You can use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="affda-316">Ele pode remover variáveis da lista de variáveis exportadas, mas não pode adicionar variáveis à lista.</span><span class="sxs-lookup"><span data-stu-id="affda-316">It can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
+<span data-ttu-id="7a0be-312">Quando você importa o módulo, o PowerShell executa o `Update-TypeData` cmdlet com os arquivos especificados.</span><span class="sxs-lookup"><span data-stu-id="7a0be-312">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="7a0be-313">Como os arquivos de tipo não estão no escopo, eles afetam todos os Estados de sessão na sessão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-313">Because type files aren't scoped, they affect all session states in the session.</span></span>
 
-<span data-ttu-id="affda-317">Se você omitir esse parâmetro, `New-ModuleManifest` o criará uma chave **VariablesToExport** com um valor de `*` (All), o que significa que todas as variáveis definidas no módulo serão exportadas pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="affda-317">If you omit this parameter, `New-ModuleManifest` creates a **VariablesToExport** key with a value of `*` (all), meaning that all variables defined in the module are exported by the manifest.</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7a0be-314">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="7a0be-314">-VariablesToExport</span></span>
+
+<span data-ttu-id="7a0be-315">Especifica as variáveis que o módulo exporta.</span><span class="sxs-lookup"><span data-stu-id="7a0be-315">Specifies the variables that the module exports.</span></span> <span data-ttu-id="7a0be-316">Caracteres curinga são permitidos.</span><span class="sxs-lookup"><span data-stu-id="7a0be-316">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="7a0be-317">Você pode usar esse parâmetro para restringir as variáveis exportadas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-317">You can use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="7a0be-318">Ele pode remover variáveis da lista de variáveis exportadas, mas não pode adicionar variáveis à lista.</span><span class="sxs-lookup"><span data-stu-id="7a0be-318">It can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
+
+<span data-ttu-id="7a0be-319">Se você omitir esse parâmetro, `New-ModuleManifest` o criará uma chave **VariablesToExport** com um valor de `*` (All), o que significa que todas as variáveis definidas no módulo serão exportadas pelo manifesto.</span><span class="sxs-lookup"><span data-stu-id="7a0be-319">If you omit this parameter, `New-ModuleManifest` creates a **VariablesToExport** key with a value of `*` (all), meaning that all variables defined in the module are exported by the manifest.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -1011,9 +1011,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="affda-318">-Confirm</span><span class="sxs-lookup"><span data-stu-id="affda-318">-Confirm</span></span>
+### <span data-ttu-id="7a0be-320">-Confirm</span><span class="sxs-lookup"><span data-stu-id="7a0be-320">-Confirm</span></span>
 
-<span data-ttu-id="affda-319">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="affda-319">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="7a0be-321">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="7a0be-321">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -1027,9 +1027,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-320">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="affda-320">-WhatIf</span></span>
+### <span data-ttu-id="7a0be-322">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7a0be-322">-WhatIf</span></span>
 
-<span data-ttu-id="affda-321">Mostra o que aconteceria se `New-ModuleManifest` for executado.</span><span class="sxs-lookup"><span data-stu-id="affda-321">Shows what would happen if `New-ModuleManifest` runs.</span></span> <span data-ttu-id="affda-322">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="affda-322">The cmdlet isn't run.</span></span>
+<span data-ttu-id="7a0be-323">Mostra o que aconteceria se `New-ModuleManifest` for executado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-323">Shows what would happen if `New-ModuleManifest` runs.</span></span> <span data-ttu-id="7a0be-324">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-324">The cmdlet isn't run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -1043,9 +1043,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-323">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="affda-323">-ClrVersion</span></span>
+### <span data-ttu-id="7a0be-325">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="7a0be-325">-ClrVersion</span></span>
 
-<span data-ttu-id="affda-324">Especifica a versão mínima do CLR (Common Language Runtime) do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="affda-324">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="7a0be-326">Especifica a versão mínima do CLR (Common Language Runtime) do Microsoft .NET Framework que o módulo exige.</span><span class="sxs-lookup"><span data-stu-id="7a0be-326">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -1059,50 +1059,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="affda-325">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="affda-325">CommonParameters</span></span>
-<span data-ttu-id="affda-326">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="affda-326">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="affda-327">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="affda-327">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="7a0be-327">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7a0be-327">CommonParameters</span></span>
+<span data-ttu-id="7a0be-328">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7a0be-328">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7a0be-329">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7a0be-329">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="affda-328">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="affda-328">INPUTS</span></span>
+## <span data-ttu-id="7a0be-330">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="7a0be-330">INPUTS</span></span>
 
-### <span data-ttu-id="affda-329">Nenhum</span><span class="sxs-lookup"><span data-stu-id="affda-329">None</span></span>
+### <span data-ttu-id="7a0be-331">Nenhum</span><span class="sxs-lookup"><span data-stu-id="7a0be-331">None</span></span>
 
-<span data-ttu-id="affda-330">Não é possível canalizar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="affda-330">You can't pipe input to this cmdlet.</span></span>
+<span data-ttu-id="7a0be-332">Não é possível canalizar a entrada para este cmdlet.</span><span class="sxs-lookup"><span data-stu-id="7a0be-332">You can't pipe input to this cmdlet.</span></span>
 
-## <span data-ttu-id="affda-331">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="affda-331">OUTPUTS</span></span>
+## <span data-ttu-id="7a0be-333">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="7a0be-333">OUTPUTS</span></span>
 
-### <span data-ttu-id="affda-332">Nenhum ou System.String</span><span class="sxs-lookup"><span data-stu-id="affda-332">None or System.String</span></span>
+### <span data-ttu-id="7a0be-334">Nenhum ou System.String</span><span class="sxs-lookup"><span data-stu-id="7a0be-334">None or System.String</span></span>
 
-<span data-ttu-id="affda-333">Por padrão, o `New-ModuleManifest` não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="affda-333">By default, `New-ModuleManifest` doesn't generate any output.</span></span> <span data-ttu-id="affda-334">No entanto, se você usar o parâmetro **PassThru** , ele gerará um objeto **System. String** que representa o manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-334">However, if you use the **PassThru** parameter, it generates a **System.String** object representing the module manifest.</span></span>
+<span data-ttu-id="7a0be-335">Por padrão, o `New-ModuleManifest` não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="7a0be-335">By default, `New-ModuleManifest` doesn't generate any output.</span></span> <span data-ttu-id="7a0be-336">No entanto, se você usar o parâmetro **PassThru** , ele gerará um objeto **System. String** que representa o manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-336">However, if you use the **PassThru** parameter, it generates a **System.String** object representing the module manifest.</span></span>
 
-## <span data-ttu-id="affda-335">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="affda-335">NOTES</span></span>
+## <span data-ttu-id="7a0be-337">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="7a0be-337">NOTES</span></span>
 
-<span data-ttu-id="affda-336">`New-ModuleManifest` a execução em plataformas Windows e não Windows cria arquivos de manifesto de módulo ( `.psd1` ) codificados como **UTF8NoBOM**.</span><span class="sxs-lookup"><span data-stu-id="affda-336">`New-ModuleManifest` running on Windows and non-Windows platforms creates module manifest (`.psd1`) files encoded as **UTF8NoBOM**.</span></span>
+<span data-ttu-id="7a0be-338">`New-ModuleManifest` a execução em plataformas Windows e não Windows cria arquivos de manifesto de módulo ( `.psd1` ) codificados como **UTF8NoBOM**.</span><span class="sxs-lookup"><span data-stu-id="7a0be-338">`New-ModuleManifest` running on Windows and non-Windows platforms creates module manifest (`.psd1`) files encoded as **UTF8NoBOM**.</span></span>
 
-<span data-ttu-id="affda-337">Manifestos de módulo são geralmente opcionais.</span><span class="sxs-lookup"><span data-stu-id="affda-337">Module manifests are usually optional.</span></span> <span data-ttu-id="affda-338">No entanto, um manifesto de módulo é necessária para exportar um assembly instalado no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="affda-338">However, a module manifest is required to export an assembly that is installed in the global assembly cache.</span></span>
+<span data-ttu-id="7a0be-339">Manifestos de módulo são geralmente opcionais.</span><span class="sxs-lookup"><span data-stu-id="7a0be-339">Module manifests are usually optional.</span></span> <span data-ttu-id="7a0be-340">No entanto, um manifesto de módulo é necessária para exportar um assembly instalado no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="7a0be-340">However, a module manifest is required to export an assembly that is installed in the global assembly cache.</span></span>
 
-<span data-ttu-id="affda-339">Para adicionar ou alterar arquivos no `$pshome\Modules` diretório, inicie o PowerShell com a opção **Executar como administrador** .</span><span class="sxs-lookup"><span data-stu-id="affda-339">To add or change files in the `$pshome\Modules` directory, start PowerShell with the **Run as administrator** option.</span></span>
+<span data-ttu-id="7a0be-341">Para adicionar ou alterar arquivos no `$pshome\Modules` diretório, inicie o PowerShell com a opção **Executar como administrador** .</span><span class="sxs-lookup"><span data-stu-id="7a0be-341">To add or change files in the `$pshome\Modules` directory, start PowerShell with the **Run as administrator** option.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="affda-340">A partir do PowerShell 6,2, o PowerShell tenta carregar todos os arquivos DLL listados na propriedade **FileList** do manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-340">Beginning in PowerShell 6.2, PowerShell attempts to load all the DLL files listed in **FileList** property of the module manifest.</span></span> <span data-ttu-id="affda-341">As DLLs nativas estão no **FileList** falha ao carregar no processo e o erro é ignorado.</span><span class="sxs-lookup"><span data-stu-id="affda-341">Native DLLs is in the **FileList** fail to load in the process and the error is ignored.</span></span> <span data-ttu-id="affda-342">Todas as DLLs gerenciadas são carregadas no processo.</span><span class="sxs-lookup"><span data-stu-id="affda-342">All managed DLLs are loaded in the process.</span></span> <span data-ttu-id="affda-343">Esse comportamento foi removido no PowerShell 7,1.</span><span class="sxs-lookup"><span data-stu-id="affda-343">This behavior was removed in PowerShell 7.1.</span></span>
+> <span data-ttu-id="7a0be-342">A partir do PowerShell 6,2, o PowerShell tenta carregar todos os arquivos DLL listados na propriedade **FileList** do manifesto do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-342">Beginning in PowerShell 6.2, PowerShell attempts to load all the DLL files listed in **FileList** property of the module manifest.</span></span> <span data-ttu-id="7a0be-343">As DLLs nativas estão no **FileList** falha ao carregar no processo e o erro é ignorado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-343">Native DLLs is in the **FileList** fail to load in the process and the error is ignored.</span></span> <span data-ttu-id="7a0be-344">Todas as DLLs gerenciadas são carregadas no processo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-344">All managed DLLs are loaded in the process.</span></span> <span data-ttu-id="7a0be-345">Esse comportamento foi removido no PowerShell 7,1.</span><span class="sxs-lookup"><span data-stu-id="7a0be-345">This behavior was removed in PowerShell 7.1.</span></span>
 
-<span data-ttu-id="affda-344">No PowerShell 2,0, muitos parâmetros de `New-ModuleManifest` eram obrigatórios, embora não sejam necessários em um manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-344">In PowerShell 2.0, many parameters of `New-ModuleManifest` were mandatory, even though they weren't required in a module manifest.</span></span> <span data-ttu-id="affda-345">A partir do PowerShell 3,0, somente o parâmetro **path** é obrigatório.</span><span class="sxs-lookup"><span data-stu-id="affda-345">Beginning in PowerShell 3.0, only the **Path** parameter is mandatory.</span></span>
+<span data-ttu-id="7a0be-346">No PowerShell 2,0, muitos parâmetros de `New-ModuleManifest` eram obrigatórios, embora não sejam necessários em um manifesto de módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-346">In PowerShell 2.0, many parameters of `New-ModuleManifest` were mandatory, even though they weren't required in a module manifest.</span></span> <span data-ttu-id="7a0be-347">A partir do PowerShell 3,0, somente o parâmetro **path** é obrigatório.</span><span class="sxs-lookup"><span data-stu-id="7a0be-347">Beginning in PowerShell 3.0, only the **Path** parameter is mandatory.</span></span>
 
-<span data-ttu-id="affda-346">Uma sessão é uma instância do ambiente de execução do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="affda-346">A session is an instance of the PowerShell execution environment.</span></span> <span data-ttu-id="affda-347">Uma sessão pode ter um ou mais estados de sessão.</span><span class="sxs-lookup"><span data-stu-id="affda-347">A session can have one or more session states.</span></span> <span data-ttu-id="affda-348">Por padrão, uma sessão tem apenas um estado de sessão global, mas cada módulo importado tem seu próprio estado de sessão.</span><span class="sxs-lookup"><span data-stu-id="affda-348">By default, a session has only a global session state, but each imported module has its own session state.</span></span> <span data-ttu-id="affda-349">Estados de sessão permitem que os comandos em um módulo sejam executados sem afetar o estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="affda-349">Session states allow the commands in a module to run without affecting the global session state.</span></span>
+<span data-ttu-id="7a0be-348">Uma sessão é uma instância do ambiente de execução do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7a0be-348">A session is an instance of the PowerShell execution environment.</span></span> <span data-ttu-id="7a0be-349">Uma sessão pode ter um ou mais estados de sessão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-349">A session can have one or more session states.</span></span> <span data-ttu-id="7a0be-350">Por padrão, uma sessão tem apenas um estado de sessão global, mas cada módulo importado tem seu próprio estado de sessão.</span><span class="sxs-lookup"><span data-stu-id="7a0be-350">By default, a session has only a global session state, but each imported module has its own session state.</span></span> <span data-ttu-id="7a0be-351">Estados de sessão permitem que os comandos em um módulo sejam executados sem afetar o estado de sessão global.</span><span class="sxs-lookup"><span data-stu-id="7a0be-351">Session states allow the commands in a module to run without affecting the global session state.</span></span>
 
-<span data-ttu-id="affda-350">O estado de sessão do chamador é o estado da sessão no qual um módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="affda-350">The caller's session state is the session state into which a module is imported.</span></span> <span data-ttu-id="affda-351">Normalmente, ele se refere ao estado de sessão global, mas quando um módulo importa módulos aninhados, o chamador é o módulo e o estado de sessão do chamador é o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="affda-351">Typically, it refers to the global session state, but when a module imports nested modules, the caller is the module and the caller's session state is the module's session state.</span></span>
+<span data-ttu-id="7a0be-352">O estado de sessão do chamador é o estado da sessão no qual um módulo é importado.</span><span class="sxs-lookup"><span data-stu-id="7a0be-352">The caller's session state is the session state into which a module is imported.</span></span> <span data-ttu-id="7a0be-353">Normalmente, ele se refere ao estado de sessão global, mas quando um módulo importa módulos aninhados, o chamador é o módulo e o estado de sessão do chamador é o estado de sessão do módulo.</span><span class="sxs-lookup"><span data-stu-id="7a0be-353">Typically, it refers to the global session state, but when a module imports nested modules, the caller is the module and the caller's session state is the module's session state.</span></span>
 
-## <span data-ttu-id="affda-352">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="affda-352">RELATED LINKS</span></span>
+## <span data-ttu-id="7a0be-354">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="7a0be-354">RELATED LINKS</span></span>
 
-[<span data-ttu-id="affda-353">Export-ModuleMember</span><span class="sxs-lookup"><span data-stu-id="affda-353">Export-ModuleMember</span></span>](Export-ModuleMember.md)
+[<span data-ttu-id="7a0be-355">Export-ModuleMember</span><span class="sxs-lookup"><span data-stu-id="7a0be-355">Export-ModuleMember</span></span>](Export-ModuleMember.md)
 
-[<span data-ttu-id="affda-354">Get-Module</span><span class="sxs-lookup"><span data-stu-id="affda-354">Get-Module</span></span>](Get-Module.md)
+[<span data-ttu-id="7a0be-356">Get-Module</span><span class="sxs-lookup"><span data-stu-id="7a0be-356">Get-Module</span></span>](Get-Module.md)
 
-[<span data-ttu-id="affda-355">Import-Module</span><span class="sxs-lookup"><span data-stu-id="affda-355">Import-Module</span></span>](Import-Module.md)
+[<span data-ttu-id="7a0be-357">Import-Module</span><span class="sxs-lookup"><span data-stu-id="7a0be-357">Import-Module</span></span>](Import-Module.md)
 
-[<span data-ttu-id="affda-356">New-Module</span><span class="sxs-lookup"><span data-stu-id="affda-356">New-Module</span></span>](New-Module.md)
+[<span data-ttu-id="7a0be-358">New-Module</span><span class="sxs-lookup"><span data-stu-id="7a0be-358">New-Module</span></span>](New-Module.md)
 
-[<span data-ttu-id="affda-357">Remove-Module</span><span class="sxs-lookup"><span data-stu-id="affda-357">Remove-Module</span></span>](Remove-Module.md)
+[<span data-ttu-id="7a0be-359">Remove-Module</span><span class="sxs-lookup"><span data-stu-id="7a0be-359">Remove-Module</span></span>](Remove-Module.md)
 
-[<span data-ttu-id="affda-358">Test-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="affda-358">Test-ModuleManifest</span></span>](Test-ModuleManifest.md)
+[<span data-ttu-id="7a0be-360">Test-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="7a0be-360">Test-ModuleManifest</span></span>](Test-ModuleManifest.md)
 
-[<span data-ttu-id="affda-359">about_Modules</span><span class="sxs-lookup"><span data-stu-id="affda-359">about_Modules</span></span>](./About/about_Modules.md)
+[<span data-ttu-id="7a0be-361">about_Modules</span><span class="sxs-lookup"><span data-stu-id="7a0be-361">about_Modules</span></span>](./About/about_Modules.md)
