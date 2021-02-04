@@ -1,85 +1,93 @@
 ---
 description: Permite que você indique quais namespaces são usados na sessão.
 Locale: en-US
-ms.date: 11/18/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: 798b7bc9759c7c88eb612d0eb47bdb92c015cc18
-ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.openlocfilehash: 2ada269fd0ce6b34a5f7faccfddf47a799301eb9
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94892014"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619934"
 ---
-# <a name="about-using"></a><span data-ttu-id="13c40-103">Sobre como usar o</span><span class="sxs-lookup"><span data-stu-id="13c40-103">About Using</span></span>
+# <a name="about-using"></a><span data-ttu-id="29b1c-103">Sobre como usar o</span><span class="sxs-lookup"><span data-stu-id="29b1c-103">About Using</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="13c40-104">DESCRIÇÃO BREVE</span><span class="sxs-lookup"><span data-stu-id="13c40-104">SHORT DESCRIPTION</span></span>
-<span data-ttu-id="13c40-105">Permite que você indique quais namespaces são usados na sessão.</span><span class="sxs-lookup"><span data-stu-id="13c40-105">Allows you to indicate which namespaces are used in the session.</span></span>
+## <a name="short-description"></a><span data-ttu-id="29b1c-104">DESCRIÇÃO BREVE</span><span class="sxs-lookup"><span data-stu-id="29b1c-104">SHORT DESCRIPTION</span></span>
+<span data-ttu-id="29b1c-105">Permite que você indique quais namespaces são usados na sessão.</span><span class="sxs-lookup"><span data-stu-id="29b1c-105">Allows you to indicate which namespaces are used in the session.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="13c40-106">DESCRIÇÃO LONGA</span><span class="sxs-lookup"><span data-stu-id="13c40-106">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="29b1c-106">DESCRIÇÃO LONGA</span><span class="sxs-lookup"><span data-stu-id="29b1c-106">LONG DESCRIPTION</span></span>
 
-<span data-ttu-id="13c40-107">A `using` instrução permite que você especifique quais namespaces serão usados na sessão.</span><span class="sxs-lookup"><span data-stu-id="13c40-107">The `using` statement allows you to specify which namespaces are used in the session.</span></span> <span data-ttu-id="13c40-108">A adição de namespaces simplifica o uso de classes e membros do .NET e permite que você importe classes de módulos de script e assemblies.</span><span class="sxs-lookup"><span data-stu-id="13c40-108">Adding namespaces simplifies usage of .NET classes and member and allows you to import classes from script modules and assemblies.</span></span>
+<span data-ttu-id="29b1c-107">A `using` instrução permite que você especifique quais namespaces serão usados na sessão.</span><span class="sxs-lookup"><span data-stu-id="29b1c-107">The `using` statement allows you to specify which namespaces are used in the session.</span></span> <span data-ttu-id="29b1c-108">A adição de namespaces simplifica o uso de classes e membros do .NET e permite que você importe classes de módulos de script e assemblies.</span><span class="sxs-lookup"><span data-stu-id="29b1c-108">Adding namespaces simplifies usage of .NET classes and member and allows you to import classes from script modules and assemblies.</span></span>
 
-<span data-ttu-id="13c40-109">As `using` instruções devem vir antes de qualquer outra instrução em um script.</span><span class="sxs-lookup"><span data-stu-id="13c40-109">The `using` statements must come before any other statements in a script.</span></span>
+<span data-ttu-id="29b1c-109">As `using` instruções devem vir antes de qualquer outra instrução em um script ou módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-109">The `using` statements must come before any other statements in a script or module.</span></span> <span data-ttu-id="29b1c-110">Nenhuma instrução sem marca de comentário pode precedê-la, incluindo parâmetros.</span><span class="sxs-lookup"><span data-stu-id="29b1c-110">No uncommented statement can precede it, including parameters.</span></span>
 
-<span data-ttu-id="13c40-110">A `using` instrução não deve ser confundida com o `using:` modificador de escopo para variáveis.</span><span class="sxs-lookup"><span data-stu-id="13c40-110">The `using` statement should not be confused with the `using:` scope modifier for variables.</span></span> <span data-ttu-id="13c40-111">Para obter mais informações, consulte [about_Remote_Variables](about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="13c40-111">For more information, see [about_Remote_Variables](about_Remote_Variables.md).</span></span>
+<span data-ttu-id="29b1c-111">A `using` instrução não deve conter nenhuma variável.</span><span class="sxs-lookup"><span data-stu-id="29b1c-111">The `using` statement must not contain any variables.</span></span>
 
-## <a name="namespace-syntax"></a><span data-ttu-id="13c40-112">Sintaxe do namespace</span><span class="sxs-lookup"><span data-stu-id="13c40-112">Namespace syntax</span></span>
+<span data-ttu-id="29b1c-112">A `using` instrução não deve ser confundida com o `using:` modificador de escopo para variáveis.</span><span class="sxs-lookup"><span data-stu-id="29b1c-112">The `using` statement should not be confused with the `using:` scope modifier for variables.</span></span> <span data-ttu-id="29b1c-113">Para obter mais informações, consulte [about_Remote_Variables](about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="29b1c-113">For more information, see [about_Remote_Variables](about_Remote_Variables.md).</span></span>
 
-<span data-ttu-id="13c40-113">Para especificar os namespaces do .NET dos quais os tipos são resolvidos:</span><span class="sxs-lookup"><span data-stu-id="13c40-113">To specify .NET namespaces from which to resolve types:</span></span>
+## <a name="namespace-syntax"></a><span data-ttu-id="29b1c-114">Sintaxe do namespace</span><span class="sxs-lookup"><span data-stu-id="29b1c-114">Namespace syntax</span></span>
+
+<span data-ttu-id="29b1c-115">Para especificar os namespaces do .NET dos quais os tipos são resolvidos:</span><span class="sxs-lookup"><span data-stu-id="29b1c-115">To specify .NET namespaces from which to resolve types:</span></span>
 
 ```
 using namespace <.NET-namespace>
 ```
 
-<span data-ttu-id="13c40-114">A especificação de um namespace torna mais fácil a referência de tipos por seus nomes curtos.</span><span class="sxs-lookup"><span data-stu-id="13c40-114">Specifying a namespace makes it easier to reference types by their short names.</span></span>
+<span data-ttu-id="29b1c-116">A especificação de um namespace torna mais fácil a referência de tipos por seus nomes curtos.</span><span class="sxs-lookup"><span data-stu-id="29b1c-116">Specifying a namespace makes it easier to reference types by their short names.</span></span>
 
-## <a name="module-syntax"></a><span data-ttu-id="13c40-115">Sintaxe do módulo</span><span class="sxs-lookup"><span data-stu-id="13c40-115">Module syntax</span></span>
+## <a name="module-syntax"></a><span data-ttu-id="29b1c-117">Sintaxe do módulo</span><span class="sxs-lookup"><span data-stu-id="29b1c-117">Module syntax</span></span>
 
-<span data-ttu-id="13c40-116">Para carregar classes de um módulo do PowerShell:</span><span class="sxs-lookup"><span data-stu-id="13c40-116">To load classes from a PowerShell module:</span></span>
+<span data-ttu-id="29b1c-118">Para carregar classes de um módulo do PowerShell:</span><span class="sxs-lookup"><span data-stu-id="29b1c-118">To load classes from a PowerShell module:</span></span>
 
 ```
 using module <module-name>
 ```
 
-<span data-ttu-id="13c40-117">O valor de `<module-name>` pode ser um nome de módulo, uma especificação de módulo completa ou um caminho para um arquivo de módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-117">The value of `<module-name>` can be a module name, a full module specification, or a path to a module file.</span></span>
+<span data-ttu-id="29b1c-119">O valor de `<module-name>` pode ser um nome de módulo, uma especificação de módulo completa ou um caminho para um arquivo de módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-119">The value of `<module-name>` can be a module name, a full module specification, or a path to a module file.</span></span>
 
-<span data-ttu-id="13c40-118">Quando `<module-name>` é um caminho, o caminho pode ser totalmente qualificado ou relativo.</span><span class="sxs-lookup"><span data-stu-id="13c40-118">When `<module-name>` is a path, the path can be fully qualified or relative.</span></span> <span data-ttu-id="13c40-119">Um caminho relativo é resolvido em relação ao script que contém a instrução using.</span><span class="sxs-lookup"><span data-stu-id="13c40-119">A relative path is resolved relative to the script that contains the using statement.</span></span>
+<span data-ttu-id="29b1c-120">Quando `<module-name>` é um caminho, o caminho pode ser totalmente qualificado ou relativo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-120">When `<module-name>` is a path, the path can be fully qualified or relative.</span></span> <span data-ttu-id="29b1c-121">Um caminho relativo é resolvido em relação ao script que contém a instrução using.</span><span class="sxs-lookup"><span data-stu-id="29b1c-121">A relative path is resolved relative to the script that contains the using statement.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="13c40-120">Quando o caminho relativo contém uma barra ( `/` ), o PowerShell trata o caminho como relativo ao local atual, em vez de ser relativo ao local do script.</span><span class="sxs-lookup"><span data-stu-id="13c40-120">When the relative path contains a forward slash (`/`), PowerShell treats the path as relative to the current location rather than relative to the script location.</span></span> <span data-ttu-id="13c40-121">Esse bug é corrigido no PowerShell 7,1.</span><span class="sxs-lookup"><span data-stu-id="13c40-121">This bug is fixed in PowerShell 7.1.</span></span>
+> <span data-ttu-id="29b1c-122">Quando o caminho relativo contém uma barra ( `/` ), o PowerShell trata o caminho como relativo ao local atual, em vez de ser relativo ao local do script.</span><span class="sxs-lookup"><span data-stu-id="29b1c-122">When the relative path contains a forward slash (`/`), PowerShell treats the path as relative to the current location rather than relative to the script location.</span></span> <span data-ttu-id="29b1c-123">Esse bug é corrigido no PowerShell 7,1.</span><span class="sxs-lookup"><span data-stu-id="29b1c-123">This bug is fixed in PowerShell 7.1.</span></span>
 
-<span data-ttu-id="13c40-122">Quando `<module-name>` é uma especificação de nome ou módulo, o PowerShell pesquisa o **PSModulePath** para o módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="13c40-122">When `<module-name>` is a name or module specification, PowerShell searches the **PSModulePath** for the specified module.</span></span>
+<span data-ttu-id="29b1c-124">Quando `<module-name>` é uma especificação de nome ou módulo, o PowerShell pesquisa o **PSModulePath** para o módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="29b1c-124">When `<module-name>` is a name or module specification, PowerShell searches the **PSModulePath** for the specified module.</span></span>
 
-<span data-ttu-id="13c40-123">Uma especificação de módulo é uma tabela de hash que tem as seguintes chaves.</span><span class="sxs-lookup"><span data-stu-id="13c40-123">A module specification is a hash table that has the following keys.</span></span>
+<span data-ttu-id="29b1c-125">Uma especificação de módulo é uma tabela de hash que tem as seguintes chaves.</span><span class="sxs-lookup"><span data-stu-id="29b1c-125">A module specification is a hash table that has the following keys.</span></span>
 
-- <span data-ttu-id="13c40-124">`ModuleName` - **Necessário** Especifica o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-124">`ModuleName` - **Required** Specifies the module name.</span></span>
-- <span data-ttu-id="13c40-125">`GUID` - **Opcional** Especifica o GUID do módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-125">`GUID` - **Optional** Specifies the GUID of the module.</span></span>
-- <span data-ttu-id="13c40-126">Também é **necessário** especificar uma das três chaves abaixo.</span><span class="sxs-lookup"><span data-stu-id="13c40-126">It's also **Required** to specify one of the three below keys.</span></span> <span data-ttu-id="13c40-127">Essas chaves não podem ser usadas juntas.</span><span class="sxs-lookup"><span data-stu-id="13c40-127">These keys can't be used together.</span></span>
-  - <span data-ttu-id="13c40-128">`ModuleVersion` -Especifica uma versão mínima aceitável do módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-128">`ModuleVersion` - Specifies a minimum acceptable version of the module.</span></span>
-  - <span data-ttu-id="13c40-129">`RequiredVersion` -Especifica uma versão exata e necessária do módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-129">`RequiredVersion` - Specifies an exact, required version of the module.</span></span>
-  - <span data-ttu-id="13c40-130">`MaximumVersion` -Especifica a versão máxima aceitável do módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-130">`MaximumVersion` - Specifies the maximum acceptable version of the module.</span></span>
+- <span data-ttu-id="29b1c-126">`ModuleName` - **Necessário** Especifica o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-126">`ModuleName` - **Required** Specifies the module name.</span></span>
+- <span data-ttu-id="29b1c-127">`GUID` - **Opcional** Especifica o GUID do módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-127">`GUID` - **Optional** Specifies the GUID of the module.</span></span>
+- <span data-ttu-id="29b1c-128">Também é **necessário** especificar uma das três chaves abaixo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-128">It's also **Required** to specify one of the three below keys.</span></span> <span data-ttu-id="29b1c-129">Essas chaves não podem ser usadas juntas.</span><span class="sxs-lookup"><span data-stu-id="29b1c-129">These keys can't be used together.</span></span>
+  - <span data-ttu-id="29b1c-130">`ModuleVersion` -Especifica uma versão mínima aceitável do módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-130">`ModuleVersion` - Specifies a minimum acceptable version of the module.</span></span>
+  - <span data-ttu-id="29b1c-131">`RequiredVersion` -Especifica uma versão exata e necessária do módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-131">`RequiredVersion` - Specifies an exact, required version of the module.</span></span>
+  - <span data-ttu-id="29b1c-132">`MaximumVersion` -Especifica a versão máxima aceitável do módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-132">`MaximumVersion` - Specifies the maximum acceptable version of the module.</span></span>
 
-## <a name="assembly-syntax"></a><span data-ttu-id="13c40-131">Sintaxe do assembly</span><span class="sxs-lookup"><span data-stu-id="13c40-131">Assembly syntax</span></span>
+<span data-ttu-id="29b1c-133">A `using module` instrução importa classes do módulo raiz ( `ModuleToProcess` ) de um módulo de script ou de um módulo binário.</span><span class="sxs-lookup"><span data-stu-id="29b1c-133">The `using module` statement imports classes from the root module (`ModuleToProcess`) of a script module or binary module.</span></span> <span data-ttu-id="29b1c-134">Ele não importa consistentemente classes definidas em módulos aninhados ou classes definidas em scripts que são originados no módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-134">It does not consistently import classes defined in nested modules or classes defined in scripts that are dot-sourced into the module.</span></span> <span data-ttu-id="29b1c-135">As classes que você deseja disponibilizar para usuários fora do módulo devem ser definidas no módulo raiz.</span><span class="sxs-lookup"><span data-stu-id="29b1c-135">Classes that you want to be available to users outside of the module should be defined in the root module.</span></span>
 
-<span data-ttu-id="13c40-132">Para pré-carregar tipos de um assembly .NET:</span><span class="sxs-lookup"><span data-stu-id="13c40-132">To preload types from a .NET assembly:</span></span>
+<span data-ttu-id="29b1c-136">Durante o desenvolvimento de um módulo de script, é comum fazer alterações no código e, em seguida, carregar a nova versão do módulo usando `Import-Module` com o parâmetro **Force** .</span><span class="sxs-lookup"><span data-stu-id="29b1c-136">During development of a script module, it is common to make changes to the code then load the new version of the module using `Import-Module` with the **Force** parameter.</span></span> <span data-ttu-id="29b1c-137">Isso funciona apenas para alterações nas funções no módulo raiz.</span><span class="sxs-lookup"><span data-stu-id="29b1c-137">This works for changes to functions in the root module only.</span></span> <span data-ttu-id="29b1c-138">`Import-Module` não recarrega nenhum módulo aninhado.</span><span class="sxs-lookup"><span data-stu-id="29b1c-138">`Import-Module` does not reload any nested modules.</span></span> <span data-ttu-id="29b1c-139">Além disso, não há como carregar nenhuma classe atualizada.</span><span class="sxs-lookup"><span data-stu-id="29b1c-139">Also, there is no way to load any updated classes.</span></span>
+
+<span data-ttu-id="29b1c-140">Para garantir que você esteja executando a versão mais recente, você deve descarregar o módulo usando o `Remove-Module` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="29b1c-140">To ensure that you are running the latest version, you must unload the module using the `Remove-Module` cmdlet.</span></span> <span data-ttu-id="29b1c-141">`Remove-Module` Remove o módulo raiz, todos os módulos aninhados e todas as classes definidas nos módulos.</span><span class="sxs-lookup"><span data-stu-id="29b1c-141">`Remove-Module` removes the root module, all nested modules, and any classes defined in the modules.</span></span> <span data-ttu-id="29b1c-142">Em seguida, você pode recarregar o módulo e as classes usando `Import-Module` e a `using module` instrução.</span><span class="sxs-lookup"><span data-stu-id="29b1c-142">Then you can reload the module and the classes using `Import-Module` and the `using module` statement.</span></span>
+
+## <a name="assembly-syntax"></a><span data-ttu-id="29b1c-143">Sintaxe do assembly</span><span class="sxs-lookup"><span data-stu-id="29b1c-143">Assembly syntax</span></span>
+
+<span data-ttu-id="29b1c-144">Para pré-carregar tipos de um assembly .NET:</span><span class="sxs-lookup"><span data-stu-id="29b1c-144">To preload types from a .NET assembly:</span></span>
 
 ```
 using assembly <.NET-assembly-path>
 ```
 
-<span data-ttu-id="13c40-133">Carregar um assembly sobrecarrega os tipos .NET desse assembly em um script no momento da análise.</span><span class="sxs-lookup"><span data-stu-id="13c40-133">Loading an assembly preloads .NET types from that assembly into a script at parse time.</span></span> <span data-ttu-id="13c40-134">Isso permite que você crie novas classes do PowerShell que usam tipos do assembly pré-carregado.</span><span class="sxs-lookup"><span data-stu-id="13c40-134">This allows you to create new PowerShell classes that use types from the preloaded assembly.</span></span>
+<span data-ttu-id="29b1c-145">Carregar um assembly sobrecarrega os tipos .NET desse assembly em um script no momento da análise.</span><span class="sxs-lookup"><span data-stu-id="29b1c-145">Loading an assembly preloads .NET types from that assembly into a script at parse time.</span></span> <span data-ttu-id="29b1c-146">Isso permite que você crie novas classes do PowerShell que usam tipos do assembly pré-carregado.</span><span class="sxs-lookup"><span data-stu-id="29b1c-146">This allows you to create new PowerShell classes that use types from the preloaded assembly.</span></span>
 
-<span data-ttu-id="13c40-135">Se você não estiver criando novas classes do PowerShell, use o `Add-Type` cmdlet em vez disso.</span><span class="sxs-lookup"><span data-stu-id="13c40-135">If you are not creating new PowerShell classes, use the `Add-Type` cmdlet instead.</span></span> <span data-ttu-id="13c40-136">Para obter mais informações, consulte [Adicionar tipo](xref:Microsoft.PowerShell.Utility.Add-Type).</span><span class="sxs-lookup"><span data-stu-id="13c40-136">For more information, see [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span></span>
+<span data-ttu-id="29b1c-147">Se você não estiver criando novas classes do PowerShell, use o `Add-Type` cmdlet em vez disso.</span><span class="sxs-lookup"><span data-stu-id="29b1c-147">If you are not creating new PowerShell classes, use the `Add-Type` cmdlet instead.</span></span> <span data-ttu-id="29b1c-148">Para obter mais informações, consulte [Adicionar tipo](xref:Microsoft.PowerShell.Utility.Add-Type).</span><span class="sxs-lookup"><span data-stu-id="29b1c-148">For more information, see [Add-Type](xref:Microsoft.PowerShell.Utility.Add-Type).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="13c40-137">Exemplos</span><span class="sxs-lookup"><span data-stu-id="13c40-137">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="29b1c-149">Exemplos</span><span class="sxs-lookup"><span data-stu-id="29b1c-149">Examples</span></span>
 
-### <a name="example-1---add-namespaces-for-typename-resolution"></a><span data-ttu-id="13c40-138">Exemplo 1-adicionar namespaces para resolução de TypeName</span><span class="sxs-lookup"><span data-stu-id="13c40-138">Example 1 - Add namespaces for typename resolution</span></span>
+### <a name="example-1---add-namespaces-for-typename-resolution"></a><span data-ttu-id="29b1c-150">Exemplo 1-adicionar namespaces para resolução de TypeName</span><span class="sxs-lookup"><span data-stu-id="29b1c-150">Example 1 - Add namespaces for typename resolution</span></span>
 
-<span data-ttu-id="13c40-139">O script a seguir obtém o hash criptográfico para a cadeia de caracteres "Olá, Mundo".</span><span class="sxs-lookup"><span data-stu-id="13c40-139">The following script gets the cryptographic hash for the "Hello World" string.</span></span>
+<span data-ttu-id="29b1c-151">O script a seguir obtém o hash criptográfico para a cadeia de caracteres "Olá, Mundo".</span><span class="sxs-lookup"><span data-stu-id="29b1c-151">The following script gets the cryptographic hash for the "Hello World" string.</span></span>
 
-<span data-ttu-id="13c40-140">Observe como o `using namespace System.Text` e o `using namespace System.IO` simplificam as referências para `[UnicodeEncoding]` no `System.Text` e `[Stream]` `[MemoryStream]` no `System.IO` .</span><span class="sxs-lookup"><span data-stu-id="13c40-140">Note how the `using namespace System.Text` and `using namespace System.IO` simplify the references to `[UnicodeEncoding]` in `System.Text` and `[Stream]` and to `[MemoryStream]` in `System.IO`.</span></span>
+<span data-ttu-id="29b1c-152">Observe como o `using namespace System.Text` e o `using namespace System.IO` simplificam as referências para `[UnicodeEncoding]` no `System.Text` e `[Stream]` `[MemoryStream]` no `System.IO` .</span><span class="sxs-lookup"><span data-stu-id="29b1c-152">Note how the `using namespace System.Text` and `using namespace System.IO` simplify the references to `[UnicodeEncoding]` in `System.Text` and `[Stream]` and to `[MemoryStream]` in `System.IO`.</span></span>
 
 ```powershell
 using namespace System.Text
@@ -97,14 +105,14 @@ $hashfromstream = Get-FileHash -InputStream $memorystream `
 $hashfromstream.Hash.ToString()
 ```
 
-### <a name="example-2---load-classes-from-a-script-module"></a><span data-ttu-id="13c40-141">Exemplo 2 – carregar classes de um módulo de script</span><span class="sxs-lookup"><span data-stu-id="13c40-141">Example 2 - Load classes from a script module</span></span>
+### <a name="example-2---load-classes-from-a-script-module"></a><span data-ttu-id="29b1c-153">Exemplo 2 – carregar classes de um módulo de script</span><span class="sxs-lookup"><span data-stu-id="29b1c-153">Example 2 - Load classes from a script module</span></span>
 
-<span data-ttu-id="13c40-142">Neste exemplo, temos um módulo de script do PowerShell chamado **CardGames** que define as seguintes classes:</span><span class="sxs-lookup"><span data-stu-id="13c40-142">In this example, we have a PowerShell script module named **CardGames** that defines the following classes:</span></span>
+<span data-ttu-id="29b1c-154">Neste exemplo, temos um módulo de script do PowerShell chamado **CardGames** que define as seguintes classes:</span><span class="sxs-lookup"><span data-stu-id="29b1c-154">In this example, we have a PowerShell script module named **CardGames** that defines the following classes:</span></span>
 
-- <span data-ttu-id="13c40-143">**CardGames. deck**</span><span class="sxs-lookup"><span data-stu-id="13c40-143">**CardGames.Deck**</span></span>
-- <span data-ttu-id="13c40-144">**CardGames. Card**</span><span class="sxs-lookup"><span data-stu-id="13c40-144">**CardGames.Card**</span></span>
+- <span data-ttu-id="29b1c-155">**CardGames. deck**</span><span class="sxs-lookup"><span data-stu-id="29b1c-155">**CardGames.Deck**</span></span>
+- <span data-ttu-id="29b1c-156">**CardGames. Card**</span><span class="sxs-lookup"><span data-stu-id="29b1c-156">**CardGames.Card**</span></span>
 
-<span data-ttu-id="13c40-145">`Import-Module` e a `#requires` instrução só importa as funções de módulo, aliases e variáveis, conforme definido pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="13c40-145">`Import-Module` and the `#requires` statement only import the module functions, aliases, and variables, as defined by the module.</span></span> <span data-ttu-id="13c40-146">As classes não são importadas.</span><span class="sxs-lookup"><span data-stu-id="13c40-146">Classes are not imported.</span></span> <span data-ttu-id="13c40-147">O `using module` comando importa o módulo e também carrega as definições de classe.</span><span class="sxs-lookup"><span data-stu-id="13c40-147">The `using module` command imports the module and also loads the class definitions.</span></span>
+<span data-ttu-id="29b1c-157">`Import-Module` e a `#requires` instrução só importa as funções de módulo, aliases e variáveis, conforme definido pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="29b1c-157">`Import-Module` and the `#requires` statement only import the module functions, aliases, and variables, as defined by the module.</span></span> <span data-ttu-id="29b1c-158">As classes não são importadas.</span><span class="sxs-lookup"><span data-stu-id="29b1c-158">Classes are not imported.</span></span> <span data-ttu-id="29b1c-159">O `using module` comando importa o módulo e também carrega as definições de classe.</span><span class="sxs-lookup"><span data-stu-id="29b1c-159">The `using module` command imports the module and also loads the class definitions.</span></span>
 
 ```powershell
 using module CardGames
@@ -117,9 +125,9 @@ $deck.Shuffle()
 [Card[]]$hand3 = $deck.Deal(5)
 ```
 
-### <a name="example-3---load-classes-from-an-assembly"></a><span data-ttu-id="13c40-148">Exemplo 3-carregar classes de um assembly</span><span class="sxs-lookup"><span data-stu-id="13c40-148">Example 3 - Load classes from an assembly</span></span>
+### <a name="example-3---load-classes-from-an-assembly"></a><span data-ttu-id="29b1c-160">Exemplo 3-carregar classes de um assembly</span><span class="sxs-lookup"><span data-stu-id="29b1c-160">Example 3 - Load classes from an assembly</span></span>
 
-<span data-ttu-id="13c40-149">Este exemplo carrega um assembly para que suas classes possam ser usadas para criar novas classes do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="13c40-149">This example loads an assembly so that its classes can be used to create new PowerShell classes.</span></span> <span data-ttu-id="13c40-150">O script a seguir cria uma nova classe do PowerShell que é derivada da classe **DirectoryContext** .</span><span class="sxs-lookup"><span data-stu-id="13c40-150">The following script creates a new PowerShell class that is derived from **DirectoryContext** class.</span></span>
+<span data-ttu-id="29b1c-161">Este exemplo carrega um assembly para que suas classes possam ser usadas para criar novas classes do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="29b1c-161">This example loads an assembly so that its classes can be used to create new PowerShell classes.</span></span> <span data-ttu-id="29b1c-162">O script a seguir cria uma nova classe do PowerShell que é derivada da classe **DirectoryContext** .</span><span class="sxs-lookup"><span data-stu-id="29b1c-162">The following script creates a new PowerShell class that is derived from **DirectoryContext** class.</span></span>
 
 ```powershell
 using assembly 'C:\Program Files\PowerShell\7\System.DirectoryServices.dll'
