@@ -1,13 +1,13 @@
 ---
-ms.date: 12/01/2020
+ms.date: 01/25/2021
 title: Cmdlets de solução de problemas
 description: Este artigo fornece informações e etapas para solucionar erros usando a Galeria do PowerShell
-ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: 8139147683b655b5f8532c3068387db6df12a98f
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913311"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771811"
 ---
 # <a name="troubleshooting-cmdlets"></a>Cmdlets de solução de problemas
 
@@ -30,6 +30,7 @@ Os cmdlets de instalação e atualização exigem acesso à Internet para se con
 - `devopsgallerystorage.blob.core.windows.net` – nome do host da conta de armazenamento
 - `*.powershellgallery.com` – site
 - `go.microsoft.com` – serviço de redirecionamento
+- `onegetcdn.azureedge.net` – inicialize o provedor do NuGet no `PowerShellGet/PackageManagement`
 
 > [!NOTE]
 > Os cmdlets que interagem com a Galeria do PowerShell podem falhar com erros inesperados quando há uma interrupção dos serviços dessa Galeria. Para ver o status atual da Galeria do PowerShell, confira a página [Status da Galeria do PowerShell](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) no GitHub.

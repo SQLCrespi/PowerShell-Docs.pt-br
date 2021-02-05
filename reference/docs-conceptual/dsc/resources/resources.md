@@ -3,12 +3,12 @@ ms.date: 07/23/2020
 keywords: DSC,powershell,configuração,instalação
 title: Recursos de DSC
 description: Os recursos de DSC fornecem os blocos de construção para uma configuração DSC. Um recurso expõe propriedades que podem ser configuradas (esquema) e contém as funções de script do PowerShell usadas pelo LCM para aplicar a configuração.
-ms.openlocfilehash: 1634db84deff8de3b33c941ad738dc21cf3017ac
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 33268c68638bb581e0b2235a53aee9d186dff6be
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92658451"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771792"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 

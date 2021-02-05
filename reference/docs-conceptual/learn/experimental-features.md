@@ -1,13 +1,13 @@
 ---
-ms.date: 11/11/2020
+ms.date: 12/14/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: 4df3601cd38120fedecbbad8a3c63a95240c5f15
-ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
+ms.openlocfilehash: be02829c27ff5d8babaf173d2ee7ebbfc7614773
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94625696"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879347"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -24,20 +24,21 @@ Para obter mais informações sobre como habilitar ou desabilitar esses recursos
 
 Este artigo descreve os recursos experimentais que estão disponíveis e como usar o recurso.
 
-|                            Nome                            |   6.2   |   7.0   |   7.1   |
-| ---------------------------------------------------------- | :-----: | :-----: | :-----: |
-| PSTempDrive (base no PS 7.0+)                        | &check; |         |         |
-| PSUseAbbreviationExpansion (base no PS 7.0+)         | &check; |         |         |
-| PSNullConditionalOperators (base no PS 7.1+)         |         | &check; |         |
-| PSUnixFileStat (somente não Windows – base no PS 7.1+)  |         | &check; |         |
-| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
-| PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
-| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
-| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
-| PSNativePSPathResolution                                   |         |         | &check; |
-| PSCultureInvariantReplaceOperator                          |         |         | &check; |
-| PSNotApplyErrorActionToStderr                              |         |         | &check; |
-| PSSubsystemPluginModel                                     |         |         | &check; |
+|                            Nome                            |   6.2   |   7.0   |   7.1   |   7.2   |
+| ---------------------------------------------------------- | :-----: | :-----: | :-----: | :-----: |
+| PSTempDrive (base no PS 7.0+)                        | &check; |         |         |         |
+| PSUseAbbreviationExpansion (base no PS 7.0+)         | &check; |         |         |         |
+| PSNullConditionalOperators (base no PS 7.1+)         |         | &check; |         |         |
+| PSUnixFileStat (somente não Windows – base no PS 7.1+)  |         | &check; |         |         |
+| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; | &check; |
+| PSImplicitRemotingBatching                                 | &check; | &check; | &check; | &check; |
+| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; | &check; |
+| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; | &check; |
+| PSNativePSPathResolution                                   |         |         | &check; | &check; |
+| PSCultureInvariantReplaceOperator                          |         |         | &check; | &check; |
+| PSNotApplyErrorActionToStderr                              |         |         | &check; | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; | &check; |
+| PSAnsiRendering                                            |         |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -65,6 +66,56 @@ $breakpoint = Get-PSBreakPoint -Runspace $runspace
 ```
 
 Nesse exemplo, um trabalho é iniciado e um ponto de interrupção é definido para interromper quando `Set-PSBreakPoint` for executado. O runspace é armazenado em uma variável e transmitido para o comando `Get-PSBreakPoint` com o parâmetro **Runspace**. Em seguida, você pode inspecionar o ponto de interrupção na variável `$breakpoint`.
+
+## <a name="psansirendering"></a>PSAnsiRendering
+
+O experimento foi adicionado no PowerShell 7.2. O recurso permite alterar a forma como o mecanismo do PowerShell gera texto e adiciona a variável automática `$PSStyle` para controlar a renderização ANSI da saída da cadeia de caracteres.
+
+```powershell
+PS> $PSStyle
+
+Name            MemberType Definition
+----            ---------- ----------
+Reset           Property   string AttributesOff {get;set;}
+Background      Property   System.Management.Automation.PSStyle+BackgroundColor Background {get;set;}
+Blink           Property   string Blink {get;set;}
+BlinkOff        Property   string BlinkOff {get;set;}
+Bold            Property   string Bold {get;set;}
+BoldOff         Property   string BoldOff {get;set;}
+Foreground      Property   System.Management.Automation.PSStyle+ForegroundColor Foreground {get;set;}
+Formatting      Property   System.Management.Automation.PSStyle+FormattingData Formatting {get;set;}
+Hidden          Property   string Hidden {get;set;}
+HiddenOff       Property   string HiddenOff {get;set;}
+OutputRendering Property   System.Management.Automation.OutputRendering OutputRendering {get;set;}
+Reverse         Property   string Reverse {get;set;}
+ReverseOff      Property   string ReverseOff {get;set;}
+Italic          Property   string Standout {get;set;}
+ItalicOff       Property   string StandoutOff {get;set;}
+Underline       Property   string Underlined {get;set;}
+Underline Off   Property   string UnderlinedOff {get;set;}
+```
+
+Os membros de base retornam cadeias de caracteres de sequências de escape ANSI mapeadas para seus nomes. Os valores são configuráveis para permitir a personalização.
+
+Para obter mais informações, confira [about_Automatic_Variables](/reference/7.2/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md)
+
+> [!NOTE]
+> Para desenvolvedores C#, você pode acessar `PSStyle` como um singleton. O uso terá esta aparência:
+>
+> ```csharp
+> string output = $"{PSStyle.Instance.Foreground.Red}{PSStyle.Instance.Bold}Hello{PSStyle.Instance.Reset}";
+> ```
+>
+> `PSStyle` existe no namespace System.Management.Automation.
+
+Junto com o acesso ao `$PSStyle`, isso apresenta alterações no mecanismo do PowerShell. O sistema de formatação do PowerShell é atualizado para respeitar `$PSStyle.OutputRendering`.
+
+- O tipo `StringDecorated` é adicionado para manipular cadeias de caracteres de escape ANSI.
+- A propriedade booliana `string IsDecorated` é adicionada para retornar se a cadeia de caracteres contém sequências de escape ANSI com base em se a cadeia de caracteres contém ESC ou C1 CSI.
+- A propriedade `Length` retorna _apenas_ o comprimento do texto sem as sequências de escape ANSI.
+- O método `StringDecorated Substring(int contentLength)` retorna uma substring começando no índice 0 até o comprimento do conteúdo que não faz parte das sequências de escape ANSI. Isso é necessário para a formatação da tabela a fim de truncar cadeias de caracteres e preservar as sequências de escape ANSI que não ocupam espaço de caracteres imprimível.
+- O método `string ToString()` permanece o mesmo e retorna a versão de texto não criptografado da cadeia de caracteres.
+- O método `string ToString(bool Ansi)` retornará a cadeia de caracteres ANSI bruta inserida se o parâmetro `Ansi` for true. Caso contrário, uma versão de texto não criptografado com sequências de escape ANSI removidas será retornada.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
