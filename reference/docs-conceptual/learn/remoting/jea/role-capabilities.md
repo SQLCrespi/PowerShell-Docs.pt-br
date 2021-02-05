@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Recursos de Função JEA
 description: Uma capacidade de função é um arquivo de dados do PowerShell com a extensão .psrc que lista todos os cmdlets, as funções, os provedores e os programas externos que devem ser disponibilizados para os usuários que estão se conectando.
 ms.openlocfilehash: 233d9081f4a8f977f0959addb5573c4566f885d0
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92499987"
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
@@ -76,7 +76,7 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 > Você não deve listá-los explicitamente no campo Parâmetros.
 
 A tabela a seguir descreve as várias maneiras que podem ser usadas para personalizar um cmdlet ou função visível.
-Você pode combinar e fazer a correspondência de qualquer item abaixo no campo **VisibleCmdlets** .
+Você pode combinar e fazer a correspondência de qualquer item abaixo no campo **VisibleCmdlets**.
 
 |                                           Exemplo                                           |                                                             Caso de uso                                                              |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,13 +93,13 @@ Você pode combinar e fazer a correspondência de qualquer item abaixo no campo 
 
 Não é possível aplicar um **ValidatePattern** e um **ValidateSet** ao mesmo cmdlet ou à mesma função.
 
-Se você fizer isso, **ValidatePattern** substituirá **ValidateSet** .
+Se você fizer isso, **ValidatePattern** substituirá **ValidateSet**.
 
-Para obter mais informações sobre **ValidatePattern** , confira [esta postagem no *Hey, Scripting Guy!* ](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) e o conteúdo de referência [Expressões regulares do PowerShell](/powershell/module/microsoft.powershell.core/about/about_regular_expressions).
+Para obter mais informações sobre **ValidatePattern**, confira [esta postagem no *Hey, Scripting Guy!*](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) e o conteúdo de referência [Expressões regulares do PowerShell](/powershell/module/microsoft.powershell.core/about/about_regular_expressions).
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>Permitindo comandos externos e scripts do PowerShell
 
-Para permitir que os usuários executem scripts do PowerShell (.ps1) e executáveis em uma sessão JEA, é necessário adicionar o caminho completo a cada programa no campo **VisibleExternalCommands** .
+Para permitir que os usuários executem scripts do PowerShell (.ps1) e executáveis em uma sessão JEA, é necessário adicionar o caminho completo a cada programa no campo **VisibleExternalCommands**.
 
 ```powershell
 VisibleExternalCommands = 'C:\Windows\System32\whoami.exe', 'C:\Program Files\Contoso\Scripts\UpdateITSoftware.ps1'
@@ -127,7 +127,7 @@ Para tarefas simples que exigem acesso ao sistema de arquivos, ao Registro, ao r
 
 ### <a name="creating-custom-functions"></a>Criando funções personalizadas
 
-Você pode criar funções personalizadas em um arquivo de capacidade de função para simplificar tarefas complexas para os seus usuários finais. As funções personalizadas também são úteis quando você precisar de lógica de validação avançada para valores de parâmetro de cmdlet. É possível escrever funções simples no campo **FunctionDefinitions** :
+Você pode criar funções personalizadas em um arquivo de capacidade de função para simplificar tarefas complexas para os seus usuários finais. As funções personalizadas também são úteis quando você precisar de lógica de validação avançada para valores de parâmetro de cmdlet. É possível escrever funções simples no campo **FunctionDefinitions**:
 
 ```powershell
 VisibleFunctions = 'Get-TopProcess'
@@ -154,9 +154,9 @@ As funções definidas em arquivos de capacidade de função ainda estão sujeit
 
 Por padrão, o `Select-Object` é um cmdlet restrito em todas as sessões JEA que não permite a seleção de propriedades arbitrárias em objetos. Para usar o `Select-Object` irrestrito em funções, é necessário solicitar explicitamente a implementação completa usando o FQMN. Qualquer cmdlet restrito em uma sessão JEA tem as mesmas restrições quando invocado em uma função. Para obter mais informações, confira [about_Command_Precedence](/powershell/module/microsoft.powershell.core/about/about_command_precedence).
 
-Se você estiver escrevendo várias funções personalizadas, será mais conveniente colocá-las em um módulo de script do PowerShell. Em seguida, você poderá tornar essas funções visíveis na sessão JEA usando o campo **VisibleFunctions** , assim como faria com módulos internos e de terceiros.
+Se você estiver escrevendo várias funções personalizadas, será mais conveniente colocá-las em um módulo de script do PowerShell. Em seguida, você poderá tornar essas funções visíveis na sessão JEA usando o campo **VisibleFunctions**, assim como faria com módulos internos e de terceiros.
 
-Para que o preenchimento da guia funcione corretamente em sessões JEA, você deve incluir a função interna `tabexpansion2` na lista **VisibleFunctions** .
+Para que o preenchimento da guia funcione corretamente em sessões JEA, você deve incluir a função interna `tabexpansion2` na lista **VisibleFunctions**.
 
 ## <a name="make-the-role-capabilities-available-to-a-configuration"></a>Disponibilize os recursos de função para uma configuração
 

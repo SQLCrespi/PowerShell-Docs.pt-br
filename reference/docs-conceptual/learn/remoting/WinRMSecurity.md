@@ -4,10 +4,10 @@ keywords: powershell, cmdlet
 title: Considerações de segurança para comunicação remota do PowerShell usando WinRM
 description: Este documento aborda questões, recomendações e práticas recomendadas de segurança ao usar a comunicação remota do PowerShell.
 ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501466"
 ---
 # <a name="security-considerations-for-powershell-remoting-using-winrm"></a>Considerações de segurança para comunicação remota do PowerShell usando WinRM

@@ -2,15 +2,14 @@
 title: The Help System (O Sistema de Ajuda)
 description: Dominar o sistema de ajuda é o segredo para ser bem-sucedido com o PowerShell.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 98876cf324b367fd5bb3c3462cb90ea6d7c7d5b9
-ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
-ms.translationtype: HT
+ms.openlocfilehash: cfb12f57b7bb6c514f4e19a93dfe9c77245bd977
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "93143306"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99597178"
 ---
 # <a name="chapter-2---the-help-system"></a>Capítulo 2 – O sistema de ajuda
 
@@ -183,7 +182,7 @@ Com base nesses resultados, você pode ver que o parâmetro **Name** é posicion
 
 Outra informação importante é que o parâmetro **Name** espera que o tipo de dados de seu valor seja uma cadeia de caracteres única, que é denotada por `<String>`. Se ele aceitar várias cadeias de caracteres, o tipo de dados será listado como `<String[]>`.
 
-Às vezes, você simplesmente não quer exibir o tópico inteiro da ajuda para um comando. Há vários outros parâmetros, além de **Full** , que podem ser especificados com `Get-Help` ou `Help`. Tente executar os seguintes comandos no computador do ambiente de laboratório do Windows 10:
+Às vezes, você simplesmente não quer exibir o tópico inteiro da ajuda para um comando. Há vários outros parâmetros, além de **Full**, que podem ser especificados com `Get-Help` ou `Help`. Tente executar os seguintes comandos no computador do ambiente de laboratório do Windows 10:
 
 ```powershell
 Get-Help -Name Get-Command -Full
@@ -204,7 +203,7 @@ help Get-Command -Full | Out-GridView
 
 Tanto o cmdlet `Out-GridView` quanto o parâmetro **ShowWindow** do cmdlet `Get-Help` exigem um sistema operacional com uma GUI (interface gráfica do usuário). Eles vão gerar uma mensagem de erro se você tentar usar qualquer um deles no Windows Server instalado usando a opção de instalação de núcleo do servidor (sem GUI).
 
-Para usar `Get-Help` para localizar comandos, use o caractere curinga asterisco (`*`) com o parâmetro **Name**. Especifique um termo no qual você está procurando comandos como o valor para o parâmetro **Name** , conforme mostrado no exemplo a seguir.
+Para usar `Get-Help` para localizar comandos, use o caractere curinga asterisco (`*`) com o parâmetro **Name**. Especifique um termo no qual você está procurando comandos como o valor para o parâmetro **Name**, conforme mostrado no exemplo a seguir.
 
 ```powershell
 help *process*
@@ -434,7 +433,7 @@ Cmdlet          Wait-Process                                       3.1.0.0    Mi
 
 Observe no exemplo anterior em que `Get-Command` foi executado, o parâmetro **Noun** é usado e `Process` é especificado como o valor para o parâmetro **Noun**. E se você não sabia como usar o cmdlet `Get-Command`? Você pode usar `Get-Help` para exibir o tópico da ajuda para `Get-Command`.
 
-Os parâmetros **Name** , **Noun** e **Verb** aceitam curingas. O exemplo a seguir mostra os curingas que estão sendo usados com o parâmetro **Nome** :
+Os parâmetros **Name**, **Noun** e **Verb** aceitam curingas. O exemplo a seguir mostra os curingas que estão sendo usados com o parâmetro **Nome**:
 
 ```Output
 Get-Command -Name *service*
@@ -463,7 +462,7 @@ Application     TieringEngineService.exe                           10.0.14... C:
 
 Não sou um fã do uso de curingas com o parâmetro **Name** de `Get-Command`, já que ele também retorna arquivos executáveis que não são comandos nativos do PowerShell.
 
-Se você pretende usar caracteres curinga com o parâmetro **Name** , recomendo limitar os resultados com o parâmetro **CommandType**.
+Se você pretende usar caracteres curinga com o parâmetro **Name**, recomendo limitar os resultados com o parâmetro **CommandType**.
 
 ```powershell
 Get-Command -Name *service* -CommandType Cmdlet, Function, Alias
@@ -485,10 +484,8 @@ Update-Help
 
 ```Output
 Update-Help : Failed to update Help for the module(s) 'BitsTransfer' with UI culture(s)
-{en-US} : The value of the HelpInfoUri key in the module manifest must resolve to a
-container or root URL on a website where the help files are stored. The HelpInfoUri
-'https://technet.microsoft.com/en-us/library/dd819413.aspx' does not resolve to a
-container.
+{en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri
+property in the module manifest is valid or check your network connection and then try the command again.
 At line:1 char:1
 + Update-Help
 +

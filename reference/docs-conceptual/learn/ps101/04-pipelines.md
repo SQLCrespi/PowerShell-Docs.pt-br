@@ -2,15 +2,14 @@
 title: One-liners and the pipeline (Uma linha e o pipeline)
 description: Um comando de uma linha do PowerShell é um pipeline contínuo, contendo vários comandos, para realizar uma só tarefa.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: b8fd45e5e5dc408754ebac015757ef4241428978
-ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
-ms.translationtype: HT
+ms.openlocfilehash: 1483ec6b76d17c3dd081356ecff85a929fc43e2c
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84633338"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99599014"
 ---
 # <a name="chapter-4---one-liners-and-the-pipeline"></a>Capítulo 4 – Comandos de uma linha e o pipeline
 
@@ -23,7 +22,7 @@ Assim como recomendamos nos capítulos anteriores, lembre-se de acompanhar os ex
 
 ## <a name="one-liners"></a>Comandos de uma linha
 
-Um comando de uma linha do PowerShell é um pipeline contínuo e, não necessariamente, um comando que esteja em uma linha física. Nem todos os comandos que estão em uma linha física são comandos de uma linha.
+Uma linha do PowerShell é um pipeline contínuo e, não necessariamente, um comando que esteja em uma das linhas físicas. Nem todos os comandos que estão em uma linha física são comandos de uma linha.
 
 Embora o comando a seguir esteja em várias linhas físicas, ele é um comando de uma linha do PowerShell, pois é um pipeline contínuo. Ele pode ser escrito em uma linha física, mas optei pela quebra de linha no símbolo de barra vertical. O símbolo de barra vertical é um dos caracteres em que uma quebra de linha natural é permitida no PowerShell.
 

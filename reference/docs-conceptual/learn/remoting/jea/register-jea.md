@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Registrando Configurações de JEA
 description: Registrar o ponto de extremidade JEA no sistema torna o ponto de extremidade disponível para uso pelos usuários e pelos mecanismos de automação.
 ms.openlocfilehash: 6e7f8cdc1e7a666bddaa42034d70fcbcf55c1972
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92499902"
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
@@ -66,7 +66,7 @@ Crie uma configuração DSC para o ponto de extremidade JEA em um computador de 
 
 As seguintes propriedades são configuráveis usando o recurso de DSC:
 
-- Definições de Funções
+- Definições de função
 - Grupos de contas virtuais
 - Nome da conta de serviço gerenciado de grupo
 - Diretório de transcrição
@@ -105,7 +105,7 @@ Configuration JEAMaintenance
 
 Em seguida, a configuração é aplicada em um sistema pela invocação direta do [Gerenciador de Configurações Local](/powershell/scripting/dsc/managing-nodes/metaConfig) ou pela atualização da [configuração do servidor de pull](/powershell/scripting/dsc/pull-server/pullServer).
 
-O recurso DSC também permite que você substitua o ponto de extremidade **Microsoft.PowerShell** padrão. Quando substituído, o recurso registra automaticamente um ponto de extremidade de backup chamado **Microsoft.PowerShell.Restricted** . O ponto de extremidade de backup tem a ACL padrão do WinRM que permite acesso aos Usuários do Gerenciamento Remoto e aos membros do grupo local de administradores.
+O recurso DSC também permite que você substitua o ponto de extremidade **Microsoft.PowerShell** padrão. Quando substituído, o recurso registra automaticamente um ponto de extremidade de backup chamado **Microsoft.PowerShell.Restricted**. O ponto de extremidade de backup tem a ACL padrão do WinRM que permite acesso aos Usuários do Gerenciamento Remoto e aos membros do grupo local de administradores.
 
 ## <a name="unregistering-jea-configurations"></a>Cancelando o registro de configurações de JEA
 

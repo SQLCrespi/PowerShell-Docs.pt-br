@@ -3,10 +3,10 @@ title: Comunicação remota do PowerShell por SSH
 ms.date: 10/19/2020
 description: Explica como configurar o protocolo SSH para comunicação remota do PowerShell.
 ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501330"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
@@ -25,17 +25,17 @@ Agora, os cmdlets `New-PSSession`, `Enter-PSSession` e `Invoke-Command` têm um 
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Para criar uma sessão remota, especifique o computador de destino com o parâmetro **HostName** e forneça o nome de usuário com **UserName** . Ao executar os cmdlets interativamente, você receberá uma solicitação de senha. Você também pode usar a autenticação de chave SSH usando um arquivo de chave privada com o parâmetro **KeyFilePath** . A criação de chaves para a autenticação SSH varia de acordo com a plataforma.
+Para criar uma sessão remota, especifique o computador de destino com o parâmetro **HostName** e forneça o nome de usuário com **UserName**. Ao executar os cmdlets interativamente, você receberá uma solicitação de senha. Você também pode usar a autenticação de chave SSH usando um arquivo de chave privada com o parâmetro **KeyFilePath**. A criação de chaves para a autenticação SSH varia de acordo com a plataforma.
 
 ## <a name="general-setup-information"></a>Informações gerais de configuração
 
-PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para fazer a comunicação remota entre os computadores. Agora o OpenSSH para Windows está disponível no build 1809 do Windows 10 e no Windows Server 2019. Para saber mais, confira [Gerenciar o Windows com OpenSSH](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado para a sua plataforma. Também é preciso instalar o PowerShell no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. É necessário habilitar a autenticação por **senha** ou **baseada em chave** .
+PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para fazer a comunicação remota entre os computadores. Agora o OpenSSH para Windows está disponível no build 1809 do Windows 10 e no Windows Server 2019. Para saber mais, confira [Gerenciar o Windows com OpenSSH](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado para a sua plataforma. Também é preciso instalar o PowerShell no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. É necessário habilitar a autenticação por **senha** ou **baseada em chave**.
 
 ## <a name="set-up-on-a-windows-computer"></a>Configurar em um computador com Windows
 
 1. Instalar a versão mais recente do PowerShell. Para obter mais informações, confira [Como instalar o PowerShell Core no Windows](../../install/installing-powershell-core-on-windows.md#msi).
 
-   É possível confirmar se o PowerShell é compatível com a comunicação remota do SSH listando os conjuntos do parâmetro `New-PSSession`. Você observará que há nomes de conjunto de parâmetros que começam com **SSH** . Esses conjuntos de parâmetros incluem parâmetros **SSH** .
+   É possível confirmar se o PowerShell é compatível com a comunicação remota do SSH listando os conjuntos do parâmetro `New-PSSession`. Você observará que há nomes de conjunto de parâmetros que começam com **SSH**. Esses conjuntos de parâmetros incluem parâmetros **SSH**.
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -93,7 +93,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
 
    Para saber mais, confira [Gerenciar chaves do OpenSSH](/windows-server/administration/openssh/openssh_keymanagement).
 
-1. Reinicie o serviço **sshd** .
+1. Reinicie o serviço **sshd**.
 
    ```powershell
    Restart-Service sshd
@@ -142,7 +142,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    PubkeyAuthentication yes
    ```
 
-1. Reinicie o serviço **ssh** .
+1. Reinicie o serviço **ssh**.
 
    ```bash
    sudo service ssh restart
@@ -161,7 +161,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
 
 1. Edite o arquivo `sshd_config` no local `/private/etc/ssh/sshd_config`.
 
-   Abra um editor de texto, como o **nano** :
+   Abra um editor de texto, como o **nano**:
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config
@@ -188,7 +188,7 @@ PowerShell 6 ou superior, e o SSH deve ser instalado em todos os computadores. I
    PubkeyAuthentication yes
    ```
 
-1. Reinicie o serviço **sshd** .
+1. Reinicie o serviço **sshd**.
 
    ```bash
    sudo launchctl stop com.openssh.sshd

@@ -1,16 +1,15 @@
 ---
 title: Formatting, aliases, providers, comparison (Formatação, aliases, provedores, comparação)
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
 description: Este capítulo apresenta os conceitos de formatação de saída, aliases de comando, provedores e operações de comparação.
-ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.openlocfilehash: 5573ca58601af0c6af15736b772a9792d8d77a79
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501602"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99595343"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>Capítulo 5 – Formatação, aliases, provedores, comparação
 
@@ -171,7 +170,7 @@ CommandType     Name                                               Version    So
 Alias           gcm -> Get-Command
 ```
 
-Vários aliases podem ser especificados para o valor do parâmetro **Name** .
+Vários aliases podem ser especificados para o valor do parâmetro **Name**.
 
 ```powershell
 Get-Alias -Name gcm, gm
@@ -196,7 +195,7 @@ CommandType     Name                                               Version    So
 Alias           gm -> Get-Member
 ```
 
-Se você desejar localizar aliases para um comando, precisará usar o parâmetro **Definition** .
+Se você desejar localizar aliases para um comando, precisará usar o parâmetro **Definition**.
 
 ```powershell
 Get-Alias -Definition Get-Command, Get-Member
@@ -575,7 +574,7 @@ Observe que a palavra "Saturday" não foi substituída no exemplo anterior. Isso
 SQL Sat - Baton Rouge
 ```
 
-Tenha cuidado ao usar métodos para transformar dados, porque você pode se deparar com problemas imprevistos, como a reprovação no _Teste da Turquia_ . Para obter um exemplo, confira o artigo de blog intitulado [Como usar o Pester para testar o código do PowerShell com outras culturas][]. Minha recomendação é usar um operador em vez de um método sempre que possível para evitar esses tipos de problemas.
+Tenha cuidado ao usar métodos para transformar dados, porque você pode se deparar com problemas imprevistos, como a reprovação no _Teste da Turquia_. Para obter um exemplo, confira o artigo de blog intitulado [Como usar o Pester para testar o código do PowerShell com outras culturas][]. Minha recomendação é usar um operador em vez de um método sempre que possível para evitar esses tipos de problemas.
 
 Embora os operadores de comparação possam ser usados conforme mostrado nos exemplos anteriores, normalmente, uso esses operadores com o cmdlet `Where-Object` para realizar algum tipo de filtragem.
 

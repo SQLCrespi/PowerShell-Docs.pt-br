@@ -3,10 +3,10 @@ title: Recursos de suporte da comunidade do PowerShell
 description: Lista de recursos criados para e por usuários do PowerShell
 ms.date: 04/29/2020
 ms.openlocfilehash: c82abc17a61bca958dfb04471678eb406df12d42
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "85794818"
 ---
 # <a name="getting-support-from-the-community"></a>Obter suporte da comunidade

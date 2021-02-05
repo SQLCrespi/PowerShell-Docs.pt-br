@@ -2,15 +2,14 @@
 title: Discovering objects, properties, and methods (Descobrir objetos, propriedades e métodos)
 description: Você não precisa ser um desenvolvedor para entender e usar objetos, propriedades e métodos.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 5ab972755afeba0d94bf6c2debaf84ec84cd9244
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: f226221da7dd3b663f54cf23439dd7f945ed3a2a
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438067"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99597383"
 ---
 # <a name="chapter-3---discovering-objects-properties-and-methods"></a>Capítulo 3 – Como descobrir objetos, propriedades e métodos
 
@@ -698,7 +697,7 @@ Neste capítulo, você aprendeu a determinar o tipo de objeto que um comando pro
 - [about_Objects][]
 - [about_Properties][]
 - [about_Methods][]
-- [Não conhece um cmdlet do PowerShell para iniciar ou interromper algo? Não se esqueça de verificar os métodos nos cmdlets Get][use-methods]
+- [Não há cmdlet do PowerShell para iniciar ou parar algo? Não se esqueça de verificar métodos em obter cmdlets][use-methods]
 
 <!-- link references -->
 [Ferramentas de Administração de Servidor Remoto para Windows]: https://support.microsoft.com/help/2693643
