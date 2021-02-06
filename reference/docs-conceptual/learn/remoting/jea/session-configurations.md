@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Configurações de Sessão de JEA
 description: As configurações de sessão definem quem pode usar o ponto de extremidade JEA e a quais funções ele terá acesso.
 ms.openlocfilehash: b616d5bf260bbdfe89b6422fd4a8b4866f7fdc67
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501551"
 ---
 # <a name="jea-session-configurations"></a>Configurações de Sessão de JEA
@@ -108,7 +108,7 @@ Para configurar a transcrição automática no arquivo de configuração de sess
 TranscriptDirectory = 'C:\ProgramData\JEAConfiguration\Transcripts'
 ```
 
-As transcrições são gravadas na pasta pela conta **Sistema Local** , que exige acesso de leitura e gravação no diretório. Os usuários padrão não devem ter nenhum acesso à pasta. Limite o número de administradores de segurança que têm acesso para auditar as transcrições.
+As transcrições são gravadas na pasta pela conta **Sistema Local**, que exige acesso de leitura e gravação no diretório. Os usuários padrão não devem ter nenhum acesso à pasta. Limite o número de administradores de segurança que têm acesso para auditar as transcrições.
 
 ### <a name="user-drive"></a>Unidade de usuário
 
@@ -118,7 +118,7 @@ Se os usuários que estão se conectando precisarem copiar arquivos bidirecional
 MountUserDrive = $true
 ```
 
-Por padrão, a unidade de usuário permite que seja armazenado um máximo de 50 MB de dados por usuário. Você pode limitar a quantidade de dados que um usuário pode consumir com o campo *UserDriveMaximumSize* .
+Por padrão, a unidade de usuário permite que seja armazenado um máximo de 50 MB de dados por usuário. Você pode limitar a quantidade de dados que um usuário pode consumir com o campo *UserDriveMaximumSize*.
 
 ```powershell
 # Enables the user drive with a per-user limit of 500MB (524288000 bytes)
@@ -135,7 +135,7 @@ Para obter mais informações sobre PSDrives, confira [Como gerenciar unidades d
 
 ### <a name="role-definitions"></a>Definições de função
 
-As definições de função em um arquivo de configuração de sessão definem o mapeamento de **usuários** para as **funções** . Cada usuário ou grupo incluído nesse campo recebe permissão no ponto de extremidade JEA quando ele é registrado.
+As definições de função em um arquivo de configuração de sessão definem o mapeamento de **usuários** para as **funções**. Cada usuário ou grupo incluído nesse campo recebe permissão no ponto de extremidade JEA quando ele é registrado.
 Cada usuário ou grupo pode ser incluído como uma chave na tabela de hash somente uma vez, mas pode ser atribuído a várias funções. O nome da capacidade de função deve ser o nome do arquivo de capacidade de função, sem a extensão `.psrc`.
 
 ```powershell

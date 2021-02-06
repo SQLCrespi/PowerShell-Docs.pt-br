@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Usando JEA
 description: Este artigo descreve as várias maneiras pelas quais você pode se conectar a um ponto de extremidade JEA e usá-lo.
 ms.openlocfilehash: b3d81cc0aa76549c81136e5a1a5af28df9c6fa7a
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501534"
 ---
 # <a name="using-jea"></a>Usando JEA
@@ -31,7 +31,7 @@ $nonAdminCred = Get-Credential
 Enter-PSSession -ComputerName localhost -ConfigurationName JEAMaintenance -Credential $nonAdminCred
 ```
 
-Se a conta de usuário atual tiver acesso ao ponto de extremidade JEA, você poderá omitir o parâmetro **Credential** .
+Se a conta de usuário atual tiver acesso ao ponto de extremidade JEA, você poderá omitir o parâmetro **Credential**.
 
 Quando o prompt do PowerShell mudar para `[localhost]: PS>`, você saberá que está interagindo com a sessão JEA remota. Você pode executar o `Get-Command` para verificar quais comandos estão disponíveis. Consulte o administrador para saber se há alguma restrição nos parâmetros disponíveis ou nos valores de parâmetros permitidos.
 

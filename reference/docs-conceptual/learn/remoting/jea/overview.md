@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Visão geral de JEA (Just Enough Administration)
 description: O JEA é uma tecnologia de segurança que permite a administração delegada para itens que possam ser gerenciados com o PowerShell.
 ms.openlocfilehash: cc1c49960e274b58635c1ca4e6769a54c3c7ded6
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501704"
 ---
 # <a name="just-enough-administration"></a>Administração Just Enough
@@ -22,9 +22,9 @@ O JEA (Administração Suficiente) é uma tecnologia de segurança que permite a
 
 Contas altamente privilegiadas, usadas para administrar os servidores, representam um sério risco de segurança. Caso um invasor comprometa uma dessas contas, poderia iniciar [ataques laterais](https://aka.ms/pth) por toda a sua organização. Cada conta comprometida fornece a um invasor acesso a um número ainda maior de contas e recursos e o coloca a um passo de roubar os segredos da empresa, iniciar um ataque de negação de serviço, entre outros.
 
-No entanto, nem sempre é fácil remover privilégios administrativos. Considere um cenário comum no qual a função DNS é instalada no mesmo computador que seu Controlador de Domínio do Active Directory. Os administradores do DNS exigem privilégios de administrador local para corrigir problemas com o servidor DNS. Mas para fazer isso, você precisa torná-los membros do altamente privilegiado grupo de segurança **Administradores do Domínio** . Essa abordagem concede de forma efetiva aos Administradores de DNS o controle todo o domínio e o acesso a todos os recursos nesse computador.
+No entanto, nem sempre é fácil remover privilégios administrativos. Considere um cenário comum no qual a função DNS é instalada no mesmo computador que seu Controlador de Domínio do Active Directory. Os administradores do DNS exigem privilégios de administrador local para corrigir problemas com o servidor DNS. Mas para fazer isso, você precisa torná-los membros do altamente privilegiado grupo de segurança **Administradores do Domínio**. Essa abordagem concede de forma efetiva aos Administradores de DNS o controle todo o domínio e o acesso a todos os recursos nesse computador.
 
-O JEA cuida desse problema por meio do princípio de **Privilégios mínimos** . Com o JEA, você pode configurar um ponto de extremidade de gerenciamento para administradores do DNS que fornece a eles acesso somente os comandos do PowerShell de que precisam para realizar seus trabalhos. Isso significa que você pode fornecer o acesso apropriado para reparar um cache DNS inviabilizado ou reiniciar o servidor DNS, sem acidentalmente conceder a eles direitos ao Active Directory, para navegar no sistema de arquivos ou para executar scripts potencialmente perigosos. Melhor ainda, quando a sessão JEA está configurada para usar contas virtuais privilegiadas temporárias, os administradores do DNS podem se conectar ao servidor usando credenciais de **não administrador** e ainda podem executar comandos que, geralmente, exigem privilégios de administrador. O JEA permite que você remova usuários de funções de administrador local/de domínio amplamente privilegiadas e controle cuidadosamente o que eles podem fazer em cada computador.
+O JEA cuida desse problema por meio do princípio de **Privilégios mínimos**. Com o JEA, você pode configurar um ponto de extremidade de gerenciamento para administradores do DNS que fornece a eles acesso somente os comandos do PowerShell de que precisam para realizar seus trabalhos. Isso significa que você pode fornecer o acesso apropriado para reparar um cache DNS inviabilizado ou reiniciar o servidor DNS, sem acidentalmente conceder a eles direitos ao Active Directory, para navegar no sistema de arquivos ou para executar scripts potencialmente perigosos. Melhor ainda, quando a sessão JEA está configurada para usar contas virtuais privilegiadas temporárias, os administradores do DNS podem se conectar ao servidor usando credenciais de **não administrador** e ainda podem executar comandos que, geralmente, exigem privilégios de administrador. O JEA permite que você remova usuários de funções de administrador local/de domínio amplamente privilegiadas e controle cuidadosamente o que eles podem fazer em cada computador.
 
 ## <a name="next-steps"></a>Próximas etapas
 

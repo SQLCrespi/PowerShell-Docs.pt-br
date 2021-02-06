@@ -4,10 +4,10 @@ keywords: jea,powershell,segurança
 title: Pré-requisitos do JEA
 description: Este artigo descreve os pré-requisitos que precisam ser atendidos para começar a usar o JEA.
 ms.openlocfilehash: 5cc70a06887a2d0a840cc83117f865d3148056e1
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501721"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
