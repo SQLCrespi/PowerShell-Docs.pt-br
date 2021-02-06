@@ -1,0 +1,67 @@
+---
+description: Apresenta funções avançadas que são uma maneira de criar cmdlets usando scripts.
+Locale: en-US
+ms.date: 06/11/2020
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced?view=powershell-7.2&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: about_Functions_Advanced
+ms.openlocfilehash: a0b8b027c91f2adedfcecd07bfc80392c1b1e071
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "99595763"
+---
+# <a name="about-functions-advanced"></a><span data-ttu-id="a08bc-103">Sobre as funções avançadas</span><span class="sxs-lookup"><span data-stu-id="a08bc-103">About Functions Advanced</span></span>
+
+## <a name="short-description"></a><span data-ttu-id="a08bc-104">DESCRIÇÃO BREVE</span><span class="sxs-lookup"><span data-stu-id="a08bc-104">SHORT DESCRIPTION</span></span>
+<span data-ttu-id="a08bc-105">Apresenta funções avançadas que são uma maneira de criar cmdlets usando scripts.</span><span class="sxs-lookup"><span data-stu-id="a08bc-105">Introduces advanced functions that are a way to create cmdlets using scripts.</span></span>
+
+## <a name="long-description"></a><span data-ttu-id="a08bc-106">DESCRIÇÃO LONGA</span><span class="sxs-lookup"><span data-stu-id="a08bc-106">LONG DESCRIPTION</span></span>
+
+<span data-ttu-id="a08bc-107">Um cmdlet é um único comando que participa da semântica do pipeline do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a08bc-107">A cmdlet is a single command that participates in the pipeline semantics of PowerShell.</span></span> <span data-ttu-id="a08bc-108">Isso inclui cmdlets binários, funções de script avançadas, CDXML e fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="a08bc-108">This includes binary cmdlets, advanced script functions, CDXML, and Workflows.</span></span>
+
+<span data-ttu-id="a08bc-109">As funções avançadas permitem criar cmdlets que são gravados como uma função do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a08bc-109">Advanced functions allow you create cmdlets that are written as a PowerShell function.</span></span> <span data-ttu-id="a08bc-110">As funções avançadas facilitam a criação de cmdlets sem a necessidade de escrever e compilar um cmdlet binário.</span><span class="sxs-lookup"><span data-stu-id="a08bc-110">Advanced functions make it easier to create cmdlets without having to write and compile a binary cmdlet.</span></span> <span data-ttu-id="a08bc-111">Os cmdlets binários são classes .NET que são escritas em uma linguagem .NET, como C#.</span><span class="sxs-lookup"><span data-stu-id="a08bc-111">Binary cmdlets are .NET classes that are written in a .NET language such as C#.</span></span>
+
+<span data-ttu-id="a08bc-112">As funções avançadas usam o `CmdletBinding` atributo para identificá-las como funções que atuam como cmdlets.</span><span class="sxs-lookup"><span data-stu-id="a08bc-112">Advanced functions use the `CmdletBinding` attribute to identify them as functions that act like cmdlets.</span></span> <span data-ttu-id="a08bc-113">O `CmdletBinding` atributo é semelhante ao atributo cmdlet usado em classes de cmdlet compiladas para identificar a classe como um cmdlet.</span><span class="sxs-lookup"><span data-stu-id="a08bc-113">The `CmdletBinding` attribute is similar to the Cmdlet attribute that is used in compiled cmdlet classes to identify the class as a cmdlet.</span></span> <span data-ttu-id="a08bc-114">Para obter mais informações sobre esse atributo, consulte [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md).</span><span class="sxs-lookup"><span data-stu-id="a08bc-114">For more information about this attribute, see [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md).</span></span>
+
+<span data-ttu-id="a08bc-115">O exemplo a seguir mostra uma função que aceita um nome e, em seguida, imprime uma saudação usando o nome fornecido.</span><span class="sxs-lookup"><span data-stu-id="a08bc-115">The following example shows a function that accepts a name and then prints a greeting using the supplied name.</span></span> <span data-ttu-id="a08bc-116">Observe também que essa função define um nome que inclui um par de verbo (envio) e substantivo (saudação) como o par verbo-substantivo de um cmdlet compilado.</span><span class="sxs-lookup"><span data-stu-id="a08bc-116">Also notice that this function defines a name that includes a verb (Send) and noun (Greeting) pair like the verb-noun pair of a compiled cmdlet.</span></span> <span data-ttu-id="a08bc-117">No entanto, não é necessário que as funções tenham um nome de verbo-substantivo.</span><span class="sxs-lookup"><span data-stu-id="a08bc-117">However, functions are not required to have a verb-noun name.</span></span>
+
+```powershell
+function Send-Greeting
+{
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory=$true)]
+        [string] $Name
+    )
+
+    Process
+    {
+        Write-Host ("Hello " + $Name + "!")
+    }
+}
+```
+
+<span data-ttu-id="a08bc-118">Os parâmetros da função são declarados usando o atributo Parameter.</span><span class="sxs-lookup"><span data-stu-id="a08bc-118">The parameters of the function are declared by using the Parameter attribute.</span></span>
+<span data-ttu-id="a08bc-119">Esse atributo pode ser usado sozinha ou pode ser combinado com o atributo alias ou com vários outros atributos de validação de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="a08bc-119">This attribute can be used alone, or it can be combined with the Alias attribute or with several other parameter validation attributes.</span></span> <span data-ttu-id="a08bc-120">Para obter mais informações sobre como declarar parâmetros (incluindo parâmetros dinâmicos que são adicionados em tempo de execução), consulte [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md).</span><span class="sxs-lookup"><span data-stu-id="a08bc-120">For more information about how to declare parameters (including dynamic parameters that are added at runtime), see [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md).</span></span>
+
+<span data-ttu-id="a08bc-121">O trabalho real da função anterior é executado no bloco Process, que é equivalente ao método ProcessingRecord que é usado por cmdlets compilados para processar os dados que são passados para o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="a08bc-121">The actual work of the previous function is performed in the Process block, which is equivalent to the ProcessingRecord method that is used by compiled cmdlets to process the data that is passed to the cmdlet.</span></span> <span data-ttu-id="a08bc-122">Esse bloco, juntamente com os blocos Begin e end, é descrito no tópico [about_Functions_Advanced_Methods](about_Functions_Advanced_Methods.md) .</span><span class="sxs-lookup"><span data-stu-id="a08bc-122">This block, along with the Begin and End blocks, is described in the [about_Functions_Advanced_Methods](about_Functions_Advanced_Methods.md) topic.</span></span>
+
+<span data-ttu-id="a08bc-123">As funções avançadas diferem dos cmdlets compilados das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="a08bc-123">Advanced functions differ from compiled cmdlets in the following ways:</span></span>
+
+- <span data-ttu-id="a08bc-124">A associação de parâmetro de função avançada não gera uma exceção quando uma matriz de cadeias de caracteres está associada a um parâmetro booliano.</span><span class="sxs-lookup"><span data-stu-id="a08bc-124">Advanced function parameter binding does not throw an exception when an array of strings is bound to a Boolean parameter.</span></span>
+- <span data-ttu-id="a08bc-125">O atributo ValidateSet e o atributo ValidatePattern não podem passar parâmetros nomeados.</span><span class="sxs-lookup"><span data-stu-id="a08bc-125">The ValidateSet attribute and the ValidatePattern attribute cannot pass named parameters.</span></span>
+- <span data-ttu-id="a08bc-126">As funções avançadas não podem ser usadas em transações.</span><span class="sxs-lookup"><span data-stu-id="a08bc-126">Advanced functions cannot be used in transactions.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a08bc-127">CONSULTE TAMBÉM</span><span class="sxs-lookup"><span data-stu-id="a08bc-127">SEE ALSO</span></span>
+
+[<span data-ttu-id="a08bc-128">about_Functions</span><span class="sxs-lookup"><span data-stu-id="a08bc-128">about_Functions</span></span>](about_Functions.md)
+
+[<span data-ttu-id="a08bc-129">about_Functions_Advanced_Methods</span><span class="sxs-lookup"><span data-stu-id="a08bc-129">about_Functions_Advanced_Methods</span></span>](about_Functions_Advanced_Methods.md)
+
+[<span data-ttu-id="a08bc-130">about_Functions_Advanced_Parameters</span><span class="sxs-lookup"><span data-stu-id="a08bc-130">about_Functions_Advanced_Parameters</span></span>](about_Functions_Advanced_Parameters.md)
+
+[<span data-ttu-id="a08bc-131">about_Functions_CmdletBindingAttribute</span><span class="sxs-lookup"><span data-stu-id="a08bc-131">about_Functions_CmdletBindingAttribute</span></span>](about_Functions_CmdletBindingAttribute.md)
+
+[<span data-ttu-id="a08bc-132">about_Functions_OutputTypeAttribute</span><span class="sxs-lookup"><span data-stu-id="a08bc-132">about_Functions_OutputTypeAttribute</span></span>](about_Functions_OutputTypeAttribute.md)

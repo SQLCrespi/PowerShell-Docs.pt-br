@@ -1,0 +1,85 @@
+---
+external help file: PSDiagnostics-help.xml
+Locale: en-US
+Module Name: PSDiagnostics
+ms.date: 11/27/2018
+online version: https://docs.microsoft.com/powershell/module/psdiagnostics/disable-pstrace?view=powershell-7.2&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Disable-PSTrace
+ms.openlocfilehash: 0e246a0e3737f4ed693ed31096fc76e878a4af54
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "99596202"
+---
+# <span data-ttu-id="7400d-102">Disable-PSTrace</span><span class="sxs-lookup"><span data-stu-id="7400d-102">Disable-PSTrace</span></span>
+
+## <span data-ttu-id="7400d-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="7400d-103">SYNOPSIS</span></span>
+<span data-ttu-id="7400d-104">Desabilita os logs do provedor de eventos Microsoft-Windows-PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7400d-104">Disables the Microsoft-Windows-PowerShell event provider logs.</span></span>
+
+## <span data-ttu-id="7400d-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7400d-105">SYNTAX</span></span>
+
+```
+Disable-PSTrace [-AnalyticOnly] [<CommonParameters>]
+```
+
+## <span data-ttu-id="7400d-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="7400d-106">DESCRIPTION</span></span>
+
+<span data-ttu-id="7400d-107">Esse cmdlet desabilita os logs de eventos operacionais e analíticos do provedor de eventos Microsoft-Windows-PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7400d-107">This cmdlet disables the Operational and Analytic event logs of the Microsoft-Windows-PowerShell event provider.</span></span>
+
+<span data-ttu-id="7400d-108">Você deve executar este cmdlet em uma sessão do PowerShell com privilégios elevados.</span><span class="sxs-lookup"><span data-stu-id="7400d-108">You must run this cmdlet from an elevated PowerShell session.</span></span>
+
+## <span data-ttu-id="7400d-109">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="7400d-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="7400d-110">Exemplo 1: desabilitar o log de eventos analíticos para o PowerShell</span><span class="sxs-lookup"><span data-stu-id="7400d-110">Example 1: Disable the Analytic event log for PowerShell</span></span>
+
+<span data-ttu-id="7400d-111">O exemplo a seguir desabilita somente o log de eventos analíticos do provedor Microsoft-Windows-PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7400d-111">The following example disables only the Analytic event log of the Microsoft-Windows-PowerShell provider.</span></span>
+
+```powershell
+Disable-PSTrace -AnalyticOnly
+```
+
+## <span data-ttu-id="7400d-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7400d-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="7400d-113">-AnalyticOnly</span><span class="sxs-lookup"><span data-stu-id="7400d-113">-AnalyticOnly</span></span>
+
+<span data-ttu-id="7400d-114">Quando esse parâmetro é usado, o cmdlet desabilita o log de eventos analíticos do provedor Microsoft-Windows-PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7400d-114">When this parameter is used, the cmdlet disables the Analytic event log of the Microsoft-Windows-PowerShell provider.</span></span> <span data-ttu-id="7400d-115">O log de eventos operacional não é alterado.</span><span class="sxs-lookup"><span data-stu-id="7400d-115">The Operational event log is not changed.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7400d-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7400d-116">CommonParameters</span></span>
+<span data-ttu-id="7400d-117">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7400d-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7400d-118">Para obter mais informações, confira [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7400d-118">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="7400d-119">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="7400d-119">INPUTS</span></span>
+
+### <span data-ttu-id="7400d-120">Nenhum</span><span class="sxs-lookup"><span data-stu-id="7400d-120">None</span></span>
+
+## <span data-ttu-id="7400d-121">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="7400d-121">OUTPUTS</span></span>
+
+### <span data-ttu-id="7400d-122">Nenhum</span><span class="sxs-lookup"><span data-stu-id="7400d-122">None</span></span>
+
+## <span data-ttu-id="7400d-123">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="7400d-123">NOTES</span></span>
+
+<span data-ttu-id="7400d-124">Esse cmdlet usa os `Get-LogProperties` `Set-LogProperties` cmdlets e.</span><span class="sxs-lookup"><span data-stu-id="7400d-124">This cmdlet uses the `Get-LogProperties` and `Set-LogProperties` cmdlets.</span></span>
+
+<span data-ttu-id="7400d-125">Você deve executar este cmdlet em uma sessão do PowerShell com privilégios elevados.</span><span class="sxs-lookup"><span data-stu-id="7400d-125">You must run this cmdlet from an elevated PowerShell session.</span></span>
+
+## <span data-ttu-id="7400d-126">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="7400d-126">RELATED LINKS</span></span>
+
+[<span data-ttu-id="7400d-127">Get-LogProperties</span><span class="sxs-lookup"><span data-stu-id="7400d-127">Get-LogProperties</span></span>](Get-LogProperties.md)
+
+[<span data-ttu-id="7400d-128">Set-LogProperties</span><span class="sxs-lookup"><span data-stu-id="7400d-128">Set-LogProperties</span></span>](Set-LogProperties.md)
+
+[<span data-ttu-id="7400d-129">Enable-PSTrace</span><span class="sxs-lookup"><span data-stu-id="7400d-129">Enable-PSTrace</span></span>](Enable-PSTrace.md)
+
