@@ -1,0 +1,283 @@
+---
+external help file: PSModule-help.xml
+Locale: en-US
+Module Name: PowerShellGet
+ms.date: 07/09/2019
+online version: https://docs.microsoft.com/powershell/module/powershellget/update-script?view=powershell-7.2&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Update-Script
+ms.openlocfilehash: 0fa537e463464fe055ea14aeab05cbb3ac5d1012
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "99596785"
+---
+# <span data-ttu-id="cb9dd-102">Update-Script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-102">Update-Script</span></span>
+
+## <span data-ttu-id="cb9dd-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="cb9dd-103">SYNOPSIS</span></span>
+<span data-ttu-id="cb9dd-104">Atualiza um script.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-104">Updates a script.</span></span>
+
+## <span data-ttu-id="cb9dd-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="cb9dd-105">SYNTAX</span></span>
+
+### <span data-ttu-id="cb9dd-106">Tudo</span><span class="sxs-lookup"><span data-stu-id="cb9dd-106">All</span></span>
+
+```
+Update-Script [[-Name] <String[]>] [-RequiredVersion <String>] [-MaximumVersion <String>]
+ [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [-Credential <PSCredential>] [-Force]
+ [-AllowPrerelease] [-AcceptLicense] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="cb9dd-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="cb9dd-107">DESCRIPTION</span></span>
+
+<span data-ttu-id="cb9dd-108">O `Update-Script` cmdlet atualiza um script que está instalado no computador local.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-108">The `Update-Script` cmdlet updates a script that is installed on the local computer.</span></span> <span data-ttu-id="cb9dd-109">O script atualizado é baixado do mesmo repositório que a versão instalada.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-109">The updated script is downloaded from the same repository as the installed version.</span></span>
+
+## <span data-ttu-id="cb9dd-110">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="cb9dd-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="cb9dd-111">Exemplo 1: atualizar o script especificado</span><span class="sxs-lookup"><span data-stu-id="cb9dd-111">Example 1: Update the specified script</span></span>
+
+<span data-ttu-id="cb9dd-112">Este exemplo atualiza um script instalado e exibe a versão atualizada.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-112">This example updates an installed script and displays the updated version.</span></span>
+
+```powershell
+Update-Script -Name UpdateManagement-Template -RequiredVersion 1.1
+Get-InstalledScript -Name UpdateManagement-Template
+```
+
+```Output
+Version   Name                       Repository   Description
+-------   ----                       ----------   -----------
+1.1       UpdateManagement-Template  PSGallery    This is a template script for Update Management...
+```
+
+<span data-ttu-id="cb9dd-113">`Update-Script` usa o parâmetro **Name** para especificar o script a ser atualizado.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-113">`Update-Script` uses the **Name** parameter to specify the script to update.</span></span> <span data-ttu-id="cb9dd-114">O parâmetro **RequiredVersion** especifica a versão do script.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-114">The **RequiredVersion** parameter specifies the script version.</span></span> <span data-ttu-id="cb9dd-115">`Get-InstalledScript` exibe a versão atualizada do script.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-115">`Get-InstalledScript` displays the updated version of the script.</span></span>
+
+## <span data-ttu-id="cb9dd-116">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="cb9dd-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="cb9dd-117">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="cb9dd-117">-AcceptLicense</span></span>
+
+<span data-ttu-id="cb9dd-118">Aceite automaticamente o contrato de licença durante a instalação se o pacote exigir.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-118">Automatically accept the license agreement during installation if the package requires it.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-119">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="cb9dd-119">-AllowPrerelease</span></span>
+
+<span data-ttu-id="cb9dd-120">Permite que você atualize um script com o script mais recente marcado como um pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-120">Allows you to update a script with the newer script marked as a prerelease.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="cb9dd-121">-Confirm</span></span>
+
+<span data-ttu-id="cb9dd-122">Solicita a confirmação antes de executar `Update-Script` .</span><span class="sxs-lookup"><span data-stu-id="cb9dd-122">Prompts you for confirmation before running `Update-Script`.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-123">-Credential</span><span class="sxs-lookup"><span data-stu-id="cb9dd-123">-Credential</span></span>
+
+<span data-ttu-id="cb9dd-124">Especifica uma conta de usuário que tem permissão para atualizar um script.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-124">Specifies a user account that has permission to update a script.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-125">-Force</span><span class="sxs-lookup"><span data-stu-id="cb9dd-125">-Force</span></span>
+
+<span data-ttu-id="cb9dd-126">Forças `Update-Script` a serem executadas sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-126">Forces `Update-Script` to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-127">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="cb9dd-127">-MaximumVersion</span></span>
+
+<span data-ttu-id="cb9dd-128">Especifica a versão máxima ou mais recente do script a ser atualizada.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-128">Specifies the maximum, or newest, version of the script to update.</span></span> <span data-ttu-id="cb9dd-129">Os parâmetros **MaximumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-129">The **MaximumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-130">-Name</span><span class="sxs-lookup"><span data-stu-id="cb9dd-130">-Name</span></span>
+
+<span data-ttu-id="cb9dd-131">Especifica um nome de script ou uma matriz de nomes de script para atualizar.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-131">Specifies one script name or an array of script names to update.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-132">-PassThru</span><span class="sxs-lookup"><span data-stu-id="cb9dd-132">-PassThru</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-133">-Proxy</span><span class="sxs-lookup"><span data-stu-id="cb9dd-133">-Proxy</span></span>
+
+<span data-ttu-id="cb9dd-134">Especifica um servidor proxy para a solicitação em vez de se conectar diretamente a um recurso da Internet.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-134">Specifies a proxy server for the request rather than connecting directly to an internet resource.</span></span>
+
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-135">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="cb9dd-135">-ProxyCredential</span></span>
+
+<span data-ttu-id="cb9dd-136">Especifica uma conta de usuário que tem permissão para usar o servidor proxy especificado pelo parâmetro de **proxy** .</span><span class="sxs-lookup"><span data-stu-id="cb9dd-136">Specifies a user account that has permission to use the proxy server specified by the **Proxy** parameter.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-137">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="cb9dd-137">-RequiredVersion</span></span>
+
+<span data-ttu-id="cb9dd-138">Especifica o número de versão exato do script a ser atualizado.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-138">Specifies the exact version number of the script to update.</span></span> <span data-ttu-id="cb9dd-139">Os parâmetros **MinimumVersion** e **RequiredVersion** não podem ser usados no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-139">The **MinimumVersion** and **RequiredVersion** parameters can't be used in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-140">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="cb9dd-140">-WhatIf</span></span>
+
+<span data-ttu-id="cb9dd-141">Mostra o que aconteceria se `Update-Script` for executado.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-141">Shows what would happen if `Update-Script` runs.</span></span> <span data-ttu-id="cb9dd-142">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-142">The cmdlet isn't run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb9dd-143">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cb9dd-143">CommonParameters</span></span>
+
+<span data-ttu-id="cb9dd-144">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-144">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cb9dd-145">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="cb9dd-145">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="cb9dd-146">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="cb9dd-146">INPUTS</span></span>
+
+### <span data-ttu-id="cb9dd-147">System.String[]</span><span class="sxs-lookup"><span data-stu-id="cb9dd-147">System.String[]</span></span>
+
+### <span data-ttu-id="cb9dd-148">System.String</span><span class="sxs-lookup"><span data-stu-id="cb9dd-148">System.String</span></span>
+
+### <span data-ttu-id="cb9dd-149">System.Uri</span><span class="sxs-lookup"><span data-stu-id="cb9dd-149">System.Uri</span></span>
+
+### <span data-ttu-id="cb9dd-150">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="cb9dd-150">System.Management.Automation.PSCredential</span></span>
+
+## <span data-ttu-id="cb9dd-151">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="cb9dd-151">OUTPUTS</span></span>
+
+### <span data-ttu-id="cb9dd-152">System.Object</span><span class="sxs-lookup"><span data-stu-id="cb9dd-152">System.Object</span></span>
+
+## <span data-ttu-id="cb9dd-153">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="cb9dd-153">NOTES</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="cb9dd-154">A partir de abril de 2020, a Galeria do PowerShell não dará mais suporte às versões 1.0 e 1.1 do protocolo TLS.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-154">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="cb9dd-155">Se você não estiver usando o TLS 1.2 ou posterior, receberá um erro ao tentar acessar a Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-155">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="cb9dd-156">Use o seguinte comando para garantir que esteja usando o TLS 1.2:</span><span class="sxs-lookup"><span data-stu-id="cb9dd-156">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="cb9dd-157">Para obter mais informações, confira o [comunicado](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) no blog do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cb9dd-157">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
+
+## <span data-ttu-id="cb9dd-158">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="cb9dd-158">RELATED LINKS</span></span>
+
+[<span data-ttu-id="cb9dd-159">Find-Script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-159">Find-Script</span></span>](Find-Script.md)
+
+[<span data-ttu-id="cb9dd-160">Install-Script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-160">Install-Script</span></span>](Install-Script.md)
+
+[<span data-ttu-id="cb9dd-161">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-161">Publish-Script</span></span>](Publish-Script.md)
+
+[<span data-ttu-id="cb9dd-162">Save-Script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-162">Save-Script</span></span>](Save-Script.md)
+
+[<span data-ttu-id="cb9dd-163">Desinstalar-script</span><span class="sxs-lookup"><span data-stu-id="cb9dd-163">Uninstall-Script</span></span>](Uninstall-Script.md)
