@@ -1,0 +1,490 @@
+---
+external help file: Microsoft.PowerShell.PackageManagement.dll-Help.xml
+Locale: en-US
+Module Name: PackageManagement
+ms.date: 05/24/2019
+online version: https://docs.microsoft.com/powershell/module/packagemanagement/uninstall-package?view=powershell-7.2&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Uninstall-Package
+ms.openlocfilehash: ca12f7f2118a004a6f474ae8174b04f9dbb9444d
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "99603342"
+---
+# <span data-ttu-id="b4eac-102">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="b4eac-102">Uninstall-Package</span></span>
+
+## <span data-ttu-id="b4eac-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="b4eac-103">SYNOPSIS</span></span>
+<span data-ttu-id="b4eac-104">Desinstala um ou mais pacotes de software.</span><span class="sxs-lookup"><span data-stu-id="b4eac-104">Uninstalls one or more software packages.</span></span>
+
+## <span data-ttu-id="b4eac-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b4eac-105">SYNTAX</span></span>
+
+### <span data-ttu-id="b4eac-106">PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b4eac-106">PackageByInputObject</span></span>
+
+```
+Uninstall-Package [-InputObject] <SoftwareIdentity[]> [-AllVersions] [-Force] [-ForceBootstrap]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b4eac-107">PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="b4eac-107">PackageBySearch</span></span>
+
+```
+Uninstall-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <String>]
+ [-MaximumVersion <String>] [-AllVersions] [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm]
+ [-ProviderName <String[]>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b4eac-108">NuGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b4eac-108">NuGet:PackageByInputObject</span></span>
+
+```
+Uninstall-Package [-AllVersions] [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm]
+ [-Destination <String>] [-ExcludeVersion] [-Scope <String>] [-SkipDependencies]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="b4eac-109">NuGet: PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="b4eac-109">NuGet:PackageBySearch</span></span>
+
+```
+Uninstall-Package [-AllVersions] [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm]
+ [-Destination <String>] [-ExcludeVersion] [-Scope <String>] [-SkipDependencies]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="b4eac-110">PowerShellGet: PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b4eac-110">PowerShellGet:PackageByInputObject</span></span>
+
+```
+Uninstall-Package [-AllVersions] [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [-Scope <String>]
+ [-PackageManagementProvider <String>] [-Type <String>] [-AllowClobber] [-SkipPublisherCheck]
+ [-InstallUpdate] [-NoPathUpdate] [-AllowPrereleaseVersions] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b4eac-111">PowerShellGet: PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="b4eac-111">PowerShellGet:PackageBySearch</span></span>
+
+```
+Uninstall-Package [-AllVersions] [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [-Scope <String>]
+ [-PackageManagementProvider <String>] [-Type <String>] [-AllowClobber] [-SkipPublisherCheck]
+ [-InstallUpdate] [-NoPathUpdate] [-AllowPrereleaseVersions] [<CommonParameters>]
+```
+
+## <span data-ttu-id="b4eac-112">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="b4eac-112">DESCRIPTION</span></span>
+
+<span data-ttu-id="b4eac-113">O `Uninstall-Package` cmdlet desinstala um ou mais pacotes de software do computador local.</span><span class="sxs-lookup"><span data-stu-id="b4eac-113">The `Uninstall-Package` cmdlet uninstalls one or more software packages from the local computer.</span></span> <span data-ttu-id="b4eac-114">Para localizar os pacotes instalados, use o `Get-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-114">To find installed packages, use the `Get-Package` cmdlet.</span></span>
+
+## <span data-ttu-id="b4eac-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="b4eac-115">EXAMPLES</span></span>
+
+### <span data-ttu-id="b4eac-116">Exemplo 1: desinstalar um pacote</span><span class="sxs-lookup"><span data-stu-id="b4eac-116">Example 1: Uninstall a package</span></span>
+
+<span data-ttu-id="b4eac-117">O `Uninstall-Package` cmdlet desinstala pacotes.</span><span class="sxs-lookup"><span data-stu-id="b4eac-117">The `Uninstall-Package` cmdlet uninstalls packages.</span></span> <span data-ttu-id="b4eac-118">O parâmetro **Name** especifica o pacote a ser desinstalado.</span><span class="sxs-lookup"><span data-stu-id="b4eac-118">The **Name** parameter specifies the package to uninstall.</span></span> <span data-ttu-id="b4eac-119">Se várias versões de um pacote forem instaladas, a versão mais recente será desinstalada.</span><span class="sxs-lookup"><span data-stu-id="b4eac-119">If multiple versions of a package are installed, the newest version is uninstalled.</span></span>
+
+```
+PS> Uninstall-Package -Name NuGet.Core
+```
+
+### <span data-ttu-id="b4eac-120">Exemplo 2: usar o pipeline para desinstalar um pacote</span><span class="sxs-lookup"><span data-stu-id="b4eac-120">Example 2: Use the pipeline to uninstall a package</span></span>
+
+<span data-ttu-id="b4eac-121">`Get-Package` localiza um pacote específico e envia o objeto **SoftwareIdentity** para baixo do pipeline para o `Uninsall-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-121">`Get-Package` locates a specific package and sends the **SoftwareIdentity** object down the pipeline to the `Uninsall-Package` cmdlet.</span></span>
+
+```
+PS> Get-Package -Name NuGet.Core -RequiredVersion 2.14.0 | Uninstall-Package
+```
+
+<span data-ttu-id="b4eac-122">O `Get-Package` cmdlet usa os parâmetros **Name** e **RequiredVersion** para especificar um pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-122">The `Get-Package` cmdlet uses the **Name** and **RequiredVersion** parameters to specify a package.</span></span>
+<span data-ttu-id="b4eac-123">Um objeto **SoftwareIdentity** é enviado pelo pipeline.</span><span class="sxs-lookup"><span data-stu-id="b4eac-123">A **SoftwareIdentity** object is sent down the pipeline.</span></span> <span data-ttu-id="b4eac-124">O `Uninstall-Package` cmdlet recebe o objeto como **InputObject** e remove o pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-124">The `Uninstall-Package` cmdlet receives the object as an **InputObject** and removes the package.</span></span>
+
+<span data-ttu-id="b4eac-125">Como alternativa, o `Uninstall-Package` cmdlet pode especificar um valor para o parâmetro **InputObject** :</span><span class="sxs-lookup"><span data-stu-id="b4eac-125">As an alternative, the `Uninstall-Package` cmdlet can specify a value for the **InputObject** parameter:</span></span>
+
+`Uninstall-Package -InputObject ( Get-Package -Name NuGet.Core -RequiredVersion 2.14.0 )`
+
+## <span data-ttu-id="b4eac-126">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b4eac-126">PARAMETERS</span></span>
+
+### <span data-ttu-id="b4eac-127">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="b4eac-127">-AllowClobber</span></span>
+
+<span data-ttu-id="b4eac-128">Substitui mensagens de aviso sobre conflitos com comandos existentes.</span><span class="sxs-lookup"><span data-stu-id="b4eac-128">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="b4eac-129">Substitui os comandos existentes que têm o mesmo nome que os comandos que estão sendo instalados.</span><span class="sxs-lookup"><span data-stu-id="b4eac-129">Overwrites existing commands that have the same name as commands being installed.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-130">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="b4eac-130">-AllowPrereleaseVersions</span></span>
+
+<span data-ttu-id="b4eac-131">Permite que os pacotes marcados como pré-lançamento sejam desinstalados.</span><span class="sxs-lookup"><span data-stu-id="b4eac-131">Allows packages marked as prerelease to be uninstalled.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-132">-Próprias versões</span><span class="sxs-lookup"><span data-stu-id="b4eac-132">-AllVersions</span></span>
+
+<span data-ttu-id="b4eac-133">Indica que esse cmdlet desinstala todas as versões do pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-133">Indicates that this cmdlet uninstalls all versions of the package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-134">-Destino</span><span class="sxs-lookup"><span data-stu-id="b4eac-134">-Destination</span></span>
+
+<span data-ttu-id="b4eac-135">Especifica uma cadeia de caracteres do caminho para o objeto de entrada.</span><span class="sxs-lookup"><span data-stu-id="b4eac-135">Specifies a string of the path to the input object.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageByInputObject, NuGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-136">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="b4eac-136">-ExcludeVersion</span></span>
+
+<span data-ttu-id="b4eac-137">Alterne para excluir o número de versão no caminho da pasta.</span><span class="sxs-lookup"><span data-stu-id="b4eac-137">Switch to exclude the version number in the folder path.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NuGet:PackageByInputObject, NuGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-138">-Force</span><span class="sxs-lookup"><span data-stu-id="b4eac-138">-Force</span></span>
+
+<span data-ttu-id="b4eac-139">Força o comando a ser executado sem solicitar a confirmação do usuário.</span><span class="sxs-lookup"><span data-stu-id="b4eac-139">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-140">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="b4eac-140">-ForceBootstrap</span></span>
+
+<span data-ttu-id="b4eac-141">Força o **PackageManagement** a instalar automaticamente o provedor de pacote para o pacote especificado.</span><span class="sxs-lookup"><span data-stu-id="b4eac-141">Forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-142">-InputObject</span><span class="sxs-lookup"><span data-stu-id="b4eac-142">-InputObject</span></span>
+
+<span data-ttu-id="b4eac-143">Aceita a entrada de pipeline que especifica o objeto **SoftwareIdentity** do pacote do `Get-Package` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-143">Accepts pipeline input that specifies the package's **SoftwareIdentity** object from the `Get-Package` cmdlet.</span></span> <span data-ttu-id="b4eac-144">**InputObject** aceita o objeto **SoftwareIdentity** como um `Get-Package` valor ou uma variável que contém o objeto.</span><span class="sxs-lookup"><span data-stu-id="b4eac-144">**InputObject** accepts the **SoftwareIdentity** object as a `Get-Package` value or a variable that contains the object.</span></span>
+
+```yaml
+Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity[]
+Parameter Sets: PackageByInputObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-145">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="b4eac-145">-InstallUpdate</span></span>
+
+<span data-ttu-id="b4eac-146">Indica que o `Uninstall-Package` desinstala as atualizações.</span><span class="sxs-lookup"><span data-stu-id="b4eac-146">Indicates that `Uninstall-Package` uninstalls updates.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-147">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="b4eac-147">-MaximumVersion</span></span>
+
+<span data-ttu-id="b4eac-148">Especifica a versão de pacote máxima permitida que você deseja desinstalar.</span><span class="sxs-lookup"><span data-stu-id="b4eac-148">Specifies the maximum allowed package version that you want to uninstall.</span></span> <span data-ttu-id="b4eac-149">Se você não especificar esse parâmetro, `Uninstall-Package` o desinstalará a versão mais recente do pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-149">If you don't specify this parameter, `Uninstall-Package` uninstalls the package's newest version.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-150">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="b4eac-150">-MinimumVersion</span></span>
+
+<span data-ttu-id="b4eac-151">Especifica a versão mínima permitida do pacote que você deseja desinstalar.</span><span class="sxs-lookup"><span data-stu-id="b4eac-151">Specifies the minimum allowed package version that you want to uninstall.</span></span> <span data-ttu-id="b4eac-152">Se você não adicionar esse parâmetro, `Uninstall-Package` o desinstala a versão mais recente do pacote que atende a qualquer versão especificada pelo parâmetro **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="b4eac-152">If you don't add this parameter, `Uninstall-Package` uninstalls the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-153">-Name</span><span class="sxs-lookup"><span data-stu-id="b4eac-153">-Name</span></span>
+
+<span data-ttu-id="b4eac-154">Especifica um ou mais nomes de pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-154">Specifies one or more package names.</span></span> <span data-ttu-id="b4eac-155">Vários nomes de pacote devem ser separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="b4eac-155">Multiple package names must be separated by commas.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-156">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="b4eac-156">-NoPathUpdate</span></span>
+
+<span data-ttu-id="b4eac-157">**NoPathUpdate** se aplica somente ao `Install-Script` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-157">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="b4eac-158">**NoPathUpdate** é um parâmetro dinâmico adicionado pelo provedor e não é suportado pelo `Uninstall-Package` .</span><span class="sxs-lookup"><span data-stu-id="b4eac-158">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Uninstall-Package`.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-159">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="b4eac-159">-PackageManagementProvider</span></span>
+
+<span data-ttu-id="b4eac-160">Especifica o provedor de **PackageManagement** .</span><span class="sxs-lookup"><span data-stu-id="b4eac-160">Specifies the **PackageManagement** provider.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-161">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="b4eac-161">-ProviderName</span></span>
+
+<span data-ttu-id="b4eac-162">Especifica um ou mais nomes de provedor de pacote para pesquisar pacotes.</span><span class="sxs-lookup"><span data-stu-id="b4eac-162">Specifies one or more package provider names to search for packages.</span></span> <span data-ttu-id="b4eac-163">Você pode obter os nomes de provedor de pacotes executando o cmdlet `Get-PackageProvider`.</span><span class="sxs-lookup"><span data-stu-id="b4eac-163">You can get package provider names by running the `Get-PackageProvider` cmdlet.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: PackageBySearch
+Aliases: Provider
+Accepted values: Bootstrap, NuGet, PowerShellGet
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-164">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="b4eac-164">-RequiredVersion</span></span>
+
+<span data-ttu-id="b4eac-165">Especifica a versão exata permitida do pacote que você deseja desinstalar.</span><span class="sxs-lookup"><span data-stu-id="b4eac-165">Specifies the exact allowed version of the package that you want to uninstall.</span></span> <span data-ttu-id="b4eac-166">Se você não adicionar esse parâmetro, `Uninstall-Package` o desinstala a versão mais recente do pacote que atende a qualquer versão especificada pelo parâmetro **MaximumVersion** .</span><span class="sxs-lookup"><span data-stu-id="b4eac-166">If you don't add this parameter, `Uninstall-Package` uninstalls the package's newest version that satisfies any version specified by the **MaximumVersion** parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-167">-Escopo</span><span class="sxs-lookup"><span data-stu-id="b4eac-167">-Scope</span></span>
+
+<span data-ttu-id="b4eac-168">Especifica o escopo para o qual o pacote será desinstalado.</span><span class="sxs-lookup"><span data-stu-id="b4eac-168">Specifies the scope for which to uninstall the package.</span></span> <span data-ttu-id="b4eac-169">Os valores aceitáveis para esse parâmetro são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="b4eac-169">The acceptable values for this parameter are as follows:</span></span>
+
+- <span data-ttu-id="b4eac-170">CurrentUser</span><span class="sxs-lookup"><span data-stu-id="b4eac-170">CurrentUser</span></span>
+- <span data-ttu-id="b4eac-171">AllUsers</span><span class="sxs-lookup"><span data-stu-id="b4eac-171">AllUsers</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageByInputObject, NuGet:PackageBySearch, PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+Accepted values: CurrentUser, AllUsers
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-172">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="b4eac-172">-SkipDependencies</span></span>
+
+<span data-ttu-id="b4eac-173">Ignora a desinstalação de dependências de software.</span><span class="sxs-lookup"><span data-stu-id="b4eac-173">Skips the uninstallation of software dependencies.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NuGet:PackageByInputObject, NuGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-174">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="b4eac-174">-SkipPublisherCheck</span></span>
+
+<span data-ttu-id="b4eac-175">Permite obter uma versão de pacote mais nova do que a versão instalada.</span><span class="sxs-lookup"><span data-stu-id="b4eac-175">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="b4eac-176">Por exemplo, um pacote instalado que é assinado digitalmente por um fornecedor confiável, mas uma nova versão não é assinada digitalmente.</span><span class="sxs-lookup"><span data-stu-id="b4eac-176">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-177">-Type</span><span class="sxs-lookup"><span data-stu-id="b4eac-177">-Type</span></span>
+
+<span data-ttu-id="b4eac-178">Especifica se é para procurar pacotes com um módulo, um script ou ambos.</span><span class="sxs-lookup"><span data-stu-id="b4eac-178">Specifies whether to search for packages with a module, a script, or both.</span></span> <span data-ttu-id="b4eac-179">Os valores aceitáveis para esse parâmetro são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="b4eac-179">The acceptable values for this parameter are as follows:</span></span>
+
+- <span data-ttu-id="b4eac-180">Módulo</span><span class="sxs-lookup"><span data-stu-id="b4eac-180">Module</span></span>
+- <span data-ttu-id="b4eac-181">Script</span><span class="sxs-lookup"><span data-stu-id="b4eac-181">Script</span></span>
+- <span data-ttu-id="b4eac-182">Tudo</span><span class="sxs-lookup"><span data-stu-id="b4eac-182">All</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet:PackageBySearch
+Aliases:
+Accepted values: Module, Script, All
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-183">-Confirm</span><span class="sxs-lookup"><span data-stu-id="b4eac-183">-Confirm</span></span>
+
+<span data-ttu-id="b4eac-184">Solicita sua confirmação antes de executar o cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-184">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-185">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b4eac-185">-WhatIf</span></span>
+
+<span data-ttu-id="b4eac-186">Mostra o que aconteceria se o `Uninstall-Package` cmdlet fosse executado.</span><span class="sxs-lookup"><span data-stu-id="b4eac-186">Shows what would happen if `Uninstall-Package` cmdlet is run.</span></span> <span data-ttu-id="b4eac-187">O cmdlet não é executado.</span><span class="sxs-lookup"><span data-stu-id="b4eac-187">The cmdlet isn't run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b4eac-188">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b4eac-188">CommonParameters</span></span>
+
+<span data-ttu-id="b4eac-189">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b4eac-189">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b4eac-190">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="b4eac-190">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="b4eac-191">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="b4eac-191">INPUTS</span></span>
+
+### <span data-ttu-id="b4eac-192">`Uninstall-Package` aceita objetos **SoftwareIdentity** do pipeline como entrada.</span><span class="sxs-lookup"><span data-stu-id="b4eac-192">`Uninstall-Package` accepts **SoftwareIdentity** objects from the pipeline as input.</span></span>
+
+## <span data-ttu-id="b4eac-193">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="b4eac-193">OUTPUTS</span></span>
+
+### <span data-ttu-id="b4eac-194">`Uninstall-Package` não gera nenhuma saída.</span><span class="sxs-lookup"><span data-stu-id="b4eac-194">`Uninstall-Package` doesn't generate any output.</span></span>
+
+## <span data-ttu-id="b4eac-195">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="b4eac-195">NOTES</span></span>
+
+<span data-ttu-id="b4eac-196">A inclusão de um provedor de pacote em um comando pode tornar os parâmetros dinâmicos disponíveis para um cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b4eac-196">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="b4eac-197">Parâmetros dinâmicos são específicos para um provedor de pacote.</span><span class="sxs-lookup"><span data-stu-id="b4eac-197">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="b4eac-198">O `Get-Help` cmdlet lista os conjuntos de parâmetros de um cmdlet e inclui o conjunto de parâmetros do provedor.</span><span class="sxs-lookup"><span data-stu-id="b4eac-198">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="b4eac-199">Por exemplo, `Uninstall-Package` tem o conjunto de parâmetros **PowerShellGet** que inclui `-NoPathUpdate` , `AllowClobber` e `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="b4eac-199">For example, `Uninstall-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
+
+## <span data-ttu-id="b4eac-200">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="b4eac-200">RELATED LINKS</span></span>
+
+[<span data-ttu-id="b4eac-201">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="b4eac-201">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+
+[<span data-ttu-id="b4eac-202">Find-Package</span><span class="sxs-lookup"><span data-stu-id="b4eac-202">Find-Package</span></span>](Find-Package.md)
+
+[<span data-ttu-id="b4eac-203">Get-Package</span><span class="sxs-lookup"><span data-stu-id="b4eac-203">Get-Package</span></span>](Get-Package.md)
+
+[<span data-ttu-id="b4eac-204">Install-Package</span><span class="sxs-lookup"><span data-stu-id="b4eac-204">Install-Package</span></span>](Install-Package.md)
+
+[<span data-ttu-id="b4eac-205">Save-Package</span><span class="sxs-lookup"><span data-stu-id="b4eac-205">Save-Package</span></span>](Save-Package.md)
+
