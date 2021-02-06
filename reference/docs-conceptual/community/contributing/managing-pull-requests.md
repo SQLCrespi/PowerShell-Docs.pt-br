@@ -1,22 +1,22 @@
 ---
 title: Como gerenciamos solicitações de pull
 description: Este artigo explica como a equipe do PowerShell-Docs gerencia solicitações de pull.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
-ms.translationtype: HT
+ms.openlocfilehash: 7050db6ad30963d0a75b2a083daace494d703027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158166"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99596566"
 ---
 # <a name="managing-pull-requests"></a>Gerenciar solicitações de pull
 
-Este artigo documenta como gerenciamos solicitações de pull no repositório do PowerShell-Docs. O artigo foi projetado para ser um auxílio de trabalho para membros da equipe do PowerShell-Docs. Publicamos aqui para fornecer transparência quanto ao processo para nossos colaboradores públicos.
+Este artigo documenta como gerenciamos solicitações de pull no repositório do PowerShell-Docs. O artigo foi projetado para ser um auxílio de trabalho para membros da equipe do PowerShell-Docs. Ele é publicado aqui para fornecer transparência de processo para nossos colaboradores públicos.
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
-- A pessoa que envia a PR (solicitação de pull) não deve mesclá-la sem uma revisão em pares.
+- A pessoa que envia a PR não deve mesclar a PR sem uma revisão de par.
 - Atribua o revisor em pares quando a PR for enviada. A atribuição antecipada permite que o revisor responda mais cedo com comentários editoriais.
 - Use os comentários para descrever a natureza da alteração ou o tipo de revisão solicitada. Mencione o revisor com @mention. Por exemplo, se a alteração for secundária, e você não precisar de uma revisão técnica completa, explique isso em um comentário.
 
@@ -43,7 +43,7 @@ Confira a [lista de verificação editorial](editorial-checklist.md) para obter 
 - Conferir a renderização de versão prévia
 - Conferir os metadados – ms.date, remover ms.assetid, garantir os campos obrigatórios
 - Validar a correção de markdown
-  - Conferir o guia de estilo para a formatação de conteúdo específico
+  - Consulte Guia de estilo para regras de formatação específicas do conteúdo
 - Reorganizar os exemplos da seguinte maneira:
   - Sentença(s) de introdução
   - Código e saída
@@ -60,7 +60,7 @@ Confira a [lista de verificação editorial](editorial-checklist.md) para obter 
 
 ## <a name="branch-merge-process"></a>Processo de mesclagem de branch
 
-O branch de preparo é o único que deve ser mesclado no branch dinâmico. As mesclagens de branches de curta duração (trabalho) devem ser restringidas.
+O `staging` Branch é o único Branch que é mesclado no `live` . As mesclagens de branches de curta duração (trabalho) devem ser restringidas.
 
 | *Mesclar de/para*  | *branch-lançamento* | *staging*        | *dinâmico*      |
 | ---------------- |:----------------:|:----------------:|:-----------:|
@@ -97,9 +97,9 @@ Quando uma PR é mesclada, o HEAD do branch de destino é alterado. Qualquer PR 
 
 ## <a name="publishing-to-live"></a>Publicar no site dinâmico
 
-Periodicamente, as alterações acumuladas no branch `staging` precisam ser publicadas no site dinâmico. Isso exige a mesclagem do branch `staging` no branch `live`.
+Periodicamente, as alterações acumuladas no branch `staging` precisam ser publicadas no site dinâmico.
 
-- O branch `staging` deve ser mesclado no `live` pelo menos uma vez por semana.
+- A `staging` ramificação é mesclada a `live` cada dia da semana em 15h PST.
 - O branch `staging` deve ser mesclado no `live` após qualquer alteração significativa.
   - Alterações em 50 ou mais arquivos
   - Depois de mesclar um branch de lançamento

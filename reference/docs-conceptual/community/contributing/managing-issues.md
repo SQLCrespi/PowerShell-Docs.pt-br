@@ -1,18 +1,18 @@
 ---
 title: Como gerenciamos problemas
 description: Este artigo explica como a equipe do PowerShell-Docs gerencia problemas.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 56f0ea5b4c5c700db8fdd0b16e3ce1c4040a43dc
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
-ms.translationtype: HT
+ms.openlocfilehash: 72267137a2657f51e5f616113adf92d80647acad
+ms.sourcegitcommit: 61765d08321623743dc5db5367160f6982fe7857
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93354585"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "99596158"
 ---
 # <a name="how-we-manage-issues"></a>Como gerenciamos problemas
 
-Este artigo documenta como gerenciamos problemas no repositório do PowerShell-Docs. O artigo foi projetado para ser um auxílio de trabalho para membros da equipe do PowerShell-Docs. Publicamos aqui para fornecer transparência quanto ao processo para nossos colaboradores públicos.
+Este artigo documenta como gerenciamos problemas no repositório do PowerShell-Docs. O artigo foi projetado para ser um auxílio de trabalho para membros da equipe do PowerShell-Docs. Ele é publicado aqui para fornecer transparência de processo para nossos colaboradores públicos.
 
 ## <a name="sources-of-issues"></a>Fontes de problemas
 
@@ -23,51 +23,54 @@ Este artigo documenta como gerenciamos problemas no repositório do PowerShell-D
 
 ## <a name="response-time-targets"></a>Metas de tempo de resposta
 
-- Triagem - 5 dias úteis
-- Correção ou alteração - nenhuma meta específica - melhor esforço
+80% dos novos problemas são fechados dentro de 3 dias úteis.
+
+- Triantigos-1 dias úteis
+- Corrigir ou alterar-10 dias úteis
 
 ### <a name="labeling--milestones"></a>Rótulos & marcos
 
 #### <a name="label-types"></a>Tipos de rótulo
 
-|Prefixo  | Descrição                                                         |
-|------- | --------------------------------------------------------------------|
-|Área    | Usado para indicar qual parte do PowerShell ou os documentos que o problema está discutindo.<br>Útil para os proprietários de recursos encontrarem problemas para seus recursos.|
-|Pri     | Usado para indicar a prioridade do problema. Intervalo de valores de 0 a 4.        |
-|Problema   | Usado para classificar o tipo de comentário para o problema                     |
-|Revisão  | Usado para problemas que exigem uma análise adicional da equipe              |
-|Status  | Usado para indicar o status do item de trabalho                        |
-|Aguardando | Usado para indicar que estamos aguardando algo                   |
+|   Tipo   | Descrição                                                         |
+| -------- | ------------------------------------------------------------------- |
+| Área     | Usado para indicar qual parte do PowerShell ou os documentos que o problema está discutindo.<br>Útil para os proprietários de recursos encontrarem problemas para seus recursos. |
+| Problema    | Indica o tipo de problema                                         |
+| Prioridade | Indica a prioridade do problema. Intervalo de valores 0 (alto)-4 (baixo)  |
+| Status   | Indica o status do item de trabalho ou por que ele foi fechado          |
+| Marca      | Rótulos usados para para classificação adicional                        |
+| Aguardando  | Indica que estamos aguardando alguém ou algum outro evento         |
 
 #### <a name="milestones"></a>Marcos
 
-Os problemas e solicitações de pull devem ser marcados com o marco apropriado. Se o problema não for direcionado a uma versão específica, nenhum marco será usado. Os problemas para solicitações de pulls de documentação para alterações que ainda precisam ser mescladas na base de código do PowerShell devem ser atribuídos ao marco **Futuro**. Após a alteração do código ter sido mesclada, altere o marco para a versão apropriada.
+Os problemas e solicitações de pull devem ser marcados com o marco apropriado. Se o problema não se aplicar a uma versão específica, nenhuma etapa será usada. PRs e problemas relacionados a alterações que ainda precisam ser mescladas na base de código do PowerShell devem ser atribuídos à etapa **futura** . Após a alteração do código ter sido mesclada, altere o marco para a versão apropriada.
 
 |    Marco     |                    Descrição                     |
 | ---------------- | -------------------------------------------------- |
-| 6.x              | Itens de trabalho relacionados ao PowerShell 6.0 a 6.2. x |
 | 7.0.0            | Itens de trabalho relacionados ao PowerShell 7.0               |
 | 7.1.0            | Itens de trabalho relacionados ao PowerShell 7.1               |
+| 7.2.0            | Itens de trabalho relacionados ao PowerShell 7,2               |
 | Futuro           | Itens de trabalho relacionados a uma versão futura do PowerShell          |
-| PSReadline-vNext | Itens de trabalho relacionados a uma versão futura do PSReadline          |
 
 ## <a name="triage-process"></a>Processo de triagem
 
-A equipe de documentação do PowerShell se reúne uma vez por semana para discutir os problemas adicionados desde a última reunião. Considera-se que um problema passou por triagem quando os rótulos foram atribuídos ou um proprietário foi atribuído. Os membros da equipe de documentação do PowerShell são incentivados a revisar os problemas diariamente e fazer a triagem de novos problemas à medida que chegam. A reunião semanal de triagem pode ser usada para discutir os novos problemas em mais detalhes, conforme necessário.
+Os membros da equipe do PowerShell revisam os problemas diários e fazem triagem de novos problemas à medida que chegam. A equipe atende semanalmente para discutir problemas que precisam de triagem ou permanecem indefinidos.
 
 ### <a name="misplaced-product-feedback"></a>Comentários incorretos sobre o produto
 
-- Insira um comentário para o cliente indicando que são comentários sobre o produto e forneça um link para o canal de comentários apropriado.
+- Insira um comentário redirecionando o cliente para o canal de comentários correto.
 - Opcional: Copie o problema no local apropriado para comentários do produto, adicione um link ao item copiado e encerre o problema. NÃO copie problemas para o UserVoice.
 
-  | DocSet    | URL de comentários do produto                                           |
-  | --------- | -------------------------------------------------------------- |
-  | developer | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
-  | dsc       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
-  | gallery   | `https://github.com/powershell/powershellgallery/issues/new`   |
-  | jea       | `https://github.com/powershell/jea/issues/new`                 |
-  | reference | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
-  | wmf       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
+  O local padrão para problemas do PowerShell é [https://github.com/PowerShell/PowerShell/issues/new/choose](https://github.com/PowerShell/PowerShell/issues/new/choose) .
+
+  As seguintes áreas de assunto têm locais diferentes para problemas:
+
+  | Entidades |                                                     URL de comentários do produto                                                     |
+  | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+  | dsc      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
+  | gallery  | [https://github.com/powershell/powershellgallery/issues/new](https://github.com/powershell/powershellgallery/issues/new)     |
+  | jea      | [https://github.com/powershell/jea/issues/new](https://github.com/powershell/jea/issues/new)                                 |
+  | wmf      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
 
 ### <a name="support-requests"></a>Solicitações de suporte
 
@@ -84,4 +87,4 @@ A equipe de documentação do PowerShell se reúne uma vez por semana para discu
 
 - Edite o problema para remover qualquer conteúdo ofensivo, se necessário.
 - Insira um comentário indicando que o problema é spam, feche o problema e bloqueie-o para evitar mais comentários.
-- Cada ocorrência disso deve ser discutida na triagem semanal para determinar a necessidade de mais ações (relatório no GitHub ou Jurídico da Microsoft).
+- Cada violação deve ser discutida na triagem semanal para determinar a necessidade de uma ação adicional (relatório para GitHub ou legal da Microsoft).

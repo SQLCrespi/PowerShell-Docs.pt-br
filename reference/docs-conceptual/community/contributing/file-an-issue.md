@@ -1,14 +1,14 @@
 ---
 title: Como arquivar um problema do PowerShell-Docs
 description: Este artigo explica como enviar comentários sobre a documentação do PowerShell.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
-ms.translationtype: HT
+ms.openlocfilehash: a044f77d3529817ec063d4a26fc9d10cdfe873aa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060291"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99596159"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>Como arquivar um problema do PowerShell-Docs
 
@@ -21,10 +21,11 @@ Há duas maneiras de criar um problema:
 
 Para obter uma descrição completa dos controles de comentários, confira o blog da Equipe do Docs que anuncia esse [recurso][feedback].
 
-Na parte inferior da maioria das páginas `docs.microsoft.com`, você verá dois botões de comentários. Um deles é um link para comentários sobre o produto, e o outro é para comentários sobre a documentação. Para contribuir com comentários sobre a documentação é necessário ter uma conta do GitHub. Ao clicar no botão, você é autenticado no GitHub e recebe um formulário simples para inserir seus comentários. Quando você envia o formulário, o controle de comentários cria um novo problema do GitHub e o vincula ao artigo atual.
+Na parte inferior da maioria das páginas `docs.microsoft.com`, você verá dois botões de comentários. Um deles é um link para comentários sobre o produto, e o outro é para comentários sobre a documentação. Para contribuir com comentários sobre a documentação é necessário ter uma conta do GitHub. Clicar no botão o leva no GitHub e apresenta um modelo de problema preenchido previamente.
+Insira seus comentários e envie o formulário.
 
 > [!NOTE]
-> Esse não é um canal de suporte. É uma maneira de fazer perguntas esclarecedoras sobre a documentação ou relatar erros e omissões. Se você precisar de suporte técnico, confira [Recursos da Comunidade](../community-support.md).
+> Esse não é um canal de suporte. Essa é uma maneira de fazer perguntas que esclarecem a documentação ou relatar erros e omissões. Se você precisar de suporte técnico, confira [Recursos da Comunidade](../community-support.md).
 
 ## <a name="filing-issues-on-github"></a>Relatar problemas no GitHub
 
