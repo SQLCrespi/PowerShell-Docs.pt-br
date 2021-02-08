@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre as tabelas de hash
 description: As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
+ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "93354415"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "97980494"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Tudo o que você queria saber sobre as tabelas de hash
 
@@ -925,8 +925,7 @@ Portanto, você pode notar que, embora eu tenha clonado a tabela de hash, a refe
 
 ### <a name="deep-copies"></a>Cópias profundas
 
-Até o momento em que escrevi este artigo, eu não tinha ciência de nenhuma forma inteligente de fazer uma cópia profunda de uma tabela de hash (e mantê-la como uma tabela de hash). Essa é apenas uma daquelas coisas que a pessoa precisa gravar.
-Aqui está um método rápido para fazer isso.
+Existem algumas maneiras de fazer uma cópia em profundidade de uma tabela de hash (e mantê-la como uma tabela de hash). Veja uma função que usa o PowerShell para criar recursivamente uma cópia em profundidade:
 
 ```powershell
 function Get-DeepClone
@@ -952,6 +951,21 @@ function Get-DeepClone
 ```
 
 Ele não gerencia nenhum outro tipo de referência ou matrizes, mas é um bom ponto de partida.
+
+Outra maneira é usar o .Net para desserializá-la usando **CliXml**, como nesta função:
+
+```powershell
+function Get-DeepClone
+{
+    param(
+        $InputObject
+    )
+    $TempCliXmlString = [System.Management.Automation.PSSerializer]::Serialize($obj, [int32]::MaxValue)
+    return [System.Management.Automation.PSSerializer]::Deserialize($TempCliXmlString)
+}
+```
+
+Para tabelas de hash muito grandes, a função de desserialização é mais rápida conforme é escalada horizontalmente. No entanto, é preciso considerar alguns fatores ao usar esse método. Como usa **CliXml**, o método usa muita memória. Se você estiver clonando tabelas de hash muito grandes, isso pode ser um problema. Outra limitação do **CliXml** é a limitação de profundidade de 48. Isso significa que se você tem uma tabela de hash com 48 camadas de tabelas de hash aninhadas, a clonagem falhará e nenhuma delas aparecerá na saída.
 
 ## <a name="anything-else"></a>Algo mais?
 
