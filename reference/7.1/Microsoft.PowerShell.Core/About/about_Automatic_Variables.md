@@ -5,12 +5,12 @@ ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
-ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
+ms.openlocfilehash: 8a2410dd2adcc1679ab203293b4c4e712b960278
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577234"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975134"
 ---
 # <a name="about-automatic-variables"></a>Sobre variáveis automáticas
 
@@ -67,7 +67,7 @@ Mesmo que `$PSItem`. Contém o objeto atual no objeto de pipeline. Você pode us
 
 Contém uma matriz de valores para parâmetros não declarados que são passados para uma função, script ou bloco de script. Ao criar uma função, você pode declarar os parâmetros usando a `param` palavra-chave ou adicionando uma lista separada por vírgulas de parâmetros entre parênteses após o nome da função.
 
-Em uma ação de evento, a `$Args` variável contém objetos que representam os argumentos do evento que está sendo processado. Essa variável é populada somente dentro do `Action` bloco de um comando de registro de evento.
+Em uma ação de evento, a `$args` variável contém objetos que representam os argumentos do evento que está sendo processado. Essa variável é populada somente dentro do `Action` bloco de um comando de registro de evento.
 O valor dessa variável também pode ser encontrado na propriedade **SourceArgs** do objeto **PSEventArgs** que `Get-Event` retorna.
 
 ### <a name="consolefilename"></a>$ConsoleFileName
