@@ -1,16 +1,16 @@
 ---
 description: Descreve as sequências de caracteres especiais que controlam como o PowerShell interpreta os próximos caracteres na sequência.
 Locale: en-US
-ms.date: 04/04/2020
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_special_characters?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Special_Characters
-ms.openlocfilehash: c642bc69d9e67bd945e5687d7f7c35e039062194
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: b21ec1eb5ed0da52cf5eff01eaf3c220d117cf55
+ms.sourcegitcommit: 364c3fe46b2069b810107d840be59fe519ea7b4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99597010"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100100709"
 ---
 # <a name="about-special-characters"></a>Sobre caracteres especiais
 
@@ -157,13 +157,28 @@ Este exemplo gera o símbolo de **seta para cima** (&#x2195;).
 
 ## <a name="vertical-tab-v"></a>Guia vertical (' v)
 
-O caractere de tabulação horizontal ( `` `v `` ) avança para a próxima parada de tabulação vertical e grava a saída restante nesse ponto. Isso não tem efeito no console do Windows padrão.
+O caractere de tabulação vertical ( `` `v `` ) avança para a próxima parada de tabulação vertical e grava a saída restante nesse ponto. O processamento da guia vertical é dependente do dispositivo e do terminal.
 
 ```powershell
 Write-Host "There is a vertical tab`vbetween the words."
 ```
 
-O exemplo a seguir mostra a saída que você obteria em uma impressora ou em um host de console diferente.
+Os exemplos a seguir mostram a saída renderizada da guia vertical em alguns ambientes comuns.
+
+O aplicativo host do console do Windows interpreta ( `` `v `` ) como um caractere especial sem nenhum espaçamento adicional adicionado.
+
+```Output
+There is a vertical tab♂between the words.
+```
+
+O [terminal do Windows](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) renderiza o caractere de tabulação vertical como um retorno de carro e alimentação de linha. O restante da saída é impresso no início da próxima linha.
+
+```Output
+There is a vertical tab
+between the words.
+```
+
+Em impressoras ou em consoles baseados em UNIX, o caractere de tabulação vertical avança para a próxima linha e grava a saída restante nesse ponto.
 
 ```Output
 There is a vertical tab

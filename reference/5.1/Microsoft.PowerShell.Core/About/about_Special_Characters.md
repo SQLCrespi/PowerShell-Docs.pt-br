@@ -2,16 +2,16 @@
 description: Descreve as sequências de caracteres especiais que controlam como o PowerShell interpreta os próximos caracteres na sequência.
 keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 04/04/2020
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_special_characters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Special_Characters
-ms.openlocfilehash: 875a1c3c63e759151c3c64b5396312b030955cb7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 7e0ea9298dd85627c08298917464cb005f4f37ff
+ms.sourcegitcommit: 364c3fe46b2069b810107d840be59fe519ea7b4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195964"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100100726"
 ---
 # <a name="about-special-characters"></a>Sobre caracteres especiais
 
@@ -21,9 +21,9 @@ Descreve as sequências de caracteres especiais que controlam como o PowerShell 
 
 ## <a name="long-description"></a>Descrição longa
 
-O PowerShell dá suporte a um conjunto de sequências de caracteres especiais que são usadas para representar caracteres que não fazem parte do conjunto de caracteres padrão. As sequências normalmente são conhecidas como _sequências de escape_ .
+O PowerShell dá suporte a um conjunto de sequências de caracteres especiais que são usadas para representar caracteres que não fazem parte do conjunto de caracteres padrão. As sequências normalmente são conhecidas como _sequências de escape_.
 
-As seqüências de escape começam com o caractere de acento grave, conhecido como acentuação (ASCII 96), e diferenciam maiúsculas de minúsculas. O caractere de acento grave também pode ser chamado de _caractere de escape_ .
+As seqüências de escape começam com o caractere de acento grave, conhecido como acentuação (ASCII 96), e diferenciam maiúsculas de minúsculas. O caractere de acento grave também pode ser chamado de _caractere de escape_.
 
 As seqüências de escape são interpretadas somente quando contidas em cadeias de caracteres com aspas duplas ( `"` ).
 
@@ -67,7 +67,7 @@ for ($i = 0; $i -le 1; $i++){"`a"}
 O caractere de Backspace ( `` `b `` ) move o cursor para trás, mas não exclui nenhum caractere.
 
 O exemplo grava a palavra **backup** e, em seguida, move o cursor duas vezes.
-Em seguida, na nova posição, o grava um espaço seguido pela palavra de **saída** .
+Em seguida, na nova posição, o grava um espaço seguido pela palavra de **saída**.
 
 ```powershell
 "backup`b`b out"
@@ -129,13 +129,28 @@ Column1         Column2         Column3
 
 ## <a name="vertical-tab-v"></a>Guia vertical (' v)
 
-O caractere de tabulação horizontal ( `` `v `` ) avança para a próxima parada de tabulação vertical e grava a saída restante nesse ponto. Isso não tem efeito no console do Windows padrão.
+O caractere de tabulação vertical ( `` `v `` ) avança para a próxima parada de tabulação vertical e grava a saída restante nesse ponto. O processamento da guia vertical é dependente do dispositivo e do terminal.
 
 ```powershell
 Write-Host "There is a vertical tab`vbetween the words."
 ```
 
-O exemplo a seguir mostra a saída que você obteria em uma impressora ou em um host de console diferente.
+Os exemplos a seguir mostram a saída renderizada da guia vertical em alguns ambientes comuns.
+
+O aplicativo host do console do Windows interpreta ( `` `v `` ) como um caractere especial sem nenhum espaçamento adicional adicionado.
+
+```Output
+There is a vertical tab♂between the words.
+```
+
+O [terminal do Windows](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) renderiza o caractere de tabulação vertical como um retorno de carro e alimentação de linha. O restante da saída é impresso no início da próxima linha.
+
+```Output
+There is a vertical tab
+between the words.
+```
+
+Em impressoras ou em consoles baseados em UNIX, o caractere de tabulação vertical avança para a próxima linha e grava a saída restante nesse ponto.
 
 ```Output
 There is a vertical tab
@@ -178,6 +193,6 @@ $args = C:\Users\username|--%|$HOME
 
 Para obter mais informações sobre o token da análise de parada, consulte [about_Parsing](about_Parsing.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [about_Quoting_Rules](about_Quoting_Rules.md)
