@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: Declaração de atributo de parâmetro
 description: Declaração de atributo de parâmetro
-ms.openlocfilehash: bab48a94cb4b1e8501fb79c2f3ef71393fa2ee68
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 24a49406b1493a7f8c23bca798ddb3e73a901111
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92650344"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500222"
 ---
 # <a name="parameter-attribute-declaration"></a>Declaração de atributo de parâmetro
 
@@ -59,7 +59,7 @@ O atributo Parameter identifica uma propriedade pública da classe cmdlet como u
 
   - Nenhum conjunto de parâmetros deve conter mais de um parâmetro posicional com a mesma posição.
 
-  - Somente um parâmetro em um conjunto de parâmetros deve declarar `ValueFromPipeline = true` . Vários parâmetros podem ser definidos `ValueFromPipelineByPropertyName = true` .
+  - Somente um parâmetro em um conjunto de parâmetros deve declarar `ValueFromPipeline = true` .
 
   - Vários parâmetros podem ser definidos `ValueFromPipelineByPropertyName = true` .
 

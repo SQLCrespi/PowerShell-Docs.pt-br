@@ -5,12 +5,12 @@ ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 2bd2aa825d09078f37dba1f99fa64584dacd324d
-ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
+ms.openlocfilehash: 2ccd631083ddc06d25f2c3b4733223cca2e89d44
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "99599039"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500239"
 ---
 # <a name="about-comparison-operators"></a>Sobre operadores de comparação
 
@@ -39,7 +39,7 @@ Os operadores de comparação permitem comparar valores ou localizar valores que
 |             | -notcontains | a coleção não contém um valor       |
 |             | -in          | o valor está em uma coleção                  |
 |             | -notin       | o valor não está em uma coleção              |
-| Tipo        | -é          | ambos os objetos são do mesmo tipo            |
+| Digite        | -é          | ambos os objetos são do mesmo tipo            |
 |             | -IsNot       | os objetos não são do mesmo tipo         |
 
 ## <a name="common-features"></a>Recursos comuns
@@ -414,7 +414,7 @@ Também é possível usar expressões regulares para substituir texto dinamicame
 No exemplo a seguir, o `-replace` operador aceita um nome de usuário na forma `DomainName\Username` e converte para o `Username@DomainName` formato:
 
 ```powershell
-$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$SearchExp = '^(?<DomainName>[\w-.]+)\\(?<Username>[\w-.]+)$'
 $ReplaceExp = '${Username}@${DomainName}'
 
 'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
@@ -429,7 +429,7 @@ John.Doe@Contoso.local
 >
 > - No PowerShell, entre aspas duplas, ele designa variáveis e atua como um operador de subexpressão.
 > - Em cadeias de caracteres de pesquisa Regex, ele denota o fim da linha
-> - Em cadeias de caracteres de substituição de Regex, ela denota grupos capturados como tal, certifique-se de colocar suas expressões regulares entre aspas simples ou inserir um caractere de acento grave ( `` ` `` ) antes delas.
+> - Em cadeias de caracteres de substituição Regex, ele denota grupos capturados. Certifique-se de colocar suas expressões regulares entre aspas simples ou inserir um caractere de acento grave ( `` ` `` ) antes delas.
 
 Por exemplo:
 

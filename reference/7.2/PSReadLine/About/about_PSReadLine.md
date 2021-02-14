@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sobre o PSReadLine
-ms.openlocfilehash: 4836abfec465ba7cdfb6800c1e60104fba19ce08
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "99597604"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500205"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -918,19 +918,39 @@ Encerra o grupo de edição atual, se necessário, e invoca TabCompletePrevious.
 
 - Modo de inserção de vi: `<Shift+Tab>`
 
-## <a name="miscellaneous-functions"></a>Funções diversas
+## <a name="prediction-functions"></a>Funções de previsão
 
 ### <a name="acceptnextsuggestionword"></a>AcceptNextSuggestionWord
 
-Aceite a próxima palavra da sugestão embutida ou selecionada.
+Ao usar `InlineView` como o estilo de exibição para previsão, aceite a próxima palavra da sugestão embutida.
 
 - A função está desassociada.
 
 ### <a name="acceptsuggestion"></a>AcceptSuggestion
 
-Aceite a sugestão embutida ou selecionada atual.
+Ao usar `InlineView` como o estilo de exibição para previsão, aceite a sugestão embutida atual.
 
 - A função está desassociada.
+
+### <a name="nextsuggestion"></a>NextSuggestion
+
+Ao usar `ListView` como o estilo de exibição para previsão, navegue até a próxima sugestão na lista.
+
+- A função está desassociada.
+
+### <a name="previoussuggestion"></a>PreviousSuggestion
+
+Ao usar `ListView` como o estilo de exibição para previsão, navegue até a sugestão anterior na lista.
+
+- A função está desassociada.
+
+### <a name="switchpredictionview"></a>SwitchPredictionView
+
+Alterne o estilo de exibição para previsão entre `InlineView` e `ListView` .
+
+- Cmd `<F2>`
+
+## <a name="miscellaneous-functions"></a>Funções diversas
 
 ### <a name="capturescreen"></a>CaptureScreen
 
@@ -1007,6 +1027,15 @@ Insira a chave.
 
 - A função está desassociada.
 
+### <a name="showcommandhelp"></a>ShowCommandHelp
+
+Fornece uma exibição da ajuda completa do cmdlet sobre o buffer de tela alternativo usando um pager do **Microsoft. PowerShell. pager**.
+
+- Cmd `<F1>`
+- Emacs `<F1>`
+- Modo de inserção de vi: `<F1>`
+- Modo de comando vi: `<F1>`
+
 ### <a name="showkeybindings"></a>ShowKeyBindings
 
 Mostrar todas as chaves associadas.
@@ -1014,6 +1043,15 @@ Mostrar todas as chaves associadas.
 - Cmd `<Ctrl+Alt+?>`
 - Emacs `<Ctrl+Alt+?>`
 - Modo de inserção de vi: `<Ctrl+Alt+?>`
+
+### <a name="showparameterhelp"></a>ShowParameterHelp
+
+Fornece ajuda dinâmica para parâmetros mostrando-o abaixo da linha de comando atual, como `MenuComplete` .
+
+- Cmd `<Alt+h>`
+- Emacs `<Alt+h>`
+- Modo de inserção de vi: `<Alt+h>`
+- Modo de comando vi: `<Alt+h>`
 
 ### <a name="vicommandmode"></a>ViCommandMode
 
@@ -1392,7 +1430,7 @@ Esse método auxiliar é usado para associações personalizadas que respeitam D
   [ref]$numericArg, 1)
 ```
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
 
 ### <a name="command-history"></a>Histórico de comandos
 
