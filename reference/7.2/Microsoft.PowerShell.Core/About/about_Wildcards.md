@@ -1,16 +1,16 @@
 ---
 description: Descreve como usar caracteres curinga no PowerShell.
 Locale: en-US
-ms.date: 03/28/2019
+ms.date: 02/13/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Wildcards
-ms.openlocfilehash: b5f13fdbfbc24e19e5ad0b1cd6ecc1b99f68914f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 40620e54bb889d683192b346f3ba1c139895e4d0
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598633"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529967"
 ---
 # <a name="about-wildcards"></a>Sobre curingas
 
@@ -20,13 +20,17 @@ Descreve como usar caracteres curinga no PowerShell.
 
 ## <a name="long-description"></a>DESCRIÇÃO LONGA
 
-Os caracteres curinga representam um ou vários caracteres. Você pode usá-los para criar padrões do Word em comandos. Por exemplo, para obter todos os arquivos no `C:\Techdocs` diretório com uma `.ppt` extensão de nome de arquivo, digite:
+Os caracteres curinga representam um ou vários caracteres. Você pode usá-los para criar padrões do Word em comandos. As expressões curinga são usadas com o `-like` operador ou com qualquer parâmetro que aceita caracteres curinga.
+
+Por exemplo, para corresponder a todos os arquivos no `C:\Techdocs` diretório com uma `.ppt` extensão de nome de arquivo, digite:
 
 ```powershell
 Get-ChildItem C:\Techdocs\*.ppt
 ```
 
 Nesse caso, o `*` caractere curinga asterisco () representa todos os caracteres que aparecem antes da `.ppt` extensão de nome de arquivo.
+
+As expressões curinga são mais simples do que expressões regulares. Para obter mais informações, consulte [about_Regular_Expressions](./about_Regular_Expressions.md).
 
 O PowerShell dá suporte aos seguintes caracteres curinga:
 

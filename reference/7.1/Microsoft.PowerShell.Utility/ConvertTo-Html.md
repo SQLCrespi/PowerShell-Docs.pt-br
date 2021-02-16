@@ -7,12 +7,12 @@ ms.date: 08/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Html
-ms.openlocfilehash: 27a1d2994dee46b9e5bfd54132ff4a665330c2b4
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: 1eade078765f93713da1f665e3ad6f062a1826d9
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93195188"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529933"
 ---
 # ConvertTo-Html
 
@@ -69,7 +69,7 @@ O comando usa o `Get-Alias` cmdlet para obter os aliases. Ele usa o operador de 
 ### Exemplo 3: criar uma página da Web para exibir eventos do PowerShell
 
 ```powershell
-`Get-EventLog` -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
+Get-EventLog -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
 ```
 
 Este comando cria uma página HTML chamada `pslog.htm` que exibe os eventos no log de eventos do Windows PowerShell no computador local.
@@ -153,7 +153,7 @@ Esse comando usa o `Get-EventLog` cmdlet para obter eventos do log de eventos do
 
 Ele usa um operador de pipeline ( `|` ) para enviar os eventos para o `ConvertTo-Html` cmdlet, que converte os eventos em formato HTML.
 
-O `ConvertTo-Html` comando usa o parâmetro **Property** para selecionar apenas as propriedades **ID** , **Level** e **Task** do evento.
+O `ConvertTo-Html` comando usa o parâmetro **Property** para selecionar apenas as propriedades **ID**, **Level** e **Task** do evento.
 
 ### Exemplo 9: criar uma página da Web para exibir os serviços especificados
 
@@ -170,7 +170,7 @@ Get-Service A* |
 Invoke-Item Services.htm
 ```
 
-Esse comando cria e abre uma página da Web que exibe os serviços no computador que começam com um. Ele usa os parâmetros **título** , **corpo** , **PreContent** e **anticontent** de `ConvertTo-Html` para personalizar a saída.
+Esse comando cria e abre uma página da Web que exibe os serviços no computador que começam com um. Ele usa os parâmetros **título**, **corpo**, **PreContent** e **anticontent** de `ConvertTo-Html` para personalizar a saída.
 
 A primeira parte do comando usa o `Get-Service` cmdlet para obter os serviços no computador que começam com um. O comando usa um operador de pipeline ( `|` ) para enviar os resultados para o `ConvertTo-Html` cmdlet. O comando também usa o `Out-File` cmdlet para enviar a saída para o arquivo de Services.htm.
 
@@ -201,7 +201,7 @@ Este comando define o DOCTYPE do HTML retornado para o DTD de transição XHTML
 
 ### -Como
 
-Determina se o objeto é formatado como uma tabela ou uma lista. Os valores válidos são **tabela** e **lista** . O valor padrão é **Table** .
+Determina se o objeto é formatado como uma tabela ou uma lista. Os valores válidos são **tabela** e **lista**. O valor padrão é **Table**.
 
 O valor da **tabela** gera uma tabela HTML que se assemelha ao formato de tabela do PowerShell. A linha de cabeçalho exibe os nomes de propriedade. Cada linha da tabela representa um objeto e exibe os valores do objeto para cada propriedade.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 ### -Transicional
 
-Altera o **DOCTYPE** para **DTD de transição XHTML** , o **DOCTYPE** padrão é um **DTD estrito de XHTML** .
+Altera o **DOCTYPE** para **DTD de transição XHTML**, o **DOCTYPE** padrão é um **DTD estrito de XHTML**.
 
 Esse parâmetro foi introduzido no PowerShell 6,0.
 
