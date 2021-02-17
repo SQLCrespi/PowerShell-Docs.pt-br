@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: be02829c27ff5d8babaf173d2ee7ebbfc7614773
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879347"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500116"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -38,6 +38,7 @@ Este artigo descreve os recursos experimentais que estão disponíveis e como us
 | PSCultureInvariantReplaceOperator                          |         |         | &check; | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; | &check; |
 | PSSubsystemPluginModel                                     |         |         | &check; | &check; |
+| PSAnsiProgress                                             |         |         |         | &check; |
 | PSAnsiRendering                                            |         |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
@@ -116,6 +117,24 @@ Junto com o acesso ao `$PSStyle`, isso apresenta alterações no mecanismo do Po
 - O método `StringDecorated Substring(int contentLength)` retorna uma substring começando no índice 0 até o comprimento do conteúdo que não faz parte das sequências de escape ANSI. Isso é necessário para a formatação da tabela a fim de truncar cadeias de caracteres e preservar as sequências de escape ANSI que não ocupam espaço de caracteres imprimível.
 - O método `string ToString()` permanece o mesmo e retorna a versão de texto não criptografado da cadeia de caracteres.
 - O método `string ToString(bool Ansi)` retornará a cadeia de caracteres ANSI bruta inserida se o parâmetro `Ansi` for true. Caso contrário, uma versão de texto não criptografado com sequências de escape ANSI removidas será retornada.
+
+## <a name="psansiprogress"></a>PSAnsiProgress
+
+O experimento foi adicionado no PowerShell 7.2. O recurso adiciona o membro `$PSStyle.Progress` e permite controlar a renderização da barra de exibição de progresso.
+
+- `$PSStyle.Progress.Style` – uma cadeia de caracteres ANSI que define o estilo de renderização.
+- `$PSStyle.Progress.MaxWidth` – define a largura máxima da exibição. Defina como `0` para a largura do console.
+  Usa como padrão `120`
+- `$PSStyle.Progress.View` – uma enumeração com valores `Minimal` e `Classic`. `Classic` é a renderização existente sem alterações. `Minimal` é uma renderização mínima de linha única. `Minimal` é o padrão.
+
+O exemplo a seguir atualiza o estilo de renderização para uma barra de progresso mínima.
+
+```powershell
+$PSStyle.Progress.View.Minimal
+```
+
+> [!NOTE]
+> O recurso experimental **PSAnsiRendering** deve estar habilitado para usar esse recurso.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
