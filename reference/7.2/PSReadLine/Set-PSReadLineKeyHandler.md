@@ -2,16 +2,16 @@
 external help file: Microsoft.PowerShell.PSReadLine2.dll-Help.xml
 Locale: en-US
 Module Name: PSReadLine
-ms.date: 12/07/2018
+ms.date: 02/16/2021
 online version: https://docs.microsoft.com/powershell/module/psreadline/set-psreadlinekeyhandler?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSReadLineKeyHandler
-ms.openlocfilehash: 0ec3466aaaf6ed1ac78b62d88a5a6cce99153673
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 86386cb8d97e16ebdd869e2ec554fc947d788f67
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99597612"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563287"
 ---
 # Set-PSReadLineKeyHandler
 
@@ -83,6 +83,9 @@ Accept wildcard characters: False
 A chave ou a sequência de chaves a serem associadas a um bloco de função ou de script. Use uma única cadeia de caracteres para especificar uma única associação. Se a associação for uma sequência de chaves, separe as chaves por uma vírgula, como no exemplo a seguir:
 
 `Ctrl+X,Ctrl+L`
+
+> [!NOTE]
+> A partir de PSReadLine 2.0.0, o parâmetro de **corda** diferencia **maiúsculas de minúsculas**. Ou seja, `Ctrl+X` e `Ctrl+x` criará associações diferentes.
 
 Esse parâmetro aceita uma matriz de cadeias de caracteres. Cada cadeia de caracteres é uma associação separada, não uma sequência de chaves para uma única associação.
 

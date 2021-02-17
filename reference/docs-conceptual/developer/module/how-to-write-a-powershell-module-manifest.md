@@ -3,12 +3,12 @@ ms.date: 01/04/2021
 ms.topic: reference
 title: Como escrever um manifesto de módulo do Windows PowerShell
 description: Como escrever um manifesto de módulo do Windows PowerShell
-ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 0270b9b3745b7ffd187f2089414ea7759515d96b
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879364"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563310"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Como escrever um manifesto de módulo do PowerShell
 
@@ -57,7 +57,7 @@ A tabela a seguir descreve os elementos que você pode incluir em um manifesto d
 |Elemento|Padrão|Descrição|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Digite: `String`|`<empty string>`|Módulo de script ou arquivo de módulo binário associado a este manifesto. As versões anteriores do PowerShell chamaram esse elemento de **ModuleToProcess**.<br /> Os tipos possíveis para o módulo raiz podem estar vazios, o que cria um módulo de **manifesto** , o nome de um módulo de script ( `.psm1` ) ou o nome de um módulo binário ( `.exe` ou `.dll` ). Colocar o nome de um manifesto de módulo ( `.psd1` ) ou um arquivo de script ( `.ps1` ) neste elemento causa um erro. <br /> Exemplo: `RootModule = 'ScriptModule.psm1'`|
-|**ModuleVersion**<br /> Digite: `Version`|`'0.0.1'`|Número de versão deste módulo. Se um valor não for especificado, `New-ModuleManifest`   o usará o padrão. A cadeia de caracteres deve ser capaz de converter para o tipo, `Version` por exemplo `#.#.#.#.#` . `Import-Module` carrega o primeiro módulo encontrado no **$PSModulePath** que corresponde ao nome e tem pelo menos o alto de **ModuleVersion**, como o parâmetro **MinimumVersion** . Para importar uma versão específica, use o `Import-Module` parâmetro **RequiredVersion** do cmdlet.<br /> Exemplo: `ModuleVersion = '1.0'`|
+|**ModuleVersion**<br /> Digite: `Version`|`'0.0.1'`|Número de versão deste módulo. Se um valor não for especificado, `New-ModuleManifest`   o usará o padrão. A cadeia de caracteres deve ser capaz de converter para o tipo, `Version` por exemplo `#.#.#.#` . `Import-Module` carrega o primeiro módulo encontrado no **$PSModulePath** que corresponde ao nome e tem pelo menos o alto de **ModuleVersion**, como o parâmetro **MinimumVersion** . Para importar uma versão específica, use o `Import-Module` parâmetro **RequiredVersion** do cmdlet.<br /> Exemplo: `ModuleVersion = '1.0'`|
 |**GUID**<br /> Digite: `GUID`|`'<GUID>'`|ID usada para identificar exclusivamente este módulo. Se um valor não for especificado, `New-ModuleManifest` o gerará o valor. No momento, não é possível importar um módulo pelo **GUID**. <br /> Exemplo: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |**Autor**<br /> Digite: `String`|`'<Current user>'`|Autor deste módulo. Se um valor não for especificado, `New-ModuleManifest` o usará o usuário atual. <br /> Exemplo: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> Digite: `String`|`'Unknown'`|Empresa ou fornecedor deste módulo. Se um valor não for especificado, `New-ModuleManifest` o usará o padrão.<br /> Exemplo: `CompanyName = 'Fabrikam'`|
