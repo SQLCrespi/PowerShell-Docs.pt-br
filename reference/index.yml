@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
-  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
+  ms.openlocfilehash: f469ddb8179b1b2c937478e776fb0383c22357e1
+  ms.sourcegitcommit: 14f45157bb60db7ef4c321c1a525c836698cafa9
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/29/2020
-  ms.locfileid: "87377511"
+  ms.lasthandoff: 02/18/2021
+  ms.locfileid: "101101280"
 highlightedContent:
   items:
   - title: Visão geral
@@ -139,18 +139,18 @@ additionalContent:
   - title: Equipe do PowerShell
     summary: Comunicar-se com a equipe do PowerShell
     items:
-    - title: Blog oficial do PowerShell
+    - title: Blog da Equipe do PowerShell
       summary: Novidades e anúncios oficiais
       url: https://devblogs.microsoft.com/powershell/
+    - title: Blog da Comunidade do PowerShell
+      summary: Um lugar para a comunidade aprender a usar o PowerShell e compartilhar ideias
+      url: https://devblogs.microsoft.com/powershell-community/
     - title: Equipe do PowerShell no Twitter
       summary: Novos 280 caracteres do PowerShell por vez
       url: https://twitter.com/PowerShell_Team
-    - title: UserVoice do PowerShell
-      summary: O local de bugs no Windows PowerShell
-      url: https://windowsserver.uservoice.com/forums/301869-powershell
     - title: Problemas do GitHub
       summary: O local de bugs na versão atual
       url: https://github.com/powershell/powershell/issues
-    - title: Hey, Scripting Guy! Blog
-      summary: Um local para saber mais sobre o PowerShell e compartilhar histórias de automação
-      url: https://devblogs.microsoft.com/scripting/
+    - title: UserVoice do PowerShell
+      summary: O local de bugs no Windows PowerShell
+      url: https://windowsserver.uservoice.com/forums/301869-powershell
