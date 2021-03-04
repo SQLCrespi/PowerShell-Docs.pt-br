@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Atalhos do teclado para o ISE do Windows PowerShell
 description: Este artigo é uma lista dos atalhos de teclado usados no ISE do PowerShell.
-ms.openlocfilehash: 690997524ab90d7581bb03c802f189d1a4b79d3f
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: 6a55bb2e6046fbda1c8b7b83345138f294009ac8
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500186"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685938"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
@@ -20,6 +20,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 |              Ação              |              Atalhos do teclado               |                                                                                                                                           Usar em                                                                                                                                           |
 | -------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Ajuda**                         | <kbd>F1</kbd>                                 | Painel de Script **Importante:** Você pode especificar que a ajuda com <kbd>F1</kbd> venha de docs.microsoft.com ou da Ajuda baixada (confira `Update-Help`). Para escolher, clique em **Ferramentas**, **Opções** e, na guia **Configurações Gerais**, defina ou apague **Usar conteúdo da ajuda local em vez do conteúdo online.** |
+| **Selecionar tudo**                   | <kbd>CTRL</kbd>+<kbd>A</kbd>                  | Painel de Script                                                                                                                                                                                                                                                                                |
 | **Copy**                         | <kbd>CTRL</kbd>+<kbd>C</kbd>                  | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                     |
 | **Recortar**                          | <kbd>CTRL</kbd>+<kbd>X</kbd>                  | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                  |
 | **Expandir ou Recolher a Estrutura de Tópicos** | <kbd>CTRL</kbd>+<kbd>M</kbd>                  | Painel de Script                                                                                                                                                                                                                                                                                |
@@ -36,6 +37,9 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 | **Selecionar tudo**                   | <kbd>CTRL</kbd>+<kbd>A</kbd>                  | Painel de Script, Painel de Comando e Painel de Saída                                                                                                                                                                                                                                                     |
 | **Mostrar Snippets**                | <kbd>CTRL</kbd>+<kbd>J</kbd>                  | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                  |
 | **Desfazer**                         | <kbd>CTRL</kbd>+<kbd>Z</kbd>                  | Painel de Script, Painel de Comando                                                                                                                                                                                                                                                                  |
+| **Mostrar ajuda do IntelliSense**       | <kbd>CTRL</kbd>+<kbd>Espaço</kbd>              | Painel de Script                                                                                                                                                                                                                                                                                |
+| **Excluir palavra à esquerda**          | <kbd>CTRL</kbd>+<kbd>Backspace</kbd>          | Painel de Script                                                                                                                                                                                                                                                                                |
+| **Excluir palavra à direita**         | <kbd>CTRL</kbd>+<kbd>Delete</kbd>             | Painel de Script                                                                                                                                                                                                                                                                                |
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para execução de scripts
 

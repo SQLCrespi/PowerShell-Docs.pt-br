@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: f97cea1dff4030da22be1efbe3cd5cbb7a9f3527
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500116"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685276"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -73,27 +73,37 @@ Nesse exemplo, um trabalho é iniciado e um ponto de interrupção é definido p
 O experimento foi adicionado no PowerShell 7.2. O recurso permite alterar a forma como o mecanismo do PowerShell gera texto e adiciona a variável automática `$PSStyle` para controlar a renderização ANSI da saída da cadeia de caracteres.
 
 ```powershell
-PS> $PSStyle
+PS> $PSStyle | Get-Member
 
-Name            MemberType Definition
-----            ---------- ----------
-Reset           Property   string AttributesOff {get;set;}
-Background      Property   System.Management.Automation.PSStyle+BackgroundColor Background {get;set;}
-Blink           Property   string Blink {get;set;}
-BlinkOff        Property   string BlinkOff {get;set;}
-Bold            Property   string Bold {get;set;}
-BoldOff         Property   string BoldOff {get;set;}
-Foreground      Property   System.Management.Automation.PSStyle+ForegroundColor Foreground {get;set;}
-Formatting      Property   System.Management.Automation.PSStyle+FormattingData Formatting {get;set;}
-Hidden          Property   string Hidden {get;set;}
-HiddenOff       Property   string HiddenOff {get;set;}
-OutputRendering Property   System.Management.Automation.OutputRendering OutputRendering {get;set;}
-Reverse         Property   string Reverse {get;set;}
-ReverseOff      Property   string ReverseOff {get;set;}
-Italic          Property   string Standout {get;set;}
-ItalicOff       Property   string StandoutOff {get;set;}
-Underline       Property   string Underlined {get;set;}
-Underline Off   Property   string UnderlinedOff {get;set;}
+   TypeName: System.Management.Automation.PSStyle
+
+Name             MemberType Definition
+----             ---------- ----------
+Equals           Method     bool Equals(System.Object obj)
+FormatHyperlink  Method     string FormatHyperlink(string text, uri link)
+GetHashCode      Method     int GetHashCode()
+GetType          Method     type GetType()
+ToString         Method     string ToString()
+Background       Property   System.Management.Automation.PSStyle+BackgroundColor Background {get;}
+Blink            Property   string Blink {get;}
+BlinkOff         Property   string BlinkOff {get;}
+Bold             Property   string Bold {get;}
+BoldOff          Property   string BoldOff {get;}
+Foreground       Property   System.Management.Automation.PSStyle+ForegroundColor Foreground {get;}
+Formatting       Property   System.Management.Automation.PSStyle+FormattingData Formatting {get;}
+Hidden           Property   string Hidden {get;}
+HiddenOff        Property   string HiddenOff {get;}
+Italic           Property   string Italic {get;}
+ItalicOff        Property   string ItalicOff {get;}
+OutputRendering  Property   System.Management.Automation.OutputRendering OutputRendering {get;set;}
+Progress         Property   System.Management.Automation.PSStyle+ProgressConfiguration Progress {get;}
+Reset            Property   string Reset {get;}
+Reverse          Property   string Reverse {get;}
+ReverseOff       Property   string ReverseOff {get;}
+Strikethrough    Property   string Strikethrough {get;}
+StrikethroughOff Property   string StrikethroughOff {get;}
+Underline        Property   string Underline {get;}
+UnderlineOff     Property   string UnderlineOff {get;}
 ```
 
 Os membros de base retornam cadeias de caracteres de sequências de escape ANSI mapeadas para seus nomes. Os valores são configuráveis para permitir a personalização.
@@ -117,6 +127,8 @@ Junto com o acesso ao `$PSStyle`, isso apresenta alterações no mecanismo do Po
 - O método `StringDecorated Substring(int contentLength)` retorna uma substring começando no índice 0 até o comprimento do conteúdo que não faz parte das sequências de escape ANSI. Isso é necessário para a formatação da tabela a fim de truncar cadeias de caracteres e preservar as sequências de escape ANSI que não ocupam espaço de caracteres imprimível.
 - O método `string ToString()` permanece o mesmo e retorna a versão de texto não criptografado da cadeia de caracteres.
 - O método `string ToString(bool Ansi)` retornará a cadeia de caracteres ANSI bruta inserida se o parâmetro `Ansi` for true. Caso contrário, uma versão de texto não criptografado com sequências de escape ANSI removidas será retornada.
+
+O `FormatHyperlink(string text, uri link)` retorna uma cadeia de caracteres contendo a sequência de escape ANSI usada para decorar hiperlinks. Alguns hosts de terminal, como o [Terminal do Windows](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701), dão suporte a essa marcação, o que torna o texto renderizado clicável no terminal.
 
 ## <a name="psansiprogress"></a>PSAnsiProgress
 
