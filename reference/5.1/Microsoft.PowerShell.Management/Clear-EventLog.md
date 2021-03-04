@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-EventLog
-ms.openlocfilehash: 695a13d4fbbf60caadeed994c1aa9c36432be917
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: af1c808b22a812700857e756136fd570fa0acc35
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194207"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685900"
 ---
 # Clear-EventLog
 
@@ -27,11 +27,9 @@ Clear-EventLog [-LogName] <String[]> [[-ComputerName] <String[]>] [-WhatIf] [-Co
 
 ## DESCRIPTION
 
-O `Clear-EventLog` cmdlet exclui todas as entradas dos logs de eventos especificados no computador local ou em computadores remotos.
-Para usar `Clear-EventLog` o, você deve ser um membro do grupo Administradores no computador afetado.
+O `Clear-EventLog` cmdlet exclui todas as entradas dos logs de eventos especificados no computador local ou em computadores remotos. Para usar `Clear-EventLog` o, você deve ser um membro do grupo Administradores no computador afetado.
 
-Os cmdlets que contêm o substantivo **EventLog** (os cmdlets EventLog) só funcionam em logs de eventos clássicos.
-Para obter eventos de logs que usam a tecnologia de log de eventos do Windows no Windows Vista e versões posteriores do Windows, use o cmdlet Get-WinEvent.
+Os cmdlets que contêm o substantivo **EventLog** (os cmdlets EventLog) só funcionam em logs de eventos clássicos. Para obter eventos de logs que usam a tecnologia de log de eventos do Windows no Windows Vista e versões posteriores do Windows, use o cmdlet Get-WinEvent.
 
 ## EXEMPLOS
 
@@ -96,14 +94,11 @@ Observe que algumas entradas foram adicionadas aos logs System e Security depois
 
 ### -ComputerName
 
-Especifica um computador remoto.
-O padrão é o computador local.
+Especifica um computador remoto. O padrão é o computador local.
 
-Digite o nome NetBIOS, um endereço IP (protocolo de Internet) ou um nome de domínio totalmente qualificado de um computador remoto.
-Para especificar o computador local, digite o nome do computador, um ponto (.) ou "localhost".
+Digite o nome NetBIOS, um endereço IP (protocolo de Internet) ou um nome de domínio totalmente qualificado de um computador remoto. Para especificar o computador local, digite o nome do computador, um ponto (.) ou "localhost".
 
-Esse parâmetro não depende da comunicação remota do Windows PowerShell.
-Você pode usar o parâmetro **ComputerName** de `Get-EventLog` mesmo que o computador não esteja configurado para executar comandos remotos.
+Esse parâmetro não depende da comunicação remota do Windows PowerShell. Você pode usar o parâmetro **ComputerName** de `Get-EventLog` mesmo que o computador não esteja configurado para executar comandos remotos.
 
 ```yaml
 Type: System.String[]
@@ -119,10 +114,10 @@ Accept wildcard characters: False
 
 ### -LogName
 
-Especifica os logs de evento.
-Insira o nome do log (o valor da propriedade Log; não o LogDisplayName) de um ou mais logs de eventos, separados por vírgulas.
-Caracteres curinga não são permitidos.
-Este parâmetro é necessário.
+Especifica os logs de evento. Insira o nome do log (o valor da propriedade **log** não o **LogDisplayName**) de um ou mais logs de eventos, separados por vírgulas. Caracteres curinga não são permitidos. Este parâmetro é necessário.
+
+> [!IMPORTANT]
+> Esse parâmetro deve aceitar valores do pipeline pelo nome da propriedade. No entanto, há um bug que impede que isso funcione. Você deve passar um valor usando o parâmetro diretamente.
 
 ```yaml
 Type: System.String[]

@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sobre o PSReadLine
-ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: ddc88dda3514e4279b6d91b023e26da88f645af7
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500205"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685221"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -114,13 +114,19 @@ Exclua o caractere antes do cursor.
 - Modo de inserção de vi: `<Backspace>`
 - Modo de comando vi: `<X>` , `<d,h>`
 
+### <a name="backwarddeleteinput"></a>BackwardDeleteInput
+
+Como BackwardKillInput-exclui o texto do ponto para o início da entrada, mas não coloca o texto excluído no Kill-Ring.
+
+- Cmd `<Ctrl+Home>`
+- Modo de inserção vi: `<Ctrl+u>` , `<Ctrl+Home>`
+- Modo de comando vi: `<Ctrl+u>` , `<Ctrl+Home>`
+
 ### <a name="backwarddeleteline"></a>BackwardDeleteLine
 
 Como BackwardKillLine-exclui o texto do ponto para o início da linha, mas não coloca o texto excluído no Kill-Ring.
 
-- Cmd `<Ctrl+Home>`
-- Modo de inserção vi: `<Ctrl+u>` , `<Ctrl+Home>`
-- Modo de comando vi: `<Ctrl+u>` , `<Ctrl+Home>` , `<d,0>`
+- Modo de comando vi: `<d,0>`
 
 ### <a name="backwarddeleteword"></a>BackwardDeleteWord
 
@@ -128,11 +134,17 @@ Exclui a palavra anterior.
 
 - Modo de comando vi: `<Ctrl+w>` , `<d,b>`
 
-### <a name="backwardkillline"></a>BackwardKillLine
+### <a name="backwardkillinput"></a>BackwardKillInput
 
-Limpe a entrada do início da entrada para o cursor. O texto limpo é colocado no Kill-Ring.
+Limpe o texto do início da entrada para o cursor. O texto limpo é colocado no Kill-Ring.
 
 - Emacs: `<Ctrl+u>` , `<Ctrl+x,Backspace>`
+
+### <a name="backwardkillline"></a>BackwardKillLine
+
+Limpe o texto do início da linha lógica atual para o cursor. O texto limpo é colocado no Kill-Ring.
+
+- A função está desassociada.
 
 ### <a name="backwardkillword"></a>BackwardKillWord
 
@@ -243,13 +255,19 @@ Excluir a próxima palavra.
 
 - Modo de comando vi: `<d,w>`
 
-### <a name="forwarddeleteline"></a>ForwardDeleteLine
+### <a name="forwarddeleteinput"></a>ForwardDeleteInput
 
-Como ForwardKillLine-exclui o texto do ponto até o fim da linha, mas não coloca o texto excluído no Kill-Ring.
+Como finalizar-exclui o texto do ponto até o fim da entrada, mas não coloca o texto excluído no Kill-Ring.
 
 - Cmd `<Ctrl+End>`
 - Modo de inserção de vi: `<Ctrl+End>`
 - Modo de comando vi: `<Ctrl+End>`
+
+### <a name="forwarddeleteline"></a>ForwardDeleteLine
+
+Exclui o texto do ponto até o fim da linha lógica atual, mas não coloca o texto excluído no Kill-Ring.
+
+- A função está desassociada
 
 ### <a name="insertlineabove"></a>InsertLineAbove
 
@@ -1029,7 +1047,9 @@ Insira a chave.
 
 ### <a name="showcommandhelp"></a>ShowCommandHelp
 
-Fornece uma exibição da ajuda completa do cmdlet sobre o buffer de tela alternativo usando um pager do **Microsoft. PowerShell. pager**.
+Fornece uma exibição da ajuda completa do cmdlet. Quando o cursor está no final de um parâmetro totalmente expandido, atingir as `<F1>` posições da chave na exibição da ajuda no local desse parâmetro.
+
+A ajuda é exibida em um buffer de tela alternativo usando um pager do **Microsoft. PowerShell. pager**. Quando você sair do pager, retornará à posição original do cursor na tela original. Esse pager só funciona em aplicativos de terminal modernos, como o [Windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701).
 
 - Cmd `<F1>`
 - Emacs `<F1>`
@@ -1046,7 +1066,7 @@ Mostrar todas as chaves associadas.
 
 ### <a name="showparameterhelp"></a>ShowParameterHelp
 
-Fornece ajuda dinâmica para parâmetros mostrando-o abaixo da linha de comando atual, como `MenuComplete` .
+Fornece ajuda dinâmica para parâmetros mostrando-o abaixo da linha de comando atual, como `MenuComplete` . O cursor deve estar no final do nome de parâmetro totalmente expandido quando você pressiona a `<Alt+h>` tecla.
 
 - Cmd `<Alt+h>`
 - Emacs `<Alt+h>`
@@ -1125,6 +1145,15 @@ Ajuste a seleção atual para incluir a palavra anterior.
 
 - Cmd `<Shift+Ctrl+LeftArrow>`
 - Emacs `<Alt+B>`
+
+### <a name="selectcommandargument"></a>SelectCommandArgument
+
+Faça a seleção visual dos argumentos do comando. A seleção de argumentos é delimitada em um bloco de script. Com base na posição do cursor, ele pesquisa do bloco de script mais interno para o bloco de script mais baixo e para quando encontra qualquer argumento em um escopo de bloco de script.
+
+Essa função honra DigitArgument. Ele trata os valores de argumento positivo ou negativo como deslocamentos para frente ou para trás do argumento atualmente selecionado ou da posição atual do cursor quando nenhum argumento é selecionado.
+
+- Cmd `<Alt+a>`
+- Emacs `<Alt+a>`
 
 ### <a name="selectforwardchar"></a>SelectForwardChar
 
@@ -1430,7 +1459,7 @@ Esse método auxiliar é usado para associações personalizadas que respeitam D
   [ref]$numericArg, 1)
 ```
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>Observações
 
 ### <a name="command-history"></a>Histórico de comandos
 

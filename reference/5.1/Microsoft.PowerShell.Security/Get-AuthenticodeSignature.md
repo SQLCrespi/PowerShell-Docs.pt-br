@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AuthenticodeSignature
-ms.openlocfilehash: 910897ae1e41b2e4bd082977ac2904388f924769
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cf19973acf799b25b8b598fad70f84943f958e1d
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193885"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685885"
 ---
 # Get-AuthenticodeSignature
 
@@ -41,7 +41,9 @@ Get-AuthenticodeSignature -SourcePathOrExtension <String[]> -Content <Byte[]> [<
 
 ## DESCRIPTION
 
-O `Get-AuthenticodeSignature` cmdlet obtém informações sobre a assinatura Authenticode para um conteúdo de arquivo ou arquivo como uma matriz de bytes. Se o arquivo não estiver assinado as informações serão recuperadas, mas os campos ficarão vazios.
+O `Get-AuthenticodeSignature` cmdlet obtém informações sobre a assinatura Authenticode para um conteúdo de arquivo ou arquivo como uma matriz de bytes.
+Se o arquivo for assinado incorporado e o catálogo do Windows assinado, a assinatura do catálogo do Windows será usada.
+Se o arquivo não estiver assinado as informações serão recuperadas, mas os campos ficarão vazios.
 
 ## EXEMPLOS
 
@@ -119,7 +121,7 @@ Accept wildcard characters: True
 
 ### -LiteralPath
 
-Especifica o caminho para o arquivo que está sendo examinado. Ao contrário de **FilePath** , o valor do parâmetro **LiteralPath** é usado exatamente como é digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir um caractere de escape, coloque-o entre aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como caracteres de escape.
+Especifica o caminho para o arquivo que está sendo examinado. Ao contrário de **FilePath**, o valor do parâmetro **LiteralPath** é usado exatamente como é digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir um caractere de escape, coloque-o entre aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como caracteres de escape.
 
 ```yaml
 Type: System.String[]

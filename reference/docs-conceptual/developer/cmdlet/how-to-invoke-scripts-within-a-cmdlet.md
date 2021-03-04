@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: Como invocar scripts dentro de um cmdlet
 description: Como invocar scripts dentro de um cmdlet
-ms.openlocfilehash: f4a43a1e1240854e57deac5721e1e070c1a45a51
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 503ecb8913fe61ef3f5ec6fe969c22c2319a4f12
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92667021"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685341"
 ---
 # <a name="how-to-invoke-scripts-within-a-cmdlet"></a>Como invocar scripts dentro de um cmdlet
 
@@ -34,7 +34,7 @@ Este exemplo mostra como invocar um script que é fornecido a um cmdlet. O scrip
 
 2. Em seguida, o script faz a iteração pela coleção retornada de objetos [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) e executa as operações necessárias.
 
-    ```c
+    ```csharp
     foreach (PSObject psObject in psObjects)
     {
       if (LanguagePrimitives.IsTrue(psObject))

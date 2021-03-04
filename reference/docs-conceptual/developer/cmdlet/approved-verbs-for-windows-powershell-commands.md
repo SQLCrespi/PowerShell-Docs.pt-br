@@ -1,14 +1,14 @@
 ---
-ms.date: 09/07/2018
+ms.date: 03/01/2021
 ms.topic: reference
 title: Verbos aprovados para comandos do PowerShell
 description: Verbos aprovados para comandos do PowerShell
-ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 277472f141eb1ef2b7b0f19801c622a899e93665
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "93355095"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686074"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
 
@@ -57,7 +57,7 @@ Use o verbo `Get` para obter informações sobre um recurso (como um arquivo) ou
 
 ### <a name="invoke-vs-start"></a>Invoke versus Iniciar
 
-Use o verbo `Invoke` para executar operações síncronas, como executar um comando e aguardar a conclusão dele. Use o verbo `Start` é usado para iniciar operações assíncronas, como iniciar um processo autônomo.
+Use o verbo `Invoke` para executar operações síncronas, como executar um comando e aguardar a conclusão dele. Use o `Start` verbo para iniciar operações assíncronas, como iniciar um processo autônomo.
 
 ### <a name="ping-vs-test"></a>Ping versus Teste
 

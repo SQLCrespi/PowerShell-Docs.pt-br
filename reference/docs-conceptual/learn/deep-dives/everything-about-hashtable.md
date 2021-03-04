@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre as tabelas de hash
 description: As tabelas de hash são muito importantes no PowerShell, portanto, é bom entendê-las bem.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
-ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
+ms.openlocfilehash: a471c0fe2c48820d6c1d152e2850b1e431d28f23
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "97980494"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686060"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Tudo o que você queria saber sobre as tabelas de hash
 
@@ -360,7 +360,7 @@ $property = @{
 
 ```powershell
 $drives = Get-PSDrive | Where Used
-$drives | Select-Object -Properties name, $property
+$drives | Select-Object -Property name, $property
 
 Name     totalSpaceGB
 ----     ------------
@@ -370,7 +370,7 @@ C    238.472652435303
 Coloquei em uma variável, mas poderia facilmente ter sido definido embutido e você poderia ter encurtado de `name` para `n` e de `expression` para `e` enquanto estivesse lá.
 
 ```powershell
-$drives | Select-Object -properties name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
+$drives | Select-Object -property name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
 ```
 
 Particularmente, eu não gosto porque deixa os comandos muito longos e geralmente ocasionam comportamentos indevidos (que prefiro não detalhar aqui). É mais provável que eu crie uma nova tabela de hash ou um `pscustomobject` com todos os campos e as propriedades que eu quiser em vez de usar essa abordagem em meus scripts. Mas há muitos códigos por aí que usam isso, então, achei válido mostrar aqui. Falarei sobre a criação de um `pscustomobject` mais adiante.

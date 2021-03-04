@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 202af7ea491b8fa020ab2ff7ae6b1cc697829b6b
-ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
+ms.openlocfilehash: e6b9ac8b096ff2607dc6b68512a998ac00bd1796
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97804122"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685693"
 ---
 # <a name="about-signing"></a>Sobre a assinatura
 
@@ -102,7 +102,7 @@ Normalmente, você usaria um certificado autoassinado somente para assinar scrip
 
 Se você criar um certificado autoassinado, certifique-se de habilitar a proteção forte de chave privada em seu certificado. Isso impede que programas mal-intencionados inscrevam scripts em seu nome. As instruções estão incluídas no final deste tópico.
 
-## <a name="create-a-self-signed-certificate"></a>Criará um certificado autoassinado
+## <a name="create-a-self-signed-certificate"></a>Crie um certificado autoassinado
 
 Para criar um certificado autoassinado, use o `New-SelfSignedCertificate` cmdlet no módulo PKI. Esse módulo é introduzido no PowerShell 3,0 e está incluído no Windows 8 e no Windows Server 2012. Para obter mais informações, consulte o tópico da ajuda para o `New-SelfSignedCertificate` cmdlet.
 

@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: 1b1824db5c5c20698d551a6277890ce6c82c4e11
-ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
+ms.openlocfilehash: c8b674a895bb323b734f018e5e8654cfec4d0045
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725180"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685584"
 ---
 # ForEach-Object
 
@@ -383,6 +383,44 @@ Output: 5
 
 `Output: 3` Nunca é gravado porque o scriptblock paralelo dessa iteração foi encerrado.
 
+### Exemplo 17: passando variáveis no ScriptBlockset de script paralelo aninhado
+
+Você pode criar uma variável fora de um `Foreach-Object -Parallel` scriptblock com escopo e usá-la dentro do scriptblock com a `$using` palavra-chave.
+
+```powershell
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+}
+```
+
+```Output
+TestA
+TestA
+```
+
+```powershell
+# You CANNOT create a variable inside a scoped scriptblock
+# to be used in a nested foreach parallel scriptblock.
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+    $test2 = 'TestB'
+    1..2 | Foreach-Object -Parallel {
+        $using:test2
+    }
+}
+```
+
+```Output
+Line |
+   2 |  1..2 | Foreach-Object -Parallel {
+     |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The value of the using variable '$using:test2' cannot be retrieved because it has not been set in the local session.
+```
+
+O scriptblock aninhado não pode acessar a `$test2` variável e um erro é gerado.
+
 ## Parâmetros
 
 ### -ArgumentList
@@ -590,7 +628,7 @@ Faz com que a invocação paralela seja executada como um trabalho do PowerShell
 Esse parâmetro foi introduzido no PowerShell 7,0.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParallelParameterSet
 Aliases:
 
@@ -606,7 +644,7 @@ Accept wildcard characters: False
 Solicita sua confirmação antes de executar o cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -622,7 +660,7 @@ Accept wildcard characters: False
 Mostra o que aconteceria se o cmdlet fosse executado. O cmdlet não é executado.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -643,7 +681,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 É possível canalizar qualquer objeto para esse cmdlet.
 
-## Saídas
+## outputs
 
 ### System. Management. Automation. PSObject
 
@@ -655,7 +693,7 @@ Esse cmdlet retorna objetos que são determinados pela entrada.
 
 - A partir do PowerShell 4,0, `Where` e os `ForEach` métodos foram adicionados para uso com coleções. Você pode ler mais sobre esses novos métodos aqui [about_arrays](./About/about_Arrays.md)
 
-- O `ForEach-Object -Parallel` conjunto de parâmetros usa a API interna do PowerShell para executar cada bloco de script. Isso é significativamente mais sobrecarga do que executar `ForEach-Object` normalmente com processamento sequencial. É importante usar **Parallel** em que a sobrecarga de execução em paralelo é pequena em comparação com o trabalho que o bloco de script executa. Por exemplo:
+- O `ForEach-Object -Parallel` conjunto de parâmetros usa a API interna do PowerShell para executar cada bloco de script. Isso é significativamente mais sobrecarga do que executar `ForEach-Object` normalmente com processamento sequencial. É importante usar **Parallel** em que a sobrecarga de execução em paralelo é pequena em comparação com o trabalho que o bloco de script executa. Por exemplo: 
 
   - Computação de scripts intensivos em máquinas com vários núcleos
   - Scripts que gastam tempo aguardando resultados ou realizando operações de arquivo

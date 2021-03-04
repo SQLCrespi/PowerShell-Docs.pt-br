@@ -2,14 +2,14 @@
 title: Novidades na documentação do PowerShell para o quarto trimestre de 2020
 description: Lista de alterações na documentação do PowerShell para o quarto trimestre de 2020
 ms.date: 01/05/2021
-ms.openlocfilehash: 823338560adbfecd6e17ad6b2e82681f5db35405
-ms.sourcegitcommit: fa1a84c81e15f1ffac962110b0b4c850c1b173a0
+ms.openlocfilehash: 2ac4a2e23ebed7cf1d371c29ceada661bc9a9bc3
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99598853"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685550"
 ---
-# <a name="whats-new-in-powershell-docs-for-2020-q4"></a>Novidades na documentação do PowerShell para o quarto trimestre de 2020
+# <a name="whats-new-in-powershell-docs-for-2020"></a>O que há de novo nos documentos do PowerShell para 2020
 
 Este artigo lista algumas das principais alterações nos documentos do mês anterior e comemora as contribuições da comunidade.
 
@@ -19,7 +19,7 @@ Ajude-nos a melhorar a documentação para você. Leia o [Guia do colaborador][c
 [contrib]: contributing/overview.md
 <!-- --------------- -->
 
-## <a name="2020-december-highlights"></a>2020 – destaques de dezembro
+## <a name="2020-december"></a>2020 – dezembro
 
 - Guia do colaborador atualizado
   - o parâmetro de consulta foi documentado `&preserve_view=true` para hiperlinks
@@ -49,7 +49,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | Cwilson-dataselfcom |            |       5       |
 | bobbybatatina       |            |       2       |
 
-## <a name="2020-november-highlights"></a>2020 – destaques de novembro
+## <a name="2020-november"></a>2020 – novembro
 
 - Versão de GA do PowerShell 7,1
   - Novidades no PowerShell 7.1
@@ -96,7 +96,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | stephenrgentry  |            |       2       |
 | Vixb1122        |            |       2       |
 
-## <a name="2020-october-highlights"></a>Destaques de outubro de 2020
+## <a name="2020-october"></a>2020 – outubro
 
 - Novos artigos
   - [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
@@ -129,7 +129,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | mklement0    |            |       3       |
 | Abdullah0820 |            |       2       |
 
-## <a name="2020-september-highlights"></a>Destaques de setembro de 2020
+## <a name="2020-september"></a>2020 – setembro
 
 - Manutenção da documentação
   - Atualizações do conteúdo de 7.1-preview
@@ -160,7 +160,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | mklement0        |            |      13       |
 | setpeetrike      |            |       2       |
 
-## <a name="2020-august-highlights"></a>Destaques de agosto de 2020
+## <a name="2020-august"></a>2020 – agosto
 
 - Nova documentação do PowerShell
   - [About_Calculated_Properties](/powershell/module/microsoft.powershell.core/about/about_calculated_properties)
@@ -190,7 +190,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | joshSi           |     1      |               |
 | kmoad            |     1      |               |
 
-## <a name="2020-july-highlights"></a>Destaques de julho de 2020
+## <a name="2020-july"></a>2020 – julho
 
 - Nova documentação do PowerShell
   - [Documentos de ETS](/powershell/scripting/developer/ets/overview) antigos ressuscitados – 7 artigos adicionados
@@ -227,7 +227,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | sharpninja     |            |       2       |
 | XuHeng1021     |            |       2       |
 
-## <a name="2020-june-highlights"></a>Destaques de junho de 2020
+## <a name="2020-june"></a>2020 – junho
 
 - Nova documentação do PowerShell
   - Foi publicado o novo conteúdo [Introdução ao PowerShell](../learn/ps101/00-introduction.md) com a colaboração de Mike F. Robbins
@@ -269,7 +269,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | mklement0     |            |       2       |
 | Sagatboy33    |            |       4       |
 
-## <a name="2020-may-highlights"></a>Destaques de maio de 2020
+## <a name="2020-may"></a>2020-maio
 
 - Nova documentação do PowerShell
   - Criação de uma seção intitulada [Aprofundamentos](../learn/deep-dives/overview.md) que traz conteúdo do colaborador da comunidade Kevin Marquette
@@ -322,7 +322,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 | JustinGrote    |            |       2       |
 | peetrike       |            |       2       |
 
-## <a name="2020-april-highlights"></a>Destaques de abril de 2020
+## <a name="2020-april"></a>2020 – abril
 
 - Novos documentos
   - Documentação do PowerShell
@@ -370,7 +370,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 
 ## <a name="2020-march"></a>2020 – março
 
-### <a name="highlights"></a>Destaques
+###
 
 - Novos documentos
   - As páginas da comunidade de documentação do PowerShell
@@ -409,7 +409,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 
 ## <a name="2020-february"></a>2020 – fevereiro
 
-### <a name="highlights"></a>Destaques
+###
 
 - Novos documentos
   - [about_Parameter_Sets](/powershell/module/microsoft.powershell.core/about/about_parameter_sets)
@@ -435,7 +435,7 @@ As pessoas a seguir contribuíram para a documentação do PowerShell enviando s
 
 ## <a name="2020-january"></a>2020 – janeiro
 
-### <a name="highlights"></a>Destaques
+###
 
 - Novos documentos
   - [about_Windows_PowerShell_Compatibility](/powershell/module/microsoft.powershell.core/about/about_Windows_PowerShell_Compatibility)

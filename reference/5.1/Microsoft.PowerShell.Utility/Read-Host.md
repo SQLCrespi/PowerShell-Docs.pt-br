@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 03/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: 9017d2352f1d2735f21343f4c1194c5e97ce2848
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 83ddac1e157f26d6a437716e9ae95e258aa1eecb
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "93194816"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685868"
 ---
 # Read-Host
 
@@ -28,6 +28,9 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 ## DESCRIPTION
 
 O `Read-Host` cmdlet lê uma linha de entrada do console. Você pode usá-lo para solicitar uma entrada do usuário. Como você pode salvar a entrada como uma cadeia de caracteres segura, use esse cmdlet para solicitar aos usuários para proteger os dados, como senhas, bem como dados compartilhados.
+
+> [!NOTE]
+> `Read-Host` tem um limite de 8190 caracteres que ele pode aceitar como entrada de um usuário.
 
 ## EXEMPLOS
 
@@ -51,7 +54,7 @@ $pwd_secure_string = Read-Host "Enter a Password" -AsSecureString
 
 ### -Assegurastring
 
-Indica que o cmdlet exibe asteriscos ( `*` ) no lugar dos caracteres que o usuário digita como entrada. Quando você usa esse parâmetro, a saída do `Read-Host` cmdlet é um objeto **SecureString** ( **System. Security. SecureString** ).
+Indica que o cmdlet exibe asteriscos ( `*` ) no lugar dos caracteres que o usuário digita como entrada. Quando você usa esse parâmetro, a saída do `Read-Host` cmdlet é um objeto **SecureString** (**System. Security. SecureString**).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -67,10 +70,7 @@ Accept wildcard characters: False
 
 ### -Aviso
 
-Especifica o texto do aviso.
-Digite uma cadeia de caracteres.
-Se a cadeia de caracteres incluir espaços, coloque-a entre aspas.
-O PowerShell acrescenta um sinal de dois-pontos ( `:` ) ao texto inserido.
+Especifica o texto do aviso. Digite uma cadeia de caracteres. Se a cadeia de caracteres incluir espaços, coloque-a entre aspas. O PowerShell acrescenta um sinal de dois-pontos ( `:` ) ao texto inserido.
 
 ```yaml
 Type: System.Object
@@ -98,7 +98,7 @@ Não é possível redirecionar a entrada para este cmdlet.
 
 ### System. String ou System. Security. SecureString
 
-Se o parâmetro **AsSecureString** for usado, `Read-Host` retornará uma **SecureString** . Caso contrário, ele retornará uma cadeia de caracteres.
+Se o parâmetro **AsSecureString** for usado, `Read-Host` retornará uma **SecureString**. Caso contrário, ele retornará uma cadeia de caracteres.
 
 ## OBSERVAÇÕES
 

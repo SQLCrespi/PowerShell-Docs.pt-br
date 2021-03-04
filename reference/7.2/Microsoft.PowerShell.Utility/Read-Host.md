@@ -2,16 +2,16 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/04/2020
+ms.date: 03/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: 2efe75730ef7d35618dc0d1fbf7a8d6f8a5db5ae
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 5563413400abd28ce376265970631ad1206ca518
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603760"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685256"
 ---
 # Read-Host
 
@@ -35,6 +35,9 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 ## DESCRIPTION
 
 O `Read-Host` cmdlet lê uma linha de entrada do console. Você pode usá-lo para solicitar uma entrada do usuário. Como você pode salvar a entrada como uma cadeia de caracteres segura, use esse cmdlet para solicitar aos usuários para proteger os dados, como senhas, bem como dados compartilhados.
+
+> [!NOTE]
+> `Read-Host` tem um limite de 1022 caracteres que ele pode aceitar como entrada de um usuário.
 
 ## EXEMPLOS
 
@@ -99,10 +102,7 @@ Accept wildcard characters: False
 
 ### -Aviso
 
-Especifica o texto do aviso.
-Digite uma cadeia de caracteres.
-Se a cadeia de caracteres incluir espaços, coloque-a entre aspas.
-O PowerShell acrescenta um sinal de dois-pontos ( `:` ) ao texto inserido.
+Especifica o texto do aviso. Digite uma cadeia de caracteres. Se a cadeia de caracteres incluir espaços, coloque-a entre aspas. O PowerShell acrescenta um sinal de dois-pontos ( `:` ) ao texto inserido.
 
 ```yaml
 Type: System.Object

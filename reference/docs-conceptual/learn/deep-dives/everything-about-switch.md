@@ -1,14 +1,14 @@
 ---
 title: Tudo o que você sempre quis saber sobre a instrução switch
 description: A instrução switch no PowerShell oferece recursos que não são encontrados em outras linguagens.
-ms.date: 05/23/2020
+ms.date: 03/01/2021
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
+ms.openlocfilehash: f6baa624285557452a2b95150b2c4de1ab274f27
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93355112"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686017"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Tudo o que você sempre quis saber sobre a instrução switch
 
@@ -169,7 +169,7 @@ Você pode usar `$PSItem` ou `$_` para fazer referência ao item atual que foi p
 
 ## <a name="parameters"></a>Parâmetros
 
-Um recurso exclusivo de `switch` do PowerShell é que ele tem um número de [parâmetros de opção][] que alteram a forma como ele é executado.
+Um recurso exclusivo de `switch` do PowerShell é que ele tem um número de parâmetros de opção que alteram a forma como ele é executado.
 
 ### <a name="-casesensitive"></a>-CaseSensitive
 
@@ -738,6 +738,5 @@ A instrução switch é aparentemente simples, mas oferece alguns recursos avan�
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [switch]: /powershell/module/microsoft.powershell.core/about/about_switch
-[parâmetros de opção]: https://www.powershellmagazine.com/2013/12/20/using-powershell-switch-vs-boolean-parameters-in-sma-runbooks/
 [As várias maneiras de usar regex]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression
 [tabelas de hash]: everything-about-hashtable.md
