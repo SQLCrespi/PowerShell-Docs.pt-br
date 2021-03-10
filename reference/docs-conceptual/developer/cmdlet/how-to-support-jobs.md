@@ -1,14 +1,14 @@
 ---
-ms.date: 09/13/2016
+ms.date: 03/09/2021
 ms.topic: reference
 title: Como dar suporte a trabalhos
 description: Como dar suporte a trabalhos
-ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 1528f5d934605caa4009688845a6caa7b95b86a3
+ms.sourcegitcommit: e679533f966f4e97cddae24531a22436da13610c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92666970"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532111"
 ---
 # <a name="how-to-support-jobs"></a>Como dar suporte a trabalhos
 
@@ -32,7 +32,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06AsJobParam](msh_samplesGetProc06#GetProc06AsJobParam)]  -->
 
-2. Crie um objeto derivado da classe [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) . Esse objeto pode ser um objeto de trabalho personalizado ou um dos objetos de trabalho fornecidos pelo Windows PowerShell, como um objeto [System. Management. Automation. PSEventJob](/dotnet/api/System.Management.Automation.PSEventJob) .
+1. Crie um objeto derivado da classe [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) . Esse objeto pode ser um objeto de trabalho personalizado ou um dos objetos de trabalho fornecidos pelo Windows PowerShell, como um objeto [System. Management. Automation. PSEventJob](/dotnet/api/System.Management.Automation.PSEventJob) .
 
     O exemplo a seguir mostra um objeto de trabalho personalizado.
 
@@ -42,7 +42,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. Em um método de processamento de registros, adicione uma `if` instrução para detectar se o cmdlet deve ser executado como um trabalho. O código a seguir usa o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
+1. Em um método de processamento de registros, adicione uma `if` instrução para detectar se o cmdlet deve ser executado como um trabalho. O código a seguir usa o método [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) .
 
     ```csharp
     protected override void ProcessRecord()
@@ -69,7 +69,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06ProcessRecord](msh_samplesGetProc06#GetProc06ProcessRecord)]  -->
 
-4. Para objetos de trabalho personalizados, implemente a classe Job.
+1. Para objetos de trabalho personalizados, implemente a classe Job.
 
     ```csharp
     private class SampleJob : Job
@@ -126,7 +126,7 @@ Este exemplo mostra como dar suporte a trabalhos quando você escreve cmdlets. S
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobClass](msh_samplesGetProc06#GetProc06JobClass)]  -->
 
-5. Se o cmdlet executar o trabalho, chame o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) para retornar um objeto de processo para o pipeline. Se o trabalho for executado como um trabalho, adicione um trabalho filho ao trabalho.
+1. Se o cmdlet executar o trabalho, chame o método [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) para retornar um objeto de processo para o pipeline. Se o trabalho for executado como um trabalho, adicione um trabalho filho ao trabalho.
 
     ```csharp
     void DoProcessLogic(bool asJob)
@@ -209,6 +209,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// Specify the AsJob parameter. This parameter indicates
     /// whether the cmdlet should retrieve the processes internally
     /// or return a Job object that retrieves the processes.
+    /// </summary>
     [Parameter()]
     public SwitchParameter AsJob
     {
