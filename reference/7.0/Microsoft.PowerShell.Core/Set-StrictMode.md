@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/09/2020
+ms.date: 03/10/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-strictmode?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StrictMode
-ms.openlocfilehash: aea54dfa2ade8a9b7b67ca82fb0d6365e6eea3c4
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: bada911409d227a56ba53d44b0a64bcdf73c8959
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391333"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771436"
 ---
 # Set-StrictMode
 
@@ -139,7 +139,7 @@ Sem a versão 2,0, a referência à propriedade **month** não existente de uma 
 
 ### Exemplo 3: ativar o modo estrito como a versão 3,0
 
-Com o modo estrito definido como **desativado** , índices inválidos ou fora dos limites resultam em valores nulos de retorno de resultados.
+Com o modo estrito definido como **desativado**, índices inválidos ou fora dos limites resultam em valores nulos de retorno de resultados.
 
 ```powershell
 # Strict mode is off by default.
@@ -192,9 +192,9 @@ Especifica as condições que causam um erro no modo estrito. Esse parâmetro ac
 
 Os valores efetivos para esse parâmetro são:
 
-- 1,0
+- 1.0
   - Proíbe referências a variáveis não inicializadas, exceto para variáveis não inicializadas em cadeias de caracteres.
-- 2.0
+- 2,0
   - Proíbe referências a variáveis não inicializadas. Isso inclui variáveis não inicializadas em cadeias de caracteres.
   - Proíbe referências a propriedades não existentes de um objeto.
   - Proíbe chamadas de função que usam a sintaxe para chamar métodos.
@@ -203,7 +203,7 @@ Os valores efetivos para esse parâmetro são:
   - Proíbe referências a propriedades não existentes de um objeto.
   - Proíbe chamadas de função que usam a sintaxe para chamar métodos.
   - Proibir fora dos limites ou índices de matriz não resolvidos.
-- Última
+- Mais recente
   - Seleciona a versão mais recente disponível. A versão mais recente é a mais estrita. Use esse valor para garantir que os scripts usem a versão mais estrita disponível, mesmo quando novas versões forem adicionadas ao PowerShell.
 
 > [!CAUTION]
@@ -238,6 +238,8 @@ Não é possível redirecionar a entrada para este cmdlet.
 Este cmdlet não retorna nenhuma saída.
 
 ## OBSERVAÇÕES
+
+Enquanto o parâmetro da `Set-StrictMode` **versão** aceitará valores maiores que `3.0` , no momento, não há regras adicionais definidas para nada maior do que `3.0` .
 
 `Set-StrictMode` entra em vigor somente no escopo no qual ele está definido e em seus escopos filho. Para obter mais informações sobre escopos no PowerShell, consulte [about_Scopes](about/about_Scopes.md).
 

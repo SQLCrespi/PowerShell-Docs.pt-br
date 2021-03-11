@@ -2,16 +2,16 @@
 external help file: System.Management.Automation.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/09/2020
+ms.date: 03/10/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-strictmode?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StrictMode
-ms.openlocfilehash: 58261830ca65da295aeb85cda22d0a78762e2502
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 007c2cd044ac91a29b40f5a49e84482d7523d3ca
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598651"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771453"
 ---
 # Set-StrictMode
 
@@ -202,7 +202,7 @@ Os valores efetivos para esse parâmetro são:
   - Proíbe referências a propriedades não existentes de um objeto.
   - Proíbe chamadas de função que usam a sintaxe para chamar métodos.
   - Proibir fora dos limites ou índices de matriz não resolvidos.
-- Última
+- Mais recente
   - Seleciona a versão mais recente disponível. A versão mais recente é a mais estrita. Use esse valor para garantir que os scripts usem a versão mais estrita disponível, mesmo quando novas versões forem adicionadas ao PowerShell.
 
 > [!CAUTION]
@@ -237,6 +237,8 @@ Não é possível redirecionar a entrada para este cmdlet.
 Este cmdlet não retorna nenhuma saída.
 
 ## OBSERVAÇÕES
+
+Enquanto o parâmetro da `Set-StrictMode` **versão** aceitará valores maiores que `3.0` , no momento, não há regras adicionais definidas para nada maior do que `3.0` .
 
 `Set-StrictMode` entra em vigor somente no escopo no qual ele está definido e em seus escopos filho. Para obter mais informações sobre escopos no PowerShell, consulte [about_Scopes](about/about_Scopes.md).
 
