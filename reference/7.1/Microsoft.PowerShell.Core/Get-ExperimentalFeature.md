@@ -1,38 +1,39 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Core
 ms.date: 03/01/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-experimentalfeature?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExperimentalFeature
-ms.openlocfilehash: 2d91c36c6fd6d2e1281fdadf95c3b83e27c36f60
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cd023cb91dd7ae15b2b10954920d133089b7d05c
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93194765"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196262"
 ---
-# <span data-ttu-id="2badf-102">Get-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="2badf-102">Get-ExperimentalFeature</span></span>
+# <span data-ttu-id="fba9e-102">Get-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="fba9e-102">Get-ExperimentalFeature</span></span>
 
-## <span data-ttu-id="2badf-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="2badf-103">SYNOPSIS</span></span>
-<span data-ttu-id="2badf-104">Obtém recursos experimentais.</span><span class="sxs-lookup"><span data-stu-id="2badf-104">Gets experimental features.</span></span>
+## <span data-ttu-id="fba9e-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="fba9e-103">SYNOPSIS</span></span>
+<span data-ttu-id="fba9e-104">Obtém recursos experimentais.</span><span class="sxs-lookup"><span data-stu-id="fba9e-104">Gets experimental features.</span></span>
 
-## <span data-ttu-id="2badf-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2badf-105">SYNTAX</span></span>
+## <span data-ttu-id="fba9e-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="fba9e-105">SYNTAX</span></span>
 
 ```
 Get-ExperimentalFeature [[-Name] <String[]>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2badf-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="2badf-106">DESCRIPTION</span></span>
+## <span data-ttu-id="fba9e-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="fba9e-106">DESCRIPTION</span></span>
 
-<span data-ttu-id="2badf-107">O `Get-ExperimentalFeature` cmdlet retorna todos os recursos experimentais descobertos pelo PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2badf-107">The `Get-ExperimentalFeature` cmdlet returns all experimental features discovered by PowerShell.</span></span>
-<span data-ttu-id="2badf-108">Os recursos experimentais podem vir de módulos ou do mecanismo do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2badf-108">Experimental features can come from modules or the PowerShell engine.</span></span> <span data-ttu-id="2badf-109">Os recursos experimentais permitem que os usuários testem novos recursos com segurança e forneçam comentários (normalmente por meio do GitHub) antes que o design seja considerado concluído e quaisquer alterações possam se tornar uma alteração significativa.</span><span class="sxs-lookup"><span data-stu-id="2badf-109">Experimental features allow users to safely test new features and provide feedback (typically via GitHub) before the design is considered complete and any changes can become a breaking change.</span></span>
+<span data-ttu-id="fba9e-107">O `Get-ExperimentalFeature` cmdlet retorna todos os recursos experimentais descobertos pelo PowerShell.</span><span class="sxs-lookup"><span data-stu-id="fba9e-107">The `Get-ExperimentalFeature` cmdlet returns all experimental features discovered by PowerShell.</span></span>
+<span data-ttu-id="fba9e-108">Os recursos experimentais podem vir de módulos ou do mecanismo do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="fba9e-108">Experimental features can come from modules or the PowerShell engine.</span></span> <span data-ttu-id="fba9e-109">Os recursos experimentais permitem que os usuários testem novos recursos com segurança e forneçam comentários (normalmente por meio do GitHub) antes que o design seja considerado concluído e quaisquer alterações possam se tornar uma alteração significativa.</span><span class="sxs-lookup"><span data-stu-id="fba9e-109">Experimental features allow users to safely test new features and provide feedback (typically via GitHub) before the design is considered complete and any changes can become a breaking change.</span></span>
 
-## <span data-ttu-id="2badf-110">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="2badf-110">EXAMPLES</span></span>
+## <span data-ttu-id="fba9e-110">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="fba9e-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="2badf-111">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="2badf-111">Example 1</span></span>
+### <span data-ttu-id="fba9e-111">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="fba9e-111">Example 1</span></span>
 
-<span data-ttu-id="2badf-112">Obtém a lista de recursos experimentais registrados no momento e seu estado atual.</span><span class="sxs-lookup"><span data-stu-id="2badf-112">Gets the list of currently registered experimental features and their current state.</span></span>
+<span data-ttu-id="fba9e-112">Obtém a lista de recursos experimentais registrados no momento e seu estado atual.</span><span class="sxs-lookup"><span data-stu-id="fba9e-112">Gets the list of currently registered experimental features and their current state.</span></span>
 
 ```powershell
 Get-ExperimentalFeature
@@ -44,11 +45,11 @@ Name                         Enabled Source      Description
 PSImplicitRemotingBatching   False PSEngine      Batch implicit remoting proxy commands to improve performance
 ```
 
-## <span data-ttu-id="2badf-113">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2badf-113">PARAMETERS</span></span>
+## <span data-ttu-id="fba9e-113">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="fba9e-113">PARAMETERS</span></span>
 
-### <span data-ttu-id="2badf-114">-Name</span><span class="sxs-lookup"><span data-stu-id="2badf-114">-Name</span></span>
+### <span data-ttu-id="fba9e-114">-Name</span><span class="sxs-lookup"><span data-stu-id="fba9e-114">-Name</span></span>
 
-<span data-ttu-id="2badf-115">Nome ou nomes de recursos experimentais específicos a serem retornados.</span><span class="sxs-lookup"><span data-stu-id="2badf-115">Name or names of specific experimental features to return.</span></span>
+<span data-ttu-id="fba9e-115">Nome ou nomes de recursos experimentais específicos a serem retornados.</span><span class="sxs-lookup"><span data-stu-id="fba9e-115">Name or names of specific experimental features to return.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -62,25 +63,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2badf-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2badf-116">CommonParameters</span></span>
+### <span data-ttu-id="fba9e-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="fba9e-116">CommonParameters</span></span>
 
-<span data-ttu-id="2badf-117">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2badf-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2badf-118">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="2badf-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="fba9e-117">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="fba9e-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="fba9e-118">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="fba9e-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="2badf-119">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="2badf-119">INPUTS</span></span>
+## <span data-ttu-id="fba9e-119">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="fba9e-119">INPUTS</span></span>
 
-### <span data-ttu-id="2badf-120">System.String[]</span><span class="sxs-lookup"><span data-stu-id="2badf-120">System.String[]</span></span>
+### <span data-ttu-id="fba9e-120">System.String[]</span><span class="sxs-lookup"><span data-stu-id="fba9e-120">System.String[]</span></span>
 
-<span data-ttu-id="2badf-121">Nome ou nomes dos recursos experimentais a serem retornados.</span><span class="sxs-lookup"><span data-stu-id="2badf-121">Name or names of experimental features to return.</span></span>
+<span data-ttu-id="fba9e-121">Nome ou nomes dos recursos experimentais a serem retornados.</span><span class="sxs-lookup"><span data-stu-id="fba9e-121">Name or names of experimental features to return.</span></span>
 
-## <span data-ttu-id="2badf-122">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="2badf-122">OUTPUTS</span></span>
+## <span data-ttu-id="fba9e-122">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="fba9e-122">OUTPUTS</span></span>
 
-### <span data-ttu-id="2badf-123">ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="2badf-123">ExperimentalFeature</span></span>
+### <span data-ttu-id="fba9e-123">ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="fba9e-123">ExperimentalFeature</span></span>
 
-<span data-ttu-id="2badf-124">Retorna instâncias que correspondem aos nomes solicitados ou a todos os recursos experimentais se nenhum nome for especificado.</span><span class="sxs-lookup"><span data-stu-id="2badf-124">Returns instances that match the requested names or all experimental features if no name is specified.</span></span>
+<span data-ttu-id="fba9e-124">Retorna instâncias que correspondem aos nomes solicitados ou a todos os recursos experimentais se nenhum nome for especificado.</span><span class="sxs-lookup"><span data-stu-id="fba9e-124">Returns instances that match the requested names or all experimental features if no name is specified.</span></span>
 
-## <span data-ttu-id="2badf-125">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="2badf-125">RELATED LINKS</span></span>
+## <span data-ttu-id="fba9e-125">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="fba9e-125">RELATED LINKS</span></span>
 
-[<span data-ttu-id="2badf-126">Disable-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="2badf-126">Disable-ExperimentalFeature</span></span>](Disable-ExperimentalFeature.md)
+[<span data-ttu-id="fba9e-126">Disable-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="fba9e-126">Disable-ExperimentalFeature</span></span>](Disable-ExperimentalFeature.md)
 
-[<span data-ttu-id="2badf-127">Enable-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="2badf-127">Enable-ExperimentalFeature</span></span>](Enable-ExperimentalFeature.md)
+[<span data-ttu-id="fba9e-127">Enable-ExperimentalFeature</span><span class="sxs-lookup"><span data-stu-id="fba9e-127">Enable-ExperimentalFeature</span></span>](Enable-ExperimentalFeature.md)
 
