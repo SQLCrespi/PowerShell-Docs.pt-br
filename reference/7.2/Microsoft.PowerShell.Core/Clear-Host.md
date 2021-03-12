@@ -1,40 +1,41 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
 Locale: en-US
+Module Name: Microsoft.PowerShell.Core
 ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/clear-host?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Host
-ms.openlocfilehash: de7dc6027653db063311bd34e1282e3cb5294e92
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 6b7541fba77c4160cf8d5c2dd36a4bad0bf99c5f
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99595363"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195180"
 ---
-# <span data-ttu-id="fdbee-102">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="fdbee-102">Clear-Host</span></span>
+# <span data-ttu-id="8aa17-102">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="8aa17-102">Clear-Host</span></span>
 
-## <span data-ttu-id="fdbee-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="fdbee-103">SYNOPSIS</span></span>
+## <span data-ttu-id="8aa17-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="8aa17-103">SYNOPSIS</span></span>
 
-<span data-ttu-id="fdbee-104">Limpa o visor no programa host.</span><span class="sxs-lookup"><span data-stu-id="fdbee-104">Clears the display in the host program.</span></span>
+<span data-ttu-id="8aa17-104">Limpa o visor no programa host.</span><span class="sxs-lookup"><span data-stu-id="8aa17-104">Clears the display in the host program.</span></span>
 
-## <span data-ttu-id="fdbee-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="fdbee-105">SYNTAX</span></span>
+## <span data-ttu-id="8aa17-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8aa17-105">SYNTAX</span></span>
 
 ```
 Clear-Host [<CommonParameters>]
 ```
 
-## <span data-ttu-id="fdbee-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="fdbee-106">DESCRIPTION</span></span>
+## <span data-ttu-id="8aa17-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8aa17-106">DESCRIPTION</span></span>
 
-<span data-ttu-id="fdbee-107">A `Clear-Host` função remove todo o texto da exibição atual, incluindo comandos e saídas que podem ter acumulado.</span><span class="sxs-lookup"><span data-stu-id="fdbee-107">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="fdbee-108">Ao concluir, ela exibe o prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="fdbee-108">When complete, it displays the command prompt.</span></span> <span data-ttu-id="fdbee-109">Você pode usar o nome da função ou seu alias, `cls` .</span><span class="sxs-lookup"><span data-stu-id="fdbee-109">You can use the function name or its alias, `cls`.</span></span>
+<span data-ttu-id="8aa17-107">A `Clear-Host` função remove todo o texto da exibição atual, incluindo comandos e saídas que podem ter acumulado.</span><span class="sxs-lookup"><span data-stu-id="8aa17-107">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="8aa17-108">Ao concluir, ela exibe o prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="8aa17-108">When complete, it displays the command prompt.</span></span> <span data-ttu-id="8aa17-109">Você pode usar o nome da função ou seu alias, `cls` .</span><span class="sxs-lookup"><span data-stu-id="8aa17-109">You can use the function name or its alias, `cls`.</span></span>
 
-<span data-ttu-id="fdbee-110">`Clear-Host` afeta apenas a exibição atual.</span><span class="sxs-lookup"><span data-stu-id="fdbee-110">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="fdbee-111">Ele não exclui os resultados salvos nem remove quaisquer itens da sessão.</span><span class="sxs-lookup"><span data-stu-id="fdbee-111">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="fdbee-112">Os itens de sessão específica, como variáveis e funções, não são afetados por essa função.</span><span class="sxs-lookup"><span data-stu-id="fdbee-112">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
+<span data-ttu-id="8aa17-110">`Clear-Host` afeta apenas a exibição atual.</span><span class="sxs-lookup"><span data-stu-id="8aa17-110">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="8aa17-111">Ele não exclui os resultados salvos nem remove quaisquer itens da sessão.</span><span class="sxs-lookup"><span data-stu-id="8aa17-111">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="8aa17-112">Os itens de sessão específica, como variáveis e funções, não são afetados por essa função.</span><span class="sxs-lookup"><span data-stu-id="8aa17-112">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
 
-<span data-ttu-id="fdbee-113">Como o comportamento da `Clear-Host` função é determinado pelo programa host, o `Clear-Host` pode funcionar de forma diferente em programas host diferentes.</span><span class="sxs-lookup"><span data-stu-id="fdbee-113">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
+<span data-ttu-id="8aa17-113">Como o comportamento da `Clear-Host` função é determinado pelo programa host, o `Clear-Host` pode funcionar de forma diferente em programas host diferentes.</span><span class="sxs-lookup"><span data-stu-id="8aa17-113">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
 
-## <span data-ttu-id="fdbee-114">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="fdbee-114">EXAMPLES</span></span>
+## <span data-ttu-id="8aa17-114">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="8aa17-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="fdbee-115">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="fdbee-115">Example 1</span></span>
+### <span data-ttu-id="8aa17-115">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="8aa17-115">Example 1</span></span>
 
 ```
 # Before
@@ -70,36 +71,36 @@ PS C:\> cls
 PS C:>
 ```
 
-<span data-ttu-id="fdbee-116">Esse comando usa o `cls` alias de `Clear-Host` para limpar a exibição atual.</span><span class="sxs-lookup"><span data-stu-id="fdbee-116">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
+<span data-ttu-id="8aa17-116">Esse comando usa o `cls` alias de `Clear-Host` para limpar a exibição atual.</span><span class="sxs-lookup"><span data-stu-id="8aa17-116">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
 
-## <span data-ttu-id="fdbee-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="fdbee-117">PARAMETERS</span></span>
+## <span data-ttu-id="8aa17-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8aa17-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="fdbee-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="fdbee-118">CommonParameters</span></span>
-<span data-ttu-id="fdbee-119">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="fdbee-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="fdbee-120">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="fdbee-120">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="8aa17-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8aa17-118">CommonParameters</span></span>
+<span data-ttu-id="8aa17-119">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8aa17-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8aa17-120">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8aa17-120">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="fdbee-121">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="fdbee-121">INPUTS</span></span>
+## <span data-ttu-id="8aa17-121">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="8aa17-121">INPUTS</span></span>
 
-### <span data-ttu-id="fdbee-122">Nenhum</span><span class="sxs-lookup"><span data-stu-id="fdbee-122">None</span></span>
+### <span data-ttu-id="8aa17-122">Nenhum</span><span class="sxs-lookup"><span data-stu-id="8aa17-122">None</span></span>
 
-<span data-ttu-id="fdbee-123">Não é possível canalizar a entrada para `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="fdbee-123">You cannot pipe input to `Clear-Host`.</span></span>
+<span data-ttu-id="8aa17-123">Não é possível canalizar a entrada para `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="8aa17-123">You cannot pipe input to `Clear-Host`.</span></span>
 
-## <span data-ttu-id="fdbee-124">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="fdbee-124">OUTPUTS</span></span>
+## <span data-ttu-id="8aa17-124">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="8aa17-124">OUTPUTS</span></span>
 
-### <span data-ttu-id="fdbee-125">Nenhum</span><span class="sxs-lookup"><span data-stu-id="fdbee-125">None</span></span>
+### <span data-ttu-id="8aa17-125">Nenhum</span><span class="sxs-lookup"><span data-stu-id="8aa17-125">None</span></span>
 
-<span data-ttu-id="fdbee-126">`Clear-Host` não gera nenhuma saída</span><span class="sxs-lookup"><span data-stu-id="fdbee-126">`Clear-Host` does not generate any output</span></span>
+<span data-ttu-id="8aa17-126">`Clear-Host` não gera nenhuma saída</span><span class="sxs-lookup"><span data-stu-id="8aa17-126">`Clear-Host` does not generate any output</span></span>
 
-## <span data-ttu-id="fdbee-127">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="fdbee-127">NOTES</span></span>
+## <span data-ttu-id="8aa17-127">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="8aa17-127">NOTES</span></span>
 
-<span data-ttu-id="fdbee-128">`Clear-Host` é uma função simples, não uma função avançada.</span><span class="sxs-lookup"><span data-stu-id="fdbee-128">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="fdbee-129">Dessa forma, você não pode usar parâmetros comuns, como **debug**, em um `Clear-Host` comando.</span><span class="sxs-lookup"><span data-stu-id="fdbee-129">As such, you cannot use common parameters, such as **Debug**, in a `Clear-Host` command.</span></span>
+<span data-ttu-id="8aa17-128">`Clear-Host` é uma função simples, não uma função avançada.</span><span class="sxs-lookup"><span data-stu-id="8aa17-128">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="8aa17-129">Dessa forma, você não pode usar parâmetros comuns, como **debug**, em um `Clear-Host` comando.</span><span class="sxs-lookup"><span data-stu-id="8aa17-129">As such, you cannot use common parameters, such as **Debug**, in a `Clear-Host` command.</span></span>
 
-## <span data-ttu-id="fdbee-130">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="fdbee-130">RELATED LINKS</span></span>
+## <span data-ttu-id="8aa17-130">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="8aa17-130">RELATED LINKS</span></span>
 
-[<span data-ttu-id="fdbee-131">Get-Host</span><span class="sxs-lookup"><span data-stu-id="fdbee-131">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
+[<span data-ttu-id="8aa17-131">Get-Host</span><span class="sxs-lookup"><span data-stu-id="8aa17-131">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
 
-[<span data-ttu-id="fdbee-132">Out-Host</span><span class="sxs-lookup"><span data-stu-id="fdbee-132">Out-Host</span></span>](Out-Host.md)
+[<span data-ttu-id="8aa17-132">Out-Host</span><span class="sxs-lookup"><span data-stu-id="8aa17-132">Out-Host</span></span>](Out-Host.md)
 
-[<span data-ttu-id="fdbee-133">Read-Host</span><span class="sxs-lookup"><span data-stu-id="fdbee-133">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
+[<span data-ttu-id="8aa17-133">Read-Host</span><span class="sxs-lookup"><span data-stu-id="8aa17-133">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
 
-[<span data-ttu-id="fdbee-134">Write-Host</span><span class="sxs-lookup"><span data-stu-id="fdbee-134">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)
+[<span data-ttu-id="8aa17-134">Write-Host</span><span class="sxs-lookup"><span data-stu-id="8aa17-134">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)
 

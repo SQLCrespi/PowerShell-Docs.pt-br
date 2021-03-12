@@ -1,24 +1,26 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 01/30/2020
-online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Set-MarkdownOption?view=powershell-7.x.0&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Set-MarkdownOption?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 73f08cd40c243a1b1a4bfc93ecbfe7dc1facb00a
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+title: Set-MarkdownOption
+ms.openlocfilehash: b8353bf6eb9669676d72f533bffb25748e4e2827
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99596204"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195225"
 ---
-# <span data-ttu-id="cd405-101">Set-MarkdownOption</span><span class="sxs-lookup"><span data-stu-id="cd405-101">Set-MarkdownOption</span></span>
+# <span data-ttu-id="3b799-102">Set-MarkdownOption</span><span class="sxs-lookup"><span data-stu-id="3b799-102">Set-MarkdownOption</span></span>
 
-## <span data-ttu-id="cd405-102">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="cd405-102">SYNOPSIS</span></span>
-<span data-ttu-id="cd405-103">Define as cores e os estilos usados para renderizar o conteúdo de redução no console.</span><span class="sxs-lookup"><span data-stu-id="cd405-103">Sets the colors and styles used for rendering Markdown content in the console.</span></span>
+## <span data-ttu-id="3b799-103">SINOPSE</span><span class="sxs-lookup"><span data-stu-id="3b799-103">SYNOPSIS</span></span>
+<span data-ttu-id="3b799-104">Define as cores e os estilos usados para renderizar o conteúdo de redução no console.</span><span class="sxs-lookup"><span data-stu-id="3b799-104">Sets the colors and styles used for rendering Markdown content in the console.</span></span>
 
-## <span data-ttu-id="cd405-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="cd405-104">SYNTAX</span></span>
+## <span data-ttu-id="3b799-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3b799-105">SYNTAX</span></span>
 
-### <span data-ttu-id="cd405-105">IndividualSetting (padrão)</span><span class="sxs-lookup"><span data-stu-id="cd405-105">IndividualSetting (Default)</span></span>
+### <span data-ttu-id="3b799-106">IndividualSetting (padrão)</span><span class="sxs-lookup"><span data-stu-id="3b799-106">IndividualSetting (Default)</span></span>
 
 ```
 Set-MarkdownOption [-Header1Color <String>] [-Header2Color <String>] [-Header3Color <String>]
@@ -28,32 +30,32 @@ Set-MarkdownOption [-Header1Color <String>] [-Header2Color <String>] [-Header3Co
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cd405-106">Tema</span><span class="sxs-lookup"><span data-stu-id="cd405-106">Theme</span></span>
+### <span data-ttu-id="3b799-107">Tema</span><span class="sxs-lookup"><span data-stu-id="3b799-107">Theme</span></span>
 
 ```
 Set-MarkdownOption [-PassThru] -Theme <String> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cd405-107">InputObject</span><span class="sxs-lookup"><span data-stu-id="cd405-107">InputObject</span></span>
+### <span data-ttu-id="3b799-108">InputObject</span><span class="sxs-lookup"><span data-stu-id="3b799-108">InputObject</span></span>
 
 ```
 Set-MarkdownOption [-PassThru] [-InputObject] <PSObject> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="cd405-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="cd405-108">DESCRIPTION</span></span>
+## <span data-ttu-id="3b799-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="3b799-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="cd405-109">Define as cores e os estilos usados para renderizar o conteúdo de redução no console.</span><span class="sxs-lookup"><span data-stu-id="cd405-109">Sets the colors and styles used for rendering Markdown content in the console.</span></span> <span data-ttu-id="cd405-110">Esses estilos são definidos usando códigos de escape ANSI que alteram a cor e o estilo do texto de redução que está sendo renderizado.</span><span class="sxs-lookup"><span data-stu-id="cd405-110">These styles are defined using ANSI escape codes that change the color and style of the Markdown text being rendered.</span></span>
+<span data-ttu-id="3b799-110">Define as cores e os estilos usados para renderizar o conteúdo de redução no console.</span><span class="sxs-lookup"><span data-stu-id="3b799-110">Sets the colors and styles used for rendering Markdown content in the console.</span></span> <span data-ttu-id="3b799-111">Esses estilos são definidos usando códigos de escape ANSI que alteram a cor e o estilo do texto de redução que está sendo renderizado.</span><span class="sxs-lookup"><span data-stu-id="3b799-111">These styles are defined using ANSI escape codes that change the color and style of the Markdown text being rendered.</span></span>
 
-<span data-ttu-id="cd405-111">Para obter mais informações sobre a redução, consulte o site do [CommonMark](https://commonmark.org/) .</span><span class="sxs-lookup"><span data-stu-id="cd405-111">For more information about Markdown, see the [CommonMark](https://commonmark.org/) website.</span></span>
+<span data-ttu-id="3b799-112">Para obter mais informações sobre a redução, consulte o site do [CommonMark](https://commonmark.org/) .</span><span class="sxs-lookup"><span data-stu-id="3b799-112">For more information about Markdown, see the [CommonMark](https://commonmark.org/) website.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cd405-112">Os valores de cadeia de caracteres usados nas configurações são os caracteres que seguem o caractere de **escape** ( `[char]0x1B` ) para a sequência de escape ANSI.</span><span class="sxs-lookup"><span data-stu-id="cd405-112">The string values used in the settings are the characters that follow the **Escape** character (`[char]0x1B`) for the ANSI escape sequence.</span></span> <span data-ttu-id="cd405-113">Não inclua o caractere de **escape** na cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cd405-113">Do not include the **Escape** character in the string.</span></span> <span data-ttu-id="cd405-114">Para obter mais informações sobre os códigos de escape ANSI funcionam, consulte [ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code).</span><span class="sxs-lookup"><span data-stu-id="cd405-114">For more information about ANSI escape codes work, see [ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code).</span></span>
+> <span data-ttu-id="3b799-113">Os valores de cadeia de caracteres usados nas configurações são os caracteres que seguem o caractere de **escape** ( `[char]0x1B` ) para a sequência de escape ANSI.</span><span class="sxs-lookup"><span data-stu-id="3b799-113">The string values used in the settings are the characters that follow the **Escape** character (`[char]0x1B`) for the ANSI escape sequence.</span></span> <span data-ttu-id="3b799-114">Não inclua o caractere de **escape** na cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="3b799-114">Do not include the **Escape** character in the string.</span></span> <span data-ttu-id="3b799-115">Para obter mais informações sobre os códigos de escape ANSI funcionam, consulte [ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code).</span><span class="sxs-lookup"><span data-stu-id="3b799-115">For more information about ANSI escape codes work, see [ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code).</span></span>
 
-## <span data-ttu-id="cd405-115">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="cd405-115">EXAMPLES</span></span>
+## <span data-ttu-id="3b799-116">EXEMPLOS</span><span class="sxs-lookup"><span data-stu-id="3b799-116">EXAMPLES</span></span>
 
-### <span data-ttu-id="cd405-116">Exemplo 1-alternar para o tema claro</span><span class="sxs-lookup"><span data-stu-id="cd405-116">Example 1 - Switch to the Light Theme</span></span>
+### <span data-ttu-id="3b799-117">Exemplo 1-alternar para o tema claro</span><span class="sxs-lookup"><span data-stu-id="3b799-117">Example 1 - Switch to the Light Theme</span></span>
 
-<span data-ttu-id="cd405-117">Este exemplo seleciona o tema **claro** e exibe a nova configuração usando o parâmetro **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="cd405-117">This example selects the **Light** theme and displays the new configuration using the **PassThru** parameter.</span></span>
+<span data-ttu-id="3b799-118">Este exemplo seleciona o tema **claro** e exibe a nova configuração usando o parâmetro **PassThru** .</span><span class="sxs-lookup"><span data-stu-id="3b799-118">This example selects the **Light** theme and displays the new configuration using the **PassThru** parameter.</span></span>
 
 ```powershell
 Set-MarkdownOption -Theme Light -PassThru
@@ -73,9 +75,9 @@ EmphasisBold    : [1m
 EmphasisItalics : [36m
 ```
 
-### <span data-ttu-id="cd405-118">Exemplo 2 – personalizar as configurações de cor e estilo</span><span class="sxs-lookup"><span data-stu-id="cd405-118">Example 2 - Customize the color and style settings</span></span>
+### <span data-ttu-id="3b799-119">Exemplo 2 – personalizar as configurações de cor e estilo</span><span class="sxs-lookup"><span data-stu-id="3b799-119">Example 2 - Customize the color and style settings</span></span>
 
-<span data-ttu-id="cd405-119">Este exemplo altera o código de escape para os cabeçalhos de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-119">This example changes the escape code for the Markdown headers.</span></span> <span data-ttu-id="cd405-120">A configuração padrão dos cabeçalhos os renderiza como texto sublinhado de várias cores.</span><span class="sxs-lookup"><span data-stu-id="cd405-120">The default configuration for headers renders them as underlined text of various colors.</span></span> <span data-ttu-id="cd405-121">Essa alteração remove o estilo sublinhado.</span><span class="sxs-lookup"><span data-stu-id="cd405-121">This change removes the underline style.</span></span>
+<span data-ttu-id="3b799-120">Este exemplo altera o código de escape para os cabeçalhos de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-120">This example changes the escape code for the Markdown headers.</span></span> <span data-ttu-id="3b799-121">A configuração padrão dos cabeçalhos os renderiza como texto sublinhado de várias cores.</span><span class="sxs-lookup"><span data-stu-id="3b799-121">The default configuration for headers renders them as underlined text of various colors.</span></span> <span data-ttu-id="3b799-122">Essa alteração remove o estilo sublinhado.</span><span class="sxs-lookup"><span data-stu-id="3b799-122">This change removes the underline style.</span></span>
 
 ```powershell
 $mdOptions = Get-MarkdownOption
@@ -101,27 +103,11 @@ EmphasisBold    : [1m
 EmphasisItalics : [36m
 ```
 
-## <span data-ttu-id="cd405-122">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="cd405-122">PARAMETERS</span></span>
+## <span data-ttu-id="3b799-123">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3b799-123">PARAMETERS</span></span>
 
-### <span data-ttu-id="cd405-123">-BoldForegroundColor</span><span class="sxs-lookup"><span data-stu-id="cd405-123">-BoldForegroundColor</span></span>
+### <span data-ttu-id="3b799-124">-BoldForegroundColor</span><span class="sxs-lookup"><span data-stu-id="3b799-124">-BoldForegroundColor</span></span>
 
-<span data-ttu-id="cd405-124">Define a cor de primeiro plano para renderizar o texto de redução em negrito.</span><span class="sxs-lookup"><span data-stu-id="cd405-124">Sets the foreground color for rendering bold Markdown text.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: IndividualSetting
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="cd405-125">-Código</span><span class="sxs-lookup"><span data-stu-id="cd405-125">-Code</span></span>
-
-<span data-ttu-id="cd405-126">Define a cor para renderizar blocos de código e abrange em texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-126">Sets the color for rendering code blocks and spans in Markdown text.</span></span>
+<span data-ttu-id="3b799-125">Define a cor de primeiro plano para renderizar o texto de redução em negrito.</span><span class="sxs-lookup"><span data-stu-id="3b799-125">Sets the foreground color for rendering bold Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -135,25 +121,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-127">-Header1Color</span><span class="sxs-lookup"><span data-stu-id="cd405-127">-Header1Color</span></span>
+### <span data-ttu-id="3b799-126">-Código</span><span class="sxs-lookup"><span data-stu-id="3b799-126">-Code</span></span>
 
-<span data-ttu-id="cd405-128">Define a cor para renderização de blocos header1 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-128">Sets the color for rendering Header1 blocks in Markdown text.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: IndividualSetting
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="cd405-129">-Header2Color</span><span class="sxs-lookup"><span data-stu-id="cd405-129">-Header2Color</span></span>
-
-<span data-ttu-id="cd405-130">Define a cor para renderização de blocos Header2 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-130">Sets the color for rendering Header2 blocks in Markdown text.</span></span>
+<span data-ttu-id="3b799-127">Define a cor para renderizar blocos de código e abrange em texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-127">Sets the color for rendering code blocks and spans in Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -167,25 +137,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-131">-Header3Color</span><span class="sxs-lookup"><span data-stu-id="cd405-131">-Header3Color</span></span>
+### <span data-ttu-id="3b799-128">-Header1Color</span><span class="sxs-lookup"><span data-stu-id="3b799-128">-Header1Color</span></span>
 
-<span data-ttu-id="cd405-132">Define a cor para renderização de blocos Header3 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-132">Sets the color for rendering Header3 blocks in Markdown text.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: IndividualSetting
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="cd405-133">-Header4Color</span><span class="sxs-lookup"><span data-stu-id="cd405-133">-Header4Color</span></span>
-
-<span data-ttu-id="cd405-134">Define a cor para renderização de blocos Header4 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-134">Sets the color for rendering Header4 blocks in Markdown text.</span></span>
+<span data-ttu-id="3b799-129">Define a cor para renderização de blocos header1 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-129">Sets the color for rendering Header1 blocks in Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -199,25 +153,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-135">-Header5Color</span><span class="sxs-lookup"><span data-stu-id="cd405-135">-Header5Color</span></span>
+### <span data-ttu-id="3b799-130">-Header2Color</span><span class="sxs-lookup"><span data-stu-id="3b799-130">-Header2Color</span></span>
 
-<span data-ttu-id="cd405-136">Define a cor para renderização de blocos Header5 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-136">Sets the color for rendering Header5 blocks in Markdown text.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: IndividualSetting
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="cd405-137">-Header6Color</span><span class="sxs-lookup"><span data-stu-id="cd405-137">-Header6Color</span></span>
-
-<span data-ttu-id="cd405-138">Define a cor para renderização de blocos Header6 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-138">Sets the color for rendering Header6 blocks in Markdown text.</span></span>
+<span data-ttu-id="3b799-131">Define a cor para renderização de blocos Header2 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-131">Sets the color for rendering Header2 blocks in Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -231,9 +169,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-139">-ImageAltTextForegroundColor</span><span class="sxs-lookup"><span data-stu-id="cd405-139">-ImageAltTextForegroundColor</span></span>
+### <span data-ttu-id="3b799-132">-Header3Color</span><span class="sxs-lookup"><span data-stu-id="3b799-132">-Header3Color</span></span>
 
-<span data-ttu-id="cd405-140">Define a cor de primeiro plano para renderizar o texto alternativo de um elemento Image no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-140">Sets the foreground color for rendering the alternate text of an image element in Markdown text.</span></span>
+<span data-ttu-id="3b799-133">Define a cor para renderização de blocos Header3 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-133">Sets the color for rendering Header3 blocks in Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -247,9 +185,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-141">-InputObject</span><span class="sxs-lookup"><span data-stu-id="cd405-141">-InputObject</span></span>
+### <span data-ttu-id="3b799-134">-Header4Color</span><span class="sxs-lookup"><span data-stu-id="3b799-134">-Header4Color</span></span>
 
-<span data-ttu-id="cd405-142">Um objeto **PSMarkdownOptionInfo** que contém a configuração a ser definida.</span><span class="sxs-lookup"><span data-stu-id="cd405-142">A **PSMarkdownOptionInfo** object containing the configuration to be set.</span></span>
+<span data-ttu-id="3b799-135">Define a cor para renderização de blocos Header4 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-135">Sets the color for rendering Header4 blocks in Markdown text.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IndividualSetting
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3b799-136">-Header5Color</span><span class="sxs-lookup"><span data-stu-id="3b799-136">-Header5Color</span></span>
+
+<span data-ttu-id="3b799-137">Define a cor para renderização de blocos Header5 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-137">Sets the color for rendering Header5 blocks in Markdown text.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IndividualSetting
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3b799-138">-Header6Color</span><span class="sxs-lookup"><span data-stu-id="3b799-138">-Header6Color</span></span>
+
+<span data-ttu-id="3b799-139">Define a cor para renderização de blocos Header6 no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-139">Sets the color for rendering Header6 blocks in Markdown text.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IndividualSetting
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3b799-140">-ImageAltTextForegroundColor</span><span class="sxs-lookup"><span data-stu-id="3b799-140">-ImageAltTextForegroundColor</span></span>
+
+<span data-ttu-id="3b799-141">Define a cor de primeiro plano para renderizar o texto alternativo de um elemento Image no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-141">Sets the foreground color for rendering the alternate text of an image element in Markdown text.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IndividualSetting
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3b799-142">-InputObject</span><span class="sxs-lookup"><span data-stu-id="3b799-142">-InputObject</span></span>
+
+<span data-ttu-id="3b799-143">Um objeto **PSMarkdownOptionInfo** que contém a configuração a ser definida.</span><span class="sxs-lookup"><span data-stu-id="3b799-143">A **PSMarkdownOptionInfo** object containing the configuration to be set.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -263,25 +265,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-143">-ItalicsForegroundColor</span><span class="sxs-lookup"><span data-stu-id="cd405-143">-ItalicsForegroundColor</span></span>
+### <span data-ttu-id="3b799-144">-ItalicsForegroundColor</span><span class="sxs-lookup"><span data-stu-id="3b799-144">-ItalicsForegroundColor</span></span>
 
-<span data-ttu-id="cd405-144">Define a cor de primeiro plano para renderizar os itálicos no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-144">Sets the foreground color for rendering the italics in Markdown text.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: IndividualSetting
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="cd405-145">-LinkForegroundColor</span><span class="sxs-lookup"><span data-stu-id="cd405-145">-LinkForegroundColor</span></span>
-
-<span data-ttu-id="cd405-146">Define a cor de primeiro plano para renderizar hiperlinks no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="cd405-146">Sets the foreground color for rendering hyperlinks in Markdown text.</span></span>
+<span data-ttu-id="3b799-145">Define a cor de primeiro plano para renderizar os itálicos no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-145">Sets the foreground color for rendering the italics in Markdown text.</span></span>
 
 ```yaml
 Type: System.String
@@ -295,9 +281,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-147">-PassThru</span><span class="sxs-lookup"><span data-stu-id="cd405-147">-PassThru</span></span>
+### <span data-ttu-id="3b799-146">-LinkForegroundColor</span><span class="sxs-lookup"><span data-stu-id="3b799-146">-LinkForegroundColor</span></span>
 
-<span data-ttu-id="cd405-148">Faz com que o cmdlet gere um objeto **PSMarkdownOptionInfo** contendo a nova configuração.</span><span class="sxs-lookup"><span data-stu-id="cd405-148">Causes the cmdlet to output a **PSMarkdownOptionInfo** object containing the new configuration.</span></span>
+<span data-ttu-id="3b799-147">Define a cor de primeiro plano para renderizar hiperlinks no texto de redução.</span><span class="sxs-lookup"><span data-stu-id="3b799-147">Sets the foreground color for rendering hyperlinks in Markdown text.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IndividualSetting
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3b799-148">-PassThru</span><span class="sxs-lookup"><span data-stu-id="3b799-148">-PassThru</span></span>
+
+<span data-ttu-id="3b799-149">Faz com que o cmdlet gere um objeto **PSMarkdownOptionInfo** contendo a nova configuração.</span><span class="sxs-lookup"><span data-stu-id="3b799-149">Causes the cmdlet to output a **PSMarkdownOptionInfo** object containing the new configuration.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -311,9 +313,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-149">-Tema</span><span class="sxs-lookup"><span data-stu-id="cd405-149">-Theme</span></span>
+### <span data-ttu-id="3b799-150">-Tema</span><span class="sxs-lookup"><span data-stu-id="3b799-150">-Theme</span></span>
 
-<span data-ttu-id="cd405-150">Seleciona um tema que contém configurações de cores predefinidas.</span><span class="sxs-lookup"><span data-stu-id="cd405-150">Selects a theme containing predefined color settings.</span></span> <span data-ttu-id="cd405-151">Os valores possíveis são **escuro** e **claro**.</span><span class="sxs-lookup"><span data-stu-id="cd405-151">The possible values are **Dark** and **Light**.</span></span>
+<span data-ttu-id="3b799-151">Seleciona um tema que contém configurações de cores predefinidas.</span><span class="sxs-lookup"><span data-stu-id="3b799-151">Selects a theme containing predefined color settings.</span></span> <span data-ttu-id="3b799-152">Os valores possíveis são **escuro** e **claro**.</span><span class="sxs-lookup"><span data-stu-id="3b799-152">The possible values are **Dark** and **Light**.</span></span>
 
 ```yaml
 Type: System.String
@@ -328,31 +330,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cd405-152">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cd405-152">CommonParameters</span></span>
+### <span data-ttu-id="3b799-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3b799-153">CommonParameters</span></span>
 
-<span data-ttu-id="cd405-153">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cd405-153">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cd405-154">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="cd405-154">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="3b799-154">Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3b799-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3b799-155">Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="3b799-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="cd405-155">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="cd405-155">INPUTS</span></span>
+## <span data-ttu-id="3b799-156">ENTRADAS</span><span class="sxs-lookup"><span data-stu-id="3b799-156">INPUTS</span></span>
 
-### <span data-ttu-id="cd405-156">System. Management. Automation. PSObject</span><span class="sxs-lookup"><span data-stu-id="cd405-156">System.Management.Automation.PSObject</span></span>
+### <span data-ttu-id="3b799-157">System. Management. Automation. PSObject</span><span class="sxs-lookup"><span data-stu-id="3b799-157">System.Management.Automation.PSObject</span></span>
 
-## <span data-ttu-id="cd405-157">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="cd405-157">OUTPUTS</span></span>
+## <span data-ttu-id="3b799-158">SAÍDAS</span><span class="sxs-lookup"><span data-stu-id="3b799-158">OUTPUTS</span></span>
 
-### <span data-ttu-id="cd405-158">Microsoft. PowerShell. MarkdownRender. PSMarkdownOptionInfo</span><span class="sxs-lookup"><span data-stu-id="cd405-158">Microsoft.PowerShell.MarkdownRender.PSMarkdownOptionInfo</span></span>
+### <span data-ttu-id="3b799-159">Microsoft. PowerShell. MarkdownRender. PSMarkdownOptionInfo</span><span class="sxs-lookup"><span data-stu-id="3b799-159">Microsoft.PowerShell.MarkdownRender.PSMarkdownOptionInfo</span></span>
 
-## <span data-ttu-id="cd405-159">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="cd405-159">NOTES</span></span>
+## <span data-ttu-id="3b799-160">OBSERVAÇÕES</span><span class="sxs-lookup"><span data-stu-id="3b799-160">NOTES</span></span>
 
-<span data-ttu-id="cd405-160">Os valores de cadeia de caracteres usados para definir a cor e o estilo devem corresponder à expressão regular `^\[*[0-9;]*?m{1}` .</span><span class="sxs-lookup"><span data-stu-id="cd405-160">The string values used to define the color and style must match the regular expression `^\[*[0-9;]*?m{1}`.</span></span>
+<span data-ttu-id="3b799-161">Os valores de cadeia de caracteres usados para definir a cor e o estilo devem corresponder à expressão regular `^\[*[0-9;]*?m{1}` .</span><span class="sxs-lookup"><span data-stu-id="3b799-161">The string values used to define the color and style must match the regular expression `^\[*[0-9;]*?m{1}`.</span></span>
 
-## <span data-ttu-id="cd405-161">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="cd405-161">RELATED LINKS</span></span>
+## <span data-ttu-id="3b799-162">LINKS RELACIONADOS</span><span class="sxs-lookup"><span data-stu-id="3b799-162">RELATED LINKS</span></span>
 
-[<span data-ttu-id="cd405-162">Get-MarkdownOption</span><span class="sxs-lookup"><span data-stu-id="cd405-162">Get-MarkdownOption</span></span>](Get-MarkdownOption.md)
+[<span data-ttu-id="3b799-163">Get-MarkdownOption</span><span class="sxs-lookup"><span data-stu-id="3b799-163">Get-MarkdownOption</span></span>](Get-MarkdownOption.md)
 
-[<span data-ttu-id="cd405-163">ConvertFrom-Markdown</span><span class="sxs-lookup"><span data-stu-id="cd405-163">ConvertFrom-Markdown</span></span>](ConvertFrom-Markdown.md)
+[<span data-ttu-id="3b799-164">ConvertFrom-Markdown</span><span class="sxs-lookup"><span data-stu-id="3b799-164">ConvertFrom-Markdown</span></span>](ConvertFrom-Markdown.md)
 
-[<span data-ttu-id="cd405-164">Show-Markdown</span><span class="sxs-lookup"><span data-stu-id="cd405-164">Show-Markdown</span></span>](Show-Markdown.md)
+[<span data-ttu-id="3b799-165">Show-Markdown</span><span class="sxs-lookup"><span data-stu-id="3b799-165">Show-Markdown</span></span>](Show-Markdown.md)
 
-[<span data-ttu-id="cd405-165">ANSI_escape_code</span><span class="sxs-lookup"><span data-stu-id="cd405-165">ANSI_escape_code</span></span>](https://en.wikipedia.org/wiki/ANSI_escape_code)
+[<span data-ttu-id="3b799-166">ANSI_escape_code</span><span class="sxs-lookup"><span data-stu-id="3b799-166">ANSI_escape_code</span></span>](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
-[<span data-ttu-id="cd405-166">CommonMark</span><span class="sxs-lookup"><span data-stu-id="cd405-166">CommonMark</span></span>](https://commonmark.org/)
+[<span data-ttu-id="3b799-167">CommonMark</span><span class="sxs-lookup"><span data-stu-id="3b799-167">CommonMark</span></span>](https://commonmark.org/)
 
