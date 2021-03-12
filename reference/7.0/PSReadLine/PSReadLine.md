@@ -8,12 +8,12 @@ Module Name: PSReadLine
 ms.date: 02/10/2020
 schema: 2.0.0
 title: PSReadLine
-ms.openlocfilehash: e14d322fb2f964f06c064c1f9878dc3033947520
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: fc059318507b7a875eedf47692c1b6e3572efbbc
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93195434"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195559"
 ---
 # Módulo PSReadLine
 
@@ -45,5 +45,5 @@ Remove uma associação de chave.
 Associa as chaves às funções de manipulador de chave definidas pelo usuário ou PSReadLine.
 
 ### [Set-PSReadLineOption](Set-PSReadLineOption.md)
-Personaliza o comportamento da edição de linha de comando no **PSReadLine** .
+Personaliza o comportamento da edição de linha de comando no **PSReadLine**.
 
