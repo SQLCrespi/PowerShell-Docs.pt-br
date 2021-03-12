@@ -1,16 +1,16 @@
 ---
 description: Descreve como escrever tópicos de ajuda baseados em comentários para funções e scripts.
-keywords: powershell, cmdlet
+Locale: en-US
 ms.date: 06/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comment_Based_Help
-ms.openlocfilehash: c3e02edd6ca33f373b1632160e4a18dc4fb744f2
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: cc19b11322e8b2062f9659c3fbce92ad5c6eded0
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94386964"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194227"
 ---
 # <a name="about-comment-based-help"></a>Sobre a ajuda baseada em comentários
 
@@ -21,7 +21,7 @@ Descreve como escrever tópicos de ajuda baseados em comentários para funções
 
 Você pode escrever tópicos de ajuda baseados em comentários para funções e scripts usando palavras-chave de comentário de ajuda especial.
 
-O cmdlet [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help) exibe a ajuda baseada em comentários no mesmo formato em que ele exibe os tópicos de ajuda do cmdlet que são gerados a partir de arquivos XML. Os usuários podem usar todos os parâmetros do `Get-Help` , como **detalhado** , **completo** , **exemplos** e **online** , para exibir o conteúdo da ajuda baseada em comentários.
+O cmdlet [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help) exibe a ajuda baseada em comentários no mesmo formato em que ele exibe os tópicos de ajuda do cmdlet que são gerados a partir de arquivos XML. Os usuários podem usar todos os parâmetros do `Get-Help` , como **detalhado**, **completo**, **exemplos** e **online**, para exibir o conteúdo da ajuda baseada em comentários.
 
 Você também pode gravar arquivos de ajuda baseados em XML para funções e scripts. Para habilitar o `Get-Help` cmdlet para localizar o arquivo de ajuda baseado em XML para uma função ou um script, use a `.ExternalHelp` palavra-chave. Sem essa palavra-chave, `Get-Help` não é possível encontrar tópicos de ajuda baseados em XML para funções ou scripts.
 
@@ -307,7 +307,7 @@ Os **parâmetros comuns** são adicionados à sintaxe e à lista de parâmetros 
 
 ### <a name="parameter-attribute-table"></a>Tabela de atributos de parâmetro
 
-`Get-Help` gera a tabela de atributos de parâmetro que aparece quando você usa o parâmetro **Full** **ou Parameter** de `Get-Help` . O valor dos atributos **obrigatório** , **posição** e valor **padrão** é obtido da sintaxe da função ou do script.
+`Get-Help` gera a tabela de atributos de parâmetro que aparece quando você usa o parâmetro **Full** **ou Parameter** de `Get-Help` . O valor dos atributos **obrigatório**, **posição** e valor **padrão** é obtido da sintaxe da função ou do script.
 
 Os valores padrão e um valor para **aceitar caracteres curinga** não aparecem na tabela de atributos de parâmetro mesmo quando eles são definidos na função ou script. Para ajudar os usuários, forneça essas informações na descrição do parâmetro.
 

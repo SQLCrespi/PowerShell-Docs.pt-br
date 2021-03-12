@@ -1,15 +1,16 @@
 ---
 description: Descreve como escrever tópicos de ajuda baseados em comentários para funções e scripts.
+Locale: en-US
 ms.date: 06/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comment_Based_Help
-ms.openlocfilehash: 055f2358a8e9d3868c9fd1024be1f6adf5520356
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: b676870c5d8879700b84339f9f0b74a18b079692
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598832"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195706"
 ---
 # <a name="about-comment-based-help"></a>Sobre a ajuda baseada em comentários
 
@@ -292,7 +293,7 @@ O nome, a sintaxe, a lista de parâmetros, a tabela de atributo de parâmetro, o
 
 A seção **nome** de um tópico da ajuda da função é extraída do nome da função na sintaxe da função. O **nome** de um tópico de ajuda de script é obtido do nome de arquivo do script. Para alterar o nome ou sua capitalização, altere a sintaxe da função ou o nome de arquivo do script.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Sintaxe
 
 A seção de **sintaxe** do tópico da ajuda é gerada a partir da sintaxe da função ou do script. Para adicionar detalhes à sintaxe do tópico da ajuda, como o tipo .NET de um parâmetro, adicione os detalhes à sintaxe. Se você não especificar um tipo de parâmetro, o tipo de **objeto** será inserido como o valor padrão.
 
@@ -742,7 +743,7 @@ Displays information about PowerShell cmdlets and concepts.
 ...
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [about_Functions](about_Functions.md)
 

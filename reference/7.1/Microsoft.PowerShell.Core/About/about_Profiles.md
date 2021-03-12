@@ -1,16 +1,16 @@
 ---
 description: Descreve como criar e usar um perfil do PowerShell.
-keywords: powershell, cmdlet
+Locale: en-US
 ms.date: 11/30/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Profiles
-ms.openlocfilehash: c807d32b1e1cf1558f662e0b7edad276102aba36
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 61458b60767f2bd51342546b74eb408433b8d29a
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196067"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195960"
 ---
 # <a name="about-profiles"></a>Sobre perfis
 
@@ -64,7 +64,7 @@ A `$PROFILE` variável armazena o caminho para o perfil "usuário atual, host at
 
 Por exemplo, a `$PROFILE` variável tem os seguintes valores no console do Windows PowerShell.
 
-|Descrição                |Name                              |
+|Descrição                |Nome                              |
 |---------------------------|----------------------------------|
 |Usuário atual, host atual |`$PROFILE`                        |
 |Usuário atual, host atual |`$PROFILE.CurrentUserCurrentHost` |
@@ -206,7 +206,7 @@ Para obter mais informações sobre o prompt do PowerShell, consulte [about_Prom
 
 ## <a name="the-noprofile-parameter"></a>O parâmetro NoProfile
 
-Para iniciar o PowerShell sem perfis, use o parâmetro **NoProfile** de **PowerShell.exe** , o programa que inicia o PowerShell.
+Para iniciar o PowerShell sem perfis, use o parâmetro **NoProfile** de **PowerShell.exe**, o programa que inicia o PowerShell.
 
 Para começar, abra um programa que possa iniciar o PowerShell, como Cmd.exe ou próprio PowerShell. Você também pode usar a caixa de diálogo Executar no Windows.
 

@@ -2,15 +2,15 @@
 description: Descreve a palavra-chave Throw, que gera um erro de terminação.
 Locale: en-US
 ms.date: 12/01/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Throw
-ms.openlocfilehash: 2984e0a9e5f470594dd1e5987b69b92f91ce4913
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: bef005f47583523f69a8b25651eb0ee5bfc5b224
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598850"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195843"
 ---
 # <a name="about-throw"></a>Sobre o throw
 
@@ -25,7 +25,7 @@ Por exemplo, você pode usar a palavra-chave Throw no bloco de script de uma ins
 
 A palavra-chave Throw pode gerar qualquer objeto, como uma cadeia de caracteres de mensagem de usuário ou o objeto que causou o erro.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 A sintaxe da palavra-chave Throw é a seguinte:
 
@@ -95,7 +95,7 @@ O objeto RunTimeexception é encapsulado em um objeto ErrorRecord e o objeto Err
 
 Ao contrário das versões anteriores do PowerShell, não use a palavra-chave Throw para validação de parâmetro. Consulte [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md) da maneira correta.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [about_Break](about_Break.md)
 - [about_Continue](about_Continue.md)

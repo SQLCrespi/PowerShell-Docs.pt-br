@@ -1,16 +1,16 @@
 ---
 description: Descreve como o PowerShell determina qual comando executar.
-keywords: powershell, cmdlet
+Locale: en-US
 ms.date: 02/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_command_precedence?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Command_Precedence
-ms.openlocfilehash: 288c01af2d66aca786cf1b97ad844dd91cac45ca
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 5dd1a5ab88d9049d6da7a221d0020567a3631ba4
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196036"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194584"
 ---
 # <a name="about-command-precedence"></a>Sobre a precedência de comando
 
@@ -45,7 +45,7 @@ Por exemplo, para executar o arquivo de FindDocs.ps1 no diretório atual, digite
 
 ### <a name="using-wildcards-in-execution"></a>Usando curingas na execução
 
-Você pode usar curingas na execução do comando. O uso de caracteres curinga também é conhecido como *mascaramento* .
+Você pode usar curingas na execução do comando. O uso de caracteres curinga também é conhecido como *mascaramento*.
 
 O PowerShell executa um arquivo que tem uma correspondência de curinga, antes de uma correspondência literal.
 
@@ -165,7 +165,7 @@ Você pode executar comandos específicos especificando propriedades de item que
 
 #### <a name="qualified-names"></a>Nomes qualificados
 
-O uso do nome qualificado por módulo de um cmdlet permite que você execute comandos ocultos por um item com o mesmo nome. Por exemplo, você pode executar o `Get-Date` cmdlet qualificando-o com seu nome de módulo **Microsoft. PowerShell. Utility** .
+O uso do nome qualificado por módulo de um cmdlet permite que você execute comandos ocultos por um item com o mesmo nome. Por exemplo, você pode executar o `Get-Date` cmdlet qualificando-o com seu nome de módulo **Microsoft. PowerShell. Utility**.
 
 Use esse método preferido ao escrever scripts que você pretende distribuir. Você não pode prever quais comandos podem estar presentes na sessão em que o script é executado.
 

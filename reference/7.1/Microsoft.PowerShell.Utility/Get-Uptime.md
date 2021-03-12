@@ -1,16 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-uptime?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Uptime
-ms.openlocfilehash: d06dbc66d9674b59df4d75f8ae333d4fe24aa7eb
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 225172868e0a011d89974a399e372515f531ac3d
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193570"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196271"
 ---
 # Get-Uptime
 
@@ -106,7 +107,7 @@ Esse é o tipo de retorno padrão quando nenhum parâmetro é usado.
 Esse tipo é retornado ao usar o parâmetro **Since** .
 
 > [!NOTE]
-> Se a inicialização rápida do Windows estiver habilitada, o Windows não atualizará o valor armazenado em **LastBootUpTime** . Para desabilitar a inicialização rápida, execute o seguinte comando: `Powercfg -h off` .
+> Se a inicialização rápida do Windows estiver habilitada, o Windows não atualizará o valor armazenado em **LastBootUpTime**. Para desabilitar a inicialização rápida, execute o seguinte comando: `Powercfg -h off` .
 >
 > Para obter mais informações sobre a inicialização rápida do Windows, consulte como [diferenciar a inicialização rápida de Wake-from-Hibernation](/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation).
 

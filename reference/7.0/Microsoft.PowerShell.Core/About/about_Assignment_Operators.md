@@ -1,16 +1,16 @@
 ---
 description: Descreve como usar operadores para atribuir valores a variáveis.
-keywords: powershell, cmdlet
+Locale: en-US
 ms.date: 04/26/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Assignment_Operators
-ms.openlocfilehash: fba0c5f5e5263af15eb3d56f1c42a881057afc46
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: fd5f807241953c19d2db32fb9063e5596615a44f
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196079"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103193858"
 ---
 # <a name="about-assignment-operators"></a>Sobre operadores de atribuição
 
@@ -39,7 +39,7 @@ O PowerShell dá suporte aos seguintes operadores de atribuição.
 |--      |Diminui o valor de uma variável, Propriedade atribuível ou   |
 |        |elemento de matriz em 1.                                          |
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 A sintaxe dos operadores de atribuição é a seguinte:
 
