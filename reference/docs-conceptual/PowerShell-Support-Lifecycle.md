@@ -2,12 +2,12 @@
 title: Ciclo de vida de suporte do PowerShell Core
 description: Políticas que regem o suporte para o PowerShell
 ms.date: 11/11/2020
-ms.openlocfilehash: 0803dda070c66b4c1d803171ecdb7029a096517b
-ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
+ms.openlocfilehash: a11c4df1f105364307b8a99ffe9b0cc7e9c29122
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98105172"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771470"
 ---
 # <a name="powershell-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell
 
@@ -131,11 +131,15 @@ Os [recursos experimentais][] estão limitados ao [suporte da comunidade](#commu
 O PowerShell segue os [Critérios da manutenção de segurança da Microsoft no Windows][].
 A tabela a seguir descreve os recursos que atendem aos critérios de manutenção e os que não atendem.
 
-| Recurso                          | Type             |
-|----------------------------------|------------------|
-| Política de execução                 | Defesa em profundidade |
-| Bloqueio do sistema – com o AppLocker | Defesa em profundidade |
-| Bloqueio do sistema – com o WDAC      | Recurso de segurança |
+|                  Recurso                   |       Type       |
+| ------------------------------------------ | ---------------- |
+| Política de execução                           | Defesa em profundidade |
+| Bloqueio do sistema – com o AppLocker           | Defesa em profundidade |
+| Modo de linguagem restrita – com o AppLocker | Defesa em profundidade |
+| Bloqueio do sistema – com o WDAC                | Recurso de segurança |
+| Modo de linguagem restrita – com o WDAC      | Recurso de segurança |
+
+Para obter mais informações sobre o AppLocker e o WDAC (Controle de Aplicativos do Windows Defender), confira [Controles de Aplicativos para Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
 ## <a name="release-history"></a>Histórico de versões
 

@@ -1,17 +1,16 @@
 ---
-description: Arquivos de configuração do PowerShell Core, substituindo a configuração do registro.
-keywords: powershell
+description: Arquivos de configuração do PowerShell, substituindo a configuração do registro.
 Locale: en-US
-ms.date: 11/02/2018
+ms.date: 03/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_Config
-ms.openlocfilehash: 88e2f5fc5eaaf3ffffd5ceb3df0632866eee705e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1ba0472e52ff6fc810a0b357fb7fa60c008d0de2
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196106"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412932"
 ---
 # <a name="about-powershell-config"></a>Sobre a configuração do PowerShell
 
@@ -23,11 +22,7 @@ Arquivos de configuração do PowerShell Core, substituindo a configuração do 
 O `powershell.config.json` arquivo contém definições de configuração para o PowerShell Core. O PowerShell carrega essa configuração na inicialização. As configurações também podem ser modificadas em tempo de execução. Anteriormente, essas configurações eram armazenadas no registro do Windows para o PowerShell, mas agora estão contidas em um arquivo para habilitar a configuração no macOS e no Linux.
 
 > [!WARNING]
-> Se o `powershell.config.json` arquivo contiver um PowerShell JSON inválido não poderá iniciar uma sessão interativa.
-> Se isso ocorrer, você deverá corrigir o arquivo de configuração.
-
-> [!NOTE]
-> Chaves não reconhecidas ou valores inválidos no arquivo de configuração serão ignorados silenciosamente.
+> Chaves não reconhecidas ou valores inválidos no arquivo de configuração são silenciosamente ignorados. Se o `powershell.config.json` arquivo contiver um JSON inválido, o PowerShell não poderá iniciar uma sessão interativa. Se isso ocorrer, você deverá corrigir o arquivo de configuração.
 
 ### <a name="allusers-shared-configuration"></a>Configuração de AllUsers (compartilhado)
 
@@ -61,9 +56,7 @@ Para configurações CurrentUser, isso define a política de execução **Curren
 
 Em que:
 
-- `<shell-id>` refere-se à ID do host do PowerShell atual.
-  Para o PowerShell Core normal, isso é `Microsoft.PowerShell` .
-  Em qualquer sessão do PowerShell, você pode descobri-lo com o `$ShellId` .
+- `<shell-id>` refere-se à ID do host do PowerShell atual. Para o PowerShell Core normal, isso é `Microsoft.PowerShell` . Em qualquer sessão do PowerShell, você pode descobri-lo com o `$ShellId` .
 - `<execution-policy>` refere-se a um nome de política de execução válido.
 
 O exemplo a seguir define a política de execução do PowerShell para `RemoteSigned` .
@@ -78,13 +71,12 @@ No Windows, as chaves de registro equivalentes podem ser encontradas em `\SOFTWA
 
 ### <a name="psmodulepath"></a>PSModulePath
 
-Substitui um componente PSModulePath para esta sessão do PowerShell. Se a configuração for para o usuário atual, define o caminho do módulo CurrentUser. Se a configuração for para todos os usuários, define o caminho do módulo do usuário.
+Substitui as `PSModulePath` configurações desta sessão do PowerShell. Se a configuração for para o usuário atual, define o caminho do módulo **CurrentUser** . Se a configuração for para todos os usuários, define o caminho do módulo **AllUsers** .
 
 > [!WARNING]
-> Configurar um caminho de módulo AllUsers ou CurrentUser aqui não alterará o local de instalação com escopo para módulos do PowerShellGet [, como install-Module](/powershell/module/powershellget/install-module).
-> Esses cmdlets sempre usam os caminhos de módulo *padrão* .
+> A configuração de um caminho de módulo **AllUsers** ou **CurrentUser** aqui não altera o local de instalação com escopo para cmdlets do PowerShellGet [, como install-Module](/powershell/module/powershellget/install-module). Esses cmdlets sempre usam os caminhos de módulo _padrão_ .
 
-Se nenhum valor for definido, o valor padrão do respectivo componente de caminho do módulo será usado. Consulte [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath) para obter mais detalhes sobre esses padrões.
+Se nenhum valor for definido, o PowerShell usará o valor padrão para a respectiva configuração de caminho de módulo. Para obter mais informações sobre esses padrões, consulte [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath).
 
 Essa configuração permite que as variáveis de ambiente sejam usadas inserindo-as entre `%` caracteres, como `"%HOME%\Documents\PowerShell\Modules"` , da mesma maneira que o cmd permite. Essa sintaxe também se aplica ao Linux e ao macOS. Consulte abaixo para obter exemplos.
 
@@ -96,7 +88,7 @@ Em que:
 
 - `<ps-module-path>` é o caminho absoluto para um diretório de módulo. Para todas as configurações de usuário, esse é o diretório de módulo compartilhado AllUsers. Para as configurações de usuário atuais, este é o diretório de módulo CurrentUser.
 
-Este exemplo mostra uma configuração de PSModulePath para um ambiente do Windows:
+Este exemplo mostra uma `PSModulePath` configuração para um ambiente do Windows:
 
 ```json
 {
@@ -104,7 +96,7 @@ Este exemplo mostra uma configuração de PSModulePath para um ambiente do Windo
 }
 ```
 
-Este exemplo mostra uma configuração de PSModulePath para um ambiente macOS ou Linux:
+Este exemplo mostra uma `PSModulePath` configuração para um ambiente MacOS ou Linux:
 
 ```json
 {
@@ -112,7 +104,7 @@ Este exemplo mostra uma configuração de PSModulePath para um ambiente macOS ou
 }
 ```
 
-Este exemplo mostra a inserção de uma variável de ambiente em uma configuração de PSModulePath. Observe que, usando a `HOME` variável de ambiente e o `/` separador de diretório, isso funcionará no Windows, no MacOS e no Linux.
+Este exemplo mostra a inserção de uma variável de ambiente em uma `PSModulePath` configuração. Observe que, usando a `HOME` variável de ambiente e o `/` separador de diretório, isso funcionará no Windows, no MacOS e no Linux.
 
 ```json
 {
@@ -120,7 +112,7 @@ Este exemplo mostra a inserção de uma variável de ambiente em uma configuraç
 }
 ```
 
-Este exemplo mostra a inserção de uma variável de ambiente em uma configuração PSModulePath que só funcionará no macOS e no Linux:
+Este exemplo mostra a inserção de uma variável de ambiente em uma `PSModulePath` configuração que só funcionará no MacOS e no Linux:
 
 ```json
 {
@@ -129,14 +121,12 @@ Este exemplo mostra a inserção de uma variável de ambiente em uma configuraç
 ```
 
 > [!NOTE]
-> As variáveis do PowerShell não podem ser inseridas em configurações do PSModulePath.
-> As configurações do PSModulePath no Linux e no macOS diferenciam maiúsculas de minúsculas. Uma configuração PSModulePath deve usar separadores de diretório válidos para a plataforma. No macOS e no Linux, isso significa `/` . No Windows, `/` e `\` funcionarão.
+> As variáveis do PowerShell não podem ser inseridas em `PSModulePath` configurações.
+> `PSModulePath` as configurações no Linux e no macOS diferenciam maiúsculas de minúsculas. Uma `PSModulePath` configuração deve usar separadores de diretório válidos para a plataforma. No macOS e no Linux, isso significa `/` . No Windows, `/` e `\` funcionarão.
 
 ### <a name="experimentalfeatures"></a>ExperimentalFeatures
 
-Os nomes dos recursos experimentais a serem habilitados no PowerShell.
-Por padrão, nenhum recurso experimental está habilitado.
-O valor padrão é uma matriz vazia.
+Os nomes dos recursos experimentais a serem habilitados no PowerShell. Por padrão, nenhum recurso experimental está habilitado. O valor padrão é uma matriz vazia.
 
 ```Schema
 "ExperimentalFeatures": ["<experimental-feature-name>", ...]
@@ -157,7 +147,7 @@ O exemplo a seguir habilita os recursos experimentais **PSImplicitRemoting** e *
 }
 ```
 
-Para obter mais informações sobre recursos experimentais, consulte [PowerShell RFC 29][RFC0029].
+Para obter mais informações sobre recursos experimentais, consulte [usando recursos experimentais](/powershell/scripting/learn/experimental-features).
 
 ## <a name="non-windows-logging-configuration"></a>Configuração de log não Windows
 
@@ -206,8 +196,8 @@ Especifica o nível de severidade mínimo no qual o PowerShell deve registrar.
 
 Em que:
 
-- `<log-level>` é um de:
-  - Always
+- `<log-level>` pode ser:
+  - Sempre
   - Crítico
   - Erro
   - Aviso
@@ -219,9 +209,9 @@ Em que:
 > A configuração de um nível de log habilita todos os níveis de log acima dele.
 
 Definir essa configuração como **padrão** será interpretado como o valor padrão.
-O valor padrão é **informativo** .
+O valor padrão é **informativo**.
 
-O exemplo a seguir define o valor como **Verbose** .
+O exemplo a seguir define o valor como **Verbose**.
 
 ```json
 {
@@ -242,11 +232,11 @@ Determina quais canais de log estão habilitados.
 
 Em que:
 
-- `<log-channel>` é um de:
+- `<log-channel>` pode ser:
   - Operacional-registra informações básicas sobre as atividades do PowerShell
   - Análise-registra informações de diagnóstico mais detalhadas
 
-O valor padrão é **operacional** . Para habilitar ambos os canais, inclua os dois valores como uma única cadeia de caracteres separada por vírgulas. Por exemplo:
+O valor padrão é **operacional**. Para habilitar ambos os canais, inclua os dois valores como uma única cadeia de caracteres separada por vírgulas. Por exemplo:
 
 ```json
 {
@@ -267,7 +257,7 @@ Determina quais partes do PowerShell são registradas. Por padrão, todas as pal
 
 Em que:
 
-- `<log-keyword>` é um de:
+- `<log-keyword>` pode ser:
   - Runspace-gerenciamento de runspace
   - Pipeline – operações de pipeline
   - Protocolo – tratamento de protocolo de comunicação, como PSRP
@@ -279,8 +269,7 @@ Em que:
   - ManagedPlugin-plug-in do WSMan
 
 > [!NOTE]
-> Geralmente, é aconselhável deixar esse valor definido, a menos que você esteja tentando diagnosticar um comportamento específico em uma parte conhecida do PowerShell.
-> A alteração desse valor diminui apenas a quantidade de informações registradas.
+> Geralmente, é aconselhável deixar esse valor definido, a menos que você esteja tentando diagnosticar um comportamento específico em uma parte conhecida do PowerShell. A alteração desse valor diminui apenas a quantidade de informações registradas.
 
 Este exemplo limita o registro em log para operações de runspace, lógica de pipeline e uso de cmdlet. Todos os outros logs serão omitidos.
 
@@ -333,7 +322,7 @@ Essa configuração define várias opções que funcionam apenas no macOS ou Lin
 
 - O caminho do módulo CurrentUser é definido como um diretório de módulo personalizado no `$HOME`
 - O recurso experimental do **PSImplicitRemotingBatching** está habilitado
-- O nível de log do PowerShell é definido como **detalhado** , para obter mais registro em log
+- O nível de log do PowerShell é definido como **detalhado**, para obter mais registro em log
 - Essa instalação do PowerShell grava nos logs usando a identidade do **PowerShell inicial** .
 
 ```json
@@ -350,5 +339,3 @@ Essa configuração define várias opções que funcionam apenas no macOS ou Lin
 [Sobre as políticas de execução](./about_Execution_Policies.md)
 
 [Sobre variáveis automáticas](./about_Automatic_Variables.md)
-
-[RFC0029]: https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md

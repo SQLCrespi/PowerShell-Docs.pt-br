@@ -1,17 +1,16 @@
 ---
 description: Descreve matrizes, que são estruturas de dados projetadas para armazenar coleções de itens.
-keywords: powershell, cmdlet
 Locale: en-US
 ms.date: 08/26/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Arrays
-ms.openlocfilehash: d9a63062871dee1d77eebb8a68639429bf809610
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: d50bcaca53939c3fee2ee9f1e179c139e1145810
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196041"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412876"
 ---
 # <a name="about-arrays"></a>Sobre matrizes
 
@@ -52,13 +51,13 @@ $C = 5..8
 
 Como resultado, `$C` contém quatro valores: 5, 6, 7 e 8.
 
-Quando nenhum tipo de dados é especificado, o PowerShell cria cada matriz como uma matriz de objetos ( **System. Object []** ). Para determinar o tipo de dados de uma matriz, use o método **GetType ()** . Por exemplo, para determinar o tipo de dados da `$A` matriz, digite:
+Quando nenhum tipo de dados é especificado, o PowerShell cria cada matriz como uma matriz de objetos (**System. Object []**). Para determinar o tipo de dados de uma matriz, use o método **GetType ()** . Por exemplo, para determinar o tipo de dados da `$A` matriz, digite:
 
 ```powershell
 $A.GetType()
 ```
 
-Para criar uma matriz fortemente tipada, ou seja, uma matriz que possa conter apenas valores de um tipo específico, converta a variável como um tipo de matriz, como **String []** , **Long []** ou **Int32 []** . Para converter uma matriz, preceda o nome da variável com um tipo de matriz entre colchetes. Por exemplo, para criar uma matriz de inteiros de 32 bits chamada `$ia` contendo quatro inteiros (1500, 2230, 3350 e 4000), digite:
+Para criar uma matriz fortemente tipada, ou seja, uma matriz que possa conter apenas valores de um tipo específico, converta a variável como um tipo de matriz, como **String []**, **Long []** ou **Int32 []**. Para converter uma matriz, preceda o nome da variável com um tipo de matriz entre colchetes. Por exemplo, para criar uma matriz de inteiros de 32 bits chamada `$ia` contendo quatro inteiros (1500, 2230, 3350 e 4000), digite:
 
 ```powershell
 [int32[]]$ia = 1500,2230,3350,4000
@@ -321,7 +320,7 @@ $a.Length
 
 ### <a name="rank"></a>Rank
 
-Retorna o número de dimensões na matriz. A maioria das matrizes no PowerShell tem apenas uma dimensão. Mesmo quando você acredita que está criando uma matriz multidimensional; semelhante ao exemplo a seguir:
+Retorna o número de dimensões na matriz. A maioria das matrizes no PowerShell tem apenas uma dimensão. Mesmo quando você acredita que está criando uma matriz multidimensional como o exemplo a seguir:
 
 ```powershell
 $a = @(
@@ -330,23 +329,72 @@ $a = @(
   @(Get-Process)
 )
 
-[int]$r = $a.Rank
-"`$a rank: $r"
+"`$a rank: $($a.Rank)"
+"`$a length: $($a.Length)"
+"`$a length: $($a.Length)"
+"Process `$a[2][1]: $($a[2][1].ProcessName)"
 ```
+
+Neste exemplo, você está criando uma matriz unidimensional que contém outras matrizes. Isso também é conhecido como uma _matriz denteada_. A propriedade **Rank** provou que isso é unidimensional. Para acessar itens em uma matriz denteada, os índices devem estar entre colchetes separados ( `[]` ).
 
 ```Output
 $a rank: 1
+$a length: 3
+$a[2] length: 348
+Process $a[2][1]: AcroRd32
 ```
 
-O exemplo a seguir mostra como criar uma matriz verdadeiramente multidimensional usando o .NET Framework.
+As matrizes multidimensionais são armazenadas em [ordem de linha principal](https://wikipedia.org/wiki/Row-_and_column-major_order). O exemplo a seguir mostra como criar uma matriz verdadeiramente multidimensional.
 
 ```powershell
-[int[,]]$rank2 = [int[,]]::new(5,5)
+[string[,]]$rank2 = [string[,]]::New(3,2)
 $rank2.rank
+$rank2.Length
+$rank2[0,0] = 'a'
+$rank2[0,1] = 'b'
+$rank2[1,0] = 'c'
+$rank2[1,1] = 'd'
+$rank2[2,0] = 'e'
+$rank2[2,1] = 'f'
+$rank2[1,1]
 ```
 
 ```Output
 2
+6
+d
+```
+
+Para acessar itens em uma matriz multidimensional, separe os índices usando uma vírgula ( `,` ) dentro de um único conjunto de colchetes ( `[]` ).
+
+Algumas operações em uma matriz multidimensional, como replicação e concatenação, exigem que a matriz seja achatada. O nivelamento transforma a matriz em uma matriz 1-dimensional de tipo irrestrito. A matriz resultante assume todos os elementos na ordem de linha principal. Considere o seguinte exemplo:
+
+```powershell
+$a = "red",$true
+$b = (New-Object 'int[,]' 2,2)
+$b[0,0] = 10
+$b[0,1] = 20
+$b[1,0] = 30
+$b[1,1] = 40
+$c = $a + $b
+$a.GetType().Name
+$b.GetType().Name
+$c.GetType().Name
+$c
+```
+
+A saída mostra que `$c` é uma matriz 1-dimensional que contém os itens de `$a` e `$b` em ordem principal de linha.
+
+```output
+Object[]
+Int32[,]
+Object[]
+red
+True
+10
+20
+30
+40
 ```
 
 ## <a name="methods-of-arrays"></a>Métodos de matrizes
@@ -425,7 +473,7 @@ $a.ForEach({ $_ * $_})
 
 Assim como o `-ArgumentList` parâmetro de `ForEach-Object` , o `arguments` parâmetro permite a passagem de uma matriz de argumentos para um bloco de script configurado para aceitá-los.
 
-Para obter mais informações sobre o comportamento de **ArgumentList** , consulte [about_Splatting](about_Splatting.md#splatting-with-arrays).
+Para obter mais informações sobre o comportamento de **ArgumentList**, consulte [about_Splatting](about_Splatting.md#splatting-with-arrays).
 
 #### <a name="foreachtype-converttotype"></a>ForEach (tipo convertTotype)
 
@@ -559,7 +607,7 @@ $logs.Where({$_.CreationTime -gt $h}, 'Last', 5)
 
 #### <a name="skipuntil"></a>SkipUntil
 
-O `SkipUntil` modo ignora todos os objetos em uma coleção até que um objeto passe o filtro de expressão de bloco de script. Em seguida, ele retorna **todos os** itens de coleta restantes sem testá-los. _Apenas um item de passagem é testado_ .
+O `SkipUntil` modo ignora todos os objetos em uma coleção até que um objeto passe o filtro de expressão de bloco de script. Em seguida, ele retorna **todos os** itens de coleta restantes sem testá-los. _Apenas um item de passagem é testado_.
 
 Isso significa que a coleção retornada contém itens de _passagem_ e _não APROVADOs_ que não foram testados.
 
@@ -606,9 +654,9 @@ O número de itens retornados pode ser limitado passando um valor para o `number
 > [!NOTE]
 > `Until`E `SkipUntil` operar com a premissa de não testar um lote de itens.
 >
-> `Until` Retorna os itens **antes** da primeira _passagem_ .
+> `Until` Retorna os itens **antes** da primeira _passagem_.
 >
-> `SkipUntil` Retorna todos os itens **após** a primeira _passagem_ , incluindo o primeiro item de passagem.
+> `SkipUntil` Retorna todos os itens **após** a primeira _passagem_, incluindo o primeiro item de passagem.
 
 #### <a name="split"></a>Divisão
 
