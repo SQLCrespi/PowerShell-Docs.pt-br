@@ -2,12 +2,12 @@
 ms.date: 06/09/2017
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 description: Este artigo documenta os valores no manifesto do módulo que são usados pela Galeria do PowerShell.
-ms.openlocfilehash: c59f65e72874a8a4ef946c954e1e8f12aad62b29
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 28dd707034f84fa752aba55b5ccc5bcbedff0d94
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664142"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196234"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 
