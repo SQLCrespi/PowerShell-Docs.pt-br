@@ -1,16 +1,16 @@
 ---
 description: Descreve os operadores que comparam valores no PowerShell.
 Locale: en-US
-ms.date: 02/19/2021
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 97875bb9c194cfef3d823b681973bd556d4195d3
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: ec8ce1a241676911795e76f0934d40fd8ad18bd8
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685913"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483395"
 ---
 # <a name="about-comparison-operators"></a>Sobre operadores de comparação
 
@@ -39,7 +39,7 @@ Os operadores de comparação permitem comparar valores ou localizar valores que
 |             | -notcontains | a coleção não contém um valor       |
 |             | -in          | o valor está em uma coleção                  |
 |             | -notin       | o valor não está em uma coleção              |
-| Tipo        | -é          | ambos os objetos são do mesmo tipo            |
+| Type        | -é          | ambos os objetos são do mesmo tipo            |
 |             | -IsNot       | os objetos não são do mesmo tipo         |
 
 ## <a name="common-features"></a>Recursos comuns
@@ -47,7 +47,7 @@ Os operadores de comparação permitem comparar valores ou localizar valores que
 Por padrão, todos os operadores de comparação não diferenciam maiúsculas de minúsculas. Para tornar um operador de comparação que diferencia maiúsculas de minúsculas, adicione um `c` após o `-` . Por exemplo, `-ceq` é a versão que diferencia maiúsculas de minúsculas do `-eq` . Para tornar a diferenciação de maiúsculas e minúsculas explícita, adicione um `i` antes `-` . Por exemplo, `-ieq` é a versão explicitamente sem diferenciação de maiúsculas e minúsculas do `-eq` .
 
 Quando a entrada de um operador é um valor escalar, o operador retorna um valor **booliano** . Quando a entrada é uma coleção, o operador retorna os elementos da coleção que correspondem ao valor do lado direito da expressão.
-Se não houver nenhuma correspondência na coleção, os operadores de comparação retornarão uma matriz vazia. Por exemplo: 
+Se não houver nenhuma correspondência na coleção, os operadores de comparação retornarão uma matriz vazia. Por exemplo:
 
 ```powershell
 $a = (1, 2 -eq 3)
@@ -64,7 +64,7 @@ Há algumas exceções:
 
 - Os operadores de contenção e de tipo sempre retornam um valor **booliano**
 - O `-replace` operador retorna o resultado de substituição
-- Os `-match` `-notmatch` operadores e também preenchem a `$Matches` variável automática
+- Os `-match` `-notmatch` operadores e também preenchem a `$Matches` variável automática, a menos que o lado esquerdo da expressão seja uma coleção.
 
 ## <a name="equality-operators"></a>Operadores de igualdade
 
@@ -322,7 +322,7 @@ Exemplos escalares:
 'bag'        -notmatch 'b[iou]g'   # Output: True
 ```
 
-Se a entrada for uma coleção, os operadores retornarão os membros correspondentes dessa coleção.
+Se a entrada for uma coleção, os operadores retornarão os membros correspondentes dessa coleção e a `$Matches` variável automática será `$null` .
 
 Exemplos de coleção:
 
@@ -431,7 +431,7 @@ John.Doe@Contoso.local
 > - Em cadeias de caracteres de pesquisa Regex, ele denota o fim da linha
 > - Em cadeias de caracteres de substituição Regex, ele denota grupos capturados. Certifique-se de colocar suas expressões regulares entre aspas simples ou inserir um caractere de acento grave ( `` ` `` ) antes delas.
 
-Por exemplo: 
+Por exemplo:
 
 ```powershell
 $1 = 'Goodbye'
@@ -443,7 +443,7 @@ $1 = 'Goodbye'
 # Output: Hello Universe
 ```
 
-`$$` em Regex, denota um literal `$` . Isso `$$` na cadeia de caracteres de substituição para incluir um literal `$` na substituição resultante. Por exemplo: 
+`$$` em Regex, denota um literal `$` . Isso `$$` na cadeia de caracteres de substituição para incluir um literal `$` na substituição resultante. Por exemplo:
 
 ```powershell
 '5.72' -replace '(.+)', '$ $1' # Output: $ 5.72
@@ -455,7 +455,7 @@ Para saber mais, confira [about_Regular_Expressions](about_Regular_Expressions.m
 
 ### <a name="substituting-in-a-collection"></a>Substituindo em uma coleção
 
-Quando o `<input>` para o `-replace` operador é uma coleção, o PowerShell aplica a substituição a todos os valores na coleção. Por exemplo: 
+Quando o `<input>` para o `-replace` operador é uma coleção, o PowerShell aplica a substituição a todos os valores na coleção. Por exemplo:
 
 ```powershell
 "B1","B2","B3","B4","B5" -replace "B", 'a'

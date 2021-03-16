@@ -4,12 +4,12 @@ description: Em que local encontrar e como iniciar o PowerShell para novos usuá
 ms.date: 06/02/2020
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 8b9fee222347970df4e35f9ba0841232952a292d
-ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.openlocfilehash: cc634eb1732947dca953d7d91baedf8052edf718
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "99596363"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483467"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>Capítulo 1 – Introdução ao PowerShell
 
@@ -61,7 +61,7 @@ At line:1 char:29
 ```
 
 A solução para esse problema é executar o PowerShell como um usuário de domínio que seja um administrador local.
-É assim que a minha segunda conta de usuário de domínio está configurada. Usando a entidade de privilégio mínimo, essa conta NÃO deve ser um administrador de domínio nem ter privilégios elevados no domínio.
+É assim que a minha segunda conta de usuário de domínio está configurada. Usando o princípio de privilégios mínimos, essa conta não deve ser um administrador de domínio ou ter privilégios elevados no domínio.
 
 Feche o PowerShell. Reinicie o console do PowerShell, mas, desta vez, clique com o botão direito do mouse no atalho do **Windows PowerShell** e selecione **Executar como administrador**, conforme mostrado na Figura 1-5.
 
