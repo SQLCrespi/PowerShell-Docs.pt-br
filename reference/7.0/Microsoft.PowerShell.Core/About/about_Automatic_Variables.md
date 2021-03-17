@@ -1,16 +1,16 @@
 ---
 description: Descreve as variáveis que armazenam informações de estado do PowerShell. Essas variáveis são criadas e mantidas pelo PowerShell.
 Locale: en-US
-ms.date: 12/14/2020
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: d99d800680c5cf5ae01ac0cbb16ccaf6a91aada5
-ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
+ms.openlocfilehash: e64f06c91df68b10db195d4eede022be5998bb35
+ms.sourcegitcommit: 15f759ca68d17acecab46b52250298d4f2037c4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577242"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575688"
 ---
 # <a name="about-automatic-variables"></a>Sobre variáveis automáticas
 
@@ -393,7 +393,10 @@ Contém uma tabela de hash somente leitura que exibe detalhes sobre a versão do
 
 ### <a name="pwd"></a>$PWD
 
-Contém um objeto Path que representa o caminho completo do diretório atual.
+Contém um objeto Path que representa o caminho completo do local do diretório atual para o runspace do PowerShell atual.
+
+> [!NOTE]
+> O PowerShell dá suporte a vários Runspaces por processo. Cada runspace tem seu próprio _diretório atual_. Isso não é o mesmo que o diretório atual do processo: `[System.Environment]::CurrentDirectory` .
 
 ### <a name="sender"></a>$Sender
 

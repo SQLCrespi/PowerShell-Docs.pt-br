@@ -1,17 +1,16 @@
 ---
 description: Descreve como usar métodos para executar ações em objetos no PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 04/08/2020
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Methods
-ms.openlocfilehash: 25056ff8b3c0bc8828be1426463b2d087e23a131
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 9c94de53bf320074c5b8aed1d1670fdd53d6b105
+ms.sourcegitcommit: 15f759ca68d17acecab46b52250298d4f2037c4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94390993"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575603"
 ---
 # <a name="about-methods"></a>Sobre métodos
 
@@ -79,7 +78,7 @@ Conforme mostrado nos exemplos anteriores, você pode invocar um método em um o
 
 A partir do PowerShell 4,0, a invocação de método usando nomes de métodos dinâmicos é suportada.
 
-### <a name="learning-about-methods"></a>Aprendendo sobre métodos
+## <a name="learning-about-methods"></a>Aprendendo sobre métodos
 
 Para localizar definições dos métodos de um objeto, acesse o tópico da ajuda para o tipo de objeto e procure sua página de métodos. Por exemplo, a página a seguir descreve os métodos de Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods).
 
@@ -111,7 +110,7 @@ O exemplo a seguir usa o segundo `CopyTo` método para copiar o `Final.txt` arqu
 (Get-ChildItem c:\final.txt).CopyTo("c:\bin\final.txt", $true)
 ```
 
-### <a name="methods-of-scalar-objects-and-collections"></a>Métodos de coleções e objetos escalares
+## <a name="methods-of-scalar-objects-and-collections"></a>Métodos de coleções e objetos escalares
 
 Os métodos de um objeto ("escalar") de um tipo específico geralmente são diferentes dos métodos de uma coleção de objetos do mesmo tipo.
 
@@ -173,7 +172,7 @@ A partir do PowerShell 4,0, há suporte para a filtragem de coleção usando uma
 
 Leia mais sobre esses métodos em [about_arrays](about_arrays.md)
 
-### <a name="calling-a-specific-method-when-multiple-overloads-exist"></a>Chamando um método específico quando há várias sobrecargas
+## <a name="calling-a-specific-method-when-multiple-overloads-exist"></a>Chamando um método específico quando há várias sobrecargas
 
 Considere o cenário a seguir ao chamar métodos .NET. Se um método usa um objeto, mas tem uma sobrecarga por meio de uma interface usando um tipo mais específico, o PowerShell escolhe o método que aceita o objeto, a menos que você o converta explicitamente nessa interface.
 
@@ -219,6 +218,12 @@ Neste exemplo, vamos converter o método para a interface **IFoo** para selecion
 ```Output
 int: 1
 ```
+
+## <a name="using-net-methods-that-take-filesystem-paths"></a>Usando métodos .NET que usam caminhos do sistema de arquivos
+
+O PowerShell dá suporte a vários Runspaces por processo. Cada runspace tem seu próprio _diretório atual_. Isso não é o mesmo que o diretório de trabalho do processo atual: `[System.Environment]::CurrentDirectory` .
+
+Os métodos do .NET usam o diretório de trabalho do processo. Os cmdlets do PowerShell usam o local do runspace. Além disso, os métodos .NET só funcionam com caminhos de sistema de arquivos nativos, não com objetos de caminho do PowerShell. Para usar caminhos do PowerShell com métodos .NET, você deve resolver o caminho para um caminho nativo do sistema de arquivos antes de passá-lo para o método .NET.
 
 ## <a name="see-also"></a>Consulte Também
 
