@@ -1,17 +1,16 @@
 ---
 description: Combinando comandos em pipelines no PowerShell
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 09/27/2019
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pipelines
-ms.openlocfilehash: bf5e57389d286a2bb1cca9b3dd73ea59674461ec
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: db4fcd1cef78756bf61d849c83d5e2785af6caca
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196109"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726342"
 ---
 # <a name="about-pipelines"></a>Sobre pipelines
 
@@ -95,7 +94,7 @@ Este pipeline de exemplo inicia o serviço WMI no computador:
 Get-Service wmi | Start-Service
 ```
 
-Para outro exemplo, você pode canalizar a saída de `Get-Item` ou `Get-ChildItem` dentro do provedor de registro do PowerShell para o `New-ItemProperty` cmdlet. Este exemplo adiciona uma nova entrada de registro, **NoOfEmployees** , com um valor de **8124** , à chave do registro **MyCompany** .
+Para outro exemplo, você pode canalizar a saída de `Get-Item` ou `Get-ChildItem` dentro do provedor de registro do PowerShell para o `New-ItemProperty` cmdlet. Este exemplo adiciona uma nova entrada de registro, **NoOfEmployees**, com um valor de **8124**, à chave do registro **MyCompany** .
 
 ```powershell
 Get-Item -Path HKLM:\Software\MyCompany |
@@ -115,6 +114,19 @@ Este exemplo mostra como usar o `Format-List` cmdlet para exibir uma lista de pr
 ```powershell
 Get-Process winlogon | Format-List -Property *
 ```
+
+Você também pode canalizar a saída de comandos nativos para cmdlets do PowerShell. Por exemplo:
+
+```powershell
+PS> ipconfig.exe | Select-String -Pattern 'IPv4'
+
+   IPv4 Address. . . . . . . . . . . : 172.24.80.1
+   IPv4 Address. . . . . . . . . . . : 192.168.1.45
+   IPv4 Address. . . . . . . . . . . : 100.64.108.37
+```
+
+> [!IMPORTANT]
+> Os fluxos de **êxito** e de **erro** são semelhantes aos fluxos stdin e stderr de outros shells. No entanto, stdin não está conectado ao pipeline do PowerShell para entrada. Para obter mais informações, consulte [about_Redirection](about_Redirection.md).
 
 Com um pouco de prática, você descobrirá que a combinação de comandos simples em pipelines poupa tempo e digitação e torna o script mais eficiente.
 
@@ -171,11 +183,11 @@ Quando você envia objetos por meio do pipeline para o `Start-Service` , o Power
 
 Os parâmetros de cmdlets podem aceitar a entrada de pipeline em uma das duas maneiras diferentes:
 
-- **ByValue** : o parâmetro aceita valores que correspondem ao tipo .net esperado ou que podem ser convertidos nesse tipo.
+- **ByValue**: o parâmetro aceita valores que correspondem ao tipo .net esperado ou que podem ser convertidos nesse tipo.
 
   Por exemplo, o parâmetro **Name** de `Start-Service` aceita entrada de pipeline por valor. Ele pode aceitar objetos String ou objetos que podem ser convertidos em cadeias de caracteres.
 
-- **ByPropertyName** : o parâmetro aceita a entrada somente quando o objeto de entrada tem uma propriedade de mesmo nome que o parâmetro.
+- **ByPropertyName**: o parâmetro aceita a entrada somente quando o objeto de entrada tem uma propriedade de mesmo nome que o parâmetro.
 
   Por exemplo, o parâmetro Name de `Start-Service` pode aceitar objetos que têm uma propriedade **Name** . Para listar as propriedades de um objeto, redirecione-o para `Get-Member` .
 
@@ -345,7 +357,7 @@ BIND POSITIONAL cmd line args [`Move-ItemProperty`]
 ...
 ```
 
-Por fim, ele mostra que a tentativa de associar o caminho ao **Destination** parâmetro de destino `Move-ItemProperty` falha.
+Por fim, ele mostra que a tentativa de associar o caminho ao  parâmetro de destino `Move-ItemProperty` falha.
 
 ```Output
 ...
@@ -374,7 +386,7 @@ Get-Help Move-ItemProperty -Parameter Destination
     Accept wildcard characters?  false
 ```
 
-Os resultados mostram que o **destino** faz apenas a entrada do pipeline "por nome da propriedade". Portanto, o objeto de pipe deve ter uma propriedade chamada **Destination** .
+Os resultados mostram que o **destino** faz apenas a entrada do pipeline "por nome da propriedade". Portanto, o objeto de pipe deve ter uma propriedade chamada **Destination**.
 
 Use `Get-Member` para ver as propriedades do objeto proveniente de `Get-Item` .
 

@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: f8a2276b6121958aedc4eb297d0565b369ee401f
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 22cc760d56d33edc952c31c1fa6422d05a5a1707
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192769"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726430"
 ---
 # Get-ChildItem
 
@@ -72,7 +72,7 @@ d-----        2/15/2019     08:29                Logs
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-Por padrão `Get-ChildItem` , lista o modo **(atributos** ), **LastWriteTime** , tamanho do arquivo ( **comprimento** ) e o **nome** do item. As letras na propriedade **modo** podem ser interpretadas da seguinte maneira:
+Por padrão `Get-ChildItem` , lista o modo **(atributos**), **LastWriteTime**, tamanho do arquivo (**comprimento**) e o **nome** do item. As letras na propriedade **modo** podem ser interpretadas da seguinte maneira:
 
 - `l` criar
 - `d` active
@@ -143,7 +143,7 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar `C:\Test\*.txt` . O **caminho** usa o curinga asterisco ( `*` ) para especificar todos os arquivos com a extensão de nome de arquivo `.txt` . O parâmetro **recurse** pesquisa o diretório **Path** em seus subdiretórios, conforme mostrado no **diretório:** cabeçalhos. O parâmetro **Force** exibe arquivos ocultos, como `hiddenfile.txt` que têm um modo de **h** .
+O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar `C:\Test\*.txt` . O **caminho** usa o curinga asterisco ( `*` ) para especificar todos os arquivos com a extensão de nome de arquivo `.txt` . O parâmetro **recurse** pesquisa o diretório **Path** em seus subdiretórios, conforme mostrado no **diretório:** cabeçalhos. O parâmetro **Force** exibe arquivos ocultos, como `hiddenfile.txt` que têm um modo de **h**.
 
 ### Exemplo 4: obter itens filho usando o parâmetro include
 
@@ -173,8 +173,8 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar o diretório **C:\test** . O parâmetro **path** inclui um curinga asterisco ( `*` ) à direita para especificar o conteúdo do diretório.
-O parâmetro **include** usa um curinga asterisco ( `*` ) para especificar todos os arquivos com a extensão de nome de arquivo **. txt** .
+O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar o diretório **C:\test**. O parâmetro **path** inclui um curinga asterisco ( `*` ) à direita para especificar o conteúdo do diretório.
+O parâmetro **include** usa um curinga asterisco ( `*` ) para especificar todos os arquivos com a extensão de nome de arquivo **. txt**.
 
 Quando o parâmetro **include** é usado, o parâmetro **Path** precisa de um curinga asterisco ( `*` ) à direita para especificar o conteúdo do diretório. Por exemplo, `-Path C:\Test\*`.
 
@@ -183,7 +183,7 @@ Quando o parâmetro **include** é usado, o parâmetro **Path** precisa de um cu
 
 ### Exemplo 5: obter itens filhos usando o parâmetro Exclude
 
-A saída do exemplo mostra o conteúdo do diretório **C:\Test\Logs** . A saída é uma referência para os outros comandos que usam os parâmetros **Exclude** e **recurse** .
+A saída do exemplo mostra o conteúdo do diretório **C:\Test\Logs**. A saída é uma referência para os outros comandos que usam os parâmetros **Exclude** e **recurse** .
 
 ```powershell
 Get-ChildItem -Path C:\Test\Logs
@@ -307,7 +307,7 @@ d-----        2/14/2019     10:22                SubDir_Level3
 -a----        2/13/2019     08:55             26 file.txt
 ```
 
-O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar **C:\Parent** . O parâmetro **Depth** especifica dois níveis de recursão. `Get-ChildItem` exibe o conteúdo do diretório especificado pelo parâmetro **path** e os dois níveis de subdiretórios.
+O `Get-ChildItem` cmdlet usa o parâmetro **Path** para especificar **C:\Parent**. O parâmetro **Depth** especifica dois níveis de recursão. `Get-ChildItem` exibe o conteúdo do diretório especificado pelo parâmetro **path** e os dois níveis de subdiretórios.
 
 ### Exemplo 9: obtendo informações de vínculo físico
 
@@ -317,7 +317,7 @@ No PowerShell 6,2, uma exibição alternativa foi adicionada para obter informa�
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### Exemplo 9: saída para o recurso experimental PSUnixFileStat
+### Exemplo 10: saída para o recurso experimental PSUnixFileStat
 
 No PowerShell 7 em sistemas UNIX, o recurso experimental **PSUnixFileStat** fornece saída do tipo UNIX:
 
@@ -359,25 +359,25 @@ Por exemplo, para obter arquivos de fora do sistema (não diretórios) que sejam
 
 `Get-ChildItem -Attributes !Directory+!System+Encrypted, !Directory+!System+Compressed`
 
-Para localizar arquivos e pastas com atributos comumente usados, use o parâmetro **Attributes** . Ou, o **diretório** de parâmetros, **arquivo** , **oculto** , **ReadOnly** e **System** .
+Para localizar arquivos e pastas com atributos comumente usados, use o parâmetro **Attributes** . Ou, o **diretório** de parâmetros, **arquivo**, **oculto**, **ReadOnly** e **System**.
 
 O parâmetro **Attributes** dá suporte às seguintes propriedades:
 
 - **Arquivar**
 - **Compactado**
 - **Dispositivo**
-- **Diretório**
+- **Active**
 - **Criptografado**
 - **Oculto**
 - **IntegrityStream**
 - **Normal**
 - **NoScrubData**
 - **NotContentIndexed**
-- **Está**
+- **Offline**
 - **ReadOnly (somente-leitura)**
 - **ReparsePoint**
 - **Escassfile**
-- **Sistema**
+- **System**
 - **Temporário**
 
 Para obter uma descrição desses atributos, consulte a [enumeração FileAttributes](/dotnet/api/system.io.fileattributes).
@@ -417,7 +417,7 @@ Esse parâmetro foi adicionado no PowerShell 5,0 e permite que você controle a 
 Por exemplo, `Depth 2` inclui o diretório do parâmetro de **caminho** , o primeiro nível de subdiretórios e o segundo nível de subdiretórios. Por padrão, os nomes do diretório e os nomes de FileName são incluídos na saída.
 
 > [!NOTE]
-> Em um computador Windows do PowerShell ou **cmd.exe** , você pode exibir uma exibição gráfica de uma estrutura de diretório com o comando **Tree.com** .
+> Em um computador Windows do PowerShell ou **cmd.exe**, você pode exibir uma exibição gráfica de uma estrutura de diretório com o comando **Tree.com** .
 
 ```yaml
 Type: System.UInt32
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 ### -Directory
 
-Para obter uma lista de diretórios, use o parâmetro **Directory** ou o parâmetro **Attributes** com a propriedade **Directory** . Você pode usar o parâmetro **recurse** com o **diretório** .
+Para obter uma lista de diretórios, use o parâmetro **Directory** ou o parâmetro **Attributes** com a propriedade **Directory** . Você pode usar o parâmetro **recurse** com o **diretório**.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -450,7 +450,7 @@ Accept wildcard characters: False
 ### -Excluir
 
 Especifica, como uma matriz de cadeia de caracteres, uma propriedade ou propriedade que esse cmdlet exclui da operação.
-O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `*.txt` ou `A*` . Caracteres curinga são aceitos.
+O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `*.txt` ou `A*` . Caracteres curinga são aceitos.
 
 Um asterisco à direita ( `*` ) no parâmetro **Path** é opcional. Por exemplo, `-Path C:\Test\Logs` ou `-Path C:\Test\Logs\*`. Se um asterisco à direita ( `*` ) for incluído, o comando recursivamente nos subdiretórios do parâmetro de **caminho** . Sem o asterisco ( `*` ), o conteúdo do parâmetro **Path** é exibido. Mais detalhes são incluídos no exemplo 5 e na seção observações.
 
@@ -468,7 +468,7 @@ Accept wildcard characters: True
 
 ### -File
 
-Para obter uma lista de arquivos, use o parâmetro **File** . Você pode usar o parâmetro **recurse** com o **arquivo** .
+Para obter uma lista de arquivos, use o parâmetro **File** . Você pode usar o parâmetro **recurse** com o **arquivo**.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -550,7 +550,7 @@ Accept wildcard characters: False
 
 ### -Incluir
 
-Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path** . Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
+Especifica, como uma matriz de cadeia de caracteres, um item ou itens que esse cmdlet inclui na operação. O valor deste parâmetro qualifica o parâmetro **Path**. Insira um elemento ou padrão de caminho, como `"*.txt"` . Caracteres curinga são permitidos. O parâmetro **include** é efetivo somente quando o comando inclui o conteúdo de um item, como `C:\Windows\*` , onde o caractere curinga especifica o conteúdo do `C:\Windows` diretório.
 
 ```yaml
 Type: System.String[]
@@ -685,7 +685,7 @@ Se você usar o parâmetro **Name** , `Get-ChildItem` o retornará os nomes de o
 ## OBSERVAÇÕES
 
 - `Get-ChildItem` pode ser executado usando qualquer um dos aliases internos, `ls` , `dir` , e `gci` . Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
-- `Get-ChildItem` não obtém itens ocultos por padrão. Para obter itens ocultos, use o parâmetro **Force** .
+- `Get-ChildItem` não obtém itens ocultos por padrão. Para obter itens ocultos, use o parâmetro **Force**.
 - O `Get-ChildItem` cmdlet é projetado para trabalhar com os dados expostos por qualquer provedor. Para listar os provedores disponíveis em sua sessão, digite `Get-PSProvider` .
   Para obter mais informações, consulte [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).
 

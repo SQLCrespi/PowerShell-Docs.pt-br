@@ -6,12 +6,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: dc47a7bc29d93e1784571f9e6b27dafcb8494bae
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: d5372b8b8a57c82e2d0c6ee731b810e9a2e0f987
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598843"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726699"
 ---
 # Get-ChildItem
 
@@ -316,7 +316,7 @@ No PowerShell 6,2, uma exibição alternativa foi adicionada para obter informa�
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### Exemplo 9: saída para sistemas operacionais que não são do Windows
+### Exemplo 10: saída para sistemas operacionais que não são do Windows
 
 No PowerShell 7,1 em sistemas UNIX, o `Get-ChildItem` fornece a saída do tipo UNIX:
 
@@ -368,14 +368,14 @@ O parâmetro **Attributes** dá suporte às seguintes propriedades:
 - **Arquivar**
 - **Compactado**
 - **Dispositivo**
-- **Diretório**
+- **Active**
 - **Criptografado**
 - **Oculto**
 - **IntegrityStream**
 - **Normal**
 - **NoScrubData**
 - **NotContentIndexed**
-- **Está**
+- **Offline**
 - **ReadOnly (somente-leitura)**
 - **ReparsePoint**
 - **Escassfile**

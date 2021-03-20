@@ -1,16 +1,16 @@
 ---
 description: Explica como redirecionar a saída do PowerShell para arquivos de texto.
 Locale: en-US
-ms.date: 10/14/2020
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Redirection
-ms.openlocfilehash: 2f2081bbfcc2cfc97eaa5a3c2c527cdd9cd61d2c
-ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
+ms.openlocfilehash: e12514fed8e126dcffb80536b252e19ab3ffa697
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98040866"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726614"
 ---
 # <a name="about-redirection"></a>Sobre o redirecionamento
 
@@ -19,7 +19,7 @@ Explica como redirecionar a saída do PowerShell para arquivos de texto.
 
 ## <a name="long-description"></a>Descrição longa
 
-Por padrão, o PowerShell envia a saída para o host do PowerShell. Geralmente, esse é o aplicativo de console. No entanto, você pode direcionar a saída para um arquivo de texto e pode redirecionar a saída de erro para o fluxo de saída regular.
+Por padrão, o PowerShell envia a saída para o host do PowerShell. Geralmente, esse é o aplicativo de console. No entanto, você pode redirecionar a saída para um arquivo de texto e pode redirecionar a saída de erro para o fluxo de saída regular.
 
 Você pode usar os seguintes métodos para redirecionar a saída:
 
@@ -46,8 +46,10 @@ O PowerShell dá suporte ao redirecionamento dos fluxos de saída a seguir.
 | 6        | **Informações** do Fluxo | PowerShell 5.0 | `Write-Information` |
 | *        | Todos os fluxos            | PowerShell 3.0 |                     |
 
-> [!NOTE]
-> Também há um fluxo de **progresso** no PowerShell, mas ele não dá suporte ao redirecionamento.
+Também há um fluxo de **progresso** no PowerShell, mas ele não dá suporte ao redirecionamento.
+
+> [!IMPORTANT]
+> Os fluxos de **êxito** e de **erro** são semelhantes aos fluxos stdin e stderr de outros shells. No entanto, stdin não está conectado ao pipeline do PowerShell para entrada.
 
 ### <a name="powershell-redirection-operators"></a>Operadores de redirecionamento do PowerShell
 
@@ -183,7 +185,7 @@ Ignore
 Inquire
 ```
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>Observações
 
 Os operadores de redirecionamento que não acrescentam dados ( `>` e `n>` ) substituem o conteúdo atual do arquivo especificado sem aviso.
 
@@ -231,7 +233,7 @@ The '<' operator is reserved for future use.
 
 Se a comparação numérica for a operação necessária `-lt` e `-gt` deve ser usada. Para obter mais informações, consulte o `-gt` operador em [about_Comparison_Operators](about_Comparison_Operators.md#-gt--ge--lt-and--le).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Out-File](xref:Microsoft.PowerShell.Utility.Out-File)
 - [Tee-Object](xref:Microsoft.PowerShell.Utility.Tee-Object)

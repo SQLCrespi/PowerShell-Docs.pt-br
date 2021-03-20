@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 03/02/2021
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: 83ddac1e157f26d6a437716e9ae95e258aa1eecb
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 7f8c8a71657d1d00beb4c6e22159fb2b4ad5dce4
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685868"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726359"
 ---
 # Read-Host
 
@@ -27,7 +26,7 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 
 ## DESCRIPTION
 
-O `Read-Host` cmdlet lê uma linha de entrada do console. Você pode usá-lo para solicitar uma entrada do usuário. Como você pode salvar a entrada como uma cadeia de caracteres segura, use esse cmdlet para solicitar aos usuários para proteger os dados, como senhas, bem como dados compartilhados.
+O `Read-Host` cmdlet lê uma linha de entrada do console do (STDIN). Você pode usá-lo para solicitar uma entrada do usuário. Como você pode salvar a entrada como uma cadeia de caracteres segura, você pode usar esse cmdlet para solicitar aos usuários dados seguros, como senhas.
 
 > [!NOTE]
 > `Read-Host` tem um limite de 8190 caracteres que ele pode aceitar como entrada de um usuário.
@@ -92,7 +91,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 ### Nenhum
 
-Não é possível redirecionar a entrada para este cmdlet.
+Esse cmdlet não aceita a entrada do pipeline do PowerShell.
 
 ## SAÍDAS
 
@@ -101,6 +100,8 @@ Não é possível redirecionar a entrada para este cmdlet.
 Se o parâmetro **AsSecureString** for usado, `Read-Host` retornará uma **SecureString**. Caso contrário, ele retornará uma cadeia de caracteres.
 
 ## OBSERVAÇÕES
+
+Esse cmdlet só lê a partir do fluxo stdin do processo de host. Normalmente, o fluxo stdin é conectado ao teclado do console do host.
 
 ## LINKS RELACIONADOS
 

@@ -1,16 +1,16 @@
 ---
 description: Combinando comandos em pipelines no PowerShell
 Locale: en-US
-ms.date: 09/27/2019
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pipelines
-ms.openlocfilehash: e4ae85fbbfe5232048a90e1fe4f62db3e95e5f1b
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 6e3f15682caeecba6fa10166e1def7cc3d4a9eed
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598238"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726733"
 ---
 # <a name="about-pipelines"></a>Sobre pipelines
 
@@ -114,6 +114,19 @@ Este exemplo mostra como usar o `Format-List` cmdlet para exibir uma lista de pr
 ```powershell
 Get-Process winlogon | Format-List -Property *
 ```
+
+Você também pode canalizar a saída de comandos nativos para cmdlets do PowerShell. Por exemplo:
+
+```powershell
+PS> ipconfig.exe | Select-String -Pattern 'IPv4'
+
+   IPv4 Address. . . . . . . . . . . : 172.24.80.1
+   IPv4 Address. . . . . . . . . . . : 192.168.1.45
+   IPv4 Address. . . . . . . . . . . : 100.64.108.37
+```
+
+> [!IMPORTANT]
+> Os fluxos de **êxito** e de **erro** são semelhantes aos fluxos stdin e stderr de outros shells. No entanto, stdin não está conectado ao pipeline do PowerShell para entrada. Para obter mais informações, consulte [about_Redirection](about_Redirection.md).
 
 Com um pouco de prática, você descobrirá que a combinação de comandos simples em pipelines poupa tempo e digitação e torna o script mais eficiente.
 

@@ -6,12 +6,12 @@ ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_exe
-ms.openlocfilehash: ef03558a6b58868b98c9da488934b0bfbbce9fe7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 4025630ebb3abe4c0598c85940cfce383e9c7890
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93196167"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726648"
 ---
 # <a name="about-powershellexe"></a>Sobre PowerShell.exe
 
@@ -110,7 +110,7 @@ Os parâmetros passados para o script são passados como cadeias de caracteres l
 
 Por outro lado, `powershell.exe -File .\test.ps1 -TestParam $env:windir` a execução em **cmd.exe** resulta no script que recebe a cadeia de caracteres literal `$env:windir` porque não tem nenhum significado especial para o Shell **cmd.exe** atual. O `$env:windir` estilo da referência de variável de ambiente _pode_ ser usado dentro de um parâmetro de **comando** , já que ele será interpretado como código do PowerShell.
 
-Da mesma forma, se você quiser executar o mesmo comando de um **script em lotes** , você usaria `%~dp0` em vez de `.\` ou `$PSScriptRoot` para representar o diretório de execução atual: `powershell.exe -File %~dp0test.ps1 -TestParam %windir%` .
+Da mesma forma, se você quiser executar o mesmo comando de um **script em lotes**, você usaria `%~dp0` em vez de `.\` ou `$PSScriptRoot` para representar o diretório de execução atual: `powershell.exe -File %~dp0test.ps1 -TestParam %windir%` .
 Se você, em vez disso `.\test.ps1` , o PowerShell geraria um erro porque ele não consegue encontrar o caminho literal `.\test.ps1`
 
 Quando o valor do **arquivo** for um caminho de arquivo, o **arquivo** _deverá_ ser o último parâmetro no comando, pois os caracteres digitados após o nome do parâmetro de **arquivo** serão interpretados como o caminho do arquivo de script seguido pelos parâmetros do script.
@@ -144,7 +144,7 @@ No `cmd.exe` , não há tal coisa como um bloco de script (ou tipo **scriptblock
 Uma cadeia de caracteres passada para o **comando** ainda é executada como código do PowerShell, portanto, as chaves de bloco de script geralmente não são necessárias em primeiro lugar durante a execução do `cmd.exe` . Para executar um bloco de script embutido definido em uma cadeia de caracteres, o [operador de chamada](about_operators.md#special-operators) `&` pode ser usado:
 
 ```cmd
-pwsh -Command "& {Get-WinEvent -LogName security}"
+powershell.exe -Command "& {Get-WinEvent -LogName security}"
 ```
 
 Se o valor do **comando** for uma cadeia de caracteres, **Command** deverá ser o último parâmetro para pwsh, pois todos os argumentos após ele serão interpretados como parte do comando a ser executado.
@@ -176,21 +176,9 @@ O código de saída do processo é determinado pelo status do último comando (e
 
 Da mesma forma, o valor 1 é retornado quando um erro de encerramento de script (encerramento de runspace), como um `throw` ou `-ErrorAction Stop` , ocorre ou quando a execução é interrompida com <kbd>Ctrl</kbd> - <kbd>C</kbd>.
 
-possível _somente_ ao executar **PowerShell.exe** de outro host do PowerShell.
-O tipo **scriptblock** pode estar contido em uma variável existente, retornada de uma expressão ou analisado pelo host do PowerShell como um bloco de script literal entre chaves `{}` , antes de ser passado para **PowerShell.exe** .
-
-Em **cmd.exe** , não há nada como um bloco de script (ou tipo **scriptblock** ), portanto, o valor passado para **Command** _sempre_ será uma cadeia de caracteres. Você pode escrever um bloco de script dentro da cadeia de caracteres, mas em vez de ser executado, ele se comportará exatamente como se tivesse sido digitado em um prompt comum do PowerShell, imprimindo o conteúdo do bloco de script para você.
-
-Uma cadeia de caracteres passada para o **comando** ainda será executada como PowerShell, portanto, as chaves de bloco de script geralmente não são necessárias em primeiro lugar durante a execução de **cmd.exe** . Para executar um bloco de script embutido definido dentro de uma cadeia de caracteres, o [operador de chamada](about_operators.md#special-operators) 
- `&` pode ser usado:
-
-```console
-"& {<command>}"
-```
-
 #### <a name="-help---"></a>-Help, -?, /?
 
-Exibe a ajuda para **PowerShell.exe** . Se você estiver digitando um comando **PowerShell.exe** em uma sessão do PowerShell, preceda os parâmetros de comando com um hífen (-), não uma barra (/). Você pode usar um hífen ou uma barra em **cmd.exe** .
+Exibe a ajuda para **PowerShell.exe**. Se você estiver digitando um comando **PowerShell.exe** em uma sessão do PowerShell, preceda os parâmetros de comando com um hífen (-), não uma barra (/). Você pode usar um hífen ou uma barra em **cmd.exe**.
 
 ### <a name="remarks"></a>COMENTÁRIOS
 
