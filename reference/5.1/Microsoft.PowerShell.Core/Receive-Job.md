@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 03/22/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-Job
-ms.openlocfilehash: 7b872c2a28943ee3d2b9ab27459ddb87722cc954
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6d1018b2e623129b9d5315e8f674bc3faf88ae34
+ms.sourcegitcommit: a0148ef8bf9757f68c788d24f2eaf92792c3979f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193526"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104796321"
 ---
 # Receive-Job
 
@@ -139,7 +139,7 @@ Este exemplo armazena um trabalho na `$job` variável e canaliza o trabalho para
 Quando você usa o parâmetro **AsJob** do `Invoke-Command` para iniciar um trabalho, o objeto de trabalho é criado no computador local, embora o trabalho seja executado nos computadores remotos.
 Como resultado, você deve usar comandos locais para gerenciar o trabalho.
 
-Além disso, quando você usa **AsJob** , o PowerShell retorna um objeto de trabalho que contém um trabalho filho para cada trabalho iniciado. Nesse caso, o objeto de trabalho contém três tarefas filhas, uma para cada trabalho em cada computador remoto.
+Além disso, quando você usa **AsJob**, o PowerShell retorna um objeto de trabalho que contém um trabalho filho para cada trabalho iniciado. Nesse caso, o objeto de trabalho contém três tarefas filhas, uma para cada trabalho em cada computador remoto.
 
 ```powershell
 # Use the Invoke-Command cmdlet with the -AsJob parameter to start a background job that runs a Get-Service command on three remote computers.
@@ -180,9 +180,10 @@ Running AppMgmt     Application Management             Server02
 # Use the New-PSSession cmdlet to create three user-managed PSSessions on three servers, and save the sessions in the $s variable.
 $s = New-PSSession -ComputerName Server01, Server02, Server03
 # Use Invoke-Command run a Start-Job command in each of the PSSessions in the $s variable.
-# The job outputs the ComputerName of each server.
+# The creates a new job with a custom name to each server
+# The job outputs the datetime from each server
 # Save the job objects in the $j variable.
-$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$env:COMPUTERNAME}}
+$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -Name $('MyJob-' +$env:COMPUTERNAME) -ScriptBlock {(Get-Date).ToString()}}
 # To confirm that these job objects are from the remote machines, run Get-Job to show no local jobs running.
 Get-Job
 ```
@@ -198,30 +199,27 @@ $j
 ```
 
 ```Output
-Id   Name     State      HasMoreData   Location   Command
---   ----     -----      -----------   --------   -------
-1    Job1     Completed  True          Localhost  $env:COMPUTERNAME
-2    Job2     Completed  True          Localhost  $env:COMPUTERNAME
-3    Job3     Completed  True          Localhost  $env:COMPUTERNAME
+Id   Name               State      HasMoreData   Location   Command
+--   ----               -----      -----------   --------   -------
+1    MyJob-Server01     Completed  True          Localhost  (Get-Date).ToString()
+2    MyJob-Server02     Completed  True          Localhost  (Get-Date).ToString()
+3    MyJob-Server03     Completed  True          Localhost  (Get-Date).ToString()
 ```
 
 ```powershell
-# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $Results variable.
+# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $results variable.
 # The Receive-Job command must be run in each session because the jobs were run locally on each server.
-$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Job $Using:j}
+$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Name $('MyJob-' +$env:COMPUTERNAME)}
 ```
 
 ```Output
-Server01
-Server02
-Server03
+3/22/2021 7:41:47 PM
+3/22/2021 7:41:47 PM
+3/22/2021 9:41:47 PM
 ```
 
 Este exemplo mostra como obter os resultados de trabalhos em segundo plano executados em três computadores remotos.
 Ao contrário do exemplo anterior, usar `Invoke-Command` para executar o `Start-Job` comando efetivamente iniciou três trabalhos independentes em cada um dos três computadores. Como resultado, o comando retornou três objetos de trabalho que representam três trabalhos executados localmente nos três computadores diferentes.
-
-> [!NOTE]
-> No último comando, porque `$j` é uma variável local, o bloco de script usa o modificador de escopo de **uso** para identificar a `$j` variável. Para obter mais informações sobre o modificador de escopo de **uso** , consulte [about_Remote_Variables](./About/about_Remote_Variables.md).
 
 ### Exemplo 5: acessar trabalhos filho
 
@@ -479,8 +477,8 @@ Accept wildcard characters: False
 ### -Sessão
 
 Especifica uma matriz de sessões.
-Esse cmdlet obtém os resultados de trabalhos que foram executados na sessão do PowerShell especificada ( **PSSession** ).
-Insira uma variável que contém a **PSSession** ou um comando que obtém a **PSSession** , como um `Get-PSSession` comando.
+Esse cmdlet obtém os resultados de trabalhos que foram executados na sessão do PowerShell especificada (**PSSession**).
+Insira uma variável que contém a **PSSession** ou um comando que obtém a **PSSession**, como um `Get-PSSession` comando.
 
 ```yaml
 Type: System.Management.Automation.Runspaces.PSSession[]
