@@ -2,23 +2,23 @@
 external help file: System.Management.Automation.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 09/08/2020
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: 8a79dcf9c2af7aed0c52c361467cab23f880a893
-ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
+ms.openlocfilehash: 53759d50e622d2c840781c5bddfd91c6fddfea45
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "99603340"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105630966"
 ---
 # ForEach-Object
 
 ## Sinopse
 Executa uma operação em cada item de uma coleção de objetos de entrada.
 
-## Syntax
+## Sintaxe
 
 ### ScriptBlockset (padrão)
 
@@ -382,6 +382,9 @@ Output: 5
 
 `Output: 3` Nunca é gravado porque o scriptblock paralelo dessa iteração foi encerrado.
 
+> [!NOTE]
+> _Não_ há suporte para variáveis de parâmetro comuns [PipelineVariable](About/about_CommonParameters.md) em `Foreach-Object -Parallel` cenários, mesmo com a `$using:` palavra-chave.
+
 ## Parâmetros
 
 ### -ArgumentList
@@ -660,6 +663,8 @@ Esse cmdlet retorna objetos que são determinados pela entrada.
   - Scripts que gastam tempo aguardando resultados ou realizando operações de arquivo
 
   O uso do parâmetro **Parallel** pode fazer com que os scripts sejam executados muito mais lentamente do que o normal. Especialmente se os scripts paralelos forem triviais. Experimente em **paralelo** para descobrir onde ele pode ser benéfico.
+
+- _Não_ há suporte para variáveis de parâmetro comuns [PipelineVariable](About/about_CommonParameters.md) em `Foreach-Object -Parallel` cenários, mesmo com a `$using:` palavra-chave.
 
   > [!IMPORTANT]
   > O `ForEach-Object -Parallel` conjunto de parâmetros executa blocos de script em paralelo em threads de processo separados. A `$using:` palavra-chave permite passar referências de variáveis do thread de invocação de cmdlet para cada thread de bloco de script em execução. Como os blocos de script são executados em threads diferentes, as variáveis de objeto passadas por referência devem ser usadas com segurança. Geralmente, é seguro ler de objetos referenciados que não são alterados. Mas se o estado do objeto estiver sendo modificado, você deverá usar objetos de thread seguro, como .NET **System. Collection. tipos simultâneos** (consulte o exemplo 11).

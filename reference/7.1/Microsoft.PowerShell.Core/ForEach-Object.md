@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 02/18/2021
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: c8b674a895bb323b734f018e5e8654cfec4d0045
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 7da05aed73fdb52132404bc08f0fd39fafbfc4ca
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685584"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105631044"
 ---
 # ForEach-Object
 
@@ -681,7 +681,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 
 É possível canalizar qualquer objeto para esse cmdlet.
 
-## outputs
+## Saídas
 
 ### System. Management. Automation. PSObject
 
@@ -693,12 +693,14 @@ Esse cmdlet retorna objetos que são determinados pela entrada.
 
 - A partir do PowerShell 4,0, `Where` e os `ForEach` métodos foram adicionados para uso com coleções. Você pode ler mais sobre esses novos métodos aqui [about_arrays](./About/about_Arrays.md)
 
-- O `ForEach-Object -Parallel` conjunto de parâmetros usa a API interna do PowerShell para executar cada bloco de script. Isso é significativamente mais sobrecarga do que executar `ForEach-Object` normalmente com processamento sequencial. É importante usar **Parallel** em que a sobrecarga de execução em paralelo é pequena em comparação com o trabalho que o bloco de script executa. Por exemplo: 
+- O `ForEach-Object -Parallel` conjunto de parâmetros usa a API interna do PowerShell para executar cada bloco de script. Isso é significativamente mais sobrecarga do que executar `ForEach-Object` normalmente com processamento sequencial. É importante usar **Parallel** em que a sobrecarga de execução em paralelo é pequena em comparação com o trabalho que o bloco de script executa. Por exemplo:
 
   - Computação de scripts intensivos em máquinas com vários núcleos
   - Scripts que gastam tempo aguardando resultados ou realizando operações de arquivo
 
   O uso do parâmetro **Parallel** pode fazer com que os scripts sejam executados muito mais lentamente do que o normal. Especialmente se os scripts paralelos forem triviais. Experimente em **paralelo** para descobrir onde ele pode ser benéfico.
+
+- _Não_ há suporte para variáveis de parâmetro comuns [PipelineVariable](About/about_CommonParameters.md) em `Foreach-Object -Parallel` cenários, mesmo com a `$using:` palavra-chave.
 
   > [!IMPORTANT]
   > O `ForEach-Object -Parallel` conjunto de parâmetros executa blocos de script em paralelo em threads de processo separados. A `$using:` palavra-chave permite passar referências de variáveis do thread de invocação de cmdlet para cada thread de bloco de script em execução. Como os blocos de script são executados em threads diferentes, as variáveis de objeto passadas por referência devem ser usadas com segurança. Geralmente, é seguro ler de objetos referenciados que não são alterados. Mas se o estado do objeto estiver sendo modificado, você deverá usar objetos de thread seguro, como .NET **System. Collection. tipos simultâneos** (consulte o exemplo 11).

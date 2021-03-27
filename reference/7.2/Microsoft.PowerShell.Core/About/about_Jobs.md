@@ -1,16 +1,16 @@
 ---
 description: Fornece informações sobre como os trabalhos em segundo plano do PowerShell executam um comando ou expressão em segundo plano sem interagir com a sessão atual.
 Locale: en-US
-ms.date: 11/11/2020
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Jobs
-ms.openlocfilehash: 862fbf54b927bb70c68e4b3cc43c564f178f9db5
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 189476d98f92b8d53251b16bd27e45f4a980ab0e
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99595553"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105630959"
 ---
 # <a name="about-jobs"></a>Sobre trabalhos
 
@@ -23,7 +23,7 @@ O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos. H
 
 - `RemoteJob` -Comandos e scripts executados em uma sessão remota. Para obter informações, consulte [about_Remote_Jobs](about_Remote_Jobs.md).
 - `BackgroundJob` -Comandos e scripts são executados em um processo separado no computador local.
-- `PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local. Para obter mais informações, consulte [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local. Para obter mais informações, consulte [about_Thread_Jobs](about_Thread_Jobs.md).
 
 Executar scripts remotamente, em um computador separado ou em um processo separado, fornece um excelente isolamento. Os erros que ocorrem no trabalho remoto não afetam outros trabalhos em execução ou a sessão pai que iniciou o trabalho. No entanto, a camada de comunicação remota adiciona sobrecarga, incluindo a serialização de objeto. Todos os objetos são serializados e desserializados à medida que são passados entre a sessão pai e a sessão remota (trabalho). A serialização de grandes objetos de dados complexos pode consumir grandes quantidades de recursos de computação e memória e transferir grandes quantidades de dados pela rede.
 
