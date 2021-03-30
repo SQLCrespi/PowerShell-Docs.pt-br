@@ -1,157 +1,93 @@
 ---
-ms.date: 05/22/2020
+ms.date: 03/22/2021
 keywords: powershell, cmdlet
 title: O que é o PowerShell?
 description: Este artigo é uma introdução ao ambiente de script do PowerShell e seus recursos.
-ms.openlocfilehash: 91fc580af9a3adf43a24c40b4aaf3f1843882705
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 3e1c2cae4b8d6507057ee8136265710a8dfe74f3
+ms.sourcegitcommit: 719debaed3cc32ba463b1d4cc56a491d8ecbce26
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500769"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105029682"
 ---
-# <a name="what-is-powershell"></a><span data-ttu-id="51f0b-104">O que é o PowerShell?</span><span class="sxs-lookup"><span data-stu-id="51f0b-104">What is PowerShell?</span></span>
+# <a name="what-is-powershell"></a><span data-ttu-id="25b21-104">O que é o PowerShell?</span><span class="sxs-lookup"><span data-stu-id="25b21-104">What is PowerShell?</span></span>
 
-<span data-ttu-id="51f0b-105">O PowerShell é uma estrutura multiplataforma de gerenciamento de configuração e de automação de tarefas, que consiste em um shell de linha de comando e em uma linguagem de script.</span><span class="sxs-lookup"><span data-stu-id="51f0b-105">PowerShell is a cross-platform task automation and configuration management framework, consisting of a command-line shell and scripting language.</span></span> <span data-ttu-id="51f0b-106">Ao contrário da maioria dos shells, que aceitam e retornam texto, o PowerShell é criado com base no CLR (Common Language Runtime) do .NET e aceita e retorna objetos .NET.</span><span class="sxs-lookup"><span data-stu-id="51f0b-106">Unlike most shells, which accept and return text, PowerShell is built on top of the .NET Common Language Runtime (CLR), and accepts and returns .NET objects.</span></span> <span data-ttu-id="51f0b-107">Essa mudança fundamental traz ferramentas e métodos totalmente novos para a automação.</span><span class="sxs-lookup"><span data-stu-id="51f0b-107">This fundamental change brings entirely new tools and methods for automation.</span></span>
+<span data-ttu-id="25b21-105">O PowerShell é uma solução de automação de tarefas multiplataforma que consiste em um shell de linha de comando, em uma linguagem de script e uma estrutura de gerenciamento de configuração.</span><span class="sxs-lookup"><span data-stu-id="25b21-105">PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.</span></span> <span data-ttu-id="25b21-106">O PowerShell pode ser executado no Windows, Linux e macOS.</span><span class="sxs-lookup"><span data-stu-id="25b21-106">PowerShell runs on Windows, Linux, and macOS.</span></span>
 
-<!-- removing images until we can get replacements
-:::row:::
-   :::column span="":::
-      Windows
-      [![PowerShell on Windows](media/overview/windows-desktop-660.gif)](media/overview/windows-desktop.gif#lightbox)
-      [Install on Windows](install/installing-powershell-core-on-windows.md)
-   :::column-end:::
-   :::column span="":::
-      Linux
-      [![PowerShell on Linux](media/overview/linux-desktop-660.gif)](media/overview/linux-desktop.gif#lightbox)
-      [Install on Linux](install/installing-powershell-core-on-linux.md)
-   :::column-end:::
-   :::column span="":::
-      macOS
-      [![PowerShell on macOS](media/overview/macos-desktop-660.gif)](media/overview/macos-desktop.gif#lightbox)
-      [Install on macOS](install/installing-powershell-core-on-macos.md)
-   :::column-end:::
-:::row-end:::
--->
+## <a name="shell"></a><span data-ttu-id="25b21-107">Shell</span><span class="sxs-lookup"><span data-stu-id="25b21-107">Shell</span></span>
 
-## <a name="output-is-object-based"></a><span data-ttu-id="51f0b-108">A saída é baseada em objeto</span><span class="sxs-lookup"><span data-stu-id="51f0b-108">Output is object-based</span></span>
+<span data-ttu-id="25b21-108">O PowerShell é um shell de comando moderno que inclui os melhores recursos de outros shells populares.</span><span class="sxs-lookup"><span data-stu-id="25b21-108">PowerShell is modern command shell that includes the best features of other popular shells.</span></span> <span data-ttu-id="25b21-109">Ao contrário da maioria dos shells que só aceita e retorna texto, o PowerShell aceita e retorna objetos .NET.</span><span class="sxs-lookup"><span data-stu-id="25b21-109">Unlike most shells that only accept and return text, PowerShell accepts and returns .NET objects.</span></span> <span data-ttu-id="25b21-110">O shell inclui os seguintes recursos:</span><span class="sxs-lookup"><span data-stu-id="25b21-110">The shell includes the following features:</span></span>
 
-<span data-ttu-id="51f0b-109">Ao contrário de interfaces de linha de comando tradicionais, os cmdlets do PowerShell são projetados para lidar com objetos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-109">Unlike traditional command-line interfaces, PowerShell cmdlets are designed to deal with objects.</span></span>
-<span data-ttu-id="51f0b-110">Um objeto representa informações estruturadas que vão além da uma cadeia de caracteres exibida na tela.</span><span class="sxs-lookup"><span data-stu-id="51f0b-110">An object is structured information that is more than just the string of characters appearing on the screen.</span></span> <span data-ttu-id="51f0b-111">A saída do comando sempre acompanha informações extras que poderão ser usadas quando necessário.</span><span class="sxs-lookup"><span data-stu-id="51f0b-111">Command output always carries extra information that you can use if you need it.</span></span>
+- <span data-ttu-id="25b21-111">[Histórico][] de linha de comando robusto</span><span class="sxs-lookup"><span data-stu-id="25b21-111">Robust command-line [history][]</span></span>
+- <span data-ttu-id="25b21-112">Previsão de comando e conclusão da guia (confira [about_PSReadLine][])</span><span class="sxs-lookup"><span data-stu-id="25b21-112">Tab completion and command prediction (See [about_PSReadLine][])</span></span>
+- <span data-ttu-id="25b21-113">Suporte a [aliases][] de parâmetro e de comando</span><span class="sxs-lookup"><span data-stu-id="25b21-113">Supports command and parameter [aliases][]</span></span>
+- <span data-ttu-id="25b21-114">[Pipeline][] para comandos de encadeamento</span><span class="sxs-lookup"><span data-stu-id="25b21-114">[Pipeline][] for chaining commands</span></span>
+- <span data-ttu-id="25b21-115">Sistema de [ajuda][] no console, semelhante a páginas `man` UNIX</span><span class="sxs-lookup"><span data-stu-id="25b21-115">In-console [help][] system, similar to Unix `man` pages</span></span>
 
-<span data-ttu-id="51f0b-112">Se você já usou ferramentas de processamento de texto para processar dados, perceberá que elas se comportam de maneira diferente quando usadas no PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-112">If you've used text-processing tools to process data in the past, you'll find that they behave differently when used in PowerShell.</span></span> <span data-ttu-id="51f0b-113">Na maioria dos casos, você não precisa de ferramentas de processamento de texto para extrair informações específicas.</span><span class="sxs-lookup"><span data-stu-id="51f0b-113">In most cases, you don't need text-processing tools to extract specific information.</span></span> <span data-ttu-id="51f0b-114">Você acessa diretamente partes dos dados usando a sintaxe de objeto padrão do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-114">You directly access portions of the data using standard PowerShell object syntax.</span></span>
+## <a name="scripting-language"></a><span data-ttu-id="25b21-116">Idioma do script</span><span class="sxs-lookup"><span data-stu-id="25b21-116">Scripting language</span></span>
 
-## <a name="the-command-family-is-extensible"></a><span data-ttu-id="51f0b-115">A família de comandos é extensível</span><span class="sxs-lookup"><span data-stu-id="51f0b-115">The command family is extensible</span></span>
+<span data-ttu-id="25b21-117">Como uma linguagem de script, o PowerShell é normalmente usado para automatizar o gerenciamento de sistemas.</span><span class="sxs-lookup"><span data-stu-id="25b21-117">As a scripting language, PowerShell is commonly used for automating the management of systems.</span></span> <span data-ttu-id="25b21-118">Ele também é usado para compilar, testar e implantar soluções, geralmente em ambientes de CI/CD.</span><span class="sxs-lookup"><span data-stu-id="25b21-118">It is also used to build, test, and deploy solutions, often in CI/CD environments.</span></span> <span data-ttu-id="25b21-119">O PowerShell é criado no CLR (Common Language Runtime) do .NET.</span><span class="sxs-lookup"><span data-stu-id="25b21-119">PowerShell is built on the .NET Common Language Runtime (CLR).</span></span> <span data-ttu-id="25b21-120">Todas as entradas e saídas são objetos .NET.</span><span class="sxs-lookup"><span data-stu-id="25b21-120">All inputs and outputs are .NET objects.</span></span> <span data-ttu-id="25b21-121">Não é necessário analisar a saída de texto para extrair informações da saída.</span><span class="sxs-lookup"><span data-stu-id="25b21-121">No need to parse text output to extract information from output.</span></span> <span data-ttu-id="25b21-122">A linguagem de script do PowerShell inclui os seguintes recursos:</span><span class="sxs-lookup"><span data-stu-id="25b21-122">The PowerShell scripting language includes the following features:</span></span>
 
-<span data-ttu-id="51f0b-116">Interfaces como a do `cmd.exe` não fornecem uma forma de estender diretamente o conjunto de comandos internos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-116">Interfaces such as `cmd.exe` don't provide a way for you to directly extend the built-in command set.</span></span> <span data-ttu-id="51f0b-117">Você pode criar ferramentas de linha de comando externas que são executadas no `cmd.exe`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-117">You can create external command-line tools that run in `cmd.exe`.</span></span> <span data-ttu-id="51f0b-118">Mas essas ferramentas externas não têm serviços, como a integração com a Ajuda.</span><span class="sxs-lookup"><span data-stu-id="51f0b-118">But these external tools don't have services, such as Help integration.</span></span> <span data-ttu-id="51f0b-119">O `cmd.exe` não sabe automaticamente que essas ferramentas externas são comandos válidos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-119">`cmd.exe` doesn't automatically know that these external tools are valid commands.</span></span>
+- <span data-ttu-id="25b21-123">Extensível por meio de [funções][], [classes][], [scripts][] e [módulos][]</span><span class="sxs-lookup"><span data-stu-id="25b21-123">Extensible through [functions][], [classes][], [scripts][], and [modules][]</span></span>
+- <span data-ttu-id="25b21-124">[Sistema de formatação][formatting] extensível para saída fácil</span><span class="sxs-lookup"><span data-stu-id="25b21-124">Extensible [formatting system][formatting] for easy output</span></span>
+- <span data-ttu-id="25b21-125">[Sistema de tipos][types] extensível para a criação de tipos dinâmicos</span><span class="sxs-lookup"><span data-stu-id="25b21-125">Extensible [type system][types] for creating dynamic types</span></span>
+- <span data-ttu-id="25b21-126">Suporte integrado para formatos de dados comuns como [CSV][], [JSON][] e [XML][]</span><span class="sxs-lookup"><span data-stu-id="25b21-126">Built-in support for common data formats like [CSV][], [JSON][], and [XML][]</span></span>
 
-<span data-ttu-id="51f0b-120">Os comandos no PowerShell são conhecidos como _cmdlets_ .</span><span class="sxs-lookup"><span data-stu-id="51f0b-120">The commands in PowerShell are known as _cmdlets_ .</span></span> <span data-ttu-id="51f0b-121">Você pode usar cada cmdlet separadamente, mas o potencial deles é atingido quando você os combina para executar tarefas complexas.</span><span class="sxs-lookup"><span data-stu-id="51f0b-121">You can use each cmdlet separately, but their power is realized when you combine them to perform complex tasks.</span></span> <span data-ttu-id="51f0b-122">Como muitos shells, o PowerShell fornece acesso ao sistema de arquivos no computador.</span><span class="sxs-lookup"><span data-stu-id="51f0b-122">Like many shells, PowerShell gives you access to the file system on the computer.</span></span> <span data-ttu-id="51f0b-123">Os _provedores_ do PowerShell permitem que você acesse outros armazenamentos de dados, como o Registro e os repositórios de certificados, com tanta facilidade quanto o sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-123">PowerShell _providers_ enable you to access other data stores, such as the registry and the certificate stores, as easily as you access the file system.</span></span>
+## <a name="configuration-management"></a><span data-ttu-id="25b21-127">Gerenciamento de configuração</span><span class="sxs-lookup"><span data-stu-id="25b21-127">Configuration management</span></span>
 
-<span data-ttu-id="51f0b-124">Você pode criar módulos de cmdlet e de função usando código compilado ou scripts.</span><span class="sxs-lookup"><span data-stu-id="51f0b-124">You can create your own cmdlet and function modules using compiled code or scripts.</span></span> <span data-ttu-id="51f0b-125">Os módulos podem adicionar cmdlets e provedores ao shell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-125">Modules can add cmdlets and providers to the shell.</span></span> <span data-ttu-id="51f0b-126">O PowerShell também dá suporte a scripts que são análogos aos scripts de shell do UNIX e aos arquivos em lotes do `cmd.exe`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-126">PowerShell also supports scripts that are analogous to UNIX shell scripts and `cmd.exe` batch files.</span></span>
+<span data-ttu-id="25b21-128">O [DSC][] (Desired State Configuration) do PowerShell é uma estrutura de gerenciamento no PowerShell que permite gerenciar a infraestrutura empresarial com a configuração como código.</span><span class="sxs-lookup"><span data-stu-id="25b21-128">PowerShell Desired State Configuration ([DSC][]) is a management framework in PowerShell that enables you to manage your enterprise infrastructure with configuration as code.</span></span> <span data-ttu-id="25b21-129">Com o DSC, você pode:</span><span class="sxs-lookup"><span data-stu-id="25b21-129">With DSC, you can:</span></span>
 
-## <a name="support-for-command-aliases"></a><span data-ttu-id="51f0b-127">Suporte para aliases de comando</span><span class="sxs-lookup"><span data-stu-id="51f0b-127">Support for command aliases</span></span>
+- <span data-ttu-id="25b21-130">Criar [configurações][] declarativas e scripts personalizados para implantações repetíveis</span><span class="sxs-lookup"><span data-stu-id="25b21-130">Create declarative [configurations][] and custom scripts for repeatable deployments</span></span>
+- <span data-ttu-id="25b21-131">Impor definições de configuração e relatar sobre descompasso de configuração</span><span class="sxs-lookup"><span data-stu-id="25b21-131">Enforce configuration settings and report on configuration drift</span></span>
+- <span data-ttu-id="25b21-132">Implantar a configuração usando modelos [push ou pull][push-pull]</span><span class="sxs-lookup"><span data-stu-id="25b21-132">Deploy configuration using [push or pull][push-pull] models</span></span>
 
-<span data-ttu-id="51f0b-128">O PowerShell dá suporte a aliases para se referir aos comandos por nomes alternativos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-128">PowerShell supports aliases to refer to commands by alternate names.</span></span> <span data-ttu-id="51f0b-129">Usar alias permite que usuários com experiência em outros shells utilizem nomes de comando comuns que já conhecem para operações semelhantes no PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-129">Aliasing allows users with experience in other shells to use common command names that they already know for similar operations in PowerShell.</span></span>
+## <a name="next-steps"></a><span data-ttu-id="25b21-133">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="25b21-133">Next steps</span></span>
 
-<span data-ttu-id="51f0b-130">O alias associa um novo nome a outro comando.</span><span class="sxs-lookup"><span data-stu-id="51f0b-130">Aliasing associates a new name with another command.</span></span> <span data-ttu-id="51f0b-131">Por exemplo, o PowerShell tem uma função interna denominada `Clear-Host` que limpa a janela de saída.</span><span class="sxs-lookup"><span data-stu-id="51f0b-131">For example, PowerShell has an internal function named `Clear-Host` that clears the output window.</span></span> <span data-ttu-id="51f0b-132">Você pode digitar o alias `cls` ou `clear` em um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="51f0b-132">You can type either the `cls` or `clear` alias at a command prompt.</span></span> <span data-ttu-id="51f0b-133">O PowerShell interpreta esses aliases e executa a função `Clear-Host`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-133">PowerShell interprets these aliases and runs the `Clear-Host` function.</span></span>
+### <a name="getting-started"></a><span data-ttu-id="25b21-134">Introdução</span><span class="sxs-lookup"><span data-stu-id="25b21-134">Getting started</span></span>
 
-<span data-ttu-id="51f0b-134">Esse recurso ajuda os usuários a aprender sobre o PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-134">This feature helps users to learn PowerShell.</span></span> <span data-ttu-id="51f0b-135">Primeiro, a maioria dos usuários do `cmd.exe` e do UNIX tem um grande repertório de comandos conhecidos por nome.</span><span class="sxs-lookup"><span data-stu-id="51f0b-135">First, most `cmd.exe` and Unix users have a large repertoire of commands that users already know by name.</span></span> <span data-ttu-id="51f0b-136">Talvez os equivalentes do PowerShell não produzam resultados idênticos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-136">The PowerShell equivalents may not produce identical results.</span></span> <span data-ttu-id="51f0b-137">No entanto, os resultados são bem parecidos, e os usuários podem fazer o trabalho sem conhecer o nome de comando do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-137">However, the results are close enough that users can do work without knowing the PowerShell command name.</span></span> <span data-ttu-id="51f0b-138">A "memória muscular" é outra grande fonte de frustração ao aprender um novo shell de comando.</span><span class="sxs-lookup"><span data-stu-id="51f0b-138">"Muscle memory" is another major source of frustration when learning a new command shell.</span></span> <span data-ttu-id="51f0b-139">Caso você use o `cmd.exe` há anos, é possível que você digite inconscientemente o comando `cls` para limpar a tela.</span><span class="sxs-lookup"><span data-stu-id="51f0b-139">If you have used `cmd.exe` for years, you might reflexively type the `cls` command to clear the screen.</span></span> <span data-ttu-id="51f0b-140">Sem o alias para `Clear-Host`, você receberá uma mensagem de erro e não saberá o que fazer para limpar a saída.</span><span class="sxs-lookup"><span data-stu-id="51f0b-140">Without the alias for `Clear-Host`, you receive an error message and won't know what to do to clear the output.</span></span>
+<span data-ttu-id="25b21-135">Você é novo no PowerShell e não sabe por onde começar?</span><span class="sxs-lookup"><span data-stu-id="25b21-135">Are you new to PowerShell and don't know where to start?</span></span> <span data-ttu-id="25b21-136">Confira estes recursos.</span><span class="sxs-lookup"><span data-stu-id="25b21-136">Take a look at these resources.</span></span>
 
-## <a name="powershell-handles-console-input-and-display"></a><span data-ttu-id="51f0b-141">O PowerShell manipula a exibição e a entrada do console</span><span class="sxs-lookup"><span data-stu-id="51f0b-141">PowerShell handles console input and display</span></span>
+- <span data-ttu-id="25b21-137">[Instalando o PowerShell][install]</span><span class="sxs-lookup"><span data-stu-id="25b21-137">[Installing PowerShell][install]</span></span>
+- <span data-ttu-id="25b21-138">[Introdução ao PowerShell][PS101]</span><span class="sxs-lookup"><span data-stu-id="25b21-138">[PowerShell 101][PS101]</span></span>
+- <span data-ttu-id="25b21-139">[Tutoriais de Bits do PowerShell][tutorials]</span><span class="sxs-lookup"><span data-stu-id="25b21-139">[PowerShell Bits tutorials][tutorials]</span></span>
+- <span data-ttu-id="25b21-140">[Módulos do Learn do PowerShell][learn]</span><span class="sxs-lookup"><span data-stu-id="25b21-140">[PowerShell Learn modules][learn]</span></span>
 
-<span data-ttu-id="51f0b-142">Quando você digita um comando, o PowerShell sempre processa a linha de comando de entrada diretamente.</span><span class="sxs-lookup"><span data-stu-id="51f0b-142">When you type a command, PowerShell always processes the command-line input directly.</span></span> <span data-ttu-id="51f0b-143">O PowerShell também formata a saída exibida na tela.</span><span class="sxs-lookup"><span data-stu-id="51f0b-143">PowerShell also formats the output that you see on the screen.</span></span> <span data-ttu-id="51f0b-144">Essa diferença é considerável porque reduz o trabalho necessário em cada cmdlet.</span><span class="sxs-lookup"><span data-stu-id="51f0b-144">This difference is significant because it reduces the work required of each cmdlet.</span></span> <span data-ttu-id="51f0b-145">Isso garante que você possa fazer as coisas sempre da mesma maneira com qualquer cmdlet.</span><span class="sxs-lookup"><span data-stu-id="51f0b-145">It ensures that you can always do things the same way with any cmdlet.</span></span> <span data-ttu-id="51f0b-146">Os desenvolvedores de cmdlet não precisam escrever códigos para analisar os argumentos de linha de comando ou formatar a saída.</span><span class="sxs-lookup"><span data-stu-id="51f0b-146">Cmdlet developers don't need to write code to parse the command-line arguments or format the output.</span></span>
+### <a name="powershell-in-action"></a><span data-ttu-id="25b21-141">PowerShell em ação</span><span class="sxs-lookup"><span data-stu-id="25b21-141">PowerShell in action</span></span>
 
-<span data-ttu-id="51f0b-147">Ferramentas de linha de comando tradicionais têm seus próprios esquemas para solicitar e exibir a Ajuda.</span><span class="sxs-lookup"><span data-stu-id="51f0b-147">Traditional command-line tools have their own schemes for requesting and displaying Help.</span></span> <span data-ttu-id="51f0b-148">Algumas ferramentas de linha de comando usam `/?` para disparar a exibição da Ajuda; outras usam `-?`, `/H` ou até mesmo `//`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-148">Some command-line tools use `/?` to trigger the Help display; others use `-?`, `/H`, or even `//`.</span></span> <span data-ttu-id="51f0b-149">Algumas delas exibem a Ajuda em uma janela GUI em vez de na exibição do console.</span><span class="sxs-lookup"><span data-stu-id="51f0b-149">Some will display Help in a GUI window, rather than in the console display.</span></span> <span data-ttu-id="51f0b-150">Se você usar o parâmetro errado, a ferramenta poderá ignorar o que você digitou e começar a executar uma tarefa automaticamente.</span><span class="sxs-lookup"><span data-stu-id="51f0b-150">If you use the wrong parameter, the tool might ignore what you typed and begin executing a task automatically.</span></span>
-<span data-ttu-id="51f0b-151">Como o PowerShell analisa e processa a linha de comando automaticamente, o parâmetro `-?` sempre significa "mostre-me a Ajuda para este comando".</span><span class="sxs-lookup"><span data-stu-id="51f0b-151">Since PowerShell automatically parses and processes the command line, the `-?` parameter always means "show me Help for this command".</span></span>
+<span data-ttu-id="25b21-142">Confira como o PowerShell está sendo usado em diferentes cenários e diferentes plataformas.</span><span class="sxs-lookup"><span data-stu-id="25b21-142">Take a look at how PowerShell is being used in different scenarios and on different platforms.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="51f0b-152">Se você executar um aplicativo gráfico no PowerShell, a janela do aplicativo se abrirá.</span><span class="sxs-lookup"><span data-stu-id="51f0b-152">If you run a graphic application in PowerShell, the window for the application opens.</span></span>
-> <span data-ttu-id="51f0b-153">O PowerShell intervém apenas no processamento da entrada da linha de comando que você fornece ou quando a saída do aplicativo retorna para a janela do console.</span><span class="sxs-lookup"><span data-stu-id="51f0b-153">PowerShell intervenes only when processing the command-line input you supply or the application output returned to the console window.</span></span> <span data-ttu-id="51f0b-154">Ele não afeta a maneira como o aplicativo funciona internamente.</span><span class="sxs-lookup"><span data-stu-id="51f0b-154">It does not affect how the application works internally.</span></span>
-
-## <a name="powershell-has-a-pipeline"></a><span data-ttu-id="51f0b-155">O PowerShell tem um pipeline</span><span class="sxs-lookup"><span data-stu-id="51f0b-155">PowerShell has a pipeline</span></span>
-
-<span data-ttu-id="51f0b-156">Pipelines são possivelmente o conceito mais valioso usado nas interfaces de linha de comando.</span><span class="sxs-lookup"><span data-stu-id="51f0b-156">Pipelines are arguably the most valuable concept used in command-line interfaces.</span></span> <span data-ttu-id="51f0b-157">Quando usados adequadamente, os pipelines facilitam o uso de comandos complexos e a visualização do fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="51f0b-157">When used properly, pipelines reduce the effort of using complex commands and make it easier to see the flow of work.</span></span> <span data-ttu-id="51f0b-158">Cada comando em um pipeline passa sua saída, item por item, para o próximo comando.</span><span class="sxs-lookup"><span data-stu-id="51f0b-158">Each command in a pipeline passes its output, item by item, to the next command.</span></span> <span data-ttu-id="51f0b-159">Os comandos não precisam lidar com mais de um item por vez.</span><span class="sxs-lookup"><span data-stu-id="51f0b-159">Commands don't have to handle more than one item at a time.</span></span> <span data-ttu-id="51f0b-160">O resultado são o consumo reduzido de recursos e a capacidade de obter uma saída imediatamente.</span><span class="sxs-lookup"><span data-stu-id="51f0b-160">The result is reduced resource consumption and the ability to get output immediately.</span></span>
-
-<span data-ttu-id="51f0b-161">A notação usada para pipelines é semelhante à notação usada em outros shells.</span><span class="sxs-lookup"><span data-stu-id="51f0b-161">The notation used for pipelines is similar to the notation used in other shells.</span></span> <span data-ttu-id="51f0b-162">À primeira vista, talvez seja aparente como os pipelines são diferentes no PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-162">At first glance, it may not be apparent how pipelines are different in PowerShell.</span></span> <span data-ttu-id="51f0b-163">Embora você veja o texto na tela, o PowerShell redireciona objetos, e não o texto, entre comandos.</span><span class="sxs-lookup"><span data-stu-id="51f0b-163">Although you see text on the screen, PowerShell pipes objects, not text, between commands.</span></span>
-
-<span data-ttu-id="51f0b-164">Por exemplo, se você usar o cmdlet `Out-Host` para forçar uma exibição de página a página da saída de outro comando, a saída parecerá ser apenas o texto normal exibido na tela, dividida em páginas:</span><span class="sxs-lookup"><span data-stu-id="51f0b-164">For example, if you use the `Out-Host` cmdlet to force a page-by-page display of output from another command, the output looks just like the normal text displayed on the screen, broken up into pages:</span></span>
-
-```powershell
-Get-ChildItem | Out-Host -Paging
-```
-
-```Output
-    Directory: /mnt/c/Git/PS-Docs/PowerShell-Docs/reference/7.0/Microsoft.PowerShell.Core
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          05/22/2020    08:30                About
------          05/20/2020    14:36           9044 Add-History.md
------          05/20/2020    14:36          12227 Clear-History.md
------          05/20/2020    14:36           3566 Clear-Host.md
------          05/20/2020    14:36          29087 Connect-PSSession.md
------          05/20/2020    14:36           5705 Debug-Job.md
------          05/20/2020    14:36           3515 Disable-ExperimentalFeature.md
------          05/20/2020    14:36          25531 Disable-PSRemoting.md
------          05/20/2020    14:36           7852 Disable-PSSessionConfiguration.md
------          05/20/2020    14:36          25355 Disconnect-PSSession.md
------          05/20/2020    14:36           3491 Enable-ExperimentalFeature.md
------          05/20/2020    14:36          13310 Enable-PSRemoting.md
------          05/20/2020    14:36           8401 Enable-PSSessionConfiguration.md
------          05/20/2020    14:36           9531 Enter-PSHostProcess.md
-...
-<SPACE> next page; <CR> next line; Q quit
-```
-
-<span data-ttu-id="51f0b-165">A paginação também reduz a utilização da CPU, pois o processamento muda para o cmdlet `Out-Host` quando há uma página completa pronta para exibição.</span><span class="sxs-lookup"><span data-stu-id="51f0b-165">Paging also reduces CPU utilization because processing transfers to the `Out-Host` cmdlet when it has a complete page ready to display.</span></span> <span data-ttu-id="51f0b-166">Os cmdlets que a precedem no pipeline pausam a execução até que a próxima página de saída esteja disponível.</span><span class="sxs-lookup"><span data-stu-id="51f0b-166">The cmdlets that precede it in the pipeline pause execution until the next page of output is available.</span></span>
-
-### <a name="objects-in-the-pipeline"></a><span data-ttu-id="51f0b-167">Objetos no pipeline</span><span class="sxs-lookup"><span data-stu-id="51f0b-167">Objects in the pipeline</span></span>
-
-<span data-ttu-id="51f0b-168">Quando você executa um cmdlet no PowerShell, vê a saída de texto porque é necessário representar objetos como texto em uma janela de console.</span><span class="sxs-lookup"><span data-stu-id="51f0b-168">When you run a cmdlet in PowerShell, you see text output because it is necessary to represent objects as text in a console window.</span></span> <span data-ttu-id="51f0b-169">A saída de texto não pode exibir todas as propriedades do objeto mostrado.</span><span class="sxs-lookup"><span data-stu-id="51f0b-169">The text output may not display all of the properties of the object being output.</span></span>
-
-<span data-ttu-id="51f0b-170">Por exemplo, considere o cmdlet `Get-Location`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-170">For example, consider the `Get-Location` cmdlet.</span></span> <span data-ttu-id="51f0b-171">A saída de texto é um resumo das informações, não uma representação completa do objeto retornado por `Get-Location`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-171">The text output is a summary of information, not a complete representation of the object returned by `Get-Location`.</span></span> <span data-ttu-id="51f0b-172">O título na saída é adicionado pelo processo que formata os dados para exibição na tela.</span><span class="sxs-lookup"><span data-stu-id="51f0b-172">The heading in the output is added by the process that formats the data for onscreen display.</span></span>
-
-```powershell
-Get-Location
-```
-
-```Output
-Path
-----
-C:\
-```
-
-<span data-ttu-id="51f0b-173">O redirecionamento da saída para o cmdlet `Get-Member` exibe informações sobre o objeto retornado por `Get-Location`.</span><span class="sxs-lookup"><span data-stu-id="51f0b-173">Piping the output to the `Get-Member` cmdlet displays information about the object returned by `Get-Location`.</span></span>
-
-```powershell
-Get-Location | Get-Member
-```
-
-```Output
-   TypeName: System.Management.Automation.PathInfo
-
-Name         MemberType Definition
-----         ---------- ----------
-Equals       Method     bool Equals(System.Object obj)
-GetHashCode  Method     int GetHashCode()
-GetType      Method     type GetType()
-ToString     Method     string ToString()
-Drive        Property   System.Management.Automation.PSDriveInfo Drive {get;}
-Path         Property   string Path {get;}
-Provider     Property   System.Management.Automation.ProviderInfo Provider {get;}
-ProviderPath Property   string ProviderPath {get;}
-```
-
-<span data-ttu-id="51f0b-174">`Get-Location` retorna um objeto **PathInfo** que contém o caminho atual e outras informações.</span><span class="sxs-lookup"><span data-stu-id="51f0b-174">`Get-Location` returns a **PathInfo** object that contains the current path and other information.</span></span>
-
-## <a name="built-in-help-system"></a><span data-ttu-id="51f0b-175">Sistema de ajuda interno</span><span class="sxs-lookup"><span data-stu-id="51f0b-175">Built-in help system</span></span>
-
-<span data-ttu-id="51f0b-176">Semelhante às páginas `man` do UNIX, o PowerShell inclui artigos de ajuda detalhados que explicam os conceitos e a sintaxe de comando do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-176">Similar to Unix `man` pages, PowerShell includes detailed help articles that explain PowerShell concepts and command syntax.</span></span> <span data-ttu-id="51f0b-177">Use o cmdlet [Get-Help][] para exibir esses artigos no prompt de comando ou confira as versões mais atualizadas deles na documentação online do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="51f0b-177">Use the [Get-Help][] cmdlet to display these articles at the command prompt or view the most recently updated versions of these articles in the PowerShell documentation online.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="51f0b-178">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="51f0b-178">Next steps</span></span>
-
-<span data-ttu-id="51f0b-179">Para saber mais sobre o PowerShell, confira a seção **Aprendendo a usar o PowerShell** deste site.</span><span class="sxs-lookup"><span data-stu-id="51f0b-179">To learn more about PowerShell, see the **Learning PowerShell** section of this site.</span></span>
+- <span data-ttu-id="25b21-143">[Comunicação remota do PowerShell por SSH][remoting]</span><span class="sxs-lookup"><span data-stu-id="25b21-143">[PowerShell remoting over SSH][remoting]</span></span>
+- <span data-ttu-id="25b21-144">[Introdução ao Azure PowerShell][azure]</span><span class="sxs-lookup"><span data-stu-id="25b21-144">[Getting started with Azure PowerShell][azure]</span></span>
+- <span data-ttu-id="25b21-145">[Criar um pipeline de CI/CD com o DSC][devops]</span><span class="sxs-lookup"><span data-stu-id="25b21-145">[Building a CI/CD pipeline with DSC][devops]</span></span>
+- <span data-ttu-id="25b21-146">[Gerenciar o Microsoft Exchange][exchange]</span><span class="sxs-lookup"><span data-stu-id="25b21-146">[Managing Microsoft Exchange][exchange]</span></span>
 
 <!-- link references -->
 
-[Get-Help]: /powershell/module/microsoft.powershell.core/Get-Help
+[história]: /powershell/module/microsoft.powershell.core/about/about_history
+[history]: /powershell/module/microsoft.powershell.core/about/about_history
+[about_PSReadLine]: /powershell/module/psreadline/about/about_psreadline
+[aliases]: /powershell/module/microsoft.powershell.core/about/about_aliases
+[Pipeline]: /powershell/module/microsoft.powershell.core/about/about_pipelines
+[help]: /powershell/module/microsoft.powershell.core/get-help
+[modules]: /powershell/module/microsoft.powershell.core/about/about_modules
+[funções]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
+[functions]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
+[classes]: /powershell/module/microsoft.powershell.core/about/about_classes
+[scripts]: /powershell/module/microsoft.powershell.core/about/about_scripts
+[formatting]: /powershell/module/microsoft.powershell.core/about/about_format.ps1xml
+[types]: /powershell/module/microsoft.powershell.core/about/about_types.ps1xml
+[CSV]: /powershell/module/microsoft.powershell.utility/convertfrom-csv
+[JSON]: /powershell/module/microsoft.powershell.utility/convertfrom-json
+[XML]: /powershell/module/microsoft.powershell.utility/convertto-xml
+[configurações]: /powershell/scripting/dsc/configurations/configurations
+[configurations]: /powershell/scripting/dsc/configurations/configurations
+[DSC]: /powershell/scripting/dsc/overview/dscforengineers
+[push-pull]: /powershell/scripting/dsc/pull-server/enactingconfigurations
+[install]: /powershell/scripting/install/installing-powershell
+[PS101]: /powershell/scripting/learn/ps101/00-introduction
+[tutorials]: /powershell/scripting/learn/tutorials/00-introduction
+[learn]: /learn/browse/?terms=PowerShell
+[azure]: /powershell/azure/get-started-azureps
+[devops]: /azure/devops/pipelines/release/dsc-cicd
+[exchange]: /powershell/exchange/exchange-management-shell
+[remoting]: /powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core
