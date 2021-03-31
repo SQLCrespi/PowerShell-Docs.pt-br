@@ -7,12 +7,12 @@ ms.date: 04/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-typedata?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TypeData
-ms.openlocfilehash: 0a935f03e479ed84fa8167f7c4c29e91bd774009
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bcd324c699eb48a9be4efd574dd8f1a3693db2d8
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193571"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936675"
 ---
 # Get-TypeData
 
@@ -47,20 +47,19 @@ Este exemplo obtém todos os dados de tipo estendido na sessão atual.
 Get-TypeData
 ```
 
-### Exemplo 2: obter tipos por nome
+### Exemplo 2: obter dados de tipo por nome
 
-Este exemplo obtém todos os tipos na sessão atual que têm nomes que contêm eventos.
+Este exemplo obtém todos os dados de tipo na sessão atual cujo nome é qualificado com "System.IO".
 
- ```powershell
-"*Eventing*" | Get-TypeData
+```powershell
+Get-TypeData -TypeName System.IO.*
 ```
 
 ```Output
-TypeName                                                  Members
---------                                                  -------
-System.Diagnostics.Eventing.Reader.EventLogConfiguration  {}System.Diagnostics.Eventing.Reader.EventLogRecord
-                                                          {}System.Diagnostics.Eventing.Reader.ProviderMetadata
-                                                          {[ProviderName, System.Management.Automation.Runspaces.AliasProper...
+TypeName                Members
+--------                -------
+System.IO.DirectoryInfo {[Mode, System.Management.Automation.Runspaces.CodePropert…
+System.IO.FileInfo      {[Mode, System.Management.Automation.Runspaces.CodePropert…
 ```
 
 ### Exemplo 3: obter o bloco de script que cria um valor de propriedade
@@ -94,7 +93,7 @@ else {
 }
 ```
 
-O comando usa o `Get-TypeData` cmdlet para obter os dados de tipo estendido para o tipo **System. DataTime** . O comando obtém a propriedade **Members** do objeto **TypeData** .
+O comando usa o `Get-TypeData` cmdlet para obter os dados de tipo estendido para o tipo **System. DataTime** . O comando obtém a propriedade **Members** do objeto **TypeData**.
 
 A propriedade **Members** contém uma tabela de hash de propriedades e métodos que são definidos por dados de tipo estendido. Cada chave na tabela de hash Members é um nome de propriedade ou método, e cada valor é a definição do valor de propriedade ou método.
 

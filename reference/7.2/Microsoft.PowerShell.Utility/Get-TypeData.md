@@ -6,12 +6,12 @@ ms.date: 04/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-typedata?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TypeData
-ms.openlocfilehash: db5dc586f2a165d83c25bdf2addaeb625f9e1ba0
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: a4f7106bfeadc963a265f5fb239f9fa6bab40800
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99597998"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936505"
 ---
 # Get-TypeData
 
@@ -46,20 +46,19 @@ Este exemplo obtém todos os dados de tipo estendido na sessão atual.
 Get-TypeData
 ```
 
-### Exemplo 2: obter tipos por nome
+### Exemplo 2: obter dados de tipo por nome
 
-Este exemplo obtém todos os tipos na sessão atual que têm nomes que contêm eventos.
+Este exemplo obtém todos os dados de tipo na sessão atual cujo nome é qualificado com "System.IO".
 
- ```powershell
-"*Eventing*" | Get-TypeData
+```powershell
+Get-TypeData -TypeName System.IO.*
 ```
 
 ```Output
-TypeName                                                  Members
---------                                                  -------
-System.Diagnostics.Eventing.Reader.EventLogConfiguration  {}System.Diagnostics.Eventing.Reader.EventLogRecord
-                                                          {}System.Diagnostics.Eventing.Reader.ProviderMetadata
-                                                          {[ProviderName, System.Management.Automation.Runspaces.AliasProper...
+TypeName                Members
+--------                -------
+System.IO.DirectoryInfo {[Mode, System.Management.Automation.Runspaces.CodePropert…
+System.IO.FileInfo      {[Mode, System.Management.Automation.Runspaces.CodePropert…
 ```
 
 ### Exemplo 3: obter o bloco de script que cria um valor de propriedade

@@ -1,16 +1,16 @@
 ---
 description: Descreve as variáveis que armazenam informações de estado do PowerShell. Essas variáveis são criadas e mantidas pelo PowerShell.
 Locale: en-US
-ms.date: 03/15/2021
+ms.date: 03/29/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 8267b71c8d5103bcaa915b664ee9f1746d0045bb
-ms.sourcegitcommit: 15f759ca68d17acecab46b52250298d4f2037c4d
+ms.openlocfilehash: a439ba5e678c68dcd25b79ea898ed7a157c851b5
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103575637"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936642"
 ---
 # <a name="about-automatic-variables"></a>Sobre variáveis automáticas
 
@@ -171,6 +171,9 @@ A `Matches` variável funciona com os `-match` `-notmatch` operadores e.
 Quando você envia a entrada escalar para `-match` o `-notmatch` operador OR e qualquer uma detecta uma correspondência, elas retornam um valor booliano e preenchem a `$Matches` variável automática com uma tabela de hash de quaisquer valores de cadeia de caracteres que foram correspondidos. A `$Matches` tabela de hash também pode ser populada com capturas quando você usa expressões regulares com o `-match` operador.
 
 Para obter mais informações sobre o `-match` operador, consulte [about_Comparison_Operators](about_comparison_operators.md). Para obter mais informações sobre expressões regulares, consulte [about_Regular_Expressions](about_Regular_Expressions.md).
+
+A `$Matches` variável também funciona em uma `switch` instrução com o `-Regex` parâmetro. Ele é populado da mesma forma que os `-match` `-notmatch` operadores e.
+Para obter mais informações sobre a `switch` instrução, consulte [about_Switch](about_Switch.md).
 
 ### <a name="myinvocation"></a>$MyInvocation
 
