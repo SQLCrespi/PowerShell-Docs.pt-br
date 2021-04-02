@@ -1,16 +1,16 @@
 ---
 description: Descreve como usar operadores para atribuir valores a variáveis.
 Locale: en-US
-ms.date: 04/26/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Assignment_Operators
-ms.openlocfilehash: 73c8937c74971160a3a1c714131108c87f2fa848
-ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
+ms.openlocfilehash: 39b3963b924327234e0dae600fd2acefbe6884a7
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103195907"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072236"
 ---
 # <a name="about-assignment-operators"></a>Sobre operadores de atribuição
 
@@ -39,7 +39,7 @@ O PowerShell dá suporte aos seguintes operadores de atribuição.
 |--      |Diminui o valor de uma variável, Propriedade atribuível ou   |
 |        |elemento de matriz em 1.                                          |
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 A sintaxe dos operadores de atribuição é a seguinte:
 
@@ -665,7 +665,9 @@ Tuesday, May 31, 2005 12:00:00 AM
 
 ## <a name="assigning-multiple-variables"></a>Atribuindo várias variáveis
 
-No PowerShell, você pode atribuir valores a várias variáveis usando um único comando. O primeiro elemento do valor de atribuição é atribuído à primeira variável, o segundo elemento é atribuído à segunda variável, o terceiro elemento à terceira variável e assim por diante. Por exemplo, o comando a seguir atribui o valor 1 à `$a` variável, o valor 2 à `$b` variável e o valor 3 à `$c` variável:
+No PowerShell, você pode atribuir valores a várias variáveis usando um único comando. O primeiro elemento do valor de atribuição é atribuído à primeira variável, o segundo elemento é atribuído à segunda variável, o terceiro elemento à terceira variável e assim por diante. Isso é conhecido como _várias atribuições_.
+
+Por exemplo, o comando a seguir atribui o valor 1 à `$a` variável, o valor 2 à `$b` variável e o valor 3 à `$c` variável:
 
 ```powershell
 $a, $b, $c = 1, 2, 3
@@ -686,13 +688,13 @@ $d, $e, $f = $c
 
 Esse comando atribui o valor 3 à `$d` variável, o valor 4 à `$e` variável e o valor 5 à `$f` variável.
 
-Se o valor de atribuição contiver menos elementos que variáveis, todas as variáveis restantes no final não serão atribuídas a nenhum valor. Por exemplo, o comando a seguir contém três variáveis e dois valores:
+Se o valor de atribuição contiver menos elementos que variáveis, as variáveis restantes receberão o valor `$null` . Por exemplo, o comando a seguir contém três variáveis e dois valores:
 
 ```powershell
 $a, $b, $c = 1, 2
 ```
 
-Portanto, o PowerShell atribui o valor 1 à `$a` variável e o valor 2 à `$b` variável. Ele não atribuirá nenhum valor à `$c` variável.
+Portanto, o PowerShell atribui o valor 1 à `$a` variável e o valor 2 à `$b` variável. A `$c` variável é `$null` .
 
 Você também pode atribuir um único valor a várias variáveis encadeando as variáveis. Por exemplo, o comando a seguir atribui um valor de "três" a todas as quatro variáveis:
 
@@ -721,4 +723,3 @@ Set-Variable -Name a -Value 1, 2, 3
 [Remove-Variable](xref:Microsoft.PowerShell.Utility.Remove-Variable)
 
 [Set-Variable](xref:Microsoft.PowerShell.Utility.Set-Variable)
-

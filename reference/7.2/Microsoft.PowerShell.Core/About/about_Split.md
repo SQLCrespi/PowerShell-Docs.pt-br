@@ -1,16 +1,16 @@
 ---
 description: Explica como usar o operador split para dividir uma ou mais cadeias de caracteres em subcadeias.
 Locale: en-US
-ms.date: 03/24/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Split
-ms.openlocfilehash: c7944c710ae3b6803772de77f50b639de4953340
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 08c6e3e049cb107c2f1745ca6796b88a063b897b
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99596000"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072760"
 ---
 # <a name="about-split"></a>Sobre divisão
 
@@ -60,7 +60,7 @@ green
 
 Os caracteres que identificam o final de uma subcadeia de caracteres. O delimitador padrão é espaço em branco, incluindo espaços e caracteres não imprimíveis, como nova linha ( \` n) e tabulação ( \` t). Quando as cadeias de caracteres são divididas, o delimitador é omitido de todas as subcadeias de caracteres. Exemplo:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split ":"
 Lastname
 FirstName
@@ -68,11 +68,11 @@ Address
 ```
 
 Por padrão, o delimitador é omitido dos resultados. Para preservar todo ou parte do delimitador, coloque entre parênteses a parte que você deseja preservar.
-Se o \<Max-substrings\> parâmetro for adicionado, isso terá precedência quando o comando dividir a coleção. Se você optar por incluir um delimitador como parte da saída, o comando retornará o delimitador como parte da saída; no entanto, dividir a cadeia de caracteres para retornar o delimitador como parte da saída não conta como uma divisão.
+Se o `<Max-substrings>` parâmetro for adicionado, isso terá precedência quando o comando dividir a coleção. Se você optar por incluir um delimitador como parte da saída, o comando retornará o delimitador como parte da saída; no entanto, dividir a cadeia de caracteres para retornar o delimitador como parte da saída não conta como uma divisão.
 
 Exemplos:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split "(:)"
 Lastname
 :
@@ -88,29 +88,9 @@ FirstName
 Address
 ```
 
-No exemplo a seguir, \<Max-substrings\> é definido como 3. Isso resulta em três divisões dos valores de cadeia de caracteres, mas um total de cinco cadeias na saída resultante; o delimitador é incluído após as divisões, até que o máximo de três subcadeias de caracteres seja atingido. Delimitadores adicionais na Subcadeia de caracteres final tornam-se parte da subcadeia de caracteres.
+### `<Max-substrings>`
 
-```powershell
-'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
-```
-
-```Output
-Chocolate
--
-Vanilla
--
-Strawberry-Blueberry
-```
-
-### \<Max-substrings\>
-
-Especifica o número máximo de vezes que uma cadeia de caracteres é dividida. O padrão é todas as subcadeias de caracteres divididas pelo delimitador. Se houver mais subcadeias de caracteres, elas serão concatenadas à subcadeia de caracteres final. Se houver menos subcadeias de caracteres, todas as subcadeias de caracteres serão retornadas. Um valor de 0 retorna todas as subcadeias de caracteres. Valores negativos retornam a quantidade de subcadeias de caracteres solicitadas a partir do final da cadeia de caracteres de entrada.
-
-> [!NOTE]
-> O suporte para valores negativos foi adicionado no PowerShell 7.
-
-**Max-subcadeias de caracteres** não especifica o número máximo de objetos retornados. Seu valor é igual ao número máximo de vezes que uma cadeia de caracteres é dividida.
-Se você enviar mais de uma cadeia de caracteres (uma matriz de cadeias de caracteres) para o `-split` operador, o limite máx. de **subcadeias de caracteres** será aplicado a cada cadeia de caracteres separadamente.
+Especifica o número máximo de subcadeias de caracteres retornado pela operação de divisão. O padrão é todas as subcadeias de caracteres divididas pelo delimitador. Se houver mais subcadeias de caracteres, elas serão concatenadas à subcadeia de caracteres final. Se houver menos subcadeias de caracteres, todas as subcadeias serão retornadas. Um valor de 0 retorna todas as subcadeias de caracteres.
 
 Exemplo:
 
@@ -126,6 +106,40 @@ Earth
 Mars
 Jupiter,Saturn,Uranus,Neptune
 ```
+
+Se você enviar mais de uma cadeia de caracteres (uma matriz de cadeias de caracteres) para o `-split` operador, o `Max-substrings` limite será aplicado a cada cadeia de caracteres separadamente.
+
+```powershell
+$c = 'a,b,c','1,2,3,4,5'
+$c -split ',', 3
+
+a
+b
+c
+1
+2
+3,4,5
+```
+
+`<Max-substrings>` não especifica o número máximo de objetos retornados. No exemplo a seguir, `<Max-substrings>` é definido como 3.
+Isso resulta em três valores de subcadeias de caracteres, mas um total de cinco cadeias de caracteres na saída resultante. O delimitador é incluído após as divisões até que o máximo de três subcadeias de caracteres seja atingido. Delimitadores adicionais na Subcadeia de caracteres final tornam-se parte da subcadeia de caracteres.
+
+```powershell
+'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
+```
+
+```Output
+Chocolate
+-
+Vanilla
+-
+Strawberry-Blueberry
+```
+
+Valores negativos retornam a quantidade de subcadeias de caracteres solicitadas a partir do final da cadeia de caracteres de entrada.
+
+> [!NOTE]
+> O suporte para valores negativos foi adicionado no PowerShell 7.
 
 ```powershell
 $c = "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"
@@ -183,7 +197,7 @@ As opções de SimpleMatch são:
 
 As opções de RegexMatch são:
 
-- **RegexMatch**: Use a correspondência de expressão regular para avaliar o delimitador. Este é o comportamento padrão. Não pode ser usado com SimpleMatch.
+- **RegexMatch**: Use a correspondência de expressão regular para avaliar o delimitador. Esse é o comportamento padrão. Não pode ser usado com SimpleMatch.
 - **IgnoreCase**: força a correspondência que não diferencia maiúsculas de minúsculas, mesmo que o operador-csplit seja especificado.
 - **CultureInvariant**: ignora diferenças culturais em linguagem quando evaluting o delimitador. Válido somente com RegexMatch.
 - **IgnorePatternWhitespace**: ignora o espaço em branco e os comentários sem escape marcados com o sinal numérico (#). Válido somente com RegexMatch.
@@ -443,4 +457,3 @@ LastName, FirstName
 [about_Comparison_Operators](about_Comparison_Operators.md)
 
 [about_Join](about_Join.md)
-

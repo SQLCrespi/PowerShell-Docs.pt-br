@@ -1,29 +1,27 @@
 ---
 description: Explica como usar o operador split para dividir uma ou mais cadeias de caracteres em subcadeias.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 12/20/2017
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Split
-ms.openlocfilehash: e93f68265bf560b03ac503ca914a11dde1f6b061
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1667964840c0ead67ccd72aac4697779b84f864e
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93195959"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072639"
 ---
 # <a name="about-split"></a>Sobre divisão
 
 ## <a name="short-description"></a>DESCRIÇÃO BREVE
-
 Explica como usar o operador split para dividir uma ou mais cadeias de caracteres em subcadeias.
 
 ## <a name="long-description"></a>DESCRIÇÃO LONGA
 
 O operador Split divide uma ou mais cadeias de caracteres em subcadeias. Você pode alterar os seguintes elementos da operação Split:
 
-- Delimitador. O padrão é espaço em branco, mas você pode especificar caracteres, cadeias, padrões ou blocos de script que especificam o delimitador. O operador split no Windows PowerShell usa uma expressão regular no delimitador, em vez de um caractere simples.
+- Delimitador. O padrão é espaço em branco, mas você pode especificar caracteres, cadeias, padrões ou blocos de script que especificam o delimitador. O operador split no PowerShell usa uma expressão regular no delimitador, em vez de um caractere simples.
 - Número máximo de subcadeias de caracteres. O padrão é retornar todas as subcadeias de caracteres. Se você especificar um número menor que o número de subcadeias de caracteres, as subcadeias restantes serão concatenadas na última subcadeia de caracteres.
 - Opções que especificam as condições sob as quais o delimitador é correspondido, como SimpleMatch e Multiline.
 
@@ -62,7 +60,7 @@ green
 
 Os caracteres que identificam o final de uma subcadeia de caracteres. O delimitador padrão é espaço em branco, incluindo espaços e caracteres não imprimíveis, como nova linha ( \` n) e tabulação ( \` t). Quando as cadeias de caracteres são divididas, o delimitador é omitido de todas as subcadeias de caracteres. Exemplo:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split ":"
 Lastname
 FirstName
@@ -70,11 +68,11 @@ Address
 ```
 
 Por padrão, o delimitador é omitido dos resultados. Para preservar todo ou parte do delimitador, coloque entre parênteses a parte que você deseja preservar.
-Se o \<Max-substrings\> parâmetro for adicionado, isso terá precedência quando o comando dividir a coleção. Se você optar por incluir um delimitador como parte da saída, o comando retornará o delimitador como parte da saída; no entanto, dividir a cadeia de caracteres para retornar o delimitador como parte da saída não conta como uma divisão.
+Se o `<Max-substrings>` parâmetro for adicionado, isso terá precedência quando o comando dividir a coleção. Se você optar por incluir um delimitador como parte da saída, o comando retornará o delimitador como parte da saída; no entanto, dividir a cadeia de caracteres para retornar o delimitador como parte da saída não conta como uma divisão.
 
 Exemplos:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split "(:)"
 Lastname
 :
@@ -90,26 +88,9 @@ FirstName
 Address
 ```
 
-No exemplo a seguir, \<Max-substrings\> é definido como 3. Isso resulta em três divisões dos valores de cadeia de caracteres, mas um total de cinco cadeias na saída resultante; o delimitador é incluído após as divisões, até que o máximo de três subcadeias de caracteres seja atingido. Delimitadores adicionais na Subcadeia de caracteres final tornam-se parte da subcadeia de caracteres.
+### `<Max-substrings>`
 
-```powershell
-'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
-```
-
-```output
-Chocolate
--
-Vanilla
--
-Strawberry-Blueberry
-```
-
-### \<Max-substrings\>
-
-Especifica o número máximo de vezes que uma cadeia de caracteres é dividida. O padrão é todas as subcadeias de caracteres divididas pelo delimitador. Se houver mais subcadeias de caracteres, elas serão concatenadas à subcadeia de caracteres final. Se houver menos subcadeias de caracteres, todas as subcadeias de caracteres serão retornadas. Um valor de 0 e valores negativos retornam todas as subcadeias de caracteres.
-
-Max-subcadeias de caracteres não especifica o número máximo de objetos retornados; seu valor é igual ao número máximo de vezes que uma cadeia de caracteres é dividida.
-Se você enviar mais de uma cadeia de caracteres (uma matriz de cadeias de caracteres) para o operador de divisão, o limite máx. de subcadeias de caracteres será aplicado a cada cadeia de caracteres separadamente.
+Especifica o número máximo de subcadeias de caracteres retornado pela operação de divisão. O padrão é todas as subcadeias de caracteres divididas pelo delimitador. Se houver mais subcadeias de caracteres, elas serão concatenadas à subcadeia de caracteres final. Se houver menos subcadeias de caracteres, todas as subcadeias serão retornadas. Um valor de 0 retorna todas as subcadeias de caracteres.
 
 Exemplo:
 
@@ -118,13 +99,45 @@ $c = "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"
 $c -split ",", 5
 ```
 
-```output
+```Output
 Mercury
 Venus
 Earth
 Mars
 Jupiter,Saturn,Uranus,Neptune
 ```
+
+Se você enviar mais de uma cadeia de caracteres (uma matriz de cadeias de caracteres) para o `-split` operador, o `Max-substrings` limite será aplicado a cada cadeia de caracteres separadamente.
+
+```powershell
+$c = 'a,b,c','1,2,3,4,5'
+$c -split ',', 3
+
+a
+b
+c
+1
+2
+3,4,5
+```
+
+`<Max-substrings>` não especifica o número máximo de objetos retornados. No exemplo a seguir, `<Max-substrings>` é definido como 3.
+Isso resulta em três valores de subcadeias de caracteres, mas um total de cinco cadeias de caracteres na saída resultante. O delimitador é incluído após as divisões até que o máximo de três subcadeias de caracteres seja atingido. Delimitadores adicionais na Subcadeia de caracteres final tornam-se parte da subcadeia de caracteres.
+
+```powershell
+'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
+```
+
+```Output
+Chocolate
+-
+Vanilla
+-
+Strawberry-Blueberry
+```
+
+Valores negativos são ignorados.
+
 
 ### \<ScriptBlock\>
 
@@ -137,7 +150,7 @@ $c = "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"
 $c -split {$_ -eq "e" -or $_ -eq "p"}
 ```
 
-```output
+```Output
 M
 rcury,V
 nus,
@@ -164,19 +177,19 @@ A sintaxe para o parâmetro options é:
 
 As opções de SimpleMatch são:
 
-- **SimpleMatch** : Use a comparação de cadeia de caracteres simples ao avaliar o delimitador. Não pode ser usado com RegexMatch.
-- **IgnoreCase** : força a correspondência que não diferencia maiúsculas de minúsculas, mesmo que o operador-csplit seja especificado.
+- **SimpleMatch**: Use a comparação de cadeia de caracteres simples ao avaliar o delimitador. Não pode ser usado com RegexMatch.
+- **IgnoreCase**: força a correspondência que não diferencia maiúsculas de minúsculas, mesmo que o operador-csplit seja especificado.
 
 As opções de RegexMatch são:
 
-- **RegexMatch** : Use a correspondência de expressão regular para avaliar o delimitador. Esse é o comportamento padrão. Não pode ser usado com SimpleMatch.
-- **IgnoreCase** : força a correspondência que não diferencia maiúsculas de minúsculas, mesmo que o operador-csplit seja especificado.
-- **CultureInvariant** : ignora diferenças culturais em linguagem quando evaluting o delimitador. Válido somente com RegexMatch.
-- **IgnorePatternWhitespace** : ignora o espaço em branco e os comentários sem escape marcados com o sinal numérico (#). Válido somente com RegexMatch.
-- **Multiline** : o modo multilinha força `^` e `$` corresponde à extremidade inicial de cada linha em vez do início e do fim da cadeia de caracteres de entrada.
-- **Unificação** : o modo de única trata a cadeia de caracteres de entrada como uma *única* .
+- **RegexMatch**: Use a correspondência de expressão regular para avaliar o delimitador. Esse é o comportamento padrão. Não pode ser usado com SimpleMatch.
+- **IgnoreCase**: força a correspondência que não diferencia maiúsculas de minúsculas, mesmo que o operador-csplit seja especificado.
+- **CultureInvariant**: ignora diferenças culturais em linguagem quando evaluting o delimitador. Válido somente com RegexMatch.
+- **IgnorePatternWhitespace**: ignora o espaço em branco e os comentários sem escape marcados com o sinal numérico (#). Válido somente com RegexMatch.
+- **Multiline**: o modo multilinha força `^` e `$` corresponde à extremidade inicial de cada linha em vez do início e do fim da cadeia de caracteres de entrada.
+- **Unificação**: o modo de única trata a cadeia de caracteres de entrada como uma *única*.
   Ele força o `.` caractere a corresponder a cada caractere (incluindo novas linhas), em vez de corresponder a cada caractere, exceto a nova linha `\n` .
-- **ExplicitCapture** : ignora grupos de correspondências não nomeados para que apenas grupos de captura explícitos sejam retornados na lista de resultados. Válido somente com RegexMatch.
+- **ExplicitCapture**: ignora grupos de correspondências não nomeados para que apenas grupos de captura explícitos sejam retornados na lista de resultados. Válido somente com RegexMatch.
 
 > [!NOTE]
 > A única é o comportamento padrão. Uni e Multiline não podem ser usadas junto com o parâmetro options. Isso foi resolvido no PowerShell 6,0.
@@ -235,7 +248,7 @@ A instrução a seguir divide a cadeia de caracteres em espaço em branco.
 -split "Windows PowerShell 2.0`nWindows PowerShell with remoting"
 ```
 
-```output
+```Output
 
 Windows
 PowerShell
@@ -252,7 +265,7 @@ A instrução a seguir divide a cadeia de caracteres em qualquer vírgula.
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split ','
 ```
 
-```output
+```Output
 Mercury
 Venus
 Earth
@@ -269,7 +282,7 @@ A instrução a seguir divide a cadeia de caracteres no padrão "er".
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split 'er'
 ```
 
-```output
+```Output
 M
 cury,Venus,Earth,Mars,Jupit
 ,Saturn,Uranus,Neptune
@@ -281,7 +294,7 @@ A instrução a seguir executa uma divisão com diferenciação de maiúsculas e
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -cSplit 'N'
 ```
 
-```output
+```Output
 Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,
 eptune
 ```
@@ -292,7 +305,7 @@ A instrução a seguir divide a cadeia de caracteres em "e" e "t".
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split '[et]'
 ```
 
-```output
+```Output
 M
 rcury,V
 nus,
@@ -311,7 +324,7 @@ A instrução a seguir divide a cadeia de caracteres em "e" e "r", mas limita as
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split '[er]', 6
 ```
 
-```output
+```Output
 M
 
 cu
@@ -326,7 +339,7 @@ A instrução a seguir divide uma cadeia de caracteres em três subcadeias.
 "a,b,c,d,e,f,g,h" -split ",", 3
 ```
 
-```output
+```Output
 a
 b
 c,d,e,f,g,h
@@ -339,7 +352,7 @@ A instrução a seguir divide duas cadeias de caracteres em três subcadeias.
 "a,b,c,d", "e,f,g,h" -split ",", 3
 ```
 
-```output
+```Output
 a
 b
 c,d
@@ -378,7 +391,7 @@ Com o padrão, RegexMatch, o ponto entre aspas (".") é interpretado para corres
 "This.is.a.test" -split "\."
 ```
 
-```output
+```Output
 This
 is
 a
@@ -393,7 +406,7 @@ O 0 representa o valor de "retornar tudo" do parâmetro Max-substrings. Você po
 "This.is.a.test" -split ".", 0, "simplematch"
 ```
 
-```output
+```Output
 This
 is
 a
@@ -408,7 +421,7 @@ $c = "LastName, FirstName; Address, City, State, Zip"
 $c -split $(if ($i -lt 1) {","} else {";"})
 ```
 
-```output
+```Output
 LastName, FirstName
  Address, City, State, Zip
 ```

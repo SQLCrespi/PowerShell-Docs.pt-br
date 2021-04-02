@@ -1,16 +1,16 @@
 ---
 description: Descreve como as variáveis armazenam valores que podem ser usados no PowerShell.
 Locale: en-US
-ms.date: 11/09/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 8d8c8d3098d33980c9c802bf00846a21e8baeb40
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 9c9c9aa7604a39aa0cc84ec252334649965f6941
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603546"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072660"
 ---
 # <a name="about-variables"></a>Sobre variáveis
 
@@ -127,6 +127,21 @@ Remove-Variable -Name MyVariable
 ```powershell
 Remove-Item -Path Variable:\MyVariable
 ```
+
+Também é possível valores para várias variáveis com uma instrução. Os exemplos a seguir atribui o mesmo valor a várias variáveis:
+
+```powershell
+$a = $b = $c = 0
+```
+
+O exemplo a seguir atribui vários valores a várias variáveis.
+
+```powershell
+$i,$j,$k = 10, "red", $true    # $i is 10, $j is "red", $k is True
+$i,$j = 10, "red", $true       # $i is 10, $j is [object[]], Length 2
+```
+
+Para obter informações mais detalhadas, consulte a seção **atribuindo várias variáveis** de [about_assignment_operators](about_assignment_operators.md#assigning-multiple-variables).
 
 ## <a name="types-of-variables"></a>Tipos de variáveis
 
@@ -402,7 +417,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | Exclui uma variável e seu valor.          |
 | `Set-Variable`    | Altera o valor de uma variável.           |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 
@@ -417,4 +432,3 @@ Get-Help <cmdlet-name>
 [about_Scopes](about_Scopes.md)
 
 [about_Remote_Variables](about_Remote_Variables.md)
-

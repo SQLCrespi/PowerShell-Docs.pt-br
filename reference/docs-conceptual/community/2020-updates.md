@@ -1,13 +1,13 @@
 ---
-title: Novidades na documentação do PowerShell para o quarto trimestre de 2020
-description: Lista de alterações na documentação do PowerShell para o quarto trimestre de 2020
+title: O que há de novo nos documentos do PowerShell para 2020
+description: Lista de alterações na documentação do PowerShell para 2020
 ms.date: 01/05/2021
-ms.openlocfilehash: 2ac4a2e23ebed7cf1d371c29ceada661bc9a9bc3
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: cb6e5a7f6e843619e720264b6ecd80458ba133af
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685550"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072537"
 ---
 # <a name="whats-new-in-powershell-docs-for-2020"></a>O que há de novo nos documentos do PowerShell para 2020
 

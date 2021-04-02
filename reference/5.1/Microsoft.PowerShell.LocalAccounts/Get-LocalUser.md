@@ -7,12 +7,12 @@ ms.date: 02/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.localaccounts/get-localuser?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-LocalUser
-ms.openlocfilehash: 34210145bcddc8d9420552d637a6cd6e5f8e61cc
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2b1831a854c4c61d4c4631ae475a59d8240a926b
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193288"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072257"
 ---
 # Get-LocalUser
 
@@ -70,7 +70,7 @@ Name                                    Enabled  Description
 MicrosoftAccount\username@outlook.com  True     Description of this account.
 ```
 
-### Exemplo 3: obter uma conta que está conectada a um conta Microsoft
+### Exemplo 3: obter uma conta que tenha o SID especificado
 
 Este exemplo obtém uma conta de usuário local que tem o SID especificado.
 
@@ -136,7 +136,7 @@ Esse cmdlet retorna contas de usuário local.
 
 ## OBSERVAÇÕES
 
-A propriedade **Principado** nos objetos **LocalUser** , **local** e **LocalPrincipal** descreve a origem do objeto. As fontes possíveis são as seguintes:
+A propriedade **Principado** nos objetos **LocalUser**, **local** e **LocalPrincipal** descreve a origem do objeto. As fontes possíveis são as seguintes:
 
 - Local
 - Active Directory

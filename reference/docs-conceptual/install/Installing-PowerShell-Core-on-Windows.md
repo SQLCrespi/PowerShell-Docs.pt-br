@@ -1,13 +1,13 @@
 ---
 title: Instalar o PowerShell no Windows
 description: Informações sobre a instalação do PowerShell no Windows
-ms.date: 02/02/2021
-ms.openlocfilehash: bd3643c1ca6beb60a8727478a1ae612dcb34c7fb
-ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
+ms.date: 03/30/2021
+ms.openlocfilehash: 7e21a34ea4dd74d2d8a9108393009c9c2660dff9
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103483429"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072707"
 ---
 # <a name="installing-powershell-on-windows"></a>Instalar o PowerShell no Windows
 
@@ -211,7 +211,7 @@ Se você já tiver o [SDK do .NET Core](/dotnet/core/sdk) instalado, será fáci
 dotnet tool install --global PowerShell
 ```
 
-O instalador da ferramenta dotnet adiciona `$env:USERPROFILE\dotnet\tools` à sua variável de ambiente `$env:PATH`. No entanto, o shell atualmente em execução não tem o `$env:PATH` atualizado. Você pode iniciar o PowerShell em um novo shell digitando `pwsh`.
+O instalador da ferramenta dotnet adiciona `$env:USERPROFILE\.dotnet\tools` à sua variável de ambiente `$env:PATH`. No entanto, o shell atualmente em execução não tem o `$env:PATH` atualizado. Você pode iniciar o PowerShell em um novo shell digitando `pwsh`.
 
 ## <a name="install-powershell-via-winget"></a>Instalar o PowerShell por meio do Winget
 

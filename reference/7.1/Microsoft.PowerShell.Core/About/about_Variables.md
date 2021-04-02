@@ -1,17 +1,16 @@
 ---
 description: Descreve como as variáveis armazenam valores que podem ser usados no PowerShell.
-keywords: powershell, cmdlet
 Locale: en-US
-ms.date: 11/09/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 858015f42ff58baf653d8d0f1502df0f7ed4a63f
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 691f6607c239cc8104daab55a380c1b64c5ba2ac
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483087"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072450"
 ---
 # <a name="about-variables"></a>Sobre variáveis
 
@@ -128,6 +127,21 @@ Remove-Variable -Name MyVariable
 ```powershell
 Remove-Item -Path Variable:\MyVariable
 ```
+
+Também é possível valores para várias variáveis com uma instrução. Os exemplos a seguir atribui o mesmo valor a várias variáveis:
+
+```powershell
+$a = $b = $c = 0
+```
+
+O exemplo a seguir atribui vários valores a várias variáveis.
+
+```powershell
+$i,$j,$k = 10, "red", $true    # $i is 10, $j is "red", $k is True
+$i,$j = 10, "red", $true       # $i is 10, $j is [object[]], Length 2
+```
+
+Para obter informações mais detalhadas, consulte a seção **atribuindo várias variáveis** de [about_assignment_operators](about_assignment_operators.md#assigning-multiple-variables).
 
 ## <a name="types-of-variables"></a>Tipos de variáveis
 
@@ -250,7 +264,7 @@ A prática recomendada é que os nomes de variáveis incluam apenas caracteres a
 
 Os nomes de variáveis alfanuméricas podem conter estes caracteres:
 
-- Caracteres Unicode destas categorias: **Lu** , **ll** , **lt** , **LM** , **lo** ou **ND**.
+- Caracteres Unicode destas categorias: **Lu**, **ll**, **lt**, **LM**, **lo** ou **ND**.
 - Caractere de sublinhado ( `_` ).
 - Caractere de ponto de interrogação ( `?` ).
 
@@ -260,7 +274,7 @@ A lista a seguir contém as descrições de categoria Unicode. Para obter mais i
 - **Ll** -LowercaseLetter
 - **Lt** -TitlecaseLetter
 - **LM** -ModifierLetter
-- **Lo** OtherLetter
+-  OtherLetter
 - **ND** -DecimalDigitNumber
 
 Para criar ou exibir um nome de variável que inclua espaços ou caracteres especiais, coloque o nome da variável com os caracteres de chaves ( `{}` ).
@@ -418,4 +432,3 @@ Get-Help <cmdlet-name>
 [about_Scopes](about_Scopes.md)
 
 [about_Remote_Variables](about_Remote_Variables.md)
-
