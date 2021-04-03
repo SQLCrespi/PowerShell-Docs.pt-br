@@ -4,15 +4,15 @@ Help Version: 7.2.0.0
 Locale: en-US
 Module Guid: 1da87e53-152b-403e-98dc-74d7b4d63d59
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Microsoft.PowerShell.Utility
-ms.openlocfilehash: 152296dcf2a5c75c94276630e2ef696e67674c40
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 8399503e1d3aea59196807782f8b79d82dc3b125
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99597820"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274403"
 ---
 # Módulo Microsoft.PowerShell.Utility
 
@@ -26,7 +26,7 @@ Esta seção contém os tópicos de ajuda para os cmdlets instalados com o módu
 Adiciona propriedades e métodos personalizados a uma instância de um objeto do PowerShell.
 
 ### [Add-Type](Add-Type.md)
-Adiciona uma classe de núcleo Microsoft .NET a uma sessão do PowerShell.
+Adiciona uma classe de Microsoft .NET a uma sessão do PowerShell.
 
 ### [Clear-Variable](Clear-Variable.md)
 Excluir o valor de uma variável.

@@ -1,23 +1,22 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/04/2020
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-type?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Type
-ms.openlocfilehash: cbf211f4ae5262255a74fa7fb97d2493202d71fa
-ms.sourcegitcommit: e0f9fe6335be1e0f94bedaa0e8baec2acaeaa076
+ms.openlocfilehash: 8c9c131a30b71cbd25bb05fcb187daedab95f183
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "93195308"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274197"
 ---
 # Add-Type
 
 ## SINOPSE
-Adiciona uma classe de núcleo Microsoft .NET a uma sessão do PowerShell.
+Adiciona uma classe de Microsoft .NET a uma sessão do PowerShell.
 
 ## SYNTAX
 
@@ -109,7 +108,7 @@ O `New-Object` cmdlet instancia uma instância da classe **BasicTest** . Ele sal
 
 ### Exemplo 2: examinar um tipo adicionado
 
-Este exemplo usa o `Get-Member` cmdlet para examinar os objetos que os `Add-Type` `New-Object` cmdlets e criados no **exemplo 1** .
+Este exemplo usa o `Get-Member` cmdlet para examinar os objetos que os `Add-Type` `New-Object` cmdlets e criados no **exemplo 1**.
 
 ```powershell
 [BasicTest] | Get-Member
@@ -271,7 +270,7 @@ Accept wildcard characters: False
 
 ### -Idioma
 
-Especifica a linguagem usada no código-fonte. O valor aceitável para esse parâmetro é **Csharp** .
+Especifica a linguagem usada no código-fonte. O valor aceitável para esse parâmetro é **Csharp**.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.Language
@@ -288,7 +287,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-Especifica o caminho para arquivos de código fonte ou arquivos DLL de assembly que contêm os tipos. Ao contrário do **caminho** , o valor do parâmetro **LiteralPath** é usado exatamente como é digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, coloque-o entre aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.
+Especifica o caminho para arquivos de código fonte ou arquivos DLL de assembly que contêm os tipos. Ao contrário do **caminho**, o valor do parâmetro **LiteralPath** é usado exatamente como é digitado. Nenhum caractere é interpretado como caractere curinga. Se o caminho incluir caracteres de escape, coloque-o entre aspas simples. Aspas simples instruem o PowerShell a não interpretar nenhum caractere como sequências de escape.
 
 ```yaml
 Type: System.String[]
@@ -422,7 +421,7 @@ Especifica o caminho para arquivos de código fonte ou arquivos DLL de assembly 
 
 Se você enviar arquivos de código-fonte, `Add-Type` o compilará o código nos arquivos e criará um assembly na memória dos tipos. A extensão de arquivo especificada no valor de **path** determina o compilador que o `Add-Type` usa.
 
-Se você enviar um arquivo de assembly, `Add-Type` o usará os tipos do assembly. Para especificar um assembly na memória ou o cache de assembly global, use o parâmetro **AssemblyName** .
+Se você enviar um arquivo de assembly, `Add-Type` o usará os tipos do assembly. Para especificar um assembly na memória ou o cache de assembly global, use o parâmetro **AssemblyName**.
 
 ```yaml
 Type: System.String[]
@@ -460,7 +459,7 @@ Accept wildcard characters: False
 
 Especifica o código-fonte que contém as definições de tipo. Insira o código-fonte em uma cadeia de caracteres ou cadeia de caracteres here, ou insira uma variável que contenha o código-fonte. Para obter mais informações sobre as cadeias de caracteres aqui, consulte [about_Quoting_Rules](../Microsoft.PowerShell.Core/about/about_Quoting_Rules.md).
 
-Inclua uma declaração de namespace em sua definição de tipo. Se você omitir a declaração de namespace, seu tipo pode ter o mesmo nome que outro tipo ou o atalho para outro tipo, causando uma substituição não intencional. Por exemplo, se você definir um tipo chamado **exceção** , os scripts que usam **exceção** como o atalho para **System. Exception** falharão.
+Inclua uma declaração de namespace em sua definição de tipo. Se você omitir a declaração de namespace, seu tipo pode ter o mesmo nome que outro tipo ou o atalho para outro tipo, causando uma substituição não intencional. Por exemplo, se você definir um tipo chamado **exceção**, os scripts que usam **exceção** como o atalho para **System. Exception** falharão.
 
 ```yaml
 Type: System.String

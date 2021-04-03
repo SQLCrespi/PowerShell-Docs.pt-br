@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/09/2020
+ms.date: 04/01/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/trace-command?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Trace-Command
-ms.openlocfilehash: afc08b263d75f8a728ce6d64cc7ede0a639df196
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 97571023c1428de5db0c2e6e13e285cafe609843
+ms.sourcegitcommit: 5b48fe7b2593581b7d4f7dd7c22206d8a45bb8af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603347"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106184402"
 ---
 # Trace-Command
 
-## SINOPSE
+## Sinopse
 Configura e inicia um rastreamento da expressão ou comando especificado.
 
-## SYNTAX
+## Sintaxe
 
 ### expressionset (padrão)
 
@@ -36,11 +36,12 @@ Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSo
  [-Debugger] [-PSHost] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
+
 O `Trace-Command` cmdlet configura e inicia um rastreamento da expressão ou do comando especificado.
 Ele funciona como Set-TraceSource, exceto que se aplica apenas ao comando especificado.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: rastrear o processamento de metadados, a associação de parâmetro e uma expressão
 
@@ -70,7 +71,7 @@ O primeiro comando armazena a cadeia de caracteres `i*` na `$A` variável. O seg
 
 A expressão que está sendo processada é `Get-Alias $Input` , em que a `$Input` variável é associada ao parâmetro **InputObject** . O parâmetro **InputObject** passa a variável `$A` para a expressão. Na verdade, o comando que está sendo processado durante o rastreamento é `Get-Alias -InputObject $A" or "$A | Get-Alias` .
 
-## PARAMETERS
+## Parâmetros
 
 ### -ArgumentList
 
@@ -190,17 +191,17 @@ Accept wildcard characters: False
 
 Especifica dados opcionais para o prefixo de cada mensagem de rastreamento na saída. Os valores aceitáveis para esse parâmetro são:
 
-- Nenhum
-- LogicalOperationStack
-- Datetime
-- Timestamp
-- ProcessId
-- ThreadId
-- Chamadas
+- `None`
+- `LogicalOperationStack`
+- `DateTime`
+- `Timestamp`
+- `ProcessId`
+- `ThreadId`
+- `Callstack`
 
-**Nenhuma** é o padrão.
+`None` é o padrão.
 
-Para especificar várias opções, separe-as com vírgulas, mas sem espaços, e coloque-as entre aspas, como "ProcessID ThreadID".
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **ListenerOption** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Diagnostics.TraceOptions
@@ -235,36 +236,36 @@ Accept wildcard characters: False
 
 Determina o tipo de eventos que são rastreados. Os valores aceitáveis para esse parâmetro são:
 
-- Nenhum
-- Construtor
-- Dispose
-- Finalizer
-- Método
-- Propriedade
-- Delegados
-- Eventos
-- Exceção
-- Bloqueio
-- Erro do
-- Errors
-- Aviso
-- Detalhado
-- WriteLine
-- Dados
-- Escopo
-- ExecutionFlow
-- Assert
-- Tudo
+- `None`
+- `Constructor`
+- `Dispose`
+- `Finalizer`
+- `Method`
+- `Property`
+- `Delegates`
+- `Events`
+- `Exception`
+- `Lock`
+- `Error`
+- `Errors`
+- `Warning`
+- `Verbose`
+- `WriteLine`
+- `Data`
+- `Scope`
+- `ExecutionFlow`
+- `Assert`
+- `All`
 
-All é o padrão.
+`All` é o padrão.
 
 Os seguintes valores são combinações de outros valores:
 
-- ExecutionFlow: (Construtor, descarte, finalizador, método, delegados, eventos e escopo)
-- Dados: (constructor, Dispose, Finalizer, Property, Verbose e WriteLine)
-- Erros: (erro e exceção).
+- `ExecutionFlow`: `Constructor`, `Dispose`, `Finalizer`, `Method`, `Delegates`, `Events`, `Scope`
+- `Data`: `Constructor`, `Dispose`, `Finalizer`, `Property`, `Verbose`, `WriteLine`
+- `Errors`: `Error`, `Exception`
 
-Para especificar várias opções, separe-as com vírgulas, mas sem espaços, e coloque-as entre aspas, como "Constructor, Dispose".
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro de **opção** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.PSTraceSourceOptions
@@ -299,19 +300,19 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System. Management. Automation. PSObject
 
 É possível canalizar objetos que representam a entrada para a expressão para `Trace-Command` .
 
-## SAÍDAS
+## Saídas
 
 ### System. Management. Automation. PSObject
 
 Retorna o rastreamento de comando no fluxo de depuração.
 
-## OBSERVAÇÕES
+## Observações
 
 - O rastreamento é um método utilizado pelos desenvolvedores para depurar e aprimorar os programas. Ao realizar o rastreamento, o componente gera mensagens detalhadas sobre cada etapa no seu processamento interno.
 
@@ -327,7 +328,7 @@ Retorna o rastreamento de comando no fluxo de depuração.
 
 - Os nomes dos parâmetros **Name**, **expression**, **Option** e **Command** são opcionais. Se você omitir os nomes de parâmetro, os valores de parâmetro não nomeados deverão aparecer nesta ordem: **nome**, **expressão**, **opção** ou **nome**, **comando**, **opção**. Se você incluir os nomes dos parâmetros, os parâmetros podem aparecer em qualquer ordem.
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Get-TraceSource](Get-TraceSource.md)
 

@@ -3,25 +3,25 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 05/11/2020
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Send-MailMessage
-ms.openlocfilehash: 6603e427a44d5b45d339b8cbf3f56a6b8d25e699
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 67701dadc8477792ceffc38e6aed1f9f8ad64e6c
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192798"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273957"
 ---
 # Send-MailMessage
 
-## SINOPSE
+## Sinopse
 Envia uma mensagem de email.
 
-## SYNTAX
+## Sintaxe
 
-### Tudo
+### Todos
 
 ```
 Send-MailMessage [-Attachments <String[]>] [-Bcc <String[]>] [[-Body] <String>] [-BodyAsHtml]
@@ -31,7 +31,7 @@ Send-MailMessage [-Attachments <String[]>] [-Bcc <String[]>] [[-Body] <String>] 
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Send-MailMessage` cmdlet envia uma mensagem de email de dentro do PowerShell.
 
@@ -41,13 +41,13 @@ O valor atribuído a `$PSEmailServer` é a configuração de SMTP padrão para o
 > [!WARNING]
 > O `Send-MailMessage` cmdlet está obsoleto. Esse cmdlet não garante conexões seguras com servidores SMTP. Embora não haja substituição imediata disponível no PowerShell, recomendamos que você não use o `Send-MailMessage` . Para obter mais informações, consulte [Nota de compatibilidade de plataforma DE0005](https://aka.ms/SendMailMessage).
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: enviar um email de uma pessoa para outra pessoa
 
 Este exemplo envia uma mensagem de email de uma pessoa para outra pessoa.
 
-Os parâmetros **from** , **to** e **Subject** são exigidos pelo `Send-MailMessage` . Este exemplo usa a `$PSEmailServer` variável padrão para o servidor SMTP, portanto, o parâmetro **SmtpServer** não é necessário.
+Os parâmetros **from**, **to** e **Subject** são exigidos pelo `Send-MailMessage` . Este exemplo usa a `$PSEmailServer` variável padrão para o servidor SMTP, portanto, o parâmetro **SmtpServer** não é necessário.
 
 ```powershell
 Send-MailMessage -From 'User01 <user01@fabrikam.com>' -To 'User02 <user02@fabrikam.com>' -Subject 'Test mail'
@@ -65,8 +65,8 @@ Send-MailMessage -From 'User01 <user01@fabrikam.com>' -To 'User02 <user02@fabrik
 
 O `Send-MailMessage` cmdlet usa o parâmetro **from** para especificar o remetente da mensagem. O parâmetro **to** especifica os destinatários da mensagem. O parâmetro **Subject** descreve o conteúdo da mensagem. O parâmetro **Body** é o conteúdo da mensagem.
 
-O parâmetro **Attachments** especifica o arquivo no diretório atual que é anexado à mensagem de email. O parâmetro **Priority** define a mensagem como prioridade **alta** . O parâmetro **-DeliveryNotificationOption** especifica dois valores, **OnSuccess** e **OnFailure** . O remetente receberá notificações por email para confirmar o êxito ou a falha da entrega de mensagens.
-O parâmetro **SmtpServer** define o servidor SMTP como **SMTP.fabrikam.com** .
+O parâmetro **Attachments** especifica o arquivo no diretório atual que é anexado à mensagem de email. O parâmetro **Priority** define a mensagem como prioridade **alta** . O parâmetro **-DeliveryNotificationOption** especifica dois valores, **OnSuccess** e **OnFailure**. O remetente receberá notificações por email para confirmar o êxito ou a falha da entrega de mensagens.
+O parâmetro **SmtpServer** define o servidor SMTP como **SMTP.fabrikam.com**.
 
 ### Exemplo 3: enviar email para uma lista de endereçamento
 
@@ -80,7 +80,7 @@ O `Send-MailMessage` cmdlet usa o parâmetro **from** para especificar o remeten
 
 O parâmetro **Credential** especifica que as credenciais de um administrador de domínio são usadas para enviar a mensagem. O parâmetro **UseSsl** especifica que o SSL (Secure Socket Layer) cria uma conexão segura.
 
-## PARAMETERS
+## Parâmetros
 
 ### -Anexos
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 Especifica uma conta de usuário que tem permissão para executar esta ação. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** . Ou insira um objeto **PSCredential** , como um do `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**. Ou insira um objeto **PSCredential** , como um do `Get-Credential` cmdlet.
 
 As credenciais são armazenadas em um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential) e a senha é armazenada como uma [SecureString](/dotnet/api/system.security.securestring).
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ### -DeliveryNotificationOption
 
 Especifica as opções de notificação de entrega para a mensagem de email. Você pode especificar vários valores.
-None é o valor padrão. O alias para esse parâmetro é **DNO** .
+None é o valor padrão. O alias para esse parâmetro é **DNO**.
 
 As notificações de entrega são enviadas para o endereço no parâmetro **from** .
 
@@ -199,6 +199,8 @@ Os valores aceitáveis para esse parâmetro são os seguintes:
 - `OnFailure`: Notificar se a entrega não for bem-sucedida.
 - `Delay`: Notificar se a entrega estiver atrasada.
 - `Never`: Nunca notificar.
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **DeliveryNotification** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Net.Mail.DeliveryNotificationOptions
@@ -382,21 +384,21 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System.String
 
 Você pode canalizar o caminho e os nomes de arquivo dos anexos para `Send-MailMessage` .
 
-## SAÍDAS
+## Saídas
 
 ### Nenhum
 
 Este cmdlet não gera saída.
 
-## OBSERVAÇÕES
+## Observações
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [about_Preference_Variables](../Microsoft.PowerShell.Core/About/about_Preference_Variables.md)
 

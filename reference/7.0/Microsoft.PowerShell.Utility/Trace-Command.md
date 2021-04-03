@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/09/2020
+ms.date: 04/01/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/trace-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Trace-Command
-ms.openlocfilehash: f3f9e47ac6d969dc08518bf97bb87699fb04ade8
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: b224d4f6eec3757192264a988a3fea9bebbc32a7
+ms.sourcegitcommit: 5b48fe7b2593581b7d4f7dd7c22206d8a45bb8af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93192943"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106184385"
 ---
 # Trace-Command
 
-## SINOPSE
+## Sinopse
 Configura e inicia um rastreamento da expressão ou comando especificado.
 
-## SYNTAX
+## Sintaxe
 
 ### expressionset (padrão)
 
@@ -37,11 +37,12 @@ Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSo
  [-Debugger] [-PSHost] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
+
 O `Trace-Command` cmdlet configura e inicia um rastreamento da expressão ou do comando especificado.
 Ele funciona como Set-TraceSource, exceto que se aplica apenas ao comando especificado.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: rastrear o processamento de metadados, a associação de parâmetro e uma expressão
 
@@ -71,13 +72,13 @@ O primeiro comando armazena a cadeia de caracteres `i*` na `$A` variável. O seg
 
 A expressão que está sendo processada é `Get-Alias $Input` , em que a `$Input` variável é associada ao parâmetro **InputObject** . O parâmetro **InputObject** passa a variável `$A` para a expressão. Na verdade, o comando que está sendo processado durante o rastreamento é `Get-Alias -InputObject $A" or "$A | Get-Alias` .
 
-## PARAMETERS
+## Parâmetros
 
 ### -ArgumentList
 
-Especifica os parâmetros e valores de parâmetro para o comando que está sendo rastreado. O alias para **ArgumentList** é **Args** . Esse recurso é especialmente útil para depuração parâmetros dinâmicos.
+Especifica os parâmetros e valores de parâmetro para o comando que está sendo rastreado. O alias para **ArgumentList** é **Args**. Esse recurso é especialmente útil para depuração parâmetros dinâmicos.
 
-Para obter mais informações sobre o comportamento de **ArgumentList** , consulte [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).
+Para obter mais informações sobre o comportamento de **ArgumentList**, consulte [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).
 
 ```yaml
 Type: System.Object[]
@@ -191,17 +192,17 @@ Accept wildcard characters: False
 
 Especifica dados opcionais para o prefixo de cada mensagem de rastreamento na saída. Os valores aceitáveis para esse parâmetro são:
 
-- Nenhum
-- LogicalOperationStack
-- Datetime
-- Timestamp
-- ProcessId
-- ThreadId
-- Chamadas
+- `None`
+- `LogicalOperationStack`
+- `DateTime`
+- `Timestamp`
+- `ProcessId`
+- `ThreadId`
+- `Callstack`
 
-**None** é o padrão.
+`None` é o padrão.
 
-Para especificar várias opções, separe-as com vírgulas, mas sem espaços, e coloque-as entre aspas, como "ProcessID ThreadID".
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **ListenerOption** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Diagnostics.TraceOptions
@@ -236,36 +237,36 @@ Accept wildcard characters: False
 
 Determina o tipo de eventos que são rastreados. Os valores aceitáveis para esse parâmetro são:
 
-- Nenhum
-- Construtor
-- Dispose
-- Finalizer
-- Método
-- Propriedade
-- Delegados
-- Eventos
-- Exceção
-- Bloqueio
-- Erro
-- Errors
-- Aviso
-- Detalhado
-- WriteLine
-- Dados
-- Escopo
-- ExecutionFlow
-- Assert
-- Tudo
+- `None`
+- `Constructor`
+- `Dispose`
+- `Finalizer`
+- `Method`
+- `Property`
+- `Delegates`
+- `Events`
+- `Exception`
+- `Lock`
+- `Error`
+- `Errors`
+- `Warning`
+- `Verbose`
+- `WriteLine`
+- `Data`
+- `Scope`
+- `ExecutionFlow`
+- `Assert`
+- `All`
 
-All é o padrão.
+`All` é o padrão.
 
 Os seguintes valores são combinações de outros valores:
 
-- ExecutionFlow: (Construtor, descarte, finalizador, método, delegados, eventos e escopo)
-- Dados: (constructor, Dispose, Finalizer, Property, Verbose e WriteLine)
-- Erros: (erro e exceção).
+- `ExecutionFlow`: `Constructor`, `Dispose`, `Finalizer`, `Method`, `Delegates`, `Events`, `Scope`
+- `Data`: `Constructor`, `Dispose`, `Finalizer`, `Property`, `Verbose`, `WriteLine`
+- `Errors`: `Error`, `Exception`
 
-Para especificar várias opções, separe-as com vírgulas, mas sem espaços, e coloque-as entre aspas, como "Constructor, Dispose".
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro de **opção** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.PSTraceSourceOptions
@@ -300,19 +301,19 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System. Management. Automation. PSObject
 
 É possível canalizar objetos que representam a entrada para a expressão para `Trace-Command` .
 
-## SAÍDAS
+## Saídas
 
 ### System. Management. Automation. PSObject
 
 Retorna o rastreamento de comando no fluxo de depuração.
 
-## OBSERVAÇÕES
+## Observações
 
 - O rastreamento é um método utilizado pelos desenvolvedores para depurar e aprimorar os programas. Ao realizar o rastreamento, o componente gera mensagens detalhadas sobre cada etapa no seu processamento interno.
 
@@ -326,9 +327,9 @@ Retorna o rastreamento de comando no fluxo de depuração.
 
 - Quando você usa o conjunto de parâmetros commandSet, o PowerShell processa o comando da mesma forma que seria processado em um pipeline. Por exemplo, a descoberta de comando não é repetida para cada objeto de entrada.
 
-- Os nomes dos parâmetros **Name** , **expression** , **Option** e **Command** são opcionais. Se você omitir os nomes de parâmetro, os valores de parâmetro não nomeados deverão aparecer nesta ordem: **nome** , **expressão** , **opção** ou **nome** , **comando** , **opção** . Se você incluir os nomes dos parâmetros, os parâmetros podem aparecer em qualquer ordem.
+- Os nomes dos parâmetros **Name**, **expression**, **Option** e **Command** são opcionais. Se você omitir os nomes de parâmetro, os valores de parâmetro não nomeados deverão aparecer nesta ordem: **nome**, **expressão**, **opção** ou **nome**, **comando**, **opção**. Se você incluir os nomes dos parâmetros, os parâmetros podem aparecer em qualquer ordem.
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Get-TraceSource](Get-TraceSource.md)
 

@@ -1,19 +1,18 @@
 ---
 Download Help Link: https://aka.ms/powershell71-help
 Help Version: 7.1.0.0
-keywords: powershell, cmdlet
 Locale: en-US
 Module Guid: 1da87e53-152b-403e-98dc-74d7b4d63d59
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Microsoft.PowerShell.Utility
-ms.openlocfilehash: 4b0101092cacb953fe8e60973f036c67624752b1
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: ea02d5bc40a931c4796fbfa5bc003ea20206f54d
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93195400"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274335"
 ---
 # Módulo Microsoft.PowerShell.Utility
 
@@ -27,7 +26,7 @@ Esta seção contém os tópicos de ajuda para os cmdlets instalados com o módu
 Adiciona propriedades e métodos personalizados a uma instância de um objeto do PowerShell.
 
 ### [Add-Type](Add-Type.md)
-Adiciona uma classe de núcleo Microsoft .NET a uma sessão do PowerShell.
+Adiciona uma classe de Microsoft .NET a uma sessão do PowerShell.
 
 ### [Clear-Variable](Clear-Variable.md)
 Excluir o valor de uma variável.
@@ -83,7 +82,7 @@ Exporta as informações sobre aliases definidos atualmente para um arquivo.
 ### [Export-Clixml](Export-Clixml.md)
 Cria uma representação baseada em XML de um objeto ou objetos e armazena-a em um arquivo.
 
-### [Export-Csv](Export-Csv.md)
+### [Export-CSV](Export-Csv.md)
 Converte objetos em uma série de cadeias de caracteres de valores separados por vírgulas (CSV) e salva as cadeias de caracteres em um arquivo.
 
 ### [Export-FormatData](Export-FormatData.md)
@@ -347,7 +346,7 @@ Aguarda até que um determinado evento seja gerado antes de continuar a executar
 ### [Write-Debug](Write-Debug.md)
 Grava uma mensagem de depuração para o console.
 
-### [Erro de gravação](Write-Error.md)
+### [Write-Error](Write-Error.md)
 Grava um objeto no fluxo de erros.
 
 ### [Write-Host](Write-Host.md)

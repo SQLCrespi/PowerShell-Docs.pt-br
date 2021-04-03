@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 02/28/2019
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Alias
-ms.openlocfilehash: e9e80b4bf558dcf1e225868a1138979270ea304f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 2c82c898dd4043d55d708eb30929580a91389845
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598611"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274284"
 ---
 # Set-Alias
 
-## SINOPSE
+## Sinopse
 Cria ou altera um alias para um cmdlet ou outro comando na sessão atual do PowerShell.
 
-## SYNTAX
+## Sintaxe
 
 ### Padrão (padrão)
 
@@ -27,7 +27,7 @@ Set-Alias [-Name] <string> [-Value] <string> [-Description <string>] [-Option <S
  [-PassThru] [-Scope <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Set-Alias` cmdlet cria ou altera um alias para um cmdlet ou um comando, como uma função, script, arquivo ou outro executável. Um alias é um nome alternativo que se refere a um cmdlet ou comando.
 Por exemplo, `sal` é o alias para o `Set-Alias` cmdlet. Para obter mais informações, consulte [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
@@ -36,7 +36,7 @@ Um cmdlet pode ter vários aliases, mas um alias só pode ser associado a um cmd
 
 Um alias que é criado ou alterado pelo `Set-Alias` não é permanente e só está disponível durante a sessão atual do PowerShell. Quando a sessão do PowerShell é fechada, o alias é removido.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: criar um alias para um cmdlet
 
@@ -135,18 +135,30 @@ Este exemplo mostra como atribuir um alias a um comando com parâmetros.
 Você pode criar um alias para um cmdlet, como `Set-Location` . Você não pode criar um alias para um comando com parâmetros e valores, como `Set-Location -Path C:\Windows\System32` . Para criar um alias para um comando, crie uma função que inclua o comando e, em seguida, crie um alias para a função. Para obter mais informações, consulte [about_Functions](../Microsoft.PowerShell.Core/about/about_Functions.md).
 
 ```
-PS> Function CD32 {Set-Location -Path C:\Windows\System32}
+Function CD32 {Set-Location -Path C:\Windows\System32}
 
-PS> Set-Alias -Name Go -Value CD32
+Set-Alias -Name Go -Value CD32
 ```
 
-Uma função chamada `CD32` é criada. A função usa o `Set-Location` cmdlet com o parâmetro **Path** para especificar o diretório, **C:\Windows\System32**.
+Uma função chamada `CD32` é criada. A função usa o `Set-Location` cmdlet com o parâmetro **Path** para especificar o diretório, `C:\Windows\System32` .
 
 O `Set-Alias` cmdlet cria um alias para a função na sessão atual do PowerShell. O parâmetro **Name** especifica o nome do alias, `Go` . O parâmetro **Value** especifica o nome da função, `CD32` .
 
-Para executar o alias, digite `Go` na linha de comando do PowerShell. A `CD32` função é executada e muda para o diretório **C:\Windows\System32**.
+Para executar o alias, digite `Go` na linha de comando do PowerShell. A `CD32` função é executada e muda para o diretório `C:\Windows\System32` .
 
-## PARAMETERS
+### Exemplo 6: atualizar opções para um alias existente
+
+Este exemplo mostra como atribuir várias opções usando o parâmetro **Option** .
+
+Usando o exemplo acima, definiremos o alias `Go` como `ReadOnly` e `Private` .
+
+```powershell
+Set-Alias -Name Go -Option ReadOnly, Private
+```
+
+O alias `Go` já deve existir. Depois de executar o comando acima, o alias não poderá ser alterado sem usar o parâmetro **Force** e só estará disponível no escopo atual.
+
+## Parâmetros
 
 ### -Description
 
@@ -200,16 +212,18 @@ Accept wildcard characters: False
 
 ### -Opção
 
-Define o valor da propriedade de **opção** do alias. Valores como **ReadOnly** e **Constant** protegem um alias de alterações involuntárias. Para ver a propriedade **Option** de todos os aliases na sessão, digite `Get-Alias | Format-Table -Property Name, Options -Autosize` .
+Define o valor da propriedade de **opção** do alias. Valores como `ReadOnly` e `Constant` protegem um alias de alterações involuntárias. Para ver a propriedade **Option** de todos os aliases na sessão, digite `Get-Alias | Format-Table -Property Name, Options -Autosize` .
 
 Os valores aceitáveis para esse parâmetro são os seguintes:
 
-- **Escopo** O alias é copiado para todos os novos escopos criados.
-- **Constante** Não pode ser alterado ou excluído.
-- **Nenhum** Não define opções e é o padrão.
-- **Particular** O alias está disponível somente no escopo atual.
-- **Somente leitura** Não pode ser alterado ou excluído, a menos que o parâmetro **Force** seja usado.
-- **Não especificado**
+- `AllScope` -O alias é copiado para todos os novos escopos criados.
+- `Constant` -Não pode ser alterado ou excluído.
+- `None` -Não define opções e é o padrão.
+- `Private` -O alias está disponível somente no escopo atual.
+- `ReadOnly` -Não pode ser alterado ou excluído, a menos que o parâmetro **Force** seja usado.
+- `Unspecified`
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro de **opção** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -317,13 +331,13 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### Nenhum
 
 `Set-Alias` Não aceita a entrada do pipeline.
 
-## SAÍDAS
+## Saídas
 
 ### Nenhum ou System. Management. Automation. AliasInfo
 
