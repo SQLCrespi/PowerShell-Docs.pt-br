@@ -3,12 +3,12 @@ title: Tudo o que você queria saber sobre matrizes
 description: As matrizes são um recurso fundamental de linguagem da maioria das linguagens de programação.
 ms.date: 10/08/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: b26aa11aadbeea1984b2754cfcad061c7fa3ff1e
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: a6c3aea82982feafc47b4aa718981857595d5fc2
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91852554"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072423"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Tudo o que você queria saber sobre matrizes
 
@@ -1047,7 +1047,7 @@ TypeName: System.String
 ...
 ```
 
-Para evitar o desencapsulamento da matriz, você pode usar `Write-Object -NoEnumerate`.
+Para evitar o desencapsulamento da matriz, você pode usar `Write-Output -NoEnumerate`.
 
 ```powershell
 PS> Write-Output -NoEnumerate $data | Get-Member
