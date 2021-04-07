@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/26/2021
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: f3545065d4879830a5051ef687f210c7fbd1251e
-ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
+ms.openlocfilehash: 4aa3b889ed00c6b0442a1191f055e1228f252631
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860653"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555518"
 ---
 # Invoke-WebRequest
 
-## SINOPSE
+## Sinopse
 Obtém o conteúdo de uma página da web na Internet.
 
-## SYNTAX
+## Sintaxe
 
 ```
 Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSession>] [-SessionVariable <String>]
@@ -29,7 +29,7 @@ Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSessio
  [-TransferEncoding <String>] [-InFile <String>] [-OutFile <String>] [-PassThru] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Invoke-WebRequest` cmdlet envia solicitações de http, HTTPS, FTP e arquivos para uma página da Web ou serviço Web.
 Ele analisa a resposta e retorna conjuntos de formulários, links, imagens e outros elementos HTML significativos.
@@ -37,10 +37,9 @@ Ele analisa a resposta e retorna conjuntos de formulários, links, imagens e out
 Este cmdlet foi introduzido no Windows PowerShell 3.0.
 
 > [!NOTE]
-> Por padrão, o código de script na página da Web pode ser executado quando a página está sendo analisada para popular a `ParsedHtml` propriedade.
-> Use a `-UseBasicParsing` opção para suprimir isso.
+> Por padrão, o código de script na página da Web pode ser executado quando a página está sendo analisada para popular a `ParsedHtml` propriedade. Use a `-UseBasicParsing` opção para suprimir isso.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: Enviar uma solicitação da Web
 
@@ -138,7 +137,7 @@ $StatusCode
 
 O erro de encerramento é capturado pelo `catch` bloco, que recupera o **StatusCode** do objeto de **exceção** .
 
-## PARAMETERS
+## Parâmetros
 
 ### -Corpo
 
@@ -323,16 +322,16 @@ Accept wildcard characters: False
 
 Especifica o método usado para a solicitação da Web. Os valores aceitáveis para esse parâmetro são:
 
-- Padrão
-- Excluir
-- Obter
-- Head
-- Mesclar
-- Opções
-- Patch
-- Postar
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.WebRequestMethod
@@ -484,11 +483,11 @@ Accept wildcard characters: False
 
 Especifica um valor para o cabeçalho de resposta HTTP de codificação de transferência. Os valores aceitáveis para esse parâmetro são:
 
-- Em bloco
-- Compactar
-- Desinflar
-- GZip
-- Identidade
+- `Chunked`
+- `Compress`
+- `Deflate`
+- `GZip`
+- `Identity`
 
 ```yaml
 Type: System.String
@@ -539,7 +538,7 @@ Accept wildcard characters: False
 
 ### -UseDefaultCredentials
 
-Indica que o cmdet usa as credenciais do usuário atual para enviar a solicitação da Web.
+Indica que o cmdlet usa as credenciais do usuário atual para enviar a solicitação da Web.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -599,19 +598,19 @@ Accept wildcard characters: False
 
 Esse cmdlet oferece suporte aos parâmetros comuns:,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` e `-WarningVariable` . Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System.Object
 
 Você pode canalizar o corpo de uma solicitação da Web para `Invoke-WebRequest` .
 
-## SAÍDAS
+## Saídas
 
 ### Microsoft.PowerShell.Commands.HtmlWebResponseObject
 
-## OBSERVAÇÕES
+## Observações
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Invoke-RestMethod](Invoke-RestMethod.md)
 

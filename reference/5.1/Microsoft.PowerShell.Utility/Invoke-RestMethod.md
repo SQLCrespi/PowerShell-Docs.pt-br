@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 12/13/2018
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-RestMethod
-ms.openlocfilehash: c89f7351e9c874cea2cc0cd5e0912e3ca0d8b0bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 916c221a4fb0886494a4632e38f25a639d5d414e
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93193777"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555492"
 ---
 # Invoke-RestMethod
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 Especifica uma conta de usuário com permissão para enviar a solicitação. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
 
 As credenciais são armazenadas em um objeto [PSCredential](/dotnet/api/system.management.automation.pscredential) e a senha é armazenada como uma [SecureString](/dotnet/api/system.security.securestring).
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 Especifica os cabeçalhos da solicitação da Web. Insira uma tabela de hash ou dicionário.
 
-Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent** . Você não pode usar esse parâmetro para especificar cabeçalhos UserAgent ou de cookie.
+Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent**. Você não pode usar esse parâmetro para especificar cabeçalhos UserAgent ou de cookie.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -317,16 +317,16 @@ Accept wildcard characters: False
 
 Especifica o método usado para a solicitação da Web. Os valores aceitáveis para esse parâmetro são:
 
-- Padrão
-- Excluir
-- Obter
-- Head
-- Mesclar
-- Opções
-- Patch
-- Postar
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.WebRequestMethod
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 Salva o corpo da resposta no arquivo de saída especificado. Digite um caminho e nome de arquivo. Se você omitir o caminho, o padrão será o local atual.
 
-Por padrão, `Invoke-RestMethod` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru** .
+Por padrão, `Invoke-RestMethod` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru**.
 
 ```yaml
 Type: System.String
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** . O padrão é o usuário atual.
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**. O padrão é o usuário atual.
 
 Digite um nome de usuário, como "User01" ou "Domínio01 \ Usuário01", ou insira um objeto **PSCredential** , como um gerado pelo `Get-Credential` cmdlet.
 
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 
 ### -ProxyUseDefaultCredentials
 
-Usa as credenciais do usuário atual para acessar o servidor de proxy especificado pelo parâmetro **Proxy** .
+Usa as credenciais do usuário atual para acessar o servidor de proxy especificado pelo parâmetro **Proxy**.
 
 Esse parâmetro é válido somente quando o parâmetro de **proxy** também é usado no comando. Não é possível usar os parâmetros **ProxyCredential** e **ProxyUseDefaultCredentials** no mesmo comando.
 
@@ -437,7 +437,7 @@ Quando você especifica uma variável de sessão, `Invoke-RestMethod` o cria um 
 
 Diferente de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor máximo de redirecionamento e a cadeia de caracteres de agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession** . O Windows PowerShell usa os dados no objeto de sessão de solicitação da web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession**. O Windows PowerShell usa os dados no objeto de sessão de solicitação da web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -475,11 +475,11 @@ Accept wildcard characters: False
 
 Especifica um valor para o cabeçalho de resposta HTTP de codificação de transferência. Os valores aceitáveis para esse parâmetro são:
 
-- Em bloco
-- Compactar
-- Desinflar
-- GZip
-- Identidade
+- `Chunked`
+- `Compress`
+- `Deflate`
+- `GZip`
+- `Identity`
 
 ```yaml
 Type: System.String
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 Especifica o identificador de URI (Uniform Resource Identifier) do recurso da Internet para o qual a solicitação da Web é enviada. Esse parâmetro oferece suporte a valores HTTP, HTTPS, FTP e FILE.
 
-Este parâmetro é necessário. O nome do parâmetro ( **URI** ) é opcional.
+Este parâmetro é necessário. O nome do parâmetro (**URI**) é opcional.
 
 ```yaml
 Type: System.Uri
@@ -568,11 +568,11 @@ Accept wildcard characters: False
 
 Especifica uma sessão de solicitação da Web. Insira o nome da variável, incluindo o cifrão ( `$` ).
 
-Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Diferente de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor máximo de redirecionamento e a cadeia de caracteres de agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para criar uma sessão de solicitação da Web, insira um nome de variável (sem um cifrão) no valor do parâmetro **SessionVariable** de um `Invoke-RestMethod` comando. `Invoke-RestMethod` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession** .
+Para criar uma sessão de solicitação da Web, insira um nome de variável (sem um cifrão) no valor do parâmetro **SessionVariable** de um `Invoke-RestMethod` comando. `Invoke-RestMethod` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession**.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 

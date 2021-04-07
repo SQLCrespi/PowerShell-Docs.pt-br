@@ -2,26 +2,26 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/23/2019
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 334746589ed991ea817929eb31100f92c2dfda1f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: cbc31f317876869658d813b0c0c566c8963b590d
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99595965"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555183"
 ---
 # Export-PSSession
 
-## SINOPSE
+## Sinopse
 
 Exporta comandos de outra sessão e salva-os em um módulo do PowerShell.
 
-## SYNTAX
+## Syntax
 
-### Tudo
+### Todos
 
 ```
 Export-PSSession [-OutputModule] <String> [-Force] [-Encoding <Encoding>]
@@ -31,7 +31,7 @@ Export-PSSession [-OutputModule] <String> [-Force] [-Encoding <Encoding>]
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Export-PSSession` cmdlet obtém cmdlets, funções, aliases e outros tipos de comando de outra sessão do PowerShell (PSSession) em um computador local ou remoto e os salva em um módulo do PowerShell. Para adicionar os comandos do módulo à sessão atual, use o `Import-Module` cmdlet.
 
@@ -43,7 +43,7 @@ Para evitar conflitos de nome de comando, o padrão para `Export-PSSession` é e
 
 O `Export-PSSession` cmdlet usa o recurso de comunicação remota implícita do PowerShell. Quando você importa comandos para a sessão atual, eles são executados implicitamente na sessão original ou em uma sessão semelhante no computador de origem.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: exportar comandos de uma PSSession
 
@@ -122,7 +122,7 @@ O `Remove-PSSession` cmdlet exclui a PSSession na `$S` variável.
 
 O `New-PSSession` cmdlet cria uma nova PSSession que se conecta ao computador Server01. O parâmetro **SessionOption** usa o objeto armazenado em `$Options` . O `Import-Module` cmdlet importa os comandos do módulo Server01. Os comandos no módulo são executados na PSSession no computador Server01.
 
-## PARAMETERS
+## Parâmetros
 
 ### -AllowClobber
 
@@ -204,15 +204,17 @@ Exporta somente os tipos especificados de objetos de comando. Use o **CommandTyp
 
 Os valores aceitáveis para esse parâmetro são os seguintes:
 
-- Receber. Todos os aliases do PowerShell na sessão atual.
-- Todos. Todos os tipos de comando. É o equivalente de `Get-Command -Name *` .
-- Console. Todos os arquivos que não sejam arquivos do PowerShell em caminhos listados na variável de ambiente Path ( `$env:path` ), incluindo arquivos. txt,. exe e. dll.
-- Cmdlet. Os cmdlets na sessão atual. É o padrão.
-- Configuração. Uma configuração do PowerShell. Para obter mais informações, consulte [about_Session_Configurations](../Microsoft.PowerShell.Core/About/about_Session_Configurations.md).
-- ExternalScript. Todos os arquivos. ps1 nos caminhos listados na variável de ambiente Path ( `$env:path` ).
-- Filtro e função. Todas as funções do PowerShell.
-- Script. Blocos de script na sessão atual.
-- Modelo. Um fluxo de trabalho do PowerShell. Para obter mais informações, consulte [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
+- `Alias`: Todos os aliases do PowerShell na sessão atual.
+- `All`: Todos os tipos de comando. É o equivalente de `Get-Command -Name *` .
+- `Application`: Todos os arquivos que não sejam arquivos do PowerShell em caminhos listados na variável de ambiente Path ( `$env:path` ), incluindo arquivos. txt,. exe e. dll.
+- `Cmdlet`: Os cmdlets na sessão atual. É o padrão.
+- `Configuration`: Uma configuração do PowerShell. Para obter mais informações, consulte [about_Session_Configurations](../Microsoft.PowerShell.Core/About/about_Session_Configurations.md).
+- `ExternalScript`: Todos os arquivos. ps1 nos caminhos listados na variável de ambiente Path ( `$env:path` ).
+- `Filter` e `Function` : todas as funções do PowerShell.
+- `Script` Blocos de script na sessão atual.
+- `Workflow` Um fluxo de trabalho do PowerShell. Para obter mais informações, consulte [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **CommandType** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -376,19 +378,19 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### Nenhum
 
 Não é possível canalizar objetos para `Export-PSSession` .
 
-## SAÍDAS
+## Saídas
 
 ### System. IO. FileInfo
 
 `Export-PSSession` Retorna uma lista de arquivos que compõem o módulo que ele criou.
 
-## OBSERVAÇÕES
+## Observações
 
 `Export-PSSession` depende da infraestrutura de comunicação remota do PowerShell. Para usar esse cmdlet, o computador deve ser configurado para comunicação remota. Para obter mais informações, consulte [about_Remote_Requirements](../Microsoft.PowerShell.Core/About/about_Remote_Requirements.md).
 
@@ -410,7 +412,7 @@ Como os perfis do PowerShell não são executados em PSSessions, os comandos que
 
 O módulo que o `Export-PSSession` cria pode incluir um arquivo de formatação, mesmo que o comando não importe dados de formatação. Se o comando não importar dados de formatação, quaisquer arquivos de formatação criados não conterão dados de formatação.
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md)
 

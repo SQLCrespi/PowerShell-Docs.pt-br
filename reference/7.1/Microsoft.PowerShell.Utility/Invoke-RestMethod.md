@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/03/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-RestMethod
-ms.openlocfilehash: d00885d0911d20dee0e5c498e5e339af4fa39a34
-ms.sourcegitcommit: eaac7af89171379df2e20464ebee9fc7e7d7674a
+ms.openlocfilehash: a5bed4574d6590272192cbcee09c4a8cd2e3a803
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "93195298"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555705"
 ---
 # Invoke-RestMethod
 
-## SINOPSE
+## Sinopse
 Envia uma solicitação HTTP ou HTTPS para um serviço Web RESTful.
 
-## SYNTAX
+## Syntax
 
 ### StandardMethod (padrão)
 
@@ -97,7 +97,7 @@ Este cmdlet é introduzido no Windows PowerShell 3.0.
 
 A partir do PowerShell 7,0, `Invoke-RestMethod` dá suporte à configuração de proxy definida por variáveis de ambiente. Consulte a seção [observações](#notes) deste artigo.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: obter o feed RSS do PowerShell
 
@@ -216,17 +216,17 @@ Accept wildcard characters: False
 
 ### -Autenticação
 
-Especifica o tipo de autenticação explícito a ser usado para a solicitação. O padrão é **Nenhum** .
-A **autenticação** não pode ser usada com **UseDefaultCredentials** .
+Especifica o tipo de autenticação explícito a ser usado para a solicitação. O padrão é **Nenhum**.
+A **autenticação** não pode ser usada com **UseDefaultCredentials**.
 
 Opções de autenticação disponíveis:
 
-- **Nenhum** : essa é a opção padrão quando a **autenticação** não é fornecida. Nenhuma autenticação explícita será usada.
-- **Básico** : requer **credencial** . As credenciais serão usadas para enviar um cabeçalho de autenticação básica do RFC 7617 `Authorization: Basic` no formato de `base64(user:password)` .
-- **Portador** : requer **token** . Enviará e `Authorization: Bearer` o cabeçalho RFC 6750 com o token fornecido. Este é um alias para **OAuth**
-- **OAuth** : requer **token** . Enviará um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
+- `None`: Essa é a opção padrão quando a **autenticação** não é fornecida. Nenhuma autenticação explícita será usada.
+- `Basic`: Requer **credencial**. As credenciais serão usadas para enviar um cabeçalho de autenticação básica do RFC 7617 `Authorization: Basic` no formato de `base64(user:password)` .
+- `Bearer`: Requer **token**. Enviará e `Authorization: Bearer` o cabeçalho RFC 6750 com o token fornecido. Este é um alias para **OAuth**
+- `OAuth`: Requer **token**. Enviará um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
 
-O fornecimento de **autenticação** substituirá todos os `Authorization` cabeçalhos fornecidos aos **cabeçalhos** ou incluídos na sessão da **websession** .
+O fornecimento de **autenticação** substituirá todos os `Authorization` cabeçalhos fornecidos aos **cabeçalhos** ou incluídos na sessão da **websession**.
 
 Esse recurso foi adicionado no PowerShell 6.0.0.
 
@@ -254,7 +254,7 @@ Quando a entrada é uma solicitação GET e o corpo é um `IDictionary` (normalm
 
 Quando o corpo é um formulário, ou é a saída de outra `Invoke-WebRequest` chamada, o PowerShell define o conteúdo da solicitação para os campos de formulário.
 
-O parâmetro **Body** também pode aceitar um objeto **System .net. http. MultipartFormDataContent** . Isso facilitará `multipart/form-data` as solicitações. Quando um objeto **MultipartFormDataContent** é fornecido para **o corpo** , todos os cabeçalhos relacionados ao conteúdo fornecidos aos parâmetros **ContentType** , **Headers** ou **websession** serão substituídos pelos cabeçalhos de conteúdo do `MultipartFormDataContent` objeto. Esse recurso foi adicionado no PowerShell 6.0.0.
+O parâmetro **Body** também pode aceitar um objeto **System .net. http. MultipartFormDataContent** . Isso facilitará `multipart/form-data` as solicitações. Quando um objeto **MultipartFormDataContent** é fornecido para **o corpo**, todos os cabeçalhos relacionados ao conteúdo fornecidos aos parâmetros **ContentType**, **Headers** ou **websession** serão substituídos pelos cabeçalhos de conteúdo do `MultipartFormDataContent` objeto. Esse recurso foi adicionado no PowerShell 6.0.0.
 
 ```yaml
 Type: System.Object
@@ -315,7 +315,7 @@ Especifica o tipo de conteúdo da solicitação da Web.
 
 Se esse parâmetro for omitido e o método de solicitação for POST, `Invoke-RestMethod` o definirá o tipo de conteúdo como `application/x-www-form-urlencoded` . Caso contrário, o tipo de conteúdo não será especificado na chamada.
 
-**ContentType** será substituído quando um `MultipartFormDataContent` objeto for fornecido para o **corpo** .
+**ContentType** será substituído quando um `MultipartFormDataContent` objeto for fornecido para o **corpo**.
 
 ```yaml
 Type: System.String
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 
 Especifica uma conta de usuário com permissão para enviar a solicitação. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, ou insira um objeto **PSCredential** gerado pelo `Get-Credential` cmdlet.
 
 A **credencial** pode ser usada sozinha ou em conjunto com determinadas opções de parâmetro de **autenticação** . Quando usado sozinho, ele só fornecerá credenciais para o servidor remoto se o servidor remoto enviar uma solicitação de desafio de autenticação. Quando usado com as opções de **autenticação** , as credenciais serão enviadas explicitamente.
 
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 
 ### -CustomMethod
 
-Especifica o método personalizado usado para a solicitação da Web. Isso pode ser usado com o método de solicitação exigido pelo ponto de extremidade não é uma opção disponível no **método** . O **método** e o **CustomMethod** não podem ser usados juntos.
+Especifica o método personalizado usado para a solicitação da Web. Isso pode ser usado com o método de solicitação exigido pelo ponto de extremidade não é uma opção disponível no **método**. O **método** e o **CustomMethod** não podem ser usados juntos.
 
 Exemplo:
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 
 ### -Formulário
 
-Converte um dicionário em um `multipart/form-data` envio. O **formulário** não pode ser usado com o **corpo** .
+Converte um dicionário em um `multipart/form-data` envio. O **formulário** não pode ser usado com o **corpo**.
 Se **ContentType** será ignorado.
 
 As chaves do dicionário serão usadas como os nomes de campo de formulário. Por padrão, os valores de formulário serão convertidos em valores de cadeia de caracteres.
@@ -461,9 +461,9 @@ Accept wildcard characters: False
 
 Especifica os cabeçalhos da solicitação da Web. Insira uma tabela de hash ou dicionário.
 
-Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent** . Você não pode usar esse parâmetro para especificar `User-Agent` cabeçalhos de cookie ou.
+Para definir cabeçalhos UserAgent, use o parâmetro **UserAgent**. Você não pode usar esse parâmetro para especificar `User-Agent` cabeçalhos de cookie ou.
 
-Cabeçalhos relacionados ao conteúdo, como, `Content-Type` serão substituídos quando um `MultipartFormDataContent` objeto for fornecido para o **corpo** .
+Cabeçalhos relacionados ao conteúdo, como, `Content-Type` serão substituídos quando um `MultipartFormDataContent` objeto for fornecido para o **corpo**.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -547,16 +547,16 @@ Accept wildcard characters: False
 
 Especifica o método usado para a solicitação da Web. Os valores aceitáveis para esse parâmetro são:
 
-- Padrão
-- Excluir
-- Obter
-- Head
-- Mesclar
-- Opções
-- Patch
-- Postar
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 O parâmetro **CustomMethod** pode ser usado para métodos de solicitação não listados acima.
 
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 
 Salva o corpo da resposta no arquivo de saída especificado. Digite um caminho e nome de arquivo. Se você omitir o caminho, o padrão será o local atual. O nome é tratado como um caminho literal. Os nomes que contêm colchetes ( `[]` ) devem ser colocados entre aspas simples ( `'` ).
 
-Por padrão, `Invoke-RestMethod` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru** .
+Por padrão, `Invoke-RestMethod` o retorna os resultados para o pipeline. Para enviar os resultados para um arquivo e para o pipeline, use o parâmetro **Passthru**.
 
 ```yaml
 Type: System.String
@@ -667,9 +667,9 @@ Accept wildcard characters: False
 
 ### -ProxyCredential
 
-Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy** . O padrão é o usuário atual.
+Especifica uma conta de usuário com permissão para conectar-se aos computadores especificados pelo parâmetro **Proxy**. O padrão é o usuário atual.
 
-Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01** , **User@Domain.Com** ou insira um `PSCredential` objeto, como um gerado pelo `Get-Credential` cmdlet.
+Digite um nome de usuário, como **User01** ou **Domínio01 \ Usuário01**, **User@Domain.Com** ou insira um `PSCredential` objeto, como um gerado pelo `Get-Credential` cmdlet.
 
 Esse parâmetro é válido somente quando o parâmetro de **proxy** também é usado no comando. Você não pode usar os parâmetros **ProxyCredential** e **ProxyUseDefaultCredentials** no mesmo comando.
 
@@ -731,11 +731,11 @@ Se o tamanho do arquivo local for menor que o tamanho do arquivo remoto, o cmdle
 
 Se o tamanho do arquivo local for igual ao tamanho do arquivo remoto, nenhuma ação será executada e o cmdlet assumirá que o download já foi concluído.
 
-Se o tamanho do arquivo local for maior que o tamanho do arquivo remoto, o arquivo local será substituído e todo o arquivo remoto será completamente baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o tamanho do arquivo local for maior que o tamanho do arquivo remoto, o arquivo local será substituído e todo o arquivo remoto será completamente baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
-Se o servidor remoto não oferecer suporte a retomada de download, o arquivo local será substituído e todo o arquivo remoto será completamente baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o servidor remoto não oferecer suporte a retomada de download, o arquivo local será substituído e todo o arquivo remoto será completamente baixado. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
-Se o arquivo local não existir, o arquivo local será criado e todo o arquivo remoto será baixado completamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar** .
+Se o arquivo local não existir, o arquivo local será criado e todo o arquivo remoto será baixado completamente. Esse comportamento é o mesmo que usar **outfile** sem **retomar**.
 
 Esse recurso foi adicionado no PowerShell 6.1.0.
 
@@ -776,7 +776,7 @@ Quando você especifica uma variável de sessão, `Invoke-RestMethod` o cria um 
 
 Ao contrário de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor de redirecionamento máximo e a cadeia de caracteres do agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession** . O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
+Para usar a sessão de solicitação da web nas solicitações da Web posteriores, especifique a variável de sessão no valor do parâmetro **WebSession**. O PowerShell usa os dados no objeto de sessão de solicitação da Web ao estabelecer a nova conexão. Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -820,7 +820,7 @@ Indica que o cmdlet deve adicionar cabeçalhos à solicitação sem validação.
 Essa opção deve ser usada para sites que exigem valores de cabeçalho que não estão em conformidade com os padrões.
 A especificação dessa opção desabilita a validação para permitir que o valor seja passado desmarcado. Quando especificado, todos os cabeçalhos são adicionados sem validação.
 
-Isso desabilitará a validação para valores passados para os parâmetros **ContentType** , **Headers** e **UserAgent** .
+Isso desabilitará a validação para valores passados para os parâmetros **ContentType**, **Headers** e **UserAgent** .
 
 Esse recurso foi adicionado no PowerShell 6.0.0.
 
@@ -859,7 +859,7 @@ Accept wildcard characters: False
 
 Define os protocolos SSL/TLS que são permitidos para a solicitação da Web. Por padrão, todos os protocolos SSL/TLS com suporte do sistema são permitidos. O **SslProtocol** permite limitar a protocolos específicos para fins de conformidade.
 
-**SslProtocol** usa o `WebSslProtocol` sinalizador enum. É possível fornecer mais de um protocolo usando a notação de sinalizador ou combinando várias `WebSslProtocol` opções com o `-bor` , no entanto, não há suporte para o fornecimento de vários protocolos em todas as plataformas.
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **SslProtocol** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores. Talvez você não possa fornecer vários valores em todas as plataformas.
 
 > [!NOTE]
 > Em plataformas não Windows, talvez não seja possível fornecer `Tls` ou `Tls12` como uma opção. O suporte para o `Tls13` não está disponível em todos os sistemas operacionais e precisará ser verificado por sistema operacional.
@@ -967,7 +967,7 @@ Accept wildcard characters: False
 
 Especifica o Uniform Resource Identifier (URI) do recurso da Internet para o qual a solicitação da Web é enviada. Esse parâmetro oferece suporte a valores HTTP, HTTPS, FTP e FILE.
 
-Este parâmetro é necessário. O nome do parâmetro ( **URI** ) é opcional.
+Este parâmetro é necessário. O nome do parâmetro (**URI**) é opcional.
 
 ```yaml
 Type: System.Uri
@@ -1037,11 +1037,11 @@ Accept wildcard characters: False
 
 Especifica uma sessão de solicitação da Web. Insira o nome da variável, incluindo o cifrão ( `$` ).
 
-Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential** . Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web. Cabeçalhos relacionados ao conteúdo, como `Content-Type` , também serão substituídos quando um objeto **MultipartFormDataContent** for fornecido para o **corpo** .
+Para substituir um valor na sessão de solicitação da Web, use um parâmetro de cmdlet, como **UserAgent** ou **Credential**. Valores de parâmetro têm precedência sobre valores na seção de solicitação da Web. Cabeçalhos relacionados ao conteúdo, como `Content-Type` , também serão substituídos quando um objeto **MultipartFormDataContent** for fornecido para o **corpo**.
 
 Ao contrário de uma sessão remota, a sessão de solicitação da Web não é uma conexão persistente. É um objeto que contém informações sobre a conexão e a solicitação, incluindo cookies, credenciais, o valor de redirecionamento máximo e a cadeia de caracteres do agente do usuário. Você pode usá-lo para compartilhar o estado e os dados entre solicitações da Web.
 
-Para criar uma sessão de solicitação da Web, insira um nome de variável, sem um sinal de cifrão, no valor do parâmetro **SessionVariable** de um `Invoke-RestMethod` comando. `Invoke-RestMethod` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession** .
+Para criar uma sessão de solicitação da Web, insira um nome de variável, sem um sinal de cifrão, no valor do parâmetro **SessionVariable** de um `Invoke-RestMethod` comando. `Invoke-RestMethod` cria a sessão e salva-a na variável. Em comandos posteriores, use a variável como o valor do parâmetro **WebSession**.
 
 Você não pode usar os parâmetros **SessionVariable** e **websession** no mesmo comando.
 
@@ -1061,13 +1061,13 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System.Object
 
 Você pode canalizar o corpo de uma solicitação da Web para `Invoke-RestMethod` .
 
-## SAÍDAS
+## Saídas
 
 ### System. Int64, System. String, System.Xml.Xmldocumento
 
@@ -1077,7 +1077,7 @@ A saída do cmdlet depende do formato do conteúdo que é obtido.
 
 Se a solicitação retornar cadeias de caracteres JSON, `Invoke-RestMethod` retornará um **PSObject** que representa as cadeias de caracteres.
 
-## OBSERVAÇÕES
+## Observações
 
 Alguns recursos podem não estar disponíveis em todas as plataformas.
 
@@ -1085,18 +1085,18 @@ Devido às alterações no .NET Core 3,1, o PowerShell 7,0 e superior usam a pro
 
 O valor dessa propriedade é diferente das regras, dependendo da sua plataforma:
 
-- **Para o Windows** : lê a configuração de proxy de variáveis de ambiente ou, se elas não estiverem definidas, nas configurações de proxy do usuário.
-- **Para MacOS** : lê a configuração de proxy de variáveis de ambiente ou, se elas não estiverem definidas, nas configurações de proxy do sistema.
-- **Para Linux** : lê a configuração de proxy de variáveis de ambiente ou, caso não estejam definidas, essa propriedade Inicializa uma instância não configurada que ignora todos os endereços.
+- **Para o Windows**: lê a configuração de proxy de variáveis de ambiente ou, se elas não estiverem definidas, nas configurações de proxy do usuário.
+- **Para MacOS**: lê a configuração de proxy de variáveis de ambiente ou, se elas não estiverem definidas, nas configurações de proxy do sistema.
+- **Para Linux**: lê a configuração de proxy de variáveis de ambiente ou, caso não estejam definidas, essa propriedade Inicializa uma instância não configurada que ignora todos os endereços.
 
 As variáveis de ambiente usadas para `DefaultProxy` inicialização em plataformas baseadas no Windows e no Unix são:
 
-- ` HTTP_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTP.
+- `HTTP_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTP.
 - `HTTPS_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTPS.
 - `ALL_PROXY`: o nome do host ou endereço IP do servidor proxy usado em solicitações HTTP e HTTPS no caso `HTTP_PROXY` ou `HTTPS_PROXY` não estão definidas.
 - `NO_PROXY`: uma lista separada por vírgulas de nomes de host que devem ser excluídos do proxy.
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [ConvertTo-Json](ConvertTo-Json.md)
 

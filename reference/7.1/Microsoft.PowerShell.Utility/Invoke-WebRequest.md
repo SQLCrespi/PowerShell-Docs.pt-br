@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/26/2021
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 036f5aef42b9413747f4e738bf748fda8bb2d2d2
-ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
+ms.openlocfilehash: 1c178c9a7683b9630cabf6165fae0341385d67a6
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860779"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555756"
 ---
 # Invoke-WebRequest
 
-## SINOPSE
+## Sinopse
 Obtém o conteúdo de uma página da Web na Internet.
 
-## SYNTAX
+## Syntax
 
 ### StandardMethod (padrão)
 
@@ -82,15 +82,15 @@ Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSessio
  [-PreserveAuthorizationOnRedirect] [-SkipHeaderValidation] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
-O `Invoke-WebRequest` cmdlet envia solicitações HTTP e HTTPS para uma página da Web ou serviço Web. Ele analisa a resposta e retorna coleções de links, imagens e outros elementos HTML significativos.
+O `Invoke-WebRequest` cmdlet envia solicitações HTTP e HTTPS para uma página da Web ou serviço Web. Ele analisa a resposta e retorna conjuntos de links, imagens e outros elementos HTML significativos.
 
 Esse cmdlet foi introduzido no PowerShell 3,0.
 
 A partir do PowerShell 7,0, `Invoke-WebRequest` dá suporte à configuração de proxy definida por variáveis de ambiente. Consulte a seção [observações](#notes) deste artigo.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: Enviar uma solicitação da Web
 
@@ -243,7 +243,7 @@ $StatusCode
 
 O erro de encerramento é capturado pelo `catch` bloco, que recupera o **StatusCode** do objeto de **exceção** .
 
-## PARAMETERS
+## Parâmetros
 
 ### -AllowUnencryptedAuthentication
 
@@ -273,10 +273,10 @@ A **autenticação** não pode ser usada com **UseDefaultCredentials**.
 
 Opções de autenticação disponíveis:
 
-- **Nenhum**: essa é a opção padrão quando a **autenticação** não é fornecida; nenhuma autenticação explícita é usada.
-- **Básico**: requer **credencial**. As credenciais são enviadas em um cabeçalho de autenticação básica do RFC 7617 no formato de `base64(user:password)` .
-- **Portador**: requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **OAuth**
-- **OAuth**: requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
+- `None`: Essa é a opção padrão quando a **autenticação** não é fornecida; nenhuma autenticação explícita é usada.
+- `Basic`: Requer **credencial**. As credenciais são enviadas em um cabeçalho de autenticação básica do RFC 7617 no formato de `base64(user:password)` .
+- `Bearer`: Requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **OAuth**
+- `OAuth`: Requer **token**. Envia um cabeçalho RFC 6750 `Authorization: Bearer` com o token fornecido. Este é um alias para **portador**
 
 O fornecimento de **autenticação** substitui todos os `Authorization` cabeçalhos fornecidos aos **cabeçalhos** ou incluídos na sessão da **websession**.
 
@@ -555,16 +555,16 @@ Accept wildcard characters: False
 
 Especifica o método usado para a solicitação da Web. Os valores aceitáveis para esse parâmetro são:
 
-- Padrão
-- Excluir
-- Obter
-- Head
-- Mesclar
-- Opções
-- Patch
-- Postar
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 O parâmetro **CustomMethod** pode ser usado para métodos de solicitação não listados acima.
 
@@ -846,7 +846,7 @@ Accept wildcard characters: False
 
 Define os protocolos SSL/TLS que são permitidos para a solicitação da Web. Por padrão, todos os protocolos SSL/TLS com suporte do sistema são permitidos. O **SslProtocol** permite limitar a protocolos específicos para fins de conformidade.
 
-**SslProtocol** usa a enumeração de sinalizador **WebSslProtocol** . É possível fornecer mais de um protocolo usando a notação de sinalizador ou combinando várias opções **WebSslProtocol** com **Bor**, no entanto, não há suporte para o fornecimento de vários protocolos em todas as plataformas.
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **SslProtocol** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores. Talvez você não consiga definir várias opções em todas as plataformas.
 
 > [!NOTE]
 > Em plataformas não Windows, talvez não seja possível fornecer `Tls` ou `Tls12` como uma opção. O suporte para o `Tls13` não está disponível em todos os sistemas operacionais e precisará ser verificado por sistema operacional.
@@ -1033,17 +1033,17 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System.Object
 
 Você pode canalizar o corpo de uma solicitação da Web para `Invoke-WebRequest` .
 
-## SAÍDAS
+## Saídas
 
 ### Microsoft. PowerShell. Commands. BasicHtmlWebResponseObject
 
-## OBSERVAÇÕES
+## Observações
 
 A partir do PowerShell, o 6.0.0 `Invoke-WebRequest` dá suporte apenas à análise básica.
 
@@ -1059,12 +1059,12 @@ O valor dessa propriedade é determinado pela sua plataforma:
 
 As variáveis de ambiente usadas para `DefaultProxy` inicialização em plataformas baseadas no Windows e no Unix são:
 
-- ` HTTP_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTP.
+- `HTTP_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTP.
 - `HTTPS_PROXY`: o nome de host ou endereço IP do servidor proxy usado em solicitações HTTPS.
 - `ALL_PROXY`: o nome do host ou endereço IP do servidor proxy usado em solicitações HTTP e HTTPS no caso `HTTP_PROXY` ou `HTTPS_PROXY` não estão definidas.
 - `NO_PROXY`: uma lista separada por vírgulas de nomes de host que devem ser excluídos do proxy.
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Invoke-RestMethod](Invoke-RestMethod.md)
 

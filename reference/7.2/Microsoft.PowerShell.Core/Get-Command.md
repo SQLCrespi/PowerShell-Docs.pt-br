@@ -2,23 +2,23 @@
 external help file: System.Management.Automation.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 05/20/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Command
-ms.openlocfilehash: 1d54082ee313c0e8d4ee7911f89da150aeba9d55
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 092b7bff345340a8e2d30136517537c375074df1
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99595768"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555450"
 ---
 # Get-Command
 
-## SINOPSE
+## Sinopse
 Obtém todos os comandos.
 
-## SYNTAX
+## Syntax
 
 ### CmdletSet (padrão)
 
@@ -39,7 +39,7 @@ Get-Command [[-Name] <String[]>] [-Module <String[]>]
  [-UseAbbreviationExpansion] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Get-Command` cmdlet obtém todos os comandos que estão instalados no computador, incluindo cmdlets, aliases, funções, filtros, scripts e aplicativos. `Get-Command` Obtém os comandos de módulos e comandos do PowerShell que foram importados de outras sessões. Para obter somente comandos que foram importados para a sessão atual, use o parâmetro **ListImported**.
 
@@ -51,7 +51,7 @@ Sem parâmetros, `Get-Command` Obtém todos os cmdlets, funções e aliases inst
 
 A partir do Windows PowerShell 5,0, os resultados do `Get-Command` cmdlet exibem uma coluna de **versão** por padrão. Uma nova propriedade **version** foi adicionada à classe **CommandInfo** .
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: obter cmdlets, funções e aliases
 
@@ -116,7 +116,10 @@ O comando no exemplo usa a `Get-DynamicParameters` função para obter os parâm
 function Get-DynamicParameters
 {
     param ($Cmdlet, $PSDrive)
-    (Get-Command -Name $Cmdlet -ArgumentList $PSDrive).ParameterSets | ForEach-Object {$_.Parameters} | Where-Object { $_.IsDynamic } | Select-Object -Property Name -Unique
+    (Get-Command -Name $Cmdlet -ArgumentList $PSDrive).ParameterSets | 
+      ForEach-Object {$_.Parameters} | 
+        Where-Object { $_.IsDynamic } | 
+          Select-Object -Property Name -Unique
 }
 Get-DynamicParameters -Cmdlet Get-ChildItem -PSDrive Cert:
 ```
@@ -156,7 +159,7 @@ O parâmetro **ParameterType** distingue parâmetros que usam um valor **Authent
 Este exemplo mostra como usar o `Get-Command` cmdlet com um alias.
 
 ```powershell
-Get-Command Name dir
+Get-Command -Name dir
 ```
 
 ```Output
@@ -272,7 +275,7 @@ Application     getconf                                            0.0.0.0    /u
 Application     command                                            0.0.0.0    /usr/bin/command
 ```
 
-## PARAMETERS
+## Parâmetros
 
 ### -All
 
@@ -323,13 +326,15 @@ Especifica os tipos de comandos que esse cmdlet obtém. Insira um ou mais tipos 
 
 Os valores aceitáveis para esse parâmetro são:
 
-- Receber. Obtém os aliases de todos os comandos do PowerShell. Para obter mais informações, consulte [about_Aliases](About/about_Aliases.md).
-- Todos. Obtém todos os tipos de comando. Esse valor de parâmetro é o equivalente de `Get-Command *` .
-- Console. Obtém arquivos que não são do PowerShell em caminhos listados na variável de ambiente **path** ($env:p Ho), incluindo arquivos. txt,. exe e. dll. Para obter mais informações sobre a variável de ambiente **path** , consulte about_Environment_Variables.
-- Cmdlet. Obtém todos os cmdlets.
-- ExternalScript. Obtém todos os arquivos .ps1 nos caminhos listados na variável de ambiente **Path** ($env:path).
-- Filtro e função. Obtém todas as funções e os filtros avançados e simples do PowerShell.
-- Script. Obtém todos os blocos de script. Para obter scripts do PowerShell (arquivos. ps1), use o valor ExternalScript.
+- `Alias`: Obtém os aliases de todos os comandos do PowerShell. Para obter mais informações, consulte [about_Aliases](About/about_Aliases.md).
+- `All`: Obtém todos os tipos de comando. Esse valor de parâmetro é o equivalente de `Get-Command *` .
+- `Application`: Obtém arquivos que não são do PowerShell em caminhos listados na variável de ambiente **path** ( `$env:path` ), incluindo arquivos. txt,. exe e. dll. Para obter mais informações sobre a variável de ambiente **Path**, consulte [about_Environment_Variables](About/about_Environment_Variables.md).
+- `Cmdlet`: Obtém todos os cmdlets.
+- `ExternalScript`: Obtém todos os arquivos. ps1 nos caminhos listados na variável de ambiente **path** ( `$env:path` ).
+- `Filter` e `Function` : Obtém todas as funções e os filtros avançados e simples do PowerShell.
+- `Script`: Obtém todos os blocos de script. Para obter scripts do PowerShell (arquivos. ps1), use o `ExternalScript` valor.
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **CommandType** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -588,13 +593,13 @@ Accept wildcard characters: True
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](About/about_CommonParameters.md).
 
-## ENTRADAS
+## Entradas
 
 ### System.String
 
 Você pode canalizar nomes de comando para este cmdlet.
 
-## SAÍDAS
+## Saídas
 
 ### System. Management. Automation. CommandInfo
 
@@ -616,13 +621,13 @@ Representa cmdlets.
 
 Representa funções e filtros.
 
-## OBSERVAÇÕES
+## Observações
 
-* Quando mais de um comando com o mesmo nome está disponível para a sessão, `Get-Command` o retorna o comando que é executado quando você digita o nome do comando. Para obter comandos com o mesmo nome, listados em ordem de execução, use o parâmetro **All** . Para obter mais informações, confira [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md).
-* Quando um módulo é importado automaticamente, o efeito é o mesmo que usar o `Import-Module` cmdlet. O módulo pode adicionar comandos, tipos e arquivos de formatação e executar scripts na sessão.
+- Quando mais de um comando com o mesmo nome está disponível para a sessão, `Get-Command` o retorna o comando que é executado quando você digita o nome do comando. Para obter comandos com o mesmo nome, listados em ordem de execução, use o parâmetro **All** . Para obter mais informações, confira [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md).
+- Quando um módulo é importado automaticamente, o efeito é o mesmo que usar o `Import-Module` cmdlet. O módulo pode adicionar comandos, tipos e arquivos de formatação e executar scripts na sessão.
   Para habilitar, desabilitar e configurar a importação automática de módulos, use a `$PSModuleAutoLoadingPreference` variável de preferência. Para obter mais informações, consulte [about_Preference_Variables](../Microsoft.PowerShell.Core/About/about_Preference_Variables.md).
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Export-PSSession](../Microsoft.PowerShell.Utility/Export-PSSession.md)
 
@@ -635,4 +640,3 @@ Representa funções e filtros.
 [Import-PSSession](../Microsoft.PowerShell.Utility/Import-PSSession.md)
 
 [about_Command_Precedence](About/about_Command_Precedence.md)
-

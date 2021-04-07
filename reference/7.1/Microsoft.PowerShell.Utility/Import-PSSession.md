@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-PSSession
-ms.openlocfilehash: 05e2d4575be1617feb29c58acbfd9a2a68fbb607
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 540be766d3fa66432207130f581262ec17e4c05c
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94389174"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555773"
 ---
 # Import-PSSession
 
-## SINOPSE
+## Sinopse
 Importa comandos de outra sessão para a sessão atual.
 
-## SYNTAX
+## Sintaxe
 
 ```
 Import-PSSession [-Prefix <String>] [-DisableNameChecking] [[-CommandName] <String[]>] [-AllowClobber]
@@ -28,7 +28,7 @@ Import-PSSession [-Prefix <String>] [-DisableNameChecking] [[-CommandName] <Stri
  [-Certificate <X509Certificate2>] [-Session] <PSSession> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Import-PSSession` cmdlet importa comandos, como cmdlets, funções e aliases, de uma PSSession em um computador local ou remoto para a sessão atual. Você pode importar qualquer comando que o `Get-Command` cmdlet possa encontrar na PSSession.
 
@@ -46,26 +46,26 @@ O `Import-PSSession` cmdlet usa o recurso de comunicação remota implícita do 
 
 A partir do Windows PowerShell 3,0, você pode usar o `Import-Module` cmdlet para importar módulos de uma sessão remota para a sessão atual. Esse recurso usa a comunicação remota implícita. É equivalente a usar `Import-PSSession` o para importar módulos selecionados de uma sessão remota para a sessão atual.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: importar todos os comandos de uma PSSession
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Import-PSSession -Session $S
+$S = New-PSSession -ComputerName Server01
+Import-PSSession -Session $S
 ```
 
 Este comando importa todos os comandos de uma PSSession no computador Server01 para a sessão atual, com exceção de comandos que possuem os mesmos nomes de comandos na sessão atual.
 
-Como esse comando não usa o parâmetro **CommandName** , ele também importa todos os dados de formatação necessários para os comandos importados.
+Como esse comando não usa o parâmetro **CommandName**, ele também importa todos os dados de formatação necessários para os comandos importados.
 
 ### Exemplo 2: importar comandos que terminam com uma cadeia de caracteres específica
 
 ```
-PS C:\> $S = New-PSSession https://ps.testlabs.com/powershell
-PS C:\> Import-PSSession -Session $S -CommandName *-test -FormatTypeName *
-PS C:\> New-Test -Name Test1
-PS C:\> Get-Test test1 | Run-Test
+$S = New-PSSession https://ps.testlabs.com/powershell
+Import-PSSession -Session $S -CommandName *-test -FormatTypeName *
+New-Test -Name Test1
+Get-Test test1 | Run-Test
 ```
 
 Esses comandos importam os comandos com nomes que terminam em "-test" de uma PSSession para a sessão local e mostram como usar um cmdlet importado.
@@ -79,11 +79,11 @@ Os terceiro e o quarto comandos usam os comandos importados na sessão atual. Co
 ### Exemplo 3: importar cmdlets de uma PSSession
 
 ```
-PS C:\> $S1 = New-PSSession -ComputerName s1
-PS C:\> $S2 = New-PSSession -ComputerName s2
-PS C:\> Import-PSSession -Session s1 -Type cmdlet -Name New-Test, Get-Test -FormatTypeName *
-PS C:\> Import-PSSession -Session s2 -Type Cmdlet -Name Set-Test -FormatTypeName *
-PS C:\> New-Test Test1 | Set-Test -RunType Full
+$S1 = New-PSSession -ComputerName s1
+$S2 = New-PSSession -ComputerName s2
+Import-PSSession -Session s1 -Type cmdlet -Name New-Test, Get-Test -FormatTypeName *
+Import-PSSession -Session s2 -Type Cmdlet -Name Set-Test -FormatTypeName *
+New-Test Test1 | Set-Test -RunType Full
 ```
 
 Este exemplo mostra que é possível usar cmdlets importados da mesma maneira que cmdlets locais.
@@ -95,10 +95,10 @@ Embora os cmdlets sejam importados de diferentes PSSessions, é possível direci
 ### Exemplo 4: executar um comando importado como um trabalho em segundo plano
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Import-PSSession -Session $S -CommandName *-test* -FormatTypeName *
-PS C:\> $batch = New-Test -Name Batch -AsJob
-PS C:\> Receive-Job $batch
+$S = New-PSSession -ComputerName Server01
+Import-PSSession -Session $S -CommandName *-test* -FormatTypeName *
+$batch = New-Test -Name Batch -AsJob
+Receive-Job $batch
 ```
 
 Este exemplo mostra como executar um comando importado como um trabalho em segundo plano.
@@ -116,9 +116,9 @@ O quarto comando usa o `Receive-Job` cmdlet para obter os resultados do trabalho
 ### Exemplo 5: importar cmdlets e funções de um módulo do Windows PowerShell
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Invoke-Command -Session $S {Import-Module TestManagement}
-PS C:\> Import-PSSession -Session $S -Module TestManagement
+$S = New-PSSession -ComputerName Server01
+Invoke-Command -Session $S {Import-Module TestManagement}
+Import-PSSession -Session $S -Module TestManagement
 ```
 
 Este exemplo mostra como importar os cmdlets e funções de um módulo do Windows PowerShell em um computador remoto para a sessão atual.
@@ -236,7 +236,7 @@ O parâmetro **Module** obtém um valor de cadeia de caracteres, que é projetad
 
 O `Get-Command` comando é o equivalente a `Get-Command $M.Name` ".
 
-## PARAMETERS
+## Parâmetros
 
 ### -AllowClobber
 
@@ -302,7 +302,7 @@ Especifica os comandos com os nomes especificados ou padrões de nome. Caractere
 
 Por padrão, `Import-PSSession` o importa todos os comandos da sessão, exceto os comandos que têm os mesmos nomes que os comandos na sessão atual. Isso impede que os comandos importados ocultem ou substituam os comandos da sessão. Para importar todos os comandos, mesmo aqueles que ocultam ou substituem outros comandos, use o parâmetro **AllowClobber**.
 
-Se você usar o parâmetro **CommandName** , os arquivos de formatação para os comandos não serão importados a menos que você use o parâmetro **FormatTypeName**. Da mesma forma, se você usar o parâmetro **FormatTypeName** , nenhum comando é importado, a menos que você use o parâmetro **CommandName**.
+Se você usar o parâmetro **CommandName**, os arquivos de formatação para os comandos não serão importados a menos que você use o parâmetro **FormatTypeName**. Da mesma forma, se você usar o parâmetro **FormatTypeName**, nenhum comando é importado, a menos que você use o parâmetro **CommandName**.
 
 ```yaml
 Type: System.String[]
@@ -320,13 +320,15 @@ Accept wildcard characters: False
 
 Especifica o tipo de objetos de comando. O valor padrão é Cmdlet. Use o **CommandType** ou seu alias, **Type**. Os valores aceitáveis para esse parâmetro são:
 
-- Receber. Os aliases do Windows PowerShell na sessão remota.
-- Todos. Os cmdlets e funções na sessão remota.
-- Console. Todos os arquivos que não sejam Windows-PowerShell arquivos nos caminhos listados na variável de ambiente Path ( `$env:path` ) na sessão remota, incluindo arquivos. txt,. exe e. dll.
-- Cmdlet. Os cmdlets na sessão remota. "Cmdlet" é o padrão.
-- ExternalScript. Os arquivos. ps1 nos caminhos listados na variável de ambiente Path ( `$env:path` ) na sessão remota.
-- Filtro e função. As funções do Windows PowerShell na sessão remota.
-- Script. Os blocos de script na sessão remota.
+- `Alias`: Os aliases do Windows PowerShell na sessão remota.
+- `All`: Os cmdlets e funções na sessão remota.
+- `Application`: Todos os arquivos que não Windows-PowerShell arquivos nos caminhos listados na variável de ambiente Path ( `$env:path` ) na sessão remota, incluindo arquivos. txt,. exe e. dll.
+- `Cmdlet`: Os cmdlets na sessão remota. "Cmdlet" é o padrão.
+- `ExternalScript`: Os arquivos. ps1 nos caminhos listados na variável de ambiente Path ( `$env:path` ) na sessão remota.
+- `Filter` e `Function` : as funções do Windows PowerShell na sessão remota.
+- `Script`: Os blocos de script na sessão remota.
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro **CommandType** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -373,9 +375,9 @@ O valor desse parâmetro deve ser o nome de um tipo que é retornado por um `Get
 
 Se o comando não incluir o parâmetro **CommandName** ou **FormatTypeName** , o `Import-PSSession` importará instruções de formatação para todos os tipos de .NET Framework retornados por um `Get-FormatData` comando na sessão remota.
 
-Se você usar o parâmetro **FormatTypeName** , nenhum comando será importado, a menos que você use o parâmetro **CommandName**.
+Se você usar o parâmetro **FormatTypeName**, nenhum comando será importado, a menos que você use o parâmetro **CommandName**.
 
-Da mesma forma, se você usar o parâmetro **CommandName** , os arquivos de formatação para os comandos não serão importados a menos que você use o parâmetro **FormatTypeName**.
+Da mesma forma, se você usar o parâmetro **CommandName**, os arquivos de formatação para os comandos não serão importados a menos que você use o parâmetro **FormatTypeName**.
 
 ```yaml
 Type: System.String[]
@@ -472,20 +474,20 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### Nenhum
 
 Não é possível transferir objetos para esse cmdlet.
 
-## SAÍDAS
+## Saídas
 
 ### System. Management. Automation. PSModuleInfo
 
 `Import-PSSession` Retorna o mesmo objeto de módulo que os `New-Module` `Get-Module` cmdlets retornam.
 No entanto, o módulo importado é temporário e existe somente na sessão atual. Para criar um módulo permanente no disco, use o `Export-PSSession` cmdlet.
 
-## OBSERVAÇÕES
+## Observações
 
 - `Import-PSSession` depende da infraestrutura de comunicação remota do PowerShell. Para usar esse cmdlet, o computador deve ser configurado para comunicação remota do WS-Management. Para obter mais informações, consulte [about_Remote](../Microsoft.PowerShell.Core/about/about_Remote.md) e [about_Remote_Requirements](../Microsoft.PowerShell.Core/about/about_Remote_Requirements.md).
 - `Import-PSSession` Não importa variáveis ou provedores do PowerShell.
@@ -499,6 +501,6 @@ No entanto, o módulo importado é temporário e existe somente na sessão atual
 - Para usar `Import-PSSession` o, a política de execução na sessão atual não pode ser restrita ou AllSigned, pois o módulo temporário que o `Import-PSSession` cria contém arquivos de script não assinados que são proibidos por essas políticas. Para usar `Import-PSSession` sem alterar a política de execução para o computador local, use o parâmetro de **escopo** de `Set-ExecutionPolicy` para definir uma política de execução menos restritiva para um único processo.
 - No Windows PowerShell 2.0, os tópicos de ajuda para comandos importados de outra sessão não incluem o prefixo que você atribui usando o parâmetro **Prefix**. Para obter ajuda sobre um comando importado no Windows PowerShell 2.0, use o nome original do comando (sem prefixo).
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Export-PSSession](Export-PSSession.md)
