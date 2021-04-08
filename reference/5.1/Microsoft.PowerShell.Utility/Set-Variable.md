@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell, cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/06/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: 2041d40803aac1afafad2a0855aa39ebba9ad814
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: a0a76ce53af872ef2004cf8bf8213265b435abe5
+ms.sourcegitcommit: 241071803915ab7d544576b5652ac23349a86369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239857"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107027168"
 ---
 # Set-Variable
 
-## SINOPSE
+## Sinopse
 Define o valor de uma variável. Cria a variável se uma com o nome solicitado não existir.
 
-## SYNTAX
+## Sintaxe
 
 ```
 Set-Variable [-Name] <String[]> [[-Value] <Object>] [-Include <String[]>] [-Exclude <String[]>]
@@ -27,11 +27,11 @@ Set-Variable [-Name] <String[]> [[-Value] <Object>] [-Include <String[]>] [-Excl
  [-PassThru] [-Scope <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Descrição
 
 O `Set-Variable` cmdlet atribui um valor a uma variável especificada ou altera o valor atual. Se a variável não existir, o cmdlet a criará.
 
-## EXEMPLOS
+## Exemplos
 
 ### Exemplo 1: definir uma variável e obter seu valor
 
@@ -59,7 +59,7 @@ Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope glob
 
 O comando usa o `Set-Variable` cmdlet para criar a variável. Ele usa o parâmetro **PassThru** para criar um objeto que representa a nova variável e usa o operador de pipeline ( `|` ) para passar o objeto para o `Format-List` cmdlet. Ele usa o parâmetro **Property** de `Format-List` com um valor de All ( `*` ) para exibir todas as propriedades da variável recém-criada.
 
-O valor, `(Get-Process)` , é colocado entre parênteses para garantir que ele seja executado antes de ser armazenado na variável. Caso contrário, a variável conterá as palavras " **Get-Process** ".
+O valor, `(Get-Process)` , é colocado entre parênteses para garantir que ele seja executado antes de ser armazenado na variável. Caso contrário, a variável conterá as palavras "**Get-Process**".
 
 ### Exemplo 3: entender as variáveis públicas versus privadas
 
@@ -99,7 +99,7 @@ PS C:\> .\use-counter.ps1
 
 Este comando mostra como alterar a visibilidade de uma variável para particular. Essa variável pode ser lida e alterada por scripts com as permissões necessárias, mas não fica visível para o usuário.
 
-## PARAMETERS
+## Parâmetros
 
 ### -Description
 
@@ -190,11 +190,13 @@ Especifica o valor da propriedade **Options** da variável.
 
 Os valores válidos são:
 
-- `None`: Não define opções. ("None" é o padrão.)
+- `None`: Não define opções. ( `None` é o padrão.)
 - `ReadOnly`: Pode ser excluído. Não pode ser alterado, exceto pelo uso do parâmetro Force.
 - `Constant`: Não pode ser excluído ou alterado. `Constant` é válido somente quando você está criando uma variável. Você não pode alterar as opções de uma variável existente para `Constant` .
 - `Private`: A variável está disponível somente no escopo atual.
 - `AllScope`: A variável é copiada para todos os novos escopos criados.
+
+Esses valores são definidos como uma enumeração baseada em sinalizador. Você pode combinar vários valores juntos para definir vários sinalizadores usando esse parâmetro. Os valores podem ser passados para o parâmetro de **opção** como uma matriz de valores ou como uma cadeia de caracteres separada por vírgulas desses valores. O cmdlet combinará os valores usando uma operação binary ou. Passar valores como uma matriz é a opção mais simples e também permite que você use a conclusão de tabulação nos valores.
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -229,13 +231,13 @@ Accept wildcard characters: False
 
 Especifica o escopo da variável. Os valores aceitáveis para esse parâmetro são:
 
-- Global
-- Local
-- script
-- Privados
+- `Global`
+- `Local`
+- `Script`
+- `Private`
 - Um número relativo ao escopo atual (0 até o número de escopos, em que 0 é o escopo atual e 1 é seu pai).
 
-Local é o padrão.
+`Local` é o padrão.
 
 Para obter mais informações, consulte [about_Scopes](../Microsoft.PowerShell.Core/About/about_scopes.md).
 
@@ -273,8 +275,8 @@ Determina se a variável é visível fora da sessão na qual ela foi criada. Ess
 
 Os valores válidos são:
 
-- Público: a variável está visível. ("Public" é o padrão.)
-- Particular: a variável não é visível.
+- `Public`: A variável está visível. ( `Public` é o padrão.)
+- `Private`: A variável não é visível.
 
 Quando uma variável é privada, ela não aparece em listas de variáveis, como as retornadas por `Get-Variable` , ou em exibições da unidade **Variable:** . Comandos para ler ou alterar o valor de uma variável privada retornam um erro. No entanto, o usuário pode executar comandos que usam uma variável privada se os comandos tiverem sido escritos na sessão em que a variável foi definida.
 
@@ -327,22 +329,22 @@ Accept wildcard characters: False
 
 Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction e -WarningVariable. Para obter mais informações, confira [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## ENTRADAS
+## Entradas
 
 ### System.Object
 
 É possível canalizar um objeto que representa o valor da variável para `Set-Variable` .
 
-## SAÍDAS
+## Saídas
 
 ### Nenhum ou System. Management. Automation. PSVariable
 
 Quando você usa o parâmetro **PassThru** , o `Set-Variable` gera um objeto **System. Management. Automation. PSVariable** que representa a variável nova ou alterada.
 Caso contrário, este cmdlet não gera nenhuma saída.
 
-## OBSERVAÇÕES
+## Observações
 
-## LINKS RELACIONADOS
+## Links Relacionados
 
 [Clear-Variable](Clear-Variable.md)
 
