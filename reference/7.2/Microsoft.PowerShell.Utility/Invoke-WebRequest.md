@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: a1bd8ebfe591d45356baa5b608bd6292babd90d9
-ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
+ms.openlocfilehash: 49fa39807a522c86b94f950ba63c8ff54a112953
+ms.sourcegitcommit: 241071803915ab7d544576b5652ac23349a86369
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/07/2021
-ms.locfileid: "106555586"
+ms.locfileid: "107027219"
 ---
 # Invoke-WebRequest
 
@@ -987,11 +987,7 @@ O agente do usuário padrão é semelhante a `Mozilla/5.0 (Windows NT 10.0; Micr
 
 Para testar um site com a cadeia de caracteres do agente de usuário padrão usada pela maioria dos navegadores da Internet, use as propriedades da classe [PSUserAgent](/dotnet/api/microsoft.powershell.commands.psuseragent) , como Chrome, Firefox, InternetExplorer, Opera e Safari.
 
-Por exemplo, o comando a seguir usa a cadeia de caracteres do agente do usuário para o Internet Explorer:
-
-```powershell
-Invoke-WebRequest -Uri https://website.com/ -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)
-```
+Por exemplo, o comando a seguir usa a cadeia de caracteres do agente do usuário para o Internet Explorer: `Invoke-WebRequest -Uri https://website.com/ -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)`
 
 ```yaml
 Type: System.String
