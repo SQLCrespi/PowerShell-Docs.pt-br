@@ -1,16 +1,16 @@
 ---
 description: Variáveis que personalizam o comportamento do PowerShell.
 Locale: en-US
-ms.date: 04/22/2020
+ms.date: 04/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_preference_variables?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Preference_Variables
-ms.openlocfilehash: d8eadf88d486de4758b56738089f27e8adc3bc91
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: ffd640f7eac8b27cabce345f11da728945043e46
+ms.sourcegitcommit: 74270273e9097352dab174c08123b82063225e2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99598814"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297190"
 ---
 # <a name="about-preference-variables"></a>Sobre variáveis de preferência
 
@@ -28,7 +28,7 @@ A tabela a seguir lista as variáveis de preferência e seus valores padrão.
 
 |             Variável             |       Valor Padrão       |
 | -------------------------------- | ------------------------- |
-| `$ConfirmPreference`             | Alta                      |
+| `$ConfirmPreference`             | Alto                      |
 | `$DebugPreference`               | SilentlyContinue          |
 | `$ErrorActionPreference`         | Continue                  |
 | `$ErrorView`                     | ConciseView               |
@@ -387,7 +387,7 @@ Determina o formato de exibição das mensagens de erro no PowerShell.
 
 Os valores válidos são os seguintes:
 
-- **ConciseView**: (padrão) fornece uma mensagem de erro concisa e uma exibição Refatorada para construtores de módulo avançados. Se o erro for da linha de comando, será uma mensagem de erro de linha única. Caso contrário, você receberá uma mensagem de erro de várias linhas que contém o erro e um ponteiro para o erro mostrando onde ele ocorre nessa linha. Se o terminal der suporte ao terminal virtual, os códigos de cor ANSI serão usados para fornecer acentos de cor. A cor de destaque pode ser alterada em `$Host.PrivateData.ErrorAccentColor` . Use `Get-Error` o cmdlet para uma exibição detalhada abrangente do erro totalmente qualificado, incluindo as exceções internas.
+- **ConciseView**: (padrão) fornece uma mensagem de erro concisa e uma exibição Refatorada para construtores de módulo avançados. A partir do PowerShell 7,2, se o erro for da linha de comando ou de um módulo de script, a saída será uma mensagem de erro de linha única. Caso contrário, você receberá uma mensagem de erro de várias linhas que contém o erro e um ponteiro para o erro mostrando onde ele ocorre nessa linha. Se o terminal der suporte ao terminal virtual, os códigos de cor ANSI serão usados para fornecer acentos de cor. A cor de destaque pode ser alterada em `$Host.PrivateData.ErrorAccentColor` . Use `Get-Error` o cmdlet para uma exibição detalhada abrangente do erro totalmente qualificado, incluindo as exceções internas.
 
   **ConciseView** foi adicionado no PowerShell 7.
 
@@ -1218,7 +1218,7 @@ At line:1 char:1
 + Get-Process -Name Winword
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

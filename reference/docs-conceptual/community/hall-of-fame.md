@@ -2,18 +2,18 @@
 title: Hall da Fama de Colaboradores da Comunidade
 description: Lista dos usuários do GitHub com o maior número de contribuições para o projeto PowerShell-Doc.
 ms.date: 04/01/2021
-ms.openlocfilehash: 145212e2182665202e3d74863c354426ed647281
-ms.sourcegitcommit: 79bec59588ad24bb41a3fb67740d123334c5d2b6
+ms.openlocfilehash: 15f5c9355e2b1c7341f055a750b5b3705affdc9a
+ms.sourcegitcommit: 74270273e9097352dab174c08123b82063225e2f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106126418"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297173"
 ---
 # <a name="community-contributor-hall-of-fame"></a>Hall da Fama do Colaborador da Comunidade
 
 A Comunidade do PowerShell é um grupo vibrante e colaborativo. Agradecemos imensamente toda a ajuda e apoio que obtemos da comunidade. Saiba como você pode contribuir lendo o [Guia do colaborador][contrib].
 
-Desde o final de maio de 2020, esses usuários do GitHub são os Principais Colaboradores de Todos os Tempos da Comunidade.
+A partir do final de março de 2021, esses usuários do GitHub são os All-Time principais colaboradores da Comunidade.
 
 ## <a name="pull-requests-opened"></a>Solicitações de pull abertas
 
