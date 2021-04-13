@@ -18,7 +18,7 @@ ms.locfileid: "107027235"
 ## Sinopse
 Obtém o conteúdo de uma página da Web na Internet.
 
-## Syntax
+## Sintaxe
 
 ### StandardMethod (padrão)
 
@@ -1038,7 +1038,7 @@ Você pode canalizar o corpo de uma solicitação da Web para `Invoke-WebRequest
 
 ### Microsoft. PowerShell. Commands. BasicHtmlWebResponseObject
 
-## Observações
+## Anotações
 
 A partir do PowerShell, o 6.0.0 `Invoke-WebRequest` dá suporte apenas à análise básica.
 

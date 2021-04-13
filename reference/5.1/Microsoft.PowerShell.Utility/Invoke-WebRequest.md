@@ -608,7 +608,7 @@ Você pode canalizar o corpo de uma solicitação da Web para `Invoke-WebRequest
 
 ### Microsoft.PowerShell.Commands.HtmlWebResponseObject
 
-## Observações
+## Anotações
 
 ## Links Relacionados
 

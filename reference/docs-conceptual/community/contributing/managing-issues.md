@@ -3,12 +3,12 @@ title: Como gerenciamos problemas
 description: Este artigo explica como a equipe do PowerShell-Docs gerencia problemas.
 ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 72267137a2657f51e5f616113adf92d80647acad
-ms.sourcegitcommit: 61765d08321623743dc5db5367160f6982fe7857
+ms.openlocfilehash: c6cb38bc37260b14e2a7c728879e2fa2a036133f
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "99596158"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216906"
 ---
 # <a name="how-we-manage-issues"></a>Como gerenciamos problemas
 
@@ -32,7 +32,7 @@ Este artigo documenta como gerenciamos problemas no repositório do PowerShell-D
 
 #### <a name="label-types"></a>Tipos de rótulo
 
-|   Tipo   | Descrição                                                         |
+|   Type   | Descrição                                                         |
 | -------- | ------------------------------------------------------------------- |
 | Área     | Usado para indicar qual parte do PowerShell ou os documentos que o problema está discutindo.<br>Útil para os proprietários de recursos encontrarem problemas para seus recursos. |
 | Problema    | Indica o tipo de problema                                         |
@@ -69,7 +69,6 @@ Os membros da equipe do PowerShell revisam os problemas diários e fazem triagem
   | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
   | dsc      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
   | gallery  | [https://github.com/powershell/powershellgallery/issues/new](https://github.com/powershell/powershellgallery/issues/new)     |
-  | jea      | [https://github.com/powershell/jea/issues/new](https://github.com/powershell/jea/issues/new)                                 |
   | wmf      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
 
 ### <a name="support-requests"></a>Solicitações de suporte

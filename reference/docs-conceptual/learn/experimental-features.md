@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Usar recursos experimentais no PowerShell
 description: Lista os recursos experimentais disponíveis no momento e como usá-los.
-ms.openlocfilehash: f97cea1dff4030da22be1efbe3cd5cbb7a9f3527
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 828a962ca46e5563874ff1c941c46c8a0624f3d8
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685276"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216887"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Usar recursos experimentais no PowerShell
 
@@ -108,7 +108,7 @@ UnderlineOff     Property   string UnderlineOff {get;}
 
 Os membros de base retornam cadeias de caracteres de sequências de escape ANSI mapeadas para seus nomes. Os valores são configuráveis para permitir a personalização.
 
-Para obter mais informações, confira [about_Automatic_Variables](/reference/7.2/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md)
+Para obter mais informações, confira [about_Automatic_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md)
 
 > [!NOTE]
 > Para desenvolvedores C#, você pode acessar `PSStyle` como um singleton. O uso terá esta aparência:

@@ -342,7 +342,7 @@ Este cmdlet oferece suporte aos parâmetros comuns: -Debug, -ErrorAction, -Error
 Quando você usa o parâmetro **PassThru** , o `Set-Variable` gera um objeto **System. Management. Automation. PSVariable** que representa a variável nova ou alterada.
 Caso contrário, este cmdlet não gera nenhuma saída.
 
-## Observações
+## Anotações
 
 ## Links Relacionados
 

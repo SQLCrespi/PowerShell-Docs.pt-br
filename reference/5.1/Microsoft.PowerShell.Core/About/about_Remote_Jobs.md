@@ -6,12 +6,12 @@ ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Remote_Jobs
-ms.openlocfilehash: 389db08a2b6528d14ff5f79cd4d369c23ed0c737
-ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
+ms.openlocfilehash: 1a4ae0478ff3da84a872ffda93ddf799d2e0c2d9
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94524528"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216843"
 ---
 # <a name="about-remote-jobs"></a>Sobre trabalhos remotos
 
@@ -24,7 +24,7 @@ O PowerShell executa comandos e scripts simultaneamente por meio de trabalhos. H
 
 - `RemoteJob` -Comandos e scripts executados em uma sessão remota.
 - `BackgroundJob` -Comandos e scripts são executados em um processo separado no computador local. Para obter mais informações, consulte [about_Jobs](about_Jobs.md).
-- `PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local. Para obter mais informações, consulte [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob` ou `ThreadJob` -comandos e scripts são executados em um thread separado dentro do mesmo processo no computador local. Para obter mais informações, consulte [about_Thread_Jobs](/powershell/module/Microsoft.PowerShell.Core/About/about_Thread_Jobs).
 
 Executar scripts remotamente, em um computador separado ou em um processo separado, proporcionar um grande isolamento. Os erros que ocorrem no trabalho remoto não afetam outros trabalhos em execução ou a sessão pai que iniciou o trabalho. No entanto, a camada de comunicação remota adiciona sobrecarga, incluindo a serialização de objeto. Todos os objetos são serializados e desserializados à medida que são passados entre a sessão pai e a sessão remota (trabalho). A serialização de grandes objetos de dados complexos pode consumir grandes quantidades de recursos de computação e memória e transferir grandes quantidades de dados pela rede.
 
@@ -278,7 +278,7 @@ Output 11
 Para este exemplo, os trabalhos ainda estão anexados a uma sessão pai do PowerShell.
 No entanto, a sessão pai não é a sessão do PowerShell original em que `Invoke-Command` foi executada.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [about_Jobs](about_Jobs.md)
 - [about_Job_Details](about_Job_Details.md)
