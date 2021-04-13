@@ -60,8 +60,8 @@
         "xref_query_tags": ["/dotnet", "/uwp/api"],
         "version": 0
     }],
-    "git_repository_branch_open_to_public_contributors": "live",
-    "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/PowerShell-Docs.pt-br",
+    "git_repository_branch_open_to_public_contributors": "",
+    "git_repository_url_open_to_public_contributors": "",
     "branches_to_filter": [
        "live"
     ],
