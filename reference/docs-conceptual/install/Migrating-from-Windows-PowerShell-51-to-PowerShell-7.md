@@ -16,7 +16,7 @@ Projetado para ambientes locais, híbridos e de nuvem, o PowerShell 7 é forneci
 - É instalado e executado lado a lado com o Windows PowerShell
 - Melhorias na compatibilidade com os módulos existentes do Windows PowerShell
 - Novos recursos de linguagem, como operadores ternários e `ForEach-Object -Parallel`
-- desempenho aprimorado
+- Desempenho aprimorado
 - Comunicação remota baseada em SSH
 - Interoperabilidade entre plataformas
 - Suporte para os contêineres do Docker
